@@ -8,7 +8,7 @@ citation: 'Meacham v. Knolls Atomic Power Laboratory, 554 U.S. 84 (2008).'
 resource: 'https://www.law.cornell.edu/supct/html/06-1505.ZX.html'
 timestamp: '2026-04-19'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-layoffs/business-rationale-documentation
 tags:

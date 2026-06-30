@@ -8,9 +8,9 @@ citation: 'Emeco International Pty Ltd v O''Shea [No 2] [2012] WASC 348 (Edelman
 resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2012/348.html'
 timestamp: '2026-06-16'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au'
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/non-compete/au/western-australia
 tags:

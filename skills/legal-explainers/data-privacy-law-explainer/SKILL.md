@@ -25,7 +25,7 @@ catalog_order: 20
 # data-privacy-law-explainer
 
 Explain how a given U.S. state's comprehensive consumer-privacy law works,
-using bundled, source-cited practice notes. This skill explains **what the law
+using bundled, source-cited practice guides. This skill explains **what the law
 says** — it does not give legal advice or render a compliance verdict on the
 user's own business or program.
 
@@ -92,6 +92,23 @@ entry has `slug`, `jurisdiction`, `countryCode`, `snapshotAsOf`,
 `lastReviewed`, and a `stale` flag). Coverage is rolling out state by state —
 read that file to enumerate what's available before answering a "which states
 do you cover?" question.
+
+## Machine-readable twins
+
+Each bundled note is a point-in-time snapshot. The live canonical version on
+openagreements.org also publishes machine-readable twins you can fetch directly
+(a fixed URL only — never send the user's facts or personal data upstream):
+
+- **Practice guide** — append `.md` or `.json` to a guide's `canonicalUrl`
+  (e.g. `…/practice-guides/privacy/us/texas.json`), or use the `/markdown` and
+  `/json` path aliases.
+- **50-state survey** — `…/surveys/privacy/us.json` or `.csv` (spreadsheet
+  import). Surveys have no `/markdown` twin.
+- **Reviewer checklist** — `…/checklists/privacy-policy/us.json`.
+
+The full corpus is also browsable as plain markdown in the open-agreements repo
+under `legal-practice-library/` (`privacy/`, `surveys/privacy/`,
+`checklists/privacy-policy/`).
 
 ## See also
 

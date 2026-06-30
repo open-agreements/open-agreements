@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/214787/soto-v-state-industrial-products-inc/
 timestamp: '2026-06-02'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/puerto-rico'
 tags:
   - case-law

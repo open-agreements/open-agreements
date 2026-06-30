@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/2752976/orca-communications-v-ann-noder-et-virpitch-public/
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/arizona'
 tags:
   - case-law

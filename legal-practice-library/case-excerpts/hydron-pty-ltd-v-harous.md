@@ -6,7 +6,7 @@ citation: 'Hydron Pty Ltd v Harous [2005] SASC 176 (Bleby J).'
 resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2005/176.html'
 timestamp: '2026-06-10'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au/south-australia'
 tags:
   - case-law

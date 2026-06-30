@@ -8,7 +8,7 @@ citation: 'MoneySmart Singapore Pte Ltd v Artem Musienko [2024] SGHC 94.'
 resource: 'https://www.elitigation.sg/gd/s/2024_SGHC_94'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/sg'
 tags:
   - case-law

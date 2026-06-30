@@ -8,7 +8,7 @@ citation: 'Perlin v. Time Inc., 237 F. Supp. 3d 623 (E.D. Mich. 2017).'
 resource: 'https://www.courtlistener.com/opinion/7324387/perlin-v-time-inc/'
 timestamp: '2026-06-11'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/privacy/us/michigan'
 tags:
   - case-law

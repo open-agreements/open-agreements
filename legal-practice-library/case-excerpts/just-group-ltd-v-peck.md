@@ -6,9 +6,9 @@ citation: 'Just Group Ltd v Peck [2016] VSCA 334 (the Court).'
 resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2016/334.html'
 timestamp: '2026-06-16'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au'
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au/victoria'
 tags:
   - case-law

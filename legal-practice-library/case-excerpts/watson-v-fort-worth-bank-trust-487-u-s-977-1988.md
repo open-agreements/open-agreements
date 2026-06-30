@@ -8,10 +8,10 @@ citation: 'Watson v. Fort Worth Bank & Trust, 487 U.S. 977 (1988).'
 resource: 'https://www.courtlistener.com/opinion/112145/watson-v-fort-worth-bank-trust'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-hiring/disparate-impact-ai-performance-review
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-hiring/disparate-impact-ai-skill-requirements
 tags:

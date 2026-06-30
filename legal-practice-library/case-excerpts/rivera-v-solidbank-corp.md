@@ -8,7 +8,7 @@ citation: 'Rivera v. Solidbank Corp., G.R. No. 163269, Apr. 19, 2006.'
 resource: 'https://lawphil.net/judjuris/juri2006/apr2006/gr_163269_2006.html'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/ph'
 tags:
   - case-law

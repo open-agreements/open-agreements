@@ -13,10 +13,10 @@ resource: >-
   https://www.damiencharlotin.com/documents/1977/Warner_v._Gilbarco_USA_10_February_2026.pdf
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-vendors/external-ai-vendor-privilege-risk
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/outside-counsel/privilege-across-counsel-transition
 tags:

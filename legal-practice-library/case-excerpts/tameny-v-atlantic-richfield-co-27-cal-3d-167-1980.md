@@ -8,7 +8,7 @@ citation: 'Tameny v. Atlantic Richfield Co., 27 Cal. 3d 167 (1980).'
 resource: 'https://scocal.stanford.edu/opinion/tameny-v-atlantic-richfield-co-28166'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-policies/conditioning-employment-on-ai-use
 tags:

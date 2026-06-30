@@ -8,7 +8,7 @@ citation: 'Pappas v. Holloway, 114 Wash. 2d 198, 787 P.2d 30 (1990).'
 resource: 'https://law.justia.com/cases/washington/supreme-court/1990/56061-7-1.html'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/outside-counsel/privilege-across-counsel-transition
 tags:

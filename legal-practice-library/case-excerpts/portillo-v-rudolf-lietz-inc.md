@@ -8,7 +8,7 @@ citation: 'Portillo v. Rudolf Lietz, Inc., G.R. No. 196539, Oct. 10, 2012.'
 resource: 'https://lawphil.net/judjuris/juri2012/oct2012/gr_196539_2012.html'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/ph'
 tags:
   - case-law

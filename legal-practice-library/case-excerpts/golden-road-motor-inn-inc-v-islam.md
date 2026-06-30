@@ -8,7 +8,7 @@ citation: 'Golden Road Motor Inn, Inc. v. Islam, 132 Nev. 476, 376 P.3d 151 (201
 resource: 'https://www.courtlistener.com/opinion/4240728/golden-rd-motor-inn-v-islam/'
 timestamp: '2026-06-02'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/nevada'
 tags:
   - case-law

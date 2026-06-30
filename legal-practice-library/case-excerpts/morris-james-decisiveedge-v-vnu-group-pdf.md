@@ -7,7 +7,7 @@ resource: >-
   https://www.morrisjames.com/assets/htmldocuments/Decisivedge%20v%20VNU%20Group.pdf
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-layoffs/contractor-displacement-ai-efficiency
 tags:

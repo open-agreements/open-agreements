@@ -6,7 +6,7 @@ citation: 'Delaney v. Dickey, 242 A.3d 257 (N.J. 2020).'
 resource: 'https://law.justia.com/cases/new-jersey/supreme-court/2020/a-30-19.html'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/outside-counsel/fee-dispute-on-transition
 tags:

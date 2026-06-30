@@ -8,7 +8,7 @@ citation: 'Tims v. Black Horse Carriers, Inc., 2023 IL 127801, ¶ 42.'
 resource: 'https://www.courtlistener.com/opinion/9372460/tims-v-black-horse-carriers-inc/'
 timestamp: '2026-06-11'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/privacy/us/illinois'
 tags:
   - case-law

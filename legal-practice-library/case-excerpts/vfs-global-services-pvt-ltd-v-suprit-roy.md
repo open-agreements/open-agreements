@@ -8,7 +8,7 @@ citation: 'VFS Global Services Pvt. Ltd. v. Suprit Roy, 2008 (2) Bom CR 446 (Bom
 resource: 'https://indiankanoon.org/doc/1547420/'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/in'
 tags:
   - case-law

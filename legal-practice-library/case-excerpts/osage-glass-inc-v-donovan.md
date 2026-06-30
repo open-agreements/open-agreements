@@ -8,7 +8,7 @@ citation: 'Osage Glass, Inc. v. Donovan, 693 S.W.2d 71 (Mo. banc 1985).'
 resource: 'https://www.courtlistener.com/opinion/1781769/osage-glass-inc-v-donovan/'
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/missouri'
 tags:
   - case-law

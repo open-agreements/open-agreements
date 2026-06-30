@@ -8,7 +8,7 @@ citation: 'Percept D''Mark (India) Pvt. Ltd. v. Zaheer Khan, (2006) 4 SCC 227.'
 resource: 'https://indiankanoon.org/doc/571375/'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/in'
 tags:
   - case-law

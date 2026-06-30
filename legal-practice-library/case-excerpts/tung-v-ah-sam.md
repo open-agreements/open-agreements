@@ -6,7 +6,7 @@ citation: 'Tung v. Ah Sam, 4 A.S.R. 764 (Trial Div. 1971).'
 resource: 'https://asbar.org/case-law/ah-sam-tung-v/'
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/american-samoa'
 tags:
   - case-law

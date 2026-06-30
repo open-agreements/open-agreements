@@ -10,7 +10,7 @@ citation: >-
 resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2025/57.html'
 timestamp: '2026-06-10'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/non-compete/au/northern-territory
 tags:

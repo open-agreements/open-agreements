@@ -8,7 +8,7 @@ citation: 'Cherena v. Coors Brewing Co., 20 F. Supp. 2d 282 (D.P.R. 1998).'
 resource: 'https://www.courtlistener.com/opinion/2423610/cherena-v-coors-brewing-co/'
 timestamp: '2026-06-02'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/puerto-rico'
 tags:
   - case-law

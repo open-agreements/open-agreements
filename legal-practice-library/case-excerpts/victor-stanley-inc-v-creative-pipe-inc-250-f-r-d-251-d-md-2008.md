@@ -8,7 +8,7 @@ citation: 'Victor Stanley, Inc. v. Creative Pipe, Inc., 250 F.R.D. 251 (D. Md. 2
 resource: 'https://app.midpage.ai/document/victor-stanley-inc-v-creative-8752108'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/outside-counsel/privilege-across-counsel-transition
 tags:

@@ -6,10 +6,10 @@ citation: 'Groff v. DeJoy, 600 U.S. 447 (2023).'
 resource: 'https://www.supremecourt.gov/opinions/22pdf/22-174_k536.pdf'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-policies/conditioning-employment-on-ai-use
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-policies/mandatory-ai-use-accommodation-risk
 tags:

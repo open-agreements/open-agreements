@@ -10,7 +10,7 @@ citation: >-
 resource: 'https://lawphil.net/judjuris/juri2019/sep2019/gr_199469_2019.html'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/ph'
 tags:
   - case-law

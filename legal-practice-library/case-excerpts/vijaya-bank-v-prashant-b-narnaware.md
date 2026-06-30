@@ -8,7 +8,7 @@ citation: 'Vijaya Bank v. Prashant B. Narnaware, 2025 INSC 691.'
 resource: 'https://indiankanoon.org/doc/42763766/'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/in'
 tags:
   - case-law

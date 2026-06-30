@@ -6,7 +6,7 @@ citation: 'Moea''i v. Reid, 9 A.S.R.2d 48 (Trial Div. 1988).'
 resource: 'https://asbar.org/case-law/9asr2d48/'
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/american-samoa'
 tags:
   - case-law

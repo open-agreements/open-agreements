@@ -9,7 +9,7 @@ resource: >-
   https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_12810860/File/Opinions/Published/2014/File16.pdf
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/virgin-islands'
 tags:
   - case-law

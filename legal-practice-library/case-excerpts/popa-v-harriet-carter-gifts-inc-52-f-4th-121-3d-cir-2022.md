@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/8403630/ashley-popa-v-harriet-carter-gifts-inc/
 timestamp: '2026-06-07'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/privacy/us/pennsylvania'
 tags:
   - case-law

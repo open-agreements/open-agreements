@@ -8,7 +8,7 @@ citation: 'Century Properties, Inc. v. Babiano, G.R. No. 220978, July 5, 2016.'
 resource: 'https://lawphil.net/judjuris/juri2016/jul2016/gr_220978_2016.html'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/ph'
 tags:
   - case-law

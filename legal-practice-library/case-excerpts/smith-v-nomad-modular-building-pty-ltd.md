@@ -8,7 +8,7 @@ citation: 'Smith v Nomad Modular Building Pty Ltd [2007] WASCA 169 (Pullin JA).'
 resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2007/169.html'
 timestamp: '2026-06-10'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/non-compete/au/western-australia
 tags:

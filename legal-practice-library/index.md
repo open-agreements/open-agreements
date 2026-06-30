@@ -4,7 +4,7 @@ okf_version: '0.1'
 
 # Legal Practice Library
 
-OpenAgreements legal practice library — practice notes, checklists, and market-standard
+OpenAgreements legal practice library — practice guides, checklists, and market-standard
 surveys, projected from openagreements.org as an Open Knowledge Format bundle.
 
 Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.0 (see `LICENSE`). Generated and maintained programmatically — open a content issue rather than editing files here.

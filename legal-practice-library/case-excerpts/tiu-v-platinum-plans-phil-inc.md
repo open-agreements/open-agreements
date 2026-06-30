@@ -8,7 +8,7 @@ citation: 'Tiu v. Platinum Plans Phil., Inc., G.R. No. 163512, Feb. 28, 2007.'
 resource: 'https://lawphil.net/judjuris/juri2007/feb2007/gr_163512_2007.html'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/ph'
 tags:
   - case-law

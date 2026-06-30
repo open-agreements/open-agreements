@@ -8,7 +8,7 @@ citation: 'DePuy Orthopaedics, Inc. v. Waxman, 95 So. 3d 928 (Fla. 1st DCA 2012)
 resource: 'https://www.courtlistener.com/opinion/5061403/depuy-orthopaedics-inc-v-waxman/'
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/florida'
 tags:
   - case-law

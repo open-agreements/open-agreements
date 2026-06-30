@@ -8,7 +8,7 @@ citation: 'Del Castillo v. Richmond, G.R. No. L-21127, Feb. 9, 1924.'
 resource: 'https://lawphil.net/judjuris/juri1924/feb1924/gr_21127_1924.html'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/ph'
 tags:
   - case-law

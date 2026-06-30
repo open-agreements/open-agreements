@@ -8,7 +8,7 @@ citation: 'New York State Courts, Kliger v. Fairmont Ins. Brokers LLC.'
 resource: 'https://www.nycourts.gov/reporter//pdfs/2026/2026_30863.pdf'
 timestamp: '2026-04-19'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-layoffs/ai-layoff-without-cause-vs-redundancy-us
 tags:

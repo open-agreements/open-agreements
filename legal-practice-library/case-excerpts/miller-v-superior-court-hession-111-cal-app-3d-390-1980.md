@@ -8,7 +8,7 @@ citation: 'Miller v. Superior Court (Hession), 111 Cal. App. 3d 390 (1980).'
 resource: 'https://law.justia.com/cases/california/court-of-appeal/3d/111/390.html'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/outside-counsel/privilege-across-counsel-transition
 tags:

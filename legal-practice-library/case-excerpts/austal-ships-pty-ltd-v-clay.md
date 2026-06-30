@@ -8,7 +8,7 @@ citation: 'Austal Ships Pty Ltd v Clay [2018] WASC 178 (Smith AJ).'
 resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2018/178.html'
 timestamp: '2026-06-10'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/non-compete/au/western-australia
 tags:

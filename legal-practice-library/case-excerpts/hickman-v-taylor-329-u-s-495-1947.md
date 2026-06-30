@@ -6,7 +6,7 @@ citation: 'Hickman v. Taylor, 329 U.S. 495 (1947).'
 resource: 'https://www.law.cornell.edu/supremecourt/text/329/495'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/outside-counsel/privilege-across-counsel-transition
 tags:

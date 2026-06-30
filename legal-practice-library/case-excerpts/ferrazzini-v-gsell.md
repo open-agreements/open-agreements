@@ -8,7 +8,7 @@ citation: 'Ferrazzini v. Gsell, G.R. No. L-10712, Aug. 10, 1916.'
 resource: 'https://lawphil.net/judjuris/juri1916/aug1916/gr_l-10712_1916.html'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/ph'
 tags:
   - case-law

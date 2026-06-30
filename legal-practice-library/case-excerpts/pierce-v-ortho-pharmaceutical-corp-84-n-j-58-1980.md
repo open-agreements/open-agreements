@@ -8,7 +8,7 @@ citation: 'Pierce v. Ortho Pharmaceutical Corp., 84 N.J. 58 (1980).'
 resource: 'https://law.justia.com/cases/new-jersey/supreme-court/1980/84-n-j-58-0.html'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-policies/conditioning-employment-on-ai-use
 tags:

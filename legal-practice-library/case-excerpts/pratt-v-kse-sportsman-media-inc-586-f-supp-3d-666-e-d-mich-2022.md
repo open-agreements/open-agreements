@@ -8,7 +8,7 @@ citation: 'Pratt v. KSE Sportsman Media, Inc., 586 F. Supp. 3d 666 (E.D. Mich. 2
 resource: 'https://caselaw.findlaw.com/court/us-dis-crt-e-d-mic-nor-div/2162951.html'
 timestamp: '2026-06-11'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/privacy/us/michigan'
 tags:
   - case-law

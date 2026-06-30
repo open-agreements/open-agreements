@@ -8,7 +8,7 @@ citation: 'Smarte Carte, Inc. v. Colón, 47 F. Supp. 2d 183 (D.P.R. 1999).'
 resource: 'https://www.courtlistener.com/opinion/2527549/smarte-carte-inc-v-colon/'
 timestamp: '2026-06-02'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/puerto-rico'
 tags:
   - case-law

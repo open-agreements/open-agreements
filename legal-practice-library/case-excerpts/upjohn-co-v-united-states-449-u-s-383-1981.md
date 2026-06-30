@@ -6,7 +6,7 @@ citation: 'Upjohn Co. v. United States, 449 U.S. 383 (1981).'
 resource: 'https://www.law.cornell.edu/supremecourt/text/449/383'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/outside-counsel/privilege-across-counsel-transition
 tags:

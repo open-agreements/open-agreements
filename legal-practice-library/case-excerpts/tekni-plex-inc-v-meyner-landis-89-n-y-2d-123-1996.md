@@ -8,7 +8,7 @@ citation: 'Tekni-Plex, Inc. v. Meyner & Landis, 89 N.Y.2d 123 (1996).'
 resource: 'https://www.law.cornell.edu/nyctap/089_0123.htm'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/outside-counsel/privilege-across-counsel-transition
 tags:

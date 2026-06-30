@@ -10,7 +10,7 @@ citation: >-
 resource: 'https://archive.sclqld.org.au/qjudgment/2025/QCA25-243.pdf'
 timestamp: '2026-06-10'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au/queensland'
 tags:
   - case-law

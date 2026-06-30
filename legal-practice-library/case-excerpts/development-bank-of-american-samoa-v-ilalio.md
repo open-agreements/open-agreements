@@ -8,7 +8,7 @@ citation: 'Development Bank of American Samoa v. Ilalio, 5 A.S.R.2d 1 (Trial Div
 resource: 'https://asbar.org/case-law/development-bank-v-ilalio/'
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/american-samoa'
 tags:
   - case-law

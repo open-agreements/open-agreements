@@ -8,7 +8,7 @@ citation: 'Niranjan Shankar Golikari v. Century Spinning & Mfg. Co., AIR 1967 SC
 resource: 'https://indiankanoon.org/doc/452434/'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/in'
 tags:
   - case-law

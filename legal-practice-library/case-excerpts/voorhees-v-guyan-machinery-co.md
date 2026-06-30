@@ -8,7 +8,7 @@ citation: 'Voorhees v. Guyan Mach. Co., 191 W. Va. 450, 446 S.E.2d 672 (1994).'
 resource: 'https://www.courtlistener.com/opinion/1347675/voorhees-v-guyan-machinery-co/'
 timestamp: '2026-06-02'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/west-virginia'
 tags:
   - case-law

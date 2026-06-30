@@ -10,7 +10,7 @@ citation: >-
 resource: 'https://indiankanoon.org/doc/175180860/'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/in'
 tags:
   - case-law

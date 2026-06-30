@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/241093/austin-j-shelton-v-guam-service-games-a-copartnership/
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/guam'
 tags:
   - case-law

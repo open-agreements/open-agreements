@@ -6,10 +6,10 @@ citation: 'Connecticut v. Teal, 457 U.S. 440 (1982).'
 resource: 'https://www.courtlistener.com/opinion/110751/connecticut-v-teal'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-hiring/disparate-impact-ai-performance-review
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-hiring/disparate-impact-ai-skill-requirements
 tags:

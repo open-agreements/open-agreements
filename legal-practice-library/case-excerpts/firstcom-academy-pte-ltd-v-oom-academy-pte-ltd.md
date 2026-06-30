@@ -8,7 +8,7 @@ citation: 'FirstCom Academy Pte Ltd v Oom Academy Pte Ltd [2025] SGHC 266.'
 resource: 'https://www.elitigation.sg/gd/s/2025_SGHC_266'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/sg'
 tags:
   - case-law

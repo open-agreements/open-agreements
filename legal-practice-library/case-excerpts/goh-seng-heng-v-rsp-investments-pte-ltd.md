@@ -8,7 +8,7 @@ citation: 'Goh Seng Heng v RSP Investments Pte Ltd [2016] SGHC 275; [2017] 3 SLR
 resource: 'https://www.elitigation.sg/gd/s/2016_SGHC_275'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/sg'
 tags:
   - case-law

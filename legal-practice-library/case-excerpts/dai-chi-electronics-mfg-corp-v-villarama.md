@@ -8,7 +8,7 @@ citation: 'Dai-Chi Electronics Mfg. Corp. v. Villarama, G.R. No. 112940, Nov. 21
 resource: 'https://lawphil.net/judjuris/juri1994/nov1994/gr_112940_1994.html'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/ph'
 tags:
   - case-law

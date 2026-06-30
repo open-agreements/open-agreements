@@ -12,7 +12,7 @@ timestamp: '2026-06-10'
 document_references:
   - type: Law Topic
     resource: 'https://openagreements.org/practice-guides/non-compete/us'
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/cnmi'
 tags:
   - case-law
