@@ -1,0 +1,1258 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/illinois",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/illinois.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/illinois",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/illinois/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/illinois/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "illinois",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Illinois",
+      "description": "A clause-by-clause reviewer checklist for Illinois employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Illinois Freedom to Work Act (820 ILCS 90), including the earnings thresholds, consideration rule, and 14-day notice gate.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Illinois",
+      "coverage": "Illinois (US)",
+      "lastReviewed": "2026-06-11",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 48,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "illinois-statutory-gates",
+        "label": "Illinois statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#identify-parties",
+        "requirementGuidance": "Match the named employer to the entity that actually pays and directs the worker. The Freedom to Work Act puts every statutory duty — the earnings calculation, the consideration, the written notice — on the employer that enters the covenant, and the Attorney General investigates employers, not forms, so an entity mismatch muddies who owed the gates and whether they were met.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#identify-effective-date",
+        "requirementGuidance": "In Illinois the date the covenant was entered selects the rules: the Freedom to Work Act governs covenants entered on or after January 1, 2022, the mental-health-professional bar reaches covenants entered after January 1, 2025, and the Workplace Transparency Act forum limits arrive January 1, 2026. An undated instrument leaves all three threshold questions open — and the 14-day notice math has no anchor.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#identify-employee-title",
+        "requirementGuidance": "Record the role and actual duties, not just a label. Several Illinois carve-outs turn on function: a construction worker is categorically off-limits unless the person primarily performs management, engineering, architectural, design, or sales work or holds ownership, and the broadcaster and agency-nurse bans likewise key to what the worker does. The recorded title is the first exhibit in any carve-out fight.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-construction-carveout",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/10(e)",
+            "citation": "820 ILCS 90/10(e).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K10.htm",
+            "proposition": "820 ILCS 90/10(e) voids covenants for construction workers but carves out employees who primarily perform management, engineering or architectural, design, or sales functions or who are owners — making recorded duties decisive.",
+            "verbatimQuote": "A covenant not to compete or a covenant not to solicit is void and illegal with respect to individuals employed in construction, regardless of whether an individual is covered by a collective bargaining agreement. This subsection (e) does not apply to construction employees who primarily perform management, engineering or architectural, design, or sales functions for the employer or who are shareholders, partners, or owners in any capacity of the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-construction-carveout"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated, and scrutinize a non-Illinois selection for an Illinois-based worker. From 2026 the Workplace Transparency Act voids a unilateral clause applying another state's law or requiring an out-of-state venue to the extent it diminishes the employee's rights around an unlawful employment practice — a bounded rule, not a blanket one, but enough to make casual forum-shifting unreliable.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-wta-forum-limits",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 96/1-25",
+            "citation": "820 ILCS 96/1-25(b).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000960K1-25.htm",
+            "proposition": "820 ILCS 96/1-25(b) supports that a unilateral employment clause applying non-Illinois law or requiring an out-of-state venue is void to the extent it diminishes an Illinois employee's rights related to an unlawful employment practice.",
+            "verbatimQuote": "(b) Any agreement, clause, covenant, or waiver that is a unilateral condition of employment or continued employment and requires the employee or prospective employee to waive, arbitrate, or otherwise diminish any existing or future claim, right, or benefit related to an unlawful employment practice to which the employee or prospective employee would otherwise be entitled under any provision of State or federal law, including that which purports to shorten the applicable statute of limitation, apply non-Illinois law to an Illinois employee's claim, or require a venue outside of Illinois to adjudicate an Illinois employee's claim, is against public policy, void to the extent it denies an employee or prospective employee a substantive or procedural right or remedy related to alleged unlawful employment practices, and severable from an otherwise valid and enforceable contract under this Act.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-wta-forum-limits"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#define-confidential-information",
+        "requirementGuidance": "The Freedom to Work Act expressly leaves confidentiality agreements outside its covenant definition, so a clean, bounded definition keeps this protection clear of the earnings floors and notice gate entirely. A definition that sweeps in general skills or whole markets squanders that exclusion — it starts to operate as a restraint on working rather than a restraint on information.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-covenant-exclusions",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/5",
+            "citation": "820 ILCS 90/5.",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K5.htm",
+            "proposition": "820 ILCS 90/5 excludes confidentiality agreements, trade-secret and invention covenants, and sale-of-business covenants from the definition of a covenant not to compete, keeping them outside the Act's gates.",
+            "verbatimQuote": "\"Covenant not to compete\" does not include (1) a covenant not to solicit, (2) a confidentiality agreement or covenant, (3) a covenant or agreement prohibiting use or disclosure of trade secrets or inventions, (4) invention assignment agreements or covenants, (5) a covenant or agreement entered into by a person purchasing or selling the goodwill of a business or otherwise acquiring or disposing of an ownership interest",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-covenant-exclusions"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#define-trade-secrets",
+        "requirementGuidance": "Define trade secrets separately from ordinary confidential information. The Illinois Trade Secrets Act lets a secrecy duty run without time or geographic limits, so the agreement gets perpetual protection for genuine secrets only if the definitions keep the two categories — and their durations — apart.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-itsa-secrecy",
+            "authorityType": "primary-law",
+            "title": "765 ILCS 1065/8",
+            "citation": "765 ILCS 1065/8(b)(1).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/076510650K8.htm",
+            "proposition": "765 ILCS 1065/8(b)(1) supports that a contractual duty to maintain secrecy is not void or unenforceable solely for lacking durational or geographic limits.",
+            "verbatimQuote": "This Act does not affect: (1) contractual remedies, whether or not based upon misappropriation of a trade secret, provided however, that a contractual or other duty to maintain secrecy or limit use of a trade secret shall not be deemed to be void or unenforceable solely for lack of durational or geographical limitation on the duty",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-itsa-secrecy"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#define-restricted-period",
+        "requirementGuidance": "One umbrella defined term makes the duration auditable in a state with no statutory maximum: Illinois judges length as part of the totality-of-the-circumstances reasonableness analysis, so every covenant should run on a clock the reviewer can find, compare, and defend in one place.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#define-restricted-territory",
+        "requirementGuidance": "Place is one of the factors Illinois weighs when testing a restraint against the protected interest, so tie the territory to where the worker actually built relationships or used confidential information. A statewide or nationwide footprint for a locally scoped role hands the employee the overbreadth argument.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-totality-factors",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/7",
+            "citation": "820 ILCS 90/7.",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K7.htm",
+            "proposition": "820 ILCS 90/7 supports that the legitimate business interest is judged on the totality of the facts and circumstances, which include the time, place, and scope of the restriction.",
+            "verbatimQuote": "In determining the legitimate business interest of the employer, the totality of the facts and circumstances of the individual case shall be considered.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-totality-factors"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the worker dealt with during a stated look-back window. The Illinois analysis asks about the employee's actual exposure to customer relationships and how durable those relationships are — a class defined by the company's whole book of business answers a question nobody asked and invites the void-as-overbroad response.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#define-covered-employees",
+        "requirementGuidance": "Limit the no-poach class to colleagues the departing worker actually worked with or supervised. An employee non-solicit is a covenant not to solicit under the Act — it carries its own earnings floor and the same consideration and notice gates — so breadth here buys statutory exposure, not extra protection.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#define-protected-interests",
+        "requirementGuidance": "Spell out the interests the covenants serve. An Illinois covenant is illegal and void unless it is no greater than required to protect a legitimate business interest of the employer, so this definition is the yardstick every restraint in the agreement gets measured against.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-void-unless-conditions",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/15",
+            "citation": "820 ILCS 90/15.",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K15.htm",
+            "proposition": "820 ILCS 90/15 supports that a covenant is illegal and void unless it is no greater than required for the protection of a legitimate business interest, among the five statutory conditions.",
+            "verbatimQuote": "A covenant not to compete or a covenant not to solicit is illegal and void unless (1) the employee receives adequate consideration, (2) the covenant is ancillary to a valid employment relationship, (3) the covenant is no greater than is required for the protection of a legitimate business interest of the employer, (4) the covenant does not impose undue hardship on the employee, and (5) the covenant is not injurious to the public.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-void-unless-conditions"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#define-competitive-business",
+        "requirementGuidance": "Describe the actual competing activity, narrowly. Illinois courts have refused to repair a restrictive covenant drafted patently broader than the employer's real interest — a sprawling competitive-business definition gambles the clause on a judicial rescue the case law warns against.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-assured-no-rescue",
+            "authorityType": "case-law",
+            "title": "AssuredPartners, Inc. v. Schmitt",
+            "citation": "AssuredPartners, Inc. v. Schmitt, 2015 IL App (1st) 141863.",
+            "url": "https://www.courtlistener.com/opinion/3173530/assuredpartners-inc-v-schmitt/",
+            "deepLink": "https://www.courtlistener.com/opinion/3173530/assuredpartners-inc-v-schmitt/#:~:text=We%20decline%20to%20rescue%20a,covenant%20that%20is%20patently%20overbroad.",
+            "proposition": "AssuredPartners, Inc. v. Schmitt supports that Illinois courts will decline to judicially modify a patently overbroad restrictive covenant.",
+            "verbatimQuote": "We decline to rescue a draftor from the risks of crafting a restrictive covenant that is patently overbroad.",
+            "date": "2016-01-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-assured-no-rescue"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for the passive-holdings carve-out below a stated threshold. A clause that technically bars index funds and ordinary public shares is facially overbroad, fails the no-greater-than-required condition, and adds undue-hardship ammunition — all for protection no employer needs.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#define-passive-public-holdings",
+        "requirementGuidance": "An optional drafting mechanic — many agreements state the carve-out inline without a capitalized term. If the defined term exists, confirm its ownership threshold matches the number the operative carve-out actually uses.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#define-solicit",
+        "requirementGuidance": "Pin down whether solicitation means initiating contact, accepting business, or both. In Illinois the definition decides which statutory lane the clause occupies: a true non-solicit rides the lower earnings floor, while language reaching all post-employment dealing edges toward a covenant not to compete and the stricter gates that come with it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#define-termination-of-employment",
+        "requirementGuidance": "Confirm the trigger covers resignation, dismissal, furlough, and expiration of a fixed term — and that the agreement distinguishes among them. How the relationship ended matters here: a covenant asserted after a pandemic-style layoff is unenforceable unless the employer pays base salary, less subsequent earnings, through the restricted period.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-covid-condition",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/10(c)",
+            "citation": "820 ILCS 90/10(c).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K10.htm",
+            "proposition": "820 ILCS 90/10(c) conditions enforcement of a covenant against a COVID-style layoff on payment of base-salary-equivalent compensation minus subsequent earnings.",
+            "verbatimQuote": "No employer shall enter into a covenant not to compete or a covenant not to solicit with any employee who an employer terminates or furloughs or lays off as the result of business circumstances or governmental orders related to the COVID-19 pandemic or under circumstances that are similar to the COVID-19 pandemic, unless enforcement of the covenant not to compete includes compensation equivalent to the employee's base salary at the time of termination for the period of enforcement minus compensation earned through subsequent employment during the period of enforcement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-covid-condition"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#acknowledge-timing",
+        "requirementGuidance": "The signing date does statutory work in Illinois twice over: the 14-day notice clock is measured against it, and the two-year continued-employment route to adequate consideration starts running from it. A recital fixing when the covenant was furnished, signed, and supported preserves the facts both gates will be tested on.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-consideration-definition",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/5",
+            "citation": "820 ILCS 90/5.",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K5.htm",
+            "proposition": "820 ILCS 90/5 defines adequate consideration as two years of employment after signing or other professional or financial benefits, making the signing date the anchor for the two-year route.",
+            "verbatimQuote": "\"Adequate consideration\" means (1) the employee worked for the employer for at least 2 years after the employee signed an agreement containing a covenant not to compete or a covenant not to solicit or (2) the employer otherwise provided consideration adequate to support an agreement to not compete or to not solicit, which consideration can consist of a period of employment plus additional professional or financial benefits or merely professional or financial benefits adequate by themselves.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-consideration-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-written-counsel-advisal-and-14-day-review",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.illinois.require-written-counsel-advisal-and-14-day-review",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Counsel advisal and 14-day review window",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#require-written-counsel-advisal-and-14-day-review",
+        "requirementGuidance": "Verify two things on the face of the document: a written statement advising the employee to consult an attorney before signing, and evidence the employee received the covenant at least 14 calendar days before starting work or was given at least 14 calendar days to review it. Either omission voids the covenant outright, and an early signature does not excuse the employer from extending the full window — so the safest agreements recite the advisal and the date the covenant was delivered.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-notice-gate",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/20",
+            "citation": "820 ILCS 90/20.",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K20.htm",
+            "proposition": "820 ILCS 90/20 voids a covenant unless the employer advises the employee in writing to consult an attorney and provides the covenant 14 calendar days before employment begins or gives 14 calendar days to review it.",
+            "verbatimQuote": "A covenant not to compete or a covenant not to solicit is illegal and void unless (1) the employer advises the employee in writing to consult with an attorney before entering into the covenant and (2) the employer provides the employee with a copy of the covenant at least 14 calendar days before the commencement of the employee's employment or the employer provides the employee with at least 14 calendar days to review the covenant.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-notice-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "The trade-secret obligation should last as long as secrecy does. Federal law defines the right that way, and Illinois statute says so expressly — a secrecy duty is not void for lacking durational or geographic limits — so a fixed end date on trade-secret protection surrenders statutory coverage the drafter already had.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-dtsa-trade-secret-definition"
+          },
+          {
+            "sourceId": "il-itsa-no-duration-limit",
+            "authorityType": "primary-law",
+            "title": "765 ILCS 1065/8",
+            "citation": "765 ILCS 1065/8(b)(1).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/076510650K8.htm",
+            "proposition": "765 ILCS 1065/8(b)(1) supports that an Illinois secrecy duty is not void or unenforceable solely for lacking durational or geographic limits.",
+            "verbatimQuote": "This Act does not affect: (1) contractual remedies, whether or not based upon misappropriation of a trade secret, provided however, that a contractual or other duty to maintain secrecy or limit use of a trade secret shall not be deemed to be void or unenforceable solely for lack of durational or geographical limitation on the duty",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-itsa-no-duration-limit"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term, separate from the perpetual trade-secret duty. A perpetual restraint over non-secret material reads as a working restriction wearing a confidentiality label — the kind of breadth that pulls a clause from the Act's confidentiality exclusion back into its covenant gates.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law requires the immunity notice in Illinois agreements like everywhere else, and trade-secret claims matter more here than in most states — they are the main protection the Freedom to Work Act leaves ungated — so forfeiting exemplary damages and fees by omitting the notice is an unforced error twice over.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confirm confidentiality and non-disparagement language yields to federally protected workplace speech — wages, hours, and working conditions. The Board strikes overbroad restrictions regardless of state law, and an Illinois agreement already navigating statutory gates does not need a federal labor-law defect stacked on top.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#permit-compelled-disclosure",
+        "requirementGuidance": "Verify the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. Worth a closer look in Illinois given active Attorney General oversight of covenant practices — the agreement should never read as discouraging cooperation with an official inquiry.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-destroy at separation, certified in writing. Because Illinois pushes employers toward confidentiality and trade-secret tools whenever a covenant is risky or unavailable, the exit certification is often the cleanest proof those information protections were taken seriously before anything walked out the door.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional — but in Illinois never free. An employee non-solicit is a covenant not to solicit under the Act, so the $45,000 earnings floor, the consideration rule, and the 14-day notice gate all apply to it just as they do to a non-compete. Confirm the clause is scoped to the defined Covered Employees class and runs on the Restricted Period.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-nonsolicit-floor",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/10(b)",
+            "citation": "820 ILCS 90/10(b).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K10.htm",
+            "proposition": "820 ILCS 90/10(b) voids a covenant not to solicit unless the employee's actual or expected annualized earnings exceed $45,000.",
+            "verbatimQuote": "No employer shall enter into a covenant not to solicit with any employee unless the employee's actual or expected annualized rate of earnings exceeds $45,000 per year.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-nonsolicit-floor"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#permit-customer-nonsolicit",
+        "requirementGuidance": "When present, confirm it reaches only Covered Customers for the Restricted Period — and that the worker clears the non-solicit earnings floor. The clause earns its keep through the customer-relationship facts the Illinois totality test cares about: contact, durability, and goodwill the worker personally carried.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-nonsolicit-floor",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/10(b)",
+            "citation": "820 ILCS 90/10(b).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K10.htm",
+            "proposition": "820 ILCS 90/10(b) voids a covenant not to solicit unless the employee's actual or expected annualized earnings exceed $45,000.",
+            "verbatimQuote": "No employer shall enter into a covenant not to solicit with any employee unless the employee's actual or expected annualized rate of earnings exceeds $45,000 per year.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-nonsolicit-floor"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they call first — a meaningful step past solicitation. In Illinois that breadth invites a court to treat the clause as a restraint on working rather than a non-solicit, with the stricter non-compete gates and the void-unless-no-greater-than-required condition waiting on the other side of that classification.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#permit-non-compete",
+        "requirementGuidance": "An Illinois non-compete must clear every statutory gate — earnings floor, adequate consideration, written counsel advisal with the 14-day window — and then survive the five void-unless conditions and the reasonableness analysis. If this clause appears, route the review through the Illinois statutory-gate items at the end of this checklist before weighing anything else about it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-void-unless",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/15",
+            "citation": "820 ILCS 90/15.",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K15.htm",
+            "proposition": "820 ILCS 90/15 supports the five conditions an Illinois covenant must satisfy to avoid being illegal and void.",
+            "verbatimQuote": "A covenant not to compete or a covenant not to solicit is illegal and void unless (1) the employee receives adequate consideration, (2) the covenant is ancillary to a valid employment relationship, (3) the covenant is no greater than is required for the protection of a legitimate business interest of the employer, (4) the covenant does not impose undue hardship on the employee, and (5) the covenant is not injurious to the public.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-void-unless"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "A named-competitor list is high-value drafting in Illinois because of how the reformation factors run: courts deciding whether to save a covenant weigh the fairness of the restraints as originally written and whether the original draft was a good-faith effort to protect a real interest. A covenant scoped to actual competitors is that good faith made visible.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-reformation-goodfaith",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/35",
+            "citation": "820 ILCS 90/35.",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K35.htm",
+            "proposition": "820 ILCS 90/35 supports that reformation is discretionary and weighs the fairness of the restraints as originally written and whether the draft reflects a good-faith effort to protect a legitimate business interest.",
+            "verbatimQuote": "Extensive judicial reformation of a covenant not to compete or a covenant not to solicit may be against the public policy of this State and a court may refrain from wholly rewriting contracts. (b) In some circumstances, a court may, in its discretion, choose to reform or sever provisions of a covenant not to compete or a covenant not to solicit rather than hold such covenant unenforceable. Factors which may be considered when deciding whether such reformation is appropriate include the fairness of the restraints as originally written, whether the original restriction reflects a good-faith effort to protect a legitimate business interest of the employer, the extent of such reformation, and whether the parties included a clause authorizing such modifications in their agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-reformation-goodfaith"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause runs on the shared Restricted Period. Investment language broad enough to restrain how the worker earns a living drags the clause toward the non-compete definition — and the $75,000 floor and notice gate that travel with it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#require-non-disparagement",
+        "requirementGuidance": "Standard inclusion with a stated term — the Freedom to Work Act does not regulate it, so the constraints are federal. Check that truthful testimony, statements to government agencies, and protected workplace speech sit outside the clause, because the Board treats overbroad non-disparagement as unlawful no matter which state supplied the contract.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#address-physician-specific-rights",
+        "requirementGuidance": "Illinois has no blanket physician non-compete ban, but the dedicated clause should map the health-care rules that do exist: covenants entered after January 1, 2025 are unenforceable against licensed mental-health professionals serving veterans and first responders where enforcement would raise the cost or difficulty of care, and nurse agencies cannot bind temporarily placed nurses or certified nurse aides at all. For other clinicians, the earnings floors and reasonableness analysis still apply with full force.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-mentalhealth-bar",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/10(f)",
+            "citation": "820 ILCS 90/10(f).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K10.htm",
+            "proposition": "820 ILCS 90/10(f) makes covenants entered after January 1, 2025 unenforceable against licensed mental-health professionals providing services to veterans and first responders where enforcement would likely raise the cost or difficulty of obtaining those services.",
+            "verbatimQuote": "Any covenant not to compete or covenant not to solicit entered into after January 1, 2025 (the effective date of Public Act 103-915) shall not be enforceable with respect to the provision of mental health services to veterans and first responders by any licensed mental health professional in this State if the enforcement of the covenant not to compete or covenant not to solicit is likely to result in an increase in cost or difficulty for any veteran or first responder seeking mental health services.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-mentalhealth-bar"
+          },
+          {
+            "sourceId": "il-nurse-agency-ban",
+            "authorityType": "primary-law",
+            "title": "225 ILCS 510/14",
+            "citation": "225 ILCS 510/14(g).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/022505100K14.htm",
+            "proposition": "225 ILCS 510/14(g) prohibits nurse agencies from entering non-competes with nurses and certified nurse aides placed at health care facilities on a temporary basis.",
+            "verbatimQuote": "Nurse agencies are prohibited from entering into covenants not to compete with nurses and certified nurse aides if the nurse is employed, assigned, or referred by a nurse agency to a health care facility on a temporary basis or the certified nurse aide is employed, assigned, or referred by a nurse agency to a health care facility on a temporary basis.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-nurse-agency-ban"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. In Illinois it doubles as an intake screen: a prior covenant the worker signed below the earnings floors or without the 14-day notice may simply be void, and knowing which kind of legacy restraint is in play changes how a hiring employer responds to a demand letter.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice. If the clause appears, condition disclosure on a reasonable belief of breach and keep the message factual — asserting a covenant that is void under the Freedom to Work Act invites a tortious-interference claim, and a routine practice of waving void covenants at new employers is the kind of pattern the Attorney General is empowered to pursue.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but treat the answer as unsettled here. No Freedom to Work Act provision or decision under it blesses tolling, an extension stacked onto the stated term feeds the duration side of the reasonableness analysis, and a court warned away from extensive rewriting may decline to trim an open-ended extension rather than fix it. A defined, modest fixed term is the conservative review posture.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-no-wholesale-rewrite",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/35(a)",
+            "citation": "820 ILCS 90/35(a).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K35.htm",
+            "proposition": "820 ILCS 90/35(a) supports that extensive judicial reformation may be against public policy, so a court may decline to cut an open-ended tolling extension back to a reasonable term.",
+            "verbatimQuote": "Extensive judicial reformation of a covenant not to compete or a covenant not to solicit may be against the public policy of this State and a court may refrain from wholly rewriting contracts.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-no-wholesale-rewrite"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief. The Freedom to Work Act supplies no presumption of irreparable injury, so the contractual recital — plus the legitimate-business-interest facts gathered elsewhere in the agreement — is what the employer brings to the emergency-relief hearing.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "account-for-statutory-employee-fee-shifting",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.illinois.account-for-statutory-employee-fee-shifting",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Fee clause matches employee fee-shifting",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#account-for-statutory-employee-fee-shifting",
+        "requirementGuidance": "Read any attorney-fees clause against the statutory baseline: when an employer sues or arbitrates to enforce a covenant and the employee prevails, the employee recovers all costs and reasonable fees no matter what the contract says. A one-way employer-favoring fee clause misstates that baseline, and overreach has a public-enforcement price — the Attorney General can seek civil penalties for pattern-and-practice violations and has extracted settlements over covenants imposed on hourly workers.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-employee-fee-recovery",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/25",
+            "citation": "820 ILCS 90/25.",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K25.htm",
+            "proposition": "820 ILCS 90/25 supports that a prevailing employee in an employer-filed enforcement action or arbitration recovers all costs and all reasonable attorney's fees.",
+            "verbatimQuote": "in a civil action or arbitration filed by an employer (including, but not limited to, a complaint or counterclaim), if an employee prevails on a claim to enforce a covenant not to compete or a covenant not to solicit, the employee shall recover from the employer all costs and all reasonable attorney's fees regarding such claim to enforce a covenant not to compete or a covenant not to solicit, and the court or arbitrator may award appropriate relief.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-employee-fee-recovery"
+          },
+          {
+            "sourceId": "il-ag-penalties",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/30",
+            "citation": "820 ILCS 90/30(d).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K30.htm",
+            "proposition": "820 ILCS 90/30 supports Attorney General pattern-and-practice enforcement with civil penalties up to $5,000 per violation or $10,000 per repeat violation within five years.",
+            "verbatimQuote": "the Attorney General may request and the court may impose a civil penalty not to exceed $5,000 for each violation or $10,000 for each repeat violation within a 5-year period.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-ag-penalties"
+          },
+          {
+            "sourceId": "il-valvoline-settlement",
+            "authorityType": "agency-guidance",
+            "title": "Attorney General Raoul Reaches Settlement With Valvoline Over Use of Non-Compete Agreements",
+            "citation": "Ill. Att'y Gen., Settlement with Valvoline (Aug. 1, 2024).",
+            "url": "https://illinoisattorneygeneral.gov/news/story/attorney-general-raoul-reaches-settlement-with-valvoline-over-use-of-non-compete-agreements",
+            "proposition": "The Illinois Attorney General's 2024 Valvoline settlement supports that the State actively enforces against non-competes imposed on lower-wage workers.",
+            "verbatimQuote": "Raoul and the attorneys general allege Valvoline required its hourly employees to sign non-competition agreements that prohibited them from working in the oil change business at any store within 100 miles of a Valvoline location for one year after leaving Valvoline.",
+            "date": "2024-08-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-valvoline-settlement"
+          }
+        ]
+      },
+      {
+        "requirementId": "authorize-judicial-reformation-without-relying-on-it",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.illinois.authorize-judicial-reformation-without-relying-on-it",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Reformation authorized, not relied on",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#authorize-judicial-reformation-without-relying-on-it",
+        "requirementGuidance": "Two checks pull in opposite directions here, and both matter. The clause should authorize judicial modification, because whether the parties included such a clause is one of the factors an Illinois court weighs when deciding to reform rather than void. But the surrounding covenants must read as if no rescue exists: the statute warns that extensive judicial reformation may offend public policy, and the appellate court has refused to repair a patently overbroad restraint. Authorization is a tiebreaker for a close case, not a license to overdraft.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-reformation-discretion",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/35",
+            "citation": "820 ILCS 90/35.",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K35.htm",
+            "proposition": "820 ILCS 90/35 supports that reformation is discretionary, that extensive reformation may be against public policy, and that an authorization clause is one factor courts weigh.",
+            "verbatimQuote": "Extensive judicial reformation of a covenant not to compete or a covenant not to solicit may be against the public policy of this State and a court may refrain from wholly rewriting contracts. (b) In some circumstances, a court may, in its discretion, choose to reform or sever provisions of a covenant not to compete or a covenant not to solicit rather than hold such covenant unenforceable. Factors which may be considered when deciding whether such reformation is appropriate include the fairness of the restraints as originally written, whether the original restriction reflects a good-faith effort to protect a legitimate business interest of the employer, the extent of such reformation, and whether the parties included a clause authorizing such modifications in their agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-reformation-discretion"
+          },
+          {
+            "sourceId": "il-assured-patently-overbroad",
+            "authorityType": "case-law",
+            "title": "AssuredPartners, Inc. v. Schmitt",
+            "citation": "AssuredPartners, Inc. v. Schmitt, 2015 IL App (1st) 141863.",
+            "url": "https://www.courtlistener.com/opinion/3173530/assuredpartners-inc-v-schmitt/",
+            "deepLink": "https://www.courtlistener.com/opinion/3173530/assuredpartners-inc-v-schmitt/#:~:text=We%20decline%20to%20rescue%20a,covenant%20that%20is%20patently%20overbroad.",
+            "proposition": "AssuredPartners, Inc. v. Schmitt supports that an Illinois court will not rescue a patently overbroad restrictive covenant through judicial modification.",
+            "verbatimQuote": "We decline to rescue a draftor from the risks of crafting a restrictive covenant that is patently overbroad.",
+            "date": "2016-01-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-assured-patently-overbroad"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite for ordinary confidentiality, and a deliberate Restricted Period for each restraint. Bundled survival language is how an unexamined duration slips into the totality analysis, where it weakens the reasonableness case for every covenant sharing the clause.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. In Illinois, remember what a successor inherits: the statutory gates were tested when the covenant was entered, so an acquirer relying on a covenant signed below the then-current earnings floor or without the 14-day notice inherits a void instrument, not a dormant one.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law and venue",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#specify-governing-law-and-venue",
+        "requirementGuidance": "Governing law, venue, and process should point the same direction — and for an Illinois worker, test any out-of-state selection twice. From 2026, a unilateral clause applying non-Illinois law or requiring an out-of-state venue is void to the extent it diminishes the employee's rights tied to an unlawful employment practice; where that bounded rule does not reach, ordinary conflict-of-laws and public-policy analysis still can. A mutual, separately bargained clause stands on firmer ground than boilerplate.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-wta-unilateral-clauses",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 96/1-25",
+            "citation": "820 ILCS 96/1-25(b).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000960K1-25.htm",
+            "proposition": "820 ILCS 96/1-25(b) voids unilateral non-Illinois choice-of-law and out-of-state venue clauses to the extent they diminish an Illinois employee's rights related to an unlawful employment practice.",
+            "verbatimQuote": "(b) Any agreement, clause, covenant, or waiver that is a unilateral condition of employment or continued employment and requires the employee or prospective employee to waive, arbitrate, or otherwise diminish any existing or future claim, right, or benefit related to an unlawful employment practice to which the employee or prospective employee would otherwise be entitled under any provision of State or federal law, including that which purports to shorten the applicable statute of limitation, apply non-Illinois law to an Illinois employee's claim, or require a venue outside of Illinois to adjudicate an Illinois employee's claim, is against public policy, void to the extent it denies an employee or prospective employee a substantive or procedural right or remedy related to alleged unlawful employment practices, and severable from an otherwise valid and enforceable contract under this Act.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-wta-unilateral-clauses"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate with an Illinois sting: an integration clause cuts the covenant off from consideration described anywhere else. The appellate court refused to count an offer-letter signing bonus toward a later integrated restrictive covenant that never mentioned it — so when reviewing the entire-agreement clause, confirm the consideration story survives inside the four corners it creates.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-midwest-integration",
+            "authorityType": "case-law",
+            "title": "Midwest Lending Corp. v. Horton",
+            "citation": "Midwest Lending Corp. v. Horton, 2023 IL App (3d) 220132.",
+            "url": "https://www.courtlistener.com/opinion/9401053/midwest-lending-corp-v-horton/",
+            "deepLink": "https://www.courtlistener.com/opinion/9401053/midwest-lending-corp-v-horton/#:~:text=Accordingly%2C%20we%20reject%20Midwest's%20argument,agreement%20to%20the%20nonsolicitation%20provision.",
+            "proposition": "Midwest Lending Corp. v. Horton supports that a signing bonus described only in an offer letter did not provide adequate consideration for a later, integrated nonsolicitation agreement that did not tie the bonus to the covenant.",
+            "verbatimQuote": "Accordingly, we reject Midwest's argument that the “signing bonus” in the offer letter provided adequate consideration for Horton's later agreement to the nonsolicitation provision.",
+            "date": "2023-05-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-midwest-integration"
+          }
+        ]
+      },
+      {
+        "requirementId": "gate-non-compete-by-earnings-threshold",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.illinois.gate-non-compete-by-earnings-threshold",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete earnings floor",
+        "sectionId": "illinois-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#gate-non-compete-by-earnings-threshold",
+        "requirementGuidance": "Confirm the worker's actual or expected annualized earnings exceed $75,000 before reading the non-compete any further — below the floor the covenant is void however narrow it is. Count everything the Act counts: salary, bonuses, commissions, and elective deferrals such as 401(k) and HSA contributions. The floor steps up to $80,000 on January 1, 2027, then $85,000 in 2032 and $90,000 in 2037, so a covenant reviewed near a step date needs the schedule checked, not just the current number.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-noncompete-floor",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/10(a)",
+            "citation": "820 ILCS 90/10(a).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K10.htm",
+            "proposition": "820 ILCS 90/10(a) voids a covenant not to compete unless the employee's actual or expected annualized earnings exceed $75,000, an amount that escalates over time.",
+            "verbatimQuote": "No employer shall enter into a covenant not to compete with any employee unless the employee's actual or expected annualized rate of earnings exceeds $75,000 per year.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-noncompete-floor"
+          }
+        ]
+      },
+      {
+        "requirementId": "gate-non-solicit-by-earnings-threshold",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.illinois.gate-non-solicit-by-earnings-threshold",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-solicit earnings floor",
+        "sectionId": "illinois-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#gate-non-solicit-by-earnings-threshold",
+        "requirementGuidance": "Run the same check for every non-solicit — employee or customer — against the separate $45,000 floor, which climbs to $47,500 in 2027, $50,000 in 2032, and $52,500 in 2037. The two floors are independent: a worker earning between them can be bound by a non-solicit but not a non-compete, so review each covenant against its own threshold rather than clearing the agreement wholesale.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-nonsolicit-floor-gate",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/10(b)",
+            "citation": "820 ILCS 90/10(b).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K10.htm",
+            "proposition": "820 ILCS 90/10(b) voids a covenant not to solicit unless the employee's actual or expected annualized earnings exceed $45,000, an amount that escalates over time.",
+            "verbatimQuote": "No employer shall enter into a covenant not to solicit with any employee unless the employee's actual or expected annualized rate of earnings exceeds $45,000 per year.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-nonsolicit-floor-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "recite-adequate-consideration-tied-to-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.illinois.recite-adequate-consideration-tied-to-covenant",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Consideration recited and tied to the covenant",
+        "sectionId": "illinois-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#recite-adequate-consideration-tied-to-covenant",
+        "requirementGuidance": "Adequate consideration means two years of employment after signing or professional or financial benefits adequate to support the restraint — and since no employer controls whether the worker stays two years, the recited benefit is the only route the drafter can guarantee. Then check the tie: a bonus or grant described in an offer letter, handbook, or side email does not carry an integrated covenant that never identifies it as the exchange. The covenant document itself should name the benefit and say it was given for the covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-consideration-def",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/5",
+            "citation": "820 ILCS 90/5.",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K5.htm",
+            "proposition": "820 ILCS 90/5 defines adequate consideration as two years of employment after signing or other professional or financial benefits adequate to support the covenant.",
+            "verbatimQuote": "\"Adequate consideration\" means (1) the employee worked for the employer for at least 2 years after the employee signed an agreement containing a covenant not to compete or a covenant not to solicit or (2) the employer otherwise provided consideration adequate to support an agreement to not compete or to not solicit, which consideration can consist of a period of employment plus additional professional or financial benefits or merely professional or financial benefits adequate by themselves.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-consideration-def"
+          },
+          {
+            "sourceId": "il-fifield-two-years",
+            "authorityType": "case-law",
+            "title": "Fifield v. Premier Dealer Services, Inc.",
+            "citation": "Fifield v. Premier Dealer Services, Inc., 2013 IL App (1st) 120327.",
+            "url": "https://www.courtlistener.com/opinion/3148347/fifield-v-premier-dealer-services-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/3148347/fifield-v-premier-dealer-services-inc/#:~:text=Generally%2C%20Illinois%20courts%20have%20held,or%20more%20constitutes%20adequate%20consideration.",
+            "proposition": "Fifield v. Premier Dealer Services supports the two-year continued-employment benchmark for adequate consideration that the Act later codified.",
+            "verbatimQuote": "Generally, Illinois courts have held that continued employment for two years or more constitutes adequate consideration.",
+            "date": "2013-06-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-fifield-two-years"
+          },
+          {
+            "sourceId": "il-midwest-express-tie",
+            "authorityType": "case-law",
+            "title": "Midwest Lending Corp. v. Horton",
+            "citation": "Midwest Lending Corp. v. Horton, 2023 IL App (3d) 220132.",
+            "url": "https://www.courtlistener.com/opinion/9401053/midwest-lending-corp-v-horton/",
+            "deepLink": "https://www.courtlistener.com/opinion/9401053/midwest-lending-corp-v-horton/#:~:text=Accordingly%2C%20we%20reject%20Midwest's%20argument,agreement%20to%20the%20nonsolicitation%20provision.",
+            "proposition": "Midwest Lending Corp. v. Horton supports that a benefit relied on as consideration must be expressly tied to the covenant in the covenant document itself.",
+            "verbatimQuote": "Accordingly, we reject Midwest's argument that the “signing bonus” in the offer letter provided adequate consideration for Horton's later agreement to the nonsolicitation provision.",
+            "date": "2023-05-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-midwest-express-tie"
+          }
+        ]
+      },
+      {
+        "requirementId": "recite-legitimate-business-interest-under-totality-test",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.illinois.recite-legitimate-business-interest-under-totality-test",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Business interest recited and matched to scope",
+        "sectionId": "illinois-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#recite-legitimate-business-interest-under-totality-test",
+        "requirementGuidance": "Look for recitals that name the interest each covenant protects and connect the restraint's time, place, and scope to it. Illinois judges the interest on the totality of the facts and circumstances — customer-relationship exposure, how durable those relationships are, confidential-information access, and the breadth of the restriction — with no single factor controlling, so an agreement that assembles those facts on its face argues its own reasonableness before anyone files anything.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-totality-codified",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/7",
+            "citation": "820 ILCS 90/7.",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K7.htm",
+            "proposition": "820 ILCS 90/7 codifies the totality-of-the-circumstances test for the legitimate business interest.",
+            "verbatimQuote": "In determining the legitimate business interest of the employer, the totality of the facts and circumstances of the individual case shall be considered.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-totality-codified"
+          },
+          {
+            "sourceId": "il-reliable-fire-totality",
+            "authorityType": "case-law",
+            "title": "Reliable Fire Equipment Co. v. Arredondo",
+            "citation": "Reliable Fire Equipment Co. v. Arredondo, 2011 IL 111871.",
+            "url": "https://www.courtlistener.com/opinion/3135645/reliable-fire-equipment-co-v-arredondo/",
+            "deepLink": "https://www.courtlistener.com/opinion/3135645/reliable-fire-equipment-co-v-arredondo/#:~:text=Rather%2C%20we%20adopt%20the%20position,circumstances%20of%20the%20individual%20case.",
+            "proposition": "Reliable Fire Equipment Co. v. Arredondo supports that whether a legitimate business interest exists is based on the totality of the facts and circumstances of the individual case rather than a rigid test.",
+            "verbatimQuote": "Rather, we adopt the position of Justice Hudson's special concurrence, which is: whether a legitimate business interest exists is based on the totality of the facts and circumstances of the individual case.",
+            "date": "2011-12-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-reliable-fire-totality"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-covenants-for-protected-worker-categories",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.illinois.exclude-covenants-for-protected-worker-categories",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No covenants for protected worker categories",
+        "sectionId": "illinois-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#exclude-covenants-for-protected-worker-categories",
+        "requirementGuidance": "The agreement must not place a covenant on a worker Illinois has put off-limits, because no drafting cures these: construction workers outside the management, design, sales, and owner carve-out; broadcasters, for post-employment restraints; nurses and certified nurse aides placed by an agency on a temporary basis; public-sector workers under a covered collective bargaining agreement, for non-competes; and, conditionally, mental-health professionals serving veterans and first responders under covenants entered after January 1, 2025. Check industry and role before scope — these bars sit upstream of every reasonableness question.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-construction-void",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/10(e)",
+            "citation": "820 ILCS 90/10(e).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K10.htm",
+            "proposition": "820 ILCS 90/10(e) voids both covenant types for construction workers, with a carve-out for management, engineering or architectural, design, sales, and ownership roles.",
+            "verbatimQuote": "A covenant not to compete or a covenant not to solicit is void and illegal with respect to individuals employed in construction, regardless of whether an individual is covered by a collective bargaining agreement. This subsection (e) does not apply to construction employees who primarily perform management, engineering or architectural, design, or sales functions for the employer or who are shareholders, partners, or owners in any capacity of the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-construction-void"
+          },
+          {
+            "sourceId": "il-broadcast-ban",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 17/10",
+            "citation": "820 ILCS 17/10.",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000170K10.htm",
+            "proposition": "820 ILCS 17/10 bars post-employment geographic/time restraints for broadcasters while preserving in-term and breach enforcement.",
+            "verbatimQuote": "No broadcasting industry employer may require in an employment contract that an employee or prospective employee refrain from obtaining employment in a specific geographic area for a specific period of time after termination of employment with that broadcasting industry employer. (b) This Section does not prevent the enforcement of a covenant not to compete during the term of an employment contract or against an employee who breaches an employment contract.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-broadcast-ban"
+          },
+          {
+            "sourceId": "il-nurse-ban",
+            "authorityType": "primary-law",
+            "title": "225 ILCS 510/14",
+            "citation": "225 ILCS 510/14(g).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/022505100K14.htm",
+            "proposition": "225 ILCS 510/14(g) prohibits nurse agencies from non-competes with temporarily placed nurses and certified nurse aides.",
+            "verbatimQuote": "Nurse agencies are prohibited from entering into covenants not to compete with nurses and certified nurse aides if the nurse is employed, assigned, or referred by a nurse agency to a health care facility on a temporary basis or the certified nurse aide is employed, assigned, or referred by a nurse agency to a health care facility on a temporary basis.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-nurse-ban"
+          }
+        ]
+      },
+      {
+        "requirementId": "pay-continued-compensation-for-covid-style-layoffs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.illinois.pay-continued-compensation-for-covid-style-layoffs",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Layoff pay condition",
+        "sectionId": "illinois-statutory-gates",
+        "itemNumber": "19.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#pay-continued-compensation-for-covid-style-layoffs",
+        "requirementGuidance": "If the worker was terminated, furloughed, or laid off in pandemic-related or similar business circumstances, enforcement requires paying base-salary-equivalent compensation through the restricted period, reduced by what the worker earns elsewhere during it. An agreement meant to survive a layoff should say who pays, on what schedule, and how outside earnings are reported and offset — a covenant asserted after such a layoff without the pay component fails as to that worker.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-covid-pay",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/10(c)",
+            "citation": "820 ILCS 90/10(c).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K10.htm",
+            "proposition": "820 ILCS 90/10(c) conditions enforcement against a COVID-style layoff on base-salary-equivalent compensation through the enforcement period, minus subsequent earnings.",
+            "verbatimQuote": "No employer shall enter into a covenant not to compete or a covenant not to solicit with any employee who an employer terminates or furloughs or lays off as the result of business circumstances or governmental orders related to the COVID-19 pandemic or under circumstances that are similar to the COVID-19 pandemic, unless enforcement of the covenant not to compete includes compensation equivalent to the employee's base salary at the time of termination for the period of enforcement minus compensation earned through subsequent employment during the period of enforcement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/illinois#src-il-covid-pay"
+          }
+        ]
+      }
+    ]
+  }
+}

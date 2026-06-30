@@ -1,0 +1,1335 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/utah",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/utah.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/utah",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/utah/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/utah/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "utah",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Utah",
+      "description": "A clause-by-clause reviewer checklist for Utah employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Post-Employment Restrictions Act's one-year cap, employer fee-shifting, and the 2026 healthcare and veterinarian bans.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Utah",
+      "coverage": "Utah (US)",
+      "lastReviewed": "2026-06-11",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 47,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "utah-statutory-gates",
+        "label": "Utah statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity that actually employs the worker. Utah's statute regulates agreements between an employer and an employee, and its fee-shifting liability lands on the employer that pursues a failed enforcement action — a covenant papered with a parent or affiliate that never employed the worker muddies both who is bound and who bears that exposure.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#identify-effective-date",
+        "requirementGuidance": "The date the covenant was entered does real sorting work in Utah: the one-year cap reaches non-competes entered on or after May 10, 2016, and the healthcare and veterinarian bans attach to agreements entered on or after May 6, 2026. An undated covenant leaves unclear which regime it answers to — pin the execution date down before anything else.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-hc-ban-cover",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-201",
+            "citation": "Utah Code Ann. § 34-51-201(1)(b).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html",
+            "proposition": "Utah Code § 34-51-201 supports the date-sensitivity of the review: the healthcare non-compete ban attaches to agreements entered on or after May 6, 2026.",
+            "verbatimQuote": "On or after May 6, 2026, a person and a healthcare worker may not enter into a healthcare non-compete agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-hc-ban-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#identify-employee-title",
+        "requirementGuidance": "Record the role with its actual duties, not just the title. Utah's healthcare-worker ban is license-based and functional — a license-holder whose job does not require practicing under that license falls outside the protected class — so what the worker actually does can decide whether a 2026-or-later covenant is banned outright. Title and duties also feed the common-law question of what protectable interest the worker really touches.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-hc-worker-def-cover",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-102",
+            "citation": "Utah Code Ann. § 34-51-102(5)(b).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S102.html",
+            "proposition": "Utah Code § 34-51-102 supports the functional limit on the healthcare-worker class: a license-holder whose role does not require practicing under the license is excluded.",
+            "verbatimQuote": "“Healthcare worker” does not include an individual: (i) who holds a license described in Subsection (5)(a)(i) through (xxxiii) ; and (ii) whose employment or contractual agreement does not require or involve practicing under the scope of the individual's license.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-hc-worker-def-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated. Restrictive-covenant outcomes swing hard on which law applies: the one-year cap, the void consequence, and the fee-shifting penalty all belong to Utah's statute, so a reviewer needs to know up front whether this agreement claims Utah law or is trying to route around it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#define-confidential-information",
+        "requirementGuidance": "Utah leaves confidentiality agreements outside the statutory non-compete definition, so this clause escapes the one-year cap — but only as long as it stays a confidentiality clause. Test the definition for breadth: language sweeping in the worker's general know-how or everything learned on the job edges the clause toward a work ban a court could recharacterize as a non-compete, cap and all.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-carve-exclusion-defs",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-102",
+            "citation": "Utah Code Ann. § 34-51-102(8)(b).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S102.html",
+            "proposition": "Utah Code § 34-51-102 supports the exclusion of nonsolicitation, nondisclosure, and confidentiality agreements from the statutory non-compete definition and its one-year cap.",
+            "verbatimQuote": "“Non-compete agreement” does not include: (i) a nonsolicitation agreement; (ii) a nondisclosure agreement; or (iii) a confidentiality agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-carve-exclusion-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#define-trade-secrets",
+        "requirementGuidance": "Keep the trade-secret definition aligned with Utah's Uniform Trade Secrets Act: independent economic value from secrecy plus reasonable efforts to keep the information secret. A definition that annexes ordinary know-how will not qualify under the statute, and in Utah the trade-secret route is one of the main lawful substitutes for a non-compete — it deserves to be drafted to survive.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-trade-secret-defs",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 13-24-2",
+            "citation": "Utah Code Ann. § 13-24-2(4).",
+            "url": "https://le.utah.gov/xcode/Title13/Chapter24/13-24-S2.html",
+            "proposition": "Utah Code § 13-24-2 supports the trade-secret definition requiring independent economic value from secrecy and reasonable secrecy efforts.",
+            "verbatimQuote": "derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and (b) is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-trade-secret-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "cap-restricted-period-at-one-year",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.utah.cap-restricted-period-at-one-year",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period capped at one year",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#cap-restricted-period-at-one-year",
+        "requirementGuidance": "For a non-compete entered on or after May 10, 2016, the restricted period must not run more than one year from the day employment ends — and a covenant that violates the cap is void, not trimmed. Check the defined Restricted Period and every covenant that references it: an eighteen-month or two-year non-compete term is a nullity in Utah, while non-solicits and NDAs sit outside the statutory definition and may run longer under common-law reasonableness.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-one-year-defs",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-201",
+            "citation": "Utah Code Ann. § 34-51-201(1)(a).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html",
+            "proposition": "Utah Code § 34-51-201 supports the one-year statutory ceiling on post-employment non-competes, measured from the day employment ends.",
+            "verbatimQuote": "an employer and an employee may not enter into a non-compete agreement for a period of more than one year from the day on which the employee is no longer employed by the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-one-year-defs"
+          },
+          {
+            "sourceId": "ut-void-defs",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-201",
+            "citation": "Utah Code Ann. § 34-51-201(1)(c).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html",
+            "proposition": "Utah Code § 34-51-201 supports voiding any non-compete that exceeds the one-year limit.",
+            "verbatimQuote": "A non-compete agreement that violates this Subsection (1) is void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-void-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#define-restricted-territory",
+        "requirementGuidance": "Tie the geography to the territory the business actually serves — that is Utah's measure. A purely local employer cannot lock down the state, while a genuinely national operation can support a national restriction, but only if the employer can prove the matching footprint. A territory drawn from ambition rather than the actual market is where reasonableness challenges start.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-geo-defs",
+            "authorityType": "case-law",
+            "title": "England Logistics, Inc. v. Kelle's Transport Service, LLC",
+            "citation": "England Logistics, Inc. v. Kelle's Transp. Serv., LLC, 2024 UT App 137.",
+            "url": "https://www.courtlistener.com/opinion/10141125/england-logistics-v-kelles-transport-service/",
+            "deepLink": "https://www.courtlistener.com/opinion/10141125/england-logistics-v-kelles-transport-service/#:~:text=a%20restrictive%20covenant%20is%20generally,to%20which%20the%20business%20extends.",
+            "proposition": "England Logistics supports tying enforceable geographic scope to the area the business actually serves.",
+            "verbatimQuote": "a restrictive covenant is generally enforceable if it specifies an area no greater than that to which the business extends.",
+            "date": "2024-10-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-geo-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the worker actually served or dealt with during a stated look-back window. Utah's common law enforces restraints only as protection for goodwill and other legitimate interests, and a customer class covering the employer's entire book reads as a restraint on competition itself rather than on the relationships the worker could actually carry away.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing worker actually worked with or supervised during the look-back window. Utah's statute does not cap non-solicits, which makes drafting discipline the only governor: a workforce-wide hiring ban dressed as a non-solicit is exactly the kind of clause a court could treat as a disguised non-compete.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#define-protected-interests",
+        "requirementGuidance": "Name the interests with specificity — goodwill, confidential information, extraordinary training. Utah enforces covenants only when carefully drawn to protect the employer's legitimate interests rather than to shield it from ordinary competition, so a recital that names a real, provable interest is doing enforceability work, not decoration.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-robbins-defs",
+            "authorityType": "case-law",
+            "title": "Robbins v. Finlay",
+            "citation": "Robbins v. Finlay, 645 P.2d 623 (Utah 1982).",
+            "url": "https://www.courtlistener.com/opinion/1231169/robbins-v-finlay/",
+            "deepLink": "https://www.courtlistener.com/opinion/1231169/robbins-v-finlay/#:~:text=Covenants%20not%20to%20compete%20are,legitimate%20interests%20of%20the%20employer.",
+            "proposition": "Robbins v. Finlay supports limiting enforceable covenants to those carefully drawn to protect the employer's legitimate interests, not ordinary competition.",
+            "verbatimQuote": "Covenants not to compete are enforceable if carefully drawn to protect only the legitimate interests of the employer.",
+            "date": "1982-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-robbins-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity in concrete terms. Utah's statutory non-compete concept is keyed to providing a product, process, or service similar to the employer's — a Competitive Business definition that balloons past what the employer actually offers both widens the restraint the common law must bless and invites the overbreadth finding the void rule punishes.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-noncompete-def-defs",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-102",
+            "citation": "Utah Code Ann. § 34-51-102(8)(a).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S102.html",
+            "proposition": "Utah Code § 34-51-102 supports the statutory non-compete definition keyed to providing a product, process, or service similar to the employer's.",
+            "verbatimQuote": "“Non-compete agreement” means an agreement, written or oral, between an employer and employee under which the employee agrees that on or after the day on which the employer no longer employs the employee, the employee, either alone or as an employee of another person, will not compete with the employer in providing a product, process, or service that is similar to the employer's product, process, or service.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-noncompete-def-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. A clause that technically forbids holding index funds or a few public shares in the industry restrains far more than any goodwill interest can justify, and gratuitous overbreadth is what Utah's careful-drawing standard exists to catch.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#define-passive-public-holdings",
+        "requirementGuidance": "A drafting convenience, not a requirement — many agreements inline the carve-out language instead of defining a capitalized term. If the term appears, confirm its ownership percentage matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#define-solicit",
+        "requirementGuidance": "Pin the term to conduct the worker initiates. Because Utah exempts nonsolicitation agreements from the one-year cap, the definition of soliciting is what keeps the clause inside that favored category — a version that also captures passively receiving inquiries or serving customers who call first behaves like a restraint on doing business, and stretches the exemption it depends on.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-carve-exclusion-defs",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-102",
+            "citation": "Utah Code Ann. § 34-51-102(8)(b).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S102.html",
+            "proposition": "Utah Code § 34-51-102 supports the exclusion of nonsolicitation, nondisclosure, and confidentiality agreements from the statutory non-compete definition and its one-year cap.",
+            "verbatimQuote": "“Non-compete agreement” does not include: (i) a nonsolicitation agreement; (ii) a nondisclosure agreement; or (iii) a confidentiality agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-carve-exclusion-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger covers resignation, dismissal, and expiration of a fixed term the same way. Utah's one-year ceiling is measured from the day the employee is no longer employed by the employer, so the definition of that day is the anchor of the whole duration analysis — ambiguity here is ambiguity about when the covenant dies.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-one-year-defs",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-201",
+            "citation": "Utah Code Ann. § 34-51-201(1)(a).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html",
+            "proposition": "Utah Code § 34-51-201 supports the one-year statutory ceiling on post-employment non-competes, measured from the day employment ends.",
+            "verbatimQuote": "an employer and an employee may not enter into a non-compete agreement for a period of more than one year from the day on which the employee is no longer employed by the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-one-year-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#acknowledge-timing",
+        "requirementGuidance": "Utah is generous on consideration: an offer of employment, including continued at-will employment, is settled as sufficient even when the worker signs after starting — no bonus or promotion needed. The acknowledgement should still pin down when the covenant was signed relative to hire, because the May 10, 2016 and May 6, 2026 statutory lines turn on when the agreement was entered, and the good-faith prong watches how the signing came about.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-consideration-timing",
+            "authorityType": "case-law",
+            "title": "England Logistics, Inc. v. Kelle's Transport Service, LLC",
+            "citation": "England Logistics, Inc. v. Kelle's Transp. Serv., LLC, 2024 UT App 137.",
+            "url": "https://www.courtlistener.com/opinion/10141125/england-logistics-v-kelles-transport-service/",
+            "deepLink": "https://www.courtlistener.com/opinion/10141125/england-logistics-v-kelles-transport-service/#:~:text=Regardless%20of%20what%20other%20jurisdictions,consideration%20for%20a%20noncompete%20agreement.",
+            "proposition": "England Logistics supports the settled Utah rule that an offer of employment can constitute consideration for a non-compete.",
+            "verbatimQuote": "Regardless of what other jurisdictions have held, it’s settled in Utah that an offer of employment can constitute consideration for a noncompete agreement.",
+            "date": "2024-10-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-consideration-timing"
+          },
+          {
+            "sourceId": "ut-allen-timing",
+            "authorityType": "case-law",
+            "title": "Allen v. Rose Park Pharmacy",
+            "citation": "Allen v. Rose Park Pharmacy, 237 P.2d 823 (Utah 1951).",
+            "url": "https://www.courtlistener.com/opinion/1199226/allen-v-rose-park-pharmacy/",
+            "deepLink": "https://www.courtlistener.com/opinion/1199226/allen-v-rose-park-pharmacy/#:~:text=a%20contract%20does%20not%20lack,obligation%20of%20the%20other%20party.",
+            "proposition": "Allen v. Rose Park Pharmacy supports upholding an at-will covenant on the reasoning that harsh or unequal terms do not defeat mutuality.",
+            "verbatimQuote": "a contract does not lack mutuality merely because its terms are harsh or its obligations unequal, or because every obligation of one party is not met by an equivalent counter obligation of the other party.",
+            "date": "1951-11-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-allen-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Utah statute demands it, but the common-law test has a live good-faith prong — the Court of Appeals flagged a quick hire-and-fire used solely to bind a worker to a long covenant as exactly the kind of conduct that prong could catch. A genuine opportunity to consult counsel, documented, is cheap evidence the negotiation was straight.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-good-faith-timing",
+            "authorityType": "case-law",
+            "title": "England Logistics, Inc. v. Kelle's Transport Service, LLC",
+            "citation": "England Logistics, Inc. v. Kelle's Transp. Serv., LLC, 2024 UT App 137.",
+            "url": "https://www.courtlistener.com/opinion/10141125/england-logistics-v-kelles-transport-service/",
+            "deepLink": "https://www.courtlistener.com/opinion/10141125/england-logistics-v-kelles-transport-service/#:~:text=Addressing%20the%20employee%E2%80%99s%20concerns%20about,to%20a%20long%20restrictive%20covenant.",
+            "proposition": "England Logistics supports treating the good-faith prong as a meaningful check on how a covenant was extracted.",
+            "verbatimQuote": "Addressing the employee’s concerns about potential inequities, the court reasoned that the good faith prong of the noncompete analysis might be implicated if an employer quickly hires and fires an at will employee with the sole intent of binding that employee to a long restrictive covenant.",
+            "date": "2024-10-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-good-faith-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret obligations should last as long as secrecy does — that is how federal law defines the right, and Utah's own trade-secrets act works the same way. In a state that caps the non-compete at a single year, the perpetual trade-secret obligation is the long-tail protection the employer actually keeps; an expiry date on it gives away the one covenant the legislature left untouched.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-dtsa-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-dtsa-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term, separate from the perpetual trade-secret track. Utah exempts confidentiality agreements from the one-year cap, but they still answer to common-law reasonableness — and a perpetual lid on non-secret information is the sort of overreach that invites a court to read the clause as a disguised restraint on working.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in Utah: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret suit against the worker. Because trade-secret protection and tight non-solicits carry so much of the load under Utah's capped-non-compete regime, giving away those remedies is an unforced error.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-dtsa-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-dtsa-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech in Utah exactly as everywhere else, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-nlra-section-7",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-nlra-section-7"
+          },
+          {
+            "sourceId": "ut-mclaren-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-mclaren-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. No confidentiality clause can lawfully prevent compelled disclosure, and in Utah a clause that even purports to is one more data point for reading the agreement as overreaching when the rest of it comes under review.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. With Utah pushing employers toward trade-secret and confidentiality protection instead of long covenants, the certification is the cleanest contemporaneous evidence if protected material later surfaces at a competitor — and it matters most in exactly the cases where the one-year non-compete has already expired.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and comparatively safe ground in Utah: nonsolicitation agreements are expressly outside the statutory non-compete definition, so the one-year cap does not bind this clause. Common-law reasonableness still does — keep it inside the Covered Employees class and a stated period, and remember that a failed attempt to enforce even a non-solicit triggers the statute's fee-shifting.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-carve-exclusion-cov",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-102",
+            "citation": "Utah Code Ann. § 34-51-102(8)(b).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S102.html",
+            "proposition": "Utah Code § 34-51-102 supports the exclusion of nonsolicitation agreements from the statutory non-compete definition and the one-year cap.",
+            "verbatimQuote": "“Non-compete agreement” does not include: (i) a nonsolicitation agreement; (ii) a nondisclosure agreement; or (iii) a confidentiality agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-carve-exclusion-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#permit-customer-nonsolicit",
+        "requirementGuidance": "Also outside the cap, and often the employer's best protection once the non-compete year runs out. The trade-offs are the same: the clause must stay reasonable under the common law, scoped to actual customer contacts — and if the employer sues on it and loses, the statute hands the employee's arbitration costs, attorney fees, and actual damages to the employer.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-fee-shift-cov",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-301",
+            "citation": "Utah Code Ann. § 34-51-301.",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S301.html",
+            "proposition": "Utah Code § 34-51-301 supports employer liability for the employee's arbitration costs, attorney fees, court costs, and actual damages when an enforced covered clause is found unenforceable.",
+            "verbatimQuote": "the employer is liable for the employee's: (1) costs associated with arbitration; (2) attorney fees and court costs; and (3) actual damages.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-fee-shift-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they call first — a restraint on doing business rather than on chasing it. That puts it close to the statutory definition of competing by providing a similar product or service, and a clause the statute would call a non-compete answers to the one-year cap regardless of the heading it sits under. Treat inclusion as a deliberate risk decision.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-noncompete-def-cov",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-102",
+            "citation": "Utah Code Ann. § 34-51-102(8)(a).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S102.html",
+            "proposition": "Utah Code § 34-51-102 supports the statutory non-compete definition that a non-dealing clause can fall into regardless of its label.",
+            "verbatimQuote": "“Non-compete agreement” means an agreement, written or oral, between an employer and employee under which the employee agrees that on or after the day on which the employer no longer employs the employee, the employee, either alone or as an employee of another person, will not compete with the employer in providing a product, process, or service that is similar to the employer's product, process, or service.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-noncompete-def-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#permit-non-compete",
+        "requirementGuidance": "If this clause appears, it carries a two-layer burden: the statutory ceiling of one year from separation, and the full common-law reasonableness test — consideration, good faith, a goodwill interest, and reasonable time-and-area limits. Passing one layer does not cure a defect in the other, so route the review through the Utah statutory gates at the end of this checklist and then test reasonableness on the facts.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-one-year-cov",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-201",
+            "citation": "Utah Code Ann. § 34-51-201(1)(a).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html",
+            "proposition": "Utah Code § 34-51-201 supports the one-year statutory ceiling that frames any included non-compete.",
+            "verbatimQuote": "an employer and an employee may not enter into a non-compete agreement for a period of more than one year from the day on which the employee is no longer employed by the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-one-year-cov"
+          },
+          {
+            "sourceId": "ut-rose-park-cov",
+            "authorityType": "case-law",
+            "title": "England Logistics, Inc. v. Kelle's Transport Service, LLC",
+            "citation": "England Logistics, Inc. v. Kelle's Transp. Serv., LLC, 2024 UT App 137.",
+            "url": "https://www.courtlistener.com/opinion/10141125/england-logistics-v-kelles-transport-service/",
+            "deepLink": "https://www.courtlistener.com/opinion/10141125/england-logistics-v-kelles-transport-service/#:~:text=These%20requirements%20are%3A%20(1)%20the,as%20to%20time%20and%20area.",
+            "proposition": "England Logistics supports the four-part common-law test every Utah non-compete must satisfy alongside the statutory cap.",
+            "verbatimQuote": "These requirements are: (1) the covenant must “be supported by consideration,” (2) “no bad faith” was involved “in the negotiation of the contract,” (3) the covenant must “be necessary to protect the goodwill of the business,” and (4) the covenant must “be reasonable in its restrictions as to time and area.",
+            "date": "2024-10-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-rose-park-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, the covenant should bind those instead of leaning on the open-ended Competitive Business definition. Utah's case law rewards exactly this: covenants survive when carefully drawn to the employer's legitimate interests, and a named list is the most legible form of careful drawing a reviewer will see.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-robbins-cov",
+            "authorityType": "case-law",
+            "title": "Robbins v. Finlay",
+            "citation": "Robbins v. Finlay, 645 P.2d 623 (Utah 1982).",
+            "url": "https://www.courtlistener.com/opinion/1231169/robbins-v-finlay/",
+            "deepLink": "https://www.courtlistener.com/opinion/1231169/robbins-v-finlay/#:~:text=Covenants%20not%20to%20compete%20are,legitimate%20interests%20of%20the%20employer.",
+            "proposition": "Robbins v. Finlay supports narrowing a covenant to the employer's legitimate interests as the path to enforceability.",
+            "verbatimQuote": "Covenants not to compete are enforceable if carefully drawn to protect only the legitimate interests of the employer.",
+            "date": "1982-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-robbins-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares a stated period — and watch the breadth: a restriction on investing in any similar business operates as a restraint on competing, which in Utah drags the clause toward the capped, void-if-over-length category.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in Utah as everywhere — and an employer that tries to enforce an overreaching severance-package clause invites the same fee-shifting calculus the rest of this checklist tracks.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-mclaren-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-mclaren-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state Utah's rule plainly: for agreements entered on or after May 6, 2026, a healthcare non-compete with a healthcare worker is off the table entirely, and a healthcare nonsolicitation agreement cannot stop the departing worker from telling patients where they currently work or will work next. Coverage turns on whether the role requires practicing under one of the listed clinical licenses — audit physician, nursing, and allied-clinical agreements against the gate at the end of this checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-hc-ban-phys",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-201",
+            "citation": "Utah Code Ann. § 34-51-201(1)(b).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html",
+            "proposition": "Utah Code § 34-51-201 supports the prohibition on healthcare non-compete agreements entered on or after May 6, 2026.",
+            "verbatimQuote": "On or after May 6, 2026, a person and a healthcare worker may not enter into a healthcare non-compete agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-hc-ban-phys"
+          },
+          {
+            "sourceId": "ut-patient-comms-phys",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-203",
+            "citation": "Utah Code Ann. § 34-51-203(1).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S203.html",
+            "proposition": "Utah Code § 34-51-203 supports the rule that a healthcare nonsolicitation agreement cannot bar a worker from informing patients of a current or future place of employment.",
+            "verbatimQuote": "On or after May 6, 2026, a person and a healthcare worker may not enter into nonsolicitation agreement that prevents a healthcare worker from informing a patient of any of the following: (a) the healthcare worker's current place of employment; or (b) the healthcare worker's future place of employment.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-patient-comms-phys"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. It earns its keep on Utah intake too: an incoming covenant signed elsewhere may exceed what Utah's cap and reasonableness rules would tolerate, and the representation surfaces that conflict before the first customer call rather than in discovery.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice with a Utah-sized hazard attached: an employer that escalates from a warning letter to arbitration or suit on a covenant that turns out to be unenforceable pays the employee's costs, fees, and actual damages. If the clause appears, condition any third-party notice on a covenant that actually survives the one-year cap and the reasonableness test — a void covenant is a poor thing to wave at a new employer.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-fee-shift-notice",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-301",
+            "citation": "Utah Code Ann. § 34-51-301.",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S301.html",
+            "proposition": "Utah Code § 34-51-301 supports the fee, cost, and damages exposure that follows a failed enforcement effort, counseling restraint in third-party notices.",
+            "verbatimQuote": "the employer is liable for the employee's: (1) costs associated with arbitration; (2) attorney fees and court costs; and (3) actual damages.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-fee-shift-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but in Utah, flag any extension mechanism on the non-compete as a void risk, not a safety net. The one-year cap is measured from the day employment ends, not from when the worker stops competing, so a tolling or extension-on-breach clause that pushes the restriction past the one-year mark collides with the statute's void consequence. Whether a court would equitably toll a covenant that stays inside the cap is an open question no staged Utah case resolves.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-toll-one-year",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-201",
+            "citation": "Utah Code Ann. § 34-51-201(1)(a).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html",
+            "proposition": "Utah Code § 34-51-201 supports measuring the one-year limit from the day employment ends, constraining any tolling or extension mechanism.",
+            "verbatimQuote": "an employer and an employee may not enter into a non-compete agreement for a period of more than one year from the day on which the employee is no longer employed by the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-toll-one-year"
+          },
+          {
+            "sourceId": "ut-toll-void",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-201",
+            "citation": "Utah Code Ann. § 34-51-201(1)(c).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html",
+            "proposition": "Utah Code § 34-51-201 supports voiding any covenant that exceeds one year, which an extension-on-breach clause risks triggering.",
+            "verbatimQuote": "A non-compete agreement that violates this Subsection (1) is void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-toll-void"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief. In Utah the strongest injunction story often runs through trade secrets rather than the covenant itself: the state trade-secrets act independently authorizes enjoining actual or threatened misappropriation, which survives long after the one-year non-compete window closes.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-utsa-injunction",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 13-24-3",
+            "citation": "Utah Code Ann. § 13-24-3(1).",
+            "url": "https://le.utah.gov/xcode/Title13/Chapter24/13-24-S3.html",
+            "proposition": "Utah Code § 13-24-3 supports enjoining actual or threatened trade-secret misappropriation independent of any covenant.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-utsa-injunction"
+          }
+        ]
+      },
+      {
+        "requirementId": "account-for-employer-fee-exposure-on-failed-enforcement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.utah.account-for-employer-fee-exposure-on-failed-enforcement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Fee exposure if enforcement fails",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#account-for-employer-fee-exposure-on-failed-enforcement",
+        "requirementGuidance": "Read any fee clause against the statutory baseline Utah has already set: an employer that seeks arbitration or files suit to enforce a covenant later held unenforceable is liable for the employee's arbitration costs, attorney fees and court costs, and actual damages — whatever the contract says, and for NDAs and non-solicits as well as non-competes. A one-way employer fee provision cannot displace that rule; check that any fee-shifting is mutual and prevailing-party based, and treat the statute as a standing reason to vet enforceability before demanding anything.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-fee-shift-remedies",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-301",
+            "citation": "Utah Code Ann. § 34-51-301.",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S301.html",
+            "proposition": "Utah Code § 34-51-301 supports the employer's liability for the employee's arbitration costs, attorney fees, court costs, and actual damages on a failed enforcement action.",
+            "verbatimQuote": "the employer is liable for the employee's: (1) costs associated with arbitration; (2) attorney fees and court costs; and (3) actual damages.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-fee-shift-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-within-the-one-year-cap-rather-than-rely-on-reformation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.utah.draft-within-the-one-year-cap-rather-than-rely-on-reformation",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Do not count on court rescue",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#draft-within-the-one-year-cap-rather-than-rely-on-reformation",
+        "requirementGuidance": "Read the savings clause as a risk signal, not a backstop. For duration, the statute makes an over-length non-compete void rather than voidable — strong textual ground for concluding a court cannot trim a two-year term to a lawful twelve months. For scope, Utah's common law has historically preferred enforcing only covenants carefully drawn at the outset over rewriting broad ones, and no modern Utah Supreme Court decision reconciles blue-penciling with the 2016 statute. An employer that drafts broad, banks on judicial repair, and loses also pays the employee's fees and damages. Expect covenants sized correctly from day one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-void-sev",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-201",
+            "citation": "Utah Code Ann. § 34-51-201(1)(c).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html",
+            "proposition": "Utah Code § 34-51-201 supports treating an over-length covenant as void, which weighs against judicial narrowing of duration.",
+            "verbatimQuote": "A non-compete agreement that violates this Subsection (1) is void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-void-sev"
+          },
+          {
+            "sourceId": "ut-careful-drafting-sev",
+            "authorityType": "case-law",
+            "title": "Robbins v. Finlay",
+            "citation": "Robbins v. Finlay, 645 P.2d 623 (Utah 1982).",
+            "url": "https://www.courtlistener.com/opinion/1231169/robbins-v-finlay/",
+            "deepLink": "https://www.courtlistener.com/opinion/1231169/robbins-v-finlay/#:~:text=Covenants%20not%20to%20compete%20are,legitimate%20interests%20of%20the%20employer.",
+            "proposition": "Robbins v. Finlay supports the common-law preference for enforcing only carefully drawn covenants rather than rewriting overbroad ones.",
+            "verbatimQuote": "Covenants not to compete are enforceable if carefully drawn to protect only the legitimate interests of the employer.",
+            "date": "1982-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-careful-drafting-sev"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable, and Utah's regime makes the clocks genuinely different: the non-compete dies at most one year after separation, trade-secret obligations run with secrecy, and non-solicits and confidentiality terms follow whatever reasonable period they state. A bundled survival clause that extends everything alike is where an over-length non-compete term hides.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-one-year-survival",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-201",
+            "citation": "Utah Code Ann. § 34-51-201(1)(a).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html",
+            "proposition": "Utah Code § 34-51-201 supports the one-year-from-separation outer bound that per-covenant survival drafting has to respect for the non-compete.",
+            "verbatimQuote": "an employer and an employee may not enter into a non-compete agreement for a period of more than one year from the day on which the employee is no longer employed by the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-one-year-survival"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. Note the Utah wrinkle for deal lawyers: an assignment moves the covenant as it stands — capped at one year from the worker's separation and still subject to the reasonableness test — while a covenant genuinely arising out of the sale of a business, where the worker takes value from the sale, can sit on the separate sale-of-business footing reviewed in the gates below.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law, venue, dispute process",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#specify-governing-law-and-venue",
+        "requirementGuidance": "The agreement should specify governing law, venue, and dispute process. For a Utah workforce, scrutinize any clause that selects another state's law: the practical aim is usually to escape the one-year cap and the fee-shifting regime, and a reviewer should price in the risk that a court treats the cap and the void rule as policy a foreign-law clause cannot wash out. Arbitration clauses deserve a second look too — the statute's fee-shifting expressly covers the employee's arbitration costs when enforcement fails.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate with a Utah trap inside: the Act's rules attach based on when an agreement is entered, so a routine amendment or renewal that re-executes the covenant can pull an older agreement into the current regime — including the healthcare and veterinarian bans for clinical staff signed up again on or after May 6, 2026. Review the amendment mechanics so a template refresh does not quietly re-paper a banned covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-hc-ban-ea",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-201",
+            "citation": "Utah Code Ann. § 34-51-201(1)(b).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html",
+            "proposition": "Utah Code § 34-51-201 supports the entered-on-or-after trigger that amendment and renewal mechanics can re-fire.",
+            "verbatimQuote": "On or after May 6, 2026, a person and a healthcare worker may not enter into a healthcare non-compete agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-hc-ban-ea"
+          }
+        ]
+      },
+      {
+        "requirementId": "satisfy-rose-park-reasonableness-test",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.utah.satisfy-rose-park-reasonableness-test",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Common-law reasonableness test",
+        "sectionId": "utah-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#satisfy-rose-park-reasonableness-test",
+        "requirementGuidance": "Run every non-compete through Utah's four-part common-law test, because clearing the one-year cap settles nothing else: the covenant needs consideration, a negotiation free of bad faith, necessity for protecting the goodwill of the business, and reasonable time-and-area limits. Reasonableness is decided case by case on the particular facts, so demand the file support each prong — what interest is protected, how the geography maps to the actual market, and how the signing came about.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-rose-park-gate",
+            "authorityType": "case-law",
+            "title": "England Logistics, Inc. v. Kelle's Transport Service, LLC",
+            "citation": "England Logistics, Inc. v. Kelle's Transp. Serv., LLC, 2024 UT App 137.",
+            "url": "https://www.courtlistener.com/opinion/10141125/england-logistics-v-kelles-transport-service/",
+            "deepLink": "https://www.courtlistener.com/opinion/10141125/england-logistics-v-kelles-transport-service/#:~:text=These%20requirements%20are%3A%20(1)%20the,as%20to%20time%20and%20area.",
+            "proposition": "England Logistics supports the four-part Rose Park reasonableness test for Utah restrictive covenants.",
+            "verbatimQuote": "These requirements are: (1) the covenant must “be supported by consideration,” (2) “no bad faith” was involved “in the negotiation of the contract,” (3) the covenant must “be necessary to protect the goodwill of the business,” and (4) the covenant must “be reasonable in its restrictions as to time and area.",
+            "date": "2024-10-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-rose-park-gate"
+          },
+          {
+            "sourceId": "ut-case-by-case-gate",
+            "authorityType": "case-law",
+            "title": "England Logistics, Inc. v. Kelle's Transport Service, LLC",
+            "citation": "England Logistics, Inc. v. Kelle's Transp. Serv., LLC, 2024 UT App 137.",
+            "url": "https://www.courtlistener.com/opinion/10141125/england-logistics-v-kelles-transport-service/",
+            "deepLink": "https://www.courtlistener.com/opinion/10141125/england-logistics-v-kelles-transport-service/#:~:text=The%20reasonableness%20of%20the%20restraints,case%20and%20the%20subject%20covenant.",
+            "proposition": "England Logistics supports assessing reasonableness case by case on the particular facts and circumstances.",
+            "verbatimQuote": "The reasonableness of the restraints in a restrictive covenant is determined on a case-by-case basis, taking into account the particular facts and circumstances surrounding the case and the subject covenant.",
+            "date": "2024-10-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-case-by-case-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "gate-broadcasting-employee-non-competes",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.utah.gate-broadcasting-employee-non-competes",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Broadcasting employee conditions",
+        "sectionId": "utah-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#gate-broadcasting-employee-non-competes",
+        "requirementGuidance": "If the worker is a broadcasting employee, the covenant answers to its own statutory validity conditions: the employee must qualify as an exempt broadcasting employee under the statute's definitions, the non-compete must sit inside a written employment contract of reasonable duration, and the restriction operates only where the company terminates for cause or the employee breaches the contract. Check each condition against the paper — a broadcasting covenant missing any one of them is not valid, full stop.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-broadcasting-gate",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-201",
+            "citation": "Utah Code Ann. § 34-51-201(2)(a).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html",
+            "proposition": "Utah Code § 34-51-201 supports the broadcasting-employee validity conditions: exempt-employee status and a written employment contract of reasonable duration.",
+            "verbatimQuote": "a non-compete agreement between a broadcasting company and a broadcasting employee is valid only if: (i) the broadcasting employee is an exempt broadcasting employee; (ii) the non-compete agreement is part of a written employment contract of reasonable duration",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-broadcasting-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "confine-above-cap-covenants-to-sale-or-severance-exceptions",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.utah.confine-above-cap-covenants-to-sale-or-severance-exceptions",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Longer than one year? Sale or severance only",
+        "sectionId": "utah-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#confine-above-cap-covenants-to-sale-or-severance-exceptions",
+        "requirementGuidance": "A covenant that runs past one year from separation survives only on one of two statutory footings: a reasonable severance agreement mutually and freely agreed upon in good faith at or after the time of termination, or a covenant related to or arising out of the sale of a business where the restricted individual receives value from the sale. Verify the footing is real — a severance covenant signed before termination, or a sale covenant binding someone who took nothing from the deal, falls back under the cap and its void consequence. And the exemptions lift only the cap: the statute expressly keeps severance agreements subject to the common law, so unbounded duration or scope can still fail.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-severance-gate",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-202",
+            "citation": "Utah Code Ann. § 34-51-202(1)(a).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S202.html",
+            "proposition": "Utah Code § 34-51-202 supports the severance exemption: a reasonable severance agreement mutually and freely agreed in good faith at or after termination.",
+            "verbatimQuote": "a reasonable severance agreement mutually and freely agreed upon in good faith at or after the time of termination that includes a non-compete agreement or a healthcare non-compete agreement",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-severance-gate"
+          },
+          {
+            "sourceId": "ut-sale-gate",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-202",
+            "citation": "Utah Code Ann. § 34-51-202(1)(b).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S202.html",
+            "proposition": "Utah Code § 34-51-202 supports the sale-of-business exemption where the restricted individual receives value related to the sale.",
+            "verbatimQuote": "a non-compete agreement or a healthcare non-compete agreement related to or arising out of the sale of a business, if the individual subject to the non-compete agreement or healthcare non-compete agreement receives value related to the sale of the business.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-sale-gate"
+          },
+          {
+            "sourceId": "ut-severance-commonlaw-gate",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-202",
+            "citation": "Utah Code Ann. § 34-51-202(2).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S202.html",
+            "proposition": "Utah Code § 34-51-202 supports that a severance agreement remains subject to common-law requirements even when exempt from the statutory cap.",
+            "verbatimQuote": "a severance agreement remains subject to any requirements imposed under common law.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-severance-commonlaw-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-healthcare-and-veterinarian-non-competes",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.utah.exclude-healthcare-and-veterinarian-non-competes",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No healthcare or veterinarian non-competes",
+        "sectionId": "utah-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#exclude-healthcare-and-veterinarian-non-competes",
+        "requirementGuidance": "For agreements entered on or after May 6, 2026, the agreement must not impose a healthcare non-compete on a healthcare worker, and must not impose a veterinarian non-compete unless the veterinarian holds at least a 5% ownership interest in the business. The healthcare class is license-based and functional — it covers workers whose roles require practicing under a listed clinical license and excludes license-holders whose jobs do not — and from the same date a healthcare nonsolicitation agreement cannot bar the worker from telling patients where they currently or will work. Treat these as in-force law, not pending bills, and audit every clinical and veterinary covenant signed, renewed, or amended on or after the effective date.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-hc-ban-gate",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-201",
+            "citation": "Utah Code Ann. § 34-51-201(1)(b).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html",
+            "proposition": "Utah Code § 34-51-201 supports the prohibition on healthcare non-compete agreements entered on or after May 6, 2026.",
+            "verbatimQuote": "On or after May 6, 2026, a person and a healthcare worker may not enter into a healthcare non-compete agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-hc-ban-gate"
+          },
+          {
+            "sourceId": "ut-vet-ban-gate",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-201",
+            "citation": "Utah Code Ann. § 34-51-201(3)(a).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html",
+            "proposition": "Utah Code § 34-51-201 supports the prohibition on veterinarian non-compete agreements entered on or after May 6, 2026.",
+            "verbatimQuote": "on or after May 6, 2026, a person and a veterinarian may not enter into a veterinarian non-compete agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-vet-ban-gate"
+          },
+          {
+            "sourceId": "ut-vet-exception-gate",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-201",
+            "citation": "Utah Code Ann. § 34-51-201(3)(b).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html",
+            "proposition": "Utah Code § 34-51-201 supports the 5% ownership exception to the veterinarian non-compete ban.",
+            "verbatimQuote": "Subsection (3)(a) does not apply if the veterinarian has at least a 5% ownership interest in the person's business.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-vet-exception-gate"
+          },
+          {
+            "sourceId": "ut-patient-comms-gate",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-203",
+            "citation": "Utah Code Ann. § 34-51-203(1).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S203.html",
+            "proposition": "Utah Code § 34-51-203 supports the patient-communication protection in healthcare nonsolicitation agreements.",
+            "verbatimQuote": "On or after May 6, 2026, a person and a healthcare worker may not enter into nonsolicitation agreement that prevents a healthcare worker from informing a patient of any of the following: (a) the healthcare worker's current place of employment; or (b) the healthcare worker's future place of employment.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-patient-comms-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "avoid-de-facto-non-competes-in-nonsolicits-and-ndas",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.utah.avoid-de-facto-non-competes-in-nonsolicits-and-ndas",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-solicits and NDAs stay in their lane",
+        "sectionId": "utah-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/utah#avoid-de-facto-non-competes-in-nonsolicits-and-ndas",
+        "requirementGuidance": "The statute exempts nonsolicitation, nondisclosure, and confidentiality agreements from the non-compete definition — but the label is not the protection. A clause drafted so broadly that it effectively blocks the worker from working in the field invites recharacterization under the statutory definition of competing by providing a similar product, process, or service, which reimposes the one-year cap and the void rule. And the exemption never reached the penalty: an employer that pursues and loses an enforcement action on an NDA or non-solicit still pays the employee's arbitration costs, attorney fees, and actual damages. Read every exempt covenant for the work-ban it might really be.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ut-noncompete-def-gate",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-102",
+            "citation": "Utah Code Ann. § 34-51-102(8)(a).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S102.html",
+            "proposition": "Utah Code § 34-51-102 supports the statutory non-compete definition a mislabeled clause can be recharacterized into.",
+            "verbatimQuote": "“Non-compete agreement” means an agreement, written or oral, between an employer and employee under which the employee agrees that on or after the day on which the employer no longer employs the employee, the employee, either alone or as an employee of another person, will not compete with the employer in providing a product, process, or service that is similar to the employer's product, process, or service.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-noncompete-def-gate"
+          },
+          {
+            "sourceId": "ut-carve-exclusion-gate",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-102",
+            "citation": "Utah Code Ann. § 34-51-102(8)(b).",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S102.html",
+            "proposition": "Utah Code § 34-51-102 supports the exclusion of nonsolicitation, nondisclosure, and confidentiality agreements from the statutory definition and cap.",
+            "verbatimQuote": "“Non-compete agreement” does not include: (i) a nonsolicitation agreement; (ii) a nondisclosure agreement; or (iii) a confidentiality agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-carve-exclusion-gate"
+          },
+          {
+            "sourceId": "ut-fee-shift-gate",
+            "authorityType": "primary-law",
+            "title": "Utah Code § 34-51-301",
+            "citation": "Utah Code Ann. § 34-51-301.",
+            "url": "https://le.utah.gov/xcode/Title34/Chapter51/34-51-S301.html",
+            "proposition": "Utah Code § 34-51-301 supports that fee-shifting reaches nondisclosure clauses and nonsolicitation agreements an employer unsuccessfully tries to enforce.",
+            "verbatimQuote": "the employer is liable for the employee's: (1) costs associated with arbitration; (2) attorney fees and court costs; and (3) actual damages.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/utah#src-ut-fee-shift-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

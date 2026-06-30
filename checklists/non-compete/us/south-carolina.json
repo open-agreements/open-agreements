@@ -1,0 +1,1396 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/south-carolina",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/south-carolina.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/south-carolina",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/south-carolina/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/south-carolina/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "south-carolina",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — South Carolina",
+      "description": "A clause-by-clause reviewer checklist for South Carolina employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the five-factor common-law reasonableness test, where an overbroad covenant fails whole and no court will narrow or reform it.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "South Carolina",
+      "coverage": "South Carolina (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 47,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "south-carolina-statutory-gates",
+        "label": "South Carolina enforceability gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity that actually holds the customer relationships the covenants protect. The legitimate-interest analysis here is built around protecting the employer against the loss of its customers, so a covenant running to an affiliate with no relationship to those customers starts the reasonableness test already behind.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-kerrigan-customers-cover",
+            "authorityType": "case-law",
+            "title": "Standard Register Co. v. Kerrigan",
+            "citation": "Standard Register Co. v. Kerrigan, 238 S.C. 54, 119 S.E.2d 533 (1961).",
+            "url": "https://www.courtlistener.com/opinion/1356432/standard-register-co-v-kerrigan/",
+            "deepLink": "https://www.courtlistener.com/opinion/1356432/standard-register-co-v-kerrigan/#:~:text=A%20restrictive%20covenant%2C%20therefore%2C%20is,against%20loss%20of%20his%20customers.",
+            "proposition": "Kerrigan frames protecting the employer against the loss of its customers as the legitimate interest a reasonable restraint protects — the interest the named employer must actually hold.",
+            "verbatimQuote": "A restrictive covenant, therefore, is reasonable if it is designed to protect the employer against loss of his customers.",
+            "date": "1961-03-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-kerrigan-customers-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#identify-effective-date",
+        "requirementGuidance": "The dates anchor two separate questions: when each restricted period starts and ends, and whether the covenant was signed at hire or after employment had already begun — which decides whether the agreement needs separate consideration beyond the job itself. An undated covenant leaves both open.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#identify-employee-title",
+        "requirementGuidance": "Title and duties are the first evidence on two of the five factors: whether a restraint on this particular worker is necessary to protect a legitimate interest, and whether it is unduly harsh in curtailing this worker's ability to earn a living. A form covenant pinned to a role with no customer contact or sensitive access is hard to justify on either.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-team-ia-five-factor-cover",
+            "authorityType": "case-law",
+            "title": "Team IA, Inc. v. Lucas",
+            "citation": "Team IA, Inc. v. Lucas, 395 S.C. 237, 717 S.E.2d 103 (Ct. App. 2011).",
+            "url": "https://www.courtlistener.com/opinion/2507693/team-ia-inc-v-lucas/",
+            "deepLink": "https://www.courtlistener.com/opinion/2507693/team-ia-inc-v-lucas/#:~:text=A%20covenant%20not%20to%20compete,(5)%20supported%20by%20valuable%20consideration.",
+            "proposition": "Team IA states the five-factor test, including the legitimate-interest and harshness factors that the worker's role and duties evidence.",
+            "verbatimQuote": "A covenant not to compete will be upheld only if it is: (1) necessary for the protection of the legitimate interest of the employer; (2) reasonably limited in its operation with respect to time and place; (3) not unduly harsh and oppressive in curtailing the legitimate efforts of the employee to earn a livelihood; (4) reasonable from the standpoint of sound public policy; and (5) supported by valuable consideration.",
+            "date": "2011-10-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-team-ia-five-factor-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#identify-governing-law",
+        "requirementGuidance": "Check that a governing state is named. Everything on this page assumes South Carolina law controls — the conjunctive five-factor test, strict construction against the employer, and the rule that no court will narrow an overbroad covenant. A different choice of law trades this framework for another one and deserves its own review.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#define-confidential-information",
+        "requirementGuidance": "Scope the definition to information that is genuinely secret or competitively sensitive. A definition so broad that keeping the information confidential effectively bars the worker from doing similar work converts the clause into a functional non-compete — and South Carolina then judges it like one, time limit and all.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-fay-functional-def",
+            "authorityType": "case-law",
+            "title": "Fay v. Total Quality Logistics, LLC",
+            "citation": "Fay v. Total Quality Logistics, LLC, 419 S.C. 622, 799 S.E.2d 318 (Ct. App. 2017).",
+            "url": "https://www.courtlistener.com/opinion/8328279/fay-v-total-quality-logistics-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/8328279/fay-v-total-quality-logistics-llc/#:~:text=Because%20the%20nondisclosure%20provisions%20had,like%20any%20other%20noncompete%20agreement.",
+            "proposition": "Fay supports scoping the confidential-information definition tightly: nondisclosure provisions with the effect of a covenant not to compete are judged like a non-compete, including the time-limit requirement.",
+            "verbatimQuote": "Because the nondisclosure provisions had the effect of a covenant not to compete, they required a reasonable time restriction like any other noncompete agreement.",
+            "date": "2017-03-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-fay-functional-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#define-trade-secrets",
+        "requirementGuidance": "Define trade secrets separately and track the statute. South Carolina imposes a statutory duty on every employee who knows of an employer's trade secret to refrain from using or disclosing it, independent of any contract — the employer's most durable protection, and one that survives even if every covenant on this page fails.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-tsa-duty-def",
+            "authorityType": "primary-law",
+            "title": "S.C. Code Ann. § 39-8-30",
+            "citation": "S.C. Code Ann. § 39-8-30(B).",
+            "url": "https://www.scstatehouse.gov/code/t39c008.php",
+            "proposition": "Section 39-8-30 imposes a statutory duty on employees to refrain from using or disclosing an employer's trade secret independently of any contract — the protection a statute-tracking definition anchors.",
+            "verbatimQuote": "Every employee who is informed of or should reasonably have known from the circumstances of the existence of any employer's trade secret has a duty to refrain from using or disclosing the trade secret without the employer's permission independently of and in addition to any written contract of employment, secrecy agreement, noncompete agreement, nondisclosure agreement, or other agreement between the employer and the employee.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-tsa-duty-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#define-restricted-period",
+        "requirementGuidance": "The period must read as a fixed, definite stretch of time the worker can count. Provisions that restrained competition with no reasonable time restriction violated South Carolina public policy, and a definition that floats on events — breach, litigation, renewals — drifts toward exactly that defect.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-fay-no-time-def",
+            "authorityType": "case-law",
+            "title": "Fay v. Total Quality Logistics, LLC",
+            "citation": "Fay v. Total Quality Logistics, LLC, 419 S.C. 622, 799 S.E.2d 318 (Ct. App. 2017).",
+            "url": "https://www.courtlistener.com/opinion/8328279/fay-v-total-quality-logistics-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/8328279/fay-v-total-quality-logistics-llc/#:~:text=The%20nondisclosure%20provisions%20in%20paragraphs,public%20policy%20of%20South%20Carolina.",
+            "proposition": "Fay held that provisions operating as non-competes with no reasonable time restriction violated South Carolina public policy — the defect an indefinite restricted-period definition invites.",
+            "verbatimQuote": "The nondisclosure provisions in paragraphs four and six operated as noncompete provisions with no reasonable time restriction, which violated the public policy of South Carolina.",
+            "date": "2017-03-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-fay-no-time-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#define-restricted-territory",
+        "requirementGuidance": "Geography is measured against necessity: a territorial scope is unreasonable if it covers an area broader than necessary to protect the employer's legitimate interest. Match the territory to where this worker actually operated and served customers, because a court here will not shrink an overdrawn map — the covenant simply fails.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-kerrigan-territory-def",
+            "authorityType": "case-law",
+            "title": "Standard Register Co. v. Kerrigan",
+            "citation": "Standard Register Co. v. Kerrigan, 238 S.C. 54, 119 S.E.2d 533 (1961).",
+            "url": "https://www.courtlistener.com/opinion/1356432/standard-register-co-v-kerrigan/",
+            "deepLink": "https://www.courtlistener.com/opinion/1356432/standard-register-co-v-kerrigan/#:~:text=Stated%20negatively%2C%20the%20territorial%20scope,legitimate%20interest%20of%20the%20employer.",
+            "proposition": "Kerrigan holds that a territorial scope is unreasonable if it covers an area broader than necessary to protect the employer's legitimate interest.",
+            "verbatimQuote": "Stated negatively, the territorial scope renders the restraint unreasonable if it covers an area broader than necessary to protect the legitimate interest of the employer.",
+            "date": "1961-03-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-kerrigan-territory-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the worker actually had contact with during a stated look-back window. A covenant limited to the employee's contacts from his last twelve months of employment withstood an overbreadth challenge — and a contact-based customer class can even stand in for a geographic limit.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-vessel-contact-def",
+            "authorityType": "case-law",
+            "title": "Vessel Medical, Inc. v. Elliott",
+            "citation": "Vessel Med., Inc. v. Elliott, No. 6:15-cv-00330-MGL, 2015 U.S. Dist. LEXIS 122436 (D.S.C. Sept. 15, 2015).",
+            "url": "https://www.courtlistener.com/docket/5358739/vessel-medical-inc-v-elliott/",
+            "deepLink": "https://www.courtlistener.com/docket/5358739/vessel-medical-inc-v-elliott/#:~:text=Here%2C%20Elliott%20is%20restricted%20from,covenants%20have%20withstood%20overbreadth%20challenges.",
+            "proposition": "Vessel Medical upheld a customer non-solicitation covenant because it was limited to customers the employee had contact with during his last twelve months of employment — the model for a covered-customers definition.",
+            "verbatimQuote": "Here, Elliott is restricted from soliciting customers with whom he had contact during his last 12 months of employment and such covenants have withstood overbreadth challenges.",
+            "date": "2015-09-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-vessel-contact-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing worker actually worked with, and watch the verb: the state supreme court read an employee covenant as barring inducement of co-workers to breach their contracts, not as preventing it from hiring them outright. Language that assumes a blanket no-hire overshoots what the construction rule supports.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-oxman-def",
+            "authorityType": "case-law",
+            "title": "Oxman v. Sherman",
+            "citation": "Oxman v. Sherman, 239 S.C. 218, 122 S.E.2d 559 (1961).",
+            "url": "https://www.courtlistener.com/opinion/1336916/oxman-v-sherman/",
+            "deepLink": "https://www.courtlistener.com/opinion/1336916/oxman-v-sherman/#:~:text=We%20construe%20the%20first%20covenant,their%20contractual%20relations%20with%20respondents.",
+            "proposition": "Oxman construed an employee covenant as restraining inducement of co-workers to breach their contracts rather than as a blanket bar on hiring — the narrow-construction rule a covered-employees or solicit definition must reckon with.",
+            "verbatimQuote": "We construe the first covenant mentioned as restraining appellant from seeking to induce any of respondents' employees to breach their contract of employment and not as preventing him from seeking the services of such employees so long as there is no interference with their contractual relations with respondents.",
+            "date": "1961-10-30",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-oxman-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#define-protected-interests",
+        "requirementGuidance": "Name the specific interests each covenant protects — the customer relationships this worker controlled, the genuinely secret information this role touched. The first factor demands a legitimate interest, and an employer is not entitled to enforce an agreement that simply prevents ordinary competition.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-fournil-ordinary-def",
+            "authorityType": "case-law",
+            "title": "Fournil v. Turbeville Insurance Agency, Inc.",
+            "citation": "Fournil v. Turbeville Ins. Agency, Inc., No. 3:07-cv-03836-JFA (D.S.C. Mar. 2, 2009).",
+            "url": "https://www.courtlistener.com/docket/4822524/fournil-v-turbeville-insurance-agency-inc/",
+            "deepLink": "https://www.courtlistener.com/docket/4822524/fournil-v-turbeville-insurance-agency-inc/#:~:text=An%20employer%20is%20not%2C%20however%2C,an%20agreement%20preventing%20ordinary%20competition.",
+            "proposition": "Fournil holds that an employer may not enforce a covenant that prevents ordinary competition rather than protecting a legitimate interest — the line a protected-interests definition must respect.",
+            "verbatimQuote": "An employer is not, however, entitled to enforce an agreement preventing ordinary competition.",
+            "date": "2009-03-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-fournil-ordinary-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#define-competitive-business",
+        "requirementGuidance": "Describe the competing activity concretely. A definition that swells to anything the employer might someday do presses on the harshness factor — curtailing the legitimate efforts of the employee to earn a livelihood — and breadth added here must be justified on every other factor too, with no court willing to trim the excess.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-team-ia-five-factor-def",
+            "authorityType": "case-law",
+            "title": "Team IA, Inc. v. Lucas",
+            "citation": "Team IA, Inc. v. Lucas, 395 S.C. 237, 717 S.E.2d 103 (Ct. App. 2011).",
+            "url": "https://www.courtlistener.com/opinion/2507693/team-ia-inc-v-lucas/",
+            "deepLink": "https://www.courtlistener.com/opinion/2507693/team-ia-inc-v-lucas/#:~:text=A%20covenant%20not%20to%20compete,(5)%20supported%20by%20valuable%20consideration.",
+            "proposition": "Team IA's conjunctive five-factor test — including the harsh-and-oppressive factor — is what every defined term on this page ultimately feeds.",
+            "verbatimQuote": "A covenant not to compete will be upheld only if it is: (1) necessary for the protection of the legitimate interest of the employer; (2) reasonably limited in its operation with respect to time and place; (3) not unduly harsh and oppressive in curtailing the legitimate efforts of the employee to earn a livelihood; (4) reasonable from the standpoint of sound public policy; and (5) supported by valuable consideration.",
+            "date": "2011-10-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-team-ia-five-factor-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where the agreement restricts owning or investing in competitors, look for a passive-holdings carve-out below a stated percentage. A clause that technically forbids holding ordinary public shares restrains the worker far beyond any customer relationship or secret, and it hands the harshness factor an easy example.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-team-ia-five-factor-def",
+            "authorityType": "case-law",
+            "title": "Team IA, Inc. v. Lucas",
+            "citation": "Team IA, Inc. v. Lucas, 395 S.C. 237, 717 S.E.2d 103 (Ct. App. 2011).",
+            "url": "https://www.courtlistener.com/opinion/2507693/team-ia-inc-v-lucas/",
+            "deepLink": "https://www.courtlistener.com/opinion/2507693/team-ia-inc-v-lucas/#:~:text=A%20covenant%20not%20to%20compete,(5)%20supported%20by%20valuable%20consideration.",
+            "proposition": "Team IA's conjunctive five-factor test — including the harsh-and-oppressive factor — is what every defined term on this page ultimately feeds.",
+            "verbatimQuote": "A covenant not to compete will be upheld only if it is: (1) necessary for the protection of the legitimate interest of the employer; (2) reasonably limited in its operation with respect to time and place; (3) not unduly harsh and oppressive in curtailing the legitimate efforts of the employee to earn a livelihood; (4) reasonable from the standpoint of sound public policy; and (5) supported by valuable consideration.",
+            "date": "2011-10-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-team-ia-five-factor-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#define-passive-public-holdings",
+        "requirementGuidance": "Optional drafting mechanics — many agreements inline the carve-out language without a capitalized term. If the term appears, confirm its percentage matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#define-solicit",
+        "requirementGuidance": "Pin down whether the verb covers only initiating contact or also passively accepting an inquiry. When covenant language is ambiguous, South Carolina courts read it the narrow way — an employee covenant was construed to bar inducing co-workers to breach rather than the broader reading the employer wanted — so a drafter who needs the wider meaning must say so expressly and then defend the added breadth.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-oxman-def",
+            "authorityType": "case-law",
+            "title": "Oxman v. Sherman",
+            "citation": "Oxman v. Sherman, 239 S.C. 218, 122 S.E.2d 559 (1961).",
+            "url": "https://www.courtlistener.com/opinion/1336916/oxman-v-sherman/",
+            "deepLink": "https://www.courtlistener.com/opinion/1336916/oxman-v-sherman/#:~:text=We%20construe%20the%20first%20covenant,their%20contractual%20relations%20with%20respondents.",
+            "proposition": "Oxman construed an employee covenant as restraining inducement of co-workers to breach their contracts rather than as a blanket bar on hiring — the narrow-construction rule a covered-employees or solicit definition must reckon with.",
+            "verbatimQuote": "We construe the first covenant mentioned as restraining appellant from seeking to induce any of respondents' employees to breach their contract of employment and not as preventing him from seeking the services of such employees so long as there is no interference with their contractual relations with respondents.",
+            "date": "1961-10-30",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-oxman-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger treats resignation, dismissal, and the end of a fixed term the same way. The restricted period and every survival clock run from this event, and ambiguity about who ended the relationship becomes ambiguity about when the restraint expires — which a court will resolve against the drafter.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#acknowledge-timing",
+        "requirementGuidance": "The timing acknowledgement matters more here than in most boilerplate reviews: a covenant entered after employment has already begun needs separate consideration beyond continued at-will work, and in the controlling case the employee's unchanged duties, position, and salary supplied nothing. The acknowledgement should record when the covenant was signed relative to the first day of work and exactly what new value moved.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-poole-rule-timing",
+            "authorityType": "case-law",
+            "title": "Poole v. Incentives Unlimited, Inc.",
+            "citation": "Poole v. Incentives Unlimited, Inc., 345 S.C. 378, 548 S.E.2d 207 (2001).",
+            "url": "https://www.courtlistener.com/opinion/1328953/poole-v-incentives-unlimited-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1328953/poole-v-incentives-unlimited-inc/#:~:text=Therefore%2C%20we%20adopt%20the%20rule,the%20covenant%20to%20be%20enforceable.",
+            "proposition": "Poole holds that a covenant signed after employment begins requires separate consideration beyond continued at-will employment — the rule the timing acknowledgement documents against.",
+            "verbatimQuote": "Therefore, we adopt the rule that when a covenant is entered into after the inception of employment, separate consideration, in addition to continued at-will employment, is necessary in order for the covenant to be enforceable.",
+            "date": "2001-06-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-poole-rule-timing"
+          },
+          {
+            "sourceId": "sc-poole-unchanged-timing",
+            "authorityType": "case-law",
+            "title": "Poole v. Incentives Unlimited, Inc.",
+            "citation": "Poole v. Incentives Unlimited, Inc., 345 S.C. 378, 548 S.E.2d 207 (2001).",
+            "url": "https://www.courtlistener.com/opinion/1328953/poole-v-incentives-unlimited-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1328953/poole-v-incentives-unlimited-inc/#:~:text=In%20the%20instant%20case%2C%20Poole's,and%20salary%20were%20left%20unchanged.",
+            "proposition": "Poole found no separate consideration where the employee's duties, position, and salary were unchanged after signing — why the acknowledgement should record what new value moved.",
+            "verbatimQuote": "In the instant case, Poole's duties, position, and salary were left unchanged.",
+            "date": "2001-06-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-poole-unchanged-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No South Carolina statute requires it, but a documented chance to take advice is useful evidence on the factors a court actually weighs — that the covenant is not unduly harsh in how it was obtained and not offensive to public policy. Cheap to include, awkward to be missing.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret obligations should run as long as secrecy does. Federal law keys trade-secret status to continued secrecy, and South Carolina's own statute says a trade secret endures and is protectable until it is disclosed or discovered by proper means — so a fixed expiry on trade-secret protection gives away the one obligation that never needed a covenant to survive.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-dtsa-trade-secret-definition"
+          },
+          {
+            "sourceId": "sc-tsa-endures-conf",
+            "authorityType": "primary-law",
+            "title": "S.C. Code Ann. § 39-8-30",
+            "citation": "S.C. Code Ann. § 39-8-30(A).",
+            "url": "https://www.scstatehouse.gov/code/t39c008.php",
+            "proposition": "Section 39-8-30 provides that trade-secret protection endures until the secret is disclosed or discovered by proper means — the statutory basis for secrecy-keyed duration rather than a fixed term.",
+            "verbatimQuote": "A trade secret endures and is protectable and enforceable until it is disclosed or discovered by proper means.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-tsa-endures-conf"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. Nondisclosure provisions that operated as non-competes with no reasonable time restriction violated South Carolina public policy — and an open-ended lid on non-secret information is the classic way a confidentiality clause crosses that line.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-fay-no-time-conf",
+            "authorityType": "case-law",
+            "title": "Fay v. Total Quality Logistics, LLC",
+            "citation": "Fay v. Total Quality Logistics, LLC, 419 S.C. 622, 799 S.E.2d 318 (Ct. App. 2017).",
+            "url": "https://www.courtlistener.com/opinion/8328279/fay-v-total-quality-logistics-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/8328279/fay-v-total-quality-logistics-llc/#:~:text=The%20nondisclosure%20provisions%20in%20paragraphs,public%20policy%20of%20South%20Carolina.",
+            "proposition": "Fay held that NDA provisions operating as non-competes with no reasonable time restriction violated South Carolina public policy — why non-secret confidentiality needs a finite term.",
+            "verbatimQuote": "The nondisclosure provisions in paragraphs four and six operated as noncompete provisions with no reasonable time restriction, which violated the public policy of South Carolina.",
+            "date": "2017-03-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-fay-no-time-conf"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#disclose-dtsa-notice",
+        "requirementGuidance": "Federal and non-negotiable: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret action against the worker. In a state whose covenant rules push employers toward statutory trade-secret protection, those remedies do real work.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech regardless of the governing state, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. A clause purporting to forbid compelled disclosure is unenforceable on that point and adds breadth a strictly construed covenant does not need to carry.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. Statutory trade-secret protection lasts only until the secret is disclosed or discovered by proper means, so a clean exit procedure is not just housekeeping — it is how the employer keeps the secrecy that the statute conditions everything on.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-tsa-endures-prop",
+            "authorityType": "primary-law",
+            "title": "S.C. Code Ann. § 39-8-30",
+            "citation": "S.C. Code Ann. § 39-8-30(A).",
+            "url": "https://www.scstatehouse.gov/code/t39c008.php",
+            "proposition": "Section 39-8-30 keys trade-secret protection to continued secrecy — protection endures until disclosure or discovery by proper means — which disciplined exit procedures preserve.",
+            "verbatimQuote": "A trade secret endures and is protectable and enforceable until it is disclosed or discovered by proper means.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-tsa-endures-prop"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and recognized here: South Carolina protects an employer's contractual relationships with its own employees. But the recognized version is narrow — a bar on inducing co-workers to breach their contracts, not a bar on ever hiring them — so review the clause against that construction and keep the covered class to real working relationships.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-oxman-cov",
+            "authorityType": "case-law",
+            "title": "Oxman v. Sherman",
+            "citation": "Oxman v. Sherman, 239 S.C. 218, 122 S.E.2d 559 (1961).",
+            "url": "https://www.courtlistener.com/opinion/1336916/oxman-v-sherman/",
+            "deepLink": "https://www.courtlistener.com/opinion/1336916/oxman-v-sherman/#:~:text=We%20construe%20the%20first%20covenant,their%20contractual%20relations%20with%20respondents.",
+            "proposition": "Oxman supports protecting the employer's contractual relationships with its employees by barring inducement to breach, rather than a blanket no-hire.",
+            "verbatimQuote": "We construe the first covenant mentioned as restraining appellant from seeking to induce any of respondents' employees to breach their contract of employment and not as preventing him from seeking the services of such employees so long as there is no interference with their contractual relations with respondents.",
+            "date": "1961-10-30",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-oxman-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#permit-customer-nonsolicit",
+        "requirementGuidance": "Optional, and usually the easiest covenant in the suite to defend — when it is tied to the customers the worker actually served. Tied instead to the employer's whole book of business, it stops protecting customer relationships and starts preventing ordinary competition, which no South Carolina employer is entitled to enforce. Route it through the gates at the end of this checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-vessel-cov",
+            "authorityType": "case-law",
+            "title": "Vessel Medical, Inc. v. Elliott",
+            "citation": "Vessel Med., Inc. v. Elliott, No. 6:15-cv-00330-MGL, 2015 U.S. Dist. LEXIS 122436 (D.S.C. Sept. 15, 2015).",
+            "url": "https://www.courtlistener.com/docket/5358739/vessel-medical-inc-v-elliott/",
+            "deepLink": "https://www.courtlistener.com/docket/5358739/vessel-medical-inc-v-elliott/#:~:text=Here%2C%20Elliott%20is%20restricted%20from,covenants%20have%20withstood%20overbreadth%20challenges.",
+            "proposition": "Vessel Medical upheld a customer non-solicitation covenant limited to customers the employee had contact with during his last twelve months of employment.",
+            "verbatimQuote": "Here, Elliott is restricted from soliciting customers with whom he had contact during his last 12 months of employment and such covenants have withstood overbreadth challenges.",
+            "date": "2015-09-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-vessel-cov"
+          },
+          {
+            "sourceId": "sc-fournil-ordinary-cov",
+            "authorityType": "case-law",
+            "title": "Fournil v. Turbeville Insurance Agency, Inc.",
+            "citation": "Fournil v. Turbeville Ins. Agency, Inc., No. 3:07-cv-03836-JFA (D.S.C. Mar. 2, 2009).",
+            "url": "https://www.courtlistener.com/docket/4822524/fournil-v-turbeville-insurance-agency-inc/",
+            "deepLink": "https://www.courtlistener.com/docket/4822524/fournil-v-turbeville-insurance-agency-inc/#:~:text=An%20employer%20is%20not%2C%20however%2C,an%20agreement%20preventing%20ordinary%20competition.",
+            "proposition": "Fournil holds that an employer may not enforce a covenant that prevents ordinary competition rather than protecting a legitimate interest.",
+            "verbatimQuote": "An employer is not, however, entitled to enforce an agreement preventing ordinary competition.",
+            "date": "2009-03-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-fournil-ordinary-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#permit-non-dealing",
+        "requirementGuidance": "Barring the worker from serving covered customers even when the customer calls first restrains accepting work, not just chasing it. That extra breadth needs its own justification — prohibiting contact with customers the worker never serviced was held to protect no legitimate interest at all — so insist on a tight, contact-based customer class before this clause earns its place.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-fournil-interest-cov",
+            "authorityType": "case-law",
+            "title": "Fournil v. Turbeville Insurance Agency, Inc.",
+            "citation": "Fournil v. Turbeville Ins. Agency, Inc., No. 3:07-cv-03836-JFA (D.S.C. Mar. 2, 2009).",
+            "url": "https://www.courtlistener.com/docket/4822524/fournil-v-turbeville-insurance-agency-inc/",
+            "deepLink": "https://www.courtlistener.com/docket/4822524/fournil-v-turbeville-insurance-agency-inc/#:~:text=The%20magistrate%20found%20that%20prohibiting,and%20this%20conclusion%20was%20well%2Dfounded.",
+            "proposition": "Fournil held that prohibiting an employee from soliciting customers she had never serviced was not related to any legitimate interest of the employer.",
+            "verbatimQuote": "The magistrate found that prohibiting such contacts was not related to any legitimate interest of Turbeville, and this conclusion was well-founded.",
+            "date": "2009-03-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-fournil-interest-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#permit-non-compete",
+        "requirementGuidance": "A South Carolina non-compete is a disfavored restraint of trade upheld only when all five reasonableness factors hold — legitimate interest, reasonable time and place, no undue harshness, sound public policy, valuable consideration. The factors are conjunctive: review the clause as a package, because one failed factor sinks it whole and nothing on this page gets rescued by a court afterward.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-team-ia-cov",
+            "authorityType": "case-law",
+            "title": "Team IA, Inc. v. Lucas",
+            "citation": "Team IA, Inc. v. Lucas, 395 S.C. 237, 717 S.E.2d 103 (Ct. App. 2011).",
+            "url": "https://www.courtlistener.com/opinion/2507693/team-ia-inc-v-lucas/",
+            "deepLink": "https://www.courtlistener.com/opinion/2507693/team-ia-inc-v-lucas/#:~:text=A%20covenant%20not%20to%20compete,(5)%20supported%20by%20valuable%20consideration.",
+            "proposition": "Team IA states the conjunctive five-factor test a South Carolina non-compete must satisfy in full.",
+            "verbatimQuote": "A covenant not to compete will be upheld only if it is: (1) necessary for the protection of the legitimate interest of the employer; (2) reasonably limited in its operation with respect to time and place; (3) not unduly harsh and oppressive in curtailing the legitimate efforts of the employee to earn a livelihood; (4) reasonable from the standpoint of sound public policy; and (5) supported by valuable consideration.",
+            "date": "2011-10-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-team-ia-cov"
+          },
+          {
+            "sourceId": "sc-kerrigan-restraint-cov",
+            "authorityType": "case-law",
+            "title": "Standard Register Co. v. Kerrigan",
+            "citation": "Standard Register Co. v. Kerrigan, 238 S.C. 54, 119 S.E.2d 533 (1961).",
+            "url": "https://www.courtlistener.com/opinion/1356432/standard-register-co-v-kerrigan/",
+            "deepLink": "https://www.courtlistener.com/opinion/1356432/standard-register-co-v-kerrigan/#:~:text=The%20reason%20that%20contracts%20against,which%20is%20against%20public%20policy.",
+            "proposition": "Kerrigan explains that non-competes are restraints of trade against public policy, unenforceable unless they meet the reasonableness criteria.",
+            "verbatimQuote": "The reason that contracts against competition are held to be unenforceable unless they meet certain criteria, is that they constitute a restraint upon trade which is against public policy.",
+            "date": "1961-03-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-kerrigan-restraint-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, bind those names instead of leaning on an open-ended definition. Narrowing done at the drafting table is the only narrowing this covenant will ever get — the restrictions must stand or fall on their own terms, and no court will rewrite them later.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-poynter-cov",
+            "authorityType": "case-law",
+            "title": "Poynter Investments, Inc. v. Century Builders of Piedmont, Inc.",
+            "citation": "Poynter Invs., Inc. v. Century Builders of Piedmont, Inc., 387 S.C. 583, 694 S.E.2d 15 (2010).",
+            "url": "https://www.courtlistener.com/opinion/1316178/poynter-investments-inc-v-century-builders-of-piedmont-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1316178/poynter-investments-inc-v-century-builders-of-piedmont-inc/#:~:text=These%20cases%20stand%20for%20the,fall%20on%20their%20own%20terms.",
+            "proposition": "Poynter holds that a non-compete's restrictions cannot be rewritten by a court and must stand or fall on their own terms — why narrowing must happen at drafting.",
+            "verbatimQuote": "These cases stand for the proposition that, in South Carolina, the restrictions in a non-compete clause cannot be rewritten by a court or limited by the parties' agreement, but must stand or fall on their own terms.",
+            "date": "2010-05-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-poynter-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period; an investment restraint with indefinite reach hands the harshness and public-policy factors exactly the breadth they count against the covenant.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#address-physician-specific-rights",
+        "requirementGuidance": "South Carolina has no enacted physician carve-out today: a physician covenant is reviewed under the ordinary five-factor test, with patient access to care a likely pressure point on the public-policy factor. Watch the legislature, though — H.4767 would declare physician noncompete clauses against the public policy of the State, and as of this review it had passed the House and drawn a favorable Senate committee report without being enacted. The dedicated clause should state the agreement's actual treatment of physicians under current law, and any physician deal signed now should be priced with the pending bill in mind rather than drafted as if it had already passed.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-h4767-bill",
+            "authorityType": "primary-law",
+            "title": "H.4767, Physician Noncompete Contract Prohibition Act",
+            "citation": "H.4767, 126th Gen. Assemb., Reg. Sess. (S.C. 2026) (passed House Mar. 26, 2026; favorable Senate committee report May 5, 2026; not enacted).",
+            "url": "https://www.scstatehouse.gov/sess126_2025-2026/prever/4767_20260505.htm",
+            "proposition": "H.4767, a bill pending in the South Carolina Senate, would declare physician noncompete clauses against the public policy of the State; it has not been enacted.",
+            "verbatimQuote": "Contracts with physicians containing noncompete clauses are considered interference with the establishment or maintenance of a patient's choice of physician and are against the public policy of the State of South Carolina.",
+            "date": "2026-05-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-h4767-bill"
+          },
+          {
+            "sourceId": "sc-team-ia-phys",
+            "authorityType": "case-law",
+            "title": "Team IA, Inc. v. Lucas",
+            "citation": "Team IA, Inc. v. Lucas, 395 S.C. 237, 717 S.E.2d 103 (Ct. App. 2011).",
+            "url": "https://www.courtlistener.com/opinion/2507693/team-ia-inc-v-lucas/",
+            "deepLink": "https://www.courtlistener.com/opinion/2507693/team-ia-inc-v-lucas/#:~:text=A%20covenant%20not%20to%20compete,(5)%20supported%20by%20valuable%20consideration.",
+            "proposition": "Team IA's five-factor test, including the sound-public-policy factor, governs physician non-competes absent a physician-specific statute.",
+            "verbatimQuote": "A covenant not to compete will be upheld only if it is: (1) necessary for the protection of the legitimate interest of the employer; (2) reasonably limited in its operation with respect to time and place; (3) not unduly harsh and oppressive in curtailing the legitimate efforts of the employee to earn a livelihood; (4) reasonable from the standpoint of sound public policy; and (5) supported by valuable consideration.",
+            "date": "2011-10-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-team-ia-phys"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement blocks the new role. On intake it cuts both ways: an incoming covenant from a prior employer may fail the five-factor test here, but one that survives review is a genuine hazard for the hiring employer — better to surface either before the first customer call.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#address-notice-to-future-employers",
+        "requirementGuidance": "A drafting choice, not a legal requirement. Notice provisions can support later enforcement, but a letter asserting a covenant that cannot clear the five-factor test overstates the employer's position and creates its own interference exposure — so condition any notice practice on a covenant that actually survives the review this page walks through.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "avoid-extending-the-restricted-period-past-its-stated-end",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-carolina.avoid-extending-the-restricted-period-past-its-stated-end",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction not stretched past its end date",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#avoid-extending-the-restricted-period-past-its-stated-end",
+        "requirementGuidance": "Do not count on the restricted period lasting longer than the words say. The state supreme court held that any extension of a covenant's time period past its stated expiration would be against public policy, and no South Carolina decision endorses automatic tolling while a breach runs. A contractual clause pausing the clock during a breach is an open question no surveyed case squarely decides — if one appears, it should be a separate, reasonable term tied to the duration of the breach, and it still has to clear the reasonably-limited-in-time factor like everything else.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-stonhard-extension-toll",
+            "authorityType": "case-law",
+            "title": "Stonhard, Inc. v. Carolina Flooring Specialists, Inc.",
+            "citation": "Stonhard, Inc. v. Carolina Flooring Specialists, Inc., 366 S.C. 156, 621 S.E.2d 352 (2005).",
+            "url": "https://www.courtlistener.com/opinion/1202971/stonhard-inc-v-carolina-flooring-specialists-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1202971/stonhard-inc-v-carolina-flooring-specialists-inc/#:~:text=Accordingly%2C%20any%20extension%20of%20the,party's%20private%20right%20to%20contract.",
+            "proposition": "Stonhard holds that extending a covenant's time period beyond its stated expiration would be against public policy.",
+            "verbatimQuote": "Accordingly, any extension of the time period would be against public policy, because it would be arbitrary and set precedent allowing a court to disrupt a party's private right to contract.",
+            "date": "2005-10-10",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-stonhard-extension-toll"
+          },
+          {
+            "sourceId": "sc-team-ia-toll",
+            "authorityType": "case-law",
+            "title": "Team IA, Inc. v. Lucas",
+            "citation": "Team IA, Inc. v. Lucas, 395 S.C. 237, 717 S.E.2d 103 (Ct. App. 2011).",
+            "url": "https://www.courtlistener.com/opinion/2507693/team-ia-inc-v-lucas/",
+            "deepLink": "https://www.courtlistener.com/opinion/2507693/team-ia-inc-v-lucas/#:~:text=A%20covenant%20not%20to%20compete,(5)%20supported%20by%20valuable%20consideration.",
+            "proposition": "Team IA's reasonableness test governs any restraint, including one extended by a tolling clause, which must remain reasonably limited in time.",
+            "verbatimQuote": "A covenant not to compete will be upheld only if it is: (1) necessary for the protection of the legitimate interest of the employer; (2) reasonably limited in its operation with respect to time and place; (3) not unduly harsh and oppressive in curtailing the legitimate efforts of the employee to earn a livelihood; (4) reasonable from the standpoint of sound public policy; and (5) supported by valuable consideration.",
+            "date": "2011-10-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-team-ia-toll"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#require-injunctive-relief-availability",
+        "requirementGuidance": "The irreparable-harm acknowledgement is standard and harmless — but it buys nothing on its own, because relief presupposes a covenant that first clears all five reasonableness factors. An unenforceable restraint supports no injunction at any stage.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-team-ia-rem",
+            "authorityType": "case-law",
+            "title": "Team IA, Inc. v. Lucas",
+            "citation": "Team IA, Inc. v. Lucas, 395 S.C. 237, 717 S.E.2d 103 (Ct. App. 2011).",
+            "url": "https://www.courtlistener.com/opinion/2507693/team-ia-inc-v-lucas/",
+            "deepLink": "https://www.courtlistener.com/opinion/2507693/team-ia-inc-v-lucas/#:~:text=A%20covenant%20not%20to%20compete,(5)%20supported%20by%20valuable%20consideration.",
+            "proposition": "Team IA's five factors are the threshold every enforcement effort must clear before any remedy — including an injunction — is available.",
+            "verbatimQuote": "A covenant not to compete will be upheld only if it is: (1) necessary for the protection of the legitimate interest of the employer; (2) reasonably limited in its operation with respect to time and place; (3) not unduly harsh and oppressive in curtailing the legitimate efforts of the employee to earn a livelihood; (4) reasonable from the standpoint of sound public policy; and (5) supported by valuable consideration.",
+            "date": "2011-10-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-team-ia-rem"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice: with no fee clause, each side bears its own costs under the default American Rule. If a fee provision appears, check that it runs both ways — a one-sided clause in an agreement a court already construes against the employer reads as one more mark of overreach.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "draft-self-contained-tiered-covenants-rather-than-rely-on-reformation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-carolina.draft-self-contained-tiered-covenants-rather-than-rely-on-reformation",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Written-in fallbacks, not a court rescue",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#draft-self-contained-tiered-covenants-rather-than-rely-on-reformation",
+        "requirementGuidance": "Read the severability boilerplate against what South Carolina courts will actually do, which is nothing: the restrictions in a non-compete cannot be rewritten by a court or limited by the parties' later agreement — they stand or fall on their own terms — and a court will not add a missing limitation the parties never negotiated. A clause asking the court to reduce the restraint to whatever is reasonable is therefore a dead letter. The protection that does work is text the parties already wrote: an alternative, narrower restriction built into the original agreement can remain enforceable even when the primary one is overbroad, so look for tiered step-down territories and durations as real agreed language, each covenant self-contained and reasonable on its own.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-poynter-sev",
+            "authorityType": "case-law",
+            "title": "Poynter Investments, Inc. v. Century Builders of Piedmont, Inc.",
+            "citation": "Poynter Invs., Inc. v. Century Builders of Piedmont, Inc., 387 S.C. 583, 694 S.E.2d 15 (2010).",
+            "url": "https://www.courtlistener.com/opinion/1316178/poynter-investments-inc-v-century-builders-of-piedmont-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1316178/poynter-investments-inc-v-century-builders-of-piedmont-inc/#:~:text=These%20cases%20stand%20for%20the,fall%20on%20their%20own%20terms.",
+            "proposition": "Poynter holds that South Carolina courts cannot rewrite a non-compete's restrictions, which must stand or fall on their own terms.",
+            "verbatimQuote": "These cases stand for the proposition that, in South Carolina, the restrictions in a non-compete clause cannot be rewritten by a court or limited by the parties' agreement, but must stand or fall on their own terms.",
+            "date": "2010-05-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-poynter-sev"
+          },
+          {
+            "sourceId": "sc-stonhard-sev",
+            "authorityType": "case-law",
+            "title": "Stonhard, Inc. v. Carolina Flooring Specialists, Inc.",
+            "citation": "Stonhard, Inc. v. Carolina Flooring Specialists, Inc., 366 S.C. 156, 621 S.E.2d 352 (2005).",
+            "url": "https://www.courtlistener.com/opinion/1202971/stonhard-inc-v-carolina-flooring-specialists-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1202971/stonhard-inc-v-carolina-flooring-specialists-inc/#:~:text=We%20hold%2C%20therefore%2C%20that%20the,neither%20of%20the%20parties%20agreed.",
+            "proposition": "Stonhard holds that a covenant may not be reformed or blue-penciled to add a new term the parties never agreed to.",
+            "verbatimQuote": "We hold, therefore, that the contract may not be reformed or blue-penciled so as to add an entirely new term to which neither of the parties agreed.",
+            "date": "2005-10-10",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-stonhard-sev"
+          },
+          {
+            "sourceId": "sc-team-ia-stepdown-sev",
+            "authorityType": "case-law",
+            "title": "Team IA, Inc. v. Lucas",
+            "citation": "Team IA, Inc. v. Lucas, 395 S.C. 237, 717 S.E.2d 103 (Ct. App. 2011).",
+            "url": "https://www.courtlistener.com/opinion/2507693/team-ia-inc-v-lucas/",
+            "deepLink": "https://www.courtlistener.com/opinion/2507693/team-ia-inc-v-lucas/#:~:text=However%2C%20we%20conclude%20the%20alternative,further%20development%20of%20the%20facts.",
+            "proposition": "Team IA indicates an alternative, narrower territory written into the original agreement can remain enforceable even when the primary territory is overbroad.",
+            "verbatimQuote": "However, we conclude the alternative territorial restriction contained in the parties' original agreement (South Carolina, North Carolina, Georgia, and Alabama) would remain valid and enforceable to the extent it is not overly broad after further development of the facts.",
+            "date": "2011-10-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-team-ia-stepdown-sev"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#address-survival-per-covenant",
+        "requirementGuidance": "Each covenant should expire on its own definite schedule and read on its own. Self-contained survival language is what lets a sound non-solicit outlive a failed non-compete — and in a state where the failed clause gets no judicial repair, that separateness is the difference between losing one covenant and losing them all.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#address-assignment-and-successors",
+        "requirementGuidance": "Confirm the employer can assign to successors and the worker cannot. Whoever inherits the covenant inherits its posture with it — the same five factors, the same strict construction, the same no-rescue rule — so an assignment clause moves the covenant without improving it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law and venue",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#specify-governing-law-and-venue",
+        "requirementGuidance": "Name the governing law, venue, and dispute process. This checklist analyzes the South Carolina framework, so confirm the selections are stated expressly and match where the work and the workforce actually sit; flag any out-of-state selection for counsel rather than treating it as routine boilerplate.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard boilerplate with one local wrinkle: a later amendment that re-papers a covenant mid-employment is itself a covenant entered after the inception of employment, so it needs its own separate consideration beyond the worker simply keeping the job — and the amendment mechanics should leave a record of what new value moved.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-poole-entire",
+            "authorityType": "case-law",
+            "title": "Poole v. Incentives Unlimited, Inc.",
+            "citation": "Poole v. Incentives Unlimited, Inc., 345 S.C. 378, 548 S.E.2d 207 (2001).",
+            "url": "https://www.courtlistener.com/opinion/1328953/poole-v-incentives-unlimited-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1328953/poole-v-incentives-unlimited-inc/#:~:text=Therefore%2C%20we%20adopt%20the%20rule,the%20covenant%20to%20be%20enforceable.",
+            "proposition": "Poole's separate-consideration rule reaches any covenant entered after employment begins, including one re-papered by amendment.",
+            "verbatimQuote": "Therefore, we adopt the rule that when a covenant is entered into after the inception of employment, separate consideration, in addition to continued at-will employment, is necessary in order for the covenant to be enforceable.",
+            "date": "2001-06-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-poole-entire"
+          }
+        ]
+      },
+      {
+        "requirementId": "satisfy-the-five-factor-reasonableness-test",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-carolina.satisfy-the-five-factor-reasonableness-test",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "All five reasonableness factors satisfied",
+        "sectionId": "south-carolina-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#satisfy-the-five-factor-reasonableness-test",
+        "requirementGuidance": "Run every restraint through all five factors: necessary to protect a legitimate interest of the employer, reasonably limited in time and place, not unduly harsh on the worker's ability to earn a living, sound as a matter of public policy, and supported by valuable consideration. The test is conjunctive and the covenant is a disfavored restraint construed against the employer — one failed factor is fatal, and there is no narrowing afterward — so score each covenant on each factor, in writing, before relying on any of them.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-team-ia-gate",
+            "authorityType": "case-law",
+            "title": "Team IA, Inc. v. Lucas",
+            "citation": "Team IA, Inc. v. Lucas, 395 S.C. 237, 717 S.E.2d 103 (Ct. App. 2011).",
+            "url": "https://www.courtlistener.com/opinion/2507693/team-ia-inc-v-lucas/",
+            "deepLink": "https://www.courtlistener.com/opinion/2507693/team-ia-inc-v-lucas/#:~:text=A%20covenant%20not%20to%20compete,(5)%20supported%20by%20valuable%20consideration.",
+            "proposition": "Team IA states South Carolina's conjunctive five-factor reasonableness test for enforcing a covenant not to compete.",
+            "verbatimQuote": "A covenant not to compete will be upheld only if it is: (1) necessary for the protection of the legitimate interest of the employer; (2) reasonably limited in its operation with respect to time and place; (3) not unduly harsh and oppressive in curtailing the legitimate efforts of the employee to earn a livelihood; (4) reasonable from the standpoint of sound public policy; and (5) supported by valuable consideration.",
+            "date": "2011-10-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-team-ia-gate"
+          },
+          {
+            "sourceId": "sc-kerrigan-gate",
+            "authorityType": "case-law",
+            "title": "Standard Register Co. v. Kerrigan",
+            "citation": "Standard Register Co. v. Kerrigan, 238 S.C. 54, 119 S.E.2d 533 (1961).",
+            "url": "https://www.courtlistener.com/opinion/1356432/standard-register-co-v-kerrigan/",
+            "deepLink": "https://www.courtlistener.com/opinion/1356432/standard-register-co-v-kerrigan/#:~:text=The%20reason%20that%20contracts%20against,which%20is%20against%20public%20policy.",
+            "proposition": "Kerrigan explains that non-competes are restraints of trade against public policy and are therefore unenforceable unless they meet the reasonableness criteria.",
+            "verbatimQuote": "The reason that contracts against competition are held to be unenforceable unless they meet certain criteria, is that they constitute a restraint upon trade which is against public policy.",
+            "date": "1961-03-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-kerrigan-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "support-mid-employment-covenants-with-separate-consideration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-carolina.support-mid-employment-covenants-with-separate-consideration",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "New value for a covenant signed after hiring",
+        "sectionId": "south-carolina-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#support-mid-employment-covenants-with-separate-consideration",
+        "requirementGuidance": "A covenant signed after employment has begun must come with separate consideration — continued at-will employment is not enough, and an unchanged role supplies nothing. Look for a raise, bonus, promotion, or genuine change in status recited in the agreement and traceable in the record; without it the fifth factor fails and the covenant fails with it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-poole-rule-gate",
+            "authorityType": "case-law",
+            "title": "Poole v. Incentives Unlimited, Inc.",
+            "citation": "Poole v. Incentives Unlimited, Inc., 345 S.C. 378, 548 S.E.2d 207 (2001).",
+            "url": "https://www.courtlistener.com/opinion/1328953/poole-v-incentives-unlimited-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1328953/poole-v-incentives-unlimited-inc/#:~:text=Therefore%2C%20we%20adopt%20the%20rule,the%20covenant%20to%20be%20enforceable.",
+            "proposition": "Poole holds that a covenant entered after the inception of employment requires separate consideration beyond continued at-will employment.",
+            "verbatimQuote": "Therefore, we adopt the rule that when a covenant is entered into after the inception of employment, separate consideration, in addition to continued at-will employment, is necessary in order for the covenant to be enforceable.",
+            "date": "2001-06-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-poole-rule-gate"
+          },
+          {
+            "sourceId": "sc-poole-unchanged-gate",
+            "authorityType": "case-law",
+            "title": "Poole v. Incentives Unlimited, Inc.",
+            "citation": "Poole v. Incentives Unlimited, Inc., 345 S.C. 378, 548 S.E.2d 207 (2001).",
+            "url": "https://www.courtlistener.com/opinion/1328953/poole-v-incentives-unlimited-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1328953/poole-v-incentives-unlimited-inc/#:~:text=In%20the%20instant%20case%2C%20Poole's,and%20salary%20were%20left%20unchanged.",
+            "proposition": "Poole found no separate consideration where the employee's duties, position, and salary were unchanged after signing.",
+            "verbatimQuote": "In the instant case, Poole's duties, position, and salary were left unchanged.",
+            "date": "2001-06-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-poole-unchanged-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "limit-customer-restrictions-to-customers-the-employee-actually-served",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-carolina.limit-customer-restrictions-to-customers-the-employee-actually-served",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer limits tied to real contacts",
+        "sectionId": "south-carolina-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#limit-customer-restrictions-to-customers-the-employee-actually-served",
+        "requirementGuidance": "Customer restrictions should not reach people the worker never served. Federal courts applying South Carolina law upheld a covenant limited to the employee's contacts from his final twelve months — and refused to enforce one that barred soliciting customers the employee had never serviced, because prohibiting those contacts protected no legitimate interest. Bound the class to actual contacts in a stated look-back window; an employer cannot enforce a clause that merely prevents ordinary competition.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-vessel-gate",
+            "authorityType": "case-law",
+            "title": "Vessel Medical, Inc. v. Elliott",
+            "citation": "Vessel Med., Inc. v. Elliott, No. 6:15-cv-00330-MGL, 2015 U.S. Dist. LEXIS 122436 (D.S.C. Sept. 15, 2015).",
+            "url": "https://www.courtlistener.com/docket/5358739/vessel-medical-inc-v-elliott/",
+            "deepLink": "https://www.courtlistener.com/docket/5358739/vessel-medical-inc-v-elliott/#:~:text=Here%2C%20Elliott%20is%20restricted%20from,covenants%20have%20withstood%20overbreadth%20challenges.",
+            "proposition": "Vessel Medical upheld a customer non-solicitation covenant because it was limited to customers the employee had contact with during his last twelve months of employment.",
+            "verbatimQuote": "Here, Elliott is restricted from soliciting customers with whom he had contact during his last 12 months of employment and such covenants have withstood overbreadth challenges.",
+            "date": "2015-09-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-vessel-gate"
+          },
+          {
+            "sourceId": "sc-fournil-interest-gate",
+            "authorityType": "case-law",
+            "title": "Fournil v. Turbeville Insurance Agency, Inc.",
+            "citation": "Fournil v. Turbeville Ins. Agency, Inc., No. 3:07-cv-03836-JFA (D.S.C. Mar. 2, 2009).",
+            "url": "https://www.courtlistener.com/docket/4822524/fournil-v-turbeville-insurance-agency-inc/",
+            "deepLink": "https://www.courtlistener.com/docket/4822524/fournil-v-turbeville-insurance-agency-inc/#:~:text=The%20magistrate%20found%20that%20prohibiting,and%20this%20conclusion%20was%20well%2Dfounded.",
+            "proposition": "Fournil held that prohibiting an employee from soliciting customers she had never serviced was not related to any legitimate interest of the employer.",
+            "verbatimQuote": "The magistrate found that prohibiting such contacts was not related to any legitimate interest of Turbeville, and this conclusion was well-founded.",
+            "date": "2009-03-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-fournil-interest-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "time-limit-nondisclosure-provisions-that-operate-as-noncompetes",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-carolina.time-limit-nondisclosure-provisions-that-operate-as-noncompetes",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "NDA that works like a non-compete has a time limit",
+        "sectionId": "south-carolina-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#time-limit-nondisclosure-provisions-that-operate-as-noncompetes",
+        "requirementGuidance": "A nondisclosure provision must not function as a non-compete without a reasonable time limit. Genuine confidentiality and invention-assignment clauses are not restraints of trade here and escape strict construction — but provisions whose practical effect is to bar the worker from similar work are judged as non-competes, and ones with no reasonable time restriction violated the public policy of the State. Read each nondisclosure clause for its effect, not its caption, and confirm anything that operates as a restraint carries a definite term.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-milliken-gate",
+            "authorityType": "case-law",
+            "title": "Milliken & Co. v. Morin",
+            "citation": "Milliken & Co. v. Morin, 399 S.C. 23, 731 S.E.2d 288 (2012).",
+            "url": "https://www.courtlistener.com/opinion/8327160/milliken-co-v-morin/",
+            "deepLink": "https://www.courtlistener.com/opinion/8327160/milliken-co-v-morin/#:~:text=We%20therefore%20hold%20confidentiality%20and,in%20favor%20of%20the%20employee.",
+            "proposition": "Milliken holds confidentiality and invention-assignment clauses are not in restraint of trade and are not strictly construed in favor of the employee — the safe harbor a genuine confidentiality clause occupies.",
+            "verbatimQuote": "We therefore hold confidentiality and invention assignment clauses are not in restraint of trade and should not be strictly construed in favor of the employee.",
+            "date": "2012-08-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-milliken-gate"
+          },
+          {
+            "sourceId": "sc-fay-functional-gate",
+            "authorityType": "case-law",
+            "title": "Fay v. Total Quality Logistics, LLC",
+            "citation": "Fay v. Total Quality Logistics, LLC, 419 S.C. 622, 799 S.E.2d 318 (Ct. App. 2017).",
+            "url": "https://www.courtlistener.com/opinion/8328279/fay-v-total-quality-logistics-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/8328279/fay-v-total-quality-logistics-llc/#:~:text=Because%20the%20nondisclosure%20provisions%20had,like%20any%20other%20noncompete%20agreement.",
+            "proposition": "Fay holds that nondisclosure provisions that operate as a covenant not to compete require a reasonable time restriction like any non-compete.",
+            "verbatimQuote": "Because the nondisclosure provisions had the effect of a covenant not to compete, they required a reasonable time restriction like any other noncompete agreement.",
+            "date": "2017-03-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-fay-functional-gate"
+          },
+          {
+            "sourceId": "sc-fay-no-time-gate",
+            "authorityType": "case-law",
+            "title": "Fay v. Total Quality Logistics, LLC",
+            "citation": "Fay v. Total Quality Logistics, LLC, 419 S.C. 622, 799 S.E.2d 318 (Ct. App. 2017).",
+            "url": "https://www.courtlistener.com/opinion/8328279/fay-v-total-quality-logistics-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/8328279/fay-v-total-quality-logistics-llc/#:~:text=The%20nondisclosure%20provisions%20in%20paragraphs,public%20policy%20of%20South%20Carolina.",
+            "proposition": "Fay held that NDA provisions operating as non-competes with no reasonable time restriction violated South Carolina public policy.",
+            "verbatimQuote": "The nondisclosure provisions in paragraphs four and six operated as noncompete provisions with no reasonable time restriction, which violated the public policy of South Carolina.",
+            "date": "2017-03-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-fay-no-time-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "paper-sale-of-business-covenants-in-the-transaction",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-carolina.paper-sale-of-business-covenants-in-the-transaction",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Sale-of-business covenants papered in the deal",
+        "sectionId": "south-carolina-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#paper-sale-of-business-covenants-in-the-transaction",
+        "requirementGuidance": "When the covenant rides a genuine business sale, paper it in the transaction documents — given by the seller, supported by deal consideration. Covenants executed in conjunction with the sale of a business are scrutinized at a more relaxed level than employment covenants, and the court upheld a sale-related territorial restriction under that standard; a covenant signed as a condition of employment gets no such grace, so the papering decides which test applies.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sc-palmetto-relaxed-gate",
+            "authorityType": "case-law",
+            "title": "Palmetto Mortuary Transport, Inc. v. Knight Systems, Inc.",
+            "citation": "Palmetto Mortuary Transp., Inc. v. Knight Sys., Inc., 424 S.C. 444, 818 S.E.2d 724 (2018).",
+            "url": "https://www.courtlistener.com/opinion/8399125/palmetto-mortuary-transp-inc-v-knight-sys-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/8399125/palmetto-mortuary-transp-inc-v-knight-sys-inc/#:~:text=Non%2Dcompete%20covenants%20executed%20in%20conjunction,in%20conjunction%20with%20employment%20contracts.",
+            "proposition": "Palmetto Mortuary holds that sale-of-business non-competes are scrutinized more leniently than employment non-competes.",
+            "verbatimQuote": "Non-compete covenants executed in conjunction with the sale of a business should be scrutinized at a more relaxed level than non-compete covenants executed in conjunction with employment contracts.",
+            "date": "2018-08-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-palmetto-relaxed-gate"
+          },
+          {
+            "sourceId": "sc-palmetto-enforced-gate",
+            "authorityType": "case-law",
+            "title": "Palmetto Mortuary Transport, Inc. v. Knight Systems, Inc.",
+            "citation": "Palmetto Mortuary Transp., Inc. v. Knight Sys., Inc., 424 S.C. 444, 818 S.E.2d 724 (2018).",
+            "url": "https://www.courtlistener.com/opinion/8399125/palmetto-mortuary-transp-inc-v-knight-sys-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/8399125/palmetto-mortuary-transp-inc-v-knight-sys-inc/#:~:text=We%20hold%20the%20territorial%20restriction,sustaining%20grounds%20are%20without%20merit.",
+            "proposition": "Palmetto Mortuary upheld the territorial restriction of the sale-related covenant as reasonable and enforceable.",
+            "verbatimQuote": "We hold the territorial restriction of the non-compete covenant is reasonable and enforceable, and we hold Knight's additional sustaining grounds are without merit.",
+            "date": "2018-08-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-carolina#src-sc-palmetto-enforced-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

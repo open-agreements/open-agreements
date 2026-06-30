@@ -1,0 +1,1407 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/new-hampshire",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/new-hampshire.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/new-hampshire",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/new-hampshire/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/new-hampshire/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "new-hampshire",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — New Hampshire",
+      "description": "A clause-by-clause reviewer checklist for New Hampshire employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under RSA 275:70's pre-acceptance notice rule, the RSA 275:70-a low-wage ban, and the three-part reasonableness test.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "New Hampshire",
+      "coverage": "New Hampshire (US)",
+      "lastReviewed": "2026-06-11",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 46,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "clinician-specific-notices-and-carve-outs",
+        "label": "Clinician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "new-hampshire-statutory-gates",
+        "label": "New Hampshire statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity that actually made the offer and pays the wages. New Hampshire's statutory duties run against the employer requiring the covenant — the pre-acceptance delivery obligation most of all — so a covenant signed with a parent or affiliate that never extended the offer muddies who owed the notice and when.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-275-70-offer-timing",
+            "authorityType": "primary-law",
+            "title": "RSA 275:70",
+            "citation": "RSA 275:70.",
+            "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70.htm",
+            "proposition": "RSA 275:70 places the pre-acceptance delivery duty on the employer requiring the noncompete and makes an undisclosed noncompete unenforceable.",
+            "verbatimQuote": "Any employer who requires an employee who has not previously been employed by the employer to execute a noncompete agreement as a condition of employment shall provide a copy of such agreement to the potential employee prior to the employee's acceptance of an offer of employment. A noncompete agreement that has not been disclosed to an employee as required by this section shall not be enforceable against the employee, but all other provisions of any employment, confidentiality, nondisclosure, trade secret, intellectual property assignment, or any other type of employment agreement or provision shall remain in full force and effect.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-275-70-offer-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#identify-effective-date",
+        "requirementGuidance": "The date does unusual work in New Hampshire: for a new hire the covenant has to reach the employee before the offer is accepted, so the agreement's date — and any record of when it was actually delivered — is the first evidence the statutory sequence was honored. An undated covenant invites the inference that it surfaced during onboarding rather than with the offer.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-275-70-offer-timing",
+            "authorityType": "primary-law",
+            "title": "RSA 275:70",
+            "citation": "RSA 275:70.",
+            "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70.htm",
+            "proposition": "RSA 275:70 places the pre-acceptance delivery duty on the employer requiring the noncompete and makes an undisclosed noncompete unenforceable.",
+            "verbatimQuote": "Any employer who requires an employee who has not previously been employed by the employer to execute a noncompete agreement as a condition of employment shall provide a copy of such agreement to the potential employee prior to the employee's acceptance of an offer of employment. A noncompete agreement that has not been disclosed to an employee as required by this section shall not be enforceable against the employee, but all other provisions of any employment, confidentiality, nondisclosure, trade secret, intellectual property assignment, or any other type of employment agreement or provision shall remain in full force and effect.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-275-70-offer-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#identify-employee-title",
+        "requirementGuidance": "Record the role, then look past it. The low-wage ban turns on the hourly rate measured against 200 percent of the federal minimum wage, not on title or duties, and the clinician practice bans turn on licensure. Title and duties still matter as evidence of which protectable interests — customer influence, confidential information — the worker actually touched.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-275-70-a-wage-test",
+            "authorityType": "primary-law",
+            "title": "RSA 275:70-a",
+            "citation": "RSA 275:70-a, I(b).",
+            "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70-a.htm",
+            "proposition": "RSA 275:70-a defines the protected low-wage class by hourly rate against 200 percent of the federal minimum wage, not by job title.",
+            "verbatimQuote": "(b) \"Low-wage employee\" means an employee who earns an hourly rate less than or equal to 200 percent of the federal minimum wage.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-275-70-a-wage-test"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated. Everything in this checklist assumes New Hampshire law applies, which means a common-law reasonableness test plus the statutory gates at the end of this page; a form drafted for a different regime rarely survives those gates unedited, so a missing or mismatched governing-law term is the first thing to resolve.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#define-confidential-information",
+        "requirementGuidance": "New Hampshire treats confidential information other than trade secrets — a unique business method, for example — as an interest a covenant can protect, so this definition does substantive work. Bound it to information the employer actually keeps confidential; a definition that swallows the worker's general skill and industry knowledge protects nothing a court will recognize.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-hobert-interest-list",
+            "authorityType": "case-law",
+            "title": "ACAS Acquisitions (Precitech) Inc. v. Hobert",
+            "citation": "ACAS Acquisitions (Precitech) Inc. v. Hobert, 155 N.H. 381 (2007).",
+            "url": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/",
+            "deepLink": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/#:~:text=Legitimate%20interests%20of%20an%20employer,goodwill%20and%20a%20positive%20image.",
+            "proposition": "Hobert catalogs the legitimate employer interests New Hampshire recognizes, including confidential information beyond trade secrets and special customer influence.",
+            "verbatimQuote": "Legitimate interests of an employer that may be protected from competition include: the employer’s trade secrets that have been communicated to the employee during the course of employment; confidential information other than trade secrets communicated by the employer to the employee, such as information regarding a unique business method; an employee’s special influence over the employer’s customers, obtained during the course of employment; contacts developed during the employment; and the employer’s development of goodwill and a positive image.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-hobert-interest-list"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#define-trade-secrets",
+        "requirementGuidance": "Track the statutory definition: independent economic value from secrecy plus reasonable secrecy efforts. Trade secrets head the list of interests that can carry a New Hampshire covenant, and a trade-secret recital naming categories nobody actually protects fails both halves of the statutory test.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-350-b-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "RSA 350-B:1",
+            "citation": "RSA 350-B:1.",
+            "url": "https://gc.nh.gov/rsa/html/XXXI/350-B/350-B-1.htm",
+            "proposition": "RSA 350-B:1 defines a trade secret by independent economic value from secrecy plus reasonable secrecy efforts.",
+            "verbatimQuote": "IV. \"Trade secret\" means information, including a formula, pattern, compilation, program, device, method, technique, or process, that: (a) Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and (b) Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-350-b-trade-secret-definition"
+          },
+          {
+            "sourceId": "nh-hobert-interest-list",
+            "authorityType": "case-law",
+            "title": "ACAS Acquisitions (Precitech) Inc. v. Hobert",
+            "citation": "ACAS Acquisitions (Precitech) Inc. v. Hobert, 155 N.H. 381 (2007).",
+            "url": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/",
+            "deepLink": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/#:~:text=Legitimate%20interests%20of%20an%20employer,goodwill%20and%20a%20positive%20image.",
+            "proposition": "Hobert catalogs the legitimate employer interests New Hampshire recognizes, including confidential information beyond trade secrets and special customer influence.",
+            "verbatimQuote": "Legitimate interests of an employer that may be protected from competition include: the employer’s trade secrets that have been communicated to the employee during the course of employment; confidential information other than trade secrets communicated by the employer to the employee, such as information regarding a unique business method; an employee’s special influence over the employer’s customers, obtained during the course of employment; contacts developed during the employment; and the employer’s development of goodwill and a positive image.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-hobert-interest-list"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#define-restricted-period",
+        "requirementGuidance": "One defined Restricted Period keeps every clock auditable. New Hampshire measures duration against the interest being protected — narrowly tailored to the goodwill or confidential-information interest, not a round number copied forward from last year's form.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-forbes-narrow-tailoring",
+            "authorityType": "case-law",
+            "title": "Concord Orthopaedics Professional Ass'n v. Forbes",
+            "citation": "Concord Orthopaedics Professional Ass'n v. Forbes, 142 N.H. 440 (1997).",
+            "url": "https://www.courtlistener.com/opinion/8091834/concord-orthopaedics-professional-assn-v-forbes/",
+            "deepLink": "https://www.courtlistener.com/opinion/8091834/concord-orthopaedics-professional-assn-v-forbes/#:~:text=A%20restraint%20on%20competition%20must,legitimate%20interest%20in%20its%20goodwill.",
+            "proposition": "Forbes requires geography and duration to be narrowly tailored to the employer's goodwill interest.",
+            "verbatimQuote": "A restraint on competition must be narrowly tailored in both geography and duration to protect COPA’s legitimate interest in its goodwill.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-forbes-narrow-tailoring"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#define-restricted-territory",
+        "requirementGuidance": "Tie the territory to where the worker actually built customer or patient relationships. A geography is not reasonable merely because it is named; it should correspond to the worker's sphere of contact rather than the employer's footprint, and it must be narrowly tailored to the goodwill interest it claims to protect.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-forbes-narrow-tailoring",
+            "authorityType": "case-law",
+            "title": "Concord Orthopaedics Professional Ass'n v. Forbes",
+            "citation": "Concord Orthopaedics Professional Ass'n v. Forbes, 142 N.H. 440 (1997).",
+            "url": "https://www.courtlistener.com/opinion/8091834/concord-orthopaedics-professional-assn-v-forbes/",
+            "deepLink": "https://www.courtlistener.com/opinion/8091834/concord-orthopaedics-professional-assn-v-forbes/#:~:text=A%20restraint%20on%20competition%20must,legitimate%20interest%20in%20its%20goodwill.",
+            "proposition": "Forbes requires geography and duration to be narrowly tailored to the employer's goodwill interest.",
+            "verbatimQuote": "A restraint on competition must be narrowly tailored in both geography and duration to protect COPA’s legitimate interest in its goodwill.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-forbes-narrow-tailoring"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the worker served or influenced during a stated look-back window. New Hampshire's leading customer-restriction case struck a covenant that reached customers beyond the salesperson's contacts as going far beyond the sphere of customer goodwill — an entire-book-of-business definition repeats that mistake.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-near-customer-sphere",
+            "authorityType": "case-law",
+            "title": "Merrimack Valley Wood Products, Inc. v. Near",
+            "citation": "Merrimack Valley Wood Products, Inc. v. Near, 152 N.H. 192 (2005).",
+            "url": "https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/",
+            "deepLink": "https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/#:~:text=Thus%2C%20the%20restrictive%20covenant%20goes,protect%20the%20plaintiffs%E2%80%99%20legitimate%20interests.",
+            "proposition": "Near struck a customer restriction that reached beyond the employee's sphere of customer goodwill as more restrictive than necessary.",
+            "verbatimQuote": "Thus, the restrictive covenant goes far beyond the defendant’s sphere of customer goodwill, and was more restrictive than necessary to protect the plaintiffs’ legitimate interests.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-near-customer-sphere"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing worker actually worked with or supervised. New Hampshire has already held that the mere cost of recruiting and hiring is not a protectable interest, so a workforce-wide definition rests the clause on exactly the interest the court rejected.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-olsten-recruiting-costs",
+            "authorityType": "case-law",
+            "title": "National Employment Service Corp. v. Olsten Staffing Service, Inc.",
+            "citation": "National Employment Service Corp. v. Olsten Staffing Service, Inc., 145 N.H. 158 (2000).",
+            "url": "https://www.courtlistener.com/opinion/8092147/national-employment-service-corp-v-olsten-staffing-service-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/8092147/national-employment-service-corp-v-olsten-staffing-service-inc/#:~:text=Thus%2C%20we%20hold%20that%20although,covenant%20in%20an%20employment%20contract.",
+            "proposition": "Olsten holds that ordinary recruiting and hiring costs are not a legitimate interest protectable by an employment restrictive covenant.",
+            "verbatimQuote": "Thus, we hold that although there may be valid reasons for restrictive covenants, the mere cost associated with recruiting and hiring employees is not a legitimate interest protectable by a restrictive covenant in an employment contract.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-olsten-recruiting-costs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#define-protected-interests",
+        "requirementGuidance": "Name the specific assets at risk and match them to the recognized catalog: trade secrets, confidential information beyond trade secrets, special customer influence, employment-developed contacts, and goodwill. Recitals about competition in general add nothing the first prong of the reasonableness test can use.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-hobert-interest-list",
+            "authorityType": "case-law",
+            "title": "ACAS Acquisitions (Precitech) Inc. v. Hobert",
+            "citation": "ACAS Acquisitions (Precitech) Inc. v. Hobert, 155 N.H. 381 (2007).",
+            "url": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/",
+            "deepLink": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/#:~:text=Legitimate%20interests%20of%20an%20employer,goodwill%20and%20a%20positive%20image.",
+            "proposition": "Hobert catalogs the legitimate employer interests New Hampshire recognizes, including confidential information beyond trade secrets and special customer influence.",
+            "verbatimQuote": "Legitimate interests of an employer that may be protected from competition include: the employer’s trade secrets that have been communicated to the employee during the course of employment; confidential information other than trade secrets communicated by the employer to the employee, such as information regarding a unique business method; an employee’s special influence over the employer’s customers, obtained during the course of employment; contacts developed during the employment; and the employer’s development of goodwill and a positive image.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-hobert-interest-list"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity in concrete terms. The restraint may be no greater than necessary to protect the legitimate interest, so a definition that expands to anything the employer might someday do overshoots the only measure the first prong supplies.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-foster-three-part",
+            "authorityType": "case-law",
+            "title": "Smith, Batchelder & Rugg v. Foster",
+            "citation": "Smith, Batchelder & Rugg v. Foster, 119 N.H. 679 (1979).",
+            "url": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/",
+            "deepLink": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/#:~:text=In%20scrutinizing%20restrictive%20covenants%2C%20this,injurious%20to%20the%20public%20interest.%E2%80%9D",
+            "proposition": "Foster states New Hampshire's three-part reasonableness test: no greater than necessary for the legitimate interest, no undue hardship on the employee, no injury to the public interest.",
+            "verbatimQuote": "In scrutinizing restrictive covenants, this court employs the following three-pronged test: “[a] restraint on employment is reasonable only if it is no greater than necessary for the protection of the employer’s legitimate interest, does not impose undue hardship on the employee and is not injurious to the public interest.”",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-foster-three-part"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. A clause that technically forbids index funds and ordinary public shares burdens the worker with no offsetting employer interest — gratuitous weight on the undue-hardship prong.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-foster-three-part",
+            "authorityType": "case-law",
+            "title": "Smith, Batchelder & Rugg v. Foster",
+            "citation": "Smith, Batchelder & Rugg v. Foster, 119 N.H. 679 (1979).",
+            "url": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/",
+            "deepLink": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/#:~:text=In%20scrutinizing%20restrictive%20covenants%2C%20this,injurious%20to%20the%20public%20interest.%E2%80%9D",
+            "proposition": "Foster states New Hampshire's three-part reasonableness test: no greater than necessary for the legitimate interest, no undue hardship on the employee, no injury to the public interest.",
+            "verbatimQuote": "In scrutinizing restrictive covenants, this court employs the following three-pronged test: “[a] restraint on employment is reasonable only if it is no greater than necessary for the protection of the employer’s legitimate interest, does not impose undue hardship on the employee and is not injurious to the public interest.”",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-foster-three-part"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#define-passive-public-holdings",
+        "requirementGuidance": "Optional as a defined term — many agreements inline the carve-out language instead. If the capitalized term appears, confirm its percentage threshold matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#define-solicit",
+        "requirementGuidance": "Pin solicitation to contact the worker initiates. The interest behind a non-solicit is the worker's special influence over the employer's customers obtained during employment — influence is exercised by reaching out, and a definition that also captures passively received inquiries widens the restraint beyond that interest.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-hobert-interest-list",
+            "authorityType": "case-law",
+            "title": "ACAS Acquisitions (Precitech) Inc. v. Hobert",
+            "citation": "ACAS Acquisitions (Precitech) Inc. v. Hobert, 155 N.H. 381 (2007).",
+            "url": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/",
+            "deepLink": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/#:~:text=Legitimate%20interests%20of%20an%20employer,goodwill%20and%20a%20positive%20image.",
+            "proposition": "Hobert catalogs the legitimate employer interests New Hampshire recognizes, including confidential information beyond trade secrets and special customer influence.",
+            "verbatimQuote": "Legitimate interests of an employer that may be protected from competition include: the employer’s trade secrets that have been communicated to the employee during the course of employment; confidential information other than trade secrets communicated by the employer to the employee, such as information regarding a unique business method; an employee’s special influence over the employer’s customers, obtained during the course of employment; contacts developed during the employment; and the employer’s development of goodwill and a positive image.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-hobert-interest-list"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger covers resignation, dismissal, and expiration of a fixed term the same way. The restricted period and every survival clock run from this event, and an ambiguous trigger hands the court a reason to read the restraint against the drafter.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "record-timing-and-continued-employment-consideration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-hampshire.record-timing-and-continued-employment-consideration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When it was delivered, signed, and what supported it",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#record-timing-and-continued-employment-consideration",
+        "requirementGuidance": "New Hampshire is forgiving on consideration — continued employment after signing supports the covenant — but consideration cannot cure a timing defect: a new hire required to sign as a condition of employment must receive the covenant before accepting the offer. The acknowledgement should record the delivery date, the signing date, and the consideration that moved, because the same recital later evidences the good-faith execution on which reformation of any overbroad term depends.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-foster-continued-employment",
+            "authorityType": "case-law",
+            "title": "Smith, Batchelder & Rugg v. Foster",
+            "citation": "Smith, Batchelder & Rugg v. Foster, 119 N.H. 679 (1979).",
+            "url": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/",
+            "deepLink": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/#:~:text=Continued%20employment%20after%20signing%20an,not%20to%20compete%20contained%20therein.",
+            "proposition": "Foster holds that continued employment after signing constitutes consideration for a covenant not to compete.",
+            "verbatimQuote": "Continued employment after signing an employment contract constitutes consideration for a covenant not to compete contained therein.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-foster-continued-employment"
+          },
+          {
+            "sourceId": "nh-275-70-disclosure-consequence",
+            "authorityType": "primary-law",
+            "title": "RSA 275:70",
+            "citation": "RSA 275:70.",
+            "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70.htm",
+            "proposition": "RSA 275:70 makes an undisclosed noncompete unenforceable against the employee while preserving the agreement's other provisions.",
+            "verbatimQuote": "A noncompete agreement that has not been disclosed to an employee as required by this section shall not be enforceable against the employee, but all other provisions of any employment, confidentiality, nondisclosure, trade secret, intellectual property assignment, or any other type of employment agreement or provision shall remain in full force and effect.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-275-70-disclosure-consequence"
+          },
+          {
+            "sourceId": "nh-near-good-faith",
+            "authorityType": "case-law",
+            "title": "Merrimack Valley Wood Products, Inc. v. Near",
+            "citation": "Merrimack Valley Wood Products, Inc. v. Near, 152 N.H. 192 (2005).",
+            "url": "https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/",
+            "deepLink": "https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/#:~:text=Courts%20have%20the%20power%20to,execution%20of%20the%20employment%20contract.",
+            "proposition": "Near conditions reformation of overbroad covenants on the employer's good faith in the execution of the employment contract.",
+            "verbatimQuote": "Courts have the power to reform overly broad restrictive covenants if the employer shows that it acted in good faith in the execution of the employment contract.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-near-good-faith"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No New Hampshire statute demands it, but reformation here is gated on how the employer behaved at execution, and bad-faith facts can end the enforceability inquiry outright. A counsel acknowledgement backed by real time to use it is cheap evidence on the right side of that question.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-syncom-bad-faith",
+            "authorityType": "case-law",
+            "title": "Syncom Industries, Inc. v. Wood",
+            "citation": "Syncom Industries, Inc. v. Wood, 155 N.H. 73 (2007).",
+            "url": "https://www.courtlistener.com/opinion/1896769/syncom-industries-inc-v-wood/",
+            "deepLink": "https://www.courtlistener.com/opinion/1896769/syncom-industries-inc-v-wood/#:~:text=If%20the%20trial%20court%20were,to%20further%20address%20their%20enforceability.",
+            "proposition": "Syncom treats employer bad faith at execution as capable of defeating reformation before enforceability is even reached.",
+            "verbatimQuote": "If the trial court were to determine that the restrictive covenants could not be reformed due to Syncom’s bad faith, then there would be no need to further address their enforceability.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-syncom-bad-faith"
+          }
+        ]
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret obligations should last as long as secrecy does — both federal law and New Hampshire's chapter 350-B key trade-secret status to continued secrecy and continued secrecy efforts. The state stakes are concrete: when a noncompete fails one of the statutory gates, trade-secret protection is the remedy that keeps working, and a fixed expiry undercuts it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-dtsa-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-dtsa-definition"
+          },
+          {
+            "sourceId": "nh-350-b-definition-duration",
+            "authorityType": "primary-law",
+            "title": "RSA 350-B:1",
+            "citation": "RSA 350-B:1.",
+            "url": "https://gc.nh.gov/rsa/html/XXXI/350-B/350-B-1.htm",
+            "proposition": "RSA 350-B:1 conditions trade-secret status on ongoing reasonable secrecy efforts, supporting protection that runs with secrecy rather than to a fixed date.",
+            "verbatimQuote": "IV. \"Trade secret\" means information, including a formula, pattern, compilation, program, device, method, technique, or process, that: (a) Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and (b) Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-350-b-definition-duration"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. New Hampshire recognizes confidential information short of trade-secret status as protectable, but a perpetual lid on everything strains reasonableness; the two-track structure keeps perpetual treatment where secrecy actually supports it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-hobert-confidential-info",
+            "authorityType": "case-law",
+            "title": "ACAS Acquisitions (Precitech) Inc. v. Hobert",
+            "citation": "ACAS Acquisitions (Precitech) Inc. v. Hobert, 155 N.H. 381 (2007).",
+            "url": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/",
+            "deepLink": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/#:~:text=Legitimate%20interests%20of%20an%20employer,goodwill%20and%20a%20positive%20image.",
+            "proposition": "Hobert recognizes confidential information other than trade secrets as a protectable employer interest.",
+            "verbatimQuote": "Legitimate interests of an employer that may be protected from competition include: the employer’s trade secrets that have been communicated to the employee during the course of employment; confidential information other than trade secrets communicated by the employer to the employee, such as information regarding a unique business method; an employee’s special influence over the employer’s customers, obtained during the course of employment; contacts developed during the employment; and the employer’s development of goodwill and a positive image.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-hobert-confidential-info"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in New Hampshire: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret suit against the worker. Because trade-secret and nondisclosure protection carry so much of the load when a New Hampshire covenant fails, giving away federal remedies is an unforced error.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech regardless of the governing state, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-nlra-section-7",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-nlra-section-7"
+          },
+          {
+            "sourceId": "nh-mclaren-macomb",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-mclaren-macomb"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation. A confidentiality clause with no compelled-disclosure exception forces the worker to choose between the contract and a subpoena — overbreadth that serves no recognizable employer interest.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. When the realistic New Hampshire remedy is a trade-secret or nondisclosure order rather than the covenant itself, the certification becomes the cleanest contemporaneous evidence if protected material later surfaces at a competitor.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional — and in New Hampshire it needs its own interest. The court has held that the mere cost of recruiting and hiring employees is not protectable, so a no-poach clause should rest on something more concrete: the departing team's customer relationships or confidential know-how, kept inside the Covered Employees class and the Restricted Period.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-olsten-no-poach-interest",
+            "authorityType": "case-law",
+            "title": "National Employment Service Corp. v. Olsten Staffing Service, Inc.",
+            "citation": "National Employment Service Corp. v. Olsten Staffing Service, Inc., 145 N.H. 158 (2000).",
+            "url": "https://www.courtlistener.com/opinion/8092147/national-employment-service-corp-v-olsten-staffing-service-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/8092147/national-employment-service-corp-v-olsten-staffing-service-inc/#:~:text=Thus%2C%20we%20hold%20that%20although,covenant%20in%20an%20employment%20contract.",
+            "proposition": "Olsten rejects recruiting and hiring costs as a protectable interest, so an employee non-solicit needs a more concrete employer asset behind it.",
+            "verbatimQuote": "Thus, we hold that although there may be valid reasons for restrictive covenants, the mere cost associated with recruiting and hiring employees is not a legitimate interest protectable by a restrictive covenant in an employment contract.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-olsten-no-poach-interest"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#permit-customer-nonsolicit",
+        "requirementGuidance": "Optional, and best kept inside the worker's own book: New Hampshire struck a restriction that reached customers beyond the salesperson's contacts. If the clause appears, check the customer class against the goodwill-sphere item in the New Hampshire gates at the end of this checklist before anything else.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-near-sphere-covenant",
+            "authorityType": "case-law",
+            "title": "Merrimack Valley Wood Products, Inc. v. Near",
+            "citation": "Merrimack Valley Wood Products, Inc. v. Near, 152 N.H. 192 (2005).",
+            "url": "https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/",
+            "deepLink": "https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/#:~:text=Thus%2C%20the%20restrictive%20covenant%20goes,protect%20the%20plaintiffs%E2%80%99%20legitimate%20interests.",
+            "proposition": "Near supports limiting a customer non-solicit to the employee's actual sphere of customer goodwill.",
+            "verbatimQuote": "Thus, the restrictive covenant goes far beyond the defendant’s sphere of customer goodwill, and was more restrictive than necessary to protect the plaintiffs’ legitimate interests.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-near-sphere-covenant"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they call first — a restraint on receiving business rather than chasing it. New Hampshire tests it like any other restraint: no greater than necessary for the protected interest, and the further the clause drifts from the worker's own customer influence, the harder that showing gets.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-foster-restraint-test",
+            "authorityType": "case-law",
+            "title": "Smith, Batchelder & Rugg v. Foster",
+            "citation": "Smith, Batchelder & Rugg v. Foster, 119 N.H. 679 (1979).",
+            "url": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/",
+            "deepLink": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/#:~:text=In%20scrutinizing%20restrictive%20covenants%2C%20this,injurious%20to%20the%20public%20interest.%E2%80%9D",
+            "proposition": "Foster's three-pronged test governs every New Hampshire restraint on employment, including non-dealing covenants.",
+            "verbatimQuote": "In scrutinizing restrictive covenants, this court employs the following three-pronged test: “[a] restraint on employment is reasonable only if it is no greater than necessary for the protection of the employer’s legitimate interest, does not impose undue hardship on the employee and is not injurious to the public interest.”",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-foster-restraint-test"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#permit-non-compete",
+        "requirementGuidance": "If a true non-compete appears, route it through the New Hampshire gates at the end of this checklist before reviewing its terms: pre-acceptance delivery for new hires, the low-wage ban, the recognized-interest requirement, and the goodwill-sphere limits. A covenant that fails a statutory gate is unenforceable or void no matter how reasonably it reads.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-275-70-gate-cover",
+            "authorityType": "primary-law",
+            "title": "RSA 275:70",
+            "citation": "RSA 275:70.",
+            "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70.htm",
+            "proposition": "RSA 275:70 makes an undisclosed new-hire noncompete unenforceable, a gate that precedes any reasonableness review.",
+            "verbatimQuote": "A noncompete agreement that has not been disclosed to an employee as required by this section shall not be enforceable against the employee, but all other provisions of any employment, confidentiality, nondisclosure, trade secret, intellectual property assignment, or any other type of employment agreement or provision shall remain in full force and effect.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-275-70-gate-cover"
+          },
+          {
+            "sourceId": "nh-275-70-a-void-cover",
+            "authorityType": "primary-law",
+            "title": "RSA 275:70-a",
+            "citation": "RSA 275:70-a, II(b).",
+            "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70-a.htm",
+            "proposition": "RSA 275:70-a makes a noncompete with a covered low-wage employee void and unenforceable.",
+            "verbatimQuote": "A noncompete agreement entered into between an employer and a low-wage employee shall be void and unenforceable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-275-70-a-void-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, bind those instead of leaning on the open-ended Competitive Business definition. New Hampshire enforced a covenant the court found reasonable on a tailored record — specificity is the cheapest tailoring evidence, and it strengthens the good-faith record that any later reformation depends on.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-hobert-enforced-tailored",
+            "authorityType": "case-law",
+            "title": "ACAS Acquisitions (Precitech) Inc. v. Hobert",
+            "citation": "ACAS Acquisitions (Precitech) Inc. v. Hobert, 155 N.H. 381 (2007).",
+            "url": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/",
+            "deepLink": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/#:~:text=Accordingly%2C%20we%20conclude%20that%20the%20defendant%E2%80%99s%20non%2Dcompetition%20covenant%20was%20reasonable%20and%20enforceable.",
+            "proposition": "Hobert enforced a non-compete the court found reasonable, showing that a tailored covenant survives New Hampshire scrutiny.",
+            "verbatimQuote": "Accordingly, we conclude that the defendant’s non-competition covenant was reasonable and enforceable.",
+            "pullQuoteLocator": "Accordingly, we conclude that the defendant’s non-competition covenant was reasonable and enforceable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-hobert-enforced-tailored"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — an investment restraint detached from any customer-facing activity sits poorly with a test that asks what employer interest the restriction actually protects.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-mclaren-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-mclaren-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-geographic-practice-restrictions-for-covered-clinicians",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-hampshire.exclude-geographic-practice-restrictions-for-covered-clinicians",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No geographic practice bans for covered clinicians",
+        "sectionId": "clinician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#exclude-geographic-practice-restrictions-for-covered-clinicians",
+        "requirementGuidance": "The agreement must not restrict where a covered New Hampshire clinician may practice after the relationship ends. Separate statutes void geographic post-termination practice restrictions for physicians, nurses, advanced practice registered nurses (effective August 23, 2025), and podiatrists, while expressly preserving the contract's remaining provisions — licensure is the test, not the job title on the signature page. If the real concern is information protection rather than practice location, carry it in confidentiality and trade-secret provisions, which these statutes leave intact.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-329-31-a-physicians",
+            "authorityType": "primary-law",
+            "title": "RSA 329:31-a",
+            "citation": "RSA 329:31-a.",
+            "url": "https://gc.nh.gov/rsa/html/XXX/329/329-31-a.htm",
+            "proposition": "RSA 329:31-a voids geographic post-termination practice restrictions for New Hampshire physicians while preserving the contract's remaining provisions.",
+            "verbatimQuote": "Any contract or agreement which creates or established the terms of a partnership, employment, or any other form of professional relationship with a physician licensed by the board to practice in this state, which includes any restriction to the right of such physician to also practice medicine in any geographic area for any period of time after the termination of such partnership, employment, or professional relationship shall be void and unenforceable with respect to said restriction; provided however, that nothing herein shall render void or unenforceable the remaining provision of any such contract or agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-329-31-a-physicians"
+          },
+          {
+            "sourceId": "nh-326-b-45-a-nurses",
+            "authorityType": "primary-law",
+            "title": "RSA 326-B:45-a",
+            "citation": "RSA 326-B:45-a.",
+            "url": "https://gc.nh.gov/rsa/html/XXX/326-B/326-B-45-a.htm",
+            "proposition": "RSA 326-B:45-a voids geographic post-termination practice restrictions for New Hampshire nurses while preserving the contract's remaining provisions.",
+            "verbatimQuote": "Any contract or agreement which creates or established the terms of a partnership, employment, or any other form of professional relationship with a nurse licensed by the board to practice in this state, which includes any restriction to the right of such nurse to also practice in any geographic area for any period of time after the termination of such partnership, employment, or professional relationship shall be void and unenforceable with respect to said restriction; provided however, that nothing herein shall render void or unenforceable the remaining provision of any such contract or agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-326-b-45-a-nurses"
+          },
+          {
+            "sourceId": "nh-326-b-45-b-aprns",
+            "authorityType": "primary-law",
+            "title": "RSA 326-B:45-b",
+            "citation": "RSA 326-B:45-b.",
+            "url": "https://gc.nh.gov/rsa/html/XXX/326-B/326-B-45-b.htm",
+            "proposition": "RSA 326-B:45-b voids geographic post-termination practice restrictions for New Hampshire advanced practice registered nurses.",
+            "verbatimQuote": "Any contract or agreement which creates or establishes the terms of a partnership, employment, or any other form of professional relationship with an advanced practice registered nurse licensed by the board to practice in this state, which includes any restriction to the right of such advanced practice registered nurse to also practice in any geographic area for any period of time after the termination of such partnership, employment, or professional relationship shall be void and unenforceable with respect to said restriction; provided however, that nothing herein shall render void or unenforceable the remaining provisions of any such contract or agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-326-b-45-b-aprns"
+          },
+          {
+            "sourceId": "nh-315-18-podiatrists",
+            "authorityType": "primary-law",
+            "title": "RSA 315:18",
+            "citation": "RSA 315:18.",
+            "url": "https://gc.nh.gov/rsa/html/XXX/315/315-18.htm",
+            "proposition": "RSA 315:18 voids geographic post-termination practice restrictions for New Hampshire podiatrists while preserving the contract's remaining provisions.",
+            "verbatimQuote": "Any contract or agreement which creates or established the terms of a partnership, employment, or any other form of professional relationship with a podiatrist licensed by the board to practice in this state, which includes any restriction to the right of such podiatrist to also practice podiatry in any geographic area for any period of time after the termination of such partnership, employment, or professional relationship shall be void and unenforceable with respect to said restriction; provided however, that nothing herein shall render void or unenforceable the remaining provision of any such contract or agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-315-18-podiatrists"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. On intake it cuts both ways in New Hampshire: an incoming covenant may carry its own defects — late delivery to a new hire, a covered low-wage signer — so ask for the prior paper itself rather than a conclusion about it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice. If the clause appears, condition any disclosure on a covenant that actually survives the New Hampshire gates — warning a new employer off the worker based on an undelivered new-hire covenant or a low-wage covenant asserts a restraint the statutes already make unenforceable or void.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-275-70-survival",
+            "authorityType": "primary-law",
+            "title": "RSA 275:70",
+            "citation": "RSA 275:70.",
+            "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70.htm",
+            "proposition": "RSA 275:70 renders an undisclosed new-hire noncompete unenforceable, so third-party notices should not assert it.",
+            "verbatimQuote": "A noncompete agreement that has not been disclosed to an employee as required by this section shall not be enforceable against the employee, but all other provisions of any employment, confidentiality, nondisclosure, trade secret, intellectual property assignment, or any other type of employment agreement or provision shall remain in full force and effect.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-275-70-survival"
+          },
+          {
+            "sourceId": "nh-275-70-a-void-notice",
+            "authorityType": "primary-law",
+            "title": "RSA 275:70-a",
+            "citation": "RSA 275:70-a, II(b).",
+            "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70-a.htm",
+            "proposition": "RSA 275:70-a voids a low-wage employee noncompete, so third-party notices should not assert one.",
+            "verbatimQuote": "A noncompete agreement entered into between an employer and a low-wage employee shall be void and unenforceable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-275-70-a-void-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-tolling-as-an-unsettled-extension-question",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-hampshire.address-tolling-as-an-unsettled-extension-question",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#address-tolling-as-an-unsettled-extension-question",
+        "requirementGuidance": "The agreement should say expressly whether the restricted period extends during a breach — and any clause that does extend it should be treated as a drafting choice of uncertain enforceability. No New Hampshire appellate decision in the practice note's source set blesses tolling, and the remedial pattern leans the other way: reformation narrows scope on a good-faith showing, and in the sale-of-business setting the court refused to stretch a written five-year term. Tie any tolling clause to the protected interest and the covenant's overall duration, and price in the possibility that it adds nothing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-gosselin-no-extension",
+            "authorityType": "case-law",
+            "title": "Gosselin v. Archibald",
+            "citation": "Gosselin v. Archibald, 121 N.H. 1016 (1981).",
+            "url": "https://www.courtlistener.com/opinion/2059042/gosselin-v-archibald/",
+            "deepLink": "https://www.courtlistener.com/opinion/2059042/gosselin-v-archibald/#:~:text=We%20cannot%20agree%20with%20the%20master%E2%80%99s%20extension,the%20covenant%20not%20to%20compete.",
+            "proposition": "Gosselin rejected a court-ordered extension of a written covenant duration, counseling against assuming a New Hampshire tolling rule.",
+            "verbatimQuote": "We cannot agree with the master’s extension of the time limitation of the covenant not to compete.",
+            "pullQuoteLocator": "We cannot agree with the master’s extension|the covenant not to compete.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-gosselin-no-extension"
+          },
+          {
+            "sourceId": "nh-near-narrowing-remedy",
+            "authorityType": "case-law",
+            "title": "Merrimack Valley Wood Products, Inc. v. Near",
+            "citation": "Merrimack Valley Wood Products, Inc. v. Near, 152 N.H. 192 (2005).",
+            "url": "https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/",
+            "deepLink": "https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/#:~:text=Courts%20have%20the%20power%20to,execution%20of%20the%20employment%20contract.",
+            "proposition": "Near frames reformation as a good-faith-gated scope-narrowing remedy, not a duration-extension rule.",
+            "verbatimQuote": "Courts have the power to reform overly broad restrictive covenants if the employer shows that it acted in good faith in the execution of the employment contract.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-near-narrowing-remedy"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief — then treat it as a recital, not a result. A federal court applying New Hampshire law declined to enjoin a noncompete for want of irreparable injury and a favorable balance of equities while still granting the narrower nondisclosure injunction; the equities get proved, not recited.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-hcc-irreparable-injury",
+            "authorityType": "case-law",
+            "title": "HCC Specialty Underwriters, Inc. v. Woodbury",
+            "citation": "HCC Specialty Underwriters, Inc. v. Woodbury, 289 F. Supp. 3d 303 (D.N.H. 2018).",
+            "url": "https://www.courtlistener.com/opinion/7328330/hcc-specialty-underwriters-inc-v-woodbury/",
+            "deepLink": "https://www.courtlistener.com/opinion/7328330/hcc-specialty-underwriters-inc-v-woodbury/#:~:text=However%2C%20with%20respect%20to%20Woodbury's,favorable%20balance%20of%20the%20equities.",
+            "proposition": "HCC, a federal decision applying New Hampshire law, denied the noncompete injunction for want of irreparable injury and a favorable balance of equities.",
+            "verbatimQuote": "However, with respect to Woodbury's breach of the noncompete provisions, HCC has not demonstrated irreparable injury or a favorable balance of the equities.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-hcc-irreparable-injury"
+          },
+          {
+            "sourceId": "nh-hcc-nondisclosure",
+            "authorityType": "case-law",
+            "title": "HCC Specialty Underwriters, Inc. v. Woodbury",
+            "citation": "HCC Specialty Underwriters, Inc. v. Woodbury, 289 F. Supp. 3d 303 (D.N.H. 2018).",
+            "url": "https://www.courtlistener.com/opinion/7328330/hcc-specialty-underwriters-inc-v-woodbury/",
+            "deepLink": "https://www.courtlistener.com/opinion/7328330/hcc-specialty-underwriters-inc-v-woodbury/#:~:text=Therefore%2C%20the%20court%20issues%20a,provisions%20of%20the%201996%20Agreement.",
+            "proposition": "HCC granted the narrower nondisclosure injunction even as it denied the noncompete injunction.",
+            "verbatimQuote": "Therefore, the court issues a preliminary injunction requiring Woodbury to abide by the nondisclosure provisions of the 1996 Agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-hcc-nondisclosure"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice. Check that any fee-shifting is mutual and prevailing-party based — a one-way employer clause stacked on an aggressive covenant adds pressure without adding enforceability, in a state whose courts weigh how the employer behaved when deciding whether to rescue an overbroad term.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "draft-in-good-faith-rather-than-rely-on-reformation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-hampshire.draft-in-good-faith-rather-than-rely-on-reformation",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Drafted narrow instead of leaning on court repair",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#draft-in-good-faith-rather-than-rely-on-reformation",
+        "requirementGuidance": "Read the severability clause as a signal, not a safety net. New Hampshire courts can reform an overbroad covenant only when the employer proves it acted in good faith in executing the agreement, and bad-faith execution facts can take reformation off the table entirely. A reformation clause may stay in the instrument, but the covenant should be sized to the enforceable scope at signing — and the execution practices behind it, advance delivery and real time to review, are part of what preserves the rescue if a term still overshoots.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-near-good-faith-reformation",
+            "authorityType": "case-law",
+            "title": "Merrimack Valley Wood Products, Inc. v. Near",
+            "citation": "Merrimack Valley Wood Products, Inc. v. Near, 152 N.H. 192 (2005).",
+            "url": "https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/",
+            "deepLink": "https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/#:~:text=Courts%20have%20the%20power%20to,execution%20of%20the%20employment%20contract.",
+            "proposition": "Near conditions the reformation power on the employer's good faith in the execution of the employment contract.",
+            "verbatimQuote": "Courts have the power to reform overly broad restrictive covenants if the employer shows that it acted in good faith in the execution of the employment contract.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-near-good-faith-reformation"
+          },
+          {
+            "sourceId": "nh-syncom-reformation-bad-faith",
+            "authorityType": "case-law",
+            "title": "Syncom Industries, Inc. v. Wood",
+            "citation": "Syncom Industries, Inc. v. Wood, 155 N.H. 73 (2007).",
+            "url": "https://www.courtlistener.com/opinion/1896769/syncom-industries-inc-v-wood/",
+            "deepLink": "https://www.courtlistener.com/opinion/1896769/syncom-industries-inc-v-wood/#:~:text=If%20the%20trial%20court%20were,to%20further%20address%20their%20enforceability.",
+            "proposition": "Syncom shows that employer bad faith can foreclose reformation before enforceability is reached.",
+            "verbatimQuote": "If the trial court were to determine that the restrictive covenants could not be reformed due to Syncom’s bad faith, then there would be no need to further address their enforceability.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-syncom-reformation-bad-faith"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual where secrecy persists, finite elsewhere. The discipline matters in New Hampshire because duration is one of the dimensions the reasonableness test polices, and a bundled survival clause is where an unexamined duration hides.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. New Hampshire has let an asset-purchase buyer enforce an employee noncompete because the agreement's plain transfer language conveyed it — the words of the assignment clause, not assumptions about successorship, decide who can enforce.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-atronix-conveyance",
+            "authorityType": "case-law",
+            "title": "Atronix, Inc. v. Morris",
+            "citation": "Atronix, Inc. v. Morris, 197 A.3d 79 (N.H. 2018).",
+            "url": "https://www.courtlistener.com/opinion/4546183/atronix-inc-v-kenneth-morris-a/",
+            "deepLink": "https://www.courtlistener.com/opinion/4546183/atronix-inc-v-kenneth-morris-a/#:~:text=Because%20we%20conclude%20that%20Morris%E2%80%99s,arguments%20or%20the%20defendants%E2%80%99%20argument",
+            "proposition": "Atronix held the employee noncompete was conveyed to the asset-purchase buyer under the agreement's plain transfer language.",
+            "verbatimQuote": "Because we conclude that Morris’s non-compete agreement was conveyed to the plaintiff under the plain language of section 2.02(a)(xii), we need not address either the plaintiff’s additional arguments or the defendants’ argument",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-atronix-conveyance"
+          }
+        ]
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law and venue",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#specify-governing-law-and-venue",
+        "requirementGuidance": "The agreement should state governing law, venue, and dispute process in one place. Restrictive-covenant outcomes are jurisdiction-sensitive, and every gate on this page assumes New Hampshire law applies — an unstated or mismatched choice-of-law clause reopens the threshold question of which state's rules govern the covenant at all.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate with a New Hampshire wrinkle: covenants get re-papered at raises and promotions, and a mid-employment refresh is sound on consideration grounds because continued employment supports it. The trap runs the other way — a covenant that first surfaces in onboarding or amendment paperwork for a worker hired without one invites the timing fight the notice statute exists to prevent.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-foster-midstream-consideration",
+            "authorityType": "case-law",
+            "title": "Smith, Batchelder & Rugg v. Foster",
+            "citation": "Smith, Batchelder & Rugg v. Foster, 119 N.H. 679 (1979).",
+            "url": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/",
+            "deepLink": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/#:~:text=Continued%20employment%20after%20signing%20an,not%20to%20compete%20contained%20therein.",
+            "proposition": "Foster supports continued employment as consideration for a covenant signed mid-employment.",
+            "verbatimQuote": "Continued employment after signing an employment contract constitutes consideration for a covenant not to compete contained therein.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-foster-midstream-consideration"
+          },
+          {
+            "sourceId": "nh-275-70-condition-of-employment",
+            "authorityType": "primary-law",
+            "title": "RSA 275:70",
+            "citation": "RSA 275:70.",
+            "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70.htm",
+            "proposition": "RSA 275:70 requires delivery of a required new-hire noncompete before the offer is accepted, which onboarding-stage paperwork cannot satisfy.",
+            "verbatimQuote": "Any employer who requires an employee who has not previously been employed by the employer to execute a noncompete agreement as a condition of employment shall provide a copy of such agreement to the potential employee prior to the employee's acceptance of an offer of employment. A noncompete agreement that has not been disclosed to an employee as required by this section shall not be enforceable against the employee, but all other provisions of any employment, confidentiality, nondisclosure, trade secret, intellectual property assignment, or any other type of employment agreement or provision shall remain in full force and effect.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-275-70-condition-of-employment"
+          }
+        ]
+      },
+      {
+        "requirementId": "provide-noncompete-before-offer-acceptance",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-hampshire.provide-noncompete-before-offer-acceptance",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Copy delivered before the offer was accepted",
+        "sectionId": "new-hampshire-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#provide-noncompete-before-offer-acceptance",
+        "requirementGuidance": "For a new hire required to sign as a condition of employment, ask for the delivery evidence itself: the employer must provide a copy of the noncompete before the employee accepts the offer, and an undisclosed covenant is unenforceable against the employee while the rest of the agreement survives. Consideration doctrine cannot patch this — continued employment supports a covenant, but the disclosure gate operates independently. The offer file should show the covenant traveled with the offer, not with the onboarding packet.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-275-70-preacceptance-gate",
+            "authorityType": "primary-law",
+            "title": "RSA 275:70",
+            "citation": "RSA 275:70.",
+            "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70.htm",
+            "proposition": "RSA 275:70 requires pre-acceptance delivery of a required new-hire noncompete and makes an undisclosed noncompete unenforceable while preserving the agreement's other provisions.",
+            "verbatimQuote": "Any employer who requires an employee who has not previously been employed by the employer to execute a noncompete agreement as a condition of employment shall provide a copy of such agreement to the potential employee prior to the employee's acceptance of an offer of employment. A noncompete agreement that has not been disclosed to an employee as required by this section shall not be enforceable against the employee, but all other provisions of any employment, confidentiality, nondisclosure, trade secret, intellectual property assignment, or any other type of employment agreement or provision shall remain in full force and effect.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-275-70-preacceptance-gate"
+          },
+          {
+            "sourceId": "nh-foster-consideration-gate",
+            "authorityType": "case-law",
+            "title": "Smith, Batchelder & Rugg v. Foster",
+            "citation": "Smith, Batchelder & Rugg v. Foster, 119 N.H. 679 (1979).",
+            "url": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/",
+            "deepLink": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/#:~:text=Continued%20employment%20after%20signing%20an,not%20to%20compete%20contained%20therein.",
+            "proposition": "Foster's continued-employment consideration rule operates independently of the statutory disclosure gate and cannot cure late delivery.",
+            "verbatimQuote": "Continued employment after signing an employment contract constitutes consideration for a covenant not to compete contained therein.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-foster-consideration-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-noncompetes-for-low-wage-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-hampshire.exclude-noncompetes-for-low-wage-employees",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No non-compete for a low-wage employee",
+        "sectionId": "new-hampshire-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#exclude-noncompetes-for-low-wage-employees",
+        "requirementGuidance": "The agreement must not impose a noncompete on a low-wage employee: the statute forbids requiring one and makes any such agreement void and unenforceable. The class is defined by hourly rate — at or below 200 percent of the federal minimum wage, which is $14.50 per hour while the federal floor sits at $7.25 — not by title or duties, so establish the wage facts before reviewing anything else about the covenant. Narrower wording does not save a covered clause.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-275-70-a-prohibition",
+            "authorityType": "primary-law",
+            "title": "RSA 275:70-a",
+            "citation": "RSA 275:70-a, II(a).",
+            "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70-a.htm",
+            "proposition": "RSA 275:70-a prohibits requiring a low-wage employee to enter into a noncompete agreement.",
+            "verbatimQuote": "No employer shall require a low-wage employee to enter into a noncompete agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-275-70-a-prohibition"
+          },
+          {
+            "sourceId": "nh-275-70-a-void-gate",
+            "authorityType": "primary-law",
+            "title": "RSA 275:70-a",
+            "citation": "RSA 275:70-a, II(b).",
+            "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70-a.htm",
+            "proposition": "RSA 275:70-a makes a noncompete between an employer and a low-wage employee void and unenforceable.",
+            "verbatimQuote": "A noncompete agreement entered into between an employer and a low-wage employee shall be void and unenforceable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-275-70-a-void-gate"
+          },
+          {
+            "sourceId": "nh-275-70-a-threshold-gate",
+            "authorityType": "primary-law",
+            "title": "RSA 275:70-a",
+            "citation": "RSA 275:70-a, I(b).",
+            "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70-a.htm",
+            "proposition": "RSA 275:70-a defines a low-wage employee by an hourly rate at or below 200 percent of the federal minimum wage.",
+            "verbatimQuote": "(b) \"Low-wage employee\" means an employee who earns an hourly rate less than or equal to 200 percent of the federal minimum wage.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-275-70-a-threshold-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "limit-covenants-to-recognized-protectable-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-hampshire.limit-covenants-to-recognized-protectable-interests",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "A recognized interest behind every restraint",
+        "sectionId": "new-hampshire-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#limit-covenants-to-recognized-protectable-interests",
+        "requirementGuidance": "Run each restraint through the three-part test: no greater than necessary for the employer's legitimate interest, no undue hardship on the employee, no injury to the public interest. The interests that count are the recognized ones — trade secrets, confidential information beyond trade secrets, special customer influence, employment-developed contacts, and goodwill — and the cost of recruiting and hiring is already off the list. A covenant that cannot name its interest fails the first prong before scope is even reached.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-foster-three-prong-gate",
+            "authorityType": "case-law",
+            "title": "Smith, Batchelder & Rugg v. Foster",
+            "citation": "Smith, Batchelder & Rugg v. Foster, 119 N.H. 679 (1979).",
+            "url": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/",
+            "deepLink": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/#:~:text=In%20scrutinizing%20restrictive%20covenants%2C%20this,injurious%20to%20the%20public%20interest.%E2%80%9D",
+            "proposition": "Foster supplies the three-pronged reasonableness test every New Hampshire restraint must pass.",
+            "verbatimQuote": "In scrutinizing restrictive covenants, this court employs the following three-pronged test: “[a] restraint on employment is reasonable only if it is no greater than necessary for the protection of the employer’s legitimate interest, does not impose undue hardship on the employee and is not injurious to the public interest.”",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-foster-three-prong-gate"
+          },
+          {
+            "sourceId": "nh-hobert-interest-gate",
+            "authorityType": "case-law",
+            "title": "ACAS Acquisitions (Precitech) Inc. v. Hobert",
+            "citation": "ACAS Acquisitions (Precitech) Inc. v. Hobert, 155 N.H. 381 (2007).",
+            "url": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/",
+            "deepLink": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/#:~:text=Legitimate%20interests%20of%20an%20employer,goodwill%20and%20a%20positive%20image.",
+            "proposition": "Hobert catalogs the recognized protectable interests a New Hampshire covenant can rest on.",
+            "verbatimQuote": "Legitimate interests of an employer that may be protected from competition include: the employer’s trade secrets that have been communicated to the employee during the course of employment; confidential information other than trade secrets communicated by the employer to the employee, such as information regarding a unique business method; an employee’s special influence over the employer’s customers, obtained during the course of employment; contacts developed during the employment; and the employer’s development of goodwill and a positive image.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-hobert-interest-gate"
+          },
+          {
+            "sourceId": "nh-olsten-cost-gate",
+            "authorityType": "case-law",
+            "title": "National Employment Service Corp. v. Olsten Staffing Service, Inc.",
+            "citation": "National Employment Service Corp. v. Olsten Staffing Service, Inc., 145 N.H. 158 (2000).",
+            "url": "https://www.courtlistener.com/opinion/8092147/national-employment-service-corp-v-olsten-staffing-service-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/8092147/national-employment-service-corp-v-olsten-staffing-service-inc/#:~:text=Thus%2C%20we%20hold%20that%20although,covenant%20in%20an%20employment%20contract.",
+            "proposition": "Olsten removes ordinary recruiting and hiring costs from the list of interests a covenant can protect.",
+            "verbatimQuote": "Thus, we hold that although there may be valid reasons for restrictive covenants, the mere cost associated with recruiting and hiring employees is not a legitimate interest protectable by a restrictive covenant in an employment contract.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-olsten-cost-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-restrictions-within-the-sphere-of-customer-goodwill",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-hampshire.keep-restrictions-within-the-sphere-of-customer-goodwill",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Scope kept to the employee's own customer goodwill",
+        "sectionId": "new-hampshire-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#keep-restrictions-within-the-sphere-of-customer-goodwill",
+        "requirementGuidance": "Check customer and territory limits against the employee's actual sphere of customer goodwill — the customers and patients this person dealt with, in the places they dealt with them. A covenant reaching the employer's whole customer base was held more restrictive than necessary, and geography and duration must be narrowly tailored to the goodwill interest. When the covered class outruns the employee's own contacts, narrow it now rather than hoping a court will.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nh-near-goodwill-gate",
+            "authorityType": "case-law",
+            "title": "Merrimack Valley Wood Products, Inc. v. Near",
+            "citation": "Merrimack Valley Wood Products, Inc. v. Near, 152 N.H. 192 (2005).",
+            "url": "https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/",
+            "deepLink": "https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/#:~:text=Thus%2C%20the%20restrictive%20covenant%20goes,protect%20the%20plaintiffs%E2%80%99%20legitimate%20interests.",
+            "proposition": "Near held a covenant reaching beyond the employee's sphere of customer goodwill more restrictive than necessary.",
+            "verbatimQuote": "Thus, the restrictive covenant goes far beyond the defendant’s sphere of customer goodwill, and was more restrictive than necessary to protect the plaintiffs’ legitimate interests.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-near-goodwill-gate"
+          },
+          {
+            "sourceId": "nh-forbes-tailoring-gate",
+            "authorityType": "case-law",
+            "title": "Concord Orthopaedics Professional Ass'n v. Forbes",
+            "citation": "Concord Orthopaedics Professional Ass'n v. Forbes, 142 N.H. 440 (1997).",
+            "url": "https://www.courtlistener.com/opinion/8091834/concord-orthopaedics-professional-assn-v-forbes/",
+            "deepLink": "https://www.courtlistener.com/opinion/8091834/concord-orthopaedics-professional-assn-v-forbes/#:~:text=A%20restraint%20on%20competition%20must,legitimate%20interest%20in%20its%20goodwill.",
+            "proposition": "Forbes requires geography and duration to be narrowly tailored to the goodwill interest.",
+            "verbatimQuote": "A restraint on competition must be narrowly tailored in both geography and duration to protect COPA’s legitimate interest in its goodwill.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#src-nh-forbes-tailoring-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

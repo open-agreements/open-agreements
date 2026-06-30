@@ -1,0 +1,1405 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "related-form",
+      "href": "https://openagreements.org/templates/openagreements-restrictive-covenant-wyoming",
+      "type": "text/html",
+      "title": "Employee Restrictive Covenant (Wyoming)"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "us",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist",
+      "description": "A clause-by-clause reviewer checklist for employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement.",
+      "eyebrow": "Reviewer Checklist",
+      "coverage": "Jurisdiction-neutral (US)",
+      "lastReviewed": "2026-06-11",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 42,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#identify-parties",
+        "requirementGuidance": "The employer and the employee should both be named on the face of the agreement — in the cover terms, not just the signature block. A covenant that names the wrong entity, such as a parent company instead of the operating subsidiary that actually employs the worker, invites an enforceability fight before the merits are ever reached.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#identify-effective-date",
+        "requirementGuidance": "Look for a stated effective date. Every covenant clock in the agreement runs from a defined start, so a missing or ambiguous date makes each duration ambiguous along with it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#identify-employee-title",
+        "requirementGuidance": "The employee's title or position should be recorded when known. States increasingly limit who can be bound by a non-compete based on the worker's classification or earnings, so a recorded title and role is the starting evidence for whether this worker can be bound at all.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-nonexempt-worker",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(c).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Massachusetts makes noncompetition agreements unenforceable against specified worker categories, including FLSA-nonexempt employees, student interns, employees terminated without cause or laid off, and employees age 18 or younger.",
+            "verbatimQuote": "A noncompetition agreement shall not be enforceable against the following types of workers: (i) an employee who is classified as nonexempt under the Fair Labor Standards Act, 29 U.S.C. 201-219; (ii) undergraduate or graduate students that partake in an internship or otherwise enter a short-term employment relationship with an employer, whether paid or unpaid, while enrolled in a full-time or part-time undergraduate or graduate educational institution; (iii) employees that have been terminated without cause or laid off; or (iv) employees age 18 or younger.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-mnaa-nonexempt-worker"
+          },
+          {
+            "sourceId": "il-noncompete-floor",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/10(a)",
+            "citation": "820 ILCS 90/10(a).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K10.htm",
+            "proposition": "Illinois voids employee non-competes unless the employee's actual or expected annualized earnings exceed a statutory floor.",
+            "verbatimQuote": "No employer shall enter into a covenant not to compete with any employee unless the employee's actual or expected annualized rate of earnings exceeds $75,000 per year.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-il-noncompete-floor"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#identify-governing-law",
+        "requirementGuidance": "Confirm the governing state is named. Restrictive-covenant rules differ sharply by state, and the parties' choice does not control where another state has a materially greater interest and a fundamental policy the chosen law would contravene — New York has refused to apply a Florida choice-of-law clause on exactly that ground — so the selection deserves real attention, not boilerplate treatment.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "restatement-187-fundamental-policy-limit",
+            "authorityType": "case-law",
+            "title": "Cardoni v. Prosperity Bank",
+            "citation": "Cardoni v. Prosperity Bank, 805 F.3d 573 (5th Cir. 2015).",
+            "url": "https://www.courtlistener.com/opinion/3150844/chris-cardoni-v-prosperity-bank/",
+            "deepLink": "https://www.courtlistener.com/opinion/3150844/chris-cardoni-v-prosperity-bank/#:~:text=Even%20when%20a%20reasonable%20basis,of%20the%20chosen%20state%E2%80%99s%20law.",
+            "proposition": "Under Restatement (Second) of Conflict of Laws section 187(2), a contractual choice of law is not honored where another state has a materially greater interest and a fundamental policy that the chosen law would contravene.",
+            "verbatimQuote": "Even when a reasonable basis exists for selecting a state as the source of law governing a transaction, the parties’ selection does not control if another state: (1) has a more significant relationship with the parties and the transaction at issue than the chosen state does under Restatement § 188; (2) has a materially greater interest than the chosen state does in the enforceability of a given provision; and (3) has a fundamental policy that would be contravened by the application of the chosen state’s law.",
+            "date": "2015-10-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-restatement-187-fundamental-policy-limit"
+          },
+          {
+            "sourceId": "q12-brown-publicpolicy",
+            "authorityType": "case-law",
+            "title": "Brown & Brown, Inc. v. Johnson",
+            "citation": "Brown & Brown, Inc. v. Johnson, 25 N.Y.3d 364 (2015).",
+            "url": "https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/",
+            "deepLink": "https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/#:~:text=On%20this%20appeal%2C%20we%20hold,public%20policy%20of%20this%20state.",
+            "proposition": "Brown & Brown shows a sister state (New York) may refuse to apply Florida non-compete law where it conflicts with that state's public policy.",
+            "verbatimQuote": "On this appeal, we hold that applying Florida law on restrictive covenants related to the non-solicitation of customers by a former employee would violate the public policy of this state.",
+            "date": "2015-06-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-q12-brown-publicpolicy"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#define-confidential-information",
+        "requirementGuidance": "The rest of the agreement builds on what counts as confidential. Look for a definition with real boundaries — categories of protected material plus the standard exclusions for public or independently known information. A definition without those boundaries can operate as a de facto non-compete, and courts have refused to enforce nondisclosure obligations on exactly that ground.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "overbroad-nda-de-facto-noncompete",
+            "authorityType": "case-law",
+            "title": "TLS Management & Marketing Services, LLC v. Rodríguez-Toledo",
+            "citation": "TLS Mgmt. & Mktg. Servs., LLC v. Rodríguez-Toledo, 966 F.3d 46 (1st Cir. 2020).",
+            "url": "https://www.courtlistener.com/opinion/4769672/tls-mgmt-and-mktg-ser-llc-v-rodriguez-toledo/",
+            "deepLink": "https://www.courtlistener.com/opinion/4769672/tls-mgmt-and-mktg-ser-llc-v-rodriguez-toledo/#:~:text=But%20overly%20broad%20nondisclosure%20agreements%2C,from%20competing%20with%20the%20plaintiff.",
+            "proposition": "A nondisclosure agreement whose definition of confidential information sweeps in public or generally known information operates as a de facto non-compete and can be refused enforcement on the same policy grounds.",
+            "verbatimQuote": "But overly broad nondisclosure agreements, while not specifically prohibiting an employee from entering into competition with the former employer, raise the same policy concerns about restraining competition as noncompete clauses where, as here, they have the effect of preventing the defendant from competing with the plaintiff.",
+            "date": "2020-07-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-overbroad-nda-de-facto-noncompete"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#define-trade-secrets",
+        "requirementGuidance": "Trade secrets should not be folded into the general confidentiality definition. Trade-secret protection lasts as long as secrecy does, while ordinary confidential information usually carries a stated end date — the duration analysis depends on keeping the two apart.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "The federal Defend Trade Secrets Act adopts a parallel definition keyed to information that derives independent economic value from not being generally known or readily ascertainable.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-dtsa-trade-secret-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#define-restricted-period",
+        "requirementGuidance": "Every covenant’s duration should point back to a single defined Restricted Period, so you check the timing once instead of re-deriving it clause by clause.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#define-restricted-territory",
+        "requirementGuidance": "Look for a defined geographic scope tied to where the employee actually worked or where the employer actually competes. Courts measure a covenant's restricted activity, geography, and time against the employer's legitimate business interest — the Restatement (Second) of Contracts § 188 framework most states follow — and an undefined territory is the classic mark of overbreadth.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "restatement-188-rule-of-reason",
+            "authorityType": "case-law",
+            "title": "Restatement (Second) of Contracts § 188 (as quoted in Central Monitoring Service, Inc. v. Zakinski)",
+            "citation": "Restatement (Second) of Contracts § 188(1) (Am. L. Inst. 1981), quoted in Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513, 518.",
+            "url": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/",
+            "deepLink": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/#:~:text=A%20promise%20to%20refrain%20from,likely%20injury%20to%20the%20public.",
+            "proposition": "The general common-law rule of reason most states follow, stated by a state high court drawing the standard directly from Restatement (Second) of Contracts § 188: a covenant ancillary to an otherwise valid relationship is unreasonably in restraint of trade if it is greater than needed to protect the employer's legitimate interest, or that need is outweighed by hardship to the worker and injury to the public.",
+            "verbatimQuote": "A promise to refrain from competition that imposes a restraint that is ancillary to an otherwise valid transaction or relationship is unreasonably in restraint of trade if (a) the restraint is greater than is needed to protect the promisee’s legitimate interest, or (b) the promisee’s need is outweighed by the hardship to the promisor and the likely injury to the public.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-restatement-188-rule-of-reason"
+          },
+          {
+            "sourceId": "scope-tested-against-protected-interest",
+            "authorityType": "case-law",
+            "title": "Reliable Fire Equipment Co. v. Arredondo",
+            "citation": "Reliable Fire Equip. Co. v. Arredondo, 2011 IL 111871, 965 N.E.2d 393.",
+            "url": "https://www.courtlistener.com/opinion/3135645/reliable-fire-equipment-co-v-arredondo/",
+            "deepLink": "https://www.courtlistener.com/opinion/3135645/reliable-fire-equipment-co-v-arredondo/#:~:text=Further%2C%20the%20extent%20of%20the,activity%2C%20geographical%20area%2C%20and%20time.",
+            "proposition": "Courts measure a non-compete's activity, geographic, and time limits against the employer's legitimate business interest, adopting Restatement (Second) of Contracts section 188.",
+            "verbatimQuote": "Further, the extent of the employer’s legitimate business interest may be limited by type of activity, geographical area, and time.",
+            "date": "2011-12-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-scope-tested-against-protected-interest"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#define-covered-customers",
+        "requirementGuidance": "The protected customer class should be bounded by actual relationship — typically customers, vendors, and referral sources the employee had material contact with during a stated look-back window, not the employer's entire book of business. Courts protect the relationships the employee actually serviced or acquired through the job; a class untethered from contact reads as a restraint on competition itself — broader than the employer's legitimate interest needs under the general rule of reason.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "restatement-188-rule-of-reason",
+            "authorityType": "case-law",
+            "title": "Restatement (Second) of Contracts § 188 (as quoted in Central Monitoring Service, Inc. v. Zakinski)",
+            "citation": "Restatement (Second) of Contracts § 188(1) (Am. L. Inst. 1981), quoted in Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513, 518.",
+            "url": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/",
+            "deepLink": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/#:~:text=A%20promise%20to%20refrain%20from,likely%20injury%20to%20the%20public.",
+            "proposition": "The general common-law rule of reason most states follow, stated by a state high court drawing the standard directly from Restatement (Second) of Contracts § 188: a covenant ancillary to an otherwise valid relationship is unreasonably in restraint of trade if it is greater than needed to protect the employer's legitimate interest, or that need is outweighed by hardship to the worker and injury to the public.",
+            "verbatimQuote": "A promise to refrain from competition that imposes a restraint that is ancillary to an otherwise valid transaction or relationship is unreasonably in restraint of trade if (a) the restraint is greater than is needed to protect the promisee’s legitimate interest, or (b) the promisee’s need is outweighed by the hardship to the promisor and the likely injury to the public.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-restatement-188-rule-of-reason"
+          },
+          {
+            "sourceId": "vessel-personal-contact",
+            "authorityType": "case-law",
+            "title": "Vessel Medical, Inc. v. Elliott",
+            "citation": "Vessel Med., Inc. v. Elliott, No. 6:15-cv-00330-MGL, 2015 U.S. Dist. LEXIS 122436 (D.S.C. Sept. 15, 2015).",
+            "url": "https://www.courtlistener.com/docket/5358739/vessel-medical-inc-v-elliott/",
+            "deepLink": "https://www.courtlistener.com/docket/5358739/vessel-medical-inc-v-elliott/#:~:text=Here%2C%20Elliott%20is%20restricted%20from,covenants%20have%20withstood%20overbreadth%20challenges.",
+            "proposition": "Vessel Medical upheld a customer non-solicitation covenant because it was limited to customers the employee had contact with during his last twelve months of employment.",
+            "verbatimQuote": "Here, Elliott is restricted from soliciting customers with whom he had contact during his last 12 months of employment and such covenants have withstood overbreadth challenges.",
+            "date": "2015-09-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-vessel-personal-contact"
+          },
+          {
+            "sourceId": "fournil-no-legitimate-interest",
+            "authorityType": "case-law",
+            "title": "Fournil v. Turbeville Insurance Agency, Inc.",
+            "citation": "Fournil v. Turbeville Ins. Agency, Inc., No. 3:07-cv-03836-JFA (D.S.C. Mar. 2, 2009).",
+            "url": "https://www.courtlistener.com/docket/4822524/fournil-v-turbeville-insurance-agency-inc/",
+            "deepLink": "https://www.courtlistener.com/docket/4822524/fournil-v-turbeville-insurance-agency-inc/#:~:text=The%20magistrate%20found%20that%20prohibiting,and%20this%20conclusion%20was%20well%2Dfounded.",
+            "proposition": "Fournil held that prohibiting an employee from soliciting customers she had never serviced was not related to any legitimate interest of the employer.",
+            "verbatimQuote": "The magistrate found that prohibiting such contacts was not related to any legitimate interest of Turbeville, and this conclusion was well-founded.",
+            "date": "2009-03-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-fournil-no-legitimate-interest"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#define-covered-employees",
+        "requirementGuidance": "Check for a bounded class — typically colleagues the departing employee worked with or managed during a stated look-back window. A no-poach clause covering every employee of the company sweeps in people the departing worker could not meaningfully influence.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#define-protected-interests",
+        "requirementGuidance": "The agreement should say which legitimate business interests the covenants protect — confidential information, customer relationships, workforce stability, goodwill. Under the prevailing common-law standard, a covenant is enforced only to the extent it protects a legitimate business interest of the employer — the Restatement-derived three-prong test — so this definition is the substantive anchor for every covenant that follows, not throat-clearing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "restatement-188-rule-of-reason",
+            "authorityType": "case-law",
+            "title": "Restatement (Second) of Contracts § 188 (as quoted in Central Monitoring Service, Inc. v. Zakinski)",
+            "citation": "Restatement (Second) of Contracts § 188(1) (Am. L. Inst. 1981), quoted in Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513, 518.",
+            "url": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/",
+            "deepLink": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/#:~:text=A%20promise%20to%20refrain%20from,likely%20injury%20to%20the%20public.",
+            "proposition": "The general common-law rule of reason most states follow, stated by a state high court drawing the standard directly from Restatement (Second) of Contracts § 188: a covenant ancillary to an otherwise valid relationship is unreasonably in restraint of trade if it is greater than needed to protect the employer's legitimate interest, or that need is outweighed by hardship to the worker and injury to the public.",
+            "verbatimQuote": "A promise to refrain from competition that imposes a restraint that is ancillary to an otherwise valid transaction or relationship is unreasonably in restraint of trade if (a) the restraint is greater than is needed to protect the promisee’s legitimate interest, or (b) the promisee’s need is outweighed by the hardship to the promisor and the likely injury to the public.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-restatement-188-rule-of-reason"
+          },
+          {
+            "sourceId": "legitimate-business-interest-three-prong",
+            "authorityType": "case-law",
+            "title": "Reliable Fire Equipment Co. v. Arredondo",
+            "citation": "Reliable Fire Equip. Co. v. Arredondo, 2011 IL 111871, 965 N.E.2d 393.",
+            "url": "https://www.courtlistener.com/opinion/3135645/reliable-fire-equipment-co-v-arredondo/",
+            "deepLink": "https://www.courtlistener.com/opinion/3135645/reliable-fire-equipment-co-v-arredondo/#:~:text=A%20restrictive%20covenant%2C%20assuming%20it,not%20injurious%20to%20the%20public.",
+            "proposition": "A restrictive covenant is reasonable only if it is no broader than required to protect a legitimate business interest of the employer, does not unduly burden the employee, and does not injure the public.",
+            "verbatimQuote": "A restrictive covenant, assuming it is ancillary to a valid employment relationship, is reasonable only if the covenant: (1) is no greater than is required for the protection of a legitimate business interest of the employer-promisee; (2) does not impose undue hardship on the employee-promisor, and (3) is not injurious to the public.",
+            "date": "2011-12-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-legitimate-business-interest-three-prong"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#define-competitive-business",
+        "requirementGuidance": "A non-compete is only as workable as its definition of what counts as competing. Look for a description of the actual business activities restrained, rather than a definition that expands to anything the employer might someday do.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where a covenant restricts owning or investing in competitors, look for a passive-ownership carve-out below a stated threshold — commonly one to five percent of a public company's shares, plus diversified funds. Without it, the covenant technically bans holding index funds and ordinary public stock across the industry, which is the kind of overbreadth that gets covenants struck.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#define-passive-public-holdings",
+        "requirementGuidance": "A separate defined term for passive holdings is a drafting convenience, not a legal requirement — many agreements simply inline the carve-out language. If the capitalized term appears, confirm its threshold matches the carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#define-solicit",
+        "requirementGuidance": "The definition should say what conduct counts — active outreach, and whether merely accepting unsolicited business is included. Jurisdictions split on whether accepting unsolicited business counts as soliciting, and who initiated contact is a key factor rather than a bright line, so an undefined term converts every departure into a fact fight.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mere-acceptance-of-business-not-solicitation",
+            "authorityType": "case-law",
+            "title": "Insure Idaho, LLC v. Horn",
+            "citation": "Insure Idaho, LLC v. Horn, No. 49936 (Idaho July 11, 2025).",
+            "url": "https://www.courtlistener.com/opinion/10634458/insure-idaho-v-horn/",
+            "deepLink": "https://www.courtlistener.com/opinion/10634458/insure-idaho-v-horn/#:~:text=To%20be%20clear%2C%20the%20mere,simple%20communication%20between%20parties%20alone.",
+            "proposition": "Insure Idaho holds that mere acceptance of business, without more, is not solicitation — while noting other jurisdictions have supplied varying answers — so the agreement should say expressly whether serving unsolicited former customers is permitted.",
+            "verbatimQuote": "To be clear, the mere acceptance of business, without more, does not fall within the plain meaning of solicitation; nor can a court infer solicitation from the simple communication between parties alone.",
+            "date": "2025-07-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-mere-acceptance-of-business-not-solicitation"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#define-termination-of-employment",
+        "requirementGuidance": "Check what event starts the restriction clock, and whether it covers resignation, termination by the employer, and expiration of a fixed term alike. The cleanest formulations key the Restricted Period to the employment ending for any reason, so the trigger never depends on who ended the relationship or why.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#acknowledge-timing",
+        "requirementGuidance": "Look for an acknowledgement of when the agreement was signed relative to the start of employment, and of the consideration supporting it. States vary on what supports a post-hire covenant — Massachusetts requires fair and reasonable consideration independent from continued employment, while Illinois defines adequate consideration by two years of post-signing employment or other adequate benefits — so the acknowledgement preserves the facts an enforcing party will later need.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-midemployment-consideration",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(b)(ii).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Massachusetts requires a mid-employment noncompete to be supported by fair and reasonable consideration independent from continued employment.",
+            "verbatimQuote": "If the agreement is entered into after commencement of employment but not in connection with the separation from employment, it must be supported by fair and reasonable consideration independent from the continuation of employment, and notice of the agreement must be provided at least 10 business days before the agreement is to be effective.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-mnaa-midemployment-consideration"
+          },
+          {
+            "sourceId": "il-consideration-def",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/5",
+            "citation": "820 ILCS 90/5.",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K5.htm",
+            "proposition": "Illinois defines adequate consideration as two years of employment after signing or other professional or financial benefits adequate to support the covenant.",
+            "verbatimQuote": "\"Adequate consideration\" means (1) the employee worked for the employer for at least 2 years after the employee signed an agreement containing a covenant not to compete or a covenant not to solicit or (2) the employer otherwise provided consideration adequate to support an agreement to not compete or to not solicit, which consideration can consist of a period of employment plus additional professional or financial benefits or merely professional or financial benefits adequate by themselves.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-il-consideration-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "An acknowledgement that the employee had the opportunity to consult a lawyer is inexpensive enforceability evidence in states that scrutinize procedural fairness. Several states impose procedural conditions on non-competes — Massachusetts, for example, requires the agreement to expressly state the employee's right to consult counsel before signing — so its absence is worth flagging even in a neutral draft.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ma-counsel-advisal-notice",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L(b)(i) — Massachusetts Noncompetition Agreement Act",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(b)(i).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter149/Section24L",
+            "proposition": "Several states impose procedural requirements on non-competes — Massachusetts, for example, requires the agreement to expressly advise the employee of the right to consult counsel before signing.",
+            "verbatimQuote": "If the agreement is entered into in connection with the commencement of employment, it must be in writing and signed by both the employer and employee and expressly state that the employee has the right to consult with counsel prior to signing.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-ma-counsel-advisal-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Confirm the trade-secret obligation runs for as long as the information remains a trade secret, with no fixed end date. Federal and state trade-secret law defines protection by secrecy itself, so a covenant that cuts trade-secret confidentiality off at a fixed term gives away statutory protection for nothing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-secrecy",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy — value from not being generally known — which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-dtsa-trade-secret-secrecy"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#state-confidentiality-duration",
+        "requirementGuidance": "Ordinary confidential information should carry its own finite term, separate from the perpetual trade-secret obligation. Courts are skeptical of perpetual restraints on information that never qualified as a trade secret, and the two-track duration structure is the standard cure.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#disclose-dtsa-notice",
+        "requirementGuidance": "Federal trade-secret law requires this notice. An employer that omits it forfeits exemplary damages and attorney fees in a later misappropriation suit against the employee — a silent, purely self-inflicted loss.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language must leave room for employees to discuss wages, hours, and working conditions. Federal labor law protects that speech in every state, and the Board has recently been striking overbroad clauses.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects employees' right to engage in concerted activities for mutual aid or protection — the statutory basis for carving wage and working-condition discussion out of confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs, Board Rules That Employers May Not Offer Severance Agreements Requiring Employees to Broadly Waive Labor Law Rights (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that simply offering employees a severance agreement requiring them to broadly waive their Section 7 rights — including through overly broad confidentiality and non-disparagement terms — violates Section 8(a)(1) of the National Labor Relations Act.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#permit-compelled-disclosure",
+        "requirementGuidance": "Look for a carve-out permitting disclosure required by law, court order, or a government investigation, ideally with notice to the employer where lawful. A confidentiality clause cannot override a subpoena, and the carve-out keeps the employee from being contractually trapped between competing obligations.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#require-property-return-and-certification",
+        "requirementGuidance": "The agreement should require return or deletion of company materials at termination and a written certification of compliance. The certification converts a vague obligation into a checkable event — and a useful exhibit if a misappropriation dispute follows.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#permit-employee-nonsolicit",
+        "requirementGuidance": "An optional covenant, and the least-litigated one in the family. When included it should track the defined Covered Employees class and the Restricted Period — workforce stability is a recognized legitimate interest, and courts have upheld reasonably scoped employee non-solicits even while striking broader covenants in the same agreement.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "workforce-stability-legitimate-interest",
+            "authorityType": "case-law",
+            "title": "Prudential Locations, LLC v. Gagnon",
+            "citation": "Prudential Locations, LLC v. Gagnon, 151 Haw. 136, 509 P.3d 1099 (2022).",
+            "url": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/",
+            "deepLink": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/#:~:text=Workforce%20stability%20and%20customer%20relationships,prohibiting%20the%20solicitation%20of%20employees.",
+            "proposition": "Workforce stability is a recognized legitimate interest supporting an employee non-solicitation covenant, and courts uphold reasonably scoped employee non-solicits even while striking broader non-competes.",
+            "verbatimQuote": "Workforce stability and customer relationships can, however, be legitimate ancillary interests for an agreement prohibiting the solicitation of employees.",
+            "date": "2022-04-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-workforce-stability-legitimate-interest"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#permit-customer-nonsolicit",
+        "requirementGuidance": "When included, confirm the covenant reaches only Covered Customers for the stated Restricted Period. Solicitation generally requires an overt act by the departing employee, so a clause that leaves the term undefined makes customer-initiated business a jurisdiction-dependent fact fight — this covenant and the Solicit definition have to be read together.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "solicitation-requires-overt-act",
+            "authorityType": "case-law",
+            "title": "Insure Idaho, LLC v. Horn",
+            "citation": "Insure Idaho, LLC v. Horn, No. 49936 (Idaho July 11, 2025).",
+            "url": "https://www.courtlistener.com/opinion/10634458/insure-idaho-v-horn/",
+            "deepLink": "https://www.courtlistener.com/opinion/10634458/insure-idaho-v-horn/#:~:text=We%20hold%20that%20the%20plain,return%20from%20a%20second%20party.",
+            "proposition": "A customer non-solicitation covenant that leaves solicitation undefined turns the treatment of customer-initiated business into a jurisdiction-dependent, fact-intensive inquiry.",
+            "verbatimQuote": "We hold that the plain meaning of solicitation requires some overt act initiated by one party, seeking something in return from a second party.",
+            "date": "2025-07-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-solicitation-requires-overt-act"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#permit-non-dealing",
+        "requirementGuidance": "Non-dealing goes further than non-solicitation: it bars doing business with covered customers even when they initiate the contact. Jurisdictions disagree on whether merely accepting customer-initiated business breaches a bare non-solicit; a non-dealing clause reaches that conduct expressly and is materially broader — treat its inclusion as a deliberate, jurisdiction-checked choice rather than boilerplate.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "acceptance-vs-solicitation-split",
+            "authorityType": "case-law",
+            "title": "Insure Idaho, LLC v. Horn",
+            "citation": "Insure Idaho, LLC v. Horn, No. 49936 (Idaho July 11, 2025).",
+            "url": "https://www.courtlistener.com/opinion/10634458/insure-idaho-v-horn/",
+            "deepLink": "https://www.courtlistener.com/opinion/10634458/insure-idaho-v-horn/#:~:text=Whether%20the%20simple%20acceptance%20of,jurisdictions%20have%20supplied%20varying%20answers.",
+            "proposition": "Courts are split on whether merely accepting business a former customer initiates breaches a non-solicit, so a covenant meant to reach customer-initiated business has to say so expressly.",
+            "verbatimQuote": "Whether the simple acceptance of business constitutes solicitation is a confounding question for which other jurisdictions have supplied varying answers.",
+            "date": "2025-07-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-acceptance-vs-solicitation-split"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#permit-non-compete",
+        "requirementGuidance": "A non-compete should be the exception rather than the default, and when present it must be bounded — defined territory, defined competitive business, defined period. State treatment runs from enforceable-when-reasonable — the prevailing Restatement-derived rule — to void outright under California's section 16600 line, so the governing state decides how much of this clause survives.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "restatement-188-rule-of-reason-covenants",
+            "authorityType": "case-law",
+            "title": "Restatement (Second) of Contracts § 188 (as quoted in Central Monitoring Service, Inc. v. Zakinski)",
+            "citation": "Restatement (Second) of Contracts § 188(1) (Am. L. Inst. 1981), quoted in Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513, 518.",
+            "url": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/",
+            "deepLink": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/#:~:text=A%20promise%20to%20refrain%20from,likely%20injury%20to%20the%20public.",
+            "proposition": "The enforceable-when-reasonable pole stated as a general rule, drawn by a state high court directly from Restatement (Second) of Contracts § 188 rather than any single state's idiosyncratic test: a covenant is an unreasonable restraint of trade if it is greater than needed to protect the employer's legitimate interest, or that need is outweighed by hardship to the worker and injury to the public.",
+            "verbatimQuote": "A promise to refrain from competition that imposes a restraint that is ancillary to an otherwise valid transaction or relationship is unreasonably in restraint of trade if (a) the restraint is greater than is needed to protect the promisee’s legitimate interest, or (b) the promisee’s need is outweighed by the hardship to the promisor and the likely injury to the public.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-restatement-188-rule-of-reason-covenants"
+          },
+          {
+            "sourceId": "enforceable-when-reasonable-baseline",
+            "authorityType": "case-law",
+            "title": "Reliable Fire Equipment Co. v. Arredondo",
+            "citation": "Reliable Fire Equip. Co. v. Arredondo, 2011 IL 111871, 965 N.E.2d 393.",
+            "url": "https://www.courtlistener.com/opinion/3135645/reliable-fire-equipment-co-v-arredondo/",
+            "deepLink": "https://www.courtlistener.com/opinion/3135645/reliable-fire-equipment-co-v-arredondo/#:~:text=A%20restrictive%20covenant%2C%20assuming%20it,not%20injurious%20to%20the%20public.",
+            "proposition": "The enforceable-when-reasonable pole: most states enforce employee non-competes only if reasonable under the three-prong Restatement-derived test.",
+            "verbatimQuote": "A restrictive covenant, assuming it is ancillary to a valid employment relationship, is reasonable only if the covenant: (1) is no greater than is required for the protection of a legitimate business interest of the employer-promisee; (2) does not impose undue hardship on the employee-promisor, and (3) is not injurious to the public.",
+            "date": "2011-12-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-enforceable-when-reasonable-baseline"
+          },
+          {
+            "sourceId": "california-void-pole-ixchel",
+            "authorityType": "case-law",
+            "title": "Ixchel Pharma, LLC v. Biogen, Inc.",
+            "citation": "Ixchel Pharma, LLC v. Biogen, Inc., 9 Cal. 5th 1130, 470 P.3d 571 (2020).",
+            "url": "https://www.courtlistener.com/opinion/4772471/ixchel-pharma-llc-v-biogen-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4772471/ixchel-pharma-llc-v-biogen-inc/#:~:text=We%20do%20not%20disturb%20the,of%20interest%20in%20a%20business.",
+            "proposition": "The void pole: under California Business and Professions Code section 16600, employee noncompetition agreements are invalid without regard to reasonableness, per Edwards v. Arthur Andersen as reaffirmed in Ixchel.",
+            "verbatimQuote": "We do not disturb the holding in Edwards and other decisions strictly interpreting section 16600 to invalidate noncompetition agreements following the termination of employment or sale of interest in a business.",
+            "date": "2020-08-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-california-void-pole-ixchel"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, the covenant should restrict those rather than lean on the broader Competitive Business definition. Under the general rule of reason, a restraint greater than needed to protect the employer's legitimate interest is unreasonable — and courts then split three ways on an overbroad covenant, refusing to enforce it, striking the offending words, or reforming it to a reasonable scope — so a restraint drafted to actual need is the safest course across all three.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "restatement-188-rule-of-reason-covenants",
+            "authorityType": "case-law",
+            "title": "Restatement (Second) of Contracts § 188 (as quoted in Central Monitoring Service, Inc. v. Zakinski)",
+            "citation": "Restatement (Second) of Contracts § 188(1) (Am. L. Inst. 1981), quoted in Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513, 518.",
+            "url": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/",
+            "deepLink": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/#:~:text=A%20promise%20to%20refrain%20from,likely%20injury%20to%20the%20public.",
+            "proposition": "The enforceable-when-reasonable pole stated as a general rule, drawn by a state high court directly from Restatement (Second) of Contracts § 188 rather than any single state's idiosyncratic test: a covenant is an unreasonable restraint of trade if it is greater than needed to protect the employer's legitimate interest, or that need is outweighed by hardship to the worker and injury to the public.",
+            "verbatimQuote": "A promise to refrain from competition that imposes a restraint that is ancillary to an otherwise valid transaction or relationship is unreasonably in restraint of trade if (a) the restraint is greater than is needed to protect the promisee’s legitimate interest, or (b) the promisee’s need is outweighed by the hardship to the promisor and the likely injury to the public.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-restatement-188-rule-of-reason-covenants"
+          },
+          {
+            "sourceId": "three-state-approaches-overbroad-covenants",
+            "authorityType": "case-law",
+            "title": "Steiner v. American Friends of Lubavitch (Chabad)",
+            "citation": "Steiner v. Am. Friends of Lubavitch (Chabad), 177 A.3d 1246 (D.C. 2018).",
+            "url": "https://www.courtlistener.com/opinion/4464037/yehuda-steiner-v-american-friends-of-lubavitch-chaabad/",
+            "deepLink": "https://www.courtlistener.com/opinion/4464037/yehuda-steiner-v-american-friends-of-lubavitch-chaabad/#:~:text=Most%20courts%20take%20one%20of,to%20enforce%20an%20overbroad%20covenant.",
+            "proposition": "Courts split three ways on overbroad covenants — refuse enforcement entirely, strike offending words, or equitably reform to a reasonable scope — so a covenant drafted no broader than actual need is the only universally safe course.",
+            "verbatimQuote": "Most courts take one of three approaches to restrictive covenants containing unenforceable provisions. One approach is simply to refuse to enforce an overbroad covenant.",
+            "date": "2018-02-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-three-state-approaches-overbroad-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#permit-non-investment",
+        "requirementGuidance": "A genuine choice, not a default. When it appears, confirm it keeps the passive public-stock carve-out and runs on the same defined Restricted Period as the other covenants — without the carve-out it bans owning ordinary index-fund-style holdings.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#require-non-disparagement",
+        "requirementGuidance": "A non-disparagement clause with a stated duration is standard, but check the carve-outs: truthful testimony, statements to government agencies, and other legally protected speech must stay outside its reach. Labor regulators have struck broad versions that chill employees' protected discussion of working conditions, so the carve-outs are what keep the clause enforceable.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs, Board Rules That Employers May Not Offer Severance Agreements Requiring Employees to Broadly Waive Labor Law Rights (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that merely offering severance terms that broadly waive Section 7 rights — including overly broad non-disparagement provisions — violates the National Labor Relations Act.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#address-physician-specific-rights",
+        "requirementGuidance": "Even a general-purpose form should say how it treats physicians, because a growing list of states voids or restricts physician non-competes by statute. A dedicated clause makes the treatment explicit and reviewable instead of leaving it to inference from the general covenants.",
+        "variants": [
+          {
+            "dimension": "jurisdiction",
+            "value": "Florida",
+            "requirementLevel": "MUST NOT",
+            "text": "Florida voids a specialist physician's restrictive covenant in any county where one entity employs or contracts with all the physicians practicing that specialty, and keeps it void for three years after a second entity enters — the agreement must not impose a non-compete where that condition is or may be present."
+          },
+          {
+            "dimension": "jurisdiction",
+            "value": "Wyoming",
+            "requirementLevel": "MUST NOT",
+            "text": "Wyoming voids non-compete provisions in employment, partnership, or corporate agreements between physicians that restrict the right to practice medicine, and separately preserves a departing physician's ability to tell rare-disorder patients where the new practice is."
+          }
+        ],
+        "sources": [
+          {
+            "sourceId": "q7-542336-trigger",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.336",
+            "citation": "Fla. Stat. § 542.336 (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.336",
+            "proposition": "Section 542.336 voids a specialist physician's covenant where one entity employs or contracts with all physicians in that specialty in the county, as unsupported by a legitimate business interest.",
+            "verbatimQuote": "A restrictive covenant entered into with a physician who is licensed under chapter 458 or chapter 459 and who practices a medical specialty in a county wherein one entity employs or contracts with, either directly or through related or affiliated entities, all physicians who practice such specialty in that county is not supported by a legitimate business interest.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-q7-542336-trigger"
+          },
+          {
+            "sourceId": "wyo-1-23-physician-bc",
+            "authorityType": "primary-law",
+            "title": "Wyo. Stat. § 1-23-108(b)–(c)",
+            "citation": "Wyo. Stat. § 1-23-108(b)–(c) (2025).",
+            "url": "https://wyoleg.gov/2025/Enroll/SF0107.pdf",
+            "proposition": "Wyo. Stat. § 1-23-108(b)–(c) supports the physician practice restriction rule and the rare-disorder patient contact rule.",
+            "verbatimQuote": "Any covenant not to compete provision of an employment, partnership or corporate agreement between physicians that restricts the right of a physician to practice medicine",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-wyo-1-23-physician-bc"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "Look for the employee's representation that no prior agreement or court order blocks performance. It surfaces a previous employer's covenant before day one and gives the new employer a defense against tortious-interference claims.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#address-notice-to-future-employers",
+        "requirementGuidance": "Whether the employer may tell a future employer about the covenants is a genuine drafting choice, not a default. Notice provisions support enforcement, but exercising them carelessly can itself create tortious-interference exposure — if the clause appears, check that disclosure is conditioned on a reasonable belief of breach.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the Restricted Period pauses while the employee is in breach. Courts in a number of jurisdictions refuse to extend an expired restriction absent an express tolling clause, so if the agreement stays silent, a determined breacher can simply run out the clock.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "no-equitable-extension-absent-tolling-clause",
+            "authorityType": "case-law",
+            "title": "EMC Corp. v. Arturi",
+            "citation": "EMC Corp. v. Arturi, 655 F.3d 75, 77-78 (1st Cir. 2011) (Souter, J.).",
+            "url": "https://www.courtlistener.com/opinion/612666/emc-corp-v-arturi/",
+            "deepLink": "https://www.courtlistener.com/opinion/612666/emc-corp-v-arturi/#:~:text=Being%20forewarned%2C%20EMC%20could%20have,breach.%20But%20it%20did%20not.",
+            "proposition": "If the agreement is silent, courts in a number of jurisdictions will not extend the restricted period after it expires — even when litigation delay consumed it — so the employer's protection against a breacher running out the clock is an express tolling clause.",
+            "verbatimQuote": "Being forewarned, EMC could have contracted, as the district judge noted, for tolling the term of the restriction during litigation, or for a period of restriction to commence upon preliminary finding of breach. But it did not.",
+            "date": "2011-08-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-no-equitable-extension-absent-tolling-clause"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the employee's acknowledgement that breach may cause irreparable harm and that injunctive relief is an appropriate remedy. The recital supports — but cannot replace — the showing an enforcing employer must make at the preliminary-injunction stage; in Colorado, for example, the employer still must establish that the covenant fits a statutory exception.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "phoenix-injunction-burden",
+            "authorityType": "case-law",
+            "title": "Phoenix Capital, Inc. v. Dowell",
+            "citation": "Phoenix Capital, Inc. v. Dowell, 176 P.3d 835 (Colo. App. 2007).",
+            "url": "https://www.courtlistener.com/opinion/2633761/phoenix-capital-inc-v-dowell/",
+            "deepLink": "https://www.courtlistener.com/opinion/2633761/phoenix-capital-inc-v-dowell/#:~:text=In%20the%20preliminary%20injunction%20context%2C,one%20of%20those%20narrow%20exceptions.",
+            "proposition": "Phoenix supports the rule that the employer seeking a preliminary injunction must establish that the covenant falls within a statutory exception.",
+            "verbatimQuote": "In the preliminary injunction context, the employer has the burden to establish that the covenant not to compete falls within one of those narrow exceptions.",
+            "date": "2007-07-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-phoenix-injunction-burden"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#address-attorneys-fees-and-costs",
+        "requirementGuidance": "Fee-shifting is a commercial choice, not a legal default: if the agreement is silent, fee recovery depends on the governing state's background rules and any applicable statute. In Indiana, for example, fees are available only for frivolous, unreasonable, groundless, or bad-faith litigation absent a contract term.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fees-bad-faith",
+            "authorityType": "primary-law",
+            "title": "Ind. Code § 34-52-1-1",
+            "citation": "Ind. Code § 34-52-1-1.",
+            "url": "https://iga.in.gov/laws/2025/ic/titles/34",
+            "proposition": "Indiana courts may award attorney's fees to the prevailing party only where a claim or defense was frivolous, unreasonable, groundless, or litigated in bad faith.",
+            "verbatimQuote": "In any civil action, the court may award attorney's fees as part of the cost to the prevailing party, if the court finds that either party: (1) brought the action or defense on a claim or defense that is frivolous, unreasonable, or groundless; (2) continued to litigate the action or defense after the party's claim or defense clearly became frivolous, unreasonable, or groundless; or (3) litigated the action in bad faith.",
+            "date": "2025-01-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-fees-bad-faith"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-blue-pencil-by-default",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-blue-pencil-by-default",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court narrowing",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#permit-blue-pencil-by-default",
+        "requirementGuidance": "The base position asks the court to trim an overbroad covenant down to an enforceable scope rather than void it. This is the most state-sensitive line in the agreement — confirm the governing state before approving the severability clause.",
+        "variants": [
+          {
+            "dimension": "jurisdiction",
+            "value": "Florida",
+            "requirementLevel": "MUST",
+            "text": "Narrowing is statutorily mandatory — the court shall modify an overbroad restraint — and the agreement must not disclaim or contract around it."
+          },
+          {
+            "dimension": "jurisdiction",
+            "value": "Wyoming",
+            "requirementLevel": "MUST NOT",
+            "text": "The clause must not invite a court to narrow an overbroad covenant. Wyoming courts will not redraft a non-compete; an overbroad covenant is entirely void, so it has to be drafted within the enforceable scope from the start."
+          },
+          {
+            "dimension": "jurisdiction",
+            "value": "California",
+            "requirementLevel": "SHOULD NOT",
+            "text": "California voids an employment non-compete no matter how narrowly tailored, so there is nothing for a court to narrow it into. A savings clause asking a court to enforce the covenant to the maximum extent permitted reads as a form built for another state — drop the void covenant cleanly instead of banking on judicial rescue."
+          },
+          {
+            "dimension": "jurisdiction",
+            "value": "Colorado",
+            "requirementLevel": "SHOULD NOT",
+            "text": "Colorado courts may narrow an overbroad covenant but can never be required to, and a clause cannot obligate them to do it — so drafting broad and banking on judicial trimming risks the covenant itself. Size each restraint to the protected interest from the start."
+          },
+          {
+            "dimension": "jurisdiction",
+            "value": "Georgia",
+            "requirementLevel": "SHOULD NOT",
+            "text": "Georgia gives a court a blue pencil but never makes it pick one up, and its appellate courts have affirmed a refusal to modify — leaving the covenants dead as written. Keeping a modification clause is fine; drafting broad because the clause exists is the mistake."
+          },
+          {
+            "dimension": "jurisdiction",
+            "value": "Illinois",
+            "requirementLevel": "SHOULD",
+            "text": "Authorizing judicial modification helps in Illinois, where whether the parties included such a clause is one factor a court weighs before reforming rather than voiding. But reformation is discretionary and extensive rewriting may offend public policy, so treat the authorization as a tiebreaker for a close case, not a license to overdraft."
+          },
+          {
+            "dimension": "jurisdiction",
+            "value": "Massachusetts",
+            "requirementLevel": "SHOULD",
+            "text": "Massachusetts expressly lets a court, in its discretion, reform a noncompetition agreement to make it enforceable, so reformation-friendly savings language fits. Discretion is not a promise, though — keep the savings clause as a safety net under an already-reasonable covenant, not a reason to draft to the edge."
+          },
+          {
+            "dimension": "jurisdiction",
+            "value": "North Dakota",
+            "requirementLevel": "SHOULD NOT",
+            "text": "North Dakota voids a restraint on a lawful profession or trade, and partial enforcement survives only in sale-of-business settings tied to genuine goodwill — where a court confined an overbroad covenant to the county the purchased business served. Savings language inviting a court to rewrite an employee covenant has no comparable rule to invoke."
+          },
+          {
+            "dimension": "jurisdiction",
+            "value": "Texas",
+            "requirementLevel": "SHOULD NOT",
+            "text": "A Texas court must reform an overbroad but ancillary covenant down to a reasonable restraint and enforce it as reformed — but it may not award damages for any breach before reformation, and relief is limited to an injunction. Drafting broad on the theory the court will fix it trades away the damages claim, so size each covenant to its final scope."
+          },
+          {
+            "dimension": "jurisdiction",
+            "value": "Washington",
+            "requirementLevel": "SHOULD NOT",
+            "text": "Washington courts will trim an overbroad covenant rather than let the whole thing fail, but trimming is a paid event: any reformation makes the employer owe the worker the greater of actual damages or a 5,000 dollar statutory penalty, plus fees. Read a savings clause as the price of overreach, and bring the covenant to court already sized to the legitimate interest."
+          }
+        ],
+        "sources": [
+          {
+            "sourceId": "reformation-188-rule",
+            "authorityType": "case-law",
+            "title": "Restatement (Second) of Contracts § 188 (as quoted in Ellis v. James V. Hurson Associates, Inc.)",
+            "citation": "Restatement (Second) of Contracts § 188(1) (Am. L. Inst. 1981), quoted in Ellis v. James V. Hurson Assocs., Inc., 565 A.2d 615, 618 (D.C. 1989).",
+            "url": "https://www.courtlistener.com/opinion/1561257/ellis-v-james-v-hurson-associates-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1561257/ellis-v-james-v-hurson-associates-inc/#:~:text=Such%20promises%20are%20%E2%80%9Cunreasonably%20in,likely%20injury%20to%20the%20public.",
+            "proposition": "The reasonableness ceiling a reforming court trims an overbroad covenant down to is the general rule of reason — a restraint is unreasonably in restraint of trade to the extent it is greater than needed to protect the employer's legitimate interest, or that need is outweighed by hardship to the worker and injury to the public — the standard the D.C. Court of Appeals drew directly from Restatement (Second) of Contracts § 188 in the same opinion that adopted partial enforcement of overbroad restraints.",
+            "verbatimQuote": "Such promises are “unreasonably in restraint of trade” if: (a) the restraint is greater than is needed to protect the promisee’s legitimate interest, or (b) the promisee’s need is outweighed by the hardship to the promisor and the likely injury to the public.",
+            "date": "1989-10-25",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-reformation-188-rule"
+          },
+          {
+            "sourceId": "overbroad-covenant-three-approaches",
+            "authorityType": "case-law",
+            "title": "Steiner v. American Friends of Lubavitch (Chabad)",
+            "citation": "Steiner v. Am. Friends of Lubavitch (Chabad), 177 A.3d 1246 (D.C. 2018).",
+            "url": "https://www.courtlistener.com/opinion/4464037/yehuda-steiner-v-american-friends-of-lubavitch-chaabad/",
+            "deepLink": "https://www.courtlistener.com/opinion/4464037/yehuda-steiner-v-american-friends-of-lubavitch-chaabad/#:~:text=Most%20courts%20take%20one%20of,to%20enforce%20an%20overbroad%20covenant.",
+            "proposition": "Courts split three ways on overbroad covenants — refuse enforcement entirely, strike offending words, or equitably reform to a reasonable scope — which is why the severability clause is the most state-sensitive line in the agreement.",
+            "verbatimQuote": "Most courts take one of three approaches to restrictive covenants containing unenforceable provisions. One approach is simply to refuse to enforce an overbroad covenant.",
+            "date": "2018-02-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-overbroad-covenant-three-approaches"
+          },
+          {
+            "sourceId": "q4-542335-modify",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335",
+            "citation": "Fla. Stat. § 542.335(1)(c) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "Florida courts must modify an overbroad restraint and grant only the relief reasonably necessary, rather than voiding the covenant.",
+            "verbatimQuote": "If a contractually specified restraint is overbroad, overlong, or otherwise not reasonably necessary to protect the legitimate business interest or interests, a court shall modify the restraint and grant only the relief reasonably necessary to protect such interest or interests.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-q4-542335-modify"
+          },
+          {
+            "sourceId": "hassler-no-blue-pencil",
+            "authorityType": "case-law",
+            "title": "Hassler v. Circle C Resources",
+            "citation": "Hassler v. Circle C Resources, 2022 WY 28, 505 P.3d 169.",
+            "url": "https://www.courtlistener.com/opinion/9998701/charlene-hassler-v-circle-c-resources/",
+            "deepLink": "https://www.courtlistener.com/opinion/9998701/charlene-hassler-v-circle-c-resources/#:~:text=Wyoming%20courts%20will%20no%20longer,within%20the%20bounds%20of%20reason.",
+            "proposition": "Hassler supports the rule against judicial narrowing and the consequence that the overbroad agreement was void.",
+            "verbatimQuote": "Wyoming courts will no longer exceed the scope of their traditional authority in contract interpretation by redrafting noncompete agreements to bring them within the bounds of reason.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-hassler-no-blue-pencil"
+          },
+          {
+            "sourceId": "ca-16600-broadly-sev",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16600",
+            "citation": "Cal. Bus. & Prof. Code § 16600(b)(1).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600",
+            "proposition": "Section 16600(b)(1) voids any employment noncompete no matter how narrowly tailored — which leaves judicial narrowing with no lawful endpoint to narrow toward.",
+            "verbatimQuote": "This section shall be read broadly, in accordance with Edwards v. Arthur Andersen LLP (2008) 44 Cal.4th 937, to void the application of any noncompete agreement in an employment context, or any noncompete clause in an employment contract, no matter how narrowly tailored, that does not satisfy an exception in this chapter.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-ca-16600-broadly-sev"
+          },
+          {
+            "sourceId": "twentythree-no-compulsion",
+            "authorityType": "case-law",
+            "title": "23 LTD v. Herman",
+            "citation": "23 LTD v. Herman, 2019 COA 113.",
+            "url": "https://www.courtlistener.com/opinion/4644233/23-ltd-v-herman/",
+            "deepLink": "https://www.courtlistener.com/opinion/4644233/23-ltd-v-herman/#:~:text=Thus%2C%20parties%20to%20an%20employment,that%20it%20determines%20are%20unreasonable.",
+            "proposition": "23 LTD supports the rule that parties cannot contractually obligate a Colorado court to blue pencil unreasonable covenants.",
+            "verbatimQuote": "Thus, parties to an employment or noncompete agreement cannot contractually obligate a court to blue pencil noncompete provisions that it determines are unreasonable.",
+            "date": "2019-07-25",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-twentythree-no-compulsion"
+          },
+          {
+            "sourceId": "ga-beltpower-decline-modify",
+            "authorityType": "case-law",
+            "title": "Belt Power, LLC v. Reed",
+            "citation": "Belt Power, LLC v. Reed, 354 Ga. App. 289 (2020).",
+            "url": "https://www.courtlistener.com/opinion/4735721/belt-power-llc-v-steve-reed/",
+            "deepLink": "https://www.courtlistener.com/opinion/4735721/belt-power-llc-v-steve-reed/#:~:text=We%20nevertheless%20conclude%20that%20the,the%20terms%20of%20the%20covenants.",
+            "proposition": "Belt Power v. Reed held that the trial court did not abuse its discretion in declining to apply the Act's blue-pencil provision to modify the covenants, leaving them unenforceable.",
+            "verbatimQuote": "We nevertheless conclude that the trial court did not abuse its discretion in declining to apply the “blue pencil” provision in the Act to modify the terms of the covenants.",
+            "date": "2020-03-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-ga-beltpower-decline-modify"
+          },
+          {
+            "sourceId": "il-reformation-discretion",
+            "authorityType": "primary-law",
+            "title": "820 ILCS 90/35",
+            "citation": "820 ILCS 90/35.",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K35.htm",
+            "proposition": "820 ILCS 90/35 supports that reformation is discretionary, that extensive reformation may be against public policy, and that an authorization clause is one factor courts weigh.",
+            "verbatimQuote": "Extensive judicial reformation of a covenant not to compete or a covenant not to solicit may be against the public policy of this State and a court may refrain from wholly rewriting contracts. (b) In some circumstances, a court may, in its discretion, choose to reform or sever provisions of a covenant not to compete or a covenant not to solicit rather than hold such covenant unenforceable. Factors which may be considered when deciding whether such reformation is appropriate include the fairness of the restraints as originally written, whether the original restriction reflects a good-faith effort to protect a legitimate business interest of the employer, the extent of such reformation, and whether the parties included a clause authorizing such modifications in their agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-il-reformation-discretion"
+          },
+          {
+            "sourceId": "mnaa-discretionary-reformation",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(d).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(d) supports the rule that a court may, in its discretion, reform or revise a noncompetition agreement to render it valid and enforceable.",
+            "verbatimQuote": "A court may, in its discretion, reform or otherwise revise a noncompetition agreement so as to render it valid and enforceable to the extent necessary to protect the applicable legitimate business interests.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-mnaa-discretionary-reformation"
+          },
+          {
+            "sourceId": "nd-statute-extent-sev",
+            "authorityType": "primary-law",
+            "title": "N.D. Cent. Code § 9-08-06",
+            "citation": "N.D. Cent. Code § 9-08-06.",
+            "url": "https://ndlegis.gov/cencode/t09c08.pdf",
+            "proposition": "N.D. Cent. Code § 9-08-06 uses voiding language rather than a general reasonableness standard for covered restraints.",
+            "verbatimQuote": "A contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind is to that extent void, except: 1. A person that sells the goodwill of a business and the person's partners, members, or shareholders may agree with the buyer to refrain from carrying on a similar business within a reasonable geographic area and for a reasonable length of time, if the buyer or any person deriving title to the goodwill from the buyer carries on a like business in that area.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-nd-statute-extent-sev"
+          },
+          {
+            "sourceId": "nd-hawkins-sale-sev",
+            "authorityType": "case-law",
+            "title": "Hawkins Chemical, Inc. v. McNea",
+            "citation": "Hawkins Chem., Inc. v. McNea, 321 N.W.2d 918, 920 (N.D. 1982).",
+            "url": "https://www.courtlistener.com/opinion/1586088/hawkins-chemical-inc-v-mcnea/",
+            "deepLink": "https://www.courtlistener.com/opinion/1586088/hawkins-chemical-inc-v-mcnea/#:~:text=Because%20the%20property%20and%20business,be%20enforceable%20in%20that%20county.",
+            "proposition": "Hawkins supports partial enforcement in a sale-of-business setting where an overbroad covenant can be confined to the valid county.",
+            "verbatimQuote": "Because the property and business purchased from Saunders and McNea were located and conducted in Ward County, we hold the non-competition agreement to be enforceable in that county.",
+            "date": "1982-07-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-nd-hawkins-sale-sev"
+          },
+          {
+            "sourceId": "tx-1551c-reform",
+            "authorityType": "primary-law",
+            "title": "Tex. Bus. & Com. Code § 15.51",
+            "citation": "Tex. Bus. & Com. Code § 15.51(c).",
+            "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm",
+            "proposition": "Tex. Bus. & Com. Code § 15.51(c) supports that a court shall reform an overbroad but ancillary covenant to the minimum reasonable restraint and enforce it as reformed, may not award damages for a breach before reformation, and limits relief to injunctive relief.",
+            "verbatimQuote": "the court shall reform the covenant to the extent necessary to cause the limitations contained in the covenant as to time, geographical area, and scope of activity to be restrained to be reasonable and to impose a restraint that is not greater than necessary to protect the goodwill or other business interest of the promisee and enforce the covenant as reformed, except that the court may not award the promisee damages for a breach of the covenant before its reformation and the relief granted to the promisee shall be limited to injunctive relief.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-tx-1551c-reform"
+          },
+          {
+            "sourceId": "wa-emerick-partial-1",
+            "authorityType": "case-law",
+            "title": "Emerick v. Cardiac Study Center, Inc.",
+            "citation": "Emerick v. Cardiac Study Ctr., Inc., 189 Wn. App. 711 (2015).",
+            "url": "https://www.courtlistener.com/opinion/2830060/robert-emerick-v-cardiac-study-center-incps/",
+            "deepLink": "https://www.courtlistener.com/opinion/2830060/robert-emerick-v-cardiac-study-center-incps/#:~:text=If%20the%20trial%20court%20determines,entire%20covenant%20does%20not%20fail.",
+            "proposition": "Emerick holds that when certain terms of a covenant are unreasonable, the entire covenant does not fail and a court may modify it.",
+            "verbatimQuote": "If the trial court determines that certain terms of the covenant are unreasonable—such as the geographic and temporal scope of the restraint—the entire covenant does not fail.",
+            "date": "2015-08-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-wa-emerick-partial-1"
+          },
+          {
+            "sourceId": "wa-rcw-080-reform-2",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.080",
+            "citation": "RCW 49.62.080(3).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.080",
+            "proposition": "RCW 49.62.080(3) applies the same penalty when a court reforms, rewrites, modifies, or only partially enforces a non-compete.",
+            "verbatimQuote": "If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-wa-rcw-080-reform-2"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#address-survival-per-covenant",
+        "requirementGuidance": "Each covenant should state its own survival and expiration rather than relying on one bundled survival clause. The covenants run on different clocks — perpetual for trade secrets, fixed terms elsewhere — and per-covenant treatment keeps each duration independently auditable.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#address-assignment-and-successors",
+        "requirementGuidance": "Check whether the employer can assign the covenants to a successor or acquirer — and confirm the employee cannot assign at all. Whether a covenant can follow the business to a buyer or successor can turn on deal structure and state law; Pennsylvania, for example, bars assignment in an asset sale absent a specific assignability provision, while Ohio allows successor enforcement after a statutory merger.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hess-not-assignable",
+            "authorityType": "case-law",
+            "title": "Hess v. Gebhard & Co.",
+            "citation": "Hess v. Gebhard & Co. Inc., 808 A.2d 912 (Pa. 2002).",
+            "url": "https://www.courtlistener.com/opinion/1931597/hess-v-gebhard-co-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1931597/hess-v-gebhard-co-inc/#:~:text=Therefore%2C%20we%20hold%20that%20a,in%20a%20sale%20of%20assets.",
+            "proposition": "Hess supports that a restrictive covenant in an employment agreement is not assignable to a purchasing entity in a sale of assets absent a specific assignability provision.",
+            "verbatimQuote": "Therefore, we hold that a restrictive covenant not to compete, contained in an employment agreement, is not assignable to the purchasing business entity, in the absence of a specific assignability provision, where the covenant is included in a sale of assets.",
+            "date": "2002-10-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-hess-not-assignable"
+          },
+          {
+            "sourceId": "acordia-successor",
+            "authorityType": "case-law",
+            "title": "Acordia of Ohio, L.L.C. v. Fishel",
+            "citation": "Acordia of Ohio, L.L.C. v. Fishel, 133 Ohio St. 3d 356, 2012-Ohio-4648, 978 N.E.2d 823.",
+            "url": "https://www.courtlistener.com/opinion/2690659/acordia-of-ohio-llc-v-fishel/",
+            "deepLink": "https://www.courtlistener.com/opinion/2690659/acordia-of-ohio-llc-v-fishel/#:~:text=We%20hold%20that%20the%20L.L.C.,the%20circumstances%20of%20this%20case.",
+            "proposition": "Acordia holds that a company surviving a statutory merger may enforce the absorbed company's non-competes as if it were the original contracting party, if the covenants are reasonable.",
+            "verbatimQuote": "We hold that the L.L.C. may enforce the noncompete agreements as if it had stepped into the shoes of the original contracting companies, provided that the noncompete agreements are reasonable under the circumstances of this case.",
+            "date": "2012-10-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-acordia-successor"
+          }
+        ]
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law and venue",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#specify-governing-law-and-venue",
+        "requirementGuidance": "Governing law, venue, and the dispute process should be stated together so all three point the same direction. Remember the limits: the chosen law yields where another state has a materially greater interest and a fundamental policy the chosen law would contravene, so the selection manages jurisdictional risk rather than eliminating it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "choice-of-law-fundamental-policy-limit",
+            "authorityType": "case-law",
+            "title": "Cardoni v. Prosperity Bank",
+            "citation": "Cardoni v. Prosperity Bank, 805 F.3d 573 (5th Cir. 2015).",
+            "url": "https://www.courtlistener.com/opinion/3150844/chris-cardoni-v-prosperity-bank/",
+            "deepLink": "https://www.courtlistener.com/opinion/3150844/chris-cardoni-v-prosperity-bank/#:~:text=Even%20when%20a%20reasonable%20basis,of%20the%20chosen%20state%E2%80%99s%20law.",
+            "proposition": "Under Restatement (Second) of Conflict of Laws section 187(2), a contractual choice of law is not honored where another state has a materially greater interest and a fundamental policy that the chosen law would contravene.",
+            "verbatimQuote": "Even when a reasonable basis exists for selecting a state as the source of law governing a transaction, the parties’ selection does not control if another state: (1) has a more significant relationship with the parties and the transaction at issue than the chosen state does under Restatement § 188; (2) has a materially greater interest than the chosen state does in the enforceability of a given provision; and (3) has a fundamental policy that would be contravened by the application of the chosen state’s law.",
+            "date": "2015-10-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-choice-of-law-fundamental-policy-limit"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard boilerplate, but check it is actually there: an entire-agreement clause, written-amendment and no-waiver mechanics, and confirmation that electronic signatures and counterparts are valid. These provisions shut down later claims of oral side deals or waiver by inaction.",
+        "variants": [],
+        "sources": []
+      }
+    ]
+  }
+}

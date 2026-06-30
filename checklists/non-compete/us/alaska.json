@@ -1,0 +1,1247 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/alaska",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/alaska.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/alaska",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/alaska/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/alaska/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "alaska",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Alaska",
+      "description": "A clause-by-clause reviewer checklist for Alaska employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Data Management reasonable-necessity test and Alaska's good-faith reasonable-alteration rule.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Alaska",
+      "coverage": "Alaska (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 45,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "alaska-statutory-gates",
+        "label": "Alaska case-law gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity that actually holds the customer relationships, confidential information, trade secrets, or goodwill the covenants claim to protect. Alaska reads non-competition agreements through strict construction, and a covenant running to an affiliate that owns none of the protected interests starts the reasonableness showing a step behind.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-decristofaro-strict-cover",
+            "authorityType": "case-law",
+            "title": "DeCristofaro v. Security Nat. Bank",
+            "citation": "DeCristofaro v. Sec. Nat'l Bank, 664 P.2d 167, 168-69 (Alaska 1983).",
+            "url": "https://www.courtlistener.com/opinion/1234367/decristofaro-v-security-national-bank/",
+            "deepLink": "https://www.courtlistener.com/opinion/1234367/decristofaro-v-security-national-bank/#:~:text=They%20are%2C%20therefore%2C%20strictly%20construed.",
+            "proposition": "DeCristofaro supports the baseline Alaska rule that non-competition agreements are strictly construed.",
+            "verbatimQuote": "They are, therefore, strictly construed.",
+            "date": "1983-05-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-decristofaro-strict-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#identify-effective-date",
+        "requirementGuidance": "Pin the date. Alaska sets no statutory clock for any covenant, which means every duration question resolves through fact-bound reasonableness measured against the terms the parties actually stated and when they took effect. An undated agreement leaves each restricted-period clock and the timing of the exchange open to dispute.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#identify-employee-title",
+        "requirementGuidance": "Record the role, because several of the factors Alaska courts weigh turn on what this employee did — whether the employee was the sole contact with the customer, whether the employee held confidential information or trade secrets, and whether the talent being suppressed was developed during the employment. A title with no plausible connection to any protectable interest is an early sign the covenant targets ordinary competition.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-data-management-factors-cover",
+            "authorityType": "case-law",
+            "title": "Data Management, Inc. v. Greene",
+            "citation": "Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).",
+            "url": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/",
+            "deepLink": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=Among%20the%20factors%20properly%20to,incidental%20to%20the%20main%20employment.%E2%80%9D",
+            "proposition": "Data Management lists the Alaska reasonableness factors, several of which turn on the employee's actual role — customer contact, confidential information, and talent developed during the employment.",
+            "verbatimQuote": "Among the factors properly to be considered are: “[t]he absence or presence of limitations as to time and space, * * * whether the employee represents the sole contact with the customer; whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition; whether the covenant seeks to stifle the inherent skill and experience of the employee; whether the benefit to the employer is disproportional to the detriment to the employee; whether the covenant operates as a bar to the employee’s sole means of support; whether the employee’s talent which the employer seeks to suppress was actually developed during the period of employment; and whether the forbidden employment is merely incidental to the main employment.”",
+            "date": "1988-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-data-management-factors-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated. When Alaska law applies there is no statute to consult — the covenant is tested entirely under Alaska Supreme Court common law, which construes non-competition agreements strictly and asks whether each restraint is reasonably necessary to protect a legitimate business interest.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-decristofaro-strict-cover",
+            "authorityType": "case-law",
+            "title": "DeCristofaro v. Security Nat. Bank",
+            "citation": "DeCristofaro v. Sec. Nat'l Bank, 664 P.2d 167, 168-69 (Alaska 1983).",
+            "url": "https://www.courtlistener.com/opinion/1234367/decristofaro-v-security-national-bank/",
+            "deepLink": "https://www.courtlistener.com/opinion/1234367/decristofaro-v-security-national-bank/#:~:text=They%20are%2C%20therefore%2C%20strictly%20construed.",
+            "proposition": "DeCristofaro supports the baseline Alaska rule that non-competition agreements are strictly construed.",
+            "verbatimQuote": "They are, therefore, strictly construed.",
+            "date": "1983-05-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-decristofaro-strict-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#define-confidential-information",
+        "requirementGuidance": "Check that the definition describes information the employer actually protects rather than everything the employee ever learned. In Alaska the definition does double duty: confidential information is one of the interests that can justify a covenant, and a customer-contact restraint becomes unreasonable where the former employee had no access to confidential information at all.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-metcalfe-confidential-defs",
+            "authorityType": "case-law",
+            "title": "Metcalfe Investments, Inc. v. Garrison",
+            "citation": "Metcalfe Invs., Inc. v. Garrison, 919 P.2d 1356, 1362 n.5 (Alaska 1996).",
+            "url": "https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/",
+            "deepLink": "https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/#:~:text=A%20covenant%20not%20to%20contact,have%20access%20to%20confidential%20information.",
+            "proposition": "Metcalfe supports the rule that a customer-contact restraint can be unreasonable when the employee lacked access to confidential information.",
+            "verbatimQuote": "A covenant not to contact former customers will also be unreasonable if the former employee did not have access to confidential information.",
+            "date": "1996-06-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-metcalfe-confidential-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#define-trade-secrets",
+        "requirementGuidance": "Keep Trade Secrets defined separately from ordinary confidential information. The separate definition preserves the perpetual protection track and keeps the contractual term aligned with the Alaska Uniform Trade Secrets Act, whose remedies — starting with injunctions against actual or threatened misappropriation — run to the statutorily defined asset.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-autsa-injunction-defs",
+            "authorityType": "primary-law",
+            "title": "AS 45.50.910 / .915 / .930 (AUTSA)",
+            "citation": "Alaska Stat. § 45.50.910(a).",
+            "url": "https://www.akleg.gov/pdf/billfiles/SLAs/SLA%201988/CH%20103%20SLA%201988.pdf",
+            "proposition": "AS 45.50.910 supplies injunctive relief for actual or threatened misappropriation of trade secrets, the statutory remedy a clean trade-secret definition feeds.",
+            "verbatimQuote": "A court may enjoin actual or threatened misappropriation of trade secrets.",
+            "date": "1988-09-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-autsa-injunction-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#define-restricted-period",
+        "requirementGuidance": "One defined Restricted Period keeps every duration auditable. Alaska imposes no statutory maximum; the presence or absence of time limits is simply the first factor in a fact-bound reasonableness inquiry, so the stated period has to be defensible on these facts rather than safe by rule.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-data-management-factors-defs",
+            "authorityType": "case-law",
+            "title": "Data Management, Inc. v. Greene",
+            "citation": "Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).",
+            "url": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/",
+            "deepLink": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=Among%20the%20factors%20properly%20to,incidental%20to%20the%20main%20employment.%E2%80%9D",
+            "proposition": "Data Management supplies the fact-bound reasonableness factors — time and space, unfair versus ordinary competition, stifled skill — that the defined terms are measured against.",
+            "verbatimQuote": "Among the factors properly to be considered are: “[t]he absence or presence of limitations as to time and space, * * * whether the employee represents the sole contact with the customer; whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition; whether the covenant seeks to stifle the inherent skill and experience of the employee; whether the benefit to the employer is disproportional to the detriment to the employee; whether the covenant operates as a bar to the employee’s sole means of support; whether the employee’s talent which the employer seeks to suppress was actually developed during the period of employment; and whether the forbidden employment is merely incidental to the main employment.”",
+            "date": "1988-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-data-management-factors-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#define-restricted-territory",
+        "requirementGuidance": "For a true non-compete, tie the geography to where the protected interest actually operates. Limitations as to time and space lead Alaska's factor list, and a statewide territory is not automatically invalid — but every mile must map to the business interest at stake, because unexplained breadth is exactly what an employer later struggles to defend as good-faith drafting.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-data-management-factors-defs",
+            "authorityType": "case-law",
+            "title": "Data Management, Inc. v. Greene",
+            "citation": "Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).",
+            "url": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/",
+            "deepLink": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=Among%20the%20factors%20properly%20to,incidental%20to%20the%20main%20employment.%E2%80%9D",
+            "proposition": "Data Management supplies the fact-bound reasonableness factors — time and space, unfair versus ordinary competition, stifled skill — that the defined terms are measured against.",
+            "verbatimQuote": "Among the factors properly to be considered are: “[t]he absence or presence of limitations as to time and space, * * * whether the employee represents the sole contact with the customer; whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition; whether the covenant seeks to stifle the inherent skill and experience of the employee; whether the benefit to the employer is disproportional to the detriment to the employee; whether the covenant operates as a bar to the employee’s sole means of support; whether the employee’s talent which the employer seeks to suppress was actually developed during the period of employment; and whether the forbidden employment is merely incidental to the main employment.”",
+            "date": "1988-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-data-management-factors-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#define-covered-customers",
+        "requirementGuidance": "Bound the class to the customers the employer procured at its own expense and the employee actually dealt with. That is the shape the Alaska Supreme Court enforced — the worker remained free to compete generally and was barred only from expropriating relationships the employer had paid to build.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-metcalfe-procured-defs",
+            "authorityType": "case-law",
+            "title": "Metcalfe Investments, Inc. v. Garrison",
+            "citation": "Metcalfe Invs., Inc. v. Garrison, 919 P.2d 1356, 1361 (Alaska 1996).",
+            "url": "https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/",
+            "deepLink": "https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/#:~:text=The%20only%20thing%20she%20was,procured%20at%20its%20own%20expense.",
+            "proposition": "Metcalfe upheld a customer restraint limited to expropriating information and customers the employer procured at its own expense — the model for the covered-customers definition.",
+            "verbatimQuote": "The only thing she was prohibited from doing was expropriating information and customers that Metcalfe Investments had procured at its own expense.",
+            "date": "1996-06-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-metcalfe-procured-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing employee actually worked with during a stated look-back window. Alaska gives workforce restraints no separate rulebook — the clause answers to the same fact-bound reasonableness inquiry as every other covenant in the agreement, and a company-wide class needs a company-wide justification.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#define-protected-interests",
+        "requirementGuidance": "Name the interests, and keep them real: customer relationships, confidential information, trade secrets, and goodwill are the categories Alaska's reasonableness inquiry protects. A recital aimed at market position or freedom from competition reads as the interest Alaska refuses to protect — eliminating ordinary competition rather than competition that would be unfair to the employer.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-data-management-factors-defs",
+            "authorityType": "case-law",
+            "title": "Data Management, Inc. v. Greene",
+            "citation": "Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).",
+            "url": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/",
+            "deepLink": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=Among%20the%20factors%20properly%20to,incidental%20to%20the%20main%20employment.%E2%80%9D",
+            "proposition": "Data Management supplies the fact-bound reasonableness factors — time and space, unfair versus ordinary competition, stifled skill — that the defined terms are measured against.",
+            "verbatimQuote": "Among the factors properly to be considered are: “[t]he absence or presence of limitations as to time and space, * * * whether the employee represents the sole contact with the customer; whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition; whether the covenant seeks to stifle the inherent skill and experience of the employee; whether the benefit to the employer is disproportional to the detriment to the employee; whether the covenant operates as a bar to the employee’s sole means of support; whether the employee’s talent which the employer seeks to suppress was actually developed during the period of employment; and whether the forbidden employment is merely incidental to the main employment.”",
+            "date": "1988-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-data-management-factors-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity in concrete terms tied to what the employee did and knew. A definition that expands to anything the employer might someday do stifles the inherent skill and experience of the employee — a factor Alaska counts directly against enforcement.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-data-management-factors-defs",
+            "authorityType": "case-law",
+            "title": "Data Management, Inc. v. Greene",
+            "citation": "Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).",
+            "url": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/",
+            "deepLink": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=Among%20the%20factors%20properly%20to,incidental%20to%20the%20main%20employment.%E2%80%9D",
+            "proposition": "Data Management supplies the fact-bound reasonableness factors — time and space, unfair versus ordinary competition, stifled skill — that the defined terms are measured against.",
+            "verbatimQuote": "Among the factors properly to be considered are: “[t]he absence or presence of limitations as to time and space, * * * whether the employee represents the sole contact with the customer; whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition; whether the covenant seeks to stifle the inherent skill and experience of the employee; whether the benefit to the employer is disproportional to the detriment to the employee; whether the covenant operates as a bar to the employee’s sole means of support; whether the employee’s talent which the employer seeks to suppress was actually developed during the period of employment; and whether the forbidden employment is merely incidental to the main employment.”",
+            "date": "1988-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-data-management-factors-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. Owning a few public shares threatens no customer relationship, confidence, or goodwill, so a clause that technically forbids index funds is gratuitous breadth — and in Alaska gratuitous breadth is what the employer must later explain away to keep the covenant eligible for judicial alteration.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#define-passive-public-holdings",
+        "requirementGuidance": "Optional drafting mechanics. Many agreements inline the carve-out without a capitalized term; when the term does appear, confirm its threshold matches the operative carve-out it supports and is not contradicted elsewhere in the agreement.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#define-solicit",
+        "requirementGuidance": "Define the prohibited conduct precisely — active outreach, passive acceptance, or both. Alaska covenant disputes are decided on fact-bound factors, and a court cannot weigh a restraint it cannot first read: a clear definition tells the departing employee what is off limits before the dispute rather than during it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#define-termination-of-employment",
+        "requirementGuidance": "Confirm the event that starts each post-employment clock is unambiguous across resignation, dismissal, and the end of any fixed term. Every restricted period in the agreement is measured from this trigger, and an ambiguous start line muddies the time-and-space showing the reasonableness factors demand.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#acknowledge-timing",
+        "requirementGuidance": "Record when the covenant was signed and what the employee received for it. None of the Alaska authorities behind this checklist addresses whether continued employment alone supports a covenant signed mid-employment, so an acknowledgement reciting the actual exchange — offer, raise, bonus, training, or customer access — is cheap evidence against a consideration fight the case law has not yet settled.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Alaska rule demands it, but remember who carries the burden here: an employer asking a court to rescue an overbroad covenant must prove the covenant was drafted in good faith. Evidence that the employee had a real window to review the agreement and seek advice is exactly the kind of procedural fairness that showing draws on.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-data-management-good-faith-timing",
+            "authorityType": "case-law",
+            "title": "Data Management, Inc. v. Greene",
+            "citation": "Data Mgmt., Inc. v. Greene, 757 P.2d 62, 64 (Alaska 1988).",
+            "url": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/",
+            "deepLink": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=The%20third%20approach%2C%20and%20the,faith%20is%20on%20the%20employer.",
+            "proposition": "Data Management places the burden of proving good-faith drafting on the employer, the showing that procedural-fairness evidence like a counsel acknowledgement supports.",
+            "verbatimQuote": "The third approach, and the one we adopt, is to hold that if an overbroad covenant not to compete can be reasonably altered to render it enforceable, then the court shall do so unless it determines the covenant was not drafted in good faith. The burden of proving that the covenant was drafted in good faith is on the employer.",
+            "date": "1988-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-data-management-good-faith-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret confidentiality runs as long as secrecy does, not to a fixed date. Federal law defines the asset by its continued secrecy, and Alaska's trade-secret remedies protect that same statutorily defined asset — a contractual expiry date on trade-secret protection surrenders rights both regimes would otherwise preserve.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-dtsa-trade-secret-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. A perpetual lid on material that never rose to trade-secret status is the kind of unexplained breadth that invites the overreach inquiry, and the two-track structure keeps perpetual obligations where the statutes actually support them.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in Alaska: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later federal trade-secret suit against the employee. Confirm the notice is present and tracks the statute.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Check that confidentiality and non-disparagement clauses carve out discussion of wages, hours, and working conditions. Section 7 protects that speech no matter which state's law governs the covenant, and the Board has held that merely offering overbroad terms violates the Act.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. No confidentiality clause can block legally compelled disclosure, and the carve-out keeps an otherwise sound clause from reading as the overreach Alaska courts construe against enforcement.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#require-property-return-and-certification",
+        "requirementGuidance": "Require all company property and confidential materials to come back at separation, with a written certification of compliance. In Alaska that certification feeds the statutory track: AUTSA lets a court enjoin actual or threatened misappropriation, and the certification — or proof it was refused — is the cleanest evidence that motion turns on.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-autsa-injunction-return",
+            "authorityType": "primary-law",
+            "title": "AS 45.50.910 / .915 / .930 (AUTSA)",
+            "citation": "Alaska Stat. § 45.50.910(a).",
+            "url": "https://www.akleg.gov/pdf/billfiles/SLAs/SLA%201988/CH%20103%20SLA%201988.pdf",
+            "proposition": "AS 45.50.910 authorizes injunctions against actual or threatened misappropriation, the claim a property-return certification supplies evidence for.",
+            "verbatimQuote": "A court may enjoin actual or threatened misappropriation of trade secrets.",
+            "date": "1988-09-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-autsa-injunction-return"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional. Alaska gives workforce covenants no statutory blessing — there is no statute at all — so a covenant against recruiting former colleagues is weighed under the same fact-bound reasonableness factors as any other restraint. Scoped to people the departing employee actually worked with, it is usually the easiest covenant in the agreement to defend.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-data-management-factors-cov",
+            "authorityType": "case-law",
+            "title": "Data Management, Inc. v. Greene",
+            "citation": "Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).",
+            "url": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/",
+            "deepLink": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=Among%20the%20factors%20properly%20to,incidental%20to%20the%20main%20employment.%E2%80%9D",
+            "proposition": "Data Management supplies the reasonableness factors every Alaska covenant is weighed under, including sole means of support and ordinary versus unfair competition.",
+            "verbatimQuote": "Among the factors properly to be considered are: “[t]he absence or presence of limitations as to time and space, * * * whether the employee represents the sole contact with the customer; whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition; whether the covenant seeks to stifle the inherent skill and experience of the employee; whether the benefit to the employer is disproportional to the detriment to the employee; whether the covenant operates as a bar to the employee’s sole means of support; whether the employee’s talent which the employer seeks to suppress was actually developed during the period of employment; and whether the forbidden employment is merely incidental to the main employment.”",
+            "date": "1988-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-data-management-factors-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#permit-customer-nonsolicit",
+        "requirementGuidance": "Optional, and the covenant Alaska law supports best when it is drawn tightly. The Alaska Supreme Court enforced a restraint limited to expropriating the information and customers the employer had procured at its own expense — the worker stayed free to compete generally. Hold any customer clause in this agreement to that shape, and run it through the customer-restraint gate at the end of this checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-metcalfe-procured-cov",
+            "authorityType": "case-law",
+            "title": "Metcalfe Investments, Inc. v. Garrison",
+            "citation": "Metcalfe Invs., Inc. v. Garrison, 919 P.2d 1356, 1361 (Alaska 1996).",
+            "url": "https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/",
+            "deepLink": "https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/#:~:text=The%20only%20thing%20she%20was,procured%20at%20its%20own%20expense.",
+            "proposition": "Metcalfe enforced a customer restraint limited to expropriating information and customers the employer procured at its own expense, leaving the worker free to compete generally.",
+            "verbatimQuote": "The only thing she was prohibited from doing was expropriating information and customers that Metcalfe Investments had procured at its own expense.",
+            "date": "1996-06-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-metcalfe-procured-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they arrive unsolicited — materially broader than a non-solicit. The broader the customer class, the closer the clause drifts toward a bar on practicing the specialty, which Alaska law requires to be drafted more narrowly. Treat inclusion as a deliberate risk decision, not boilerplate.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-metcalfe-specialty-cov",
+            "authorityType": "case-law",
+            "title": "Metcalfe Investments, Inc. v. Garrison",
+            "citation": "Metcalfe Invs., Inc. v. Garrison, 919 P.2d 1356, 1362 n.5 (Alaska 1996).",
+            "url": "https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/",
+            "deepLink": "https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/#:~:text=For%20instance%2C%20if%20a%20business,to%20be%20drafted%20more%20narrowly.",
+            "proposition": "Metcalfe requires narrower drafting where a customer restraint would amount to a bar on practicing the employee's specialty — the risk a broad non-dealing clause runs.",
+            "verbatimQuote": "For instance, if a business is so large that a restraint on contacting former clients would amount to a bar prohibiting the employee from practicing his or her specialty, the court will require the restraint to be drafted more narrowly.",
+            "date": "1996-06-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-metcalfe-specialty-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#permit-non-compete",
+        "requirementGuidance": "If a true non-compete appears, it faces Alaska's most skeptical reading: non-competition agreements are strictly construed, and the covenant must clear the reasonable-necessity gate at the end of this checklist before any of its terms matter. A restraint that functions as a bar on the employee's livelihood or on ordinary competition fails however modest its stated time and territory look.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-decristofaro-strict-cov",
+            "authorityType": "case-law",
+            "title": "DeCristofaro v. Security Nat. Bank",
+            "citation": "DeCristofaro v. Sec. Nat'l Bank, 664 P.2d 167, 168-69 (Alaska 1983).",
+            "url": "https://www.courtlistener.com/opinion/1234367/decristofaro-v-security-national-bank/",
+            "deepLink": "https://www.courtlistener.com/opinion/1234367/decristofaro-v-security-national-bank/#:~:text=They%20are%2C%20therefore%2C%20strictly%20construed.",
+            "proposition": "DeCristofaro sets the strict-construction posture an Alaska non-compete is read under.",
+            "verbatimQuote": "They are, therefore, strictly construed.",
+            "date": "1983-05-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-decristofaro-strict-cov"
+          },
+          {
+            "sourceId": "ak-data-management-factors-cov",
+            "authorityType": "case-law",
+            "title": "Data Management, Inc. v. Greene",
+            "citation": "Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).",
+            "url": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/",
+            "deepLink": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=Among%20the%20factors%20properly%20to,incidental%20to%20the%20main%20employment.%E2%80%9D",
+            "proposition": "Data Management supplies the reasonableness factors every Alaska covenant is weighed under, including sole means of support and ordinary versus unfair competition.",
+            "verbatimQuote": "Among the factors properly to be considered are: “[t]he absence or presence of limitations as to time and space, * * * whether the employee represents the sole contact with the customer; whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition; whether the covenant seeks to stifle the inherent skill and experience of the employee; whether the benefit to the employer is disproportional to the detriment to the employee; whether the covenant operates as a bar to the employee’s sole means of support; whether the employee’s talent which the employer seeks to suppress was actually developed during the period of employment; and whether the forbidden employment is merely incidental to the main employment.”",
+            "date": "1988-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-data-management-factors-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its actual competitors, bind that list rather than the open-ended Competitive Business definition. Alaska asks whether each restraint is broader than the protected interest requires, and a named list is the most concrete proof of tailoring a drafter can offer — tailoring that also feeds the good-faith showing the employer may later need.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — then ask which customer relationship, confidence, or goodwill a ban on investing actually protects, because that is the first question Alaska's reasonableness factors put to it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#require-non-disparagement",
+        "requirementGuidance": "Include it with a stated duration, and audit it against federal law — Alaska imposes no covenant-specific rule of its own here. Truthful testimony, statements to government agencies, and protected workplace speech must all sit outside the clause, because the Board polices overbroad versions in every state.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Healthcare-professional rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state Alaska's position accurately: there is no physician or other occupation statute, so a provider covenant is tested under the same common-law reasonableness as any other. What Alaska adds is a public-injury lens — where the restrained clinician serves a population in need of important low-cost care, enforcement is weighed against the harm to that access, not just against radius and duration.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-wenzell-public-interest-phys",
+            "authorityType": "case-law",
+            "title": "Dominic Wenzell, DMD PC v. Ingrim",
+            "citation": "Dominic Wenzell, DMD PC v. Ingrim, 228 P.3d 103, 111 (Alaska 2010).",
+            "url": "https://www.courtlistener.com/opinion/2601652/dominic-wenzell-dmd-pc-v-ingrim/",
+            "deepLink": "https://www.courtlistener.com/opinion/2601652/dominic-wenzell-dmd-pc-v-ingrim/#:~:text=It%20appears%20from%20the%20record,in%20need%20of%20such%20care.",
+            "proposition": "Wenzell supports close public-policy scrutiny where enforcement would affect important low-cost healthcare services.",
+            "verbatimQuote": "It appears from the record that Ingrim is employed by an organization providing an important, low-cost service to a population in need of such care.",
+            "date": "2010-04-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-wenzell-public-interest-phys"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The employee's representation that no earlier agreement or order blocks the new role. On intake it surfaces an incoming restraint early — before the first customer call rather than after — and tells the reviewer which prior promises need the same reasonableness analysis this checklist applies to the outgoing ones.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice, not a default. A notice letter is only as strong as the covenant behind it: built on a restraint that cannot tie itself to a protectable interest, the letter invites a tortious-interference dispute instead of deterring a hire. If the clause appears, condition any third-party notice on the covenant clearing the gate section below.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say expressly whether the restricted period pauses during a breach, because no Alaska authority answers the question either way. Then weigh the worst case: an extension makes the effective restraint longer, and a longer restraint is weighed under the same fact-bound time-and-space factors as the original term. Silence in the contract on top of silence in the case law is a plan for litigation, not enforcement.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-data-management-factors-tolling",
+            "authorityType": "case-law",
+            "title": "Data Management, Inc. v. Greene",
+            "citation": "Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).",
+            "url": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/",
+            "deepLink": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=Among%20the%20factors%20properly%20to,incidental%20to%20the%20main%20employment.%E2%80%9D",
+            "proposition": "Data Management makes time limits a weighed reasonableness factor, the inquiry any breach-extended restricted period would face.",
+            "verbatimQuote": "Among the factors properly to be considered are: “[t]he absence or presence of limitations as to time and space, * * * whether the employee represents the sole contact with the customer; whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition; whether the covenant seeks to stifle the inherent skill and experience of the employee; whether the benefit to the employer is disproportional to the detriment to the employee; whether the covenant operates as a bar to the employee’s sole means of support; whether the employee’s talent which the employer seeks to suppress was actually developed during the period of employment; and whether the forbidden employment is merely incidental to the main employment.”",
+            "date": "1988-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-data-management-factors-tolling"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that injunctive relief is appropriate — then note Alaska's independent statutory path: AUTSA authorizes injunctions against actual or threatened trade-secret misappropriation, so a disciplined trade-secret program preserves relief even where a covenant falters.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-autsa-injunction-rem",
+            "authorityType": "primary-law",
+            "title": "AS 45.50.910 / .915 / .930 (AUTSA)",
+            "citation": "Alaska Stat. § 45.50.910(a).",
+            "url": "https://www.akleg.gov/pdf/billfiles/SLAs/SLA%201988/CH%20103%20SLA%201988.pdf",
+            "proposition": "AS 45.50.910 supports trade-secret injunctions as an independent statutory route to relief alongside the covenant's own remedies clause.",
+            "verbatimQuote": "A court may enjoin actual or threatened misappropriation of trade secrets.",
+            "date": "1988-09-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-autsa-injunction-rem"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice the parties may make; Alaska covenant law adds no rule of its own. Keep the statutory remedies in view when weighing it: where misappropriation is wilful and malicious, AUTSA authorizes exemplary damages up to twice the compensatory award — leverage that exists whether or not the fee clause does.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-autsa-damages-rem",
+            "authorityType": "primary-law",
+            "title": "AS 45.50.910 / .915 / .930 (AUTSA)",
+            "citation": "Alaska Stat. § 45.50.915.",
+            "url": "https://www.akleg.gov/pdf/billfiles/SLAs/SLA%201988/CH%20103%20SLA%201988.pdf",
+            "proposition": "AS 45.50.915 authorizes exemplary damages up to twice the compensatory award for wilful and malicious misappropriation, a statutory remedy independent of any contractual fee-shifting.",
+            "verbatimQuote": "If wilful and malicious misappropriation exists, the court may award exemplary damages in an amount not exceeding twice the damages awarded under (a) of this section.",
+            "date": "1988-09-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-autsa-damages-rem"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-narrowly-and-in-good-faith-for-reasonable-alteration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.alaska.draft-narrowly-and-in-good-faith-for-reasonable-alteration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Narrow terms up front; alteration only rescues good faith",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#draft-narrowly-and-in-good-faith-for-reasonable-alteration",
+        "requirementGuidance": "Read the severability clause as a backstop, never a strategy. Alaska does not follow a mechanical blue-pencil rule: if an overbroad covenant can be reasonably altered to render it enforceable, the court shall do so — unless it determines the covenant was not drafted in good faith, and the burden of proving good-faith drafting sits on the employer. Where the employer has overreached willfully, the court should refuse to alter the covenant at all. Draft each restraint as narrowly as the evidence supports, so the rescue is never needed.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-data-management-alteration-sev",
+            "authorityType": "case-law",
+            "title": "Data Management, Inc. v. Greene",
+            "citation": "Data Mgmt., Inc. v. Greene, 757 P.2d 62, 64 (Alaska 1988).",
+            "url": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/",
+            "deepLink": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=The%20third%20approach%2C%20and%20the,faith%20is%20on%20the%20employer.",
+            "proposition": "Data Management adopts the reasonable-alteration rule and places the burden of proving good-faith drafting on the employer.",
+            "verbatimQuote": "The third approach, and the one we adopt, is to hold that if an overbroad covenant not to compete can be reasonably altered to render it enforceable, then the court shall do so unless it determines the covenant was not drafted in good faith. The burden of proving that the covenant was drafted in good faith is on the employer.",
+            "date": "1988-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-data-management-alteration-sev"
+          },
+          {
+            "sourceId": "ak-data-management-overreach-sev",
+            "authorityType": "case-law",
+            "title": "Data Management, Inc. v. Greene",
+            "citation": "Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).",
+            "url": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/",
+            "deepLink": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=The%20trial%20court%20must%20determine,refuse%20to%20alter%20the%20covenant.",
+            "proposition": "Data Management directs courts to refuse alteration where the employer willfully overreached.",
+            "verbatimQuote": "The trial court must determine whether an employer has overreached willfully and, if so, the court should refuse to alter the covenant.",
+            "date": "1988-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-data-management-overreach-sev"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite for ordinary confidences, and a stated term for each restraint. Because Alaska reviews every covenant on its own facts rather than against a statutory schedule, a single bundled survival clause is where an undefended duration hides.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the employee cannot assign. A covenant that changes hands in a business sale also changes posture in Alaska — purchased goodwill is a recognized interest, but the analysis then weighs seller hardship and public injury — so read the assignment clause together with the sale-of-business item in the gate section below.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law and venue",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#specify-governing-law-and-venue",
+        "requirementGuidance": "State the governing law, venue, and dispute process. None of the staged Alaska authorities overrides the parties' choice of law for restrictive covenants, so confirm the selection was deliberate: choosing Alaska selects strict construction and the fact-bound reasonableness factors for every covenant in the agreement.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-decristofaro-strict-law",
+            "authorityType": "case-law",
+            "title": "DeCristofaro v. Security Nat. Bank",
+            "citation": "DeCristofaro v. Sec. Nat'l Bank, 664 P.2d 167, 168-69 (Alaska 1983).",
+            "url": "https://www.courtlistener.com/opinion/1234367/decristofaro-v-security-national-bank/",
+            "deepLink": "https://www.courtlistener.com/opinion/1234367/decristofaro-v-security-national-bank/#:~:text=They%20are%2C%20therefore%2C%20strictly%20construed.",
+            "proposition": "DeCristofaro's strict-construction posture is part of the framework a choice of Alaska law imports into the covenant analysis.",
+            "verbatimQuote": "They are, therefore, strictly construed.",
+            "date": "1983-05-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-decristofaro-strict-law"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard boilerplate doing extra work in this jurisdiction: the Alaska Supreme Court has enforced an oral customer-list restraint despite the absence of a writing. A tight integration clause is therefore the reviewer's main defense against side promises — real or asserted — ripening into enforceable restraints the document never mentions.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-metcalfe-oral-entire",
+            "authorityType": "case-law",
+            "title": "Metcalfe Investments, Inc. v. Garrison",
+            "citation": "Metcalfe Invs., Inc. v. Garrison, 919 P.2d 1356, 1362 (Alaska 1996).",
+            "url": "https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/",
+            "deepLink": "https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/#:~:text=The%20noncompetition%20agreement%20in%20this,it%20was%20not%20in%20writing.",
+            "proposition": "Metcalfe held an oral customer-list noncompetition promise enforceable despite not being in writing, which makes the integration clause unusually load-bearing in Alaska.",
+            "verbatimQuote": "The noncompetition agreement in this case is thus enforceable despite the fact that it was not in writing.",
+            "date": "1996-06-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-metcalfe-oral-entire"
+          }
+        ]
+      },
+      {
+        "requirementId": "limit-covenants-to-reasonably-necessary-protection",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.alaska.limit-covenants-to-reasonably-necessary-protection",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Tied to a real interest, no broader than needed",
+        "sectionId": "alaska-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#limit-covenants-to-reasonably-necessary-protection",
+        "requirementGuidance": "This is the gate every covenant passes through. For each restraint, demand an answer to one question: which customer relationships, confidential information, trade secrets, or goodwill does this clause protect, and is it drawn no broader than that interest requires? Alaska courts construe these agreements strictly and weigh the practical factors — time and space limits, sole customer contact, confidential information, unfair versus ordinary competition, disproportionate burden, and whether the covenant bars the employee's sole means of support. A restraint aimed at ordinary competition or the worker's livelihood fails no matter how its term and territory are drawn.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-decristofaro-strict-gate",
+            "authorityType": "case-law",
+            "title": "DeCristofaro v. Security Nat. Bank",
+            "citation": "DeCristofaro v. Sec. Nat'l Bank, 664 P.2d 167, 168-69 (Alaska 1983).",
+            "url": "https://www.courtlistener.com/opinion/1234367/decristofaro-v-security-national-bank/",
+            "deepLink": "https://www.courtlistener.com/opinion/1234367/decristofaro-v-security-national-bank/#:~:text=They%20are%2C%20therefore%2C%20strictly%20construed.",
+            "proposition": "DeCristofaro supplies the strict-construction baseline every Alaska restrictive covenant is read against.",
+            "verbatimQuote": "They are, therefore, strictly construed.",
+            "date": "1983-05-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-decristofaro-strict-gate"
+          },
+          {
+            "sourceId": "ak-data-management-factors-gate",
+            "authorityType": "case-law",
+            "title": "Data Management, Inc. v. Greene",
+            "citation": "Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).",
+            "url": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/",
+            "deepLink": "https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=Among%20the%20factors%20properly%20to,incidental%20to%20the%20main%20employment.%E2%80%9D",
+            "proposition": "Data Management lists the reasonableness factors that implement Alaska's reasonable-necessity gate, including ordinary versus unfair competition and the bar on the employee's sole means of support.",
+            "verbatimQuote": "Among the factors properly to be considered are: “[t]he absence or presence of limitations as to time and space, * * * whether the employee represents the sole contact with the customer; whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition; whether the covenant seeks to stifle the inherent skill and experience of the employee; whether the benefit to the employer is disproportional to the detriment to the employee; whether the covenant operates as a bar to the employee’s sole means of support; whether the employee’s talent which the employer seeks to suppress was actually developed during the period of employment; and whether the forbidden employment is merely incidental to the main employment.”",
+            "date": "1988-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-data-management-factors-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "scope-customer-restraints-to-procured-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.alaska.scope-customer-restraints-to-procured-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer restraints limited to procured customers",
+        "sectionId": "alaska-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#scope-customer-restraints-to-procured-customers",
+        "requirementGuidance": "Limit any customer restraint to expropriating the information and customers the employer procured at its own expense — the shape the Alaska Supreme Court enforced even without a stated territory or term, because the worker remained free to compete generally. The same opinion supplies the limits to check on review: a customer set so large the clause amounts to a bar on practicing the specialty must be drafted more narrowly, and a contact restraint is unreasonable where the employee had no access to confidential information. Narrow customer-list restraints, not open-ended field bans, are what this doctrine supports.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-metcalfe-procured-gate",
+            "authorityType": "case-law",
+            "title": "Metcalfe Investments, Inc. v. Garrison",
+            "citation": "Metcalfe Invs., Inc. v. Garrison, 919 P.2d 1356, 1361 (Alaska 1996).",
+            "url": "https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/",
+            "deepLink": "https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/#:~:text=The%20only%20thing%20she%20was,procured%20at%20its%20own%20expense.",
+            "proposition": "Metcalfe upheld a customer restraint limited to expropriating the information and customers the employer procured at its own expense.",
+            "verbatimQuote": "The only thing she was prohibited from doing was expropriating information and customers that Metcalfe Investments had procured at its own expense.",
+            "date": "1996-06-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-metcalfe-procured-gate"
+          },
+          {
+            "sourceId": "ak-metcalfe-no-limits-gate",
+            "authorityType": "case-law",
+            "title": "Metcalfe Investments, Inc. v. Garrison",
+            "citation": "Metcalfe Invs., Inc. v. Garrison, 919 P.2d 1356, 1361-62 (Alaska 1996).",
+            "url": "https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/",
+            "deepLink": "https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/#:~:text=We%20conclude%20that%20the%20noncompetition,a%20geographical%20or%20durational%20limitation.",
+            "proposition": "Metcalfe holds that a narrow customer-list restraint is not unenforceable merely because it lacks geographic or durational limits.",
+            "verbatimQuote": "We conclude that the noncompetition agreement is not rendered unenforceable by the lack of a geographical or durational limitation.",
+            "date": "1996-06-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-metcalfe-no-limits-gate"
+          },
+          {
+            "sourceId": "ak-metcalfe-specialty-gate",
+            "authorityType": "case-law",
+            "title": "Metcalfe Investments, Inc. v. Garrison",
+            "citation": "Metcalfe Invs., Inc. v. Garrison, 919 P.2d 1356, 1362 n.5 (Alaska 1996).",
+            "url": "https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/",
+            "deepLink": "https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/#:~:text=For%20instance%2C%20if%20a%20business,to%20be%20drafted%20more%20narrowly.",
+            "proposition": "Metcalfe requires narrower drafting where a customer restraint would amount to a bar on practicing the employee's specialty.",
+            "verbatimQuote": "For instance, if a business is so large that a restraint on contacting former clients would amount to a bar prohibiting the employee from practicing his or her specialty, the court will require the restraint to be drafted more narrowly.",
+            "date": "1996-06-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-metcalfe-specialty-gate"
+          },
+          {
+            "sourceId": "ak-metcalfe-confidential-gate",
+            "authorityType": "case-law",
+            "title": "Metcalfe Investments, Inc. v. Garrison",
+            "citation": "Metcalfe Invs., Inc. v. Garrison, 919 P.2d 1356, 1362 n.5 (Alaska 1996).",
+            "url": "https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/",
+            "deepLink": "https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/#:~:text=A%20covenant%20not%20to%20contact,have%20access%20to%20confidential%20information.",
+            "proposition": "Metcalfe makes a customer-contact restraint unreasonable where the former employee lacked access to confidential information.",
+            "verbatimQuote": "A covenant not to contact former customers will also be unreasonable if the former employee did not have access to confidential information.",
+            "date": "1996-06-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-metcalfe-confidential-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "weigh-public-injury-in-sale-of-business-covenants",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.alaska.weigh-public-injury-in-sale-of-business-covenants",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Sale-of-business covenants weighed against public harm",
+        "sectionId": "alaska-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#weigh-public-injury-in-sale-of-business-covenants",
+        "requirementGuidance": "When the covenant arises from a business sale, test it against Alaska's three-way balance: the buyer's need to protect the goodwill purchased, the hardship to the seller from enforcement, and the likely injury to the public. Healthcare facts sharpen the last prong — where the restrained work is for a federally funded nonprofit offering free or low-cost care, competition will not be presumed and must be proven, and even proven competition leaves the court weighing public harm. A sale covenant that would cut off important low-cost services to a population in need has to survive that weighing, not just a radius-and-duration check.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ak-wenzell-balance-gate",
+            "authorityType": "case-law",
+            "title": "Dominic Wenzell, DMD PC v. Ingrim",
+            "citation": "Dominic Wenzell, DMD PC v. Ingrim, 228 P.3d 103, 111 (Alaska 2010).",
+            "url": "https://www.courtlistener.com/opinion/2601652/dominic-wenzell-dmd-pc-v-ingrim/",
+            "deepLink": "https://www.courtlistener.com/opinion/2601652/dominic-wenzell-dmd-pc-v-ingrim/#:~:text=Under%20the%20second%20prong%2C%20the,likely%20injury%20to%20the%20public.",
+            "proposition": "Wenzell states Alaska's sale-of-business balance: purchased goodwill against seller hardship and likely injury to the public.",
+            "verbatimQuote": "Under the second prong, the superior court must balance Wen-zell's need to protect the goodwill he purchased with the hardship to Ingrim from enforcing the covenant and the likely injury to the public.",
+            "date": "2010-04-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-wenzell-balance-gate"
+          },
+          {
+            "sourceId": "ak-wenzell-proof-gate",
+            "authorityType": "case-law",
+            "title": "Dominic Wenzell, DMD PC v. Ingrim",
+            "citation": "Dominic Wenzell, DMD PC v. Ingrim, 228 P.3d 103, 109 (Alaska 2010).",
+            "url": "https://www.courtlistener.com/opinion/2601652/dominic-wenzell-dmd-pc-v-ingrim/",
+            "deepLink": "https://www.courtlistener.com/opinion/2601652/dominic-wenzell-dmd-pc-v-ingrim/#:~:text=In%20such%20a%20case%2C%20competition,presumed%20and%20must%20be%20proven.",
+            "proposition": "Wenzell requires proof of competition where a sale-of-practice covenant is asserted against work for a federally funded nonprofit low-cost healthcare provider.",
+            "verbatimQuote": "In such a case, competition will not be presumed and must be proven.",
+            "date": "2010-04-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-wenzell-proof-gate"
+          },
+          {
+            "sourceId": "ak-wenzell-lowcost-gate",
+            "authorityType": "case-law",
+            "title": "Dominic Wenzell, DMD PC v. Ingrim",
+            "citation": "Dominic Wenzell, DMD PC v. Ingrim, 228 P.3d 103, 111 (Alaska 2010).",
+            "url": "https://www.courtlistener.com/opinion/2601652/dominic-wenzell-dmd-pc-v-ingrim/",
+            "deepLink": "https://www.courtlistener.com/opinion/2601652/dominic-wenzell-dmd-pc-v-ingrim/#:~:text=It%20appears%20from%20the%20record,in%20need%20of%20such%20care.",
+            "proposition": "Wenzell weighs enforcement against the public's access to important low-cost healthcare services.",
+            "verbatimQuote": "It appears from the record that Ingrim is employed by an organization providing an important, low-cost service to a population in need of such care.",
+            "date": "2010-04-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alaska#src-ak-wenzell-lowcost-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

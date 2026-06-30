@@ -1,0 +1,1336 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/new-mexico",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/new-mexico.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/new-mexico",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/new-mexico/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/new-mexico/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "new-mexico",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — New Mexico",
+      "description": "A clause-by-clause reviewer checklist for New Mexico employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Lovelace reasonableness test, the Piano consideration rule, and the § 24A-4-2 health-care practitioner ban.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "New Mexico",
+      "coverage": "New Mexico (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 46,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "new-mexico-statutory-gates",
+        "label": "New Mexico statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#identify-parties",
+        "requirementGuidance": "Who the parties are can decide whether the practitioner statute applies at all: agreements between health-care practitioners who are shareholders, owners, partners, or directors of a practice sit outside it. Confirm whether the signing entities make this an employment covenant or an owner-to-owner deal before reaching anything else.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hc-owner-exemption-parties",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-5",
+            "citation": "NMSA 1978, § 24A-4-5(A).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-5 exempts agreements between health-care practitioners who are shareholders, owners, partners, or directors of a health-care practice.",
+            "verbatimQuote": "Chapter 24, Article 1I NMSA 1978 [Chapter 24A, Article 4 NMSA 1978] does not apply to agreements between health care practitioners who are shareholders, owners, partners or directors of a health care practice.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-owner-exemption-parties"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#identify-effective-date",
+        "requirementGuidance": "The execution date does statutory work in New Mexico: psychologists, physician assistants, and pharmacists are covered by the practitioner ban only for agreements, renewals, or extensions executed on or after the effective date of the 2023 act. An undated covenant leaves its own coverage indeterminate.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hc-2023-classes-date",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-5",
+            "citation": "NMSA 1978, § 24A-4-5(D).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-5 states effective-date rules, including the 2023 expansion for psychologists, physician assistants, and pharmacists.",
+            "verbatimQuote": "For psychologists, physician assistants and pharmacists, the provisions of Chapter 24, Article 1I NMSA 1978 [Chapter 24A, Article 4 NMSA 1978] apply to agreements, or renewals or extensions of agreements, executed on or after the effective date of this 2023 act.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-2023-classes-date"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#identify-employee-title",
+        "requirementGuidance": "The role is the first gate here. Ten practitioner licenses — from dentists and physicians through psychologists, physician assistants, and pharmacists — trigger the statutory ban, and outside that class the title frames which proprietary interests the worker could plausibly threaten.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hc-practitioner-class-title",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-1",
+            "citation": "NMSA 1978, § 24A-4-1(B).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-1 defines the covered health-care practitioners.",
+            "verbatimQuote": "\"health care practitioner\" means: (1) a dentist; (2) an osteopathic physician; (3) a physician; (4) a podiatrist; (5) a certified registered nurse anesthetist; (6) a certified nurse practitioner; (7) a certified nurse-midwife; (8) a psychologist; (9) a physician assistant; and (10) a pharmacist.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-practitioner-class-title"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated — and treat a foreign-law clause on an agreement for clinical health-care services rendered in New Mexico as void rather than clever, because the statute strikes those provisions no matter how they are worded.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hc-choice-of-law-cover",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-2",
+            "citation": "NMSA 1978, § 24A-4-2(B).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-2 voids foreign choice-of-law and out-of-state litigation provisions in covered New Mexico clinical health-care services agreements.",
+            "verbatimQuote": "A provision in an agreement for clinical health care services to be rendered in this state is void, unenforceable and against public policy if the provision: (1) makes the agreement subject to the laws of another state; or (2) requires any litigation arising out of the agreement to be conducted in another state.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-choice-of-law-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#define-confidential-information",
+        "requirementGuidance": "Test the definition against what New Mexico will actually protect: general skills and knowledge are not trade secrets, so a definition sweeping in everything the worker learned on the job overclaims — and weakens every covenant that leans on it for a legitimate interest.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mcgonigle-general-skills-def",
+            "authorityType": "case-law",
+            "title": "Insure New Mexico, LLC v. McGonigle",
+            "citation": "Insure New Mexico, LLC v. McGonigle, 2000-NMCA-018, 995 P.2d 1053.",
+            "url": "https://www.courtlistener.com/opinion/1291299/insure-new-mexico-llc-v-mcgonigle/",
+            "deepLink": "https://www.courtlistener.com/opinion/1291299/insure-new-mexico-llc-v-mcgonigle/#:~:text=General%20skills%20and%20knowledge%20do,the%20level%20of%20trade%20secrets.",
+            "proposition": "McGonigle supports that an employee's general skills and knowledge are not trade secrets.",
+            "verbatimQuote": "General skills and knowledge do not rise to the level of trade secrets.",
+            "date": "2000-02-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-mcgonigle-general-skills-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#define-trade-secrets",
+        "requirementGuidance": "Track the statutory test: independent economic value from secrecy, plus efforts reasonable under the circumstances to keep the secret. A trade-secret definition unmoored from those two elements claims material the trade secrets act will not back when it matters.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "utsa-secret-definition",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 57-3A-2",
+            "citation": "NMSA 1978, § 57-3A-2(D).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/4423/1/document.do",
+            "proposition": "Section 57-3A-2 defines a New Mexico trade secret by economic value from secrecy and reasonable secrecy efforts.",
+            "verbatimQuote": "\"trade secret\" means information, including a formula, pattern, compilation, program, device, method, technique or process, that: (1) derives independent economic value, actual or potential, from not being generally known to and not being readily ascertainable by proper means by other persons who can obtain economic value from its disclosure or use; and (2) is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-utsa-secret-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#define-restricted-period",
+        "requirementGuidance": "One defined Restricted Period keeps every duration auditable. New Mexico tests duration on the facts of the particular case — no fixed cap, no safe harbor — so the period needs a factual story connecting its length to the interest it protects.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "bowen-facts-of-case",
+            "authorityType": "case-law",
+            "title": "Bowen v. Carlsbad Insurance & Real Estate, Inc.",
+            "citation": "Bowen v. Carlsbad Ins. & Real Estate, Inc., 104 N.M. 514, 724 P.2d 223 (1986).",
+            "url": "https://www.courtlistener.com/opinion/1211410/bowen-v-carlsbad-insurance-real-estate-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1211410/bowen-v-carlsbad-insurance-real-estate-inc/#:~:text=Whether%20there%20is%20a%20reasonable,for%20the%20courts%20to%20decide.",
+            "proposition": "Bowen supports evaluating reasonableness based on the facts of the particular case rather than fixed numerical caps.",
+            "verbatimQuote": "Whether there is a reasonable restraint depends on the facts of a particular case, D. W. Trowbridge Ford, Inc. v. Galyen, 200 Neb. 103, 106 , 262 N.W.2d 442, 445 (1978), and is a matter of law for the courts to decide.",
+            "date": "1986-08-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-bowen-facts-of-case"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#define-restricted-territory",
+        "requirementGuidance": "Match the radius to where the employee actually practiced or sold. A New Mexico district court confronted with a one-hundred-mile dental restriction cut it to thirty miles — geography sized to ambition rather than to the worker's real territory is the most visible overreach in the file.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "kidskare-thirty-miles",
+            "authorityType": "case-law",
+            "title": "KidsKare, P.C. v. Mann",
+            "citation": "KidsKare, P.C. v. Mann, 2015-NMCA-064, 350 P.3d 1228.",
+            "url": "https://www.courtlistener.com/opinion/2789328/kidskare-v-mann/",
+            "deepLink": "https://www.courtlistener.com/opinion/2789328/kidskare-v-mann/#:~:text=As%20its%20remedy%2C%20the%20district,the%20covenant%20was%20thus%20enforceable.",
+            "proposition": "KidsKare illustrates a district court reducing an overbroad dental covenant's geographic restriction from one hundred miles to thirty miles.",
+            "verbatimQuote": "As its remedy, the district court reformed the 9 distance provision of clause one by reducing the radius to thirty miles, finding that 10 the covenant was thus enforceable.",
+            "date": "2015-03-25",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-kidskare-thirty-miles"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the worker actually served during a stated look-back window. The leading New Mexico caution involved customer information that was not peculiar and did not require special information — a whole-book-of-business definition built on ordinary knowledge fails the interest test.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mcgonigle-customers-not-special",
+            "authorityType": "case-law",
+            "title": "Insure New Mexico, LLC v. McGonigle",
+            "citation": "Insure New Mexico, LLC v. McGonigle, 2000-NMCA-018, 995 P.2d 1053.",
+            "url": "https://www.courtlistener.com/opinion/1291299/insure-new-mexico-llc-v-mcgonigle/",
+            "deepLink": "https://www.courtlistener.com/opinion/1291299/insure-new-mexico-llc-v-mcgonigle/#:~:text=For%20this%20reason%2C%20there%20was,did%20not%20require%20special%20information.",
+            "proposition": "McGonigle supports denying trade-secret protection where customer needs and characteristics were not peculiar and did not require special information.",
+            "verbatimQuote": "For this reason, there was substantial evidence supporting the trial court’s finding that the particular needs or characteristics of Plaintiffs customers were not peculiar and did not require special information.",
+            "date": "2000-02-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-mcgonigle-customers-not-special"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing worker dealt with during the look-back window. For covered health-care practitioners, remember the statute preserves employee non-solicits only for a period of one year or less after the last date of employment — the class definition and the duration travel together.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hc-nonsolicit-year-defs",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-3",
+            "citation": "NMSA 1978, § 24A-4-3.",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-3 preserves NDAs, one-year-or-less patient and employee non-solicits, and other lawful provisions.",
+            "verbatimQuote": "Nothing in this act shall be construed to limit the enforceability of: A. a provision in an agreement requiring a health care practitioner who has worked for an employer for an initial period of less than three years to repay all or a portion of: (1) a loan; (2) relocation expenses; (3) a signing bonus or other remuneration to induce the health care practitioner to relocate or establish a health care practice in a specified geographic area; or (4) recruiting, education and training expenses; B. a nondisclosure provision relating to confidential information and trade secrets; C. a nonsolicitation provision with respect to patients and employees of the party seeking to enforce the agreement for a period of one year or less after the last date of employment; or D. any other provision of an agreement that is not in violation of law, including a provision for liquidated damages.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-nonsolicit-year-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#define-protected-interests",
+        "requirementGuidance": "Name the interests, because reasonableness is measured against them: New Mexico enforces employment covenants only when the restrictions imposed are reasonable, and a recital that protects nothing concrete reads as a naked restraint on work rather than a shield for something the employer owns.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "lovelace-reasonableness-defs",
+            "authorityType": "case-law",
+            "title": "Lovelace Clinic v. Murphy",
+            "citation": "Lovelace Clinic v. Murphy, 76 N.M. 645, 417 P.2d 450 (1966).",
+            "url": "https://www.courtlistener.com/opinion/1196089/lovelace-clinic-v-murphy/",
+            "deepLink": "https://www.courtlistener.com/opinion/1196089/lovelace-clinic-v-murphy/#:~:text=All%20of%20the%20physician%20and,or%20the%20associate%20are%20reasonable.",
+            "proposition": "Lovelace supports New Mexico's common-law rule that restrictive covenants in employment or professional association agreements can be enforced when the restrictions are reasonable.",
+            "verbatimQuote": "All of the physician and surgeon cases either expressly hold or clearly indicate that the rights and duties created by the contract of employment or association are enforceable, if the restrictions thus imposed on the employee or the associate are reasonable.",
+            "date": "1966-08-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-lovelace-reasonableness-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity in concrete terms tied to what the employer actually does. An open-ended definition forces the reasonableness analysis to assume the widest reading — and a New Mexico court has no settled obligation to shrink it unless the contract itself supplies that power.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. A clause that technically forbids index funds and ordinary public shares restrains the worker far past any legitimate interest and hands the other side an easy overbreadth argument.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#define-passive-public-holdings",
+        "requirementGuidance": "Optional drafting mechanics — many agreements inline the threshold language instead of defining a capitalized term. If the term appears, check that its percentage agrees with the operative carve-out it serves.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#define-solicit",
+        "requirementGuidance": "Pin the term to initiating contact, and check whether passively receiving an inquiry counts as a breach. The looser the definition, the heavier the restraint weighs on the employee's side of the reasonableness balance — and the harder it becomes to defend as protection rather than punishment.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#define-termination-of-employment",
+        "requirementGuidance": "This trigger does double duty in New Mexico: it starts the restricted period, and for covered practitioners the statutory unenforceability attaches on termination of the agreement, of a renewal or extension, or of the employment itself. The definition cannot be ambiguous about which event happened and when.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hc-ban-termination",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-2",
+            "citation": "NMSA 1978, § 24A-4-2(A).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-2 makes covered health-care practitioner non-competes unenforceable when they restrict clinical health-care services in New Mexico after the covered relationship ends.",
+            "verbatimQuote": "A non-compete provision in an agreement, which provision restricts the right of a health care practitioner to provide clinical health care services in this state, shall be unenforceable upon the termination of: (1) the agreement; (2) a renewal or extension of the agreement; or (3) a health care practitioner's employment with a party seeking to enforce the agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-ban-termination"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-independent-consideration-for-midstream-covenants",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-mexico.require-independent-consideration-for-midstream-covenants",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "New consideration for mid-stream covenants",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#require-independent-consideration-for-midstream-covenants",
+        "requirementGuidance": "For a covenant signed after employment began, do not accept a recital of continued at-will employment as the consideration: New Mexico treats that promise as illusory, and an agreement without consideration was never formed at all. Look for a documented raise, bonus, promotion, equity grant, or other new benefit dated to the signing; for an at-hire covenant, confirm the agreement records that signing was a condition of the offer itself.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "piano-illusory",
+            "authorityType": "case-law",
+            "title": "Piano v. Premier Distributing Co.",
+            "citation": "Piano v. Premier Distrib. Co., 2005-NMCA-018, 107 P.3d 11.",
+            "url": "https://www.courtlistener.com/opinion/2509475/piano-v-premier-distributing-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2509475/piano-v-premier-distributing-co/#:~:text=Continued%20at%2Dwill%20employment%20is%20an,promise%20that%20cannot%20be%20consideration.",
+            "proposition": "Piano states New Mexico's general consideration rule that continued at-will employment is illusory and cannot be consideration.",
+            "verbatimQuote": "Continued at-will employment is an illusory promise that cannot be consideration.",
+            "date": "2004-12-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-piano-illusory"
+          },
+          {
+            "sourceId": "piano-never-formed",
+            "authorityType": "case-law",
+            "title": "Piano v. Premier Distributing Co.",
+            "citation": "Piano v. Premier Distrib. Co., 2005-NMCA-018, 107 P.3d 11.",
+            "url": "https://www.courtlistener.com/opinion/2509475/piano-v-premier-distributing-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2509475/piano-v-premier-distributing-co/#:~:text=Because%20we%20conclude%20that%20the,a%20contract%20was%20never%20formed.",
+            "proposition": "Piano supports the drafting risk that an agreement unsupported by consideration is not formed.",
+            "verbatimQuote": "Because we conclude that the agreement is not supported by consideration, a contract was never formed.",
+            "date": "2004-12-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-piano-never-formed"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No New Mexico statute demands it, but the reasonableness balance weighs how harshly the restraint lands on the worker — and a documented opportunity to take the agreement to a lawyer before signing is cheap evidence the process was fair rather than coercive.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret obligations should run as long as secrecy does — federal law and New Mexico's trade secrets act both key the right to continued secrecy rather than to a calendar date. A fixed expiry on trade-secret protection gives away the one interest in the agreement that lawfully lasts forever.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-dtsa-trade-secret-definition"
+          },
+          {
+            "sourceId": "utsa-secrecy-keyed",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 57-3A-2",
+            "citation": "NMSA 1978, § 57-3A-2(D).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/4423/1/document.do",
+            "proposition": "Section 57-3A-2 keys New Mexico trade-secret status to economic value from secrecy and reasonable secrecy efforts, supporting protection that lasts as long as secrecy does.",
+            "verbatimQuote": "\"trade secret\" means information, including a formula, pattern, compilation, program, device, method, technique or process, that: (1) derives independent economic value, actual or potential, from not being generally known to and not being readily ascertainable by proper means by other persons who can obtain economic value from its disclosure or use; and (2) is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-utsa-secrecy-keyed"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. A perpetual lid on non-secret material operates as an indirect restraint on working with general knowledge — exactly the category New Mexico refuses to protect — and the two-track structure keeps the perpetual obligation where the law actually supports it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in New Mexico: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret suit against the worker. That forfeiture stings here, because trade-secret remedies are the main fallback when a covenant fails the reasonableness test or the practitioner ban.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech regardless of the governing state, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. No confidentiality clause outranks a subpoena, and the carve-out keeps the worker from being squeezed between the contract and a legal duty.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. In New Mexico the certification earns its keep twice: trade-secret status itself depends on efforts that are reasonable under the circumstances to maintain secrecy, and a documented return process is exactly the kind of effort a court looks for.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "utsa-reasonable-efforts-return",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 57-3A-2",
+            "citation": "NMSA 1978, § 57-3A-2(D).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/4423/1/document.do",
+            "proposition": "Section 57-3A-2 conditions trade-secret status on reasonable secrecy efforts, which a documented return-and-certification process helps establish.",
+            "verbatimQuote": "\"trade secret\" means information, including a formula, pattern, compilation, program, device, method, technique or process, that: (1) derives independent economic value, actual or potential, from not being generally known to and not being readily ascertainable by proper means by other persons who can obtain economic value from its disclosure or use; and (2) is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-utsa-reasonable-efforts-return"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional and comparatively low-risk when scoped to colleagues the worker actually dealt with. For a covered health-care practitioner, check the duration first: the statute preserves employee non-solicits only for one year or less after the last date of employment, so a longer term fails before reasonableness ever comes up.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hc-nonsolicit-year-covenants",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-3",
+            "citation": "NMSA 1978, § 24A-4-3.",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-3 preserves NDAs, one-year-or-less patient and employee non-solicits, and other lawful provisions.",
+            "verbatimQuote": "Nothing in this act shall be construed to limit the enforceability of: A. a provision in an agreement requiring a health care practitioner who has worked for an employer for an initial period of less than three years to repay all or a portion of: (1) a loan; (2) relocation expenses; (3) a signing bonus or other remuneration to induce the health care practitioner to relocate or establish a health care practice in a specified geographic area; or (4) recruiting, education and training expenses; B. a nondisclosure provision relating to confidential information and trade secrets; C. a nonsolicitation provision with respect to patients and employees of the party seeking to enforce the agreement for a period of one year or less after the last date of employment; or D. any other provision of an agreement that is not in violation of law, including a provision for liquidated damages.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-nonsolicit-year-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#permit-customer-nonsolicit",
+        "requirementGuidance": "Generally the easier covenant to defend when limited to customers the worker served. For covered practitioners, the patient non-solicit survives the statutory ban only at one year or less — a two-year patient clause is not a negotiating position, it is an unenforceable one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hc-nonsolicit-year-covenants",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-3",
+            "citation": "NMSA 1978, § 24A-4-3.",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-3 preserves NDAs, one-year-or-less patient and employee non-solicits, and other lawful provisions.",
+            "verbatimQuote": "Nothing in this act shall be construed to limit the enforceability of: A. a provision in an agreement requiring a health care practitioner who has worked for an employer for an initial period of less than three years to repay all or a portion of: (1) a loan; (2) relocation expenses; (3) a signing bonus or other remuneration to induce the health care practitioner to relocate or establish a health care practice in a specified geographic area; or (4) recruiting, education and training expenses; B. a nondisclosure provision relating to confidential information and trade secrets; C. a nonsolicitation provision with respect to patients and employees of the party seeking to enforce the agreement for a period of one year or less after the last date of employment; or D. any other provision of an agreement that is not in violation of law, including a provision for liquidated damages.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-nonsolicit-year-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they call first — a heavier restraint than a non-solicit, and one that weighs against the employer in the balancing, because the public also has an interest in competition not being unreasonably limited. Treat its inclusion as a deliberate risk decision.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "lovelace-public-interest-balance",
+            "authorityType": "case-law",
+            "title": "Lovelace Clinic v. Murphy",
+            "citation": "Lovelace Clinic v. Murphy, 76 N.M. 645, 417 P.2d 450 (1966).",
+            "url": "https://www.courtlistener.com/opinion/1196089/lovelace-clinic-v-murphy/",
+            "deepLink": "https://www.courtlistener.com/opinion/1196089/lovelace-clinic-v-murphy/#:~:text=The%20public%20has%20an%20interest,enforcing%20contractual%20rights%20and%20obligations.",
+            "proposition": "Lovelace frames the public-policy balance between avoiding unreasonable restraints and enforcing contractual obligations.",
+            "verbatimQuote": "The public has an interest in seeing that competition is not unreasonably limited or restricted, but it also has an interest in protecting the freedom of persons to contract, and in enforcing contractual rights and obligations.",
+            "date": "1966-08-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-lovelace-public-interest-balance"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#permit-non-compete",
+        "requirementGuidance": "If this clause appears, route the review through the New Mexico gates at the end of this checklist first: the health-care practitioner ban, then reasonableness, consideration, and a genuine protectable interest. Ordinary covenants are enforceable when a court deems them reasonable — no more, no less.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mcgonigle-ordinary-covenants",
+            "authorityType": "case-law",
+            "title": "Insure New Mexico, LLC v. McGonigle",
+            "citation": "Insure New Mexico, LLC v. McGonigle, 2000-NMCA-018, 995 P.2d 1053.",
+            "url": "https://www.courtlistener.com/opinion/1291299/insure-new-mexico-llc-v-mcgonigle/",
+            "deepLink": "https://www.courtlistener.com/opinion/1291299/insure-new-mexico-llc-v-mcgonigle/#:~:text=Non%2Dcompetition%20covenants%20are%20ordinarily%20enforceable,a%20court%20deems%20them%20reasonable.",
+            "proposition": "McGonigle restates that New Mexico non-competes are ordinarily enforceable if a court deems them reasonable.",
+            "verbatimQuote": "Non-competition covenants are ordinarily enforceable as long as a court deems them reasonable.",
+            "date": "2000-02-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-mcgonigle-ordinary-covenants"
+          },
+          {
+            "sourceId": "hc-ban-noncompete",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-2",
+            "citation": "NMSA 1978, § 24A-4-2(A).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-2 makes covered health-care practitioner non-competes unenforceable when they restrict clinical health-care services in New Mexico after the covered relationship ends.",
+            "verbatimQuote": "A non-compete provision in an agreement, which provision restricts the right of a health care practitioner to provide clinical health care services in this state, shall be unenforceable upon the termination of: (1) the agreement; (2) a renewal or extension of the agreement; or (3) a health care practitioner's employment with a party seeking to enforce the agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-ban-noncompete"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, the covenant should bind those instead of leaning on an open-ended definition. A named list is the cleanest evidence that the restraint protects an identified interest rather than punishing departure — exactly the showing the reasonableness test rewards.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — an investment ban with no carve-out swells the hardship side of the balance for very little protective gain.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Health-care practitioner rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#address-physician-specific-rights",
+        "requirementGuidance": "In New Mexico this clause carries the heaviest state-specific load, and it reaches well past physicians. It should state the rule plainly: a non-compete restricting a covered practitioner's clinical services is unenforceable when the agreement, a renewal or extension, or the employment ends; the covered class spans ten licenses from dentists through pharmacists; and the lawful fallbacks are the statute's preserved tools — early-departure repayment provisions, NDAs, one-year non-solicits, and reasonable liquidated damages.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hc-ban-clause",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-2",
+            "citation": "NMSA 1978, § 24A-4-2(A).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-2 makes covered health-care practitioner non-competes unenforceable when they restrict clinical health-care services in New Mexico after the covered relationship ends.",
+            "verbatimQuote": "A non-compete provision in an agreement, which provision restricts the right of a health care practitioner to provide clinical health care services in this state, shall be unenforceable upon the termination of: (1) the agreement; (2) a renewal or extension of the agreement; or (3) a health care practitioner's employment with a party seeking to enforce the agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-ban-clause"
+          },
+          {
+            "sourceId": "hc-practitioner-class-clause",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-1",
+            "citation": "NMSA 1978, § 24A-4-1(B).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-1 defines the covered health-care practitioners.",
+            "verbatimQuote": "\"health care practitioner\" means: (1) a dentist; (2) an osteopathic physician; (3) a physician; (4) a podiatrist; (5) a certified registered nurse anesthetist; (6) a certified nurse practitioner; (7) a certified nurse-midwife; (8) a psychologist; (9) a physician assistant; and (10) a pharmacist.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-practitioner-class-clause"
+          },
+          {
+            "sourceId": "hc-repayment-tools",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-3",
+            "citation": "NMSA 1978, § 24A-4-3(A).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-3 preserves certain repayment provisions for practitioners employed for an initial period of less than three years.",
+            "verbatimQuote": "Nothing in this act shall be construed to limit the enforceability of: A. a provision in an agreement requiring a health care practitioner who has worked for an employer for an initial period of less than three years to repay all or a portion of: (1) a loan; (2) relocation expenses; (3) a signing bonus or other remuneration to induce the health care practitioner to relocate or establish a health care practice in a specified geographic area; or (4) recruiting, education and training expenses;",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-repayment-tools"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. It earns extra value on intake in New Mexico: an incoming practitioner's prior covenant may be unenforceable under the practitioner statute, and the representation surfaces that analysis before a dispute does rather than after.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice with tortious-interference sensitivity attached. Warning a new employer off a covered practitioner on the strength of a non-compete the statute makes unenforceable invites exactly the dispute the clause was meant to prevent — if the clause appears, condition any disclosure on a covenant that actually survives New Mexico review.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but treat any extension mechanism as an open New Mexico question. The staged cases enforce or reform fixed restricted periods and announce no tolling rule, so a tolling clause should be drafted as its own restraint, tied to proven breach and a legitimate interest, with no assumption that a court will add time after the original period expires.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "kidskare-fixed-period",
+            "authorityType": "case-law",
+            "title": "KidsKare, P.C. v. Mann",
+            "citation": "KidsKare, P.C. v. Mann, 2015-NMCA-064, 350 P.3d 1228.",
+            "url": "https://www.courtlistener.com/opinion/2789328/kidskare-v-mann/",
+            "deepLink": "https://www.courtlistener.com/opinion/2789328/kidskare-v-mann/#:~:text=As%20reformed%20by%20the%20district,compete%20was%20reasonable%20and%20enforceable.",
+            "proposition": "KidsKare illustrates enforcement of a reformed one-year and thirty-mile restraint without announcing a tolling rule.",
+            "verbatimQuote": "As reformed by the district 7 court, the covenant not to compete was reasonable and enforceable.",
+            "date": "2015-03-25",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-kidskare-fixed-period"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief — then note the statutory backstop: actual or threatened trade-secret misappropriation can be enjoined regardless of how the covenant itself fares, which is one more reason to keep the trade-secret architecture clean.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "utsa-injunction-remedies",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 57-3A-3",
+            "citation": "NMSA 1978, § 57-3A-3(A).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/4423/1/document.do",
+            "proposition": "Section 57-3A-3 authorizes injunctive relief for actual or threatened trade-secret misappropriation.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-utsa-injunction-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice; the default American Rule applies if the agreement is silent. Check that any fee-shifting is mutual and prevailing-party based — a one-way employer clause adds hardship weight to the reasonableness balance without adding enforceability.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "secure-reformation-through-express-contract-language",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-mexico.secure-reformation-through-express-contract-language",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Reformation written into the contract",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#secure-reformation-through-express-contract-language",
+        "requirementGuidance": "In New Mexico the severability and reformation clause is not filler — it may be the only basis a court has to narrow an overbroad covenant. The leading modification case upheld a reduced radius because the agreement expressly authorized amendment of unenforceable provisions and enforcement to the full reasonable extent, while declining to decide whether courts could do that without such language. Confirm the clause is present and explicit, then verify the primary restriction is drafted narrowly enough that nobody needs it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "kidskare-contract-reformation",
+            "authorityType": "case-law",
+            "title": "KidsKare, P.C. v. Mann",
+            "citation": "KidsKare, P.C. v. Mann, 2015-NMCA-064, 350 P.3d 1228.",
+            "url": "https://www.courtlistener.com/opinion/2789328/kidskare-v-mann/",
+            "deepLink": "https://www.courtlistener.com/opinion/2789328/kidskare-v-mann/#:~:text=We%20hold%20that%2C%20contrary%20to,by%20the%20reviewing%2014%20court.",
+            "proposition": "KidsKare upheld modification because the contract explicitly authorized amendment of unenforceable provisions and enforcement to the reasonable extent.",
+            "verbatimQuote": "We hold that, contrary to the argument of Dr. Mann, the 11 covenant not to compete was amenable to modification by the district court because 12 the agreement explicitly provided for amendment of any unenforceable provision and 13 enforcement to the full extent deemed reasonable and enforceable by the reviewing 14 court.",
+            "date": "2015-03-25",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-kidskare-contract-reformation"
+          },
+          {
+            "sourceId": "kidskare-no-general-ruling",
+            "authorityType": "case-law",
+            "title": "KidsKare, P.C. v. Mann",
+            "citation": "KidsKare, P.C. v. Mann, 2015-NMCA-064, 350 P.3d 1228.",
+            "url": "https://www.courtlistener.com/opinion/2789328/kidskare-v-mann/",
+            "deepLink": "https://www.courtlistener.com/opinion/2789328/kidskare-v-mann/#:~:text=Because%20we%20conclude%20that%20an,regarding%20New%20Mexico%20case%20law.",
+            "proposition": "KidsKare did not decide whether New Mexico case law independently authorizes broader blue-pencil reformation.",
+            "verbatimQuote": "Because we conclude that an alternative basis to alter the covenant not to 6 compete allows for disposition of this case, we do not reach Defendant’s argument 7 regarding New Mexico case law.",
+            "date": "2015-03-25",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-kidskare-no-general-ruling"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite elsewhere. For covered practitioners the audit is sharper still: the surviving patient and employee non-solicits cap at one year after the last date of employment, and a bundled survival clause is exactly where a longer, unenforceable duration hides.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hc-nonsolicit-year-survival",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-3",
+            "citation": "NMSA 1978, § 24A-4-3.",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-3 preserves NDAs, one-year-or-less patient and employee non-solicits, and other lawful provisions.",
+            "verbatimQuote": "Nothing in this act shall be construed to limit the enforceability of: A. a provision in an agreement requiring a health care practitioner who has worked for an employer for an initial period of less than three years to repay all or a portion of: (1) a loan; (2) relocation expenses; (3) a signing bonus or other remuneration to induce the health care practitioner to relocate or establish a health care practice in a specified geographic area; or (4) recruiting, education and training expenses; B. a nondisclosure provision relating to confidential information and trade secrets; C. a nonsolicitation provision with respect to patients and employees of the party seeking to enforce the agreement for a period of one year or less after the last date of employment; or D. any other provision of an agreement that is not in violation of law, including a provision for liquidated damages.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-nonsolicit-year-survival"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. The successor inherits the New Mexico analysis along with the covenant: reasonableness gets re-measured against the enforcing business's actual market and interests, and the practitioner ban does not care which entity is trying to enforce.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "keep-clinical-health-care-agreements-under-new-mexico-law-and-forum",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-mexico.keep-clinical-health-care-agreements-under-new-mexico-law-and-forum",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "New Mexico law for clinical-services agreements",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#keep-clinical-health-care-agreements-under-new-mexico-law-and-forum",
+        "requirementGuidance": "For an agreement covering clinical health-care services rendered in New Mexico, a provision choosing another state's law or requiring litigation in another state is void, unenforceable, and against public policy — flag either one as a form that was never localized, because neither can carry the covenant past the practitioner statute. The clause should still state governing law, venue, and process; outside the health-care statute, do not assume a foreign-law selection controls a restraint operating in New Mexico without a conflicts and public-policy analysis behind it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hc-choice-of-law-gate",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-2",
+            "citation": "NMSA 1978, § 24A-4-2(B).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-2 voids foreign choice-of-law and out-of-state litigation provisions in covered New Mexico clinical health-care services agreements.",
+            "verbatimQuote": "A provision in an agreement for clinical health care services to be rendered in this state is void, unenforceable and against public policy if the provision: (1) makes the agreement subject to the laws of another state; or (2) requires any litigation arising out of the agreement to be conducted in another state.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-choice-of-law-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate with a New Mexico trap inside: the practitioner statute reaches renewals and extensions, and the 2023-act classes are covered for agreements, renewals, or extensions executed on or after that act took effect — so a routine renewal can pull an older psychologist, physician assistant, or pharmacist covenant into the ban. Review the amendment mechanics with that timing in mind.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hc-2023-classes-renewal",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-5",
+            "citation": "NMSA 1978, § 24A-4-5(D).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-5 states effective-date rules, including the 2023 expansion for psychologists, physician assistants, and pharmacists.",
+            "verbatimQuote": "For psychologists, physician assistants and pharmacists, the provisions of Chapter 24, Article 1I NMSA 1978 [Chapter 24A, Article 4 NMSA 1978] apply to agreements, or renewals or extensions of agreements, executed on or after the effective date of this 2023 act.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-2023-classes-renewal"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-covenants-reasonable-and-tied-to-a-legitimate-interest",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-mexico.keep-covenants-reasonable-and-tied-to-a-legitimate-interest",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Reasonable restraint tied to a real interest",
+        "sectionId": "new-mexico-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#keep-covenants-reasonable-and-tied-to-a-legitimate-interest",
+        "requirementGuidance": "Run every restraint through the questions a New Mexico court will ask: is it reasonable in time, geography, and scope, and does it protect a specific legitimate interest rather than punish competition? Employment covenants are enforceable when the restrictions imposed are reasonable, and ordinarily only then — while general skills and knowledge can never carry one. Demand that the time and territory connect to an identified interest on the facts: trade secrets, genuinely confidential information, or customer goodwill the worker actually held.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "lovelace-reasonableness-gate",
+            "authorityType": "case-law",
+            "title": "Lovelace Clinic v. Murphy",
+            "citation": "Lovelace Clinic v. Murphy, 76 N.M. 645, 417 P.2d 450 (1966).",
+            "url": "https://www.courtlistener.com/opinion/1196089/lovelace-clinic-v-murphy/",
+            "deepLink": "https://www.courtlistener.com/opinion/1196089/lovelace-clinic-v-murphy/#:~:text=All%20of%20the%20physician%20and,or%20the%20associate%20are%20reasonable.",
+            "proposition": "Lovelace supports New Mexico's common-law rule that restrictive covenants in employment or professional association agreements can be enforced when the restrictions are reasonable.",
+            "verbatimQuote": "All of the physician and surgeon cases either expressly hold or clearly indicate that the rights and duties created by the contract of employment or association are enforceable, if the restrictions thus imposed on the employee or the associate are reasonable.",
+            "date": "1966-08-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-lovelace-reasonableness-gate"
+          },
+          {
+            "sourceId": "mcgonigle-ordinary-gate",
+            "authorityType": "case-law",
+            "title": "Insure New Mexico, LLC v. McGonigle",
+            "citation": "Insure New Mexico, LLC v. McGonigle, 2000-NMCA-018, 995 P.2d 1053.",
+            "url": "https://www.courtlistener.com/opinion/1291299/insure-new-mexico-llc-v-mcgonigle/",
+            "deepLink": "https://www.courtlistener.com/opinion/1291299/insure-new-mexico-llc-v-mcgonigle/#:~:text=Non%2Dcompetition%20covenants%20are%20ordinarily%20enforceable,a%20court%20deems%20them%20reasonable.",
+            "proposition": "McGonigle restates that New Mexico non-competes are ordinarily enforceable if a court deems them reasonable.",
+            "verbatimQuote": "Non-competition covenants are ordinarily enforceable as long as a court deems them reasonable.",
+            "date": "2000-02-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-mcgonigle-ordinary-gate"
+          },
+          {
+            "sourceId": "mcgonigle-general-skills-gate",
+            "authorityType": "case-law",
+            "title": "Insure New Mexico, LLC v. McGonigle",
+            "citation": "Insure New Mexico, LLC v. McGonigle, 2000-NMCA-018, 995 P.2d 1053.",
+            "url": "https://www.courtlistener.com/opinion/1291299/insure-new-mexico-llc-v-mcgonigle/",
+            "deepLink": "https://www.courtlistener.com/opinion/1291299/insure-new-mexico-llc-v-mcgonigle/#:~:text=General%20skills%20and%20knowledge%20do,the%20level%20of%20trade%20secrets.",
+            "proposition": "McGonigle supports that an employee's general skills and knowledge are not trade secrets.",
+            "verbatimQuote": "General skills and knowledge do not rise to the level of trade secrets.",
+            "date": "2000-02-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-mcgonigle-general-skills-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-non-competes-for-covered-health-care-practitioners",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-mexico.exclude-non-competes-for-covered-health-care-practitioners",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No non-competes for covered practitioners",
+        "sectionId": "new-mexico-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#exclude-non-competes-for-covered-health-care-practitioners",
+        "requirementGuidance": "If the worker holds one of the ten covered licenses — dentist, osteopathic physician, physician, podiatrist, certified registered nurse anesthetist, certified nurse practitioner, certified nurse-midwife, psychologist, physician assistant, or pharmacist — a non-compete restricting clinical health-care services in New Mexico is unenforceable when the agreement, a renewal or extension, or the employment ends, and ordinary reasonableness cannot rescue it. For psychologists, physician assistants, and pharmacists, coverage attaches to agreements, renewals, or extensions executed on or after the 2023 act. The one exemption to verify: agreements between practitioners who are shareholders, owners, partners, or directors of the practice sit outside the article.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hc-ban-gate",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-2",
+            "citation": "NMSA 1978, § 24A-4-2(A).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-2 makes covered health-care practitioner non-competes unenforceable when they restrict clinical health-care services in New Mexico after the covered relationship ends.",
+            "verbatimQuote": "A non-compete provision in an agreement, which provision restricts the right of a health care practitioner to provide clinical health care services in this state, shall be unenforceable upon the termination of: (1) the agreement; (2) a renewal or extension of the agreement; or (3) a health care practitioner's employment with a party seeking to enforce the agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-ban-gate"
+          },
+          {
+            "sourceId": "hc-practitioner-class-gate",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-1",
+            "citation": "NMSA 1978, § 24A-4-1(B).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-1 defines the covered health-care practitioners.",
+            "verbatimQuote": "\"health care practitioner\" means: (1) a dentist; (2) an osteopathic physician; (3) a physician; (4) a podiatrist; (5) a certified registered nurse anesthetist; (6) a certified nurse practitioner; (7) a certified nurse-midwife; (8) a psychologist; (9) a physician assistant; and (10) a pharmacist.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-practitioner-class-gate"
+          },
+          {
+            "sourceId": "hc-2023-classes-gate",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-5",
+            "citation": "NMSA 1978, § 24A-4-5(D).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-5 states effective-date rules, including the 2023 expansion for psychologists, physician assistants, and pharmacists.",
+            "verbatimQuote": "For psychologists, physician assistants and pharmacists, the provisions of Chapter 24, Article 1I NMSA 1978 [Chapter 24A, Article 4 NMSA 1978] apply to agreements, or renewals or extensions of agreements, executed on or after the effective date of this 2023 act.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-2023-classes-gate"
+          },
+          {
+            "sourceId": "hc-owner-exemption-gate",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-5",
+            "citation": "NMSA 1978, § 24A-4-5(A).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-5 exempts agreements between health-care practitioners who are shareholders, owners, partners, or directors of a health-care practice.",
+            "verbatimQuote": "Chapter 24, Article 1I NMSA 1978 [Chapter 24A, Article 4 NMSA 1978] does not apply to agreements between health care practitioners who are shareholders, owners, partners or directors of a health care practice.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-owner-exemption-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "limit-preserved-practitioner-provisions-to-statutory-bounds",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-mexico.limit-preserved-practitioner-provisions-to-statutory-bounds",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Fallback tools within statutory limits",
+        "sectionId": "new-mexico-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#limit-preserved-practitioner-provisions-to-statutory-bounds",
+        "requirementGuidance": "The statute leaves the employer real tools, each with a hard edge to verify. Patient and employee non-solicits survive only for one year or less after the last date of employment. Repayment provisions work only against a practitioner whose initial period of work was under three years, and only for loans, relocation expenses, signing bonuses or similar relocation inducements, and recruiting, education, and training expenses. NDAs for confidential information and trade secrets stand, and liquidated damages must be reasonable at execution in light of anticipated harm and the difficulty of proving loss — an outsized figure is a penalty, not a workaround for the ban.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hc-nonsolicit-year-gate",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-3",
+            "citation": "NMSA 1978, § 24A-4-3.",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-3 preserves NDAs, one-year-or-less patient and employee non-solicits, and other lawful provisions.",
+            "verbatimQuote": "Nothing in this act shall be construed to limit the enforceability of: A. a provision in an agreement requiring a health care practitioner who has worked for an employer for an initial period of less than three years to repay all or a portion of: (1) a loan; (2) relocation expenses; (3) a signing bonus or other remuneration to induce the health care practitioner to relocate or establish a health care practice in a specified geographic area; or (4) recruiting, education and training expenses; B. a nondisclosure provision relating to confidential information and trade secrets; C. a nonsolicitation provision with respect to patients and employees of the party seeking to enforce the agreement for a period of one year or less after the last date of employment; or D. any other provision of an agreement that is not in violation of law, including a provision for liquidated damages.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-nonsolicit-year-gate"
+          },
+          {
+            "sourceId": "hc-repayment-gate",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-3",
+            "citation": "NMSA 1978, § 24A-4-3(A).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-3 preserves certain repayment provisions for practitioners employed for an initial period of less than three years.",
+            "verbatimQuote": "Nothing in this act shall be construed to limit the enforceability of: A. a provision in an agreement requiring a health care practitioner who has worked for an employer for an initial period of less than three years to repay all or a portion of: (1) a loan; (2) relocation expenses; (3) a signing bonus or other remuneration to induce the health care practitioner to relocate or establish a health care practice in a specified geographic area; or (4) recruiting, education and training expenses;",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-repayment-gate"
+          },
+          {
+            "sourceId": "hc-liquidated-damages-gate",
+            "authorityType": "primary-law",
+            "title": "NMSA 1978, § 24A-4-4",
+            "citation": "NMSA 1978, § 24A-4-4(A).",
+            "url": "https://nmonesource.com/nmos/nmsa/en/18973/1/document.do",
+            "proposition": "Section 24A-4-4 permits reasonable liquidated damages and voids unreasonably large liquidated damages as a penalty.",
+            "verbatimQuote": "An agreement may provide for liquidated damages in an amount that is reasonable at the time the agreement is executed and in light of anticipated harm and difficulty of proving the amount of loss resulting from breach of the agreement by any party.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-hc-liquidated-damages-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "tailor-sale-of-business-covenants-to-the-purchased-goodwill",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-mexico.tailor-sale-of-business-covenants-to-the-purchased-goodwill",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Sale-of-business covenants sized to the deal",
+        "sectionId": "new-mexico-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#tailor-sale-of-business-covenants-to-the-purchased-goodwill",
+        "requirementGuidance": "When the covenant rides a business sale, review it against the deal rather than the employment default: a restrictive covenant within reasonable limits of time and space and ancillary to a sale of a business is valid, and courts are more reluctant to disturb buy-sell covenants than employment ones. The purchase price, the payout period, the seller's prominence, and the purchased goodwill are what justify the breadth — confirm the covenant is genuinely ancillary to the sale, entered voluntarily and for consideration, and sized to what the buyer actually paid for.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "bowen-sale-valid-gate",
+            "authorityType": "case-law",
+            "title": "Bowen v. Carlsbad Insurance & Real Estate, Inc.",
+            "citation": "Bowen v. Carlsbad Ins. & Real Estate, Inc., 104 N.M. 514, 724 P.2d 223 (1986).",
+            "url": "https://www.courtlistener.com/opinion/1211410/bowen-v-carlsbad-insurance-real-estate-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1211410/bowen-v-carlsbad-insurance-real-estate-inc/#:~:text=It%20is%20well%2Dsettled%20that%20a,a%20sale%20of%20a%20business.",
+            "proposition": "Bowen states the rule that sale-of-business restrictive covenants are valid when reasonable in time and space.",
+            "verbatimQuote": "It is well-settled that a restrictive covenant is valid if it is within reasonable limits of time and space and ancillary to a sale of a business.",
+            "date": "1986-08-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-bowen-sale-valid-gate"
+          },
+          {
+            "sourceId": "bowen-sale-deference-gate",
+            "authorityType": "case-law",
+            "title": "Bowen v. Carlsbad Insurance & Real Estate, Inc.",
+            "citation": "Bowen v. Carlsbad Ins. & Real Estate, Inc., 104 N.M. 514, 724 P.2d 223 (1986).",
+            "url": "https://www.courtlistener.com/opinion/1211410/bowen-v-carlsbad-insurance-real-estate-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1211410/bowen-v-carlsbad-insurance-real-estate-inc/#:~:text=Courts%20are%20more%20reluctant%20to,than%20those%20in%20employment%20contracts.",
+            "proposition": "Bowen supports greater reluctance to disturb sale-of-business covenants than employment covenants.",
+            "verbatimQuote": "Courts are more reluctant to disturb restrictive covenants in buy-sell agreements than those in employment contracts.",
+            "date": "1986-08-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-bowen-sale-deference-gate"
+          },
+          {
+            "sourceId": "bowen-enforced-written-gate",
+            "authorityType": "case-law",
+            "title": "Bowen v. Carlsbad Insurance & Real Estate, Inc.",
+            "citation": "Bowen v. Carlsbad Ins. & Real Estate, Inc., 104 N.M. 514, 724 P.2d 223 (1986).",
+            "url": "https://www.courtlistener.com/opinion/1211410/bowen-v-carlsbad-insurance-real-estate-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1211410/bowen-v-carlsbad-insurance-real-estate-inc/#:~:text=The%20covenant%20should%20be%20enforced,into%20voluntarily%20and%20for%20consideration.",
+            "proposition": "Bowen enforced the sale-of-business covenant as written because it was voluntary, supported by consideration, and reasonable in context.",
+            "verbatimQuote": "The covenant should be enforced as written; it being entered into voluntarily and for consideration.",
+            "date": "1986-08-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-mexico#src-bowen-enforced-written-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

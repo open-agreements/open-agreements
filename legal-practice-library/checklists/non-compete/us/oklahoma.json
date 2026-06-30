@@ -1,0 +1,1153 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/oklahoma",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/oklahoma.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/oklahoma",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/oklahoma/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/oklahoma/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "oklahoma",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Oklahoma",
+      "description": "A clause-by-clause reviewer checklist for Oklahoma restrictive covenant agreements — screening void non-competes under 15 O.S. § 217, fitting customer non-solicits to § 219A's direct-solicitation shape, and checking the surviving confidentiality and anti-raiding suite.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Oklahoma",
+      "coverage": "Oklahoma (US)",
+      "lastReviewed": "2026-06-11",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 43,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "oklahoma-statutory-gates",
+        "label": "Oklahoma statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#identify-parties",
+        "requirementGuidance": "Pin down which entity is the employer of record. Oklahoma's customer carve-out protects the established customers of the former employer — a covenant signed with a parent or affiliate that has no customer relationship of its own leaves unclear whose customers the clause can lawfully reach.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ok-219a-established-customers",
+            "authorityType": "primary-law",
+            "title": "15 O.S. § 219A",
+            "citation": "Okla. Stat. tit. 15, § 219A(A).",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os15.pdf",
+            "proposition": "Section 219A(A) ties the permitted customer restriction to the established customers of the former employer, which makes the identity of the contracting employer substantively significant.",
+            "verbatimQuote": "A person who makes an agreement with an employer, whether in writing or verbally, not to compete with the employer after the employment relationship has been terminated, shall be permitted to engage in the same business as that conducted by the former employer or in a similar business as that conducted by the former employer as long as the former employee does not directly solicit the sale of goods, services or a combination of goods and services from the established customers of the former employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-ok-219a-established-customers"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#identify-effective-date",
+        "requirementGuidance": "Confirm a stated effective date. The surviving Oklahoma covenants are judged partly on how long they run, and an undated agreement makes every duration argument — and the timing of the consideration that supported it — harder to reconstruct later.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#identify-employee-title",
+        "requirementGuidance": "Record the role, but expect it to change nothing about enforceability: Oklahoma has no executive, high-earner, or professional-staff pathway that buys a non-compete back. The void rule applies to every lawful profession, trade, or business, from technician to officer.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ok-217-void-cover",
+            "authorityType": "primary-law",
+            "title": "15 O.S. § 217",
+            "citation": "Okla. Stat. tit. 15, § 217.",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os15.pdf",
+            "proposition": "Section 217 voids restraints on exercising a lawful profession, trade, or business of any kind, without an exception keyed to title, seniority, or compensation.",
+            "verbatimQuote": "Every contract by which any one is restrained from exercising a lawful profession, trade or business of any kind, otherwise than as provided by Sections 218 and 219 of this title, or otherwise than as provided by Section 2 of this act, is to that extent void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-ok-217-void-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#identify-governing-law",
+        "requirementGuidance": "Check that a governing state is named, and treat a foreign choice for an Oklahoma employee as a signal rather than a solution: an Oklahoma court will refuse to apply chosen law that violates the state's public policy against restraints on work. The governing-law section later in this checklist explains why the venue clause deserves more attention than this one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "eakle-public-policy-cover",
+            "authorityType": "case-law",
+            "title": "Eakle v. Grinnell Corp.",
+            "citation": "Eakle v. Grinnell Corp., 272 F. Supp. 2d 1304 (E.D. Okla. 2003).",
+            "url": "https://www.courtlistener.com/opinion/2296282/eakle-v-grinnell-corp/",
+            "deepLink": "https://www.courtlistener.com/opinion/2296282/eakle-v-grinnell-corp/#:~:text=As%20this%20general%20rule%20recognizes%2C,policy%20of%20the%20forum%20state.",
+            "proposition": "Eakle states that an Oklahoma forum court will not apply a contractually chosen foreign law where doing so would violate Oklahoma public policy.",
+            "verbatimQuote": "As this general rule recognizes, however, the forum court will not apply the law chosen by the contracting parties should doing so violate the public policy of the forum state.",
+            "date": "2003-06-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-eakle-public-policy-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#define-confidential-information",
+        "requirementGuidance": "Keep the definition aimed at information, not at work. A confidentiality clause survives in Oklahoma precisely because it restrains the misuse of protected material rather than the exercise of a trade — a definition so broad that observing it would effectively stop the employee from practicing their occupation drifts toward the restraint § 217 voids.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ok-217-void-defs",
+            "authorityType": "primary-law",
+            "title": "15 O.S. § 217",
+            "citation": "Okla. Stat. tit. 15, § 217.",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os15.pdf",
+            "proposition": "Section 217 voids contractual restraints on exercising a lawful profession, trade, or business, which is the boundary confidentiality definitions and investment restrictions must stay clear of.",
+            "verbatimQuote": "Every contract by which any one is restrained from exercising a lawful profession, trade or business of any kind, otherwise than as provided by Sections 218 and 219 of this title, or otherwise than as provided by Section 2 of this act, is to that extent void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-ok-217-void-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#define-trade-secrets",
+        "requirementGuidance": "A separate trade-secret definition matters more here than in most states: with the non-compete off the table, the Oklahoma Uniform Trade Secrets Act is the employer's most durable protection, and a clean definition is what connects the contract to the statute's injunction and damages remedies.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "outsa-injunction-defs",
+            "authorityType": "primary-law",
+            "title": "78 O.S. § 87",
+            "citation": "Okla. Stat. tit. 78, § 87(A).",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os78.pdf",
+            "proposition": "Section 87 of the Oklahoma Uniform Trade Secrets Act authorizes injunctive relief against actual or threatened misappropriation, the remedy a clean trade-secret definition connects the agreement to.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-outsa-injunction-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#define-restricted-period",
+        "requirementGuidance": "One umbrella Restricted Period keeps the surviving covenants auditable. Oklahoma gives those covenants no statutory term limit, but the common-law rule of reason still governs how long they may run — a defined period is what that reasonableness review attaches to.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "inergy-rule-of-reason-defs",
+            "authorityType": "case-law",
+            "title": "Inergy Propane, LLC v. Lundy",
+            "citation": "Inergy Propane, LLC v. Lundy, 2009 OK CIV APP 8, 219 P.3d 547.",
+            "url": "https://www.courtlistener.com/opinion/2629577/inergy-propane-llc-v-lundy/",
+            "deepLink": "https://www.courtlistener.com/opinion/2629577/inergy-propane-llc-v-lundy/#:~:text=That%20does%20not%2C%20however%2C%20require,by%20previously%20established%20case%20law.",
+            "proposition": "Inergy holds that § 219A did not abolish the common-law rule of reason, so the duration and scope of a surviving covenant remain subject to reasonableness review.",
+            "verbatimQuote": "That does not, however, require abandonment of the rule of reason analysis required by previously established case law.",
+            "date": "2008-08-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-inergy-rule-of-reason-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#define-covered-customers",
+        "requirementGuidance": "Hold this definition against the statutory phrase: the customer class may not be wider than the established customers of the former employer. A definition sweeping in prospects, former customers, or anyone the company ever quoted defines the clause straight into conflict with § 219A.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ok-219a-direct-rule-defs",
+            "authorityType": "primary-law",
+            "title": "15 O.S. § 219A",
+            "citation": "Okla. Stat. tit. 15, § 219A(A).",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os15.pdf",
+            "proposition": "Section 219A(A) confines the permitted customer restriction to direct solicitation of the established customers of the former employer.",
+            "verbatimQuote": "A person who makes an agreement with an employer, whether in writing or verbally, not to compete with the employer after the employment relationship has been terminated, shall be permitted to engage in the same business as that conducted by the former employer or in a similar business as that conducted by the former employer as long as the former employee does not directly solicit the sale of goods, services or a combination of goods and services from the established customers of the former employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-ok-219a-direct-rule-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#define-covered-employees",
+        "requirementGuidance": "The anti-raiding statute is generous about who can be protected — employees and independent contractors alike — so the definition can cover both. Discipline still helps: a class limited to people the departing employee actually worked with reads as workforce protection rather than a backdoor restraint.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ok-219b-antiraid-defs",
+            "authorityType": "primary-law",
+            "title": "15 O.S. § 219B",
+            "citation": "Okla. Stat. tit. 15, § 219B.",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os15.pdf",
+            "proposition": "Section 219B permits anti-raiding covenants covering both employees and independent contractors, including direct or indirect solicitation.",
+            "verbatimQuote": "A contract or contractual provision which prohibits an employee or independent contractor of a person or business from soliciting, directly or indirectly, actively or inactively, the employees or independent contractors of that person or business to become employees or independent contractors of another person or business shall not be construed as a restraint from exercising a lawful profession, trade or business of any kind.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-ok-219b-antiraid-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#define-protected-interests",
+        "requirementGuidance": "Name the interests, but know that recitals cannot expand the menu. Oklahoma's protectable slice is fixed by statute — established customer relationships, the workforce, purchased goodwill, and trade secrets — and a recital claiming a broader competitive interest does not create a covenant the statutes refuse to permit.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where any clause restricts owning or investing in competing businesses, look for a passive-holdings carve-out below a stated percentage. A restriction that catches index funds and ordinary public shares restrains far more than any interest Oklahoma recognizes, in a state whose baseline instinct is to void restraints on carrying on a business.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ok-217-void-defs",
+            "authorityType": "primary-law",
+            "title": "15 O.S. § 217",
+            "citation": "Okla. Stat. tit. 15, § 217.",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os15.pdf",
+            "proposition": "Section 217 voids contractual restraints on exercising a lawful profession, trade, or business, which is the boundary confidentiality definitions and investment restrictions must stay clear of.",
+            "verbatimQuote": "Every contract by which any one is restrained from exercising a lawful profession, trade or business of any kind, otherwise than as provided by Sections 218 and 219 of this title, or otherwise than as provided by Section 2 of this act, is to that extent void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-ok-217-void-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#define-passive-public-holdings",
+        "requirementGuidance": "Optional drafting mechanics — many agreements inline the carve-out without a capitalized term. If the defined term exists, confirm its threshold matches the operative carve-out language.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#define-solicit",
+        "requirementGuidance": "This definition carries unusual weight in Oklahoma because the lawful scope differs by target: customer restrictions may reach only direct solicitation, while employee anti-raiding clauses may reach direct or indirect solicitation. A single definition that bakes indirect conduct or passive acceptance into the customer covenant infects that clause with the very word the courts refuse to blue-pencil out.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "autry-no-sever-defs",
+            "authorityType": "case-law",
+            "title": "Autry v. Acosta, Inc.",
+            "citation": "Autry v. Acosta, Inc., 2018 OK CIV APP 8, 410 P.3d 1017.",
+            "url": "https://www.courtlistener.com/opinion/4520541/autry-v-acosta-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4520541/autry-v-acosta-inc/#:~:text=We%20find%20that%20the%20remedy,merely%20deleting%20the%20word%20%E2%80%9Cindirectly.%E2%80%9D",
+            "proposition": "Autry holds that a non-solicitation agreement reaching indirect solicitation cannot be cured by simply deleting the word indirectly — the court will not blue-pencil it.",
+            "verbatimQuote": "We find that the remedy for this Non-Solicitation Agreement's shortcomings is not quite that simple and it cannot be made to comply with § 219A by merely deleting the word “indirectly.”",
+            "date": "2017-11-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-autry-no-sever-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger treats resignation, dismissal, and the end of a fixed term consistently. Section 219A speaks from the moment the employment relationship has been terminated, so the surviving covenants' clocks — and any consideration analysis — all hang off this definition being unambiguous.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#acknowledge-timing",
+        "requirementGuidance": "Have the acknowledgement record whether signing happened at hire or mid-employment, and what the employee received. Oklahoma has never settled whether continued at-will employment alone supports a mid-employment covenant — and no amount of consideration rescues a clause whose substance conflicts with the statute.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ok-219a-b-consideration",
+            "authorityType": "primary-law",
+            "title": "15 O.S. § 219A",
+            "citation": "Okla. Stat. tit. 15, § 219A(B).",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os15.pdf",
+            "proposition": "Section 219A(B) voids any conflicting employment-contract provision, so consideration cannot save a covenant whose substance exceeds what the statute permits.",
+            "verbatimQuote": "Any provision in a contract between an employer and an employee in conflict with the provisions of this section shall be void and unenforceable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-ok-219a-b-consideration"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Oklahoma statute requires it, but the acknowledgement is cheap procedural-fairness evidence — and in a state where the covenant menu is this constrained, a documented chance to take advice undercuts later claims that the employee never understood what survived.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret obligations should run as long as secrecy does — that is how the federal definition works, and Oklahoma's trade-secret act is the strongest protection left standing once the non-compete is gone. A fixed expiry on trade-secret confidentiality quietly surrenders the one tool the ban never touches.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-dtsa-trade-secret-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. The two-track structure keeps the perpetual obligation tied to genuine trade secrets — and a confidentiality clause that locks up everything forever starts to look like the indirect restraint on working that Oklahoma law refuses to enforce.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law applies with full force in Oklahoma: without the immunity notice, the employer forfeits exemplary damages and attorney fees in a later trade-secret action against the employee. Since trade-secret litigation is the main enforcement path an Oklahoma employer has left, skipping the notice is self-sabotage.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language must leave employees free to discuss wages, hours, and working conditions. That protection is federal labor law and does not bend to any state's covenant regime, and the Board has been striking overbroad employee-agreement clauses.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the standard carve-out: disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. Confidentiality cannot block legally compelled disclosure, and the carve-out keeps the clause from overpromising.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. Because an Oklahoma employer protects itself through information rather than through competition restraints, the certification is often the first concrete evidence in a misappropriation case — it fixes what the employee said they kept.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and the covenant Oklahoma treats most generously: the anti-raiding statute expressly removes these clauses from the restraint-of-trade prohibition and lets them reach direct or indirect, active or inactive solicitation of employees and independent contractors. Verify the clause stays on solicitation — the Oklahoma statutory gates at the end of this checklist cover the no-hire trap.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ok-219b-antiraid-covenants",
+            "authorityType": "primary-law",
+            "title": "15 O.S. § 219B",
+            "citation": "Okla. Stat. tit. 15, § 219B.",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os15.pdf",
+            "proposition": "Section 219B permits an anti-raiding covenant barring direct or indirect solicitation of a business's employees or independent contractors, and exempts it from the restraint-of-trade prohibition.",
+            "verbatimQuote": "A contract or contractual provision which prohibits an employee or independent contractor of a person or business from soliciting, directly or indirectly, actively or inactively, the employees or independent contractors of that person or business to become employees or independent contractors of another person or business shall not be construed as a restraint from exercising a lawful profession, trade or business of any kind.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-ok-219b-antiraid-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "limit-customer-nonsolicit-to-direct-solicitation-of-established-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oklahoma.limit-customer-nonsolicit-to-direct-solicitation-of-established-customers",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit kept to direct solicitation",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#limit-customer-nonsolicit-to-direct-solicitation-of-established-customers",
+        "requirementGuidance": "Read this clause word by word against the statute: it may bar only direct solicitation of the sale of goods or services from established customers of the former employer. The words indirectly, prospective, or former customers are not trims a court will make for the employer — the appellate courts void the whole provision instead, so each extra word is a kill switch rather than a stretch goal.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ok-219a-direct-covenants",
+            "authorityType": "primary-law",
+            "title": "15 O.S. § 219A",
+            "citation": "Okla. Stat. tit. 15, § 219A(A).",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os15.pdf",
+            "proposition": "Section 219A(A) entitles a former employee to engage in the same business as the former employer and permits restraining only direct solicitation of the sale of goods or services from established customers.",
+            "verbatimQuote": "A person who makes an agreement with an employer, whether in writing or verbally, not to compete with the employer after the employment relationship has been terminated, shall be permitted to engage in the same business as that conducted by the former employer or in a similar business as that conducted by the former employer as long as the former employee does not directly solicit the sale of goods, services or a combination of goods and services from the established customers of the former employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-ok-219a-direct-covenants"
+          },
+          {
+            "sourceId": "autry-void-covenants",
+            "authorityType": "case-law",
+            "title": "Autry v. Acosta, Inc.",
+            "citation": "Autry v. Acosta, Inc., 2018 OK CIV APP 8, 410 P.3d 1017.",
+            "url": "https://www.courtlistener.com/opinion/4520541/autry-v-acosta-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4520541/autry-v-acosta-inc/#:~:text=Examined%20under%20the%20lens%20of,Legislature's%20enactment%20of%20that%20section.",
+            "proposition": "Autry holds that the overbroad non-solicitation agreement was void and unenforceable as against Oklahoma public policy under § 219A.",
+            "verbatimQuote": "Examined under the lens of § 219A, the Non-Solicitation Agreement is void and unenforceable as against Oklahoma's public policy expressed by the Legislature's enactment of that section.",
+            "date": "2017-11-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-autry-void-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-non-dealing-covenants",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oklahoma.exclude-non-dealing-covenants",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#exclude-non-dealing-covenants",
+        "requirementGuidance": "A clause that forbids doing business with covered customers at all — even when the customer calls first — restrains more than the direct solicitation Oklahoma permits. The statute affirmatively entitles the former employee to engage in the same business as the old employer, and any provision in conflict is void and unenforceable; flag every accept-no-business formulation as such a conflict.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ok-219a-direct-covenants",
+            "authorityType": "primary-law",
+            "title": "15 O.S. § 219A",
+            "citation": "Okla. Stat. tit. 15, § 219A(A).",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os15.pdf",
+            "proposition": "Section 219A(A) entitles a former employee to engage in the same business as the former employer and permits restraining only direct solicitation of the sale of goods or services from established customers.",
+            "verbatimQuote": "A person who makes an agreement with an employer, whether in writing or verbally, not to compete with the employer after the employment relationship has been terminated, shall be permitted to engage in the same business as that conducted by the former employer or in a similar business as that conducted by the former employer as long as the former employee does not directly solicit the sale of goods, services or a combination of goods and services from the established customers of the former employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-ok-219a-direct-covenants"
+          },
+          {
+            "sourceId": "ok-219a-b-void-covenants",
+            "authorityType": "primary-law",
+            "title": "15 O.S. § 219A",
+            "citation": "Okla. Stat. tit. 15, § 219A(B).",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os15.pdf",
+            "proposition": "Section 219A(B) makes any employment-contract provision that conflicts with the statute void and unenforceable, which reaches non-dealing formulations that restrict more than direct solicitation.",
+            "verbatimQuote": "Any provision in a contract between an employer and an employee in conflict with the provisions of this section shall be void and unenforceable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-ok-219a-b-void-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-employee-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oklahoma.exclude-employee-non-compete",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No employee non-compete",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#exclude-employee-non-compete",
+        "requirementGuidance": "The headline rule: an Oklahoma employment agreement may not restrain the employee from working in their profession, trade, or business after separation. There is no reasonableness rescue — duration, geography, and scope never get weighed, and the state supreme court has described conventional non-competes as going well beyond what the statute allows. If the clause exists, the finding is made; the only follow-up is what the parties intended the rest of the agreement to do without it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ok-217-void-covenants",
+            "authorityType": "primary-law",
+            "title": "15 O.S. § 217",
+            "citation": "Okla. Stat. tit. 15, § 217.",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os15.pdf",
+            "proposition": "Section 217 voids any contract restraining a person from exercising a lawful profession, trade, or business, outside the narrow statutory carve-outs.",
+            "verbatimQuote": "Every contract by which any one is restrained from exercising a lawful profession, trade or business of any kind, otherwise than as provided by Sections 218 and 219 of this title, or otherwise than as provided by Section 2 of this act, is to that extent void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-ok-217-void-covenants"
+          },
+          {
+            "sourceId": "howard-void-covenants",
+            "authorityType": "case-law",
+            "title": "Howard v. Nitro-Lift Technologies, L.L.C.",
+            "citation": "Howard v. Nitro-Lift Techs., L.L.C., 2011 OK 98, 273 P.3d 20, vacated on other grounds sub nom. Nitro-Lift Techs., L.L.C. v. Howard, 568 U.S. 17 (2012).",
+            "url": "https://www.courtlistener.com/opinion/5327051/howard-v-nitro-lift-technologies-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/5327051/howard-v-nitro-lift-technologies-llc/#:~:text=The%20non%2Dcompetition%20contracts%20go%20well,the%20legislatively%20expressed%20public%20policy.",
+            "proposition": "Howard reflects Oklahoma's rule that conventional non-competition covenants are void because they exceed what § 219A allows; the decision was vacated on arbitration-procedure grounds, but the statutory rule it applied remains good law.",
+            "verbatimQuote": "The non-competition contracts go well beyond the bounds of what is allowable under § 219A and violate the legislatively expressed public policy.",
+            "date": "2011-11-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-howard-void-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#permit-non-investment",
+        "requirementGuidance": "Rare, and untested in Oklahoma. No statute or reported decision squarely addresses investment restrictions, so review one by analogy: the closer it comes to stopping the employee from carrying on a business — as owner, advisor, or operator — the closer it sits to the restraint the void rule reaches. Confirm the passive-holdings carve-out is intact.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ok-217-void-covenants",
+            "authorityType": "primary-law",
+            "title": "15 O.S. § 217",
+            "citation": "Okla. Stat. tit. 15, § 217.",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os15.pdf",
+            "proposition": "Section 217 voids any contract restraining a person from exercising a lawful profession, trade, or business, outside the narrow statutory carve-outs.",
+            "verbatimQuote": "Every contract by which any one is restrained from exercising a lawful profession, trade or business of any kind, otherwise than as provided by Sections 218 and 219 of this title, or otherwise than as provided by Section 2 of this act, is to that extent void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-ok-217-void-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#require-non-disparagement",
+        "requirementGuidance": "Oklahoma's covenant statutes leave non-disparagement alone, so the clause rises or falls on federal limits: audit the carve-outs for truthful testimony, statements to government agencies, and protected workplace speech, which must sit outside the restriction.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The standard intake representation does double duty in Oklahoma: an incoming hire's covenant from another state may well be void here, but if it carries a mandatory out-of-state forum clause the fight can still happen elsewhere. Surfacing prior agreements before the first customer contact gives counsel time to assess that venue exposure.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice, with a sharp edge in a ban state: a letter warning a new employer off the worker based on a covenant Oklahoma voids asserts rights the employer does not have, and invites a tortious-interference response. If the clause appears, tie any notice to the covenants that actually survive — confidentiality, anti-raiding, and a properly drawn customer non-solicit.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock on the surviving non-solicits pauses during a breach — but treat any extension mechanism as untested here. No Oklahoma authority addresses tolling, and the duration of these covenants already answers to the common-law rule of reason, so a clause that can stretch a two-year restriction indefinitely hands a reviewing court an easy overbreadth argument.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "inergy-rule-of-reason-tolling",
+            "authorityType": "case-law",
+            "title": "Inergy Propane, LLC v. Lundy",
+            "citation": "Inergy Propane, LLC v. Lundy, 2009 OK CIV APP 8, 219 P.3d 547.",
+            "url": "https://www.courtlistener.com/opinion/2629577/inergy-propane-llc-v-lundy/",
+            "deepLink": "https://www.courtlistener.com/opinion/2629577/inergy-propane-llc-v-lundy/#:~:text=That%20does%20not%2C%20however%2C%20require,by%20previously%20established%20case%20law.",
+            "proposition": "Inergy holds that § 219A did not displace the rule-of-reason analysis, which is the standard any breach-extension mechanism on a surviving covenant would be measured against.",
+            "verbatimQuote": "That does not, however, require abandonment of the rule of reason analysis required by previously established case law.",
+            "date": "2008-08-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-inergy-rule-of-reason-tolling"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the irreparable-harm acknowledgement, then place it correctly: in Oklahoma the dependable injunction runs through trade-secret law, which authorizes courts to enjoin actual or threatened misappropriation. No recital makes a void covenant enjoinable, so the remedies clause should lean on the obligations that survive.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "outsa-injunction-remedies",
+            "authorityType": "primary-law",
+            "title": "78 O.S. § 87",
+            "citation": "Okla. Stat. tit. 78, § 87(A).",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os78.pdf",
+            "proposition": "Section 87 of the Oklahoma Uniform Trade Secrets Act authorizes injunctive relief against actual or threatened misappropriation of a trade secret.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-outsa-injunction-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "12.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice; the American Rule applies if the agreement is silent. Prefer mutual, prevailing-party language — a one-way employer fee clause attached to covenants that are mostly void in this state reads as in-terrorem drafting rather than genuine risk allocation.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "draft-within-the-statutory-carve-outs-rather-than-rely-on-severance",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oklahoma.draft-within-the-statutory-carve-outs-rather-than-rely-on-severance",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No reliance on court trimming",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#draft-within-the-statutory-carve-outs-rather-than-rely-on-severance",
+        "requirementGuidance": "Treat savings language as a tell, not a fix. When an Oklahoma employment covenant overreaches, the courts have refused to repair it even by deleting a single offending word — the provision falls whole. The only trimming the law provides is statutory and narrow: an overbroad sale-of-goodwill territory shrinks to the primary county and its neighbors. Severability still earns its place by detaching void covenants from the confidentiality and anti-raiding clauses that survive; what it cannot do is invite a court to rewrite.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "autry-no-sever-severability",
+            "authorityType": "case-law",
+            "title": "Autry v. Acosta, Inc.",
+            "citation": "Autry v. Acosta, Inc., 2018 OK CIV APP 8, 410 P.3d 1017.",
+            "url": "https://www.courtlistener.com/opinion/4520541/autry-v-acosta-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4520541/autry-v-acosta-inc/#:~:text=We%20find%20that%20the%20remedy,merely%20deleting%20the%20word%20%E2%80%9Cindirectly.%E2%80%9D",
+            "proposition": "Autry refused to cure an overbroad non-solicitation agreement by deleting the offending word, establishing that Oklahoma courts void rather than blue-pencil employment covenants.",
+            "verbatimQuote": "We find that the remedy for this Non-Solicitation Agreement's shortcomings is not quite that simple and it cannot be made to comply with § 219A by merely deleting the word “indirectly.”",
+            "date": "2017-11-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-autry-no-sever-severability"
+          },
+          {
+            "sourceId": "ok-218-statutory-trim",
+            "authorityType": "primary-law",
+            "title": "15 O.S. § 218",
+            "citation": "Okla. Stat. tit. 15, § 218.",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os15.pdf",
+            "proposition": "Section 218 supplies the only reformation in Oklahoma covenant law: a territorially overbroad sale-of-goodwill covenant is deemed valid only within the primary county and contiguous counties.",
+            "verbatimQuote": "One who sells the goodwill of a business may agree with the buyer to refrain from carrying on a similar business within a specified county and any county or counties contiguous thereto, or a specified city or town or any part thereof, so long as the buyer, or any person deriving title to the goodwill from him carries on a like business therein. Provided, that any such agreement which is otherwise lawful but which exceeds the territorial limitations specified by this section may be deemed valid, but only within the county comprising the primary place of the conduct of the subject business and within any counties contiguous thereto.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-ok-218-statutory-trim"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each obligation's lifespan independently checkable: perpetual for trade secrets, finite for ordinary confidential information and the non-solicits. In a state where some covenants in the document may be void from the start, a bundled survival clause also obscures which obligations are actually left running.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. Keep expectations calibrated: assignment transfers whatever the covenant lawfully is, and in Oklahoma that means a successor inherits the same narrow suite — a void non-compete does not become enforceable because the business changed hands after signing.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-out-of-state-forum-selection-as-the-operative-risk",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oklahoma.treat-out-of-state-forum-selection-as-the-operative-risk",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Forum selection, not governing law, is the escape hatch",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#treat-out-of-state-forum-selection-as-the-operative-risk",
+        "requirementGuidance": "Spend the review on the venue sentence. A foreign choice-of-law clause rarely moves the outcome — Oklahoma courts decline to apply chosen law that violates the state's public policy against work restraints — but a mandatory out-of-state forum clause can take the whole dispute to a court with no such policy. A federal court here recently enforced one and transferred an Oklahoma employee's case while acknowledging it would likely have found the covenants void had the case stayed. The clause should still name governing law, venue, and process; the question to answer is whose court reads it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "eakle-public-policy-gov",
+            "authorityType": "case-law",
+            "title": "Eakle v. Grinnell Corp.",
+            "citation": "Eakle v. Grinnell Corp., 272 F. Supp. 2d 1304 (E.D. Okla. 2003).",
+            "url": "https://www.courtlistener.com/opinion/2296282/eakle-v-grinnell-corp/",
+            "deepLink": "https://www.courtlistener.com/opinion/2296282/eakle-v-grinnell-corp/#:~:text=As%20this%20general%20rule%20recognizes%2C,policy%20of%20the%20forum%20state.",
+            "proposition": "Eakle states that an Oklahoma forum court will not apply a contractually chosen foreign law where doing so would violate Oklahoma public policy, which is why a choice-of-law clause alone does not revive a void covenant.",
+            "verbatimQuote": "As this general rule recognizes, however, the forum court will not apply the law chosen by the contracting parties should doing so violate the public policy of the forum state.",
+            "date": "2003-06-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-eakle-public-policy-gov"
+          },
+          {
+            "sourceId": "griffin-transfer-gov",
+            "authorityType": "case-law",
+            "title": "Griffin v. Howmedica Osteonics Corp.",
+            "citation": "Griffin v. Howmedica Osteonics Corp., No. 25-CV-302-JFJ (N.D. Okla. Oct. 2, 2025).",
+            "url": "https://www.courtlistener.com/docket/70562720/21/griffin-v-howmedica-osteonics-corporation/",
+            "deepLink": "https://www.courtlistener.com/docket/70562720/21/griffin-v-howmedica-osteonics-corporation/#:~:text=Plaintiff%20has%20therefore%20not%20met,to%20the%20contractually%20selected%20forum.",
+            "proposition": "In Griffin, the Northern District of Oklahoma enforced a mandatory Michigan forum-selection clause and transferred an Oklahoma employee's declaratory-judgment action, holding Oklahoma's anti-non-compete policy was not an exceptional circumstance defeating transfer.",
+            "verbatimQuote": "Plaintiff has therefore not met his burden of showing that exceptional circumstances exist that counsel against transfer to the contractually selected forum.",
+            "date": "2025-10-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-griffin-transfer-gov"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard machinery, with one Oklahoma-flavored reason to care: the customer statute reaches agreements made in writing or verbally, so an integration clause that collapses side conversations into the signed document keeps the covenant universe — and the void-or-valid analysis — confined to text a reviewer can actually read.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ok-219a-verbal-agreements",
+            "authorityType": "primary-law",
+            "title": "15 O.S. § 219A",
+            "citation": "Okla. Stat. tit. 15, § 219A(A).",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os15.pdf",
+            "proposition": "Section 219A(A) applies to agreements made in writing or verbally, which makes the integration clause the tool that confines the covenant analysis to the signed document.",
+            "verbatimQuote": "A person who makes an agreement with an employer, whether in writing or verbally, not to compete with the employer after the employment relationship has been terminated, shall be permitted to engage in the same business as that conducted by the former employer or in a similar business as that conducted by the former employer as long as the former employee does not directly solicit the sale of goods, services or a combination of goods and services from the established customers of the former employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-ok-219a-verbal-agreements"
+          }
+        ]
+      },
+      {
+        "requirementId": "gate-sale-of-business-covenants-to-county-level-geography",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oklahoma.gate-sale-of-business-covenants-to-county-level-geography",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "County-level geography for sale covenants",
+        "sectionId": "oklahoma-statutory-gates",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#gate-sale-of-business-covenants-to-county-level-geography",
+        "requirementGuidance": "A sale-of-goodwill or partnership-dissolution covenant must stay inside the statutory map: a specified county plus contiguous counties, or a specified city or town. Multi-state and regional radii common in acquisition forms blow through that ceiling — and the statute's own fix shrinks the territory to the primary county and its neighbors, never to the broader scope the parties wrote. Check the geography clause against a county map, not against the deal's footprint.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ok-218-goodwill-gate",
+            "authorityType": "primary-law",
+            "title": "15 O.S. § 218",
+            "citation": "Okla. Stat. tit. 15, § 218.",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os15.pdf",
+            "proposition": "Section 218 limits a sale-of-goodwill covenant to a specified county and contiguous counties or a specified city or town, and reforms overbroad geography only down to the primary county and contiguous counties.",
+            "verbatimQuote": "One who sells the goodwill of a business may agree with the buyer to refrain from carrying on a similar business within a specified county and any county or counties contiguous thereto, or a specified city or town or any part thereof, so long as the buyer, or any person deriving title to the goodwill from him carries on a like business therein. Provided, that any such agreement which is otherwise lawful but which exceeds the territorial limitations specified by this section may be deemed valid, but only within the county comprising the primary place of the conduct of the subject business and within any counties contiguous thereto.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-ok-218-goodwill-gate"
+          },
+          {
+            "sourceId": "ok-219-partners-gate",
+            "authorityType": "primary-law",
+            "title": "15 O.S. § 219",
+            "citation": "Okla. Stat. tit. 15, § 219.",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os15.pdf",
+            "proposition": "Section 219 gives partnership-dissolution covenants the same county-level geography and the same statutory territorial reformation rule as sale-of-goodwill covenants.",
+            "verbatimQuote": "Partners may, upon or in anticipation of a dissolution of the partnership, agree that none of them will carry on a similar business within a specified county and any county or counties contiguous thereto, or a specified city or town or any part thereof. Provided, that any such agreement which is otherwise lawful but which exceeds the territorial limitations specified by this section may be deemed valid, but only within the county comprising the primary place of the conduct of the business of the subject partnership and within any counties contiguous thereto.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-ok-219-partners-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "confirm-appreciable-ownership-behind-sale-of-goodwill-covenants",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oklahoma.confirm-appreciable-ownership-behind-sale-of-goodwill-covenants",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Real ownership behind a goodwill covenant",
+        "sectionId": "oklahoma-statutory-gates",
+        "itemNumber": "18.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#confirm-appreciable-ownership-behind-sale-of-goodwill-covenants",
+        "requirementGuidance": "Verify that the person bound by a sale-of-business covenant actually sold an appreciable stake. The state supreme court has treated the sale of a meaningful ownership interest — roughly a twenty-percent block in the leading discussion — as what carries goodwill; a token equity grant stapled to an employment deal does not convert an employee non-compete into a protected sale covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "bayly-appreciable-gate",
+            "authorityType": "case-law",
+            "title": "Bayly, Martin & Fay, Inc. v. Pickard",
+            "citation": "Bayly, Martin & Fay, Inc. v. Pickard, 1989 OK 122, 780 P.2d 1168.",
+            "url": "https://www.courtlistener.com/opinion/1190912/bayly-martin-fay-inc-v-pickard/",
+            "deepLink": "https://www.courtlistener.com/opinion/1190912/bayly-martin-fay-inc-v-pickard/#:~:text=Court%20held%20that%20the%20sale,the%20meaning%20of%20%C2%A7%20218.",
+            "proposition": "Bayly indicates that only the sale of an appreciable ownership interest can qualify as a sale of goodwill within the meaning of § 218.",
+            "verbatimQuote": "Court held that the sale of an appreciable amount of stock, there 20%, could constitute a sale of good will within the meaning of § 218.",
+            "date": "1989-09-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-bayly-appreciable-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-anti-raiding-clauses-to-solicitation-rather-than-hiring",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oklahoma.keep-anti-raiding-clauses-to-solicitation-rather-than-hiring",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Anti-raiding stops at solicitation, not hiring",
+        "sectionId": "oklahoma-statutory-gates",
+        "itemNumber": "18.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#keep-anti-raiding-clauses-to-solicitation-rather-than-hiring",
+        "requirementGuidance": "The workforce statute protects against soliciting — direct or indirect, active or inactive — and that is where the safe ground ends. A clause that bars hiring a colleague who applies entirely on their own initiative restricts conduct the statute never mentions, leaving it exposed to the general void rule. Flag every no-hire formulation and ask whether the employer can live with a solicitation-only version.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ok-219b-antiraid-gate",
+            "authorityType": "primary-law",
+            "title": "15 O.S. § 219B",
+            "citation": "Okla. Stat. tit. 15, § 219B.",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os15.pdf",
+            "proposition": "Section 219B exempts clauses prohibiting the solicitation of employees or independent contractors from the restraint-of-trade rule, which is the boundary a no-hire formulation steps past.",
+            "verbatimQuote": "A contract or contractual provision which prohibits an employee or independent contractor of a person or business from soliciting, directly or indirectly, actively or inactively, the employees or independent contractors of that person or business to become employees or independent contractors of another person or business shall not be construed as a restraint from exercising a lawful profession, trade or business of any kind.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-ok-219b-antiraid-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "pair-mid-employment-covenants-with-fresh-consideration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oklahoma.pair-mid-employment-covenants-with-fresh-consideration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Fresh consideration for mid-employment covenants",
+        "sectionId": "oklahoma-statutory-gates",
+        "itemNumber": "18.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#pair-mid-employment-covenants-with-fresh-consideration",
+        "requirementGuidance": "When the covenant was signed after the start date, look for something new and identifiable moving to the employee — a bonus, raise, promotion, or new confidential-information access. Oklahoma has not decided whether continued employment alone is enough, so the careful agreement does not test the question. Remember the limit of this check: consideration is necessary support, never a cure for a clause whose substance the statute voids.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ok-219a-b-consideration-gate",
+            "authorityType": "primary-law",
+            "title": "15 O.S. § 219A",
+            "citation": "Okla. Stat. tit. 15, § 219A(B).",
+            "url": "https://oksenate.gov/sites/default/files/2022-05/os15.pdf",
+            "proposition": "Section 219A(B) voids any conflicting provision regardless of the consideration exchanged, which is why fresh consideration supports but never cures a covenant.",
+            "verbatimQuote": "Any provision in a contract between an employer and an employee in conflict with the provisions of this section shall be void and unenforceable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-ok-219a-b-consideration-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-surviving-covenant-durations-reasonable",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oklahoma.keep-surviving-covenant-durations-reasonable",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Reasonable duration on surviving covenants",
+        "sectionId": "oklahoma-statutory-gates",
+        "itemNumber": "18.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#keep-surviving-covenant-durations-reasonable",
+        "requirementGuidance": "Fitting the statutory shape is the entry ticket, not the finish line: the covenants Oklahoma permits still answer to the common-law rule of reason on duration and scope. No statute fixes a maximum term — practitioners commonly hold customer non-solicits to two years or less as a risk-control measure — so test each surviving covenant's length against the customer relationships or workforce interest it actually protects.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "inergy-rule-of-reason-gate",
+            "authorityType": "case-law",
+            "title": "Inergy Propane, LLC v. Lundy",
+            "citation": "Inergy Propane, LLC v. Lundy, 2009 OK CIV APP 8, 219 P.3d 547.",
+            "url": "https://www.courtlistener.com/opinion/2629577/inergy-propane-llc-v-lundy/",
+            "deepLink": "https://www.courtlistener.com/opinion/2629577/inergy-propane-llc-v-lundy/#:~:text=That%20does%20not%2C%20however%2C%20require,by%20previously%20established%20case%20law.",
+            "proposition": "Inergy holds that § 219A did not abolish the rule-of-reason analysis, so surviving covenants must still be reasonable in duration and scope.",
+            "verbatimQuote": "That does not, however, require abandonment of the rule of reason analysis required by previously established case law.",
+            "date": "2008-08-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oklahoma#src-inergy-rule-of-reason-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

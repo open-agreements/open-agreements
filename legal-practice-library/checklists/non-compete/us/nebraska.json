@@ -1,0 +1,1384 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/nebraska",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/nebraska.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/nebraska",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/nebraska/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/nebraska/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "nebraska",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Nebraska",
+      "description": "A clause-by-clause reviewer checklist for Nebraska employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under Nebraska's three-part reasonableness test, where a customer covenant survives only when limited to customers the employee personally served and no court will rewrite an overbroad restraint.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Nebraska",
+      "coverage": "Nebraska (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 47,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "nebraska-statutory-gates",
+        "label": "Nebraska enforceability gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity whose client relationships the covenants protect. Nebraska ties a valid customer covenant to the clients and accounts the worker actually did business with for that employer, so a covenant running to an affiliate the worker never served starts the reasonableness analysis already behind.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-polly-personal-cover",
+            "authorityType": "case-law",
+            "title": "Polly v. Ray D. Hilderman & Co.",
+            "citation": "Polly v. Ray D. Hilderman & Co., 225 Neb. 662, 668, 407 N.W.2d 751 (1987).",
+            "url": "https://www.courtlistener.com/opinion/1235956/polly-v-ray-d-hilderman-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1235956/polly-v-ray-d-hilderman-co/#:~:text=Such%20a%20covenant%20may%20be,business%20and%20has%20personal%20contact.",
+            "proposition": "Polly ties a valid Nebraska customer covenant to the former employer's own clients and accounts the worker actually did business with and personally contacted — the relationships the named employer must actually hold.",
+            "verbatimQuote": "Such a covenant may be valid only if it restricts the former employee from working for or soliciting the former employer’s clients or accounts with whom the former employee actually did business and has personal contact.",
+            "date": "1987-06-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-polly-personal-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#identify-effective-date",
+        "requirementGuidance": "The dates anchor the timeline everything else runs on: when each restricted period starts and ends, and which window of customer contact the covered-customer look-back measures. An undated covenant leaves both open, and ambiguity in a restraint of trade is not a drafting nicety here — the covenant is read as written.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#identify-employee-title",
+        "requirementGuidance": "Title and duties are the first evidence of which customers this worker personally served and what goodwill the worker could unfairly take. A role with no customer contact or sensitive access makes any restraint hard to justify as protecting a legitimate interest rather than suppressing ordinary competition.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-polly-personal-cover",
+            "authorityType": "case-law",
+            "title": "Polly v. Ray D. Hilderman & Co.",
+            "citation": "Polly v. Ray D. Hilderman & Co., 225 Neb. 662, 668, 407 N.W.2d 751 (1987).",
+            "url": "https://www.courtlistener.com/opinion/1235956/polly-v-ray-d-hilderman-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1235956/polly-v-ray-d-hilderman-co/#:~:text=Such%20a%20covenant%20may%20be,business%20and%20has%20personal%20contact.",
+            "proposition": "Polly ties a valid Nebraska customer covenant to the former employer's own clients and accounts the worker actually did business with and personally contacted — the relationships the named employer must actually hold.",
+            "verbatimQuote": "Such a covenant may be valid only if it restricts the former employee from working for or soliciting the former employer’s clients or accounts with whom the former employee actually did business and has personal contact.",
+            "date": "1987-06-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-polly-personal-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#identify-governing-law",
+        "requirementGuidance": "Check that a governing state is named. Everything on this page assumes Nebraska law controls — the three-part reasonableness test, the personally-served customer rule, and the refusal to rewrite an overbroad covenant. A different choice of law trades this framework for another one and deserves its own review.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#define-confidential-information",
+        "requirementGuidance": "Scope the definition to information that is genuinely secret or competitively sensitive. Nebraska's statutory trade-secret definition is demanding — independent economic value from secrecy plus reasonable efforts to maintain it — and a confidentiality definition that sweeps in general skills and public knowledge protects no interest a Nebraska court recognizes.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-tsa-definition-def",
+            "authorityType": "primary-law",
+            "title": "Neb. Rev. Stat. § 87-502",
+            "citation": "Neb. Rev. Stat. § 87-502(4).",
+            "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=87-502",
+            "proposition": "Section 87-502 defines a trade secret by independent economic value, non-ascertainability by proper means, and reasonable secrecy efforts — the demanding statutory line a confidentiality or trade-secret definition should track.",
+            "verbatimQuote": "Trade secret shall mean information, including, but not limited to, a drawing, formula, pattern, compilation, program, device, method, technique, code, or process that: (a) Derives independent economic value, actual or potential, from not being known to, and not being ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and (b) Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-tsa-definition-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#define-trade-secrets",
+        "requirementGuidance": "Define trade secrets separately and track the statute. Nebraska's Trade Secrets Act gives a freestanding misappropriation claim with its own narrow definition, so a statute-tracking defined term keeps the strongest protection in the agreement aligned with the one a court will actually apply.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-tsa-act-def",
+            "authorityType": "primary-law",
+            "title": "Neb. Rev. Stat. § 87-501",
+            "citation": "Neb. Rev. Stat. § 87-501.",
+            "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=87-501",
+            "proposition": "Section 87-501 identifies Nebraska's Trade Secrets Act as a separate statutory framework a trade-secret definition can anchor to.",
+            "verbatimQuote": "Sections 87-501 to 87-507 shall be known and may be cited as the Trade Secrets Act.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-tsa-act-def"
+          },
+          {
+            "sourceId": "ne-tsa-definition-def",
+            "authorityType": "primary-law",
+            "title": "Neb. Rev. Stat. § 87-502",
+            "citation": "Neb. Rev. Stat. § 87-502(4).",
+            "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=87-502",
+            "proposition": "Section 87-502 defines a trade secret by independent economic value, non-ascertainability by proper means, and reasonable secrecy efforts — the demanding statutory line a confidentiality or trade-secret definition should track.",
+            "verbatimQuote": "Trade secret shall mean information, including, but not limited to, a drawing, formula, pattern, compilation, program, device, method, technique, code, or process that: (a) Derives independent economic value, actual or potential, from not being known to, and not being ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and (b) Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-tsa-definition-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#define-restricted-period",
+        "requirementGuidance": "The period must read as a fixed, definite stretch of time. A restraint with no limit in time or space is against public policy and void in Nebraska, and a period that floats on events — breach, litigation, renewals — drifts toward exactly that defect with no court willing to trim it back.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-brown-unlimited-def",
+            "authorityType": "case-law",
+            "title": "Securities Acceptance Corp. v. Brown",
+            "citation": "Securities Acceptance Corp. v. Brown, 171 Neb. 406, 422, 106 N.W.2d 456 (1960).",
+            "url": "https://www.courtlistener.com/opinion/1948918/securities-acceptance-corporation-v-brown/",
+            "deepLink": "https://www.courtlistener.com/opinion/1948918/securities-acceptance-corporation-v-brown/#:~:text=A%20contract%20in%20restraint%20of,against%20public%20policy%20and%20void.",
+            "proposition": "Securities Acceptance holds a restraint unlimited in time or space void — the defect an indefinite restricted-period definition invites.",
+            "verbatimQuote": "A contract in restraint of trade, which is neither limited in time nor space, is against public policy and void.",
+            "date": "1960-12-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-brown-unlimited-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#define-restricted-territory",
+        "requirementGuidance": "Treat any defined territory with suspicion rather than comfort. Nebraska employment covenants are safest when customer-specific, because a radius or territory ban tends to block ordinary competition — the worker using general skill in the market — rather than protect a defined goodwill interest, and the state supreme court has rejected a covenant on precisely that ground.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-gaver-ordinary-def",
+            "authorityType": "case-law",
+            "title": "Gaver v. Schneider's O.K. Tire Co.",
+            "citation": "Gaver v. Schneider's O.K. Tire Co., 289 Neb. 491 (2014).",
+            "url": "https://www.courtlistener.com/opinion/2751413/gaver-v-schneiders-ok-tire-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2751413/gaver-v-schneiders-ok-tire-co/#:~:text=The%20noncompete%20agreement%20as%20written,Schneider%E2%80%99s%20arguments%20to%20the%20contrary.",
+            "proposition": "Gaver rejected a covenant as an attempt to prevent ordinary competition — the risk a geographic or territory definition carries for an ordinary employee.",
+            "verbatimQuote": "The noncompete agreement as written is an attempt to prevent ordinary competition, not improper or unjust competition, and we reject Schneider’s arguments to the contrary.",
+            "date": "2014-11-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-gaver-ordinary-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#define-covered-customers",
+        "requirementGuidance": "This is the load-bearing definition on the page. Bound the class to clients and accounts the worker actually did business with and personally contacted, over a stated look-back window — and keep prospective customers out, because a federal court applying Nebraska law rejected a non-solicit that reached the company's actual or prospective relationships as greatly exceeding the permissible scope.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-polly-personal-def",
+            "authorityType": "case-law",
+            "title": "Polly v. Ray D. Hilderman & Co.",
+            "citation": "Polly v. Ray D. Hilderman & Co., 225 Neb. 662, 668, 407 N.W.2d 751 (1987).",
+            "url": "https://www.courtlistener.com/opinion/1235956/polly-v-ray-d-hilderman-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1235956/polly-v-ray-d-hilderman-co/#:~:text=Such%20a%20covenant%20may%20be,business%20and%20has%20personal%20contact.",
+            "proposition": "Polly states the personally-served customer rule — a covered-customers or solicit definition may validly reach only clients the worker actually did business with and personally contacted.",
+            "verbatimQuote": "Such a covenant may be valid only if it restricts the former employee from working for or soliciting the former employer’s clients or accounts with whom the former employee actually did business and has personal contact.",
+            "date": "1987-06-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-polly-personal-def"
+          },
+          {
+            "sourceId": "ne-sisk-prospective-def",
+            "authorityType": "case-law",
+            "title": "Sisk v. Scripps Media, Inc.",
+            "citation": "Sisk v. Scripps Media, Inc., No. 8:24CV86, 2024 WL 1175140 (D. Neb. Mar. 18, 2024).",
+            "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-8_24-cv-00086",
+            "proposition": "Sisk rejected a non-solicit reaching the company's actual or prospective customer relationships as exceeding the permissible Nebraska customer scope — why prospective customers stay out of the definition.",
+            "verbatimQuote": "This provision greatly exceeds the permissible scope of customers an employee may be precluded from contacting by a restrictive covenant under Nebraska law.",
+            "date": "2024-03-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-sisk-prospective-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing worker actually worked with during a stated look-back window. The practice note stages no Nebraska case on employee non-solicits specifically, so assume the general framework applies: the narrower and more personal the covered class, the easier it is to defend as protecting a legitimate interest.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#define-protected-interests",
+        "requirementGuidance": "Name the specific interests each covenant protects — the customer goodwill this worker carried, the genuinely secret information this role touched. The second of Nebraska's three requirements measures every restraint against the legitimate interest it serves, and a covenant that cannot point to one reads as an attempt to stop ordinary competition.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-brown-three-part-def",
+            "authorityType": "case-law",
+            "title": "Securities Acceptance Corp. v. Brown",
+            "citation": "Securities Acceptance Corp. v. Brown, 171 Neb. 406, 417, 106 N.W.2d 456 (1960).",
+            "url": "https://www.courtlistener.com/opinion/1948918/securities-acceptance-corporation-v-brown/",
+            "deepLink": "https://www.courtlistener.com/opinion/1948918/securities-acceptance-corporation-v-brown/#:~:text=There%20are%20three%20general%20requirements,and%20oppressive%20on%20the%20employee.",
+            "proposition": "Securities Acceptance states the three general requirements — public injury, legitimate-interest necessity, and harshness to the employee — that every defined term on this page ultimately feeds.",
+            "verbatimQuote": "There are three general requirements relating to partial restraints of trade: First, is the restriction reasonable in the sense that it is not injurious to the public; second, is the restriction reasonable in the sense that it is no greater than is reasonably necessary to protect the employer in some legitimate interest; and, third, is the restriction reasonable in the sense that it is not unduly harsh and oppressive on the employee.",
+            "date": "1960-12-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-brown-three-part-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#define-competitive-business",
+        "requirementGuidance": "Describe the competing activity concretely. Broad definitions of competitive work — substantially similar products or services, anything the employer might someday offer — helped sink a modern media covenant as unreasonable and unenforceable under Nebraska law, and breadth added here cannot be trimmed by a court later.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-sisk-modern-def",
+            "authorityType": "case-law",
+            "title": "Sisk v. Scripps Media, Inc.",
+            "citation": "Sisk v. Scripps Media, Inc., No. 8:24CV86, 2024 WL 1175140 (D. Neb. Mar. 18, 2024).",
+            "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-8_24-cv-00086",
+            "proposition": "Sisk found both covenants in a modern media agreement unreasonable and unenforceable under Nebraska law — the warning for sweeping competitive-business definitions.",
+            "verbatimQuote": "Because both covenants at issue are unreasonable and unenforceable under Nebraska law, Sisk has demonstrated a fair chance of prevailing on the merits of his underlying action.",
+            "date": "2024-03-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-sisk-modern-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where the agreement restricts owning or investing in competitors, look for a passive-holdings carve-out below a stated percentage. A clause that technically forbids holding ordinary public shares restrains the worker far beyond any customer relationship or secret, and Nebraska's third requirement asks directly whether the restraint is unduly harsh and oppressive on the employee.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-brown-three-part-def",
+            "authorityType": "case-law",
+            "title": "Securities Acceptance Corp. v. Brown",
+            "citation": "Securities Acceptance Corp. v. Brown, 171 Neb. 406, 417, 106 N.W.2d 456 (1960).",
+            "url": "https://www.courtlistener.com/opinion/1948918/securities-acceptance-corporation-v-brown/",
+            "deepLink": "https://www.courtlistener.com/opinion/1948918/securities-acceptance-corporation-v-brown/#:~:text=There%20are%20three%20general%20requirements,and%20oppressive%20on%20the%20employee.",
+            "proposition": "Securities Acceptance states the three general requirements — public injury, legitimate-interest necessity, and harshness to the employee — that every defined term on this page ultimately feeds.",
+            "verbatimQuote": "There are three general requirements relating to partial restraints of trade: First, is the restriction reasonable in the sense that it is not injurious to the public; second, is the restriction reasonable in the sense that it is no greater than is reasonably necessary to protect the employer in some legitimate interest; and, third, is the restriction reasonable in the sense that it is not unduly harsh and oppressive on the employee.",
+            "date": "1960-12-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-brown-three-part-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#define-passive-public-holdings",
+        "requirementGuidance": "Optional drafting mechanics — many agreements inline the carve-out language without a capitalized term. If the term appears, confirm its percentage matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#define-solicit",
+        "requirementGuidance": "Pin down whether the verb covers only initiating contact or also passively accepting an inquiry. Nebraska's customer rule speaks of restricting the worker from working for or soliciting personally served clients, so the definition should make clear which of those activities the clause restrains — and any reading broader than that customer set is breadth the covenant has to justify.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-polly-personal-def",
+            "authorityType": "case-law",
+            "title": "Polly v. Ray D. Hilderman & Co.",
+            "citation": "Polly v. Ray D. Hilderman & Co., 225 Neb. 662, 668, 407 N.W.2d 751 (1987).",
+            "url": "https://www.courtlistener.com/opinion/1235956/polly-v-ray-d-hilderman-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1235956/polly-v-ray-d-hilderman-co/#:~:text=Such%20a%20covenant%20may%20be,business%20and%20has%20personal%20contact.",
+            "proposition": "Polly states the personally-served customer rule — a covered-customers or solicit definition may validly reach only clients the worker actually did business with and personally contacted.",
+            "verbatimQuote": "Such a covenant may be valid only if it restricts the former employee from working for or soliciting the former employer’s clients or accounts with whom the former employee actually did business and has personal contact.",
+            "date": "1987-06-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-polly-personal-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger treats resignation, dismissal, and the end of a fixed term the same way. The restricted period and every survival clock run from this event, and ambiguity about who ended the relationship becomes ambiguity about when the restraint expires — in a state that enforces the covenant exactly as written.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#acknowledge-timing",
+        "requirementGuidance": "Record when the covenant was signed relative to the first day of work and what consideration supported it. The practice note stages no Nebraska-specific consideration rule, so treat the acknowledgement as evidence housekeeping: a clean record of timing and exchanged value costs nothing now and forecloses an argument later.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Nebraska statute requires it, but a documented chance to take advice is useful evidence on the harshness question a Nebraska court actually weighs — whether the restraint is unduly harsh and oppressive on the employee, in substance or in how it was obtained. Cheap to include, awkward to be missing.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret obligations should run as long as secrecy does. Federal law keys trade-secret status to continued secrecy, and Nebraska's statutory definition is built the same way — value from not being known, plus reasonable efforts to keep it that way — so a fixed expiry on trade-secret protection gives away the one obligation that outlasts every covenant on this page.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-dtsa-trade-secret-definition"
+          },
+          {
+            "sourceId": "ne-tsa-definition-conf",
+            "authorityType": "primary-law",
+            "title": "Neb. Rev. Stat. § 87-502",
+            "citation": "Neb. Rev. Stat. § 87-502(4).",
+            "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=87-502",
+            "proposition": "Nebraska's trade-secret definition likewise keys protection to secrecy — economic value from not being known plus reasonable efforts to maintain secrecy — supporting secrecy-keyed duration rather than a fixed term.",
+            "verbatimQuote": "Trade secret shall mean information, including, but not limited to, a drawing, formula, pattern, compilation, program, device, method, technique, code, or process that: (a) Derives independent economic value, actual or potential, from not being known to, and not being ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and (b) Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-tsa-definition-conf"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term, separate from the perpetual trade-secret obligation. An open-ended lid on non-secret information is breadth without a matching interest — and in a state that measures every restraint against what is reasonably necessary and refuses to trim the excess, unjustified breadth is risk the employer carries, not slack a court absorbs.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#disclose-dtsa-notice",
+        "requirementGuidance": "Federal and non-negotiable: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret action against the worker. In a state whose covenant rules push employers toward trade-secret and confidentiality tools instead of broad non-competes, those remedies do real work.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech regardless of the governing state, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. A clause purporting to forbid compelled disclosure is unenforceable on that point and adds breadth a Nebraska covenant has no room to carry.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. Nebraska's trade-secret definition conditions protection on efforts that are reasonable under the circumstances to maintain secrecy, so a disciplined exit procedure is not just housekeeping — it is part of the proof that the employer kept its end of the statutory bargain.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-tsa-definition-prop",
+            "authorityType": "primary-law",
+            "title": "Neb. Rev. Stat. § 87-502",
+            "citation": "Neb. Rev. Stat. § 87-502(4).",
+            "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=87-502",
+            "proposition": "Section 87-502 conditions trade-secret status on reasonable secrecy efforts — the statutory reason exit procedures and return certifications matter.",
+            "verbatimQuote": "Trade secret shall mean information, including, but not limited to, a drawing, formula, pattern, compilation, program, device, method, technique, code, or process that: (a) Derives independent economic value, actual or potential, from not being known to, and not being ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and (b) Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-tsa-definition-prop"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional. The practice note stages no Nebraska case on employee non-solicits specifically, so review the clause under the general framework every Nebraska restraint must satisfy: a legitimate interest, no more breadth than that interest needs, and no undue harshness on the worker. A covered class limited to colleagues the worker actually worked with is the defensible shape.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-aon-test-cov",
+            "authorityType": "case-law",
+            "title": "Aon Consulting, Inc. v. Midlands Financial Benefits, Inc.",
+            "citation": "Aon Consulting, Inc. v. Midlands Fin. Benefits, Inc., 275 Neb. 642, 748 N.W.2d 626 (2008).",
+            "url": "https://www.courtlistener.com/opinion/2139960/aon-consulting-v-midlands-financial/",
+            "deepLink": "https://www.courtlistener.com/opinion/2139960/aon-consulting-v-midlands-financial/#:~:text=In%20determining%20whether%20a%20covenant,and%20oppressive%20on%20the%20employee.",
+            "proposition": "Aon restates the three-part reasonableness test every Nebraska covenant in the suite must satisfy.",
+            "verbatimQuote": "In determining whether a covenant not to compete is valid, a court considers whether the restriction is (1) reasonable in the sense that it is not injurious to the public, (2) not greater than is reasonably necessary to protect the employer in some legitimate interest, and (3) not unduly harsh and oppressive on the employee.",
+            "date": "2008-05-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-aon-test-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#permit-customer-nonsolicit",
+        "requirementGuidance": "Optional, and the covenant Nebraska law is actually built around — when it reaches only the clients the worker personally served. The state supreme court has upheld a restriction limited to customers the worker had personal business dealings with as properly focused on protecting goodwill rather than blocking competition. Route it through the gates at the end of this checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-aon-goodwill-cov",
+            "authorityType": "case-law",
+            "title": "Aon Consulting, Inc. v. Midlands Financial Benefits, Inc.",
+            "citation": "Aon Consulting, Inc. v. Midlands Fin. Benefits, Inc., 275 Neb. 642, 748 N.W.2d 626 (2008).",
+            "url": "https://www.courtlistener.com/opinion/2139960/aon-consulting-v-midlands-financial/",
+            "deepLink": "https://www.courtlistener.com/opinion/2139960/aon-consulting-v-midlands-financial/#:~:text=The%20agreement%20was%20properly%20focused,Aon's%20goodwill%20with%20its%20customers.",
+            "proposition": "Aon upheld a customer-specific restriction focused on customers the employee personally dealt with as properly aimed at protecting goodwill.",
+            "verbatimQuote": "The agreement was properly focused on the legitimate purpose of protecting Aon's goodwill with its customers.",
+            "date": "2008-05-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-aon-goodwill-cov"
+          },
+          {
+            "sourceId": "ne-polly-personal-cov",
+            "authorityType": "case-law",
+            "title": "Polly v. Ray D. Hilderman & Co.",
+            "citation": "Polly v. Ray D. Hilderman & Co., 225 Neb. 662, 668, 407 N.W.2d 751 (1987).",
+            "url": "https://www.courtlistener.com/opinion/1235956/polly-v-ray-d-hilderman-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1235956/polly-v-ray-d-hilderman-co/#:~:text=Such%20a%20covenant%20may%20be,business%20and%20has%20personal%20contact.",
+            "proposition": "Polly permits a customer covenant to restrict only working for or soliciting clients the worker actually did business with and personally contacted — the outer boundary for non-solicit and non-dealing clauses.",
+            "verbatimQuote": "Such a covenant may be valid only if it restricts the former employee from working for or soliciting the former employer’s clients or accounts with whom the former employee actually did business and has personal contact.",
+            "date": "1987-06-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-polly-personal-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#permit-non-dealing",
+        "requirementGuidance": "Barring the worker from serving covered customers even when the customer calls first restrains accepting work, not just chasing it. Nebraska's customer rule tolerates restricting the worker from working for or soliciting personally served clients — but nothing wider — so a non-dealing clause earns its place only with a tight, personally-served customer class behind it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-polly-personal-cov",
+            "authorityType": "case-law",
+            "title": "Polly v. Ray D. Hilderman & Co.",
+            "citation": "Polly v. Ray D. Hilderman & Co., 225 Neb. 662, 668, 407 N.W.2d 751 (1987).",
+            "url": "https://www.courtlistener.com/opinion/1235956/polly-v-ray-d-hilderman-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1235956/polly-v-ray-d-hilderman-co/#:~:text=Such%20a%20covenant%20may%20be,business%20and%20has%20personal%20contact.",
+            "proposition": "Polly permits a customer covenant to restrict only working for or soliciting clients the worker actually did business with and personally contacted — the outer boundary for non-solicit and non-dealing clauses.",
+            "verbatimQuote": "Such a covenant may be valid only if it restricts the former employee from working for or soliciting the former employer’s clients or accounts with whom the former employee actually did business and has personal contact.",
+            "date": "1987-06-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-polly-personal-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#permit-non-compete",
+        "requirementGuidance": "A true Nebraska non-compete for an ordinary employee is the highest-risk covenant in the suite. The restraint must clear all three reasonableness requirements, and a ban framed around a business, market, or territory rather than personally served customers reads as an attempt to prevent ordinary competition — the exact ground the state supreme court has used to strike one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-aon-test-cov",
+            "authorityType": "case-law",
+            "title": "Aon Consulting, Inc. v. Midlands Financial Benefits, Inc.",
+            "citation": "Aon Consulting, Inc. v. Midlands Fin. Benefits, Inc., 275 Neb. 642, 748 N.W.2d 626 (2008).",
+            "url": "https://www.courtlistener.com/opinion/2139960/aon-consulting-v-midlands-financial/",
+            "deepLink": "https://www.courtlistener.com/opinion/2139960/aon-consulting-v-midlands-financial/#:~:text=In%20determining%20whether%20a%20covenant,and%20oppressive%20on%20the%20employee.",
+            "proposition": "Aon restates the three-part reasonableness test every Nebraska covenant in the suite must satisfy.",
+            "verbatimQuote": "In determining whether a covenant not to compete is valid, a court considers whether the restriction is (1) reasonable in the sense that it is not injurious to the public, (2) not greater than is reasonably necessary to protect the employer in some legitimate interest, and (3) not unduly harsh and oppressive on the employee.",
+            "date": "2008-05-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-aon-test-cov"
+          },
+          {
+            "sourceId": "ne-gaver-ordinary-cov",
+            "authorityType": "case-law",
+            "title": "Gaver v. Schneider's O.K. Tire Co.",
+            "citation": "Gaver v. Schneider's O.K. Tire Co., 289 Neb. 491 (2014).",
+            "url": "https://www.courtlistener.com/opinion/2751413/gaver-v-schneiders-ok-tire-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2751413/gaver-v-schneiders-ok-tire-co/#:~:text=The%20noncompete%20agreement%20as%20written,Schneider%E2%80%99s%20arguments%20to%20the%20contrary.",
+            "proposition": "Gaver struck a non-compete as an attempt to prevent ordinary competition rather than unfair competition — the failure mode of business- and territory-framed bans.",
+            "verbatimQuote": "The noncompete agreement as written is an attempt to prevent ordinary competition, not improper or unjust competition, and we reject Schneider’s arguments to the contrary.",
+            "date": "2014-11-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-gaver-ordinary-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, bind those names instead of leaning on an open-ended definition. Broad competitive-work language helped sink a modern Nebraska covenant, and narrowing done at the drafting table is the only narrowing this covenant will ever get — it is not the function of the courts here to reform a covenant to make it enforceable.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-sisk-modern-cov",
+            "authorityType": "case-law",
+            "title": "Sisk v. Scripps Media, Inc.",
+            "citation": "Sisk v. Scripps Media, Inc., No. 8:24CV86, 2024 WL 1175140 (D. Neb. Mar. 18, 2024).",
+            "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-8_24-cv-00086",
+            "proposition": "Sisk found both covenants in a modern media agreement unreasonable and unenforceable under Nebraska law — the warning against open-ended competitive definitions.",
+            "verbatimQuote": "Because both covenants at issue are unreasonable and unenforceable under Nebraska law, Sisk has demonstrated a fair chance of prevailing on the merits of his underlying action.",
+            "date": "2024-03-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-sisk-modern-cov"
+          },
+          {
+            "sourceId": "ne-waadah-no-reform-cov",
+            "authorityType": "case-law",
+            "title": "Unlimited Opportunity, Inc. v. Waadah",
+            "citation": "Unlimited Opportunity, Inc. v. Waadah, 290 Neb. 629, 630, 861 N.W.2d 437 (2015).",
+            "url": "https://www.courtlistener.com/opinion/2792825/unlimited-opportunity-v-waadah/",
+            "deepLink": "https://www.courtlistener.com/opinion/2792825/unlimited-opportunity-v-waadah/#:~:text=It%20is%20not%20the%20function,order%20to%20make%20it%20enforceable.",
+            "proposition": "Waadah states Nebraska's refusal to reform a covenant not to compete — why narrowing must happen at drafting.",
+            "verbatimQuote": "It is not the function of the courts to reform a covenant not to compete in order to make it enforceable.",
+            "date": "2015-04-10",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-waadah-no-reform-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined restricted period; an investment restraint with indefinite reach hands the harshness requirement exactly the breadth it counts against the covenant.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#address-physician-specific-rights",
+        "requirementGuidance": "The practice note reports no physician-specific Nebraska covenant rule and no general statutory ban as of its review date, so a physician covenant runs through the same framework as any other employee restraint: a legitimate interest, no more breadth than necessary, no undue harshness — with the patient relationships a physician personally served as the natural covered class. The dedicated clause should state the agreement's actual treatment of physicians rather than import another jurisdiction's rules by template inertia.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-aon-test-phys",
+            "authorityType": "case-law",
+            "title": "Aon Consulting, Inc. v. Midlands Financial Benefits, Inc.",
+            "citation": "Aon Consulting, Inc. v. Midlands Fin. Benefits, Inc., 275 Neb. 642, 748 N.W.2d 626 (2008).",
+            "url": "https://www.courtlistener.com/opinion/2139960/aon-consulting-v-midlands-financial/",
+            "deepLink": "https://www.courtlistener.com/opinion/2139960/aon-consulting-v-midlands-financial/#:~:text=In%20determining%20whether%20a%20covenant,and%20oppressive%20on%20the%20employee.",
+            "proposition": "Aon's three-part reasonableness test governs physician covenants in Nebraska absent any occupation-specific statute.",
+            "verbatimQuote": "In determining whether a covenant not to compete is valid, a court considers whether the restriction is (1) reasonable in the sense that it is not injurious to the public, (2) not greater than is reasonably necessary to protect the employer in some legitimate interest, and (3) not unduly harsh and oppressive on the employee.",
+            "date": "2008-05-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-aon-test-phys"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement blocks the new role. On intake it cuts both ways: an incoming covenant from a prior employer may fail Nebraska's narrow framework, but one scoped to personally served customers can survive review — better to surface either before the first customer call.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#address-notice-to-future-employers",
+        "requirementGuidance": "A drafting choice, not a legal requirement. Notice provisions can support later enforcement, but a letter asserting a covenant that reaches customers the worker never served overstates the employer's position and creates its own interference exposure — so condition any notice practice on a covenant that actually survives the review this page walks through.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach?",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#address-tolling-during-breach",
+        "requirementGuidance": "Nebraska appellate law is silent on tolling: no staged decision says whether a court may pause the clock during a breach or whether a contractual extension-on-breach clause is enforceable. Read any tolling language as another restraint that must be reasonable as written — a restraint with no effective limit in time is void here, and a covenant a court finds overbroad does not get reformed into a lawful one. If tolling appears, it should be a separate, definite term tied to the duration of the breach, never an open-ended extension.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-brown-unlimited-toll",
+            "authorityType": "case-law",
+            "title": "Securities Acceptance Corp. v. Brown",
+            "citation": "Securities Acceptance Corp. v. Brown, 171 Neb. 406, 422, 106 N.W.2d 456 (1960).",
+            "url": "https://www.courtlistener.com/opinion/1948918/securities-acceptance-corporation-v-brown/",
+            "deepLink": "https://www.courtlistener.com/opinion/1948918/securities-acceptance-corporation-v-brown/#:~:text=A%20contract%20in%20restraint%20of,against%20public%20policy%20and%20void.",
+            "proposition": "Securities Acceptance holds a restraint unlimited in time or space void — the risk an open-ended tolling or extension clause invites.",
+            "verbatimQuote": "A contract in restraint of trade, which is neither limited in time nor space, is against public policy and void.",
+            "date": "1960-12-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-brown-unlimited-toll"
+          },
+          {
+            "sourceId": "ne-waadah-no-reform-toll",
+            "authorityType": "case-law",
+            "title": "Unlimited Opportunity, Inc. v. Waadah",
+            "citation": "Unlimited Opportunity, Inc. v. Waadah, 290 Neb. 629, 630, 861 N.W.2d 437 (2015).",
+            "url": "https://www.courtlistener.com/opinion/2792825/unlimited-opportunity-v-waadah/",
+            "deepLink": "https://www.courtlistener.com/opinion/2792825/unlimited-opportunity-v-waadah/#:~:text=It%20is%20not%20the%20function,order%20to%20make%20it%20enforceable.",
+            "proposition": "Waadah confirms Nebraska courts will not reform an overbroad covenant — an aggressive extension clause faces the same all-or-nothing risk as any other term.",
+            "verbatimQuote": "It is not the function of the courts to reform a covenant not to compete in order to make it enforceable.",
+            "date": "2015-04-10",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-waadah-no-reform-toll"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#require-injunctive-relief-availability",
+        "requirementGuidance": "The irreparable-harm acknowledgement is standard and harmless — but it buys nothing on its own, because relief presupposes a covenant that first clears Nebraska's three reasonableness requirements. An unenforceable restraint supports no injunction at any stage.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-aon-test-rem",
+            "authorityType": "case-law",
+            "title": "Aon Consulting, Inc. v. Midlands Financial Benefits, Inc.",
+            "citation": "Aon Consulting, Inc. v. Midlands Fin. Benefits, Inc., 275 Neb. 642, 748 N.W.2d 626 (2008).",
+            "url": "https://www.courtlistener.com/opinion/2139960/aon-consulting-v-midlands-financial/",
+            "deepLink": "https://www.courtlistener.com/opinion/2139960/aon-consulting-v-midlands-financial/#:~:text=In%20determining%20whether%20a%20covenant,and%20oppressive%20on%20the%20employee.",
+            "proposition": "Aon's three-part test is the threshold every enforcement effort must clear before any remedy — including an injunction — is available.",
+            "verbatimQuote": "In determining whether a covenant not to compete is valid, a court considers whether the restriction is (1) reasonable in the sense that it is not injurious to the public, (2) not greater than is reasonably necessary to protect the employer in some legitimate interest, and (3) not unduly harsh and oppressive on the employee.",
+            "date": "2008-05-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-aon-test-rem"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice: with no fee clause, each side bears its own costs under the default American Rule. If a fee provision appears, check that it runs both ways — a one-sided clause sits poorly next to a harshness inquiry that already asks how much the agreement piles onto the worker.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "draft-severable-personally-served-covenants-rather-than-rely-on-reformation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.draft-severable-personally-served-covenants-rather-than-rely-on-reformation",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Self-contained covenants, not a court rescue",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#draft-severable-personally-served-covenants-rather-than-rely-on-reformation",
+        "requirementGuidance": "Read the severability boilerplate against what a Nebraska court will actually do, which is nothing: the state supreme court has declined to revisit its rejection of the blue pencil rule, has said reformation is not the function of the courts, and has found an unreasonable covenant and simply not reformed it. A clause asking the court to reduce the restraint to whatever is reasonable is therefore a dead letter. Worse, severability itself has a trap — where integrated restraints are not severable, the entire clause is invalid if one portion is invalid — so look for covenants drafted as genuinely separate units, each self-contained, each scoped to the customers the worker personally served, each able to fall alone.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-waadah-bluepencil-sev",
+            "authorityType": "case-law",
+            "title": "Unlimited Opportunity, Inc. v. Waadah",
+            "citation": "Unlimited Opportunity, Inc. v. Waadah, 290 Neb. 629, 637, 861 N.W.2d 437 (2015).",
+            "url": "https://www.courtlistener.com/opinion/2792825/unlimited-opportunity-v-waadah/",
+            "deepLink": "https://www.courtlistener.com/opinion/2792825/unlimited-opportunity-v-waadah/#:~:text=We%20decline%20Jani%2DKing%E2%80%99s%20invitation%20to,of%20the%20blue%20pencil%20rule.",
+            "proposition": "Waadah reaffirms Nebraska's rejection of blue-pencil reformation for covenants not to compete.",
+            "verbatimQuote": "We decline Jani-King’s invitation to reconsider our rejection of the blue pencil rule.",
+            "date": "2015-04-10",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-waadah-bluepencil-sev"
+          },
+          {
+            "sourceId": "ne-gaver-noreform-sev",
+            "authorityType": "case-law",
+            "title": "Gaver v. Schneider's O.K. Tire Co.",
+            "citation": "Gaver v. Schneider's O.K. Tire Co., 289 Neb. 491 (2014).",
+            "url": "https://www.courtlistener.com/opinion/2751413/gaver-v-schneiders-ok-tire-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2751413/gaver-v-schneiders-ok-tire-co/#:~:text=We%20have%20determined%20above%20that,it%20to%20make%20it%20enforceable.",
+            "proposition": "Gaver found the covenant unreasonable and declined to reform it — the no-rescue rule in operation.",
+            "verbatimQuote": "We have determined above that the noncompete agreement in this case is unreasonable, and we do not reform it to make it enforceable.",
+            "date": "2014-11-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-gaver-noreform-sev"
+          },
+          {
+            "sourceId": "ne-waadah-entire-sev",
+            "authorityType": "case-law",
+            "title": "Unlimited Opportunity, Inc. v. Waadah",
+            "citation": "Unlimited Opportunity, Inc. v. Waadah, 290 Neb. 629, 637, 861 N.W.2d 437 (2015).",
+            "url": "https://www.courtlistener.com/opinion/2792825/unlimited-opportunity-v-waadah/",
+            "deepLink": "https://www.courtlistener.com/opinion/2792825/unlimited-opportunity-v-waadah/#:~:text=The%20district%20court%20was%20correct,if%20one%20portion%20is%20invalid.",
+            "proposition": "Waadah treats nonseverable integrated restraints as falling together — the trap self-contained drafting avoids.",
+            "verbatimQuote": "The district court was correct to consider the two covenants together and find the entire clause invalid if one portion is invalid.",
+            "date": "2015-04-10",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-waadah-entire-sev"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#address-survival-per-covenant",
+        "requirementGuidance": "Each covenant should expire on its own definite schedule and read on its own. Nebraska treats nonseverable integrated restraints as standing or falling together, so self-contained survival language is the difference between losing one overreaching clause and losing the whole covenant suite with it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-waadah-entire-surv",
+            "authorityType": "case-law",
+            "title": "Unlimited Opportunity, Inc. v. Waadah",
+            "citation": "Unlimited Opportunity, Inc. v. Waadah, 290 Neb. 629, 637, 861 N.W.2d 437 (2015).",
+            "url": "https://www.courtlistener.com/opinion/2792825/unlimited-opportunity-v-waadah/",
+            "deepLink": "https://www.courtlistener.com/opinion/2792825/unlimited-opportunity-v-waadah/#:~:text=The%20district%20court%20was%20correct,if%20one%20portion%20is%20invalid.",
+            "proposition": "Waadah found the entire clause invalid where nonseverable restraints were considered together — why per-covenant survival and separateness matter.",
+            "verbatimQuote": "The district court was correct to consider the two covenants together and find the entire clause invalid if one portion is invalid.",
+            "date": "2015-04-10",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-waadah-entire-surv"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-successor-enforcement-through-merger-and-assignment-terms",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.address-successor-enforcement-through-merger-and-assignment-terms",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Who can enforce after a sale or merger",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#address-successor-enforcement-through-merger-and-assignment-terms",
+        "requirementGuidance": "Confirm the employer can assign to successors — and know that Nebraska has recognized a second path: where the statute governing a merger transfers contracts by operation of law, a covenant passes to the surviving company regardless of whether it would otherwise be assignable. Succession moves the covenant without improving it, though. The successor still must prove the restraint valid under Nebraska's rules, and in the controlling case that worked because the restriction was tied to customers the worker personally dealt with during the preceding two years.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-aon-merger-assign",
+            "authorityType": "case-law",
+            "title": "Aon Consulting, Inc. v. Midlands Financial Benefits, Inc.",
+            "citation": "Aon Consulting, Inc. v. Midlands Fin. Benefits, Inc., 275 Neb. 642, 748 N.W.2d 626 (2008).",
+            "url": "https://www.courtlistener.com/opinion/2139960/aon-consulting-v-midlands-financial/",
+            "deepLink": "https://www.courtlistener.com/opinion/2139960/aon-consulting-v-midlands-financial/#:~:text=We%20agree%20with%20those%20cases,agreement%20would%20otherwise%20be%20assignable.",
+            "proposition": "Aon holds that under merger statutes similar to Maryland's, a covenant not to compete passes by operation of law to the successor corporation regardless of assignability.",
+            "verbatimQuote": "We agree with those cases which hold, under statutes similar to Maryland's, that a covenant not to compete is an asset of a corporation which passes by operation of law to a successor corporation as the result of a merger, regardless of whether the agreement would otherwise be assignable.",
+            "date": "2008-05-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-aon-merger-assign"
+          },
+          {
+            "sourceId": "ne-aon-valid-assign",
+            "authorityType": "case-law",
+            "title": "Aon Consulting, Inc. v. Midlands Financial Benefits, Inc.",
+            "citation": "Aon Consulting, Inc. v. Midlands Fin. Benefits, Inc., 275 Neb. 642, 748 N.W.2d 626 (2008).",
+            "url": "https://www.courtlistener.com/opinion/2139960/aon-consulting-v-midlands-financial/",
+            "deepLink": "https://www.courtlistener.com/opinion/2139960/aon-consulting-v-midlands-financial/#:~:text=For%20the%20reasons%20discussed%2C%20we,A%20%26%20A%20by%20merger.",
+            "proposition": "Aon held both that the agreement was valid under Nebraska law and that the right to enforce it passed by operation of law in the merger — the successor inherits the covenant and the burden of proving it valid.",
+            "verbatimQuote": "For the reasons discussed, we conclude that the nonsolicitation agreement between Pearson and A & A was valid under Nebraska law and that the right to enforce the agreement passed to Aon by operation of law when it acquired A & A by merger.",
+            "date": "2008-05-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-aon-valid-assign"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-to-satisfy-nebraska-law-rather-than-rely-on-a-foreign-choice-of-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.draft-to-satisfy-nebraska-law-rather-than-rely-on-a-foreign-choice-of-law",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Out-of-state law is not the enforceability plan",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#draft-to-satisfy-nebraska-law-rather-than-rely-on-a-foreign-choice-of-law",
+        "requirementGuidance": "Name the governing law, venue, and dispute process — but do not let an out-of-state selection carry the enforceability strategy. The Nebraska Supreme Court applied Nebraska law to an out-of-state employer's covenant because the worker performed the services in Nebraska and the competition affected Nebraska, and it emphasized that overbroad postemployment restraints are against Nebraska public policy and void. That was a conflicts ruling, not a clause ban — no express choice-of-law clause was at issue — so treat a foreign-law selection as a risk variable rather than a cure, and draft the covenant to satisfy Nebraska law whenever Nebraska is the likely place of work, customers, and enforcement.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-mertz-controls-gov",
+            "authorityType": "case-law",
+            "title": "Mertz v. Pharmacists Mutual Insurance Co.",
+            "citation": "Mertz v. Pharmacists Mut. Ins. Co., 261 Neb. 704, 710, 625 N.W.2d 197 (2001).",
+            "url": "https://www.courtlistener.com/opinion/1245316/mertz-v-pharmacists-mutual-insurance/",
+            "deepLink": "https://www.courtlistener.com/opinion/1245316/mertz-v-pharmacists-mutual-insurance/#:~:text=Accordingly%2C%20Nebraska%20law%20should%20be,the%20validity%20of%20the%20covenant.",
+            "proposition": "Mertz applied Nebraska law to determine a covenant's validity where the services and affected competition were in Nebraska.",
+            "verbatimQuote": "Accordingly, Nebraska law should be applied to determine the validity of the covenant.",
+            "date": "2001-05-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-mertz-controls-gov"
+          },
+          {
+            "sourceId": "ne-mertz-policy-gov",
+            "authorityType": "case-law",
+            "title": "Mertz v. Pharmacists Mutual Insurance Co.",
+            "citation": "Mertz v. Pharmacists Mut. Ins. Co., 261 Neb. 704, 710, 625 N.W.2d 197 (2001).",
+            "url": "https://www.courtlistener.com/opinion/1245316/mertz-v-pharmacists-mutual-insurance/",
+            "deepLink": "https://www.courtlistener.com/opinion/1245316/mertz-v-pharmacists-mutual-insurance/#:~:text=In%20Nebraska%2C%20this%20court%20has,against%20public%20policy%20and%20void.",
+            "proposition": "Mertz states Nebraska's public-policy refusal to enforce postemployment covenants broader than reasonably necessary — the policy a foreign-law selection cannot outrun for Nebraska-centered work.",
+            "verbatimQuote": "In Nebraska, this court has refused to enforce postemployment covenants not to compete which are broader than reasonably necessary to protect legitimate business interests on the ground that such covenants are against public policy and void.",
+            "date": "2001-05-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-mertz-policy-gov"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard boilerplate with one local wrinkle: any amendment that widens a covenant — a bigger customer class, a longer period — re-runs the whole Nebraska analysis on the new terms, because the covenant is judged as written with no court trimming it back afterward. Amendment mechanics should leave a clean record of what changed and when.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "satisfy-the-three-part-reasonableness-test",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.satisfy-the-three-part-reasonableness-test",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "All three reasonableness requirements satisfied",
+        "sectionId": "nebraska-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#satisfy-the-three-part-reasonableness-test",
+        "requirementGuidance": "Run every restraint through Nebraska's three requirements: not injurious to the public, no greater than reasonably necessary to protect a legitimate employer interest, and not unduly harsh and oppressive on the employee. The legitimate interest is protection against unfair competition — goodwill, confidential information, trade secrets — never the suppression of ordinary competition from a worker who simply got better at the job, and the statutory background declares restraints of trade unlawful as the baseline every covenant must overcome. Score each covenant on each requirement, in writing, before relying on any of them.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-brown-three-part-gate",
+            "authorityType": "case-law",
+            "title": "Securities Acceptance Corp. v. Brown",
+            "citation": "Securities Acceptance Corp. v. Brown, 171 Neb. 406, 417, 106 N.W.2d 456 (1960).",
+            "url": "https://www.courtlistener.com/opinion/1948918/securities-acceptance-corporation-v-brown/",
+            "deepLink": "https://www.courtlistener.com/opinion/1948918/securities-acceptance-corporation-v-brown/#:~:text=There%20are%20three%20general%20requirements,and%20oppressive%20on%20the%20employee.",
+            "proposition": "Securities Acceptance states Nebraska's three general requirements for partial restraints of trade.",
+            "verbatimQuote": "There are three general requirements relating to partial restraints of trade: First, is the restriction reasonable in the sense that it is not injurious to the public; second, is the restriction reasonable in the sense that it is no greater than is reasonably necessary to protect the employer in some legitimate interest; and, third, is the restriction reasonable in the sense that it is not unduly harsh and oppressive on the employee.",
+            "date": "1960-12-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-brown-three-part-gate"
+          },
+          {
+            "sourceId": "ne-restraint-civil-gate",
+            "authorityType": "primary-law",
+            "title": "Neb. Rev. Stat. § 59-1603",
+            "citation": "Neb. Rev. Stat. § 59-1603.",
+            "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=59-1603",
+            "proposition": "Section 59-1603 supplies Nebraska's civil statutory baseline against contracts in restraint of trade — the background every covenant must overcome.",
+            "verbatimQuote": "Any contract, combination, in the form of trust or otherwise, or conspiracy in restraint of trade or commerce shall be unlawful.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-restraint-civil-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "limit-customer-restrictions-to-personally-served-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.limit-customer-restrictions-to-personally-served-customers",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer limits tied to people the worker served",
+        "sectionId": "nebraska-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#limit-customer-restrictions-to-personally-served-customers",
+        "requirementGuidance": "The central Nebraska gate: a goodwill covenant may be valid only if it restricts the worker from working for or soliciting the clients and accounts the worker actually did business with and personally contacted. Reaching accounts the worker never handled or even knew, or prospective customers the company merely hoped to win, took covenants down in the controlling case and in a 2024 federal application alike. The personally-served limit is a floor, not a safe harbor — the covenant still has to clear all three reasonableness requirements — and because no court here trims an overbroad class, one customer category too many risks voiding the covenant in full.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-polly-personal-gate",
+            "authorityType": "case-law",
+            "title": "Polly v. Ray D. Hilderman & Co.",
+            "citation": "Polly v. Ray D. Hilderman & Co., 225 Neb. 662, 669, 407 N.W.2d 751 (1987).",
+            "url": "https://www.courtlistener.com/opinion/1235956/polly-v-ray-d-hilderman-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1235956/polly-v-ray-d-hilderman-co/#:~:text=Because%20the%20covenant%20not%20to,is%20thus%20unreasonable%20and%20unenforceable.",
+            "proposition": "Polly held a covenant reaching clients the worker did not work with and did not even know greater than reasonably necessary and therefore unreasonable and unenforceable.",
+            "verbatimQuote": "Because the covenant not to compete in this case attempts to restrict Polly from soliciting or working for Hilderman’s clients with whom Polly did not work and did not even know, it is greater than is reasonably necessary to protect Hilderman’s legitimate interest in customer goodwill, and is thus unreasonable and unenforceable.",
+            "date": "1987-06-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-polly-personal-gate"
+          },
+          {
+            "sourceId": "ne-sisk-prospective-gate",
+            "authorityType": "case-law",
+            "title": "Sisk v. Scripps Media, Inc.",
+            "citation": "Sisk v. Scripps Media, Inc., No. 8:24CV86, 2024 WL 1175140 (D. Neb. Mar. 18, 2024).",
+            "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-8_24-cv-00086",
+            "proposition": "Sisk rejected a non-solicit reaching the company's actual or prospective customers as greatly exceeding the permissible Nebraska customer scope.",
+            "verbatimQuote": "This provision greatly exceeds the permissible scope of customers an employee may be precluded from contacting by a restrictive covenant under Nebraska law.",
+            "date": "2024-03-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-sisk-prospective-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "avoid-geographic-and-activity-bans-for-ordinary-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.avoid-geographic-and-activity-bans-for-ordinary-employees",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No radius or whole-business bans for regular employees",
+        "sectionId": "nebraska-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#avoid-geographic-and-activity-bans-for-ordinary-employees",
+        "requirementGuidance": "An ordinary employee covenant should not lean on a radius, territory, or business-activity ban. The state supreme court struck a covenant as an attempt to prevent ordinary competition rather than unfair competition, and a short radius is no safe harbor when the practical effect is to stop the worker from using general skill in the market. Tie the restraint to personally served customers instead — and keep sale-of-business covenants, where geography can legitimately protect purchased goodwill, in their own drafting lane.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-gaver-ordinary-gate",
+            "authorityType": "case-law",
+            "title": "Gaver v. Schneider's O.K. Tire Co.",
+            "citation": "Gaver v. Schneider's O.K. Tire Co., 289 Neb. 491 (2014).",
+            "url": "https://www.courtlistener.com/opinion/2751413/gaver-v-schneiders-ok-tire-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2751413/gaver-v-schneiders-ok-tire-co/#:~:text=The%20noncompete%20agreement%20as%20written,Schneider%E2%80%99s%20arguments%20to%20the%20contrary.",
+            "proposition": "Gaver struck a covenant as an attempt to prevent ordinary competition rather than improper or unjust competition — the failure mode of geographic and activity bans.",
+            "verbatimQuote": "The noncompete agreement as written is an attempt to prevent ordinary competition, not improper or unjust competition, and we reject Schneider’s arguments to the contrary.",
+            "date": "2014-11-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-gaver-ordinary-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "route-sale-of-business-covenants-through-the-transaction",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.route-sale-of-business-covenants-through-the-transaction",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Sale-of-business covenants papered in the deal",
+        "sectionId": "nebraska-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#route-sale-of-business-covenants-through-the-transaction",
+        "requirementGuidance": "When the covenant rides a genuine business sale, paper it in the transaction documents — the seller's own restraint, supported by the purchase price. Nebraska treats a sale covenant as frequently necessary to make goodwill a transferable asset the buyer actually receives, and the controlling case upheld a sale-related customer restraint as a reasonable method to protect the purchased property. The covenant still must be reasonable in character, space, and time, and the favorable treatment stays in the deal: an employment covenant cannot become a disguised market ban just because the worker knows the business.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-chambers-goodwill-gate",
+            "authorityType": "case-law",
+            "title": "Chambers-Dobson, Inc. v. Squier",
+            "citation": "Chambers-Dobson, Inc. v. Squier, 238 Neb. 748, 756, 472 N.W.2d 391 (1991).",
+            "url": "https://www.courtlistener.com/opinion/2189174/chambers-dobson-inc-v-squier/",
+            "deepLink": "https://www.courtlistener.com/opinion/2189174/chambers-dobson-inc-v-squier/#:~:text=Thus%2C%20a%20covenant%20not%20to,full%20value%20of%20acquired%20goodwill.",
+            "proposition": "Chambers-Dobson explains that a sale-of-business covenant is the seller's self-imposed restraint, frequently necessary to make goodwill a transferable asset the buyer actually receives.",
+            "verbatimQuote": "Thus, a covenant not to compete which is contained in a contract for sale of a business is a seller’s self-imposed restraint from trade and is frequently necessary to make goodwill in the seller’s business a transferable asset and ensure that the buyer receives the full value of acquired goodwill.",
+            "date": "1991-07-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-chambers-goodwill-gate"
+          },
+          {
+            "sourceId": "ne-chambers-pool-gate",
+            "authorityType": "case-law",
+            "title": "Chambers-Dobson, Inc. v. Squier",
+            "citation": "Chambers-Dobson, Inc. v. Squier, 238 Neb. 748, 763, 472 N.W.2d 391 (1991).",
+            "url": "https://www.courtlistener.com/opinion/2189174/chambers-dobson-inc-v-squier/",
+            "deepLink": "https://www.courtlistener.com/opinion/2189174/chambers-dobson-inc-v-squier/#:~:text=A%20noncompetition%20covenant%20is%20a,the%20property%20acquired%20by%20Chambers%2DDobson.",
+            "proposition": "Chambers-Dobson upheld a sale-related customer restraint as a reasonable method to protect the property the buyer acquired.",
+            "verbatimQuote": "A noncompetition covenant is a reasonable method to protect the property acquired by Chambers-Dobson.",
+            "date": "1991-07-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-chambers-pool-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "confine-statutory-reformation-to-franchise-noncompete-agreements",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.confine-statutory-reformation-to-franchise-noncompete-agreements",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Franchise reformation statute stays in its lane",
+        "sectionId": "nebraska-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#confine-statutory-reformation-to-franchise-noncompete-agreements",
+        "requirementGuidance": "Nebraska has exactly one statutory reformation rule, and it covers franchise non-compete agreements: when a court or arbitrator finds the restrictions unreasonable, the statute directs reformation to a reasonable and enforceable scope. Inside that lane the backstop is real; outside it, the common law controls and reformation is not the function of the courts. Flag any employment agreement that cites the franchise statute as a general savings mechanism — and any franchise agreement that fails to account for the mandatory reformation it is actually subject to.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ne-franchise-reformation-gate",
+            "authorityType": "primary-law",
+            "title": "Neb. Rev. Stat. § 87-404",
+            "citation": "Neb. Rev. Stat. § 87-404(2).",
+            "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=87-404",
+            "proposition": "Section 87-404 requires a court or arbitrator to reform unreasonable franchise non-compete restrictions to a reasonable and enforceable scope — the lone statutory reformation exception.",
+            "verbatimQuote": "If restrictions in a noncompete agreement are found by an arbitrator or a court to be unreasonable in restraining competition, the arbitrator or court shall reform the terms of the noncompete agreement to the extent necessary to cause the restrictions contained therein to be reasonable and enforceable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-franchise-reformation-gate"
+          },
+          {
+            "sourceId": "ne-waadah-noreform-gate",
+            "authorityType": "case-law",
+            "title": "Unlimited Opportunity, Inc. v. Waadah",
+            "citation": "Unlimited Opportunity, Inc. v. Waadah, 290 Neb. 629, 630, 861 N.W.2d 437 (2015).",
+            "url": "https://www.courtlistener.com/opinion/2792825/unlimited-opportunity-v-waadah/",
+            "deepLink": "https://www.courtlistener.com/opinion/2792825/unlimited-opportunity-v-waadah/#:~:text=It%20is%20not%20the%20function,order%20to%20make%20it%20enforceable.",
+            "proposition": "Waadah states the general common-law refusal to reform covenants not to compete — the rule the franchise statute is the lone exception to.",
+            "verbatimQuote": "It is not the function of the courts to reform a covenant not to compete in order to make it enforceable.",
+            "date": "2015-04-10",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#src-ne-waadah-noreform-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

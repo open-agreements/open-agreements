@@ -1,0 +1,1303 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/pennsylvania",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/pennsylvania.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/pennsylvania",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/pennsylvania/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/pennsylvania/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "pennsylvania",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Pennsylvania",
+      "description": "A clause-by-clause reviewer checklist for Pennsylvania employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Socko four-part test, the new-consideration rule for mid-employment covenants, and Act 74's health care restrictions.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Pennsylvania",
+      "coverage": "Pennsylvania (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 46,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "pennsylvania-statutory-gates",
+        "label": "Pennsylvania statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity the worker actually works for. In Pennsylvania the covenant is personal to the contracting employer — it does not automatically travel to affiliates or buyers — so a covenant papered with a parent or staffing entity raises the question of who, exactly, holds an enforceable promise.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#identify-effective-date",
+        "requirementGuidance": "The date does double duty here. It starts each covenant clock, and for health care practitioners it decides whether the agreement falls under the 2024 statute: a noncompete covenant entered into after the Act's effective date is void unless it fits the narrow one-year exception. An undated practitioner agreement leaves the reviewer unable to tell which regime governs.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-act74-applicability-cover",
+            "authorityType": "primary-law",
+            "title": "Fair Contracting for Health Care Practitioners Act § 4(a)",
+            "citation": "Fair Contracting for Health Care Practitioners Act, Act of July 17, 2024, P.L. 846, No. 74, § 4(a) (Pa.).",
+            "url": "https://www.legis.state.pa.us/WU01/LI/LI/US/HTM/2024/0/0074..HTM",
+            "proposition": "Act 74 keys its voiding rule to whether the noncompete covenant was entered into after the Act's effective date.",
+            "verbatimQuote": "(a) Applicability.--Except as provided under subsection (b), a noncompete covenant entered into after the effective date of this subsection is deemed contrary to the public policy and is void and unenforceable by an employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-act74-applicability-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#identify-employee-title",
+        "requirementGuidance": "Record the title and the actual duties. The role drives the reasonableness analysis — what counts as a protectable interest and a fair restraint differs for a salesperson and an engineer — and for clinicians it is dispositive: the statute names five covered practitioner classes, from medical doctors to physician assistants, and each sits under the one-year cap and dismissal rule checked at the end of this checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-act74-practitioner-cover",
+            "authorityType": "primary-law",
+            "title": "Fair Contracting for Health Care Practitioners Act § 3",
+            "citation": "Fair Contracting for Health Care Practitioners Act, Act of July 17, 2024, P.L. 846, No. 74, § 3 (Pa.).",
+            "url": "https://www.legis.state.pa.us/WU01/LI/LI/US/HTM/2024/0/0074..HTM",
+            "proposition": "Act 74 defines the covered health care practitioners as medical doctors, doctors of osteopathy, certified registered nurse anesthetists, certified registered nurse practitioners, and physician assistants.",
+            "verbatimQuote": "\"Health care practitioner.\" The following: (1) A medical doctor as defined in section 2 of the act of December 20, 1985 (P.L.457, No.112), known as the Medical Practice Act of 1985. (2) A doctor of osteopathy under the act of October 5, 1978 (P.L.1109, No.261), known as the Osteopathic Medical Practice Act. (3) A certified registered nurse anesthetist as defined in section 2(16) of the act of May 22, 1951 (P.L.317, No.69), known as The Professional Nursing Law. (4) A certified registered nurse practitioner as defined in section 2(12) of The Professional Nursing Law. (5) A physician assistant as defined in section 2 of the Osteopathic Medical Practice Act or section 2 of the Medical Practice Act of 1985.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-act74-practitioner-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated. The choice decides whether the covenant is measured against Pennsylvania's four-part test, its consideration rule, and Act 74 — or against some other body of law — and an agreement that leaves the question open invites a threshold fight before the merits.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#define-confidential-information",
+        "requirementGuidance": "Tie the definition to material the employer genuinely guards. Pennsylvania's foundational case recognized the carefully guarded methods of doing business that amount to trade secrets as the kind of interest a covenant may protect — a definition that sweeps in everything the worker ever learned reads as suppression of ordinary competition, which Pennsylvania law does not protect.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-morgans-specialized-training",
+            "authorityType": "case-law",
+            "title": "Morgan's Home Equipment Corp. v. Martucci",
+            "citation": "Morgan's Home Equipment Corp. v. Martucci, 136 A.2d 838 (Pa. 1957).",
+            "url": "https://www.courtlistener.com/opinion/2330966/morgans-home-equipment-corp-v-martucci/",
+            "deepLink": "https://www.courtlistener.com/opinion/2330966/morgans-home-equipment-corp-v-martucci/#:~:text=An%20employe%20may%20receive%20specialized,secrets%20of%20a%20particular%20enterprise.",
+            "proposition": "Morgan's Home Equipment supports protecting specialized training, skills, and guarded methods that amount to trade secrets as the interests behind a Pennsylvania restraint.",
+            "verbatimQuote": "An employe may receive specialized training and skills, and learn the carefully guarded methods of doing business which are the trade secrets of a particular enterprise.",
+            "date": "1957-11-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-morgans-specialized-training"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#define-trade-secrets",
+        "requirementGuidance": "Keep trade secrets defined separately from ordinary confidential information. The separate term lets trade-secret protection run as long as secrecy lasts while everything else gets a finite term, and it anchors the strongest protectable interest available to support the covenants — the specialized methods Pennsylvania courts have protected since the 1950s.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-morgans-specialized-training",
+            "authorityType": "case-law",
+            "title": "Morgan's Home Equipment Corp. v. Martucci",
+            "citation": "Morgan's Home Equipment Corp. v. Martucci, 136 A.2d 838 (Pa. 1957).",
+            "url": "https://www.courtlistener.com/opinion/2330966/morgans-home-equipment-corp-v-martucci/",
+            "deepLink": "https://www.courtlistener.com/opinion/2330966/morgans-home-equipment-corp-v-martucci/#:~:text=An%20employe%20may%20receive%20specialized,secrets%20of%20a%20particular%20enterprise.",
+            "proposition": "Morgan's Home Equipment supports protecting specialized training, skills, and guarded methods that amount to trade secrets as the interests behind a Pennsylvania restraint.",
+            "verbatimQuote": "An employe may receive specialized training and skills, and learn the carefully guarded methods of doing business which are the trade secrets of a particular enterprise.",
+            "date": "1957-11-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-morgans-specialized-training"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#define-restricted-period",
+        "requirementGuidance": "One defined Restricted Period keeps every duration auditable. Pennsylvania has no statutory cap for the ordinary workforce — a covenant is only presumptively enforceable when reasonably limited as to duration, measured against the interest protected — and health care practitioner covenants are capped at one year by statute regardless of what the agreement says.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-morgans-prima-facie",
+            "authorityType": "case-law",
+            "title": "Morgan's Home Equipment Corp. v. Martucci",
+            "citation": "Morgan's Home Equipment Corp. v. Martucci, 136 A.2d 838 (Pa. 1957).",
+            "url": "https://www.courtlistener.com/opinion/2330966/morgans-home-equipment-corp-v-martucci/",
+            "deepLink": "https://www.courtlistener.com/opinion/2330966/morgans-home-equipment-corp-v-martucci/#:~:text=We%20have%20held%20that%20employment,of%20time%20and%20geographical%20extent.",
+            "proposition": "Morgan's Home Equipment supports that a post-employment covenant is only prima facie enforceable when reasonably limited in duration and geographic extent.",
+            "verbatimQuote": "We have held that employment contracts containing general covenants by an employe not to compete after the termination of his employment are prima facie enforcible if they are reasonably limited as to duration of time and geographical extent.",
+            "date": "1957-11-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-morgans-prima-facie"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#define-restricted-territory",
+        "requirementGuidance": "Map the territory to where the employer actually competes. Pennsylvania courts enforce post-employment restraints only when they are reasonably limited in geographic extent and reasonably necessary to protect the employer — a territory drawn around aspiration rather than the real market is the classic overbreadth that invites a court to enforce less than the employer drafted, or nothing at all.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-sidco-standard-defs",
+            "authorityType": "case-law",
+            "title": "Sidco Paper Co. v. Aaron",
+            "citation": "Sidco Paper Co. v. Aaron, 351 A.2d 250 (Pa. 1976).",
+            "url": "https://www.courtlistener.com/opinion/1437137/sidco-paper-company-v-aaron/",
+            "deepLink": "https://www.courtlistener.com/opinion/1437137/sidco-paper-company-v-aaron/#:~:text=Our%20courts%20will%20permit%20the,in%20duration%20and%20geographic%20extent.",
+            "proposition": "Sidco supports that post-employment restraints are enforced only where incident to employment, reasonably necessary to protect the employer, and reasonably limited in duration and geographic extent.",
+            "verbatimQuote": "Our courts will permit the equitable enforcement of post-employment restraints only where they are incident to an employment relation between the parties to the covenant, the restrictions are reasonably necessary for the protection of the employer, and the restrictions are reasonably limited in duration and geographic extent.",
+            "date": "1976-01-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-sidco-standard-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the worker actually served during a stated look-back window. A recent Pennsylvania appellate decision declined to stretch a restriction to customers whose relationships predated the employee's tenure — the employer never built that goodwill through this worker, so restraining it protects nothing the law recognizes.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-english-predated-defs",
+            "authorityType": "case-law",
+            "title": "First National Trust Co. v. English",
+            "citation": "First National Trust Co. v. English, No. 1109 WDA 2025 (Pa. Super. Feb. 18, 2026) (non-precedential).",
+            "url": "https://www.pacourts.us/assets/opinions/Superior/out/J-A02018-26m%20-%20106684106347494370.pdf",
+            "proposition": "English supports that it is unreasonable to extend a restrictive covenant to customers whose relationships predated the employee's employment.",
+            "verbatimQuote": "Keeping in mind that Pennsylvania law disfavors restrictive covenants, see Socko, we conclude that it would be unreasonable to include the customers of Advisors, whose relationships predated each advisor’s employment with Appellant.",
+            "date": "2026-02-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-english-predated-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing worker actually worked with or supervised during the look-back window. No Pennsylvania statute or staged decision speaks directly to employee non-solicits, so the clause is judged on the same reasonableness principles as every other restraint — a modest, relationship-based class is far easier to defend than a workforce-wide hiring fence.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#define-protected-interests",
+        "requirementGuidance": "Name the interests in the vocabulary Pennsylvania recognizes: trade secrets, confidential information, customer goodwill, and genuinely specialized training. The fourth element of the enforceability test runs through these interests, and the covenants are enforced only so far as reasonably necessary to protect them — a recital that claims only a wish to avoid competition supports nothing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-morgans-necessary-defs",
+            "authorityType": "case-law",
+            "title": "Morgan's Home Equipment Corp. v. Martucci",
+            "citation": "Morgan's Home Equipment Corp. v. Martucci, 136 A.2d 838 (Pa. 1957).",
+            "url": "https://www.courtlistener.com/opinion/2330966/morgans-home-equipment-corp-v-martucci/",
+            "deepLink": "https://www.courtlistener.com/opinion/2330966/morgans-home-equipment-corp-v-martucci/#:~:text=They%20are%20enforced%20by%20the,the%20protection%20of%20the%20employer.",
+            "proposition": "Morgan's Home Equipment supports that covenants protecting these interests are enforced only as reasonably necessary for the employer's protection.",
+            "verbatimQuote": "They are enforced by the courts as reasonably necessary for the protection of the employer.",
+            "date": "1957-11-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-morgans-necessary-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity in concrete terms, then test the definition against the worker's trade. Pennsylvania courts subject these covenants to close scrutiny precisely because the parties bargain from unequal positions — a definition that swallows the worker's whole occupation hands the employee that scrutiny argument fully formed.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-reading-scrutiny-defs",
+            "authorityType": "case-law",
+            "title": "Reading Aviation Service, Inc. v. Bertolet",
+            "citation": "Reading Aviation Service, Inc. v. Bertolet, 311 A.2d 628 (Pa. 1973).",
+            "url": "https://www.courtlistener.com/opinion/6390927/reading-aviation-service-inc-v-bertolet/",
+            "deepLink": "https://www.courtlistener.com/opinion/6390927/reading-aviation-service-inc-v-bertolet/#:~:text=Because%20of%20the%20inherently%20unequal,their%20employers%20to%20close%20scrutiny.",
+            "proposition": "Reading Aviation supports that Pennsylvania courts subject employee non-competition covenants to close scrutiny because of unequal bargaining positions.",
+            "verbatimQuote": "Because of the inherently unequal bargaining positions of the parties, we have consistently subjected covenants of non-competition between employees and their employers to close scrutiny.",
+            "date": "1973-11-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-reading-scrutiny-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. A clause that technically forbids holding index funds or ordinary public shares is breadth no protectable interest justifies — exactly the gratuitous overreach Pennsylvania courts have warned drafters away from.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#define-passive-public-holdings",
+        "requirementGuidance": "A drafting convenience, not a requirement — plenty of agreements inline the carve-out language instead. If the capitalized term appears, confirm its percentage matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit-as-affirmative-conduct",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.pennsylvania.define-solicit-as-affirmative-conduct",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#define-solicit-as-affirmative-conduct",
+        "requirementGuidance": "Pennsylvania reads solicitation as something the employee does, not something that happens to them. A 2026 Superior Court memorandum held that the verbs solicit, divert, and entice each require an affirmative act — so a worker who merely accepts business from clients who seek him out has not breached — and found a non-solicitation clause unenforceable as written because it had no geographic scope. The decision is non-precedential, but it applies settled reasonableness principles: define soliciting as affirmative outreach directed at covered customers, give the clause a geographic limit, and do not write a definition that quietly converts the clause into a ban on accepting work.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-english-affirmative-defs",
+            "authorityType": "case-law",
+            "title": "First National Trust Co. v. English",
+            "citation": "First National Trust Co. v. English, No. 1109 WDA 2025 (Pa. Super. Feb. 18, 2026) (non-precedential).",
+            "url": "https://www.pacourts.us/assets/opinions/Superior/out/J-A02018-26m%20-%20106684106347494370.pdf",
+            "proposition": "English supports that the terms solicit, divert, and entice each require an affirmative act, so passively accepting business is not solicitation.",
+            "verbatimQuote": "Significantly, the terms “solicit”, “divert,” and “entice” are verbs, with each requiring an affirmative act.",
+            "date": "2026-02-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-english-affirmative-defs"
+          },
+          {
+            "sourceId": "pa-english-no-geo-defs",
+            "authorityType": "case-law",
+            "title": "First National Trust Co. v. English",
+            "citation": "First National Trust Co. v. English, No. 1109 WDA 2025 (Pa. Super. Feb. 18, 2026) (non-precedential).",
+            "url": "https://www.pacourts.us/assets/opinions/Superior/out/J-A02018-26m%20-%20106684106347494370.pdf",
+            "proposition": "English supports that a non-solicitation clause lacking any geographic scope is unenforceable as written.",
+            "verbatimQuote": "Thus, the non-solicitation clause is unenforceable as written.",
+            "date": "2026-02-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-english-no-geo-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger covers resignation, dismissal, and expiration the same way — and capture who ended the relationship and why, because in Pennsylvania that fact shapes enforcement. The courts draw a significant distinction between a worker who voluntarily leaves and one fired for failing to do the job: dismissing a worker as not worth keeping undercuts the claim that the employer still needs protection from that same worker.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-brobston-distinction-defs",
+            "authorityType": "case-law",
+            "title": "Insulation Corp. of America v. Brobston",
+            "citation": "Insulation Corp. of America v. Brobston, 667 A.2d 729 (Pa. Super. 1995).",
+            "url": "https://www.courtlistener.com/opinion/2383660/insulation-corp-of-america-v-brobston/",
+            "deepLink": "https://www.courtlistener.com/opinion/2383660/insulation-corp-of-america-v-brobston/#:~:text=It%20bears%20noting%20that%20there,failing%20to%20do%20his%20job.",
+            "proposition": "Brobston supports that there is a significant distinction between enforcing a covenant against an employee who voluntarily leaves and one terminated for failing to do the job.",
+            "verbatimQuote": "It bears noting that there is a significant factual distinction between the hardship imposed by the enforcement of a restrictive covenant on an employee who voluntarily leaves his employer and that imposed upon an employee who is terminated for failing to do his job.",
+            "date": "1995-11-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-brobston-distinction-defs"
+          },
+          {
+            "sourceId": "pa-brobston-fired-defs",
+            "authorityType": "case-law",
+            "title": "Insulation Corp. of America v. Brobston",
+            "citation": "Insulation Corp. of America v. Brobston, 667 A.2d 729 (Pa. Super. 1995).",
+            "url": "https://www.courtlistener.com/opinion/2383660/insulation-corp-of-america-v-brobston/",
+            "deepLink": "https://www.courtlistener.com/opinion/2383660/insulation-corp-of-america-v-brobston/#:~:text=Where%20an%20employee%20is%20terminated,the%20employee%20in%20its%20service.",
+            "proposition": "Brobston supports that an employer who fires an employee for failing to promote its business interests has implicitly decided those interests are best served without the employee.",
+            "verbatimQuote": "Where an employee is terminated by his employer on the grounds that he has failed to promote the employer's legitimate business interests, it clearly suggests an implicit decision on the part of the employer that its business interests are best promoted without the employee in its service.",
+            "date": "1995-11-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-brobston-fired-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "provide-new-consideration-for-post-hire-covenants",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.pennsylvania.provide-new-consideration-for-post-hire-covenants",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "New consideration for a mid-employment covenant",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#provide-new-consideration-for-post-hire-covenants",
+        "requirementGuidance": "This is the item that kills more Pennsylvania covenants than any other. A covenant signed after employment has begun is enforceable only with new and valuable consideration beyond keeping the job — a raise, bonus, promotion, or other beneficial change in status — because continued at-will employment alone is not enough. A recital that the parties intend to be legally bound does not plug the gap: the Supreme Court held the statutory recital cannot substitute for real consideration in this context. And for a covenant signed shortly after the first day, no new consideration is needed only if the parties agreed to its essential provisions when the relationship began. Find the date, find the consideration, and confirm the worker actually received it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-socko-mid-employment",
+            "authorityType": "case-law",
+            "title": "Socko v. Mid-Atlantic Systems of CPA, Inc.",
+            "citation": "Socko v. Mid-Atlantic Systems of CPA, Inc., 126 A.3d 1266 (Pa. 2015).",
+            "url": "https://www.courtlistener.com/opinion/3155889/socko-d-v-mid-atantic-systems-of-cpa-inc-aplt/",
+            "deepLink": "https://www.courtlistener.com/opinion/3155889/socko-d-v-mid-atantic-systems-of-cpa-inc-aplt/#:~:text=In%20the%20context%20of%20requiring,to%20support%20the%20restrictive%20clause.",
+            "proposition": "Socko supports that a covenant required mid-employment is enforceable only with new and valuable consideration beyond mere continued employment.",
+            "verbatimQuote": "In the context of requiring an employee to agree to a restrictive covenant mid-employment, however, such a restraint on trade will be enforceable only if new and valuable consideration, beyond mere continued employment, is provided and is sufficient to support the restrictive clause.",
+            "date": "2015-11-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-socko-mid-employment"
+          },
+          {
+            "sourceId": "pa-maintenance-continued",
+            "authorityType": "case-law",
+            "title": "Maintenance Specialties, Inc. v. Gottus",
+            "citation": "Maintenance Specialties, Inc. v. Gottus, 314 A.2d 279 (Pa. 1974).",
+            "url": "https://www.courtlistener.com/opinion/1925441/maintenance-specialties-inc-v-gottus/",
+            "deepLink": "https://www.courtlistener.com/opinion/1925441/maintenance-specialties-inc-v-gottus/#:~:text=An%20employee's%20continued%20employment%20is,employment%20for%20a%20definite%20term.",
+            "proposition": "Maintenance Specialties supports that continued employment is not sufficient consideration for a covenant signed after employment began.",
+            "verbatimQuote": "An employee's continued employment is not sufficient consideration for a covenant not to compete which the employee signed after the inception of his employment, where the employer makes no promise of continued employment for a definite term.",
+            "date": "1974-01-25",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-maintenance-continued"
+          },
+          {
+            "sourceId": "pa-socko-uwoa",
+            "authorityType": "case-law",
+            "title": "Socko v. Mid-Atlantic Systems of CPA, Inc.",
+            "citation": "Socko v. Mid-Atlantic Systems of CPA, Inc., 126 A.3d 1266 (Pa. 2015).",
+            "url": "https://www.courtlistener.com/opinion/3155889/socko-d-v-mid-atantic-systems-of-cpa-inc-aplt/",
+            "deepLink": "https://www.courtlistener.com/opinion/3155889/socko-d-v-mid-atantic-systems-of-cpa-inc-aplt/#:~:text=we%20conclude%20that%20a%20construction,of%20employment%20would%20be%20unreasonable.",
+            "proposition": "Socko supports that the Uniform Written Obligations Act's intend-to-be-legally-bound recital does not cure a lack of consideration for a restrictive covenant.",
+            "verbatimQuote": "we conclude that a construction of the UWOA which would vitiate the need for new and valuable consideration when entering into an agreement containing a restrictive covenant after the initiation of employment would be unreasonable.",
+            "date": "2015-11-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-socko-uwoa"
+          },
+          {
+            "sourceId": "pa-rullex-essential",
+            "authorityType": "case-law",
+            "title": "Rullex Co. v. Tel-Stream, Inc.",
+            "citation": "Rullex Co. v. Tel-Stream, Inc., 232 A.3d 620 (Pa. 2020).",
+            "url": "https://www.courtlistener.com/opinion/4761300/rullex-co-llc-aplt-v-tel-stream-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4761300/rullex-co-llc-aplt-v-tel-stream-inc/#:~:text=From%20the%20foregoing%20it%20should,beginning%20of%20the%20employment%20relationship.",
+            "proposition": "Rullex supports that a covenant signed after the first day of work is enforceable without new consideration only if the parties agreed to its essential provisions at the start of employment.",
+            "verbatimQuote": "From the foregoing it should be evident that, for a restrictive covenant executed after the first day of employment to be enforceable absent new consideration, the parties must have agreed to its essential provisions as of the beginning of the employment relationship.",
+            "date": "2020-06-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-rullex-essential"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Pennsylvania statute demands it, but these covenants are scrutinized closely because the parties bargain from unequal positions — and a documented opportunity to take the agreement to a lawyer before signing is cheap evidence that the process was fair rather than coercive.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "The trade-secret obligation should last as long as secrecy does — that is how federal law defines the right. A fixed expiry on trade-secret confidentiality quietly forfeits protection the employer is entitled to keep, and in a state where the covenant must be tethered to a genuine protectable interest, weakening the trade-secret position weakens the covenant resting on it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-dtsa-trade-secret-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. Pennsylvania measures every restraint against what is reasonably necessary, and a perpetual lid on non-secret material is exactly the kind of unbounded obligation that draws an overbreadth attack — the two-track structure keeps the perpetual duty where it belongs.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in Pennsylvania: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later federal trade-secret suit against the worker. For an employer whose restraint package leans on trade secrets, giving up those remedies over a missing paragraph is an unforced error.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech regardless of the governing state, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. A confidentiality clause cannot stop legally compelled disclosure, and a clause that pretends otherwise hands the worker an overbreadth argument for free.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. The certification builds the record an employer needs if a covenant fight comes: in a state where the restraint must track a genuine protectable interest, being able to show exactly what confidential material left and what came back makes the interest concrete instead of rhetorical.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and the quietest covenant in the Pennsylvania family: no statute addresses it, so it is judged on ordinary reasonableness. Keep it inside the Covered Employees class and the Restricted Period — and remember that a clause restraining the worker from soliciting colleagues is different in kind from a clause between two businesses promising not to hire each other's people, which faces its own Pennsylvania problem checked at the end of this list.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#permit-customer-nonsolicit",
+        "requirementGuidance": "Often the best-value covenant, but Pennsylvania polices its edges. Keep it tied to customers the worker actually served, give it a geographic limit, and keep the operative verbs affirmative — a recent appellate decision read soliciting, diverting, and enticing as each requiring an affirmative act, so a clause counting on catching passively accepted business is counting on language the court refused to stretch.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-english-acceptance-covs",
+            "authorityType": "case-law",
+            "title": "First National Trust Co. v. English",
+            "citation": "First National Trust Co. v. English, No. 1109 WDA 2025 (Pa. Super. Feb. 18, 2026) (non-precedential).",
+            "url": "https://www.pacourts.us/assets/opinions/Superior/out/J-A02018-26m%20-%20106684106347494370.pdf",
+            "proposition": "English supports that the terms solicit, divert, and entice each require an affirmative act, so passively accepting business is not solicitation.",
+            "verbatimQuote": "Significantly, the terms “solicit”, “divert,” and “entice” are verbs, with each requiring an affirmative act.",
+            "date": "2026-02-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-english-acceptance-covs"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they call first — which is precisely the conduct Pennsylvania's affirmative-act reading of solicitation leaves free. A clause prohibiting the worker from accepting unsolicited business is therefore a deliberate escalation, not a drafting variant: treat it as a restraint that needs its own reasonableness justification, and keep the customer class and period tight.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-english-acceptance-covs",
+            "authorityType": "case-law",
+            "title": "First National Trust Co. v. English",
+            "citation": "First National Trust Co. v. English, No. 1109 WDA 2025 (Pa. Super. Feb. 18, 2026) (non-precedential).",
+            "url": "https://www.pacourts.us/assets/opinions/Superior/out/J-A02018-26m%20-%20106684106347494370.pdf",
+            "proposition": "English supports that the terms solicit, divert, and entice each require an affirmative act, so passively accepting business is not solicitation.",
+            "verbatimQuote": "Significantly, the terms “solicit”, “divert,” and “entice” are verbs, with each requiring an affirmative act.",
+            "date": "2026-02-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-english-acceptance-covs"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#permit-non-compete",
+        "requirementGuidance": "Available in Pennsylvania, but only on the common law's terms, and under close scrutiny. Every element gets tested: ancillary to the employment, supported by adequate consideration, reasonably limited in time and territory, and tied to a legitimate business interest. Route the review through the Pennsylvania gates at the end of this checklist — the four-part test first, then the health care rules if the worker is a covered practitioner.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-socko-test-covs",
+            "authorityType": "case-law",
+            "title": "Socko v. Mid-Atlantic Systems of CPA, Inc.",
+            "citation": "Socko v. Mid-Atlantic Systems of CPA, Inc., 126 A.3d 1266 (Pa. 2015).",
+            "url": "https://www.courtlistener.com/opinion/3155889/socko-d-v-mid-atantic-systems-of-cpa-inc-aplt/",
+            "deepLink": "https://www.courtlistener.com/opinion/3155889/socko-d-v-mid-atantic-systems-of-cpa-inc-aplt/#:~:text=Consistent%20with%20this%20legal%20background%2C,legitimate%20interests%20of%20the%20employer.",
+            "proposition": "Socko restates Pennsylvania's four-part rule that a restrictive covenant is enforceable only if it is ancillary to employment, supported by adequate consideration, reasonably limited, and designed to protect the employer's legitimate interests.",
+            "verbatimQuote": "Consistent with this legal background, currently in Pennsylvania, restrictive covenants are enforceable only if they are: (1) ancillary to an employment relationship between an employee and an employer; (2) supported by adequate consideration; (3) the restrictions are reasonably limited in duration and geographic extent; and (4) the restrictions are designed to protect the legitimate interests of the employer.",
+            "date": "2015-11-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-socko-test-covs"
+          },
+          {
+            "sourceId": "pa-reading-scrutiny-covs",
+            "authorityType": "case-law",
+            "title": "Reading Aviation Service, Inc. v. Bertolet",
+            "citation": "Reading Aviation Service, Inc. v. Bertolet, 311 A.2d 628 (Pa. 1973).",
+            "url": "https://www.courtlistener.com/opinion/6390927/reading-aviation-service-inc-v-bertolet/",
+            "deepLink": "https://www.courtlistener.com/opinion/6390927/reading-aviation-service-inc-v-bertolet/#:~:text=Because%20of%20the%20inherently%20unequal,their%20employers%20to%20close%20scrutiny.",
+            "proposition": "Reading Aviation supports that Pennsylvania courts subject employee non-competition covenants to close scrutiny because of unequal bargaining positions.",
+            "verbatimQuote": "Because of the inherently unequal bargaining positions of the parties, we have consistently subjected covenants of non-competition between employees and their employers to close scrutiny.",
+            "date": "1973-11-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-reading-scrutiny-covs"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, the covenant should bind those instead of leaning on the open-ended Competitive Business definition. In a state whose courts enforce restraints only so far as reasonably necessary — and may decline to trim an aggressive draft — a named list is self-proving narrowness that leaves the worker the rest of the industry.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — an investment restraint with no carve-out and no end date is breadth the employer will struggle to justify as reasonably necessary for any recognized interest.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state, and no Pennsylvania statute gives the clause any special shelter.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Practitioner rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state Pennsylvania's health care rules plainly: for a covered practitioner, a noncompete covenant is enforceable only if it runs no more than one year and the practitioner was not dismissed by the employer, and the employer owes departing practitioners' recent patients a notice within 90 days. The covered classes go well beyond physicians — nurse anesthetists, nurse practitioners, and physician assistants are all in — so the clause should speak to practitioners generally, not doctors alone. The hard gates are checked in the Pennsylvania section below.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-act74-exception-clause",
+            "authorityType": "primary-law",
+            "title": "Fair Contracting for Health Care Practitioners Act § 4(b)",
+            "citation": "Fair Contracting for Health Care Practitioners Act, Act of July 17, 2024, P.L. 846, No. 74, § 4(b) (Pa.).",
+            "url": "https://www.legis.state.pa.us/WU01/LI/LI/US/HTM/2024/0/0074..HTM",
+            "proposition": "Act 74 permits enforcement only if the covenant is no more than one year and the practitioner was not dismissed by the employer.",
+            "verbatimQuote": "(b) Exception.--An employer may enforce a noncompete covenant if the length of the noncompete covenant is no more than one year, provided that the health care practitioner was not dismissed by the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-act74-exception-clause"
+          },
+          {
+            "sourceId": "pa-act74-notice-clause",
+            "authorityType": "primary-law",
+            "title": "Fair Contracting for Health Care Practitioners Act § 5(b)",
+            "citation": "Fair Contracting for Health Care Practitioners Act, Act of July 17, 2024, P.L. 846, No. 74, § 5(b) (Pa.).",
+            "url": "https://www.legis.state.pa.us/WU01/LI/LI/US/HTM/2024/0/0074..HTM",
+            "proposition": "Act 74 requires an employer to notify a departing practitioner's recent patients within 90 days of the departure.",
+            "verbatimQuote": "(b) Time period.--The employer shall provide the notice within 90 days of the health care practitioner's departure.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-act74-notice-clause"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. It surfaces an incoming covenant on day one — when the parties can still test it against Pennsylvania's four-part framework and consideration rule — instead of after a demand letter arrives mid-quarter.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice, not a requirement. A notice provision can support enforcement, but warning a new employer off a worker based on a covenant a Pennsylvania court would refuse to enforce — for missing consideration, overbreadth, or the health care rules — invites a tortious-interference dispute. If the clause appears, condition any outreach on a covenant that actually survives the gates in this checklist.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Pennsylvania question. No staged statute or appellate decision squarely endorses automatic tolling, and the background rules cut against open-ended extensions: every restraint must be reasonably limited in duration, and a covenant is only presumptively enforceable when reasonably limited as to time. Draft any extension as a separate, breach-tied, bounded restraint, and do not assume a court will revive an expired covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-sidco-tolling",
+            "authorityType": "case-law",
+            "title": "Sidco Paper Co. v. Aaron",
+            "citation": "Sidco Paper Co. v. Aaron, 351 A.2d 250 (Pa. 1976).",
+            "url": "https://www.courtlistener.com/opinion/1437137/sidco-paper-company-v-aaron/",
+            "deepLink": "https://www.courtlistener.com/opinion/1437137/sidco-paper-company-v-aaron/#:~:text=Our%20courts%20will%20permit%20the,in%20duration%20and%20geographic%20extent.",
+            "proposition": "Sidco supports that any restraint, including an extension of the restricted period, must be reasonably necessary to protect the employer and reasonably limited in duration.",
+            "verbatimQuote": "Our courts will permit the equitable enforcement of post-employment restraints only where they are incident to an employment relation between the parties to the covenant, the restrictions are reasonably necessary for the protection of the employer, and the restrictions are reasonably limited in duration and geographic extent.",
+            "date": "1976-01-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-sidco-tolling"
+          },
+          {
+            "sourceId": "pa-morgans-tolling",
+            "authorityType": "case-law",
+            "title": "Morgan's Home Equipment Corp. v. Martucci",
+            "citation": "Morgan's Home Equipment Corp. v. Martucci, 136 A.2d 838 (Pa. 1957).",
+            "url": "https://www.courtlistener.com/opinion/2330966/morgans-home-equipment-corp-v-martucci/",
+            "deepLink": "https://www.courtlistener.com/opinion/2330966/morgans-home-equipment-corp-v-martucci/#:~:text=We%20have%20held%20that%20employment,of%20time%20and%20geographical%20extent.",
+            "proposition": "Morgan's Home Equipment supports that a covenant is only prima facie enforceable when reasonably limited as to duration, which cuts against an open-ended extension.",
+            "verbatimQuote": "We have held that employment contracts containing general covenants by an employe not to compete after the termination of his employment are prima facie enforcible if they are reasonably limited as to duration of time and geographical extent.",
+            "date": "1957-11-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-morgans-tolling"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief. Enforcement of these covenants in Pennsylvania is equitable at its core — the courts speak of the equitable enforcement of post-employment restraints — so the acknowledgement supports, but never replaces, the showing a court will demand before restraining anyone.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-sidco-equitable-remedies",
+            "authorityType": "case-law",
+            "title": "Sidco Paper Co. v. Aaron",
+            "citation": "Sidco Paper Co. v. Aaron, 351 A.2d 250 (Pa. 1976).",
+            "url": "https://www.courtlistener.com/opinion/1437137/sidco-paper-company-v-aaron/",
+            "deepLink": "https://www.courtlistener.com/opinion/1437137/sidco-paper-company-v-aaron/#:~:text=Our%20courts%20will%20permit%20the,in%20duration%20and%20geographic%20extent.",
+            "proposition": "Sidco frames covenant enforcement as equitable, conditioned on necessity and reasonable limits.",
+            "verbatimQuote": "Our courts will permit the equitable enforcement of post-employment restraints only where they are incident to an employment relation between the parties to the covenant, the restrictions are reasonably necessary for the protection of the employer, and the restrictions are reasonably limited in duration and geographic extent.",
+            "date": "1976-01-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-sidco-equitable-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice; the default American Rule applies if the agreement is silent. Check that any fee-shifting is mutual and prevailing-party based — a one-way employer clause adds to the harshness of a package that Pennsylvania courts already read with a skeptical eye.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "draft-reasonable-tiers-rather-than-rely-on-partial-enforcement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.pennsylvania.draft-reasonable-tiers-rather-than-rely-on-partial-enforcement",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Tiered restraints, not court rescue",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#draft-reasonable-tiers-rather-than-rely-on-partial-enforcement",
+        "requirementGuidance": "Read the severability clause as architecture, not insurance. A Pennsylvania court of equity can enforce just the portions of an overbroad covenant that are reasonably necessary — but the power is discretionary, and the Supreme Court has warned that freely rewriting excessive restraints would reward employers for over-drafting, secure in the knowledge that something survives. A covenant drafted far broader than necessary may get no rescue at all. Prefer separable tiers, customer-specific alternatives, and distinct duration and geography steps that give a court reasonable text to enforce without authoring the restraint itself.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-sidco-partial",
+            "authorityType": "case-law",
+            "title": "Sidco Paper Co. v. Aaron",
+            "citation": "Sidco Paper Co. v. Aaron, 351 A.2d 250 (Pa. 1976).",
+            "url": "https://www.courtlistener.com/opinion/1437137/sidco-paper-company-v-aaron/",
+            "deepLink": "https://www.courtlistener.com/opinion/1437137/sidco-paper-company-v-aaron/#:~:text=However%2C%20where%20the%20covenant%20imposes,the%20protection%20of%20the%20employer.",
+            "proposition": "Sidco supports that a court of equity may grant enforcement limited to the portions of an overbroad covenant that are reasonably necessary to protect the employer.",
+            "verbatimQuote": "However, where the covenant imposes restrictions broader than necessary to protect the employer, we have repeatedly held that a court of equity may grant enforcement limited to those portions of the restrictions which are reasonably necessary for the protection of the employer.",
+            "date": "1976-01-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-sidco-partial"
+          },
+          {
+            "sourceId": "pa-reading-overreach",
+            "authorityType": "case-law",
+            "title": "Reading Aviation Service, Inc. v. Bertolet",
+            "citation": "Reading Aviation Service, Inc. v. Bertolet, 311 A.2d 628 (Pa. 1973).",
+            "url": "https://www.courtlistener.com/opinion/6390927/reading-aviation-service-inc-v-bertolet/",
+            "deepLink": "https://www.courtlistener.com/opinion/6390927/reading-aviation-service-inc-v-bertolet/#:~:text=The%20objection%20to%20such%20a,part%2C%20if%20not%20in%20full.",
+            "proposition": "Reading Aviation supports that courts are wary of rewriting overbroad covenants because doing so encourages employers to insist on excessive restrictions.",
+            "verbatimQuote": "The objection to such a practice is that it tends to encourage employers and purchasers possessing superior bargaining power over that of their employees and vendors to insist upon unreasonable and excessive restrictions, secure in the knowledge that the promise may be upheld in part, if not in full.",
+            "date": "1973-11-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-reading-overreach"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite elsewhere. The discipline matters in Pennsylvania because each surviving restraint is measured on its own footing against the four-part test: a defensible customer non-solicit should not have its fate bundled with a shakier market-wide ban inside one undifferentiated survival clause.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "include-an-express-assignability-provision",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.pennsylvania.include-an-express-assignability-provision",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Express assignability provision",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#include-an-express-assignability-provision",
+        "requirementGuidance": "In Pennsylvania this clause is load-bearing, not boilerplate. The Supreme Court holds that a restrictive covenant in an employment agreement does not pass to a buyer in an asset sale unless the agreement contains a specific assignability provision — the covenant is personal, confined to the employer the worker actually contracted with. A generic successors-and-assigns recital that never mentions the restrictive covenants leaves an acquirer with nothing to enforce, so confirm the express provision exists in every agreement a transaction is counting on.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-hess-not-assignable",
+            "authorityType": "case-law",
+            "title": "Hess v. Gebhard & Co.",
+            "citation": "Hess v. Gebhard & Co. Inc., 808 A.2d 912 (Pa. 2002).",
+            "url": "https://www.courtlistener.com/opinion/1931597/hess-v-gebhard-co-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1931597/hess-v-gebhard-co-inc/#:~:text=Therefore%2C%20we%20hold%20that%20a,in%20a%20sale%20of%20assets.",
+            "proposition": "Hess supports that a restrictive covenant in an employment agreement is not assignable to a purchasing entity in a sale of assets absent a specific assignability provision.",
+            "verbatimQuote": "Therefore, we hold that a restrictive covenant not to compete, contained in an employment agreement, is not assignable to the purchasing business entity, in the absence of a specific assignability provision, where the covenant is included in a sale of assets.",
+            "date": "2002-10-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-hess-not-assignable"
+          },
+          {
+            "sourceId": "pa-hess-personal",
+            "authorityType": "case-law",
+            "title": "Hess v. Gebhard & Co.",
+            "citation": "Hess v. Gebhard & Co. Inc., 808 A.2d 912 (Pa. 2002).",
+            "url": "https://www.courtlistener.com/opinion/1931597/hess-v-gebhard-co-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1931597/hess-v-gebhard-co-inc/#:~:text=Like%20the%20contract%20for%20hire%2C,absent%20specific%20provisions%20for%20assignability.",
+            "proposition": "Hess supports that an employee's restrictive covenant is confined to the employer with whom the agreement was made, absent specific provisions for assignability.",
+            "verbatimQuote": "Like the contract for hire, upon which the covenant was given, the employee’s restrictive covenant is confined to the employer with whom the agreement was made, absent specific provisions for assignability.",
+            "date": "2002-10-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-hess-personal"
+          }
+        ]
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law, venue, dispute process",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#specify-governing-law-and-venue",
+        "requirementGuidance": "The clause should name governing law, venue, and the dispute process. For a Pennsylvania workforce the honest selection is Pennsylvania law and a Pennsylvania forum: the covenant was presumably drafted against the four-part test, the consideration rule, and the health care statute, and a foreign-law clause papering a Pennsylvania clinician or salesperson signals a form that was never localized — and tees up a choice-of-law fight on top of the merits.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate with a Pennsylvania trap inside: a covenant added by amendment after the initial contract is a later-agreed restraint, and a later-agreed restraint must be supported by new consideration of its own. Review the amendment mechanics so a routine refresh does not quietly create a covenant the employer never paid for — and remember that an intend-to-be-legally-bound recital cannot stand in for the missing value.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-kistler-later",
+            "authorityType": "case-law",
+            "title": "George W. Kistler, Inc. v. O'Brien",
+            "citation": "George W. Kistler, Inc. v. O'Brien, 347 A.2d 311 (Pa. 1975).",
+            "url": "https://www.courtlistener.com/opinion/1482686/george-w-kistler-inc-v-obrien/",
+            "deepLink": "https://www.courtlistener.com/opinion/1482686/george-w-kistler-inc-v-obrien/#:~:text=While%20a%20restrictive%20covenant%2C%20in,be%20supported%20by%20new%20consideration.",
+            "proposition": "Kistler supports that a covenant agreed upon after the initial contract must be supported by new consideration.",
+            "verbatimQuote": "While a restrictive covenant, in order to be valid need not appear in the initial contract, if it is agreed upon at some later time it must be supported by new consideration.",
+            "date": "1975-10-30",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-kistler-later"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-covenants-within-the-four-part-enforceability-test",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.pennsylvania.keep-covenants-within-the-four-part-enforceability-test",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "All four enforceability elements satisfied",
+        "sectionId": "pennsylvania-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#keep-covenants-within-the-four-part-enforceability-test",
+        "requirementGuidance": "Run every restraint through Pennsylvania's four questions: is the covenant ancillary to an employment relationship, is it supported by adequate consideration, is it reasonably limited in duration and geographic extent, and is it designed to protect a legitimate interest of the employer? All four must hold — a covenant reasonably limited in every dimension still fails if the consideration was just keeping the job, and a well-paid-for covenant still fails if it protects nothing but freedom from competition. The framework is decades old: a post-employment covenant is only presumptively enforceable when reasonably limited as to time and geography, and even then the courts enforce no more than the employer's protection requires.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-socko-four-part-gate",
+            "authorityType": "case-law",
+            "title": "Socko v. Mid-Atlantic Systems of CPA, Inc.",
+            "citation": "Socko v. Mid-Atlantic Systems of CPA, Inc., 126 A.3d 1266 (Pa. 2015).",
+            "url": "https://www.courtlistener.com/opinion/3155889/socko-d-v-mid-atantic-systems-of-cpa-inc-aplt/",
+            "deepLink": "https://www.courtlistener.com/opinion/3155889/socko-d-v-mid-atantic-systems-of-cpa-inc-aplt/#:~:text=Consistent%20with%20this%20legal%20background%2C,legitimate%20interests%20of%20the%20employer.",
+            "proposition": "Socko restates Pennsylvania's four-part rule that a restrictive covenant is enforceable only if it is ancillary to employment, supported by adequate consideration, reasonably limited, and designed to protect the employer's legitimate interests.",
+            "verbatimQuote": "Consistent with this legal background, currently in Pennsylvania, restrictive covenants are enforceable only if they are: (1) ancillary to an employment relationship between an employee and an employer; (2) supported by adequate consideration; (3) the restrictions are reasonably limited in duration and geographic extent; and (4) the restrictions are designed to protect the legitimate interests of the employer.",
+            "date": "2015-11-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-socko-four-part-gate"
+          },
+          {
+            "sourceId": "pa-morgans-prima-facie-gate",
+            "authorityType": "case-law",
+            "title": "Morgan's Home Equipment Corp. v. Martucci",
+            "citation": "Morgan's Home Equipment Corp. v. Martucci, 136 A.2d 838 (Pa. 1957).",
+            "url": "https://www.courtlistener.com/opinion/2330966/morgans-home-equipment-corp-v-martucci/",
+            "deepLink": "https://www.courtlistener.com/opinion/2330966/morgans-home-equipment-corp-v-martucci/#:~:text=We%20have%20held%20that%20employment,of%20time%20and%20geographical%20extent.",
+            "proposition": "Morgan's Home Equipment supports that a post-employment covenant is only prima facie enforceable when reasonably limited in duration and geographic extent.",
+            "verbatimQuote": "We have held that employment contracts containing general covenants by an employe not to compete after the termination of his employment are prima facie enforcible if they are reasonably limited as to duration of time and geographical extent.",
+            "date": "1957-11-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-morgans-prima-facie-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "void-health-care-noncompetes-over-one-year-or-after-dismissal",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.pennsylvania.void-health-care-noncompetes-over-one-year-or-after-dismissal",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Health care non-competes capped at one year, gone on dismissal",
+        "sectionId": "pennsylvania-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#void-health-care-noncompetes-over-one-year-or-after-dismissal",
+        "requirementGuidance": "For a covered health care practitioner — a medical doctor, doctor of osteopathy, certified registered nurse anesthetist, certified registered nurse practitioner, or physician assistant — a noncompete covenant entered into after the 2024 Act's effective date is void as against public policy, with one narrow exception: it runs no more than one year and the practitioner was not dismissed by the employer. Both conditions matter — a facially reasonable two-year clinician restraint is simply void, and even a one-year covenant evaporates if the employer did the dismissing. Skip the reasonableness balancing entirely for these workers; check the practitioner class, the date, the length, and who ended the relationship. The Act leaves room for recovering practitioner-specific expenses such as relocation, training, and patient-base costs accrued in the three years before separation, amortized over up to five years — but not when the employer dismissed the practitioner.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-act74-applicability-gate",
+            "authorityType": "primary-law",
+            "title": "Fair Contracting for Health Care Practitioners Act § 4(a)",
+            "citation": "Fair Contracting for Health Care Practitioners Act, Act of July 17, 2024, P.L. 846, No. 74, § 4(a) (Pa.).",
+            "url": "https://www.legis.state.pa.us/WU01/LI/LI/US/HTM/2024/0/0074..HTM",
+            "proposition": "Act 74 makes a noncompete covenant entered into after its effective date contrary to public policy and void and unenforceable by an employer, except as provided in the exception.",
+            "verbatimQuote": "(a) Applicability.--Except as provided under subsection (b), a noncompete covenant entered into after the effective date of this subsection is deemed contrary to the public policy and is void and unenforceable by an employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-act74-applicability-gate"
+          },
+          {
+            "sourceId": "pa-act74-exception-gate",
+            "authorityType": "primary-law",
+            "title": "Fair Contracting for Health Care Practitioners Act § 4(b)",
+            "citation": "Fair Contracting for Health Care Practitioners Act, Act of July 17, 2024, P.L. 846, No. 74, § 4(b) (Pa.).",
+            "url": "https://www.legis.state.pa.us/WU01/LI/LI/US/HTM/2024/0/0074..HTM",
+            "proposition": "Act 74 permits enforcement only if the covenant is no more than one year and the practitioner was not dismissed by the employer.",
+            "verbatimQuote": "(b) Exception.--An employer may enforce a noncompete covenant if the length of the noncompete covenant is no more than one year, provided that the health care practitioner was not dismissed by the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-act74-exception-gate"
+          },
+          {
+            "sourceId": "pa-act74-practitioner-gate",
+            "authorityType": "primary-law",
+            "title": "Fair Contracting for Health Care Practitioners Act § 3",
+            "citation": "Fair Contracting for Health Care Practitioners Act, Act of July 17, 2024, P.L. 846, No. 74, § 3 (Pa.).",
+            "url": "https://www.legis.state.pa.us/WU01/LI/LI/US/HTM/2024/0/0074..HTM",
+            "proposition": "Act 74 defines the covered health care practitioners as medical doctors, doctors of osteopathy, certified registered nurse anesthetists, certified registered nurse practitioners, and physician assistants.",
+            "verbatimQuote": "\"Health care practitioner.\" The following: (1) A medical doctor as defined in section 2 of the act of December 20, 1985 (P.L.457, No.112), known as the Medical Practice Act of 1985. (2) A doctor of osteopathy under the act of October 5, 1978 (P.L.1109, No.261), known as the Osteopathic Medical Practice Act. (3) A certified registered nurse anesthetist as defined in section 2(16) of the act of May 22, 1951 (P.L.317, No.69), known as The Professional Nursing Law. (4) A certified registered nurse practitioner as defined in section 2(12) of The Professional Nursing Law. (5) A physician assistant as defined in section 2 of the Osteopathic Medical Practice Act or section 2 of the Medical Practice Act of 1985.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-act74-practitioner-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "notify-patients-after-a-covered-practitioner-departs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.pennsylvania.notify-patients-after-a-covered-practitioner-departs",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Patient notice after a practitioner departs",
+        "sectionId": "pennsylvania-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#notify-patients-after-a-covered-practitioner-departs",
+        "requirementGuidance": "When a covered practitioner leaves, the employer must notify the patients the practitioner saw within the past year — where there was an ongoing outpatient relationship of at least two years — within 90 days of the departure. The duty is the employer's and does not depend on whether any covenant survives, so confirm the agreement's confidentiality and covenant language does not treat the practitioner's departure or destination as a secret the employer cannot share with patients. An organization that papers the covenant but has no notice workflow has satisfied the easy half of the statute.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-act74-notice-gate",
+            "authorityType": "primary-law",
+            "title": "Fair Contracting for Health Care Practitioners Act § 5(b)",
+            "citation": "Fair Contracting for Health Care Practitioners Act, Act of July 17, 2024, P.L. 846, No. 74, § 5(b) (Pa.).",
+            "url": "https://www.legis.state.pa.us/WU01/LI/LI/US/HTM/2024/0/0074..HTM",
+            "proposition": "Act 74 requires an employer to notify a departing practitioner's recent patients within 90 days of the departure.",
+            "verbatimQuote": "(b) Time period.--The employer shall provide the notice within 90 days of the health care practitioner's departure.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-act74-notice-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "avoid-no-hire-clauses-between-businesses",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.pennsylvania.avoid-no-hire-clauses-between-businesses",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No business-to-business no-hire clauses",
+        "sectionId": "pennsylvania-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#avoid-no-hire-clauses-between-businesses",
+        "requirementGuidance": "If the covenant package rides a commercial contract between businesses, check for a clause promising that one business will not hire the other's people. The Pennsylvania Supreme Court balanced such a provision's overbreadth and public harm against the company's interest and held it unreasonably in restraint of trade and unenforceable — it was greater than needed and restrained workers who were not parties to the contract and received no consideration. Strike the clause and protect the relationship the direct way: narrowly drawn confidentiality obligations and worker-side covenants supported by consideration.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pa-beemac-unenforceable-gate",
+            "authorityType": "case-law",
+            "title": "Pittsburgh Logistics Systems, Inc. v. Beemac Trucking, LLC",
+            "citation": "Pittsburgh Logistics Systems, Inc. v. Beemac Trucking, LLC, 249 A.3d 918 (Pa. 2021).",
+            "url": "https://www.courtlistener.com/opinion/4878381/pgh-logistics-aplt-v-beemac-trucking/",
+            "deepLink": "https://www.courtlistener.com/opinion/4878381/pgh-logistics-aplt-v-beemac-trucking/#:~:text=Balancing%20PLS%E2%80%99s%20interest%20against%20the,of%20trade%20and%20therefore%20unenforceable.",
+            "proposition": "Beemac supports that a business-to-business no-hire provision is unreasonably in restraint of trade and therefore unenforceable.",
+            "verbatimQuote": "Balancing PLS’s interest against the overbreadth of the no-hire provision and the likelihood of harm to the public, we conclude that the no-hire provision is unreasonably in restraint of trade and therefore unenforceable.",
+            "date": "2021-04-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-beemac-unenforceable-gate"
+          },
+          {
+            "sourceId": "pa-beemac-overbroad-gate",
+            "authorityType": "case-law",
+            "title": "Pittsburgh Logistics Systems, Inc. v. Beemac Trucking, LLC",
+            "citation": "Pittsburgh Logistics Systems, Inc. v. Beemac Trucking, LLC, 249 A.3d 918 (Pa. 2021).",
+            "url": "https://www.courtlistener.com/opinion/4878381/pgh-logistics-aplt-v-beemac-trucking/",
+            "deepLink": "https://www.courtlistener.com/opinion/4878381/pgh-logistics-aplt-v-beemac-trucking/#:~:text=However%2C%20the%20no%2Dhire%20provision%20is,of%20harm%20to%20the%20public.",
+            "proposition": "Beemac supports that the no-hire provision was greater than needed to protect the company's interest and created a probability of harm to the public.",
+            "verbatimQuote": "However, the no-hire provision is both greater than needed to protect PLS’s interest and creates a probability of harm to the public.",
+            "date": "2021-04-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/pennsylvania#src-pa-beemac-overbroad-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

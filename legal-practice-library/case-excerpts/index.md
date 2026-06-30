@@ -52,6 +52,7 @@
 * [Banks v. International Rental & Leasing Corp.](banks-v-international-rental-leasing-corp.md) - Banks v. Int'l Rental & Leasing Corp., 55 V.I. 967 (V.I. 2011). — quoted in 1 document(s).
 * [Barshaw v. Allegheny Performance Plastics, LLC](barshaw-v-allegheny-performance-plastics-llc.md) - Barshaw v. Allegheny Performance Plastics, LLC, 334 Mich. App. 741 (2020). — quoted in 2 document(s).
 * [Bayly, Martin & Fay, Inc. v. Pickard](bayly-martin-fay-inc-v-pickard.md) - Bayly, Martin & Fay, Inc. v. Pickard, 1989 OK 122, 780 P.2d 1168. — quoted in 2 document(s).
+* [Bd. of Trustees of the Leland Stanford Junior Univ. v. Roche Molecular Systems](bd-of-trustees-of-the-leland-stanford-junior-univ-v-roche-molecular-systems.md) - Bd. of Trustees of the Leland Stanford Junior Univ. v. Roche Molecular Sys., Inc., 563 U.S. 776 (2011). — quoted in 2 document(s).
 * [BDO Seidman v. Hirshberg](bdo-seidman-v-hirshberg.md) - BDO Seidman v. Hirshberg, 93 N.Y.2d 382, 388 (1999). — quoted in 2 document(s).
 * [Becker v. Bailey](becker-v-bailey.md) - Becker v. Bailey, 268 Md. 93 (1973). — quoted in 2 document(s).
 * [Beilfuss v. Huffy Corp.](beilfuss-v-huffy-corp.md) - Beilfuss v. Huffy Corp., 2004 WI App 118. — quoted in 2 document(s).
@@ -119,6 +120,7 @@
 * [Cranston Print Works Co. v. Pothier](cranston-print-works-co-v-pothier.md) - Cranston Print Works Co. v. Pothier, 848 A.2d 213, 219 (R.I. 2004). — quoted in 2 document(s).
 * [Cream v Bushcolt Pty Ltd](cream-v-bushcolt-pty-ltd.md) - Cream v Bushcolt Pty Ltd [2004] WASCA 82 (Malcolm CJ; Miller and McKechnie JJ agreeing). — quoted in 1 document(s).
 * [Crowe Horwath (Aust) Pty Ltd v Loone](crowe-horwath-aust-pty-ltd-v-loone.md) - Crowe Horwath (Aust) Pty Ltd v Loone [2017] VSCA 181 (Ashley, Priest and Beach JJA). — quoted in 1 document(s).
+* [Cubic Corp. v. Marty](cubic-corp-v-marty.md) - Cubic Corp. v. Marty, 185 Cal. App. 3d 438 (1986). — quoted in 1 document(s).
 * [Dai-Chi Electronics Mfg. Corp. v. Villarama](dai-chi-electronics-mfg-corp-v-villarama.md) - Dai-Chi Electronics Mfg. Corp. v. Villarama, G.R. No. 112940, Nov. 21, 1994. — quoted in 1 document(s).
 * [Daneshgari v. Patriot Towing Services, LLC](daneshgari-v-patriot-towing-services-llc.md) - Daneshgari v. Patriot Towing Services, LLC, 361 Ga. App. 555 (2021). — quoted in 2 document(s).
 * [Data Management, Inc. v. Greene](data-management-inc-v-greene.md) - Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988). — quoted in 2 document(s).
@@ -503,6 +505,7 @@
 * [Werlinger v. Mutual Service Casualty Insurance Co.](werlinger-v-mutual-service-casualty-insurance-co.md) - Werlinger v. Mut. Serv. Cas. Ins. Co., 496 N.W.2d 26, 27 (N.D. 1993). — quoted in 2 document(s).
 * [Whelan Security Co. v. Kennebrew](whelan-security-co-v-kennebrew.md) - Whelan Sec. Co. v. Kennebrew, 379 S.W.3d 835 (Mo. banc 2012). — quoted in 2 document(s).
 * [White v. Mederi Caretenders Visiting Servs. of Se. Fla., LLC](white-v-mederi-caretenders-visiting-servs-of-se-fla-llc.md) - White v. Mederi Caretenders Visiting Servs. of Se. Fla., LLC, 226 So. 3d 774 (Fla. 2017). — quoted in 2 document(s).
+* [Whitewater West Industries, Ltd. v. Alleshouse](whitewater-west-industries-ltd-v-alleshouse.md) - Whitewater W. Indus., Ltd. v. Alleshouse, 981 F.3d 1045 (Fed. Cir. 2020). — quoted in 2 document(s).
 * [Whitmyer Bros., Inc. v. Doyle](whitmyer-bros-inc-v-doyle.md) - Whitmyer Bros., Inc. v. Doyle, 58 N.J. 25 (1971). — quoted in 2 document(s).
 * [Whittaker General Medical Corp. v. Daniel](whittaker-general-medical-corp-v-daniel.md) - Whittaker Gen. Med. Corp. v. Daniel, 324 N.C. 523 (1989). — quoted in 2 document(s).
 * [Whittington v. The Nordam Group Inc., 429 F.3d 986 (10th Cir. 2005)](whittington-v-the-nordam-group-inc-429-f-3d-986-10th-cir-2005.md) - Whittington v. The Nordam Group Inc., 429 F.3d 986 (10th Cir. 2005). — quoted in 1 document(s).

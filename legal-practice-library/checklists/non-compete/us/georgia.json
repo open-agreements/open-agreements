@@ -1,0 +1,1329 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/georgia",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/georgia.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/georgia",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/georgia/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/georgia/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "georgia",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Georgia",
+      "description": "A clause-by-clause reviewer checklist for Georgia employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Georgia Restrictive Covenants Act's reasonableness standard, employee-category gate, and durational presumptions.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Georgia",
+      "coverage": "Georgia (US)",
+      "lastReviewed": "2026-06-11",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 47,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "georgia-statutory-gates",
+        "label": "Georgia statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#identify-parties",
+        "requirementGuidance": "Verify the named employer is the entity in an Act-covered relationship with the worker. The GRCA applies only between the relationships it lists — employer and employee, franchisor and franchisee, seller and purchaser of a business, and a handful of others — so a covenant papered with the wrong affiliate can end up arguing about whether the Act reaches it at all.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-13-8-52-relationships",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-52",
+            "citation": "O.C.G.A. § 13-8-52(a).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-52(a) limits the Act to contracts between specified relationships, including employers and employees, franchisors and franchisees, and sellers and purchasers of a business.",
+            "verbatimQuote": "The provisions of this article shall be applicable only to contracts and agreements between or among: (1) Employers and employees; (2) Distributors and manufacturers; (3) Lessors and lessees; (4) Partnerships and partners; (5) Franchisors and franchisees; (6) Sellers and purchasers of a business or commercial enterprise; and (7) Two or more employers.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-52-relationships"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#identify-effective-date",
+        "requirementGuidance": "In Georgia the signing date picks the legal regime. The Act governs only contracts entered into on or after May 11, 2011; anything earlier is judged under the state's old covenant-hostile common law, where an overbroad employment non-compete fails outright. An undated covenant leaves that threshold question — and every presumption clock that runs from termination — harder to pin down.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-hb30-date-split",
+            "authorityType": "primary-law",
+            "title": "2011 Ga. HB 30, § 5 (O.C.G.A. § 13-8-50 et seq.)",
+            "citation": "2011 Ga. HB 30, § 5 (eff. May 11, 2011).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "The enacting legislation provides that the Georgia Restrictive Covenants Act applies only to contracts entered into on or after its effective date and not to covenants entered before that date.",
+            "verbatimQuote": "This Act shall become effective upon its approval by the Governor or upon its becoming law without such approval and shall apply to contracts entered into on and after such date and shall not apply in actions determining the enforceability of restrictive covenants entered into before such date.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-hb30-date-split"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#identify-employee-title",
+        "requirementGuidance": "Record the title, then test the actual duties behind it. Georgia gates post-employment non-competes on what the worker really does — customarily soliciting customers, making sales, managing, or serving as a key employee or professional — and a court will look past the label to the function. Title plus a duties recital is the cheapest evidence that the worker belongs in a covered category.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-13-8-53a-categories-cover",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-53",
+            "citation": "O.C.G.A. § 13-8-53(a).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-53(a) bars enforcement of a post-employment non-compete against any employee who does not perform one of the enumerated functions: soliciting customers, making sales, defined managerial duties, or qualifying as a key employee or professional.",
+            "verbatimQuote": "However, enforcement of contracts that restrict competition after the term of employment, as distinguished from a customer nonsolicitation provision, as described in subsection (b) of this Code section, or a nondisclosure of confidential information provision, as described in subsection (e) of this Code section, shall not be permitted against any employee who does not, in the course of his or her employment: (1) Customarily and regularly solicit for the employer customers or prospective customers; (2) Customarily and regularly engage in making sales or obtaining orders or contracts for products or services to be performed by others; (3) Perform the following duties: (A) Have a primary duty of managing the enterprise in which the employee is employed or of a customarily recognized department or subdivision thereof; (B) Customarily and regularly direct the work of two or more other employees; and (C) Have the authority to hire or fire other employees or have particular weight given to suggestions and recommendations as to the hiring, firing, advancement, promotion, or any other change of status of other employees; or (4) Perform the duties of a key employee or of a professional.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-53a-categories-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#identify-governing-law",
+        "requirementGuidance": "Confirm the governing state is stated, and read any selection of another state's law with skepticism. When a covenant is litigated in a Georgia court, Georgia law remains the touchstone for enforceability no matter what the contract says — so the clause sets expectations but cannot opt out of the Act.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-motorsports-touchstone-cover",
+            "authorityType": "case-law",
+            "title": "Motorsports of Conyers, LLC v. Burbach",
+            "citation": "Motorsports of Conyers, LLC v. Burbach, 317 Ga. 206 (2023).",
+            "url": "https://www.courtlistener.com/opinion/10680038/motorsports-of-conyers-llc-v-burbach/",
+            "deepLink": "https://www.courtlistener.com/opinion/10680038/motorsports-of-conyers-llc-v-burbach/#:~:text=Having%20taken%20a%20fresh%20look%2C,says%20another%20state's%20law%20applies.",
+            "proposition": "Motorsports of Conyers v. Burbach held that Georgia law remains the touchstone for enforceability of a restrictive covenant litigated in Georgia, even where the contract selects another state's law.",
+            "verbatimQuote": "Having taken a fresh look, we conclude that Georgia law remains the touchstone for determining whether a given restrictive covenant is enforceable in our courts, even where the contract says another state's law applies.",
+            "date": "2023-09-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-motorsports-touchstone-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#define-confidential-information",
+        "requirementGuidance": "Georgia is generous here, so the definition should earn it: the Act lets a confidentiality obligation run without time or geographic limits for as long as the information stays confidential, and the clause is enforceable against workers who could never be bound by a non-compete. A definition that genuinely describes protectable information keeps that advantage; one that sweeps in everything the worker ever learned invites a court to treat the clause as something else.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-13-8-53e-defs",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-53",
+            "citation": "O.C.G.A. § 13-8-53(e).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-53(e) provides that confidentiality and trade-secret obligations are not limited in time or geography for as long as the information remains confidential or a trade secret.",
+            "verbatimQuote": "Nothing in this article shall be construed to limit the period of time for which a party may agree to maintain information as confidential or as a trade secret, or to limit the geographic area within which such information must be kept confidential or as a trade secret, for so long as the information or material remains confidential or a trade secret, as applicable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-53e-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#define-trade-secrets",
+        "requirementGuidance": "Keep Trade Secrets defined separately from ordinary Confidential Information. The Act preserves protection for material held as a trade secret for as long as it qualifies, and the separate definition is what lets the agreement give trade secrets that indefinite treatment while handling everything else on its own terms.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-13-8-53e-defs",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-53",
+            "citation": "O.C.G.A. § 13-8-53(e).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-53(e) provides that confidentiality and trade-secret obligations are not limited in time or geography for as long as the information remains confidential or a trade secret.",
+            "verbatimQuote": "Nothing in this article shall be construed to limit the period of time for which a party may agree to maintain information as confidential or as a trade secret, or to limit the geographic area within which such information must be kept confidential or as a trade secret, for so long as the information or material remains confidential or a trade secret, as applicable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-53e-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#define-restricted-period",
+        "requirementGuidance": "A single defined Restricted Period makes the Georgia time math auditable. For an ordinary employee, two years measured from termination is the dividing line: at or under it the restraint is presumed reasonable in time, over it the presumption flips against the employer. Check that every covenant referencing the period lands on the right side of that line.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-13-8-57b-defs",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-57",
+            "citation": "O.C.G.A. § 13-8-57(b).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-57(b) presumes reasonable any post-employment restraint of two years or less and unreasonable any restraint longer than two years, measured from termination.",
+            "verbatimQuote": "a court shall presume to be reasonable in time any restraint two years or less in duration and shall presume to be unreasonable in time any restraint more than two years in duration, measured from the date of the termination of the business relationship.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-57b-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "assess-territory-in-context-rather-than-require-express-term",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.georgia.assess-territory-in-context-rather-than-require-express-term",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#assess-territory-in-context-rather-than-require-express-term",
+        "requirementGuidance": "Do not fail the agreement for a missing territory clause: the Supreme Court of Georgia has held that the Act does not require an express geographic term, so geographic reach is judged for overall reasonableness in context. An express definition still earns its keep — a territory tracking where the employer does business is presumptively reasonable when the total distance is reasonable or the agreement names particular competitors for a limited period — and an extravagant express territory remains exactly as vulnerable as it sounds.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-wimmer-defs",
+            "authorityType": "case-law",
+            "title": "North American Senior Benefits, LLC v. Wimmer",
+            "citation": "North American Senior Benefits, LLC v. Wimmer, 319 Ga. 641 (2024).",
+            "url": "https://www.courtlistener.com/opinion/10680273/north-american-senior-benefits-llc-v-wimmer/",
+            "deepLink": "https://www.courtlistener.com/opinion/10680273/north-american-senior-benefits-llc-v-wimmer/#:~:text=The%20petitioner%20%E2%80%94%20a%20Georgia,this%20case%20for%20further%20proceedings.",
+            "proposition": "North American Senior Benefits v. Wimmer reversed the Court of Appeals' conclusion that O.C.G.A. § 13-8-53(a) requires an express geographic term, holding that the Court of Appeals erred.",
+            "verbatimQuote": "The petitioner — a Georgia corporation seeking to enforce a restrictive covenant against two former employees — asks us to review the conclusion reached by the Court of Appeals that, to be deemed geographically reasonable under OCGA § 13-8-53 (a), a restrictive covenant must contain an express geographic term. In light of the statutory text and context of the GRCA, we conclude that the Court of Appeals erred, so we reverse and remand this case for further proceedings.",
+            "date": "2024-09-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-wimmer-defs"
+          },
+          {
+            "sourceId": "ga-13-8-56-defs",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-56",
+            "citation": "O.C.G.A. § 13-8-56(2).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-56(2) presumes reasonable a geographic territory covering the areas where the employer does business, provided the total distance is also reasonable.",
+            "verbatimQuote": "In determining the reasonableness of a restrictive covenant that limits or restricts competition during or after the term of an employment or business or commercial relationship, the court shall make the following presumptions:",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-56-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#define-covered-customers",
+        "requirementGuidance": "In Georgia the statute hands you the right definition: material contact. The protected class is customers the employee dealt with, supervised dealings for, learned confidential information about, or earned compensation from in the two years before termination. A Covered Customers definition that mirrors that list fits the statutory shape; one that grabs the employer's whole customer file does not.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-material-contact-defs",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-51",
+            "citation": "O.C.G.A. § 13-8-51(10).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-51(10) defines material contact narrowly, limiting it to customers the employee dealt with, supervised, learned confidential information about, or earned compensation from within two years before termination.",
+            "verbatimQuote": "'Material contact' means the contact between an employee and each customer or potential customer: (A) With whom or which the employee dealt on behalf of the employer; (B) Whose dealings with the employer were coordinated or supervised by the employee; (C) About whom the employee obtained confidential information in the ordinary course of business as a result of such employee's association with the employer; or (D) Who receives products or services authorized by the employer, the sale or provision of which results or resulted in compensation, commissions, or earnings for the employee within two years prior to the date of the employee's termination.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-material-contact-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#define-covered-employees",
+        "requirementGuidance": "Bound the no-poach class to colleagues the departing worker actually worked with or supervised during a stated look-back window. Georgia courts analyze employee non-recruitment covenants under the Act's reasonableness standard, and a class scoped to real working relationships is far easier to defend than a ban on touching anyone on the payroll.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#define-protected-interests",
+        "requirementGuidance": "Name the legitimate business interests with care — in Georgia they are the enforcing party's opening burden. The statute requires whoever enforces the covenant to plead and prove a legitimate business interest before the burden ever shifts to the worker, so a Protected Interests definition that maps each covenant to a concrete interest is the agreement doing the employer's future homework.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-13-8-55-burden-defs",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-55",
+            "citation": "O.C.G.A. § 13-8-55.",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-55 requires the party seeking enforcement to plead and prove a legitimate business interest, and shifts the burden to the party opposing enforcement once the enforcing party makes a prima facie showing of compliance with § 13-8-53.",
+            "verbatimQuote": "The person seeking enforcement of a restrictive covenant shall plead and prove the existence of one or more legitimate business interests justifying the restrictive covenant. If a person seeking enforcement of the restrictive covenant establishes by prima-facie evidence that the restraint is in compliance with the provisions of Code Section 13-8-53, then any person opposing enforcement has the burden of establishing that the contractually specified restraint does not comply with such requirements or that such covenant is unreasonable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-55-burden-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#define-competitive-business",
+        "requirementGuidance": "Describe the competing activity in terms a court can apply: the products, services, and roles that actually overlap with the worker's job. Georgia tests scope of prohibited activities as one leg of the reasonableness standard, and a Competitive Business definition that swells to the employer's entire industry forces the covenant to survive on a discretionary narrowing it may never get.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where the covenants restrict owning or investing in competitors, look for a passive-holdings carve-out below a stated percentage. A clause that technically bars index funds and ordinary public shares widens the scope of prohibited activities for no protective gain — gratuitous overbreadth in a state where a court weighs exactly that scope and is never obliged to trim it for you.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#define-passive-public-holdings",
+        "requirementGuidance": "Optional drafting mechanics — many Georgia agreements inline the carve-out language without a capitalized term. If the defined term appears, confirm its ownership threshold matches the operative carve-out so the two never drift apart in later amendments.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#define-solicit",
+        "requirementGuidance": "Track the statutory verbs. Georgia's customer non-solicit safe harbor covers soliciting or attempting to solicit, directly or by assisting others, including actively seeking prospective customers — language aimed at initiated outreach. A definition that also captures passively receiving an unprompted inquiry stretches past what the statute blesses and should be flagged as scope creep.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-13-8-53b-defs",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-53",
+            "citation": "O.C.G.A. § 13-8-53(b).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-53(b) permits a customer non-solicitation covenant limited to material-contact customers and provides that no express geographic reference is required for enforceability.",
+            "verbatimQuote": "an employee may agree in writing for the benefit of an employer to refrain, for a stated period of time following termination, from soliciting, or attempting to solicit, directly or by assisting others, any business from any of such employer's customers, including actively seeking prospective customers, with whom the employee had material contact during his or her employment for purposes of providing products or services that are competitive with those provided by the employer's business. No express reference to geographic area or the types of products or services considered to be competitive shall be required in order for the restraint to be enforceable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-53b-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#define-termination-of-employment",
+        "requirementGuidance": "Make the trigger unambiguous for resignation, dismissal, and the end of a fixed term alike. Georgia's durational presumptions are measured from the date the business relationship terminates, and the material-contact look-back counts backward from the same event — so a fuzzy termination definition blurs both clocks at once.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-13-8-57b-defs",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-57",
+            "citation": "O.C.G.A. § 13-8-57(b).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-57(b) presumes reasonable any post-employment restraint of two years or less and unreasonable any restraint longer than two years, measured from termination.",
+            "verbatimQuote": "a court shall presume to be reasonable in time any restraint two years or less in duration and shall presume to be unreasonable in time any restraint more than two years in duration, measured from the date of the termination of the business relationship.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-57b-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#acknowledge-timing",
+        "requirementGuidance": "Pin down the signing date and what the worker received in exchange. The Act is silent on consideration, and no modern Georgia appellate decision squarely settles whether continued at-will employment alone supports a mid-employment covenant — so for an existing employee, a recital documenting some additional consideration (a raise, a bonus, a promotion) is the conservative play, and the signing date separately decides whether the Act applies at all.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-consideration-silence",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-53",
+            "citation": "O.C.G.A. § 13-8-53(a).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-53(a) sets the reasonableness and employee-category conditions for enforcement without addressing what consideration must support the covenant, leaving consideration to general Georgia contract law.",
+            "verbatimQuote": "Notwithstanding any other provision of this chapter, enforcement of contracts that restrict competition during the term of a restrictive covenant, so long as such restrictions are reasonable in time, geographic area, and scope of prohibited activities, shall be permitted.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-consideration-silence"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Georgia statute requires it, but it is cheap procedural-fairness evidence. Because the enforcing party opens the case by proving a legitimate business interest and the overall reasonableness of the restraint, anything that shows the worker signed with eyes open quietly helps the same narrative.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret obligations must run for as long as secrecy does — federal law defines the right that way, and Georgia's statute goes out of its way to say the Act places no time or geographic limit on keeping material protected as a trade secret. A fixed expiry on trade-secret protection is an unforced surrender of the most durable tool in the agreement.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-dtsa-trade-secret-definition"
+          },
+          {
+            "sourceId": "ga-13-8-53e-duration",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-53",
+            "citation": "O.C.G.A. § 13-8-53(e).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-53(e) authorizes confidentiality and trade-secret obligations unlimited in time and geography for as long as the information remains confidential or a trade secret.",
+            "verbatimQuote": "Nothing in this article shall be construed to limit the period of time for which a party may agree to maintain information as confidential or as a trade secret, or to limit the geographic area within which such information must be kept confidential or as a trade secret, for so long as the information or material remains confidential or a trade secret, as applicable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-53e-duration"
+          }
+        ]
+      },
+      {
+        "requirementId": "allow-confidentiality-to-run-while-information-remains-protected",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.georgia.allow-confidentiality-to-run-while-information-remains-protected",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality duration",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#allow-confidentiality-to-run-while-information-remains-protected",
+        "requirementGuidance": "Georgia removes the usual pressure for a finite confidentiality term: the Act says nothing in it limits how long, or where, a party may agree to keep information confidential, for as long as the information actually remains confidential. So an open-ended obligation keyed to continued confidentiality is statutorily sound here — what to verify instead is the conditional itself, meaning the clause releases information once it stops being confidential rather than promising secrecy forever regardless. A stated finite term for ordinary business information remains a perfectly acceptable choice.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-13-8-53e-duration",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-53",
+            "citation": "O.C.G.A. § 13-8-53(e).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-53(e) authorizes confidentiality and trade-secret obligations unlimited in time and geography for as long as the information remains confidential or a trade secret.",
+            "verbatimQuote": "Nothing in this article shall be construed to limit the period of time for which a party may agree to maintain information as confidential or as a trade secret, or to limit the geographic area within which such information must be kept confidential or as a trade secret, for so long as the information or material remains confidential or a trade secret, as applicable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-53e-duration"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law applies with full force in Georgia: an agreement governing trade secrets or confidential information must carry the whistleblower-immunity notice, or the employer forfeits exemplary damages and attorney fees in a later trade-secret action against the worker. Since confidentiality is the workhorse covenant for Georgia employers — enforceable against every employee, not just the covered categories — skipping the notice is an expensive omission.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Whatever the governing state, confidentiality and non-disparagement language has to leave wages, hours, and working conditions open for discussion. Federal labor law protects that concerted activity, and the Board has condemned employee agreements whose terms broadly waive it — a Georgia choice-of-law clause changes none of this.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. Georgia adds no special statutory text here, but a confidentiality clause that purports to override a subpoena is unenforceable on its face and gives a reviewing court an easy reason to read the whole clause as overreaching.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. In Georgia the certification does double duty: confidentiality and trade-secret covenants are the protections that reach every employee regardless of job category, and a signed certification is the contemporaneous record that makes a later misappropriation claim concrete instead of speculative.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional — and in Georgia, a covenant with its own body of law. The Court of Appeals placed employee non-recruitment covenants within the ambit of the Act, and the Supreme Court reviewed a two-year non-recruitment provision under the same reasonableness standard as a non-compete. Keep it scoped to Covered Employees and the Restricted Period, and route it through the Georgia gates at the end of this checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-beltpower-ambit",
+            "authorityType": "case-law",
+            "title": "Belt Power, LLC v. Reed",
+            "citation": "Belt Power, LLC v. Reed, 354 Ga. App. 289 (2020).",
+            "url": "https://www.courtlistener.com/opinion/4735721/belt-power-llc-v-steve-reed/",
+            "deepLink": "https://www.courtlistener.com/opinion/4735721/belt-power-llc-v-steve-reed/#:~:text=Upon%20a%20close%20reading%20of,the%20ambit%20of%20the%20Act.",
+            "proposition": "Belt Power v. Reed held that the restrictive covenants at issue fall within the ambit of the Georgia Restrictive Covenants Act.",
+            "verbatimQuote": "Upon a close reading of the entire statute, we conclude that the restrictive covenants at issue do fall within the ambit of the Act.",
+            "date": "2020-03-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-beltpower-ambit"
+          },
+          {
+            "sourceId": "ga-wimmer-nonrecruit",
+            "authorityType": "case-law",
+            "title": "North American Senior Benefits, LLC v. Wimmer",
+            "citation": "North American Senior Benefits, LLC v. Wimmer, 319 Ga. 641 (2024).",
+            "url": "https://www.courtlistener.com/opinion/10680273/north-american-senior-benefits-llc-v-wimmer/",
+            "deepLink": "https://www.courtlistener.com/opinion/10680273/north-american-senior-benefits-llc-v-wimmer/#:~:text=In%20light%20of%20the%20statutory,this%20case%20for%20further%20proceedings.",
+            "proposition": "North American Senior Benefits v. Wimmer arose from a two-year employee non-recruitment provision and reversed the Court of Appeals, confirming that such covenants are analyzed under O.C.G.A. § 13-8-53(a) without an express-geographic-term requirement.",
+            "verbatimQuote": "In light of the statutory text and context of the GRCA, we conclude that the Court of Appeals erred, so we reverse and remand this case for further proceedings.",
+            "date": "2024-09-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-wimmer-nonrecruit"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#permit-customer-nonsolicit",
+        "requirementGuidance": "Often the best-value covenant in a Georgia agreement: the statute blesses it expressly, exempts it from the employee-category gate that limits non-competes, and requires no geographic term. The price of that favored treatment is shape — a stated period, material-contact customers, competitive products or services — which the Georgia gates section below walks through in detail.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-13-8-53b-covenant",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-53",
+            "citation": "O.C.G.A. § 13-8-53(b).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-53(b) permits a customer non-solicitation covenant limited to material-contact customers and provides that no express geographic reference is required for enforceability.",
+            "verbatimQuote": "an employee may agree in writing for the benefit of an employer to refrain, for a stated period of time following termination, from soliciting, or attempting to solicit, directly or by assisting others, any business from any of such employer's customers, including actively seeking prospective customers, with whom the employee had material contact during his or her employment for purposes of providing products or services that are competitive with those provided by the employer's business. No express reference to geographic area or the types of products or services considered to be competitive shall be required in order for the restraint to be enforceable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-53b-covenant"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#permit-non-dealing",
+        "requirementGuidance": "Non-dealing forbids serving covered customers even when they arrive unprompted — a step beyond the soliciting-or-attempting-to-solicit conduct Georgia's safe harbor describes. Expect a clause this broad to be analyzed as a restraint on competition in its own right, with the reasonableness standard and possibly the employee-category gate in play, rather than as a routine non-solicit. Treat its inclusion as a deliberate risk decision.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-13-8-53b-covenant",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-53",
+            "citation": "O.C.G.A. § 13-8-53(b).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-53(b) permits a customer non-solicitation covenant limited to material-contact customers and provides that no express geographic reference is required for enforceability.",
+            "verbatimQuote": "an employee may agree in writing for the benefit of an employer to refrain, for a stated period of time following termination, from soliciting, or attempting to solicit, directly or by assisting others, any business from any of such employer's customers, including actively seeking prospective customers, with whom the employee had material contact during his or her employment for purposes of providing products or services that are competitive with those provided by the employer's business. No express reference to geographic area or the types of products or services considered to be competitive shall be required in order for the restraint to be enforceable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-53b-covenant"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#permit-non-compete",
+        "requirementGuidance": "Georgia will enforce this clause, but on conditions: the restraint must be reasonable in time, geographic area, and scope of prohibited activities, the worker must perform a covered job function, and the employer carries the opening burden of pleading and proving a legitimate business interest. If the clause appears, run the covered-function and duration gates at the end of this checklist before evaluating any individual term.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-13-8-53a-reasonable-covenant",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-53",
+            "citation": "O.C.G.A. § 13-8-53(a).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-53(a) permits enforcement of a covenant restricting competition so long as it is reasonable in time, geographic area, and scope of prohibited activities.",
+            "verbatimQuote": "Notwithstanding any other provision of this chapter, enforcement of contracts that restrict competition during the term of a restrictive covenant, so long as such restrictions are reasonable in time, geographic area, and scope of prohibited activities, shall be permitted.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-53a-reasonable-covenant"
+          },
+          {
+            "sourceId": "ga-13-8-55-burden-covenant",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-55",
+            "citation": "O.C.G.A. § 13-8-55.",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-55 requires the party seeking enforcement to plead and prove a legitimate business interest justifying the restrictive covenant.",
+            "verbatimQuote": "The person seeking enforcement of a restrictive covenant shall plead and prove the existence of one or more legitimate business interests justifying the restrictive covenant. If a person seeking enforcement of the restrictive covenant establishes by prima-facie evidence that the restraint is in compliance with the provisions of Code Section 13-8-53, then any person opposing enforcement has the burden of establishing that the contractually specified restraint does not comply with such requirements or that such covenant is unreasonable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-55-burden-covenant"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, bind those names. Georgia writes the reward directly into the statute: a competitor list for a limited period is one of the routes by which an employer-business-areas territory earns the statutory presumption of geographic reasonableness — so the named-competitor formulation is not just narrower, it is presumption-buying.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-13-8-56-competitor-list",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-56",
+            "citation": "O.C.G.A. § 13-8-56(2).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-56(2)(B) makes a list of particular competitors as prohibited employers for a limited period one of the conditions under which an employer's-business-areas territory is presumed reasonable.",
+            "verbatimQuote": "In determining the reasonableness of a restrictive covenant that limits or restricts competition during or after the term of an employment or business or commercial relationship, the court shall make the following presumptions:",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-56-competitor-list"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#permit-non-investment",
+        "requirementGuidance": "Rare, and worth interrogating. An investment restriction adds scope of prohibited activities without an obvious matching business interest for an ordinary employee, and Georgia's reasonableness review weighs exactly that proportionality. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period rather than running on its own clock.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#require-non-disparagement",
+        "requirementGuidance": "Reasonable to include with a stated term, but audit the carve-outs rather than the prohibition: truthful testimony, statements to government agencies, and protected workplace speech must stay outside the clause. Georgia law adds no covenant-specific restriction here, so the governing risk is federal — the Board treats employee agreements that broadly waive protected speech as unlawful in every state.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state Georgia's current position plainly: there is no physician-specific statutory ban, a physician typically qualifies as a professional — one of the categories that can be bound — and the covenant is judged on ordinary reasonableness terms. Two cautions belong in the review notes: other healthcare workers are covered only if they independently fall within a listed category, and healthcare non-compete bills recur in the Georgia legislature, so confirm the statute is unchanged before relying on a physician covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-professional-definition",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-51",
+            "citation": "O.C.G.A. § 13-8-51(14).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-51(14) defines a professional, a category that ordinarily includes physicians, as an employee whose primary duty requires advanced knowledge acquired by prolonged specialized instruction.",
+            "verbatimQuote": "'Professional' means an employee who has as a primary duty the performance of work requiring knowledge of an advanced type in a field of science or learning customarily acquired by a prolonged course of specialized intellectual instruction or requiring invention, imagination, originality, or talent in a recognized field of artistic or creative endeavor.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-professional-definition"
+          },
+          {
+            "sourceId": "ga-13-8-53a-physician",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-53",
+            "citation": "O.C.G.A. § 13-8-53(a).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-53(a) governs physician non-competes on the same reasonableness terms as other professionals, because Georgia has no physician-specific statutory carve-out.",
+            "verbatimQuote": "Notwithstanding any other provision of this chapter, enforcement of contracts that restrict competition during the term of a restrictive covenant, so long as such restrictions are reasonable in time, geographic area, and scope of prohibited activities, shall be permitted.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-53a-physician"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier covenant or order blocks the new role. It earns its place on Georgia intake reviews: an incoming covenant signed in another state will be measured against Georgia law if it is ever litigated here, and the representation forces that conversation before onboarding instead of after a demand letter arrives.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice, not a default. A notice provision can support enforcement, but warning a new employer off a worker based on a covenant a Georgia court later finds unreasonable — and declines to narrow — converts the letter into tortious-interference exposure. If the clause appears, keep any third-party disclosure factual and tied to covenants that plausibly survive the Act's review.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "avoid-reliance-on-tolling-past-contractual-expiration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.georgia.avoid-reliance-on-tolling-past-contractual-expiration",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#avoid-reliance-on-tolling-past-contractual-expiration",
+        "requirementGuidance": "Do not let an extension clause stand in for prompt enforcement. Georgia's Court of Appeals reversed a trial court for extending an injunction past the contractual expiration of a non-compete — even against a party who was violating the injunction — because Georgia precedent rejects equitable extension of a covenant's period. Whether a self-executing contractual tolling clause fares any better is undecided, so treat the stated end date as the real one: the agreement should still say whether the clock pauses during breach, but the employer's protection is moving fast inside the term, not banking on time added after it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-daneshgari-no-extend",
+            "authorityType": "case-law",
+            "title": "Daneshgari v. Patriot Towing Services, LLC",
+            "citation": "Daneshgari v. Patriot Towing Services, LLC, 361 Ga. App. 555 (2021).",
+            "url": "https://www.courtlistener.com/opinion/5295364/khosrow-daneshgari-v-patriot-towing-services-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/5295364/khosrow-daneshgari-v-patriot-towing-services-llc/#:~:text=On%20appeal%2C%20the%20defendants%20contend,infra%2C%20we%20agree%20and%20reverse.",
+            "proposition": "Daneshgari v. Patriot Towing Services agreed with the defendants and reversed, holding that the trial court erred in extending its injunction beyond the contractual expiration of the noncompete agreement.",
+            "verbatimQuote": "On appeal, the defendants contend that the trial court erred in extending its injunction beyond the contractual expiration of the noncompete agreement. For the reasons set forth infra, we agree and reverse.",
+            "date": "2021-11-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-daneshgari-no-extend"
+          },
+          {
+            "sourceId": "ga-daneshgari-equity",
+            "authorityType": "case-law",
+            "title": "Daneshgari v. Patriot Towing Services, LLC",
+            "citation": "Daneshgari v. Patriot Towing Services, LLC, 361 Ga. App. 555 (2021).",
+            "url": "https://www.courtlistener.com/opinion/5295364/khosrow-daneshgari-v-patriot-towing-services-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/5295364/khosrow-daneshgari-v-patriot-towing-services-llc/#:~:text=But%20the%20Supreme%20Court%20of,period%20of%20a%20non%2Dcompete%20agreement.%E2%80%9D",
+            "proposition": "Daneshgari v. Patriot Towing Services relied on Georgia precedent rejecting the idea that equity permits a court to extend the period of a non-compete agreement.",
+            "verbatimQuote": "But the Supreme Court of Georgia has rejected—at least implicitly—the idea that “equity permits a court to extend the period of a non-compete agreement.”",
+            "date": "2021-11-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-daneshgari-equity"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that injunctive relief is appropriate. Georgia backs the remedy with statute — courts enforce restrictive covenants by any appropriate and effective remedy at law or equity, including temporary and permanent injunctions — but the relief runs only through the covenant's stated term, which is one more reason the duration item above matters.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-13-8-58-remedies",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-58",
+            "citation": "O.C.G.A. § 13-8-58(c).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-58(c) authorizes courts to enforce a restrictive covenant by any appropriate and effective remedy at law or equity, including temporary and permanent injunctions.",
+            "verbatimQuote": "A court shall enforce a restrictive covenant by any appropriate and effective remedy available at law or equity, including, but not limited to, temporary and permanent injunctions.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-58-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice — Georgia imposes no covenant-specific fee rule, so the American Rule applies when the agreement is silent. If fee-shifting appears, prefer a mutual prevailing-party formulation: a one-way employer clause adds friction to negotiation and gives a court weighing overall reasonableness one more aggressive term to notice.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "draft-within-reasonable-scope-despite-discretionary-modification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.georgia.draft-within-reasonable-scope-despite-discretionary-modification",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No reliance on court rescue",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#draft-within-reasonable-scope-despite-discretionary-modification",
+        "requirementGuidance": "Georgia has a blue pencil, but read the severability clause as if it might never be picked up. The Act makes a non-compliant covenant void and unenforceable, then permits — never requires — a court to modify it, and the modification can only narrow: nothing may leave the covenant more restrictive than as originally drafted, and a court will not write in the limits the drafter left out. The Court of Appeals has affirmed a trial court that declined to modify at all, leaving the covenants dead as written. So a modification clause is fine to include; drafting broad because the clause exists is the mistake. Size each covenant to the legitimate interest from the start.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-13-8-53d-modify",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-53",
+            "citation": "O.C.G.A. § 13-8-53(d).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-53(d) makes a non-compliant covenant void but permits a court to modify it, provided the modification does not make it more restrictive than originally drafted.",
+            "verbatimQuote": "Any restrictive covenant not in compliance with the provisions of this article is unlawful and is void and unenforceable; provided, however, that a court may modify a covenant that is otherwise void and unenforceable so long as the modification does not render the covenant more restrictive with regard to the employee than as originally drafted by the parties.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-53d-modify"
+          },
+          {
+            "sourceId": "ga-beltpower-decline-modify",
+            "authorityType": "case-law",
+            "title": "Belt Power, LLC v. Reed",
+            "citation": "Belt Power, LLC v. Reed, 354 Ga. App. 289 (2020).",
+            "url": "https://www.courtlistener.com/opinion/4735721/belt-power-llc-v-steve-reed/",
+            "deepLink": "https://www.courtlistener.com/opinion/4735721/belt-power-llc-v-steve-reed/#:~:text=We%20nevertheless%20conclude%20that%20the,the%20terms%20of%20the%20covenants.",
+            "proposition": "Belt Power v. Reed held that the trial court did not abuse its discretion in declining to apply the Act's blue-pencil provision to modify the covenants, leaving them unenforceable.",
+            "verbatimQuote": "We nevertheless conclude that the trial court did not abuse its discretion in declining to apply the “blue pencil” provision in the Act to modify the terms of the covenants.",
+            "date": "2020-03-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-beltpower-decline-modify"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each Georgia clock independently checkable: confidentiality and trade-secret obligations can lawfully run for as long as the information stays protected, while the competition restraints live inside their presumption windows and end on their stated dates. A single bundled survival clause blurs that structure — and the stated end dates carry real weight in Georgia, because no court will extend them afterward.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. Georgia adds a structural footnote: the Act applies only between its listed relationships, and the durational presumptions differ by relationship — an employee covenant is presumed reasonable at two years, a sale-of-business covenant at five or more — so when covenants move in an acquisition, check which relationship, and which window, the surviving covenant actually claims.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "test-grca-compliance-before-relying-on-foreign-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.georgia.test-grca-compliance-before-relying-on-foreign-law",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Georgia law tested first",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#test-grca-compliance-before-relying-on-foreign-law",
+        "requirementGuidance": "Treat a foreign choice-of-law clause as cosmetic for enforceability purposes. The Supreme Court of Georgia has held that Georgia law remains the touchstone in Georgia courts even where the contract selects another state's law, and that a covenant found unreasonable under the Act cannot be enforced by applying foreign law instead. The sequence is fixed — the Act first, the chosen law only if the covenant survives — so a form that leans on a permissive sister-state selection was never localized for Georgia. The clause should still name governing law, venue, and process; it just cannot do the work the drafter may have hoped.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-motorsports-touchstone",
+            "authorityType": "case-law",
+            "title": "Motorsports of Conyers, LLC v. Burbach",
+            "citation": "Motorsports of Conyers, LLC v. Burbach, 317 Ga. 206 (2023).",
+            "url": "https://www.courtlistener.com/opinion/10680038/motorsports-of-conyers-llc-v-burbach/",
+            "deepLink": "https://www.courtlistener.com/opinion/10680038/motorsports-of-conyers-llc-v-burbach/#:~:text=Having%20taken%20a%20fresh%20look%2C,says%20another%20state's%20law%20applies.",
+            "proposition": "Motorsports of Conyers v. Burbach held that Georgia law remains the touchstone for enforceability of a restrictive covenant litigated in Georgia, even where the contract selects another state's law.",
+            "verbatimQuote": "Having taken a fresh look, we conclude that Georgia law remains the touchstone for determining whether a given restrictive covenant is enforceable in our courts, even where the contract says another state's law applies.",
+            "date": "2023-09-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-motorsports-touchstone"
+          },
+          {
+            "sourceId": "ga-motorsports-mechanism",
+            "authorityType": "case-law",
+            "title": "Motorsports of Conyers, LLC v. Burbach",
+            "citation": "Motorsports of Conyers, LLC v. Burbach, 317 Ga. 206 (2023).",
+            "url": "https://www.courtlistener.com/opinion/10680038/motorsports-of-conyers-llc-v-burbach/",
+            "deepLink": "https://www.courtlistener.com/opinion/10680038/motorsports-of-conyers-llc-v-burbach/#:~:text=If%20the%20restrictive%20covenant%20is,foreign%20law%20to%20enforce%20it.",
+            "proposition": "Motorsports of Conyers v. Burbach held that if a restrictive covenant is unreasonable under the GRCA, a Georgia court may not apply foreign law to enforce it.",
+            "verbatimQuote": "If the restrictive covenant is unreasonable under the GRCA, a Georgia court may not apply foreign law to enforce it.",
+            "date": "2023-09-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-motorsports-mechanism"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard boilerplate with one Georgia wrinkle worth noting: the Act governs contracts entered into on or after May 11, 2011, so re-papering an old covenant — a restated agreement, a fresh signature on an updated form — creates a new contract that takes the modern regime, with its reasonableness standard and narrowing-only modification, in place of the old common law. Review the amendment mechanics so that switch happens by design rather than by accident.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-hb30-new-contract",
+            "authorityType": "primary-law",
+            "title": "2011 Ga. HB 30, § 5 (O.C.G.A. § 13-8-50 et seq.)",
+            "citation": "2011 Ga. HB 30, § 5 (eff. May 11, 2011).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "The enacting legislation applies the Georgia Restrictive Covenants Act to contracts entered into on or after its effective date, so a newly executed agreement takes the modern regime.",
+            "verbatimQuote": "This Act shall become effective upon its approval by the Governor or upon its becoming law without such approval and shall apply to contracts entered into on and after such date and shall not apply in actions determining the enforceability of restrictive covenants entered into before such date.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-hb30-new-contract"
+          }
+        ]
+      },
+      {
+        "requirementId": "gate-non-compete-by-covered-employee-function",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.georgia.gate-non-compete-by-covered-employee-function",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered job function for the non-compete",
+        "sectionId": "georgia-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#gate-non-compete-by-covered-employee-function",
+        "requirementGuidance": "Before evaluating a single term of a Georgia post-employment non-compete, establish that the worker belongs to a class the Act lets it bind: employees who customarily and regularly solicit customers, make sales or obtain orders, perform the enumerated managerial duties, or perform the duties of a key employee or professional. The gate ignores how reasonable the covenant is — a flawless restraint still fails against a worker outside the categories, and the case law polices the definitions: an hourly equipment operator was held not to be a key employee, sinking the injunction. Customer non-solicits and confidentiality clauses sit outside the gate; the non-compete does not.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-13-8-53a-categories-gate",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-53",
+            "citation": "O.C.G.A. § 13-8-53(a).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-53(a) bars enforcement of a post-employment non-compete against any employee who does not solicit customers, make sales, perform defined managerial duties, or qualify as a key employee or professional.",
+            "verbatimQuote": "However, enforcement of contracts that restrict competition after the term of employment, as distinguished from a customer nonsolicitation provision, as described in subsection (b) of this Code section, or a nondisclosure of confidential information provision, as described in subsection (e) of this Code section, shall not be permitted against any employee who does not, in the course of his or her employment: (1) Customarily and regularly solicit for the employer customers or prospective customers; (2) Customarily and regularly engage in making sales or obtaining orders or contracts for products or services to be performed by others; (3) Perform the following duties: (A) Have a primary duty of managing the enterprise in which the employee is employed or of a customarily recognized department or subdivision thereof; (B) Customarily and regularly direct the work of two or more other employees; and (C) Have the authority to hire or fire other employees or have particular weight given to suggestions and recommendations as to the hiring, firing, advancement, promotion, or any other change of status of other employees; or (4) Perform the duties of a key employee or of a professional.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-53a-categories-gate"
+          },
+          {
+            "sourceId": "ga-blair-key-employee",
+            "authorityType": "case-law",
+            "title": "Blair v. Pantera Enterprises, Inc.",
+            "citation": "Blair v. Pantera Enterprises, Inc., 349 Ga. App. 846 (2019) (physical precedent only).",
+            "url": "https://www.courtlistener.com/opinion/4601931/blair-v-pantera-enterprises-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4601931/blair-v-pantera-enterprises-inc/#:~:text=Thus%2C%20Blair%20is%20not%20a,issuing%20injunctive%20relief%20to%20Pantera.",
+            "proposition": "Blair v. Pantera Enterprises (physical precedent only) concluded that an hourly equipment operator was not a key employee under O.C.G.A. § 13-8-51(8), so the non-compete could not be enforced against him.",
+            "verbatimQuote": "Thus, Blair is not a “key employee” as that term is defined in OCGA § 13-8-51 (8). Consequently, the trial court erred in issuing injunctive relief to Pantera.",
+            "date": "2019-03-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-blair-key-employee"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-duration-within-relationship-presumption-windows",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.georgia.keep-duration-within-relationship-presumption-windows",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Duration inside the presumption window",
+        "sectionId": "georgia-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#keep-duration-within-relationship-presumption-windows",
+        "requirementGuidance": "Match the restricted period to the relationship that produced the covenant. Georgia presumes reasonable a restraint of two years or less against a former employee, three years or less against a distributor, dealer, franchisee, lessee, or licensee, and the longer of five years or the payout period against the seller or owner of a business — each measured from termination or disposition, each presumed unreasonable beyond the window. The presumptions are rebuttable in both directions, but they decide who carries the burden, so a covenant drafted one month past its window has volunteered for the harder side of the argument.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-13-8-57b-gate",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-57",
+            "citation": "O.C.G.A. § 13-8-57(b).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-57(b) presumes reasonable any post-employment restraint of two years or less and unreasonable any restraint longer than two years, measured from termination.",
+            "verbatimQuote": "a court shall presume to be reasonable in time any restraint two years or less in duration and shall presume to be unreasonable in time any restraint more than two years in duration, measured from the date of the termination of the business relationship.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-57b-gate"
+          },
+          {
+            "sourceId": "ga-13-8-57c-gate",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-57",
+            "citation": "O.C.G.A. § 13-8-57(c).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-57(c) presumes reasonable any restraint of three years or less against a current or former distributor, dealer, franchisee, lessee of real or personal property, or licensee.",
+            "verbatimQuote": "a court shall presume to be reasonable in time any restraint three years or less in duration and shall presume to be unreasonable in time any restraint more than three years in duration, measured from the date of termination of the business relationship.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-57c-gate"
+          },
+          {
+            "sourceId": "ga-13-8-57d-gate",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-57",
+            "citation": "O.C.G.A. § 13-8-57(d).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-57(d) presumes reasonable any restraint against the owner or seller of a business for the longer of five years or the period during which sale payments are being made to the seller.",
+            "verbatimQuote": "a court shall presume to be reasonable in time any restraint the longer of five years or less in duration or equal to the period of time during which payments are being made to the owner or seller as a result of any sale referred to in this subsection and shall presume to be unreasonable in time any restraint more than the longer of five years in duration or the period of time during which payments are being made to the owner or seller as a result of any sale referred to in this subsection, measured from the date of termination or disposition of such interest.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-57d-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "review-pre-2011-covenants-under-prior-common-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.georgia.review-pre-2011-covenants-under-prior-common-law",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Pre-2011 agreements screened out",
+        "sectionId": "georgia-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#review-pre-2011-covenants-under-prior-common-law",
+        "requirementGuidance": "Run the date screen first: the Act applies only to contracts entered into on or after May 11, 2011, and expressly does not apply when a court determines the enforceability of a covenant entered before that date. A pre-2011 covenant lives under Georgia's old strict common law — heightened scrutiny, no judicial modification, an overbroad employment non-compete void in its entirety — which means every Georgia-specific item on this page assumes a post-2011 signing. For a legacy covenant, the practical fix is usually a fresh agreement under the modern Act rather than a defense of the old one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-hb30-prospective",
+            "authorityType": "primary-law",
+            "title": "2011 Ga. HB 30, § 5 (O.C.G.A. § 13-8-50 et seq.)",
+            "citation": "2011 Ga. HB 30, § 5 (eff. May 11, 2011).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "The enacting legislation provides that the Georgia Restrictive Covenants Act applies only to contracts entered into on or after its effective date and not to covenants entered before that date.",
+            "verbatimQuote": "This Act shall become effective upon its approval by the Governor or upon its becoming law without such approval and shall apply to contracts entered into on and after such date and shall not apply in actions determining the enforceability of restrictive covenants entered into before such date.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-hb30-prospective"
+          }
+        ]
+      },
+      {
+        "requirementId": "anchor-customer-nonsolicit-to-material-contact",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.georgia.anchor-customer-nonsolicit-to-material-contact",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Material-contact anchor for the customer non-solicit",
+        "sectionId": "georgia-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#anchor-customer-nonsolicit-to-material-contact",
+        "requirementGuidance": "Hold the customer non-solicit to its statutory shape: a stated period, customers with whom the employee had material contact, and products or services competitive with the employer's business. Material contact has a precise definition — customers the employee dealt with, coordinated or supervised dealings for, learned confidential information about, or earned compensation from within the two years before termination — and a clause anchored to it needs no geographic term and no express description of competitive product types. A clause reaching the employer's entire customer base trades that statutory blessing for an overbreadth fight.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-13-8-53b-gate",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-53",
+            "citation": "O.C.G.A. § 13-8-53(b).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-53(b) permits a customer non-solicitation covenant limited to material-contact customers and provides that no express geographic or competitive-type reference is required for enforceability.",
+            "verbatimQuote": "an employee may agree in writing for the benefit of an employer to refrain, for a stated period of time following termination, from soliciting, or attempting to solicit, directly or by assisting others, any business from any of such employer's customers, including actively seeking prospective customers, with whom the employee had material contact during his or her employment for purposes of providing products or services that are competitive with those provided by the employer's business. No express reference to geographic area or the types of products or services considered to be competitive shall be required in order for the restraint to be enforceable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-13-8-53b-gate"
+          },
+          {
+            "sourceId": "ga-material-contact-gate",
+            "authorityType": "primary-law",
+            "title": "O.C.G.A. § 13-8-51",
+            "citation": "O.C.G.A. § 13-8-51(10).",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20112012/114248",
+            "proposition": "O.C.G.A. § 13-8-51(10) defines material contact narrowly, limiting it to customers the employee dealt with, supervised, learned confidential information about, or earned compensation from within two years before termination.",
+            "verbatimQuote": "'Material contact' means the contact between an employee and each customer or potential customer: (A) With whom or which the employee dealt on behalf of the employer; (B) Whose dealings with the employer were coordinated or supervised by the employee; (C) About whom the employee obtained confidential information in the ordinary course of business as a result of such employee's association with the employer; or (D) Who receives products or services authorized by the employer, the sale or provision of which results or resulted in compensation, commissions, or earnings for the employee within two years prior to the date of the employee's termination.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-material-contact-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "treat-employee-nonrecruitment-as-grca-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.georgia.treat-employee-nonrecruitment-as-grca-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No-poach clause under the Act",
+        "sectionId": "georgia-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#treat-employee-nonrecruitment-as-grca-covenant",
+        "requirementGuidance": "Review any employee non-recruitment or no-hire clause as a creature of the Act, not of general contract law. Georgia's appellate courts placed these covenants within the ambit of the statute, and the Supreme Court reviewed a two-year non-recruitment provision under the same section that governs non-competes — holding along the way that no express geographic term is required. The consequences are concrete: reasonableness in time and scope is the test, the two-year employee presumption is the natural durational anchor, and an overbroad clause depends on the same discretionary, narrowing-only modification as every other covenant on this page.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ga-beltpower-gate",
+            "authorityType": "case-law",
+            "title": "Belt Power, LLC v. Reed",
+            "citation": "Belt Power, LLC v. Reed, 354 Ga. App. 289 (2020).",
+            "url": "https://www.courtlistener.com/opinion/4735721/belt-power-llc-v-steve-reed/",
+            "deepLink": "https://www.courtlistener.com/opinion/4735721/belt-power-llc-v-steve-reed/#:~:text=Upon%20a%20close%20reading%20of,the%20ambit%20of%20the%20Act.",
+            "proposition": "Belt Power v. Reed held that the restrictive covenants at issue fall within the ambit of the Georgia Restrictive Covenants Act.",
+            "verbatimQuote": "Upon a close reading of the entire statute, we conclude that the restrictive covenants at issue do fall within the ambit of the Act.",
+            "date": "2020-03-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-beltpower-gate"
+          },
+          {
+            "sourceId": "ga-wimmer-gate",
+            "authorityType": "case-law",
+            "title": "North American Senior Benefits, LLC v. Wimmer",
+            "citation": "North American Senior Benefits, LLC v. Wimmer, 319 Ga. 641 (2024).",
+            "url": "https://www.courtlistener.com/opinion/10680273/north-american-senior-benefits-llc-v-wimmer/",
+            "deepLink": "https://www.courtlistener.com/opinion/10680273/north-american-senior-benefits-llc-v-wimmer/#:~:text=In%20light%20of%20the%20statutory,this%20case%20for%20further%20proceedings.",
+            "proposition": "North American Senior Benefits v. Wimmer arose from a two-year employee non-recruitment provision and confirmed that such covenants are analyzed under O.C.G.A. § 13-8-53(a) without an express-geographic-term requirement.",
+            "verbatimQuote": "In light of the statutory text and context of the GRCA, we conclude that the Court of Appeals erred, so we reverse and remand this case for further proceedings.",
+            "date": "2024-09-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/georgia#src-ga-wimmer-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1433 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/massachusetts",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/massachusetts.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/massachusetts",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/massachusetts/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/massachusetts/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "massachusetts",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Massachusetts",
+      "description": "A clause-by-clause reviewer checklist for Massachusetts employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Noncompetition Agreement Act, G.L. c. 149, § 24L, and Massachusetts case law.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Massachusetts",
+      "coverage": "Massachusetts (US)",
+      "lastReviewed": "2026-06-11",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 50,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "massachusetts-statutory-gates",
+        "label": "Massachusetts statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#identify-parties",
+        "requirementGuidance": "Match the employer named in the cover terms against the entity that actually employs the worker. The statute regulates an agreement between an employer and an employee, and a Massachusetts trial court has already declined to enforce a covenant that ran to a parent holding company instead of the operating employer — so a mismatched counterparty is a live enforceability defect here, not a formality.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "anaplan-wrong-entity",
+            "authorityType": "case-law",
+            "title": "Anaplan Parent, LP v. Brennan",
+            "citation": "Anaplan Parent, LP v. Brennan, No. 2584CV02350 (Mass. Super. Ct. 2025).",
+            "url": "https://www.mintz.com/sites/default/files/media/documents/2025-11-07/Anaplan-Parent%2C-LP-v.-Brennan-Noncompete%20Order.pdf",
+            "proposition": "Anaplan supports the point that the statutory term employer has not been read to include a parent corporation, so a covenant signed only with a parent risks being unenforceable.",
+            "verbatimQuote": "It has never been held to include a parent corporation as an \"employer.\"",
+            "date": "2025-09-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-anaplan-wrong-entity"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#identify-effective-date",
+        "requirementGuidance": "The date the agreement was entered into selects the legal regime: covenants signed on or after October 1, 2018 are governed by the Noncompetition Agreement Act and its validity stack, while older covenants stay under common-law reasonableness. An undated instrument leaves that threshold open — and an updated or re-signed covenant becomes a new agreement tested under the act.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-prospective-reach",
+            "authorityType": "case-law",
+            "title": "NuVasive, Inc. v. Day",
+            "citation": "NuVasive, Inc. v. Day, 954 F.3d 439 (1st Cir. 2020).",
+            "url": "https://www.courtlistener.com/opinion/4743298/nuvasive-inc-v-day/",
+            "deepLink": "https://www.courtlistener.com/opinion/4743298/nuvasive-inc-v-day/#:~:text=the%20MNCA%20%22only%20applies%20to,or%20after%20October%201%2C%202018%2C%22",
+            "proposition": "NuVasive supports the rule that the Massachusetts Noncompetition Agreement Act applies only to noncompetition agreements entered into on or after October 1, 2018.",
+            "verbatimQuote": "the MNCA \"only applies to employee noncompetition agreements entered into on or after October 1, 2018,\"",
+            "date": "2020-04-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-prospective-reach"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#identify-employee-title",
+        "requirementGuidance": "Record the role and how the position is classified. In Massachusetts the worker's status can decide the covenant outright: an employee who is nonexempt under the Fair Labor Standards Act cannot be bound at all, so the recorded title and duties are the first evidence in that exclusion analysis.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-nonexempt-worker",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(c).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(c) supports the rule that noncompetes are unenforceable against FLSA-nonexempt employees, student interns, employees terminated without cause or laid off, and employees age 18 or younger.",
+            "verbatimQuote": "A noncompetition agreement shall not be enforceable against the following types of workers: (i) an employee who is classified as nonexempt under the Fair Labor Standards Act, 29 U.S.C. 201-219; (ii) undergraduate or graduate students that partake in an internship or otherwise enter a short-term employment relationship with an employer, whether paid or unpaid, while enrolled in a full-time or part-time undergraduate or graduate educational institution; (iii) employees that have been terminated without cause or laid off; or (iv) employees age 18 or younger.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-nonexempt-worker"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#identify-governing-law",
+        "requirementGuidance": "Confirm the governing state is stated — and treat a foreign choice of law for a Massachusetts-based worker as presumptively ineffective. The act voids any choice-of-law provision that would avoid its requirements for an employee who lived or worked in Massachusetts for the 30 days before leaving, so the selection cannot launder a non-compliant covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-evasion-bar",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(e).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(e) supports the rule that a choice-of-law provision that would avoid the statute is unenforceable for an employee who was a Massachusetts resident or employed in Massachusetts for at least 30 days before cessation.",
+            "verbatimQuote": "No choice of law provision that would have the effect of avoiding the requirements of this section will be enforceable if the employee is, and has been for at least 30 days immediately preceding his or her cessation of employment, a resident of or employed in Massachusetts at the time of his or her termination of employment.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-evasion-bar"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#define-confidential-information",
+        "requirementGuidance": "The confidentiality definition is the foundation for one of the only three interests a Massachusetts non-compete may protect — confidential information that falls short of a trade secret. A definition that sweeps in general skills or industry knowledge weakens the no-broader-than-necessary showing the statute demands, so look for stated categories plus the usual public-knowledge exclusions.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-three-interests",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(b)(iii).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(b)(iii) supports the rule that a noncompete must be no broader than necessary to protect trade secrets, non-trade-secret confidential information, or goodwill.",
+            "verbatimQuote": "The agreement must be no broader than necessary to protect one or more of the following legitimate business interests of the employer: (A) the employer's trade secrets; (B) the employer's confidential information that otherwise would not qualify as a trade secret; or (C) the employer's goodwill.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-three-interests"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#define-trade-secrets",
+        "requirementGuidance": "Keep trade secrets defined separately, in terms that track the Massachusetts Uniform Trade Secrets Act's broad statutory definition. The separation matters twice here: trade secrets are the first enumerated interest a non-compete may protect, and the trade-secret backstop is often the more reliable remedy when the covenant itself fails one of the act's gates.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mutsa-broad-definition",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 93, § 42",
+            "citation": "Mass. Gen. Laws ch. 93, § 42(4).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter93/Section42",
+            "proposition": "Section 42 supports the broad statutory definition of a trade secret under the Massachusetts Uniform Trade Secrets Act.",
+            "verbatimQuote": "(4) ''Trade secret'', specified or specifiable information, whether or not fixed in tangible form or embodied in any tangible thing, including but not limited to a formula, pattern, compilation, program, device, method, technique, process, business strategy, customer list, invention, or scientific, technical, financial or customer data",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mutsa-broad-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#define-restricted-period",
+        "requirementGuidance": "One umbrella defined term keeps the statutory duration math auditable. Massachusetts caps the stated restricted period at 12 months from cessation of employment, so a stray clause running on its own longer clock is not just untidy drafting — it is a validity defect in the covenant it controls.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-twelve-month-term",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(b)(iv).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(b)(iv) supports the 12-month maximum restricted period running from the date of cessation of employment, extendable to 2 years only on the statutory misconduct trigger.",
+            "verbatimQuote": "In no event may the stated restricted period exceed 12 months from the date of cessation of employment, unless the employee has breached his or her fiduciary duty to the employer or the employee has unlawfully taken, physically or electronically, property belonging to the employer, in which case the duration may not exceed 2 years from the date of cessation of employment.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-twelve-month-term"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#define-restricted-territory",
+        "requirementGuidance": "The common-law reasonableness test still operates underneath the statute: a covenant must be reasonably limited in time and space and consonant with the public interest. Tie the territory to where the worker actually built goodwill or used protected information, not to the employer's entire footprint.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "boulanger-time-and-space",
+            "authorityType": "case-law",
+            "title": "Boulanger v. Dunkin' Donuts Inc.",
+            "citation": "Boulanger v. Dunkin' Donuts Inc., 442 Mass. 635 (2004).",
+            "url": "https://www.courtlistener.com/opinion/6579005/boulanger-v-dunkin-donuts-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/6579005/boulanger-v-dunkin-donuts-inc/#:~:text=A%20covenant%20not%20to%20compete%20is,consonant%20with%20the%20public%20interest.",
+            "proposition": "Boulanger supports the common-law standard that a non-compete is enforceable only if necessary to protect a legitimate business interest, reasonably limited in time and space, and consonant with the public interest.",
+            "verbatimQuote": "A covenant not to compete is enforceable only if it is necessary to protect a legitimate business interest, reasonably limited in time and space, and consonant with the public interest.",
+            "date": "2004-10-01",
+            "pullQuoteLocator": "A covenant not to compete is|consonant with the public interest.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-boulanger-time-and-space"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers, clients, and vendors the worker actually dealt with during a stated look-back window. Customer non-solicits sit outside the Noncompetition Agreement Act — no garden leave, no 12-month cap — and a tight covered-customer definition is what keeps the clause comfortably on that side of the line and defensible under ordinary reasonableness review.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-nonsolicit-outside",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(a).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(a) supports the rule that noncompetition agreements include forfeiture-for-competition agreements but exclude employee and customer non-solicitation covenants.",
+            "verbatimQuote": "Noncompetition agreements include forfeiture for competition agreements, but do not include: (i) covenants not to solicit or hire employees of the employer; (ii) covenants not to solicit or transact business with customers, clients, or vendors of the employer;",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-nonsolicit-outside"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#define-covered-employees",
+        "requirementGuidance": "Limit the no-poach class to colleagues the departing worker actually worked with or supervised during the look-back window. Covenants not to solicit or hire the employer's employees are likewise excluded from the act, so they escape its consideration and duration rules — but a class covering the whole workforce still has to survive common-law scrutiny on its own.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-nonsolicit-outside",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(a).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(a) supports the rule that noncompetition agreements include forfeiture-for-competition agreements but exclude employee and customer non-solicitation covenants.",
+            "verbatimQuote": "Noncompetition agreements include forfeiture for competition agreements, but do not include: (i) covenants not to solicit or hire employees of the employer; (ii) covenants not to solicit or transact business with customers, clients, or vendors of the employer;",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-nonsolicit-outside"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#define-protected-interests",
+        "requirementGuidance": "Massachusetts gives this definition a closed statutory menu: trade secrets, confidential information that is not a trade secret, and goodwill. The agreement should name which of the three each covenant serves — anything outside the menu adds breadth without adding enforceability.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "boulanger-interest-list",
+            "authorityType": "case-law",
+            "title": "Boulanger v. Dunkin' Donuts Inc.",
+            "citation": "Boulanger v. Dunkin' Donuts Inc., 442 Mass. 635 (2004).",
+            "url": "https://www.courtlistener.com/opinion/6579005/boulanger-v-dunkin-donuts-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/6579005/boulanger-v-dunkin-donuts-inc/#:~:text=Legitimate%20business%20interests%20include%20protection,confidential%20information%2C%20and%20good%20will.",
+            "proposition": "Boulanger supports the rule that legitimate business interests are limited to trade secrets, confidential information, and goodwill.",
+            "verbatimQuote": "Legitimate business interests include protection of trade secrets, confidential information, and good will.",
+            "date": "2004-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-boulanger-interest-list"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#define-competitive-business",
+        "requirementGuidance": "Describe the actual competing activity narrowly. Massachusetts courts have said for decades that a former employer cannot use a contract to restrain ordinary competition, so a competitive-business definition that reads as a ban on working in the industry undercuts the covenant's necessity showing from the start.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "allstainless-ordinary",
+            "authorityType": "case-law",
+            "title": "All Stainless, Inc. v. Colby",
+            "citation": "All Stainless, Inc. v. Colby, 364 Mass. 773 (1974).",
+            "url": "https://www.courtlistener.com/opinion/2151844/all-stainless-inc-v-colby/",
+            "deepLink": "https://www.courtlistener.com/opinion/2151844/all-stainless-inc-v-colby/#:~:text=A%20former%20employer%20is%20not,contract%20to%20restrain%20ordinary%20competition.",
+            "proposition": "All Stainless supports the rule that a former employer cannot use a non-compete to restrain ordinary competition.",
+            "verbatimQuote": "A former employer is not entitled by contract to restrain ordinary competition.",
+            "date": "1974-03-12",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-allstainless-ordinary"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership of or investment in competitors is restricted, check for a passive-holdings carve-out below a stated threshold. Owning a few public shares protects no trade secret and no goodwill, so a clause that forbids it is facial overbreadth — and while a Massachusetts judge has discretion to trim, a reviewer should never leave the covenant depending on that mercy.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#define-passive-public-holdings",
+        "requirementGuidance": "An optional drafting mechanic — many agreements inline the carve-out without a capitalized term. If the defined term exists, verify its ownership threshold matches the operative carve-out language elsewhere in the agreement.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#define-solicit",
+        "requirementGuidance": "Pin down whether solicitation means initiating contact, accepting business, or both. In Massachusetts the definition also polices a statutory boundary: the Supreme Judicial Court reads the act by its plain language, with non-solicitation agreements outside it — so a clean definition keeps the clause, and any forfeiture provision keyed to it, out of the act's garden-leave and duration rules.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "miele-plain-reading",
+            "authorityType": "case-law",
+            "title": "Miele v. Foundation Medicine, Inc.",
+            "citation": "Miele v. Foundation Medicine, Inc., 496 Mass. 171 (2025).",
+            "url": "https://www.courtlistener.com/opinion/10604382/susan-miele-v-foundation-medicine-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/10604382/susan-miele-v-foundation-medicine-inc/#:~:text=Under%20the%20plain%20language%20of,a%20subset%20of%20noncompetition%20agreements.",
+            "proposition": "Miele supports the rule that, under the act's plain language, noncompetition agreements exclude nonsolicitation agreements and forfeiture-for-competition agreements are a subset of noncompetition agreements.",
+            "verbatimQuote": "Under the plain language of the Massachusetts Noncompetition Agreement Act, (1) noncompetition agreements do not include nonsolicitation agreements, and (2) forfeiture for competition agreements are a subset of noncompetition agreements.",
+            "date": "2025-06-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-miele-plain-reading"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#define-termination-of-employment",
+        "requirementGuidance": "Confirm the trigger covers resignation, dismissal, and expiration of a fixed term, because the statutory clock runs from the date of cessation of employment. Keep in mind that in Massachusetts the manner of termination can matter more than the definition: a worker laid off or terminated without cause cannot be held to the non-compete at all.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-twelve-month-term",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(b)(iv).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(b)(iv) supports the 12-month maximum restricted period running from the date of cessation of employment, extendable to 2 years only on the statutory misconduct trigger.",
+            "verbatimQuote": "In no event may the stated restricted period exceed 12 months from the date of cessation of employment, unless the employee has breached his or her fiduciary duty to the employer or the employee has unlawfully taken, physically or electronically, property belonging to the employer, in which case the duration may not exceed 2 years from the date of cessation of employment.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-twelve-month-term"
+          }
+        ]
+      },
+      {
+        "requirementId": "recite-timing-and-consideration-for-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.massachusetts.recite-timing-and-consideration-for-covenant",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Statutory delivery timing and consideration",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#recite-timing-and-consideration-for-covenant",
+        "requirementGuidance": "Verify the formation timeline against the statute, by posture. A new hire's covenant must have been delivered by the earlier of the formal offer or 10 business days before the start date; a covenant signed during employment needs fair and reasonable consideration independent from simply keeping the job, plus at least 10 business days of advance notice. The agreement should recite the delivery date, signing date, and the consideration exchanged, because those facts decide validity — continued employment alone no longer carries a mid-employment covenant here.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-newhire-delivery",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(b)(i).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(b)(i) supports the rule that a new-hire noncompete must be provided by the earlier of a formal offer or 10 business days before employment begins.",
+            "verbatimQuote": "The agreement must be provided to the employee by the earlier of a formal offer of employment or 10 business days before the commencement of the employee's employment.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-newhire-delivery"
+          },
+          {
+            "sourceId": "mnaa-midemployment-consideration",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(b)(ii).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(b)(ii) supports the rule that a mid-employment noncompete must be supported by fair and reasonable consideration independent from continued employment, with at least 10 business days' notice.",
+            "verbatimQuote": "If the agreement is entered into after commencement of employment but not in connection with the separation from employment, it must be supported by fair and reasonable consideration independent from the continuation of employment, and notice of the agreement must be provided at least 10 business days before the agreement is to be effective.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-midemployment-consideration"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-right-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.massachusetts.state-right-to-consult-counsel",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Right-to-counsel statement on the face of the agreement",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#state-right-to-consult-counsel",
+        "requirementGuidance": "Look for an express sentence telling the employee they have the right to consult counsel before signing. For an at-hire covenant this statement is a statutory minimum — its absence is a validity defect, not a style point — and the agreement must also be in writing and signed by both parties. The cautious practice is to keep the sentence in mid-employment covenants too.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-counsel-statement",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(b)(i).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(b)(i) supports the rule that a new-hire noncompete must be in writing, signed by both parties, and expressly state the employee's right to consult counsel.",
+            "verbatimQuote": "If the agreement is entered into in connection with the commencement of employment, it must be in writing and signed by both the employer and employee and expressly state that the employee has the right to consult with counsel prior to signing.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-counsel-statement"
+          }
+        ]
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "The trade-secret obligation should run for as long as secrecy persists — that is how the law defines the right, federally and under the Massachusetts trade-secrets act. The point carries practical weight here: when a non-compete dies on one of the statutory gates, the perpetual trade-secret obligation is often what remains standing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-secrecy-keyed",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-dtsa-secrecy-keyed"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term, separate from the perpetual trade-secret obligation. Confidentiality agreements escape the Noncompetition Agreement Act entirely, but a perpetual restraint on non-secret information still reads as overreach under ordinary contract scrutiny — and overreach in the definitions bleeds into the no-broader-than-necessary analysis of any covenant relying on them.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#disclose-dtsa-notice",
+        "requirementGuidance": "Required by federal law in Massachusetts as everywhere else. An employer that omits the immunity notice forfeits exemplary damages and attorney fees in a later federal trade-secret suit against the worker — a meaningful loss in a state where trade-secret claims so often do the work a capped non-compete cannot.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Wage-and-working-conditions speech is federally protected, and confidentiality and non-disparagement language must yield to it. The Board's recent decisions strike overbroad clauses regardless of which state's law the contract selects, so verify the carve-out is present and not contradicted elsewhere.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#permit-compelled-disclosure",
+        "requirementGuidance": "Verify the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. No contract overrides compelled process; the carve-out keeps the worker from being squeezed between a subpoena and a confidentiality clause.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-destroy at separation, certified in writing. This clause has unusual leverage in Massachusetts: the unlawful taking of employer property is one of only two events that let the restricted period run beyond 12 months, so a clean return-and-certification record is the evidence base for invoking — or rebutting — that extension.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-taking-extension",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(b)(iv).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(b)(iv) supports the rule that the restricted period may exceed 12 months, up to 2 years, only where the employee breached a fiduciary duty or unlawfully took employer property.",
+            "verbatimQuote": "In no event may the stated restricted period exceed 12 months from the date of cessation of employment, unless the employee has breached his or her fiduciary duty to the employer or the employee has unlawfully taken, physically or electronically, property belonging to the employer, in which case the duration may not exceed 2 years from the date of cessation of employment.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-taking-extension"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional — and in Massachusetts, deliberately cheaper than a non-compete. Covenants not to solicit or hire the employer's employees fall outside the Noncompetition Agreement Act, so they need no garden leave and face no 12-month cap; confirm the clause is scoped to the defined covered-employee class and a stated period so it stays defensible under ordinary reasonableness review.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-act-excludes-solicits",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(a).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(a) supports the rule that the act's definition of a noncompetition agreement excludes employee non-solicits and covenants not to solicit or transact business with customers, clients, or vendors.",
+            "verbatimQuote": "Noncompetition agreements include forfeiture for competition agreements, but do not include: (i) covenants not to solicit or hire employees of the employer; (ii) covenants not to solicit or transact business with customers, clients, or vendors of the employer;",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-act-excludes-solicits"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#permit-customer-nonsolicit",
+        "requirementGuidance": "When present, confirm it reaches only covered customers for the stated period. The Supreme Judicial Court has confirmed that non-solicitation agreements sit outside the act by its plain language — which is exactly why employers lean on them when a statutory non-compete is too expensive or unavailable, and why the clause should be drafted to stand on its own.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "miele-nonsolicit-boundary",
+            "authorityType": "case-law",
+            "title": "Miele v. Foundation Medicine, Inc.",
+            "citation": "Miele v. Foundation Medicine, Inc., 496 Mass. 171 (2025).",
+            "url": "https://www.courtlistener.com/opinion/10604382/susan-miele-v-foundation-medicine-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/10604382/susan-miele-v-foundation-medicine-inc/#:~:text=Under%20the%20plain%20language%20of,a%20subset%20of%20noncompetition%20agreements.",
+            "proposition": "Miele supports the rule that, under the act's plain language, noncompetition agreements exclude nonsolicitation agreements.",
+            "verbatimQuote": "Under the plain language of the Massachusetts Noncompetition Agreement Act, (1) noncompetition agreements do not include nonsolicitation agreements, and (2) forfeiture for competition agreements are a subset of noncompetition agreements.",
+            "date": "2025-06-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-miele-nonsolicit-boundary"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they make the first call. Massachusetts expressly excludes covenants not to transact business with customers, clients, or vendors from the act's definition, so the clause escapes the statutory gates — but because it restrains more conduct than a pure non-solicit, scope it to actual relationships and a sensible look-back to keep it reasonable.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-act-excludes-solicits",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(a).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(a) supports the rule that the act's definition of a noncompetition agreement excludes employee non-solicits and covenants not to solicit or transact business with customers, clients, or vendors.",
+            "verbatimQuote": "Noncompetition agreements include forfeiture for competition agreements, but do not include: (i) covenants not to solicit or hire employees of the employer; (ii) covenants not to solicit or transact business with customers, clients, or vendors of the employer;",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-act-excludes-solicits"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#permit-non-compete",
+        "requirementGuidance": "If a true non-compete appears, the full statutory stack applies: eight minimum validity requirements, including the consideration, duration, scope, and formation items in this checklist. Remember the act reaches independent contractors as well as employees, so re-papering the worker as a contractor changes nothing. Route the review through the Massachusetts statutory-gate items at the end of this checklist before anything else about the clause.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-eight-requirements",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(b).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(b) supports the rule that a Massachusetts noncompetition agreement is valid and enforceable only if it satisfies eight minimum statutory requirements.",
+            "verbatimQuote": "To be valid and enforceable, a noncompetition agreement must meet the minimum requirements of paragraphs (i) through (viii).",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-eight-requirements"
+          },
+          {
+            "sourceId": "mnaa-contractor-reach",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(a).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(a) supports the rule that, for purposes of the act, an employee includes independent contractors under section 148B.",
+            "verbatimQuote": "provided, however, that the term ''employee'', as used in this section, shall also include independent contractors under section 148B.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-contractor-reach"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "A named-competitor list is the cleanest way to satisfy the statute's command that the covenant be no broader than necessary. Naming the handful of firms where the worker's knowledge would actually matter converts an industry-wide restraint into a targeted one — and saves the employer from asking a judge to exercise reformation discretion later.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-no-broader",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(b)(iii).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(b)(iii) supports drafting the non-compete no broader than necessary to protect the enumerated legitimate business interests.",
+            "verbatimQuote": "The agreement must be no broader than necessary to protect one or more of the following legitimate business interests of the employer: (A) the employer's trade secrets; (B) the employer's confidential information that otherwise would not qualify as a trade secret; or (C) the employer's goodwill.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-no-broader"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause runs on the shared restricted period. An investment restraint broad enough to function as a competition ban risks being treated as a noncompetition agreement subject to the act's consideration and duration rules, so keep it visibly narrower than that line.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#require-non-disparagement",
+        "requirementGuidance": "Standard inclusion with a stated term, but the carve-outs do the legal work: truthful testimony, statements to government agencies, and protected workplace speech must stay outside the clause's reach. Federal labor law polices this line no matter what Massachusetts contract law would tolerate, and the Board has struck broadly drafted versions.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state plainly that no provision restricts a physician's right to practice medicine after separation — Massachusetts voids such restrictions by statute while leaving the rest of the contract intact, and parallel bans protect nurses, psychologists, and social workers. For health-care workers the review focus shifts to what remains: confidentiality, non-solicits, and trade-secret protection.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ban-physician-practice-void",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 112, § 12X",
+            "citation": "Mass. Gen. Laws ch. 112, § 12X.",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter112/Section12X",
+            "proposition": "Section 12X supports the rule that a covenant restricting a registered physician's right to practice medicine is void and unenforceable as to that restriction.",
+            "verbatimQuote": "Any contract or agreement which creates or establishes the terms of a partnership, employment, or any other form of professional relationship with a physician registered to practice medicine pursuant to section two, which includes any restriction of the right of such physician to practice medicine in any geographic area for any period of time after the termination of such partnership, employment or professional relationship shall be void and unenforceable with respect to said restriction; provided, however, that nothing herein shall render void or unenforceable the remaining provisions of any such contract or agreement.",
+            "date": "1977-01-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-ban-physician-practice-void"
+          },
+          {
+            "sourceId": "ban-nurse-practice-void",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 112, § 74D",
+            "citation": "Mass. Gen. Laws ch. 112, § 74D.",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter112/Section74D",
+            "proposition": "Section 74D supports the rule that a covenant restricting a nurse's right to practice nursing is void and unenforceable as to that restriction.",
+            "verbatimQuote": "which includes any restriction of the right of such nurse to practice as a nurse in any geographical area for any period of time after the termination of such partnership, employment or professional relationship shall be void and unenforceable with respect to said restriction.",
+            "date": "2024-01-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-ban-nurse-practice-void"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. In Massachusetts the answer is often more nuanced than yes or no: a prior covenant may already be unenforceable because the worker was laid off, was nonexempt, or held a protected profession — so the representation should surface the prior paper itself, letting counsel assess it rather than assume it binds.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice. If the clause appears, condition any disclosure on a reasonable belief that an enforceable covenant is actually being breached — telling a new employer about a non-compete that died with a layoff or failed the act's consideration rules invites a tortious-interference claim rather than deterring one.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-within-statutory-cap",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.massachusetts.address-tolling-within-statutory-cap",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#address-tolling-within-statutory-cap",
+        "requirementGuidance": "The agreement should say expressly whether the clock pauses during a breach, because no court will add it later: Massachusetts strongly disfavors equitable extension of a covenant past its plain terms, and the First Circuit has told employers in so many words that tolling during litigation is something to contract for, not request. Then check the arithmetic — the statute's only built-in extension is the misconduct trigger reaching up to 2 years, and an express tolling clause has to keep the total restraint inside that cap structure.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "emc-contract-for-tolling",
+            "authorityType": "case-law",
+            "title": "EMC Corp. v. Arturi",
+            "citation": "EMC Corp. v. Arturi, 655 F.3d 75 (1st Cir. 2011).",
+            "url": "https://www.courtlistener.com/opinion/612666/emc-corp-v-arturi/",
+            "deepLink": "https://www.courtlistener.com/opinion/612666/emc-corp-v-arturi/#:~:text=Being%20forewarned%2C%20EMC%20could%20have,upon%20preliminary%20finding%20of%20breach.",
+            "proposition": "EMC v. Arturi supports the rule that a court will not equitably extend a non-compete past its term, and an employer that wants tolling during litigation must contract for it.",
+            "verbatimQuote": "Being forewarned, EMC could have contracted, as the district judge noted, for tolling the term of the restriction during litigation, or for a period of restriction to commence upon preliminary finding of breach.",
+            "date": "2011-08-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-emc-contract-for-tolling"
+          },
+          {
+            "sourceId": "automile-extension-disfavored",
+            "authorityType": "case-law",
+            "title": "Automile Holdings, LLC v. McGovern",
+            "citation": "Automile Holdings, LLC v. McGovern, 483 Mass. 797 (2020).",
+            "url": "https://caselaw.findlaw.com/court/ma-supreme-judicial-court/2042227.html",
+            "proposition": "Automile supports the rule that a court's use of an equitable remedy to extend a restrictive covenant beyond its plain terms is strongly disfavored and, absent a finding that damages would be inadequate, an abuse of discretion.",
+            "verbatimQuote": "As a matter of public policy, we strongly disfavor restrictive covenants, and the use of an equitable remedy to extend such a restriction beyond the plain terms of the contract, even in the context of a sale of a business, was not warranted without a finding that damages would be inadequate.",
+            "date": "2020-01-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-automile-extension-disfavored"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief. Timing gives it bite in Massachusetts: once the 12-month restricted period runs out, specific relief is off the table and the employer is left with damages — so the recital, and fast enforcement, are what make the short statutory window usable.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "emc-expired-restraint",
+            "authorityType": "case-law",
+            "title": "EMC Corp. v. Arturi",
+            "citation": "EMC Corp. v. Arturi, 655 F.3d 75 (1st Cir. 2011).",
+            "url": "https://www.courtlistener.com/opinion/612666/emc-corp-v-arturi/",
+            "deepLink": "https://www.courtlistener.com/opinion/612666/emc-corp-v-arturi/#:~:text=We%20explained%20that%20%22when%20the,left%20to%20his%20damages%20remedy.",
+            "proposition": "EMC v. Arturi supports the rule that once the restraint period has expired, specific relief is inappropriate and the injured party is left to a damages remedy.",
+            "verbatimQuote": "We explained that \"when the period of restraint has expired, even when the delay was substantially caused by the time consumed in legal appeals, specific relief is inappropriate and the injured party is left to his damages remedy.",
+            "date": "2011-08-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-emc-expired-restraint"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#address-attorneys-fees-and-costs",
+        "requirementGuidance": "Fee-shifting stays a commercial choice for a Massachusetts non-compete — the act adds no covenant-specific fee rule, so the American Rule applies if the contract is silent. If the clause appears, check that it is mutual and keyed to prevailing-party status rather than one-way in the employer's favor.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-blue-pencil-by-default",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-blue-pencil-by-default",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court may narrow an overbroad covenant",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#permit-blue-pencil-by-default",
+        "requirementGuidance": "Reformation-friendly savings language fits Massachusetts law: the statute expressly lets a court, in its discretion, reform or revise a noncompetition agreement to make it valid and enforceable. The discipline point runs the other way — discretion is not a promise, so a reviewer should treat the savings clause as a safety net under an already-reasonable covenant, never as license to draft to the outer edge and hope the judge trims.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-discretionary-reformation",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(d).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(d) supports the rule that a court may, in its discretion, reform or revise a noncompetition agreement to render it valid and enforceable.",
+            "verbatimQuote": "A court may, in its discretion, reform or otherwise revise a noncompetition agreement so as to render it valid and enforceable to the extent necessary to protect the applicable legitimate business interests.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-discretionary-reformation"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — and Massachusetts forces the clocks apart by design: the non-compete is capped at 12 months, while non-solicits and confidentiality obligations sit outside the act and can lawfully run longer. Bundled survival language is how a capped covenant quietly inherits an uncapped term, so unbundle and verify each one.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. The Massachusetts wrinkle is the employer-identity question: because the act regulates the agreement between the employer and the employee, a restructuring that leaves the covenant held by an entity other than the actual employing company hands the worker the same defense that has already defeated a parent-company enforcement attempt here.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "bar-choice-of-law-evasion-and-fix-county-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.massachusetts.bar-choice-of-law-evasion-and-fix-county-venue",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No law-shopping; venue in the worker's county",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#bar-choice-of-law-evasion-and-fix-county-venue",
+        "requirementGuidance": "The clause must not select another state's law as a way around the act — the statute voids any choice-of-law provision that would avoid its requirements for a worker who lived or was employed in Massachusetts for the 30 days before leaving. Venue is fixed too: suits over a covered non-compete belong in the employee's county of residence or, by mutual agreement, in Suffolk County, so check the forum clause against that rule. And selecting Massachusetts law is no universal shield either — the Supreme Judicial Court has refused to apply it where doing so would offend the fundamental public policy of the state whose law should govern.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-30-day-evasion-bar",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(e).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(e) supports the rule that a choice-of-law provision that would avoid the statute is unenforceable for an employee who was a Massachusetts resident or employed in Massachusetts for at least 30 days before cessation.",
+            "verbatimQuote": "No choice of law provision that would have the effect of avoiding the requirements of this section will be enforceable if the employee is, and has been for at least 30 days immediately preceding his or her cessation of employment, a resident of or employed in Massachusetts at the time of his or her termination of employment.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-30-day-evasion-bar"
+          },
+          {
+            "sourceId": "mnaa-suffolk-venue",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(f).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(f) supports the rule that civil actions on a covered noncompete must be brought in the employee's county of residence or, by mutual agreement, in Suffolk County.",
+            "verbatimQuote": "All civil actions relating to employee noncompetition agreements subject to this section shall be brought in the county where the employee resides or, if mutually agreed upon by the employer and employee, in Suffolk county;",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-suffolk-venue"
+          },
+          {
+            "sourceId": "oxford-reverse-direction",
+            "authorityType": "case-law",
+            "title": "Oxford Global Res., LLC v. Hernandez",
+            "citation": "Oxford Global Res., LLC v. Hernandez, 480 Mass. 462 (2018).",
+            "url": "https://www.courtlistener.com/opinion/7175264/oxford-global-res-llc-v-hernandez/",
+            "deepLink": "https://www.courtlistener.com/opinion/7175264/oxford-global-res-llc-v-hernandez/#:~:text=We%20conclude%20that%20the%20Massachusetts,open%20competition%20and%20employee%20mobility.",
+            "proposition": "Oxford Global supports the rule that a Massachusetts choice-of-law clause is unenforceable where applying Massachusetts law would violate the fundamental public policy of the state whose law otherwise governs.",
+            "verbatimQuote": "We conclude that the Massachusetts choice of law provision in the agreement is not enforceable, where California substantive law would apply under our choice of law principles, and where the application of Massachusetts substantive law would violate the fundamental public policy of California favoring open competition and employee mobility.",
+            "date": "2018-09-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-oxford-reverse-direction"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate with a Massachusetts twist: how changes get made can decide whether the covenant survives them. Courts here have treated far-reaching changes in pay and position as evidence the parties abandoned the old contract — non-compete included — and formed a new one, so the amendment mechanics should anticipate re-execution on material role changes rather than assume the original paper rolls forward.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "bartlett-new-contract",
+            "authorityType": "case-law",
+            "title": "F.A. Bartlett Tree Expert Co. v. Barrington",
+            "citation": "F.A. Bartlett Tree Expert Co. v. Barrington, 353 Mass. 585 (1968).",
+            "url": "https://www.courtlistener.com/opinion/2013561/f-a-bartlett-tree-expert-co-v-barrington/",
+            "deepLink": "https://www.courtlistener.com/opinion/2013561/f-a-bartlett-tree-expert-co-v-barrington/#:~:text=The%20judge%20concluded%20that%20the,and%20rescinded%20by%20mutual%20consent.",
+            "proposition": "Bartlett supports the rule that a material change in the employment terms can result in the earlier contract, with its covenant, being abandoned and rescinded by mutual consent.",
+            "verbatimQuote": "The judge concluded that the conduct of the parties shows a clear new employment contract in both 1960 and 1965 and that the 1948 contract was abandoned and rescinded by mutual consent.",
+            "date": "1968-02-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-bartlett-new-contract"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-garden-leave-or-agreed-consideration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.massachusetts.require-garden-leave-or-agreed-consideration",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Garden leave or specified consideration",
+        "sectionId": "massachusetts-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#require-garden-leave-or-agreed-consideration",
+        "requirementGuidance": "A Massachusetts non-compete has to be bought. Verify the agreement contains either a garden leave clause — pro-rata payments across the entire restricted period of at least half the worker's highest annualized base salary from the prior two years — or other mutually agreed consideration that the agreement itself spells out. The statute never defines how small that alternative consideration can be, so treat a token payment as unresolved risk and size it against the garden-leave benchmark.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-consideration-clause",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(b)(vii).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(b)(vii) supports the rule that a noncompete must be supported by a garden leave clause or other mutually-agreed upon consideration specified in the agreement.",
+            "verbatimQuote": "The noncompetition agreement shall be supported by a garden leave clause or other mutually-agreed upon consideration between the employer and the employee, provided that such consideration is specified in the noncompetition agreement.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-consideration-clause"
+          },
+          {
+            "sourceId": "mnaa-fifty-percent-benchmark",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(b)(vii).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(b)(vii) supports the rule that a garden leave clause must pay at least 50% of the employee's highest annualized base salary over the prior two years, pro rata across the restricted period.",
+            "verbatimQuote": "To constitute a garden leave clause within the meaning of this section, the agreement must (i) provide for the payment, consistent with the requirements for the payment of wages under section 148 of chapter 149 of the general laws, on a pro-rata basis during the entirety of the restricted period, of at least 50 percent of the employee's highest annualized base salary paid by the employer within the 2 years preceding the employee's termination;",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-fifty-percent-benchmark"
+          }
+        ]
+      },
+      {
+        "requirementId": "cap-restricted-period-at-twelve-months",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.massachusetts.cap-restricted-period-at-twelve-months",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period within the 12-month ceiling",
+        "sectionId": "massachusetts-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#cap-restricted-period-at-twelve-months",
+        "requirementGuidance": "The stated restricted period cannot exceed 12 months from the end of employment — full stop, as drafted. The only path past it is the misconduct trigger: a breach of fiduciary duty or the unlawful taking of employer property allows a duration of up to 2 years. Audit every covenant clock against the ceiling, including any tolling or extension mechanics that could push the effective restraint over it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-duration-ceiling",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(b)(iv).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(b)(iv) supports the 12-month maximum restricted period, extendable to 2 years only if the employee breached a fiduciary duty or unlawfully took employer property.",
+            "verbatimQuote": "In no event may the stated restricted period exceed 12 months from the date of cessation of employment, unless the employee has breached his or her fiduciary duty to the employer or the employee has unlawfully taken, physically or electronically, property belonging to the employer, in which case the duration may not exceed 2 years from the date of cessation of employment.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-duration-ceiling"
+          }
+        ]
+      },
+      {
+        "requirementId": "limit-scope-to-statutory-legitimate-business-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.massachusetts.limit-scope-to-statutory-legitimate-business-interests",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Scope tied to the three statutory interests",
+        "sectionId": "massachusetts-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#limit-scope-to-statutory-legitimate-business-interests",
+        "requirementGuidance": "Trace each restriction back to one of the three interests the statute permits: trade secrets, confidential information that is not a trade secret, or goodwill. Anything that cannot be traced — industry-wide bans, restraints on roles the worker never held — is breadth beyond necessity, and the case law has always refused to let a contract restrain ordinary competition.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-interest-categories",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(b)(iii).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(b)(iii) supports the rule that a noncompete must be no broader than necessary to protect trade secrets, non-trade-secret confidential information, or goodwill.",
+            "verbatimQuote": "The agreement must be no broader than necessary to protect one or more of the following legitimate business interests of the employer: (A) the employer's trade secrets; (B) the employer's confidential information that otherwise would not qualify as a trade secret; or (C) the employer's goodwill.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-interest-categories"
+          },
+          {
+            "sourceId": "boulanger-codified-interests",
+            "authorityType": "case-law",
+            "title": "Boulanger v. Dunkin' Donuts Inc.",
+            "citation": "Boulanger v. Dunkin' Donuts Inc., 442 Mass. 635 (2004).",
+            "url": "https://www.courtlistener.com/opinion/6579005/boulanger-v-dunkin-donuts-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/6579005/boulanger-v-dunkin-donuts-inc/#:~:text=Legitimate%20business%20interests%20include%20protection,confidential%20information%2C%20and%20good%20will.",
+            "proposition": "Boulanger supports the rule that legitimate business interests are limited to trade secrets, confidential information, and goodwill.",
+            "verbatimQuote": "Legitimate business interests include protection of trade secrets, confidential information, and good will.",
+            "date": "2004-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-boulanger-codified-interests"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-reach-scope-and-effect-reasonable",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.massachusetts.keep-reach-scope-and-effect-reasonable",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Reasonable geographic reach, activity scope, and public policy",
+        "sectionId": "massachusetts-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#keep-reach-scope-and-effect-reasonable",
+        "requirementGuidance": "Beyond the three protected interests, the act's minimum requirements demand that the covenant also be reasonable in geographic reach (§ 24L(b)(v)), reasonable in the scope of proscribed activities (§ 24L(b)(vi)), and consonant with public policy (§ 24L(b)(viii)). Measure the restricted territory against where the worker actually operated and the proscribed activities against the work the worker actually did — these are the geographic-reach and activity-scope prongs — and carry forward the common-law test the statute restates: a covenant is enforceable only if necessary to protect a legitimate interest, reasonably limited in time and space, and consonant with the public interest.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "boulanger-reasonable-restraint",
+            "authorityType": "case-law",
+            "title": "Boulanger v. Dunkin' Donuts Inc.",
+            "citation": "Boulanger v. Dunkin' Donuts Inc., 442 Mass. 635 (2004).",
+            "url": "https://www.courtlistener.com/opinion/6579005/boulanger-v-dunkin-donuts-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/6579005/boulanger-v-dunkin-donuts-inc/#:~:text=A%20covenant%20not%20to%20compete%20is,consonant%20with%20the%20public%20interest.",
+            "proposition": "Boulanger supports the common-law standard — restated by the act's reasonableness prongs — that a non-compete is enforceable only if necessary to protect a legitimate business interest, reasonably limited in time and space, and consonant with the public interest.",
+            "verbatimQuote": "A covenant not to compete is enforceable only if it is necessary to protect a legitimate business interest, reasonably limited in time and space, and consonant with the public interest.",
+            "date": "2004-10-01",
+            "pullQuoteLocator": "A covenant not to compete is|consonant with the public interest.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-boulanger-reasonable-restraint"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-non-competes-for-excluded-worker-categories",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.massachusetts.exclude-non-competes-for-excluded-worker-categories",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No non-compete for excluded workers",
+        "sectionId": "massachusetts-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#exclude-non-competes-for-excluded-worker-categories",
+        "requirementGuidance": "The agreement must not impose a non-compete on the statute's four protected categories: workers who are nonexempt under federal wage law, student interns, workers terminated without cause or laid off, and workers 18 or younger. The layoff rule deserves special attention in review — it means the employer's own decision to end the relationship without cause dissolves the covenant, and because the statute never defines what counts as cause, any non-misconduct separation should be treated as likely freeing the worker.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mnaa-four-exclusions",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 24L",
+            "citation": "Mass. Gen. Laws ch. 149, § 24L(c).",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
+            "proposition": "Section 24L(c) supports the rule that noncompetes are unenforceable against FLSA-nonexempt employees, student interns, employees terminated without cause or laid off, and employees age 18 or younger.",
+            "verbatimQuote": "A noncompetition agreement shall not be enforceable against the following types of workers: (i) an employee who is classified as nonexempt under the Fair Labor Standards Act, 29 U.S.C. 201-219; (ii) undergraduate or graduate students that partake in an internship or otherwise enter a short-term employment relationship with an employer, whether paid or unpaid, while enrolled in a full-time or part-time undergraduate or graduate educational institution; (iii) employees that have been terminated without cause or laid off; or (iv) employees age 18 or younger.",
+            "date": "2018-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-mnaa-four-exclusions"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-non-competes-for-banned-professions",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.massachusetts.exclude-non-competes-for-banned-professions",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No practice restraints on protected professions",
+        "sectionId": "massachusetts-statutory-gates",
+        "itemNumber": "19.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#exclude-non-competes-for-banned-professions",
+        "requirementGuidance": "Separate statutes — older than the 2018 act and untouched by it — void any restriction on the post-separation practice of physicians, nurses, psychologists, and social workers, and void most broadcasting-industry covenants when the employer ends the relationship, the parties part by mutual agreement, or the contract expires. There is no garden-leave cure for these; if the worker holds a protected profession, the restraint comes out, and a violating broadcast employer additionally owes the worker's attorneys' fees.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ban-physicians-void",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 112, § 12X",
+            "citation": "Mass. Gen. Laws ch. 112, § 12X.",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter112/Section12X",
+            "proposition": "Section 12X supports the rule that a covenant restricting a registered physician's right to practice medicine is void and unenforceable as to that restriction.",
+            "verbatimQuote": "Any contract or agreement which creates or establishes the terms of a partnership, employment, or any other form of professional relationship with a physician registered to practice medicine pursuant to section two, which includes any restriction of the right of such physician to practice medicine in any geographic area for any period of time after the termination of such partnership, employment or professional relationship shall be void and unenforceable with respect to said restriction; provided, however, that nothing herein shall render void or unenforceable the remaining provisions of any such contract or agreement.",
+            "date": "1977-01-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-ban-physicians-void"
+          },
+          {
+            "sourceId": "ban-broadcasters-void",
+            "authorityType": "primary-law",
+            "title": "Mass. Gen. Laws ch. 149, § 186",
+            "citation": "Mass. Gen. Laws ch. 149, § 186.",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section186",
+            "proposition": "Section 186 supports the rule that a broadcasting-industry covenant restricting an employee's right to obtain later employment is void where the employer terminated the employment, the parties terminated it by mutual agreement, or the contract expired.",
+            "verbatimQuote": "Any contract or agreement which creates or establishes the terms of employment for an employee or individual in the broadcasting industry, including, television stations, television networks, radio stations, radio networks, or any entities affiliated with the foregoing, and which restricts the right of such employee or individual to obtain employment in a specified geographic area for a specified period of time after termination of employment of the employee by the employer or by termination of the employment relationship by mutual agreement of the employer and the employee or by termination of the employment relationship by the expiration of the contract or agreement, shall be void and unenforceable with respect to such provision.",
+            "date": "2024-01-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-ban-broadcasters-void"
+          }
+        ]
+      },
+      {
+        "requirementId": "re-paper-covenants-after-material-change",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.massachusetts.re-paper-covenants-after-material-change",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Fresh covenant after a material role change",
+        "sectionId": "massachusetts-statutory-gates",
+        "itemNumber": "19.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#re-paper-covenants-after-material-change",
+        "requirementGuidance": "Ask when the covenant was signed relative to the worker's current role. Massachusetts courts have treated far-reaching changes in pay and position as abandoning the original contract — and the covenant inside it — so an agreement signed several promotions ago may no longer bind. The conservative practice is a fresh, statute-compliant covenant at each material change, which also re-triggers the act's notice and consideration rules.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "bartlett-abandoned-arrangement",
+            "authorityType": "case-law",
+            "title": "F.A. Bartlett Tree Expert Co. v. Barrington",
+            "citation": "F.A. Bartlett Tree Expert Co. v. Barrington, 353 Mass. 585 (1968).",
+            "url": "https://www.courtlistener.com/opinion/2013561/f-a-bartlett-tree-expert-co-v-barrington/",
+            "deepLink": "https://www.courtlistener.com/opinion/2013561/f-a-bartlett-tree-expert-co-v-barrington/#:~:text=Such%20far%20reaching%20changes%20strongly,entered%20into%20a%20new%20relationship.",
+            "proposition": "Bartlett supports the rule that far-reaching changes to the employment relationship suggest the parties abandoned the old arrangement and entered a new one.",
+            "verbatimQuote": "Such far reaching changes strongly suggest that the parties had abandoned their old arrangement and had entered into a new relationship.",
+            "date": "1968-02-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-bartlett-abandoned-arrangement"
+          }
+        ]
+      },
+      {
+        "requirementId": "name-direct-employer-as-counterparty",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.massachusetts.name-direct-employer-as-counterparty",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Direct employer signs, not a parent entity",
+        "sectionId": "massachusetts-statutory-gates",
+        "itemNumber": "19.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#name-direct-employer-as-counterparty",
+        "requirementGuidance": "Confirm the covenant runs to the entity that actually employs the worker. A Massachusetts trial court has refused preliminary relief on a non-compete tucked into equity paperwork signed with a parent holding company, reasoning that the statutory term for employer has never been read to cover a parent corporation. The ruling is persuasive rather than binding — but the fix at signing costs nothing, and the defect at enforcement may cost the covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "anaplan-parent-not-employer",
+            "authorityType": "case-law",
+            "title": "Anaplan Parent, LP v. Brennan",
+            "citation": "Anaplan Parent, LP v. Brennan, No. 2584CV02350 (Mass. Super. Ct. 2025).",
+            "url": "https://www.mintz.com/sites/default/files/media/documents/2025-11-07/Anaplan-Parent%2C-LP-v.-Brennan-Noncompete%20Order.pdf",
+            "proposition": "Anaplan supports the point that the statutory term employer has not been read to include a parent corporation, so a non-compete signed with a parent rather than the direct employing entity risks being unenforceable.",
+            "verbatimQuote": "It has never been held to include a parent corporation as an \"employer.\"",
+            "date": "2025-09-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#src-anaplan-parent-not-employer"
+          }
+        ]
+      }
+    ]
+  }
+}

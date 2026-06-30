@@ -1,0 +1,1406 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/new-york",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/new-york.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/new-york",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/new-york/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/new-york/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "new-york",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — New York",
+      "description": "A clause-by-clause reviewer checklist for New York employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the common-law BDO Seidman reasonableness test and New York case law.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "New York",
+      "coverage": "New York (US)",
+      "lastReviewed": "2026-06-11",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 48,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "new-york-doctrine-gates",
+        "label": "New York doctrine gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity whose trade secrets, customer relationships, and goodwill the covenant claims to protect. New York ties enforceability to a legitimate interest of the employer, so a covenant signed with a parent or affiliate that holds none of the relationships at stake starts the reasonableness analysis with a gap it may never close.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#identify-effective-date",
+        "requirementGuidance": "Every covenant clock needs a defined start, and in New York the date does a second job: it marks whether the covenant came at hire or mid-employment, which determines whether the consideration question even arises. Reasonableness in time is part of the enforceability test, and a duration nobody can compute is a duration nobody can defend.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "otg-time-area-cover",
+            "authorityType": "case-law",
+            "title": "OTG Management, LLC v. Konstantinidis",
+            "citation": "OTG Mgt., LLC v. Konstantinidis, 40 Misc. 3d 617 (Sup. Ct. N.Y. County 2013).",
+            "url": "https://www.courtlistener.com/opinion/6314442/otg-management-llc-v-konstantinidis/",
+            "deepLink": "https://www.courtlistener.com/opinion/6314442/otg-management-llc-v-konstantinidis/#:~:text=In%20order%20to%20be%20enforceable%2C,unreasonably%20burdensome%20to%20the%20employee.",
+            "proposition": "OTG Management states that a covenant ancillary to employment must be reasonable in time and area, which makes a computable start date part of the enforceability story.",
+            "verbatimQuote": "In order to be enforceable, an anticompetitive covenant ancillary to an employment agreement must be reasonable in time and area, necessary to protect the employer’s legitimate interests, not harmful to the public, and not unreasonably burdensome to the employee.",
+            "date": "2013-06-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-otg-time-area-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#identify-employee-title",
+        "requirementGuidance": "Record the role with more care than usual. One of New York's few protectable interests is competition by an employee whose services are unique or extraordinary, and courts decide that question case by case from the employee's actual relationship to the business — the stated title and duties are the first evidence on the point.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ticor-role-inquiry",
+            "authorityType": "case-law",
+            "title": "Ticor Title Insurance Co. v. Cohen",
+            "citation": "Ticor Title Ins. Co. v. Cohen, 173 F.3d 63 (2d Cir. 1999).",
+            "url": "https://www.courtlistener.com/opinion/763095/ticor-title-insurance-co-chicago-title-insurance-co-v-kenneth-c-cohen/",
+            "deepLink": "https://www.courtlistener.com/opinion/763095/ticor-title-insurance-co-chicago-title-insurance-co-v-kenneth-c-cohen/#:~:text=Instead%2C%20now%20the%20inquiry%20is,be%20on%20a%20case%2Dby%2Dcase%20basis.",
+            "proposition": "Ticor explains that whether an employee's services are unique turns on the employee's particular relationship to the business, decided case by case.",
+            "verbatimQuote": "Instead, now the inquiry is more focused on the employee’s relationship to the employer’s business to ascertain whether his or her services and value to that operation may be said to be unique, special or extraordinary; that inquiry, because individual circumstances differ so widely, must of necessity be on a case-by-case basis.",
+            "date": "1999-03-31",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-ticor-role-inquiry"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#identify-governing-law",
+        "requirementGuidance": "Check that a governing state is stated, and read any non-New York selection for a New York-based worker skeptically. The Court of Appeals has refused to apply a chosen foreign law to a restrictive covenant where doing so would violate New York public policy, so the clause names a starting point — not an escape hatch.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "brown-brown-policy-cover",
+            "authorityType": "case-law",
+            "title": "Brown & Brown, Inc. v. Johnson",
+            "citation": "Brown & Brown, Inc. v. Johnson, 25 N.Y.3d 364 (2015).",
+            "url": "https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/",
+            "deepLink": "https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/#:~:text=On%20this%20appeal%2C%20we%20hold,public%20policy%20of%20this%20state.",
+            "proposition": "Brown & Brown holds that a foreign choice-of-law clause yields where applying the chosen law to a restrictive covenant would violate New York public policy.",
+            "verbatimQuote": "On this appeal, we hold that applying Florida law on restrictive covenants related to the non-solicitation of customers by a former employee would violate the public policy of this state.",
+            "date": "2015-06-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-brown-brown-policy-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#define-confidential-information",
+        "requirementGuidance": "Test the definition against New York's oldest limit: an employee's knowledge of the employer's ordinary, internal operations is not protectable absent a trade secret or a breach of trust. A definition that quietly absorbs general know-how and routine business information claims an interest the courts have refused to recognize for half a century.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "reed-roberts-general-knowledge",
+            "authorityType": "case-law",
+            "title": "Reed, Roberts Associates, Inc. v. Strauman",
+            "citation": "Reed, Roberts Assocs., Inc. v. Strauman, 40 N.Y.2d 303 (1976).",
+            "url": "https://www.courtlistener.com/opinion/5682269/reed-roberts-associates-inc-v-strauman/",
+            "deepLink": "https://www.courtlistener.com/opinion/5682269/reed-roberts-associates-inc-v-strauman/#:~:text=Where%20the%20knowledge%20does%20not,by%20availing%20himself%20of%20opportunity.",
+            "proposition": "Reed, Roberts holds that knowledge of an employer's routine internal operations is not protectable absent a trade secret or breach of trust.",
+            "verbatimQuote": "Where the knowledge does not qualify for protection as a trade secret and there has been no conspiracy or breach of trust resulting in commercial piracy we see no reason to inhibit the employee’s ability to realize his potential both professionally and financially by availing himself of opportunity.",
+            "date": "1976-07-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-reed-roberts-general-knowledge"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#define-trade-secrets",
+        "requirementGuidance": "A separate, concrete trade-secret definition matters here because trade secrets and confidential customer information head the short list of interests that can justify a New York restraint. The sharper the definition, the easier it is to show the covenant guards something the law actually protects rather than competition in general.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "gallagher-protectable-categories",
+            "authorityType": "case-law",
+            "title": "Arthur J. Gallagher & Co. v. Marchese",
+            "citation": "Arthur J. Gallagher & Co. v. Marchese, 96 A.D.3d 791 (2d Dep't 2012).",
+            "url": "https://www.courtlistener.com/opinion/5999301/arthur-j-gallagher-co-v-marchese/",
+            "deepLink": "https://www.courtlistener.com/opinion/5999301/arthur-j-gallagher-co-v-marchese/#:~:text=An%20employer%E2%80%99s%20interests%20justifying%20a,services%20are%20unique%20or%20extraordinary%E2%80%9D",
+            "proposition": "Gallagher restates the limited categories of employer interests that justify a New York restrictive covenant.",
+            "verbatimQuote": "An employer’s interests justifying a restrictive covenant are limited “to the protection against misappropriation of the employer’s trade secrets or of confidential customer lists, or protection from competition by a former employee whose services are unique or extraordinary”",
+            "date": "2012-06-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-gallagher-protectable-categories"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#define-restricted-period",
+        "requirementGuidance": "One umbrella defined term keeps every duration auditable, and in New York duration is not housekeeping: reasonableness in time period is part of the enforceability framework itself, so a court asked to enforce the covenant will be measuring exactly the number this definition controls.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ag-faq-time-geography",
+            "authorityType": "agency-guidance",
+            "title": "N.Y. Attorney General, Non-Compete Agreements in New York State: FAQ",
+            "citation": "N.Y. Att'y Gen., Non-Compete Agreements in New York State: Frequently Asked Questions (2022).",
+            "url": "https://ag.ny.gov/sites/default/files/non-competes.pdf",
+            "proposition": "The Attorney General's guidance lists reasonableness in time period and geographic scope among the conditions of enforceability.",
+            "verbatimQuote": "A non-compete is only allowed and enforceable to the extent it (1) is necessary to protect the employer’s legitimate interests, (2) does not impose an undue hardship on the employee, (3) does not harm the public, and (4) is reasonable in time period and geographic scope.",
+            "date": "2022-02-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-ag-faq-time-geography"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#define-restricted-territory",
+        "requirementGuidance": "Tie the geography to where the protected interest actually lives — the clients served, the secrets exploitable — not to the employer's footprint. Geographic scope is one of the express reasonableness factors, and an everywhere-we-operate territory invites a finding of overbreadth that a New York court has discretion to leave unrepaired.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ag-faq-time-geography",
+            "authorityType": "agency-guidance",
+            "title": "N.Y. Attorney General, Non-Compete Agreements in New York State: FAQ",
+            "citation": "N.Y. Att'y Gen., Non-Compete Agreements in New York State: Frequently Asked Questions (2022).",
+            "url": "https://ag.ny.gov/sites/default/files/non-competes.pdf",
+            "proposition": "The Attorney General's guidance lists reasonableness in time period and geographic scope among the conditions of enforceability.",
+            "verbatimQuote": "A non-compete is only allowed and enforceable to the extent it (1) is necessary to protect the employer’s legitimate interests, (2) does not impose an undue hardship on the employee, (3) does not harm the public, and (4) is reasonable in time period and geographic scope.",
+            "date": "2022-02-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-ag-faq-time-geography"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the employee actually developed or serviced during a stated look-back window. The Court of Appeals has held a customer restraint overbroad precisely because it reached clients the employee had never met, did not know about, and had done no work for — an entire-book-of-business definition recreates that losing posture on day one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "brown-brown-never-served-defs",
+            "authorityType": "case-law",
+            "title": "Brown & Brown, Inc. v. Johnson",
+            "citation": "Brown & Brown, Inc. v. Johnson, 25 N.Y.3d 364 (2015).",
+            "url": "https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/",
+            "deepLink": "https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/#:~:text=even%20those%20Johnson%20had%20never,she%20had%20done%20no%20work",
+            "proposition": "Brown & Brown found a customer non-solicitation covenant overbroad to the extent it reached customers the employee never met, did not know about, and did no work for.",
+            "verbatimQuote": "even those Johnson had never met, did not know about and for whom she had done no work",
+            "date": "2015-06-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-brown-brown-never-served-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing worker actually worked with during the look-back window. New York treats employee non-recruitment clauses as lighter restraints than non-competes, and the narrower the class, the easier it is to keep that favorable framing instead of drifting toward a workforce-wide mobility ban.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#define-protected-interests",
+        "requirementGuidance": "Name the interests — and make them New York's interests. The recognized categories are misappropriation of trade secrets or confidential customer information, competition by an employee whose services are unique or extraordinary, and client goodwill created and maintained at the employer's expense. A recital built on anything else decorates the agreement without supporting it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "gallagher-protectable-categories",
+            "authorityType": "case-law",
+            "title": "Arthur J. Gallagher & Co. v. Marchese",
+            "citation": "Arthur J. Gallagher & Co. v. Marchese, 96 A.D.3d 791 (2d Dep't 2012).",
+            "url": "https://www.courtlistener.com/opinion/5999301/arthur-j-gallagher-co-v-marchese/",
+            "deepLink": "https://www.courtlistener.com/opinion/5999301/arthur-j-gallagher-co-v-marchese/#:~:text=An%20employer%E2%80%99s%20interests%20justifying%20a,services%20are%20unique%20or%20extraordinary%E2%80%9D",
+            "proposition": "Gallagher restates the limited categories of employer interests that justify a New York restrictive covenant.",
+            "verbatimQuote": "An employer’s interests justifying a restrictive covenant are limited “to the protection against misappropriation of the employer’s trade secrets or of confidential customer lists, or protection from competition by a former employee whose services are unique or extraordinary”",
+            "date": "2012-06-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-gallagher-protectable-categories"
+          },
+          {
+            "sourceId": "bdo-goodwill-defs",
+            "authorityType": "case-law",
+            "title": "BDO Seidman v. Hirshberg",
+            "citation": "BDO Seidman v. Hirshberg, 93 N.Y.2d 382, 392 (1999).",
+            "url": "https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/",
+            "deepLink": "https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/#:~:text=The%20employer%20has%20a%20legitimate,to%20the%20employer%E2%80%99s%20competitive%20detriment",
+            "proposition": "BDO Seidman recognizes client goodwill created and maintained at the employer's expense as a legitimate protectable interest.",
+            "verbatimQuote": "The employer has a legitimate interest in preventing former employees from exploiting or appropriating the goodwill of a client or customer, which had been created and maintained at the employer’s expense, to the employer’s competitive detriment",
+            "date": "1999-05-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-bdo-goodwill-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity in concrete terms. A definition stretching to anything the employer might someday do reads as a restraint on ordinary competition — the one thing New York will not protect — and an overreaching definition undercuts the good-faith showing the employer needs if it ever asks a court to enforce the covenant in part.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. A clause that technically bars index funds and ordinary public shares adds hardship on the employee without protecting any recognized interest — needless weight on the very prong New York courts use to strike covenants down.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#define-passive-public-holdings",
+        "requirementGuidance": "A drafting convenience rather than a requirement — many agreements inline the carve-out instead of defining a capitalized term. If the term appears, confirm its percentage matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#define-solicit",
+        "requirementGuidance": "Pin the term to initiating contact. New York's goodwill cases draw the controlling line between actively soliciting former customers and accepting business that arrives without prompting — a definition that also captures passive acceptance pushes the clause across that line and toward the broader restraint courts scrutinize hardest.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mohawk-solicitation-line",
+            "authorityType": "case-law",
+            "title": "Mohawk Maintenance Co. v. Kessler",
+            "citation": "Mohawk Maintenance Co. v. Kessler, 52 N.Y.2d 276 (1981).",
+            "url": "https://www.courtlistener.com/opinion/5684701/mohawk-maintenance-co-v-kessler/",
+            "deepLink": "https://www.courtlistener.com/opinion/5684701/mohawk-maintenance-co-v-kessler/#:~:text=Although%20defendants%20may%20accept%20the,acquisition%20of%20Mohawk%E2%80%99s%20%E2%80%9Cgood%20will%E2%80%9D.",
+            "proposition": "Mohawk Maintenance draws New York's clearest line between accepting unprompted patronage and actively soliciting former customers.",
+            "verbatimQuote": "Although defendants may accept the patronage of those customers who were actively dealing with Mohawk on the date of the sale if such customers choose to leave Mohawk without prompting from defendants, the defendants remain under a positive and permanent duty to refrain from interfering with the rights acquired by plaintiff as a result of its acquisition of Mohawk’s “good will”.",
+            "date": "1981-02-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-mohawk-solicitation-line"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger handles resignation, dismissal, and expiration of a fixed term the same way. The restricted period runs from this event, and in New York the manner of separation can color the whole analysis — an undefined trigger invites exactly the fact-by-fact dispute the definition exists to prevent.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#acknowledge-timing",
+        "requirementGuidance": "The signing-versus-start-date question carries real consequence in New York. For a covenant signed mid-employment, the consideration can be the employer's forbearance from firing an at-will worker — but that forbearance counts only if employment then continues for a substantial period, and it fails as illusory if the worker is dismissed soon after. The acknowledgement should pin down when the covenant was signed and what consideration moved.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "zellner-forbearance-consideration",
+            "authorityType": "case-law",
+            "title": "Zellner v. Stephen D. Conrad, M.D., P.C.",
+            "citation": "Zellner v. Stephen D. Conrad, M.D., P.C., 183 A.D.2d 250 (2d Dep't 1992).",
+            "url": "https://www.courtlistener.com/opinion/6084767/zellner-v-stephen-d-conrad-md-p-c/",
+            "deepLink": "https://www.courtlistener.com/opinion/6084767/zellner-v-stephen-d-conrad-md-p-c/#:~:text=Because%20in%20at%2Dwill%20employment%20the,consideration%20for%20a%20restrictive%20covenant.",
+            "proposition": "Zellner holds that forbearance from discharging an at-will worker is a legal detriment that can serve as consideration for a restrictive covenant.",
+            "verbatimQuote": "Because in at-will employment the employer has the right to discharge the employee (or, as here, an independent contractor providing services under a similar arrangement), without cause, and without being subject to inquiry as to his or her motives (Sabetay v Sterling Drug, supra), forbearance of that right is a legal detriment which can stand as consideration for a restrictive covenant.",
+            "date": "1992-11-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-zellner-forbearance-consideration"
+          },
+          {
+            "sourceId": "zellner-tenure-validates",
+            "authorityType": "case-law",
+            "title": "Zellner v. Stephen D. Conrad, M.D., P.C.",
+            "citation": "Zellner v. Stephen D. Conrad, M.D., P.C., 183 A.D.2d 250 (2d Dep't 1992).",
+            "url": "https://www.courtlistener.com/opinion/6084767/zellner-v-stephen-d-conrad-md-p-c/",
+            "deepLink": "https://www.courtlistener.com/opinion/6084767/zellner-v-stephen-d-conrad-md-p-c/#:~:text=However%2C%20where%2C%20as%20here%2C%20a,for%20the%20promise%20is%20validated.",
+            "proposition": "Zellner holds that continued employment for a substantial period after the covenant is given validates the consideration.",
+            "verbatimQuote": "However, where, as here, a relationship continues for a substantial period after the covenant is given, the forbearance is real, not illusory, and the consideration given for the promise is validated.",
+            "date": "1992-11-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-zellner-tenure-validates"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No New York rule requires it, but it earns its place anyway: partial enforcement of an overbroad covenant depends on the employer showing it did not use coercive bargaining power, and a documented chance to seek advice before signing is inexpensive evidence on exactly that point.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret obligations should run as long as secrecy does — that is how federal law defines the right. The New York angle: trade secrets sit at the top of the short list of interests that can support a restrictive covenant at all, so an agreement that lets its own trade-secret protection lapse on a calendar date saws at the branch the covenants are sitting on.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-dtsa-trade-secret-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. New York already declines to protect general knowledge and routine operational information, and a perpetual lid on non-secret material reads as the kind of overreach that costs an employer the benefit of the doubt when reasonableness is measured.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in New York: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret action against the worker. In a state where trade secrets are often the only interest holding the covenant up, giving away those remedies is self-sabotage.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech in every state, and the Board has been striking overbroad clauses in employee agreements regardless of what state law would tolerate.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. A confidentiality clause cannot stop legally compelled disclosure anywhere, and a clause that pretends otherwise hands opposing counsel an easy overbreadth exhibit.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. Because New York enforcement so often turns on whether real trade secrets or confidential customer information were at risk, the certification is the cleanest contemporaneous record if protected material later surfaces at a competitor — and its absence weakens the very interest the covenants depend on.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and the best-positioned covenant in the New York family: courts treat non-recruitment clauses as inherently more reasonable and less restrictive than non-competes, and have enforced a reasonable one even while refusing the non-compete beside it. Keep it inside the Covered Employees class and the Restricted Period to preserve that favorable framing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "otg-norecruit-lesser",
+            "authorityType": "case-law",
+            "title": "OTG Management, LLC v. Konstantinidis",
+            "citation": "OTG Mgt., LLC v. Konstantinidis, 40 Misc. 3d 617 (Sup. Ct. N.Y. County 2013).",
+            "url": "https://www.courtlistener.com/opinion/6314442/otg-management-llc-v-konstantinidis/",
+            "deepLink": "https://www.courtlistener.com/opinion/6314442/otg-management-llc-v-konstantinidis/#:~:text=While%20both%20Renaissance%20Nutrition%20and,less%20restrictive%E2%80%9D%20than%20noncompete%20clauses.",
+            "proposition": "OTG Management treats employee non-recruitment clauses as inherently more reasonable and less restrictive than non-competes.",
+            "verbatimQuote": "While both Renaissance Nutrition and Lazer recognized that non-recruitment clauses are subject to reasonableness scrutiny because they are anti-competitive in nature, non-recruitment clauses are “inherently more reasonable and less restrictive” than noncompete clauses.",
+            "date": "2013-06-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-otg-norecruit-lesser"
+          },
+          {
+            "sourceId": "otg-norecruit-enforced",
+            "authorityType": "case-law",
+            "title": "OTG Management, LLC v. Konstantinidis",
+            "citation": "OTG Mgt., LLC v. Konstantinidis, 40 Misc. 3d 617 (Sup. Ct. N.Y. County 2013).",
+            "url": "https://www.courtlistener.com/opinion/6314442/otg-management-llc-v-konstantinidis/",
+            "deepLink": "https://www.courtlistener.com/opinion/6314442/otg-management-llc-v-konstantinidis/#:~:text=Here%2C%20the%20court%20finds%20that,no%20meaningful%20burden%20on%20Konstantinidis.",
+            "proposition": "OTG Management enforced a reasonable non-recruitment clause while declining to enforce the accompanying non-compete.",
+            "verbatimQuote": "Here, the court finds that the non-recruitment clause is enforceable because it is reasonable in scope and imposes no meaningful burden on Konstantinidis.",
+            "date": "2013-06-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-otg-norecruit-enforced"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#permit-customer-nonsolicit",
+        "requirementGuidance": "Enforceable in New York when tied to relationships the employee actually serviced — and overbroad when it is not. The Court of Appeals struck a clause reaching clients the employee never met or worked for, so if this covenant appears, run it through the customers-actually-served gate at the end of this checklist before weighing anything else.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "brown-brown-never-served-covenants",
+            "authorityType": "case-law",
+            "title": "Brown & Brown, Inc. v. Johnson",
+            "citation": "Brown & Brown, Inc. v. Johnson, 25 N.Y.3d 364 (2015).",
+            "url": "https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/",
+            "deepLink": "https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/#:~:text=even%20those%20Johnson%20had%20never,she%20had%20done%20no%20work",
+            "proposition": "Brown & Brown found a customer non-solicitation covenant overbroad to the extent it reached customers the employee never met, did not know about, and did no work for.",
+            "verbatimQuote": "even those Johnson had never met, did not know about and for whom she had done no work",
+            "date": "2015-06-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-brown-brown-never-served-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they arrive unprompted — a restraint on accepting business, not just chasing it. New York's own goodwill doctrine stops short of that line even for someone who sold the business, permitting unsolicited patronage while banning solicitation; a clause demanding more from a mere employee should be treated as a deliberate risk decision.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mohawk-acceptance-covenants",
+            "authorityType": "case-law",
+            "title": "Mohawk Maintenance Co. v. Kessler",
+            "citation": "Mohawk Maintenance Co. v. Kessler, 52 N.Y.2d 276 (1981).",
+            "url": "https://www.courtlistener.com/opinion/5684701/mohawk-maintenance-co-v-kessler/",
+            "deepLink": "https://www.courtlistener.com/opinion/5684701/mohawk-maintenance-co-v-kessler/#:~:text=Although%20defendants%20may%20accept%20the,acquisition%20of%20Mohawk%E2%80%99s%20%E2%80%9Cgood%20will%E2%80%9D.",
+            "proposition": "Mohawk Maintenance permits even a seller of goodwill to accept unprompted patronage, banning only active solicitation — the line a non-dealing covenant crosses.",
+            "verbatimQuote": "Although defendants may accept the patronage of those customers who were actively dealing with Mohawk on the date of the sale if such customers choose to leave Mohawk without prompting from defendants, the defendants remain under a positive and permanent duty to refrain from interfering with the rights acquired by plaintiff as a result of its acquisition of Mohawk’s “good will”.",
+            "date": "1981-02-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-mohawk-acceptance-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#permit-non-compete",
+        "requirementGuidance": "If a full non-compete appears, it carries the heaviest burden in the New York suite: reasonableness on every prong — no broader than the legitimate interest requires, no undue hardship, no injury to the public — with any single failure invalidating the covenant. Route the review straight through the doctrine gates at the end of this checklist before evaluating its terms.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "bdo-three-prong-covenants",
+            "authorityType": "case-law",
+            "title": "BDO Seidman v. Hirshberg",
+            "citation": "BDO Seidman v. Hirshberg, 93 N.Y.2d 382, 388 (1999).",
+            "url": "https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/",
+            "deepLink": "https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/#:~:text=The%20modern%2C%20prevailing%20common%2Dlaw%20standard,compete%20applies%20a%20three%2Dpronged%20test.",
+            "proposition": "BDO Seidman establishes the three-pronged reasonableness test New York applies to employee non-competes.",
+            "verbatimQuote": "The modern, prevailing common-law standard of reasonableness for employee agreements not to compete applies a three-pronged test.",
+            "date": "1999-05-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-bdo-three-prong-covenants"
+          },
+          {
+            "sourceId": "natural-organics-restraint-test",
+            "authorityType": "case-law",
+            "title": "Natural Organics, Inc. v. Kirkendall",
+            "citation": "Natural Organics, Inc. v. Kirkendall, 52 A.D.3d 488 (2d Dep't 2008).",
+            "url": "https://www.courtlistener.com/opinion/5897806/natural-organics-inc-v-kirkendall/",
+            "deepLink": "https://www.courtlistener.com/opinion/5897806/natural-organics-inc-v-kirkendall/#:~:text=%22A%20restraint%20is%20reasonable%20only,not%20injurious%20to%20the%20public%22",
+            "proposition": "Natural Organics restates the three prongs a New York restraint must satisfy to be reasonable.",
+            "verbatimQuote": "\"A restraint is reasonable only if it: (1) is no greater than is required for the protection of the legitimate interest of the employer, (2) does not impose undue hardship on the employee, and (3) is not injurious to the public\"",
+            "date": "2008-06-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-natural-organics-restraint-test"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, bind those instead of leaning on the open-ended Competitive Business definition. New York pays for that restraint twice: a named list is strong evidence the covenant is no greater than required, and it builds the good-faith, no-overreach record an employer must show before a court will even consider enforcing an imperfect covenant in part.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "bdo-good-faith-narrowing",
+            "authorityType": "case-law",
+            "title": "BDO Seidman v. Hirshberg",
+            "citation": "BDO Seidman v. Hirshberg, 93 N.Y.2d 382, 394 (1999).",
+            "url": "https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/",
+            "deepLink": "https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/#:~:text=Under%20this%20approach%2C%20if%20the,partial%20enforcement%20may%20be%20justified",
+            "proposition": "BDO Seidman conditions partial enforcement on the employer's good faith and absence of overreaching — the record a narrowed covenant helps build.",
+            "verbatimQuote": "Under this approach, if the employer demonstrates an absence of overreaching, coercive use of dominant bargaining power, or other anti-competitive misconduct, but has in good faith sought to protect a legitimate business interest, consistent with reasonable standards of fair dealing, partial enforcement may be justified",
+            "date": "1999-05-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-bdo-good-faith-narrowing"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — and ask which recognized New York interest an investment restriction actually protects, because hardship without a protectable interest behind it is how covenants fail here.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must stay outside the clause. Federal labor law polices overbroad versions in every state, and New York adds no special shelter for an aggressive one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state plainly how the agreement treats physicians. New York's one industry-specific statutory shield covers broadcast employees, not doctors, so a physician covenant is measured under the same reasonableness framework as everyone else's — including the prong asking whether the restraint injures the public, which is where patient access arguments live. Spell out the treatment rather than leaving it to inference.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "natural-organics-public-prong",
+            "authorityType": "case-law",
+            "title": "Natural Organics, Inc. v. Kirkendall",
+            "citation": "Natural Organics, Inc. v. Kirkendall, 52 A.D.3d 488 (2d Dep't 2008).",
+            "url": "https://www.courtlistener.com/opinion/5897806/natural-organics-inc-v-kirkendall/",
+            "deepLink": "https://www.courtlistener.com/opinion/5897806/natural-organics-inc-v-kirkendall/#:~:text=%22A%20restraint%20is%20reasonable%20only,not%20injurious%20to%20the%20public%22",
+            "proposition": "Natural Organics restates the reasonableness test, whose third prong asks whether the restraint is injurious to the public.",
+            "verbatimQuote": "\"A restraint is reasonable only if it: (1) is no greater than is required for the protection of the legitimate interest of the employer, (2) does not impose undue hardship on the employee, and (3) is not injurious to the public\"",
+            "date": "2008-06-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-natural-organics-public-prong"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement blocks the new role. It earns extra value on New York intake: an incoming covenant signed under another state's law may not survive New York's public-policy screen, and the representation forces that conversation before the first customer call instead of in a preliminary-injunction brief.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice with a New York-shaped cost: warning a new employer off the worker on the strength of an overbroad covenant is the kind of aggressive enforcement conduct that undercuts the good-faith record partial enforcement depends on, and it courts tortious-interference exposure besides. If the clause appears, condition any outreach on a covenant the employer genuinely believes survives the reasonableness test.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but treat any extension mechanism as an open New York question. No controlling decision blesses automatic tolling, and because duration is itself a reasonableness factor, an open-ended extension can push an otherwise defensible covenant past the line. Draft any extension narrowly and time-limited, and note that pending legislation would cap permissible non-competes at one year if it ever becomes law.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "otg-duration-reasonableness",
+            "authorityType": "case-law",
+            "title": "OTG Management, LLC v. Konstantinidis",
+            "citation": "OTG Mgt., LLC v. Konstantinidis, 40 Misc. 3d 617 (Sup. Ct. N.Y. County 2013).",
+            "url": "https://www.courtlistener.com/opinion/6314442/otg-management-llc-v-konstantinidis/",
+            "deepLink": "https://www.courtlistener.com/opinion/6314442/otg-management-llc-v-konstantinidis/#:~:text=In%20order%20to%20be%20enforceable%2C,unreasonably%20burdensome%20to%20the%20employee.",
+            "proposition": "OTG Management confirms that a covenant must be reasonable in time, so a clause extending the restricted period is itself subject to reasonableness review.",
+            "verbatimQuote": "In order to be enforceable, an anticompetitive covenant ancillary to an employment agreement must be reasonable in time and area, necessary to protect the employer’s legitimate interests, not harmful to the public, and not unreasonably burdensome to the employee.",
+            "date": "2013-06-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-otg-duration-reasonableness"
+          },
+          {
+            "sourceId": "s4641a-one-year-cap-tolling",
+            "authorityType": "primary-law",
+            "title": "N.Y. Senate Bill 2025-S4641A (pending)",
+            "citation": "N.Y. S.B. S4641A, § 191-d(7)(a) (2025-2026 Reg. Sess.) (pending).",
+            "url": "https://www.nysenate.gov/legislation/bills/2025/S4641/amendment/A",
+            "proposition": "S4641A, if enacted, would cap any permissible non-compete at a one-year term, limiting how far an extension-on-breach clause could reach.",
+            "verbatimQuote": "A NON-COMPETE AGREEMENT THAT IS REASONABLE IN TIME PURSUANT TO SUBPARAGRAPH (I) OF THIS PARAGRAPH SHALL NOT CONTAIN A TERM OF RESTRICTION GREATER THAN ONE YEAR",
+            "date": "2025-06-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-s4641a-one-year-cap-tolling"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief — then remember the recital is not the showing. In New York, injunctive enforcement absent trade secrets typically rides on services that are genuinely special, unique, or extraordinary, and no boilerplate paragraph manufactures that fact.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ticor-injunctive-relief",
+            "authorityType": "case-law",
+            "title": "Ticor Title Insurance Co. v. Cohen",
+            "citation": "Ticor Title Ins. Co. v. Cohen, 173 F.3d 63 (2d Cir. 1999).",
+            "url": "https://www.courtlistener.com/opinion/763095/ticor-title-insurance-co-chicago-title-insurance-co-v-kenneth-c-cohen/",
+            "deepLink": "https://www.courtlistener.com/opinion/763095/ticor-title-insurance-co-chicago-title-insurance-co-v-kenneth-c-cohen/#:~:text=Services%20that%20are%20not%20simply,an%20employer%20to%20injunctive%20relief.",
+            "proposition": "Ticor confirms that special, unique, or extraordinary services may entitle an employer to injunctive relief under New York law.",
+            "verbatimQuote": "Services that are not simply of value to the employer, but that may also truly be said to be special, unique or extraordinary may entitle an employer to injunctive relief.",
+            "date": "1999-03-31",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-ticor-injunctive-relief"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice; the American Rule applies if the agreement is silent. Check that any fee-shifting is mutual and prevailing-party based — a one-way employer fee clause layered onto an aggressive covenant reads as exactly the coercive posture that costs employers the partial-enforcement safety valve.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "draft-to-reasonable-scope-rather-than-rely-on-partial-enforcement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-york.draft-to-reasonable-scope-rather-than-rely-on-partial-enforcement",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Partial enforcement is not a safety net",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#draft-to-reasonable-scope-rather-than-rely-on-partial-enforcement",
+        "requirementGuidance": "Read the severability clause as a risk signal, not insurance. New York rejects automatically voiding every overbroad covenant, but a court will trim one to reasonable scope only when the employer shows it did not overreach, did not lean on dominant bargaining power, and sought in good faith to protect a legitimate interest — meaning the covenant drafted aggressively enough to need rescue is the one least likely to get it. And where no legitimate interest exists at all, there is nothing to sever. Size duration, geography, and activity to the actual interest from the outset.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "bdo-no-per-se-rule",
+            "authorityType": "case-law",
+            "title": "BDO Seidman v. Hirshberg",
+            "citation": "BDO Seidman v. Hirshberg, 93 N.Y.2d 382, 394 (1999).",
+            "url": "https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/",
+            "deepLink": "https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/#:~:text=The%20prevailing%2C%20modern%20view%20rejects,employee%20agreement%20not%20to%20compete.",
+            "proposition": "BDO Seidman rejects a per se rule that would void any overbroad employee non-compete in its entirety.",
+            "verbatimQuote": "The prevailing, modern view rejects a per se rule that invalidates entirely any overbroad employee agreement not to compete.",
+            "date": "1999-05-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-bdo-no-per-se-rule"
+          },
+          {
+            "sourceId": "bdo-conduct-condition",
+            "authorityType": "case-law",
+            "title": "BDO Seidman v. Hirshberg",
+            "citation": "BDO Seidman v. Hirshberg, 93 N.Y.2d 382, 394 (1999).",
+            "url": "https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/",
+            "deepLink": "https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/#:~:text=Under%20this%20approach%2C%20if%20the,partial%20enforcement%20may%20be%20justified",
+            "proposition": "BDO Seidman conditions partial enforcement on the employer's good faith and the absence of overreaching or coercion.",
+            "verbatimQuote": "Under this approach, if the employer demonstrates an absence of overreaching, coercive use of dominant bargaining power, or other anti-competitive misconduct, but has in good faith sought to protect a legitimate business interest, consistent with reasonable standards of fair dealing, partial enforcement may be justified",
+            "date": "1999-05-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-bdo-conduct-condition"
+          },
+          {
+            "sourceId": "natural-organics-nothing-to-sever",
+            "authorityType": "case-law",
+            "title": "Natural Organics, Inc. v. Kirkendall",
+            "citation": "Natural Organics, Inc. v. Kirkendall, 52 A.D.3d 488 (2d Dep't 2008).",
+            "url": "https://www.courtlistener.com/opinion/5897806/natural-organics-inc-v-kirkendall/",
+            "deepLink": "https://www.courtlistener.com/opinion/5897806/natural-organics-inc-v-kirkendall/#:~:text=Since%20there%20is%20no%20legitimate,partial%20enforcement%20does%20not%20arise",
+            "proposition": "Natural Organics holds that when no legitimate interest exists, the covenant is unenforceable and partial enforcement does not arise.",
+            "verbatimQuote": "Since there is no legitimate employer interest to protect, the noncompete agreement is unenforceable and the issue of partial enforcement does not arise",
+            "date": "2008-06-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-natural-organics-nothing-to-sever"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite for everything else. In New York the discipline matters because each surviving restraint must independently pass the reasonableness test; a bundled survival clause is where an unexamined duration hides until an adversary finds it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. The New York wrinkle: the covenant's force comes from the original employer's protectable interests — its secrets, its customer goodwill — so an assignee inherits the restraint only as far as those interests genuinely travel with the deal. An assignment clause moves the covenant; it cannot mint a new interest to support it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "avoid-foreign-choice-of-law-against-new-york-public-policy",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-york.avoid-foreign-choice-of-law-against-new-york-public-policy",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Choice of law tested against New York policy",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#avoid-foreign-choice-of-law-against-new-york-public-policy",
+        "requirementGuidance": "The agreement should not pick another state's law expecting it to displace New York's limits for a New York-based worker. The Court of Appeals has refused to apply a chosen foreign law to a former employee's restrictive covenant where that law was employer-favorable enough to offend New York public policy, and pending legislation would go further by voiding avoidance-purposed choice-of-law and venue clauses outright. The clause should still name governing law, venue, and process — just verify it was chosen for administration, not escape.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "brown-brown-policy-override",
+            "authorityType": "case-law",
+            "title": "Brown & Brown, Inc. v. Johnson",
+            "citation": "Brown & Brown, Inc. v. Johnson, 25 N.Y.3d 364 (2015).",
+            "url": "https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/",
+            "deepLink": "https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/#:~:text=On%20this%20appeal%2C%20we%20hold,public%20policy%20of%20this%20state.",
+            "proposition": "Brown & Brown holds that applying the chosen foreign law to a former employee's non-solicitation covenant would violate New York public policy, so New York law governs.",
+            "verbatimQuote": "On this appeal, we hold that applying Florida law on restrictive covenants related to the non-solicitation of customers by a former employee would violate the public policy of this state.",
+            "date": "2015-06-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-brown-brown-policy-override"
+          },
+          {
+            "sourceId": "s4641a-antiavoidance-pending",
+            "authorityType": "primary-law",
+            "title": "N.Y. Senate Bill 2025-S4641A (pending)",
+            "citation": "N.Y. S.B. S4641A, § 191-d(8) (2025-2026 Reg. Sess.) (pending).",
+            "url": "https://www.nysenate.gov/legislation/bills/2025/S4641/amendment/A",
+            "proposition": "S4641A, if enacted, would void choice-of-law and venue clauses used to avoid the statute for workers who reside or work in New York.",
+            "verbatimQuote": "NO CHOICE OF LAW PROVISION OR CHOICE OF VENUE PROVISION THAT WOULD HAVE THE EFFECT OF AVOIDING OR LIMITING THE REQUIREMENTS OF THIS SECTION SHALL BE ENFORCEABLE IF THE COVERED INDIVIDUAL IS AND HAS BEEN, FOR AT LEAST THIRTY DAYS IMMEDIATELY PRECEDING THE COVERED INDIVIDUAL'S CESSATION OF EMPLOYMENT, A RESIDENT OF NEW YORK OR EMPLOYED IN NEW YORK",
+            "date": "2025-06-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-s4641a-antiavoidance-pending"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate with a New York consequence tucked inside: any amendment that adds or expands a covenant mid-employment re-opens the consideration question, since continued employment supports the new promise only if the relationship then lasts a substantial period. Review the amendment mechanics so a routine refresh does not quietly create a covenant with no consideration behind it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "gate-non-compete-by-bdo-reasonableness",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-york.gate-non-compete-by-bdo-reasonableness",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Reasonableness on every prong",
+        "sectionId": "new-york-doctrine-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#gate-non-compete-by-bdo-reasonableness",
+        "requirementGuidance": "Run the non-compete through all three prongs of New York's controlling test: no greater than required to protect the employer's legitimate interest, no undue hardship on the employee, and no injury to the public — with the Attorney General's guidance adding reasonableness in time period and geographic scope. One failed prong invalidates the covenant, so the review is conjunctive: the clause must clear every gate, not most of them.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "bdo-three-prong-gate",
+            "authorityType": "case-law",
+            "title": "BDO Seidman v. Hirshberg",
+            "citation": "BDO Seidman v. Hirshberg, 93 N.Y.2d 382, 388 (1999).",
+            "url": "https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/",
+            "deepLink": "https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/#:~:text=The%20modern%2C%20prevailing%20common%2Dlaw%20standard,compete%20applies%20a%20three%2Dpronged%20test.",
+            "proposition": "BDO Seidman establishes the three-pronged common-law reasonableness test that gates every New York employee non-compete.",
+            "verbatimQuote": "The modern, prevailing common-law standard of reasonableness for employee agreements not to compete applies a three-pronged test.",
+            "date": "1999-05-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-bdo-three-prong-gate"
+          },
+          {
+            "sourceId": "natural-organics-three-prong-gate",
+            "authorityType": "case-law",
+            "title": "Natural Organics, Inc. v. Kirkendall",
+            "citation": "Natural Organics, Inc. v. Kirkendall, 52 A.D.3d 488 (2d Dep't 2008).",
+            "url": "https://www.courtlistener.com/opinion/5897806/natural-organics-inc-v-kirkendall/",
+            "deepLink": "https://www.courtlistener.com/opinion/5897806/natural-organics-inc-v-kirkendall/#:~:text=%22A%20restraint%20is%20reasonable%20only,not%20injurious%20to%20the%20public%22",
+            "proposition": "Natural Organics states the three conjunctive prongs a New York restraint must satisfy.",
+            "verbatimQuote": "\"A restraint is reasonable only if it: (1) is no greater than is required for the protection of the legitimate interest of the employer, (2) does not impose undue hardship on the employee, and (3) is not injurious to the public\"",
+            "date": "2008-06-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-natural-organics-three-prong-gate"
+          },
+          {
+            "sourceId": "ag-faq-framework-gate",
+            "authorityType": "agency-guidance",
+            "title": "N.Y. Attorney General, Non-Compete Agreements in New York State: FAQ",
+            "citation": "N.Y. Att'y Gen., Non-Compete Agreements in New York State: Frequently Asked Questions (2022).",
+            "url": "https://ag.ny.gov/sites/default/files/non-competes.pdf",
+            "proposition": "The Attorney General's guidance summarizes the four-factor enforceability framework, adding reasonableness in time and geographic scope.",
+            "verbatimQuote": "A non-compete is only allowed and enforceable to the extent it (1) is necessary to protect the employer’s legitimate interests, (2) does not impose an undue hardship on the employee, (3) does not harm the public, and (4) is reasonable in time period and geographic scope.",
+            "date": "2022-02-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-ag-faq-framework-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "tie-restraints-to-a-recognized-legitimate-interest",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-york.tie-restraints-to-a-recognized-legitimate-interest",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "A real protectable interest behind the restraint",
+        "sectionId": "new-york-doctrine-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#tie-restraints-to-a-recognized-legitimate-interest",
+        "requirementGuidance": "Identify which recognized interest each covenant actually protects: misappropriation of trade secrets or confidential customer information, competition by an employee whose services were genuinely unique or extraordinary, or client goodwill built at the employer's expense. Knowledge of ordinary internal operations does not qualify, and the unique-services category demands more than that the employee was excellent or valuable. A covenant with no recognized interest behind it is unenforceable outright — there is nothing for a court to trim.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "gallagher-interest-gate",
+            "authorityType": "case-law",
+            "title": "Arthur J. Gallagher & Co. v. Marchese",
+            "citation": "Arthur J. Gallagher & Co. v. Marchese, 96 A.D.3d 791 (2d Dep't 2012).",
+            "url": "https://www.courtlistener.com/opinion/5999301/arthur-j-gallagher-co-v-marchese/",
+            "deepLink": "https://www.courtlistener.com/opinion/5999301/arthur-j-gallagher-co-v-marchese/#:~:text=An%20employer%E2%80%99s%20interests%20justifying%20a,services%20are%20unique%20or%20extraordinary%E2%80%9D",
+            "proposition": "Gallagher restates the limited categories of protectable employer interests: trade secrets, confidential customer lists, and unique or extraordinary services.",
+            "verbatimQuote": "An employer’s interests justifying a restrictive covenant are limited “to the protection against misappropriation of the employer’s trade secrets or of confidential customer lists, or protection from competition by a former employee whose services are unique or extraordinary”",
+            "date": "2012-06-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-gallagher-interest-gate"
+          },
+          {
+            "sourceId": "reed-roberts-gate",
+            "authorityType": "case-law",
+            "title": "Reed, Roberts Associates, Inc. v. Strauman",
+            "citation": "Reed, Roberts Assocs., Inc. v. Strauman, 40 N.Y.2d 303 (1976).",
+            "url": "https://www.courtlistener.com/opinion/5682269/reed-roberts-associates-inc-v-strauman/",
+            "deepLink": "https://www.courtlistener.com/opinion/5682269/reed-roberts-associates-inc-v-strauman/#:~:text=Where%20the%20knowledge%20does%20not,by%20availing%20himself%20of%20opportunity.",
+            "proposition": "Reed, Roberts holds that an employee's knowledge of routine internal operations is not protectable absent a trade secret or breach of trust.",
+            "verbatimQuote": "Where the knowledge does not qualify for protection as a trade secret and there has been no conspiracy or breach of trust resulting in commercial piracy we see no reason to inhibit the employee’s ability to realize his potential both professionally and financially by availing himself of opportunity.",
+            "date": "1976-07-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-reed-roberts-gate"
+          },
+          {
+            "sourceId": "weitz-unique-threshold",
+            "authorityType": "case-law",
+            "title": "Purchasing Associates, Inc. v. Weitz",
+            "citation": "Purchasing Assocs., Inc. v. Weitz, 13 N.Y.2d 267 (1963).",
+            "url": "https://www.courtlistener.com/opinion/5673277/purchasing-associates-inc-v-weitz/",
+            "deepLink": "https://www.courtlistener.com/opinion/5673277/purchasing-associates-inc-v-weitz/#:~:text=More%20must%2C%20of%20course%2C%20be,high%20value%20to%20his%20employer.",
+            "proposition": "Weitz sets the demanding threshold for the unique-or-extraordinary-services category.",
+            "verbatimQuote": "More must, of course, be shown to establish such a quality than that the employee excels at his work or that his performance is of high value to his employer.",
+            "date": "1963-12-30",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-weitz-unique-threshold"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-customer-nonsolicit-to-customers-actually-served",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-york.narrow-customer-nonsolicit-to-customers-actually-served",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit limited to customers actually served",
+        "sectionId": "new-york-doctrine-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#narrow-customer-nonsolicit-to-customers-actually-served",
+        "requirementGuidance": "The customer non-solicit should not reach clients the employee never met, did not know about, and did no work for — the precise formulation the Court of Appeals held overbroad. Confine the class to relationships the employee developed or serviced through work for the employer: that is the goodwill interest the law recognizes, and staying inside it preserves the employer's path to partial enforcement if some residual overbreadth surfaces later.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "brown-brown-never-served-gate",
+            "authorityType": "case-law",
+            "title": "Brown & Brown, Inc. v. Johnson",
+            "citation": "Brown & Brown, Inc. v. Johnson, 25 N.Y.3d 364 (2015).",
+            "url": "https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/",
+            "deepLink": "https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/#:~:text=even%20those%20Johnson%20had%20never,she%20had%20done%20no%20work",
+            "proposition": "Brown & Brown holds a customer non-solicitation covenant overbroad under New York law to the extent it reached customers the employee never met, did not know about, and did no work for.",
+            "verbatimQuote": "even those Johnson had never met, did not know about and for whom she had done no work",
+            "date": "2015-06-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-brown-brown-never-served-gate"
+          },
+          {
+            "sourceId": "bdo-partial-preserved-gate",
+            "authorityType": "case-law",
+            "title": "BDO Seidman v. Hirshberg",
+            "citation": "BDO Seidman v. Hirshberg, 93 N.Y.2d 382, 394 (1999).",
+            "url": "https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/",
+            "deepLink": "https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/#:~:text=Under%20this%20approach%2C%20if%20the,partial%20enforcement%20may%20be%20justified",
+            "proposition": "BDO Seidman supports preserving partial enforcement of an overbroad covenant where the employer has not overreached.",
+            "verbatimQuote": "Under this approach, if the employer demonstrates an absence of overreaching, coercive use of dominant bargaining power, or other anti-competitive misconduct, but has in good faith sought to protect a legitimate business interest, consistent with reasonable standards of fair dealing, partial enforcement may be justified",
+            "date": "1999-05-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-bdo-partial-preserved-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-adequate-consideration-for-post-hire-covenants",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-york.require-adequate-consideration-for-post-hire-covenants",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Real consideration for mid-employment covenants",
+        "sectionId": "new-york-doctrine-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#require-adequate-consideration-for-post-hire-covenants",
+        "requirementGuidance": "For a covenant signed after employment began, verify what the worker received. Continued at-will employment can carry the promise — forbearance from discharge is a legal detriment — but only if the relationship in fact continues for a substantial period afterward; a worker dismissed soon after signing received illusory forbearance and the consideration fails. Fresh, identifiable consideration such as a raise, promotion, or bonus does not depend on after-the-fact tenure and is the safer record.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "zellner-adequate-consideration-gate",
+            "authorityType": "case-law",
+            "title": "Zellner v. Stephen D. Conrad, M.D., P.C.",
+            "citation": "Zellner v. Stephen D. Conrad, M.D., P.C., 183 A.D.2d 250 (2d Dep't 1992).",
+            "url": "https://www.courtlistener.com/opinion/6084767/zellner-v-stephen-d-conrad-md-p-c/",
+            "deepLink": "https://www.courtlistener.com/opinion/6084767/zellner-v-stephen-d-conrad-md-p-c/#:~:text=As%20with%20any%20contract%2C%20the,the%20part%20of%20the%20promisee.",
+            "proposition": "Zellner restates that a non-compete promise must be supported by adequate consideration.",
+            "verbatimQuote": "As with any contract, the promise not to compete must be supported by adequate consideration on the part of the promisee.",
+            "date": "1992-11-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-zellner-adequate-consideration-gate"
+          },
+          {
+            "sourceId": "zellner-substantial-period-gate",
+            "authorityType": "case-law",
+            "title": "Zellner v. Stephen D. Conrad, M.D., P.C.",
+            "citation": "Zellner v. Stephen D. Conrad, M.D., P.C., 183 A.D.2d 250 (2d Dep't 1992).",
+            "url": "https://www.courtlistener.com/opinion/6084767/zellner-v-stephen-d-conrad-md-p-c/",
+            "deepLink": "https://www.courtlistener.com/opinion/6084767/zellner-v-stephen-d-conrad-md-p-c/#:~:text=However%2C%20where%2C%20as%20here%2C%20a,for%20the%20promise%20is%20validated.",
+            "proposition": "Zellner holds that continued employment for a substantial period validates the consideration for an after-hire covenant.",
+            "verbatimQuote": "However, where, as here, a relationship continues for a substantial period after the covenant is given, the forbearance is real, not illusory, and the consideration given for the promise is validated.",
+            "date": "1992-11-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-zellner-substantial-period-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-post-employment-non-competes-for-broadcast-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-york.exclude-post-employment-non-competes-for-broadcast-employees",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No post-employment non-compete for broadcast employees",
+        "sectionId": "new-york-doctrine-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#exclude-post-employment-non-competes-for-broadcast-employees",
+        "requirementGuidance": "If the worker is a broadcast employee, the agreement must not impose a post-employment non-compete at all: the Labor Law bars a broadcasting-industry employer from requiring, as a condition of employment, that the employee refrain from working in a specified area, for a period of time, or for a particular employer or industry after the job ends, and a violating employer is liable for damages, fees, and costs. The statute leaves in-term restraints alone — the ban starts where the employment stops.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "lab-202k-ban-gate",
+            "authorityType": "primary-law",
+            "title": "N.Y. Labor Law § 202-k",
+            "citation": "N.Y. Lab. Law § 202-k(2).",
+            "url": "https://www.nysenate.gov/legislation/laws/LAB/202-K",
+            "proposition": "Labor Law § 202-k prohibits broadcasting-industry employers from imposing post-employment non-competes on broadcast employees.",
+            "verbatimQuote": "A broadcasting industry employer shall not require as a condition of employment, whether in an employment contract or otherwise, that a broadcast employee or prospective broadcast employee refrain from obtaining employment: (a) in any specified geographic area; (b) for a specific period of time; or (c) with any particular employer or in any particular industry; after the conclusion of employment with such broadcasting industry employer.",
+            "date": "2014-12-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-lab-202k-ban-gate"
+          },
+          {
+            "sourceId": "lab-202k-in-term-gate",
+            "authorityType": "primary-law",
+            "title": "N.Y. Labor Law § 202-k",
+            "citation": "N.Y. Lab. Law § 202-k(2).",
+            "url": "https://www.nysenate.gov/legislation/laws/LAB/202-K",
+            "proposition": "Labor Law § 202-k applies only to post-employment restraints, not to covenants operating during the contract term.",
+            "verbatimQuote": "This section shall not apply to preventing the enforcement of such a covenant during the term of an employment contract.",
+            "date": "2014-12-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-lab-202k-in-term-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "align-sale-of-business-covenants-with-the-implied-goodwill-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-york.align-sale-of-business-covenants-with-the-implied-goodwill-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Sale-of-business covenants and the implied no-solicit duty",
+        "sectionId": "new-york-doctrine-gates",
+        "itemNumber": "19.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#align-sale-of-business-covenants-with-the-implied-goodwill-covenant",
+        "requirementGuidance": "Where the covenant arises from a business sale, review it against the doctrine that already binds the seller: New York implies a covenant barring a seller of goodwill from improperly soliciting former clients — a permanent duty, but a narrower one than an express non-compete, leaving the seller free to accept patronage that arrives unprompted. Keep that solicitation line explicit in the express clause, and note that even the pending statutory ban would preserve this more favored category for qualifying owners.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "bessemer-implied-covenant-gate",
+            "authorityType": "case-law",
+            "title": "Bessemer Trust Co., N.A. v. Branin",
+            "citation": "Bessemer Trust Co., N.A. v. Branin, 16 N.Y.3d 549 (2011).",
+            "url": "https://www.courtlistener.com/opinion/2526164/bessemer-trust-co-na-v-branin/",
+            "deepLink": "https://www.courtlistener.com/opinion/2526164/bessemer-trust-co-na-v-branin/#:~:text=In%20answering%20the%20certified%20question%2C,improperly%20soliciting%20his%20former%20clients.",
+            "proposition": "Bessemer Trust holds that on a sale of goodwill, the implied covenant bars the seller from improperly soliciting former clients.",
+            "verbatimQuote": "In answering the certified question, we continue to apply our precedents in Von Bremen and Mohawk and hold that the “implied covenant” bars a seller of “good will” from improperly soliciting his former clients.",
+            "date": "2011-04-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-bessemer-implied-covenant-gate"
+          },
+          {
+            "sourceId": "mohawk-narrower-duty-gate",
+            "authorityType": "case-law",
+            "title": "Mohawk Maintenance Co. v. Kessler",
+            "citation": "Mohawk Maintenance Co. v. Kessler, 52 N.Y.2d 276 (1981).",
+            "url": "https://www.courtlistener.com/opinion/5684701/mohawk-maintenance-co-v-kessler/",
+            "deepLink": "https://www.courtlistener.com/opinion/5684701/mohawk-maintenance-co-v-kessler/#:~:text=As%20such%2C%20the%20%E2%80%9Cimplied%20covenant%E2%80%9D,area%20or%20field%20of%20endeavor.",
+            "proposition": "Mohawk Maintenance explains the implied covenant imposes a narrower duty than an express non-compete.",
+            "verbatimQuote": "As such, the “implied covenant” imposes a much narrower duty than do express covenants purporting to restrict the seller’s right to compete in a particular geographical area or field of endeavor.",
+            "date": "1981-02-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-mohawk-narrower-duty-gate"
+          },
+          {
+            "sourceId": "s4641a-sale-of-business-gate",
+            "authorityType": "primary-law",
+            "title": "N.Y. Senate Bill 2025-S4641A (pending)",
+            "citation": "N.Y. S.B. S4641A, § 191-d(6) (2025-2026 Reg. Sess.) (pending).",
+            "url": "https://www.nysenate.gov/legislation/bills/2025/S4641/amendment/A",
+            "proposition": "S4641A, if enacted, would preserve sale-of-business and goodwill non-competes for qualifying owners.",
+            "verbatimQuote": "NOTHING IN THIS SECTION SHALL PROHIBIT THE INCLUSION AND ENFORCEMENT OF NON-COMPETE AGREEMENTS OR OTHER SIMILAR COVENANTS IN THE SALE OF THE GOODWILL OF A BUSINESS OR THE SALE OR DISPOSITION OF A MAJORITY OF AN OWNERSHIP INTEREST IN A BUSINESS BY A PARTNER OF A PARTNERSHIP, A MEMBER OF A LIMITED LIABILITY COMPANY, OR AN ENTITY",
+            "date": "2025-06-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-york#src-s4641a-sale-of-business-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

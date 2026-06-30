@@ -1,0 +1,1206 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/new-jersey",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/new-jersey.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/new-jersey",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/new-jersey/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/new-jersey/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "new-jersey",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — New Jersey",
+      "description": "A clause-by-clause reviewer checklist for New Jersey employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Solari/Whitmyer three-part reasonableness test, the occupational bars, and the discrimination-claim concealment rule.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "New Jersey",
+      "coverage": "New Jersey (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 46,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "new-jersey-statutory-gates",
+        "label": "New Jersey reasonableness and occupational gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity whose trade secrets, confidential information, and customer relationships the covenant claims to protect. The reasonableness test runs on the enforcing employer's own legitimate interests, so a covenant signed with an affiliate that holds none of those interests starts the analysis on the wrong foot.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#identify-effective-date",
+        "requirementGuidance": "Every covenant clock runs from a defined start. With no statutory timeline in this state, the agreement's own dates are all a court has — and a later tolling dispute will turn on exactly when the restricted period began and how much of it remained when the breach started.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#identify-employee-title",
+        "requirementGuidance": "Record the role and duties. The legitimate-interest and undue-hardship prongs are fact-driven: which customers the employee served and what confidential material they touched is the evidence that sizes the enforceable restraint, and the title is where that record starts.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated. New Jersey enforceability rests on common-law reasonableness rather than a statute, so the choice-of-law clause decides which body of restrictive-covenant doctrine applies to everything else on this page.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#define-confidential-information",
+        "requirementGuidance": "Test the definition against the interests New Jersey actually protects: trade secrets, confidential business information, and customer relationships. A definition that sweeps in the employee's general skill and knowledge claims more than the case law gives and weakens every covenant that leans on it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nj-whitmyer-protectable",
+            "authorityType": "case-law",
+            "title": "Whitmyer Bros., Inc. v. Doyle",
+            "citation": "Whitmyer Bros., Inc. v. Doyle, 58 N.J. 25 (1971).",
+            "url": "https://www.courtlistener.com/opinion/2061132/whitmyer-bros-inc-v-doyle/",
+            "deepLink": "https://www.courtlistener.com/opinion/2061132/whitmyer-bros-inc-v-doyle/#:~:text=But%20the%20employer%20has%20a,in%20protecting%20his%20customer%20relationships.",
+            "proposition": "Whitmyer identifies trade secrets, confidential business information, and customer relationships as the employer's legitimate protectable interests.",
+            "verbatimQuote": "But the employer has a patently legitimate interest in protecting his trade secrets as well as his confidential business information and he has an equally legitimate interest in protecting his customer relationships.",
+            "date": "1971-03-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-whitmyer-protectable"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#define-trade-secrets",
+        "requirementGuidance": "Keep a separate trade-secret definition aligned with the statutory one — independent economic value derived from secrecy. The state trade-secret act runs alongside the contract, and a contractual definition that matches it keeps the statutory remedies in reach without stretching the covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nj-tsa-definition",
+            "authorityType": "primary-law",
+            "title": "New Jersey Trade Secrets Act",
+            "citation": "New Jersey Trade Secrets Act, N.J.S.A. 56:15-2.",
+            "url": "https://pub.njleg.gov/bills/2010/PL11/161_.PDF",
+            "proposition": "The New Jersey Trade Secrets Act defines a trade secret by its independent economic value from secrecy and reasonable efforts to keep it secret.",
+            "verbatimQuote": "Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use;",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-tsa-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#define-restricted-period",
+        "requirementGuidance": "One defined Restricted Period keeps the duration analysis auditable. There is no statutory cap here, but the term must survive the undue-hardship weighing, and a period sized to how long the employer genuinely needs to replace the employee and stabilize the relationships is the defensible shape.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nj-more-two-year",
+            "authorityType": "case-law",
+            "title": "Community Hospital Group, Inc. v. More",
+            "citation": "Community Hospital Group, Inc. v. More, 183 N.J. 36 (2005).",
+            "url": "https://www.courtlistener.com/opinion/1957320/community-hospital-group-inc-v-more/",
+            "deepLink": "https://www.courtlistener.com/opinion/1957320/community-hospital-group-inc-v-more/#:~:text=On%20its%20face%20two%20years,assume%20Dr.%20More%E2%80%99s%20prior%20role.",
+            "proposition": "More holds that, on its face, a two-year restriction is a reasonable period for the employer to replace and train a successor.",
+            "verbatimQuote": "On its face two years appears to be a reasonable period for JFK to replace and train a person to assume Dr. More’s prior role.",
+            "date": "2005-04-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-more-two-year"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#define-restricted-territory",
+        "requirementGuidance": "Tie the geography to where the employee actually worked and where the protected relationships live. Courts here weigh territory against the public's access to the service and will shrink a radius that overreaches — drafting it tight up front beats relying on a judge to redraw the map.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nj-more-radius",
+            "authorityType": "case-law",
+            "title": "Community Hospital Group, Inc. v. More",
+            "citation": "Community Hospital Group, Inc. v. More, 183 N.J. 36 (2005).",
+            "url": "https://www.courtlistener.com/opinion/1957320/community-hospital-group-inc-v-more/",
+            "deepLink": "https://www.courtlistener.com/opinion/1957320/community-hospital-group-inc-v-more/#:~:text=We%20are%20satisfied%20that%20if,public%20that%20it%20presently%20has.",
+            "proposition": "More reduces the geographic scope so a covenant no longer harms the public, illustrating territory analysis tied to public access.",
+            "verbatimQuote": "We are satisfied that if the covenant were limited to a distance less than thirteen miles so that Somerset was not within the restricted area, the covenant would not have the same adverse impact on the public that it presently has.",
+            "date": "2005-04-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-more-radius"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the employee served or learned about during a stated look-back window. Customer relationships are a recognized protectable interest, but a definition reaching the employer's entire book converts a relationship covenant into a restraint on ordinary competition.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nj-whitmyer-protectable",
+            "authorityType": "case-law",
+            "title": "Whitmyer Bros., Inc. v. Doyle",
+            "citation": "Whitmyer Bros., Inc. v. Doyle, 58 N.J. 25 (1971).",
+            "url": "https://www.courtlistener.com/opinion/2061132/whitmyer-bros-inc-v-doyle/",
+            "deepLink": "https://www.courtlistener.com/opinion/2061132/whitmyer-bros-inc-v-doyle/#:~:text=But%20the%20employer%20has%20a,in%20protecting%20his%20customer%20relationships.",
+            "proposition": "Whitmyer identifies trade secrets, confidential business information, and customer relationships as the employer's legitimate protectable interests.",
+            "verbatimQuote": "But the employer has a patently legitimate interest in protecting his trade secrets as well as his confidential business information and he has an equally legitimate interest in protecting his customer relationships.",
+            "date": "1971-03-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-whitmyer-protectable"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing employee actually worked with or supervised. Employee non-solicits run through the same reasonableness weighing as every other covenant on this page, and a workforce-wide mobility ban is hard to match to any particular protected interest.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#define-protected-interests",
+        "requirementGuidance": "Name the specific trade secrets, confidential information, and customer relationships at stake. A covenant that exists merely to suppress competition or to stop the employee from using general skill and knowledge protects nothing the doctrine recognizes — this definition is where the agreement proves it is doing something else.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nj-ingersoll-interests",
+            "authorityType": "case-law",
+            "title": "Ingersoll-Rand Co. v. Ciavatta",
+            "citation": "Ingersoll-Rand Co. v. Ciavatta, 110 N.J. 609 (1988).",
+            "url": "https://www.courtlistener.com/opinion/1916343/ingersoll-rand-co-v-ciavatta/",
+            "deepLink": "https://www.courtlistener.com/opinion/1916343/ingersoll-rand-co-v-ciavatta/#:~:text=Employers%2C%20therefore%2C%20have%20the%20right,confidential%20information%2C%20and%20customer%20relations.",
+            "proposition": "Ingersoll-Rand confirms that employers may protect trade secrets, confidential information, and customer relations through a restrictive covenant.",
+            "verbatimQuote": "Employers, therefore, have the right to protect their trade secrets, confidential information, and customer relations.",
+            "date": "1988-06-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-ingersoll-interests"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity in concrete terms. The further the definition drifts past the employer's real market, the more the covenant reads as a restraint on mobility — exactly the concern that makes a post-employment covenant more closely scrutinized than other contracts.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. Forbidding ordinary public shareholdings adds employee-side hardship while protecting no recognizable interest — pure weight on the wrong side of the balancing.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#define-passive-public-holdings",
+        "requirementGuidance": "Optional mechanics: the substantive carve-out can live inline without a capitalized term. When the defined term does appear, check that its ownership threshold agrees with the operative carve-out that relies on it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#define-solicit",
+        "requirementGuidance": "Pin down whether the term covers only initiated contact or also accepting an approach. New Jersey courts will narrow an overbroad non-solicit to a reasonable scope, but a precise definition keeps the enforceable line where the parties drew it rather than where a judge later redraws it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger treats resignation, dismissal, and expiration of a fixed term consistently. The restricted period — and any breach-tolling mechanics enforced later — runs from this event, so ambiguity here infects both clocks at once.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#acknowledge-timing",
+        "requirementGuidance": "New Jersey accepts consideration found in the original employment contract or in continued employment after signing, so a mid-employment covenant does not automatically need a raise or bonus behind it. The acknowledgement should still record when the covenant was signed and what moved in exchange — the undue-hardship weighing can ask how the bargain actually balanced for this employee.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nj-hogan-consideration",
+            "authorityType": "case-law",
+            "title": "Hogan v. Bergen Brunswig Corp.",
+            "citation": "Hogan v. Bergen Brunswig Corp., 153 N.J. Super. 37 (App. Div. 1977).",
+            "url": "https://www.courtlistener.com/opinion/2358200/hogan-v-bergen-brunswig-corporation/",
+            "deepLink": "https://www.courtlistener.com/opinion/2358200/hogan-v-bergen-brunswig-corporation/#:~:text=The%20existence%20of%20sufficient%20consideration,part%2C%20the%20continuation%20of%20employment.",
+            "proposition": "Hogan holds that consideration for a post-employment restraint may come from the original employment contract or from continued employment after signing.",
+            "verbatimQuote": "The existence of sufficient consideration to support a post-employment restraint may be found in either the original contract of employment or in a post-employment contract, where the supporting consideration is at least, in part, the continuation of employment.",
+            "date": "1977-09-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-hogan-consideration"
+          },
+          {
+            "sourceId": "nj-hogan-continuation",
+            "authorityType": "case-law",
+            "title": "Hogan v. Bergen Brunswig Corp.",
+            "citation": "Hogan v. Bergen Brunswig Corp., 153 N.J. Super. 37 (App. Div. 1977).",
+            "url": "https://www.courtlistener.com/opinion/2358200/hogan-v-bergen-brunswig-corporation/",
+            "deepLink": "https://www.courtlistener.com/opinion/2358200/hogan-v-bergen-brunswig-corporation/#:~:text=The%20continuation%20of%20plaintiff's%20employment,consideration%20for%20the%20restrictive%20covenant.",
+            "proposition": "Hogan finds that continued employment after the covenant was acknowledged supplied consideration, without any threat of discharge.",
+            "verbatimQuote": "The continuation of plaintiff's employment for approximately three years after he signed the letter which acknowledges the covenant also provides consideration for the restrictive covenant.",
+            "date": "1977-09-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-hogan-continuation"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No New Jersey rule requires it, but the acknowledgement is cheap procedural-fairness evidence in a doctrine that weighs hardship to the employee — proof the employee had a genuine chance to understand the restraint before signing it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret obligations should last as long as secrecy does: both the federal definition and New Jersey's own act key protection to continued secrecy rather than to a calendar date. A fixed expiry on trade-secret protection gives away the strongest interest the covenant suite has — and trade secrets sit first on the list of interests that can carry a New Jersey restraint.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-dtsa-trade-secret-definition"
+          },
+          {
+            "sourceId": "nj-tsa-secrecy",
+            "authorityType": "primary-law",
+            "title": "New Jersey Trade Secrets Act",
+            "citation": "New Jersey Trade Secrets Act, N.J.S.A. 56:15-2.",
+            "url": "https://pub.njleg.gov/bills/2010/PL11/161_.PDF",
+            "proposition": "The New Jersey Trade Secrets Act likewise defines a trade secret by independent economic value derived from secrecy.",
+            "verbatimQuote": "Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use;",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-tsa-secrecy"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. A perpetual lid on non-secret material adds employee-side hardship without a matching interest, and the two-track structure keeps the perpetual obligation where the secrecy rationale actually holds.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#disclose-dtsa-notice",
+        "requirementGuidance": "The federal immunity notice belongs in every agreement that governs trade secrets or confidential information: without it, the employer loses exemplary damages and fee recovery in a later misappropriation action against the employee. In a state whose covenants lean heavily on trade-secret interests, that is an expensive omission.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable — protected concerted activity under federal labor law, policed recently against overbroad employee agreements. New Jersey layers its own rule on top for discrimination-claim details, covered in the state gates at the end of this checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. A confidentiality clause cannot stand between the employee and compelled process, and the express carve-out keeps the clause clear of protected-disclosure territory.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-destroy at separation, certified in writing. Where the real protection strategy is trade-secret law rather than a broad restraint, the certification is the cleanest contemporaneous evidence that the employer treated the material as secret and the employee acknowledged as much on the way out.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and reviewed under the same reasonableness framework as the rest of the family. Keep it inside the Covered Employees class and the Restricted Period: New Jersey tailors overbroad covenants rather than discarding them, but a clause that needed no tailoring is the one that enforces cleanly.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nj-kusins-blue-pencil",
+            "authorityType": "case-law",
+            "title": "ADP, LLC v. Kusins",
+            "citation": "ADP, LLC v. Kusins, 460 N.J. Super. 368 (App. Div. 2019).",
+            "url": "https://www.courtlistener.com/opinion/4650682/adp-llc-vs-erik-kusins-adp-llc-vs-ryan-hopper-adp-llc-vs-anthony-m/",
+            "deepLink": "https://www.courtlistener.com/opinion/4650682/adp-llc-vs-erik-kusins-adp-llc-vs-ryan-hopper-adp-llc-vs-anthony-m/#:~:text=The%20term%20%22blue%20pencil%5Bing%5D%22%20refers,tailoring%20of%20a%20restrictive%20covenant.",
+            "proposition": "Kusins describes blue-penciling as a court's modification or tailoring of a restrictive covenant, the remedy applied to overbroad non-solicitation provisions.",
+            "verbatimQuote": "The term \"blue pencil[ing]\" refers to a court's modification or tailoring of a restrictive covenant.",
+            "date": "2019-07-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-kusins-blue-pencil"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#permit-customer-nonsolicit",
+        "requirementGuidance": "Often the better instrument than a full non-compete in this state: tiered restrictive covenants built around actual customer relationships have been upheld as furthering legitimate business interests. Scope it to customers the employee served or learned about, and run it through the reasonableness gate at the end of this checklist like everything else.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nj-rafferty-tiered",
+            "authorityType": "case-law",
+            "title": "ADP, LLC v. Rafferty",
+            "citation": "ADP, LLC v. Rafferty, 923 F.3d 113 (3d Cir. 2019).",
+            "url": "https://www.courtlistener.com/opinion/4614026/adp-llc-v-nicole-rafferty-adp-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4614026/adp-llc-v-nicole-rafferty-adp-llc/#:~:text=Applying%20New%20Jersey%20law%2C%20we,with%20the%20state%E2%80%99s%20public%20policy.",
+            "proposition": "Rafferty concludes that ADP's tiered restrictive covenants furthered legitimate business interests and complied with New Jersey public policy.",
+            "verbatimQuote": "Applying New Jersey law, we conclude that both tiers of ADP’s restrictive covenants further legitimate business interests and otherwise comply with the state’s public policy.",
+            "date": "2019-04-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-rafferty-tiered"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#permit-non-dealing",
+        "requirementGuidance": "Broader than a non-solicit — it bars serving covered customers even when they arrive unprompted. That added breadth lands squarely on the undue-hardship and public-interest prongs, so treat inclusion as a deliberate risk decision and tie the customer class tightly to the relationships the employee actually held.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#permit-non-compete",
+        "requirementGuidance": "Enforceable when reasonable: a post-employment covenant is given effect where it protects a legitimate interest without undue hardship or public injury, though it is scrutinized more closely than a covenant tied to the sale of a business, which is freely enforceable as protection of the goodwill sold. If the clause appears, route it through the reasonableness gate at the end of this checklist before reviewing its terms.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nj-solari-effect",
+            "authorityType": "case-law",
+            "title": "Solari Industries, Inc. v. Malady",
+            "citation": "Solari Industries, Inc. v. Malady, 55 N.J. 571 (1970).",
+            "url": "https://www.courtlistener.com/opinion/7374715/solari-industries-inc-v-malady/",
+            "deepLink": "https://www.courtlistener.com/opinion/7374715/solari-industries-inc-v-malady/#:~:text=And%20while%20a%20covenant%20by,circumstances%20of%20the%20particular%20case.",
+            "proposition": "Solari holds that an employee non-compete, though scrutinized for countervailing policy reasons, is given effect when reasonable in all the circumstances.",
+            "verbatimQuote": "And while a covenant by an employee not to compete after the termination of his employment is not, because of the countervailing policy considerations, as freely enforceable, it will nonetheless be given effect if it is reasonable in view of all the circumstances of the particular case.",
+            "date": "1970-04-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-solari-effect"
+          },
+          {
+            "sourceId": "nj-whitmyer-sale",
+            "authorityType": "case-law",
+            "title": "Whitmyer Bros., Inc. v. Doyle",
+            "citation": "Whitmyer Bros., Inc. v. Doyle, 58 N.J. 25 (1971).",
+            "url": "https://www.courtlistener.com/opinion/2061132/whitmyer-bros-inc-v-doyle/",
+            "deepLink": "https://www.courtlistener.com/opinion/2061132/whitmyer-bros-inc-v-doyle/#:~:text=we%20pointed%20out%20that%20while,well%20recognized%20countervailing%20policy%20considerations.",
+            "proposition": "Whitmyer distinguishes a seller's freely enforceable sale-of-business covenant from an employee's more closely scrutinized post-employment covenant.",
+            "verbatimQuote": "we pointed out that while a seller’s noncompetitive covenant designed to protect the good will of the business for the buyer is freely enforceable, an employee’s covenant not to compete after the termination of his employment is not as freely enforceable because of well recognized countervailing policy considerations.",
+            "date": "1971-03-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-whitmyer-sale"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, bind those instead of leaning on the open-ended Competitive Business definition. A named list is concrete evidence the restraint protects an identified interest rather than suppressing competition at large — the distinction the legitimate-interest prong turns on.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period; investment restrictions pile on hardship quickly while protecting interests only at the margin, which is a bad trade under a balancing test.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term — but in New Jersey audit it twice. Federal labor law polices clauses that chill protected workplace speech, and a non-disparagement provision that conceals the details of a discrimination, retaliation, or harassment claim is unenforceable outright, whatever the clause is called. The state gate at the end of this checklist carries that rule in full.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-mclaren-macomb-nondisparagement"
+          },
+          {
+            "sourceId": "nj-savage-void",
+            "authorityType": "case-law",
+            "title": "Savage v. Township of Neptune",
+            "citation": "Savage v. Township of Neptune, 257 N.J. 204 (2024).",
+            "url": "https://www.courtlistener.com/opinion/9499942/christine-savage-v-township-of-neptune/",
+            "deepLink": "https://www.courtlistener.com/opinion/9499942/christine-savage-v-township-of-neptune/#:~:text=The%20non%2Ddisparagement%20clause%20in%20the,policy%20and%20cannot%20be%20enforced.",
+            "proposition": "Savage holds a non-disparagement clause unenforceable as against public policy under the LAD concealment rule.",
+            "verbatimQuote": "The non-disparagement clause in the agreement is against public policy and cannot be enforced.",
+            "date": "2024-05-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-savage-void"
+          }
+        ]
+      },
+      {
+        "requirementId": "subject-physician-covenants-to-patient-access-scrutiny",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-jersey.subject-physician-covenants-to-patient-access-scrutiny",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician covenants and patient access",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#subject-physician-covenants-to-patient-access-scrutiny",
+        "requirementGuidance": "The dedicated clause should reflect how New Jersey actually treats physician covenants: enforceable when reasonable, with the public-interest prong doing the heavy lifting. The Supreme Court reduced a hospital covenant's radius so a nearby hospital fell outside it rather than voiding the covenant, and trial courts are directed to test legitimate interest, undue hardship, and public interest on the facts. Expect shortage specialties and on-call coverage to sharpen that scrutiny, because the live question is whether enforcement would deprive the community of needed care.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nj-more-public-radius",
+            "authorityType": "case-law",
+            "title": "Community Hospital Group, Inc. v. More",
+            "citation": "Community Hospital Group, Inc. v. More, 183 N.J. 36 (2005).",
+            "url": "https://www.courtlistener.com/opinion/1957320/community-hospital-group-inc-v-more/",
+            "deepLink": "https://www.courtlistener.com/opinion/1957320/community-hospital-group-inc-v-more/#:~:text=We%20are%20satisfied%20that%20if,public%20that%20it%20presently%20has.",
+            "proposition": "More reduces a physician covenant's geographic reach to protect the public rather than voiding it.",
+            "verbatimQuote": "We are satisfied that if the covenant were limited to a distance less than thirteen miles so that Somerset was not within the restricted area, the covenant would not have the same adverse impact on the public that it presently has.",
+            "date": "2005-04-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-more-public-radius"
+          },
+          {
+            "sourceId": "nj-pierson-standard",
+            "authorityType": "case-law",
+            "title": "Pierson v. Medical Health Centers, P.A.",
+            "citation": "Pierson v. Medical Health Centers, P.A., 183 N.J. 65 (2005).",
+            "url": "https://www.courtlistener.com/opinion/1957686/pierson-v-medical-health-centers/",
+            "deepLink": "https://www.courtlistener.com/opinion/1957686/pierson-v-medical-health-centers/#:~:text=Rather%2C%20the%20trial%20court%20must,adverse%20to%20the%20public%20interest.",
+            "proposition": "Pierson directs the trial court to test a physician covenant for legitimate interest, undue hardship, and public interest.",
+            "verbatimQuote": "Rather, the trial court must determine whether the restrictive covenant protects the legitimate interests of the employer, imposes no undue hardship on the employee, and is not adverse to the public interest.",
+            "date": "2005-04-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-pierson-standard"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The employee's representation that no earlier covenant or court order blocks the new role. It surfaces inbound restraints during onboarding rather than in discovery, and it gives the employer a defense narrative if a prior employer later claims interference.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice. A notice provision can support later enforcement, but warning a new employer off the worker carries its own tortious-interference sensitivity — especially where a court might later narrow the covenant the warning relied on. If included, keep any disclosure factual and tied to the covenant's actual terms.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "toll-restricted-period-only-during-actual-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-jersey.toll-restricted-period-only-during-actual-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#toll-restricted-period-only-during-actual-breach",
+        "requirementGuidance": "Look for a tolling clause, and check its trigger. New Jersey will enforce tolling that suspends the restricted period during the time the employee was actually violating the covenant — the appellate courts have remanded specifically so the trial court could toll for the period of the violations, giving the employer the benefit of its bargain. But the extension is tied to a real breach: covenants are not favored, and a court refused to stretch one past its stated period absent justification. An automatic, open-ended extension invites attack as unreasonable; tolling pinned to a court-determined violation is the enforceable shape.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nj-kusins-tolling",
+            "authorityType": "case-law",
+            "title": "ADP, LLC v. Kusins",
+            "citation": "ADP, LLC v. Kusins, 460 N.J. Super. 368 (App. Div. 2019).",
+            "url": "https://www.courtlistener.com/opinion/4650682/adp-llc-vs-erik-kusins-adp-llc-vs-ryan-hopper-adp-llc-vs-anthony-m/",
+            "deepLink": "https://www.courtlistener.com/opinion/4650682/adp-llc-vs-erik-kusins-adp-llc-vs-ryan-hopper-adp-llc-vs-anthony-m/#:~:text=In%20all%20of%20the%20matters,the%20period%20of%20defendants'%20violations.",
+            "proposition": "Kusins remands for the trial court to toll the restricted periods during the time the defendants were violating their covenants.",
+            "verbatimQuote": "In all of the matters other than Kusins, we remand for a determination of the appropriate remedy for each defendant's breach of the RCA, including a tolling of the time limitations of the RCAs during the period of defendants' violations.",
+            "date": "2019-07-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-kusins-tolling"
+          },
+          {
+            "sourceId": "nj-more-no-extension",
+            "authorityType": "case-law",
+            "title": "Community Hospital Group, Inc. v. More",
+            "citation": "Community Hospital Group, Inc. v. More, 183 N.J. 36 (2005).",
+            "url": "https://www.courtlistener.com/opinion/1957320/community-hospital-group-inc-v-more/",
+            "deepLink": "https://www.courtlistener.com/opinion/1957320/community-hospital-group-inc-v-more/#:~:text=Because%20restrictive%20covenants%20are%20not,the%20agreement%20beyond%20that%20period.",
+            "proposition": "More declines to extend a covenant beyond its stated period because restrictive covenants are not favored in the law.",
+            "verbatimQuote": "Because restrictive covenants are not favored in the law, we find no justification to extend the agreement beyond that period.",
+            "date": "2005-04-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-more-no-extension"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief. It supports the element without deciding it — a court still weighs the covenant's reasonableness, prong by prong, before restraining anyone.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice, with one New Jersey tripwire: a party that enforces or even attempts to enforce a provision concealing discrimination-claim details is liable for the employee's reasonable attorney fees and costs. Check that any fee-shifting clause is mutual and cannot be read to fund enforcement of language the state gates below flag.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nj-lad-fees",
+            "authorityType": "primary-law",
+            "title": "N.J.S.A. 10:5-12.9 (P.L.2019, c.39)",
+            "citation": "N.J.S.A. 10:5-12.9.",
+            "url": "https://pub.njleg.gov/bills/2018/PL19/39_.PDF",
+            "proposition": "A party that enforces or attempts to enforce a barred concealment provision is liable for the employee's attorney fees and costs.",
+            "verbatimQuote": "A person who enforces or attempts to enforce a provision deemed against public policy and unenforceable pursuant to P.L.2019, c.39 (C.10:5-12.7 et seq.) shall be liable for the employee’s reasonable attorney fees and costs.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-lad-fees"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-partial-enforcement-and-blue-penciling",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-jersey.permit-partial-enforcement-and-blue-penciling",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Severable tiers and court narrowing",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#permit-partial-enforcement-and-blue-penciling",
+        "requirementGuidance": "A severability and reformation clause works with the grain of New Jersey doctrine: the void-per-se rule was abandoned in favor of total or partial enforcement to the extent reasonable, and curtailing an overbroad covenant's scope is the approach the state's highest court prescribes. Partial enforcement is the norm — but it is an equitable remedy, so still read the covenant for severable tiers sized to the protected interests rather than a single maximal restraint drafted on the assumption a judge will trim it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nj-solari-partial",
+            "authorityType": "case-law",
+            "title": "Solari Industries, Inc. v. Malady",
+            "citation": "Solari Industries, Inc. v. Malady, 55 N.J. 571 (1970).",
+            "url": "https://www.courtlistener.com/opinion/7374715/solari-industries-inc-v-malady/",
+            "deepLink": "https://www.courtlistener.com/opinion/7374715/solari-industries-inc-v-malady/#:~:text=We%20are%20entirely%20satisfied%20that,extent%20reasonable%20under%20the%20circumstances.",
+            "proposition": "Solari abandons the void-per-se rule in favor of total or partial enforcement of a covenant to the extent reasonable.",
+            "verbatimQuote": "We are entirely satisfied that the time is well due for the abandonment of New Jersey’s void per se rule in favor of the rule which permits the total or partial enforcement of noncompetitive agreements to the extent reasonable under the circumstances.",
+            "date": "1970-04-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-solari-partial"
+          },
+          {
+            "sourceId": "nj-rafferty-curtail",
+            "authorityType": "case-law",
+            "title": "ADP, LLC v. Rafferty",
+            "citation": "ADP, LLC v. Rafferty, 923 F.3d 113 (3d Cir. 2019).",
+            "url": "https://www.courtlistener.com/opinion/4614026/adp-llc-v-nicole-rafferty-adp-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4614026/adp-llc-v-nicole-rafferty-adp-llc/#:~:text=Accordingly%2C%20we%20will%20remand%20for,restrictive%20covenants%20such%20as%20these.",
+            "proposition": "Rafferty describes curtailing an overbroad covenant's scope as the approach prescribed by the New Jersey Supreme Court.",
+            "verbatimQuote": "Accordingly, we will remand for the District Court to consider whether and to what extent it is necessary to curtail the restrictive covenants’ scope, which is the approach prescribed by the New Jersey Supreme Court when confronted with overbroad restrictive covenants such as these.",
+            "date": "2019-04-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-rafferty-curtail"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#address-survival-per-covenant",
+        "requirementGuidance": "Separate survival language per covenant keeps the perpetual trade-secret track and the finite covenant tracks visibly distinct. Duration is a live prong of the reasonableness weighing, not boilerplate, and a single bundled survival clause obscures exactly the per-covenant timing a reviewing court will ask about.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the employee cannot assign. Assignment moves the covenant but not the burden: whoever ends up enforcing it still has to show a legitimate interest, bearable hardship, and no public injury on the facts as they then stand.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law and venue",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#specify-governing-law-and-venue",
+        "requirementGuidance": "Specify governing law, venue, and dispute process. Restrictive-covenant outcomes are doctrine-sensitive, and every state-specific item on this page assumes New Jersey law controls — a clause selecting another state means the analysis has to be re-run under that state's doctrine before any of these conclusions hold.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard boilerplate confirming no oral side deals and valid electronic execution. In a common-law regime the written terms are everything a court has to weigh and narrow against, so the integration clause also fences out informal assurances about how the restraint would really be enforced.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "satisfy-solari-reasonableness-test",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-jersey.satisfy-solari-reasonableness-test",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passes the three-part reasonableness test",
+        "sectionId": "new-jersey-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#satisfy-solari-reasonableness-test",
+        "requirementGuidance": "Every restraint in the agreement must clear the three-part test: it protects a legitimate employer interest, imposes no undue hardship on the employee, and is not injurious to the public. The prongs are weighed together on the facts — there is no safe-harbor duration or radius, only the discipline of matching each covenant to a named interest and a bearable burden. A covenant tied to the sale of a business is weighed more leniently than a post-employment restraint, and a covenant that fails the weighing is not enforced as written, though a court may narrow it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nj-solari-test",
+            "authorityType": "case-law",
+            "title": "Solari Industries, Inc. v. Malady",
+            "citation": "Solari Industries, Inc. v. Malady, 55 N.J. 571 (1970).",
+            "url": "https://www.courtlistener.com/opinion/7374715/solari-industries-inc-v-malady/",
+            "deepLink": "https://www.courtlistener.com/opinion/7374715/solari-industries-inc-v-malady/#:~:text=It%20will%20generally%20be%20found,not%20injurious%20to%20the%20public.",
+            "proposition": "Solari states the three-prong reasonableness test: legitimate employer interest, no undue hardship, and no injury to the public.",
+            "verbatimQuote": "It will generally be found to be reasonable where it simply protects the legitimate interests of the employer, imposes no undue hardship on the employee, and is not injurious to the public.",
+            "date": "1970-04-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-solari-test"
+          },
+          {
+            "sourceId": "nj-more-restatement",
+            "authorityType": "case-law",
+            "title": "Community Hospital Group, Inc. v. More",
+            "citation": "Community Hospital Group, Inc. v. More, 183 N.J. 36 (2005).",
+            "url": "https://www.courtlistener.com/opinion/1957320/community-hospital-group-inc-v-more/",
+            "deepLink": "https://www.courtlistener.com/opinion/1957320/community-hospital-group-inc-v-more/#:~:text=That%20test%20requires%20us%20to,be%20injurious%20to%20the%20public.",
+            "proposition": "More restates the New Jersey three-part reasonableness test for restrictive covenants.",
+            "verbatimQuote": "That test requires us to determine whether (1) the restrictive covenant was necessary to protect the employer’s legitimate interests in enforcement, (2) whether it would cause undue hardship to the employee, and (3) whether it would be injurious to the public.",
+            "date": "2005-04-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-more-restatement"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-practice-restrictions-for-attorneys",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-jersey.exclude-practice-restrictions-for-attorneys",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No practice restrictions for lawyers",
+        "sectionId": "new-jersey-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#exclude-practice-restrictions-for-attorneys",
+        "requirementGuidance": "If the worker is a lawyer — including in-house counsel, admitted in this state or not — the agreement must not restrict the right to practice law after the relationship ends, apart from retirement benefits. The bar reaches indirect pressure too: compensation forfeitures aimed at departing lawyers who keep serving firm clients violate the rule and are unenforceable as against public policy, so check the economics of the departure terms, not just the covenant headings.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nj-rpc-56",
+            "authorityType": "primary-law",
+            "title": "N.J. Ct. R., RPC 5.6",
+            "citation": "N.J. Ct. R., RPC 5.6.",
+            "url": "https://www.njcourts.gov/sites/default/files/rpc.pdf",
+            "proposition": "RPC 5.6 bars a lawyer from a partnership or employment agreement that restricts the right to practice after the relationship ends, except for retirement benefits.",
+            "verbatimQuote": "A lawyer shall not participate in offering or making: (a) a partnership or employment agreement that restricts the rights of a lawyer to practice after termination of the relationship, except an agreement concerning benefits upon retirement; or (b) an agreement in which a restriction on the lawyer's right to practice is part of the settlement of a controversy between private parties.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-rpc-56"
+          },
+          {
+            "sourceId": "nj-jacob-indirect",
+            "authorityType": "case-law",
+            "title": "Jacob v. Norris, McLaughlin & Marcus",
+            "citation": "Jacob v. Norris, McLaughlin & Marcus, 128 N.J. 10 (1992).",
+            "url": "https://www.courtlistener.com/opinion/1984610/jacob-v-norris-mclaughlin-marcus/",
+            "deepLink": "https://www.courtlistener.com/opinion/1984610/jacob-v-norris-mclaughlin-marcus/#:~:text=We%20believe%20that%20indirect%20restrictions,the%20spirit%20of%20RPC%205.6.",
+            "proposition": "Jacob holds that indirect financial-disincentive provisions, not just outright bans, violate RPC 5.6.",
+            "verbatimQuote": "We believe that indirect restrictions on the practice of law, such as the financial disincentives at issue in this case, likewise violate both the language and the spirit of RPC 5.6.",
+            "date": "1992-05-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-jacob-indirect"
+          },
+          {
+            "sourceId": "nj-acpe-708",
+            "authorityType": "agency-guidance",
+            "title": "ACPE Opinion 708",
+            "citation": "N.J. Advisory Comm. on Prof'l Ethics, Op. 708 (2006).",
+            "url": "https://www.njcourts.gov/sites/default/files/notices/2006/07/ACPEOpinion708.pdf",
+            "proposition": "Opinion 708 confirms in-house and corporate counsel in New Jersey must follow the Rules of Professional Conduct, including RPC 5.6, whether or not admitted in the State.",
+            "verbatimQuote": "Therefore, it is our opinion that in-house or corporate counsel in New Jersey must abide by the Rules of Professional Conduct, regardless of whether they are members of the bar of our State.",
+            "date": "2006-07-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-acpe-708"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-client-access-restrictions-for-psychologists",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-jersey.exclude-client-access-restrictions-for-psychologists",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No client-access limits for psychologists",
+        "sectionId": "new-jersey-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#exclude-client-access-restrictions-for-psychologists",
+        "requirementGuidance": "If the worker is a licensed psychologist, the agreement must not include any term that interferes with or restricts a client's ability to keep seeing the therapist of choice. The regulation centers the patient rather than the practitioner, and the courts add that the uniquely personal treatment relationship forbids restraints that would interrupt ongoing care — a covenant whose time and territory look reasonable still fails on this ground.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nj-njac-therapist",
+            "authorityType": "primary-law",
+            "title": "N.J.A.C. 13:42-10.16",
+            "citation": "N.J.A.C. 13:42-10.16.",
+            "url": "https://dspace.njstatelib.org/bitstreams/13f70d2e-c854-4547-9f99-9997089d3164/download",
+            "proposition": "N.J.A.C. 13:42-10.16 bars a psychologist from any business agreement that restricts a client's ability to keep seeing the therapist of choice.",
+            "verbatimQuote": "A licensee shall not enter into any business agreement that interferes with or restricts the ability of a client to see or continue to see his or her therapist of choice.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-njac-therapist"
+          },
+          {
+            "sourceId": "nj-prince-treatment",
+            "authorityType": "case-law",
+            "title": "Comprehensive Psychology System, P.C. v. Prince",
+            "citation": "Comprehensive Psychology Sys., P.C. v. Prince, 375 N.J. Super. 273 (App. Div. 2005).",
+            "url": "https://www.courtlistener.com/opinion/1547623/comprehensive-psycho-sys-v-prince/",
+            "deepLink": "https://www.courtlistener.com/opinion/1547623/comprehensive-psycho-sys-v-prince/#:~:text=We%20also%20are%20persuaded%20that%2C,an%20ongoing%20course%20of%20treatment.",
+            "proposition": "Prince holds the patient-psychologist relationship forbids restraints that interfere with ongoing treatment.",
+            "verbatimQuote": "We also are persuaded that, apart from the existence of the regulations, the nature of the practice of psychology and the uniquely personal patient-psychologist relationship forbid any restrictions which might interfere with an ongoing course of treatment.",
+            "date": "2005-02-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-prince-treatment"
+          }
+        ]
+      },
+      {
+        "requirementId": "bar-concealment-of-discrimination-claim-details",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-jersey.bar-concealment-of-discrimination-claim-details",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No concealing discrimination claims",
+        "sectionId": "new-jersey-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#bar-concealment-of-discrimination-claim-details",
+        "requirementGuidance": "No confidentiality or non-disparagement language may have the purpose or effect of concealing the details of a discrimination, retaliation, or harassment claim — such a provision is unenforceable against the employee, the label on the clause does not control, and attempting to enforce one shifts the employee's fees onto the enforcing party. The same statute expressly preserves ordinary non-competes and proprietary-information agreements, so the fix is surgical: carve the claim-details language out and leave the covenant suite intact.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nj-lad-concealment",
+            "authorityType": "primary-law",
+            "title": "N.J.S.A. 10:5-12.8 (P.L.2019, c.39)",
+            "citation": "N.J.S.A. 10:5-12.8(a).",
+            "url": "https://pub.njleg.gov/bills/2018/PL19/39_.PDF",
+            "proposition": "The 2019 LAD amendment makes a contract or settlement provision unenforceable when its purpose or effect is to conceal the details of a discrimination, retaliation, or harassment claim.",
+            "verbatimQuote": "A provision in any employment contract or settlement agreement which has the purpose or effect of concealing the details relating to a claim of discrimination, retaliation, or harassment (hereinafter referred to as a “non-disclosure provision”) shall be deemed against public policy and unenforceable against a current or former employee (hereinafter referred to as an “employee”) who is a party to the contract or settlement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-lad-concealment"
+          },
+          {
+            "sourceId": "nj-savage-labels",
+            "authorityType": "case-law",
+            "title": "Savage v. Township of Neptune",
+            "citation": "Savage v. Township of Neptune, 257 N.J. 204 (2024).",
+            "url": "https://www.courtlistener.com/opinion/9499942/christine-savage-v-township-of-neptune/",
+            "deepLink": "https://www.courtlistener.com/opinion/9499942/christine-savage-v-township-of-neptune/#:~:text=As%20a%20result%2C%20labels%20like,the%20meaning%20of%20section%2012.8.",
+            "proposition": "Savage explains that the label on a clause does not control whether the LAD concealment rule applies.",
+            "verbatimQuote": "As a result, labels like \"non-disclosure,\" which is in the text, or \"non-disparagement,\" which is not, do not control the meaning of section 12.8.",
+            "date": "2024-05-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-savage-labels"
+          },
+          {
+            "sourceId": "nj-lad-carveout",
+            "authorityType": "primary-law",
+            "title": "N.J.S.A. 10:5-12.8 (P.L.2019, c.39)",
+            "citation": "N.J.S.A. 10:5-12.8(c).",
+            "url": "https://pub.njleg.gov/bills/2018/PL19/39_.PDF",
+            "proposition": "The same LAD section expressly preserves agreements not to compete and not to disclose proprietary information.",
+            "verbatimQuote": "this section shall not be construed to prohibit an employer from requiring an employee to sign an agreement: (1) in which the employee agrees not to enter into competition with the employer during or after employment;",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#src-nj-lad-carveout"
+          }
+        ]
+      }
+    ]
+  }
+}

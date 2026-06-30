@@ -1,0 +1,1228 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/wyoming",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/wyoming.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/wyoming",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/wyoming/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/wyoming/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "related-form",
+      "href": "https://openagreements.org/templates/openagreements-restrictive-covenant-wyoming",
+      "type": "text/html",
+      "title": "Employee Restrictive Covenant (Wyoming)"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "wyoming",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Wyoming",
+      "description": "A clause-by-clause reviewer checklist for Wyoming employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under Wyo. Stat. § 1-23-108 and Wyoming case law.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Wyoming",
+      "coverage": "Wyoming (US)",
+      "lastReviewed": "2026-06-11",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 47,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "wyoming-statutory-gates",
+        "label": "Wyoming statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#identify-parties",
+        "requirementGuidance": "Confirm the employer entity named in the cover terms is the one that actually employs the worker. Wyoming's statutory exceptions attach to specific relationships — a sale-of-business covenant binds the seller, an executive covenant binds the executive's employer — so a mismatched entity muddies which pathway, if any, the covenant can claim.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#identify-effective-date",
+        "requirementGuidance": "In Wyoming the effective date is not housekeeping: it picks the legal regime. Contracts entered into on or after July 1, 2025 are tested against Wyo. Stat. § 1-23-108's void-unless-excepted rule, while earlier agreements stay under the common law. An undated or ambiguously dated instrument leaves that threshold question open.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sf107-effective-date",
+            "authorityType": "primary-law",
+            "title": "SF 107 §§ 1–3",
+            "citation": "S.F. 107, Enrolled Act No. 87, §§ 1–3, 68th Leg., Gen. Sess. (Wyo. 2025).",
+            "url": "https://wyoleg.gov/2025/Enroll/SF0107.pdf",
+            "proposition": "SF 107 supports the July 1, 2025 effective date and prospective application of Wyo. Stat. § 1-23-108.",
+            "verbatimQuote": "This act shall apply to contracts entered into on and after July 1, 2025.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-sf107-effective-date"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#identify-employee-title",
+        "requirementGuidance": "Record the role, not just the name. The exception Wyoming employers lean on most — executive and management personnel and their professional staff — turns on what the worker actually does, so the recorded title and duties are the first exhibit in any pathway argument.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wyo-1-23-exec-staff",
+            "authorityType": "primary-law",
+            "title": "Wyo. Stat. § 1-23-108(a)(iv)",
+            "citation": "Wyo. Stat. § 1-23-108(a)(iv) (2025).",
+            "url": "https://wyoleg.gov/2025/Enroll/SF0107.pdf",
+            "proposition": "Wyo. Stat. § 1-23-108(a)(iv) supports the existence of the executive, management, and professional-staff exception.",
+            "verbatimQuote": "Executive and management personnel and officers and employees who constitute professional staff to executive and management personnel.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-wyo-1-23-exec-staff"
+          },
+          {
+            "sourceId": "fisher-actual-duties",
+            "authorityType": "law-firm-commentary",
+            "title": "Fisher Phillips commentary",
+            "citation": "Fisher Phillips, New Law Voids Most Wyoming Non-Compete Agreements (2025).",
+            "url": "https://www.fisherphillips.com/en/insights/insights/new-law-voids-most-wyoming-non-compete-agreements",
+            "proposition": "Fisher Phillips supports the focus on actual duties rather than titles for the executive exception.",
+            "verbatimQuote": "This analysis should focus on actual job responsibilities – not just job titles.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-fisher-actual-duties"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated, and treat a clause selecting a friendlier state's law for a Wyoming-based worker with suspicion. Now that the legislature has declared most labor non-competes void, a foreign choice-of-law clause invites a public-policy attack rather than resolving the question.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#define-confidential-information",
+        "requirementGuidance": "In Wyoming the confidentiality definition does double duty: it protects information day-to-day and frames any later argument that a covenant fits the trade-secret pathway. A definition that sweeps in general skills and industry knowledge invites the counter-argument that the clause restrains labor rather than secrets.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fisher-nda-question",
+            "authorityType": "law-firm-commentary",
+            "title": "Fisher Phillips commentary",
+            "citation": "Fisher Phillips, New Law Voids Most Wyoming Non-Compete Agreements (2025).",
+            "url": "https://www.fisherphillips.com/en/insights/insights/new-law-voids-most-wyoming-non-compete-agreements",
+            "proposition": "Fisher Phillips supports the caution that broad confidentiality provisions may be litigated as covered restraints.",
+            "verbatimQuote": "What is not clear, however, is whether other common forms of restrictive covenants will likewise be interpreted to constitute \"covenants not to compete.\"",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-fisher-nda-question"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#define-trade-secrets",
+        "requirementGuidance": "Wyoming keys its trade-secret exception to the criminal code's definition at W.S. 6-3-501(a)(xi), so a covenant relying on that pathway should define trade secrets in terms that track the statutory bar rather than fold them into general confidential information. How broadly courts will read the carve-out remains an open question.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wyo-1-23-trade-secret-carveout",
+            "authorityType": "primary-law",
+            "title": "Wyo. Stat. § 1-23-108(a)(ii)",
+            "citation": "Wyo. Stat. § 1-23-108(a)(ii) (2025).",
+            "url": "https://wyoleg.gov/2025/Enroll/SF0107.pdf",
+            "proposition": "The trade-secret exception reaches a covenant only to the extent it protects trade secrets as defined by W.S. 6-3-501(a)(xi).",
+            "verbatimQuote": "Any covenant not to compete to the extent the covenant provides for the protection of trade secrets as defined by W.S. 6-3-501(a)(xi)",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-wyo-1-23-trade-secret-carveout"
+          },
+          {
+            "sourceId": "littler-trade-secret-unsettled",
+            "authorityType": "law-firm-commentary",
+            "title": "Littler Mendelson commentary",
+            "citation": "Littler Mendelson, Wyoming Bans Non-Compete Covenants with Some Exceptions (2025).",
+            "url": "https://www.littler.com/news-analysis/asap/wyoming-bans-non-compete-covenants-some-exceptions",
+            "proposition": "Littler supports the caution that the practical breadth of the trade-secret exception remains uncertain.",
+            "verbatimQuote": "How expansive the trade secret exception will turn out to be waits to be seen.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-littler-trade-secret-unsettled"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#define-restricted-period",
+        "requirementGuidance": "One umbrella defined term keeps the duration analysis auditable. In a state that voids rather than trims, a stray clause running on its own longer clock is exactly the drafting slip that can put a whole covenant at risk.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#define-restricted-territory",
+        "requirementGuidance": "Wyoming's common-law test — still governing pre-2025 covenants and covenants drafted into a statutory exception — demands reasonable durational and geographic limits, with the employer carrying the burden. Tie the territory to where the worker actually operated, not to everywhere the company has ambitions.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "malave-reasonableness-baseline",
+            "authorityType": "case-law",
+            "title": "Malave v. Western Wyoming Beverages, Inc.",
+            "citation": "Malave v. Western Wyoming Beverages, Inc., 2022 WY 14, 503 P.3d 36.",
+            "url": "https://law.justia.com/cases/wyoming/supreme-court/2022/s-21-0140.html",
+            "deepLink": "https://law.justia.com/cases/wyoming/supreme-court/2022/s-21-0140.html#:~:text=A%20valid%20and%20enforceable%20covenant,(5)%20not%20against%20public%20policy.",
+            "proposition": "Malave supports the traditional Wyoming common-law enforceability elements for non-competes.",
+            "verbatimQuote": "A valid and enforceable covenant not to compete requires a showing that the covenant is: (1) in writing; (2) part of a contract of employment; (3) based on reasonable consideration; (4) reasonable in durational and geographical limitations; and (5) not against public policy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-malave-reasonableness-baseline"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers, vendors, and referral sources the worker dealt with during a stated look-back window. The wider the class reaches beyond actual contact, the stronger the argument that the clause is a covered covenant not to compete travelling under another name.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fisher-classification-question",
+            "authorityType": "law-firm-commentary",
+            "title": "Fisher Phillips commentary",
+            "citation": "Fisher Phillips, New Law Voids Most Wyoming Non-Compete Agreements (2025).",
+            "url": "https://www.fisherphillips.com/en/insights/insights/new-law-voids-most-wyoming-non-compete-agreements",
+            "proposition": "Fisher Phillips supports the caution that customer non-solicits and adjacent restraints may need judicial classification under the statute.",
+            "verbatimQuote": "What is not clear, however, is whether other common forms of restrictive covenants will likewise be interpreted to constitute \"covenants not to compete.\"",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-fisher-classification-question"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#define-covered-employees",
+        "requirementGuidance": "Limit the no-poach class to colleagues the departing worker actually worked with or supervised during the look-back window. Wyoming's statute has no express non-solicit exception, so restraint in this definition is what keeps the clause out of the classification fight.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#define-protected-interests",
+        "requirementGuidance": "Spell out the interests the covenants serve. Wyoming strictly construes restraints against the employer and voids them unless necessary for the employer's reasonable protection, so this definition is the foundation the enforcing party will have to stand on.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "brown-strict-construction",
+            "authorityType": "case-law",
+            "title": "Brown v. Best Home Health & Hospice, LLC",
+            "citation": "Brown v. Best Home Health & Hospice, LLC, 2021 WY 83, 491 P.3d 1021.",
+            "url": "https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/",
+            "deepLink": "https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=Contracts%20which%20hinder%20them%20from,reasonable%20protection%20of%20the%20employer.%22",
+            "proposition": "Brown supports strict construction and the employer's burden to justify a restraint.",
+            "verbatimQuote": "Contracts which hinder them from doing so are \"strictly construed and rigidly scanned and are declared void unless necessary for the reasonable protection of the employer.\"",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-brown-strict-construction"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#define-competitive-business",
+        "requirementGuidance": "Describe the actual competing activity, narrowly. Because a Wyoming court will not shave an expansive definition down to size, an aggressive competitive-business clause risks the entire covenant rather than just the excess.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hassler-draft-narrow",
+            "authorityType": "case-law",
+            "title": "Hassler v. Circle C Resources",
+            "citation": "Hassler v. Circle C Resources, 2022 WY 28, 505 P.3d 169.",
+            "url": "https://www.courtlistener.com/opinion/9998701/charlene-hassler-v-circle-c-resources/",
+            "deepLink": "https://www.courtlistener.com/opinion/9998701/charlene-hassler-v-circle-c-resources/#:~:text=By%20rejecting%20the%20liberal%20blue,restraints%20into%20their%20employment%20contracts",
+            "proposition": "Hassler supports the drafting incentive created by Wyoming's refusal to narrow overbroad covenants.",
+            "verbatimQuote": "By rejecting the liberal blue pencil rule, we encourage employers to incorporate only reasonable trade restraints into their employment contracts",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-hassler-draft-narrow"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, check for a passive-holdings carve-out below a stated threshold. A clause that technically forbids index funds and ordinary public-company shares is overbroad on its face — and in Wyoming, facial overbreadth is fatal rather than trimmable.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#define-passive-public-holdings",
+        "requirementGuidance": "An optional drafting mechanic — many agreements inline the carve-out without a capitalized term. If the defined term exists, verify its threshold matches the operative carve-out language.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#define-solicit",
+        "requirementGuidance": "Pin down whether solicitation means initiating contact, accepting business, or both. In Wyoming the stakes are classification: the more conduct the term reaches, the closer the clause moves to a restraint on receiving compensation for labor — the very thing the statute voids.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wyo-1-23-compensation-focus",
+            "authorityType": "primary-law",
+            "title": "Wyo. Stat. § 1-23-108(a)",
+            "citation": "Wyo. Stat. § 1-23-108(a) (2025).",
+            "url": "https://wyoleg.gov/2025/Enroll/SF0107.pdf",
+            "proposition": "Wyo. Stat. § 1-23-108(a) supports the statutory focus on restrictions on compensation for skilled or unskilled labor.",
+            "verbatimQuote": "Any covenant not to compete that restricts the right of any person to receive compensation for performance of skilled or unskilled labor shall be void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-wyo-1-23-compensation-focus"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#define-termination-of-employment",
+        "requirementGuidance": "Confirm the trigger covers resignation, dismissal, and expiration of a fixed term alike. The restricted-period math only works if the start event is unambiguous regardless of who ended the relationship.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#acknowledge-timing",
+        "requirementGuidance": "In Wyoming this acknowledgement preserves substantive facts: a covenant signed after employment begins requires separate contemporaneous consideration, because continued employment alone will not support it. The recital should say when signing happened relative to the start date and what new value was exchanged.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "brown-separate-consideration",
+            "authorityType": "case-law",
+            "title": "Brown v. Best Home Health & Hospice, LLC",
+            "citation": "Brown v. Best Home Health & Hospice, LLC, 2021 WY 83, 491 P.3d 1021.",
+            "url": "https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/",
+            "deepLink": "https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=when%20an%20employer%20requests%20an,consideration%22%20for%20the%20new%20promise",
+            "proposition": "Brown supports the separate-consideration rule for post-hire Wyoming non-competes.",
+            "verbatimQuote": "when an employer requests an existing employee sign a non-compete agreement, the employer must provide \"separate contemporaneous consideration\" for the new promise",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-brown-separate-consideration"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "Inexpensive procedural-fairness evidence in a state whose courts rigidly scan restraints against the employer. No Wyoming statute requires the acknowledgement, but it undercuts any later narrative that the covenant was sprung on the worker.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "brown-rigid-scrutiny",
+            "authorityType": "case-law",
+            "title": "Brown v. Best Home Health & Hospice, LLC",
+            "citation": "Brown v. Best Home Health & Hospice, LLC, 2021 WY 83, 491 P.3d 1021.",
+            "url": "https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/",
+            "deepLink": "https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=Contracts%20which%20hinder%20them%20from,reasonable%20protection%20of%20the%20employer.%22",
+            "proposition": "Brown supports the strict-construction baseline that makes procedural-fairness evidence valuable in Wyoming.",
+            "verbatimQuote": "Contracts which hinder them from doing so are \"strictly construed and rigidly scanned and are declared void unless necessary for the reasonable protection of the employer.\"",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-brown-rigid-scrutiny"
+          }
+        ]
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "The trade-secret obligation should run for as long as secrecy persists — that is how federal law defines the right, and in Wyoming it also preserves the argument that an associated covenant fits the trade-secret pathway. A fixed end date concedes statutory protection for nothing in return.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-dtsa-trade-secret-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term, separate from the perpetual trade-secret obligation. A perpetual restraint on non-secret information reads as overreach in a state already primed to void rather than narrow.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#disclose-dtsa-notice",
+        "requirementGuidance": "Required by federal law in Wyoming as everywhere else. An employer that omits the immunity notice forfeits exemplary damages and attorney fees in a later trade-secret suit against the worker — a silent, self-inflicted loss.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Wage-and-working-conditions speech is federally protected, and confidentiality and non-disparagement language must yield to it. The Board's recent decisions strike overbroad clauses no matter which state's law governs the contract.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#permit-compelled-disclosure",
+        "requirementGuidance": "Verify the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. No contract overrides compelled process; the carve-out keeps the worker from being squeezed between competing obligations.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-destroy at separation, certified in writing. In Wyoming, where the surviving restraints after 2025 are mostly confidentiality-shaped, the certification is the employer's cleanest evidence if protected information later walks out the door.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional — and in Wyoming, commentary splits on whether the 2025 statute leaves it untouched. Keep the clause scoped to the defined Covered Employees class and the Restricted Period, and treat breadth that approaches a recruiting ban as classification risk.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "brownstein-nonsolicits-unaffected",
+            "authorityType": "law-firm-commentary",
+            "title": "Brownstein Hyatt Farber Schreck commentary",
+            "citation": "Brownstein Hyatt Farber Schreck, Wyoming Adopts Statutory Limits for Noncompetes (2025).",
+            "url": "https://www.bhfs.com/insight/wyoming-adopts-statutory-limits-for-noncompetes/",
+            "proposition": "Brownstein supports the employer-friendly view that non-solicitation and non-recruitment restrictions are not affected.",
+            "verbatimQuote": "However, non-solicitation, non-recruitment and confidentiality restrictions remain unaffected.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-brownstein-nonsolicits-unaffected"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#permit-customer-nonsolicit",
+        "requirementGuidance": "When present, confirm it reaches only Covered Customers for the Restricted Period. The statute contains no express carve-out for customer non-solicits, so the clause survives by staying narrow enough that no court needs to classify it as a covenant not to compete.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "littler-no-nonsolicit-carveout",
+            "authorityType": "law-firm-commentary",
+            "title": "Littler Mendelson commentary",
+            "citation": "Littler Mendelson, Wyoming Bans Non-Compete Covenants with Some Exceptions (2025).",
+            "url": "https://www.littler.com/news-analysis/asap/wyoming-bans-non-compete-covenants-some-exceptions",
+            "proposition": "Littler supports the point that the Act has no express non-solicit carveout and the omission leaves uncertainty.",
+            "verbatimQuote": "Noticeably absent are any express exceptions for non-solicit restrictions such as covenants prohibiting the solicitation of customers or the solicitation of other employees",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-littler-no-nonsolicit-carveout"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they make the first call — functionally closer to a non-compete than a non-solicit. In Wyoming that proximity is dangerous: a court asked to classify the clause could place it inside the statutory void.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fisher-adjacent-restraints",
+            "authorityType": "law-firm-commentary",
+            "title": "Fisher Phillips commentary",
+            "citation": "Fisher Phillips, New Law Voids Most Wyoming Non-Compete Agreements (2025).",
+            "url": "https://www.fisherphillips.com/en/insights/insights/new-law-voids-most-wyoming-non-compete-agreements",
+            "proposition": "Fisher Phillips supports the classification caution for non-dealing and other adjacent restraints.",
+            "verbatimQuote": "What is not clear, however, is whether other common forms of restrictive covenants will likewise be interpreted to constitute \"covenants not to compete.\"",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-fisher-adjacent-restraints"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#permit-non-compete",
+        "requirementGuidance": "A post-July-2025 Wyoming non-compete is void unless it fits one of four statutory pathways — there is no general reasonableness fallback. If this clause appears, route the review through the Wyoming statutory-gate items at the end of this checklist before anything else about it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wyo-1-23-voids-labor-noncompetes",
+            "authorityType": "primary-law",
+            "title": "Wyo. Stat. § 1-23-108(a)",
+            "citation": "Wyo. Stat. § 1-23-108(a) (2025) (SF 107, Enrolled Act No. 87).",
+            "url": "https://wyoleg.gov/2025/Enroll/SF0107.pdf",
+            "proposition": "Wyo. Stat. § 1-23-108(a) supports the rule that most labor non-competes are void unless an enumerated exception applies.",
+            "verbatimQuote": "Any covenant not to compete that restricts the right of any person to receive compensation for performance of skilled or unskilled labor shall be void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-wyo-1-23-voids-labor-noncompetes"
+          },
+          {
+            "sourceId": "wyo-1-23-four-carveouts",
+            "authorityType": "primary-law",
+            "title": "Wyo. Stat. § 1-23-108(a)(i)–(iv)",
+            "citation": "Wyo. Stat. § 1-23-108(a)(i)–(iv) (2025).",
+            "url": "https://wyoleg.gov/2025/Enroll/SF0107.pdf",
+            "proposition": "Wyo. Stat. § 1-23-108(a)(i)–(iv) supports the four statutory carveouts.",
+            "verbatimQuote": "This subsection shall not apply to: (i) Any covenant not to compete contained in a contract for the purchase and sale of a business or the assets of a business; (ii) Any covenant not to compete to the extent the covenant provides for the protection of trade secrets as defined by W.S. 6-3-501(a)(xi);",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-wyo-1-23-four-carveouts"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "A named-competitor list is the Wyoming-rational way to draft. The state supreme court has said outright that refusing to blue-pencil is meant to push employers toward incorporating only reasonable restraints in the first place — a covenant scoped to actual competitors is that instruction followed.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hassler-narrow-incentive",
+            "authorityType": "case-law",
+            "title": "Hassler v. Circle C Resources",
+            "citation": "Hassler v. Circle C Resources, 2022 WY 28, 505 P.3d 169.",
+            "url": "https://www.courtlistener.com/opinion/9998701/charlene-hassler-v-circle-c-resources/",
+            "deepLink": "https://www.courtlistener.com/opinion/9998701/charlene-hassler-v-circle-c-resources/#:~:text=By%20rejecting%20the%20liberal%20blue,restraints%20into%20their%20employment%20contracts",
+            "proposition": "Hassler supports drafting to actual need because Wyoming courts will not trim an overbroad covenant.",
+            "verbatimQuote": "By rejecting the liberal blue pencil rule, we encourage employers to incorporate only reasonable trade restraints into their employment contracts",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-hassler-narrow-incentive"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause runs on the shared Restricted Period — and watch for investment language broad enough to restrain how the worker earns a living, which is where Wyoming's statute bites.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#require-non-disparagement",
+        "requirementGuidance": "Standard inclusion with a stated term, but the carve-outs do the legal work: truthful testimony, statements to government agencies, and protected workplace speech must stay outside the clause's reach, or federal labor law will treat the whole provision as overbroad.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should recite both Wyoming physician rules: practice-restraining non-competes between physicians are void, and a departing physician may tell rare-disorder patients where the practice moved without liability. Do not lean on the executive exception for physicians employed by hospitals or other non-physician entities — the statute's outer reach there is unsettled.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wyo-1-23-physician-bc",
+            "authorityType": "primary-law",
+            "title": "Wyo. Stat. § 1-23-108(b)–(c)",
+            "citation": "Wyo. Stat. § 1-23-108(b)–(c) (2025).",
+            "url": "https://wyoleg.gov/2025/Enroll/SF0107.pdf",
+            "proposition": "Wyo. Stat. § 1-23-108(b)–(c) supports the physician practice restriction rule and the rare-disorder patient contact rule.",
+            "verbatimQuote": "Any covenant not to compete provision of an employment, partnership or corporate agreement between physicians that restricts the right of a physician to practice medicine",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-wyo-1-23-physician-bc"
+          },
+          {
+            "sourceId": "holland-between-physicians",
+            "authorityType": "law-firm-commentary",
+            "title": "Holland & Hart commentary",
+            "citation": "Holland & Hart, Wyoming Legislature Takes a Bite Out of Covenants Not to Compete (2025).",
+            "url": "https://www.hollandhart.com/wyoming-legislature-takes-a-bite-out-of-covenants-not-to-compete-1",
+            "proposition": "Holland & Hart supports the open question about contracts between physicians and non-physician entities.",
+            "verbatimQuote": "This language suggests that the law intends to invalidate covenants not to compete entered into between physicians who are members of or employed by a medical practice owned by physicians, and not those contracts with hospitals or other types of entities.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-holland-between-physicians"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. Useful everywhere — and in Wyoming it also surfaces legacy pre-2025 covenants, which remain enforceable under common law and can ambush an unwary new employer.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice. If the clause appears, condition any disclosure on a reasonable belief of breach — telling a new employer about a covenant Wyoming's statute likely voids is a tortious-interference claim waiting to be filed.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but know the Wyoming posture before approving one: no published Wyoming authority blesses tolling, and the added duration faces the same strict scrutiny as the original term, with voiding rather than trimming as the realistic downside.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "brown-tolling-scrutiny",
+            "authorityType": "case-law",
+            "title": "Brown v. Best Home Health & Hospice, LLC",
+            "citation": "Brown v. Best Home Health & Hospice, LLC, 2021 WY 83, 491 P.3d 1021.",
+            "url": "https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/",
+            "deepLink": "https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=Contracts%20which%20hinder%20them%20from,reasonable%20protection%20of%20the%20employer.%22",
+            "proposition": "Brown supports the strict scrutiny any duration-extending mechanism would face in Wyoming.",
+            "verbatimQuote": "Contracts which hinder them from doing so are \"strictly construed and rigidly scanned and are declared void unless necessary for the reasonable protection of the employer.\"",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-brown-tolling-scrutiny"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief. Wyoming has no statutory presumption of irreparable injury for covenant breaches, so this contractual recital is most of the scaffolding an employer brings to the emergency-relief stage.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#address-attorneys-fees-and-costs",
+        "requirementGuidance": "Fee-shifting remains a commercial choice in Wyoming — no covenant-specific fee statute displaces the American Rule. If the clause appears, check that it is mutual and keyed to prevailing-party status rather than one-way in the employer's favor.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclaim-judicial-reformation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.wyoming.disclaim-judicial-reformation",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Judicial reformation disclaimed",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#disclaim-judicial-reformation",
+        "requirementGuidance": "Flip the usual severability instinct: in Wyoming the clause must disclaim judicial reformation, not request it. Savings language inviting a court to trim an overbroad covenant is ineffective here — the supreme court refuses to redraft non-competes, and an overbroad covenant is void in its entirety — so the agreement has to be drafted within the enforceable scope from the outset, and the severability clause should say exactly that.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hassler-no-blue-pencil",
+            "authorityType": "case-law",
+            "title": "Hassler v. Circle C Resources",
+            "citation": "Hassler v. Circle C Resources, 2022 WY 28, 505 P.3d 169.",
+            "url": "https://www.courtlistener.com/opinion/9998701/charlene-hassler-v-circle-c-resources/",
+            "deepLink": "https://www.courtlistener.com/opinion/9998701/charlene-hassler-v-circle-c-resources/#:~:text=Wyoming%20courts%20will%20no%20longer,within%20the%20bounds%20of%20reason.",
+            "proposition": "Hassler supports the rule against judicial narrowing and the consequence that the overbroad agreement was void.",
+            "verbatimQuote": "Wyoming courts will no longer exceed the scope of their traditional authority in contract interpretation by redrafting noncompete agreements to bring them within the bounds of reason.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-hassler-no-blue-pencil"
+          },
+          {
+            "sourceId": "holland-blue-pencil-warning",
+            "authorityType": "law-firm-commentary",
+            "title": "Holland & Hart commentary",
+            "citation": "Holland & Hart, Wyoming Legislature Takes a Bite Out of Covenants Not to Compete (2025).",
+            "url": "https://www.hollandhart.com/wyoming-legislature-takes-a-bite-out-of-covenants-not-to-compete-1",
+            "proposition": "Holland & Hart supports the practical warning that drafting overbreadth remains risky even inside exceptions.",
+            "verbatimQuote": "Since a 2022 Wyoming Supreme Court decision, Wyoming courts are no longer authorized to revise an unreasonable covenant to make it reasonable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-holland-blue-pencil-warning"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite elsewhere. Bundled survival language is how an unreviewed duration slips through, and in Wyoming an indefensible duration voids the covenant it sits in rather than getting shortened.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. Pre-2025 Wyoming covenants give this clause extra freight: how a transaction restructures the agreement can bear on whether a grandfathered covenant keeps its pre-statute status.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law and venue",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#specify-governing-law-and-venue",
+        "requirementGuidance": "Governing law, venue, and process should point the same direction. Do not expect an out-of-state choice-of-law clause to rescue a covenant for a Wyoming-based worker: courts can refuse a chosen law that offends local public policy, as New York's highest court did with a Florida clause.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "brown-brown-publicpolicy",
+            "authorityType": "case-law",
+            "title": "Brown & Brown, Inc. v. Johnson",
+            "citation": "Brown & Brown, Inc. v. Johnson, 25 N.Y.3d 364 (2015).",
+            "url": "https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/",
+            "deepLink": "https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/#:~:text=On%20this%20appeal%2C%20we%20hold,public%20policy%20of%20this%20state.",
+            "proposition": "Brown & Brown shows a court may refuse to apply another state's non-compete law where it conflicts with local public policy.",
+            "verbatimQuote": "On this appeal, we hold that applying Florida law on restrictive covenants related to the non-solicitation of customers by a former employee would violate the public policy of this state.",
+            "date": "2015-06-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-brown-brown-publicpolicy"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate with a Wyoming twist: how changes get made matters. Replacing a pre-July-2025 agreement wholesale creates a new post-statute contract that may swap an enforceable covenant for a void one, while amending or renewing under the existing terms can preserve grandfathered status — so review the amendment mechanics with that trade in mind.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "holland-amend-not-replace",
+            "authorityType": "law-firm-commentary",
+            "title": "Holland & Hart commentary",
+            "citation": "Holland & Hart, Wyoming Legislature Takes a Bite Out of Covenants Not to Compete (2025).",
+            "url": "https://www.hollandhart.com/wyoming-legislature-takes-a-bite-out-of-covenants-not-to-compete-1",
+            "proposition": "Holland & Hart supports amending or renewing an existing covenant rather than replacing it, to preserve pre-July-2025 status.",
+            "verbatimQuote": "consider whether those agreements have terms that permit you to renew or amend the agreements without entering into an entirely new agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-holland-amend-not-replace"
+          },
+          {
+            "sourceId": "littler-rollover-warning",
+            "authorityType": "law-firm-commentary",
+            "title": "Littler Mendelson commentary",
+            "citation": "Littler Mendelson, Wyoming Bans Non-Compete Covenants with Some Exceptions (2025).",
+            "url": "https://www.littler.com/news-analysis/asap/wyoming-bans-non-compete-covenants-some-exceptions",
+            "proposition": "Littler supports the rollover warning for routine agreement updates after the effective date.",
+            "verbatimQuote": "Employers in Wyoming will need to evaluate routine replacement or updating programs that put a new non-compete agreement in place",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-littler-rollover-warning"
+          }
+        ]
+      },
+      {
+        "requirementId": "gate-non-compete-by-statutory-pathway",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.wyoming.gate-non-compete-by-statutory-pathway",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Statutory pathway named",
+        "sectionId": "wyoming-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#gate-non-compete-by-statutory-pathway",
+        "requirementGuidance": "Any non-compete entered into on or after July 1, 2025 must identify which of the four statutory pathways authorizes it: sale of a business, trade-secret protection, tenure-capped recovery of relocation, education, and training expense, or executive and management personnel and their professional staff. A covenant claiming no pathway is void, and a recital naming the pathway makes the gate reviewable on the face of the document instead of in litigation.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wyo-1-23-pathway-list",
+            "authorityType": "primary-law",
+            "title": "Wyo. Stat. § 1-23-108(a)(i)–(iv)",
+            "citation": "Wyo. Stat. § 1-23-108(a)(i)–(iv) (2025).",
+            "url": "https://wyoleg.gov/2025/Enroll/SF0107.pdf",
+            "proposition": "Wyo. Stat. § 1-23-108(a)(i)–(iv) supports the four statutory pathways a Wyoming non-compete must fit.",
+            "verbatimQuote": "This subsection shall not apply to: (i) Any covenant not to compete contained in a contract for the purchase and sale of a business or the assets of a business; (ii) Any covenant not to compete to the extent the covenant provides for the protection of trade secrets as defined by W.S. 6-3-501(a)(xi);",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-wyo-1-23-pathway-list"
+          }
+        ]
+      },
+      {
+        "requirementId": "cap-training-cost-recovery-by-tenure-schedule",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.wyoming.cap-training-cost-recovery-by-tenure-schedule",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Training-repayment caps by tenure",
+        "sectionId": "wyoming-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#cap-training-cost-recovery-by-tenure-schedule",
+        "requirementGuidance": "If the pathway is training-cost recovery, audit the schedule: up to 100 percent of documented expense below two years of service, 66 percent from two to three, 33 percent from three to four, and nothing at four or more. Recovery must tie to actual relocation, education, or training spend — a flat repayment untethered from documented cost reads as a penalty on competing rather than expense recovery.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wyo-1-23-tier-100",
+            "authorityType": "primary-law",
+            "title": "Wyo. Stat. § 1-23-108(a)(iii)(A)",
+            "citation": "Wyo. Stat. § 1-23-108(a)(iii)(A) (2025).",
+            "url": "https://wyoleg.gov/2025/Enroll/SF0107.pdf",
+            "proposition": "The repayment schedule caps recovery at 100 percent of expense for employees who served less than two years.",
+            "verbatimQuote": "Recovery of not more than one hundred percent (100%) of the expense for an employee who has served an employer for a period of less than two (2) years",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-wyo-1-23-tier-100"
+          },
+          {
+            "sourceId": "faegre-repayment-tier",
+            "authorityType": "law-firm-commentary",
+            "title": "Faegre Drinker commentary",
+            "citation": "Faegre Drinker, Wyoming Enacts Significant Restrictions on Noncompete Agreements (2025).",
+            "url": "https://www.faegredrinker.com/en/insights/publications/2025/3/wyoming-enacts-significant-restrictions-on-noncompete-agreements",
+            "proposition": "Faegre Drinker supports the tiered repayment schedule and the need to update templates for compliance.",
+            "verbatimQuote": "Recovery of not more than 100% of the expense for an employee who has served an employer for a period of less than two years.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-faegre-repayment-tier"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-separate-consideration-for-post-hire-covenants",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.wyoming.require-separate-consideration-for-post-hire-covenants",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Separate consideration for post-hire signing",
+        "sectionId": "wyoming-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#require-separate-consideration-for-post-hire-covenants",
+        "requirementGuidance": "A covenant signed after the start date needs its own consideration — a bonus, equity grant, promotion, or other identifiable new value, recited in the agreement. Continued employment alone is not enough under Wyoming case law, and the defect makes the covenant unenforceable regardless of which statutory pathway it claims.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "brown-post-hire-consideration",
+            "authorityType": "case-law",
+            "title": "Brown v. Best Home Health & Hospice, LLC",
+            "citation": "Brown v. Best Home Health & Hospice, LLC, 2021 WY 83, 491 P.3d 1021.",
+            "url": "https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/",
+            "deepLink": "https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=when%20an%20employer%20requests%20an,consideration%22%20for%20the%20new%20promise",
+            "proposition": "Brown supports the separate-consideration requirement for covenants signed after employment begins.",
+            "verbatimQuote": "when an employer requests an existing employee sign a non-compete agreement, the employer must provide \"separate contemporaneous consideration\" for the new promise",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-brown-post-hire-consideration"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-non-competes-for-physicians",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.wyoming.exclude-non-competes-for-physicians",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No physician non-compete",
+        "sectionId": "wyoming-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#exclude-non-competes-for-physicians",
+        "requirementGuidance": "The agreement must not impose a non-compete on a physician. The statute voids practice restraints in agreements between physicians, and because the carve-out's reach beyond physician-owned practices is unresolved — and an overbroad guess cannot be judicially repaired in Wyoming — the defensible posture is to omit the restraint for every physician and recite the rare-disorder patient-contact right instead.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wyo-1-23-physician-void",
+            "authorityType": "primary-law",
+            "title": "Wyo. Stat. § 1-23-108(b)",
+            "citation": "Wyo. Stat. § 1-23-108(b) (2025).",
+            "url": "https://wyoleg.gov/2025/Enroll/SF0107.pdf",
+            "proposition": "Wyo. Stat. § 1-23-108(b) voids physician practice-restraining non-competes.",
+            "verbatimQuote": "Any covenant not to compete provision of an employment, partnership or corporate agreement between physicians that restricts the right of a physician to practice medicine",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-wyo-1-23-physician-void"
+          },
+          {
+            "sourceId": "littler-between-physicians",
+            "authorityType": "law-firm-commentary",
+            "title": "Littler Mendelson commentary",
+            "citation": "Littler Mendelson, Wyoming Bans Non-Compete Covenants with Some Exceptions (2025).",
+            "url": "https://www.littler.com/news-analysis/asap/wyoming-bans-non-compete-covenants-some-exceptions",
+            "proposition": "Littler supports the caution that the between-physicians phrase may not cover contracts between physicians and hospitals.",
+            "verbatimQuote": "The language in this subparagraph suggests that the restriction only intends to limit non-compete provisions in contracts entered into \"between physicians,\"",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-littler-between-physicians"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-solicit-and-non-dealing-to-actual-contacts",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.wyoming.narrow-non-solicit-and-non-dealing-to-actual-contacts",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-solicits limited to actual contacts",
+        "sectionId": "wyoming-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#narrow-non-solicit-and-non-dealing-to-actual-contacts",
+        "requirementGuidance": "Non-solicits and non-dealing clauses should not reach beyond people the worker actually dealt with: not every customer of the company, not every employee, and not business the worker never touched. Breadth is what converts these clauses into covenant-not-to-compete equivalents subject to the statute's voidability rules.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fisher-reclassification-risk",
+            "authorityType": "law-firm-commentary",
+            "title": "Fisher Phillips commentary",
+            "citation": "Fisher Phillips, New Law Voids Most Wyoming Non-Compete Agreements (2025).",
+            "url": "https://www.fisherphillips.com/en/insights/insights/new-law-voids-most-wyoming-non-compete-agreements",
+            "proposition": "Fisher Phillips supports the risk that broad non-solicit and non-dealing restraints get classified as covenants not to compete.",
+            "verbatimQuote": "What is not clear, however, is whether other common forms of restrictive covenants will likewise be interpreted to constitute \"covenants not to compete.\"",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/wyoming#src-fisher-reclassification-risk"
+          }
+        ]
+      }
+    ]
+  }
+}

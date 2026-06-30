@@ -12,5 +12,6 @@ Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.
 
 ## Documents
 
+* [Invention Assignment](invention-assignment/)
 * [Non Compete](non-compete/)
 * [Privacy](privacy/)

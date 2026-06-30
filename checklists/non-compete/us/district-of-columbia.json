@@ -1,0 +1,1602 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/district-of-columbia",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/district-of-columbia.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/district-of-columbia",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/district-of-columbia/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/district-of-columbia/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "district-of-columbia",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — District of Columbia",
+      "description": "A clause-by-clause reviewer checklist for District of Columbia employee restrictive covenant agreements — the District bans non-competes for employees below an annually adjusted pay threshold and enforces a covenant against a highly compensated employee only if it clears strict scope, duration, and 14-day notice gates.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "District of Columbia",
+      "coverage": "District of Columbia (US)",
+      "lastReviewed": "2026-06-11",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 51,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "district-of-columbia-statutory-gates",
+        "label": "District of Columbia statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#identify-parties",
+        "requirementGuidance": "Name both sides precisely, then remember that in the District the employer's identity settles less than the employee's geography: the ban covers a worker who spends more than half their work time for the employer in the District, or whose District-based role involves substantial District work — wherever the company is headquartered. A clean party block is the anchor for that coverage analysis.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-covered-def-parties",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(6)(A).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(6) defines a covered employee as one who is not a highly compensated employee and who either spends more than 50% of work time for the employer in the District, or whose District-based employment regularly involves a substantial amount of District work and not more than 50% elsewhere.",
+            "verbatimQuote": "an employee who is not a highly compensated employee and: (A) If the employee has commenced work for the employer: (i) Spends more than 50% of his or her work time for the employer working in the District; or (ii) Whose employment for the employer is based in the District and the employee regularly spends a substantial amount of his or her work time for the employer in the District and not more than 50% of his or her work time for that employer in another jurisdiction",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-covered-def-parties"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#identify-effective-date",
+        "requirementGuidance": "The date is the regime selector. A non-compete provision in a covered employee's agreement entered into on or after October 1, 2022 is void as a matter of law; an agreement signed before that date is judged instead under the District's common-law reasonableness rule. An undated instrument leaves the single most consequential classification on this page unanchored.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-void-rule-parties",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.02",
+            "citation": "D.C. Code § 32-581.02(a)(2).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.02",
+            "proposition": "Section 32-581.02(a)(2) makes a non-compete provision in a covered employee's agreement entered into on or after October 1, 2022, void as a matter of law and unenforceable — fixing the date line between the statutory ban and common law.",
+            "verbatimQuote": "A non-compete provision that violates paragraph (1) of this subsection contained in an agreement between a covered employee and an employer that was entered into on or after October 1, 2022, shall be void as a matter of law and unenforceable.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-void-rule-parties"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#identify-employee-title",
+        "requirementGuidance": "Record the role with its compensation context, because the District grades by pay and occupation rather than seniority labels. The title is the first clue to three statutory categories that change everything: a sub-threshold worker (covenant void), a broadcast creator (never bindable, at any salary), and a licensed physician who may qualify as a medical specialist (higher threshold, longer cap).",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#identify-governing-law",
+        "requirementGuidance": "Check that a governing jurisdiction is stated, and weigh what it can and cannot do here: the ban's coverage keys to where the employee works — the District work test — not to the law label on the signature page, so writing another jurisdiction into the clause does not move a District-based worker out of the covered-employee analysis. Treat an out-of-District selection in a District-heavy role as a flag for closer review rather than a cure.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-covered-def-parties",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(6)(A).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(6) defines a covered employee as one who is not a highly compensated employee and who either spends more than 50% of work time for the employer in the District, or whose District-based employment regularly involves a substantial amount of District work and not more than 50% elsewhere.",
+            "verbatimQuote": "an employee who is not a highly compensated employee and: (A) If the employee has commenced work for the employer: (i) Spends more than 50% of his or her work time for the employer working in the District; or (ii) Whose employment for the employer is based in the District and the employee regularly spends a substantial amount of his or her work time for the employer in the District and not more than 50% of his or her work time for that employer in another jurisdiction",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-covered-def-parties"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#define-confidential-information",
+        "requirementGuidance": "The District expressly leaves confidentiality restrictions outside its non-compete ban, which makes this definition the workhorse of the surviving protective program — and its breadth the thing to test. A definition confined to genuinely confidential and proprietary employer information stays inside the carve-out; one that locks up everything the worker ever learned starts to function as a bar on working for a competitor and risks recharacterization as a banned non-compete provision.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-confidentiality-defs",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(15)(B)(i).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(15)(B)(i) excludes from the non-compete definition a provision restricting an employee from disclosing, using, selling, or accessing the employer's confidential or proprietary information — the carve-out that keeps properly scoped confidentiality clauses lawful.",
+            "verbatimQuote": "Disclosing, using, selling, or accessing the employer's confidential employer information or proprietary employer information",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-confidentiality-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#define-trade-secrets",
+        "requirementGuidance": "Define trade secrets separately and concretely. The District's Uniform Trade Secrets Act lets a court enjoin actual or threatened misappropriation without any covenant at all, so a precise trade-secret definition is the employer's most reliable remedy in a jurisdiction where the competition restraints themselves are mostly off the table.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-utsa-defs",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 36-402",
+            "citation": "D.C. Code § 36-402(a).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/36-402",
+            "proposition": "Section 36-402(a) of the District's Uniform Trade Secrets Act authorizes a court to enjoin actual or threatened misappropriation of a trade secret, independent of any covenant.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined.",
+            "date": "1990-03-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-utsa-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#define-restricted-period",
+        "requirementGuidance": "Confirm the umbrella term is expressed in calendar days running from the date of separation, because that is exactly how the statute writes its ceilings — 365 calendar days from separation for a non-medical highly compensated employee. A restricted period defined from some other trigger, or in fuzzy month language, makes the cap compliance check harder than it needs to be.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-duration-defs",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.03",
+            "citation": "D.C. Code § 32-581.03(a)(1)(C)(i).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
+            "proposition": "Section 32-581.03(a)(1)(C)(i) caps the post-employment non-competition term for a non-medical highly compensated employee at 365 calendar days measured from the date of separation.",
+            "verbatimQuote": "If the employee is not a medical specialist, a term of non-competition that does not exceed 365 calendar days from the date the employee separates from employment with the employer",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-duration-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#define-restricted-territory",
+        "requirementGuidance": "In the District this definition is not just good practice — geographical limitations are one of the contents the statute requires a highly compensated employee's covenant to specify before it can be valid. A covenant silent on geography fails the statutory checklist outright, so confirm the territory is stated, bounded, and matched to where the employee actually works.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-scope-defs",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.03",
+            "citation": "D.C. Code § 32-581.03(a)(1).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
+            "proposition": "Section 32-581.03(a)(1) requires a valid highly compensated employee non-compete to specify the functional scope of the restriction and its geographical limitations.",
+            "verbatimQuote": "The agreement must specify: (A) The functional scope of the competitive restriction, including what services, roles, industry, or competing entities the employee is restricted from performing work in or on behalf of; (B) The geographical limitations of the work restriction",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-scope-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#define-covered-customers",
+        "requirementGuidance": "The District's ban targets provisions that stop an employee from working for another for pay or running their own business — a customer non-solicit scoped to actual contacts during a look-back window sits comfortably outside that definition. Keep the class tight anyway: the narrower the customer set, the clearer it is that the clause restrains solicitation rather than employment itself.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-definition-defs",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(15).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(15) defines a non-compete provision as a provision in a written agreement or a workplace policy that prohibits an employee from performing work for another for pay or operating the employee's own business — a definition that does not reach properly scoped solicitation covenants.",
+            "verbatimQuote": "\"Non-compete provision\" means a provision in a written agreement or a workplace policy that prohibits an employee from performing work for another for pay or from operating the employee's own business.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-definition-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#define-covered-employees",
+        "requirementGuidance": "For any employee non-solicit, confirm the protected class is the colleagues the departing worker actually worked with during a stated look-back window. Note the vocabulary trap in this jurisdiction: the statute uses covered employee to mean a worker the ban protects, so an agreement that borrows the same phrase for its non-solicit class should define it unmistakably as a contract term.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#define-protected-interests",
+        "requirementGuidance": "Name the interests, and weight them the way the District does: the statute's carve-outs protect confidential and proprietary employer information, and trade-secret law supplies the injunction. Recitals about goodwill or training investment do nothing for a covered employee's covenant — the ban is a flat rule — so the definition should foreground the information interests the law actually lets the employer defend.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-confidentiality-defs",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(15)(B)(i).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(15)(B)(i) excludes from the non-compete definition a provision restricting an employee from disclosing, using, selling, or accessing the employer's confidential or proprietary information — the carve-out that keeps properly scoped confidentiality clauses lawful.",
+            "verbatimQuote": "Disclosing, using, selling, or accessing the employer's confidential employer information or proprietary employer information",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-confidentiality-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#define-competitive-business",
+        "requirementGuidance": "This definition carries statutory weight for a highly compensated employee: the covenant must specify the functional scope of the restriction, including what services, roles, industry, or competing entities the employee may not work in or for. A Competitive Business definition written at that level of specificity is how the agreement satisfies the requirement; a vague any-competing-enterprise formulation is a validity gap, not just loose drafting.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-scope-defs",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.03",
+            "citation": "D.C. Code § 32-581.03(a)(1).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
+            "proposition": "Section 32-581.03(a)(1) requires a valid highly compensated employee non-compete to specify the functional scope of the restriction and its geographical limitations.",
+            "verbatimQuote": "The agreement must specify: (A) The functional scope of the competitive restriction, including what services, roles, industry, or competing entities the employee is restricted from performing work in or on behalf of; (B) The geographical limitations of the work restriction",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-scope-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where any clause restricts owning or investing in competitors, look for the passive-holdings carve-out below a stated threshold. The District adds a definitional edge to the usual overbreadth concern: the banned non-compete provision includes one that stops an employee from operating their own business, and an investment restraint drafted wide enough can drift toward that line.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-definition-defs",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(15).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(15) defines a non-compete provision as a provision in a written agreement or a workplace policy that prohibits an employee from performing work for another for pay or operating the employee's own business — a definition that does not reach properly scoped solicitation covenants.",
+            "verbatimQuote": "\"Non-compete provision\" means a provision in a written agreement or a workplace policy that prohibits an employee from performing work for another for pay or from operating the employee's own business.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-definition-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#define-passive-public-holdings",
+        "requirementGuidance": "Optional drafting machinery — many agreements state the carve-out inline without a capitalized term. If the defined term appears, confirm the ownership threshold in the definition matches the one the operative carve-out actually uses.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#define-solicit",
+        "requirementGuidance": "Pin the term to initiating contact. A solicitation definition that also captures accepting unsolicited approaches converts a non-solicit into something closer to a bar on working for the people who call — which, for a covered employee, is the territory the ban occupies. The tighter the definition, the more clearly the clause stays a solicitation restraint.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#define-termination-of-employment",
+        "requirementGuidance": "Verify one unambiguous separation trigger covering resignation, dismissal, and the end of a fixed term. In the District the stakes are statutory: the duration caps are measured in calendar days from the date the employee separates from employment, so an ambiguous separation definition leaves the covenant's compliance with the cap genuinely uncertain.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-duration-defs",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.03",
+            "citation": "D.C. Code § 32-581.03(a)(1)(C)(i).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
+            "proposition": "Section 32-581.03(a)(1)(C)(i) caps the post-employment non-competition term for a non-medical highly compensated employee at 365 calendar days measured from the date of separation.",
+            "verbatimQuote": "If the employee is not a medical specialist, a term of non-competition that does not exceed 365 calendar days from the date the employee separates from employment with the employer",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-duration-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#acknowledge-timing",
+        "requirementGuidance": "In the District the timing acknowledgement should do specific evidentiary work: record the date the employer delivered the non-compete provision in writing, because a highly compensated employee must receive it at least 14 days before starting work — or, for a current employee, at least 14 days before signing — for the covenant to be valid. A recital proving the 14-day fact from the face of the instrument is cheap insurance against the most mechanical way a District covenant fails.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-notice-timing-ack",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.03",
+            "citation": "D.C. Code § 32-581.03(a)(2).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
+            "proposition": "Section 32-581.03(a)(2) requires the employer to provide the non-compete provision in writing at least 14 days before employment commences, or at least 14 days before a current employee must execute it.",
+            "verbatimQuote": "The employer shall provide the non-compete provision to the employee in writing: (A) At least 14 days before the individual commences employment for the employer; or (B) If the employer already employs the highly compensated employee, at least 14 days before the employee must execute the agreement.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-notice-timing-ack"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "The District imposes no counsel-consultation formality, so this acknowledgement works as general procedural-fairness evidence. It pairs naturally with the 14-day delivery window — the statute's design gives the employee time to seek advice, and a recital that the employee had and could use that time supports the covenant's procedural story.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Let trade-secret obligations run as long as secrecy does — federal law keys the right to continued secrecy, and the District's own trade-secrets act supplies the injunction. With most competition restraints banned below the pay threshold, this clause is the employer's principal protection in the District, and contractually expiring it on a fixed date surrenders a remedy the statute would otherwise extend indefinitely.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-dtsa-1839-conf",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-dtsa-1839-conf"
+          },
+          {
+            "sourceId": "dc-utsa-conf",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 36-402",
+            "citation": "D.C. Code § 36-402(a).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/36-402",
+            "proposition": "Section 36-402(a) of the District's Uniform Trade Secrets Act authorizes a court to enjoin actual or threatened misappropriation of a trade secret.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined.",
+            "date": "1990-03-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-utsa-conf"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#state-confidentiality-duration",
+        "requirementGuidance": "Give non-trade-secret confidential information its own finite term. The two-track structure also protects the clause's statutory footing in the District: the carve-out shelters restrictions on the employer's confidential and proprietary information, and a perpetual lid on everything the worker knows is the drafting pattern most likely to be read as preventing competitive employment altogether — taking the clause outside the carve-out it depends on.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-confidentiality-conf",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(15)(B)(i).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(15)(B)(i) excludes from the non-compete definition a provision restricting disclosure or use of the employer's confidential or proprietary information — the carve-out an overbroad confidentiality clause can forfeit.",
+            "verbatimQuote": "Disclosing, using, selling, or accessing the employer's confidential employer information or proprietary employer information",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-confidentiality-conf"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#disclose-dtsa-notice",
+        "requirementGuidance": "Confirm the federal immunity notice appears in any agreement governing confidential information. In a jurisdiction where trade-secret litigation is the main enforcement channel left to the employer, forfeiting exemplary damages and attorney fees by omitting the notice gives up exactly the remedies a District employer will want most.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-dtsa-immunity",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-dtsa-immunity"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Wages, hours, and working conditions must stay discussable no matter what the confidentiality and non-disparagement clauses say — federal labor law protects that speech everywhere, and the Board condemns terms broad enough to chill it. In an agreement already navigating a local ban, an overbroad federal-law violation is an unforced error.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-nlra-7",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-nlra-7"
+          },
+          {
+            "sourceId": "dc-mclaren-disclosures",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-mclaren-disclosures"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. No contract overrides compelled process, and in a jurisdiction with an active enforcement office, language that purports to forbid cooperating with the government reads especially badly.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. Because a District employer below the pay threshold protects itself through confidentiality and trade-secret claims rather than competition restraints, the signed certification is often the best exhibit it will ever produce — contemporaneous proof of what the departing worker said about devices, files, and copies if protected material later surfaces at a competitor.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#permit-employee-nonsolicit",
+        "requirementGuidance": "Acceptable when scoped to active solicitation of actual colleagues for a stated period — the District's statutory ban does not speak to employee non-solicits. Do not mistake silence for safe harbor: the Attorney General has treated a franchise no-poach clause as violating both the non-compete ban and the District's Antitrust Act, which declares restraints of trade illegal, so restraints on worker mobility in this jurisdiction draw enforcement attention even outside the statute's text.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-nopoach-cov",
+            "authorityType": "agency-guidance",
+            "title": "OAG Press Release on Non-Compete Settlements (Nov. 17, 2023)",
+            "citation": "Office of the Attorney General for the District of Columbia, Press Release (Nov. 17, 2023).",
+            "url": "https://oag.dc.gov/release/attorney-general-schwalb-announces-three-district",
+            "proposition": "The Office of the Attorney General treated a franchise no-poach clause as violating both the District's Antitrust Act and the ban on non-compete agreements.",
+            "verbatimQuote": "Through its investigation, OAG uncovered evidence that Hissho violated the District’s Antitrust Act and the District’s ban on non-compete agreements by including a “no-poach” clause in its contracts with franchisees, which prevented employees from leaving one fast food franchise to work for another franchise in the same chain.",
+            "date": "2023-11-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-nopoach-cov"
+          },
+          {
+            "sourceId": "dc-antitrust-cov",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 28-4502",
+            "citation": "D.C. Code § 28-4502.",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/28-4502",
+            "proposition": "Section 28-4502 of the District's Antitrust Act declares illegal every contract, combination, or conspiracy in restraint of trade within the District — the basis for treating a no-poach clause as an antitrust violation.",
+            "verbatimQuote": "Every contract, combination in the form of a trust or otherwise, or conspiracy in restraint of trade or commerce all or any part of which is within the District of Columbia is declared to be illegal.",
+            "date": "1981-03-10",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-antitrust-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#permit-customer-nonsolicit",
+        "requirementGuidance": "Permissible: a clause barring solicitation of covered customers does not prohibit working for another for pay or operating a business, so it sits outside the banned-provision definition. It is still a restraint of trade under District common law, judged for reasonableness — confirm the look-back class, the duration, and the solicitation definition each pull the clause toward actual relationships rather than the market at large.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-definition-cov",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(15).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(15) defines a non-compete provision as one prohibiting an employee from performing work for another for pay or operating the employee's own business — the definitional line that solicitation covenants sit outside and that broad non-dealing or investment restraints can cross.",
+            "verbatimQuote": "\"Non-compete provision\" means a provision in a written agreement or a workplace policy that prohibits an employee from performing work for another for pay or from operating the employee's own business.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-definition-cov"
+          },
+          {
+            "sourceId": "dc-ellis-cov",
+            "authorityType": "case-law",
+            "title": "Ellis v. James V. Hurson Associates, Inc.",
+            "citation": "Ellis v. James V. Hurson Assocs., Inc., 565 A.2d 615 (D.C. 1989).",
+            "url": "https://www.courtlistener.com/opinion/1561257/ellis-v-james-v-hurson-associates-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1561257/ellis-v-james-v-hurson-associates-inc/#:~:text=A%20promise%20is%20unenforceable%20on,unreasonably%20in%20restraint%20of%20trade.",
+            "proposition": "Ellis applies the Restatement (Second) of Contracts reasonableness framework to restraints of trade under District of Columbia law, under which a promise unreasonably in restraint of trade is unenforceable on public-policy grounds.",
+            "verbatimQuote": "A promise is unenforceable on grounds of public policy if it is unreasonably in restraint of trade.",
+            "date": "1989-10-25",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-ellis-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#permit-non-dealing",
+        "requirementGuidance": "Review a no-business-with-covered-customers clause more skeptically than a non-solicit: it forbids serving customers who initiate the contact, and the wider it sweeps, the closer it edges to prohibiting the employee from performing work for another for pay — the very definition the District voids for covered employees. Keep it to a defined customer set and a finite period, and treat a broad version as a candidate for recharacterization.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-definition-cov",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(15).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(15) defines a non-compete provision as one prohibiting an employee from performing work for another for pay or operating the employee's own business — the definitional line that solicitation covenants sit outside and that broad non-dealing or investment restraints can cross.",
+            "verbatimQuote": "\"Non-compete provision\" means a provision in a written agreement or a workplace policy that prohibits an employee from performing work for another for pay or from operating the employee's own business.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-definition-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-non-competes-for-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.exclude-non-competes-for-covered-employees",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete with a below-threshold employee (void)",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#exclude-non-competes-for-covered-employees",
+        "requirementGuidance": "The agreement must not include a non-compete provision for a covered employee — a District-based worker earning below the published threshold ($162,164 for most employees in 2026). Since October 1, 2022 an employer may not even request that such a worker sign or comply with one, and a violating provision in an agreement entered into on or after that date is void as a matter of law. There is no reasonableness analysis to run and no narrowing that helps: if the worker is below the line, the clause's presence is the finding, and the only follow-up questions are the penalty exposure and the cleanup. A worker above the line routes instead through the statutory gates at the end of this checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-ban-cov",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.02",
+            "citation": "D.C. Code § 32-581.02(a)(1).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.02",
+            "proposition": "Section 32-581.02(a)(1) prohibits an employer from requiring or requesting that a covered employee sign or comply with a non-compete provision, beginning October 1, 2022.",
+            "verbatimQuote": "Beginning October 1, 2022, no employer may require or request that a covered employee sign an agreement or comply with a workplace policy that includes a non-compete provision.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-ban-cov"
+          },
+          {
+            "sourceId": "dc-void-cov",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.02",
+            "citation": "D.C. Code § 32-581.02(a)(2).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.02",
+            "proposition": "Section 32-581.02(a)(2) makes a non-compete provision in a covered employee's agreement entered into on or after October 1, 2022, void as a matter of law and unenforceable.",
+            "verbatimQuote": "A non-compete provision that violates paragraph (1) of this subsection contained in an agreement between a covered employee and an employer that was entered into on or after October 1, 2022, shall be void as a matter of law and unenforceable.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-void-cov"
+          },
+          {
+            "sourceId": "dc-threshold-cov",
+            "authorityType": "agency-guidance",
+            "title": "DOES Public Notice: District of Columbia Prohibition on Non-Compete Clauses (2026)",
+            "citation": "D.C. Dep't of Emp't Servs., Office of Wage-Hour, Public Notice: District of Columbia Prohibition on Non-Compete Clauses (Jan. 1, 2026).",
+            "url": "https://does.dc.gov/sites/default/files/dc/sites/does/publication/attachments/2026%20Ban%20on%20Non-Compete%20Clauses_0.pdf",
+            "proposition": "The Department of Employment Services 2026 public notice states the current compensation thresholds below which the non-compete ban applies: $162,164 for most employees and $270,274 for medical specialists.",
+            "verbatimQuote": "As of January 1, 2026, the restriction on non-compete clauses applies to employees earning less than $162,164 and to medical specialists earning less than $270,274.",
+            "date": "2026-01-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-threshold-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "Where the employer can name its competitors, write them in. The District's content rule asks the covenant to specify what services, roles, industry, or competing entities are restricted — a named-competitor list is the most concrete way to satisfy the competing-entities limb, and it shrinks the functional scope a reviewer has to defend.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-scope-cov",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.03",
+            "citation": "D.C. Code § 32-581.03(a)(1).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
+            "proposition": "Section 32-581.03(a)(1)(A) requires the covenant to specify the functional scope of the competitive restriction, including the competing entities the employee is restricted from working for — the limb a named-competitor list satisfies concretely.",
+            "verbatimQuote": "The agreement must specify: (A) The functional scope of the competitive restriction, including what services, roles, industry, or competing entities the employee is restricted from performing work in or on behalf of; (B) The geographical limitations of the work restriction",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-scope-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#permit-non-investment",
+        "requirementGuidance": "Rare, and in the District worth a definitional double-check: a clause restraining investment broadly enough to stop the worker from operating their own business lands inside the banned-provision definition for a covered employee. If the clause appears, confirm the passive-holdings carve-out is intact and the restriction reaches only active, operational involvement in a competitor.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-definition-cov",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(15).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(15) defines a non-compete provision as one prohibiting an employee from performing work for another for pay or operating the employee's own business — the definitional line that solicitation covenants sit outside and that broad non-dealing or investment restraints can cross.",
+            "verbatimQuote": "\"Non-compete provision\" means a provision in a written agreement or a workplace policy that prohibits an employee from performing work for another for pay or from operating the employee's own business.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-definition-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#require-non-disparagement",
+        "requirementGuidance": "Fine to include with a stated term, provided the carve-outs survive: truthful testimony, statements to government agencies, and protected workplace speech must sit outside its reach, and the Board strikes versions broad enough to swallow them. In a jurisdiction whose Attorney General already polices employment restraints, an overbroad non-disparagement clause invites scrutiny the rest of the agreement does not need.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-mclaren-nondisp",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-mclaren-nondisp"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#address-physician-specific-rights",
+        "requirementGuidance": "The District handles physicians through its pay architecture rather than a profession ban: a medical specialist — a licensed physician who completed a residency and earns at least the adjusted floor ($270,274 in 2026) — can be bound, but only under a longer 730-calendar-day cap and the same scope, geography, and notice rules as everyone else. The dedicated clause should establish the qualifying facts (license, physician status, completed residency, compensation), because a doctor who misses any element is just an ordinary employee under the general threshold — or a covered employee whose covenant is void.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-medical-def-phys",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(12).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(12) defines a medical specialist as a highly compensated employee who holds a license to practice medicine, is a physician, has completed a residency, and earns at least $250,000.",
+            "verbatimQuote": "\"Medical specialist\" means a highly compensated employee who is engaged primarily in the delivery of medical services and who: (A) Holds a license to practice medicine; (B) Is a physician ; (C) Has completed a medical residency; and (D) Receives total compensation in the amount equal to or greater than $ 250,000.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-medical-def-phys"
+          },
+          {
+            "sourceId": "dc-medical-duration-phys",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.03",
+            "citation": "D.C. Code § 32-581.03(a)(1)(C)(ii).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
+            "proposition": "Section 32-581.03(a)(1)(C)(ii) caps the post-employment non-competition term for a medical specialist at 730 calendar days from separation.",
+            "verbatimQuote": "If the employee is a medical specialist, a term of non-competition that does not exceed 730 calendar days from the date the employee separates from employment with the employer",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-medical-duration-phys"
+          },
+          {
+            "sourceId": "dc-medical-threshold-phys",
+            "authorityType": "agency-guidance",
+            "title": "DOES Public Notice: District of Columbia Prohibition on Non-Compete Clauses (2026)",
+            "citation": "D.C. Dep't of Emp't Servs., Public Notice: District of Columbia Prohibition on Non-Compete Clauses (Jan. 1, 2026).",
+            "url": "https://does.dc.gov/sites/default/files/dc/sites/does/publication/attachments/2026%20Ban%20on%20Non-Compete%20Clauses_0.pdf",
+            "proposition": "The Department of Employment Services 2026 public notice sets the medical specialist compensation threshold at $270,274.",
+            "verbatimQuote": "As of January 1, 2026, the restriction on non-compete clauses applies to employees earning less than $162,164 and to medical specialists earning less than $270,274.",
+            "date": "2026-01-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-medical-threshold-phys"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement blocks the new role. For a District hire this is also the intake screen for imported covenants: a restraint signed elsewhere, with another employer, is not automatically dissolved by the District's ban, and the prior employer may litigate in a friendlier forum — so surface the obligation at signing rather than discovering it through a demand letter mid-onboarding.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#address-notice-to-future-employers",
+        "requirementGuidance": "Optional everywhere, hazardous here. Warning a new employer off a worker on the strength of a void covenant is a way of attempting to enforce it, and the statute prices that move at no less than $1,500 per employee. If a notice clause stays in, confine it to obligations that remain lawful in the District — confidentiality and trade-secret duties, or a properly gated highly-compensated covenant — and never a provision the ban voids.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-attempt-relief-notice",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.04",
+            "citation": "D.C. Code § 32-581.04(d)(2)(A).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.04",
+            "proposition": "Section 32-581.04(d)(2)(A) makes an employer that attempts to enforce a void or unenforceable non-compete liable for at least $1,500 to each affected employee.",
+            "verbatimQuote": "An employer that attempts to enforce a non-compete provision that is unenforceable or void as provided in §§ 32-581.02(a)(2) and 32-581.03(a) shall be liable to each employee against whom the employer attempted to enforce the invalid non-compete provision for relief in an amount not less than $1,500.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-attempt-relief-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "avoid-tolling-past-the-statutory-duration-caps",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.avoid-tolling-past-the-statutory-duration-caps",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No tolling past the day caps",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#avoid-tolling-past-the-statutory-duration-caps",
+        "requirementGuidance": "The covenant should not be built on the assumption that the clock pauses during a breach. The District's statute sets no tolling rule, and its ceilings are written as fixed calendar days measured from the date of separation — 365 for most highly compensated employees — so a clause stretching enforcement past that point fights the statutory text. No District decision blesses a contractual extension, and the common law the statute preserves as cumulative has not endorsed one either; flag any tolling clause that depends on running past the cap, and treat an in-cap extension as the only defensible version.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-cap-tolling",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.03",
+            "citation": "D.C. Code § 32-581.03(a)(1)(C)(i).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
+            "proposition": "Section 32-581.03(a)(1)(C)(i) caps the non-medical highly compensated employee's term of non-competition at 365 calendar days measured from the date of separation, constraining any extension on breach.",
+            "verbatimQuote": "If the employee is not a medical specialist, a term of non-competition that does not exceed 365 calendar days from the date the employee separates from employment with the employer",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-cap-tolling"
+          },
+          {
+            "sourceId": "dc-cumulative-tolling",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.04b",
+            "citation": "D.C. Code § 32-581.04b.",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.04b",
+            "proposition": "Section 32-581.04b preserves common-law rights and remedies as cumulative, so any tolling question for a covenant outside the statute is governed by the District's common-law reasonableness rule, which has not endorsed extension on breach.",
+            "verbatimQuote": "The rights, remedies, and prohibitions accorded by the provisions of this chapter are in addition to and cumulative of any right, remedy, or prohibition accorded by the common law, federal law, or any District statute",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-cumulative-tolling"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#require-injunctive-relief-availability",
+        "requirementGuidance": "Keep the irreparable-harm acknowledgement, but check what it points at. The injunction a District employer can count on protects trade secrets — actual or threatened misappropriation may be enjoined — while an injunction enforcing a covenant works only for a fully compliant highly-compensated covenant. Seeking to enforce a void one is itself a priced violation, so a remedies clause that recites irreparable harm from competition by a below-threshold worker is describing a lawsuit the employer cannot safely bring.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-utsa-remedies",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 36-402",
+            "citation": "D.C. Code § 36-402(a).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/36-402",
+            "proposition": "Section 36-402(a) of the District's Uniform Trade Secrets Act authorizes a court to enjoin actual or threatened misappropriation of a trade secret — the injunction a District employer can rely on without a covenant.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined.",
+            "date": "1990-03-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-utsa-remedies"
+          },
+          {
+            "sourceId": "dc-attempt-relief-remedies",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.04",
+            "citation": "D.C. Code § 32-581.04(d)(2)(A).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.04",
+            "proposition": "Section 32-581.04(d)(2)(A) prices an attempt to enforce a void or unenforceable non-compete at no less than $1,500 per affected employee.",
+            "verbatimQuote": "An employer that attempts to enforce a non-compete provision that is unenforceable or void as provided in §§ 32-581.02(a)(2) and 32-581.03(a) shall be liable to each employee against whom the employer attempted to enforce the invalid non-compete provision for relief in an amount not less than $1,500.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-attempt-relief-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice, but price in the asymmetry: the District's statute already hands employees fixed monetary relief — starting at $500 to $1,000 per affected employee just for being subjected to a banned covenant — with administrative penalties on top, and gives the employer nothing comparable. An aggressive one-way employer fee clause sits awkwardly next to that architecture; mutual prevailing-party drafting is the defensible shape.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-subjecting-relief-remedies",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.04",
+            "citation": "D.C. Code § 32-581.04(d)(1)(A).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.04",
+            "proposition": "Section 32-581.04(d)(1)(A) makes an employer that subjects an employee to a banned non-compete liable for $500 to $1,000 per affected employee.",
+            "verbatimQuote": "An employer that violates § 32-581.02(a)(1) shall be liable for each violation to each employee subjected to the violation for monetary relief in an amount not less than $500 and not greater than $1,000.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-subjecting-relief-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "treat-reformation-as-narrowing-only",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.treat-reformation-as-narrowing-only",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Courts narrow, never broaden",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#treat-reformation-as-narrowing-only",
+        "requirementGuidance": "Reformation exists in the District, but read it as a one-way valve before relying on it: the Court of Appeals formally adopted equitable reformation and in the same decision vacated a trial court's revision for describing the restricted activities in broader language than the contract itself. And the doctrine reaches only what the statute leaves alive — a covered employee's covenant is void with nothing to reform, and a highly compensated employee's covenant that misses a statutory element is not valid and enforceable in the first place. A plain severability clause is healthy; enforce-to-the-maximum-extent language asking a judge to finish the drafting is the red flag.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-steiner-sev",
+            "authorityType": "case-law",
+            "title": "Steiner v. American Friends of Lubavitch (Chabad)",
+            "citation": "Steiner v. Am. Friends of Lubavitch (Chabad), 177 A.3d 1246 (D.C. 2018).",
+            "url": "https://www.courtlistener.com/opinion/4464037/yehuda-steiner-v-american-friends-of-lubavitch-chaabad/",
+            "deepLink": "https://www.courtlistener.com/opinion/4464037/yehuda-steiner-v-american-friends-of-lubavitch-chaabad/#:~:text=We%20also%20formally%20adopt%20the,contained%20in%20the%20noncompete%20clause.",
+            "proposition": "Steiner formally adopts equitable reformation to modify an overbroad covenant but holds that a court exceeds the doctrine by using broader language than the contract and thereby expanding the restriction.",
+            "verbatimQuote": "We also formally adopt the doctrine of equitable reformation to modify contract provisions, but hold that the trial court's equitable revision of the noncompete clause in this case exceeded the bounds of that doctrine by describing the activities the Steiners were precluded from engaging in using broader language than the terms of the employment contract itself and thus effectively expanding the scope of the restrictions contained in the noncompete clause.",
+            "date": "2018-02-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-steiner-sev"
+          },
+          {
+            "sourceId": "dc-hce-stem-sev",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.03",
+            "citation": "D.C. Code § 32-581.03(a).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
+            "proposition": "Section 32-581.03(a) conditions the validity of a highly compensated employee non-compete on satisfying the listed statutory content and notice requirements — the floor judicial reformation cannot repair.",
+            "verbatimQuote": "For a non-compete agreement between an employer and a highly compensated employee executed on or after October 1, 2022, to be valid and enforceable:",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-hce-stem-sev"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps every post-separation clock independently checkable: perpetual for trade secrets, finite for other confidential information, and a calendar-day count from separation for any lawful non-compete. In the District a bundled survival clause has a specific failure mode worth scanning for — quietly carrying a void covenant forward so it keeps casting a shadow over a worker the statute freed.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. The District wrinkle is what assignment cannot do: the sale-of-business exclusion belongs to a covenant in which the seller agrees not to compete, contained within or executed alongside the sale agreement — an employee-side covenant does not acquire that status by riding through an acquisition, and a void covenant arrives at the buyer just as void as it left.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-sale-carveout-assign",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(15)(A).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(15)(A) excludes from the non-compete definition a seller's covenant not to compete contained within or executed contemporaneously with the sale of a business — a status an employment covenant cannot acquire through assignment.",
+            "verbatimQuote": "Contained within or executed contemporaneously with an agreement between the seller of a business and one or more buyers of that business wherein the seller agrees not to compete with the buyer's business",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-sale-carveout-assign"
+          }
+        ]
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law and venue",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#specify-governing-law-and-venue",
+        "requirementGuidance": "Specify governing law, venue, and dispute process — and understand the limits of the selection for a District worker. Coverage under the ban follows the employee's work location, not the clause: a worker who spends most of their work time in the District is protected whatever law the agreement names, so the honest drafting choice for a District-based employee is District law with a District forum. Separately, confirm whether a collective bargaining agreement governs the relationship, because the chapter does not supersede a valid one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-covered-def-gov",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(6)(A).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(6) keys covered-employee status to where the work happens — more than 50% of work time in the District, or a District-based role with substantial District work — rather than to the employer's location or the agreement's chosen law.",
+            "verbatimQuote": "an employee who is not a highly compensated employee and: (A) If the employee has commenced work for the employer: (i) Spends more than 50% of his or her work time for the employer working in the District; or (ii) Whose employment for the employer is based in the District and the employee regularly spends a substantial amount of his or her work time for the employer in the District and not more than 50% of his or her work time for that employer in another jurisdiction",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-covered-def-gov"
+          },
+          {
+            "sourceId": "dc-cba-gov",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.04a",
+            "citation": "D.C. Code § 32-581.04a.",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.04a",
+            "proposition": "Section 32-581.04a provides that nothing in the chapter supersedes the terms of a valid collective bargaining agreement.",
+            "verbatimQuote": "Nothing in this chapter shall be interpreted as superseding the terms of a valid collective bargaining agreement.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-cba-gov"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard boilerplate with one District date buried in it: the void rule turns on when the agreement was entered into, with October 1, 2022 as the line. A pre-2022 covenant lives under common-law reasonableness only as long as it stays untouched — re-papering the relationship through a new agreement is a new entry into the statutory regime, so review the amendment mechanics knowing that every refresh is also a reclassification event.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-void-rule-amend",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.02",
+            "citation": "D.C. Code § 32-581.02(a)(2).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.02",
+            "proposition": "Section 32-581.02(a)(2) voids non-compete provisions in covered-employee agreements entered into on or after October 1, 2022 — the date line a re-papered agreement crosses.",
+            "verbatimQuote": "A non-compete provision that violates paragraph (1) of this subsection contained in an agreement between a covered employee and an employer that was entered into on or after October 1, 2022, shall be void as a matter of law and unenforceable.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-void-rule-amend"
+          }
+        ]
+      },
+      {
+        "requirementId": "gate-non-compete-by-minimum-qualifying-compensation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.gate-non-compete-by-minimum-qualifying-compensation",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Pay threshold met (highly compensated employee)",
+        "sectionId": "district-of-columbia-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#gate-non-compete-by-minimum-qualifying-compensation",
+        "requirementGuidance": "Establish the threshold before reading another clause: the worker must be a highly compensated employee — reasonably expected to earn, or having earned in the preceding consecutive 12-month period, at or above the minimum qualifying annual compensation. The statute set the base at $150,000 ($250,000 for a medical specialist) with annual inflation adjustment, and the published 2026 figures are $162,164 and $270,274 — so check against the current notice, not the number printed in the statute. One category never qualifies: a broadcast employee, the on- or off-air creator the definition carves out, cannot be bound at any salary.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-hce-def-gates",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(10).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(10) defines a highly compensated employee — excluding broadcast employees — as one reasonably expected to earn, or who earned in the preceding 12-month period, at or above the minimum qualifying annual compensation.",
+            "verbatimQuote": "other than a broadcast employee, an employee: (A) Who is reasonably expected to earn from the employer in a consecutive 12-month period compensation greater than or equal to the minimum qualifying annual compensation; or (B) Whose compensation earned from the employer in the consecutive 12-month period preceding the date on which the proposed term of non-competition is to begin is greater than or equal to the minimum qualifying annual compensation.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-hce-def-gates"
+          },
+          {
+            "sourceId": "dc-min-comp-gates",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(13).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(13) sets the minimum qualifying annual compensation at a base of $150,000 ($250,000 for a medical specialist) and provides for annual inflation adjustment beginning January 1, 2024.",
+            "verbatimQuote": "Beginning with the calendar year in which this chapter becomes applicable: (i) $150,000; or (ii) $250,000, if the employee is a medical specialist. (B) For the calendar year beginning January 1, 2024, and each calendar year thereafter, an amount equal to the previous calendar year's minimum qualifying annual compensation, increased in proportion to the annual average increase, if any, in the Consumer Price Index for All Urban Consumers in the Washington Metropolitan Statistical Area published by the Bureau of Labor Statistics of the United States Department of Labor for the previous calendar year adjusted to the nearest whole dollar.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-min-comp-gates"
+          },
+          {
+            "sourceId": "dc-threshold-gates",
+            "authorityType": "agency-guidance",
+            "title": "DOES Public Notice: District of Columbia Prohibition on Non-Compete Clauses (2026)",
+            "citation": "D.C. Dep't of Emp't Servs., Office of Wage-Hour, Public Notice: District of Columbia Prohibition on Non-Compete Clauses (Jan. 1, 2026).",
+            "url": "https://does.dc.gov/sites/default/files/dc/sites/does/publication/attachments/2026%20Ban%20on%20Non-Compete%20Clauses_0.pdf",
+            "proposition": "The Department of Employment Services 2026 public notice states the current compensation thresholds below which the non-compete ban applies: $162,164 for most employees and $270,274 for medical specialists.",
+            "verbatimQuote": "As of January 1, 2026, the restriction on non-compete clauses applies to employees earning less than $162,164 and to medical specialists earning less than $270,274.",
+            "date": "2026-01-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-threshold-gates"
+          },
+          {
+            "sourceId": "dc-broadcast-gates",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(2).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(2) defines a broadcast employee — an on- or off-air creator for a broadcaster — the category that § 32-581.01(10) excludes from highly compensated employee status.",
+            "verbatimQuote": "\"Broadcast employee\" means an on- or off-air creator (such as an anchor, disc jockey, editor, producer, program host, reporter, or writer) of a legal entity that owns or operates one or more of the following: (A) A television station or network",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-broadcast-gates"
+          }
+        ]
+      },
+      {
+        "requirementId": "specify-functional-scope-and-geographic-limits",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.specify-functional-scope-and-geographic-limits",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Functional scope and geography spelled out",
+        "sectionId": "district-of-columbia-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#specify-functional-scope-and-geographic-limits",
+        "requirementGuidance": "The covenant must say, on its face, what work is restricted — the services, roles, industry, or competing entities the employee may not work in or for — and where the restriction applies. These are conditions of validity for a highly compensated employee's covenant, not style points: an agreement that leaves either one implicit fails the statute even when the worker clears the pay threshold comfortably.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-hce-stem-gates",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.03",
+            "citation": "D.C. Code § 32-581.03(a).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
+            "proposition": "Section 32-581.03(a) allows a non-compete agreement with a highly compensated employee to be valid and enforceable only if it meets specified content and notice requirements.",
+            "verbatimQuote": "For a non-compete agreement between an employer and a highly compensated employee executed on or after October 1, 2022, to be valid and enforceable:",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-hce-stem-gates"
+          },
+          {
+            "sourceId": "dc-scope-gates",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.03",
+            "citation": "D.C. Code § 32-581.03(a)(1).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
+            "proposition": "Section 32-581.03(a)(1) requires a valid highly compensated employee non-compete to specify the functional scope of the restriction and its geographical limitations.",
+            "verbatimQuote": "The agreement must specify: (A) The functional scope of the competitive restriction, including what services, roles, industry, or competing entities the employee is restricted from performing work in or on behalf of; (B) The geographical limitations of the work restriction",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-scope-gates"
+          }
+        ]
+      },
+      {
+        "requirementId": "cap-the-term-at-365-or-730-calendar-days",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.cap-the-term-at-365-or-730-calendar-days",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "365-day cap (730 for medical specialists)",
+        "sectionId": "district-of-columbia-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#cap-the-term-at-365-or-730-calendar-days",
+        "requirementGuidance": "Count the days: the term of non-competition may not exceed 365 calendar days from the date the employee separates, or 730 calendar days for a medical specialist. Watch for the two classic misses — a term written in years that silently overshoots the day count, and a 730-day term claimed for a health-care worker who does not satisfy the full medical-specialist definition (license, physician status, completed residency, qualifying compensation).",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-duration-gates",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.03",
+            "citation": "D.C. Code § 32-581.03(a)(1)(C)(i).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
+            "proposition": "Section 32-581.03(a)(1)(C)(i) caps the post-employment non-competition term for a non-medical highly compensated employee at 365 calendar days from separation.",
+            "verbatimQuote": "If the employee is not a medical specialist, a term of non-competition that does not exceed 365 calendar days from the date the employee separates from employment with the employer",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-duration-gates"
+          },
+          {
+            "sourceId": "dc-medical-duration-gates",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.03",
+            "citation": "D.C. Code § 32-581.03(a)(1)(C)(ii).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
+            "proposition": "Section 32-581.03(a)(1)(C)(ii) caps the post-employment non-competition term for a medical specialist at 730 calendar days from separation.",
+            "verbatimQuote": "If the employee is a medical specialist, a term of non-competition that does not exceed 730 calendar days from the date the employee separates from employment with the employer",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-medical-duration-gates"
+          }
+        ]
+      },
+      {
+        "requirementId": "deliver-the-covenant-in-writing-fourteen-days-in-advance",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.deliver-the-covenant-in-writing-fourteen-days-in-advance",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "14-day advance delivery",
+        "sectionId": "district-of-columbia-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#deliver-the-covenant-in-writing-fourteen-days-in-advance",
+        "requirementGuidance": "The employer must put the non-compete provision in the employee's hands, in writing, at least 14 days before the individual starts work — or, for someone already employed, at least 14 days before the employee must sign. The window is a validity condition the document itself rarely proves, so ask for the delivery evidence: an offer-stage transmittal date, or a recital of the date the provision was provided, is what makes this gate auditable.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-notice-timing-gates",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.03",
+            "citation": "D.C. Code § 32-581.03(a)(2).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
+            "proposition": "Section 32-581.03(a)(2) requires the employer to provide the non-compete provision in writing at least 14 days before employment commences, or at least 14 days before a current employee must execute it.",
+            "verbatimQuote": "The employer shall provide the non-compete provision to the employee in writing: (A) At least 14 days before the individual commences employment for the employer; or (B) If the employer already employs the highly compensated employee, at least 14 days before the employee must execute the agreement.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-notice-timing-gates"
+          }
+        ]
+      },
+      {
+        "requirementId": "provide-the-prescribed-statutory-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.provide-the-prescribed-statutory-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Statutory notice handed over",
+        "sectionId": "district-of-columbia-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#provide-the-prescribed-statutory-notice",
+        "requirementGuidance": "Separate from delivering the covenant, the employer must give the highly compensated employee the statute's own notice whenever a non-compete provision is proposed. The content is fixed: the notice tells the employee that the Ban on Non-Compete Agreements Amendment Act of 2020 limits non-competes, that the employer has determined the employee to be highly compensated, and that the Department of Employment Services can provide more information. A missed disclosure is itself a violation, priced at $250 per affected employee.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-statutory-notice-gates",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.03a",
+            "citation": "D.C. Code § 32-581.03a(b).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03a",
+            "proposition": "Section 32-581.03a(b) requires an employer to provide a prescribed statutory notice to a highly compensated employee whenever a non-compete provision is proposed.",
+            "verbatimQuote": "A highly compensated employee's employer shall provide the following notice to the employee whenever a non-compete provision is proposed to the employee:",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-statutory-notice-gates"
+          },
+          {
+            "sourceId": "dc-disclosure-relief-gates",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.04",
+            "citation": "D.C. Code § 32-581.04(d)(4).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.04",
+            "proposition": "Section 32-581.04(d)(4) makes an employer that violates the disclosure rules of § 32-581.03a liable for $250 in monetary relief per violation to each affected employee.",
+            "verbatimQuote": "An employer that violates § 32-581.03a shall be liable for each violation to each employee subjected to the violation for monetary relief in an amount of $250.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-disclosure-relief-gates"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-workplace-policy-carveouts-in-writing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.disclose-workplace-policy-carveouts-in-writing",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Workplace-policy carve-outs disclosed in writing",
+        "sectionId": "district-of-columbia-statutory-gates",
+        "itemNumber": "19.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#disclose-workplace-policy-carveouts-in-writing",
+        "requirementGuidance": "If the employer leans on the policy exceptions — anti-moonlighting rules, conflict-of-interest restrictions, confidentiality policies — it owes employees a written copy of those provisions within 30 days of acceptance of employment, within 30 days after October 1, 2022, and every time the policy changes. Reviewing the signed agreement alone can miss this entirely, so ask for the handbook and the distribution record; each missed disclosure costs $250 per employee.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-policy-disclosure-gates",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.03a",
+            "citation": "D.C. Code § 32-581.03a(a).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03a",
+            "proposition": "Section 32-581.03a(a) requires an employer relying on a policy exception to the non-compete definition to provide a written copy within 30 days of acceptance, within 30 days after October 1, 2022, and whenever the policy changes.",
+            "verbatimQuote": "An employer with a workplace policy that includes one or more of the exceptions to the definition of non-compete provision, as detailed in § 32-581.01(15) , shall provide a written copy of the provisions to an employee: (1) Within 30 days after the employee's acceptance of employment with the employer; (2) Within 30 days after October 1, 2022; and (3) Any time such policy changes.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-policy-disclosure-gates"
+          },
+          {
+            "sourceId": "dc-disclosure-relief-gates",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.04",
+            "citation": "D.C. Code § 32-581.04(d)(4).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.04",
+            "proposition": "Section 32-581.04(d)(4) makes an employer that violates the disclosure rules of § 32-581.03a liable for $250 in monetary relief per violation to each affected employee.",
+            "verbatimQuote": "An employer that violates § 32-581.03a shall be liable for each violation to each employee subjected to the violation for monetary relief in an amount of $250.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-disclosure-relief-gates"
+          }
+        ]
+      },
+      {
+        "requirementId": "confine-outside-work-restrictions-to-the-statutory-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.confine-outside-work-restrictions-to-the-statutory-carveout",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Outside-work limits within the carve-out",
+        "sectionId": "district-of-columbia-statutory-gates",
+        "itemNumber": "19.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#confine-outside-work-restrictions-to-the-statutory-carveout",
+        "requirementGuidance": "The ban protects moonlighting, not just post-employment mobility: a provision stopping a covered employee from performing work for another for pay — even during employment — is a banned non-compete provision, and it counts whether it sits in the signed agreement, the handbook, or an unwritten rule applied in practice. The surviving lane is narrow and reasoned: a restriction on outside paid work stands only where the employer reasonably believes the work would disclose confidential information, breach established conflict-of-interest rules, create a conflict of commitment at a higher education institution, or impair compliance with law, a contract, or a grant. A blanket second-job ban fits none of those.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-definition-gates",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(15).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(15) defines a non-compete provision as a provision in a written agreement or a workplace policy that prohibits an employee from performing work for another for pay or operating the employee's own business — including during employment.",
+            "verbatimQuote": "\"Non-compete provision\" means a provision in a written agreement or a workplace policy that prohibits an employee from performing work for another for pay or from operating the employee's own business.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-definition-gates"
+          },
+          {
+            "sourceId": "dc-policy-def-gates",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(19).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(19) defines a workplace policy to include rules and restrictions whether written or applied as a matter of practice — closing the handbook loophole.",
+            "verbatimQuote": "\"Workplace policy\" means the rules and restrictions, whether written or as a matter of practice, implemented by an employer to govern the conduct of the employer's employees.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-policy-def-gates"
+          },
+          {
+            "sourceId": "dc-outside-work-gates",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(15)(B)(ii).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(15)(B)(ii) excludes from the non-compete definition a restriction on accepting outside work during employment where the employer reasonably believes it will disclose confidential information, conflict with conflict-of-interest rules, create a conflict of commitment at a higher education institution, or impair legal compliance.",
+            "verbatimQuote": "Accepting money or a thing of value for performing work for a person other than the employer, during the employee's employment with the employer, because the employer reasonably believes the employee's acceptance of money or a thing of value under such circumstances will: (I) Result in the employee's disclosure or use of confidential employer information or proprietary employer information; (II) Conflict with the employer's, industry's, or profession's established rules regarding conflicts of interest; (III) Constitute a conflict of commitment if the employee is employed by a higher education institution; or (IV) Impair the employer's ability to comply with District or federal laws or regulations; a contract; or a grant agreement",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-outside-work-gates"
+          }
+        ]
+      },
+      {
+        "requirementId": "avoid-retaliation-for-asserting-non-compete-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.avoid-retaliation-for-asserting-non-compete-rights",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No retaliation for asserting ban rights",
+        "sectionId": "district-of-columbia-statutory-gates",
+        "itemNumber": "19.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#avoid-retaliation-for-asserting-non-compete-rights",
+        "requirementGuidance": "The employer may not retaliate or threaten to retaliate against a covered employee for refusing a banned non-compete, declining to comply with one, or complaining about one — and each instance costs $1,000 to $2,500 per affected employee. The document-review angle: scan for consequences language that conditions the job, a promotion, or benefits on signing or honoring a provision the statute voids, because a written threat is the form of retaliation a contract reviewer can actually catch.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-retaliation-ban-gates",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.02",
+            "citation": "D.C. Code § 32-581.02(b).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.02",
+            "proposition": "Section 32-581.02(b) prohibits an employer from retaliating or threatening to retaliate against a covered employee for refusing, failing to comply with, or complaining about a banned non-compete.",
+            "verbatimQuote": "No employer may retaliate or threaten to retaliate against a covered employee for:",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-retaliation-ban-gates"
+          },
+          {
+            "sourceId": "dc-retaliation-relief-gates",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.04",
+            "citation": "D.C. Code § 32-581.04(d)(3)(A).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.04",
+            "proposition": "Section 32-581.04(d)(3)(A) makes an employer that retaliates liable for $1,000 to $2,500 per instance to each affected employee.",
+            "verbatimQuote": "An employer that retaliates against an employee in violation of § 32-581.02(b) or § 32-581.03(b) shall be liable for each instance of retaliation to each employee subject to the retaliation in an amount not less than $1,000 and not more than $2,500.",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-retaliation-relief-gates"
+          }
+        ]
+      },
+      {
+        "requirementId": "confine-sale-of-business-covenants-to-the-seller-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.confine-sale-of-business-covenants-to-the-seller-carveout",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Sale-of-business covenant in its lane",
+        "sectionId": "district-of-columbia-statutory-gates",
+        "itemNumber": "19.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#confine-sale-of-business-covenants-to-the-seller-carveout",
+        "requirementGuidance": "A covenant escaping the ban through the sale-of-business exclusion must actually be one: contained within, or executed contemporaneously with, the agreement between the seller and the buyer, with the seller promising not to compete with the buyer's business. Clearing the statute is not the finish line — outside the ban, the District's common law still tests the restraint for reasonableness, enforcing it only to the extent its terms are reasonable — so audit both the covenant's placement in the deal papers and its scope against the business actually sold.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dc-sale-carveout-gates",
+            "authorityType": "primary-law",
+            "title": "D.C. Code § 32-581.01",
+            "citation": "D.C. Code § 32-581.01(15)(A).",
+            "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
+            "proposition": "Section 32-581.01(15)(A) excludes from the non-compete definition a seller's covenant not to compete contained within or executed contemporaneously with the sale of a business.",
+            "verbatimQuote": "Contained within or executed contemporaneously with an agreement between the seller of a business and one or more buyers of that business wherein the seller agrees not to compete with the buyer's business",
+            "date": "2022-10-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-sale-carveout-gates"
+          },
+          {
+            "sourceId": "dc-ellis-gates",
+            "authorityType": "case-law",
+            "title": "Ellis v. James V. Hurson Associates, Inc.",
+            "citation": "Ellis v. James V. Hurson Assocs., Inc., 565 A.2d 615 (D.C. 1989).",
+            "url": "https://www.courtlistener.com/opinion/1561257/ellis-v-james-v-hurson-associates-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1561257/ellis-v-james-v-hurson-associates-inc/#:~:text=we%20join%20those%20jurisdictions%20which,whole%20or%20not%20at%20all.",
+            "proposition": "Ellis holds that District of Columbia courts may partially enforce a covenant not to compete to the extent its terms are reasonable, rejecting an all-or-nothing rule.",
+            "verbatimQuote": "we join those jurisdictions which have rejected the view that covenants not to compete must be enforceable in whole or not at all.",
+            "date": "1989-10-25",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#src-dc-ellis-gates"
+          }
+        ]
+      }
+    ]
+  }
+}

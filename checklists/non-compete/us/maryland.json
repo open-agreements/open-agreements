@@ -1,0 +1,1371 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/maryland",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/maryland.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/maryland",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/maryland/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/maryland/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "maryland",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Maryland",
+      "description": "A clause-by-clause reviewer checklist for Maryland employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under Md. Code, Lab. & Empl. § 3-716's worker-class voids, the clinician cap, and the Becker reasonableness test.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Maryland",
+      "coverage": "Maryland (US)",
+      "lastReviewed": "2026-06-11",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 49,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "maryland-statutory-gates",
+        "label": "Maryland statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity that actually employs and pays the worker. Maryland's statutory voids turn on the employee's wage and occupation in that employment, and the patient-notice duty for departing clinicians runs to the employer — a covenant papered with an affiliate that holds neither the payroll nor the patients muddies both analyses.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#identify-effective-date",
+        "requirementGuidance": "The execution date does sorting work in Maryland: the health care expansion of the statute reaches only agreements executed on or after July 1, 2025, the architect category begins with agreements executed on or after October 1, 2026, and the veterinary ban reaches backward to existing agreements. An undated covenant leaves the reviewer unable to tell which regime applies.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-hb1388-health-prospective-cover",
+            "authorityType": "primary-law",
+            "title": "2024 Md. Laws ch. 378 (H.B. 1388)",
+            "citation": "2024 Md. Laws ch. 378, § 3 (H.B. 1388).",
+            "url": "https://mgaleg.maryland.gov/2024rs/Chapters_noln/CH_378_hb1388e.pdf",
+            "proposition": "House Bill 1388 makes the health care expansion of § 3-716 apply only to agreements executed on or after July 1, 2025.",
+            "verbatimQuote": "That § 3–716(a)(1)(i)2 and (b) of the Labor and Employment Article, as enacted by Section 1 of this Act, shall be construed to apply only to employment contracts or similar documents or agreements for employment executed on or after July 1, 2025.",
+            "date": "2024-04-25",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-hb1388-health-prospective-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#identify-employee-title",
+        "requirementGuidance": "Record the title, license, and duties — in Maryland the occupation can decide the case before reasonableness ever runs. A veterinary license, a Health Occupations Article license paired with direct patient care, or wages near the statutory floor each route the covenant into a void or capped category, and the title is the first clue that one of those categories is in play.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated. Maryland's statute declares covered covenants null and void as against the public policy of the State, so a foreign-law clause papering a Maryland worker invites a public-policy fight rather than a clean escape — treat it as a flag that the form was never localized.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-3716-public-policy-cover",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Lab. & Empl. § 3-716",
+            "citation": "Md. Code, Lab. & Empl. § 3-716(a)(3).",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-716",
+            "proposition": "Section 3-716 makes a covered noncompete or conflict-of-interest provision null and void as against Maryland public policy.",
+            "verbatimQuote": "A noncompete or conflict of interest provision in an employment contract or a similar document or agreement that restricts the ability of an employee to enter into employment with a new employer or to become self–employed in the same or similar business or trade shall be null and void as being against the public policy of the State.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-3716-public-policy-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#define-confidential-information",
+        "requirementGuidance": "In Maryland this definition carries extra weight because it survives where the covenant dies: the statute's void rule does not reach provisions about the taking or use of client or patient lists or other proprietary client information. Make sure the definition captures those lists and data with precision, since for protected workers it may be the only restriction left standing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-client-list-carveout-defs",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Lab. & Empl. § 3-716",
+            "citation": "Md. Code, Lab. & Empl. § 3-716(a)(2).",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-716",
+            "proposition": "Section 3-716(a)'s void rule does not reach provisions about the taking or use of a client or patient list or other proprietary client information.",
+            "verbatimQuote": "This subsection does not apply to an employment contract or a similar document or agreement with respect to the taking or use of a client or patient list or other proprietary client–related or patient–related information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-client-list-carveout-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#define-trade-secrets",
+        "requirementGuidance": "Track the statutory definition: information with independent economic value from secrecy, subject to reasonable secrecy efforts. Maryland's trade-secret act supplies remedies that do not depend on an enforceable covenant, so a definition aligned with the statute keeps that fallback fully loaded.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-mutsa-definition-defs",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Com. Law § 11-1201",
+            "citation": "Md. Code, Com. Law § 11-1201(e).",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcl&section=11-1201",
+            "proposition": "Section 11-1201 defines a trade secret as information with independent economic value from secrecy that is subject to reasonable secrecy efforts.",
+            "verbatimQuote": "“Trade secret” means information, including a formula, pattern, compilation, program, device, method, technique, or process, that: (1) Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and (2) Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-mutsa-definition-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#define-restricted-period",
+        "requirementGuidance": "One defined Restricted Period keeps every duration auditable. Maryland sets no fixed cap for ordinary employees — the courts apply no arbitrary yardstick — so the defined period is what the reviewer measures against the worker's actual role and exposure, and a covenant that scatters its durations across clauses defeats that audit.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-ruhl-no-yardstick",
+            "authorityType": "case-law",
+            "title": "Ruhl v. F. A. Bartlett Tree Expert Co.",
+            "citation": "Ruhl v. F. A. Bartlett Tree Expert Co., 245 Md. 118 (1967).",
+            "url": "https://www.courtlistener.com/opinion/2292892/ruhl-v-f-a-bartlett-tree-expert-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2292892/ruhl-v-f-a-bartlett-tree-expert-co/#:~:text=There%20is%20no%20arbitrary%20yardstick,the%20interest%20of%20the%20public.",
+            "proposition": "Ruhl holds that Maryland reasonableness analysis is fact-specific, with no fixed yardstick for necessity, hardship, or public interest.",
+            "verbatimQuote": "There is no arbitrary yardstick as to what protection of the business of the employer is reasonably necessary, no categorical measurement of what constitutes undue hardship on the employee, no precise scales to weigh the interest of the public.",
+            "date": "1967-01-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-ruhl-no-yardstick"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#define-restricted-territory",
+        "requirementGuidance": "Tie the geography to where the worker actually built relationships or used protected information. Maryland calls a restraint overbroad the moment it exceeds what is reasonably necessary to protect the employer's legally protected interest, and territory is where overreach shows first.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-seneca-overbroad",
+            "authorityType": "case-law",
+            "title": "Seneca One Finance, Inc. v. Bloshuk",
+            "citation": "Seneca One Fin., Inc. v. Bloshuk, 214 F. Supp. 3d 457 (D. Md. 2016).",
+            "url": "https://www.courtlistener.com/opinion/7322313/seneca-one-finance-inc-v-bloshuk/",
+            "deepLink": "https://www.courtlistener.com/opinion/7322313/seneca-one-finance-inc-v-bloshuk/#:~:text=A%20restrictive%20covenant%20is%20overbroad,the%20employer%E2%80%99s%20legally%20protected%20interest.",
+            "proposition": "Seneca One defines overbreadth as a restraint exceeding what is reasonably necessary to protect the employer's legally protected interest.",
+            "verbatimQuote": "A restrictive covenant is overbroad if it exceeds the limits of what is reasonably necessary to protect the employer’s legally protected interest.",
+            "date": "2016-10-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-seneca-overbroad"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the worker actually served or solicited during a stated look-back window. Maryland enforces covenants to protect client relationships and against solicitation of customers — not to wall off the employer's entire market — so an all-customers definition outruns the recognized interest.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-becker-protectable-interests",
+            "authorityType": "case-law",
+            "title": "Becker v. Bailey",
+            "citation": "Becker v. Bailey, 268 Md. 93 (1973).",
+            "url": "https://www.courtlistener.com/opinion/2322561/becker-v-bailey/",
+            "deepLink": "https://www.courtlistener.com/opinion/2322561/becker-v-bailey/#:~:text=These%20decisions%20demonstrate%20that%20Maryland,clients%2C%20or%20solicitation%20of%20customers.",
+            "proposition": "Becker limits enforceable Maryland covenants to those protecting unique services, trade secrets, routes or client lists, or against solicitation of customers.",
+            "verbatimQuote": "These decisions demonstrate that Maryland follows the general rule that restrictive covenants may be applied and enforced only against those employees who provide unique services, or to prevent the future misuse of trade secrets, routes or lists of clients, or solicitation of customers.",
+            "date": "1973-02-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-becker-protectable-interests"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing worker actually worked with or supervised during the look-back window. Maryland's statute does not address employee non-solicits, so the clause is judged on ordinary reasonableness — a modest, relationship-based class reads as protection, a workforce-wide ban reads as restraint.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#define-protected-interests",
+        "requirementGuidance": "Name the interests in Maryland's own categories: unique services, trade secrets, routes or client lists, customer solicitation. Recitals about generic competitive advantage add nothing — and even a covenant serving a genuine interest can be no broader or more restrictive than necessary to effectuate it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-becker-protectable-interests",
+            "authorityType": "case-law",
+            "title": "Becker v. Bailey",
+            "citation": "Becker v. Bailey, 268 Md. 93 (1973).",
+            "url": "https://www.courtlistener.com/opinion/2322561/becker-v-bailey/",
+            "deepLink": "https://www.courtlistener.com/opinion/2322561/becker-v-bailey/#:~:text=These%20decisions%20demonstrate%20that%20Maryland,clients%2C%20or%20solicitation%20of%20customers.",
+            "proposition": "Becker limits enforceable Maryland covenants to those protecting unique services, trade secrets, routes or client lists, or against solicitation of customers.",
+            "verbatimQuote": "These decisions demonstrate that Maryland follows the general rule that restrictive covenants may be applied and enforced only against those employees who provide unique services, or to prevent the future misuse of trade secrets, routes or lists of clients, or solicitation of customers.",
+            "date": "1973-02-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-becker-protectable-interests"
+          },
+          {
+            "sourceId": "md-fowler-no-broader",
+            "authorityType": "case-law",
+            "title": "Fowler v. Printers II, Inc.",
+            "citation": "Fowler v. Printers II, Inc., 89 Md. App. 448 (1991).",
+            "url": "https://www.courtlistener.com/opinion/1930228/fowler-v-printers-ii-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1930228/fowler-v-printers-ii-inc/#:~:text=Of%20course%2C%20even%20a%20restrictive,necessary%20to%20effectuate%20that%20interest.",
+            "proposition": "Fowler holds that even a covenant serving a legitimate interest can be no broader or more restrictive than necessary to effectuate that interest.",
+            "verbatimQuote": "Of course, even a restrictive covenant that serves an employer’s “legitimate interest” can be no broader, or more restrictive, than necessary to effectuate that interest.",
+            "date": "1991-12-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-fowler-no-broader"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity in concrete terms tied to the worker's actual role. A Maryland federal court struck a covenant on its face because it barred work in essentially any capacity — an any-role, any-line-of-business definition is exactly that defect written into the definitions section.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-medispec-facially-overbroad",
+            "authorityType": "case-law",
+            "title": "Medispec, Ltd. v. Chouinard",
+            "citation": "Medispec, Ltd. v. Chouinard, 133 F. Supp. 3d 771 (D. Md. 2015).",
+            "url": "https://www.courtlistener.com/opinion/7315898/medispec-ltd-v-chouinard/",
+            "deepLink": "https://www.courtlistener.com/opinion/7315898/medispec-ltd-v-chouinard/#:~:text=Here%2C%20an%20examination%20of%20the,overly%20broad%20on%20its%20face.",
+            "proposition": "Medispec holds a covenant unenforceable on its face where the prohibited activity is overly broad.",
+            "verbatimQuote": "Here, an examination of the particular facts is not necessary because the clause is overly broad on its face.",
+            "date": "2015-09-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-medispec-facially-overbroad"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. A clause that technically forbids index funds and ordinary public shares is gratuitous overbreadth — the kind of facially unnecessary restraint that hands the employee an overbreadth argument for free.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#define-passive-public-holdings",
+        "requirementGuidance": "A drafting convenience, not a requirement — plenty of agreements inline the carve-out language instead. If the capitalized term appears, confirm its percentage matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#define-solicit",
+        "requirementGuidance": "Pin the term down: does it cover only initiating contact, or also accepting business that walks in the door? Maryland courts weigh covenants fact by fact, and a solicitation definition that quietly converts a non-solicit into a no-dealing ban widens the restraint the court will be measuring.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger covers resignation, dismissal, and expiration of a fixed term the same way. Maryland's clinician cap runs from the last day of employment, and every other restricted-period clock starts at this event — an ambiguous trigger makes every duration in the agreement ambiguous with it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-cap-duration-defs",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Lab. & Empl. § 3-716",
+            "citation": "Md. Code, Lab. & Empl. § 3-716(b)(2)(i).",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-716",
+            "proposition": "Section 3-716 caps a covered high-earner health care covenant at one year from the last day of employment.",
+            "verbatimQuote": "The period for which a noncompete or conflict of interest provision in an employment contract or similar document or agreement is in effect may not exceed 1 year from the last day of employment.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-cap-duration-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "recite-continued-employment-consideration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.maryland.recite-continued-employment-consideration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Consideration tied to continued employment",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#recite-continued-employment-consideration",
+        "requirementGuidance": "Maryland treats continued at-will employment as sufficient consideration for a covenant signed after employment begins — the mutuality of the at-will relationship makes the employer's promise not to terminate as good as the employee's promise to keep working. Still, do not let the agreement rest on a bare recital: check that the recital and the surrounding documents actually connect the signing to the employee's continued employment, because the consideration argument is only as strong as that record.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-simko-mutuality",
+            "authorityType": "case-law",
+            "title": "Simko, Inc. v. Graymar Co.",
+            "citation": "Simko, Inc. v. Graymar Co., 55 Md. App. 561 (1983).",
+            "url": "https://www.courtlistener.com/opinion/1983736/simko-inc-v-graymar-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1983736/simko-inc-v-graymar-co/#:~:text=Given%20the%20inherent%20mutuality%2C%20we,employer%E2%80%99s%20consent%20not%20to%20terminate.",
+            "proposition": "Simko holds that an employer's consent not to terminate an at-will employee can be consideration for a covenant, given the mutuality of the at-will relationship.",
+            "verbatimQuote": "Given the inherent mutuality, we see no basis for distinguishing the employee’s consent to continue from the flip side of the coin — the employer’s consent not to terminate.",
+            "date": "1983-09-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-simko-mutuality"
+          },
+          {
+            "sourceId": "md-simko-minority-view",
+            "authorityType": "case-law",
+            "title": "Simko, Inc. v. Graymar Co.",
+            "citation": "Simko, Inc. v. Graymar Co., 55 Md. App. 561 (1983).",
+            "url": "https://www.courtlistener.com/opinion/1983736/simko-inc-v-graymar-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1983736/simko-inc-v-graymar-co/#:~:text=the%20viewpoint%20which%20holds%20that,compete%20represents%20the%20distinct%20minority.",
+            "proposition": "Simko characterizes the view that continued at-will employment is not sufficient consideration as the distinct minority position.",
+            "verbatimQuote": "the viewpoint which holds that continuation of an at-will employee is not sufficient consideration for a covenant not to compete represents the distinct minority.",
+            "date": "1983-09-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-simko-minority-view"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "Cheap insurance — no Maryland statute demands it, but the common-law test asks about undue hardship on the employee, and a documented opportunity to take the agreement to counsel is the kind of procedural-fairness fact that makes hardship arguments harder to run.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret protection should last as long as secrecy does — Maryland's trade-secret act keys the right to information that stays not generally known and subject to reasonable secrecy efforts, with no expiration date. A contractual term that cuts trade-secret obligations off at a fixed date surrenders protection the statute would have kept alive, which matters doubly for workers whose covenants the statute voids.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-mutsa-definition-confid",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Com. Law § 11-1201",
+            "citation": "Md. Code, Com. Law § 11-1201(e).",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcl&section=11-1201",
+            "proposition": "Section 11-1201 keys trade-secret status to continued secrecy and reasonable secrecy efforts, which is why contractual trade-secret protection should run as long as secrecy does.",
+            "verbatimQuote": "“Trade secret” means information, including a formula, pattern, compilation, program, device, method, technique, or process, that: (1) Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and (2) Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-mutsa-definition-confid"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. A perpetual lid on non-secret information is the confidentiality version of overbreadth, and the two-track structure — perpetual for trade secrets, finite for the rest — keeps each obligation sized to the interest behind it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in Maryland: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later federal trade-secret suit against the worker. Because trade-secret remedies are the fallback Maryland leaves employers when the statute voids a covenant, giving part of them away in the drafting is an unforced error.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech regardless of the governing state, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. No confidentiality clause can outrun a subpoena, and the carve-out plus notice procedure is the standard way to say so without weakening the rest of the clause.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. Maryland's recent trade-secret litigation turned on customer lists and pricing data walking out the door — a signed certification is the cleanest contemporaneous evidence when that material later surfaces at a competitor.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-ingram-trade-secret-finding",
+            "authorityType": "case-law",
+            "title": "Ingram v. Cantwell-Cleary Co.",
+            "citation": "Ingram v. Cantwell-Cleary Co., 259 Md. App. 102 (2023).",
+            "url": "https://www.courtlistener.com/opinion/9454756/ingram-v-cantwell-cleary-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/9454756/ingram-v-cantwell-cleary-co/#:~:text=We%20also%20hold%20that%20the,Appellants%20had%20misappropriated%20that%20information.",
+            "proposition": "Ingram upholds findings that confidential customer lists and pricing information were trade secrets that the former employees misappropriated.",
+            "verbatimQuote": "We also hold that the court did not err in finding that Cantwell-Cleary’s confidential customer lists and pricing information constituted trade secrets and that Appellants had misappropriated that information.",
+            "date": "2023-12-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-ingram-trade-secret-finding"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and statutorily untouched: Maryland's void rule targets provisions that restrict the worker's own next job, not promises about recruiting former colleagues. The clause is still judged on reasonableness, so keep it inside the Covered Employees class and the Restricted Period rather than letting it grow into a hiring ban.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#permit-customer-nonsolicit",
+        "requirementGuidance": "Often the better Maryland instrument: protecting client relationships and client data is squarely inside the interests Maryland recognizes, and the statute itself carves provisions about client and patient lists out of the void rule. Scope it to actual contacts during the look-back window so it stays on the protected side of that line.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-client-list-carveout-covenants",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Lab. & Empl. § 3-716",
+            "citation": "Md. Code, Lab. & Empl. § 3-716(a)(2).",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-716",
+            "proposition": "Section 3-716(a)'s void rule does not reach provisions about the taking or use of a client or patient list or other proprietary client information.",
+            "verbatimQuote": "This subsection does not apply to an employment contract or a similar document or agreement with respect to the taking or use of a client or patient list or other proprietary client–related or patient–related information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-client-list-carveout-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they call first — a restraint on receiving business rather than chasing it. That moves the clause away from the solicitation interest Maryland protects and toward blocking ordinary competition, which Maryland does not protect; treat its inclusion as a deliberate risk decision, not boilerplate.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#permit-non-compete",
+        "requirementGuidance": "If a non-compete appears, run the worker's wage and occupation through the Maryland statutory gates at the end of this checklist before reading a single term — the statute voids the covenant for whole worker classes regardless of how well it is drafted. Only a covenant that survives that screen earns the common-law analysis: adequate consideration, a restraint no wider as to area and duration than reasonably necessary, no undue hardship, no harm to the public.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-3716-null-void-covenants",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Lab. & Empl. § 3-716",
+            "citation": "Md. Code, Lab. & Empl. § 3-716(a)(3).",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-716",
+            "proposition": "Section 3-716 makes a covered noncompete or conflict-of-interest provision null and void as against Maryland public policy.",
+            "verbatimQuote": "A noncompete or conflict of interest provision in an employment contract or a similar document or agreement that restricts the ability of an employee to enter into employment with a new employer or to become self–employed in the same or similar business or trade shall be null and void as being against the public policy of the State.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-3716-null-void-covenants"
+          },
+          {
+            "sourceId": "md-becker-general-rule",
+            "authorityType": "case-law",
+            "title": "Becker v. Bailey",
+            "citation": "Becker v. Bailey, 268 Md. 93 (1973).",
+            "url": "https://www.courtlistener.com/opinion/2322561/becker-v-bailey/",
+            "deepLink": "https://www.courtlistener.com/opinion/2322561/becker-v-bailey/#:~:text=The%20general%20rule%20in%20Maryland,the%20interests%20of%20the%20public.%E2%80%9D",
+            "proposition": "Becker states the Maryland general rule that a covenant is upheld only when limited to what is reasonably necessary to protect the employer without undue hardship or harm to the public.",
+            "verbatimQuote": "The general rule in Maryland is that if a restrictive covenant in an employment contract is supported by adequate consideration and is ancillary to the employment contract, an employee’s agreement not to compete with his employer upon leaving the employment will be upheld “if the restraint is confined within limits which are no wider as to area and duration than are reasonably necessary for the protection of the business of the employer and do not impose undue hardship on the employee or disregard the interests of the public.”",
+            "date": "1973-02-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-becker-general-rule"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, the covenant should bind those instead of leaning on the open-ended Competitive Business definition. Maryland measures every covenant against what is necessary to effectuate the protected interest, and a named list is the most concrete evidence of tailoring a drafter can offer.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-fowler-no-broader-covenants",
+            "authorityType": "case-law",
+            "title": "Fowler v. Printers II, Inc.",
+            "citation": "Fowler v. Printers II, Inc., 89 Md. App. 448 (1991).",
+            "url": "https://www.courtlistener.com/opinion/1930228/fowler-v-printers-ii-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1930228/fowler-v-printers-ii-inc/#:~:text=Of%20course%2C%20even%20a%20restrictive,necessary%20to%20effectuate%20that%20interest.",
+            "proposition": "Fowler holds that even a covenant serving a legitimate interest can be no broader or more restrictive than necessary to effectuate that interest.",
+            "verbatimQuote": "Of course, even a restrictive covenant that serves an employer’s “legitimate interest” can be no broader, or more restrictive, than necessary to effectuate that interest.",
+            "date": "1991-12-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-fowler-no-broader-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — an open-ended ban on owning competitor stock restricts the worker's use of money already earned, which adds overbreadth without adding protection.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state, Maryland included.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Clinician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state Maryland's health care rules plainly — and note they reach far beyond physicians, to every Health Occupations Article licensee in a direct-patient-care role. For agreements executed on or after July 1, 2025, a covenant is void for such an employee earning $350,000 or less; above that line the covenant is capped, and the employer owes patients notice, on request, of where the departing clinician will be practicing. The Maryland statutory gates at the end of this checklist carry the item-by-item tests.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-healthcare-void-clause",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Lab. & Empl. § 3-716",
+            "citation": "Md. Code, Lab. & Empl. § 3-716(a)(1)(i)2.",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-716",
+            "proposition": "Section 3-716 voids covenants for licensed health-occupations employees who provide direct patient care and earn $350,000 or less.",
+            "verbatimQuote": "employment in a position for which the employee: A. is required to be licensed under the Health Occupations Article; B. is employed in a position that provides direct patient care; and C. earns equal to or less than $350,000 in total annual compensation",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-healthcare-void-clause"
+          },
+          {
+            "sourceId": "md-patient-notice-clause",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Lab. & Empl. § 3-716",
+            "citation": "Md. Code, Lab. & Empl. § 3-716(b)(3).",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-716",
+            "proposition": "Section 3-716 requires patient notice of a departing clinician's new location on request.",
+            "verbatimQuote": "On request of a patient, an employer of an employee described in paragraph (1) of this subsection shall provide notice to a patient of the new location where a former employee will be practicing.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-patient-notice-clause"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. It protects the employer against tortious-interference claims from prior employers and surfaces an incoming covenant early — when there is still time to assess whether it binds the worker at all.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice with the usual tortious-interference sensitivity, sharpened in Maryland: a warning letter built on a covenant the statute voids for the worker's class asserts rights the employer never had. If the clause appears, condition any third-party notice on a covenant that actually clears the Maryland gates.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Maryland question. No Maryland statute or appellate decision squarely blesses tolling or an extension-on-breach clause after the stated period expires, and the safest reading is that an extension is itself a restraint that must pass the same fact-specific reasonableness test as the covenant. Draft it as a separate, bounded restraint tied to the duration of the breach, never as an open-ended reset.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-ruhl-reasonableness-backdrop",
+            "authorityType": "case-law",
+            "title": "Ruhl v. F. A. Bartlett Tree Expert Co.",
+            "citation": "Ruhl v. F. A. Bartlett Tree Expert Co., 245 Md. 118 (1967).",
+            "url": "https://www.courtlistener.com/opinion/2292892/ruhl-v-f-a-bartlett-tree-expert-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2292892/ruhl-v-f-a-bartlett-tree-expert-co/#:~:text=Covenants%20of%20this%20nature%20are,reasonable%20on%20the%20specific%20facts.",
+            "proposition": "Ruhl supports applying Maryland's reasonableness test to any restraint, including one that would extend the restricted period.",
+            "verbatimQuote": "Covenants of this nature are in restraint of trade; the test is whether the particular restraint is reasonable on the specific facts.",
+            "date": "1967-01-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-ruhl-reasonableness-backdrop"
+          },
+          {
+            "sourceId": "md-becker-reasonableness-backdrop",
+            "authorityType": "case-law",
+            "title": "Becker v. Bailey",
+            "citation": "Becker v. Bailey, 268 Md. 93 (1973).",
+            "url": "https://www.courtlistener.com/opinion/2322561/becker-v-bailey/",
+            "deepLink": "https://www.courtlistener.com/opinion/2322561/becker-v-bailey/#:~:text=The%20general%20rule%20in%20Maryland,the%20interests%20of%20the%20public.%E2%80%9D",
+            "proposition": "Becker supports measuring any extension of a restraint against Maryland's requirement that the restraint be no wider than reasonably necessary without undue hardship or harm to the public.",
+            "verbatimQuote": "The general rule in Maryland is that if a restrictive covenant in an employment contract is supported by adequate consideration and is ancillary to the employment contract, an employee’s agreement not to compete with his employer upon leaving the employment will be upheld “if the restraint is confined within limits which are no wider as to area and duration than are reasonably necessary for the protection of the business of the employer and do not impose undue hardship on the employee or disregard the interests of the public.”",
+            "date": "1973-02-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-becker-reasonableness-backdrop"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief. Remember the Maryland backstop: even where the covenant fails, actual or threatened trade-secret misappropriation may be enjoined under the trade-secret act, so the remedies architecture should preserve both routes.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-mutsa-injunction",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Com. Law § 11-1202",
+            "citation": "Md. Code, Com. Law § 11-1202(a).",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcl&section=11-1202",
+            "proposition": "Section 11-1202 authorizes injunctions against actual or threatened trade-secret misappropriation.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-mutsa-injunction"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice under the default American Rule. Check how any fee or liquidated-damages clause interacts with the rest of the remedies: a Maryland appellate court let an employer recover trade-secret damages on top of declining to enforce the covenant's liquidated-damages terms, so the remedy provisions should be drafted to stack deliberately rather than collide.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-ingram-liquidated-not-bar",
+            "authorityType": "case-law",
+            "title": "Ingram v. Cantwell-Cleary Co.",
+            "citation": "Ingram v. Cantwell-Cleary Co., 259 Md. App. 102 (2023).",
+            "url": "https://www.courtlistener.com/opinion/9454756/ingram-v-cantwell-cleary-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/9454756/ingram-v-cantwell-cleary-co/#:~:text=We%20hold%20that%20the%20court,its%20separate%20claims%20for%20misappropriation",
+            "proposition": "Ingram holds that a non-compete's liquidated-damages provisions did not bar a separate recovery for trade-secret misappropriation under MUTSA.",
+            "verbatimQuote": "We hold that the court did not err in declining to enforce the liquidated damages provisions contained in Appellants’ Non-Compete Agreements because they did not bar Cantwell-Cleary from recovering damages under its separate claims for misappropriation",
+            "date": "2023-12-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-ingram-liquidated-not-bar"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-severable-tiers-for-strict-blue-penciling",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.maryland.draft-severable-tiers-for-strict-blue-penciling",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Severable tiers, no court rescue",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#draft-severable-tiers-for-strict-blue-penciling",
+        "requirementGuidance": "Read the severability clause against what a Maryland court will actually do: blue-pencil, not rewrite. The court may cross out a violative, severable portion and enforce what remains — and under the strict mechanical version, only if the remaining words still form a complete, valid contract — but if the overbroad term is indivisible, the whole covenant is void, and no savings clause can make a judge draft a narrower radius or duration. Prefer restrictions built in severable tiers, where partial enforcement of the lawful pieces works no injustice, over a single aggressive term plus a plea for reformation.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-holloway-blue-pencil",
+            "authorityType": "case-law",
+            "title": "Holloway v. Faw, Casson & Co.",
+            "citation": "Holloway v. Faw, Casson & Co., 78 Md. App. 205 (1989), aff'd in part & rev'd in part, 319 Md. 324 (1990).",
+            "url": "https://www.courtlistener.com/opinion/1991703/holloway-v-faw-casson-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1991703/holloway-v-faw-casson-co/#:~:text=The%20typical%20response%20in%20the,the%20entire%20agreement%20is%20void.",
+            "proposition": "Holloway describes Maryland's blue-pencil practice: strike severable invalid portions and enforce the rest, or void the whole covenant if the invalid portion is not severable.",
+            "verbatimQuote": "The typical response in the reported appellate decisions in this State, in which the Courts have ruled a portion of an employee noncompetition agreement invalid, has been to “blue pencil” (cross out) the violative portions of the agreement and, if the excised portions of the agreement are severable, to permit the agreement to stand minus the unenforceable wording; otherwise the entire agreement is void.",
+            "date": "1989-02-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-holloway-blue-pencil"
+          },
+          {
+            "sourceId": "md-holloway-mechanical-rule",
+            "authorityType": "case-law",
+            "title": "Holloway v. Faw, Casson & Co.",
+            "citation": "Holloway v. Faw, Casson & Co., 78 Md. App. 205 (1989), aff'd in part & rev'd in part, 319 Md. 324 (1990).",
+            "url": "https://www.courtlistener.com/opinion/1991703/holloway-v-faw-casson-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1991703/holloway-v-faw-casson-co/#:~:text=By%20this%20rule%2C%20the%20divisibility,%E2%80%9Cblue%20penciled%E2%80%9D%20will%20be%20enforced.",
+            "proposition": "Holloway describes the strict blue-pencil rule as a mechanical test that enforces a covenant only if excess restraint can be crossed out leaving a complete, valid contract.",
+            "verbatimQuote": "By this rule, the divisibility of a promise in excessive restraint of trade is determined by purely mechanical means: if the promise is so worded that the excessive restraint can be eliminated by crossing out a few of the words with a “blue pencil,” while at the same time the remaining words constitute a complete and valid contract, the contract as thus “blue penciled” will be enforced.",
+            "date": "1989-02-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-holloway-mechanical-rule"
+          },
+          {
+            "sourceId": "md-hebb-severable",
+            "authorityType": "case-law",
+            "title": "Hebb v. Stump, Harvey & Cook, Inc.",
+            "citation": "Hebb v. Stump, Harvey & Cook, Inc., 25 Md. App. 478 (1975).",
+            "url": "https://www.courtlistener.com/opinion/2195970/hebb-v-stump-harvey-cook-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/2195970/hebb-v-stump-harvey-cook-inc/#:~:text=In%20the%20instant%20case%20the,severable%20and%20thus%20partially%20enforceable.",
+            "proposition": "Hebb holds that an overbroad restriction not logically inseparable from the rest of the contract is severable and partially enforceable where partial enforcement works no injury to the public and no injustice to the parties.",
+            "verbatimQuote": "In the instant case the partial enforcement of the restrictions works no injury to the public and creates no injustice to the parties, thus the restrictions are severable and thus partially enforceable.",
+            "date": "1975-04-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-hebb-severable"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite elsewhere. The discipline matters in Maryland because different clauses face different fates: the confidentiality and client-list terms may be doing all the work for a statutorily protected worker, and a bundled survival clause is where an unexamined duration hides.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. The Maryland wrinkle for the assignee: the statute tests the worker's wage and occupation, not the employer's identity, so an assignment moves the covenant but never lifts a worker out of a void or capped category — and a successor inherits the patient-notice duty along with any clinician covenant.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law, venue, dispute process",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#specify-governing-law-and-venue",
+        "requirementGuidance": "The clause should name governing law, venue, and the dispute process. Maryland has no recorded statutory override of these selections for restrictive covenants, but the void rule speaks in public-policy terms — so for a Maryland-based worker, expect a court to weigh whether a foreign-law selection can sidestep protections the State calls public policy, and price the clause accordingly rather than treating it as a guaranteed exit.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate with a Maryland date trap inside: the health care expansion reaches agreements executed on or after July 1, 2025, so re-papering or re-executing an older covenant can pull it into the modern regime the original signing predated. Review the amendment mechanics so a routine refresh is a conscious regime change, not an accidental one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-hb1388-health-prospective-amend",
+            "authorityType": "primary-law",
+            "title": "2024 Md. Laws ch. 378 (H.B. 1388)",
+            "citation": "2024 Md. Laws ch. 378, § 3 (H.B. 1388).",
+            "url": "https://mgaleg.maryland.gov/2024rs/Chapters_noln/CH_378_hb1388e.pdf",
+            "proposition": "House Bill 1388 makes the health care expansion of § 3-716 apply only to agreements executed on or after July 1, 2025.",
+            "verbatimQuote": "That § 3–716(a)(1)(i)2 and (b) of the Labor and Employment Article, as enacted by Section 1 of this Act, shall be construed to apply only to employment contracts or similar documents or agreements for employment executed on or after July 1, 2025.",
+            "date": "2024-04-25",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-hb1388-health-prospective-amend"
+          }
+        ]
+      },
+      {
+        "requirementId": "void-non-compete-for-low-wage-workers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.maryland.void-non-compete-for-low-wage-workers",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No non-competes at or below the wage line",
+        "sectionId": "maryland-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#void-non-compete-for-low-wage-workers",
+        "requirementGuidance": "Check the worker's pay first. A noncompete or conflict-of-interest provision is null and void for an employee earning 150% or less of the State minimum wage — and with the minimum wage at fifteen dollars per hour since January 1, 2024, the covered ceiling sits at twenty-two dollars and fifty cents per hour. For a worker at or under that line, no drafting fixes the covenant; the protection plan has to run through the client-list and trade-secret terms instead.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-150-threshold-gate",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Lab. & Empl. § 3-716",
+            "citation": "Md. Code, Lab. & Empl. § 3-716(a)(1)(i)1.",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-716",
+            "proposition": "Section 3-716 applies to employees earning at or below 150% of the State minimum wage.",
+            "verbatimQuote": "an employee who earns equal to or less than 150% of the State minimum wage rate established under § 3–413 of this title",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-150-threshold-gate"
+          },
+          {
+            "sourceId": "md-minimum-wage-gate",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Lab. & Empl. § 3-413",
+            "citation": "Md. Code, Lab. & Empl. § 3-413(c)(1).",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-413",
+            "proposition": "Section 3-413 sets the State minimum wage at $15.00 per hour beginning January 1, 2024, the figure the § 3-716 threshold is keyed to.",
+            "verbatimQuote": "the State minimum wage rate is: (i) for the 12–month period beginning January 1, 2023, $13.25 per hour; and (ii) beginning January 1, 2024, $15.00 per hour.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-minimum-wage-gate"
+          },
+          {
+            "sourceId": "md-3716-null-void-gate",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Lab. & Empl. § 3-716",
+            "citation": "Md. Code, Lab. & Empl. § 3-716(a)(3).",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-716",
+            "proposition": "Section 3-716 makes a covered noncompete or conflict-of-interest provision null and void as against Maryland public policy.",
+            "verbatimQuote": "A noncompete or conflict of interest provision in an employment contract or a similar document or agreement that restricts the ability of an employee to enter into employment with a new employer or to become self–employed in the same or similar business or trade shall be null and void as being against the public policy of the State.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-3716-null-void-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "void-non-compete-for-veterinary-professionals",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.maryland.void-non-compete-for-veterinary-professionals",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No veterinary non-competes",
+        "sectionId": "maryland-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#void-non-compete-for-veterinary-professionals",
+        "requirementGuidance": "A covenant is void for an employee licensed as a veterinary practitioner or veterinary technician, at any compensation level — and unlike the health care expansion, this ban reaches backward: the 2024 act construes it to apply to agreements entered into on or before its effective date. An old veterinary covenant in the file is not grandfathered; it is simply unenforceable.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-vet-ban-gate",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Lab. & Empl. § 3-716",
+            "citation": "Md. Code, Lab. & Empl. § 3-716(a)(1)(i)3.",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-716",
+            "proposition": "Section 3-716 extends the void-as-against-public-policy rule to veterinary practitioners and technicians.",
+            "verbatimQuote": "an employee licensed as a veterinary practitioner or veterinary technician under Title 2, Subtitle 3 of the Agriculture Article",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-vet-ban-gate"
+          },
+          {
+            "sourceId": "md-hb1388-vet-retroactive-gate",
+            "authorityType": "primary-law",
+            "title": "2024 Md. Laws ch. 378 (H.B. 1388)",
+            "citation": "2024 Md. Laws ch. 378, § 2 (H.B. 1388).",
+            "url": "https://mgaleg.maryland.gov/2024rs/Chapters_noln/CH_378_hb1388e.pdf",
+            "proposition": "House Bill 1388 makes the veterinary non-compete ban apply retroactively to existing agreements.",
+            "verbatimQuote": "That this Act shall be construed to apply retroactively and shall be applied to and interpreted to affect an employment contract or a similar contract or agreement entered into on or before the effective date of this Act.",
+            "date": "2024-04-25",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-hb1388-vet-retroactive-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "void-non-compete-for-covered-health-care-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.maryland.void-non-compete-for-covered-health-care-employees",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No non-competes for most patient-care clinicians",
+        "sectionId": "maryland-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#void-non-compete-for-covered-health-care-employees",
+        "requirementGuidance": "For agreements executed on or after July 1, 2025, a covenant is void for an employee who must be licensed under the Health Occupations Article, works in a position providing direct patient care, and earns $350,000 or less in total annual compensation. Run all three elements — the class is defined by license, duties, and pay, not by job title, and it sweeps in nurses, therapists, technicians, and every other licensed direct-care role, not just physicians.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-healthcare-void-gate",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Lab. & Empl. § 3-716",
+            "citation": "Md. Code, Lab. & Empl. § 3-716(a)(1)(i)2.",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-716",
+            "proposition": "Section 3-716 voids covenants for licensed health-occupations employees who provide direct patient care and earn $350,000 or less.",
+            "verbatimQuote": "employment in a position for which the employee: A. is required to be licensed under the Health Occupations Article; B. is employed in a position that provides direct patient care; and C. earns equal to or less than $350,000 in total annual compensation",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-healthcare-void-gate"
+          },
+          {
+            "sourceId": "md-hb1388-health-prospective-gate",
+            "authorityType": "primary-law",
+            "title": "2024 Md. Laws ch. 378 (H.B. 1388)",
+            "citation": "2024 Md. Laws ch. 378, § 3 (H.B. 1388).",
+            "url": "https://mgaleg.maryland.gov/2024rs/Chapters_noln/CH_378_hb1388e.pdf",
+            "proposition": "House Bill 1388 makes the health care expansion of § 3-716 apply only to agreements executed on or after July 1, 2025.",
+            "verbatimQuote": "That § 3–716(a)(1)(i)2 and (b) of the Labor and Employment Article, as enacted by Section 1 of this Act, shall be construed to apply only to employment contracts or similar documents or agreements for employment executed on or after July 1, 2025.",
+            "date": "2024-04-25",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-hb1388-health-prospective-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "cap-high-earner-clinician-covenant-at-one-year-and-ten-miles",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.maryland.cap-high-earner-clinician-covenant-at-one-year-and-ten-miles",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "One year and ten miles for high-earning clinicians",
+        "sectionId": "maryland-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#cap-high-earner-clinician-covenant-at-one-year-and-ten-miles",
+        "requirementGuidance": "Above the $350,000 line, the direct-patient-care covenant survives only inside hard ceilings: no longer than one year from the last day of employment, and no farther than ten miles from the primary place of employment. Measure the drafted term and radius against both numbers — then remember the cap is a ceiling, not a safe harbor, and the covenant still has to pass the ordinary reasonableness test on its own facts.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-highearner-bucket-gate",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Lab. & Empl. § 3-716",
+            "citation": "Md. Code, Lab. & Empl. § 3-716(b)(1).",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-716",
+            "proposition": "Section 3-716(b) applies the one-year and ten-mile cap to direct-patient-care health care employees who earn more than $350,000.",
+            "verbatimQuote": "This subsection applies only to an employment contract or similar document or agreement concerning employment in a position for which the employee: (i) is required to be licensed under the Health Occupations Article; (ii) is employed in a position that provides direct patient care; and (iii) earns more than $350,000 in total annual compensation.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-highearner-bucket-gate"
+          },
+          {
+            "sourceId": "md-cap-duration-gate",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Lab. & Empl. § 3-716",
+            "citation": "Md. Code, Lab. & Empl. § 3-716(b)(2)(i).",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-716",
+            "proposition": "Section 3-716 caps a covered high-earner health care covenant at one year from the last day of employment.",
+            "verbatimQuote": "The period for which a noncompete or conflict of interest provision in an employment contract or similar document or agreement is in effect may not exceed 1 year from the last day of employment.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-cap-duration-gate"
+          },
+          {
+            "sourceId": "md-cap-geography-gate",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Lab. & Empl. § 3-716",
+            "citation": "Md. Code, Lab. & Empl. § 3-716(b)(2)(ii).",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-716",
+            "proposition": "Section 3-716 caps the geographic reach of a covered high-earner health care covenant at ten miles from the primary place of employment.",
+            "verbatimQuote": "The geographical restriction in a noncompete or conflict of interest provision in an employment contract or similar document or agreement may not exceed 10 miles from the primary place of employment.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-cap-geography-gate"
+          },
+          {
+            "sourceId": "md-becker-highearner-gate",
+            "authorityType": "case-law",
+            "title": "Becker v. Bailey",
+            "citation": "Becker v. Bailey, 268 Md. 93 (1973).",
+            "url": "https://www.courtlistener.com/opinion/2322561/becker-v-bailey/",
+            "deepLink": "https://www.courtlistener.com/opinion/2322561/becker-v-bailey/#:~:text=The%20general%20rule%20in%20Maryland,the%20interests%20of%20the%20public.%E2%80%9D",
+            "proposition": "Becker's common-law reasonableness requirement still governs a covenant that falls within § 3-716(b)'s statutory cap.",
+            "verbatimQuote": "The general rule in Maryland is that if a restrictive covenant in an employment contract is supported by adequate consideration and is ancillary to the employment contract, an employee’s agreement not to compete with his employer upon leaving the employment will be upheld “if the restraint is confined within limits which are no wider as to area and duration than are reasonably necessary for the protection of the business of the employer and do not impose undue hardship on the employee or disregard the interests of the public.”",
+            "date": "1973-02-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-becker-highearner-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "provide-patient-notice-of-departing-clinician-location",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.maryland.provide-patient-notice-of-departing-clinician-location",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Patients told where the clinician went",
+        "sectionId": "maryland-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#provide-patient-notice-of-departing-clinician-location",
+        "requirementGuidance": "The clinician cap travels with a duty: on a patient's request, the employer must say where the departing clinician will be practicing. The obligation belongs to the employer, not the worker, so confirm there is an operational process behind it — intake staff who know the answer and are allowed to give it — rather than a covenant drafted as if patient questions will never come.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-patient-notice-gate",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Lab. & Empl. § 3-716",
+            "citation": "Md. Code, Lab. & Empl. § 3-716(b)(3).",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-716",
+            "proposition": "Section 3-716 requires patient notice of a departing clinician's new location on request.",
+            "verbatimQuote": "On request of a patient, an employer of an employee described in paragraph (1) of this subsection shall provide notice to a patient of the new location where a former employee will be practicing.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-patient-notice-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "protect-covered-workers-through-client-list-and-trade-secret-terms",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.maryland.protect-covered-workers-through-client-list-and-trade-secret-terms",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protection through client lists and trade secrets",
+        "sectionId": "maryland-statutory-gates",
+        "itemNumber": "19.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#protect-covered-workers-through-client-list-and-trade-secret-terms",
+        "requirementGuidance": "Where the statute voids the covenant, check what remains: the void rule expressly spares provisions about the taking or use of client or patient lists and other proprietary client information, and the trade-secret act adds injunctions plus exemplary damages — up to twice the compensatory award for willful and malicious misappropriation — none of it contingent on an enforceable non-compete. For a protected worker, those terms are the protection plan; confirm they are drafted to stand alone.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-client-list-carveout-gate",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Lab. & Empl. § 3-716",
+            "citation": "Md. Code, Lab. & Empl. § 3-716(a)(2).",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-716",
+            "proposition": "Section 3-716(a)'s void rule does not reach provisions about the taking or use of a client or patient list or other proprietary client information.",
+            "verbatimQuote": "This subsection does not apply to an employment contract or a similar document or agreement with respect to the taking or use of a client or patient list or other proprietary client–related or patient–related information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-client-list-carveout-gate"
+          },
+          {
+            "sourceId": "md-mutsa-exemplary-damages-gate",
+            "authorityType": "primary-law",
+            "title": "Md. Code, Com. Law § 11-1203",
+            "citation": "Md. Code, Com. Law § 11-1203(d).",
+            "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcl&section=11-1203",
+            "proposition": "Section 11-1203 allows exemplary damages up to twice the compensatory award for willful and malicious misappropriation.",
+            "verbatimQuote": "If willful and malicious misappropriation exists, the court may award exemplary damages in an amount not exceeding twice any award made under subsection (a) of this section.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-mutsa-exemplary-damages-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "void-non-compete-for-relocated-architect-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.maryland.void-non-compete-for-relocated-architect-employees",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Architect employees after an out-of-state move",
+        "sectionId": "maryland-statutory-gates",
+        "itemNumber": "19.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#void-non-compete-for-relocated-architect-employees",
+        "requirementGuidance": "Enacted but not yet begun: for agreements executed on or after October 1, 2026, the void rule extends to employees of a licensed architect whose employer, after employing more than 30 workers based mainly in Maryland, moves the majority of that workforce out of state or gives up its Maryland principal place of business. The provision is narrow and prospective only — but the same act renumbers the statute's subsections, so check which version of the section any covenant cites.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "md-hb1016-architect-gate",
+            "authorityType": "primary-law",
+            "title": "2026 Md. Laws ch. 301 (H.B. 1016)",
+            "citation": "2026 Md. Laws ch. 301, § 2 (H.B. 1016).",
+            "url": "https://mgaleg.maryland.gov/2026rs/Chapters_noln/CH_301_hb1016e.pdf",
+            "proposition": "House Bill 1016 (Chapter 301) adds a new § 3-716 category, effective October 1, 2026, for employees of a licensed architect whose employer relocates a formerly Maryland-based workforce out of state, and applies only to agreements executed on or after the Act's effective date.",
+            "verbatimQuote": "That § 3–716(a)(1)(i)3 of the Labor and Employment Article, as enacted by Section 1 of this Act, shall be construed to apply only to employment contracts or similar documents or agreements for employment executed on or after the effective date of this Act.",
+            "date": "2026-04-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-hb1016-architect-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

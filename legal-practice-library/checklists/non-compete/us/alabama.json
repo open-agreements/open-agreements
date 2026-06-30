@@ -1,0 +1,1434 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/alabama",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/alabama.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/alabama",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/alabama/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/alabama/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "alabama",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Alabama",
+      "description": "A clause-by-clause reviewer checklist for Alabama employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Restrictive Covenant Act's void-by-default rule, safe-harbor categories, signature formalities, and professional exemption.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Alabama",
+      "coverage": "Alabama (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 49,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "alabama-statutory-gates",
+        "label": "Alabama statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity that actually employs the worker and the entity that will sign. Alabama requires the covenant document to be signed by all parties, so the party block is not decorative — a covenant naming a parent or affiliate that never signs, or that is not the true employer, sets up the exact signature and relationship defects that void covenants here.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-192-signature-cover",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-192",
+            "citation": "Ala. Code § 8-1-192.",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-192",
+            "proposition": "Ala. Code § 8-1-192 supports that a covenant must be in writing, signed by all parties, and supported by adequate consideration to be valid.",
+            "verbatimQuote": "In order to be valid, any contract or agreement executed pursuant to this article shall be reduced to writing, signed by all parties, and be supported by adequate consideration.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-192-signature-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#identify-effective-date",
+        "requirementGuidance": "The date earns its place twice in Alabama. It anchors every duration presumption — the restricted periods run from a defined start — and it determines which statutory regime applies at all, since the Restrictive Covenant Act governs covenants entered on or after its 2016 effective date while older agreements answer to the predecessor statute. An undated covenant leaves both questions open.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#identify-employee-title",
+        "requirementGuidance": "In Alabama the title is an early warning system: if the role is a recognized profession — medicine, accountancy, veterinary practice, physical therapy, or anything similar — the professional exemption can put a practice-restraining covenant out of reach entirely, no matter how well the rest of the agreement is drafted. Record the title and licensure, and route professionals to the statutory-gate items at the end of this checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-196-exemption-cover",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-196",
+            "citation": "Ala. Code § 8-1-196.",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-196",
+            "proposition": "Ala. Code § 8-1-196 supports that the Act does not eliminate any professional exemption recognized by Alabama law.",
+            "verbatimQuote": "Nothing in this article shall be construed to eliminate any professional exemption recognized by Alabama law.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-196-exemption-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated — and treat a clause naming another state's law for an Alabama worker as a signal, not a solution. The legislature declared the Restrictive Covenant Act fundamental public policy and directed courts to apply it over conflicting foreign law, so an out-of-state selection cannot revive a covenant Alabama would void.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-197-govern-cover",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-197",
+            "citation": "Ala. Code § 8-1-197.",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-197",
+            "proposition": "Ala. Code § 8-1-197 supports that the Act governs instead of a foreign law whose application would violate the fundamental public policy the Act expresses.",
+            "verbatimQuote": "Therefore, this article shall govern and shall be applied instead of any foreign laws that might otherwise be applicable in those instances when the application of those foreign laws would violate a fundamental public policy expressed in this article.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-197-govern-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#define-confidential-information",
+        "requirementGuidance": "Test the definition against Alabama's hard line: job skills by themselves are not a protectable interest, so a confidentiality definition that sweeps in the worker's ordinary know-how claims protection the statute refuses to give. The definition should describe genuinely confidential business information the worker could not lawfully carry to a competitor.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-191-jobskills-defs",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-191",
+            "citation": "Ala. Code § 8-1-191(b).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-191",
+            "proposition": "Ala. Code § 8-1-191(b) supports that job skills by themselves are not a protectable interest.",
+            "verbatimQuote": "Job skills in and of themselves, without more, are not protectable interests.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-191-jobskills-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#define-trade-secrets",
+        "requirementGuidance": "Keep trade secrets defined separately from ordinary confidential information. Alabama's protectable-interest list reaches trade secrets by cross-reference to the Alabama Trade Secrets Act, so a definition tracking that statutory meaning gives the covenant the cleanest interest to stand on — and preserves the perpetual-protection treatment the trade-secret tier deserves.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#define-restricted-period",
+        "requirementGuidance": "One defined Restricted Period keeps every duration auditable against the statutory presumptions — two years or less is presumed reasonable for an employee non-compete, and each covenant family has its own window. Scattered or inconsistent period language is how an agreement drifts past the presumption without anyone noticing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-190-employee-defs",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-190",
+            "citation": "Ala. Code § 8-1-190(b)(4).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-190",
+            "proposition": "Ala. Code § 8-1-190(b)(4) supports that an employee may agree to a geographically limited non-compete and that restraints of two years or less are presumed reasonable.",
+            "verbatimQuote": "Restraints of two years or less are presumed to be reasonable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-190-employee-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#define-restricted-territory",
+        "requirementGuidance": "Alabama's employee exception is written for a geographically limited covenant, so the territory definition is part of fitting the statutory category, not an afterthought. Tie the geography to where the employer actually does competing business; an unbounded or everywhere-we-might-expand territory undercuts the claim that the covenant fits the exception at all.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-190-employee-defs",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-190",
+            "citation": "Ala. Code § 8-1-190(b)(4).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-190",
+            "proposition": "Ala. Code § 8-1-190(b)(4) supports that an employee may agree to a geographically limited non-compete and that restraints of two years or less are presumed reasonable.",
+            "verbatimQuote": "Restraints of two years or less are presumed to be reasonable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-190-employee-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#define-covered-customers",
+        "requirementGuidance": "Bound the class to current customers. Alabama's non-solicitation category reaches only the employer's current customers — not former ones, not prospects — so a covered-customer definition that includes anyone the employer ever served or hopes to serve pushes the clause outside its statutory category, where the void rule waits.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-190-nonsolicit-defs",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-190",
+            "citation": "Ala. Code § 8-1-190(b)(5).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-190",
+            "proposition": "Ala. Code § 8-1-190(b)(5) supports the current-customer non-solicitation exception and its eighteen-month (or paid-consideration) presumption of reasonableness.",
+            "verbatimQuote": "Restraints of 18 months or for as long as post-separation consideration is paid for such agreement, whichever is greater, are presumed to be reasonable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-190-nonsolicit-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#define-covered-employees",
+        "requirementGuidance": "In Alabama the covered-employee class has a statutory ceiling: a restraint on hiring another party's workers is allowed only for workers holding a position uniquely essential to the management, organization, or service of the business. A definition spanning the whole workforce, or all employees the departing worker met, cannot fit that category.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-190-no-hire-defs",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-190",
+            "citation": "Ala. Code § 8-1-190(b)(1).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-190",
+            "proposition": "Ala. Code § 8-1-190(b)(1) supports that an employee no-hire covenant is allowed only where the worker holds a position uniquely essential to the business.",
+            "verbatimQuote": "A contract between two or more persons or businesses or a person and a business limiting their ability to hire or employ the agent, servant, or employees of a party to the contract where the agent, servant, or employee holds a position uniquely essential to the management, organization, or service of the business.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-190-no-hire-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#define-protected-interests",
+        "requirementGuidance": "Name the interests in the statute's own categories: trade secrets, confidential information, relationships with specific existing or prospective customers, goodwill, or qualifying specialized training. The enforcing party must prove the covenant protects a listed interest, and recitals about market position or suppressing competition prove nothing — the statute says expressly that job skills alone do not qualify.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-191-customers-defs",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-191",
+            "citation": "Ala. Code § 8-1-191(a)(3).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-191",
+            "proposition": "Ala. Code § 8-1-191(a)(3) supports that commercial relationships with specific prospective or existing customers are a protectable interest.",
+            "verbatimQuote": "Commercial relationships or contacts with specific prospective or existing customers, patients, vendors, or clients.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-191-customers-defs"
+          },
+          {
+            "sourceId": "ala-191-jobskills-defs",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-191",
+            "citation": "Ala. Code § 8-1-191(b).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-191",
+            "proposition": "Ala. Code § 8-1-191(b) supports that job skills by themselves are not a protectable interest.",
+            "verbatimQuote": "Job skills in and of themselves, without more, are not protectable interests.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-191-jobskills-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#define-competitive-business",
+        "requirementGuidance": "Describe the competing activity concretely, anchored to the business the employer actually carries on. Alabama's employee exception presupposes the employer has a competing business to protect, and a definition that balloons into adjacent markets reads as a restraint on the worker's trade generally — exactly what the baseline rule voids.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated percentage. A clause that technically forbids holding index funds or ordinary public shares restrains far more than any listed protectable interest requires — gratuitous overbreadth in a state whose statute voids restraints except as it specifically provides.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-190-void-defs",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-190",
+            "citation": "Ala. Code § 8-1-190(a).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-190",
+            "proposition": "Ala. Code § 8-1-190(a) supports the rule that every contract restraining a lawful profession, trade, or business is void except as the section otherwise allows.",
+            "verbatimQuote": "Every contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind otherwise than is provided by this section is to that extent void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-190-void-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#define-passive-public-holdings",
+        "requirementGuidance": "A drafting convenience, not a requirement — many agreements inline the carve-out language instead of defining a capitalized term. If the term appears, confirm its percentage threshold matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#define-solicit",
+        "requirementGuidance": "Pin the term down before a dispute does it for you. A solicitation definition limited to initiating contact keeps the non-solicit covenants reading as the modest, category-fitting restraints the Act allows; a definition that also captures passively receiving inquiries widens the clause toward a restraint on doing business at all, which has no listed category of its own.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger treats resignation, dismissal, and expiration of a fixed term the same way. Every Alabama restricted period — and every presumption keyed to it — runs from this event, and the current-customer non-solicit window can also stretch for as long as post-separation consideration is paid, so the definition needs to make clear when employment ended and when any post-separation payments start and stop.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-190-nonsolicit-defs",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-190",
+            "citation": "Ala. Code § 8-1-190(b)(5).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-190",
+            "proposition": "Ala. Code § 8-1-190(b)(5) supports the current-customer non-solicitation exception and its eighteen-month (or paid-consideration) presumption of reasonableness.",
+            "verbatimQuote": "Restraints of 18 months or for as long as post-separation consideration is paid for such agreement, whichever is greater, are presumed to be reasonable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-190-nonsolicit-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#acknowledge-timing",
+        "requirementGuidance": "The timing acknowledgement should establish two facts: that the employment relationship existed when the covenant was signed, and what consideration supported it. Alabama requires adequate consideration as a formation element, treats continued employment of an existing employee as adequate, and — the trap — holds that paying for a covenant cannot rescue one signed before the relationship began, because the statute already presupposes consideration.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-192-consideration-timing",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-192",
+            "citation": "Ala. Code § 8-1-192.",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-192",
+            "proposition": "Ala. Code § 8-1-192 supports that a covenant must be in writing, signed by all parties, and supported by adequate consideration to be valid.",
+            "verbatimQuote": "In order to be valid, any contract or agreement executed pursuant to this article shall be reduced to writing, signed by all parties, and be supported by adequate consideration.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-192-consideration-timing"
+          },
+          {
+            "sourceId": "pitney-consideration-timing",
+            "authorityType": "case-law",
+            "title": "Pitney Bowes, Inc. v. Berney Office Solutions",
+            "citation": "Pitney Bowes, Inc. v. Berney Office Solutions, 823 So. 2d 659 (Ala. 2001).",
+            "url": "https://www.courtlistener.com/opinion/1099624/pitney-bowes-inc-v-berney-office-solutions/",
+            "deepLink": "https://www.courtlistener.com/opinion/1099624/pitney-bowes-inc-v-berney-office-solutions/#:~:text=This%20statute%2C%20however%2C%20presupposes%20noncompete%20agreements%20supported%20by%20consideration.",
+            "proposition": "Pitney Bowes, construing the former § 8-1-1, supports that the restrictive-covenant statute presupposes a covenant already supported by consideration, so paying for the covenant does not by itself save an otherwise void restraint.",
+            "verbatimQuote": "This statute, however, presupposes noncompete agreements supported by consideration.",
+            "date": "2001-12-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-pitney-consideration-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Alabama statute demands it, but it remains cheap insurance. The Act puts the burden of proof on the enforcing party, and an acknowledged opportunity to seek advice is the kind of procedural-fairness evidence that costs nothing at signing and helps at enforcement.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "The trade-secret obligation should last as long as secrecy does — that is how federal law defines the right, and Alabama's protectable-interest list reaches trade secrets through its own trade-secrets statute on the same logic. A fixed expiry on trade-secret protection gives away the one interest the covenant suite most reliably stands on.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-dtsa-trade-secret-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. The two-track structure — perpetual for trade secrets, dated for everything else — keeps the open-ended obligation where the law actually supports it and spares the broader clause from reading as an indefinite restraint on using general experience.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in Alabama: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret suit against the worker. With Alabama covenants leaning so heavily on trade secrets as the protectable interest, surrendering those remedies is an unforced error.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech whatever the governing state, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. No confidentiality clause can outrank a subpoena, and the carve-out plus a notice procedure is the standard way to keep the clause honest about that.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. Because the enforcing party in Alabama bears the burden of proof on every element, the certification is the cheapest contemporaneous evidence the employer will ever collect about what confidential material the worker did or did not keep.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional — and in Alabama, unusually constrained. The Act's only category for restraints touching another party's workers is the no-hire exception, and it reaches just workers in positions uniquely essential to the business. Keep any coworker-directed clause scoped to that class and to the Restricted Period, and treat a workforce-wide no-poach clause as a category problem, not a tailoring problem.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-190-no-hire-cov",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-190",
+            "citation": "Ala. Code § 8-1-190(b)(1).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-190",
+            "proposition": "Ala. Code § 8-1-190(b)(1) supports that an employee no-hire covenant is allowed only where the worker holds a position uniquely essential to the business.",
+            "verbatimQuote": "A contract between two or more persons or businesses or a person and a business limiting their ability to hire or employ the agent, servant, or employees of a party to the contract where the agent, servant, or employee holds a position uniquely essential to the management, organization, or service of the business.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-190-no-hire-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#permit-customer-nonsolicit",
+        "requirementGuidance": "Alabama gives this clause its own statutory category with two built-in limits: current customers only, and a presumptively reasonable window of eighteen months or as long as post-separation consideration is paid, whichever is greater. If the clause appears, confirm both limits before reviewing anything else about it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-190-nonsolicit-cov",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-190",
+            "citation": "Ala. Code § 8-1-190(b)(5).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-190",
+            "proposition": "Ala. Code § 8-1-190(b)(5) supports the current-customer non-solicitation exception and its eighteen-month (or paid-consideration) presumption of reasonableness.",
+            "verbatimQuote": "Restraints of 18 months or for as long as post-separation consideration is paid for such agreement, whichever is greater, are presumed to be reasonable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-190-nonsolicit-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they call first — a broader restraint than non-solicitation, and one with no named category among Alabama's six exceptions. A covenant that cannot find a category is void to that extent under the baseline rule, so treat inclusion as a deliberate risk decision and draft it to fit inside the current-customer non-solicit category if it stays.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-190-void-cov",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-190",
+            "citation": "Ala. Code § 8-1-190(a).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-190",
+            "proposition": "Ala. Code § 8-1-190(a) supports the rule that every contract restraining a lawful profession, trade, or business is void except as the section otherwise allows.",
+            "verbatimQuote": "Every contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind otherwise than is provided by this section is to that extent void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-190-void-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#permit-non-compete",
+        "requirementGuidance": "An Alabama non-compete is void unless it fits the employee exception — specified geography, a competing business, an existing employment relationship — and the enforcing party will carry the burden of proof on every element. If this clause appears at all, route the review straight through the Alabama statutory gates at the end of this checklist: category fit, protectable interest, signatures, timing, and the professional exemption.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-190-void-cov",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-190",
+            "citation": "Ala. Code § 8-1-190(a).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-190",
+            "proposition": "Ala. Code § 8-1-190(a) supports the rule that every contract restraining a lawful profession, trade, or business is void except as the section otherwise allows.",
+            "verbatimQuote": "Every contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind otherwise than is provided by this section is to that extent void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-190-void-cov"
+          },
+          {
+            "sourceId": "ala-194-burden-cov",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-194",
+            "citation": "Ala. Code § 8-1-194.",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-194",
+            "proposition": "Ala. Code § 8-1-194 supports that the party seeking enforcement bears the burden of proof on every element.",
+            "verbatimQuote": "The party seeking enforcement of the covenant has the burden of proof on every element.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-194-burden-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, the covenant should bind those instead of leaning on the open-ended Competitive Business definition. Alabama rewards specificity: the protectable-interest list speaks in terms of specific customers and concrete relationships, and a covenant drawn to named threats is far easier to defend as protecting a listed interest rather than suppressing competition generally.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-191-customers-cov",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-191",
+            "citation": "Ala. Code § 8-1-191(a)(3).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-191",
+            "proposition": "Ala. Code § 8-1-191(a)(3) supports that commercial relationships with specific prospective or existing customers are a protectable interest.",
+            "verbatimQuote": "Commercial relationships or contacts with specific prospective or existing customers, patients, vendors, or clients.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-191-customers-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate, with no named Alabama category of its own. One genuine use here: for a licensed professional, business conduct outside the practice of the profession — acquiring competing practices purely as an investment, without managing them — sits outside the professional exemption and can be restrained where a practice ban cannot. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "benchmark-scope-cov",
+            "authorityType": "case-law",
+            "title": "Benchmark Medical Holdings, Inc. v. Barnes",
+            "citation": "Benchmark Med. Holdings, Inc. v. Barnes, 328 F. Supp. 2d 1236 (M.D. Ala. 2004).",
+            "url": "https://www.courtlistener.com/opinion/2438759/benchmark-medical-holdings-inc-v-barnes/",
+            "deepLink": "https://www.courtlistener.com/opinion/2438759/benchmark-medical-holdings-inc-v-barnes/#:~:text=A%20doctor%20is%2C%20instead%2C%20protected,receive%20the%20doctor's%20professional%20services.",
+            "proposition": "Benchmark Medical Holdings v. Barnes, construing the former § 8-1-1, supports that the professional exemption protects the professional only in the practice of the profession, not in unrelated business conduct.",
+            "verbatimQuote": "A doctor is, instead, protected only in his practice of medicine, for the purpose of the protection is the interest of the public in being able to receive the doctor's professional services.",
+            "date": "2004-07-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-benchmark-scope-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state, and Alabama adds no statutory shelter of its own for an aggressive one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#address-physician-specific-rights",
+        "requirementGuidance": "In Alabama this clause should state the professional exemption plainly — and reach beyond physicians. The Act preserves the long-standing rule that a covenant cannot bar a member of a recognized profession from practicing it, and courts have applied that protection to physicians, certified public accountants, veterinarians, and physical therapists. The clause should say what the covenant does not restrain (the practice itself) and what it still can (business conduct outside the practice).",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-196-physician",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-196",
+            "citation": "Ala. Code § 8-1-196.",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-196",
+            "proposition": "Ala. Code § 8-1-196 supports that the Act does not eliminate any professional exemption recognized by Alabama law.",
+            "verbatimQuote": "Nothing in this article shall be construed to eliminate any professional exemption recognized by Alabama law.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-196-physician"
+          },
+          {
+            "sourceId": "benchmark-pt-physician",
+            "authorityType": "case-law",
+            "title": "Benchmark Medical Holdings, Inc. v. Barnes",
+            "citation": "Benchmark Med. Holdings, Inc. v. Barnes, 328 F. Supp. 2d 1236 (M.D. Ala. 2004).",
+            "url": "https://www.courtlistener.com/opinion/2438759/benchmark-medical-holdings-inc-v-barnes/",
+            "deepLink": "https://www.courtlistener.com/opinion/2438759/benchmark-medical-holdings-inc-v-barnes/#:~:text=Because%20a%20physical%20therapist%20as,not%20subject%20to%20non%2Dcompetition%20agreements.",
+            "proposition": "Benchmark Medical Holdings v. Barnes, construing the former § 8-1-1, supports that a physical therapist is a professional and therefore is not subject to a non-compete that bars the practice of the profession under Alabama law.",
+            "verbatimQuote": "Because a physical therapist as a professional cannot fall within either of these statutory exceptions, the general rule that non-compete agreements are invalid applies; therefore, physical therapists are not subject to non-competition agreements.",
+            "date": "2004-07-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-benchmark-pt-physician"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. It protects the employer against interference claims from prior employers and surfaces an incoming covenant early — when there is still time to evaluate whether Alabama law would even enforce it against the new hire.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice. A notice clause can support enforcement, but a warning letter built on a covenant that fails Alabama's category, interest, or signature gates invites an interference claim rather than deterring one — the enforcing party here must be ready to prove every element of the covenant it is brandishing. If the clause appears, condition any third-party notice on a covenant that actually clears the gates.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Alabama question. No statute or appellate decision under the 2016 Act addresses a clause that adds lost time back to the period, the employee window presumes only restraints of two years or less reasonable, and a court's power to reform an unreasonable duration is the likely tool for cutting an open-ended extension back. A defined, reasonable fixed term is the position of strength.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-190-two-year-tolling",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-190",
+            "citation": "Ala. Code § 8-1-190(b)(4).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-190",
+            "proposition": "Ala. Code § 8-1-190(b)(4) supports that only restraints of two years or less are presumed reasonable, which bears on a tolling clause that extends the effective period.",
+            "verbatimQuote": "Restraints of two years or less are presumed to be reasonable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-190-two-year-tolling"
+          },
+          {
+            "sourceId": "ala-193-reform-tolling",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-193",
+            "citation": "Ala. Code § 8-1-193.",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-193",
+            "proposition": "Ala. Code § 8-1-193 supports that a court may reform a restraint that is overly broad or unreasonable in its duration.",
+            "verbatimQuote": "If a contractually specified restraint is overly broad or unreasonable in its duration, a court may void the restraint in part and reform it to preserve the protectable interest or interests.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-193-reform-tolling"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief — then weigh it realistically. Alabama puts the burden of proof on the party seeking enforcement for every element and preserves every defense available in law or equity, so the recital smooths the path to an injunction without ever substituting for the statutory showing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-194-burden-remedies",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-194",
+            "citation": "Ala. Code § 8-1-194.",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-194",
+            "proposition": "Ala. Code § 8-1-194 supports that the party seeking enforcement bears the burden of proof on every element.",
+            "verbatimQuote": "The party seeking enforcement of the covenant has the burden of proof on every element.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-194-burden-remedies"
+          },
+          {
+            "sourceId": "ala-195-defenses-remedies",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-195",
+            "citation": "Ala. Code § 8-1-195(b).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-195",
+            "proposition": "Ala. Code § 8-1-195(b) supports that the Act does not limit any defense otherwise available in law or equity.",
+            "verbatimQuote": "Nothing in this article shall limit the availability of any defense otherwise available in law or equity.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-195-defenses-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice the Act expressly accommodates: contract remedies for breach include attorney fees or costs where the contract or other law provides for them. If fee-shifting appears, confirm it is written mutually and prevailing-party based — a one-way employer clause draws avoidable sympathy toward the restrained worker in a state that already tilts the burden against enforcement.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-195-fees-remedies",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-195",
+            "citation": "Ala. Code § 8-1-195(a)(3).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-195",
+            "proposition": "Ala. Code § 8-1-195(a) supports that contract remedies, including attorneys' fees or costs where provided, are available for breach of a covenant under the Act.",
+            "verbatimQuote": "Any remedies available in contract law, including attorneys’ fees or costs, if provided for in the contract or otherwise provided for by law.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-195-fees-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "confine-reformation-reliance-to-duration-within-a-statutory-category",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.alabama.confine-reformation-reliance-to-duration-within-a-statutory-category",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court narrowing limited to duration",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#confine-reformation-reliance-to-duration-within-a-statutory-category",
+        "requirementGuidance": "Keep the severability clause, but read it for what Alabama actually delivers. A court here may trim a covenant whose duration is overly broad and enforce the rest — that power is real and worth preserving in the drafting. What the clause cannot do is rescue a covenant that never fit a statutory category or never protected a listed interest: for that restraint, the statute authorizes voiding in its entirety, not narrowing. An agreement drafted broad on the theory that a court will shrink it to size is betting on a power the court does not have for the defects that matter most.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-193-reform-sev",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-193",
+            "citation": "Ala. Code § 8-1-193.",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-193",
+            "proposition": "Ala. Code § 8-1-193 supports that a court may reform a restraint that is overly broad or unreasonable in duration and enforce it in part.",
+            "verbatimQuote": "If a contractually specified restraint is overly broad or unreasonable in its duration, a court may void the restraint in part and reform it to preserve the protectable interest or interests.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-193-reform-sev"
+          },
+          {
+            "sourceId": "ala-193-void-sev",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-193",
+            "citation": "Ala. Code § 8-1-193.",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-193",
+            "proposition": "Ala. Code § 8-1-193 supports that a restraint that does not fall within the § 8-1-190(b) exceptions may be voided in its entirety.",
+            "verbatimQuote": "If a contractually specified restraint does not fall within the limited exceptions set out in subsection (b) of Section 8-1-190, a court may void the restraint in its entirety.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-193-void-sev"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite elsewhere. In Alabama the discipline maps directly onto the statute, which hands each covenant family its own presumptive window; a bundled survival clause is where a duration quietly outgrows its category's presumption.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. Then note the Alabama-specific caution for deal teams: a covenant signed before the employer-employee relationship with the new entity existed has been held void, and later employment did not cure it — so after an acquisition that changes the employing entity, the safe course is a fresh, fully signed covenant rather than reliance on the assignment clause alone.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pitney-timing-assignment",
+            "authorityType": "case-law",
+            "title": "Pitney Bowes, Inc. v. Berney Office Solutions",
+            "citation": "Pitney Bowes, Inc. v. Berney Office Solutions, 823 So. 2d 659 (Ala. 2001).",
+            "url": "https://www.courtlistener.com/opinion/1099624/pitney-bowes-inc-v-berney-office-solutions/",
+            "deepLink": "https://www.courtlistener.com/opinion/1099624/pitney-bowes-inc-v-berney-office-solutions/#:~:text=The%20voidness%20of%20the%20agreement,a%20month%20after%20the%20signing.",
+            "proposition": "Pitney Bowes, construing the former § 8-1-1, supports that a covenant signed before the employer-employee relationship existed is void and is not cured when employment later begins.",
+            "verbatimQuote": "The voidness of the agreement in this case did not disappear when Pitney employed Morris almost a month after the signing.",
+            "date": "2001-12-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-pitney-timing-assignment"
+          }
+        ]
+      },
+      {
+        "requirementId": "expect-alabama-fundamental-policy-to-override-foreign-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.alabama.expect-alabama-fundamental-policy-to-override-foreign-law",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Alabama policy overrides foreign law",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#expect-alabama-fundamental-policy-to-override-foreign-law",
+        "requirementGuidance": "Do not rely on an out-of-state choice-of-law clause to make an Alabama-void covenant enforceable. The legislature declared the Restrictive Covenant Act an expression of fundamental public policy and directed courts to apply it instead of any foreign law whose application would violate that policy — which is precisely the scenario a permissive-state selection is trying to engineer. The clause should still specify governing law, venue, and dispute process; for an Alabama-based worker, Alabama law is the selection that operates as written, and the venue and process terms do the real work.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-197-policy-col",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-197",
+            "citation": "Ala. Code § 8-1-197.",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-197",
+            "proposition": "Ala. Code § 8-1-197 supports that the Act expresses fundamental public policies of the State of Alabama.",
+            "verbatimQuote": "It is hereby declared that this article expresses fundamental public policies of the State of Alabama.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-197-policy-col"
+          },
+          {
+            "sourceId": "ala-197-govern-col",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-197",
+            "citation": "Ala. Code § 8-1-197.",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-197",
+            "proposition": "Ala. Code § 8-1-197 supports that the Act governs instead of a foreign law whose application would violate the fundamental public policy the Act expresses.",
+            "verbatimQuote": "Therefore, this article shall govern and shall be applied instead of any foreign laws that might otherwise be applicable in those instances when the application of those foreign laws would violate a fundamental public policy expressed in this article.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-197-govern-col"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate with an Alabama edge: the formation rules — writing, all-parties signatures, adequate consideration — apply to the document containing the covenant, so any amendment or restatement that carries the covenant forward must itself be signed by everyone, employer included. Check the amendment mechanics so a routine refresh cannot quietly produce an unsigned covenant document.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-192-amendment",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-192",
+            "citation": "Ala. Code § 8-1-192.",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-192",
+            "proposition": "Ala. Code § 8-1-192 supports that a covenant must be in writing, signed by all parties, and supported by adequate consideration to be valid.",
+            "verbatimQuote": "In order to be valid, any contract or agreement executed pursuant to this article shall be reduced to writing, signed by all parties, and be supported by adequate consideration.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-192-amendment"
+          }
+        ]
+      },
+      {
+        "requirementId": "fit-covenant-within-a-statutory-exception",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.alabama.fit-covenant-within-a-statutory-exception",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covenant fits a statutory exception",
+        "sectionId": "alabama-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#fit-covenant-within-a-statutory-exception",
+        "requirementGuidance": "Start every Alabama review here: each restraint must fit one of the six listed exceptions — employee no-hire for uniquely essential workers, exclusive dealing, sale of business, employee non-competes, current-customer non-solicits, and dissolution covenants. The baseline rule voids any restraint on a lawful profession, trade, or business except as the statute provides, and a covenant outside the list is not trimmed to fit — the statute authorizes voiding it in its entirety. Map each covenant in the agreement to its category by name before reviewing anything else.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-190-void-gate",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-190",
+            "citation": "Ala. Code § 8-1-190(a).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-190",
+            "proposition": "Ala. Code § 8-1-190(a) supports the rule that every contract restraining a lawful profession, trade, or business is void except as the section otherwise allows.",
+            "verbatimQuote": "Every contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind otherwise than is provided by this section is to that extent void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-190-void-gate"
+          },
+          {
+            "sourceId": "ala-193-void-gate",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-193",
+            "citation": "Ala. Code § 8-1-193.",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-193",
+            "proposition": "Ala. Code § 8-1-193 supports that a restraint that does not fall within the § 8-1-190(b) exceptions may be voided in its entirety.",
+            "verbatimQuote": "If a contractually specified restraint does not fall within the limited exceptions set out in subsection (b) of Section 8-1-190, a court may void the restraint in its entirety.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-193-void-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "protect-a-listed-protectable-interest",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.alabama.protect-a-listed-protectable-interest",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protectable interest behind the covenant",
+        "sectionId": "alabama-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#protect-a-listed-protectable-interest",
+        "requirementGuidance": "Fitting a category is necessary but not sufficient — the covenant must also protect an interest the statute lists: trade secrets, confidential information, relationships with specific existing or prospective customers, goodwill, or qualifying specialized training. Job skills alone never qualify. And if specialized training is the claimed interest, check the drafting mechanic: the training and its expense must be specifically set out in writing in the agreement as the consideration for the restraint, so a boilerplate training recital earns nothing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-191-customers-gate",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-191",
+            "citation": "Ala. Code § 8-1-191(a)(3).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-191",
+            "proposition": "Ala. Code § 8-1-191(a)(3) supports that commercial relationships with specific prospective or existing customers are a protectable interest.",
+            "verbatimQuote": "Commercial relationships or contacts with specific prospective or existing customers, patients, vendors, or clients.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-191-customers-gate"
+          },
+          {
+            "sourceId": "ala-191-jobskills-gate",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-191",
+            "citation": "Ala. Code § 8-1-191(b).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-191",
+            "proposition": "Ala. Code § 8-1-191(b) supports that job skills by themselves are not a protectable interest.",
+            "verbatimQuote": "Job skills in and of themselves, without more, are not protectable interests.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-191-jobskills-gate"
+          },
+          {
+            "sourceId": "ala-191-training-gate",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-191",
+            "citation": "Ala. Code § 8-1-191(a)(5).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-191",
+            "proposition": "Ala. Code § 8-1-191(a)(5) supports that specialized training is a protectable interest only when the training is specifically set forth in writing as the consideration for the restraint.",
+            "verbatimQuote": "Specialized and unique training involving substantial business expenditure specifically directed to a particular agent, servant, or employee; provided that such training is specifically set forth in writing as the consideration for the restraint.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-191-training-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-all-parties-signature-on-the-covenant-document",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.alabama.require-all-parties-signature-on-the-covenant-document",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employer signature on the covenant document",
+        "sectionId": "alabama-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#require-all-parties-signature-on-the-covenant-document",
+        "requirementGuidance": "Inspect the signature block of the document that contains the covenant — not the offer letter, not the handbook acknowledgement. Alabama requires the covenant to be in writing, signed by all parties, and supported by adequate consideration, and the state supreme court has voided a covenant where the employer signed the covenant addendum two years late, rejecting assent-by-conduct and full performance as substitutes. An unsigned or late-signed covenant document is a defect no other clause in the agreement can repair.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-192-gate",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-192",
+            "citation": "Ala. Code § 8-1-192.",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-192",
+            "proposition": "Ala. Code § 8-1-192 supports that a covenant must be in writing, signed by all parties, and supported by adequate consideration to be valid.",
+            "verbatimQuote": "In order to be valid, any contract or agreement executed pursuant to this article shall be reduced to writing, signed by all parties, and be supported by adequate consideration.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-192-gate"
+          },
+          {
+            "sourceId": "howard-affirm-gate",
+            "authorityType": "case-law",
+            "title": "Amanda Howard Real Estate, LLC v. Lee",
+            "citation": "Amanda Howard Real Estate, LLC v. Lee, 387 So. 3d 120 (Ala. 2023).",
+            "url": "https://www.cunninghambounds.com/documents/appellate-blog-category-/Howard-Real-Estate-LLC-v-Lee-and-JRHBW-Realty-Inc..pdf",
+            "proposition": "Amanda Howard Real Estate v. Lee supports that a covenant is void where the employer did not satisfy the statutory all-parties signature requirement of § 8-1-192.",
+            "verbatimQuote": "We affirm the judgment because none of Howard Real Estate's arguments establish that it satisfied the statutory signatures requirement.",
+            "date": "2023-06-30",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-howard-affirm-gate"
+          },
+          {
+            "sourceId": "howard-thing-signed-gate",
+            "authorityType": "case-law",
+            "title": "Amanda Howard Real Estate, LLC v. Lee",
+            "citation": "Amanda Howard Real Estate, LLC v. Lee, 387 So. 3d 120 (Ala. 2023).",
+            "url": "https://www.cunninghambounds.com/documents/appellate-blog-category-/Howard-Real-Estate-LLC-v-Lee-and-JRHBW-Realty-Inc..pdf",
+            "proposition": "Amanda Howard Real Estate v. Lee supports that the document that must be signed by all parties is the contract or agreement containing the noncompete provision.",
+            "verbatimQuote": "Thus, the thing that must be signed by all parties is the \"contract or agreement\" containing the noncompete provision.",
+            "date": "2023-06-30",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-howard-thing-signed-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "avoid-execution-before-the-employment-relationship-exists",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.alabama.avoid-execution-before-the-employment-relationship-exists",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No signing before employment begins",
+        "sectionId": "alabama-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#avoid-execution-before-the-employment-relationship-exists",
+        "requirementGuidance": "The covenant must not be signed before the employer-employee relationship exists. The Alabama Supreme Court held a covenant signed about a month before employment began void, and held that the voidness did not disappear when employment later started — nor could payment fix it, since the statute presupposes covenants supported by consideration. The employee exceptions in the current Act are written the same relationship-first way. Verify the execution date against the start date, and after any acquisition that changes the employing entity, look for a re-executed covenant with the new employer.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pitney-timing-gate",
+            "authorityType": "case-law",
+            "title": "Pitney Bowes, Inc. v. Berney Office Solutions",
+            "citation": "Pitney Bowes, Inc. v. Berney Office Solutions, 823 So. 2d 659 (Ala. 2001).",
+            "url": "https://www.courtlistener.com/opinion/1099624/pitney-bowes-inc-v-berney-office-solutions/",
+            "deepLink": "https://www.courtlistener.com/opinion/1099624/pitney-bowes-inc-v-berney-office-solutions/#:~:text=The%20voidness%20of%20the%20agreement,a%20month%20after%20the%20signing.",
+            "proposition": "Pitney Bowes, construing the former § 8-1-1, supports that a covenant signed before the employer-employee relationship existed is void and is not cured when employment later begins.",
+            "verbatimQuote": "The voidness of the agreement in this case did not disappear when Pitney employed Morris almost a month after the signing.",
+            "date": "2001-12-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-pitney-timing-gate"
+          },
+          {
+            "sourceId": "pitney-consideration-gate",
+            "authorityType": "case-law",
+            "title": "Pitney Bowes, Inc. v. Berney Office Solutions",
+            "citation": "Pitney Bowes, Inc. v. Berney Office Solutions, 823 So. 2d 659 (Ala. 2001).",
+            "url": "https://www.courtlistener.com/opinion/1099624/pitney-bowes-inc-v-berney-office-solutions/",
+            "deepLink": "https://www.courtlistener.com/opinion/1099624/pitney-bowes-inc-v-berney-office-solutions/#:~:text=This%20statute%2C%20however%2C%20presupposes%20noncompete%20agreements%20supported%20by%20consideration.",
+            "proposition": "Pitney Bowes, construing the former § 8-1-1, supports that the restrictive-covenant statute presupposes a covenant already supported by consideration, so paying for the covenant does not by itself save an otherwise void restraint.",
+            "verbatimQuote": "This statute, however, presupposes noncompete agreements supported by consideration.",
+            "date": "2001-12-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-pitney-consideration-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-covenants-that-bar-professional-practice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.alabama.exclude-covenants-that-bar-professional-practice",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No practice ban on exempt professionals",
+        "sectionId": "alabama-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#exclude-covenants-that-bar-professional-practice",
+        "requirementGuidance": "The agreement must not restrain a member of a recognized profession from practicing it. The Act preserves the common-law professional exemption, and a professional cannot fall within the statutory exceptions at all — so the covenant fails against the professional even when its drafting is otherwise perfect. Courts have applied the exemption to physicians, certified public accountants, veterinarians, and physical therapists, and the class is open-ended: any occupation with demanding training, delicate services, and instantaneous judgment calls is a candidate. The exemption protects the practice itself; restraints on business conduct outside the practice can still operate.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-196-gate",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-196",
+            "citation": "Ala. Code § 8-1-196.",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-196",
+            "proposition": "Ala. Code § 8-1-196 supports that the Act does not eliminate any professional exemption recognized by Alabama law.",
+            "verbatimQuote": "Nothing in this article shall be construed to eliminate any professional exemption recognized by Alabama law.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-196-gate"
+          },
+          {
+            "sourceId": "friddle-cannot-fall-gate",
+            "authorityType": "case-law",
+            "title": "Friddle v. Raymond",
+            "citation": "Friddle v. Raymond, 575 So. 2d 1038 (Ala. 1991).",
+            "url": "https://www.courtlistener.com/opinion/1839261/friddle-v-raymond/",
+            "deepLink": "https://www.courtlistener.com/opinion/1839261/friddle-v-raymond/#:~:text=this%20Court%20has%20stated%20on,fall%20within%20these%20statutory%20exceptions.",
+            "proposition": "Friddle v. Raymond, construing the former § 8-1-1, supports that a professional cannot fall within the statutory exceptions, so a covenant not to compete against a professional is unenforceable.",
+            "verbatimQuote": "this Court has stated on numerous occasions that a \"professional\" cannot fall within these statutory exceptions.",
+            "date": "1991-01-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-friddle-cannot-fall-gate"
+          },
+          {
+            "sourceId": "benchmark-pt-gate",
+            "authorityType": "case-law",
+            "title": "Benchmark Medical Holdings, Inc. v. Barnes",
+            "citation": "Benchmark Med. Holdings, Inc. v. Barnes, 328 F. Supp. 2d 1236 (M.D. Ala. 2004).",
+            "url": "https://www.courtlistener.com/opinion/2438759/benchmark-medical-holdings-inc-v-barnes/",
+            "deepLink": "https://www.courtlistener.com/opinion/2438759/benchmark-medical-holdings-inc-v-barnes/#:~:text=Because%20a%20physical%20therapist%20as,not%20subject%20to%20non%2Dcompetition%20agreements.",
+            "proposition": "Benchmark Medical Holdings v. Barnes, construing the former § 8-1-1, supports that a physical therapist is a professional and therefore is not subject to a non-compete that bars the practice of the profession under Alabama law.",
+            "verbatimQuote": "Because a physical therapist as a professional cannot fall within either of these statutory exceptions, the general rule that non-compete agreements are invalid applies; therefore, physical therapists are not subject to non-competition agreements.",
+            "date": "2004-07-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-benchmark-pt-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-durations-within-the-statutory-presumptions",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.alabama.keep-durations-within-the-statutory-presumptions",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Durations inside the statutory presumptions",
+        "sectionId": "alabama-statutory-gates",
+        "itemNumber": "19.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#keep-durations-within-the-statutory-presumptions",
+        "requirementGuidance": "Check each covenant's term against its category's presumptively reasonable window: two years or less for an employee non-compete, eighteen months — or as long as post-separation consideration is paid, whichever is greater — for a current-customer non-solicit, and one year or less for a sale-of-business restraint. The presumptions are rebuttable, but a term outside the window surrenders the statutory presumption and hands the court a reason to reform the duration down.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-190-two-year-gate",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-190",
+            "citation": "Ala. Code § 8-1-190(b)(4).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-190",
+            "proposition": "Ala. Code § 8-1-190(b)(4) supports that an employee non-compete restraint of two years or less is presumed reasonable.",
+            "verbatimQuote": "Restraints of two years or less are presumed to be reasonable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-190-two-year-gate"
+          },
+          {
+            "sourceId": "ala-190-nonsolicit-gate",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-190",
+            "citation": "Ala. Code § 8-1-190(b)(5).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-190",
+            "proposition": "Ala. Code § 8-1-190(b)(5) supports the current-customer non-solicitation exception and its eighteen-month (or paid-consideration) presumption of reasonableness.",
+            "verbatimQuote": "Restraints of 18 months or for as long as post-separation consideration is paid for such agreement, whichever is greater, are presumed to be reasonable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-190-nonsolicit-gate"
+          },
+          {
+            "sourceId": "ala-190-sale-gate",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-190",
+            "citation": "Ala. Code § 8-1-190(b)(3).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-190",
+            "proposition": "Ala. Code § 8-1-190(b)(3) supports that a sale-of-business covenant restraint of one year or less is presumed reasonable.",
+            "verbatimQuote": "Restraints of one year or less are presumed to be reasonable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-190-sale-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "limit-no-hire-covenants-to-uniquely-essential-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.alabama.limit-no-hire-covenants-to-uniquely-essential-employees",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No-hire limited to uniquely essential workers",
+        "sectionId": "alabama-statutory-gates",
+        "itemNumber": "19.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#limit-no-hire-covenants-to-uniquely-essential-employees",
+        "requirementGuidance": "Any restraint on hiring or employing another party's workers must be confined to workers holding a position uniquely essential to the management, organization, or service of the business — that is the entire reach of the category, and it is a high bar that few rank-and-file or mid-level employees will meet. A clause covering the whole workforce, or everyone the departing worker supervised, does not fit the category and inherits the void rule. Ask the employer to identify, role by role, why each covered position is uniquely essential.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ala-190-no-hire-gate",
+            "authorityType": "primary-law",
+            "title": "Ala. Code § 8-1-190",
+            "citation": "Ala. Code § 8-1-190(b)(1).",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama/8-1-190",
+            "proposition": "Ala. Code § 8-1-190(b)(1) supports that an employee no-hire covenant is allowed only where the worker holds a position uniquely essential to the business.",
+            "verbatimQuote": "A contract between two or more persons or businesses or a person and a business limiting their ability to hire or employ the agent, servant, or employees of a party to the contract where the agent, servant, or employee holds a position uniquely essential to the management, organization, or service of the business.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/alabama#src-ala-190-no-hire-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

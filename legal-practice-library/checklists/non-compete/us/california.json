@@ -1,0 +1,1300 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/california",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/california.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/california",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/california/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/california/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "california",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — California",
+      "description": "A clause-by-clause reviewer checklist for California employee restrictive covenant agreements — Bus. & Prof. Code § 16600 voids non-competes and customer non-solicits by default, so the review screens for void clauses that create employer liability and checks the surviving confidentiality suite.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "California",
+      "coverage": "California (US)",
+      "lastReviewed": "2026-06-11",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 42,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "california-statutory-gates",
+        "label": "California statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#identify-parties",
+        "requirementGuidance": "Confirm which entity is actually a party, because in California the entity question decides which legal box the covenant sits in: a covenant with the employer in an employment agreement is tested under the void-by-default rule, a covenant with a buyer in a purchase agreement can claim the sale-of-business exception, and a management entity controlled by private equity faces its own healthcare-specific prohibition. A mismatched or ambiguous party line muddies all three analyses.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#identify-effective-date",
+        "requirementGuidance": "The date matters less here than in most states for the core question — a void restraint is unenforceable regardless of where and when the contract was signed — but it still selects the modern statutory layers: Labor Code section 925 reaches contracts entered into, modified, or extended on or after January 1, 2017, and the stay-or-pay and healthcare rules attach to contracts under the regimes taking effect January 1, 2026. An undated instrument leaves those gates unanchored.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-16600-5-when-signed",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16600.5",
+            "citation": "Cal. Bus. & Prof. Code § 16600.5(a).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.5",
+            "proposition": "Section 16600.5(a) provides that a contract void under the chapter is unenforceable regardless of where and when it was signed.",
+            "verbatimQuote": "Any contract that is void under this chapter is unenforceable regardless of where and when the contract was signed.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-16600-5-when-signed"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#identify-employee-title",
+        "requirementGuidance": "Record the role, but do not look for an executive exception — California has none, and no level of seniority or pay buys back a void restraint. The title still earns its place in review: it flags licensed health-care providers (who get extra statutory protection), and it frames what trade secrets the worker plausibly touches, which is the interest the surviving confidentiality suite actually protects.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated — and read any selection of another state's law for a California-based employee as a red flag, not a workaround. Labor Code section 925 lets an employee who primarily resides and works in California void a clause that strips California law or forces litigation elsewhere, unless the employee negotiated it with their own lawyer.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-925-conditions",
+            "authorityType": "primary-law",
+            "title": "Cal. Lab. Code § 925",
+            "citation": "Cal. Lab. Code § 925(a).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=925",
+            "proposition": "Labor Code section 925(a) bars requiring a California-resident-and-working employee, as a condition of employment, to adjudicate California claims elsewhere or to give up the substantive protection of California law; by subdivision (e) it does not apply where the employee was individually represented by counsel in negotiating the clause.",
+            "verbatimQuote": "An employer shall not require an employee who primarily resides and works in California, as a condition of employment, to agree to a provision that would do either of the following: (1) Require the employee to adjudicate outside of California a claim arising in California. (2) Deprive the employee of the substantive protection of California law with respect to a controversy arising in California.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-925-conditions"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#define-confidential-information",
+        "requirementGuidance": "In California this definition carries the whole protective program, so test its breadth twice: once for whether it actually captures the sensitive material, and once for whether it captures too much. A definition that locks up the employee's general skills, industry knowledge, or everything learned on the job operates as a non-compete in disguise — and a court will void it as one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-brown-de-facto-defs",
+            "authorityType": "case-law",
+            "title": "Brown v. TGS Management Co., LLC",
+            "citation": "Brown v. TGS Mgmt. Co., 57 Cal. App. 5th 303 (2020).",
+            "url": "https://www.courtlistener.com/opinion/4805583/brown-v-tgs-management-co-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4805583/brown-v-tgs-management-co-llc/#:~:text=Collectively%2C%20these%20overly%20restrictive%20provisions,chosen%20profession%20of%20statistical%20arbitrage.",
+            "proposition": "Brown held that confidentiality provisions defined so broadly that they barred the employee from working in his field operated as a de facto non-compete and were void under section 16600.",
+            "verbatimQuote": "Collectively, these overly restrictive provisions operate as a de facto noncompete provision; they plainly bar Brown in perpetuity from doing any work in the securities field, much less in his chosen profession of statistical arbitrage.",
+            "date": "2020-11-12",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-brown-de-facto-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#define-trade-secrets",
+        "requirementGuidance": "Define trade secrets separately and concretely, because trade-secret law is the enforcement tool California actually hands the employer: an injunction against actual or threatened misappropriation, no covenant required. Precision pays off in litigation too — before discovery, the employer must identify the claimed secret with reasonable particularity, and a contract definition written at that level of specificity is a head start.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-cutsa-injunction-defs",
+            "authorityType": "primary-law",
+            "title": "Cal. Civ. Code § 3426.2",
+            "citation": "Cal. Civ. Code § 3426.2(a).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=3426.2",
+            "proposition": "Civil Code section 3426.2(a), part of the California Uniform Trade Secrets Act, authorizes an injunction against actual or threatened misappropriation of a trade secret.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-cutsa-injunction-defs"
+          },
+          {
+            "sourceId": "ca-2019-210-particularity",
+            "authorityType": "primary-law",
+            "title": "Cal. Civ. Proc. Code § 2019.210",
+            "citation": "Cal. Civ. Proc. Code § 2019.210.",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CCP&sectionNum=2019.210",
+            "proposition": "Code of Civil Procedure section 2019.210 requires a party alleging trade-secret misappropriation to identify the trade secret with reasonable particularity before commencing discovery relating to it.",
+            "verbatimQuote": "before commencing discovery relating to the trade secret, the party alleging the misappropriation shall identify the trade secret with reasonable particularity",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-2019-210-particularity"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#define-restricted-period",
+        "requirementGuidance": "The umbrella defined term has a shorter reach in California — the void covenants never get a clock — but it still disciplines whatever survives: a finite confidentiality term for non-secret information and, if the parties take the risk, an employee non-solicit. Confirm every surviving duration references one auditable definition instead of running on its own.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#define-covered-employees",
+        "requirementGuidance": "If an employee non-solicit appears at all (see the covenant section below — it is presumptively risky here), the Covered Employees class is its best defense: colleagues the departing worker actually worked with or supervised during a stated look-back window, nothing broader. A class that sweeps in the whole workforce reads as a restraint on the recruiting profession itself — exactly what doomed the clause in the leading modern case.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-amn-defs",
+            "authorityType": "case-law",
+            "title": "AMN Healthcare, Inc. v. Aya Healthcare Services, Inc.",
+            "citation": "AMN Healthcare, Inc. v. Aya Healthcare Servs., Inc., 28 Cal. App. 5th 923 (2018).",
+            "url": "https://www.courtlistener.com/opinion/4549721/amn-healthcare-inc-v-aya-healthcare-services-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4549721/amn-healthcare-inc-v-aya-healthcare-services-inc/#:~:text=Turning%20to%20the%20instant%20case%2C,is%20void%20under%20section%2016600.",
+            "proposition": "AMN Healthcare independently concluded that the employee non-solicitation provision was void under section 16600 because it restrained the recruiters' chosen profession.",
+            "verbatimQuote": "Turning to the instant case, we independently conclude that the nonsolicitation of employee provision in the CNDA is void under section 16600.",
+            "date": "2018-11-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-amn-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#define-protected-interests",
+        "requirementGuidance": "Name the interests, but understand what they can and cannot do in California: recitals about goodwill, customer relationships, or investment in training do not make a restraint lawful, because the statute voids restraints on lawful work without weighing the employer's interests. What the definition should foreground is the trade-secret and confidential-information interest — the one interest the surviving suite genuinely protects.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-16600-void-defs",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16600",
+            "citation": "Cal. Bus. & Prof. Code § 16600(a).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600",
+            "proposition": "Section 16600(a) voids any contract that restrains a person from engaging in a lawful profession, trade, or business, except as provided in the chapter.",
+            "verbatimQuote": "Except as provided in this chapter, every contract by which anyone is restrained from engaging in a lawful profession, trade, or business of any kind is to that extent void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-16600-void-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where any clause restricts owning or investing in competitors, check for a passive-holdings carve-out below a stated threshold. In California the stakes are sharper than overbreadth: a restriction that reaches ordinary public-company shares restrains participation in lawful business, and the statute voids restraints of that kind to that extent rather than trimming them.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-16600-void-defs",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16600",
+            "citation": "Cal. Bus. & Prof. Code § 16600(a).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600",
+            "proposition": "Section 16600(a) voids any contract that restrains a person from engaging in a lawful profession, trade, or business, except as provided in the chapter.",
+            "verbatimQuote": "Except as provided in this chapter, every contract by which anyone is restrained from engaging in a lawful profession, trade, or business of any kind is to that extent void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-16600-void-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#define-passive-public-holdings",
+        "requirementGuidance": "Optional drafting machinery — the carve-out can live inline without a capitalized term. Where the defined term does appear, confirm its ownership threshold matches the operative carve-out language it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#define-solicit",
+        "requirementGuidance": "Confine the term to initiating contact. The older California decision that upheld an anti-raiding clause treated it as only a slight restraint precisely because it left people free to respond to opportunities on their own initiative; a definition that also captures accepting an unsolicited application or inquiry widens the clause toward the restraint-on-a-profession territory where the modern case law voids it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-loral-defs",
+            "authorityType": "case-law",
+            "title": "Loral Corp. v. Moyes",
+            "citation": "Loral Corp. v. Moyes, 174 Cal. App. 3d 268 (1985).",
+            "url": "https://www.courtlistener.com/opinion/2140771/loral-corp-v-moyes/",
+            "deepLink": "https://www.courtlistener.com/opinion/2140771/loral-corp-v-moyes/#:~:text=This%20does%20not%20appear%20to,on%20disclosure%20of%20confidential%20information.",
+            "proposition": "Loral upheld an employee anti-raiding covenant, treating it as no more significant a restraint than a restriction on soliciting customers or disclosing confidential information — the older view AMN Healthcare later questioned.",
+            "verbatimQuote": "This does not appear to be any more of a significant restraint on his engaging in his profession, trade or business than a restraint on solicitation of customers or on disclosure of confidential information.",
+            "date": "1985-11-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-loral-defs"
+          },
+          {
+            "sourceId": "ca-amn-defs",
+            "authorityType": "case-law",
+            "title": "AMN Healthcare, Inc. v. Aya Healthcare Services, Inc.",
+            "citation": "AMN Healthcare, Inc. v. Aya Healthcare Servs., Inc., 28 Cal. App. 5th 923 (2018).",
+            "url": "https://www.courtlistener.com/opinion/4549721/amn-healthcare-inc-v-aya-healthcare-services-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4549721/amn-healthcare-inc-v-aya-healthcare-services-inc/#:~:text=Turning%20to%20the%20instant%20case%2C,is%20void%20under%20section%2016600.",
+            "proposition": "AMN Healthcare independently concluded that the employee non-solicitation provision was void under section 16600 because it restrained the recruiters' chosen profession.",
+            "verbatimQuote": "Turning to the instant case, we independently conclude that the nonsolicitation of employee provision in the CNDA is void under section 16600.",
+            "date": "2018-11-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-amn-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger treats resignation, dismissal, and the end of a fixed term identically. The clocks that survive in California — the finite confidentiality term and any retained non-solicit — all start at this event, and an ambiguous trigger leaves the only enforceable durations on the page unanchored.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#acknowledge-timing",
+        "requirementGuidance": "California imposes no covenant-specific consideration or advance-notice ritual for the surviving suite, so this acknowledgement works as evidence rather than as a statutory gate. It still earns review: the signing date establishes whether the contract falls under the post-2017 choice-of-law protections — which also catch later modifications and extensions — and whether the 2026 stay-or-pay regime reaches it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-925-timing",
+            "authorityType": "primary-law",
+            "title": "Cal. Lab. Code § 925",
+            "citation": "Cal. Lab. Code § 925(a).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=925",
+            "proposition": "Labor Code section 925(a) bars conditioning employment on out-of-state adjudication or loss of California law for a California-based employee; by subdivision (f) it applies to contracts entered into, modified, or extended on or after January 1, 2017, and by subdivision (e) it does not apply where the employee was individually represented by counsel in negotiating the clause.",
+            "verbatimQuote": "An employer shall not require an employee who primarily resides and works in California, as a condition of employment, to agree to a provision that would do either of the following: (1) Require the employee to adjudicate outside of California a claim arising in California. (2) Deprive the employee of the substantive protection of California law with respect to a controversy arising in California.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-925-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "In California this acknowledgement does unusual, double-edged work. Generic procedural-fairness value aside, the statute carves out forum and choice-of-law clauses that the employee negotiated while individually represented by counsel — so a recital of mere opportunity to consult does not trigger that exception, and a recital of actual individual representation in negotiation changes what the governing-law clause can lawfully do. Read it carefully and confirm it matches what really happened.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-925-timing",
+            "authorityType": "primary-law",
+            "title": "Cal. Lab. Code § 925",
+            "citation": "Cal. Lab. Code § 925(a).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=925",
+            "proposition": "Labor Code section 925(a) bars conditioning employment on out-of-state adjudication or loss of California law for a California-based employee; by subdivision (f) it applies to contracts entered into, modified, or extended on or after January 1, 2017, and by subdivision (e) it does not apply where the employee was individually represented by counsel in negotiating the clause.",
+            "verbatimQuote": "An employer shall not require an employee who primarily resides and works in California, as a condition of employment, to agree to a provision that would do either of the following: (1) Require the employee to adjudicate outside of California a claim arising in California. (2) Deprive the employee of the substantive protection of California law with respect to a controversy arising in California.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-925-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Let the trade-secret obligation run as long as secrecy does — federal law defines the right that way, and in California this clause is not a supplement to the covenant program, it is the program. With every competition restraint off the table, an employer that contractually expires its own trade-secret protection on a fixed date has surrendered its principal remaining remedy for nothing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-dtsa-1839",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-dtsa-1839"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary, non-secret confidential information its own finite term. In California a perpetual lid on everything the worker ever learned is more than untidy drafting — paired with a broad definition, it is the pattern courts have condemned as a non-compete in disguise, voiding the provisions outright. The two-track structure keeps perpetual protection where the law supports it and a sunset everywhere else.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-brown-duration",
+            "authorityType": "case-law",
+            "title": "Brown v. TGS Management Co., LLC",
+            "citation": "Brown v. TGS Mgmt. Co., 57 Cal. App. 5th 303 (2020).",
+            "url": "https://www.courtlistener.com/opinion/4805583/brown-v-tgs-management-co-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4805583/brown-v-tgs-management-co-llc/#:~:text=Collectively%2C%20these%20overly%20restrictive%20provisions,chosen%20profession%20of%20statistical%20arbitrage.",
+            "proposition": "Brown shows the consequence of overbroad, effectively perpetual confidentiality drafting: the provisions operated as a de facto non-compete and were void.",
+            "verbatimQuote": "Collectively, these overly restrictive provisions operate as a de facto noncompete provision; they plainly bar Brown in perpetuity from doing any work in the securities field, much less in his chosen profession of statistical arbitrage.",
+            "date": "2020-11-12",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-brown-duration"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law applies in California with extra bite: because trade-secret litigation is the main enforcement channel left to a California employer, forfeiting exemplary damages and attorney fees by omitting the immunity notice gives up remedies the employer will actually want. Confirm the notice is present in any agreement governing confidential information.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Wages, hours, and working conditions must remain discussable whatever the confidentiality and non-disparagement clauses say — federal labor law protects that speech in every state, and the Board strikes clauses broad enough to chill it. A California reviewer should treat this carve-out as one more place where overbroad language converts a routine clause into a legal violation.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-nlra-section-7",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-nlra-section-7"
+          },
+          {
+            "sourceId": "ca-mclaren-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-mclaren-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. No contract overrides compelled process, and in a state whose courts already read protective language against the employer, an agreement that pretends otherwise invites the broader overbreadth attack.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. Because a California employer protects itself through trade-secret claims rather than competition restraints, the signed certification is often the single best exhibit it will have — contemporaneous proof of what the departing worker represented about devices, files, and copies if protected material later surfaces at a competitor.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-employee-nonsolicit-as-presumptively-void",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.treat-employee-nonsolicit-as-presumptively-void",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit (probably void)",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#treat-employee-nonsolicit-as-presumptively-void",
+        "requirementGuidance": "The agreement should not include an employee non-solicit or no-hire clause for a California employee. The older authority that tolerated anti-raiding clauses as a slight restraint has been openly questioned by the modern appellate decision voiding an employee non-solicit as a restraint on the workers' profession, federal courts have largely followed the modern view, and the state supreme court has not resolved the split. If the parties keep the clause anyway, it must be the narrow kind — active solicitation only, scoped to actual colleagues — and everyone should understand a court will more likely void it than enforce it, with the statutory exposure that now follows a void restraint.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-amn-covenants",
+            "authorityType": "case-law",
+            "title": "AMN Healthcare, Inc. v. Aya Healthcare Services, Inc.",
+            "citation": "AMN Healthcare, Inc. v. Aya Healthcare Servs., Inc., 28 Cal. App. 5th 923 (2018).",
+            "url": "https://www.courtlistener.com/opinion/4549721/amn-healthcare-inc-v-aya-healthcare-services-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4549721/amn-healthcare-inc-v-aya-healthcare-services-inc/#:~:text=Turning%20to%20the%20instant%20case%2C,is%20void%20under%20section%2016600.",
+            "proposition": "AMN Healthcare independently concluded that the employee non-solicitation provision was void under section 16600 and questioned whether Loral's reasonableness approach survives Edwards.",
+            "verbatimQuote": "Turning to the instant case, we independently conclude that the nonsolicitation of employee provision in the CNDA is void under section 16600.",
+            "date": "2018-11-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-amn-covenants"
+          },
+          {
+            "sourceId": "ca-loral-covenants",
+            "authorityType": "case-law",
+            "title": "Loral Corp. v. Moyes",
+            "citation": "Loral Corp. v. Moyes, 174 Cal. App. 3d 268 (1985).",
+            "url": "https://www.courtlistener.com/opinion/2140771/loral-corp-v-moyes/",
+            "deepLink": "https://www.courtlistener.com/opinion/2140771/loral-corp-v-moyes/#:~:text=This%20does%20not%20appear%20to,on%20disclosure%20of%20confidential%20information.",
+            "proposition": "Loral upheld an employee anti-raiding covenant as a slight restraint — the older view that AMN Healthcare questioned, leaving the split unresolved.",
+            "verbatimQuote": "This does not appear to be any more of a significant restraint on his engaging in his profession, trade or business than a restraint on solicitation of customers or on disclosure of confidential information.",
+            "date": "1985-11-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-loral-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "flag-customer-nonsolicit-as-void-restraint",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.flag-customer-nonsolicit-as-void-restraint",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit (void here)",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#flag-customer-nonsolicit-as-void-restraint",
+        "requirementGuidance": "The agreement must not restrict the former employee from soliciting or serving customers. California analyzes that clause as the same restraint of trade the statute voids — the state supreme court struck a customer non-solicitation covenant and refused any narrow-restraint analysis, so trimming the clause to key accounts or a short window does not save it. Finding it in an employment agreement is the finding: since 2024, including it is unlawful and attempting to enforce it is a civil violation.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-edwards-covenants",
+            "authorityType": "case-law",
+            "title": "Edwards v. Arthur Andersen LLP",
+            "citation": "Edwards v. Arthur Andersen LLP, 44 Cal. 4th 937 (2008).",
+            "url": "https://www.courtlistener.com/opinion/5608069/edwards-v-arthur-andersen-llp/",
+            "deepLink": "https://www.courtlistener.com/opinion/5608069/edwards-v-arthur-andersen-llp/#:~:text=We%20reject%20Andersen's%20contention%20that,prohibition%2Dagainst%2Drestraint%20rule%20under%20section%2016600.",
+            "proposition": "Edwards struck a customer non-solicitation covenant and rejected the narrow-restraint exception, so customer non-solicits are analyzed as restraints void under section 16600 in the employment context.",
+            "verbatimQuote": "We reject Andersen's contention that we should adopt a narrow-restraint exception to section 16600 and leave it to the Legislature, if it chooses, either to relax the statutory restrictions or adopt additional exceptions to the prohibition-against-restraint rule under section 16600.",
+            "date": "2008-08-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-edwards-covenants"
+          },
+          {
+            "sourceId": "ca-16600-1-covenants",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16600.1",
+            "citation": "Cal. Bus. & Prof. Code § 16600.1(a).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.1",
+            "proposition": "Section 16600.1(a) makes it unlawful to include a noncompete clause in an employment contract or to require an employee to enter one that does not satisfy a statutory exception.",
+            "verbatimQuote": "It shall be unlawful to include a noncompete clause in an employment contract, or to require an employee to enter a noncompete agreement, that does not satisfy an exception in this chapter.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-16600-1-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "flag-non-dealing-as-void-restraint",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.flag-non-dealing-as-void-restraint",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant (void here)",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#flag-non-dealing-as-void-restraint",
+        "requirementGuidance": "The agreement must not bar the former employee from doing business with covered customers — a non-dealing clause forecloses even relationships the customer initiates, which is more restraint than a non-solicit, not less. California does not grade restraints on a curve; a clause that takes any part of a lawful trade off the table for the worker is void to that extent, and a buyer of customer relationships gets no help from drafting it softly. The lawful protection for the customer base is the trade-secret and confidentiality program above.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-16600-void-covenants",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16600",
+            "citation": "Cal. Bus. & Prof. Code § 16600(a).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600",
+            "proposition": "Section 16600(a) voids any contract that restrains a person from engaging in a lawful profession, trade, or business, except as provided in the chapter.",
+            "verbatimQuote": "Except as provided in this chapter, every contract by which anyone is restrained from engaging in a lawful profession, trade, or business of any kind is to that extent void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-16600-void-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-employee-non-compete-as-void-and-unlawful",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.exclude-employee-non-compete-as-void-and-unlawful",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant (void and unlawful)",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#exclude-employee-non-compete-as-void-and-unlawful",
+        "requirementGuidance": "The agreement must not contain an employee non-compete. The statute voids any noncompete in an employment context no matter how narrowly tailored unless a statutory exception applies, so there is no duration, geography, or competitor list to evaluate — the clause's presence is itself the defect. And presence now costs money: including the clause is unlawful, entering into or attempting to enforce it is a civil violation with a private right of action and prevailing-worker fees. If this clause appears, route the review through the California statutory gates at the end of this checklist — the only live questions are the sale-of-business pathway and the cleanup obligations.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-16600-broadly-covenants",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16600",
+            "citation": "Cal. Bus. & Prof. Code § 16600(b)(1).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600",
+            "proposition": "Section 16600(b)(1) directs courts to read the restraint ban broadly to void any noncompete in an employment context, no matter how narrowly tailored, unless it satisfies a statutory exception.",
+            "verbatimQuote": "This section shall be read broadly, in accordance with Edwards v. Arthur Andersen LLP (2008) 44 Cal.4th 937, to void the application of any noncompete agreement in an employment context, or any noncompete clause in an employment contract, no matter how narrowly tailored, that does not satisfy an exception in this chapter.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-16600-broadly-covenants"
+          },
+          {
+            "sourceId": "ca-16600-5-covenants",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16600.5",
+            "citation": "Cal. Bus. & Prof. Code § 16600.5(d).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.5",
+            "proposition": "Section 16600.5(d) makes entering into or attempting to enforce a contract void under the chapter a civil violation.",
+            "verbatimQuote": "An employer that enters into a contract that is void under this chapter or attempts to enforce a contract that is void under this chapter commits a civil violation.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-16600-5-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#permit-non-investment",
+        "requirementGuidance": "Rare anywhere, and in California a clause to read with suspicion rather than tailor: a restriction on investing in competitors shades into restraining participation in lawful business, the territory the statute voids to that extent. If the clause appears, confirm the passive-holdings carve-out is intact and the restriction reaches no further than active, operational involvement — and treat anything broader as a candidate for the same void-restraint analysis as the covenants above.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-16600-void-covenants",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16600",
+            "citation": "Cal. Bus. & Prof. Code § 16600(a).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600",
+            "proposition": "Section 16600(a) voids any contract that restrains a person from engaging in a lawful profession, trade, or business, except as provided in the chapter.",
+            "verbatimQuote": "Except as provided in this chapter, every contract by which anyone is restrained from engaging in a lawful profession, trade, or business of any kind is to that extent void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-16600-void-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#require-non-disparagement",
+        "requirementGuidance": "Acceptable to include with a stated term, but in a state that polices overbreadth this aggressively, the carve-outs are the clause: truthful testimony, statements to government agencies, and protected workplace speech have to sit outside its reach, and federal labor law strikes versions broad enough to swallow them regardless of the governing state.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-mclaren-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-mclaren-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#address-physician-specific-rights",
+        "requirementGuidance": "For physicians and dental providers the general ban already does most of the work, but the dedicated clause should also reflect the 2026 healthcare layer: where private equity or a hedge fund is involved with the practice, a management or asset-sale contract cannot bar a provider from competing after leaving, and a preserved sale-of-business covenant is not allowed to function as an employee non-compete against the provider. An agreement in a sponsor-backed practice that is silent on this line was drafted for a different regime.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-sb351-ban",
+            "authorityType": "primary-law",
+            "title": "Cal. Health & Safety Code § 1191 (SB 351)",
+            "citation": "Cal. Health & Safety Code § 1191(d)(1).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1191",
+            "proposition": "Section 1191(d) bars a management or asset-sale contract with a private-equity- or hedge-fund-controlled entity from including any clause barring a provider from competing with the practice after a termination or resignation.",
+            "verbatimQuote": "shall not include any clause barring any provider in that practice from doing either of the following: (A) Competing with that practice in the event of a termination or resignation of that provider from that practice.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-sb351-ban"
+          },
+          {
+            "sourceId": "ca-sb351-sale-line",
+            "authorityType": "primary-law",
+            "title": "Cal. Health & Safety Code § 1191 (SB 351)",
+            "citation": "Cal. Health & Safety Code § 1191(d)(3)(A).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1191",
+            "proposition": "Section 1191(d)(3) preserves an otherwise enforceable sale-of-business noncompete but provides that a contract described in the subdivision shall not operate as an employee noncompete agreement.",
+            "verbatimQuote": "An otherwise enforceable sale of business noncompete agreement. However, a contract described in this subdivision shall not operate as an employee noncompete agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-sb351-sale-line"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. For a California hire it doubles as an intake screen for imported covenants: a restraint the worker signed in another state is unenforceable here if it is void under this chapter, no matter where or when it was signed — but the prior employer may still sue somewhere friendlier, so the representation surfaces the fight early instead of mid-onboarding.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-16600-5-incoming",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16600.5",
+            "citation": "Cal. Bus. & Prof. Code § 16600.5(a).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.5",
+            "proposition": "Section 16600.5(a) provides that a contract void under the chapter is unenforceable regardless of where and when it was signed — the rule that reaches covenants imported from other states.",
+            "verbatimQuote": "Any contract that is void under this chapter is unenforceable regardless of where and when the contract was signed.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-16600-5-incoming"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#address-notice-to-future-employers",
+        "requirementGuidance": "Optional everywhere, and in California close to radioactive: warning a new employer off a worker based on a covenant the statute voids reads as an attempt to enforce a void contract, which is itself a civil violation with the worker holding a private right of action. If a notice clause survives review at all, it should cover only obligations that are actually lawful here — confidentiality and trade-secret duties — and never the void covenant family.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-16600-5-attempt",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16600.5",
+            "citation": "Cal. Bus. & Prof. Code § 16600.5(d).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.5",
+            "proposition": "Section 16600.5(d) makes attempting to enforce a void covenant a civil violation — the exposure that third-party notice letters over void clauses can trigger.",
+            "verbatimQuote": "An employer that enters into a contract that is void under this chapter or attempts to enforce a contract that is void under this chapter commits a civil violation.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-16600-5-attempt"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#require-injunctive-relief-availability",
+        "requirementGuidance": "The irreparable-harm acknowledgement is fine to keep, but know what it attaches to in California: the injunction an employer can realistically get protects trade secrets — actual or threatened misappropriation may be enjoined — not compliance with a competition restraint. A remedies clause that recites irreparable harm from competition is scaffolding for a covenant the statute voids; one keyed to misuse of confidential information supports the claim the employer can actually bring.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-cutsa-injunction-remedies",
+            "authorityType": "primary-law",
+            "title": "Cal. Civ. Code § 3426.2",
+            "citation": "Cal. Civ. Code § 3426.2(a).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=3426.2",
+            "proposition": "Civil Code section 3426.2(a) authorizes an injunction against actual or threatened misappropriation of a trade secret — the injunction a California employer can realistically obtain.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-cutsa-injunction-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "12.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice — but notice that California has already placed a thumb on the scale: a worker who prevails against a void restraint recovers reasonable attorney fees and costs by statute, with no reciprocal right for the employer. A one-way employer fee clause cannot offset that, and an aggressive one invites the broader unconscionability and overreach narrative. Mutual, prevailing-party drafting is the defensible shape.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-16600-5-fees",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16600.5",
+            "citation": "Cal. Bus. & Prof. Code § 16600.5(e)(2).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.5",
+            "proposition": "Section 16600.5(e) entitles a prevailing employee, former employee, or prospective employee to recover reasonable attorney's fees and costs in an action based on a violation of the chapter.",
+            "verbatimQuote": "In addition to the remedies described in paragraph (1), a prevailing employee, former employee, or prospective employee in an action based on a violation of this chapter shall be entitled to recover reasonable attorney's fees and costs.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-16600-5-fees"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-without-reliance-on-judicial-narrowing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.draft-without-reliance-on-judicial-narrowing",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No court will narrow it",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#draft-without-reliance-on-judicial-narrowing",
+        "requirementGuidance": "Treat reformation language as a tell, not a tool. There is nothing for a California court to narrow a void covenant into — the statute voids an employment non-compete no matter how narrowly tailored, so every smaller version of the clause is just as void — and the exposure attached when the clause went into the contract, before any judge could look at it. A plain severability clause that drops the void provision and preserves the rest of the agreement is healthy; language asking a court to enforce restraints to the maximum extent permitted by law signals a form drafted for a different state and a covenant someone hoped to keep.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-16600-broadly-sev",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16600",
+            "citation": "Cal. Bus. & Prof. Code § 16600(b)(1).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600",
+            "proposition": "Section 16600(b)(1) voids any employment noncompete no matter how narrowly tailored — which leaves judicial narrowing with no lawful endpoint to narrow toward.",
+            "verbatimQuote": "This section shall be read broadly, in accordance with Edwards v. Arthur Andersen LLP (2008) 44 Cal.4th 937, to void the application of any noncompete agreement in an employment context, or any noncompete clause in an employment contract, no matter how narrowly tailored, that does not satisfy an exception in this chapter.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-16600-broadly-sev"
+          },
+          {
+            "sourceId": "ca-16600-1-sev",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16600.1",
+            "citation": "Cal. Bus. & Prof. Code § 16600.1(a).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.1",
+            "proposition": "Section 16600.1(a) makes including the noncompete clause itself unlawful — exposure that attaches at drafting and that no later judicial narrowing can cure.",
+            "verbatimQuote": "It shall be unlawful to include a noncompete clause in an employment contract, or to require an employee to enter a noncompete agreement, that does not satisfy an exception in this chapter.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-16600-1-sev"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each post-separation clock checkable on its own: perpetual for trade secrets, finite for other confidential information, and whatever the parties dared for a retained non-solicit. In California a bundled survival clause has one extra failure mode worth scanning for — quietly extending obligations that were void from the start, which keeps dead clauses looking alive to the next reader of the file.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. The California caution runs to acquirers: assignment moves the contract, but it cannot upgrade it — a void restraint stays void in the buyer's hands, and the sale-of-business exception protects only covenants given by a seller in the transaction documents, not employment-agreement covenants that ride along with the deal. Courts read the agreements together and void the one parked in the wrong instrument.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-fillpoint-assignment",
+            "authorityType": "case-law",
+            "title": "Fillpoint, LLC v. Maas",
+            "citation": "Fillpoint, LLC v. Maas, 208 Cal. App. 4th 1170 (2012).",
+            "url": "https://www.courtlistener.com/opinion/5811287/fillpoint-llc-v-maas/",
+            "deepLink": "https://www.courtlistener.com/opinion/5811287/fillpoint-llc-v-maas/#:~:text=In%20this%20case%2C%20when%20we,and%20unenforceable%20under%20California%20law.",
+            "proposition": "Fillpoint read the purchase and employment agreements together and held the covenant in the employment agreement void — an acquirer cannot launder an employment restraint through the transaction.",
+            "verbatimQuote": "In this case, when we read the two noncompetition covenants together, we hold that the noncompetition and nonsolicitation covenant contained in the employment agreement is void and unenforceable under California law.",
+            "date": "2012-08-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-fillpoint-assignment"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-california-law-and-forum-for-california-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.keep-california-law-and-forum-for-california-employees",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "California law and forum for California employees",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#keep-california-law-and-forum-for-california-employees",
+        "requirementGuidance": "For an employee who primarily resides and works in California, the agreement must not condition employment on litigating California claims elsewhere or on giving up California law — the employee can void such a clause, and a void restraint is unenforceable here regardless of where or when the contract was signed. Check for the one statutory escape hatch: a clause the employee negotiated while individually represented by counsel sits outside the rule. Then check the limit running the other way — a sister-state court is not bound to honor California's policy, and a federal appeals court has let another state's non-compete injunction stand against an executive who relocated to California — so a clean California clause protects the worker far better than after-the-fact reliance on the ban.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-925-forum",
+            "authorityType": "primary-law",
+            "title": "Cal. Lab. Code § 925",
+            "citation": "Cal. Lab. Code § 925(a).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=925",
+            "proposition": "Labor Code section 925(a) bars requiring a California-resident-and-working employee, as a condition of employment, to adjudicate California claims elsewhere or to give up the substantive protection of California law; by subdivision (e) it does not apply where the employee was individually represented by counsel in negotiating the clause.",
+            "verbatimQuote": "An employer shall not require an employee who primarily resides and works in California, as a condition of employment, to agree to a provision that would do either of the following: (1) Require the employee to adjudicate outside of California a claim arising in California. (2) Deprive the employee of the substantive protection of California law with respect to a controversy arising in California.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-925-forum"
+          },
+          {
+            "sourceId": "ca-16600-5-anywhere-gov",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16600.5",
+            "citation": "Cal. Bus. & Prof. Code § 16600.5(a).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.5",
+            "proposition": "Section 16600.5(a) provides that a contract void under the chapter is unenforceable regardless of where and when it was signed.",
+            "verbatimQuote": "Any contract that is void under this chapter is unenforceable regardless of where and when the contract was signed.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-16600-5-anywhere-gov"
+          },
+          {
+            "sourceId": "ca-draftkings",
+            "authorityType": "case-law",
+            "title": "DraftKings Inc. v. Hermalyn",
+            "citation": "DraftKings Inc. v. Hermalyn, 118 F.4th 416 (1st Cir. 2024).",
+            "url": "https://www.courtlistener.com/opinion/10125471/draftkings-inc-v-hermalyn/",
+            "deepLink": "https://www.courtlistener.com/opinion/10125471/draftkings-inc-v-hermalyn/#:~:text=Having%20considered%20the%20matter%20on,let%20the%20challenged%20order%20stand.",
+            "proposition": "In DraftKings v. Hermalyn the First Circuit applied Massachusetts law, upheld a preliminary injunction enforcing a Massachusetts non-compete against an executive who moved to California, and declined to treat California's policy as controlling — illustrating the limits of section 16600.5's extraterritorial reach.",
+            "verbatimQuote": "Having considered the matter on an expedited basis, we let the challenged order stand.",
+            "date": "2024-09-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-draftkings"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate with two California dates hiding in it. The choice-of-law protections cover contracts entered into, modified, or extended on or after January 1, 2017 — so a routine amendment can pull a legacy agreement into the modern rule even if the original predates it — and the stay-or-pay regime applies to contracts entered into on or after January 1, 2026, making re-papering an event that can convert a tolerated old term into a void one. Review the amendment mechanics knowing every refresh is also a regime check.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-925-modified",
+            "authorityType": "primary-law",
+            "title": "Cal. Lab. Code § 925",
+            "citation": "Cal. Lab. Code § 925(a).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=925",
+            "proposition": "Labor Code section 925 applies by subdivision (f) to contracts entered into, modified, or extended on or after January 1, 2017 — so amendments can bring older agreements within its protections.",
+            "verbatimQuote": "An employer shall not require an employee who primarily resides and works in California, as a condition of employment, to agree to a provision that would do either of the following: (1) Require the employee to adjudicate outside of California a claim arising in California. (2) Deprive the employee of the substantive protection of California law with respect to a controversy arising in California.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-925-modified"
+          },
+          {
+            "sourceId": "ca-16608-prospective",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16608 (AB 692)",
+            "citation": "Cal. Bus. & Prof. Code § 16608(c).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16608",
+            "proposition": "Section 16608(c) treats an unlawful stay-or-pay contract as a restraint of trade void under section 16600, but only if it was entered into on or after January 1, 2026.",
+            "verbatimQuote": "A contract that is unlawful under subdivision (b) is a contract restraining a person from engaging in a lawful profession, trade, or business, and is void under Section 16600 only if the contract was entered into on or after January 1, 2026.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-16608-prospective"
+          }
+        ]
+      },
+      {
+        "requirementId": "confirm-ab1076-notice-to-affected-workers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.confirm-ab1076-notice-to-affected-workers",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice for past void clauses sent",
+        "sectionId": "california-statutory-gates",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#confirm-ab1076-notice-to-affected-workers",
+        "requirementGuidance": "If this agreement — or the form family it came from — ever carried a void non-compete or customer non-solicit, ask the compliance question the document itself cannot answer: did the employer notify the affected workers that the clause is void? The 2024 notice obligation came with a February 14, 2024 deadline, a violation is an act of unfair competition, and the Attorney General has publicly told workers these rights are enforceable. A legacy form review is not finished until someone produces the notice or owns the gap.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-16600-1-ucl",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16600.1",
+            "citation": "Cal. Bus. & Prof. Code § 16600.1(c).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.1",
+            "proposition": "Section 16600.1(c) makes a violation of the section — including the failure to send the required February 14, 2024 notice — an act of unfair competition under Chapter 5 (Section 17200).",
+            "verbatimQuote": "A violation of this section constitutes an act of unfair competition within the meaning of Chapter 5 (commencing with Section 17200).",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-16600-1-ucl"
+          },
+          {
+            "sourceId": "ca-ag-alert",
+            "authorityType": "agency-guidance",
+            "title": "California Attorney General — Consumer Alert on Noncompete Agreements",
+            "citation": "Cal. Att'y Gen., Consumer Alert: Noncompete Agreements (Oct. 15, 2024).",
+            "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-issues-consumer-alert-reminding-california-workers-their",
+            "proposition": "The California Attorney General's October 2024 consumer alert states that SB 699 makes it generally illegal for employers to enter into noncompete agreements with California employees, signaling active enforcement.",
+            "verbatimQuote": "Effective January 1, 2024, Senate Bill (SB) 699 makes it generally illegal for employers to enter into noncompete agreements with California employees.",
+            "date": "2024-10-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-ag-alert"
+          }
+        ]
+      },
+      {
+        "requirementId": "confine-noncompete-to-sale-of-business-pathway",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.confine-noncompete-to-sale-of-business-pathway",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Sale-of-business covenant kept in its lane",
+        "sectionId": "california-statutory-gates",
+        "itemNumber": "18.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#confine-noncompete-to-sale-of-business-pathway",
+        "requirementGuidance": "The one lawful competition restraint on an individual in California belongs to a genuine sale: a seller of goodwill or of an ownership interest may agree not to carry on a similar business within the geographic area where the business operated. Audit three things — the covenant lives in the purchase agreement, not the employment agreement; it tracks the goodwill or interest actually transferred; and its geography matches where the business was carried on. Courts read the deal documents together and void covenants parked in the employment paper, while enforcing covenants tied to a real disposition of the seller's whole interest. For a partial sale where the owner keeps a stake and stays involved, the covenant is not void per se but must survive a reasonableness review.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-16601-gate",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16601",
+            "citation": "Cal. Bus. & Prof. Code § 16601.",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16601",
+            "proposition": "Section 16601 lets a person who sells the goodwill of a business, or an owner disposing of an ownership interest, agree not to carry on a similar business within the specified geographic area where the business was carried on, so long as the buyer continues a like business there.",
+            "verbatimQuote": "Any person who sells the goodwill of a business, or any owner of a business entity selling or otherwise disposing of all of his or her ownership interest in the business entity, or any owner of a business entity that sells (a) all or substantially all of its operating assets together with the goodwill of the business entity, (b) all or substantially all of the operating assets of a division or a subsidiary of the business entity together with the goodwill of that division or subsidiary, or (c) all of the ownership interest of any subsidiary, may agree with the buyer to refrain from carrying on a similar business within a specified geographic area in which the business so sold, or that of the business entity, division, or subsidiary has been carried on, so long as the buyer, or any person deriving title to the goodwill or ownership interest from the buyer, carries on a like business therein.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-16601-gate"
+          },
+          {
+            "sourceId": "ca-fillpoint-gate",
+            "authorityType": "case-law",
+            "title": "Fillpoint, LLC v. Maas",
+            "citation": "Fillpoint, LLC v. Maas, 208 Cal. App. 4th 1170 (2012).",
+            "url": "https://www.courtlistener.com/opinion/5811287/fillpoint-llc-v-maas/",
+            "deepLink": "https://www.courtlistener.com/opinion/5811287/fillpoint-llc-v-maas/#:~:text=In%20this%20case%2C%20when%20we,and%20unenforceable%20under%20California%20law.",
+            "proposition": "Fillpoint read the purchase and employment agreements together and held the noncompetition and nonsolicitation covenant in the employment agreement void and unenforceable — it did not fit the limited sale-of-business exception.",
+            "verbatimQuote": "In this case, when we read the two noncompetition covenants together, we hold that the noncompetition and nonsolicitation covenant contained in the employment agreement is void and unenforceable under California law.",
+            "date": "2012-08-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-fillpoint-gate"
+          },
+          {
+            "sourceId": "ca-blue-mountain-gate",
+            "authorityType": "case-law",
+            "title": "Blue Mountain Enterprises, LLC v. Owen",
+            "citation": "Blue Mountain Enters., LLC v. Owen, 74 Cal. App. 5th 537 (2022).",
+            "url": "https://www.courtlistener.com/opinion/6246635/blue-mountain-enterprises-llc-v-owen/",
+            "deepLink": "https://www.courtlistener.com/opinion/6246635/blue-mountain-enterprises-llc-v-owen/#:~:text=Here%2C%20the%20trial%20court%20correctly,which%20the%20business%20so%20sold.%E2%80%9D",
+            "proposition": "Blue Mountain held that section 16601 applied as a matter of law where the owner disposed of all of his ownership interest while agreeing not to carry on a similar business in the area sold, enforcing a customer non-solicitation covenant under the exception.",
+            "verbatimQuote": "Here, the trial court correctly found that section 16601 applies as a matter of law because Owen “dispos[ed] of all of his . . . ownership interest” under the Contribution Agreement while concurrently agreeing under the Employment Agreement to “refrain from carrying on a similar business within a specified geographic area in which the business so sold.”",
+            "date": "2022-01-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-blue-mountain-gate"
+          },
+          {
+            "sourceId": "ca-samuelian-partial",
+            "authorityType": "case-law",
+            "title": "Samuelian v. Life Generations Healthcare, LLC",
+            "citation": "Samuelian v. Life Generations Healthcare, LLC (Cal. Ct. App. 2024).",
+            "url": "https://www.courtlistener.com/opinion/10118817/samuelian-v-life-generations-healthcare-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/10118817/samuelian-v-life-generations-healthcare-llc/#:~:text=We%20agree%20the%20reasonableness%20standard%20applies%20to%20partial%20sales.",
+            "proposition": "Samuelian applied Ixchel and held that a noncompetition restraint arising from a partial sale of a business interest is evaluated under the reasonableness standard rather than treated as void per se.",
+            "verbatimQuote": "We agree the reasonableness standard applies to partial sales.",
+            "date": "2024-09-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-samuelian-partial"
+          }
+        ]
+      },
+      {
+        "requirementId": "prevent-confidentiality-from-operating-as-de-facto-noncompete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.prevent-confidentiality-from-operating-as-de-facto-noncompete",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality not a non-compete in disguise",
+        "sectionId": "california-statutory-gates",
+        "itemNumber": "18.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#prevent-confidentiality-from-operating-as-de-facto-noncompete",
+        "requirementGuidance": "Run the confidentiality suite through the same screen as the covenants: definitions or restrictions broad enough to bar the worker from their field operate as a de facto non-compete and are void — and a void restraint by any name now carries the inclusion and enforcement exposure of the 2024 laws. The fix is structural, not cosmetic: tie the obligations to identifiable trade secrets and genuinely sensitive information, leave general skills and public knowledge outside, and let trade-secret law do the enforcing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-brown-gate",
+            "authorityType": "case-law",
+            "title": "Brown v. TGS Management Co., LLC",
+            "citation": "Brown v. TGS Mgmt. Co., 57 Cal. App. 5th 303 (2020).",
+            "url": "https://www.courtlistener.com/opinion/4805583/brown-v-tgs-management-co-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4805583/brown-v-tgs-management-co-llc/#:~:text=Collectively%2C%20these%20overly%20restrictive%20provisions,chosen%20profession%20of%20statistical%20arbitrage.",
+            "proposition": "Brown held that confidentiality provisions defined so broadly that they barred the employee from working in his field operated as a de facto non-compete and were void under section 16600.",
+            "verbatimQuote": "Collectively, these overly restrictive provisions operate as a de facto noncompete provision; they plainly bar Brown in perpetuity from doing any work in the securities field, much less in his chosen profession of statistical arbitrage.",
+            "date": "2020-11-12",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-brown-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-stay-or-pay-and-training-repayment-terms",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.exclude-stay-or-pay-and-training-repayment-terms",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No stay-or-pay or training-repayment penalties",
+        "sectionId": "california-statutory-gates",
+        "itemNumber": "18.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#exclude-stay-or-pay-and-training-repayment-terms",
+        "requirementGuidance": "For contracts entered into on or after January 1, 2026, scan for money-shaped restraints: training-repayment provisions, replacement-hire fees, quit fees, or any term charging the worker a penalty, fee, or cost for leaving. These are unlawful, void as restraints of trade, and privately actionable at actual damages or five thousand dollars per worker, whichever is greater, plus fees. The statute leaves room for a few genuine arrangements — a separately-papered sign-on bonus with a retention period of no more than two years, tuition for a transferable credential offered apart from the employment contract — so check any retention program against the carve-outs rather than assuming it survives.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-16608-penalty-gate",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16608 (AB 692)",
+            "citation": "Cal. Bus. & Prof. Code § 16608(b)(1)(C).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16608",
+            "proposition": "Section 16608(b)(1) makes it unlawful, for covered contracts entered on or after January 1, 2026, to include a term that imposes any penalty, fee, or cost on a worker if the worker's employment terminates.",
+            "verbatimQuote": "Imposes any penalty, fee, or cost on a worker if the worker's employment or work relationship with a specific employer terminates.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-16608-penalty-gate"
+          },
+          {
+            "sourceId": "ca-16608-void-gate",
+            "authorityType": "primary-law",
+            "title": "Cal. Bus. & Prof. Code § 16608 (AB 692)",
+            "citation": "Cal. Bus. & Prof. Code § 16608(c).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16608",
+            "proposition": "Section 16608(c) treats an unlawful stay-or-pay contract as a restraint of trade void under section 16600, but only if it was entered into on or after January 1, 2026.",
+            "verbatimQuote": "A contract that is unlawful under subdivision (b) is a contract restraining a person from engaging in a lawful profession, trade, or business, and is void under Section 16600 only if the contract was entered into on or after January 1, 2026.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-16608-void-gate"
+          },
+          {
+            "sourceId": "ca-926-damages-gate",
+            "authorityType": "primary-law",
+            "title": "Cal. Lab. Code § 926 (AB 692)",
+            "citation": "Cal. Lab. Code § 926(c).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=926",
+            "proposition": "Labor Code section 926 gives a worker or worker representative a civil action for a section 16608 violation, with liability of actual damages or $5,000 per worker, whichever is greater, plus injunctive relief and attorney's fees.",
+            "verbatimQuote": "Any person found liable for a violation of this section shall be liable for actual damages sustained by the worker or workers on whose behalf the case is brought, or five thousand dollars ($5,000) per worker, whichever is greater, in addition to injunctive relief, and reasonable attorney's fees and costs.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-926-damages-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-provider-noncompetes-in-private-equity-healthcare-contracts",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.exclude-provider-noncompetes-in-private-equity-healthcare-contracts",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No provider non-competes in investor contracts",
+        "sectionId": "california-statutory-gates",
+        "itemNumber": "18.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#exclude-provider-noncompetes-in-private-equity-healthcare-contracts",
+        "requirementGuidance": "Where private equity or a hedge fund is involved with a physician or dental practice, the management and asset-sale contracts themselves are restricted under the framework taking effect January 1, 2026: they cannot include any clause barring a provider from competing with the practice after a termination or resignation, and a preserved sale-of-business covenant is expressly forbidden from operating as an employee non-compete. Review the MSO and transaction documents alongside the employment agreement — in sponsor-backed healthcare, the void clause usually hides in the management contract, not the offer letter.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-sb351-mgmt-gate",
+            "authorityType": "primary-law",
+            "title": "Cal. Health & Safety Code § 1191 (SB 351)",
+            "citation": "Cal. Health & Safety Code § 1191(d)(1).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1191",
+            "proposition": "Section 1191(d) bars a management or asset-sale contract with a private-equity- or hedge-fund-controlled entity from including any clause barring a provider from competing with the practice after a termination or resignation.",
+            "verbatimQuote": "shall not include any clause barring any provider in that practice from doing either of the following: (A) Competing with that practice in the event of a termination or resignation of that provider from that practice.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-sb351-mgmt-gate"
+          },
+          {
+            "sourceId": "ca-sb351-employee-line-gate",
+            "authorityType": "primary-law",
+            "title": "Cal. Health & Safety Code § 1191 (SB 351)",
+            "citation": "Cal. Health & Safety Code § 1191(d)(3)(A).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1191",
+            "proposition": "Section 1191(d)(3) preserves an otherwise enforceable sale-of-business noncompete but provides that a contract described in the subdivision shall not operate as an employee noncompete agreement.",
+            "verbatimQuote": "An otherwise enforceable sale of business noncompete agreement. However, a contract described in this subdivision shall not operate as an employee noncompete agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/california#src-ca-sb351-employee-line-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

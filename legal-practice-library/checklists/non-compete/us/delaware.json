@@ -1,0 +1,1415 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/delaware",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/delaware.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/delaware",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/delaware/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/delaware/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "delaware",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Delaware",
+      "description": "A clause-by-clause reviewer checklist for Delaware employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under Court of Chancery reasonableness review, where recent decisions increasingly refuse to blue-pencil an overbroad covenant rather than rewrite it.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Delaware",
+      "coverage": "Delaware (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 47,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "delaware-statutory-gates",
+        "label": "Delaware enforceability gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity that actually holds the goodwill and confidential information the covenants protect. Delaware recognizes employer goodwill and confidential information as the legitimate interests a restraint may serve, so a covenant running to an affiliate with neither starts the reasonableness review already behind.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-payscale-interests-cover",
+            "authorityType": "case-law",
+            "title": "Payscale Inc. v. Norman",
+            "citation": "Payscale Inc. v. Norman, No. 297, 2025, slip op. at 15-16 (Del. Mar. 19, 2026).",
+            "url": "https://www.courtlistener.com/opinion/10811247/payscale-inc-v-erin-norman-and-bettercomp-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/10811247/payscale-inc-v-erin-norman-and-bettercomp-inc/#:~:text=For%20a%20restrictive%20covenant%2C%20%E2%80%9C%E2%80%98%5Bl%5Degitimate,employer%20confidential%20information%20from%20misuse.%E2%80%9D",
+            "proposition": "Payscale identifies employer goodwill and confidential information as the legitimate interests Delaware law recognizes — the interests the named employer must actually hold.",
+            "verbatimQuote": "For a restrictive covenant, “‘[l]egitimate interests’ recognized by Delaware law include protection of employer goodwill[] and protection of employer confidential information from misuse.”",
+            "date": "2026-03-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-payscale-interests-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#identify-effective-date",
+        "requirementGuidance": "The dates anchor two separate questions: when each restricted period starts and ends, and what the worker received at the moment of signing — because Delaware measures consideration at contract formation, not at enforcement. An undated agreement leaves both open.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-doorly-formation-cover",
+            "authorityType": "case-law",
+            "title": "North American Fire Ultimate Holdings, LP v. Doorly",
+            "citation": "N. Am. Fire Ultimate Holdings, LP v. Doorly, No. 142, 2025, order at 6 (Del. Feb. 3, 2026).",
+            "url": "https://www.courtlistener.com/opinion/10783312/north-american-fire-ultimate-holdings-lp-v-alan-doorly/",
+            "deepLink": "https://www.courtlistener.com/opinion/10783312/north-american-fire-ultimate-holdings-lp-v-alan-doorly/#:~:text=Consideration%20is%20measured%20at%20the%20time%20of%20formation,at%20the%20time%20of%20enforcement.",
+            "proposition": "Doorly fixes the consideration analysis at the moment of contract formation — why the agreement's dates matter to more than the restricted-period math.",
+            "verbatimQuote": "Consideration is measured at the time of formation and is not reevaluated at the time of enforcement.",
+            "date": "2026-02-03",
+            "pullQuoteLocator": "Consideration is measured at the time of formation|at the time of enforcement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-doorly-formation-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#identify-employee-title",
+        "requirementGuidance": "Title and duties are the first evidence of fit between this worker and this restraint. Delaware demands fact-specific tailoring before enforcing a true restraint on work, and a form covenant pinned to a role with no customer relationships or sensitive access gives the equities little to weigh on the employer's side.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#identify-governing-law",
+        "requirementGuidance": "Check that a governing state is named. Everything on this page assumes Delaware law controls — Chancery reasonableness review, the refusal trend on blue-penciling, and the two targeted statutes. The deeper question of whether a Delaware selection holds for an out-of-state worker has its own item in the governing-law section below.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#define-confidential-information",
+        "requirementGuidance": "Scope the definition to information that is genuinely confidential. Information that meets Delaware's statutory trade-secret definition is already protected by statute, so the contractual definition earns its keep by covering the sensitive-but-not-secret layer — and a definition so broad it works like an indefinite non-compete invites the reasonableness review that bare confidentiality language is supposed to avoid.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-dutsa-definition-def",
+            "authorityType": "primary-law",
+            "title": "6 Del. C. § 2001",
+            "citation": "6 Del. C. § 2001(4).",
+            "enactedCitation": "6 Del. C. § 2001",
+            "url": "https://delcode.delaware.gov/title6/c020/index.html",
+            "proposition": "The Delaware Uniform Trade Secrets Act defines a trade secret by independent economic value from secrecy plus reasonable secrecy efforts — the statutory line a layered confidential-information and trade-secret definition should track.",
+            "verbatimQuote": "“Trade secret” shall mean information, including a formula, pattern, compilation, program, device, method, technique or process, that: a. Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and b. Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "date": "1982-07-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-dutsa-definition-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#define-trade-secrets",
+        "requirementGuidance": "Define trade secrets separately and track the statutory elements: independent economic value from secrecy, plus reasonable efforts to keep the information secret. A definition aligned with the Delaware Uniform Trade Secrets Act keeps the contract and the statute pulling in the same direction — and the statutory remedies survive even if a covenant on this page fails.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-dutsa-definition-def",
+            "authorityType": "primary-law",
+            "title": "6 Del. C. § 2001",
+            "citation": "6 Del. C. § 2001(4).",
+            "enactedCitation": "6 Del. C. § 2001",
+            "url": "https://delcode.delaware.gov/title6/c020/index.html",
+            "proposition": "The Delaware Uniform Trade Secrets Act defines a trade secret by independent economic value from secrecy plus reasonable secrecy efforts — the statutory line a layered confidential-information and trade-secret definition should track.",
+            "verbatimQuote": "“Trade secret” shall mean information, including a formula, pattern, compilation, program, device, method, technique or process, that: a. Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and b. Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "date": "1982-07-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-dutsa-definition-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#define-restricted-period",
+        "requirementGuidance": "The period should read as a fixed, definite stretch of time. Delaware evaluates a covenant holistically — duration counts together with geography, activity scope, and every other restriction in the contract — so an open-ended or event-floated period adds breadth on a dimension the court weighs against everything else at once.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-sunder-holistic-def",
+            "authorityType": "case-law",
+            "title": "Sunder Energy, LLC v. Jackson",
+            "citation": "Sunder Energy, LLC v. Jackson, 305 A.3d 723, 754 (Del. Ch. 2023), aff'd in relevant part, 332 A.3d 472 (Del. 2024).",
+            "url": "https://www.courtlistener.com/opinion/9444424/sunder-energy-llc-v-jackson/",
+            "deepLink": "https://www.courtlistener.com/opinion/9444424/sunder-energy-llc-v-jackson/#:~:text=When%20evaluating%20the%20reasonableness%20of,other%20restrictions%20in%20the%20contract.",
+            "proposition": "Sunder Chancery requires evaluating a restrictive covenant holistically, across all of its dimensions and in combination with the contract's other restrictions — why each defined term's breadth counts against the whole.",
+            "verbatimQuote": "When evaluating the reasonableness of a restrictive covenant, a court examines the restriction holistically and in context. That means evaluating all of the dimensions of the restrictive covenant and considering how it operates with other restrictions in the contract.",
+            "date": "2023-11-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-sunder-holistic-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#define-restricted-territory",
+        "requirementGuidance": "Geographic scope is the first prong of the Delaware test: the covenant must be reasonable in geographic scope and temporal duration. Match the territory to where the protected business actually operates and this worker actually reached — breadth here must be earned by the pleaded business reality, not assumed.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-fp-uc-test-def",
+            "authorityType": "case-law",
+            "title": "FP UC Holdings, LLC v. Hamilton",
+            "citation": "FP UC Holdings, LLC v. Hamilton, 2020 WL 1492783, at *6 (Del. Ch. Mar. 27, 2020).",
+            "url": "https://www.courtlistener.com/opinion/4739986/fp-uc-holdings-llc-fpmcm-llc-and-fast-pace-medical-clinic-pllc-v/",
+            "deepLink": "https://www.courtlistener.com/opinion/4739986/fp-uc-holdings-llc-fpmcm-llc-and-fast-pace-medical-clinic-pllc-v/#:~:text=Instead%2C%20our%20courts%20carefully%20review,a%20balancing%20of%20the%20equities.%E2%80%9D",
+            "proposition": "FP UC Holdings states Delaware's three-part review — reasonable geographic and temporal scope, legitimate economic interest, balancing of the equities — that the territory definition feeds first.",
+            "verbatimQuote": "Instead, our courts carefully review the covenants to assure they “(1) [are] reasonable in geographic scope and temporal duration, (2) advance a legitimate economic interest of the party seeking its enforcement, and (3) survive a balancing of the equities.”",
+            "date": "2020-03-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-fp-uc-test-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the worker had real contact with during a stated look-back window. Delaware credits restraints tied to specific, identified customer relationships — protecting the contracts with the employer's most valued customers is what carried a broad covenant past the pleading stage — and an unbounded customer class gives the equities nothing concrete to credit.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-payscale-pleaded-def",
+            "authorityType": "case-law",
+            "title": "Payscale Inc. v. Norman",
+            "citation": "Payscale Inc. v. Norman, No. 297, 2025, slip op. at 18 (Del. Mar. 19, 2026).",
+            "url": "https://www.courtlistener.com/opinion/10811247/payscale-inc-v-erin-norman-and-bettercomp-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/10811247/payscale-inc-v-erin-norman-and-bettercomp-inc/#:~:text=Payscale%20alleges%20that%20the%20non%2Dcompete%E2%80%99s,Payscale%E2%80%99s%20%E2%80%9Cparticularly%20strong%20economic%20interest.%E2%80%9D",
+            "proposition": "Payscale credited a covenant tied to specific contracts with the employer's most valued customers — the model for a contact-based covered-customers definition.",
+            "verbatimQuote": "Payscale alleges that the non-compete’s terms are directly tied to protecting specific contracts with its most valued customers; at the pleadings stage, it is reasonable to infer that protecting relationships with these key customers is in Payscale’s “particularly strong economic interest.”",
+            "date": "2026-03-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-payscale-pleaded-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing worker actually worked with during a stated look-back window. A class swelling to the employer's whole workforce adds breadth the holistic review counts, and the combined weight of overbroad definitions is exactly what has sunk recent Delaware covenants.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#define-protected-interests",
+        "requirementGuidance": "Name the specific interests each covenant protects. Delaware's recognized interests are employer goodwill and confidential information, and the covenant must advance a legitimate economic interest of the party enforcing it — so tie each restraint to the goodwill or information this worker actually touched rather than reciting interests in the abstract.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-payscale-interests-def",
+            "authorityType": "case-law",
+            "title": "Payscale Inc. v. Norman",
+            "citation": "Payscale Inc. v. Norman, No. 297, 2025, slip op. at 15-16 (Del. Mar. 19, 2026).",
+            "url": "https://www.courtlistener.com/opinion/10811247/payscale-inc-v-erin-norman-and-bettercomp-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/10811247/payscale-inc-v-erin-norman-and-bettercomp-inc/#:~:text=For%20a%20restrictive%20covenant%2C%20%E2%80%9C%E2%80%98%5Bl%5Degitimate,employer%20confidential%20information%20from%20misuse.%E2%80%9D",
+            "proposition": "Payscale identifies employer goodwill and confidential information as the legitimate interests Delaware law recognizes — what the protected-interests definition should name concretely.",
+            "verbatimQuote": "For a restrictive covenant, “‘[l]egitimate interests’ recognized by Delaware law include protection of employer goodwill[] and protection of employer confidential information from misuse.”",
+            "date": "2026-03-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-payscale-interests-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#define-competitive-business",
+        "requirementGuidance": "Describe the competing activity concretely. A definition that swells to everything the employer or its affiliates might do is the signature of the covenants Delaware courts have refused to rescue — a worldwide restraint drafted by a sophisticated party was left to fail as written rather than be revised down to something lawful.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-intertek-def",
+            "authorityType": "case-law",
+            "title": "Intertek Testing Services NA, Inc. v. Eastman",
+            "citation": "Intertek Testing Servs. NA, Inc. v. Eastman, 2023 WL 2544236, at *5 (Del. Ch. Mar. 16, 2023).",
+            "url": "https://www.courtlistener.com/opinion/9384707/intertek-testing-services-na-inc-v-jeff-eastman/",
+            "deepLink": "https://www.courtlistener.com/opinion/9384707/intertek-testing-services-na-inc-v-jeff-eastman/#:~:text=In%20my%20view%2C%20revising%20the,its%20overreach%20would%20be%20inequitable.",
+            "proposition": "Intertek refused to revise a worldwide non-compete to rescue a sophisticated party from its overreach — the fate of a competitive-business definition drawn wider than the record supports.",
+            "verbatimQuote": "In my view, revising the non-compete to save Intertek—a sophisticated party—from its overreach would be inequitable.",
+            "date": "2023-03-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-intertek-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where the agreement restricts owning or investing in competitors, look for a passive-holdings carve-out below a stated percentage. A clause that technically forbids holding ordinary public shares is breadth with no goodwill or confidential-information story behind it, and it counts against the covenant in a review that weighs every dimension together.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-sunder-holistic-def",
+            "authorityType": "case-law",
+            "title": "Sunder Energy, LLC v. Jackson",
+            "citation": "Sunder Energy, LLC v. Jackson, 305 A.3d 723, 754 (Del. Ch. 2023), aff'd in relevant part, 332 A.3d 472 (Del. 2024).",
+            "url": "https://www.courtlistener.com/opinion/9444424/sunder-energy-llc-v-jackson/",
+            "deepLink": "https://www.courtlistener.com/opinion/9444424/sunder-energy-llc-v-jackson/#:~:text=When%20evaluating%20the%20reasonableness%20of,other%20restrictions%20in%20the%20contract.",
+            "proposition": "Sunder Chancery requires evaluating a restrictive covenant holistically, across all of its dimensions and in combination with the contract's other restrictions — why each defined term's breadth counts against the whole.",
+            "verbatimQuote": "When evaluating the reasonableness of a restrictive covenant, a court examines the restriction holistically and in context. That means evaluating all of the dimensions of the restrictive covenant and considering how it operates with other restrictions in the contract.",
+            "date": "2023-11-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-sunder-holistic-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#define-passive-public-holdings",
+        "requirementGuidance": "Optional drafting mechanics — many agreements inline the carve-out language without a capitalized term. If the term appears, confirm its percentage matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#define-solicit",
+        "requirementGuidance": "Pin down whether the verb covers only initiating contact or also passively accepting an inquiry. The wider reading restrains more conduct, and in Delaware every increment of breadth has to be defended in the same holistic review — a drafter who wants the wider meaning should say so expressly and be ready to justify it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger treats resignation, dismissal, and the end of a fixed term the same way. The restricted period and every survival clock run from this event, and ambiguity about who ended the relationship becomes ambiguity about when the restraint expires.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "record-formation-stage-consideration-for-the-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.delaware.record-formation-stage-consideration-for-the-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "What the worker received at signing",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#record-formation-stage-consideration-for-the-covenant",
+        "requirementGuidance": "Record what the worker received for the covenant and when signing happened relative to the first day of work. Delaware can treat continued employment as sufficient consideration where signing is a condition of keeping the position, and the Supreme Court measures consideration at formation rather than at enforcement — but adequacy still matters, because the balancing of the equities lets the court weigh the breadth of the restraint against the consideration that supports it. A recital naming the specific value exchanged does more work than a bare adequacy formula.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-powell-continued-timing",
+            "authorityType": "case-law",
+            "title": "Research & Trading Corp. v. Powell",
+            "citation": "Research & Trading Corp. v. Powell, 468 A.2d 1301, 1305 (Del. Ch. 1983).",
+            "url": "https://www.courtlistener.com/opinion/2275060/research-trading-corp-v-powell/",
+            "deepLink": "https://www.courtlistener.com/opinion/2275060/research-trading-corp-v-powell/#:~:text=The%20Court%20finds%20there%20was,support%20an%20enforceable%20restrictive%20covenant.",
+            "proposition": "Powell holds that continued employment supplied sufficient consideration at signing where keeping the position was conditioned on signing.",
+            "verbatimQuote": "The Court finds there was sufficient consideration at the time of the signing of the covenant to support an enforceable restrictive covenant.",
+            "date": "1983-12-30",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-powell-continued-timing"
+          },
+          {
+            "sourceId": "de-doorly-formation-timing",
+            "authorityType": "case-law",
+            "title": "North American Fire Ultimate Holdings, LP v. Doorly",
+            "citation": "N. Am. Fire Ultimate Holdings, LP v. Doorly, No. 142, 2025, order at 6 (Del. Feb. 3, 2026).",
+            "url": "https://www.courtlistener.com/opinion/10783312/north-american-fire-ultimate-holdings-lp-v-alan-doorly/",
+            "deepLink": "https://www.courtlistener.com/opinion/10783312/north-american-fire-ultimate-holdings-lp-v-alan-doorly/#:~:text=Consideration%20is%20measured%20at%20the%20time%20of%20formation,at%20the%20time%20of%20enforcement.",
+            "proposition": "Doorly holds that consideration is measured at formation and not reevaluated at enforcement — the rule the timing acknowledgement documents against.",
+            "verbatimQuote": "Consideration is measured at the time of formation and is not reevaluated at the time of enforcement.",
+            "date": "2026-02-03",
+            "pullQuoteLocator": "Consideration is measured at the time of formation|at the time of enforcement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-doorly-formation-timing"
+          },
+          {
+            "sourceId": "de-payscale-adequacy-timing",
+            "authorityType": "case-law",
+            "title": "Payscale Inc. v. Norman",
+            "citation": "Payscale Inc. v. Norman, No. 297, 2025, slip op. at 17 (Del. Mar. 19, 2026).",
+            "url": "https://www.courtlistener.com/opinion/10811247/payscale-inc-v-erin-norman-and-bettercomp-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/10811247/payscale-inc-v-erin-norman-and-bettercomp-inc/#:~:text=That%20is%20not%20to%20suggest,the%20consideration%20that%20supports%20it.",
+            "proposition": "Payscale confirms that the adequacy of consideration still bears on the balancing of the equities even though its existence is fixed at formation.",
+            "verbatimQuote": "That is not to suggest that the adequacy of consideration is irrelevant in the context of restrictive covenants; the balancing-of-the-equities inquiry affords the court discretion to weigh the breadth of a restrictive covenant against the consideration that supports it.",
+            "date": "2026-03-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-payscale-adequacy-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Delaware statute requires it, but a documented chance to take advice is useful evidence in a review that ends with a balancing of the equities — the court weighs how the covenant was obtained alongside what it restrains. Cheap to include, awkward to be missing.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret obligations should run as long as secrecy does. Both federal law and Delaware's own statute key trade-secret status to continued secrecy and reasonable efforts to maintain it, so a fixed expiry on trade-secret protection gives away the one obligation the statutes would otherwise protect indefinitely.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-dtsa-trade-secret-definition"
+          },
+          {
+            "sourceId": "de-dutsa-definition-conf",
+            "authorityType": "primary-law",
+            "title": "6 Del. C. § 2001",
+            "citation": "6 Del. C. § 2001(4).",
+            "enactedCitation": "6 Del. C. § 2001",
+            "url": "https://delcode.delaware.gov/title6/c020/index.html",
+            "proposition": "Delaware's statutory trade-secret definition conditions protection on continued secrecy and reasonable secrecy efforts — the basis for secrecy-keyed duration rather than a fixed term.",
+            "verbatimQuote": "“Trade secret” shall mean information, including a formula, pattern, compilation, program, device, method, technique or process, that: a. Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and b. Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "date": "1982-07-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-dutsa-definition-conf"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. Delaware preserves contractual remedies alongside the trade-secret statute, but a confidentiality clause earns that protection by staying a confidentiality clause — drafted around actual confidential information, not run indefinitely as a non-compete by another name.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-dutsa-contract-remedies-conf",
+            "authorityType": "primary-law",
+            "title": "6 Del. C. § 2007",
+            "citation": "6 Del. C. § 2007(b)(1).",
+            "enactedCitation": "6 Del. C. § 2007",
+            "url": "https://delcode.delaware.gov/title6/c020/index.html",
+            "proposition": "DUTSA preserves contractual remedies whether or not based on trade-secret misappropriation — the statutory room a properly bounded confidentiality clause occupies.",
+            "verbatimQuote": "(1) Contractual remedies, whether or not based upon misappropriation of a trade secret;",
+            "date": "1982-07-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-dutsa-contract-remedies-conf"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#disclose-dtsa-notice",
+        "requirementGuidance": "Federal and non-negotiable: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later federal trade-secret action against the worker. In a state whose courts push employers toward tight covenants backed by statutory trade-secret remedies, those federal remedies are worth keeping intact.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech regardless of the governing state, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. A clause purporting to forbid compelled disclosure is unenforceable on that point and adds breadth a Delaware covenant package does not need to carry into the equities.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. Delaware's trade-secret statute conditions protection on efforts that are reasonable under the circumstances to maintain secrecy, so a disciplined exit procedure is not just housekeeping — it is part of the secrecy record the statute asks for.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-dutsa-secrecy-prop",
+            "authorityType": "primary-law",
+            "title": "6 Del. C. § 2001",
+            "citation": "6 Del. C. § 2001(4).",
+            "enactedCitation": "6 Del. C. § 2001",
+            "url": "https://delcode.delaware.gov/title6/c020/index.html",
+            "proposition": "Delaware's trade-secret definition requires reasonable secrecy efforts — the statutory reason exit procedures and return certifications matter.",
+            "verbatimQuote": "“Trade secret” shall mean information, including a formula, pattern, compilation, program, device, method, technique or process, that: a. Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and b. Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "date": "1982-07-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-dutsa-secrecy-prop"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional and usually the least contested covenant in the suite — but in Delaware it is not reviewed in isolation. The court weighs how each restriction operates with the others in the contract, so even a modest no-poach clause should stay scoped to real working relationships rather than padding the package with breadth the whole suite then has to defend.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-sunder-holistic-cov",
+            "authorityType": "case-law",
+            "title": "Sunder Energy, LLC v. Jackson",
+            "citation": "Sunder Energy, LLC v. Jackson, 305 A.3d 723, 754 (Del. Ch. 2023), aff'd in relevant part, 332 A.3d 472 (Del. 2024).",
+            "url": "https://www.courtlistener.com/opinion/9444424/sunder-energy-llc-v-jackson/",
+            "deepLink": "https://www.courtlistener.com/opinion/9444424/sunder-energy-llc-v-jackson/#:~:text=When%20evaluating%20the%20reasonableness%20of,other%20restrictions%20in%20the%20contract.",
+            "proposition": "Sunder Chancery evaluates each covenant in combination with the contract's other restrictions — why every covenant in the suite shares responsibility for the package's total breadth.",
+            "verbatimQuote": "When evaluating the reasonableness of a restrictive covenant, a court examines the restriction holistically and in context. That means evaluating all of the dimensions of the restrictive covenant and considering how it operates with other restrictions in the contract.",
+            "date": "2023-11-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-sunder-holistic-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#permit-customer-nonsolicit",
+        "requirementGuidance": "Optional, and most defensible when tied to identified customer relationships. A restraint built around specific contracts with the employer's most valued customers is the kind of business-specific interest Delaware credits; one built around the whole book of business asks the equities to protect competition itself.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-payscale-pleaded-cov",
+            "authorityType": "case-law",
+            "title": "Payscale Inc. v. Norman",
+            "citation": "Payscale Inc. v. Norman, No. 297, 2025, slip op. at 18 (Del. Mar. 19, 2026).",
+            "url": "https://www.courtlistener.com/opinion/10811247/payscale-inc-v-erin-norman-and-bettercomp-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/10811247/payscale-inc-v-erin-norman-and-bettercomp-inc/#:~:text=Payscale%20alleges%20that%20the%20non%2Dcompete%E2%80%99s,Payscale%E2%80%99s%20%E2%80%9Cparticularly%20strong%20economic%20interest.%E2%80%9D",
+            "proposition": "Payscale credited a covenant tied to protecting specific contracts with the employer's most valued customers — the business-specific interest a customer restraint should be built on.",
+            "verbatimQuote": "Payscale alleges that the non-compete’s terms are directly tied to protecting specific contracts with its most valued customers; at the pleadings stage, it is reasonable to infer that protecting relationships with these key customers is in Payscale’s “particularly strong economic interest.”",
+            "date": "2026-03-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-payscale-pleaded-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#permit-non-dealing",
+        "requirementGuidance": "Barring the worker from serving covered customers even when the customer calls first restrains accepting work, not just chasing it. That extra breadth is a dimension the holistic review weighs against the rest of the package — insist on a tight, contact-based customer class before this clause earns its place.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-sunder-holistic-cov",
+            "authorityType": "case-law",
+            "title": "Sunder Energy, LLC v. Jackson",
+            "citation": "Sunder Energy, LLC v. Jackson, 305 A.3d 723, 754 (Del. Ch. 2023), aff'd in relevant part, 332 A.3d 472 (Del. 2024).",
+            "url": "https://www.courtlistener.com/opinion/9444424/sunder-energy-llc-v-jackson/",
+            "deepLink": "https://www.courtlistener.com/opinion/9444424/sunder-energy-llc-v-jackson/#:~:text=When%20evaluating%20the%20reasonableness%20of,other%20restrictions%20in%20the%20contract.",
+            "proposition": "Sunder Chancery evaluates each covenant in combination with the contract's other restrictions — why every covenant in the suite shares responsibility for the package's total breadth.",
+            "verbatimQuote": "When evaluating the reasonableness of a restrictive covenant, a court examines the restriction holistically and in context. That means evaluating all of the dimensions of the restrictive covenant and considering how it operates with other restrictions in the contract.",
+            "date": "2023-11-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-sunder-holistic-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#permit-non-compete",
+        "requirementGuidance": "A Delaware non-compete must be reasonable in geographic scope and temporal duration, advance a legitimate economic interest, and survive a balancing of the equities — and the modern decisions make the stakes explicit: an overbroad covenant may not be enforced even in part, because partial enforcement of overreach is itself inequitable. Review the clause as the court would, package and record together.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-fp-uc-test-cov",
+            "authorityType": "case-law",
+            "title": "FP UC Holdings, LLC v. Hamilton",
+            "citation": "FP UC Holdings, LLC v. Hamilton, 2020 WL 1492783, at *6 (Del. Ch. Mar. 27, 2020).",
+            "url": "https://www.courtlistener.com/opinion/4739986/fp-uc-holdings-llc-fpmcm-llc-and-fast-pace-medical-clinic-pllc-v/",
+            "deepLink": "https://www.courtlistener.com/opinion/4739986/fp-uc-holdings-llc-fpmcm-llc-and-fast-pace-medical-clinic-pllc-v/#:~:text=Instead%2C%20our%20courts%20carefully%20review,a%20balancing%20of%20the%20equities.%E2%80%9D",
+            "proposition": "FP UC Holdings states the three-part reasonableness review every Delaware non-compete must satisfy.",
+            "verbatimQuote": "Instead, our courts carefully review the covenants to assure they “(1) [are] reasonable in geographic scope and temporal duration, (2) advance a legitimate economic interest of the party seeking its enforcement, and (3) survive a balancing of the equities.”",
+            "date": "2020-03-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-fp-uc-test-cov"
+          },
+          {
+            "sourceId": "de-kodiak-inequity-cov",
+            "authorityType": "case-law",
+            "title": "Kodiak Building Partners, LLC v. Adams",
+            "citation": "Kodiak Bldg. Partners, LLC v. Adams, 2022 WL 5240507, at *13 n.108 (Del. Ch. Oct. 6, 2022).",
+            "url": "https://www.courtlistener.com/opinion/8247185/kodiak-building-partners-llc-v-philip-d-adams/",
+            "deepLink": "https://www.courtlistener.com/opinion/8247185/kodiak-building-partners-llc-v-philip-d-adams/#:~:text=The%20inequities%20inherent%20in%20blue%2Dpenciling,to%20have%20violated%20those%20portions.",
+            "proposition": "Kodiak refused to enforce even the supportable portions of an overbroad covenant — partial enforcement of overreach is itself inequitable.",
+            "verbatimQuote": "The inequities inherent in blue-penciling a noncompete also counsel against enforcing only those portions of the RCA that are supported by Kodiak’s legitimate business interests, even as Adams appears to have violated those portions.",
+            "date": "2022-10-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-kodiak-inequity-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, bind those names instead of leaning on an open-ended definition. Delaware's refusal trend is incentive-driven — courts will not reward drafting broad and litigating narrow, because rescuing unreasonable covenants would teach employers to stop crafting reasonable ones — so the narrowing has to happen at the drafting table.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-sunder-perverse-cov",
+            "authorityType": "case-law",
+            "title": "Sunder Energy, LLC v. Jackson",
+            "citation": "Sunder Energy, LLC v. Jackson, 332 A.3d 472, 495 (Del. 2024).",
+            "url": "https://www.courtlistener.com/opinion/10291288/sunder-energy-llc-v-tyler-jackson/",
+            "deepLink": "https://www.courtlistener.com/opinion/10291288/sunder-energy-llc-v-tyler-jackson/#:~:text=This%20argument%2C%20however%2C%20turns%20the,reasonable%20restrictions%20from%20the%20outset.",
+            "proposition": "Sunder Supreme warns that enforcing unreasonable covenants would create perverse drafting incentives — why narrowing must happen at the drafting table.",
+            "verbatimQuote": "This argument, however, turns the analysis on its head and creates perverse incentives for employers drafting restrictive covenants. If employers know that even the most unreasonable covenants will be enforced if an employee’s conduct is sufficiently flagrant, employers will be less incentivized to craft reasonable restrictions from the outset.",
+            "date": "2024-12-10",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-sunder-perverse-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period; an investment restraint with indefinite reach is breadth with no goodwill or confidential-information story, and the holistic review will weigh it against the whole package.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#address-physician-specific-rights",
+        "requirementGuidance": "Delaware has a targeted physician statute, so the dedicated clause has real work to do: a covenant restricting a physician's right to practice medicine in a particular locale or for a defined period after termination is void, while the rest of the agreement stays enforceable — including damages provisions reasonably related to the injury from termination, which may include damages related to competition. The clause should state that split expressly: no practice restraint, and any damages provision kept separate and tied to actual injury. The full prohibition is enforced as a gate at the end of this checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-2707-void-phys",
+            "authorityType": "primary-law",
+            "title": "6 Del. C. § 2707",
+            "citation": "6 Del. C. § 2707.",
+            "enactedCitation": "6 Del. C. § 2707",
+            "url": "https://delcode.delaware.gov/title6/c027/sc01/index.html",
+            "proposition": "Section 2707 voids physician covenants restricting practice by locale or time after termination while preserving the agreement's other provisions.",
+            "verbatimQuote": "Any covenant not to compete provision of an employment, partnership or corporate agreement between and/or among physicians which restricts the right of a physician to practice medicine in a particular locale and/or for a defined period of time, upon the termination of the principal agreement of which the said provision is a part, shall be void; except that all other provisions of such an agreement shall be enforceable at law, including provisions which require the payment of damages in an amount that is reasonably related to the injury suffered by reason of termination of the principal agreement.",
+            "date": "1983-07-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-2707-void-phys"
+          },
+          {
+            "sourceId": "de-2707-damages-phys",
+            "authorityType": "primary-law",
+            "title": "6 Del. C. § 2707",
+            "citation": "6 Del. C. § 2707.",
+            "enactedCitation": "6 Del. C. § 2707",
+            "url": "https://delcode.delaware.gov/title6/c027/sc01/index.html",
+            "proposition": "Section 2707 permits damages provisions in physician agreements, including damages related to competition — the lawful alternative to a practice restraint.",
+            "verbatimQuote": "Provisions which require the payment of damages upon termination of the principal agreement may include, but not be limited to, damages related to competition.",
+            "date": "1983-07-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-2707-damages-phys"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement blocks the new role. On intake it cuts both ways: an incoming covenant from a prior employer may fail Delaware's reasonableness review, but one that survives it — or a forfeiture condition on equity the worker is walking away from — is a genuine hazard for the hiring employer, better surfaced before the first customer call.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#address-notice-to-future-employers",
+        "requirementGuidance": "A drafting choice, not a legal requirement. Notice provisions can support later enforcement, but a letter asserting a covenant the Court of Chancery would refuse to enforce — and refuse to narrow — overstates the employer's position and creates its own interference exposure. Condition any notice practice on a covenant that actually survives the review this page walks through.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach?",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#address-tolling-during-breach",
+        "requirementGuidance": "State expressly whether the restricted period pauses while the worker is in breach — but know that no surveyed Delaware statute or decision blesses or rejects tolling. Treat any tolling clause as added duration: it is one more dimension of the covenant that the court evaluates together with everything else in the contract, and an employer should not assume a Delaware court will extend an expired restraint it never promised to extend.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-sunder-holistic-toll",
+            "authorityType": "case-law",
+            "title": "Sunder Energy, LLC v. Jackson",
+            "citation": "Sunder Energy, LLC v. Jackson, 305 A.3d 723, 754 (Del. Ch. 2023), aff'd in relevant part, 332 A.3d 472 (Del. 2024).",
+            "url": "https://www.courtlistener.com/opinion/9444424/sunder-energy-llc-v-jackson/",
+            "deepLink": "https://www.courtlistener.com/opinion/9444424/sunder-energy-llc-v-jackson/#:~:text=When%20evaluating%20the%20reasonableness%20of,other%20restrictions%20in%20the%20contract.",
+            "proposition": "Sunder Chancery's holistic review covers every dimension of the covenant — including the added duration a tolling clause introduces.",
+            "verbatimQuote": "When evaluating the reasonableness of a restrictive covenant, a court examines the restriction holistically and in context. That means evaluating all of the dimensions of the restrictive covenant and considering how it operates with other restrictions in the contract.",
+            "date": "2023-11-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-sunder-holistic-toll"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#require-injunctive-relief-availability",
+        "requirementGuidance": "The irreparable-harm acknowledgement is standard and harmless — but in the Court of Chancery it buys nothing on its own. Relief presupposes a covenant that first survives the reasonableness review and the balancing of the equities, and recent decisions show the court denying enforcement outright where the restraint overreached.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice: with no fee clause, each side bears its own costs under the default American Rule. Delaware's trade-secret statute adds its own fee-shifting for bad-faith claims and wilful misappropriation, independent of anything the contract says — so a contractual fee clause should be checked for mutuality rather than treated as the only path to fees.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-dutsa-fees-rem",
+            "authorityType": "primary-law",
+            "title": "6 Del. C. § 2004",
+            "citation": "6 Del. C. § 2004.",
+            "enactedCitation": "6 Del. C. § 2004",
+            "url": "https://delcode.delaware.gov/title6/c020/index.html",
+            "proposition": "DUTSA authorizes fee awards in bad-faith and wilful-and-malicious circumstances independent of any contractual fee clause.",
+            "verbatimQuote": "If a claim of misappropriation is made in bad faith, a motion to terminate an injunction is made or resisted in bad faith, or wilful and malicious misappropriation exists, the court may award reasonable attorney’s fees to the prevailing party.",
+            "date": "1982-07-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-dutsa-fees-rem"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-the-enforceable-scope-rather-than-rely-on-blue-penciling",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.delaware.draft-the-enforceable-scope-rather-than-rely-on-blue-penciling",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Real scope in the contract, not a court rescue",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#draft-the-enforceable-scope-rather-than-rely-on-blue-penciling",
+        "requirementGuidance": "Read the severability boilerplate against what Delaware courts have actually been doing. The power to blue-pencil exists — the Supreme Court took care not to say that Delaware courts should never narrow an overbroad agreement — but the recent decisions refuse to use it as a rescue: partial enforcement of an overbroad covenant was called inequitable, a worldwide restraint was left to fail rather than be revised for a sophisticated party, and the court warned that saving unreasonable covenants would teach employers to stop drafting reasonable ones. So do not review a savings clause as a safety net. Put the actual enforceable scope in the contract — protected business, restricted activities, customer set, geography, duration — and treat anything broader as already lost.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-sunder-discretion-sev",
+            "authorityType": "case-law",
+            "title": "Sunder Energy, LLC v. Jackson",
+            "citation": "Sunder Energy, LLC v. Jackson, 332 A.3d 472, 495 (Del. 2024).",
+            "url": "https://www.courtlistener.com/opinion/10291288/sunder-energy-llc-v-tyler-jackson/",
+            "deepLink": "https://www.courtlistener.com/opinion/10291288/sunder-energy-llc-v-tyler-jackson/#:~:text=This%20is%20not%20to%20say,reformation%20of%20the%20parties%E2%80%99%20agreement.",
+            "proposition": "Sunder Supreme confirms blue-penciling remains discretionary — preserved in principle, refused on the record before the court.",
+            "verbatimQuote": "This is not to say that Delaware courts should never blue pencil an agreement that is overbroad in some respects. But the relief Appellant sought was a wholesale reformation of the parties’ agreement.",
+            "date": "2024-12-10",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-sunder-discretion-sev"
+          },
+          {
+            "sourceId": "de-kodiak-sev",
+            "authorityType": "case-law",
+            "title": "Kodiak Building Partners, LLC v. Adams",
+            "citation": "Kodiak Bldg. Partners, LLC v. Adams, 2022 WL 5240507, at *13 n.108 (Del. Ch. Oct. 6, 2022).",
+            "url": "https://www.courtlistener.com/opinion/8247185/kodiak-building-partners-llc-v-philip-d-adams/",
+            "deepLink": "https://www.courtlistener.com/opinion/8247185/kodiak-building-partners-llc-v-philip-d-adams/#:~:text=The%20inequities%20inherent%20in%20blue%2Dpenciling,to%20have%20violated%20those%20portions.",
+            "proposition": "Kodiak refused partial enforcement because the inequities inherent in blue-penciling counsel against saving an overbroad covenant even in part.",
+            "verbatimQuote": "The inequities inherent in blue-penciling a noncompete also counsel against enforcing only those portions of the RCA that are supported by Kodiak’s legitimate business interests, even as Adams appears to have violated those portions.",
+            "date": "2022-10-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-kodiak-sev"
+          },
+          {
+            "sourceId": "de-intertek-sev",
+            "authorityType": "case-law",
+            "title": "Intertek Testing Services NA, Inc. v. Eastman",
+            "citation": "Intertek Testing Servs. NA, Inc. v. Eastman, 2023 WL 2544236, at *5 (Del. Ch. Mar. 16, 2023).",
+            "url": "https://www.courtlistener.com/opinion/9384707/intertek-testing-services-na-inc-v-jeff-eastman/",
+            "deepLink": "https://www.courtlistener.com/opinion/9384707/intertek-testing-services-na-inc-v-jeff-eastman/#:~:text=In%20my%20view%2C%20revising%20the,its%20overreach%20would%20be%20inequitable.",
+            "proposition": "Intertek refused to revise a worldwide non-compete to rescue a sophisticated party from its overreach.",
+            "verbatimQuote": "In my view, revising the non-compete to save Intertek—a sophisticated party—from its overreach would be inequitable.",
+            "date": "2023-03-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-intertek-sev"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#address-survival-per-covenant",
+        "requirementGuidance": "Each covenant should expire on its own definite schedule and read on its own. Self-contained survival language is what lets a sound non-solicit outlive a failed non-compete — and in a state whose courts increasingly decline to repair the failed clause, that separateness is the difference between losing one covenant and losing the package.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#address-assignment-and-successors",
+        "requirementGuidance": "Confirm the employer can assign to successors and the worker cannot. Whoever inherits the covenant inherits its posture with it — the same reasonableness review, the same equities, the same reluctance to narrow — and a successor whose business looks nothing like the goodwill the covenant was written to protect inherits a harder case, not a better one.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "anchor-delaware-choice-of-law-within-its-limits",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.delaware.anchor-delaware-choice-of-law-within-its-limits",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Delaware choice of law, and where it stops",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#anchor-delaware-choice-of-law-within-its-limits",
+        "requirementGuidance": "Do not treat a Delaware choice-of-law clause as a universal workaround for another state's non-compete rules. The statutory anchor is real — a written Delaware selection in a qualifying contract is conclusively presumed a significant, material and reasonable relationship with the State, though contracts involving less than $100,000 are excluded — but Delaware's own courts police the limit: Chancery has refused to let Delaware's freedom-of-contract policy routinely trump the default state's public policy, and has applied another state's law over a Delaware clause where that state had the stronger interest. Name the governing law, venue, and dispute process expressly; for an out-of-state worker, analyze the default state, its fundamental policy, and which state has the materially greater interest before relying on the clause.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-2708-anchor-gov",
+            "authorityType": "primary-law",
+            "title": "6 Del. C. § 2708",
+            "citation": "6 Del. C. § 2708(a).",
+            "enactedCitation": "6 Del. C. § 2708",
+            "url": "https://delcode.delaware.gov/title6/c027/sc01/index.html",
+            "proposition": "Section 2708 conclusively presumes a qualifying written Delaware choice-of-law selection reasonable and enforceable.",
+            "verbatimQuote": "The foregoing shall conclusively be presumed to be a significant, material and reasonable relationship with this State and shall be enforced whether or not there are other relationships with this State.",
+            "date": "1993-07-12",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-2708-anchor-gov"
+          },
+          {
+            "sourceId": "de-2708-threshold-gov",
+            "authorityType": "primary-law",
+            "title": "6 Del. C. § 2708",
+            "citation": "6 Del. C. § 2708(c).",
+            "enactedCitation": "6 Del. C. § 2708",
+            "url": "https://delcode.delaware.gov/title6/c027/sc01/index.html",
+            "proposition": "Section 2708 excludes contracts involving less than $100,000 from the statutory choice-of-law rule.",
+            "verbatimQuote": "This section shall not apply to any contract, agreement or other undertaking: (1) To the extent provided to the contrary in § 1-301(c) of this title; or (2) Involving less than $100,000.",
+            "date": "1993-07-12",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-2708-threshold-gov"
+          },
+          {
+            "sourceId": "de-ascension-gov",
+            "authorityType": "case-law",
+            "title": "Ascension Insurance Holdings, LLC v. Underwood",
+            "citation": "Ascension Ins. Holdings, LLC v. Underwood, 2015 WL 356002, at *5 (Del. Ch. Jan. 28, 2015).",
+            "url": "https://www.courtlistener.com/opinion/2774269/ascension-insurance-holdings-llc-v-roberts-f-under/",
+            "deepLink": "https://www.courtlistener.com/opinion/2774269/ascension-insurance-holdings-llc-v-roberts-f-under/#:~:text=I%20cannot%20agree%20with%20the,the%20default%20state%E2%80%99s%20public%20policy.",
+            "proposition": "Ascension refused to let Delaware's freedom-of-contract interest routinely override the default state's fundamental non-compete policy.",
+            "verbatimQuote": "I cannot agree with the Plaintiff, however, that the teaching of DGWL is that Delaware’s broad interest in freedom of contract will always, or even routinely, trump the default state’s public policy.",
+            "date": "2015-01-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-ascension-gov"
+          },
+          {
+            "sourceId": "de-fp-uc-col-gov",
+            "authorityType": "case-law",
+            "title": "FP UC Holdings, LLC v. Hamilton",
+            "citation": "FP UC Holdings, LLC v. Hamilton, 2020 WL 1492783, at *10 (Del. Ch. Mar. 27, 2020).",
+            "url": "https://www.courtlistener.com/opinion/4739986/fp-uc-holdings-llc-fpmcm-llc-and-fast-pace-medical-clinic-pllc-v/",
+            "deepLink": "https://www.courtlistener.com/opinion/4739986/fp-uc-holdings-llc-fpmcm-llc-and-fast-pace-medical-clinic-pllc-v/#:~:text=If%20these%20narrow%20%E2%80%9Cquestions%20are,apply%20notwithstanding%20the%20choice%2Dof%2Dlaw%20provision.%E2%80%9D",
+            "proposition": "FP UC Holdings applied another state's law notwithstanding a Delaware choice-of-law clause where that state had the stronger non-compete policy interest.",
+            "verbatimQuote": "If these narrow “questions are answered in the affirmative, [Alabama] law will apply notwithstanding the choice-of-law provision.”",
+            "date": "2020-03-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-fp-uc-col-gov"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard boilerplate with one local wrinkle: because Delaware fixes the consideration question at the moment each instrument is formed, an amendment that re-papers a covenant is its own formation event. Keep the amendment mechanics clean and leave a record of what value moved at each signing, so the formation-time story is documented rather than reconstructed in litigation.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "satisfy-the-chancery-reasonableness-test",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.delaware.satisfy-the-chancery-reasonableness-test",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "The full reasonableness review satisfied",
+        "sectionId": "delaware-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#satisfy-the-chancery-reasonableness-test",
+        "requirementGuidance": "Run every restraint through the Delaware test: reasonable in geographic scope and temporal duration, advancing a legitimate economic interest of the party enforcing it, and surviving a balancing of the equities. The review is holistic — every dimension of the covenant, weighed together with the contract's other restrictions — and the recognized interests are employer goodwill and confidential information, established on this employer's actual facts. A Delaware choice-of-law clause, executive status, or an equity grant does not substitute for the inquiry, and no wage threshold or notice statute stands in for it either.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-fp-uc-test-gate",
+            "authorityType": "case-law",
+            "title": "FP UC Holdings, LLC v. Hamilton",
+            "citation": "FP UC Holdings, LLC v. Hamilton, 2020 WL 1492783, at *6 (Del. Ch. Mar. 27, 2020).",
+            "url": "https://www.courtlistener.com/opinion/4739986/fp-uc-holdings-llc-fpmcm-llc-and-fast-pace-medical-clinic-pllc-v/",
+            "deepLink": "https://www.courtlistener.com/opinion/4739986/fp-uc-holdings-llc-fpmcm-llc-and-fast-pace-medical-clinic-pllc-v/#:~:text=Instead%2C%20our%20courts%20carefully%20review,a%20balancing%20of%20the%20equities.%E2%80%9D",
+            "proposition": "FP UC Holdings states Delaware's three-part review: reasonable geographic and temporal scope, a legitimate economic interest, and a balancing of the equities.",
+            "verbatimQuote": "Instead, our courts carefully review the covenants to assure they “(1) [are] reasonable in geographic scope and temporal duration, (2) advance a legitimate economic interest of the party seeking its enforcement, and (3) survive a balancing of the equities.”",
+            "date": "2020-03-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-fp-uc-test-gate"
+          },
+          {
+            "sourceId": "de-sunder-holistic-gate",
+            "authorityType": "case-law",
+            "title": "Sunder Energy, LLC v. Jackson",
+            "citation": "Sunder Energy, LLC v. Jackson, 305 A.3d 723, 754 (Del. Ch. 2023), aff'd in relevant part, 332 A.3d 472 (Del. 2024).",
+            "url": "https://www.courtlistener.com/opinion/9444424/sunder-energy-llc-v-jackson/",
+            "deepLink": "https://www.courtlistener.com/opinion/9444424/sunder-energy-llc-v-jackson/#:~:text=When%20evaluating%20the%20reasonableness%20of,other%20restrictions%20in%20the%20contract.",
+            "proposition": "Sunder Chancery requires the reasonableness review to be holistic, across every dimension of the covenant and its interaction with the contract's other restrictions.",
+            "verbatimQuote": "When evaluating the reasonableness of a restrictive covenant, a court examines the restriction holistically and in context. That means evaluating all of the dimensions of the restrictive covenant and considering how it operates with other restrictions in the contract.",
+            "date": "2023-11-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-sunder-holistic-gate"
+          },
+          {
+            "sourceId": "de-payscale-interests-gate",
+            "authorityType": "case-law",
+            "title": "Payscale Inc. v. Norman",
+            "citation": "Payscale Inc. v. Norman, No. 297, 2025, slip op. at 15-16 (Del. Mar. 19, 2026).",
+            "url": "https://www.courtlistener.com/opinion/10811247/payscale-inc-v-erin-norman-and-bettercomp-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/10811247/payscale-inc-v-erin-norman-and-bettercomp-inc/#:~:text=For%20a%20restrictive%20covenant%2C%20%E2%80%9C%E2%80%98%5Bl%5Degitimate,employer%20confidential%20information%20from%20misuse.%E2%80%9D",
+            "proposition": "Payscale identifies employer goodwill and confidential information as the legitimate interests recognized by Delaware law.",
+            "verbatimQuote": "For a restrictive covenant, “‘[l]egitimate interests’ recognized by Delaware law include protection of employer goodwill[] and protection of employer confidential information from misuse.”",
+            "date": "2026-03-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-payscale-interests-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-physician-practice-restrictions",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.delaware.exclude-physician-practice-restrictions",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No practice restraints on physicians",
+        "sectionId": "delaware-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#exclude-physician-practice-restrictions",
+        "requirementGuidance": "A covenant in an employment, partnership, or corporate agreement between or among physicians that restricts a physician's right to practice medicine in a particular locale or for a defined period after termination is void by statute. The statute is targeted, not total: all other provisions remain enforceable, including damages provisions in an amount reasonably related to the injury from termination — and those damages may include damages related to competition. Strike any practice restraint; keep any damages clause separate from it and tied to actual injury.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-2707-void-gate",
+            "authorityType": "primary-law",
+            "title": "6 Del. C. § 2707",
+            "citation": "6 Del. C. § 2707.",
+            "enactedCitation": "6 Del. C. § 2707",
+            "url": "https://delcode.delaware.gov/title6/c027/sc01/index.html",
+            "proposition": "Section 2707 voids physician covenants restricting practice by locale or time after termination while preserving all other provisions of the agreement.",
+            "verbatimQuote": "Any covenant not to compete provision of an employment, partnership or corporate agreement between and/or among physicians which restricts the right of a physician to practice medicine in a particular locale and/or for a defined period of time, upon the termination of the principal agreement of which the said provision is a part, shall be void; except that all other provisions of such an agreement shall be enforceable at law, including provisions which require the payment of damages in an amount that is reasonably related to the injury suffered by reason of termination of the principal agreement.",
+            "date": "1983-07-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-2707-void-gate"
+          },
+          {
+            "sourceId": "de-2707-damages-gate",
+            "authorityType": "primary-law",
+            "title": "6 Del. C. § 2707",
+            "citation": "6 Del. C. § 2707.",
+            "enactedCitation": "6 Del. C. § 2707",
+            "url": "https://delcode.delaware.gov/title6/c027/sc01/index.html",
+            "proposition": "Section 2707 permits damages provisions on termination, including damages related to competition — the lawful alternative the statute leaves open.",
+            "verbatimQuote": "Provisions which require the payment of damages upon termination of the principal agreement may include, but not be limited to, damages related to competition.",
+            "date": "1983-07-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-2707-damages-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-home-inspector-trainee-noncompetes",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.delaware.exclude-home-inspector-trainee-noncompetes",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No non-compete forced on a home inspector trainee",
+        "sectionId": "delaware-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#exclude-home-inspector-trainee-noncompetes",
+        "requirementGuidance": "A registered home inspector trainee cannot be required to execute a covenant not to compete with a supervising licensed home inspector — or to pay the supervisor any fee or other thing of value — as a condition of satisfying the trainee requirements. This is a narrow licensing rule, not a general employee statute, so apply it in profession-specific review: inspection businesses, trainee-supervision arrangements, and any agreement papering that relationship.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-home-inspector-gate",
+            "authorityType": "primary-law",
+            "title": "24 Del. C. § 4109(d)",
+            "citation": "24 Del. C. § 4109(d).",
+            "enactedCitation": "24 Del. C. § 4109(d)",
+            "url": "https://delcode.delaware.gov/title24/c041/sc02/index.html",
+            "proposition": "Section 4109(d) bars requiring a home inspector trainee to execute a non-compete with a supervising licensed home inspector as a condition of the trainee requirements.",
+            "verbatimQuote": "(d) No person, while registered as a home inspector trainee, shall be required to pay any fee, charge or other thing of value to a supervising licensed home inspector, or be required to execute a covenant not to compete with a supervising licensed home inspector, as a condition of satisfying the home inspector trainee requirements of this subchapter.",
+            "date": "2014-08-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-home-inspector-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "match-sale-of-business-covenants-to-acquired-goodwill",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.delaware.match-sale-of-business-covenants-to-acquired-goodwill",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Sale covenants matched to what was bought",
+        "sectionId": "delaware-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#match-sale-of-business-covenants-to-acquired-goodwill",
+        "requirementGuidance": "When the covenant rides a business sale, Delaware reviews it less searchingly than an employment covenant — but the restraint still has to match what the buyer actually bought. The cautionary case refused preliminary enforcement where the covenant protected the buyer's unrelated segments and affiliates beyond the goodwill and information acquired; the enforceable case paired substantial merger consideration with a restricted area matching the seller's real operational reach. Define the restricted business by the acquired business, and treat buyer-family affiliate language as overreach unless the record supports it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-derge-less-searching-gate",
+            "authorityType": "case-law",
+            "title": "Derge v. D&H United Fueling Solutions, Inc.",
+            "citation": "Derge v. D&H United Fueling Sols., Inc., C.A. No. 2025-0087-BWD, slip op. at 12 (Del. Ch. Dec. 8, 2025).",
+            "url": "https://www.courtlistener.com/opinion/10749078/william-brian-derge-v-dh-united-fueling-solutions-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/10749078/william-brian-derge-v-dh-united-fueling-solutions-inc/#:~:text=By%20comparison%2C%20%E2%80%9Ccovenants%20not%20to,contained%20in%20an%20employment%20contract.%E2%80%99%E2%80%9D",
+            "proposition": "Derge applies a less searching inquiry to sale-of-business non-competes than to employment non-competes.",
+            "verbatimQuote": "By comparison, “covenants not to compete in the context of a business sale are subject to a ‘less searching’ inquiry than if the covenant ‘had been contained in an employment contract.’”",
+            "date": "2025-12-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-derge-less-searching-gate"
+          },
+          {
+            "sourceId": "de-kodiak-goodwill-gate",
+            "authorityType": "case-law",
+            "title": "Kodiak Building Partners, LLC v. Adams",
+            "citation": "Kodiak Bldg. Partners, LLC v. Adams, 2022 WL 5240507, at *8 (Del. Ch. Oct. 6, 2022).",
+            "url": "https://www.courtlistener.com/opinion/8247185/kodiak-building-partners-llc-v-philip-d-adams/",
+            "deepLink": "https://www.courtlistener.com/opinion/8247185/kodiak-building-partners-llc-v-philip-d-adams/#:~:text=In%20sum%2C%20Kodiak%20has%20a,Adams%20knows%20or%20could%20access.",
+            "proposition": "Kodiak limits the sale-of-business interest to the goodwill purchased in the deal and the information the seller actually knows or can access.",
+            "verbatimQuote": "In sum, Kodiak has a legitimate business interest in protecting the goodwill it purchased when it bought Northwest, and the confidential information about Kodiak operations that Adams knows or could access.",
+            "date": "2022-10-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-kodiak-goodwill-gate"
+          },
+          {
+            "sourceId": "de-derge-scope-gate",
+            "authorityType": "case-law",
+            "title": "Derge v. D&H United Fueling Solutions, Inc.",
+            "citation": "Derge v. D&H United Fueling Sols., Inc., C.A. No. 2025-0087-BWD, slip op. at 19 (Del. Ch. Dec. 8, 2025).",
+            "url": "https://www.courtlistener.com/opinion/10749078/william-brian-derge-v-dh-united-fueling-solutions-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/10749078/william-brian-derge-v-dh-united-fueling-solutions-inc/#:~:text=The%20record%20here%20shows%20that,interest%20in%20the%20Protected%20Area.",
+            "proposition": "Derge enforced an expansive sale-of-business covenant where the restricted area matched the seller's operational responsibility across the acquired business's markets.",
+            "verbatimQuote": "The record here shows that Tanknology conducted business across the United States and internationally, and that, as COO, Plaintiff had responsibility over operations across all markets. Thus, Defendants have a legitimate business interest in the Protected Area.",
+            "date": "2025-12-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-derge-scope-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "distinguish-forfeiture-for-competition-from-restraints-on-work",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.delaware.distinguish-forfeiture-for-competition-from-restraints-on-work",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Forfeiture conditions kept distinct from work bans",
+        "sectionId": "delaware-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#distinguish-forfeiture-for-competition-from-restraints-on-work",
+        "requirementGuidance": "Do not let a label decide the review. A genuine forfeiture-for-competition provision conditions a deferred benefit — partnership distributions, equity awards — on staying out of competition: the worker remains free to compete at the price of the benefit, and Delaware reviews that condition under the employee-choice doctrine rather than as a restraint of trade, in corporate equity plans as much as limited partnerships. But the doctrine runs only one way. A clause that directly bars work is a true non-compete however it is captioned, and it keeps the full reasonableness review this page is built around — so classify each competition-linked provision by its effect before deciding which gate it must clear.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "de-ainslie-distinction-gate",
+            "authorityType": "case-law",
+            "title": "Cantor Fitzgerald, L.P. v. Ainslie",
+            "citation": "Cantor Fitzgerald, L.P. v. Ainslie, 312 A.3d 674, 694 (Del. 2024).",
+            "url": "https://www.courtlistener.com/opinion/9469727/cantor-fitzgerald-lp-v-ainslie/",
+            "deepLink": "https://www.courtlistener.com/opinion/9469727/cantor-fitzgerald-lp-v-ainslie/#:~:text=Thus%2C%20the%20Competitive%20Activity%20Condition,does%20competition%20support%20injunctive%20relief.",
+            "proposition": "Ainslie distinguishes a forfeiture condition on a contingent benefit from a restraint on the former partner's ability to work.",
+            "verbatimQuote": "Thus, the Competitive Activity Condition does not restrict competition or a former partner’s ability to work; nor does competition support injunctive relief.",
+            "date": "2024-01-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-ainslie-distinction-gate"
+          },
+          {
+            "sourceId": "de-ainslie-summary-gate",
+            "authorityType": "case-law",
+            "title": "Cantor Fitzgerald, L.P. v. Ainslie",
+            "citation": "Cantor Fitzgerald, L.P. v. Ainslie, 312 A.3d 674, 700 (Del. 2024).",
+            "url": "https://www.courtlistener.com/opinion/9469727/cantor-fitzgerald-lp-v-ainslie/",
+            "deepLink": "https://www.courtlistener.com/opinion/9469727/cantor-fitzgerald-lp-v-ainslie/#:~:text=To%20sum%20up%2C%20we%20disagree,subject%20to%20review%20for%20reasonableness.",
+            "proposition": "Ainslie holds that forfeiture-for-competition provisions are not restraints of trade subject to reasonableness review.",
+            "verbatimQuote": "To sum up, we disagree with the Court of Chancery’s conclusion that forfeiture-for-competition provisions like the one at issue here are restraints of trade subject to review for reasonableness.",
+            "date": "2024-01-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-ainslie-summary-gate"
+          },
+          {
+            "sourceId": "de-lkq-gate",
+            "authorityType": "case-law",
+            "title": "LKQ Corp. v. Rutledge",
+            "citation": "LKQ Corp. v. Rutledge, No. 110, 2024 (Del. Dec. 18, 2024).",
+            "url": "https://www.courtlistener.com/opinion/10296559/lkq-corporation-v-robert-rutledge/",
+            "deepLink": "https://www.courtlistener.com/opinion/10296559/lkq-corporation-v-robert-rutledge/#:~:text=Cantor%20Fitzgerald%20is%20not%20restricted,to%20the%20limited%20partnership%20context.",
+            "proposition": "LKQ extends the employee-choice doctrine beyond limited partnerships to corporate equity forfeiture-for-competition provisions.",
+            "verbatimQuote": "Cantor Fitzgerald is not restricted to the limited partnership context.",
+            "date": "2024-12-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/delaware#src-de-lkq-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

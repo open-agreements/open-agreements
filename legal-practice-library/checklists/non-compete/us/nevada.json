@@ -1,0 +1,1309 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/nevada",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/nevada.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/nevada",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/nevada/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/nevada/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "nevada",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Nevada",
+      "description": "A clause-by-clause reviewer checklist for Nevada employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under NRS 613.195's four-part test, hourly-worker ban, volunteer-customer carve-out, and mandatory judicial revision.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Nevada",
+      "coverage": "Nevada (US)",
+      "lastReviewed": "2026-06-11",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 47,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "nevada-statutory-gates",
+        "label": "Nevada statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#identify-parties",
+        "requirementGuidance": "Match the named employer to the entity whose protection the restraint actually serves. Nevada measures every covenant against the restraint required for the protection of the employer for whose benefit it is imposed, so a covenant papered with a parent or affiliate that holds none of the protected relationships starts the analysis with a mismatch.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-benefit-employer",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(1)(b).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(1)(b) frames the restraint analysis around the employer for whose benefit the restraint is imposed, which is why the named employer should hold the protected interest.",
+            "verbatimQuote": "A noncompetition covenant is void and unenforceable unless the noncompetition covenant: (a) Is supported by valuable consideration; (b) Does not impose any restraint that is greater than is required for the protection of the employer for whose benefit the restraint is imposed; (c) Does not impose any undue hardship on the employee; and (d) Imposes restrictions that are appropriate in relation to the valuable consideration supporting the noncompetition covenant.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-benefit-employer"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#identify-effective-date",
+        "requirementGuidance": "Confirm a stated effective date and a defined start for each covenant clock. Nevada ties enforceability to facts that move over time — what consideration was given when, how employment later ended, whether severance is still being paid — and an undated covenant makes each of those reconstructions harder than it needs to be.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#identify-employee-title",
+        "requirementGuidance": "Record the title, but in Nevada check the pay structure next to it: a worker paid solely on an hourly wage basis, tips aside, cannot be bound at all, no matter how senior the role sounds on paper. Title and duties still matter as evidence of what the worker could carry to a competitor.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-hourly-pay-structure",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(3).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(3) supports checking pay structure alongside title, because solely hourly-paid employees cannot be bound by a non-compete.",
+            "verbatimQuote": "A noncompetition covenant may not apply to an employee who is paid solely on an hourly wage basis, exclusive of any tips or gratuities.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-hourly-pay-structure"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#identify-governing-law",
+        "requirementGuidance": "Verify the governing state is stated on the face of the agreement. When Nevada law applies, NRS 613.195 supplies the whole framework this checklist tests against — the validity conditions, the worker exclusions, the revision rule, and the fee exposure — so an ambiguous governing-law term leaves the review itself unanchored.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#define-confidential-information",
+        "requirementGuidance": "Check the definition against Nevada's statutory safe harbor: post-termination confidentiality agreements are expressly preserved when they cover trade secrets, business methods, customer lists, secret formulas or processes, and confidential information, are supported by valuable consideration, and stay reasonable in scope and duration. A definition that swells beyond those categories trades the safe harbor for risk.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-nda-safe-harbor",
+            "authorityType": "primary-law",
+            "title": "NRS 613.200",
+            "citation": "NRS 613.200(4).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.200(4) supports the safe harbor for reasonable, consideration-supported post-termination confidentiality agreements covering trade secrets and confidential business information.",
+            "verbatimQuote": "The provisions of this section do not prohibit a person, association, company, corporation, agent or officer from negotiating, executing and enforcing an agreement with an employee of the person, association, company or corporation which, upon termination of the employment, prohibits the employee from disclosing any trade secrets, business methods, lists of customers, secret formulas or processes or confidential information learned or obtained during the course of his or her employment with the person, association, company or corporation if the agreement is supported by valuable consideration and is otherwise reasonable in its scope and duration.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-nda-safe-harbor"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#define-trade-secrets",
+        "requirementGuidance": "Keep the trade-secret definition aligned with Nevada's Uniform Trade Secrets Act: information that derives independent economic value from secrecy and is subject to reasonable secrecy efforts. A contractual definition that labels everything a trade secret invites a court to discount the one category Nevada protects without any time limit.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "NRS 600A.030",
+            "citation": "NRS 600A.030(5)(a).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-600A.html",
+            "proposition": "NRS 600A.030(5)(a) supports aligning the contractual trade-secret definition with Nevada's secrecy-value and reasonable-efforts elements.",
+            "verbatimQuote": "“Trade secret”: (a) Means information, including, without limitation, a formula, pattern, compilation, program, device, method, technique, product, system, process, design, prototype, procedure, computer programming instruction or code that: (1) Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by the public or any other persons who can obtain commercial or economic value from its disclosure or use; and (2) Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-trade-secret-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#define-restricted-period",
+        "requirementGuidance": "One umbrella Restricted Period keeps every duration auditable — and in Nevada it marks exactly what a court will operate on, because time limits are the first thing the statute authorizes a judge to revise down to reasonableness. A clean, severable period definition makes that mandatory revision surgical instead of structural.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-revision-scope-defs",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(6).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(6) supports the point that time, geographic, and activity limits are what a Nevada court revises down to reasonableness.",
+            "verbatimQuote": "Such revisions must cause the limitations contained in the covenant as to time, geographical area and scope of activity to be restrained to be reasonable, to not impose undue hardship on the employee and to impose a restraint that is not greater than is necessary for the protection of the employer for whose benefit the restraint is imposed.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-revision-scope-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#define-restricted-territory",
+        "requirementGuidance": "Tie the geography to where the employer actually faces the worker's competition. Nevada courts must trim an unreasonable territory rather than void the covenant, but revised means narrowed by a judge under a no-greater-than-necessary standard — a result no drafter should prefer to a territory that was defensible as written.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-revision-scope-defs",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(6).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(6) supports the point that time, geographic, and activity limits are what a Nevada court revises down to reasonableness.",
+            "verbatimQuote": "Such revisions must cause the limitations contained in the covenant as to time, geographical area and scope of activity to be restrained to be reasonable, to not impose undue hardship on the employee and to impose a restraint that is not greater than is necessary for the protection of the employer for whose benefit the restraint is imposed.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-revision-scope-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the worker actually served during a stated look-back window — and make sure the definition does not silently capture the customer Nevada protects: one who was never solicited and voluntarily followed the departing employee. A customer class drafted wider than the statute allows puts the clause in mandatory-fee territory, not just overbreadth territory.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-volunteer-customer-defs",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(2).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(2) supports keeping customer classes and solicitation definitions clear of the protected volunteer-customer scenario.",
+            "verbatimQuote": "A noncompetition covenant may not restrict, and an employer may not bring an action to restrict, a former employee of an employer from providing service to a former customer or client if: (a) The former employee did not solicit the former customer or client; (b) The customer or client voluntarily chose to leave and seek services from the former employee; and (c) The former employee is otherwise complying with the limitations in the covenant as to time, geographical area and scope of activity to be restrained, other than any limitation on providing services to a former customer or client who seeks the services of the former employee without any contact instigated by the former employee.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-volunteer-customer-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing worker actually worked with or supervised during the look-back window. Nevada's non-compete statute does not separately regulate employee non-solicits, so the clause stands or falls on ordinary reasonableness — a workforce-wide hiring ban reads as a restraint the statute never blessed.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#define-protected-interests",
+        "requirementGuidance": "Name the interests with enough specificity to do statutory work. Nevada's second validity condition voids any restraint greater than required for the employer's protection, so the recital of what is being protected is the yardstick the whole covenant gets measured — and if necessary revised — against.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-greater-restraint-defs",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(1)(b).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(1)(b) supports measuring the covenant against the protection actually required by the employer's stated interests.",
+            "verbatimQuote": "A noncompetition covenant is void and unenforceable unless the noncompetition covenant: (a) Is supported by valuable consideration; (b) Does not impose any restraint that is greater than is required for the protection of the employer for whose benefit the restraint is imposed; (c) Does not impose any undue hardship on the employee; and (d) Imposes restrictions that are appropriate in relation to the valuable consideration supporting the noncompetition covenant.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-greater-restraint-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#define-competitive-business",
+        "requirementGuidance": "Describe the competing activity in concrete terms. Nevada's revision mandate has a hard limit that matters here: a court will revise an overbroad covenant but will not rewrite one or supply missing essential terms, so a Competitive Business definition too vague to narrow is a definition the statute cannot save.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-rewrite-limit-defs",
+            "authorityType": "case-law",
+            "title": "Tough Turtle Turf, LLC v. Scott",
+            "citation": "Tough Turtle Turf, LLC v. Scott, 139 Nev. Adv. Op. 47, 537 P.3d 883 (2023).",
+            "url": "https://www.courtlistener.com/opinion/9456796/tough-turtle-turf-llc-v-scott/",
+            "deepLink": "https://www.courtlistener.com/opinion/9456796/tough-turtle-turf-llc-v-scott/#:~:text=Reading%20subsection%20(1)%20harmoniously%20with,than%20revise%20the%20noncompete%20covenant.",
+            "proposition": "Tough Turtle Turf supports the limit that a Nevada court revises rather than rewrites, so a definition too vague to narrow cannot be saved.",
+            "verbatimQuote": "Reading subsection (1) harmoniously with subsection (6) indicates that there are instances when a noncompete covenant will be unenforceable, such as when no valuable consideration supports the noncompete covenant or when the court would need to rewrite rather than revise the noncompete covenant.",
+            "date": "2023-11-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-rewrite-limit-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. A clause that technically reaches index funds and ordinary public shares burdens the worker without protecting the employer — gratuitous weight on Nevada's undue-hardship scale, and an easy target for judicial trimming.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#define-passive-public-holdings",
+        "requirementGuidance": "A drafting convenience rather than a requirement — many agreements inline the carve-out language instead of defining a capitalized term. If the term appears, confirm its ownership percentage matches the operative carve-out that relies on it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#define-solicit",
+        "requirementGuidance": "In Nevada this definition carries statutory freight: the volunteer-customer carve-out turns on whether the former employee solicited the customer or the customer arrived without any contact the employee instigated. A definition that treats merely accepting inbound business as solicitation collides head-on with conduct the statute protects.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-volunteer-customer-defs",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(2).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(2) supports keeping customer classes and solicitation definitions clear of the protected volunteer-customer scenario.",
+            "verbatimQuote": "A noncompetition covenant may not restrict, and an employer may not bring an action to restrict, a former employee of an employer from providing service to a former customer or client if: (a) The former employee did not solicit the former customer or client; (b) The customer or client voluntarily chose to leave and seek services from the former employee; and (c) The former employee is otherwise complying with the limitations in the covenant as to time, geographical area and scope of activity to be restrained, other than any limitation on providing services to a former customer or client who seeks the services of the former employee without any contact instigated by the former employee.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-volunteer-customer-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger handles resignation, dismissal, and employer-driven restructuring distinctly. Nevada makes the cause of termination outcome-determinative: after a reduction in force, reorganization, or similar restructuring, the covenant is enforceable only while the employer keeps paying — so the definitions need to make the restructuring case identifiable on the face of the agreement.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-rif-termination-defs",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(5).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(5) supports defining termination causes precisely, because restructuring terminations condition enforcement on continued pay.",
+            "verbatimQuote": "If the termination of the employment of an employee is the result of a reduction of force, reorganization or similar restructuring of the employer, a noncompetition covenant is only enforceable during the period in which the employer is paying the employee’s salary, benefits or equivalent compensation, including, without limitation, severance pay.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-rif-termination-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#acknowledge-timing",
+        "requirementGuidance": "Pin down when the covenant was signed relative to hire and what moved in exchange. Nevada's high court accepted continued at-will employment as consideration, but the modern statute adds a proportionality test — the restrictions must be appropriate in relation to the consideration — so a timing acknowledgement that records fresh value for a mid-employment covenant earns its place.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-camco-continued-employment",
+            "authorityType": "case-law",
+            "title": "Camco, Inc. v. Baker",
+            "citation": "Camco, Inc. v. Baker, 113 Nev. 512, 936 P.2d 829 (1997).",
+            "url": "https://www.courtlistener.com/opinion/1224995/camco-inc-v-baker/",
+            "deepLink": "https://www.courtlistener.com/opinion/1224995/camco-inc-v-baker/#:~:text=Today%20we%20adopt%20the%20majority,for%20enforcing%20a%20non%2Dcompetition%20agreement.",
+            "proposition": "Camco supports the Nevada common-law rule that continued at-will employment can be sufficient consideration for a post-hire non-compete.",
+            "verbatimQuote": "Today we adopt the majority rule which states that an at-will employee's continued employment is sufficient consideration for enforcing a non-competition agreement.",
+            "date": "1997-04-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-camco-continued-employment"
+          },
+          {
+            "sourceId": "nv-consideration-proportionality",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(1)(a), (d).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(1)(a) and (d) support the statutory requirements of valuable consideration and restrictions proportionate to that consideration.",
+            "verbatimQuote": "A noncompetition covenant is void and unenforceable unless the noncompetition covenant: (a) Is supported by valuable consideration; (b) Does not impose any restraint that is greater than is required for the protection of the employer for whose benefit the restraint is imposed; (c) Does not impose any undue hardship on the employee; and (d) Imposes restrictions that are appropriate in relation to the valuable consideration supporting the noncompetition covenant.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-consideration-proportionality"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Nevada statute requires it, but the acknowledgement is cheap evidence on two statutory fronts at once: it supports the valuable-consideration narrative and softens an undue-hardship argument from a worker who later claims the covenant was sprung without a real chance to evaluate it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret obligations should run as long as secrecy does, because that is how the right itself is defined: Nevada's Uniform Trade Secrets Act keys protection to information that stays valuable by staying secret and remains subject to reasonable secrecy efforts. A fixed expiry on trade-secret confidentiality contradicts the statutory framework and hands the worker an argument that secrecy was abandoned by contract.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-secrecy-definition",
+            "authorityType": "primary-law",
+            "title": "NRS 600A.030",
+            "citation": "NRS 600A.030(5)(a).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-600A.html",
+            "proposition": "NRS 600A.030(5)(a) keys trade-secret status to continued secrecy, supporting protection that runs as long as secrecy does.",
+            "verbatimQuote": "“Trade secret”: (a) Means information, including, without limitation, a formula, pattern, compilation, program, device, method, technique, product, system, process, design, prototype, procedure, computer programming instruction or code that: (1) Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by the public or any other persons who can obtain commercial or economic value from its disclosure or use; and (2) Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-secrecy-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. Nevada's safe harbor for post-termination confidentiality agreements requires the agreement to be reasonable in scope and duration — a perpetual lid on non-secret information presses on exactly that condition, while the two-track structure keeps the perpetual obligation where the trade-secret statute supports it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-nda-duration",
+            "authorityType": "primary-law",
+            "title": "NRS 613.200",
+            "citation": "NRS 613.200(4).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.200(4) conditions the confidentiality safe harbor on consideration and reasonableness in scope and duration.",
+            "verbatimQuote": "The provisions of this section do not prohibit a person, association, company, corporation, agent or officer from negotiating, executing and enforcing an agreement with an employee of the person, association, company or corporation which, upon termination of the employment, prohibits the employee from disclosing any trade secrets, business methods, lists of customers, secret formulas or processes or confidential information learned or obtained during the course of his or her employment with the person, association, company or corporation if the agreement is supported by valuable consideration and is otherwise reasonable in its scope and duration.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-nda-duration"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law applies with full force in Nevada: an agreement governing trade secrets or confidential information has to carry the whistleblower-immunity notice, or the employer forfeits exemplary damages and attorney fees in a later federal trade-secret action against the worker. For an employer whose strongest Nevada tools are secrecy-based, that is a costly clause to omit.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language must leave wages, hours, and working conditions discussable. Federal labor law protects that concerted activity in every state, and the Board has struck employee agreements whose terms broadly waived it — a federal overlay that no Nevada drafting choice can opt out of.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-nlra-section-7",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-nlra-section-7"
+          },
+          {
+            "sourceId": "nv-mclaren-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-mclaren-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. Confidentiality obligations cannot stop legally compelled disclosure anywhere, and in Nevada a clause that pretends otherwise needlessly strains the reasonable-scope condition the confidentiality safe harbor depends on.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. In Nevada the certification doubles as trade-secret hygiene: the statute protects only information subject to efforts that are reasonable under the circumstances to maintain its secrecy, and a documented return process is exactly the kind of effort a court looks for when the employer later claims misappropriation.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-secrecy-efforts",
+            "authorityType": "primary-law",
+            "title": "NRS 600A.030",
+            "citation": "NRS 600A.030(5)(a).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-600A.html",
+            "proposition": "NRS 600A.030(5)(a) conditions trade-secret status on reasonable secrecy efforts, which a documented return-and-certification process evidences.",
+            "verbatimQuote": "“Trade secret”: (a) Means information, including, without limitation, a formula, pattern, compilation, program, device, method, technique, product, system, process, design, prototype, procedure, computer programming instruction or code that: (1) Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by the public or any other persons who can obtain commercial or economic value from its disclosure or use; and (2) Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-secrecy-efforts"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and the quietest covenant in the Nevada family — the non-compete statute does not separately regulate it. Keep it scoped to Covered Employees and the Restricted Period, and remember the outer boundary: Nevada makes it a criminal offense to willfully prevent a former worker from obtaining employment elsewhere in the state, so a no-poach clause enforced as a de facto hiring blacklist is not a risk-free fallback.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-interference-misdemeanor",
+            "authorityType": "primary-law",
+            "title": "NRS 613.200",
+            "citation": "NRS 613.200(1).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.200(1) supports the criminal boundary on conduct that willfully prevents a former worker from obtaining employment elsewhere in Nevada.",
+            "verbatimQuote": "Except as otherwise provided in this section and NRS 613.195 , any person, association, company or corporation within this State, or any agent or officer on behalf of the person, association, company or corporation, who willfully does anything intended to prevent any person who for any cause left or was discharged from his, her or its employ from obtaining employment elsewhere in this State is guilty of a gross misdemeanor and shall be punished by a fine of not more than $5,000.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-interference-misdemeanor"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#permit-customer-nonsolicit",
+        "requirementGuidance": "Generally the safer Nevada covenant — but only when it polices outreach, not service. The statute protects a former customer who was never solicited and voluntarily follows the departing employee, and an employer who restricts or even attempts to restrict that protected service buys a mandatory fee award. If the clause appears, run it through the Nevada statutory gates at the end of this checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-volunteer-customer-covenants",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(2).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(2) supports the protected volunteer-customer scenario that customer-restriction covenants cannot lawfully reach.",
+            "verbatimQuote": "A noncompetition covenant may not restrict, and an employer may not bring an action to restrict, a former employee of an employer from providing service to a former customer or client if: (a) The former employee did not solicit the former customer or client; (b) The customer or client voluntarily chose to leave and seek services from the former employee; and (c) The former employee is otherwise complying with the limitations in the covenant as to time, geographical area and scope of activity to be restrained, other than any limitation on providing services to a former customer or client who seeks the services of the former employee without any contact instigated by the former employee.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-volunteer-customer-covenants"
+          },
+          {
+            "sourceId": "nv-fee-shifting-covenants",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(7).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(7) supports the mandatory fee award when an employer restricts or attempts to restrict protected volunteer-customer service.",
+            "verbatimQuote": "If an employer brings an action to enforce a noncompetition covenant or an employee brings an action to challenge a noncompetition covenant and the court finds that the noncompetition covenant applies to an employee described in subsection 3 or that the employer has restricted or attempted to restrict a former employee in the manner described in subsection 2, the court shall award the employee reasonable attorney’s fees and costs.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-fee-shifting-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they call first — which is precisely the scenario Nevada's volunteer-customer carve-out protects. An absolute no-service clause cannot lawfully reach a customer who arrives unsolicited and is served within the covenant's other valid limits, so any non-dealing covenant here needs an express statutory carve-out to survive review.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-volunteer-customer-covenants",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(2).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(2) supports the protected volunteer-customer scenario that customer-restriction covenants cannot lawfully reach.",
+            "verbatimQuote": "A noncompetition covenant may not restrict, and an employer may not bring an action to restrict, a former employee of an employer from providing service to a former customer or client if: (a) The former employee did not solicit the former customer or client; (b) The customer or client voluntarily chose to leave and seek services from the former employee; and (c) The former employee is otherwise complying with the limitations in the covenant as to time, geographical area and scope of activity to be restrained, other than any limitation on providing services to a former customer or client who seeks the services of the former employee without any contact instigated by the former employee.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-volunteer-customer-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#permit-non-compete",
+        "requirementGuidance": "Available in Nevada, but only on the statute's terms: the covenant is void unless it clears all four validity conditions, and it cannot touch a solely hourly-paid worker at any scope. If the clause appears, route the review straight through the Nevada statutory gates at the end of this checklist — validity test, hourly exclusion, volunteer-customer carve-out, layoff pay condition — before weighing any individual term.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-four-part-covenants",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(1).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(1) supports the four validity conditions every Nevada non-compete must clear.",
+            "verbatimQuote": "A noncompetition covenant is void and unenforceable unless the noncompetition covenant: (a) Is supported by valuable consideration; (b) Does not impose any restraint that is greater than is required for the protection of the employer for whose benefit the restraint is imposed; (c) Does not impose any undue hardship on the employee; and (d) Imposes restrictions that are appropriate in relation to the valuable consideration supporting the noncompetition covenant.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-four-part-covenants"
+          },
+          {
+            "sourceId": "nv-hourly-ban-covenants",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(3).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(3) supports the categorical exclusion of solely hourly-paid employees from non-compete coverage.",
+            "verbatimQuote": "A noncompetition covenant may not apply to an employee who is paid solely on an hourly wage basis, exclusive of any tips or gratuities.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-hourly-ban-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, bind those instead of leaning on the open-ended Competitive Business definition. Nevada's no-greater-restraint-than-required condition rewards the narrower formulation directly — and a covenant already sized to actual competition leaves a revising court little to cut.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-four-part-covenants",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(1).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(1) supports the four validity conditions every Nevada non-compete must clear.",
+            "verbatimQuote": "A noncompetition covenant is void and unenforceable unless the noncompetition covenant: (a) Is supported by valuable consideration; (b) Does not impose any restraint that is greater than is required for the protection of the employer for whose benefit the restraint is imposed; (c) Does not impose any undue hardship on the employee; and (d) Imposes restrictions that are appropriate in relation to the valuable consideration supporting the noncompetition covenant.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-four-part-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period. Restricting how a worker deploys already-earned compensation adds undue-hardship weight without much protective payoff — the kind of imbalance Nevada's proportionality condition exists to catch.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech have to sit outside the clause. The federal Board polices overbroad versions in every state, and Nevada adds nothing that would rescue a clause federal labor law condemns.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-mclaren-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-mclaren-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#address-physician-specific-rights",
+        "requirementGuidance": "Nevada has no physician-specific non-compete statute — a 2023 bill aimed at physician covenants was vetoed — so a healthcare covenant is judged under the general four-part test, where patient access and community need can weigh heavily on the undue-hardship and greater-than-necessary prongs. The dedicated clause should say how the agreement treats clinicians rather than leaving the question to inference, and reviewers should re-verify the legislative landscape before relying on the status quo.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-healthcare-four-part",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(1).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(1) supports the general four-part validity test that Nevada applies to physician and healthcare covenants in the absence of a profession-specific statute.",
+            "verbatimQuote": "A noncompetition covenant is void and unenforceable unless the noncompetition covenant: (a) Is supported by valuable consideration; (b) Does not impose any restraint that is greater than is required for the protection of the employer for whose benefit the restraint is imposed; (c) Does not impose any undue hardship on the employee; and (d) Imposes restrictions that are appropriate in relation to the valuable consideration supporting the noncompetition covenant.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-healthcare-four-part"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. On the hiring side in Nevada it does double duty: an incoming covenant signed with a prior employer may have traveled through an asset sale without the consent Nevada requires, and the representation forces that assignment question into the open before the worker starts.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice with a sharp Nevada edge: willfully acting to prevent a former worker from obtaining employment elsewhere in the state is a gross misdemeanor, with the statute's covenant rules operating as the exception. A notification letter built on a covenant that fails Nevada's gates is not a routine precaution — condition any third-party notice on a covenant that actually survives them.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-interference-letters",
+            "authorityType": "primary-law",
+            "title": "NRS 613.200",
+            "citation": "NRS 613.200(1).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.200(1) supports the criminal exposure for willful interference with a former worker's employment, which constrains aggressive third-party notice practices.",
+            "verbatimQuote": "Except as otherwise provided in this section and NRS 613.195 , any person, association, company or corporation within this State, or any agent or officer on behalf of the person, association, company or corporation, who willfully does anything intended to prevent any person who for any cause left or was discharged from his, her or its employ from obtaining employment elsewhere in this State is guilty of a gross misdemeanor and shall be punished by a fine of not more than $5,000.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-interference-letters"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but treat any extension mechanism as an open Nevada question. No Nevada statute or appellate decision approves or rejects tolling; the closest authority is the revision statute, which lets a court reshape time limits toward reasonableness and supports, at most, an inference that a defined and modest extension clause would be weighed with the rest of the covenant. Draft it as a bounded term, never an open-ended restraint.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-revision-tolling",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(6).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(6) supports judicial revision of time limits toward reasonableness, the closest Nevada authority bearing on extension-on-breach clauses.",
+            "verbatimQuote": "Such revisions must cause the limitations contained in the covenant as to time, geographical area and scope of activity to be restrained to be reasonable, to not impose undue hardship on the employee and to impose a restraint that is not greater than is necessary for the protection of the employer for whose benefit the restraint is imposed.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-revision-tolling"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that injunctive relief is appropriate. In Nevada the recital coexists with the revision regime: a court asked to enjoin will first measure the covenant against the statute, and the injunction it grants tracks the covenant as revised — not necessarily the covenant as written.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice, but read it against the fee award Nevada already mandates: when a covenant reaches a solely hourly-paid employee or restricts protected volunteer-customer service, the court shall award the employee reasonable fees and costs regardless of what the contract says. Check that any contractual fee clause is mutual and does not pretend to displace the statutory one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-mandatory-fee-award",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(7).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(7) supports the mandatory award of attorney's fees and costs to the employee in specified unlawful-enforcement cases.",
+            "verbatimQuote": "If an employer brings an action to enforce a noncompetition covenant or an employee brings an action to challenge a noncompetition covenant and the court finds that the noncompetition covenant applies to an employee described in subsection 3 or that the employer has restricted or attempted to restrict a former employee in the manner described in subsection 2, the court shall award the employee reasonable attorney’s fees and costs.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-mandatory-fee-award"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-for-mandatory-judicial-revision",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.nevada.draft-for-mandatory-judicial-revision",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Drafted for mandatory court revision",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#draft-for-mandatory-judicial-revision",
+        "requirementGuidance": "Nevada inverts the usual severability gamble: when a covenant is supported by valuable consideration but overbroad in time, geography, or activity — or imposes a greater restraint than necessary or undue hardship — the court shall revise it to the extent necessary and enforce it as revised. The state's highest court confirms the revision duty is mandatory when revision is possible, replacing the older rule that an unreasonable covenant simply died. Read the severability clause for fit with that regime, and check the two places the mandate runs out: a covenant without valuable consideration stays unenforceable, and a court will revise but never rewrite, so missing essential terms stay missing. A savings clause still earns its keep on older agreements, where the court allowed blue-penciling when the contract itself authorized it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-mandatory-revision",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(6).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(6) supports mandatory judicial revision and enforcement of a consideration-supported but overbroad Nevada covenant.",
+            "verbatimQuote": "If an employer brings an action to enforce a noncompetition covenant or an employee brings an action to challenge a noncompetition covenant and the court finds the covenant is supported by valuable consideration but contains limitations as to time, geographical area or scope of activity to be restrained that are not reasonable, imposes a greater restraint than is necessary for the protection of the employer for whose benefit the restraint is imposed or imposes undue hardship on the employee, the court shall revise the covenant to the extent necessary and enforce the covenant as revised.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-mandatory-revision"
+          },
+          {
+            "sourceId": "nv-tough-turtle-mandatory",
+            "authorityType": "case-law",
+            "title": "Tough Turtle Turf, LLC v. Scott",
+            "citation": "Tough Turtle Turf, LLC v. Scott, 139 Nev. Adv. Op. 47, 537 P.3d 883 (2023).",
+            "url": "https://www.courtlistener.com/opinion/9456796/tough-turtle-turf-llc-v-scott/",
+            "deepLink": "https://www.courtlistener.com/opinion/9456796/tough-turtle-turf-llc-v-scott/#:~:text=It%20nonetheless%20mandates%20judicial%20revision,subjecting%20employees%20to%20unreasonable%20terms.",
+            "proposition": "Tough Turtle Turf supports that judicial revision is mandatory when it can be done without subjecting the employee to unreasonable terms.",
+            "verbatimQuote": "It nonetheless mandates judicial revision of a restrictive covenant if this can be done without subjecting employees to unreasonable terms.",
+            "date": "2023-11-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-tough-turtle-mandatory"
+          },
+          {
+            "sourceId": "nv-tough-turtle-no-rewrite",
+            "authorityType": "case-law",
+            "title": "Tough Turtle Turf, LLC v. Scott",
+            "citation": "Tough Turtle Turf, LLC v. Scott, 139 Nev. Adv. Op. 47, 537 P.3d 883 (2023).",
+            "url": "https://www.courtlistener.com/opinion/9456796/tough-turtle-turf-llc-v-scott/",
+            "deepLink": "https://www.courtlistener.com/opinion/9456796/tough-turtle-turf-llc-v-scott/#:~:text=Reading%20subsection%20(1)%20harmoniously%20with,than%20revise%20the%20noncompete%20covenant.",
+            "proposition": "Tough Turtle Turf supports the two limits on revision: no consideration means no enforcement, and courts revise rather than rewrite.",
+            "verbatimQuote": "Reading subsection (1) harmoniously with subsection (6) indicates that there are instances when a noncompete covenant will be unenforceable, such as when no valuable consideration supports the noncompete covenant or when the court would need to rewrite rather than revise the noncompete covenant.",
+            "date": "2023-11-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-tough-turtle-no-rewrite"
+          },
+          {
+            "sourceId": "nv-duong-savings",
+            "authorityType": "case-law",
+            "title": "Duong v. Fielden Hanson Isaacs Miyada Robison Yeh, Ltd.",
+            "citation": "Duong v. Fielden Hanson Isaacs Miyada Robison Yeh, Ltd., 136 Nev. Adv. Op. 87, 478 P.3d 380 (2020).",
+            "url": "https://www.courtlistener.com/opinion/5304741/duong-md-vs-fielden-hanson-isaacs-miyada-robison-yeh-ltd/",
+            "deepLink": "https://www.courtlistener.com/opinion/5304741/duong-md-vs-fielden-hanson-isaacs-miyada-robison-yeh-ltd/#:~:text=We%20hold%20that%20Golden%20Road,agreement%20itself%20allows%20for%20it.",
+            "proposition": "Duong supports blue-penciling of pre-statute agreements where the agreement itself authorized judicial modification.",
+            "verbatimQuote": "We hold that Golden Road does not prohibit a district court from blue-penciling an unreasonable noncompetition agreement if the agreement itself allows for it.",
+            "date": "2020-12-31",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-duong-savings"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite for everything else. In Nevada the discipline has a second payoff: if a court must revise one covenant's duration, separately stated survival terms keep the revision contained instead of inviting the judge into every clause at once.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-express-consent-for-asset-sale-assignment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.nevada.require-express-consent-for-asset-sale-assignment",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee consent for asset-sale assignment",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#require-express-consent-for-asset-sale-assignment",
+        "requirementGuidance": "Nevada draws a hard transactional line. In an asset sale, employee non-competes are personal and do not follow the assets: the buyer needs the employee's express consent, obtained through arm's-length negotiation and supported by consideration beyond what backs the underlying covenant — a boilerplate successors-and-assigns clause does not substitute. In a statutory merger the covenant passes by operation of law and the consent rule does not apply. The clause should state the assignment position expressly and build the consent-and-consideration mechanics for the asset-sale case; a separate Nevada carve-out keeps reasonable sale-of-business covenants outside the antitrust chapter, but it does nothing to relax the consent rule for employee covenants.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-traffic-control-consent",
+            "authorityType": "case-law",
+            "title": "Traffic Control Servs., Inc. v. United Rentals Nw., Inc.",
+            "citation": "Traffic Control Servs., Inc. v. United Rentals Nw., Inc., 120 Nev. 168, 87 P.3d 1054 (2004).",
+            "url": "https://www.courtlistener.com/opinion/8085820/traffic-control-services-inc-v-united-rentals-northwest-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/8085820/traffic-control-services-inc-v-united-rentals-northwest-inc/#:~:text=Covenants%20not%20to%20compete%20are,to%20support%20the%20underlying%20covenant.",
+            "proposition": "Traffic Control Services supports the rule that employee non-competes are personal and unassignable in an asset sale absent express consent, arm's-length negotiation, and separate consideration.",
+            "verbatimQuote": "Covenants not to compete are personal in nature and therefore are not assignable absent the employee's express consent. Further, an employer must obtain such consent through arm's-length negotiation with the employee, supported by valuable consideration beyond that necessary to support the underlying covenant.",
+            "date": "2004-04-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-traffic-control-consent"
+          },
+          {
+            "sourceId": "nv-hd-supply-merger",
+            "authorityType": "case-law",
+            "title": "HD Supply Facilities Maint., Ltd. v. Bymoen",
+            "citation": "HD Supply Facilities Maint., Ltd. v. Bymoen, 125 Nev. 200, 210 P.3d 183 (2009).",
+            "url": "https://www.courtlistener.com/opinion/2575254/hd-supply-facilities-maintenance-ltd-v-bymoen/",
+            "deepLink": "https://www.courtlistener.com/opinion/2575254/hd-supply-facilities-maintenance-ltd-v-bymoen/#:~:text=Traffic%20Control's%20rule%20of%20nonassignability,the%20result%20of%20a%20merger.",
+            "proposition": "HD Supply supports that the nonassignability rule does not apply when covenants pass to a successor corporation through a statutory merger.",
+            "verbatimQuote": "Traffic Control's rule of nonassignability does not apply when a successor corporation acquires restrictive employment covenants as the result of a merger.",
+            "date": "2009-06-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-hd-supply-merger"
+          },
+          {
+            "sourceId": "nv-sale-of-business-carveout",
+            "authorityType": "primary-law",
+            "title": "NRS 598A.040",
+            "citation": "NRS 598A.040(5).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-598A.html",
+            "proposition": "NRS 598A.040(5) supports the antitrust carve-out for reasonable sale-of-business restrictive covenants.",
+            "verbatimQuote": "Restrictive covenants: (a) Which are part of a contract of sale for a business and which bar the seller of the business from competing with the purchaser of the business sold within a reasonable market area for a reasonable period of time; or (b) Which are part of a commercial shopping center lease and which bar the parties from permitting or engaging in the furnishing of certain services or the sale of certain commodities within the commercial shopping center where such leased premises are located.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-sale-of-business-carveout"
+          }
+        ]
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law, venue, dispute process",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#specify-governing-law-and-venue",
+        "requirementGuidance": "Confirm governing law, venue, and the dispute process are all stated. Nevada's covenant rules carry public-policy weight — a categorical worker exclusion, a protected-customer carve-out, and mandatory fee shifting among them — so a clause steering a Nevada worker's dispute elsewhere invites a choice-of-law fight rather than settling one. The cleanest review outcome is a Nevada-law, Nevada-forum clause that matches where the worker actually works.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard boilerplate with one Nevada-specific check inside: any amendment that tightens a covenant mid-employment re-opens the consideration question, because the statute tests whether restrictions are appropriate in relation to the value supporting them. Amendment mechanics should make the new consideration for a new restriction explicit rather than resting on the original signing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-amendment-proportionality",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(1)(a), (d).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(1)(a) and (d) support requiring fresh, documented consideration when an amendment tightens a covenant.",
+            "verbatimQuote": "A noncompetition covenant is void and unenforceable unless the noncompetition covenant: (a) Is supported by valuable consideration; (b) Does not impose any restraint that is greater than is required for the protection of the employer for whose benefit the restraint is imposed; (c) Does not impose any undue hardship on the employee; and (d) Imposes restrictions that are appropriate in relation to the valuable consideration supporting the noncompetition covenant.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-amendment-proportionality"
+          }
+        ]
+      },
+      {
+        "requirementId": "satisfy-four-part-statutory-validity-test",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.nevada.satisfy-four-part-statutory-validity-test",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Four-part validity test",
+        "sectionId": "nevada-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#satisfy-four-part-statutory-validity-test",
+        "requirementGuidance": "Walk the covenant through all four statutory conditions in order: valuable consideration supports it; no restraint exceeds what the employer's protection requires; no undue hardship lands on the employee; and the restrictions stay appropriate in relation to the consideration given. Failing any one voids the covenant as written — consideration cannot buy back an excessive restraint, and a modest duration cannot cure a hollow exchange. The proportionality prong deserves the closest read on mid-employment covenants, where the value actually delivered may be thin.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-gate-four-part",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(1).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(1) supports the four-part validity test every Nevada non-compete must satisfy.",
+            "verbatimQuote": "A noncompetition covenant is void and unenforceable unless the noncompetition covenant: (a) Is supported by valuable consideration; (b) Does not impose any restraint that is greater than is required for the protection of the employer for whose benefit the restraint is imposed; (c) Does not impose any undue hardship on the employee; and (d) Imposes restrictions that are appropriate in relation to the valuable consideration supporting the noncompetition covenant.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-gate-four-part"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-non-competes-for-hourly-wage-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.nevada.exclude-non-competes-for-hourly-wage-employees",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No covenants for hourly-paid workers",
+        "sectionId": "nevada-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#exclude-non-competes-for-hourly-wage-employees",
+        "requirementGuidance": "The covenant must not apply to an employee paid solely on an hourly wage basis, tips and gratuities aside — a categorical exclusion no consideration or tailoring can cure. Verify the worker's actual pay structure, not the job description, and treat hourly-plus arrangements with care: Nevada's appellate courts have not decided whether a commission or bonus on top of hourly pay defeats the exclusion. Enforcing against an hourly worker carries a mandatory award of the employee's fees and costs.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-gate-hourly",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(3).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(3) supports the categorical ban on applying a non-compete to an employee paid solely on an hourly wage basis.",
+            "verbatimQuote": "A noncompetition covenant may not apply to an employee who is paid solely on an hourly wage basis, exclusive of any tips or gratuities.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-gate-hourly"
+          },
+          {
+            "sourceId": "nv-gate-fees",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(7).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(7) supports the mandatory fee-and-cost award for enforcement against hourly workers or protected volunteer-customer service.",
+            "verbatimQuote": "If an employer brings an action to enforce a noncompetition covenant or an employee brings an action to challenge a noncompetition covenant and the court finds that the noncompetition covenant applies to an employee described in subsection 3 or that the employer has restricted or attempted to restrict a former employee in the manner described in subsection 2, the court shall award the employee reasonable attorney’s fees and costs.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-gate-fees"
+          }
+        ]
+      },
+      {
+        "requirementId": "preserve-volunteer-customer-service-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.nevada.preserve-volunteer-customer-service-carveout",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customers who come voluntarily stay reachable",
+        "sectionId": "nevada-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#preserve-volunteer-customer-service-carveout",
+        "requirementGuidance": "The agreement must not bar a former employee from serving a former customer who was never solicited, voluntarily chose to follow the employee, and is being served within the covenant's other valid limits. Check the customer-facing clauses for an express carve-out matching those statutory conditions — the statute prohibits even bringing an action against the protected conduct, and restricting or attempting to restrict it triggers the same mandatory fee award as the hourly-worker ban.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-gate-volunteer-customer",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(2).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(2) supports the volunteer-customer carve-out that customer-facing covenant language must preserve.",
+            "verbatimQuote": "A noncompetition covenant may not restrict, and an employer may not bring an action to restrict, a former employee of an employer from providing service to a former customer or client if: (a) The former employee did not solicit the former customer or client; (b) The customer or client voluntarily chose to leave and seek services from the former employee; and (c) The former employee is otherwise complying with the limitations in the covenant as to time, geographical area and scope of activity to be restrained, other than any limitation on providing services to a former customer or client who seeks the services of the former employee without any contact instigated by the former employee.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-gate-volunteer-customer"
+          },
+          {
+            "sourceId": "nv-gate-fees",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(7).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(7) supports the mandatory fee-and-cost award for enforcement against hourly workers or protected volunteer-customer service.",
+            "verbatimQuote": "If an employer brings an action to enforce a noncompetition covenant or an employee brings an action to challenge a noncompetition covenant and the court finds that the noncompetition covenant applies to an employee described in subsection 3 or that the employer has restricted or attempted to restrict a former employee in the manner described in subsection 2, the court shall award the employee reasonable attorney’s fees and costs.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-gate-fees"
+          }
+        ]
+      },
+      {
+        "requirementId": "condition-post-layoff-enforcement-on-continued-pay",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.nevada.condition-post-layoff-enforcement-on-continued-pay",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Layoff enforcement only while pay continues",
+        "sectionId": "nevada-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#condition-post-layoff-enforcement-on-continued-pay",
+        "requirementGuidance": "When termination results from a reduction in force, reorganization, or similar restructuring, the covenant is enforceable only while the employer pays the employee's salary, benefits, equivalent compensation, or severance. Confirm the agreement does not promise a restraint that outlives the pay — for a restructured-out worker the restricted period and the payment period are the same thing, and severance mechanics become covenant mechanics.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-gate-rif",
+            "authorityType": "primary-law",
+            "title": "NRS 613.195",
+            "citation": "NRS 613.195(5).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.195(5) supports conditioning post-restructuring enforcement on the employer's continued payment of salary, benefits, equivalent compensation, or severance.",
+            "verbatimQuote": "If the termination of the employment of an employee is the result of a reduction of force, reorganization or similar restructuring of the employer, a noncompetition covenant is only enforceable during the period in which the employer is paying the employee’s salary, benefits or equivalent compensation, including, without limitation, severance pay.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-gate-rif"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-confidentiality-within-trade-secret-safe-harbor",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.nevada.keep-confidentiality-within-trade-secret-safe-harbor",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality inside the statutory safe harbor",
+        "sectionId": "nevada-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#keep-confidentiality-within-trade-secret-safe-harbor",
+        "requirementGuidance": "Keep the post-termination confidentiality covenant inside the statutory exception: supported by valuable consideration, reasonable in scope and duration, and aimed at the listed categories — trade secrets, business methods, customer lists, secret formulas or processes, and confidential information. The stakes are unusual: outside that exception sits a statute making it a gross misdemeanor to willfully prevent a former worker from getting hired elsewhere in Nevada, so a confidentiality clause that operates as a disguised non-compete is not just unenforceable drafting.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-gate-nda-safe-harbor",
+            "authorityType": "primary-law",
+            "title": "NRS 613.200",
+            "citation": "NRS 613.200(4).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.200(4) supports the conditions a post-termination confidentiality covenant must meet to stay within the statutory exception.",
+            "verbatimQuote": "The provisions of this section do not prohibit a person, association, company, corporation, agent or officer from negotiating, executing and enforcing an agreement with an employee of the person, association, company or corporation which, upon termination of the employment, prohibits the employee from disclosing any trade secrets, business methods, lists of customers, secret formulas or processes or confidential information learned or obtained during the course of his or her employment with the person, association, company or corporation if the agreement is supported by valuable consideration and is otherwise reasonable in its scope and duration.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-gate-nda-safe-harbor"
+          },
+          {
+            "sourceId": "nv-gate-interference",
+            "authorityType": "primary-law",
+            "title": "NRS 613.200",
+            "citation": "NRS 613.200(1).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-613.html",
+            "proposition": "NRS 613.200(1) supports the gross-misdemeanor exposure for willful interference with a former worker's employment, the rule the confidentiality safe harbor excepts.",
+            "verbatimQuote": "Except as otherwise provided in this section and NRS 613.195 , any person, association, company or corporation within this State, or any agent or officer on behalf of the person, association, company or corporation, who willfully does anything intended to prevent any person who for any cause left or was discharged from his, her or its employ from obtaining employment elsewhere in this State is guilty of a gross misdemeanor and shall be punished by a fine of not more than $5,000.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/nevada#src-nv-gate-interference"
+          }
+        ]
+      }
+    ]
+  }
+}

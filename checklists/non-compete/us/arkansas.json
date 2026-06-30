@@ -1,0 +1,1370 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/arkansas",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/arkansas.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/arkansas",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/arkansas/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/arkansas/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "arkansas",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Arkansas",
+      "description": "A clause-by-clause reviewer checklist for Arkansas employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under Ark. Code Ann. § 4-75-101's protectable-interest test, two-year presumption, mandatory reformation, and physician ban.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Arkansas",
+      "coverage": "Arkansas (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 48,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "arkansas-statutory-gates",
+        "label": "Arkansas statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity that actually owns the interests the covenant protects. Arkansas builds the whole test around the protectable business interest of the employer — customer lists, goodwill, confidential data, training — so a covenant signed with a parent or affiliate that holds none of those assets starts the interest showing in a hole.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-interest-list-cover",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(b).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(b) supports tying the named employer to the statutory protectable business interests the covenant defends.",
+            "verbatimQuote": "For the purposes of subsection (a) of this section, the protectable business interest of the employer includes the employer's: (1) Trade secrets; (2) Intellectual property; (3) Customer lists; (4) Goodwill with customers; (5) Knowledge of his or her business practices; (6) Methods; (7) Profit margins; (8) Costs; (9) Other confidential business information that is confidential, proprietary, and increases in value from not being known by a competitor; (10) Training and education of the employer's employees; and (11) Other valuable employer data that the employer has provided to an employee that an employer would reasonably seek to protect or safeguard from a competitor in the interest of fairness.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-interest-list-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#identify-effective-date",
+        "requirementGuidance": "The execution date picks the legal track. Act 921 became effective July 22, 2015, and an agreement signed before that line sits on the old common-law regime — valid as written, with no judicial narrowing — while a later agreement gets the statute, including its reformation duty. An undated covenant leaves the single most consequential sorting fact indeterminate.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "box-act-921-cover",
+            "authorityType": "case-law",
+            "title": "Box v. J.B. Hunt Transport, Inc.",
+            "citation": "Box v. J.B. Hunt Transp., Inc., 2017 Ark. App. 605, 533 S.W.3d 603.",
+            "url": "https://www.courtlistener.com/opinion/4441363/box-v-jb-hunt-transport-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4441363/box-v-jb-hunt-transport-inc/#:~:text=Arkansas%20Code%20Annotated%20section%204%2D75%2D101,of%20Act%20921%20of%202015.",
+            "proposition": "Box supports the July 22, 2015 effective-date line that sorts agreements between the pre-Act common-law track and the statutory track.",
+            "verbatimQuote": "Arkansas Code Annotated section 4-75-101 (Supp. 2015), which became effective on July 22, 2015, pursuant to the enactment of Act 921 of 2015.",
+            "date": "2017-11-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-box-act-921-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#identify-employee-title",
+        "requirementGuidance": "Record the role: title and duties are the evidence of which protectable interests the worker actually touches, and the tailoring analysis compares the restriction to that exposure. The title also surfaces the two status questions that change everything in Arkansas — whether the worker is a physician, and whether the worker holds a professional license that takes the covenant outside the statute.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated. Everything else on this page assumes Arkansas law supplies the rules — the protectable-interest test, the two-year presumption, the reformation duty — so a clause selecting some other state's law puts the entire analysis on different footing and deserves a deliberate look rather than a skim.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#define-confidential-information",
+        "requirementGuidance": "Define the term, and know which framework will judge it: Arkansas keeps confidentiality agreements outside the non-compete statute, so common-law standards govern the clause itself. The definition still earns its keep in the covenant analysis — confidential business information that gains value from secrecy is one of the statutory interests a non-compete can be built on, and a sloppy definition weakens that showing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-related-covenants-defs",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(i).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(i) supports the exclusion of employee non-solicits, confidentiality agreements, and nondisclosure agreements from the non-compete statute's scope.",
+            "verbatimQuote": "This section shall not apply to other types of agreements between employers and employees that do not concern competition or competitive work, including: (A) Agreements not to solicit, recruit, or hire employees; (B) Confidentiality agreements; (C) Nondisclosure agreements; and (D) The terms and conditions of an employment or employment agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-related-covenants-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#define-trade-secrets",
+        "requirementGuidance": "Keep trade secrets defined separately. The non-compete statute expressly preserves the parties' protections and rights under the Arkansas Trade Secrets Act, so a trade-secret claim runs on its own track with its own remedies — but only if the agreement keeps the category distinct instead of folding it into general confidential information.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-atsa-defs",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(j).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(j) supports preserving Arkansas Trade Secrets Act protections separately from the non-compete framework.",
+            "verbatimQuote": "Except as provided under subsection (k) of this section, this section shall not: (1) Be read to impair, limit, or change a party's protections and rights under the Arkansas Trade Secrets Act, § 4-75-601 et seq.; or (2) Apply to a person holding a professional license under Arkansas Code Title 17, Subtitle 3.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-atsa-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#define-restricted-period",
+        "requirementGuidance": "One defined Restricted Period keeps every duration auditable against the Arkansas yardstick: two years post-termination is presumptively reasonable, and anything longer needs case-specific justification. Scattered per-clause durations are where an unexamined three-year term hides.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-two-years-defs",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(d).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(d) supports the two-year presumptive-reasonableness benchmark every defined duration should be audited against.",
+            "verbatimQuote": "A post-termination restriction of two (2) years is presumptively reasonable as to length of time under subdivision (a)(2) of this section unless the facts and circumstances of a particular case clearly demonstrate that two (2) years is unreasonable compared to the employer's protectable business interest.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-two-years-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#define-restricted-territory",
+        "requirementGuidance": "Arkansas does not insist on a map: the statute says a missing geographic restriction does not by itself make the covenant overbroad, as long as time and scope stay no greater than necessary. So review the territory definition for what it signals about tailoring — a defined territory should track where the protected interest is actually at risk, and an absent one shifts the whole limiting burden onto the customer and activity definitions.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-no-geography-defs",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(c).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(c) supports the rule that a missing geographic restriction does not by itself make an otherwise tailored covenant overbroad.",
+            "verbatimQuote": "The lack of a specific or defined geographic descriptive restriction in a covenant not to compete agreement does not make the covenant not to compete agreement overly broad under subdivision (a)(2) of this section if the covenant not to compete agreement is limited with respect to time and scope in a manner that is not greater than necessary to defend the protectable business interest of the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-no-geography-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the worker actually served or learned about during a stated look-back window. The statute makes customer-group limitation an express reasonableness factor — whether the restriction is limited to a specific group of customers or other entities associated with the employer's business — so a tight Covered Customers definition is direct statutory credit, and an entire-book definition spends it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-factors-defs",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(c).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(c) supports customer-group limitation as an express statutory reasonableness factor.",
+            "verbatimQuote": "The reasonableness of a covenant not to compete agreement shall be determined after considering: (A) The nature of the employer's protectable business interest; (B) The geographic scope of the employer's business and whether or not a geographic limitation is feasible under the circumstances; (C) Whether or not the restriction placed on the employee is limited to a specific group of customers or other individuals or entities associated with the employer's business; and (D) The nature of the employer's business.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-factors-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing worker actually worked with or supervised. Arkansas places agreements not to solicit, recruit, or hire employees outside the non-compete statute entirely — common-law standards govern — so the clause cannot borrow the statute's reformation safety net and lives or dies on being a modest restraint as written.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-related-covenants-defs",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(i).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(i) supports the exclusion of employee non-solicits, confidentiality agreements, and nondisclosure agreements from the non-compete statute's scope.",
+            "verbatimQuote": "This section shall not apply to other types of agreements between employers and employees that do not concern competition or competitive work, including: (A) Agreements not to solicit, recruit, or hire employees; (B) Confidentiality agreements; (C) Nondisclosure agreements; and (D) The terms and conditions of an employment or employment agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-related-covenants-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#define-protected-interests",
+        "requirementGuidance": "Name the interests, and draw them from the statutory list: trade secrets, intellectual property, customer lists, goodwill, business practices, methods, margins, costs, confidential business information, training, and other valuable employer data. A recital that boils down to keeping the worker away from competitors recites nothing the law protects — Arkansas courts refuse covenants that merely prohibit ordinary competition.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-interest-list-defs",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(b).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(b) supports drawing the recited protected interests from the statutory categories.",
+            "verbatimQuote": "For the purposes of subsection (a) of this section, the protectable business interest of the employer includes the employer's: (1) Trade secrets; (2) Intellectual property; (3) Customer lists; (4) Goodwill with customers; (5) Knowledge of his or her business practices; (6) Methods; (7) Profit margins; (8) Costs; (9) Other confidential business information that is confidential, proprietary, and increases in value from not being known by a competitor; (10) Training and education of the employer's employees; and (11) Other valuable employer data that the employer has provided to an employee that an employer would reasonably seek to protect or safeguard from a competitor in the interest of fairness.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-interest-list-defs"
+          },
+          {
+            "sourceId": "mercy-ordinary-competition-defs",
+            "authorityType": "case-law",
+            "title": "Mercy Health Sys. of Nw. Ark., Inc. v. Bicak",
+            "citation": "Mercy Health Sys. of Nw. Ark., Inc. v. Bicak, 2011 Ark. App. 341, 383 S.W.3d 869.",
+            "url": "https://www.courtlistener.com/opinion/5283436/mercy-health-system-of-northwest-arkansas-inc-v-bicak/",
+            "deepLink": "https://www.courtlistener.com/opinion/5283436/mercy-health-system-of-northwest-arkansas-inc-v-bicak/#:~:text=Unless%20the%20covenantee%20has%20a,would%20merely%20prohibit%20ordinary%20competition.",
+            "proposition": "Mercy supports the rule that a covenant without a legitimate protectable interest merely prohibits ordinary competition and will not be enforced.",
+            "verbatimQuote": "Unless the covenantee has a legitimate interest to be protected by the agreement, the law will not enforce such a contract, as this would merely prohibit ordinary competition.",
+            "date": "2011-05-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-mercy-ordinary-competition-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity in concrete terms. Scope is half of the Arkansas tailoring test — the covenant must be limited in time and scope no more than necessary to defend the protectable interest — and the Competitive Business definition is where scope is actually set. A definition that expands to anything the employer might someday do invites reformation down to something the drafter could have written in the first place.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-tailoring-defs",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(a).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(a) supports the time-and-scope tailoring limit the Competitive Business definition is measured against.",
+            "verbatimQuote": "The covenant not to compete agreement is limited with respect to time and scope in a manner that is not greater than necessary to defend the protectable business interest of the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-tailoring-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. A clause that technically forbids index funds and ordinary public shares restrains conduct that threatens no protectable interest — exactly the kind of excess width a reviewing court would trim and a careful drafter never includes.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#define-passive-public-holdings",
+        "requirementGuidance": "A drafting convenience, not a requirement — plenty of agreements inline the carve-out language instead. If the capitalized term appears, confirm its percentage matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#define-solicit",
+        "requirementGuidance": "Pin the term to initiating contact. In Arkansas the definition also does classification work: a solicitation clause that sweeps in serving anyone who calls first starts to read as a restraint on competitive work rather than a pure non-solicit, which can change the framework the clause is judged under. Precision here keeps each covenant on its intended track.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger covers resignation, dismissal, and expiration of a fixed term the same way. The presumptively reasonable two-year window is measured post-termination, so the definition of when termination happens is the start line for the only duration the statute blesses — it cannot afford ambiguity about who ended the relationship or how.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#acknowledge-timing",
+        "requirementGuidance": "Arkansas takes the consideration fight off the table for covered covenants: continued employment is sufficient consideration under the statute, so a mid-employment covenant needs no separate bonus or promotion. The timing acknowledgement still matters for a different reason — it pins the execution date relative to July 22, 2015, the line that decides whether the covenant gets the statute or the old no-narrowing common law.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-consideration-timing",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(g).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(g) supports continued employment as sufficient consideration for a covered covenant.",
+            "verbatimQuote": "An employee's continued employment is sufficient consideration for a covenant not to compete agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-consideration-timing"
+          },
+          {
+            "sourceId": "box-act-921-timing",
+            "authorityType": "case-law",
+            "title": "Box v. J.B. Hunt Transport, Inc.",
+            "citation": "Box v. J.B. Hunt Transp., Inc., 2017 Ark. App. 605, 533 S.W.3d 603.",
+            "url": "https://www.courtlistener.com/opinion/4441363/box-v-jb-hunt-transport-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4441363/box-v-jb-hunt-transport-inc/#:~:text=Arkansas%20Code%20Annotated%20section%204%2D75%2D101,of%20Act%20921%20of%202015.",
+            "proposition": "Box supports the effective-date sorting role the execution date plays under Act 921.",
+            "verbatimQuote": "Arkansas Code Annotated section 4-75-101 (Supp. 2015), which became effective on July 22, 2015, pursuant to the enactment of Act 921 of 2015.",
+            "date": "2017-11-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-box-act-921-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Arkansas statute demands it, but the acknowledgement is cheap procedural-fairness evidence — useful background when a court weighs how the covenant compares to the interest it claims to protect.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "The trade-secret obligation should last as long as secrecy does — that is how federal law defines the right, and Arkansas's non-compete statute expressly leaves Arkansas Trade Secrets Act protections untouched. A fixed expiry on trade-secret protection gives away rights both statutes preserve.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-dtsa-trade-secret-definition"
+          },
+          {
+            "sourceId": "aca-atsa-perpetual",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(j).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(j) supports leaving Arkansas Trade Secrets Act protections unimpaired by the covenant framework.",
+            "verbatimQuote": "Except as provided under subsection (k) of this section, this section shall not: (1) Be read to impair, limit, or change a party's protections and rights under the Arkansas Trade Secrets Act, § 4-75-601 et seq.; or (2) Apply to a person holding a professional license under Arkansas Code Title 17, Subtitle 3.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-atsa-perpetual"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. Confidentiality clauses in Arkansas are judged under common-law standards rather than the non-compete statute, and a perpetual lid on non-secret information is the kind of overreach that draws scrutiny — the two-track structure keeps the perpetual obligation where the law actually supports it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in Arkansas: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret suit against the worker. With the Arkansas Trade Secrets Act track expressly preserved alongside the covenant framework, giving away the federal remedies is an unforced error.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech regardless of the governing state, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. No confidentiality clause can outrun a subpoena; the carve-out plus a notice procedure is the standard way to acknowledge that without inviting casual disclosure.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. In a state whose covenant test turns on protecting customer lists, confidential data, and training investments, the certification is the cleanest contemporaneous evidence that the employer actually treats those assets as protected — and the first exhibit if they later surface at a competitor.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and judged outside the statute: Arkansas expressly excludes agreements not to solicit, recruit, or hire employees from § 4-75-101, leaving common-law standards in effect. That cuts both ways — the clause escapes the statutory gates, but it also cannot borrow the statute's reformation duty or its consideration rule, so it must stand on its own reasonableness as written.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-related-covenants-cov",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(i).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(i) supports the scope line between covered competition restraints and excluded employee non-solicits, confidentiality agreements, and NDAs.",
+            "verbatimQuote": "This section shall not apply to other types of agreements between employers and employees that do not concern competition or competitive work, including: (A) Agreements not to solicit, recruit, or hire employees; (B) Confidentiality agreements; (C) Nondisclosure agreements; and (D) The terms and conditions of an employment or employment agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-related-covenants-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#permit-customer-nonsolicit",
+        "requirementGuidance": "The threshold question is classification. The statute's exclusion list names employee no-poach clauses, confidentiality agreements, and NDAs — not customer non-solicits — and the statute treats customer-group limitation as a tailoring factor for restraints it does cover, so a customer non-solicit that concerns competitive work may well be tested under the statutory framework. Review it both ways: tight enough to pass the tailoring test, and reasonable enough to stand alone if the statute does not reach it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-related-covenants-cov",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(i).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(i) supports the scope line between covered competition restraints and excluded employee non-solicits, confidentiality agreements, and NDAs.",
+            "verbatimQuote": "This section shall not apply to other types of agreements between employers and employees that do not concern competition or competitive work, including: (A) Agreements not to solicit, recruit, or hire employees; (B) Confidentiality agreements; (C) Nondisclosure agreements; and (D) The terms and conditions of an employment or employment agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-related-covenants-cov"
+          },
+          {
+            "sourceId": "aca-factors-cov",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(c).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(c) supports the reasonableness factors, including limitation to a specific group of customers or entities associated with the employer's business.",
+            "verbatimQuote": "The reasonableness of a covenant not to compete agreement shall be determined after considering: (A) The nature of the employer's protectable business interest; (B) The geographic scope of the employer's business and whether or not a geographic limitation is feasible under the circumstances; (C) Whether or not the restriction placed on the employee is limited to a specific group of customers or other individuals or entities associated with the employer's business; and (D) The nature of the employer's business.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-factors-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they call first — a restraint on doing competitive work, which is exactly what § 4-75-101 regulates. Expect the full statutory analysis: a protectable interest behind the clause and a scope no greater than necessary to defend it, with the customer-list and goodwill interests doing the justifying.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-core-test-cov",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(a).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(a) supports the core enforceability test for Arkansas restraints on competitive work.",
+            "verbatimQuote": "A covenant not to compete agreement is enforceable if the agreement is ancillary to an employment relationship or part of an otherwise enforceable employment agreement or contract to the extent that: (1) The employer has a protectable business interest; and (2) The covenant not to compete agreement is limited with respect to time and scope in a manner that is not greater than necessary to defend the protectable business interest of the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-core-test-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#permit-non-compete",
+        "requirementGuidance": "If a non-compete appears, route the review straight through the Arkansas statutory gates at the end of this checklist — ancillary relationship, protectable interest, tailored time and scope, the two-year presumption, the physician ban, and the licensed-professional exclusion — before evaluating any of its terms. The covenant is enforceable exactly to the extent it passes that sequence.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-core-test-cov",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(a).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(a) supports the core enforceability test for Arkansas restraints on competitive work.",
+            "verbatimQuote": "A covenant not to compete agreement is enforceable if the agreement is ancillary to an employment relationship or part of an otherwise enforceable employment agreement or contract to the extent that: (1) The employer has a protectable business interest; and (2) The covenant not to compete agreement is limited with respect to time and scope in a manner that is not greater than necessary to defend the protectable business interest of the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-core-test-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, the covenant should bind those instead of leaning on the open-ended Competitive Business definition. Arkansas's reasonableness factors reward precisely this move — a restriction limited to specific entities associated with the employer's business reads as tailored rather than punitive, and tailoring is the half of the statutory test most covenants fail.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-factors-cov",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(c).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(c) supports the reasonableness factors, including limitation to a specific group of customers or entities associated with the employer's business.",
+            "verbatimQuote": "The reasonableness of a covenant not to compete agreement shall be determined after considering: (A) The nature of the employer's protectable business interest; (B) The geographic scope of the employer's business and whether or not a geographic limitation is feasible under the circumstances; (C) Whether or not the restriction placed on the employee is limited to a specific group of customers or other individuals or entities associated with the employer's business; and (D) The nature of the employer's business.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-factors-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — an investment restraint with no carve-out and no protectable-interest story is gratuitous width in a state that measures every covenant against the interest it defends.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state, and nothing in Arkansas's covenant statute shields a non-disparagement clause from that scrutiny.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state Arkansas's rule plainly: a covenant restricting a physician's right to practice within the physician's scope of practice is void, full stop, under the 2025 amendment. The statutory definition reaches both medical licensees under the Arkansas Medical Practices Act and osteopathy licensees — so the clause should either confirm the agreement imposes no practice restriction on a physician or explain what survives, such as obligations that do not restrict practice.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-physician-void-note",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(k).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(k) supports the rule voiding a covenant that restricts a physician's right to practice within scope.",
+            "verbatimQuote": "A covenant not to compete agreement that restricts the right of a physician to practice within the physician's scope of practice is void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-physician-void-note"
+          },
+          {
+            "sourceId": "aca-physician-definition-note",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(k).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(k) supports the statutory physician definition spanning Medical Practices Act licensees and osteopathy licensees.",
+            "verbatimQuote": "As used in subdivision (k)(1) of this section, \"physician\" means a person authorized or licensed to practice medicine under the Arkansas Medical Practices Act, § 17-95-201 et seq., § 17-95-301 et seq., and § 17-95-401 et seq., and a person authorized to practice osteopathy under § 17-91-101 et seq.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-physician-definition-note"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. It surfaces an incoming covenant before the first customer call instead of after — and in Arkansas the follow-up questions are concrete: when was the prior covenant signed, what interest backs it, and does the worker's licensure take it outside the statute entirely.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice, not a legal requirement. If the clause appears, make sure any warning letter it authorizes stays tethered to a covenant that actually survives the Arkansas gates — telling a new employer about a void physician restriction, or about a covenant whose worker sits outside the statute, trades enforcement value for tortious-interference exposure.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but flag any automatic extension-on-breach mechanism as an open Arkansas question. The court of appeals has treated a prospective injunction running past the nominal restricted period as legally possible in the injunction posture, yet the statute speaks to damages, injunctions, and reformation without ever validating contractual tolling. Draft and read tolling language as risk allocation, not as settled Arkansas law.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "bud-prospective-injunction",
+            "authorityType": "case-law",
+            "title": "Bud Anderson Heating & Cooling, Inc. v. Neil",
+            "citation": "Bud Anderson Heating & Cooling, Inc. v. Neil, 2018 Ark. App. 183, 545 S.W.3d 819.",
+            "url": "https://www.courtlistener.com/opinion/6241502/bud-anderson-heating-cooling-inc-v-mike-neil-absolute-hvac-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/6241502/bud-anderson-heating-cooling-inc-v-mike-neil-absolute-hvac-llc/#:~:text=Therefore%2C%20it%20is%20not%20clear,appeal%2C%20a%20one%2Dyear%20prospective%20injunction.",
+            "proposition": "Bud Anderson supports the possibility of a prospective injunction running beyond the contract's nominal one-year post-employment period.",
+            "verbatimQuote": "Therefore, it is not clear and obvious on the record before us that BAHC could not obtain the relief it seeks on appeal, a one-year prospective injunction.",
+            "date": "2018-03-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-bud-prospective-injunction"
+          },
+          {
+            "sourceId": "aca-remedies-tolling",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(e).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(e) supports the statutory remedies menu, which contains no express contractual tolling rule.",
+            "verbatimQuote": "In a private court action, a court may award the employer damages for a breach of a covenant not to compete agreement, appropriate injunctive relief, or both, if appropriate.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-remedies-tolling"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm — then notice that Arkansas does the heavy lifting by statute: immediate harm from breach of a covered covenant is treated as irreparable for preliminary-injunction purposes, and the court of appeals has reversed a trial court for analyzing a post-2015 covenant under the common-law harm standard instead. The recital should align with the statutory rule, not substitute for checking that the covenant is covered.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-irreparable-harm",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(e).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(e) supports treating immediate harm from breach as irreparable for preliminary-injunction purposes.",
+            "verbatimQuote": "The immediate harm associated with the breach of a covenant not to compete agreement shall be considered irreparable to establish the appropriateness of a preliminary injunction.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-irreparable-harm"
+          },
+          {
+            "sourceId": "porters-statutory-harm",
+            "authorityType": "case-law",
+            "title": "Porter's Commercial Refrigeration, Inc. v. Brewer",
+            "citation": "Porter's Com. Refrigeration, Inc. v. Brewer, 2024 Ark. App. 232, 688 S.W.3d 145.",
+            "url": "https://www.courtlistener.com/opinion/9490284/porters-commercial-refrigeration-inc-v-danny-a-brewer-jason-spears/",
+            "deepLink": "https://www.courtlistener.com/opinion/9490284/porters-commercial-refrigeration-inc-v-danny-a-brewer-jason-spears/#:~:text=This%20means%20that%20a%20party,a%20breach%20of%20the%20noncompete.",
+            "proposition": "Porter's supports establishing statutory irreparable harm through immediate harm from breach of a post-2015 non-compete.",
+            "verbatimQuote": "This means that a party seeking a preliminary injunction concerning a noncompete agreement executed after 2015 can establish irreparable harm by establishing immediate harm associated with a breach of the noncompete.",
+            "date": "2024-04-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-porters-statutory-harm"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice. The Arkansas covenant statute speaks to damages and injunctive relief and says nothing about fee-shifting, so the default American Rule applies when the contract is silent — if a fee clause appears, check that it is mutual and prevailing-party based rather than a one-way employer term.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-private-action-remedies",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(e).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(e) supports the statutory remedies menu of damages, appropriate injunctive relief, or both, with no fee-shifting provision.",
+            "verbatimQuote": "In a private court action, a court may award the employer damages for a breach of a covenant not to compete agreement, appropriate injunctive relief, or both, if appropriate.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-private-action-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-to-reasonable-scope-despite-mandatory-reformation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.arkansas.draft-to-reasonable-scope-despite-mandatory-reformation",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Reformation backstop, drafted narrow anyway",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#draft-to-reasonable-scope-despite-mandatory-reformation",
+        "requirementGuidance": "Arkansas flips the usual severability question: for a covered post-Act covenant, the court must reform unreasonable restrictions and enforce the covenant under the reformed terms whether or not the contract asks for it. Do not read that as license to draft broad — the court trims only to the extent necessary, which lands the employer on the minimum lawful covenant it could have written at the outset, and the safety net vanishes entirely for agreements signed before July 22, 2015 or workers the statute excludes, where the old rule still holds: valid as written, no narrowing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-reformation-duty",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(f).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(f) supports mandatory judicial reformation of unreasonable restrictions, limited to the extent necessary.",
+            "verbatimQuote": "If restrictions in a covenant not to compete agreement are found to be unreasonable and impose a greater restraint than is necessary to protect the protectable business interest of the employer under subdivision (a)(1) of this section, the court shall reform the covenant not to compete agreement to the extent necessary to: (A) Cause the limitations contained in the covenant not to compete agreement to be reasonable; and (B) Impose a restraint that is not greater than necessary to protect the protectable business interest.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-reformation-duty"
+          },
+          {
+            "sourceId": "aca-reformation-enforce",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(f).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(f) supports enforcement of the covenant under its reformed terms.",
+            "verbatimQuote": "The court shall enforce the covenant not to compete agreement under the reformed terms and conditions.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-reformation-enforce"
+          },
+          {
+            "sourceId": "bendinger-valid-as-written",
+            "authorityType": "case-law",
+            "title": "Bendinger v. Marshalltown Trowel Co.",
+            "citation": "Bendinger v. Marshalltown Trowel Co., 338 Ark. 410, 994 S.W.2d 468 (1999).",
+            "url": "https://www.courtlistener.com/opinion/2454655/bendinger-v-marshalltown-trowell-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2454655/bendinger-v-marshalltown-trowell-co/#:~:text=The%20court%20has%20held%20that,it%20might%20be%20considered%20reasonable.",
+            "proposition": "Bendinger supports the pre-Act rule that the contract must be valid as written and the court will not narrow it — the regime that still governs agreements outside the statute.",
+            "verbatimQuote": "The court has held that the contract must be valid as written, and the court will not apportion or enforce a contract to the extent that it might be considered reasonable.",
+            "date": "1999-07-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-bendinger-valid-as-written"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite elsewhere. In Arkansas the discipline pays directly: the covered non-compete is the clause measured against the two-year presumptive window, and a bundled survival clause is where a duration nobody audited quietly outruns it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. The Arkansas wrinkle is the interest analysis: the statute protects the employer's own customer relationships, data, and training investment, so a successor enforcing an assigned covenant should be ready to show those interests transferred with the business rather than assuming the covenant carries them automatically.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law, venue, dispute process",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#specify-governing-law-and-venue",
+        "requirementGuidance": "Specify all three. The choice does real sorting work for an Arkansas worker: the protectable-interest test, the two-year presumption, the reformation duty, and the statutory irreparable-harm rule all arrive through Arkansas law governing the covenant, so a clause routing the dispute elsewhere swaps the entire rulebook this checklist applies and should be treated as a substantive decision, not boilerplate.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate with a date trap inside: re-papering matters in Arkansas because the statute reaches agreements executed after Act 921 took effect, and the court of appeals has treated only the agreement executed after the effective date as arguably statutory. An amendment or restatement signed today can move an old covenant from the no-narrowing common-law track onto the statutory one — review amendment mechanics with that migration in mind.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "box-amendment-track",
+            "authorityType": "case-law",
+            "title": "Box v. J.B. Hunt Transport, Inc.",
+            "citation": "Box v. J.B. Hunt Transp., Inc., 2017 Ark. App. 605, 533 S.W.3d 603.",
+            "url": "https://www.courtlistener.com/opinion/4441363/box-v-jb-hunt-transport-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4441363/box-v-jb-hunt-transport-inc/#:~:text=However%2C%20in%20the%20present%20case,after%20Act%20921%20became%20effective.",
+            "proposition": "Box supports treating only the agreement executed after Act 921's effective date as arguably governed by the statute.",
+            "verbatimQuote": "However, in the present case the statutory law arguably applies only to the parties’ third restricted stock agreement executed in October 2015 after Act 921 became effective.",
+            "date": "2017-11-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-box-amendment-track"
+          }
+        ]
+      },
+      {
+        "requirementId": "gate-non-compete-by-protectable-business-interest",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.arkansas.gate-non-compete-by-protectable-business-interest",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Statutory test for the non-compete",
+        "sectionId": "arkansas-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#gate-non-compete-by-protectable-business-interest",
+        "requirementGuidance": "Run the covered non-compete through the statute's full sentence: ancillary to an employment relationship or part of an otherwise enforceable employment agreement, backed by a protectable business interest, and limited in time and scope no more than necessary to defend that interest. Consideration is the one element the employer gets for free — continued employment suffices — which means the review concentrates on whether the interest is real and the limits fit it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-core-test-gate",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(a).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(a) supports the ancillary, protectable-interest, and time-and-scope requirements for an enforceable Arkansas non-compete.",
+            "verbatimQuote": "A covenant not to compete agreement is enforceable if the agreement is ancillary to an employment relationship or part of an otherwise enforceable employment agreement or contract to the extent that: (1) The employer has a protectable business interest; and (2) The covenant not to compete agreement is limited with respect to time and scope in a manner that is not greater than necessary to defend the protectable business interest of the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-core-test-gate"
+          },
+          {
+            "sourceId": "aca-consideration-gate",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(g).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(g) supports continued employment as sufficient consideration, narrowing the review to interest and tailoring.",
+            "verbatimQuote": "An employee's continued employment is sufficient consideration for a covenant not to compete agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-consideration-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "anchor-protectable-interest-to-statutory-categories",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.arkansas.anchor-protectable-interest-to-statutory-categories",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Interests drawn from the statutory list",
+        "sectionId": "arkansas-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#anchor-protectable-interest-to-statutory-categories",
+        "requirementGuidance": "Match the covenant's interest recitals against the statutory categories — trade secrets, intellectual property, customer lists, goodwill, business practices, methods, margins, costs, confidential business information, training, and other valuable employer data. The list is illustrative, but a recital that maps onto it carries the employer's proof burden, while one that reduces to suppressing competition itself fails: Arkansas courts will not enforce a covenant that merely prohibits ordinary competition.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-interest-list-gate",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(b).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(b) supports the statutory categories of protectable business interests the covenant's recitals should map onto.",
+            "verbatimQuote": "For the purposes of subsection (a) of this section, the protectable business interest of the employer includes the employer's: (1) Trade secrets; (2) Intellectual property; (3) Customer lists; (4) Goodwill with customers; (5) Knowledge of his or her business practices; (6) Methods; (7) Profit margins; (8) Costs; (9) Other confidential business information that is confidential, proprietary, and increases in value from not being known by a competitor; (10) Training and education of the employer's employees; and (11) Other valuable employer data that the employer has provided to an employee that an employer would reasonably seek to protect or safeguard from a competitor in the interest of fairness.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-interest-list-gate"
+          },
+          {
+            "sourceId": "mercy-ordinary-competition-gate",
+            "authorityType": "case-law",
+            "title": "Mercy Health Sys. of Nw. Ark., Inc. v. Bicak",
+            "citation": "Mercy Health Sys. of Nw. Ark., Inc. v. Bicak, 2011 Ark. App. 341, 383 S.W.3d 869.",
+            "url": "https://www.courtlistener.com/opinion/5283436/mercy-health-system-of-northwest-arkansas-inc-v-bicak/",
+            "deepLink": "https://www.courtlistener.com/opinion/5283436/mercy-health-system-of-northwest-arkansas-inc-v-bicak/#:~:text=Unless%20the%20covenantee%20has%20a,would%20merely%20prohibit%20ordinary%20competition.",
+            "proposition": "Mercy supports refusing covenants whose only function is to prohibit ordinary competition.",
+            "verbatimQuote": "Unless the covenantee has a legitimate interest to be protected by the agreement, the law will not enforce such a contract, as this would merely prohibit ordinary competition.",
+            "date": "2011-05-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-mercy-ordinary-competition-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "pair-missing-geography-with-customer-or-activity-limits",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.arkansas.pair-missing-geography-with-customer-or-activity-limits",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No geography needs another limit",
+        "sectionId": "arkansas-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#pair-missing-geography-with-customer-or-activity-limits",
+        "requirementGuidance": "If the covenant states no territory, look for the substitute limit that keeps it tailored — a customer-group restriction, an activity-scope restriction, or a business-scope restriction tied to the protected interest. The statute forgives missing geography only when time and scope stay no greater than necessary, and its reasonableness factors ask in terms whether a geographic limit was feasible and whether the restriction is confined to specific customers or entities. A covenant with neither geography nor any substitute is the classic overbreadth fact pattern.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-no-geography-gate",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(c).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(c) supports saving a no-geography covenant only when time and scope remain no greater than necessary.",
+            "verbatimQuote": "The lack of a specific or defined geographic descriptive restriction in a covenant not to compete agreement does not make the covenant not to compete agreement overly broad under subdivision (a)(2) of this section if the covenant not to compete agreement is limited with respect to time and scope in a manner that is not greater than necessary to defend the protectable business interest of the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-no-geography-gate"
+          },
+          {
+            "sourceId": "aca-factors-gate",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(c).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(c) supports the reasonableness factors weighing geographic feasibility and customer-group limitation.",
+            "verbatimQuote": "The reasonableness of a covenant not to compete agreement shall be determined after considering: (A) The nature of the employer's protectable business interest; (B) The geographic scope of the employer's business and whether or not a geographic limitation is feasible under the circumstances; (C) Whether or not the restriction placed on the employee is limited to a specific group of customers or other individuals or entities associated with the employer's business; and (D) The nature of the employer's business.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-factors-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-restricted-period-within-two-year-presumption",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.arkansas.keep-restricted-period-within-two-year-presumption",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Two-year presumptive duration",
+        "sectionId": "arkansas-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#keep-restricted-period-within-two-year-presumption",
+        "requirementGuidance": "Check the post-termination period against two years: a term at or under it starts presumptively reasonable, and a longer one starts from nothing. The presumption bends to case-specific facts in both directions — a narrow interest can make even two years too long — and the historical pattern the court of appeals has recited points the same way: one- and two-year limits upheld, three- and five-year limits unreasonable or invalid.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-two-years-gate",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(d).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(d) supports the two-year presumption and its case-specific exception.",
+            "verbatimQuote": "A post-termination restriction of two (2) years is presumptively reasonable as to length of time under subdivision (a)(2) of this section unless the facts and circumstances of a particular case clearly demonstrate that two (2) years is unreasonable compared to the employer's protectable business interest.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-two-years-gate"
+          },
+          {
+            "sourceId": "bud-duration-history",
+            "authorityType": "case-law",
+            "title": "Bud Anderson Heating & Cooling, Inc. v. Neil",
+            "citation": "Bud Anderson Heating & Cooling, Inc. v. Neil, 2018 Ark. App. 183, 545 S.W.3d 819.",
+            "url": "https://www.courtlistener.com/opinion/6241502/bud-anderson-heating-cooling-inc-v-mike-neil-absolute-hvac-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/6241502/bud-anderson-heating-cooling-inc-v-mike-neil-absolute-hvac-llc/#:~:text=%5BW%5Dhile%20the%20courts%20have%20upheld,years%20were%20unreasonable%20and%20invalid.",
+            "proposition": "Bud Anderson supports the historical duration pattern: one- and two-year limits upheld, three- and five-year limits unreasonable or invalid.",
+            "verbatimQuote": "[W]hile the courts have upheld time limits of one year and two years, restrictions of three years and five years were unreasonable and invalid.",
+            "date": "2018-03-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-bud-duration-history"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-physician-practice-restrictions",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.arkansas.exclude-physician-practice-restrictions",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No practice restrictions for physicians",
+        "sectionId": "arkansas-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#exclude-physician-practice-restrictions",
+        "requirementGuidance": "If the worker is a physician, stop at this gate: a covenant restricting the physician's right to practice within scope is void under the 2025 amendment, at any compensation level and for any stated interest. The statutory definition covers persons licensed under the Arkansas Medical Practices Act and persons authorized to practice osteopathy — both kinds of physician, and only physicians. Confirm the agreement imposes no practice restriction on a covered worker, and treat any that appears as void rather than negotiable.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-physician-void-gate",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(k).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(k) supports voiding a covenant that restricts a physician's right to practice within the physician's scope of practice.",
+            "verbatimQuote": "A covenant not to compete agreement that restricts the right of a physician to practice within the physician's scope of practice is void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-physician-void-gate"
+          },
+          {
+            "sourceId": "aca-physician-definition-gate",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(k).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(k) supports the physician definition covering Medical Practices Act licensees and osteopathy licensees.",
+            "verbatimQuote": "As used in subdivision (k)(1) of this section, \"physician\" means a person authorized or licensed to practice medicine under the Arkansas Medical Practices Act, § 17-95-201 et seq., § 17-95-301 et seq., and § 17-95-401 et seq., and a person authorized to practice osteopathy under § 17-91-101 et seq.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-physician-definition-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "treat-title-17-licensees-as-outside-the-statute",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.arkansas.treat-title-17-licensees-as-outside-the-statute",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Licensed professionals outside the statute",
+        "sectionId": "arkansas-statutory-gates",
+        "itemNumber": "19.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#treat-title-17-licensees-as-outside-the-statute",
+        "requirementGuidance": "Before applying any statutory rule on this page, ask whether the worker holds a professional license under Arkansas Code Title 17, Subtitle 3 — the statute does not apply to such a person except for the physician voiding rule. For an excluded licensee the covenant gets no mandatory reformation, no continued-employment consideration rule, no two-year presumption, and no statutory irreparable-harm shortcut: the common-law regime governs, where the covenant must be valid as written because the court will not narrow it. An agreement that leans on the statute for a licensee is leaning on rules that do not reach the worker.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aca-title-17-gate",
+            "authorityType": "primary-law",
+            "title": "Ark. Code Ann. § 4-75-101",
+            "citation": "Ark. Code Ann. § 4-75-101(j).",
+            "enactedCitation": "Acts 2015, No. 921, § 1; 2025, No. 232, §§ 1-3.",
+            "url": "https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00",
+            "proposition": "Section 4-75-101(j)(2) supports the exclusion of Title 17, Subtitle 3 professional licensees from the statute, except for the physician voiding rule.",
+            "verbatimQuote": "Except as provided under subsection (k) of this section, this section shall not: (1) Be read to impair, limit, or change a party's protections and rights under the Arkansas Trade Secrets Act, § 4-75-601 et seq.; or (2) Apply to a person holding a professional license under Arkansas Code Title 17, Subtitle 3.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-aca-title-17-gate"
+          },
+          {
+            "sourceId": "nanomech-valid-as-written-gate",
+            "authorityType": "case-law",
+            "title": "NanoMech, Inc. v. Suresh",
+            "citation": "NanoMech, Inc. v. Suresh, 777 F.3d 1020 (8th Cir. 2015).",
+            "url": "https://www.courtlistener.com/opinion/2777573/nanomech-inc-v-arunya-suresh/",
+            "deepLink": "https://www.courtlistener.com/opinion/2777573/nanomech-inc-v-arunya-suresh/#:~:text=Under%20Arkansas%20law%2C%20a%20noncompete,court%20may%20not%20narrow%20it.",
+            "proposition": "NanoMech supports the no-narrowing rule that governs covenants outside the statute's reach.",
+            "verbatimQuote": "Under Arkansas law, a noncompete agreement must be valid as written; a court may not narrow it.",
+            "date": "2015-02-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arkansas#src-nanomech-valid-as-written-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

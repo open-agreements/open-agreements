@@ -1,0 +1,1354 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/hawaii",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/hawaii.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/hawaii",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/hawaii/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/hawaii/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "hawaii",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Hawaii",
+      "description": "A clause-by-clause reviewer checklist for Hawaii employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under HRS chapter 480's restraint-of-trade framework and the technology-business employee ban.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Hawaii",
+      "coverage": "Hawaii (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 46,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "hawaii-statutory-gates",
+        "label": "Hawaii statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity that actually employs the worker. In Hawaii the statutory ban keys to the employer's business — whether the employing entity derives the majority of its gross income from software or information technology development — so a covenant papered with a parent, affiliate, or staffing entity can obscure whether the technology-business rule governs.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-tech-business-definition",
+            "authorityType": "primary-law",
+            "title": "HRS 480-4",
+            "citation": "Haw. Rev. Stat. 480-4(d).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm",
+            "proposition": "HRS 480-4 keys the technology-business ban to the employer's revenue mix, with broadcast and certain telecommunications exclusions.",
+            "verbatimQuote": "“Technology business” means a trade or business that derives the majority of its gross income from the sale or license of products or services resulting from its software development or information technology development, or both. A “technology business” excludes any trade or business that is considered by standard practice as part of the broadcast industry or any telecommunications carrier, as defined in section 269-1, that holds a franchise or charter enacted or granted by the legislative or executive authority of the State or its predecessor governments.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-tech-business-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#identify-effective-date",
+        "requirementGuidance": "Every covenant clock needs a defined start. Hawaii imposes no statutory maximum duration, but the effective length of each restraint feeds directly into the antitrust analysis — a reasonable period is a condition of the statutory covenant categories — so an undated instrument leaves the reviewer unable to audit any duration at all.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#identify-employee-title",
+        "requirementGuidance": "Record the title and the actual duties, then look past them: in Hawaii the decisive classification question is the employer's line of business, not the worker's job description. An employee of a technology business cannot be bound by a non-compete or an employee non-solicit at all, while the title still matters for whether a protectable interest — specialized training, customer relationships, access to trade secrets — plausibly attaches to this worker.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-tech-business-definition",
+            "authorityType": "primary-law",
+            "title": "HRS 480-4",
+            "citation": "Haw. Rev. Stat. 480-4(d).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm",
+            "proposition": "HRS 480-4 keys the technology-business ban to the employer's revenue mix, with broadcast and certain telecommunications exclusions.",
+            "verbatimQuote": "“Technology business” means a trade or business that derives the majority of its gross income from the sale or license of products or services resulting from its software development or information technology development, or both. A “technology business” excludes any trade or business that is considered by standard practice as part of the broadcast industry or any telecommunications carrier, as defined in section 269-1, that holds a franchise or charter enacted or granted by the legislative or executive authority of the State or its predecessor governments.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-tech-business-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated. The choice decides whether the covenant is measured against HRS chapter 480's restraint-of-trade screen and the technology-business ban or against some other body of law, and an agreement that leaves the question open invites a threshold fight before the merits.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#define-confidential-information",
+        "requirementGuidance": "Tie the definition to material the employer genuinely protects. Hawaii's highest court has scrutinized whether claimed confidential information is actually confidential — the leading decision rejected the theory where similarly situated workers were not restricted, the information circulated more broadly, and no trade-secret violation was shown. A definition that labels ordinary market knowledge confidential will not carry a covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-gagnon-no-confidential-record",
+            "authorityType": "case-law",
+            "title": "Prudential Locations, LLC v. Gagnon",
+            "citation": "Prudential Locations, LLC v. Gagnon, 151 Haw. 136, 509 P.3d 1099 (2022).",
+            "url": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/",
+            "deepLink": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/#:~:text=In%20addition%2C%20Locations%20did%20not,was%20no%20trade%20secret%20violation.",
+            "proposition": "Gagnon supports scrutinizing whether claimed confidential information is actually confidential and protected.",
+            "verbatimQuote": "In addition, Locations did not produce any evidence of and did not dispute that there was no trade secret violation.",
+            "date": "2022-02-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gagnon-no-confidential-record"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#define-trade-secrets",
+        "requirementGuidance": "In Hawaii this definition is the load-bearing one. The statute expressly permits an employee or agent covenant not to use the employer's trade secrets in competition, and that category is the only restrictive covenant that survives for technology-business employees — so what the agreement counts as a trade secret marks the outer edge of the strongest, and sometimes the only, available restraint.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-trade-secret-covenant",
+            "authorityType": "primary-law",
+            "title": "HRS 480-4",
+            "citation": "Haw. Rev. Stat. 480-4(c)(4).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm",
+            "proposition": "HRS 480-4 supports the employee or agent trade-secret covenant category and its time and hardship limits.",
+            "verbatimQuote": "A covenant or agreement by an employee or agent not to use the trade secrets of the employer or principal in competition with the employee's or agent's employer or principal, during the term of the agency or thereafter, or after the termination of employment, within such time as may be reasonably necessary for the protection of the employer or principal, without imposing undue hardship on the employee or agent.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-trade-secret-covenant"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#define-restricted-period",
+        "requirementGuidance": "One defined Restricted Period keeps every duration auditable. Hawaii sets no fixed ceiling, but length of time is one of the factors a court examines when weighing a restraint, and the statutory categories each demand a reasonable period — so the period should be the shortest the protected interest credibly requires, with the record explaining why.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-traeger-scope-factors",
+            "authorityType": "case-law",
+            "title": "7's Enterprises, Inc. v. Del Rosario",
+            "citation": "7's Enterprises, Inc. v. Del Rosario, 111 Haw. 484, 143 P.3d 23 (2006).",
+            "url": "https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/",
+            "deepLink": "https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=A%20court%20%E2%80%9Cmust%20examine%20such,placed%20on%20a%20given%20activity.%E2%80%9D",
+            "proposition": "Del Rosario, restating Traeger, supports examining geographical scope, duration, and breadth when assessing reasonableness.",
+            "verbatimQuote": "A court “must examine such factors as geographical scope, length of time, and breadth of the restriction placed on a given activity.”",
+            "date": "2006-09-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-traeger-scope-factors"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#define-restricted-territory",
+        "requirementGuidance": "Geographic scope is examined alongside duration and breadth, and the contract's own territory controls what can be enforced — in the staged case law an injunction entered statewide was sent back to be trimmed to the covenant's County of Honolulu limit. Define the territory precisely and size it to where the protected interest actually operates.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-traeger-scope-factors",
+            "authorityType": "case-law",
+            "title": "7's Enterprises, Inc. v. Del Rosario",
+            "citation": "7's Enterprises, Inc. v. Del Rosario, 111 Haw. 484, 143 P.3d 23 (2006).",
+            "url": "https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/",
+            "deepLink": "https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=A%20court%20%E2%80%9Cmust%20examine%20such,placed%20on%20a%20given%20activity.%E2%80%9D",
+            "proposition": "Del Rosario, restating Traeger, supports examining geographical scope, duration, and breadth when assessing reasonableness.",
+            "verbatimQuote": "A court “must examine such factors as geographical scope, length of time, and breadth of the restriction placed on a given activity.”",
+            "date": "2006-09-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-traeger-scope-factors"
+          },
+          {
+            "sourceId": "hi-del-rosario-honolulu",
+            "authorityType": "case-law",
+            "title": "7's Enterprises, Inc. v. Del Rosario",
+            "citation": "7's Enterprises, Inc. v. Del Rosario, 111 Haw. 484, 143 P.3d 23 (2006).",
+            "url": "https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/",
+            "deepLink": "https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=The%20case%20is%20remanded%20to,to%20the%20County%20of%20Honolulu.",
+            "proposition": "Del Rosario supports limiting enforcement to the covenant's own geographic terms.",
+            "verbatimQuote": "The case is remanded to the court to amend its judgment to reflect that the injunction involved herein is limited to the County of Honolulu.",
+            "date": "2006-09-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-del-rosario-honolulu"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the worker had real contact with during a stated look-back window. Special customer relationships are among the interests Hawaii recognizes as protectable, and a customer class limited to relationships the worker actually built keeps the clause tethered to that interest rather than to the market at large.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-del-rosario-protectable",
+            "authorityType": "case-law",
+            "title": "7's Enterprises, Inc. v. Del Rosario",
+            "citation": "7's Enterprises, Inc. v. Del Rosario, 111 Haw. 484, 143 P.3d 23 (2006).",
+            "url": "https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/",
+            "deepLink": "https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=Hence%2C%20as%20a%20matter%20of,information%2C%20or%20special%20customer%20relationships.",
+            "proposition": "Del Rosario supports the protectable-interest vocabulary: trade secrets, confidential information, special customer relationships, and specialized training combined with other factors.",
+            "verbatimQuote": "Hence, as a matter of law, we hold that training that provides skills beyond those of a general nature is a legitimate interest which may be considered in weighing the reasonableness of a non-competition covenant, when combined with other factors weighing in favor of a protectable business interest such as trade secrets, confidential information, or special customer relationships.",
+            "date": "2006-09-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-del-rosario-protectable"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#define-covered-employees",
+        "requirementGuidance": "Keep the class to colleagues the departing worker actually worked with during the look-back window. Two Hawaii rules shadow this definition: an employee non-solicit is analyzed as a restraint of trade needing its own legitimate purpose, and for technology-business employees the statute voids the clause entirely no matter how the class is drawn.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-tech-ban-defs",
+            "authorityType": "primary-law",
+            "title": "HRS 480-4",
+            "citation": "Haw. Rev. Stat. 480-4(d).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm",
+            "proposition": "HRS 480-4 voids noncompete and nonsolicit clauses for technology-business employees regardless of drafting, except trade-secret covenants.",
+            "verbatimQuote": "Except as provided in subsection (c)(4), it shall be prohibited to include a noncompete clause or a nonsolicit clause in any employment contract relating to an employee of a technology business. The clause shall be void and of no force and effect.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-tech-ban-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#define-protected-interests",
+        "requirementGuidance": "Name the interests in the vocabulary Hawaii recognizes: trade secrets, genuinely confidential information, special customer relationships, and specialized training combined with other protectable factors. The recital matters more here than in most boilerplate because preventing competition is not a legitimate purpose — a recital that amounts to a wish to keep the worker out of the market supports nothing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-del-rosario-protectable",
+            "authorityType": "case-law",
+            "title": "7's Enterprises, Inc. v. Del Rosario",
+            "citation": "7's Enterprises, Inc. v. Del Rosario, 111 Haw. 484, 143 P.3d 23 (2006).",
+            "url": "https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/",
+            "deepLink": "https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=Hence%2C%20as%20a%20matter%20of,information%2C%20or%20special%20customer%20relationships.",
+            "proposition": "Del Rosario supports the protectable-interest vocabulary: trade secrets, confidential information, special customer relationships, and specialized training combined with other factors.",
+            "verbatimQuote": "Hence, as a matter of law, we hold that training that provides skills beyond those of a general nature is a legitimate interest which may be considered in weighing the reasonableness of a non-competition covenant, when combined with other factors weighing in favor of a protectable business interest such as trade secrets, confidential information, or special customer relationships.",
+            "date": "2006-09-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-del-rosario-protectable"
+          },
+          {
+            "sourceId": "hi-gagnon-not-competition",
+            "authorityType": "case-law",
+            "title": "Prudential Locations, LLC v. Gagnon",
+            "citation": "Prudential Locations, LLC v. Gagnon, 151 Haw. 136, 509 P.3d 1099 (2022).",
+            "url": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/",
+            "deepLink": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/#:~:text=Preventing%20competition%2C%20however%2C%20is%20not,purpose%20under%20HRS%20%C2%A7%20480%2D4(a).",
+            "proposition": "Gagnon supports the rule that preventing competition is not a legitimate ancillary purpose.",
+            "verbatimQuote": "Preventing competition, however, is not a legitimate ancillary purpose under HRS § 480-4(a).",
+            "date": "2022-02-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gagnon-not-competition"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity in concrete terms. In Hawaii an over-wide definition does double damage: it widens the restraint the court must weigh, and it reads as evidence that the covenant's real purpose is blocking competition — which is exactly the purpose the antitrust screen refuses to credit.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-gagnon-not-competition",
+            "authorityType": "case-law",
+            "title": "Prudential Locations, LLC v. Gagnon",
+            "citation": "Prudential Locations, LLC v. Gagnon, 151 Haw. 136, 509 P.3d 1099 (2022).",
+            "url": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/",
+            "deepLink": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/#:~:text=Preventing%20competition%2C%20however%2C%20is%20not,purpose%20under%20HRS%20%C2%A7%20480%2D4(a).",
+            "proposition": "Gagnon supports the rule that preventing competition is not a legitimate ancillary purpose.",
+            "verbatimQuote": "Preventing competition, however, is not a legitimate ancillary purpose under HRS § 480-4(a).",
+            "date": "2022-02-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gagnon-not-competition"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. A clause that technically forbids ordinary public shareholdings adds hardship on the restricted person with no protected interest behind it — and undue hardship is one of the three grounds on which a Hawaii court will find a restraint unreasonable.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-traeger-reasonableness",
+            "authorityType": "case-law",
+            "title": "7's Enterprises, Inc. v. Del Rosario",
+            "citation": "7's Enterprises, Inc. v. Del Rosario, 111 Haw. 484, 143 P.3d 23 (2006).",
+            "url": "https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/",
+            "deepLink": "https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=As%20observed%20in%20Traeger%2C%20courts,injury%20to%20the%20public.%E2%80%99%20%E2%80%9D",
+            "proposition": "Del Rosario, restating the Traeger rule, supports the three grounds of unreasonableness, including undue hardship on the person restricted.",
+            "verbatimQuote": "As observed in Traeger, courts will find a non-competition provision unreasonable if “ ‘(i) it is greater than required for the protection of the person for whose benefit it is imposed; (ii) it imposes undue hardship on the person restricted; or (iii) its benefit to the covenantee is outweighed by injury to the public.’ ”",
+            "date": "2006-09-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-traeger-reasonableness"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#define-passive-public-holdings",
+        "requirementGuidance": "A drafting convenience, not a requirement — many agreements inline the carve-out language instead. If the capitalized term appears, confirm its percentage matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit-around-active-initiation-of-contact",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.hawaii.define-solicit-around-active-initiation-of-contact",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#define-solicit-around-active-initiation-of-contact",
+        "requirementGuidance": "Hawaii has answered this definitional question at the highest level: solicitation requires an active initiation of contact, and former coworkers quitting to join the departing employee's new venture does not by itself prove a violation. Check that the agreement's definition tracks that active-initiation standard — no-contact, no-service, and no-acceptance formulations reach conduct the court has placed outside solicitation, widening a clause that already needs its own legitimate purpose to survive the restraint-of-trade screen.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-gagnon-active-contact",
+            "authorityType": "case-law",
+            "title": "Prudential Locations, LLC v. Gagnon",
+            "citation": "Prudential Locations, LLC v. Gagnon, 151 Haw. 136, 509 P.3d 1099 (2022).",
+            "url": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/",
+            "deepLink": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/#:~:text=Our%20law%20does%20not%20clearly,an%20active%20initiation%20of%20contact.",
+            "proposition": "Gagnon supports the rule that solicitation requires active initiation of contact.",
+            "verbatimQuote": "Our law does not clearly define “solicitation.” We agree with reasoned opinions from other jurisdictions and now hold that “solicitation” requires an active initiation of contact.",
+            "date": "2022-02-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gagnon-active-contact"
+          },
+          {
+            "sourceId": "hi-gagnon-no-automatic-violation",
+            "authorityType": "case-law",
+            "title": "Prudential Locations, LLC v. Gagnon",
+            "citation": "Prudential Locations, LLC v. Gagnon, 151 Haw. 136, 509 P.3d 1099 (2022).",
+            "url": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/",
+            "deepLink": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/#:~:text=These%20agents%E2%80%99%20termination%20of%20their,violation%20of%20the%20non%2Dsolicitation%20clause.",
+            "proposition": "Gagnon supports the rule that former coworkers joining a new venture does not automatically prove solicitation.",
+            "verbatimQuote": "These agents’ termination of their employment with Locations and subsequent employment with Prestige do not automatically demonstrate a violation of the non-solicitation clause.",
+            "date": "2022-02-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gagnon-no-automatic-violation"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger covers resignation, dismissal, and expiration of a fixed term the same way. The statutory trade-secret covenant runs during the relationship or after termination of employment for the time reasonably necessary — a clean, single definition of when employment ends is what keeps that clock, and every other covenant clock, auditable.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-trade-secret-covenant",
+            "authorityType": "primary-law",
+            "title": "HRS 480-4",
+            "citation": "Haw. Rev. Stat. 480-4(c)(4).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm",
+            "proposition": "HRS 480-4 supports the employee or agent trade-secret covenant category and its time and hardship limits.",
+            "verbatimQuote": "A covenant or agreement by an employee or agent not to use the trade secrets of the employer or principal in competition with the employee's or agent's employer or principal, during the term of the agency or thereafter, or after the termination of employment, within such time as may be reasonably necessary for the protection of the employer or principal, without imposing undue hardship on the employee or agent.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-trade-secret-covenant"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Timing of signing acknowledged",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#acknowledge-timing",
+        "requirementGuidance": "Look for the worker's acknowledgement of when the covenant was signed relative to the start of employment and what was exchanged for it. No staged Hawaii statute conditions enforceability on a particular consideration form, but a clean record of timing and exchange is cheap evidence if procedural fairness is ever contested — and it documents the legitimate purpose the covenant will need to show.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Hawaii statute demands it, but the reasonableness analysis weighs the hardship the restraint places on the worker — and a documented opportunity to take the agreement to a lawyer before signing is low-cost evidence that the process was fair rather than coercive.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret protection should last as long as secrecy does — federal law keys the right to continued secrecy, and Hawaii's own statutory covenant category lets the restraint run after termination for whatever time is reasonably necessary to protect the employer. A fixed expiry on trade-secret confidentiality quietly forfeits protection the law would otherwise keep alive, and weakens the one interest Hawaii most reliably credits.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-dtsa-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-dtsa-definition"
+          },
+          {
+            "sourceId": "hi-c4-duration",
+            "authorityType": "primary-law",
+            "title": "HRS 480-4",
+            "citation": "Haw. Rev. Stat. 480-4(c)(4).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm",
+            "proposition": "HRS 480-4 lets a trade-secret covenant run after termination for the time reasonably necessary to protect the employer or principal.",
+            "verbatimQuote": "A covenant or agreement by an employee or agent not to use the trade secrets of the employer or principal in competition with the employee's or agent's employer or principal, during the term of the agency or thereafter, or after the termination of employment, within such time as may be reasonably necessary for the protection of the employer or principal, without imposing undue hardship on the employee or agent.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-c4-duration"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. A perpetual lid on non-secret material lengthens the practical restraint the antitrust framework will weigh, and the two-track structure — perpetual for trade secrets, finite for everything else — keeps each obligation matched to the interest that justifies it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in Hawaii: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later federal trade-secret suit against the worker. That forfeiture stings more here than in most agreements, because the trade-secret covenant is the centerpiece of Hawaii drafting — the one restraint the statute always preserves.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-dtsa-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-dtsa-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech regardless of the governing state, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-nlra-section-7",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-nlra-section-7"
+          },
+          {
+            "sourceId": "hi-mclaren-macomb",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-mclaren-macomb"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. A confidentiality clause cannot stop legally compelled disclosure, and a clause that pretends otherwise hands the worker an overbreadth argument for free.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. Hawaii's trade-secret act displaces overlapping tort remedies but expressly preserves contractual ones — so the contract paper trail of what left and what came back is the record an employer will actually litigate on, whether the claim sounds in misappropriation or in breach.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-utsa-contracts-preserved",
+            "authorityType": "primary-law",
+            "title": "HRS 482B-8",
+            "citation": "Haw. Rev. Stat. 482B-8(b).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0482B/HRS_0482B-0008.htm",
+            "proposition": "HRS 482B-8 preserves contractual remedies whether or not based on trade-secret misappropriation.",
+            "verbatimQuote": "This chapter does not affect: (1) Contractual remedies, whether or not based upon misappropriation of a trade secret; (2) Other civil remedies that are not based upon misappropriation of a trade secret; or (3) Criminal remedies, whether or not based upon misappropriation of a trade secret.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-utsa-contracts-preserved"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and in Hawaii a clause with two separate failure modes. As a restraint of trade it needs a legitimate ancillary purpose of its own — workforce stability does not prove itself — and for an employee of a technology business the statute voids it outright, since the prohibition on soliciting the employer's employees is precisely the nonsolicit clause the ban defines. Confirm both gates before reading the class and period.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-gagnon-solicitation-restraint",
+            "authorityType": "case-law",
+            "title": "Prudential Locations, LLC v. Gagnon",
+            "citation": "Prudential Locations, LLC v. Gagnon, 151 Haw. 136, 509 P.3d 1099 (2022).",
+            "url": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/",
+            "deepLink": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/#:~:text=Solicitation%20clauses%20are%20also%20contracts,purpose%20under%20HRS%20%C2%A7%20480%2D4(a).",
+            "proposition": "Gagnon supports the rule that solicitation clauses are restraints of trade requiring a legitimate ancillary purpose.",
+            "verbatimQuote": "Solicitation clauses are also contracts in restraint of trade or commerce that require a legitimate ancillary purpose under HRS § 480-4(a).",
+            "date": "2022-02-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gagnon-solicitation-restraint"
+          },
+          {
+            "sourceId": "hi-tech-ban-covenants",
+            "authorityType": "primary-law",
+            "title": "HRS 480-4",
+            "citation": "Haw. Rev. Stat. 480-4(d).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm",
+            "proposition": "HRS 480-4 voids noncompete and nonsolicit clauses in employment contracts of technology-business employees, except trade-secret covenants.",
+            "verbatimQuote": "Except as provided in subsection (c)(4), it shall be prohibited to include a noncompete clause or a nonsolicit clause in any employment contract relating to an employee of a technology business. The clause shall be void and of no force and effect.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-tech-ban-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#permit-customer-nonsolicit",
+        "requirementGuidance": "Often the most defensible covenant in a Hawaii agreement when tied to real customer relationships — but it is still analyzed as a restraint of trade requiring a legitimate ancillary purpose, and enforcement turns on proof that the worker actively initiated the contact. Keep it bound to the Covered Customers class and the Restricted Period.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-gagnon-solicitation-restraint",
+            "authorityType": "case-law",
+            "title": "Prudential Locations, LLC v. Gagnon",
+            "citation": "Prudential Locations, LLC v. Gagnon, 151 Haw. 136, 509 P.3d 1099 (2022).",
+            "url": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/",
+            "deepLink": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/#:~:text=Solicitation%20clauses%20are%20also%20contracts,purpose%20under%20HRS%20%C2%A7%20480%2D4(a).",
+            "proposition": "Gagnon supports the rule that solicitation clauses are restraints of trade requiring a legitimate ancillary purpose.",
+            "verbatimQuote": "Solicitation clauses are also contracts in restraint of trade or commerce that require a legitimate ancillary purpose under HRS § 480-4(a).",
+            "date": "2022-02-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gagnon-solicitation-restraint"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they call first — a meaningfully harsher restraint than a non-solicit, and one that reaches the passive conduct Hawaii's solicitation standard deliberately excludes. Treat its inclusion as a decision that needs its own legitimate-purpose justification, not as a stronger flavor of the same clause.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-gagnon-active-initiation",
+            "authorityType": "case-law",
+            "title": "Prudential Locations, LLC v. Gagnon",
+            "citation": "Prudential Locations, LLC v. Gagnon, 151 Haw. 136, 509 P.3d 1099 (2022).",
+            "url": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/",
+            "deepLink": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/#:~:text=Our%20law%20does%20not%20clearly,an%20active%20initiation%20of%20contact.",
+            "proposition": "Gagnon supports the active-initiation boundary that a non-dealing covenant deliberately crosses.",
+            "verbatimQuote": "Our law does not clearly define “solicitation.” We agree with reasoned opinions from other jurisdictions and now hold that “solicitation” requires an active initiation of contact.",
+            "date": "2022-02-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gagnon-active-initiation"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#permit-non-compete",
+        "requirementGuidance": "Available in Hawaii only on the antitrust statute's terms. Before evaluating any term of the clause, route the review through the Hawaii gates at the end of this checklist: the technology-business ban first, then the legitimate-ancillary-purpose screen — which a covenant can fail even after satisfying every reasonableness factor — and only then duration, territory, and breadth.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-gagnon-purpose-over-reasonableness",
+            "authorityType": "case-law",
+            "title": "Prudential Locations, LLC v. Gagnon",
+            "citation": "Prudential Locations, LLC v. Gagnon, 151 Haw. 136, 509 P.3d 1099 (2022).",
+            "url": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/",
+            "deepLink": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/#:~:text=Even%20if%20a%20restrictive%20covenant,not%20violative%20of%20Chapter%20480.",
+            "proposition": "Gagnon supports the rule that a covenant satisfying the reasonableness factors is still unenforceable without a legitimate ancillary purpose.",
+            "verbatimQuote": "Even if a restrictive covenant otherwise satisfies the Traeger three-factor reasonableness test, it is unenforceable unless it is ancillary to a legitimate purpose not violative of Chapter 480.",
+            "date": "2022-02-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gagnon-purpose-over-reasonableness"
+          },
+          {
+            "sourceId": "hi-tech-ban-covenants",
+            "authorityType": "primary-law",
+            "title": "HRS 480-4",
+            "citation": "Haw. Rev. Stat. 480-4(d).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm",
+            "proposition": "HRS 480-4 voids noncompete and nonsolicit clauses in employment contracts of technology-business employees, except trade-secret covenants.",
+            "verbatimQuote": "Except as provided in subsection (c)(4), it shall be prohibited to include a noncompete clause or a nonsolicit clause in any employment contract relating to an employee of a technology business. The clause shall be void and of no force and effect.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-tech-ban-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, the covenant should bind those instead of leaning on the open-ended Competitive Business definition. In a state whose courts refuse to credit competition-blocking as a purpose, a named list is the cleanest way to show the restraint protects a specific interest against specific rivals rather than fencing the market.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-gagnon-purpose-not-competition",
+            "authorityType": "case-law",
+            "title": "Prudential Locations, LLC v. Gagnon",
+            "citation": "Prudential Locations, LLC v. Gagnon, 151 Haw. 136, 509 P.3d 1099 (2022).",
+            "url": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/",
+            "deepLink": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/#:~:text=Preventing%20competition%2C%20however%2C%20is%20not,purpose%20under%20HRS%20%C2%A7%20480%2D4(a).",
+            "proposition": "Gagnon supports the rule that preventing competition is not a legitimate ancillary purpose.",
+            "verbatimQuote": "Preventing competition, however, is not a legitimate ancillary purpose under HRS § 480-4(a).",
+            "date": "2022-02-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gagnon-purpose-not-competition"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — an investment restraint with no carve-out and no end date adds hardship and anticompetitive effect with no protected interest gaining anything.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state, and no Hawaii statute gives the clause any special shelter.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-mclaren-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-mclaren-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#address-physician-specific-rights",
+        "requirementGuidance": "The staged Hawaii sources contain no physician-specific covenant statute, so the dedicated clause does honest work by saying what governs: a physician covenant passes through the same restraint-of-trade framework as any other — legitimate ancillary purpose, no substantial lessening of competition, reasonable scope. A clause that states that treatment expressly keeps the question reviewable instead of leaving the physician to assume some special regime exists.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. It surfaces an incoming covenant on day one — when the parties can still test it against Hawaii's restraint-of-trade screen — instead of after a demand letter arrives mid-quarter.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice, not a requirement — and in Hawaii one with real downside. Warning a new employer off a worker based on a covenant that fails the restraint-of-trade screen, or that the technology-business ban voids, invites more than a tortious-interference dispute: the statute separately outlaws unfair methods of competition and lets any person sue on that theory. If the clause appears, condition any outreach on a covenant that actually survives the gates in this checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-umoc-unlawful",
+            "authorityType": "primary-law",
+            "title": "HRS 480-2",
+            "citation": "Haw. Rev. Stat. 480-2(a).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0002.htm",
+            "proposition": "HRS 480-2 separately declares unfair methods of competition unlawful.",
+            "verbatimQuote": "Unfair methods of competition and unfair or deceptive acts or practices in the conduct of any trade or commerce are unlawful.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-umoc-unlawful"
+          },
+          {
+            "sourceId": "hi-umoc-person-actions",
+            "authorityType": "primary-law",
+            "title": "HRS 480-2",
+            "citation": "Haw. Rev. Stat. 480-2(e).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0002.htm",
+            "proposition": "HRS 480-2 allows any person to sue over unfair methods of competition.",
+            "verbatimQuote": "Any person may bring an action based on unfair methods of competition declared unlawful by this section.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-umoc-person-actions"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Hawaii question. The staged authorities do not resolve whether a covenant period pauses during breach or litigation, and an extension-on-breach clause lengthens the actual restraint, so it has to be justified under the same ancillary-purpose and reasonable-duration limits that govern the covenant itself. Do not assume a court will enforce it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-tolling-ancillary",
+            "authorityType": "primary-law",
+            "title": "HRS 480-4",
+            "citation": "Haw. Rev. Stat. 480-4(c).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm",
+            "proposition": "HRS 480-4 supports applying the ancillary-purpose and anticompetitive-effect framework to the effective length of a restrictive covenant.",
+            "verbatimQuote": "Notwithstanding subsection (b) and without limiting the application of subsection (a), it shall be lawful for a person to enter into any of the following restrictive covenants or agreements ancillary to a legitimate purpose not violative of this chapter, unless the effect thereof may be substantially to lessen competition or to tend to create a monopoly in any line of commerce in any section of the State: (1) A covenant or agreement by the transferor of a business not to compete within a reasonable area and within a reasonable period of time in connection with the sale of the business; (2) A covenant or agreement between partners not to compete with the partnership within a reasonable area and for a reasonable period of time upon the withdrawal of a partner from the partnership; (3) A covenant or agreement of the lessee to be restricted in the use of the leased premises to certain business or agricultural uses, or covenant or agreement of the lessee to be restricted in the use of the leased premises to certain business uses and of the lessor to be restricted in the use of premises reasonably proximate to any such leased premises to certain business uses; (4) A covenant or agreement by an employee or agent not to use the trade secrets of the employer or principal in competition with the employee's or agent's employer or principal, during the term of the agency or thereafter, or after the termination of employment, within such time as may be reasonably necessary for the protection of the employer or principal, without imposing undue hardship on the employee or agent.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-tolling-ancillary"
+          },
+          {
+            "sourceId": "hi-tolling-scope",
+            "authorityType": "case-law",
+            "title": "7's Enterprises, Inc. v. Del Rosario",
+            "citation": "7's Enterprises, Inc. v. Del Rosario, 111 Haw. 484, 143 P.3d 23 (2006).",
+            "url": "https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/",
+            "deepLink": "https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=A%20court%20%E2%80%9Cmust%20examine%20such,placed%20on%20a%20given%20activity.%E2%80%9D",
+            "proposition": "Del Rosario, restating Traeger, supports examining duration as part of restrictive-covenant reasonableness — including duration added by an extension clause.",
+            "verbatimQuote": "A court “must examine such factors as geographical scope, length of time, and breadth of the restriction placed on a given activity.”",
+            "date": "2006-09-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-tolling-scope"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief. Note what Hawaii adds underneath: chapter 480 itself authorizes injunction proceedings for a person injured by conduct the chapter forbids, with fees and costs awarded on a plaintiff's decree — statutory machinery that runs in both directions in a covenant dispute.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-480-13-remedies",
+            "authorityType": "primary-law",
+            "title": "HRS 480-13",
+            "citation": "Haw. Rev. Stat. 480-13(a).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0013.htm",
+            "proposition": "HRS 480-13 supports private damages, treble or statutory-minimum recovery, injunctive proceedings, and fee-and-cost awards for a prevailing plaintiff injured by conduct forbidden by chapter 480.",
+            "verbatimQuote": "Except as provided in subsections (b) and (c), any person who is injured in the person's business or property by reason of anything forbidden or declared unlawful by this chapter: (1) May sue for damages sustained by the person, and, if the judgment is for the plaintiff, the plaintiff shall be awarded a sum not less than $1,000 or threefold damages by the plaintiff sustained, whichever sum is the greater, and reasonable attorney's fees together with the costs of suit; provided that indirect purchasers injured by an illegal overcharge shall recover only compensatory damages, and reasonable attorney's fees together with the costs of suit in actions not brought under section 480-14(c); and (2) May bring proceedings to enjoin the unlawful practices, and if the decree is for the plaintiff, the plaintiff shall be awarded reasonable attorney's fees together with the costs of suit.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-480-13-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "weigh-statutory-fee-and-treble-exposure-under-chapter-480",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.hawaii.weigh-statutory-fee-and-treble-exposure-under-chapter-480",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and statutory exposure",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#weigh-statutory-fee-and-treble-exposure-under-chapter-480",
+        "requirementGuidance": "Contractual fee-shifting remains a commercial choice, and the American Rule applies if the agreement is silent. But weigh the clause against the statutory backdrop the parties cannot draft around: a person injured in business or property by anything the chapter forbids recovers the greater of $1,000 or threefold damages plus reasonable attorney fees and costs on a plaintiff's judgment, and fees on an injunction decree. Because the covenants in this agreement are themselves analyzed as restraints of trade, a covenant that fails the framework is not just unenforceable — it is potential fee-bearing, treble-damages exposure for the party pressing it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-480-13-remedies",
+            "authorityType": "primary-law",
+            "title": "HRS 480-13",
+            "citation": "Haw. Rev. Stat. 480-13(a).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0013.htm",
+            "proposition": "HRS 480-13 supports private damages, treble or statutory-minimum recovery, injunctive proceedings, and fee-and-cost awards for a prevailing plaintiff injured by conduct forbidden by chapter 480.",
+            "verbatimQuote": "Except as provided in subsections (b) and (c), any person who is injured in the person's business or property by reason of anything forbidden or declared unlawful by this chapter: (1) May sue for damages sustained by the person, and, if the judgment is for the plaintiff, the plaintiff shall be awarded a sum not less than $1,000 or threefold damages by the plaintiff sustained, whichever sum is the greater, and reasonable attorney's fees together with the costs of suit; provided that indirect purchasers injured by an illegal overcharge shall recover only compensatory damages, and reasonable attorney's fees together with the costs of suit in actions not brought under section 480-14(c); and (2) May bring proceedings to enjoin the unlawful practices, and if the decree is for the plaintiff, the plaintiff shall be awarded reasonable attorney's fees together with the costs of suit.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-480-13-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-to-the-protected-interest-rather-than-rely-on-narrowing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.hawaii.draft-to-the-protected-interest-rather-than-rely-on-narrowing",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Minimum scope, not court rescue",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#draft-to-the-protected-interest-rather-than-rely-on-narrowing",
+        "requirementGuidance": "Read the severability clause as architecture, not insurance. The staged Hawaii authorities supply no rule that a court will rewrite an overbroad covenant into an enforceable one: the closest example trimmed an injunction back to the covenant's own county limit — correcting enforcement to the contract's terms, not rewriting the contract — and the covenant that lacked a legitimate ancillary purpose failed outright rather than being saved by narrower wording. Expect each restriction to be drafted at the minimum scope its protected interest supports, in separable tiers a court can enforce or strike cleanly, rather than a broad clause paired with a savings provision that asks the court to do the tailoring.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-narrowing-honolulu",
+            "authorityType": "case-law",
+            "title": "7's Enterprises, Inc. v. Del Rosario",
+            "citation": "7's Enterprises, Inc. v. Del Rosario, 111 Haw. 484, 143 P.3d 23 (2006).",
+            "url": "https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/",
+            "deepLink": "https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=The%20case%20is%20remanded%20to,to%20the%20County%20of%20Honolulu.",
+            "proposition": "Del Rosario supports limiting the injunction to the County of Honolulu where the covenant itself had that geographic limit.",
+            "verbatimQuote": "The case is remanded to the court to amend its judgment to reflect that the injunction involved herein is limited to the County of Honolulu.",
+            "date": "2006-09-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-narrowing-honolulu"
+          },
+          {
+            "sourceId": "hi-narrowing-purpose",
+            "authorityType": "case-law",
+            "title": "Prudential Locations, LLC v. Gagnon",
+            "citation": "Prudential Locations, LLC v. Gagnon, 151 Haw. 136, 509 P.3d 1099 (2022).",
+            "url": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/",
+            "deepLink": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/#:~:text=Even%20if%20a%20restrictive%20covenant,not%20violative%20of%20Chapter%20480.",
+            "proposition": "Gagnon supports the rule that lack of a legitimate ancillary purpose makes a covenant unenforceable rather than reformable.",
+            "verbatimQuote": "Even if a restrictive covenant otherwise satisfies the Traeger three-factor reasonableness test, it is unenforceable unless it is ancillary to a legitimate purpose not violative of Chapter 480.",
+            "date": "2022-02-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-narrowing-purpose"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable. In Hawaii the discipline has a statutory shape: the trade-secret covenant may run after termination for whatever time is reasonably necessary, while every other restraint needs its own bounded, justified period — bundling them in one undifferentiated survival clause obscures exactly the duration analysis the antitrust framework performs.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-c4-survival",
+            "authorityType": "primary-law",
+            "title": "HRS 480-4",
+            "citation": "Haw. Rev. Stat. 480-4(c)(4).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm",
+            "proposition": "HRS 480-4 lets the trade-secret covenant survive termination for the time reasonably necessary, on its own clock.",
+            "verbatimQuote": "A covenant or agreement by an employee or agent not to use the trade secrets of the employer or principal in competition with the employee's or agent's employer or principal, during the term of the agency or thereafter, or after the termination of employment, within such time as may be reasonably necessary for the protection of the employer or principal, without imposing undue hardship on the employee or agent.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-c4-survival"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. The successor inherits the Hawaii analysis along with the covenant: the legitimate ancillary purpose is measured against the enforcing business's actual interests, and a successor in a different line of business — say, one that now derives most of its income from software development — can change which statutory rules apply at all.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law, venue, dispute process",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#specify-governing-law-and-venue",
+        "requirementGuidance": "The clause should name governing law, venue, and the dispute process. For a Hawaii workforce the honest selection is Hawaii law and a Hawaii forum: the covenant was presumably drafted against the chapter 480 framework and the technology-business ban, and a foreign-law clause papering a Hawaii employment relationship signals a form that was never localized — and tees up a choice-of-law fight on top of the merits.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard boilerplate, with one Hawaii-flavored check: the merger clause fixes the four corners the restraint-of-trade analysis will read, so confirm the amendment mechanics cannot silently widen a covenant — every broadening amendment is a new restraint that must clear the same ancillary-purpose screen the original did.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-legitimate-ancillary-purpose-under-chapter-480",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.hawaii.require-legitimate-ancillary-purpose-under-chapter-480",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Legitimate purpose behind every restraint",
+        "sectionId": "hawaii-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#require-legitimate-ancillary-purpose-under-chapter-480",
+        "requirementGuidance": "Start from the statute's baseline: a contract in restraint of trade or commerce in the State is illegal, and a restrictive covenant becomes lawful only when it is ancillary to a legitimate purpose not violative of the chapter and its effect is not substantially to lessen competition or tend toward monopoly. The screen sits on top of reasonableness, not inside it — a covenant can satisfy every reasonableness factor and still fail for want of a legitimate ancillary purpose, and the purpose cannot be the prevention of competition itself. For each restraint in the agreement, identify the specific protected interest it serves and confirm the restraint is no broader than that interest requires.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-gate-baseline",
+            "authorityType": "primary-law",
+            "title": "HRS 480-4",
+            "citation": "Haw. Rev. Stat. 480-4(a).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm",
+            "proposition": "HRS 480-4 supports Hawaii's baseline antitrust rule that in-state restraints of trade or commerce are illegal.",
+            "verbatimQuote": "Every contract, combination in the form of trust or otherwise, or conspiracy, in restraint of trade or commerce in the State, or in any section of this State is illegal.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gate-baseline"
+          },
+          {
+            "sourceId": "hi-gate-ancillary",
+            "authorityType": "primary-law",
+            "title": "HRS 480-4",
+            "citation": "Haw. Rev. Stat. 480-4(c).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm",
+            "proposition": "HRS 480-4 supports the statutory framework allowing restrictive covenants only when ancillary to a legitimate chapter 480 purpose and not substantially anticompetitive.",
+            "verbatimQuote": "Notwithstanding subsection (b) and without limiting the application of subsection (a), it shall be lawful for a person to enter into any of the following restrictive covenants or agreements ancillary to a legitimate purpose not violative of this chapter, unless the effect thereof may be substantially to lessen competition or to tend to create a monopoly in any line of commerce in any section of the State: (1) A covenant or agreement by the transferor of a business not to compete within a reasonable area and within a reasonable period of time in connection with the sale of the business; (2) A covenant or agreement between partners not to compete with the partnership within a reasonable area and for a reasonable period of time upon the withdrawal of a partner from the partnership; (3) A covenant or agreement of the lessee to be restricted in the use of the leased premises to certain business or agricultural uses, or covenant or agreement of the lessee to be restricted in the use of the leased premises to certain business uses and of the lessor to be restricted in the use of premises reasonably proximate to any such leased premises to certain business uses; (4) A covenant or agreement by an employee or agent not to use the trade secrets of the employer or principal in competition with the employee's or agent's employer or principal, during the term of the agency or thereafter, or after the termination of employment, within such time as may be reasonably necessary for the protection of the employer or principal, without imposing undue hardship on the employee or agent.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gate-ancillary"
+          },
+          {
+            "sourceId": "hi-gate-purpose-over-reasonableness",
+            "authorityType": "case-law",
+            "title": "Prudential Locations, LLC v. Gagnon",
+            "citation": "Prudential Locations, LLC v. Gagnon, 151 Haw. 136, 509 P.3d 1099 (2022).",
+            "url": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/",
+            "deepLink": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/#:~:text=Even%20if%20a%20restrictive%20covenant,not%20violative%20of%20Chapter%20480.",
+            "proposition": "Gagnon supports requiring a legitimate ancillary purpose even after reasonableness review.",
+            "verbatimQuote": "Even if a restrictive covenant otherwise satisfies the Traeger three-factor reasonableness test, it is unenforceable unless it is ancillary to a legitimate purpose not violative of Chapter 480.",
+            "date": "2022-02-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gate-purpose-over-reasonableness"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-noncompete-and-nonsolicit-clauses-for-technology-business-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.hawaii.exclude-noncompete-and-nonsolicit-clauses-for-technology-business-employees",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No non-competes or employee non-solicits for technology-business employees",
+        "sectionId": "hawaii-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#exclude-noncompete-and-nonsolicit-clauses-for-technology-business-employees",
+        "requirementGuidance": "If the employer is a technology business — a trade or business deriving the majority of its gross income from products or services resulting from software development or information technology development, excluding the broadcast industry and certain franchised telecommunications carriers — the employment contract cannot contain a noncompete clause or a nonsolicit clause: the clause is void and of no force and effect. The statute defines both devices for this rule (a geographic-and-time work prohibition after leaving; a prohibition on soliciting the employer's employees after leaving) and preserves exactly one path, the trade-secret covenant. Resolve the employer's revenue mix first; if the ban applies, strike the clauses rather than tailor them.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-gate-tech-ban",
+            "authorityType": "primary-law",
+            "title": "HRS 480-4",
+            "citation": "Haw. Rev. Stat. 480-4(d).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm",
+            "proposition": "HRS 480-4 supports the statutory ban on noncompete and nonsolicit clauses in employment contracts for technology-business employees, except for trade-secret covenants.",
+            "verbatimQuote": "Except as provided in subsection (c)(4), it shall be prohibited to include a noncompete clause or a nonsolicit clause in any employment contract relating to an employee of a technology business. The clause shall be void and of no force and effect.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gate-tech-ban"
+          },
+          {
+            "sourceId": "hi-gate-tech-definition",
+            "authorityType": "primary-law",
+            "title": "HRS 480-4",
+            "citation": "Haw. Rev. Stat. 480-4(d).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm",
+            "proposition": "HRS 480-4 supports the definition of technology business and its broadcast and telecommunications exclusions.",
+            "verbatimQuote": "“Technology business” means a trade or business that derives the majority of its gross income from the sale or license of products or services resulting from its software development or information technology development, or both. A “technology business” excludes any trade or business that is considered by standard practice as part of the broadcast industry or any telecommunications carrier, as defined in section 269-1, that holds a franchise or charter enacted or granted by the legislative or executive authority of the State or its predecessor governments.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gate-tech-definition"
+          },
+          {
+            "sourceId": "hi-gate-noncompete-def",
+            "authorityType": "primary-law",
+            "title": "HRS 480-4",
+            "citation": "Haw. Rev. Stat. 480-4(d).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm",
+            "proposition": "HRS 480-4 supports the technology-business subsection's definition of noncompete clause.",
+            "verbatimQuote": "“Noncompete clause” means a clause in an employment contract that prohibits an employee from working in a specific geographic area for a specific period of time after leaving employment with the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gate-noncompete-def"
+          },
+          {
+            "sourceId": "hi-gate-nonsolicit-def",
+            "authorityType": "primary-law",
+            "title": "HRS 480-4",
+            "citation": "Haw. Rev. Stat. 480-4(d).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm",
+            "proposition": "HRS 480-4 supports the technology-business subsection's definition of nonsolicit clause.",
+            "verbatimQuote": "“Nonsolicit clause” means a clause in an employment contract that prohibits an employee from soliciting employees of the employer after leaving employment with the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gate-nonsolicit-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-trade-secret-covenants-within-the-statutory-exception",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.hawaii.keep-trade-secret-covenants-within-the-statutory-exception",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret covenant within the statutory shape",
+        "sectionId": "hawaii-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#keep-trade-secret-covenants-within-the-statutory-exception",
+        "requirementGuidance": "The statutory trade-secret covenant — the workhorse of Hawaii drafting, and the only restraint available for technology-business employees — has a fixed shape: it restricts use of the employer's trade secrets in competition, may run during the relationship or after termination, but only for the time reasonably necessary to protect the employer, and without imposing undue hardship on the worker. Check that the clause protects information rather than market position; a trade-secret label on what operates as a general ban on competing falls back into the illegal-restraint baseline, and the case law rejects confidentiality theories unsupported by evidence of genuinely protected information.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-gate-trade-secret",
+            "authorityType": "primary-law",
+            "title": "HRS 480-4",
+            "citation": "Haw. Rev. Stat. 480-4(c)(4).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm",
+            "proposition": "HRS 480-4 supports the employee or agent trade-secret covenant exception and its time and hardship limits.",
+            "verbatimQuote": "A covenant or agreement by an employee or agent not to use the trade secrets of the employer or principal in competition with the employee's or agent's employer or principal, during the term of the agency or thereafter, or after the termination of employment, within such time as may be reasonably necessary for the protection of the employer or principal, without imposing undue hardship on the employee or agent.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gate-trade-secret"
+          },
+          {
+            "sourceId": "hi-gate-no-confidential-record",
+            "authorityType": "case-law",
+            "title": "Prudential Locations, LLC v. Gagnon",
+            "citation": "Prudential Locations, LLC v. Gagnon, 151 Haw. 136, 509 P.3d 1099 (2022).",
+            "url": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/",
+            "deepLink": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/#:~:text=In%20addition%2C%20Locations%20did%20not,was%20no%20trade%20secret%20violation.",
+            "proposition": "Gagnon supports requiring evidence that claimed confidential information is actually protected.",
+            "verbatimQuote": "In addition, Locations did not produce any evidence of and did not dispute that there was no trade secret violation.",
+            "date": "2022-02-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gate-no-confidential-record"
+          }
+        ]
+      },
+      {
+        "requirementId": "limit-sale-of-business-covenants-to-reasonable-area-and-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.hawaii.limit-sale-of-business-covenants-to-reasonable-area-and-period",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Sale covenants limited to reasonable area and time",
+        "sectionId": "hawaii-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#limit-sale-of-business-covenants-to-reasonable-area-and-period",
+        "requirementGuidance": "A transferor's covenant in connection with the sale of a business is the strongest statutory category, but it carries its limits in its own text: a reasonable area and a reasonable period of time, in connection with the sale, under the same ancillary-purpose and anticompetitive-effect conditions as every other category. Size the covenant to the goodwill and competitive risk actually transferred — a court weighs geographic scope, duration, and breadth, and will find the restraint unreasonable where it exceeds the protection the buyer genuinely needs.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hi-gate-sale",
+            "authorityType": "primary-law",
+            "title": "HRS 480-4",
+            "citation": "Haw. Rev. Stat. 480-4(c)(1).",
+            "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm",
+            "proposition": "HRS 480-4 supports Hawaii's sale-of-business covenant exception with its reasonable-area and reasonable-period limits.",
+            "verbatimQuote": "Notwithstanding subsection (b) and without limiting the application of subsection (a), it shall be lawful for a person to enter into any of the following restrictive covenants or agreements ancillary to a legitimate purpose not violative of this chapter, unless the effect thereof may be substantially to lessen competition or to tend to create a monopoly in any line of commerce in any section of the State: (1) A covenant or agreement by the transferor of a business not to compete within a reasonable area and within a reasonable period of time in connection with the sale of the business; (2) A covenant or agreement between partners not to compete with the partnership within a reasonable area and for a reasonable period of time upon the withdrawal of a partner from the partnership; (3) A covenant or agreement of the lessee to be restricted in the use of the leased premises to certain business or agricultural uses, or covenant or agreement of the lessee to be restricted in the use of the leased premises to certain business uses and of the lessor to be restricted in the use of premises reasonably proximate to any such leased premises to certain business uses; (4) A covenant or agreement by an employee or agent not to use the trade secrets of the employer or principal in competition with the employee's or agent's employer or principal, during the term of the agency or thereafter, or after the termination of employment, within such time as may be reasonably necessary for the protection of the employer or principal, without imposing undue hardship on the employee or agent.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gate-sale"
+          },
+          {
+            "sourceId": "hi-gate-reasonableness",
+            "authorityType": "case-law",
+            "title": "7's Enterprises, Inc. v. Del Rosario",
+            "citation": "7's Enterprises, Inc. v. Del Rosario, 111 Haw. 484, 143 P.3d 23 (2006).",
+            "url": "https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/",
+            "deepLink": "https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=As%20observed%20in%20Traeger%2C%20courts,injury%20to%20the%20public.%E2%80%99%20%E2%80%9D",
+            "proposition": "Del Rosario, restating the Traeger rule, supports Hawaii's three-factor reasonableness test for restrictive covenants.",
+            "verbatimQuote": "As observed in Traeger, courts will find a non-competition provision unreasonable if “ ‘(i) it is greater than required for the protection of the person for whose benefit it is imposed; (ii) it imposes undue hardship on the person restricted; or (iii) its benefit to the covenantee is outweighed by injury to the public.’ ”",
+            "date": "2006-09-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/hawaii#src-hi-gate-reasonableness"
+          }
+        ]
+      }
+    ]
+  }
+}
