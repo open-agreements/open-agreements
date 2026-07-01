@@ -20,7 +20,7 @@ function stripConcertoMeta(instance: Record<string, unknown>): Record<string, un
 }
 
 describe('Concerto flat model → fill pipeline integration', () => {
-  const TEMPLATE_DIR = resolve('content/templates/bonterms-mutual-nda');
+  const TEMPLATE_DIR = resolve('templates/bonterms-mutual-nda');
 
   // Data shaped as a Concerto-validated instance (includes $class, $identifier, contractId)
   const concertoInstance = {

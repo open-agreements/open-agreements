@@ -802,7 +802,7 @@ describe('Integration: template currency sanitization', () => {
 // ---------------------------------------------------------------------------
 
 describe('NDA signature block fields', () => {
-  const NDA_DIR = resolve(__dirname, '../content/templates/common-paper-mutual-nda');
+  const NDA_DIR = resolve(__dirname, '../templates/common-paper-mutual-nda');
 
   /** Fill the real NDA template with the given values and return the output XML text. */
   async function fillNdaTemplate(values: Record<string, unknown>): Promise<{ xml: string; buf: Uint8Array }> {
@@ -1005,7 +1005,7 @@ function dummyAllValues(templateDir: string): Record<string, unknown> {
 }
 
 describe('Signature block fields — role-based templates', () => {
-  const TEMPLATES_DIR = resolve(__dirname, '../content/templates');
+  const TEMPLATES_DIR = resolve(__dirname, '../templates');
 
   it('standard 2-party entity mode (pilot agreement)', async () => {
     const dir = join(TEMPLATES_DIR, 'common-paper-pilot-agreement');
@@ -1136,7 +1136,7 @@ describe('Signature block fields — role-based templates', () => {
 // ---------------------------------------------------------------------------
 
 describe('Parametric smoke test — signatory fields across all templates', () => {
-  const TEMPLATES_DIR = resolve(__dirname, '../content/templates');
+  const TEMPLATES_DIR = resolve(__dirname, '../templates');
 
   // Discover all common-paper template dirs that have *_signatory_type fields
   const templateDirs = readdirSync(TEMPLATES_DIR)

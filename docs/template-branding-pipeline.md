@@ -24,12 +24,12 @@ Run:
 npm run generate:templates
 ```
 
-This walks `content/templates/` and regenerates each template's `template.docx`
+This walks `templates/` and regenerates each template's `template.docx`
 artifact from its source. Sources are auto-discovered:
 
 - A `template.md` with canonical YAML frontmatter (containing `template_id`,
   `layout_id`, `style_id`, etc.) is treated as a **canonical source**. Its
-  generated JSON spec is written to `content/templates/<slug>/.template.generated.json`
+  generated JSON spec is written to `templates/<slug>/.template.generated.json`
   (a hidden, generated artifact — do not edit by hand).
 - A directory with `template.json` (and no canonical `template.md`) is treated
   as a **JSON source**. The JSON is hand-authored.
@@ -41,9 +41,9 @@ The generator is implemented in `scripts/generate_templates.mjs` and uses the
 
 Generation separates concerns:
 
-- canonical sources: `content/templates/<slug>/template.md` (YAML frontmatter + Markdown body)
-- generated specs: `content/templates/<slug>/.template.generated.json` (auto-written)
-- hand-authored specs: `content/templates/<slug>/template.json` (legacy; new templates should be canonical)
+- canonical sources: `templates/<slug>/template.md` (YAML frontmatter + Markdown body)
+- generated specs: `templates/<slug>/.template.generated.json` (auto-written)
+- hand-authored specs: `templates/<slug>/template.json` (legacy; new templates should be canonical)
 - style profile: `scripts/template-specs/styles/openagreements-default-v1.json`
 - shared renderer: `scripts/template_renderer/`
 - layout module: `scripts/template_renderer/layouts/cover-standard-signature-v1.mjs`
@@ -54,12 +54,12 @@ content close to the rendered DOCX it produces.
 
 ### Add a new canonical template
 
-1. Create `content/templates/<your-slug>/template.md` with YAML frontmatter:
+1. Create `templates/<your-slug>/template.md` with YAML frontmatter:
    - `template_id`: must equal `<your-slug>`
    - `layout_id`: a registered layout (e.g. `cover-standard-signature-v1`)
    - `style_id`: `openagreements-default-v1` unless you intentionally introduce a new style
    - `document`: title/label/version/license metadata
-   - `outputs.docx`: path to the rendered DOCX (typically `content/templates/<slug>/template.docx`)
+   - `outputs.docx`: path to the rendered DOCX (typically `templates/<slug>/template.docx`)
    - `sections`: cover_terms, standard_terms, signature definitions
 2. Author cover terms, standard terms, and signature blocks as Markdown in the body.
    For array-driven stacked signers, declare the repeat on `oa:signature-mode`
@@ -75,7 +75,7 @@ content close to the rendered DOCX it produces.
    Date: {effective_date}
    ```
 3. Run `npm run generate:templates`. The generator discovers the new canonical
-   source automatically and writes `content/templates/<your-slug>/.template.generated.json`
+   source automatically and writes `templates/<your-slug>/.template.generated.json`
    alongside the rendered `template.docx`.
 4. Run targeted checks:
    - `npm run test:run -- integration-tests/template-renderer-json-spec.test.ts`

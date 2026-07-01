@@ -212,7 +212,7 @@ function extractTableSectionsFromMarkdown(mdPath: string): TableSection[] {
 describe('checklist canonical markdown structural drift', () => {
   for (const slug of checklistSlugs) {
     it(`${slug} template.md tables match template.docx structure`, () => {
-      const templateDir = join(repoRoot, 'content', 'templates', slug);
+      const templateDir = join(repoRoot, 'templates', slug);
       const docxSections = extractTableSectionsFromDocx(
         join(templateDir, 'template.docx')
       );

@@ -101,7 +101,7 @@ const PIPELINE_TRIGGER_PATHS = new Set([
   "scripts/libreoffice_headless.mjs",
 ]);
 
-// Per-template render-input filenames (under content/templates/<id>/).
+// Per-template render-input filenames (under templates/<id>/).
 const TEMPLATE_MD_FILE = "template.md";
 const TEMPLATE_JSON_FILE = "template.json";
 const TEMPLATE_DOCX_FILE = "template.docx";
@@ -338,7 +338,7 @@ export function expandTriggers(records, headOwnedIds, upstreamAuthoredIds = new 
 }
 
 function matchTemplatePath(p) {
-  const m = /^content\/templates\/([^/]+)\/([^/]+)$/.exec(p);
+  const m = /^templates\/([^/]+)\/([^/]+)$/.exec(p);
   if (!m) return null;
   return { templateId: m[1], filename: m[2] };
 }
@@ -461,7 +461,7 @@ export function findManifestSatisfied(
     if (!entry) continue;
 
     const currentSha = sha256File(
-      path.resolve(repoRoot, "content", "templates", id, TEMPLATE_DOCX_FILE)
+      path.resolve(repoRoot, "templates", id, TEMPLATE_DOCX_FILE)
     );
     if (currentSha !== null && entry.docxSha256 === currentSha) {
       satisfied.add(id);
@@ -740,7 +740,7 @@ export async function main(env) {
 
 /**
  * Return template IDs whose trigger records are EXCLUSIVELY a modification of
- * `content/templates/<id>/template.docx`. Manifest satisfaction must not apply
+ * `templates/<id>/template.docx`. Manifest satisfaction must not apply
  * when a source-side trigger (template.md, template.json, renderer, layout,
  * pipeline, etc.) also fires for the same template — the manifest only
  * declares "this docx mutation is non-visual," it does NOT cover an
@@ -766,7 +766,7 @@ function docxOnlyTriggeredIds(triggered) {
     if (
       records.every(
         (record) =>
-          record.path === `content/templates/${id}/${TEMPLATE_DOCX_FILE}` &&
+          record.path === `templates/${id}/${TEMPLATE_DOCX_FILE}` &&
           record.status === "modified"
       )
     ) {

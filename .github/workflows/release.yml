@@ -380,11 +380,11 @@ jobs:
           TARBALL="templates-${VERSION}.tar.gz"
 
           # Tarball contents track exactly what dev-website's consumer reads:
-          # content/templates/<slug>/{metadata.yaml,template.docx}, data/templates-snapshot.json,
-          # and scripts/template-specs/ (for label resolution). content/external is intentionally
+          # templates/<slug>/{metadata.yaml,template.docx}, data/templates-snapshot.json,
+          # and scripts/template-specs/ (for label resolution). external is intentionally
           # excluded — dev-website does not consume the YC SAFE templates from this path.
           tar -czf "$TARBALL" \
-            content/templates \
+            templates \
             data/templates-snapshot.json \
             scripts/template-specs
 

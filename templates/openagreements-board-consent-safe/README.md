@@ -5,7 +5,7 @@ Agreements for Future Equity (SAFEs) by a Delaware corporation.
 
 ## Source
 
-- **URL**: https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-board-consent-safe
+- **URL**: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-board-consent-safe
 - **Version**: 1.2
 - **License**: CC BY 4.0
 
@@ -21,7 +21,7 @@ Agreements for Future Equity (SAFEs) by a Delaware corporation.
 ## Canonical Markdown Authoring
 
 The board consent is authored canonically in
-`content/templates/openagreements-board-consent-safe/template.md`, with the
+`templates/openagreements-board-consent-safe/template.md`, with the
 generated JSON spec and rendered DOCX derived from that source.
 
 Compiled, rendered, and filled outputs preserve the board consent legal text,

@@ -86,7 +86,7 @@ function runValidateSingle(args: ValidateArgs): void {
     return;
   }
 
-  console.error(`Agreement "${id}" not found in templates, external, or recipes.`);
+  console.error(`Agreement "${id}" not found in templates, external, or field-selectors.`);
   process.exit(1);
 }
 
@@ -169,7 +169,7 @@ function validateRecipes(entries: { id: string; dir: string }[], args: ValidateA
   for (const entry of entries) {
     const id = entry.id;
     const dir = entry.dir;
-    console.log(`\nValidating recipe: ${id}`);
+    console.log(`\nValidating field-selector: ${id}`);
 
     const result = validateRecipe(dir, id, { strict: args.strict });
     if (!result.valid) {
@@ -181,6 +181,6 @@ function validateRecipes(entries: { id: string; dir: string }[], args: ValidateA
     for (const w of result.warnings) console.log(`  WARN: ${w}`);
   }
 
-  console.log(`\n${entries.length} recipe(s) validated.`);
+  console.log(`\n${entries.length} field-selector(s) validated.`);
   return hasErrors;
 }

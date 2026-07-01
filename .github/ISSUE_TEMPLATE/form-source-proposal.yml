@@ -69,9 +69,9 @@ body:
       label: Intended implementation path
       description: Choose the expected placement based on rights.
       options:
-        - content/templates/
-        - content/external/
-        - content/recipes/
+        - templates/
+        - external/
+        - field-selectors/
         - excluded
     validations:
       required: true

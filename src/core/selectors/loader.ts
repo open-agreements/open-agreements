@@ -2,8 +2,8 @@
  * Discover and validate selector-contract manifests for a recipe.
  *
  * A recipe opts a field into the selector engine by adding
- * `content/recipes/<id>/fields/<field_id>.json`. The cutover from the legacy
- * `replacements.json` path is declared in `content/recipes/<id>/template-manifest.json`
+ * `field-selectors/<id>/fields/<field_id>.json`. The cutover from the legacy
+ * `replacements.json` path is declared in `field-selectors/<id>/template-manifest.json`
  * via `migrated_keys`. Recipes with no `fields/` directory load nothing here and
  * keep today's behavior exactly.
  */

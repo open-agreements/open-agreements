@@ -27,8 +27,8 @@ After editing a `template.md`:
 npm run generate:templates
 ```
 
-This regenerates `content/templates/<slug>/.template.generated.json` and
-`content/templates/<slug>/template.docx` from the canonical source.
+This regenerates `templates/<slug>/.template.generated.json` and
+`templates/<slug>/template.docx` from the canonical source.
 
 ### Verifying canonical → JSON sync
 

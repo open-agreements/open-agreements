@@ -94,7 +94,7 @@ describe('NVCA assumptions regression', () => {
     );
 
     const cleanConfig = JSON.parse(
-      readFileSync(join(process.cwd(), 'content/recipes/nvca-stock-purchase-agreement/clean.json'), 'utf-8')
+      readFileSync(join(process.cwd(), 'field-selectors/nvca-stock-purchase-agreement/clean.json'), 'utf-8')
     ) as CleanConfig;
 
     await cleanDocument(input, cleaned, cleanConfig);
@@ -123,7 +123,7 @@ describe('NVCA assumptions regression', () => {
     );
 
     const normalizeConfig = JSON.parse(
-      readFileSync(join(process.cwd(), 'content/recipes/nvca-stock-purchase-agreement/normalize.json'), 'utf-8')
+      readFileSync(join(process.cwd(), 'field-selectors/nvca-stock-purchase-agreement/normalize.json'), 'utf-8')
     ) as DeclarativeNormalizeConfig;
 
     await normalizeBracketArtifacts(input, output, {

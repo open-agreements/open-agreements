@@ -64,7 +64,7 @@ interface FieldAssertionPolicy {
 }
 
 const RECIPE_ID = 'nvca-stock-purchase-agreement';
-const RECIPE_DIR = join(import.meta.dirname, '..', 'content', 'recipes', RECIPE_ID);
+const RECIPE_DIR = join(import.meta.dirname, '..', 'field-selectors', RECIPE_ID);
 
 /**
  * Context-qualified (`>`-anchor) replacement keys that have been migrated to selector contracts

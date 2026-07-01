@@ -222,9 +222,9 @@ function getContentTier(id, isRecipe) {
 }
 
 function getContentRepoPath(id, contentTier) {
-  if (contentTier === "recipe") return `content/recipes/${id}`;
-  if (contentTier === "external") return `content/external/${id}`;
-  return `content/templates/${id}`;
+  if (contentTier === "recipe") return `field-selectors/${id}`;
+  if (contentTier === "external") return `external/${id}`;
+  return `templates/${id}`;
 }
 
 function loadCatalogItems(rootDir) {
@@ -251,7 +251,7 @@ export function buildCatalog({ rootDir = REPO_ROOT } = {}) {
     const isOpenAgreements =
       item.name.startsWith("openagreements-") || sourceLabel === "OpenAgreements";
     const hasPreview = isOpenAgreements;
-    const templateDir = resolve(rootDir, "content", "templates", item.name);
+    const templateDir = resolve(rootDir, "templates", item.name);
     const hasDocxDownload =
       hasPreview &&
       flags.distributable &&
@@ -361,7 +361,6 @@ export function prepareCatalogDownloads({
     if (template.hasDocxDownload) {
       const sourcePath = resolve(
         rootDir,
-        "content",
         "templates",
         template.id,
         "template.docx",
@@ -376,7 +375,7 @@ export function prepareCatalogDownloads({
     }
 
     if (template.hasMarkdownDownload) {
-      const templateDir = resolve(rootDir, "content", "templates", template.id);
+      const templateDir = resolve(rootDir, "templates", template.id);
       const sourcePath = resolve(templateDir, "template.md");
       const destinationPath = resolve(downloadsDir, `${template.id}.md`);
       if (existsSync(sourcePath)) {

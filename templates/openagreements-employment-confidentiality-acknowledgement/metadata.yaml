@@ -1,7 +1,7 @@
 name: OpenAgreements Employment Confidentiality Acknowledgement
 category: employment
 description: Employee confidentiality and acceptable-use acknowledgement companion for onboarding packets, including reporting and post-employment handling.
-source_url: https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employment-confidentiality-acknowledgement
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-confidentiality-acknowledgement
 version: '1.2'
 license: CC-BY-4.0
 allow_derivatives: true

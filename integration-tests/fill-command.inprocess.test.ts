@@ -344,7 +344,7 @@ describe('runFill in-process coverage', () => {
     ).rejects.toThrow('EXIT_1');
 
     expect(errorSpy).toHaveBeenCalledWith(
-      'Agreement "does-not-exist" not found in templates, external, or recipes.'
+      'Agreement "does-not-exist" not found in templates, external, or field-selectors.'
     );
     expect(errorSpy).toHaveBeenCalledWith(
       expect.stringContaining('Available: common-paper-mutual-nda, yc-safe-valuation-cap, nvca-voting-agreement')

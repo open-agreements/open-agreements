@@ -6,8 +6,8 @@ import { join } from 'node:path';
 import AdmZip from 'adm-zip';
 import { resolveRecipeDir } from '../src/utils/paths.js';
 import { loadCleanConfig, loadRecipeMetadata } from '../src/core/metadata.js';
-import replacements from '../content/recipes/nvca-stock-purchase-agreement/replacements.json' with { type: 'json' };
-import coiReplacements from '../content/recipes/nvca-certificate-of-incorporation/replacements.json' with { type: 'json' };
+import replacements from '../field-selectors/nvca-stock-purchase-agreement/replacements.json' with { type: 'json' };
+import coiReplacements from '../field-selectors/nvca-certificate-of-incorporation/replacements.json' with { type: 'json' };
 import { cleanDocument } from '../src/core/recipe/cleaner.js';
 import { patchDocument } from '../src/core/recipe/patcher.js';
 import {

@@ -58,8 +58,8 @@ describe('recipe commands', () => {
     ).rejects.toThrow('EXIT_1');
 
     expect(exitSpy).toHaveBeenCalledWith(1);
-    expect(errorSpy).toHaveBeenCalledWith('Recipe "missing-recipe-id" not found.');
-    expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('Available recipes:'));
+    expect(errorSpy).toHaveBeenCalledWith('Field-selector "missing-recipe-id" not found.');
+    expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('Available field-selectors:'));
     expect(runRecipeMock).not.toHaveBeenCalled();
   });
 
@@ -311,7 +311,7 @@ describe('recipe commands', () => {
   it('runRecipeClean computes extract guidance hashes when clean.json is absent', async () => {
     const rootDir = mkdtempSync(join(tmpdir(), 'oa-recipe-root-no-clean-'));
     const recipeId = 'fixture-no-clean-config';
-    const recipeDir = join(rootDir, 'content', 'recipes', recipeId);
+    const recipeDir = join(rootDir, 'field-selectors', recipeId);
     mkdirSync(recipeDir, { recursive: true });
     tempDirs.push(rootDir);
 

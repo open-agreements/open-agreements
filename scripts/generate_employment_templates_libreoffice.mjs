@@ -7,9 +7,9 @@ import { resolveLibreOfficeBinary } from './libreoffice_headless.mjs';
 
 const ROOT = resolve('.');
 const TARGETS = [
-  resolve(ROOT, 'content/templates/openagreements-employment-offer-letter/template.docx'),
-  resolve(ROOT, 'content/templates/openagreements-employee-ip-inventions-assignment/template.docx'),
-  resolve(ROOT, 'content/templates/openagreements-employment-confidentiality-acknowledgement/template.docx'),
+  resolve(ROOT, 'templates/openagreements-employment-offer-letter/template.docx'),
+  resolve(ROOT, 'templates/openagreements-employee-ip-inventions-assignment/template.docx'),
+  resolve(ROOT, 'templates/openagreements-employment-confidentiality-acknowledgement/template.docx'),
 ];
 
 function run(cmd, args, options = {}) {

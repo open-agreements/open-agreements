@@ -11,7 +11,7 @@ import { discoverTemplateSources } from './template_renderer/canonical-sources.m
 import { postProcessGeneratedDocx } from './lib/docx-post-process.mjs';
 
 const STYLE_PATH = 'scripts/template-specs/styles/openagreements-default-v1.json';
-const TEMPLATES_DIR = 'content/templates';
+const TEMPLATES_DIR = 'templates';
 
 async function writeDocx(doc, outPath) {
   const buf = await Packer.toBuffer(doc);
@@ -49,7 +49,7 @@ async function main() {
   const sources = discoverTemplateSources(process.cwd());
 
   if (sources.length === 0) {
-    throw new Error('No template sources discovered under content/templates/');
+    throw new Error('No template sources discovered under templates/');
   }
 
   for (const source of sources) {

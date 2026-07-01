@@ -43,7 +43,7 @@ import type { ExperimentEntry } from './lib/experiment-journal.js';
 
 const PROJECT_ROOT = resolve(import.meta.dirname!, '..');
 const DEFAULT_OUTPUT_DIR = join(PROJECT_ROOT, '.nvca-hardening-output');
-const QUALITY_TRACKER_PATH = join(PROJECT_ROOT, 'content', 'recipes', 'QUALITY_TRACKER.md');
+const QUALITY_TRACKER_PATH = join(PROJECT_ROOT, 'field-selectors', 'QUALITY_TRACKER.md');
 const FIXTURES_DIR = join(PROJECT_ROOT, 'integration-tests', 'fixtures');
 
 /** Escape regex metacharacters so a value can be safely interpolated into a RegExp. */
@@ -75,11 +75,11 @@ const STALL_RESET_CUMULATIVE = 0.03;
 
 function getAllowedGlobs(): string[] {
   return [
-    'content/recipes/nvca-*/metadata.yaml',
-    'content/recipes/nvca-*/replacements.json',
-    'content/recipes/nvca-*/clean.json',
-    'content/recipes/nvca-*/computed.json',
-    'content/recipes/nvca-*/selections.json',
+    'field-selectors/nvca-*/metadata.yaml',
+    'field-selectors/nvca-*/replacements.json',
+    'field-selectors/nvca-*/clean.json',
+    'field-selectors/nvca-*/computed.json',
+    'field-selectors/nvca-*/selections.json',
     'integration-tests/fixtures/*.json',
     '.hardening-journal/*.intent.json',
     '.hardening-journal/*.result.json',
@@ -103,7 +103,7 @@ const BLOCKED_EXTENSIONS = [
   '.mjs',
   '.cjs',
   '.yml',
-  '.yaml',  // only allowed under content/recipes/nvca-*/
+  '.yaml',  // only allowed under field-selectors/nvca-*/
 ];
 
 function isPathBlocked(filePath: string): boolean {
@@ -112,7 +112,7 @@ function isPathBlocked(filePath: string): boolean {
   }
   // Block .yaml files unless they're recipe metadata
   if (filePath.endsWith('.yaml') || filePath.endsWith('.yml')) {
-    if (filePath.match(/^content\/recipes\/nvca-[^/]+\/metadata\.yaml$/)) return false;
+    if (filePath.match(/^field-selectors\/nvca-[^/]+\/metadata\.yaml$/)) return false;
     return true;
   }
   for (const ext of BLOCKED_EXTENSIONS) {
@@ -124,7 +124,7 @@ function isPathBlocked(filePath: string): boolean {
 
 function isPathAllowed(filePath: string): boolean {
   // Explicit allow-list patterns
-  if (filePath.match(/^content\/recipes\/nvca-[^/]+\/(metadata\.yaml|replacements\.json|clean\.json|computed\.json|selections\.json)$/)) {
+  if (filePath.match(/^field-selectors\/nvca-[^/]+\/(metadata\.yaml|replacements\.json|clean\.json|computed\.json|selections\.json)$/)) {
     return true;
   }
   if (filePath.match(/^integration-tests\/fixtures\/.*\.json$/)) {
@@ -362,7 +362,7 @@ function gitCheckpoint(recipeId: string, iteration: number, score: number, conti
   try {
     // Stage recipe files and fixtures
     execSync(
-      `git add content/recipes/${recipeId}/ ${fixtureGlobs} 2>/dev/null || true`,
+      `git add field-selectors/${recipeId}/ ${fixtureGlobs} 2>/dev/null || true`,
       { cwd: PROJECT_ROOT },
     );
 
@@ -387,7 +387,7 @@ function revertToCommit(commitSha: string, recipeId: string): void {
   const fixtureGlobs = prefixes.map((p) => `integration-tests/fixtures/${p}*`).join(' ');
   try {
     execSync(
-      `git checkout ${commitSha} -- content/recipes/${recipeId}/ ${fixtureGlobs} 2>/dev/null || true`,
+      `git checkout ${commitSha} -- field-selectors/${recipeId}/ ${fixtureGlobs} 2>/dev/null || true`,
       { cwd: PROJECT_ROOT },
     );
   } catch {
@@ -497,7 +497,7 @@ function findRegressedChecks(
 function getModifiedReplacementKeys(recipeId: string): string[] {
   try {
     const diff = execSync(
-      `git diff HEAD -- content/recipes/${recipeId}/replacements.json`,
+      `git diff HEAD -- field-selectors/${recipeId}/replacements.json`,
       { cwd: PROJECT_ROOT },
     ).toString();
     // Extract keys from added/removed lines
@@ -787,7 +787,7 @@ async function hardenRecipe(
     try {
       recipeDir = resolveRecipeDir(recipeId);
     } catch {
-      recipeDir = join(PROJECT_ROOT, 'content', 'recipes', recipeId);
+      recipeDir = join(PROJECT_ROOT, 'field-selectors', recipeId);
     }
     const treeHash = existsSync(recipeDir) ? computeRecipeTreeHash(recipeDir) : 'unknown';
 

@@ -83,7 +83,7 @@ async function main() {
   }
 
   const root = process.cwd();
-  const recipesRoot = join(root, 'content', 'recipes');
+  const recipesRoot = join(root, 'field-selectors');
   const recipeIds = args.recipeIds.length > 0 ? args.recipeIds : listRecipeIds(recipesRoot);
 
   const report = {

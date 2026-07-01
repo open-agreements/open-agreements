@@ -3,7 +3,7 @@ template_id: openagreements-stockholder-consent-safe
 layout_id: traditional-consent-v1
 style_id: openagreements-default-v1
 outputs:
-  docx: content/templates/openagreements-stockholder-consent-safe/template.docx
+  docx: templates/openagreements-stockholder-consent-safe/template.docx
 document:
   title: ACTION BY WRITTEN CONSENT OF THE STOCKHOLDERS OF {company_name}
   label: OpenAgreements Stockholder Consent for SAFE Financing

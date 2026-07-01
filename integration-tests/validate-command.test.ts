@@ -53,9 +53,9 @@ async function loadValidateHarness(opts: ValidateHarnessOptions = {}): Promise<V
   const validateExternal = vi.fn(() => ({ valid: true, errors: [] as string[], warnings: ['external warning'] }));
   const validateRecipe = vi.fn(() => ({ valid: true, errors: [] as string[], warnings: ['recipe warning'], scaffold: false }));
 
-  const listTemplateEntries = vi.fn(() => opts.listTemplateEntries ?? [{ id: 'tmpl-1', dir: '/content/templates/tmpl-1' }]);
-  const listExternalEntries = vi.fn(() => opts.listExternalEntries ?? [{ id: 'ext-1', dir: '/content/external/ext-1' }]);
-  const listRecipeEntries = vi.fn(() => opts.listRecipeEntries ?? [{ id: 'rcp-1', dir: '/content/recipes/rcp-1' }]);
+  const listTemplateEntries = vi.fn(() => opts.listTemplateEntries ?? [{ id: 'tmpl-1', dir: '/templates/tmpl-1' }]);
+  const listExternalEntries = vi.fn(() => opts.listExternalEntries ?? [{ id: 'ext-1', dir: '/external/ext-1' }]);
+  const listRecipeEntries = vi.fn(() => opts.listRecipeEntries ?? [{ id: 'rcp-1', dir: '/field-selectors/rcp-1' }]);
 
   const findTemplateDir = vi.fn(() => opts.findTemplateDir);
   const findExternalDir = vi.fn(() => opts.findExternalDir);
@@ -172,9 +172,9 @@ describe('runValidate command coverage', () => {
 
   it('validates a single template and bypasses external/recipe validators', async () => {
     const harness = await loadValidateHarness({
-      findTemplateDir: '/content/templates/tmpl-single',
-      findExternalDir: '/content/external/ext-single',
-      findRecipeDir: '/content/recipes/rcp-single',
+      findTemplateDir: '/templates/tmpl-single',
+      findExternalDir: '/external/ext-single',
+      findRecipeDir: '/field-selectors/rcp-single',
     });
 
     const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
@@ -197,8 +197,8 @@ describe('runValidate command coverage', () => {
   it('fails single external validation when external validator returns invalid', async () => {
     const harness = await loadValidateHarness({
       findTemplateDir: undefined,
-      findExternalDir: '/content/external/ext-single',
-      findRecipeDir: '/content/recipes/rcp-single',
+      findExternalDir: '/external/ext-single',
+      findRecipeDir: '/field-selectors/rcp-single',
     });
 
     harness.spies.validateExternal.mockReturnValueOnce({
@@ -223,7 +223,7 @@ describe('runValidate command coverage', () => {
     const recipeHarness = await loadValidateHarness({
       findTemplateDir: undefined,
       findExternalDir: undefined,
-      findRecipeDir: '/content/recipes/rcp-single',
+      findRecipeDir: '/field-selectors/rcp-single',
     });
 
     recipeHarness.spies.validateRecipe.mockReturnValueOnce({
@@ -260,7 +260,7 @@ describe('runValidate command coverage', () => {
 
     expect(exitSpy).toHaveBeenCalledWith(1);
     expect(missingErrorSpy).toHaveBeenCalledWith(
-      'Agreement "does-not-exist" not found in templates, external, or recipes.'
+      'Agreement "does-not-exist" not found in templates, external, or field-selectors.'
     );
   });
 });

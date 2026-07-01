@@ -27,7 +27,7 @@ export function createProgram(): Command {
   const program = new Command();
   program
     .name('open-agreements')
-    .description('Open-source legal template and recipe filling CLI')
+    .description('Open-source legal template and field-selector filling CLI')
     .version(pkg.version);
 
   // --- Fill command ---
@@ -86,7 +86,7 @@ export function createProgram(): Command {
 
   program
     .command('validate [template]')
-    .description('Run validation pipeline on all templates and recipes')
+    .description('Run validation pipeline on all templates and field-selectors')
     .option('--strict', 'Treat warnings (scaffolds, missing files) as errors')
     .action((template: string | undefined, opts: { strict?: boolean }) => {
       runValidate({ template, strict: opts.strict });
@@ -96,21 +96,21 @@ export function createProgram(): Command {
 
   program
     .command('list')
-    .description('Show all available agreements (templates, external, and recipes)')
+    .description('Show all available agreements (templates, external, and field-selectors)')
     .option('--json', 'Output machine-readable JSON with full field definitions')
     .option('--json-strict', 'Like --json but exit non-zero if any metadata fails')
     .action((opts: { json?: boolean; jsonStrict?: boolean }) => {
       runList({ json: opts.json, jsonStrict: opts.jsonStrict });
     });
 
-  // --- Recipe command ---
+  // --- Field-selector command ---
 
-  const recipeCmd = new Command('recipe');
-  recipeCmd.description('Work with recipe-based document pipelines');
+  const recipeCmd = new Command('field-selector');
+  recipeCmd.description('Work with field-selector-based document pipelines');
 
   recipeCmd
-    .command('run <recipe-id>')
-    .description('Run the full recipe pipeline (clean → patch → fill → verify)')
+    .command('run <field-selector-id>')
+    .description('Run the full field-selector pipeline (clean → patch → fill → verify)')
     .option('-i, --input <path>', 'Source DOCX file (auto-downloads if omitted)')
     .option('-o, --output <path>', 'Output file path')
     .option('-d, --data <json-file>', 'JSON file with field values')
@@ -132,21 +132,21 @@ export function createProgram(): Command {
 
   recipeCmd
     .command('clean <input>')
-    .description('Run only the clean stage of a recipe')
+    .description('Run only the clean stage of a field-selector')
     .requiredOption('-o, --output <path>', 'Output file path')
-    .requiredOption('--recipe <id>', 'Recipe ID to use for clean config')
+    .requiredOption('--field-selector <id>', 'Field-selector ID to use for clean config')
     .option('--extract-guidance <path>', 'Extract removed content as guidance JSON to the specified path')
-    .action(async (input: string, opts: { output: string; recipe: string; extractGuidance?: string }) => {
-      await runRecipeClean({ input, output: opts.output, recipe: opts.recipe, extractGuidance: opts.extractGuidance });
+    .action(async (input: string, opts: { output: string; fieldSelector: string; extractGuidance?: string }) => {
+      await runRecipeClean({ input, output: opts.output, recipe: opts.fieldSelector, extractGuidance: opts.extractGuidance });
     });
 
   recipeCmd
     .command('patch <input>')
-    .description('Run only the patch stage of a recipe')
+    .description('Run only the patch stage of a field-selector')
     .requiredOption('-o, --output <path>', 'Output file path')
-    .requiredOption('--recipe <id>', 'Recipe ID to use for replacements')
-    .action(async (input: string, opts: { output: string; recipe: string }) => {
-      await runRecipePatch({ input, output: opts.output, recipe: opts.recipe });
+    .requiredOption('--field-selector <id>', 'Field-selector ID to use for replacements')
+    .action(async (input: string, opts: { output: string; fieldSelector: string }) => {
+      await runRecipePatch({ input, output: opts.output, recipe: opts.fieldSelector });
     });
 
   program.addCommand(recipeCmd);

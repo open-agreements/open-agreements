@@ -3,7 +3,7 @@ template_id: openagreements-board-consent-safe
 layout_id: traditional-consent-v1
 style_id: openagreements-default-v1
 outputs:
-  docx: content/templates/openagreements-board-consent-safe/template.docx
+  docx: templates/openagreements-board-consent-safe/template.docx
 document:
   title: ACTION BY UNANIMOUS WRITTEN CONSENT OF THE BOARD OF DIRECTORS OF {company_name}
   label: OpenAgreements Board Consent for SAFE Financing

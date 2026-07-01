@@ -20,9 +20,9 @@ export async function runRecipeCommand(args: RecipeRunArgs): Promise<void> {
 
   if (!existsSync(recipeDir)) {
     const available = listRecipeIds();
-    console.error(`Recipe "${args.recipeId}" not found.`);
+    console.error(`Field-selector "${args.recipeId}" not found.`);
     if (available.length > 0) {
-      console.error(`Available recipes: ${available.join(', ')}`);
+      console.error(`Available field-selectors: ${available.join(', ')}`);
     }
     process.exit(1);
   }

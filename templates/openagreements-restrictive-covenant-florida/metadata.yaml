@@ -1,7 +1,7 @@
 name: OpenAgreements Employee Restrictive Covenant (Florida)
 category: employment
 description: Florida-specific employee restrictive covenant agreement with modular covenant structure (non-compete, non-solicitation, non-dealing, non-investment, confidentiality, non-disparagement). Implements Fla. Stat. section 542.335 (legitimate-business-interest recital, mandatory judicial modification of overbroad restraints, express assignee / successor / third-party-beneficiary enforcement), the section 542.336 physician specialty-monopoly carve-out, and the 2025 CHOICE Act (sections 542.41-542.45) covered-employee enhanced- enforcement track. Drafted as a starting point for licensed counsel review.
-source_url: https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-restrictive-covenant-florida
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-florida
 version: '1.0'
 license: CC-BY-4.0
 allow_derivatives: true

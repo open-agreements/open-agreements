@@ -40,11 +40,16 @@ function resolveChildDir(parentDir: string, childId: string, label: string): str
   return resolved;
 }
 
-/** Resolve a content sub-directory, preferring the nested content/ layout. */
+/**
+ * Resolve a top-level content sub-directory.
+ *
+ * The `recipes` kind lives on disk under `field-selectors/` (renamed in the
+ * S3 top-level promotion); the other kinds keep their names. There is no
+ * legacy `content/<kind>` fallback — these directories are top-level only.
+ */
 function resolveContentDir(root: string, kind: 'templates' | 'external' | 'recipes'): string {
-  const nested = join(root, 'content', kind);
-  if (existsSync(nested)) return nested;
-  return join(root, kind);
+  const dirName = kind === 'recipes' ? 'field-selectors' : kind;
+  return join(root, dirName);
 }
 
 /** Templates directory */

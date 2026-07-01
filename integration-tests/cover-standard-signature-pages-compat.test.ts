@@ -43,7 +43,7 @@ function extractStyleBlock(stylesXml: string, styleId: string): string {
 
 async function renderTemplateBuffer(slug: string, sourceType: 'canonical' | 'json'): Promise<Buffer> {
   const style = loadStyleProfile(STYLE_PATH);
-  const templateDir = join(REPO_ROOT, 'content', 'templates', slug);
+  const templateDir = join(REPO_ROOT, 'templates', slug);
 
   let spec;
   if (sourceType === 'canonical') {

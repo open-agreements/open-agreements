@@ -55,7 +55,7 @@ function validateTemplateFillRequest(templateDir: string, values: Record<string,
 }
 
 export async function runFill(args: FillArgs): Promise<void> {
-  // Search templates/ → external/ → recipes/
+  // Search templates/ → external/ → field-selectors/
   const templateDir = findTemplateDir(args.template);
   const externalDir = findExternalDir(args.template);
   const recipeDir = findRecipeDir(args.template);
@@ -66,7 +66,7 @@ export async function runFill(args: FillArgs): Promise<void> {
 
   if (!isTemplate && !isExternal && !isRecipe) {
     const available = getAvailableIds();
-    console.error(`Agreement "${args.template}" not found in templates, external, or recipes.`);
+    console.error(`Agreement "${args.template}" not found in templates, external, or field-selectors.`);
     if (available.length > 0) {
       console.error(`Available: ${available.join(', ')}`);
     }

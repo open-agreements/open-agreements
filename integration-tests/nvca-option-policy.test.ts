@@ -11,7 +11,7 @@ import { itAllure } from './helpers/allure-test.js';
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const tempDirs: string[] = [];
 const RECIPE_ID = 'nvca-stock-purchase-agreement';
-const RECIPE_DIR = join(import.meta.dirname, '..', 'content', 'recipes', RECIPE_ID);
+const RECIPE_DIR = join(import.meta.dirname, '..', 'field-selectors', RECIPE_ID);
 const it = itAllure.epic('NVCA SPA Template');
 
 afterEach(() => {

@@ -84,10 +84,10 @@ export function buildCodexPrompt(opts: CodexPromptOptions): string {
 
   // Editable files
   sections.push(`## Recipe Files You May Edit:
-- content/recipes/${recipeId}/metadata.yaml
-- content/recipes/${recipeId}/replacements.json
-- content/recipes/${recipeId}/clean.json
-- content/recipes/${recipeId}/computed.json [create if needed]
+- field-selectors/${recipeId}/metadata.yaml
+- field-selectors/${recipeId}/replacements.json
+- field-selectors/${recipeId}/clean.json
+- field-selectors/${recipeId}/computed.json [create if needed]
 - integration-tests/fixtures/${recipeId.replace(/^nvca-/, '')}*.json [create if needed]`);
 
   // Existing fixtures
@@ -112,7 +112,7 @@ Fixture files go in: integration-tests/fixtures/`);
 
   // Rules
   sections.push(`## Rules:
-1. FORBIDDEN: Do NOT edit any file in scripts/, src/, packages/, or any .docx file. You may ONLY edit files in content/recipes/${recipeId}/ and integration-tests/fixtures/.
+1. FORBIDDEN: Do NOT edit any file in scripts/, src/, packages/, or any .docx file. You may ONLY edit files in field-selectors/${recipeId}/ and integration-tests/fixtures/.
 2. Every replacement key value must reference {field_name} defined in metadata.yaml.
 3. Use context-qualified keys ("label text > [placeholder]") for ambiguous short placeholders.
 4. Replacement values MUST NOT contain the search text (causes infinite loops).

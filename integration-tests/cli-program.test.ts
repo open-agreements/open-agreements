@@ -309,7 +309,7 @@ describe('CLI program wiring', () => {
     const recipeRunArgv = [
       'node',
       'open-agreements',
-      'recipe',
+      'field-selector',
       'run',
       'nvca-voting-agreement',
       '--input',
@@ -326,12 +326,12 @@ describe('CLI program wiring', () => {
     const recipeCleanArgv = [
       'node',
       'open-agreements',
-      'recipe',
+      'field-selector',
       'clean',
       'raw.docx',
       '--output',
       'clean.docx',
-      '--recipe',
+      '--field-selector',
       'nvca-voting-agreement',
       '--extract-guidance',
       'guidance.json',
@@ -340,12 +340,12 @@ describe('CLI program wiring', () => {
     const recipePatchArgv = [
       'node',
       'open-agreements',
-      'recipe',
+      'field-selector',
       'patch',
       'clean.docx',
       '--output',
       'patched.docx',
-      '--recipe',
+      '--field-selector',
       'nvca-voting-agreement',
     ];
 
@@ -504,7 +504,7 @@ describe('CLI program wiring', () => {
     const argv = [
       'node',
       'open-agreements',
-      'recipe',
+      'field-selector',
       'run',
       'nvca-voting-agreement',
       '--values',

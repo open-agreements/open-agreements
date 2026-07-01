@@ -38,8 +38,8 @@ A small set of `npm run` scripts is also allowlisted (`npm run validate`, `npm r
 ## Repo orientation (always available)
 
 - TypeScript source: `src/` (`cli/`, `commands/`, `core/`, `utils/`) and `packages/*/src/`
-- Templates: `content/templates/<id>/` with `metadata.yaml`, `template.md`, `template.docx`
-- External (non-redistributable) templates: `content/external/`
-- Recipes: `content/recipes/`
+- Templates: `templates/<id>/` with `metadata.yaml`, `template.md`, `template.docx`
+- External (non-redistributable) templates: `external/`
+- Recipes: `field-selectors/`
 - MCP servers and shared code: `packages/contracts-workspace/`, `packages/contracts-workspace-mcp/`, `packages/contract-templates-mcp/`, `api/_*.ts`
 - The existing mechanical CI (`.github/workflows/ci.yml`, `validate.yml`) already covers compile/test/schema/license. **Your job is to find issues those gates can't catch** — semantic, cross-file, or judgment-based concerns.

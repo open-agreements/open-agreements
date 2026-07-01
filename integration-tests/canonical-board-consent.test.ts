@@ -12,7 +12,7 @@ import { loadMetadata } from '../src/core/metadata.js';
 
 const it = itAllure.epic('Filling & Rendering');
 const REPO_ROOT = join(import.meta.dirname, '..');
-const TEMPLATE_DIR = join(REPO_ROOT, 'content', 'templates', 'openagreements-board-consent-safe');
+const TEMPLATE_DIR = join(REPO_ROOT, 'templates', 'openagreements-board-consent-safe');
 const SOURCE_PATH = join(TEMPLATE_DIR, 'template.md');
 const STYLE_PATH = join(REPO_ROOT, 'scripts', 'template-specs', 'styles', 'openagreements-default-v1.json');
 const tempDirs: string[] = [];

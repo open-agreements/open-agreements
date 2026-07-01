@@ -38,7 +38,7 @@ open-agreements scan ~/Downloads/source-document.docx --output-replacements repl
 ## Step 2: Create the Recipe Directory
 
 ```bash
-mkdir content/recipes/your-recipe-name/
+mkdir field-selectors/your-recipe-name/
 ```
 
 ## Step 3: Create metadata.yaml

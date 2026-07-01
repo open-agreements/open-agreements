@@ -5,7 +5,7 @@ Agreements for Future Equity (SAFEs) by a Delaware corporation.
 
 ## Source
 
-- **URL**: https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-stockholder-consent-safe
+- **URL**: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-stockholder-consent-safe
 - **Version**: 1.2
 - **License**: CC BY 4.0
 
@@ -21,7 +21,7 @@ Agreements for Future Equity (SAFEs) by a Delaware corporation.
 ## Canonical Markdown Authoring
 
 The stockholder consent is authored canonically in
-`content/templates/openagreements-stockholder-consent-safe/template.md`, with
+`templates/openagreements-stockholder-consent-safe/template.md`, with
 the generated JSON spec and rendered DOCX derived from that source.
 
 Compiled, rendered, and filled outputs preserve the stockholder consent legal

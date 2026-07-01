@@ -101,7 +101,7 @@ Audit all NVCA recipes and update the quality tracker
 
 When running the audit:
 
-1. Read `content/recipes/QUALITY_TRACKER.md` for current state
+1. Read `field-selectors/QUALITY_TRACKER.md` for current state
 2. Run Tier 1 checks (always possible)
 3. Run Tier 2 checks if source document is available (use `ensureSourceDocx()`)
 4. Run Tier 3 checks if a test fixture exists
