@@ -2,11 +2,11 @@
 
 This document is the in-repo governance record for every `/.well-known/*` path published at `https://openagreements.org/.well-known/*`. It is documentation only. It does not approve path migrations or content changes.
 
-> **Hosting note.** The openagreements.org deployment that serves these paths now lives in the private `UseJunior/openagreements-org-deploy` repo, not this public repo. References below to `api/auth/well-known-*.ts` and `vercel.json` describe the contract those handlers implement; the source files themselves live in the private deploy repo. Static `site/.well-known/*` artifacts in this repo are the canonical source-of-truth and are mirrored into the deploy repo at scaffold time.
+> **Hosting note.** The openagreements.org deployment that serves these paths now lives in the private `UseJunior/openagreements-org-deploy` repo, not this public repo. References below to `api/auth/well-known-*.ts` and `vercel.json` describe the contract those handlers implement; the source files themselves live in the private deploy repo. Static `.well-known/*` artifacts in this repo are the canonical source-of-truth and are mirrored into the deploy repo at scaffold time.
 
 ## Scope
 
-- Static source-controlled files live under `site/.well-known/` (canonical source-of-truth).
+- Static source-controlled files live under `.well-known/` (canonical source-of-truth).
 - Generated build artifacts currently include `/.well-known/ai/index.json` and `/.well-known/arp/index.sig`.
 - `/.well-known/agent-skills/*` is published on `openagreements.org` by [UseJunior/legal-explainer](https://github.com/UseJunior/legal-explainer) (the app that serves the domain), not by this repository's build.
 - OAuth metadata is served through Vercel rewrites to API handlers in the private deploy repo, not from static files.
@@ -21,7 +21,7 @@ Why:
 - The product-facing host and API origin are `openagreements.org`.
 - The repo and published artifacts are branded as OpenAgreements even when operated by UseJunior.
 - Internal namespace precedent already uses `org.openagreements.*` in repo-managed identifiers such as the `concerto/*.cto` models.
-- `site/.well-known/ai/entity.json` still names `https://usejunior.com/.well-known/ai/entity.json` as the canonical entity URL and identifies UseJunior as the operator, but that reads as operator ownership, not the stronger reverse-DNS naming convention for the OpenAgreements product namespace.
+- `.well-known/ai/entity.json` still names `https://usejunior.com/.well-known/ai/entity.json` as the canonical entity URL and identifies UseJunior as the operator, but that reads as operator ownership, not the stronger reverse-DNS naming convention for the OpenAgreements product namespace.
 
 ## Inventory
 
@@ -29,13 +29,13 @@ Why:
 | --- | --- | --- | --- |
 | `/.well-known/oauth-authorization-server` | Yes — [RFC 8414](https://www.rfc-editor.org/rfc/rfc8414.html) | Dynamic handler: `api/auth/well-known-oauth-as.ts` via `vercel.json` rewrite | Document only; do not change |
 | `/.well-known/oauth-protected-resource` | Yes — [RFC 9728](https://www.rfc-editor.org/rfc/rfc9728.html) | Dynamic handler: `api/auth/well-known-protected-resource.ts` via `vercel.json` rewrite | Document only; do not change |
-| `/.well-known/agent-card.json` | Yes — [IANA Well-Known URIs registry](https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml), [A2A spec](https://a2a-protocol.org/latest/specification/) | Static file: `site/.well-known/agent-card.json` | Document only; do not change |
-| `/.well-known/api-catalog` | Yes — [RFC 9727](https://www.rfc-editor.org/rfc/rfc9727.html) | Static file: `site/.well-known/api-catalog` | Document only; do not change |
-| `/.well-known/mcp-server-card` | No — track [SEP-1649](https://github.com/modelcontextprotocol/modelcontextprotocol/issues/1649) only | Static file: `site/.well-known/mcp-server-card` | Document only; no migration in this PR |
+| `/.well-known/agent-card.json` | Yes — [IANA Well-Known URIs registry](https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml), [A2A spec](https://a2a-protocol.org/latest/specification/) | Static file: `.well-known/agent-card.json` | Document only; do not change |
+| `/.well-known/api-catalog` | Yes — [RFC 9727](https://www.rfc-editor.org/rfc/rfc9727.html) | Static file: `.well-known/api-catalog` | Document only; do not change |
+| `/.well-known/mcp-server-card` | No — track [SEP-1649](https://github.com/modelcontextprotocol/modelcontextprotocol/issues/1649) only | Static file: `.well-known/mcp-server-card` | Document only; no migration in this PR |
 | `/.well-known/agent-skills/index.json` | No — `agent-skills` is the current agentskills.io discovery path | Published by UseJunior/legal-explainer (`scripts/generate-wellknown-agent-skills.ts` in that repo) from this repo's skills catalog | Document only; generated externally |
-| `/.well-known/ai/entity.json` | No | Static file: `site/.well-known/ai/entity.json` | Document current state; migration later |
+| `/.well-known/ai/entity.json` | No | Static file: `.well-known/ai/entity.json` | Document current state; migration later |
 | `/.well-known/ai/index.json` | No | Generated by `scripts/build-wellknown-ai-index.cjs` into `_site/.well-known/ai/index.json` | Document current state; migration later |
-| `/.well-known/arp/pubkey.json` | No | Static file: `site/.well-known/arp/pubkey.json` | Document current state; migration later |
+| `/.well-known/arp/pubkey.json` | No | Static file: `.well-known/arp/pubkey.json` | Document current state; migration later |
 | `/.well-known/arp/index.sig` | No | Generated by `scripts/sign-manifest.cjs` into `_site/.well-known/arp/index.sig` | Document current state; migration later |
 
 ## Path Records
@@ -65,7 +65,7 @@ Why:
 - Path: `/.well-known/agent-card.json`
 - Registered?: Yes. Registered in the [IANA Well-Known URIs registry](https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml) with the A2A specification as the reference.
 - Schema: A2A Agent Card JSON as defined by the [A2A specification](https://a2a-protocol.org/latest/specification/).
-- Generator: None. This is a source-controlled static artifact at `site/.well-known/agent-card.json`.
+- Generator: None. This is a source-controlled static artifact at `.well-known/agent-card.json`.
 - Header / Content-Type expectations: No explicit `headers` rule in `vercel.json`; as a static `.json` file it is expected to be served as JSON with platform-default cache and CORS behavior.
 - Expected consumers: A2A clients discovering the OpenAgreements agent endpoint at `https://openagreements.org/api/a2a`.
 - Open issues: The current card is intentionally unchanged in this PR, but it still has an A2A conformance TODO for missing `preferredTransport`.
@@ -75,7 +75,7 @@ Why:
 - Path: `/.well-known/api-catalog`
 - Registered?: Yes. Defined and registered by [RFC 9727](https://www.rfc-editor.org/rfc/rfc9727.html).
 - Schema: API Catalog document in the RFC 9727 linkset format. The current file is a Linkset JSON document with `service-desc` links to the MCP and A2A discovery documents.
-- Generator: None. This is a source-controlled static artifact at `site/.well-known/api-catalog`.
+- Generator: None. This is a source-controlled static artifact at `.well-known/api-catalog`.
 - Header / Content-Type expectations: `vercel.json` sets `Content-Type: application/linkset+json; profile="https://www.rfc-editor.org/info/rfc9727"`, `Cache-Control: public, max-age=3600`, `Access-Control-Allow-Origin: *`, `Access-Control-Allow-Methods: GET`, and `Access-Control-Allow-Headers: Content-Type`.
 - Expected consumers: Generic API discovery clients, linkset-aware tooling, and crawlers looking for published APIs.
 - Open issues: The path itself is correct and must not change in this PR. A separate bug exists in `scripts/build-wellknown-ai-index.cjs`, which incorrectly looks for `.well-known/api-catalog/index.json` instead of the extensionless published file.
@@ -85,7 +85,7 @@ Why:
 - Path: `/.well-known/mcp-server-card`
 - Registered?: No. There is no IANA registration for this suffix today. The current reference point is [SEP-1649](https://github.com/modelcontextprotocol/modelcontextprotocol/issues/1649), which proposes `/.well-known/mcp/server-card.json` instead.
 - Schema: MCP server card JSON. The current file follows the older static schema URL embedded in the artifact, not the SEP-1649 discovery path.
-- Generator: None. This is a source-controlled static artifact at `site/.well-known/mcp-server-card`.
+- Generator: None. This is a source-controlled static artifact at `.well-known/mcp-server-card`.
 - Header / Content-Type expectations: `vercel.json` sets `Content-Type: application/json`, `Cache-Control: public, max-age=3600`, `Access-Control-Allow-Origin: *`, `Access-Control-Allow-Methods: GET`, and `Access-Control-Allow-Headers: Content-Type`.
 - Expected consumers: MCP registries, discovery tools, and clients that probe server metadata before opening `https://openagreements.org/api/mcp`.
 - Open issues: No migration in this PR. Follow-up work should move toward the SEP-1649 path `/.well-known/mcp/server-card.json` if and when that draft becomes the project’s chosen target.
@@ -105,7 +105,7 @@ Why:
 - Path: `/.well-known/ai/entity.json`
 - Registered?: No. This path is currently unregistered.
 - Schema: Repo-defined JSON identity document. Today it contains OpenAgreements branding, domains, canonical URL, operator metadata, and related links. There is no external IANA registration or in-repo spec beyond this document.
-- Generator: None. This is a source-controlled static artifact at `site/.well-known/ai/entity.json`.
+- Generator: None. This is a source-controlled static artifact at `.well-known/ai/entity.json`.
 - Header / Content-Type expectations: No explicit `headers` rule in `vercel.json`; as a static `.json` file it is expected to be served as JSON with platform-default cache and CORS behavior.
 - Expected consumers: AI discovery systems and any verifier or crawler that starts from the OpenAgreements entity description.
 - Open issues: This path is currently unregistered. The RFC 8615 compliant migration target should be `/.well-known/appspecific/org.openagreements.ai.entity.json`. Migration is a separate PR.
@@ -115,7 +115,7 @@ Why:
 - Path: `/.well-known/ai/index.json`
 - Registered?: No. This path is currently unregistered.
 - Schema: Repo-defined ARP-style manifest JSON with `version`, `generatedAt`, `lastUpdated`, `description`, `entity`, `pubkey`, and `integrity` fields. There is no external IANA registration or in-repo spec beyond this document.
-- Generator: `scripts/build-wellknown-ai-index.cjs`, which writes `_site/.well-known/ai/index.json` after Eleventy passthrough of `site/.well-known/`.
+- Generator: `scripts/build-wellknown-ai-index.cjs`, which writes `_site/.well-known/ai/index.json` after Eleventy passthrough of `.well-known/`.
 - Header / Content-Type expectations: No explicit `headers` rule in `vercel.json`; as a generated `.json` file it is expected to be served as JSON with platform-default cache and CORS behavior.
 - Expected consumers: Clients verifying OpenAgreements identity metadata and integrity bindings across `entity.json`, `pubkey.json`, and other AI-facing discovery artifacts.
 - Open issues: This path is currently unregistered. The RFC 8615 compliant migration target should be `/.well-known/appspecific/org.openagreements.ai.index.json`. Migration is a separate PR. Also, `scripts/build-wellknown-ai-index.cjs` currently looks for `.well-known/api-catalog/index.json` and `.well-known/mcp-server-card/index.json`, but the repo publishes extensionless `/.well-known/api-catalog` and `/.well-known/mcp-server-card`. The generator path is wrong, so those integrity hashes are currently skipped.
@@ -125,7 +125,7 @@ Why:
 - Path: `/.well-known/arp/pubkey.json`
 - Registered?: No. This path is currently unregistered.
 - Schema: Repo-defined JSON key descriptor containing the active Ed25519 public key, key identifiers, validity windows, and rotation policy text. There is no external IANA registration or in-repo spec beyond this document.
-- Generator: None. This is a source-controlled static artifact at `site/.well-known/arp/pubkey.json`.
+- Generator: None. This is a source-controlled static artifact at `.well-known/arp/pubkey.json`.
 - Header / Content-Type expectations: No explicit `headers` rule in `vercel.json`; as a static `.json` file it is expected to be served as JSON with platform-default cache and CORS behavior.
 - Expected consumers: Verifiers validating detached signatures for the AI manifest.
 - Open issues: This path is currently unregistered. The RFC 8615 compliant migration target should be `/.well-known/appspecific/org.openagreements.arp.pubkey.json`. Migration is a separate PR.
@@ -147,10 +147,10 @@ The following path is referenced by current rotation policy but is not published
 ### `/.well-known/arp/pubkey-next.json`
 
 - Path: `/.well-known/arp/pubkey-next.json`
-- Status: Not currently served. There is no `site/.well-known/arp/pubkey-next.json` source file, no `vercel.json` rewrite, and no generator that publishes this path today.
+- Status: Not currently served. There is no `.well-known/arp/pubkey-next.json` source file, no `vercel.json` rewrite, and no generator that publishes this path today.
 - Registered?: No. This path is currently unregistered.
 - Schema: Intended to match the repo-defined public-key descriptor schema used by `pubkey.json`.
-- Why it is referenced: The `rotationPolicy` field in `site/.well-known/arp/pubkey.json` names this path as the future replacement-key location for planned rotation.
+- Why it is referenced: The `rotationPolicy` field in `.well-known/arp/pubkey.json` names this path as the future replacement-key location for planned rotation.
 - Header / Content-Type expectations: If published later as a `.json` file, it would inherit platform-default headers unless a future PR adds explicit overrides.
 - Expected consumers: Key-rotation verifiers that need the next signing key before cutover.
 - Open issues: This path is currently unregistered. The RFC 8615 compliant migration target should be `/.well-known/appspecific/org.openagreements.arp.pubkey-next.json`. The file should be created in separate work when key rotation is implemented.

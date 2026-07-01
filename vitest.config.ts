@@ -53,7 +53,6 @@ export default defineConfig({
         '**/bin/**',
         'content/**',
         'scripts/**',
-        'site/**',
         'coverage/**',
         'allure-results/**',
         'allure-report/**',

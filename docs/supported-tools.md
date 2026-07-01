@@ -28,7 +28,7 @@ OpenAgreements uses an agent-agnostic `ToolCommandAdapter` interface for generat
 ### Gemini CLI
 
 - **Extension manifest**: `gemini-extension.json`
-- **Context file**: `GEMINI.md`
+- **Context file**: `AGENTS.md`
 - **How it works**: Gemini loads two local stdio MCP servers:
   - `@open-agreements/contracts-workspace-mcp` for workspace/catalog/status operations
   - `@open-agreements/contract-templates-mcp` for template discovery and fill workflows

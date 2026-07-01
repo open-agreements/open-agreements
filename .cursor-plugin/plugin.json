@@ -11,7 +11,7 @@
   "homepage": "https://github.com/open-agreements/open-agreements#readme",
   "repository": "https://github.com/open-agreements/open-agreements",
   "license": "Apache-2.0",
-  "logo": "site/assets/openagreements_logo.jpg",
+  "logo": ".cursor-plugin/openagreements_logo.jpg",
   "keywords": [
     "cursor",
     "mcp",

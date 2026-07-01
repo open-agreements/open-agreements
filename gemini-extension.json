@@ -2,8 +2,8 @@
   "name": "open-agreements",
   "version": "0.8.0",
   "description": "Local MCP extension for OpenAgreements workspace organization and contract template drafting.",
-  "contextFileName": "GEMINI.md",
-  "entrypoint": "GEMINI.md",
+  "contextFileName": "AGENTS.md",
+  "entrypoint": "AGENTS.md",
   "mcpServers": {
     "contracts-workspace-mcp": {
       "command": "npx",

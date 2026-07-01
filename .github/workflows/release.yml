@@ -112,7 +112,7 @@ jobs:
         run: |
           PACK_OUTPUT="$(npm pack --dry-run 2>&1)"
           echo "$PACK_OUTPUT"
-          for required_file in gemini-extension.json GEMINI.md server.json; do
+          for required_file in gemini-extension.json AGENTS.md server.json; do
             if ! echo "$PACK_OUTPUT" | grep -q "$required_file"; then
               echo "FATAL: $required_file is missing from the npm tarball. Add it to the files array in package.json."
               exit 1
