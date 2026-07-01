@@ -5,7 +5,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { runFill } from '../commands/fill.js';
 import { runValidate } from '../commands/validate.js';
 import { runList } from '../commands/list.js';
-import { runRecipeCommand, runRecipeClean, runRecipePatch } from '../commands/recipe.js';
+import { runFieldSelectorCommand, runFieldSelectorClean, runFieldSelectorPatch } from '../commands/field-selector.js';
 import { runScan } from '../commands/scan.js';
 import {
   runChecklistCreate,
@@ -105,10 +105,10 @@ export function createProgram(): Command {
 
   // --- Field-selector command ---
 
-  const recipeCmd = new Command('field-selector');
-  recipeCmd.description('Work with field-selector-based document pipelines');
+  const fieldSelectorCmd = new Command('field-selector');
+  fieldSelectorCmd.description('Work with field-selector-based document pipelines');
 
-  recipeCmd
+  fieldSelectorCmd
     .command('run <field-selector-id>')
     .description('Run the full field-selector pipeline (clean → patch → fill → verify)')
     .option('-i, --input <path>', 'Source DOCX file (auto-downloads if omitted)')
@@ -118,9 +118,9 @@ export function createProgram(): Command {
     .option('--keep-intermediate', 'Preserve intermediate files')
     .option('--computed-out <path>', 'Write computed interaction artifact JSON')
     .option('--no-normalize-brackets', 'Disable post-fill bracket artifact normalization')
-    .action(async (recipeId: string, opts: { input?: string; output?: string; data?: string; values?: string; keepIntermediate?: boolean; computedOut?: string; normalizeBrackets?: boolean }) => {
-      await runRecipeCommand({
-        recipeId,
+    .action(async (fieldSelectorId: string, opts: { input?: string; output?: string; data?: string; values?: string; keepIntermediate?: boolean; computedOut?: string; normalizeBrackets?: boolean }) => {
+      await runFieldSelectorCommand({
+        fieldSelectorId,
         input: opts.input,
         output: opts.output,
         data: opts.data ?? opts.values,
@@ -130,26 +130,26 @@ export function createProgram(): Command {
       });
     });
 
-  recipeCmd
+  fieldSelectorCmd
     .command('clean <input>')
     .description('Run only the clean stage of a field-selector')
     .requiredOption('-o, --output <path>', 'Output file path')
     .requiredOption('--field-selector <id>', 'Field-selector ID to use for clean config')
     .option('--extract-guidance <path>', 'Extract removed content as guidance JSON to the specified path')
     .action(async (input: string, opts: { output: string; fieldSelector: string; extractGuidance?: string }) => {
-      await runRecipeClean({ input, output: opts.output, recipe: opts.fieldSelector, extractGuidance: opts.extractGuidance });
+      await runFieldSelectorClean({ input, output: opts.output, fieldSelector: opts.fieldSelector, extractGuidance: opts.extractGuidance });
     });
 
-  recipeCmd
+  fieldSelectorCmd
     .command('patch <input>')
     .description('Run only the patch stage of a field-selector')
     .requiredOption('-o, --output <path>', 'Output file path')
     .requiredOption('--field-selector <id>', 'Field-selector ID to use for replacements')
     .action(async (input: string, opts: { output: string; fieldSelector: string }) => {
-      await runRecipePatch({ input, output: opts.output, recipe: opts.fieldSelector });
+      await runFieldSelectorPatch({ input, output: opts.output, fieldSelector: opts.fieldSelector });
     });
 
-  program.addCommand(recipeCmd);
+  program.addCommand(fieldSelectorCmd);
 
   // --- Scan command ---
 

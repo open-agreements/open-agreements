@@ -6,7 +6,7 @@ description: >-
 source_url: https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx
 source_version: '2020'
 license_note: >-
-  NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation
+  NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation
   instructions, not the source document.
 source_sha256: f9b61b4d99e245573de41d9469925b4332f871ec0e6ac6593055cdfe17825300
 optional: false

@@ -1,7 +1,7 @@
 import { join } from 'node:path';
 import { expect } from 'vitest';
 import { fillTemplate } from '../../src/core/engine.js';
-import { extractAllText } from '../../src/core/recipe/verifier.js';
+import { extractAllText } from '../../src/core/field-selector/verifier.js';
 
 export type TemplateTextAssertion =
   | { kind: 'contains'; text: string; label?: string }

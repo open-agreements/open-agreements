@@ -70,7 +70,7 @@ Fill standard legal agreement templates and get signable DOCX files — party
 info, dates, and terms in, formatting-preserving Word document out. The Source
 column links to the upstream standard or canonical project page (varies by
 publisher); the License column shows redistribution terms; Repo links point to
-the GitHub content directory for each template or recipe. To fill one with an
+the GitHub content directory for each template or field-selector. To fill one with an
 agent or the CLI, see [Template Filling via MCP](#template-filling-via-mcp).
 
 ### SAFEs
@@ -86,13 +86,13 @@ agent or the CLI, see [Template Filling via MCP](#template-filling-via-mcp).
 
 | Template | HTML | Source | License | Repo |
 |----------|------|--------|---------|------|
-| ROFR Co Sale Agreement | [HTML](https://usejunior.com/templates/nvca-rofr-co-sale-agreement?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [NVCA](https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-ROFRA-10-1-2025.docx) | NVCA proprietary | — |
-| Investors Rights Agreement | [HTML](https://usejunior.com/templates/nvca-investors-rights-agreement?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [NVCA](https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-IRA-10-1-2025-2-1.docx) | NVCA proprietary | — |
-| Voting Agreement | [HTML](https://usejunior.com/templates/nvca-voting-agreement?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [NVCA](https://nvca.org/wp-content/uploads/2024/10/NVCA-Model-VA-10-1-2025.docx) | NVCA proprietary | — |
-| Stock Purchase Agreement | [HTML](https://usejunior.com/templates/nvca-stock-purchase-agreement?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [NVCA](https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-SPA-10-28-2025-1.docx) | NVCA proprietary | — |
-| Certificate Of Incorporation | [HTML](https://usejunior.com/templates/nvca-certificate-of-incorporation?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [NVCA](https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-COI-10-1-2025.docx) | NVCA proprietary | — |
-| Indemnification Agreement | [HTML](https://usejunior.com/templates/nvca-indemnification-agreement?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [NVCA](https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx) | NVCA proprietary | — |
-| Management Rights Letter | [HTML](https://usejunior.com/templates/nvca-management-rights-letter?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [NVCA](https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx) | NVCA proprietary | — |
+| ROFR Co Sale Agreement | [HTML](https://usejunior.com/templates/nvca-rofr-co-sale-agreement?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [NVCA](https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-ROFRA-10-1-2025.docx) | Field-selector | — |
+| Investors Rights Agreement | [HTML](https://usejunior.com/templates/nvca-investors-rights-agreement?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [NVCA](https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-IRA-10-1-2025-2-1.docx) | Field-selector | — |
+| Voting Agreement | [HTML](https://usejunior.com/templates/nvca-voting-agreement?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [NVCA](https://nvca.org/wp-content/uploads/2024/10/NVCA-Model-VA-10-1-2025.docx) | Field-selector | — |
+| Stock Purchase Agreement | [HTML](https://usejunior.com/templates/nvca-stock-purchase-agreement?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [NVCA](https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-SPA-10-28-2025-1.docx) | Field-selector | — |
+| Certificate Of Incorporation | [HTML](https://usejunior.com/templates/nvca-certificate-of-incorporation?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [NVCA](https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-COI-10-1-2025.docx) | Field-selector | — |
+| Indemnification Agreement | [HTML](https://usejunior.com/templates/nvca-indemnification-agreement?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [NVCA](https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx) | Field-selector | — |
+| Management Rights Letter | [HTML](https://usejunior.com/templates/nvca-management-rights-letter?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [NVCA](https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx) | Field-selector | — |
 
 ### Deals & Partnerships
 
@@ -319,7 +319,7 @@ open-agreements/
   content/
     templates/            # Fillable DOCX templates with {tag} placeholders
     external/             # YC SAFE templates vendored unchanged
-    recipes/              # Recipe instructions for non-redistributable sources
+    field-selectors/              # Field-selector instructions for non-redistributable sources
   legal-practice-library/ # Practice guides, surveys, and checklists (markdown)
   skills/                 # Agent skill definitions
   server.json             # MCP server manifest
@@ -327,7 +327,7 @@ open-agreements/
   README.md, LICENSE
 ```
 
-NVCA recipe templates are downloaded at runtime and are not bundled in the package.
+NVCA field-selector templates are downloaded at runtime and are not bundled in the package.
 
 <details>
 <summary><strong>CLI Reference</strong></summary>
@@ -449,7 +449,7 @@ npx -y open-agreements@latest list
 ### Guides
 
 - [Adding Templates](https://github.com/open-agreements/open-agreements/blob/main/docs/adding-templates.md)
-- [Adding Recipes](https://github.com/open-agreements/open-agreements/blob/main/docs/adding-recipes.md)
+- [Adding Field-selectors](https://github.com/open-agreements/open-agreements/blob/main/docs/adding-field-selectors.md)
 
 ### Other Packages
 
@@ -485,7 +485,7 @@ Planned work is tracked in [open issues](https://github.com/open-agreements/open
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/open-agreements/open-agreements/blob/main/CONTRIBUTING.md) for how to add templates, recipes, and other improvements. The Legal Practice Library is generated upstream — see its [`index.md`](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/index.md) for where to send content fixes.
+See [CONTRIBUTING.md](https://github.com/open-agreements/open-agreements/blob/main/CONTRIBUTING.md) for how to add templates, field-selectors, and other improvements. The Legal Practice Library is generated upstream — see its [`index.md`](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/index.md) for where to send content fixes.
 
 ## Built With OpenAgreements
 
@@ -503,7 +503,7 @@ Project code is licensed under [Apache License 2.0](LICENSE). The Apache license
 
 - CC BY 4.0 for Common Paper, Bonterms, OpenAgreements-authored templates, and the Legal Practice Library
 - CC BY-ND 4.0 for Y Combinator SAFE templates vendored unchanged
-- proprietary or non-redistributable for NVCA source documents handled via recipe workflows
+- proprietary or non-redistributable for NVCA source documents handled via field-selector workflows
 
 See each template's `metadata.yaml` for source-specific details.
 

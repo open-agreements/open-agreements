@@ -6,7 +6,7 @@ description: >-
 source_url: https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-COI-10-1-2025.docx
 source_version: 10-1-2025
 license_note: >-
-  NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation
+  NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation
   instructions, not the source document.
 source_sha256: d75600769c12724990de48149d7a2bb161f3522daa54b1783672f93697d87d29
 optional: false

@@ -297,5 +297,5 @@ Before adding a template, classify the source as one of:
 - `restricted-no-automation`
 
 Do not onboard `restricted-no-automation` sources into `templates/`, `external/`,
-or recipe auto-fetch flows without explicit written permission. Employment-pack
+or field-selector auto-fetch flows without explicit written permission. Employment-pack
 classifications are tracked in `docs/employment-source-policy.md`.

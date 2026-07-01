@@ -114,9 +114,9 @@ const LICENSE_LABELS = {
 };
 
 function formatLicenseCell(license) {
-  // Recipe entries carry no redistributable license (we publish fill recipes,
+  // FieldSelector entries carry no redistributable license (we publish fill fieldSelectors,
   // not the underlying NVCA forms), so they surface as proprietary.
-  if (!license || license === "Recipe") return "NVCA proprietary";
+  if (!license || license === "FieldSelector") return "NVCA proprietary";
   const label = LICENSE_LABELS[license] || license;
   const url = LICENSE_URLS[license];
   return url ? `[${label}](${url})` : label;
@@ -288,9 +288,9 @@ function renderTemplates() {
             `[HTML](${websiteUrl})`,
             formatSourceCell(template),
             formatLicenseCell(template.license),
-            // We publish NVCA fill recipes, not the forms themselves, so a
+            // We publish NVCA fill fieldSelectors, not the forms themselves, so a
             // "Repo" link would wrongly imply we host the source document.
-            template.contentTier === "recipe"
+            template.contentTier === "field-selector"
               ? "—"
               : `[Repo](${githubTreeUrl(template.repoPath)})`,
           ];

@@ -8,7 +8,7 @@ import {
 import {
   TemplateMetadataSchema,
   ExternalMetadataSchema,
-  RecipeMetadataSchema,
+  FieldSelectorMetadataSchema,
   FieldDefinitionSchema,
   CleanConfigSchema,
   GuidanceOutputSchema,
@@ -525,9 +525,9 @@ function buildExternalMetadataPayload(fields: unknown[]) {
   };
 }
 
-function buildRecipeMetadataPayload(fields: unknown[]) {
+function buildFieldSelectorMetadataPayload(fields: unknown[]) {
   return {
-    name: 'Fixture Recipe',
+    name: 'Fixture FieldSelector',
     source_url: 'https://example.com/source.docx',
     source_version: '1.0',
     license_note: 'Not redistributable',
@@ -602,13 +602,13 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
-  it('RecipeMetadataSchema rejects empty name', async () => {
+  it('FieldSelectorMetadataSchema rejects empty name', async () => {
     await expectSafeParseOutcome(
-      'RecipeMetadataSchema',
-      RecipeMetadataSchema,
+      'FieldSelectorMetadataSchema',
+      FieldSelectorMetadataSchema,
       {
         name: '',
-        source_url: 'https://example.com/recipe',
+        source_url: 'https://example.com/fieldSelector',
         source_version: '1.0',
         license_note: 'Public domain',
       },
@@ -796,11 +796,11 @@ describe('TemplateMetadataSchema', () => {
   });
 });
 
-describe('RecipeMetadataSchema', () => {
-  it('accepts valid recipe metadata', async () => {
+describe('FieldSelectorMetadataSchema', () => {
+  it('accepts valid fieldSelector metadata', async () => {
     await expectSafeParseOutcome(
-      'RecipeMetadataSchema',
-      RecipeMetadataSchema,
+      'FieldSelectorMetadataSchema',
+      FieldSelectorMetadataSchema,
       {
         name: 'NVCA Voting Agreement',
         source_url: 'https://nvca.org/document.docx',
@@ -813,8 +813,8 @@ describe('RecipeMetadataSchema', () => {
 
   it('rejects missing source_url', async () => {
     await expectSafeParseOutcome(
-      'RecipeMetadataSchema',
-      RecipeMetadataSchema,
+      'FieldSelectorMetadataSchema',
+      FieldSelectorMetadataSchema,
       {
         name: 'NVCA Voting Agreement',
         source_version: '10-1-2025',
@@ -825,15 +825,15 @@ describe('RecipeMetadataSchema', () => {
   });
 
   it('defaults optional to false', async () => {
-    const parsed = await allureStep('Parse recipe metadata with optional omitted', () =>
-      RecipeMetadataSchema.parse({
+    const parsed = await allureStep('Parse fieldSelector metadata with optional omitted', () =>
+      FieldSelectorMetadataSchema.parse({
         name: 'Test',
         source_url: 'https://example.com/doc.docx',
         source_version: '1.0',
         license_note: 'Not redistributable',
       })
     );
-    await allureJsonAttachment('recipe-metadata-parse-output.json', parsed);
+    await allureJsonAttachment('field-selector-metadata-parse-output.json', parsed);
 
     await allureStep('Assert optional defaults to false', () => {
       expect(parsed.optional).toBe(false);
@@ -862,11 +862,11 @@ describe('RecipeMetadataSchema', () => {
     );
   });
 
-  it('rejects derived key collisions in recipe metadata', async () => {
+  it('rejects derived key collisions in fieldSelector metadata', async () => {
     await expectSafeParseOutcome(
-      'RecipeMetadataSchema',
-      RecipeMetadataSchema,
-      buildRecipeMetadataPayload([
+      'FieldSelectorMetadataSchema',
+      FieldSelectorMetadataSchema,
+      buildFieldSelectorMetadataPayload([
         {
           name: 'industry_modules',
           type: 'multiselect',

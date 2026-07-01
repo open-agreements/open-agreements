@@ -709,7 +709,7 @@ describe('Regression: behavioral divergence', () => {
     expect(data.flag).toBe(false);
   });
 
-  it('recipe/external path does not coerce booleans', () => {
+  it('field-selector/external path does not coerce booleans', () => {
     const boolFields = [
       { name: 'company', type: 'string' as const, description: 'Co' },
       { name: 'flag', type: 'boolean' as const, description: 'Flag' },

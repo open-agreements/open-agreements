@@ -215,14 +215,14 @@ function detectCategory(id) {
   return "other";
 }
 
-function getContentTier(id, isRecipe) {
-  if (isRecipe) return "recipe";
+function getContentTier(id, isFieldSelector) {
+  if (isFieldSelector) return "field-selector";
   if (id.startsWith("yc-safe-")) return "external";
   return "template";
 }
 
 function getContentRepoPath(id, contentTier) {
-  if (contentTier === "recipe") return `field-selectors/${id}`;
+  if (contentTier === "field-selector") return `field-selectors/${id}`;
   if (contentTier === "external") return `external/${id}`;
   return `templates/${id}`;
 }
@@ -241,9 +241,9 @@ export function buildCatalog({ rootDir = REPO_ROOT } = {}) {
   const items = loadCatalogItems(rootDir);
 
   const templates = items.map((item) => {
-    const isRecipe = !item.license;
-    const contentTier = getContentTier(item.name, isRecipe);
-    const flags = isRecipe
+    const isFieldSelector = !item.license;
+    const contentTier = getContentTier(item.name, isFieldSelector);
+    const flags = isFieldSelector
       ? { distributable: false, fillable: false }
       : LICENSE_FLAGS[item.license] || { distributable: false, fillable: false };
     const sourceLabel = getSourceLabel(item);
@@ -265,8 +265,8 @@ export function buildCatalog({ rootDir = REPO_ROOT } = {}) {
       id: item.name,
       displayName: formatName(item.name),
       description: item.description,
-      license: item.license || "Recipe",
-      isRecipe,
+      license: item.license || "Field-selector",
+      isFieldSelector,
       sourceLabel,
       sourceUrl: getSourceUrl(item),
       sourceDocUrl: item.source_url,

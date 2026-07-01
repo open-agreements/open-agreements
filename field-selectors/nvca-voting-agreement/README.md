@@ -1,24 +1,24 @@
 # NVCA Model Voting Agreement
 
-Recipe for the NVCA Model Voting Agreement (version 10-1-2025).
+Field-selector for the NVCA Model Voting Agreement (version 10-1-2025).
 
 ## Source
 
 The source document is freely downloadable from [NVCA](https://nvca.org) but is not
-redistributable. This recipe contains only transformation instructions.
+redistributable. This field-selector contains only transformation instructions.
 
 ## Usage
 
 ```bash
 # Full pipeline (auto-downloads from NVCA)
-open-agreements recipe run nvca-voting-agreement -d values.json -o voting-agreement.docx
+open-agreements field-selector run nvca-voting-agreement -d values.json -o voting-agreement.docx
 
 # With a local copy of the source document
-open-agreements recipe run nvca-voting-agreement -i NVCA-Voting-Agreement.docx -d values.json -o voting-agreement.docx
+open-agreements field-selector run nvca-voting-agreement -i NVCA-Voting-Agreement.docx -d values.json -o voting-agreement.docx
 
 # Individual stages
-open-agreements recipe clean source.docx -o cleaned.docx --recipe nvca-voting-agreement
-open-agreements recipe patch cleaned.docx -o patched.docx --recipe nvca-voting-agreement
+open-agreements field-selector clean source.docx -o cleaned.docx --field-selector nvca-voting-agreement
+open-agreements field-selector patch cleaned.docx -o patched.docx --field-selector nvca-voting-agreement
 ```
 
 ## Values File
@@ -45,7 +45,7 @@ Create a JSON file with the field values:
 }
 ```
 
-## What the Recipe Does
+## What the Field-selector Does
 
 1. **Clean**: Removes explanatory footnotes and drafting notes ("Note to Drafter:", "Preliminary Note")
 2. **Patch**: Replaces 33 bracketed placeholders with template tags, handling Word's split-run XML
@@ -54,7 +54,7 @@ Create a JSON file with the field values:
 
 ## Option Vesting Policy Computation
 
-The NVCA voting agreement recipe includes option-vesting policy computation
+The NVCA voting agreement field-selector includes option-vesting policy computation
 coverage for deterministic derived values. When option-vesting inputs select a
 policy profile, computed outputs reflect the selected vesting treatment and the
 exported trace records the rule path used to derive those outputs.
@@ -69,8 +69,8 @@ is preserved unresolved until a policy is added.
 
 ## Assumption Validation
 
-Template assumption validation confirms that required NVCA recipe assumptions
-are explicit and machine-checkable. When bundled NVCA recipe assumptions are
+Template assumption validation confirms that required NVCA field-selector assumptions
+are explicit and machine-checkable. When bundled NVCA field-selector assumptions are
 validated, missing or inconsistent assumptions fail validation with actionable
 messages rather than silently producing a filled document.
 

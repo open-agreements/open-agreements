@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { validateExternalMetadata, loadExternalMetadata, CleanConfigSchema } from '../metadata.js';
-import { parseReplacementKey } from '../recipe/replacement-keys.js';
+import { parseReplacementKey } from '../field-selector/replacement-keys.js';
 
 export interface ExternalValidationResult {
   externalId: string;

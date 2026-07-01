@@ -4,7 +4,7 @@ description: Management rights letter granting ERISA-qualifying management right
 source_url: https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx
 source_version: '2020'
 license_note: >-
-  NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation
+  NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation
   instructions, not the source document.
 source_sha256: 9661d2a68ca20ee77cf553f1ec5804f08147e7e4c35f5a03938e76a778083e8b
 optional: false

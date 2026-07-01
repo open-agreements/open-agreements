@@ -18,8 +18,8 @@ import { existsSync, readFileSync, readdirSync, mkdtempSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { tmpdir } from 'node:os';
 import { rmSync } from 'node:fs';
-import { cleanDocument } from '../src/core/recipe/cleaner.js';
-import { patchDocument } from '../src/core/recipe/patcher.js';
+import { cleanDocument } from '../src/core/field-selector/cleaner.js';
+import { patchDocument } from '../src/core/field-selector/patcher.js';
 import { CleanConfigSchema } from '../src/core/metadata.js';
 
 interface SourceConfig {

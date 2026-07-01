@@ -262,7 +262,7 @@ describe('searchTemplates — edge cases', () => {
 // ---------------------------------------------------------------------------
 
 describe('searchTemplates — category propagation', () => {
-  it('NVCA recipes have venture-financing category, not general', () => {
+  it('NVCA fieldSelectors have venture-financing category, not general', () => {
     const results = searchTemplates(TEMPLATES, { query: 'NVCA', category: 'venture-financing' });
     expect(results.length).toBeGreaterThan(0);
     for (const r of results) {

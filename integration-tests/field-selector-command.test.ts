@@ -7,30 +7,30 @@ import { itAllure } from './helpers/allure-test.js';
 const it = itAllure.epic('Filling & Rendering');
 
 const {
-  runRecipeMock,
+  runFieldSelectorMock,
   cleanDocumentMock,
   patchDocumentMock,
 } = vi.hoisted(() => ({
-  runRecipeMock: vi.fn(),
+  runFieldSelectorMock: vi.fn(),
   cleanDocumentMock: vi.fn(),
   patchDocumentMock: vi.fn(),
 }));
 
-vi.mock('../src/core/recipe/index.js', () => ({
-  runRecipe: runRecipeMock,
+vi.mock('../src/core/field-selector/index.js', () => ({
+  runFieldSelector: runFieldSelectorMock,
   cleanDocument: cleanDocumentMock,
   patchDocument: patchDocumentMock,
 }));
 
-vi.mock('../src/core/recipe/cleaner.js', () => ({
+vi.mock('../src/core/field-selector/cleaner.js', () => ({
   cleanDocument: cleanDocumentMock,
 }));
 
-vi.mock('../src/core/recipe/patcher.js', () => ({
+vi.mock('../src/core/field-selector/patcher.js', () => ({
   patchDocument: patchDocumentMock,
 }));
 
-import { runRecipeCommand, runRecipeClean, runRecipePatch } from '../src/commands/recipe.js';
+import { runFieldSelectorCommand, runFieldSelectorClean, runFieldSelectorPatch } from '../src/commands/field-selector.js';
 
 const tempDirs: string[] = [];
 
@@ -39,126 +39,126 @@ afterEach(() => {
     rmSync(dir, { recursive: true, force: true });
   }
   vi.restoreAllMocks();
-  runRecipeMock.mockReset();
+  runFieldSelectorMock.mockReset();
   cleanDocumentMock.mockReset();
   patchDocumentMock.mockReset();
 });
 
-describe('recipe commands', () => {
-  it('runRecipeCommand exits with available recipe guidance when recipe ID is missing', async () => {
+describe('fieldSelector commands', () => {
+  it('runFieldSelectorCommand exits with available fieldSelector guidance when fieldSelector ID is missing', async () => {
     const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
     const exitSpy = vi.spyOn(process, 'exit').mockImplementation(((code?: number) => {
       throw new Error(`EXIT_${code ?? 0}`);
     }) as never);
 
     await expect(
-      runRecipeCommand({
-        recipeId: 'missing-recipe-id',
+      runFieldSelectorCommand({
+        fieldSelectorId: 'missing-field-selector-id',
       })
     ).rejects.toThrow('EXIT_1');
 
     expect(exitSpy).toHaveBeenCalledWith(1);
-    expect(errorSpy).toHaveBeenCalledWith('Field-selector "missing-recipe-id" not found.');
+    expect(errorSpy).toHaveBeenCalledWith('Field-selector "missing-field-selector-id" not found.');
     expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('Available field-selectors:'));
-    expect(runRecipeMock).not.toHaveBeenCalled();
+    expect(runFieldSelectorMock).not.toHaveBeenCalled();
   });
 
-  it('runRecipeCommand omits inputPath to allow auto-download', async () => {
-    const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-auto-'));
+  it('runFieldSelectorCommand omits inputPath to allow auto-download', async () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-auto-'));
     tempDirs.push(outDir);
 
-    runRecipeMock.mockResolvedValue({
+    runFieldSelectorMock.mockResolvedValue({
       metadata: { name: 'NVCA Voting Agreement' },
       outputPath: join(outDir, 'out.docx'),
       fieldsUsed: ['company_name'],
     });
 
-    await runRecipeCommand({
-      recipeId: 'nvca-voting-agreement',
+    await runFieldSelectorCommand({
+      fieldSelectorId: 'nvca-voting-agreement',
       output: join(outDir, 'out.docx'),
       keepIntermediate: false,
     });
 
-    expect(runRecipeMock).toHaveBeenCalledWith(
+    expect(runFieldSelectorMock).toHaveBeenCalledWith(
       expect.objectContaining({
-        recipeId: 'nvca-voting-agreement',
+        fieldSelectorId: 'nvca-voting-agreement',
         inputPath: undefined,
       })
     );
   });
 
-  it('runRecipeCommand defaults output path when --output is omitted', async () => {
-    runRecipeMock.mockResolvedValue({
+  it('runFieldSelectorCommand defaults output path when --output is omitted', async () => {
+    runFieldSelectorMock.mockResolvedValue({
       metadata: { name: 'NVCA Voting Agreement' },
       outputPath: '/tmp/nvca-voting-agreement-filled.docx',
       fieldsUsed: ['company_name'],
     });
 
-    await runRecipeCommand({
-      recipeId: 'nvca-voting-agreement',
+    await runFieldSelectorCommand({
+      fieldSelectorId: 'nvca-voting-agreement',
     });
 
-    expect(runRecipeMock).toHaveBeenCalledWith(
+    expect(runFieldSelectorMock).toHaveBeenCalledWith(
       expect.objectContaining({
         outputPath: expect.stringContaining('nvca-voting-agreement-filled.docx'),
       })
     );
   });
 
-  it('runRecipeCommand forwards a user-supplied input path', async () => {
-    const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-input-'));
+  it('runFieldSelectorCommand forwards a user-supplied input path', async () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-input-'));
     tempDirs.push(outDir);
     const inputPath = join(outDir, 'source.docx');
     writeFileSync(inputPath, Buffer.from('docx-bytes'));
 
-    runRecipeMock.mockResolvedValue({
+    runFieldSelectorMock.mockResolvedValue({
       metadata: { name: 'NVCA Voting Agreement' },
       outputPath: join(outDir, 'out.docx'),
       fieldsUsed: ['company_name'],
     });
 
-    await runRecipeCommand({
-      recipeId: 'nvca-voting-agreement',
+    await runFieldSelectorCommand({
+      fieldSelectorId: 'nvca-voting-agreement',
       input: inputPath,
       output: join(outDir, 'out.docx'),
     });
 
-    expect(runRecipeMock).toHaveBeenCalledWith(
+    expect(runFieldSelectorMock).toHaveBeenCalledWith(
       expect.objectContaining({
         inputPath: inputPath,
       })
     );
   });
 
-  it('runRecipeCommand forwards keepIntermediate flag', async () => {
-    const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-keep-'));
+  it('runFieldSelectorCommand forwards keepIntermediate flag', async () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-keep-'));
     tempDirs.push(outDir);
 
-    runRecipeMock.mockResolvedValue({
+    runFieldSelectorMock.mockResolvedValue({
       metadata: { name: 'NVCA Voting Agreement' },
       outputPath: join(outDir, 'out.docx'),
       fieldsUsed: ['company_name'],
     });
 
-    await runRecipeCommand({
-      recipeId: 'nvca-voting-agreement',
+    await runFieldSelectorCommand({
+      fieldSelectorId: 'nvca-voting-agreement',
       output: join(outDir, 'out.docx'),
       keepIntermediate: true,
     });
 
-    expect(runRecipeMock).toHaveBeenCalledWith(
+    expect(runFieldSelectorMock).toHaveBeenCalledWith(
       expect.objectContaining({
         keepIntermediate: true,
       })
     );
   });
 
-  it('runRecipeCommand forwards computed artifact output path', async () => {
-    const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-computed-'));
+  it('runFieldSelectorCommand forwards computed artifact output path', async () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-computed-'));
     tempDirs.push(outDir);
     const computedOut = join(outDir, 'computed.json');
 
-    runRecipeMock.mockResolvedValue({
+    runFieldSelectorMock.mockResolvedValue({
       metadata: { name: 'NVCA Voting Agreement' },
       outputPath: join(outDir, 'out.docx'),
       fieldsUsed: ['company_name'],
@@ -166,21 +166,21 @@ describe('recipe commands', () => {
       computedArtifact: { profile_present: true },
     });
 
-    await runRecipeCommand({
-      recipeId: 'nvca-voting-agreement',
+    await runFieldSelectorCommand({
+      fieldSelectorId: 'nvca-voting-agreement',
       output: join(outDir, 'out.docx'),
       computedOut,
     });
 
-    expect(runRecipeMock).toHaveBeenCalledWith(
+    expect(runFieldSelectorMock).toHaveBeenCalledWith(
       expect.objectContaining({
         computedOutPath: computedOut,
       })
     );
   });
 
-  it('runRecipeCommand parses values from --data JSON file', async () => {
-    const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-data-'));
+  it('runFieldSelectorCommand parses values from --data JSON file', async () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-data-'));
     tempDirs.push(outDir);
     const dataPath = join(outDir, 'values.json');
     writeFileSync(
@@ -189,27 +189,27 @@ describe('recipe commands', () => {
       'utf-8'
     );
 
-    runRecipeMock.mockResolvedValue({
+    runFieldSelectorMock.mockResolvedValue({
       metadata: { name: 'NVCA Voting Agreement' },
       outputPath: join(outDir, 'out.docx'),
       fieldsUsed: ['company_name'],
     });
 
-    await runRecipeCommand({
-      recipeId: 'nvca-voting-agreement',
+    await runFieldSelectorCommand({
+      fieldSelectorId: 'nvca-voting-agreement',
       data: dataPath,
       output: join(outDir, 'out.docx'),
     });
 
-    expect(runRecipeMock).toHaveBeenCalledWith(
+    expect(runFieldSelectorMock).toHaveBeenCalledWith(
       expect.objectContaining({
         values: { company_name: 'Acme Corp', board_approved: true },
       })
     );
   });
 
-  it('runRecipeCommand surfaces invalid JSON data payload errors', async () => {
-    const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-data-invalid-'));
+  it('runFieldSelectorCommand surfaces invalid JSON data payload errors', async () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-data-invalid-'));
     tempDirs.push(outDir);
     const dataPath = join(outDir, 'invalid-values.json');
     writeFileSync(dataPath, '{not valid json', 'utf-8');
@@ -218,49 +218,49 @@ describe('recipe commands', () => {
     }) as never);
 
     await expect(
-      runRecipeCommand({
-        recipeId: 'nvca-voting-agreement',
+      runFieldSelectorCommand({
+        fieldSelectorId: 'nvca-voting-agreement',
         data: dataPath,
       })
     ).rejects.toThrow(SyntaxError);
 
     expect(exitSpy).not.toHaveBeenCalled();
-    expect(runRecipeMock).not.toHaveBeenCalled();
+    expect(runFieldSelectorMock).not.toHaveBeenCalled();
   });
 
-  it('runRecipeCommand reports run errors through command error channel', async () => {
-    const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-error-'));
+  it('runFieldSelectorCommand reports run errors through command error channel', async () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-error-'));
     tempDirs.push(outDir);
 
-    runRecipeMock.mockRejectedValue(new Error('recipe run failed'));
+    runFieldSelectorMock.mockRejectedValue(new Error('fieldSelector run failed'));
     const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
     const exitSpy = vi.spyOn(process, 'exit').mockImplementation(((code?: number) => {
       throw new Error(`EXIT_${code ?? 0}`);
     }) as never);
 
     await expect(
-      runRecipeCommand({
-        recipeId: 'nvca-voting-agreement',
+      runFieldSelectorCommand({
+        fieldSelectorId: 'nvca-voting-agreement',
         output: join(outDir, 'out.docx'),
       })
     ).rejects.toThrow('EXIT_1');
 
     expect(exitSpy).toHaveBeenCalledWith(1);
-    expect(errorSpy).toHaveBeenCalledWith('Error: recipe run failed');
+    expect(errorSpy).toHaveBeenCalledWith('Error: fieldSelector run failed');
   });
 
-  it('runRecipeClean invokes cleanDocument with recipe config', async () => {
-    const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-clean-'));
+  it('runFieldSelectorClean invokes cleanDocument with fieldSelector config', async () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-clean-'));
     tempDirs.push(outDir);
     const inputPath = join(outDir, 'source.docx');
     writeFileSync(inputPath, Buffer.from('docx-bytes'));
 
     cleanDocumentMock.mockResolvedValue(undefined);
 
-    await runRecipeClean({
+    await runFieldSelectorClean({
       input: inputPath,
       output: join(outDir, 'cleaned.docx'),
-      recipe: 'nvca-voting-agreement',
+      fieldSelector: 'nvca-voting-agreement',
     });
 
     expect(cleanDocumentMock).toHaveBeenCalledTimes(1);
@@ -269,8 +269,8 @@ describe('recipe commands', () => {
     expect(cleanDocumentMock.mock.calls[0][2]).toEqual(expect.objectContaining({ removeFootnotes: expect.any(Boolean) }));
   });
 
-  it('runRecipeClean writes extracted guidance when requested', async () => {
-    const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-guidance-'));
+  it('runFieldSelectorClean writes extracted guidance when requested', async () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-guidance-'));
     tempDirs.push(outDir);
     const inputPath = join(outDir, 'source.docx');
     const outputPath = join(outDir, 'cleaned.docx');
@@ -287,10 +287,10 @@ describe('recipe commands', () => {
       },
     });
 
-    await runRecipeClean({
+    await runFieldSelectorClean({
       input: inputPath,
       output: outputPath,
-      recipe: 'nvca-voting-agreement',
+      fieldSelector: 'nvca-voting-agreement',
       extractGuidance,
     });
 
@@ -308,14 +308,14 @@ describe('recipe commands', () => {
     );
   });
 
-  it('runRecipeClean computes extract guidance hashes when clean.json is absent', async () => {
-    const rootDir = mkdtempSync(join(tmpdir(), 'oa-recipe-root-no-clean-'));
-    const recipeId = 'fixture-no-clean-config';
-    const recipeDir = join(rootDir, 'field-selectors', recipeId);
-    mkdirSync(recipeDir, { recursive: true });
+  it('runFieldSelectorClean computes extract guidance hashes when clean.json is absent', async () => {
+    const rootDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-root-no-clean-'));
+    const fieldSelectorId = 'fixture-no-clean-config';
+    const fieldSelectorDir = join(rootDir, 'field-selectors', fieldSelectorId);
+    mkdirSync(fieldSelectorDir, { recursive: true });
     tempDirs.push(rootDir);
 
-    const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-clean-no-config-'));
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-clean-no-config-'));
     tempDirs.push(outDir);
     const inputPath = join(outDir, 'source.docx');
     const extractGuidance = join(outDir, 'guidance.json');
@@ -335,10 +335,10 @@ describe('recipe commands', () => {
     process.env.OPEN_AGREEMENTS_CONTENT_ROOTS = rootDir;
 
     try {
-      await runRecipeClean({
+      await runFieldSelectorClean({
         input: inputPath,
         output: join(outDir, 'cleaned.docx'),
-        recipe: recipeId,
+        fieldSelector: fieldSelectorId,
         extractGuidance,
       });
     } finally {
@@ -358,8 +358,8 @@ describe('recipe commands', () => {
     );
   });
 
-  it('runRecipeClean reports cleaner errors', async () => {
-    const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-clean-error-'));
+  it('runFieldSelectorClean reports cleaner errors', async () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-clean-error-'));
     tempDirs.push(outDir);
     const inputPath = join(outDir, 'source.docx');
     writeFileSync(inputPath, Buffer.from('docx-bytes'));
@@ -371,10 +371,10 @@ describe('recipe commands', () => {
     }) as never);
 
     await expect(
-      runRecipeClean({
+      runFieldSelectorClean({
         input: inputPath,
         output: join(outDir, 'cleaned.docx'),
-        recipe: 'nvca-voting-agreement',
+        fieldSelector: 'nvca-voting-agreement',
       })
     ).rejects.toThrow('EXIT_1');
 
@@ -382,18 +382,18 @@ describe('recipe commands', () => {
     expect(errorSpy).toHaveBeenCalledWith('Error: clean failed');
   });
 
-  it('runRecipePatch invokes patchDocument with recipe replacements', async () => {
-    const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-patch-'));
+  it('runFieldSelectorPatch invokes patchDocument with fieldSelector replacements', async () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-patch-'));
     tempDirs.push(outDir);
     const inputPath = join(outDir, 'source.docx');
     writeFileSync(inputPath, Buffer.from('docx-bytes'));
 
     patchDocumentMock.mockResolvedValue({ outputPath: '', zeroMatchKeys: [] });
 
-    await runRecipePatch({
+    await runFieldSelectorPatch({
       input: inputPath,
       output: join(outDir, 'patched.docx'),
-      recipe: 'nvca-voting-agreement',
+      fieldSelector: 'nvca-voting-agreement',
     });
 
     expect(patchDocumentMock).toHaveBeenCalledTimes(1);
@@ -402,8 +402,8 @@ describe('recipe commands', () => {
     expect(patchDocumentMock.mock.calls[0][2]).toEqual(expect.any(Object));
   });
 
-  it('runRecipePatch reports patching errors', async () => {
-    const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-patch-error-'));
+  it('runFieldSelectorPatch reports patching errors', async () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-patch-error-'));
     tempDirs.push(outDir);
     const inputPath = join(outDir, 'source.docx');
     writeFileSync(inputPath, Buffer.from('docx-bytes'));
@@ -415,10 +415,10 @@ describe('recipe commands', () => {
     }) as never);
 
     await expect(
-      runRecipePatch({
+      runFieldSelectorPatch({
         input: inputPath,
         output: join(outDir, 'patched.docx'),
-        recipe: 'nvca-voting-agreement',
+        fieldSelector: 'nvca-voting-agreement',
       })
     ).rejects.toThrow('EXIT_1');
 

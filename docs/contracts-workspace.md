@@ -15,7 +15,7 @@ The contracts workspace CLI is a separate package focused on filesystem-based co
 
 ## Why Separate from `open-agreements`
 
-`open-agreements` is optimized for template/recipe filling. The workspace CLI handles repository-level workflows:
+`open-agreements` is optimized for template/field-selector filling. The workspace CLI handles repository-level workflows:
 
 - topic-first structure planning/suggestions
 - forms catalog validation/download (URL + checksum)

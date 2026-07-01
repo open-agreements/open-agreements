@@ -1,8 +1,8 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { loadRecipeMetadata, loadCleanConfig, loadNormalizeConfig } from '../metadata.js';
+import { loadFieldSelectorMetadata, loadCleanConfig, loadNormalizeConfig } from '../metadata.js';
 import { loadSelectionsConfig } from '../selector.js';
-import { resolveRecipeDir } from '../../utils/paths.js';
+import { resolveFieldSelectorDir } from '../../utils/paths.js';
 import { verifyOutput, extractAllText } from './verifier.js';
 import { extractSearchText } from './replacement-keys.js';
 import { loadSelectorContracts, evaluatePostconditions } from '../selectors/index.js';
@@ -16,7 +16,7 @@ import {
 } from './computed.js';
 import { normalizeBracketArtifacts } from './bracket-normalizer.js';
 import { runFillPipeline } from '../unified-pipeline.js';
-import type { RecipeRunOptions, RecipeRunResult } from './types.js';
+import type { FieldSelectorRunOptions, FieldSelectorRunResult } from './types.js';
 import type { ComputedValueMap } from './computed.js';
 
 function toComputedValueMap(values: Record<string, unknown>): ComputedValueMap {
@@ -34,28 +34,28 @@ function toComputedValueMap(values: Record<string, unknown>): ComputedValueMap {
 }
 
 /**
- * Run the full recipe pipeline: clean → patch → fill → verify.
+ * Run the full fieldSelector pipeline: clean → patch → fill → verify.
  * If no inputPath is provided, auto-downloads the source document from source_url.
  */
-export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunResult> {
-  const { recipeId, outputPath, values, keepIntermediate, computedOutPath } = options;
-  const recipeDir = resolveRecipeDir(recipeId);
+export async function runFieldSelector(options: FieldSelectorRunOptions): Promise<FieldSelectorRunResult> {
+  const { fieldSelectorId, outputPath, values, keepIntermediate, computedOutPath } = options;
+  const fieldSelectorDir = resolveFieldSelectorDir(fieldSelectorId);
 
-  const metadata = loadRecipeMetadata(recipeDir);
-  const cleanConfig = loadCleanConfig(recipeDir);
-  const normalizeConfig = loadNormalizeConfig(recipeDir);
+  const metadata = loadFieldSelectorMetadata(fieldSelectorDir);
+  const cleanConfig = loadCleanConfig(fieldSelectorDir);
+  const normalizeConfig = loadNormalizeConfig(fieldSelectorDir);
 
   // Load selectionsConfig if selections.json exists (mirrors engine.ts template path)
-  const selectionsPath = join(recipeDir, 'selections.json');
+  const selectionsPath = join(fieldSelectorDir, 'selections.json');
   const selectionsConfig = existsSync(selectionsPath)
     ? loadSelectionsConfig(selectionsPath)
     : undefined;
 
   // Resolve input: explicit path or auto-download
-  const inputPath = options.inputPath ?? await ensureSourceDocx(recipeId, metadata);
+  const inputPath = options.inputPath ?? await ensureSourceDocx(fieldSelectorId, metadata);
 
   // Load replacements.json
-  const replacementsPath = join(recipeDir, 'replacements.json');
+  const replacementsPath = join(fieldSelectorDir, 'replacements.json');
   const replacements: Record<string, string | { value: string; format?: Record<string, unknown> }> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
   const replacementFieldNames = new Set<string>();
   for (const rawReplacement of Object.values(replacements)) {
@@ -70,7 +70,7 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
   // keys the selector engine owns. Those are removed from the dict handed to
   // the legacy patcher only; the verifier still receives the FULL key set.
   const metadataFieldNames = metadata.fields.map((f) => f.name);
-  const { manifests: selectorManifests, templateManifest } = loadSelectorContracts(recipeDir, metadataFieldNames);
+  const { manifests: selectorManifests, templateManifest } = loadSelectorContracts(fieldSelectorDir, metadataFieldNames);
   const migratedKeys = new Set(templateManifest?.migrated_keys ?? []);
   const patchReplacements: typeof replacements = {};
   for (const [key, value] of Object.entries(replacements)) {
@@ -92,7 +92,7 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
 
   const inputValues = { ...values };
   const computedInputValues = toComputedValueMap(inputValues);
-  const computedProfile = loadComputedProfile(recipeDir);
+  const computedProfile = loadComputedProfile(fieldSelectorDir);
   const computedEvaluation = computedProfile
     ? evaluateComputedProfile(computedProfile, computedInputValues)
     : null;
@@ -111,12 +111,12 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
   }
   const computedArtifact = computedEvaluation && computedProfile
     ? buildComputedArtifact({
-      recipeId,
+      fieldSelectorId,
       inputValues: computedInputValues,
       evaluated: computedEvaluation,
       profileVersion: computedProfile.version,
     })
-    : (computedOutPath ? buildPassthroughArtifact({ recipeId, inputValues: computedInputValues }) : undefined);
+    : (computedOutPath ? buildPassthroughArtifact({ fieldSelectorId, inputValues: computedInputValues }) : undefined);
 
   if (computedOutPath && computedArtifact) {
     writeComputedArtifact(computedOutPath, computedArtifact);
@@ -183,8 +183,8 @@ export { patchDocument } from './patcher.js';
 export type { PatchResult } from './patcher.js';
 export { verifyOutput, normalizeText, extractAllText, countFormattingAnomalies } from './verifier.js';
 export { ensureSourceDocx } from './downloader.js';
-export { checkRecipeSourceDrift, checkSelectorDrift, computeSourceStructureSignature } from './source-drift.js';
+export { checkFieldSelectorSourceDrift, checkSelectorDrift, computeSourceStructureSignature } from './source-drift.js';
 export { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 export type { OoxmlTextParts } from './ooxml-parts.js';
-export type { RecipeRunOptions, RecipeRunResult, VerifyResult, VerifyCheck } from './types.js';
+export type { FieldSelectorRunOptions, FieldSelectorRunResult, VerifyResult, VerifyCheck } from './types.js';
 export type { ComputedArtifact, ComputedProfile } from './computed.js';

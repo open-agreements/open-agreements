@@ -6,7 +6,7 @@ description: >-
 source_url: https://nvca.org/wp-content/uploads/2024/10/NVCA-Model-VA-10-1-2025.docx
 source_version: 10-1-2025
 license_note: >-
-  NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation
+  NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation
   instructions, not the source document.
 source_sha256: 3496d7ae9343d1b5b7db13239313c6512e7e0d68d13273538c4dbf06416a5f0d
 optional: false

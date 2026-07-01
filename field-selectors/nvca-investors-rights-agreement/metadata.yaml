@@ -6,7 +6,7 @@ description: >-
 source_url: https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-IRA-10-1-2025-2-1.docx
 source_version: 10-1-2025
 license_note: >-
-  NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation
+  NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation
   instructions, not the source document.
 source_sha256: be8ad13f171a343bdb53716b1d318689ae3477cdf7f1986b2e3985e1cabbd08a
 optional: false

@@ -1,13 +1,13 @@
 import { readdirSync, existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { validateRecipeMetadata, loadRecipeMetadata } from '../metadata.js';
+import { validateFieldSelectorMetadata, loadFieldSelectorMetadata } from '../metadata.js';
 import { CleanConfigSchema } from '../metadata.js';
 import { NormalizeConfigSchema } from '../metadata.js';
-import { parseReplacementKey } from '../recipe/replacement-keys.js';
-import { ComputedProfileSchema } from '../recipe/computed.js';
+import { parseReplacementKey } from '../field-selector/replacement-keys.js';
+import { ComputedProfileSchema } from '../field-selector/computed.js';
 
-export interface RecipeValidationResult {
-  recipeId: string;
+export interface FieldSelectorValidationResult {
+  fieldSelectorId: string;
   valid: boolean;
   scaffold: boolean;
   errors: string[];
@@ -22,41 +22,41 @@ const ANY_BRACE_RE = /\{[^}]+\}/g;
 const SAFE_TAG_RE = /^\{[a-z_][a-z0-9_]*\}$/;
 
 /**
- * Validate a recipe directory:
+ * Validate a fieldSelector directory:
  * - No .docx files (copyrighted content must not be committed)
  * - metadata.yaml validates against schema
- * - For non-scaffold recipes: replacements.json present and valid
+ * - For non-scaffold fieldSelectors: replacements.json present and valid
  * - Replacement values must be valid {identifier} tags
  * - In strict mode: scaffolds are errors, all files required
  */
-export function validateRecipe(
-  recipeDir: string,
-  recipeId: string,
+export function validateFieldSelector(
+  fieldSelectorDir: string,
+  fieldSelectorId: string,
   options?: { strict?: boolean }
-): RecipeValidationResult {
+): FieldSelectorValidationResult {
   const errors: string[] = [];
   const warnings: string[] = [];
   const strict = options?.strict ?? false;
 
-  // Check for .docx files (forbidden in recipe dirs)
-  const files = readdirSync(recipeDir);
+  // Check for .docx files (forbidden in fieldSelector dirs)
+  const files = readdirSync(fieldSelectorDir);
   const docxFiles = files.filter((f) => f.toLowerCase().endsWith('.docx'));
   if (docxFiles.length > 0) {
-    errors.push(`Copyrighted .docx file(s) found: ${docxFiles.join(', ')}. Recipes must not contain source documents.`);
+    errors.push(`Copyrighted .docx file(s) found: ${docxFiles.join(', ')}. FieldSelectors must not contain source documents.`);
   }
 
   // Validate metadata
-  const metaResult = validateRecipeMetadata(recipeDir);
+  const metaResult = validateFieldSelectorMetadata(fieldSelectorDir);
   if (!metaResult.valid) {
     errors.push(...metaResult.errors.map((e) => `metadata: ${e}`));
-    return { recipeId, valid: false, scaffold: false, errors, warnings };
+    return { fieldSelectorId, valid: false, scaffold: false, errors, warnings };
   }
 
   // Scaffold detection: if only metadata.yaml exists, this is a scaffold
-  const metadata = loadRecipeMetadata(recipeDir);
+  const metadata = loadFieldSelectorMetadata(fieldSelectorDir);
   const metadataFieldNames = new Set(metadata.fields.map((field) => field.name));
-  const computedPath = join(recipeDir, 'computed.json');
-  const hasReplacements = existsSync(join(recipeDir, 'replacements.json'));
+  const computedPath = join(fieldSelectorDir, 'computed.json');
+  const hasReplacements = existsSync(join(fieldSelectorDir, 'replacements.json'));
   const isScaffold = !hasReplacements;
 
   // Validate computed.json if present
@@ -98,16 +98,16 @@ export function validateRecipe(
 
   if (isScaffold) {
     if (strict) {
-      errors.push('Scaffold recipe (metadata-only): not runnable. Use non-strict mode to allow scaffolds.');
+      errors.push('Scaffold fieldSelector (metadata-only): not runnable. Use non-strict mode to allow scaffolds.');
     } else {
-      warnings.push('Scaffold recipe (metadata-only): not runnable');
+      warnings.push('Scaffold fieldSelector (metadata-only): not runnable');
     }
-    return { recipeId, valid: errors.length === 0, scaffold: true, errors, warnings };
+    return { fieldSelectorId, valid: errors.length === 0, scaffold: true, errors, warnings };
   }
 
-  // Validate replacements.json for runnable recipes.
+  // Validate replacements.json for runnable fieldSelectors.
   try {
-    const raw = readFileSync(join(recipeDir, 'replacements.json'), 'utf-8');
+    const raw = readFileSync(join(fieldSelectorDir, 'replacements.json'), 'utf-8');
     const replacements = JSON.parse(raw);
     if (typeof replacements !== 'object' || replacements === null) {
       errors.push('replacements.json must be a JSON object');
@@ -172,7 +172,7 @@ export function validateRecipe(
   }
 
   // Validate clean.json if present
-  const cleanPath = join(recipeDir, 'clean.json');
+  const cleanPath = join(fieldSelectorDir, 'clean.json');
   if (existsSync(cleanPath)) {
     try {
       const raw = readFileSync(cleanPath, 'utf-8');
@@ -183,7 +183,7 @@ export function validateRecipe(
   }
 
   // Validate normalize.json if present
-  const normalizePath = join(recipeDir, 'normalize.json');
+  const normalizePath = join(fieldSelectorDir, 'normalize.json');
   if (existsSync(normalizePath)) {
     try {
       const raw = readFileSync(normalizePath, 'utf-8');
@@ -198,5 +198,5 @@ export function validateRecipe(
     warnings.push('No source_sha256 in metadata — fill will skip integrity verification');
   }
 
-  return { recipeId, valid: errors.length === 0, scaffold: false, errors, warnings };
+  return { fieldSelectorId, valid: errors.length === 0, scaffold: false, errors, warnings };
 }

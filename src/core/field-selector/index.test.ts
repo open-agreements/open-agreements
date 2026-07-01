@@ -18,17 +18,17 @@ afterEach(() => {
   vi.resetModules();
 });
 
-function createRecipeFixture(options?: { computedProfile?: unknown; normalizeConfig?: unknown }) {
-  const root = mkdtempSync(join(tmpdir(), 'oa-recipe-index-'));
+function createFieldSelectorFixture(options?: { computedProfile?: unknown; normalizeConfig?: unknown }) {
+  const root = mkdtempSync(join(tmpdir(), 'oa-field-selector-index-'));
   tempDirs.push(root);
 
   writeFileSync(
     join(root, 'metadata.yaml'),
     [
-      'name: Fixture Recipe',
+      'name: Fixture FieldSelector',
       'source_url: https://example.com/source.docx',
       'source_version: "1.0"',
-      'license_note: Example recipe license',
+      'license_note: Example fieldSelector license',
       'fields:',
       '  - name: company_name',
       '    type: string',
@@ -65,9 +65,9 @@ function createRecipeFixture(options?: { computedProfile?: unknown; normalizeCon
   return root;
 }
 
-describe('runRecipe', () => {
+describe('runFieldSelector', () => {
   itFilling('forwards priorityFieldNames when inputPath is supplied', async () => {
-    const recipeDir = createRecipeFixture();
+    const fieldSelectorDir = createFieldSelectorFixture();
 
     const runFillPipelineMock = vi.fn(async ({ outputPath }: { outputPath: string }) => ({
       outputPath,
@@ -80,23 +80,23 @@ describe('runRecipe', () => {
     }));
 
     vi.doMock('../../utils/paths.js', () => ({
-      resolveRecipeDir: () => recipeDir,
+      resolveFieldSelectorDir: () => fieldSelectorDir,
     }));
 
     vi.doMock('../unified-pipeline.js', () => ({
       runFillPipeline: runFillPipelineMock,
     }));
 
-    const { runRecipe } = await import('./index.js');
+    const { runFieldSelector } = await import('./index.js');
 
-    const result = await runRecipe({
-      recipeId: 'fixture-recipe',
+    const result = await runFieldSelector({
+      fieldSelectorId: 'fixture-fieldSelector',
       inputPath: '/tmp/input.docx',
       outputPath: '/tmp/output.docx',
       values: { company_name: 'Acme Corp' },
     });
 
-    await allureJsonAttachment('runRecipe-forwarding.json', {
+    await allureJsonAttachment('runFieldSelector-forwarding.json', {
       pipelineCall: runFillPipelineMock.mock.calls[0]?.[0],
       result,
     });
@@ -144,8 +144,8 @@ describe('runRecipe', () => {
         },
       ],
     };
-    const recipeDir = createRecipeFixture({ computedProfile });
-    const computedOutPath = join(recipeDir, 'computed-output.json');
+    const fieldSelectorDir = createFieldSelectorFixture({ computedProfile });
+    const computedOutPath = join(fieldSelectorDir, 'computed-output.json');
 
     const runFillPipelineMock = vi.fn(async ({ outputPath }: { outputPath: string }) => ({
       outputPath,
@@ -158,17 +158,17 @@ describe('runRecipe', () => {
     }));
 
     vi.doMock('../../utils/paths.js', () => ({
-      resolveRecipeDir: () => recipeDir,
+      resolveFieldSelectorDir: () => fieldSelectorDir,
     }));
 
     vi.doMock('../unified-pipeline.js', () => ({
       runFillPipeline: runFillPipelineMock,
     }));
 
-    const { runRecipe } = await import('./index.js');
+    const { runFieldSelector } = await import('./index.js');
 
-    const result = await runRecipe({
-      recipeId: 'fixture-recipe',
+    const result = await runFieldSelector({
+      fieldSelectorId: 'fixture-fieldSelector',
       inputPath: '/tmp/input.docx',
       outputPath: '/tmp/output.docx',
       values: {
@@ -180,7 +180,7 @@ describe('runRecipe', () => {
     });
 
     const artifact = JSON.parse(readFileSync(computedOutPath, 'utf-8')) as Record<string, unknown>;
-    await allureJsonAttachment('runRecipe-computed-artifact.json', artifact);
+    await allureJsonAttachment('runFieldSelector-computed-artifact.json', artifact);
 
     expect(runFillPipelineMock).toHaveBeenCalledTimes(1);
     expect(runFillPipelineMock.mock.calls[0][0]).toMatchObject({
@@ -193,7 +193,7 @@ describe('runRecipe', () => {
     });
 
     expect(artifact).toMatchObject({
-      recipe_id: 'fixture-recipe',
+      field_selector_id: 'fixture-fieldSelector',
       profile_present: true,
       derived_audit_values: {
         dispute_resolution_track: 'courts',
@@ -209,7 +209,7 @@ describe('runRecipe', () => {
   });
 
   itFilling('uses downloader path when inputPath is omitted', async () => {
-    const recipeDir = createRecipeFixture();
+    const fieldSelectorDir = createFieldSelectorFixture();
     const ensureSourceDocxMock = vi.fn(async () => '/tmp/downloaded-source.docx');
 
     const runFillPipelineMock = vi.fn(async ({ outputPath }: { outputPath: string }) => ({
@@ -223,7 +223,7 @@ describe('runRecipe', () => {
     }));
 
     vi.doMock('../../utils/paths.js', () => ({
-      resolveRecipeDir: () => recipeDir,
+      resolveFieldSelectorDir: () => fieldSelectorDir,
     }));
 
     vi.doMock('./downloader.js', () => ({
@@ -234,22 +234,22 @@ describe('runRecipe', () => {
       runFillPipeline: runFillPipelineMock,
     }));
 
-    const { runRecipe } = await import('./index.js');
+    const { runFieldSelector } = await import('./index.js');
 
-    await runRecipe({
-      recipeId: 'fixture-recipe',
+    await runFieldSelector({
+      fieldSelectorId: 'fixture-fieldSelector',
       outputPath: '/tmp/output.docx',
       values: { company_name: 'Acme Corp' },
     });
 
-    expect(ensureSourceDocxMock).toHaveBeenCalledWith('fixture-recipe', expect.any(Object));
+    expect(ensureSourceDocxMock).toHaveBeenCalledWith('fixture-fieldSelector', expect.any(Object));
     expect(runFillPipelineMock.mock.calls[0][0]).toMatchObject({
       inputPath: '/tmp/downloaded-source.docx',
     });
   });
 
   itFilling('loads normalize.json rules and passes field values into post-process normalization', async () => {
-    const recipeDir = createRecipeFixture({
+    const fieldSelectorDir = createFieldSelectorFixture({
       normalizeConfig: {
         paragraph_rules: [
           {
@@ -289,7 +289,7 @@ describe('runRecipe', () => {
     });
 
     vi.doMock('../../utils/paths.js', () => ({
-      resolveRecipeDir: () => recipeDir,
+      resolveFieldSelectorDir: () => fieldSelectorDir,
     }));
 
     vi.doMock('./bracket-normalizer.js', () => ({
@@ -300,10 +300,10 @@ describe('runRecipe', () => {
       runFillPipeline: runFillPipelineMock,
     }));
 
-    const { runRecipe } = await import('./index.js');
+    const { runFieldSelector } = await import('./index.js');
 
-    await runRecipe({
-      recipeId: 'fixture-recipe',
+    await runFieldSelector({
+      fieldSelectorId: 'fixture-fieldSelector',
       inputPath: '/tmp/input.docx',
       outputPath: '/tmp/output.docx',
       values: { company_name: 'Acme Corp', company_counsel_name: 'Cooley LLP' },

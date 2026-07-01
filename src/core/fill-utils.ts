@@ -1,11 +1,11 @@
 /**
- * Shared utilities for the fill stage of all pipelines (template, recipe, external).
+ * Shared utilities for the fill stage of all pipelines (template, fieldSelector, external).
  */
 
 import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
-import { enumerateTextParts, getGeneralTextPartNames } from './recipe/ooxml-parts.js';
-import type { VerifyResult } from './recipe/types.js';
+import { enumerateTextParts, getGeneralTextPartNames } from './field-selector/ooxml-parts.js';
+import type { VerifyResult } from './field-selector/types.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 

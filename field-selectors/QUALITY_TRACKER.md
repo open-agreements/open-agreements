@@ -1,11 +1,11 @@
-# NVCA Recipe Quality Tracker
+# NVCA Field-selector Quality Tracker
 
-Tracks quality audit scores and maturity tiers for all 7 NVCA recipes.
-Updated by the `recipe-quality-audit` skill after each audit.
+Tracks quality audit scores and maturity tiers for all 7 NVCA field-selectors.
+Updated by the `field-selector-quality-audit` skill after each audit.
 
 ## Scorecard
 
-| Recipe | S | B | F | Total | Tier | Fixture | Last Audit |
+| Field-selector | S | B | F | Total | Tier | Fixture | Last Audit |
 |--------|---|---|---|-------|------|---------|------------|
 | nvca-stock-purchase-agreement | 7/7 | 4/4 | 4/4 | 15/15 | production | spa-*.json | 2026-03-15 |
 | nvca-certificate-of-incorporation | 6/7 | 3/4 | 2/4 | 11/15 | beta | coi-imim-series-c.json | 2026-03-15 |

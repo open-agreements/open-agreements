@@ -3,9 +3,9 @@ import { spawnSync } from 'node:child_process';
 import { homedir, tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect } from 'vitest';
-import { loadRecipeMetadata } from '../src/core/metadata.js';
-import { runRecipe } from '../src/core/recipe/index.js';
-import { resolveRecipeDir } from '../src/utils/paths.js';
+import { loadFieldSelectorMetadata } from '../src/core/metadata.js';
+import { runFieldSelector } from '../src/core/field-selector/index.js';
+import { resolveFieldSelectorDir } from '../src/utils/paths.js';
 import {
   allureImageAttachment,
   allureJsonAttachment,
@@ -21,7 +21,7 @@ interface MetadataField {
   options?: string[];
 }
 
-interface RecipeMetadataDocument {
+interface FieldSelectorMetadataDocument {
   fields: MetadataField[];
 }
 
@@ -41,9 +41,9 @@ interface RenderSummary {
   };
 }
 
-const RECIPE_ID = 'nvca-stock-purchase-agreement';
-const RECIPE_DIR = resolveRecipeDir(RECIPE_ID);
-const SOURCE_CACHE_PATH = join(homedir(), '.open-agreements', 'cache', RECIPE_ID, 'source.docx');
+const FIELD_SELECTOR_ID = 'nvca-stock-purchase-agreement';
+const FIELD_SELECTOR_DIR = resolveFieldSelectorDir(FIELD_SELECTOR_ID);
+const SOURCE_CACHE_PATH = join(homedir(), '.open-agreements', 'cache', FIELD_SELECTOR_ID, 'source.docx');
 const LIBREOFFICE_CHECK_SCRIPT = join(import.meta.dirname, '..', 'scripts', 'check_libreoffice_headless.mjs');
 
 // This test requires a cached NVCA source DOCX and LibreOffice — skip in CI
@@ -60,11 +60,11 @@ const RENDER_PREVIEW_TIMEOUT_MS = 60_000;
 
 describe.skipIf(!hasPrereqs)('NVCA rendered preview evidence', () => {
   it('attaches rendered NVCA pages as PNG evidence for human review', async () => {
-    await allureParameter('recipe_id', RECIPE_ID);
+    await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
     await allureParameter('evidence_renderer', 'libreoffice+pdftoppm');
 
-    const metadata = await allureStep('Load NVCA recipe metadata', () =>
-      loadRecipeMetadata(RECIPE_DIR) as RecipeMetadataDocument,
+    const metadata = await allureStep('Load NVCA fieldSelector metadata', () =>
+      loadFieldSelectorMetadata(FIELD_SELECTOR_DIR) as FieldSelectorMetadataDocument,
     );
 
     await allureStep('Assert cached NVCA source exists for deterministic visual run', () => {
@@ -110,8 +110,8 @@ describe.skipIf(!hasPrereqs)('NVCA rendered preview evidence', () => {
 
     try {
       await allureStep('Render NVCA stock purchase agreement using cached source', async () => {
-        await runRecipe({
-          recipeId: RECIPE_ID,
+        await runFieldSelector({
+          fieldSelectorId: FIELD_SELECTOR_ID,
           inputPath: SOURCE_CACHE_PATH,
           outputPath: outputDocxPath,
           values,

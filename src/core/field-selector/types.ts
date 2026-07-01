@@ -1,8 +1,8 @@
-import type { RecipeMetadata } from '../metadata.js';
+import type { FieldSelectorMetadata } from '../metadata.js';
 import type { ComputedArtifact } from './computed.js';
 
-export interface RecipeRunOptions {
-  recipeId: string;
+export interface FieldSelectorRunOptions {
+  fieldSelectorId: string;
   inputPath?: string;
   outputPath: string;
   values: Record<string, unknown>;
@@ -11,9 +11,9 @@ export interface RecipeRunOptions {
   normalizeBracketArtifacts?: boolean;
 }
 
-export interface RecipeRunResult {
+export interface FieldSelectorRunResult {
   outputPath: string;
-  metadata: RecipeMetadata;
+  metadata: FieldSelectorMetadata;
   fieldsUsed: string[];
   stages: {
     clean: string;

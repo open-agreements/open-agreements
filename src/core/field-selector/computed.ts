@@ -90,7 +90,7 @@ export interface ComputedPassTrace {
 }
 
 export interface ComputedArtifact {
-  recipe_id: string;
+  field_selector_id: string;
   generated_at: string;
   profile_present: boolean;
   profile_version: string | null;
@@ -188,8 +188,8 @@ function computeDerivedValues(initialValues: ComputedValueMap, finalValues: Comp
   return result;
 }
 
-export function loadComputedProfile(recipeDir: string): ComputedProfile | null {
-  const computedPath = join(recipeDir, 'computed.json');
+export function loadComputedProfile(fieldSelectorDir: string): ComputedProfile | null {
+  const computedPath = join(fieldSelectorDir, 'computed.json');
   if (!existsSync(computedPath)) {
     return null;
   }
@@ -279,14 +279,14 @@ export function evaluateComputedProfile(
 }
 
 export function buildComputedArtifact(args: {
-  recipeId: string;
+  fieldSelectorId: string;
   inputValues: ComputedValueMap;
   evaluated: EvaluatedComputedProfile;
   profileVersion: string;
 }): ComputedArtifact {
-  const { recipeId, inputValues, evaluated, profileVersion } = args;
+  const { fieldSelectorId, inputValues, evaluated, profileVersion } = args;
   return {
-    recipe_id: recipeId,
+    field_selector_id: fieldSelectorId,
     generated_at: new Date().toISOString(),
     profile_present: true,
     profile_version: profileVersion,
@@ -302,11 +302,11 @@ export function buildComputedArtifact(args: {
 }
 
 export function buildPassthroughArtifact(args: {
-  recipeId: string;
+  fieldSelectorId: string;
   inputValues: ComputedValueMap;
 }): ComputedArtifact {
   return {
-    recipe_id: args.recipeId,
+    field_selector_id: args.fieldSelectorId,
     generated_at: new Date().toISOString(),
     profile_present: false,
     profile_version: null,

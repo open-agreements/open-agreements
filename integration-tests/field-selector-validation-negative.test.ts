@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { afterEach, describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
-import { validateRecipe } from '../src/core/validation/recipe.js';
+import { validateFieldSelector } from '../src/core/validation/field-selector.js';
 
 const tempDirs: string[] = [];
 const it = itAllure.epic('Compliance & Governance');
@@ -14,11 +14,11 @@ afterEach(() => {
   }
 });
 
-function writeMetadata(recipeDir: string): void {
+function writeMetadata(fieldSelectorDir: string): void {
   writeFileSync(
-    join(recipeDir, 'metadata.yaml'),
+    join(fieldSelectorDir, 'metadata.yaml'),
     [
-      'name: Fixture Recipe',
+      'name: Fixture FieldSelector',
       'source_url: https://example.com/source.docx',
       'source_version: "1.0"',
       'license_note: Fixture license note',
@@ -34,94 +34,94 @@ function writeMetadata(recipeDir: string): void {
   );
 }
 
-describe('validateRecipe negative scenarios', () => {
+describe('validateFieldSelector negative scenarios', () => {
   it('fails when metadata.yaml is invalid', () => {
-    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-invalid-metadata-'));
-    tempDirs.push(recipeDir);
-    writeFileSync(join(recipeDir, 'metadata.yaml'), 'name: Broken Recipe', 'utf-8');
+    const fieldSelectorDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-invalid-metadata-'));
+    tempDirs.push(fieldSelectorDir);
+    writeFileSync(join(fieldSelectorDir, 'metadata.yaml'), 'name: Broken FieldSelector', 'utf-8');
 
-    const result = validateRecipe(recipeDir, 'fixture-recipe');
+    const result = validateFieldSelector(fieldSelectorDir, 'fixture-fieldSelector');
 
     expect(result.valid).toBe(false);
     expect(result.errors.join(' ')).toContain('metadata:');
   });
 
-  it('treats metadata-only recipes as strict-mode errors', () => {
-    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-strict-scaffold-'));
-    tempDirs.push(recipeDir);
-    writeMetadata(recipeDir);
+  it('treats metadata-only fieldSelectors as strict-mode errors', () => {
+    const fieldSelectorDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-strict-scaffold-'));
+    tempDirs.push(fieldSelectorDir);
+    writeMetadata(fieldSelectorDir);
 
-    const result = validateRecipe(recipeDir, 'fixture-recipe', { strict: true });
+    const result = validateFieldSelector(fieldSelectorDir, 'fixture-fieldSelector', { strict: true });
 
     expect(result.valid).toBe(false);
     expect(result.scaffold).toBe(true);
-    expect(result.errors.join(' ')).toContain('Scaffold recipe (metadata-only): not runnable');
+    expect(result.errors.join(' ')).toContain('Scaffold fieldSelector (metadata-only): not runnable');
   });
 
-  it('rejects committed DOCX files in recipe directories', () => {
-    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-docx-'));
-    tempDirs.push(recipeDir);
+  it('rejects committed DOCX files in fieldSelector directories', () => {
+    const fieldSelectorDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-docx-'));
+    tempDirs.push(fieldSelectorDir);
 
-    writeMetadata(recipeDir);
-    writeFileSync(join(recipeDir, 'template.docx'), Buffer.from('fake-docx'));
+    writeMetadata(fieldSelectorDir);
+    writeFileSync(join(fieldSelectorDir, 'template.docx'), Buffer.from('fake-docx'));
 
-    const result = validateRecipe(recipeDir, 'fixture-recipe');
+    const result = validateFieldSelector(fieldSelectorDir, 'fixture-fieldSelector');
     expect(result.valid).toBe(false);
     expect(result.errors.join(' ')).toContain('Copyrighted .docx file(s) found');
   });
 
   it('warns when replacement targets are not in metadata fields', () => {
-    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-schema-'));
-    tempDirs.push(recipeDir);
+    const fieldSelectorDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-schema-'));
+    tempDirs.push(fieldSelectorDir);
 
-    writeMetadata(recipeDir);
+    writeMetadata(fieldSelectorDir);
     writeFileSync(
-      join(recipeDir, 'replacements.json'),
+      join(fieldSelectorDir, 'replacements.json'),
       JSON.stringify({ '[Company Name]': '{company_name_missing}' }, null, 2),
       'utf-8'
     );
 
-    const result = validateRecipe(recipeDir, 'fixture-recipe');
+    const result = validateFieldSelector(fieldSelectorDir, 'fixture-fieldSelector');
     expect(result.valid).toBe(true);
     expect(result.warnings.join(' ')).toContain('Replacement target {company_name_missing} not found in metadata fields');
   });
 
   it('rejects unsafe non-identifier replacement tags', () => {
-    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-unsafe-tag-'));
-    tempDirs.push(recipeDir);
+    const fieldSelectorDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-unsafe-tag-'));
+    tempDirs.push(fieldSelectorDir);
 
-    writeMetadata(recipeDir);
+    writeMetadata(fieldSelectorDir);
     writeFileSync(
-      join(recipeDir, 'replacements.json'),
+      join(fieldSelectorDir, 'replacements.json'),
       JSON.stringify({ '[Company Name]': '{#if hacked}' }, null, 2),
       'utf-8'
     );
 
-    const result = validateRecipe(recipeDir, 'fixture-recipe');
+    const result = validateFieldSelector(fieldSelectorDir, 'fixture-fieldSelector');
     expect(result.valid).toBe(false);
     expect(result.errors.join(' ')).toContain('unsafe tag');
   });
 
   it('rejects replacements.json when it is not a JSON object', () => {
-    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-replacements-object-'));
-    tempDirs.push(recipeDir);
+    const fieldSelectorDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-replacements-object-'));
+    tempDirs.push(fieldSelectorDir);
 
-    writeMetadata(recipeDir);
-    writeFileSync(join(recipeDir, 'replacements.json'), '1', 'utf-8');
+    writeMetadata(fieldSelectorDir);
+    writeFileSync(join(fieldSelectorDir, 'replacements.json'), '1', 'utf-8');
 
-    const result = validateRecipe(recipeDir, 'fixture-recipe');
+    const result = validateFieldSelector(fieldSelectorDir, 'fixture-fieldSelector');
 
     expect(result.valid).toBe(false);
     expect(result.errors.join(' ')).toContain('replacements.json must be a JSON object');
   });
 
   it('rejects replacement value shape and infinite loop patterns', () => {
-    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-replacement-shape-'));
-    tempDirs.push(recipeDir);
+    const fieldSelectorDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-replacement-shape-'));
+    tempDirs.push(fieldSelectorDir);
 
-    writeMetadata(recipeDir);
+    writeMetadata(fieldSelectorDir);
     writeFileSync(
-      join(recipeDir, 'replacements.json'),
+      join(fieldSelectorDir, 'replacements.json'),
       JSON.stringify(
         {
           '[Not String]': 123,
@@ -135,7 +135,7 @@ describe('validateRecipe negative scenarios', () => {
       'utf-8'
     );
 
-    const result = validateRecipe(recipeDir, 'fixture-recipe');
+    const result = validateFieldSelector(fieldSelectorDir, 'fixture-fieldSelector');
 
     expect(result.valid).toBe(false);
     expect(result.errors.join(' ')).toContain('value for "[Not String]" must be a string');
@@ -145,30 +145,30 @@ describe('validateRecipe negative scenarios', () => {
   });
 
   it('rejects replacements.json parse failures', () => {
-    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-replacements-parse-'));
-    tempDirs.push(recipeDir);
+    const fieldSelectorDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-replacements-parse-'));
+    tempDirs.push(fieldSelectorDir);
 
-    writeMetadata(recipeDir);
-    writeFileSync(join(recipeDir, 'replacements.json'), '{invalid json', 'utf-8');
+    writeMetadata(fieldSelectorDir);
+    writeFileSync(join(fieldSelectorDir, 'replacements.json'), '{invalid json', 'utf-8');
 
-    const result = validateRecipe(recipeDir, 'fixture-recipe');
+    const result = validateFieldSelector(fieldSelectorDir, 'fixture-fieldSelector');
 
     expect(result.valid).toBe(false);
     expect(result.errors.join(' ')).toContain('replacements.json:');
   });
 
   it('rejects computed profiles with unsupported predicate operators', () => {
-    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-computed-op-'));
-    tempDirs.push(recipeDir);
+    const fieldSelectorDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-computed-op-'));
+    tempDirs.push(fieldSelectorDir);
 
-    writeMetadata(recipeDir);
+    writeMetadata(fieldSelectorDir);
     writeFileSync(
-      join(recipeDir, 'replacements.json'),
+      join(fieldSelectorDir, 'replacements.json'),
       JSON.stringify({ '[Company Name]': '{company_name}' }, null, 2),
       'utf-8'
     );
     writeFileSync(
-      join(recipeDir, 'computed.json'),
+      join(fieldSelectorDir, 'computed.json'),
       JSON.stringify(
         {
           version: '1.0',
@@ -186,23 +186,23 @@ describe('validateRecipe negative scenarios', () => {
       'utf-8'
     );
 
-    const result = validateRecipe(recipeDir, 'fixture-recipe');
+    const result = validateFieldSelector(fieldSelectorDir, 'fixture-fieldSelector');
     expect(result.valid).toBe(false);
     expect(result.errors.join(' ')).toContain('computed.json');
   });
 
   it('rejects invalid normalize.json configuration', () => {
-    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-normalize-'));
-    tempDirs.push(recipeDir);
+    const fieldSelectorDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-normalize-'));
+    tempDirs.push(fieldSelectorDir);
 
-    writeMetadata(recipeDir);
+    writeMetadata(fieldSelectorDir);
     writeFileSync(
-      join(recipeDir, 'replacements.json'),
+      join(fieldSelectorDir, 'replacements.json'),
       JSON.stringify({ '[Company Name]': '{company_name}' }, null, 2),
       'utf-8'
     );
     writeFileSync(
-      join(recipeDir, 'normalize.json'),
+      join(fieldSelectorDir, 'normalize.json'),
       JSON.stringify(
         {
           paragraph_rules: [
@@ -219,28 +219,28 @@ describe('validateRecipe negative scenarios', () => {
       'utf-8'
     );
 
-    const result = validateRecipe(recipeDir, 'fixture-recipe');
+    const result = validateFieldSelector(fieldSelectorDir, 'fixture-fieldSelector');
     expect(result.valid).toBe(false);
     expect(result.errors.join(' ')).toContain('normalize.json');
   });
 
   it('rejects invalid clean.json configuration', () => {
-    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-clean-invalid-'));
-    tempDirs.push(recipeDir);
+    const fieldSelectorDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-clean-invalid-'));
+    tempDirs.push(fieldSelectorDir);
 
-    writeMetadata(recipeDir);
+    writeMetadata(fieldSelectorDir);
     writeFileSync(
-      join(recipeDir, 'replacements.json'),
+      join(fieldSelectorDir, 'replacements.json'),
       JSON.stringify({ '[Company Name]': '{company_name}' }, null, 2),
       'utf-8'
     );
     writeFileSync(
-      join(recipeDir, 'clean.json'),
+      join(fieldSelectorDir, 'clean.json'),
       JSON.stringify({ removeFootnotes: 'invalid' }, null, 2),
       'utf-8'
     );
 
-    const result = validateRecipe(recipeDir, 'fixture-recipe');
+    const result = validateFieldSelector(fieldSelectorDir, 'fixture-fieldSelector');
 
     expect(result.valid).toBe(false);
     expect(result.errors.join(' ')).toContain('clean.json');

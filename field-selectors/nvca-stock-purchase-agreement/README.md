@@ -1,11 +1,11 @@
 # NVCA Model Stock Purchase Agreement
 
-Recipe for the NVCA Model Stock Purchase Agreement (version 10-28-2025).
+Field-selector for the NVCA Model Stock Purchase Agreement (version 10-28-2025).
 
 ## Source
 
 The source document is freely downloadable from [NVCA](https://nvca.org) but is
-not redistributable. This recipe contains only transformation instructions.
+not redistributable. This field-selector contains only transformation instructions.
 
 ## Interaction Audit Coverage
 

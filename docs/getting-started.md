@@ -88,15 +88,15 @@ Available employment templates:
 - `openagreements-employee-ip-inventions-assignment`
 - `openagreements-employment-confidentiality-acknowledgement`
 
-## Recipe-Driven Templates
+## Field-selector-Driven Templates
 
 Some templates (like NVCA Series A documents) are downloaded from official sources at runtime:
 
 ```bash
-open-agreements fill --recipe nvca-stock-purchase-agreement -d deal.json -o spa.docx
+open-agreements fill --field-selector nvca-stock-purchase-agreement -d deal.json -o spa.docx
 ```
 
-Recipes can include computed profiles that derive fill values automatically. Use `--computed-out computed.json` to capture the computed audit artifact.
+Field-selectors can include computed profiles that derive fill values automatically. Use `--computed-out computed.json` to capture the computed audit artifact.
 
 ## Validation
 

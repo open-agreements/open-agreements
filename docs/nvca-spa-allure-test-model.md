@@ -17,8 +17,8 @@ flowchart TB
     end
 
     subgraph VALIDATE["2. Static Validation Gates"]
-      V1[validateRecipeMetadata]
-      V2[validateRecipe]
+      V1[validateFieldSelectorMetadata]
+      V2[validateFieldSelector]
       V3[computed.json schema validation if present]
       V4[mapping integrity checks<br/>required fields vs replacement targets]
     end
@@ -92,21 +92,21 @@ flowchart LR
     GOLDEN --> CONF
 ```
 
-## Sequence: `recipe run --computed-out`
+## Sequence: `field-selector run --computed-out`
 
 ```mermaid
 sequenceDiagram
     actor User
-    participant CLI as open-agreements recipe run
-    participant Runtime as runRecipe
+    participant CLI as open-agreements field-selector run
+    participant Runtime as runFieldSelector
     participant CP as Computed evaluator
     participant Pipeline as clean/patch/fill pipeline
     participant Verifier as verifyOutput
     participant FS as Filesystem
     participant Allure as NVCA tests + Allure
 
-    User->>CLI: recipe run nvca-stock-purchase-agreement --data values.json --computed-out computed.json
-    CLI->>Runtime: runRecipe(options)
+    User->>CLI: field-selector run nvca-stock-purchase-agreement --data values.json --computed-out computed.json
+    CLI->>Runtime: runFieldSelector(options)
     Runtime->>FS: load metadata.yaml, clean.json, replacements.json
     Runtime->>FS: load computed.json if present
 

@@ -1,14 +1,14 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join } from 'node:path';
-import { loadRecipeMetadata, loadNormalizeConfig } from '../dist/core/metadata.js';
-import { ensureSourceDocx } from '../dist/core/recipe/downloader.js';
-import { checkRecipeSourceDrift, checkSelectorDrift } from '../dist/core/recipe/source-drift.js';
+import { loadFieldSelectorMetadata, loadNormalizeConfig } from '../dist/core/metadata.js';
+import { ensureSourceDocx } from '../dist/core/field-selector/downloader.js';
+import { checkFieldSelectorSourceDrift, checkSelectorDrift } from '../dist/core/field-selector/source-drift.js';
 import { loadSelectorContracts } from '../dist/core/selectors/index.js';
 
 function parseArgs(argv) {
   const parsed = {
-    recipeIds: [],
+    fieldSelectorIds: [],
     download: false,
     strictMissing: false,
     json: false,
@@ -16,12 +16,12 @@ function parseArgs(argv) {
 
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
-    if (arg === '--recipe' || arg === '-r') {
+    if (arg === '--fieldSelector' || arg === '-r') {
       const next = argv[i + 1];
       if (!next) {
-        throw new Error('Missing value for --recipe');
+        throw new Error('Missing value for --fieldSelector');
       }
-      parsed.recipeIds.push(next);
+      parsed.fieldSelectorIds.push(next);
       i += 1;
       continue;
     }
@@ -52,10 +52,10 @@ function printHelp() {
     [
       'Usage: node scripts/source_drift_canary.mjs [options]',
       '',
-      'Checks recipe source hash + structural anchor drift against metadata/replacements/normalize config.',
+      'Checks fieldSelector source hash + structural anchor drift against metadata/replacements/normalize config.',
       '',
       'Options:',
-      '  -r, --recipe <id>    Check only one recipe (repeatable)',
+      '  -r, --fieldSelector <id>    Check only one fieldSelector (repeatable)',
       '      --download       Download source docx if cache is missing',
       '      --strict-missing Fail when source cache is missing',
       '      --json           Print full JSON report',
@@ -64,15 +64,15 @@ function printHelp() {
   );
 }
 
-function listRecipeIds(recipesRoot) {
-  return readdirSync(recipesRoot, { withFileTypes: true })
+function listFieldSelectorIds(fieldSelectorsRoot) {
+  return readdirSync(fieldSelectorsRoot, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name)
     .sort();
 }
 
-function getCachedSourcePath(recipeId) {
-  return join(homedir(), '.open-agreements', 'cache', recipeId, 'source.docx');
+function getCachedSourcePath(fieldSelectorId) {
+  return join(homedir(), '.open-agreements', 'cache', fieldSelectorId, 'source.docx');
 }
 
 async function main() {
@@ -83,8 +83,8 @@ async function main() {
   }
 
   const root = process.cwd();
-  const recipesRoot = join(root, 'field-selectors');
-  const recipeIds = args.recipeIds.length > 0 ? args.recipeIds : listRecipeIds(recipesRoot);
+  const fieldSelectorsRoot = join(root, 'field-selectors');
+  const fieldSelectorIds = args.fieldSelectorIds.length > 0 ? args.fieldSelectorIds : listFieldSelectorIds(fieldSelectorsRoot);
 
   const report = {
     generated_at: new Date().toISOString(),
@@ -92,23 +92,23 @@ async function main() {
     skipped_missing_source: [],
   };
 
-  for (const recipeId of recipeIds) {
-    const recipeDir = join(recipesRoot, recipeId);
-    const metadata = loadRecipeMetadata(recipeDir);
-    const normalizeConfig = loadNormalizeConfig(recipeDir);
-    const replacementsPath = join(recipeDir, 'replacements.json');
+  for (const fieldSelectorId of fieldSelectorIds) {
+    const fieldSelectorDir = join(fieldSelectorsRoot, fieldSelectorId);
+    const metadata = loadFieldSelectorMetadata(fieldSelectorDir);
+    const normalizeConfig = loadNormalizeConfig(fieldSelectorDir);
+    const replacementsPath = join(fieldSelectorDir, 'replacements.json');
     const replacements = existsSync(replacementsPath)
       ? JSON.parse(readFileSync(replacementsPath, 'utf-8'))
       : {};
 
-    let sourcePath = getCachedSourcePath(recipeId);
+    let sourcePath = getCachedSourcePath(fieldSelectorId);
     if (!existsSync(sourcePath) && args.download) {
-      sourcePath = await ensureSourceDocx(recipeId, metadata);
+      sourcePath = await ensureSourceDocx(fieldSelectorId, metadata);
     }
 
     if (!existsSync(sourcePath)) {
       report.skipped_missing_source.push({
-        recipe_id: recipeId,
+        field_selector_id: fieldSelectorId,
         source_path: sourcePath,
       });
       continue;
@@ -118,13 +118,13 @@ async function main() {
     // the source DOCX via safe-docx; any unresolved occurrence / failed assertion
     // is upstream-form drift and FAILs the canary.
     const { manifests } = loadSelectorContracts(
-      recipeDir,
+      fieldSelectorDir,
       metadata.fields.map((f) => f.name),
     );
     const selectorDrift = await checkSelectorDrift(sourcePath, manifests);
 
-    const result = checkRecipeSourceDrift({
-      recipeId,
+    const result = checkFieldSelectorSourceDrift({
+      fieldSelectorId,
       sourcePath,
       metadata,
       replacements,
@@ -142,7 +142,7 @@ async function main() {
     console.log(`Skipped (missing source): ${report.skipped_missing_source.length}`);
     for (const result of report.checked) {
       const status = result.ok ? 'PASS' : 'FAIL';
-      console.log(`- ${status} ${result.recipe_id}`);
+      console.log(`- ${status} ${result.field_selector_id}`);
       if (!result.hash_match) {
         console.log(`    hash mismatch: expected=${result.expected_sha256 ?? '<none>'} actual=${result.actual_sha256}`);
       }
@@ -166,9 +166,9 @@ async function main() {
       }
     }
     if (report.skipped_missing_source.length > 0) {
-      console.log('\nSkipped recipes (source not cached):');
+      console.log('\nSkipped fieldSelectors (source not cached):');
       for (const skipped of report.skipped_missing_source) {
-        console.log(`- ${skipped.recipe_id}: ${skipped.source_path}`);
+        console.log(`- ${skipped.field_selector_id}: ${skipped.source_path}`);
       }
       console.log('Tip: re-run with --download to fetch source documents before canary checks.');
     }

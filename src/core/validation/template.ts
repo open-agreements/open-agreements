@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
 import { loadMetadata } from '../metadata.js';
-import { extractSearchText } from '../recipe/replacement-keys.js';
+import { extractSearchText } from '../field-selector/replacement-keys.js';
 
 export interface TemplateValidationResult {
   templateId: string;

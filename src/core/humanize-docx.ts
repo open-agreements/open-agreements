@@ -18,7 +18,7 @@ import AdmZip from 'adm-zip';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document, Element } from '@xmldom/xmldom';
 import yaml from 'js-yaml';
-import { copyEntriesSkippingDirs } from './recipe/ooxml-parts.js';
+import { copyEntriesSkippingDirs } from './field-selector/ooxml-parts.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const XML_NS = 'http://www.w3.org/XML/1998/namespace';

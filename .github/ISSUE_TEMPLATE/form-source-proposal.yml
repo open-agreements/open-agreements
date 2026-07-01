@@ -99,7 +99,7 @@ body:
     attributes:
       label: Pre-submit checks
       options:
-        - label: I reviewed docs/licensing.md and docs/adding-templates.md or docs/adding-recipes.md.
+        - label: I reviewed docs/licensing.md and docs/adding-templates.md or docs/adding-field-selectors.md.
           required: true
         - label: I included a clear license/terms signal with a URL.
           required: true

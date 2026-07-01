@@ -7,7 +7,7 @@ section: Reference
 
 # Assumptions
 
-This document captures the highest-impact assumptions in the OpenAgreements pipeline, especially for NVCA recipe processing where source formatting and bracket semantics are complex.
+This document captures the highest-impact assumptions in the OpenAgreements pipeline, especially for NVCA field-selector processing where source formatting and bracket semantics are complex.
 
 Use this together with the targeted verification commands at the end of this document.
 
@@ -35,7 +35,7 @@ Use this together with the targeted verification commands at the end of this doc
 
 - Assumption: In declarative mode, we should avoid global text rewrites that can shift run-level style boundaries.
 - Risk if wrong: Underline/bold/highlight drift and heading/body spacing artifacts.
-- Validation: `src/core/recipe/bracket-normalizer.test.ts` and `integration-tests/nvca-assumptions.test.ts`.
+- Validation: `src/core/field-selector/bracket-normalizer.test.ts` and `integration-tests/nvca-assumptions.test.ts`.
 
 ### OA-ASSUMP-004: Heading fallback normalization can safely strip only the leading bracket
 
@@ -47,7 +47,7 @@ Use this together with the targeted verification commands at the end of this doc
 
 - Assumption: When closing brackets outnumber opening brackets at paragraph end, trimming trailing `]` is safe.
 - Risk if wrong: Dangling punctuation and malformed legal prose remain.
-- Validation: `src/core/recipe/bracket-normalizer.test.ts` and `integration-tests/nvca-assumptions.test.ts`.
+- Validation: `src/core/field-selector/bracket-normalizer.test.ts` and `integration-tests/nvca-assumptions.test.ts`.
 
 ### OA-ASSUMP-006: NVCA option blocks are intentionally left when no explicit selection rule exists
 
@@ -67,7 +67,7 @@ Use this together with the targeted verification commands at the end of this doc
 - Risk if wrong: Visual drift undermines trust even when values are correct.
 - Validation: `integration-tests/formatting-boundary-diff.test.ts`.
 
-### OA-ASSUMP-010: Recipe source drift canary needs both hash and structural anchor checks
+### OA-ASSUMP-010: Field-selector source drift canary needs both hash and structural anchor checks
 
 - Assumption: Hash integrity alone is insufficient; anchor-level checks are needed to detect source format drift that breaks replacements/normalize rules.
 - Risk if wrong: Source updates can pass hash checks (or hash can be updated manually) while runtime behavior silently breaks.
@@ -83,13 +83,13 @@ Use this together with the targeted verification commands at the end of this doc
 
 - Assumption: High-impact declarative rules should target both a start anchor (`paragraph_contains`) and end anchor (`paragraph_end_contains`) and declare a minimum expected match count.
 - Risk if wrong: Broad or drifting matches can silently mutate the wrong paragraph, or intended edits can stop applying without clear signal.
-- Validation: `src/core/recipe/bracket-normalizer.test.ts`, `integration-tests/source-drift-canary.test.ts`, and `npm run check:source-drift`.
+- Validation: `src/core/field-selector/bracket-normalizer.test.ts`, `integration-tests/source-drift-canary.test.ts`, and `npm run check:source-drift`.
 
 ## Quick verification commands
 
 ```bash
 # Assumption-focused regression checks
-npx vitest run integration-tests/nvca-assumptions.test.ts src/core/recipe/bracket-normalizer.test.ts
+npx vitest run integration-tests/nvca-assumptions.test.ts src/core/field-selector/bracket-normalizer.test.ts
 
 # Full quality gates
 npm run test:run

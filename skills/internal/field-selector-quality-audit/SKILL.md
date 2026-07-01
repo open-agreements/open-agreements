@@ -1,10 +1,10 @@
 ---
-name: recipe-quality-audit
+name: field-selector-quality-audit
 description: >-
-  Audit NVCA recipe quality: check file inventory, metadata schema, field-to-replacement
+  Audit NVCA field-selector quality: check file inventory, metadata schema, field-to-replacement
   coverage, ambiguous keys, smart quotes, test fixtures, and fill quality. Produces a
-  structured scorecard per recipe with maturity tier classification. Use when user says
-  "audit recipe quality," "check recipe coverage," "recipe scorecard," or "NVCA recipe
+  structured scorecard per field-selector with maturity tier classification. Use when user says
+  "audit field-selector quality," "check field-selector coverage," "field-selector scorecard," or "NVCA field-selector
   quality."
 license: Apache-2.0
 compatibility: >-
@@ -18,9 +18,9 @@ catalog_group: Developer Workflows
 catalog_order: 10
 ---
 
-# recipe-quality-audit
+# field-selector-quality-audit
 
-Audit a single NVCA recipe's quality and produce a structured scorecard.
+Audit a single NVCA field-selector's quality and produce a structured scorecard.
 
 ## Security model
 
@@ -30,14 +30,14 @@ Audit a single NVCA recipe's quality and produce a structured scorecard.
 
 ## Usage
 
-Run the audit for a specific recipe:
+Run the audit for a specific field-selector:
 ```
-Audit the recipe: nvca-certificate-of-incorporation
+Audit the field-selector: nvca-certificate-of-incorporation
 ```
 
-Or audit all recipes:
+Or audit all field-selectors:
 ```
-Audit all NVCA recipes and update the quality tracker
+Audit all NVCA field-selectors and update the quality tracker
 ```
 
 ## Checks
@@ -46,13 +46,13 @@ Audit all NVCA recipes and update the quality tracker
 
 | # | Check | How |
 |---|-------|-----|
-| S1 | File inventory | Does recipe have metadata.yaml, replacements.json, clean.json? Optional: computed.json, normalize.json, selections.json |
-| S2 | Metadata schema valid | Run existing `validateRecipeMetadata()` from `src/core/metadata.ts` |
+| S1 | File inventory | Does field-selector have metadata.yaml, replacements.json, clean.json? Optional: computed.json, normalize.json, selections.json |
+| S2 | Metadata schema valid | Run existing `validateFieldSelectorMetadata()` from `src/core/metadata.ts` |
 | S3 | Field-to-replacement coverage | For each field in metadata, is there a replacement key referencing `{field_name}`? |
 | S4 | Ambiguous keys | Flag replacement keys < 8 chars without context qualifier (e.g., `[name]`, `[its]`) |
 | S5 | Smart quote coverage | Keys with apostrophes should have smart-quote variants (or patcher normalizes — check patcher has normalizeQuotes) |
 | S6 | Source SHA present | `source_sha256` in metadata.yaml |
-| S7 | Test fixture exists | `integration-tests/fixtures/{recipe-id}-*.json` exists |
+| S7 | Test fixture exists | `integration-tests/fixtures/{field-selector-id}-*.json` exists |
 
 ### Tier 2: Behavioral (requires source download)
 
@@ -76,7 +76,7 @@ Audit all NVCA recipes and update the quality tracker
 
 ```json
 {
-  "recipe_id": "nvca-voting-agreement",
+  "field_selector_id": "nvca-voting-agreement",
   "maturity": "beta",
   "scores": { "structural": "6/7", "behavioral": "3/4", "fill": "0/4", "total": "9/15" },
   "checks": [
@@ -111,9 +111,9 @@ When running the audit:
 
 ## Implementation Notes
 
-- Use `validateRecipeMetadata()` from `src/core/metadata.ts` for S2
-- Use `ensureSourceDocx()` from `src/core/recipe/downloader.ts` for B1-B4
-- Use `runRecipe()` from `src/core/recipe/index.ts` for F1-F4
+- Use `validateFieldSelectorMetadata()` from `src/core/metadata.ts` for S2
+- Use `ensureSourceDocx()` from `src/core/field-selector/downloader.ts` for B1-B4
+- Use `runFieldSelector()` from `src/core/field-selector/index.ts` for F1-F4
 - Bracket pattern detection uses `\[[_A-Z]` prefix to avoid counting citations and legal references
 - Zero-match keys come from `PatchResult.zeroMatchKeys` returned by the patcher
 - Cross-reference zero-match keys with `cleanConfig.removeRanges` and `cleanConfig.removeParagraphPatterns` to suppress expected zero-matches

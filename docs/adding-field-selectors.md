@@ -1,13 +1,13 @@
 ---
-title: Adding Recipes
-description: Create recipe-driven templates for non-redistributable document sources.
+title: Adding Field-selectors
+description: Create field-selector-driven templates for non-redistributable document sources.
 order: 3
 section: Guides
 ---
 
-# Adding Recipes
+# Adding Field-selectors
 
-Recipes enable OpenAgreements to work with non-redistributable document sources
+Field-selectors enable OpenAgreements to work with non-redistributable document sources
 (like NVCA model financing documents) by hosting only transformation instructions.
 
 ## Prerequisites
@@ -35,10 +35,10 @@ To generate a draft `replacements.json`:
 open-agreements scan ~/Downloads/source-document.docx --output-replacements replacements-draft.json
 ```
 
-## Step 2: Create the Recipe Directory
+## Step 2: Create the Field-selector Directory
 
 ```bash
-mkdir field-selectors/your-recipe-name/
+mkdir field-selectors/your-field-selector-name/
 ```
 
 ## Step 3: Create metadata.yaml
@@ -49,7 +49,7 @@ description: Brief description of the document
 source_url: https://example.com/document.docx
 source_version: "2025-01"
 license_note: >-
-  Describe the licensing situation and why a recipe is needed.
+  Describe the licensing situation and why a field-selector is needed.
 optional: false
 fields:
   - name: company_name
@@ -233,15 +233,15 @@ priority_fields:
 ## Step 7: Test
 
 ```bash
-# Validate the recipe
+# Validate the field-selector
 open-agreements validate
 
 # Test individual stages
-open-agreements recipe clean source.docx -o cleaned.docx --recipe your-recipe-name
-open-agreements recipe patch cleaned.docx -o patched.docx --recipe your-recipe-name
+open-agreements field-selector clean source.docx -o cleaned.docx --field-selector your-field-selector-name
+open-agreements field-selector patch cleaned.docx -o patched.docx --field-selector your-field-selector-name
 
 # Full pipeline
-open-agreements recipe run your-recipe-name -d values.json -o output.docx --keep-intermediate
+open-agreements field-selector run your-field-selector-name -d values.json -o output.docx --keep-intermediate
 ```
 
 ## Guidance Extraction
@@ -252,13 +252,13 @@ values are, and how sections interact. The cleaner removes this content to produ
 fillable document, but the knowledge is valuable for anyone (human or AI) filling the
 form.
 
-The `--extract-guidance` flag on `recipe clean` captures all removed content as structured
+The `--extract-guidance` flag on `field-selector clean` captures all removed content as structured
 JSON **before** deleting it from the DOCX:
 
 ```bash
-open-agreements recipe clean source.docx \
+open-agreements field-selector clean source.docx \
   -o cleaned.docx \
-  --recipe nvca-indemnification-agreement \
+  --field-selector nvca-indemnification-agreement \
   --extract-guidance guidance.json
 ```
 
@@ -316,10 +316,10 @@ NVCA), the guidance file must NOT be committed to the repository or shipped in t
 package — it is a **local-only, authoring-time** artifact generated on the user's machine.
 For permissive-licensed sources, guidance could be committed, but this is not required.
 
-## Important: No .docx Files in Recipe Directories
+## Important: No .docx Files in Field-selector Directories
 
-Recipe directories must **never** contain `.docx` files. The source document is
-copyrighted and must not be committed to the repository. The recipe only contains
+Field-selector directories must **never** contain `.docx` files. The source document is
+copyrighted and must not be committed to the repository. The field-selector only contains
 transformation instructions. This is enforced by validation.
 
 ## Known Limitations

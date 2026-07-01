@@ -43,12 +43,12 @@ function resolveChildDir(parentDir: string, childId: string, label: string): str
 /**
  * Resolve a top-level content sub-directory.
  *
- * The `recipes` kind lives on disk under `field-selectors/` (renamed in the
+ * The `fieldSelectors` kind lives on disk under `field-selectors/` (renamed in the
  * S3 top-level promotion); the other kinds keep their names. There is no
  * legacy `content/<kind>` fallback — these directories are top-level only.
  */
-function resolveContentDir(root: string, kind: 'templates' | 'external' | 'recipes'): string {
-  const dirName = kind === 'recipes' ? 'field-selectors' : kind;
+function resolveContentDir(root: string, kind: 'templates' | 'external' | 'fieldSelectors'): string {
+  const dirName = kind === 'fieldSelectors' ? 'field-selectors' : kind;
   return join(root, dirName);
 }
 
@@ -110,33 +110,33 @@ export function listExternalIds(): string[] {
   return listExternalEntries().map((entry) => entry.id);
 }
 
-/** Recipes directory */
-export function getRecipesDir(): string {
-  return resolveContentDir(getPackageRoot(), 'recipes');
+/** FieldSelectors directory */
+export function getFieldSelectorsDir(): string {
+  return resolveContentDir(getPackageRoot(), 'fieldSelectors');
 }
 
-/** All recipe directories in precedence order (env roots first, package root last). */
-export function getAllRecipesDirs(): string[] {
-  return getContentRoots().map((root) => resolveContentDir(root, 'recipes'));
+/** All fieldSelector directories in precedence order (env roots first, package root last). */
+export function getAllFieldSelectorsDirs(): string[] {
+  return getContentRoots().map((root) => resolveContentDir(root, 'fieldSelectors'));
 }
 
-/** Resolve a specific recipe directory by ID */
-export function resolveRecipeDir(recipeId: string): string {
-  return findRecipeDir(recipeId) ?? resolveChildDir(getRecipesDir(), recipeId, 'recipe');
+/** Resolve a specific fieldSelector directory by ID */
+export function resolveFieldSelectorDir(fieldSelectorId: string): string {
+  return findFieldSelectorDir(fieldSelectorId) ?? resolveChildDir(getFieldSelectorsDir(), fieldSelectorId, 'field-selector');
 }
 
-/** Find a specific recipe directory by ID across all configured content roots. */
-export function findRecipeDir(recipeId: string): string | undefined {
-  return findChildDir(getAllRecipesDirs(), recipeId, 'recipe');
+/** Find a specific fieldSelector directory by ID across all configured content roots. */
+export function findFieldSelectorDir(fieldSelectorId: string): string | undefined {
+  return findChildDir(getAllFieldSelectorsDirs(), fieldSelectorId, 'field-selector');
 }
 
-/** List recipe IDs across all content roots (first match wins for duplicates). */
-export function listRecipeEntries(): ContentEntry[] {
-  return listEntries(getAllRecipesDirs(), 'recipe');
+/** List fieldSelector IDs across all content roots (first match wins for duplicates). */
+export function listFieldSelectorEntries(): ContentEntry[] {
+  return listEntries(getAllFieldSelectorsDirs(), 'field-selector');
 }
 
-export function listRecipeIds(): string[] {
-  return listRecipeEntries().map((entry) => entry.id);
+export function listFieldSelectorIds(): string[] {
+  return listFieldSelectorEntries().map((entry) => entry.id);
 }
 
 function uniqueOrdered(paths: string[]): string[] {

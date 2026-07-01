@@ -1,6 +1,6 @@
 /**
  * Unified fill pipeline — shared orchestration for all three fill paths
- * (bundled templates, external/vendored, and recipes).
+ * (bundled templates, external/vendored, and fieldSelectors).
  *
  * Each path is now a thin wrapper that builds PipelineOptions and calls
  * runFillPipeline(). The data-prep and fill steps come from fill-pipeline.ts;
@@ -15,14 +15,14 @@ import AdmZip from 'adm-zip';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import { getParagraphText, replaceParagraphTextRange } from '@usejunior/docx-core';
 import { prepareFillData, fillDocx, type ConfirmClauseDescriptor } from './fill-pipeline.js';
-import { cleanDocument } from './recipe/cleaner.js';
-import { patchDocument } from './recipe/patcher.js';
+import { cleanDocument } from './field-selector/cleaner.js';
+import { patchDocument } from './field-selector/patcher.js';
 import { applySelectorContracts, type FieldSelectorManifest, type FieldResolution } from './selectors/index.js';
 import { applySelections } from './selector.js';
-import { enumerateTextParts, getGeneralTextPartNames, rezipWithoutDirEntries } from './recipe/ooxml-parts.js';
+import { enumerateTextParts, getGeneralTextPartNames, rezipWithoutDirEntries } from './field-selector/ooxml-parts.js';
 import type { FieldDefinition, CleanConfig } from './metadata.js';
 import type { SelectionsConfig } from './selector.js';
-import type { VerifyResult } from './recipe/types.js';
+import type { VerifyResult } from './field-selector/types.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -210,7 +210,7 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
     // Step 7: Copy to output
     copyFileSync(filledPath, outputPath);
 
-    // Optional post-processing for recipe-specific normalization.
+    // Optional post-processing for field-selector-specific normalization.
     if (postProcess) {
       await postProcess(outputPath);
     }

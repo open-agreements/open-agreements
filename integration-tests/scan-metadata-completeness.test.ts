@@ -4,16 +4,16 @@ import { join } from 'node:path';
 import AdmZip from 'adm-zip';
 import { afterEach, describe, expect } from 'vitest';
 import { scanDocxBrackets } from '../src/commands/scan.js';
-import { loadRecipeMetadata } from '../src/core/metadata.js';
-import { parseReplacementKey, resolveReplacementValue } from '../src/core/recipe/replacement-keys.js';
-import type { ReplacementValue } from '../src/core/recipe/replacement-keys.js';
+import { loadFieldSelectorMetadata } from '../src/core/metadata.js';
+import { parseReplacementKey, resolveReplacementValue } from '../src/core/field-selector/replacement-keys.js';
+import type { ReplacementValue } from '../src/core/field-selector/replacement-keys.js';
 import { assessScanMetadataCoverage } from '../src/core/validation/scan-metadata.js';
 import { itAllure } from './helpers/allure-test.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const tempDirs: string[] = [];
-const RECIPE_ID = 'nvca-stock-purchase-agreement';
-const RECIPE_DIR = join(import.meta.dirname, '..', 'field-selectors', RECIPE_ID);
+const FIELD_SELECTOR_ID = 'nvca-stock-purchase-agreement';
+const FIELD_SELECTOR_DIR = join(import.meta.dirname, '..', 'field-selectors', FIELD_SELECTOR_ID);
 const it = itAllure.epic('Discovery & Metadata');
 
 afterEach(() => {
@@ -68,17 +68,17 @@ function loadNvcaCoverageInputs(): {
   replacements: Record<string, ReplacementValue>;
   extraCoveredFields: string[];
 } {
-  const metadata = loadRecipeMetadata(RECIPE_DIR);
+  const metadata = loadFieldSelectorMetadata(FIELD_SELECTOR_DIR);
   const replacements = JSON.parse(
-    readFileSync(join(RECIPE_DIR, 'replacements.json'), 'utf-8')
+    readFileSync(join(FIELD_SELECTOR_DIR, 'replacements.json'), 'utf-8')
   ) as Record<string, ReplacementValue>;
   const normalize = JSON.parse(
-    readFileSync(join(RECIPE_DIR, 'normalize.json'), 'utf-8')
+    readFileSync(join(FIELD_SELECTOR_DIR, 'normalize.json'), 'utf-8')
   ) as {
     paragraph_rules: Array<{ replacements?: Record<string, string> }>;
   };
   const computed = JSON.parse(
-    readFileSync(join(RECIPE_DIR, 'computed.json'), 'utf-8')
+    readFileSync(join(FIELD_SELECTOR_DIR, 'computed.json'), 'utf-8')
   ) as {
     rules: Array<{ set_fill?: Record<string, unknown>; set_audit?: Record<string, unknown> }>;
   };

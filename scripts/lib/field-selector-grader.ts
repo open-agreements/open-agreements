@@ -1,28 +1,28 @@
 #!/usr/bin/env npx tsx
 /**
- * Programmatic 15-point recipe quality scorecard.
+ * Programmatic 15-point fieldSelector quality scorecard.
  *
- * Implements the checks from skills/recipe-quality-audit/SKILL.md as a callable
- * function. Reuses existing recipe infrastructure (verifier, patcher, metadata).
+ * Implements the checks from skills/field-selector-quality-audit/SKILL.md as a callable
+ * function. Reuses existing fieldSelector infrastructure (verifier, patcher, metadata).
  *
  * Usage (standalone):
- *   npx tsx scripts/lib/recipe-grader.ts <recipe-id> [fixture.json]
+ *   npx tsx scripts/lib/field-selector-grader.ts <field-selector-id> [fixture.json]
  */
 
 import { existsSync, readFileSync, mkdtempSync, rmSync, readdirSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { tmpdir } from 'node:os';
 import {
-  loadRecipeMetadata,
+  loadFieldSelectorMetadata,
   loadCleanConfig,
-  validateRecipeMetadata,
+  validateFieldSelectorMetadata,
 } from '../../src/core/metadata.js';
-import { resolveRecipeDir } from '../../src/utils/paths.js';
-import { runRecipe, extractAllText, verifyOutput } from '../../src/core/recipe/index.js';
-import { patchDocument } from '../../src/core/recipe/patcher.js';
-import { cleanDocument } from '../../src/core/recipe/cleaner.js';
-import { ensureSourceDocx } from '../../src/core/recipe/downloader.js';
-import type { VerifyResult, VerifyCheck } from '../../src/core/recipe/types.js';
+import { resolveFieldSelectorDir } from '../../src/utils/paths.js';
+import { runFieldSelector, extractAllText, verifyOutput } from '../../src/core/field-selector/index.js';
+import { patchDocument } from '../../src/core/field-selector/patcher.js';
+import { cleanDocument } from '../../src/core/field-selector/cleaner.js';
+import { ensureSourceDocx } from '../../src/core/field-selector/downloader.js';
+import type { VerifyResult, VerifyCheck } from '../../src/core/field-selector/types.js';
 
 // ---------------------------------------------------------------------------
 // Public types
@@ -37,8 +37,8 @@ export interface CheckResult {
   details?: string;
 }
 
-export interface RecipeScorecard {
-  recipe_id: string;
+export interface FieldSelectorScorecard {
+  field_selector_id: string;
   timestamp: string;
   maturity: 'scaffold' | 'beta' | 'production';
   scores: { structural: string; behavioral: string; fill: string; total: string };
@@ -60,8 +60,8 @@ export interface RecipeScorecard {
 const PROJECT_ROOT = resolve(import.meta.dirname!, '../..');
 const FIXTURES_DIR = join(PROJECT_ROOT, 'integration-tests', 'fixtures');
 
-// Map recipe IDs to fixture file prefixes (abbreviations used in existing fixtures)
-const RECIPE_FIXTURE_PREFIXES: Record<string, string[]> = {
+// Map fieldSelector IDs to fixture file prefixes (abbreviations used in existing fixtures)
+const FIELD_SELECTOR_FIXTURE_PREFIXES: Record<string, string[]> = {
   'nvca-stock-purchase-agreement': ['spa-', 'stock-purchase-agreement-'],
   'nvca-certificate-of-incorporation': ['coi-', 'certificate-of-incorporation-'],
   'nvca-investors-rights-agreement': ['ira-', 'investors-rights-agreement-'],
@@ -71,10 +71,10 @@ const RECIPE_FIXTURE_PREFIXES: Record<string, string[]> = {
   'nvca-management-rights-letter': ['mrl-', 'management-rights-letter-'],
 };
 
-function fixturesForRecipe(recipeId: string): string[] {
+function fixturesForFieldSelector(fieldSelectorId: string): string[] {
   if (!existsSync(FIXTURES_DIR)) return [];
-  const shortId = recipeId.replace(/^nvca-/, '');
-  const prefixes = RECIPE_FIXTURE_PREFIXES[recipeId] ?? [shortId + '-'];
+  const shortId = fieldSelectorId.replace(/^nvca-/, '');
+  const prefixes = FIELD_SELECTOR_FIXTURE_PREFIXES[fieldSelectorId] ?? [shortId + '-'];
   return readdirSync(FIXTURES_DIR)
     .filter((f) => f.endsWith('.json') && prefixes.some((p) => f.startsWith(p)))
     .map((f) => join(FIXTURES_DIR, f));
@@ -97,8 +97,8 @@ function loadBestFixture(fixtures: string[]): Record<string, string> {
   return loadFixtureValues(fixtures[fixtures.length - 1]);
 }
 
-function buildDefaultValues(recipeDir: string): Record<string, string> {
-  const meta = loadRecipeMetadata(recipeDir);
+function buildDefaultValues(fieldSelectorDir: string): Record<string, string> {
+  const meta = loadFieldSelectorMetadata(fieldSelectorDir);
   const defaults: Record<string, string> = {};
   for (const field of meta.fields) {
     if (field.default !== undefined) {
@@ -112,11 +112,11 @@ function buildDefaultValues(recipeDir: string): Record<string, string> {
 // Individual check implementations
 // ---------------------------------------------------------------------------
 
-function checkS1FileInventory(recipeDir: string): CheckResult {
+function checkS1FileInventory(fieldSelectorDir: string): CheckResult {
   const required = ['metadata.yaml', 'replacements.json', 'clean.json'];
   const optional = ['computed.json', 'normalize.json', 'selections.json'];
-  const missing = required.filter((f) => !existsSync(join(recipeDir, f)));
-  const present = optional.filter((f) => existsSync(join(recipeDir, f)));
+  const missing = required.filter((f) => !existsSync(join(fieldSelectorDir, f)));
+  const present = optional.filter((f) => existsSync(join(fieldSelectorDir, f)));
   return {
     id: 'S1',
     name: 'File inventory',
@@ -127,8 +127,8 @@ function checkS1FileInventory(recipeDir: string): CheckResult {
   };
 }
 
-function checkS2MetadataValid(recipeDir: string): CheckResult {
-  const result = validateRecipeMetadata(recipeDir);
+function checkS2MetadataValid(fieldSelectorDir: string): CheckResult {
+  const result = validateFieldSelectorMetadata(fieldSelectorDir);
   return {
     id: 'S2',
     name: 'Metadata valid',
@@ -137,12 +137,12 @@ function checkS2MetadataValid(recipeDir: string): CheckResult {
   };
 }
 
-function checkS3FieldCoverage(recipeDir: string): {
+function checkS3FieldCoverage(fieldSelectorDir: string): {
   check: CheckResult;
   coverage: { metadata_fields: number; replacement_refs: number; uncovered: string[] };
 } {
-  const meta = loadRecipeMetadata(recipeDir);
-  const replacementsPath = join(recipeDir, 'replacements.json');
+  const meta = loadFieldSelectorMetadata(fieldSelectorDir);
+  const replacementsPath = join(fieldSelectorDir, 'replacements.json');
   const fieldNames = new Set(meta.fields.map((f) => f.name));
 
   if (!existsSync(replacementsPath)) {
@@ -161,7 +161,7 @@ function checkS3FieldCoverage(recipeDir: string): {
   }
 
   // Also check computed.json for field references
-  const computedPath = join(recipeDir, 'computed.json');
+  const computedPath = join(fieldSelectorDir, 'computed.json');
   if (existsSync(computedPath)) {
     const computed = JSON.parse(readFileSync(computedPath, 'utf-8'));
     const computedStr = JSON.stringify(computed);
@@ -211,8 +211,8 @@ function checkS3FieldCoverage(recipeDir: string): {
   };
 }
 
-function checkS4AmbiguousKeys(recipeDir: string): CheckResult {
-  const replacementsPath = join(recipeDir, 'replacements.json');
+function checkS4AmbiguousKeys(fieldSelectorDir: string): CheckResult {
+  const replacementsPath = join(fieldSelectorDir, 'replacements.json');
   if (!existsSync(replacementsPath)) {
     return { id: 'S4', name: 'Ambiguous keys', passed: false, details: 'No replacements.json' };
   }
@@ -239,9 +239,9 @@ function checkS5SmartQuotes(): CheckResult {
   return { id: 'S5', name: 'Smart quotes', passed: true, details: 'Auto-pass (patcher normalizes)' };
 }
 
-function checkS6SourceSHA(recipeDir: string): CheckResult {
+function checkS6SourceSHA(fieldSelectorDir: string): CheckResult {
   try {
-    const meta = loadRecipeMetadata(recipeDir);
+    const meta = loadFieldSelectorMetadata(fieldSelectorDir);
     return {
       id: 'S6',
       name: 'Source SHA',
@@ -253,8 +253,8 @@ function checkS6SourceSHA(recipeDir: string): CheckResult {
   }
 }
 
-function checkS7TestFixture(recipeId: string): CheckResult {
-  const fixtures = fixturesForRecipe(recipeId);
+function checkS7TestFixture(fieldSelectorId: string): CheckResult {
+  const fixtures = fixturesForFieldSelector(fieldSelectorId);
   return {
     id: 'S7',
     name: 'Test fixture',
@@ -265,10 +265,10 @@ function checkS7TestFixture(recipeId: string): CheckResult {
   };
 }
 
-async function checkB1SourceScan(recipeId: string, recipeDir: string): Promise<CheckResult> {
+async function checkB1SourceScan(fieldSelectorId: string, fieldSelectorDir: string): Promise<CheckResult> {
   try {
-    const meta = loadRecipeMetadata(recipeDir);
-    const sourcePath = await ensureSourceDocx(recipeId, meta);
+    const meta = loadFieldSelectorMetadata(fieldSelectorDir);
+    const sourcePath = await ensureSourceDocx(fieldSelectorId, meta);
     const text = extractAllText(sourcePath);
     const bracketPatterns = text.match(/\[[_A-Z][_A-Z\s]*\]/g) ?? [];
     return {
@@ -283,12 +283,12 @@ async function checkB1SourceScan(recipeId: string, recipeDir: string): Promise<C
 }
 
 async function checkB2CoverageRatio(
-  recipeId: string,
-  recipeDir: string,
+  fieldSelectorId: string,
+  fieldSelectorDir: string,
 ): Promise<CheckResult> {
   try {
-    const meta = loadRecipeMetadata(recipeDir);
-    const sourcePath = await ensureSourceDocx(recipeId, meta);
+    const meta = loadFieldSelectorMetadata(fieldSelectorDir);
+    const sourcePath = await ensureSourceDocx(fieldSelectorId, meta);
     const text = extractAllText(sourcePath);
 
     // All bracket patterns in source
@@ -297,7 +297,7 @@ async function checkB2CoverageRatio(
       return { id: 'B2', name: 'Coverage ratio', passed: true, details: 'No bracket patterns in source' };
     }
 
-    const replacementsPath = join(recipeDir, 'replacements.json');
+    const replacementsPath = join(fieldSelectorDir, 'replacements.json');
     if (!existsSync(replacementsPath)) {
       return { id: 'B2', name: 'Coverage ratio', passed: false, details: 'No replacements.json' };
     }
@@ -334,12 +334,12 @@ async function checkB2CoverageRatio(
 }
 
 async function checkB3UnmatchedUnderscores(
-  recipeId: string,
-  recipeDir: string,
+  fieldSelectorId: string,
+  fieldSelectorDir: string,
 ): Promise<CheckResult> {
   try {
-    const meta = loadRecipeMetadata(recipeDir);
-    const sourcePath = await ensureSourceDocx(recipeId, meta);
+    const meta = loadFieldSelectorMetadata(fieldSelectorDir);
+    const sourcePath = await ensureSourceDocx(fieldSelectorId, meta);
     const text = extractAllText(sourcePath);
 
     const underscorePatterns = [...new Set(text.match(/\[_{3,}\]/g) ?? [])];
@@ -347,7 +347,7 @@ async function checkB3UnmatchedUnderscores(
       return { id: 'B3', name: 'Unmatched underscores', passed: true, details: 'No underscore patterns found' };
     }
 
-    const replacementsPath = join(recipeDir, 'replacements.json');
+    const replacementsPath = join(fieldSelectorDir, 'replacements.json');
     if (!existsSync(replacementsPath)) {
       return { id: 'B3', name: 'Unmatched underscores', passed: false, details: 'No replacements.json' };
     }
@@ -369,14 +369,14 @@ async function checkB3UnmatchedUnderscores(
 }
 
 async function checkB4CleanEffectiveness(
-  recipeId: string,
-  recipeDir: string,
+  fieldSelectorId: string,
+  fieldSelectorDir: string,
 ): Promise<CheckResult> {
-  const tempDir = mkdtempSync(join(tmpdir(), `grader-b4-${recipeId}-`));
+  const tempDir = mkdtempSync(join(tmpdir(), `grader-b4-${fieldSelectorId}-`));
   try {
-    const meta = loadRecipeMetadata(recipeDir);
-    const cleanConfig = loadCleanConfig(recipeDir);
-    const sourcePath = await ensureSourceDocx(recipeId, meta);
+    const meta = loadFieldSelectorMetadata(fieldSelectorDir);
+    const cleanConfig = loadCleanConfig(fieldSelectorDir);
+    const sourcePath = await ensureSourceDocx(fieldSelectorId, meta);
     const cleanedPath = join(tempDir, 'cleaned.docx');
     await cleanDocument(sourcePath, cleanedPath, cleanConfig);
 
@@ -410,28 +410,28 @@ async function checkB4CleanEffectiveness(
 }
 
 async function checkF1DefaultFill(
-  recipeId: string,
-  recipeDir: string,
+  fieldSelectorId: string,
+  fieldSelectorDir: string,
   outputDir: string,
 ): Promise<{ check: CheckResult; verifyResult: VerifyResult | null }> {
-  const tempDir = mkdtempSync(join(tmpdir(), `grader-f1-${recipeId}-`));
+  const tempDir = mkdtempSync(join(tmpdir(), `grader-f1-${fieldSelectorId}-`));
   try {
-    const defaults = buildDefaultValues(recipeDir);
-    const outPath = join(outputDir, `${recipeId}-defaults-fill.docx`);
-    await runRecipe({
-      recipeId,
+    const defaults = buildDefaultValues(fieldSelectorDir);
+    const outPath = join(outputDir, `${fieldSelectorId}-defaults-fill.docx`);
+    await runFieldSelector({
+      fieldSelectorId,
       outputPath: outPath,
       values: defaults,
     });
 
     // Clean source for formatting anomaly baseline
-    const meta = loadRecipeMetadata(recipeDir);
-    const cleanConfig = loadCleanConfig(recipeDir);
-    const sourcePath = await ensureSourceDocx(recipeId, meta);
+    const meta = loadFieldSelectorMetadata(fieldSelectorDir);
+    const cleanConfig = loadCleanConfig(fieldSelectorDir);
+    const sourcePath = await ensureSourceDocx(fieldSelectorId, meta);
     const cleanedSourcePath = join(tempDir, 'cleaned-source.docx');
     await cleanDocument(sourcePath, cleanedSourcePath, cleanConfig);
 
-    const replacementsPath = join(recipeDir, 'replacements.json');
+    const replacementsPath = join(fieldSelectorDir, 'replacements.json');
     const replacements: Record<string, string> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
     const result = await verifyOutput(outPath, defaults, replacements, cleanConfig, cleanedSourcePath);
 
@@ -462,8 +462,8 @@ async function checkF1DefaultFill(
 }
 
 async function checkF2FullFill(
-  recipeId: string,
-  recipeDir: string,
+  fieldSelectorId: string,
+  fieldSelectorDir: string,
   fixtureValues: Record<string, string>,
   outputDir: string,
 ): Promise<{ check: CheckResult; verifyResult: VerifyResult | null }> {
@@ -479,25 +479,25 @@ async function checkF2FullFill(
     };
   }
 
-  const tempDir = mkdtempSync(join(tmpdir(), `grader-f2-${recipeId}-`));
+  const tempDir = mkdtempSync(join(tmpdir(), `grader-f2-${fieldSelectorId}-`));
   try {
-    const defaults = buildDefaultValues(recipeDir);
+    const defaults = buildDefaultValues(fieldSelectorDir);
     const merged = { ...defaults, ...fixtureValues };
-    const outPath = join(outputDir, `${recipeId}-full-fill.docx`);
-    await runRecipe({
-      recipeId,
+    const outPath = join(outputDir, `${fieldSelectorId}-full-fill.docx`);
+    await runFieldSelector({
+      fieldSelectorId,
       outputPath: outPath,
       values: merged,
     });
 
     // Clean source for formatting anomaly baseline
-    const meta = loadRecipeMetadata(recipeDir);
-    const cleanConfig = loadCleanConfig(recipeDir);
-    const sourcePath = await ensureSourceDocx(recipeId, meta);
+    const meta = loadFieldSelectorMetadata(fieldSelectorDir);
+    const cleanConfig = loadCleanConfig(fieldSelectorDir);
+    const sourcePath = await ensureSourceDocx(fieldSelectorId, meta);
     const cleanedSourcePath = join(tempDir, 'cleaned-source.docx');
     await cleanDocument(sourcePath, cleanedSourcePath, cleanConfig);
 
-    const replacementsPath = join(recipeDir, 'replacements.json');
+    const replacementsPath = join(fieldSelectorDir, 'replacements.json');
     const replacements: Record<string, string> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
     const result = await verifyOutput(outPath, merged, replacements, cleanConfig, cleanedSourcePath);
 
@@ -528,34 +528,34 @@ async function checkF2FullFill(
 }
 
 async function checkF3FormattingAnomalies(
-  recipeId: string,
-  recipeDir: string,
+  fieldSelectorId: string,
+  fieldSelectorDir: string,
   fixtureValues: Record<string, string>,
   outputDir: string,
 ): Promise<CheckResult> {
   // Reuse the fill output from F2 if it exists, otherwise do a fresh fill
-  const outPath = join(outputDir, `${recipeId}-full-fill.docx`);
+  const outPath = join(outputDir, `${fieldSelectorId}-full-fill.docx`);
   if (!existsSync(outPath)) {
     // Run with defaults if no full fill was done
     try {
-      const defaults = buildDefaultValues(recipeDir);
+      const defaults = buildDefaultValues(fieldSelectorDir);
       const merged = { ...defaults, ...fixtureValues };
-      await runRecipe({ recipeId, outputPath: outPath, values: merged });
+      await runFieldSelector({ fieldSelectorId, outputPath: outPath, values: merged });
     } catch {
       return { id: 'F3', name: 'Formatting anomalies', passed: false, details: 'Could not produce fill output' };
     }
   }
 
-  const tempDir = mkdtempSync(join(tmpdir(), `grader-f3-${recipeId}-`));
+  const tempDir = mkdtempSync(join(tmpdir(), `grader-f3-${fieldSelectorId}-`));
   try {
     // Clean the source to establish baseline anomaly count
-    const meta = loadRecipeMetadata(recipeDir);
-    const cleanConfig = loadCleanConfig(recipeDir);
-    const sourcePath = await ensureSourceDocx(recipeId, meta);
+    const meta = loadFieldSelectorMetadata(fieldSelectorDir);
+    const cleanConfig = loadCleanConfig(fieldSelectorDir);
+    const sourcePath = await ensureSourceDocx(fieldSelectorId, meta);
     const cleanedSourcePath = join(tempDir, 'cleaned-source.docx');
     await cleanDocument(sourcePath, cleanedSourcePath, cleanConfig);
 
-    const replacementsPath = join(recipeDir, 'replacements.json');
+    const replacementsPath = join(fieldSelectorDir, 'replacements.json');
     const replacements: Record<string, string> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
     const result = await verifyOutput(outPath, {}, replacements, cleanConfig, cleanedSourcePath);
     const anomalyCheck = result.checks.find((c) => c.name === 'No formatting anomalies');
@@ -573,24 +573,24 @@ async function checkF3FormattingAnomalies(
 }
 
 async function checkF4ZeroMatchKeys(
-  recipeId: string,
-  recipeDir: string,
+  fieldSelectorId: string,
+  fieldSelectorDir: string,
   fixtureValues: Record<string, string>,
   outputDir: string,
 ): Promise<{ check: CheckResult; zeroMatchKeys: string[] }> {
-  const tempDir = mkdtempSync(join(tmpdir(), `grader-f4-${recipeId}-`));
+  const tempDir = mkdtempSync(join(tmpdir(), `grader-f4-${fieldSelectorId}-`));
   try {
-    const meta = loadRecipeMetadata(recipeDir);
-    const cleanConfig = loadCleanConfig(recipeDir);
-    const sourcePath = await ensureSourceDocx(recipeId, meta);
+    const meta = loadFieldSelectorMetadata(fieldSelectorDir);
+    const cleanConfig = loadCleanConfig(fieldSelectorDir);
+    const sourcePath = await ensureSourceDocx(fieldSelectorId, meta);
     const cleanedPath = join(tempDir, 'cleaned.docx');
     await cleanDocument(sourcePath, cleanedPath, cleanConfig);
 
-    const replacementsPath = join(recipeDir, 'replacements.json');
+    const replacementsPath = join(fieldSelectorDir, 'replacements.json');
     const replacements: Record<string, string> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
 
     // Interpolate field values into replacement values
-    const defaults = buildDefaultValues(recipeDir);
+    const defaults = buildDefaultValues(fieldSelectorDir);
     const merged = { ...defaults, ...fixtureValues };
     const interpolated: Record<string, string> = {};
     for (const [key, value] of Object.entries(replacements)) {
@@ -639,7 +639,7 @@ function generateRecommendations(checks: CheckResult[], coverage: { uncovered: s
     if (check.passed) continue;
     switch (check.id) {
       case 'S1':
-        recs.push('Create missing recipe files (replacements.json, clean.json, metadata.yaml)');
+        recs.push('Create missing fieldSelector files (replacements.json, clean.json, metadata.yaml)');
         break;
       case 'S2':
         recs.push(`Fix metadata validation errors: ${check.details}`);
@@ -694,13 +694,13 @@ function generateRecommendations(checks: CheckResult[], coverage: { uncovered: s
 // Main grading function
 // ---------------------------------------------------------------------------
 
-export async function gradeRecipe(
-  recipeId: string,
+export async function gradeFieldSelector(
+  fieldSelectorId: string,
   fixtureValues?: Record<string, string>,
   outputDir?: string,
-): Promise<RecipeScorecard> {
-  const recipeDir = resolveRecipeDir(recipeId);
-  const effectiveOutputDir = outputDir ?? mkdtempSync(join(tmpdir(), `grader-${recipeId}-`));
+): Promise<FieldSelectorScorecard> {
+  const fieldSelectorDir = resolveFieldSelectorDir(fieldSelectorId);
+  const effectiveOutputDir = outputDir ?? mkdtempSync(join(tmpdir(), `grader-${fieldSelectorId}-`));
 
   const checks: CheckResult[] = [];
   let fieldCoverage = { metadata_fields: 0, replacement_refs: 0, uncovered: [] as string[] };
@@ -708,27 +708,27 @@ export async function gradeRecipe(
   let verifyResult: VerifyResult | null = null;
 
   // --- Structural checks (S1-S7) ---
-  checks.push(checkS1FileInventory(recipeDir));
-  checks.push(checkS2MetadataValid(recipeDir));
+  checks.push(checkS1FileInventory(fieldSelectorDir));
+  checks.push(checkS2MetadataValid(fieldSelectorDir));
 
-  const s3 = checkS3FieldCoverage(recipeDir);
+  const s3 = checkS3FieldCoverage(fieldSelectorDir);
   checks.push(s3.check);
   fieldCoverage = s3.coverage;
 
-  checks.push(checkS4AmbiguousKeys(recipeDir));
+  checks.push(checkS4AmbiguousKeys(fieldSelectorDir));
   checks.push(checkS5SmartQuotes());
-  checks.push(checkS6SourceSHA(recipeDir));
-  checks.push(checkS7TestFixture(recipeId));
+  checks.push(checkS6SourceSHA(fieldSelectorDir));
+  checks.push(checkS7TestFixture(fieldSelectorId));
 
   // --- Behavioral checks (B1-B4) ---
   // These require downloading/processing the source document
-  const hasReplacements = existsSync(join(recipeDir, 'replacements.json'));
+  const hasReplacements = existsSync(join(fieldSelectorDir, 'replacements.json'));
 
   if (hasReplacements) {
-    checks.push(await checkB1SourceScan(recipeId, recipeDir));
-    checks.push(await checkB2CoverageRatio(recipeId, recipeDir));
-    checks.push(await checkB3UnmatchedUnderscores(recipeId, recipeDir));
-    checks.push(await checkB4CleanEffectiveness(recipeId, recipeDir));
+    checks.push(await checkB1SourceScan(fieldSelectorId, fieldSelectorDir));
+    checks.push(await checkB2CoverageRatio(fieldSelectorId, fieldSelectorDir));
+    checks.push(await checkB3UnmatchedUnderscores(fieldSelectorId, fieldSelectorDir));
+    checks.push(await checkB4CleanEffectiveness(fieldSelectorId, fieldSelectorDir));
   } else {
     checks.push({ id: 'B1', name: 'Source scan', passed: false, details: 'No replacements.json' });
     checks.push({ id: 'B2', name: 'Coverage ratio', passed: false, details: 'No replacements.json' });
@@ -738,22 +738,22 @@ export async function gradeRecipe(
 
   // --- Fill checks (F1-F4) ---
   if (hasReplacements) {
-    // Find best fixture for this recipe
-    const fixtures = fixturesForRecipe(recipeId);
+    // Find best fixture for this fieldSelector
+    const fixtures = fixturesForFieldSelector(fieldSelectorId);
     // Prefer series-c > full > partial > defaults (defaults.json is {} which breaks F2)
     const effectiveFixture = fixtureValues ?? loadBestFixture(fixtures);
 
-    const f1 = await checkF1DefaultFill(recipeId, recipeDir, effectiveOutputDir);
+    const f1 = await checkF1DefaultFill(fieldSelectorId, fieldSelectorDir, effectiveOutputDir);
     checks.push(f1.check);
     verifyResult = f1.verifyResult;
 
-    const f2 = await checkF2FullFill(recipeId, recipeDir, effectiveFixture, effectiveOutputDir);
+    const f2 = await checkF2FullFill(fieldSelectorId, fieldSelectorDir, effectiveFixture, effectiveOutputDir);
     checks.push(f2.check);
     if (f2.verifyResult) verifyResult = f2.verifyResult;
 
-    checks.push(await checkF3FormattingAnomalies(recipeId, recipeDir, effectiveFixture, effectiveOutputDir));
+    checks.push(await checkF3FormattingAnomalies(fieldSelectorId, fieldSelectorDir, effectiveFixture, effectiveOutputDir));
 
-    const f4 = await checkF4ZeroMatchKeys(recipeId, recipeDir, effectiveFixture, effectiveOutputDir);
+    const f4 = await checkF4ZeroMatchKeys(fieldSelectorId, fieldSelectorDir, effectiveFixture, effectiveOutputDir);
     checks.push(f4.check);
     zeroMatchKeys = f4.zeroMatchKeys;
   } else {
@@ -781,14 +781,14 @@ export async function gradeRecipe(
   const maxApplicable = applicableChecks.length;
 
   const pctApplicable = maxApplicable > 0 ? continuousTotal / maxApplicable : 0;
-  const maturity: RecipeScorecard['maturity'] =
-    pctApplicable >= 1.0 && fixturesForRecipe(recipeId).length > 0 ? 'production' :
+  const maturity: FieldSelectorScorecard['maturity'] =
+    pctApplicable >= 1.0 && fixturesForFieldSelector(fieldSelectorId).length > 0 ? 'production' :
     pctApplicable >= 0.67 ? 'beta' : 'scaffold';
 
   const recommendations = generateRecommendations(checks, fieldCoverage, zeroMatchKeys);
 
   return {
-    recipe_id: recipeId,
+    field_selector_id: fieldSelectorId,
     timestamp: new Date().toISOString(),
     maturity,
     scores: {
@@ -814,9 +814,9 @@ export async function gradeRecipe(
 // ---------------------------------------------------------------------------
 
 async function main() {
-  const recipeId = process.argv[2];
-  if (!recipeId) {
-    console.error('Usage: npx tsx scripts/lib/recipe-grader.ts <recipe-id> [fixture.json]');
+  const fieldSelectorId = process.argv[2];
+  if (!fieldSelectorId) {
+    console.error('Usage: npx tsx scripts/lib/field-selector-grader.ts <field-selector-id> [fixture.json]');
     process.exit(1);
   }
 
@@ -829,8 +829,8 @@ async function main() {
     mkdirSync(outputDir, { recursive: true });
   }
 
-  console.log(`Grading recipe: ${recipeId}`);
-  const scorecard = await gradeRecipe(recipeId, fixtureValues, outputDir);
+  console.log(`Grading fieldSelector: ${fieldSelectorId}`);
+  const scorecard = await gradeFieldSelector(fieldSelectorId, fixtureValues, outputDir);
 
   console.log(`\nScore: ${scorecard.scores.total} (${scorecard.maturity}) — continuous: ${scorecard.continuous_total.toFixed(3)}/${scorecard.max_applicable}`);
   console.log(`  Structural: ${scorecard.scores.structural}`);

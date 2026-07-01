@@ -1,5 +1,5 @@
 /**
- * Shared fill pipeline used by all three fill paths (template, external, recipe).
+ * Shared fill pipeline used by all three fill paths (template, external, fieldSelector).
  * Centralizes: defaults, boolean coercion, display fields, currency sanitization,
  * drafting note removal, and the docx-templates createReport() call.
  */
@@ -14,7 +14,7 @@ import {
   enumerateTextParts,
   getGeneralTextPartNames,
   rezipWithoutDirEntries,
-} from './recipe/ooxml-parts.js';
+} from './field-selector/ooxml-parts.js';
 import type { FieldDefinition } from './metadata.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';

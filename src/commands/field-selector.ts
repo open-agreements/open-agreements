@@ -1,12 +1,12 @@
 import { resolve } from 'node:path';
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
-import { runRecipe, cleanDocument, patchDocument } from '../core/recipe/index.js';
+import { runFieldSelector, cleanDocument, patchDocument } from '../core/field-selector/index.js';
 import { loadCleanConfig } from '../core/metadata.js';
-import { listRecipeIds, resolveRecipeDir } from '../utils/paths.js';
+import { listFieldSelectorIds, resolveFieldSelectorDir } from '../utils/paths.js';
 
-export interface RecipeRunArgs {
-  recipeId: string;
+export interface FieldSelectorRunArgs {
+  fieldSelectorId: string;
   input?: string;
   output?: string;
   data?: string;
@@ -15,12 +15,12 @@ export interface RecipeRunArgs {
   normalizeBrackets?: boolean;
 }
 
-export async function runRecipeCommand(args: RecipeRunArgs): Promise<void> {
-  const recipeDir = resolveRecipeDir(args.recipeId);
+export async function runFieldSelectorCommand(args: FieldSelectorRunArgs): Promise<void> {
+  const fieldSelectorDir = resolveFieldSelectorDir(args.fieldSelectorId);
 
-  if (!existsSync(recipeDir)) {
-    const available = listRecipeIds();
-    console.error(`Field-selector "${args.recipeId}" not found.`);
+  if (!existsSync(fieldSelectorDir)) {
+    const available = listFieldSelectorIds();
+    console.error(`Field-selector "${args.fieldSelectorId}" not found.`);
     if (available.length > 0) {
       console.error(`Available field-selectors: ${available.join(', ')}`);
     }
@@ -32,11 +32,11 @@ export async function runRecipeCommand(args: RecipeRunArgs): Promise<void> {
     values = JSON.parse(readFileSync(args.data, 'utf-8'));
   }
 
-  const outputPath = resolve(args.output ?? `${args.recipeId}-filled.docx`);
+  const outputPath = resolve(args.output ?? `${args.fieldSelectorId}-filled.docx`);
 
   try {
-    const result = await runRecipe({
-      recipeId: args.recipeId,
+    const result = await runFieldSelector({
+      fieldSelectorId: args.fieldSelectorId,
       inputPath: args.input ? resolve(args.input) : undefined,
       outputPath,
       values,
@@ -56,23 +56,23 @@ export async function runRecipeCommand(args: RecipeRunArgs): Promise<void> {
   }
 }
 
-export interface RecipeCleanArgs {
+export interface FieldSelectorCleanArgs {
   input: string;
   output: string;
-  recipe: string;
+  fieldSelector: string;
   extractGuidance?: string;
 }
 
-export async function runRecipeClean(args: RecipeCleanArgs): Promise<void> {
-  const recipeDir = resolveRecipeDir(args.recipe);
-  const config = loadCleanConfig(recipeDir);
+export async function runFieldSelectorClean(args: FieldSelectorCleanArgs): Promise<void> {
+  const fieldSelectorDir = resolveFieldSelectorDir(args.fieldSelector);
+  const config = loadCleanConfig(fieldSelectorDir);
   const inputPath = resolve(args.input);
 
   try {
     if (args.extractGuidance) {
       const sourceData = readFileSync(inputPath);
       const sourceHash = createHash('sha256').update(sourceData).digest('hex');
-      const cleanPath = resolve(recipeDir, 'clean.json');
+      const cleanPath = resolve(fieldSelectorDir, 'clean.json');
       const configData = existsSync(cleanPath) ? readFileSync(cleanPath, 'utf-8') : '{}';
       const configHash = createHash('sha256').update(configData).digest('hex');
 
@@ -95,15 +95,15 @@ export async function runRecipeClean(args: RecipeCleanArgs): Promise<void> {
   }
 }
 
-export interface RecipePatchArgs {
+export interface FieldSelectorPatchArgs {
   input: string;
   output: string;
-  recipe: string;
+  fieldSelector: string;
 }
 
-export async function runRecipePatch(args: RecipePatchArgs): Promise<void> {
-  const recipeDir = resolveRecipeDir(args.recipe);
-  const replacementsPath = resolve(recipeDir, 'replacements.json');
+export async function runFieldSelectorPatch(args: FieldSelectorPatchArgs): Promise<void> {
+  const fieldSelectorDir = resolveFieldSelectorDir(args.fieldSelector);
+  const replacementsPath = resolve(fieldSelectorDir, 'replacements.json');
   const replacements: Record<string, string> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
 
   try {

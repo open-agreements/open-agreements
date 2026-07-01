@@ -58,7 +58,7 @@ The following template sources are **not included** because they use CC BY-ND an
 - **Bonterms Standard End User Agreement** — CC BY-ND
 - **Bonterms Standard Online Cloud Terms** — CC BY-ND
 
-These may be added in the future if their publishers provide clear guidance on programmatic use, or via the recipe tier (download at runtime).
+These may be added in the future if their publishers provide clear guidance on programmatic use, or via the field-selector tier (download at runtime).
 
 ### Employment Source Classifications
 

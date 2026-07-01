@@ -49,7 +49,7 @@ export interface BracketNormalizationOptions {
 }
 
 /**
- * Normalize residual bracket artifacts in generated recipe documents.
+ * Normalize residual bracket artifacts in generated fieldSelector documents.
  *
  * Only operates when declarative rules are provided (via normalize.json).
  * Without declarative rules, returns zero-change stats (no-op).

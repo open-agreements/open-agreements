@@ -1,6 +1,6 @@
 import { existsSync, writeFileSync } from 'node:fs';
 import AdmZip from 'adm-zip';
-import { enumerateTextParts, getGeneralTextPartNames } from '../core/recipe/ooxml-parts.js';
+import { enumerateTextParts, getGeneralTextPartNames } from '../core/field-selector/ooxml-parts.js';
 
 export interface ScanDocxResult {
   partNames: string[];
@@ -110,7 +110,7 @@ export function runScan(args: { input: string; outputReplacements?: string }): v
     console.log(`  ${p}${suffix}`);
   }
 
-  console.log(`\nLong clauses/alternatives (${longClauses.length}) — skipped by recipe:`);
+  console.log(`\nLong clauses/alternatives (${longClauses.length}) — skipped by field-selector:`);
   for (const c of longClauses) {
     console.log(`  ${c}`);
   }

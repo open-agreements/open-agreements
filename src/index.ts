@@ -17,16 +17,16 @@ export {
 export {
   loadMetadata,
   validateMetadata,
-  loadRecipeMetadata,
-  validateRecipeMetadata,
+  loadFieldSelectorMetadata,
+  validateFieldSelectorMetadata,
   loadCleanConfig,
   TemplateMetadataSchema,
-  RecipeMetadataSchema,
+  FieldSelectorMetadataSchema,
   CleanConfigSchema,
   LicenseEnum,
   FieldDefinitionSchema,
   type TemplateMetadata,
-  type RecipeMetadata,
+  type FieldSelectorMetadata,
   type CleanConfig,
   type FieldDefinition,
   type License,
@@ -51,7 +51,7 @@ export {
 export { validateTemplate, type TemplateValidationResult } from './core/validation/template.js';
 export { validateLicense, type LicenseValidationResult } from './core/validation/license.js';
 export { validateOutput, type OutputValidationResult } from './core/validation/output.js';
-export { validateRecipe, type RecipeValidationResult } from './core/validation/recipe.js';
+export { validateFieldSelector, type FieldSelectorValidationResult } from './core/validation/field-selector.js';
 export { validateExternal, type ExternalValidationResult } from './core/validation/external.js';
 export {
   assessScanMetadataCoverage,
@@ -59,20 +59,20 @@ export {
   type ScanMetadataCoverageReport,
 } from './core/validation/scan-metadata.js';
 
-// Recipe engine
+// FieldSelector engine
 export {
-  runRecipe,
+  runFieldSelector,
   cleanDocument,
   patchDocument,
   verifyOutput,
   ensureSourceDocx,
-  checkRecipeSourceDrift,
+  checkFieldSelectorSourceDrift,
   computeSourceStructureSignature,
-  type RecipeRunOptions,
-  type RecipeRunResult,
+  type FieldSelectorRunOptions,
+  type FieldSelectorRunResult,
   type VerifyResult,
   type VerifyCheck,
-} from './core/recipe/index.js';
+} from './core/field-selector/index.js';
 
 // Closing checklist
 export {

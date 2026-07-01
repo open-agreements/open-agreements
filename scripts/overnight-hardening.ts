@@ -1,17 +1,17 @@
 #!/usr/bin/env npx tsx
 /**
- * Autonomous NVCA Recipe Hardening Loop
+ * Autonomous NVCA FieldSelector Hardening Loop
  *
- * Processes each non-production recipe sequentially, invoking Codex CLI in a
- * loop to iteratively improve recipe quality until the scorecard hits 15/15
+ * Processes each non-production fieldSelector sequentially, invoking Codex CLI in a
+ * loop to iteratively improve fieldSelector quality until the scorecard hits 15/15
  * or 20 loops are exhausted.
  *
  * Usage:
  *   npx tsx scripts/overnight-hardening.ts [options]
  *
  * Options:
- *   --recipe <id>       Run only one recipe (default: all non-production)
- *   --max-loops <n>     Max iterations per recipe (default: 20)
+ *   --fieldSelector <id>       Run only one fieldSelector (default: all non-production)
+ *   --max-loops <n>     Max iterations per fieldSelector (default: 20)
  *   --dry-run           Grade only, don't invoke Codex
  *   --output-dir <dir>  Report output dir (default: .nvca-hardening-output/)
  */
@@ -19,12 +19,12 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync, readdirSync, appendFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { execSync, execFileSync, spawnSync } from 'node:child_process';
-import { gradeRecipe } from './lib/recipe-grader.js';
+import { gradeFieldSelector } from './lib/field-selector-grader.js';
 import { buildCodexPrompt, loadCoiFixture } from './lib/codex-prompt.js';
-import { loadRecipeMetadata, loadCleanConfig } from '../src/core/metadata.js';
-import { resolveRecipeDir } from '../src/utils/paths.js';
-import { ensureSourceDocx, extractAllText, cleanDocument } from '../src/core/recipe/index.js';
-import type { RecipeScorecard } from './lib/recipe-grader.js';
+import { loadFieldSelectorMetadata, loadCleanConfig } from '../src/core/metadata.js';
+import { resolveFieldSelectorDir } from '../src/utils/paths.js';
+import { ensureSourceDocx, extractAllText, cleanDocument } from '../src/core/field-selector/index.js';
+import type { FieldSelectorScorecard } from './lib/field-selector-grader.js';
 import {
   appendExperiment,
   getRecentHistory,
@@ -32,7 +32,7 @@ import {
   readIntentFile,
   readResultFile,
   cleanHandshakeFiles,
-  computeRecipeTreeHash,
+  computeFieldSelectorTreeHash,
   GRADER_VERSION,
 } from './lib/experiment-journal.js';
 import type { ExperimentEntry } from './lib/experiment-journal.js';
@@ -51,11 +51,11 @@ function escapeRegExp(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-// Set by main() before any recipe processing
+// Set by main() before any fieldSelector processing
 let outputDirGlobal = DEFAULT_OUTPUT_DIR;
 
-// Recipe processing order: legal impact priority, skip SPA (production)
-const RECIPE_ORDER = [
+// FieldSelector processing order: legal impact priority, skip SPA (production)
+const FIELD_SELECTOR_ORDER = [
   'nvca-certificate-of-incorporation',
   'nvca-investors-rights-agreement',
   'nvca-voting-agreement',
@@ -110,7 +110,7 @@ function isPathBlocked(filePath: string): boolean {
   for (const blocked of BLOCKED_PATHS) {
     if (filePath.startsWith(blocked)) return true;
   }
-  // Block .yaml files unless they're recipe metadata
+  // Block .yaml files unless they're fieldSelector metadata
   if (filePath.endsWith('.yaml') || filePath.endsWith('.yml')) {
     if (filePath.match(/^field-selectors\/nvca-[^/]+\/metadata\.yaml$/)) return false;
     return true;
@@ -177,8 +177,8 @@ function enforceEditPolicy(): string[] {
 // Types
 // ---------------------------------------------------------------------------
 
-interface RecipeReport {
-  recipeId: string;
+interface FieldSelectorReport {
+  fieldSelectorId: string;
   startScore: number;
   endScore: number;
   bestScore: number;
@@ -187,14 +187,14 @@ interface RecipeReport {
   loops: number;
   exitReason: 'perfect' | 'max_loops' | 'stalled' | 'error';
   newFixtures: number;
-  scorecards: RecipeScorecard[];
-  bestScorecard?: RecipeScorecard;  // last kept scorecard (not reverted)
+  scorecards: FieldSelectorScorecard[];
+  bestScorecard?: FieldSelectorScorecard;  // last kept scorecard (not reverted)
   errors: string[];
   policyViolations: string[];
 }
 
 interface CLIOptions {
-  recipe?: string;
+  fieldSelector?: string;
   maxLoops: number;
   dryRun: boolean;
   outputDir: string;
@@ -214,8 +214,8 @@ function parseArgs(): CLIOptions {
 
   for (let i = 0; i < args.length; i++) {
     switch (args[i]) {
-      case '--recipe':
-        opts.recipe = args[++i];
+      case '--fieldSelector':
+        opts.fieldSelector = args[++i];
         break;
       case '--max-loops':
         opts.maxLoops = parseInt(args[++i], 10);
@@ -239,8 +239,8 @@ function parseArgs(): CLIOptions {
 // Helpers
 // ---------------------------------------------------------------------------
 
-// Map recipe IDs to fixture file prefixes (abbreviations used in existing fixtures)
-const RECIPE_FIXTURE_PREFIXES: Record<string, string[]> = {
+// Map fieldSelector IDs to fixture file prefixes (abbreviations used in existing fixtures)
+const FIELD_SELECTOR_FIXTURE_PREFIXES: Record<string, string[]> = {
   'nvca-stock-purchase-agreement': ['spa-', 'stock-purchase-agreement-'],
   'nvca-certificate-of-incorporation': ['coi-', 'certificate-of-incorporation-'],
   'nvca-investors-rights-agreement': ['ira-', 'investors-rights-agreement-'],
@@ -250,21 +250,21 @@ const RECIPE_FIXTURE_PREFIXES: Record<string, string[]> = {
   'nvca-management-rights-letter': ['mrl-', 'management-rights-letter-'],
 };
 
-function fixturesForRecipe(recipeId: string): string[] {
+function fixturesForFieldSelector(fieldSelectorId: string): string[] {
   if (!existsSync(FIXTURES_DIR)) return [];
-  const shortId = recipeId.replace(/^nvca-/, '');
-  const prefixes = RECIPE_FIXTURE_PREFIXES[recipeId] ?? [shortId + '-'];
+  const shortId = fieldSelectorId.replace(/^nvca-/, '');
+  const prefixes = FIELD_SELECTOR_FIXTURE_PREFIXES[fieldSelectorId] ?? [shortId + '-'];
   return readdirSync(FIXTURES_DIR)
     .filter((f) => f.endsWith('.json') && prefixes.some((p) => f.startsWith(p)))
     .map((f) => join(FIXTURES_DIR, f));
 }
 
-function countFixtures(recipeId: string): number {
-  return fixturesForRecipe(recipeId).length;
+function countFixtures(fieldSelectorId: string): number {
+  return fixturesForFieldSelector(fieldSelectorId).length;
 }
 
-function loadBestFixture(recipeId: string): Record<string, string> {
-  const fixtures = fixturesForRecipe(recipeId);
+function loadBestFixture(fieldSelectorId: string): Record<string, string> {
+  const fixtures = fixturesForFieldSelector(fieldSelectorId);
   // Prefer series-c > full > partial > defaults
   const priority = ['series-c', 'full', 'partial', 'defaults'];
   for (const suffix of priority) {
@@ -276,17 +276,17 @@ function loadBestFixture(recipeId: string): Record<string, string> {
   return {};
 }
 
-async function getSourceTextExcerpt(recipeId: string): Promise<string> {
+async function getSourceTextExcerpt(fieldSelectorId: string): Promise<string> {
   try {
-    const recipeDir = resolveRecipeDir(recipeId);
-    const meta = loadRecipeMetadata(recipeDir);
-    const cleanConfig = loadCleanConfig(recipeDir);
-    const sourcePath = await ensureSourceDocx(recipeId, meta);
+    const fieldSelectorDir = resolveFieldSelectorDir(fieldSelectorId);
+    const meta = loadFieldSelectorMetadata(fieldSelectorDir);
+    const cleanConfig = loadCleanConfig(fieldSelectorDir);
+    const sourcePath = await ensureSourceDocx(fieldSelectorId, meta);
 
     // Clean then extract text
     const { mkdtempSync, rmSync } = await import('node:fs');
     const { tmpdir } = await import('node:os');
-    const tempDir = mkdtempSync(join(tmpdir(), `excerpt-${recipeId}-`));
+    const tempDir = mkdtempSync(join(tmpdir(), `excerpt-${fieldSelectorId}-`));
     try {
       const cleanedPath = join(tempDir, 'cleaned.docx');
       await cleanDocument(sourcePath, cleanedPath, cleanConfig);
@@ -299,10 +299,10 @@ async function getSourceTextExcerpt(recipeId: string): Promise<string> {
   }
 }
 
-function getMetadataFieldNames(recipeId: string): string[] {
+function getMetadataFieldNames(fieldSelectorId: string): string[] {
   try {
-    const recipeDir = resolveRecipeDir(recipeId);
-    const meta = loadRecipeMetadata(recipeDir);
+    const fieldSelectorDir = resolveFieldSelectorDir(fieldSelectorId);
+    const meta = loadFieldSelectorMetadata(fieldSelectorDir);
     return meta.fields.map((f) => f.name);
   } catch {
     return [];
@@ -355,14 +355,14 @@ function invokeCodex(prompt: string): { success: boolean; output: string } {
   }
 }
 
-function gitCheckpoint(recipeId: string, iteration: number, score: number, continuousTotal?: number): string {
-  const prefixes = RECIPE_FIXTURE_PREFIXES[recipeId] ?? [recipeId.replace(/^nvca-/, '') + '-'];
+function gitCheckpoint(fieldSelectorId: string, iteration: number, score: number, continuousTotal?: number): string {
+  const prefixes = FIELD_SELECTOR_FIXTURE_PREFIXES[fieldSelectorId] ?? [fieldSelectorId.replace(/^nvca-/, '') + '-'];
   const fixtureGlobs = prefixes.map((p) => `integration-tests/fixtures/${p}*`).join(' ');
   const continuousStr = continuousTotal !== undefined ? `, continuous ${continuousTotal.toFixed(3)}` : '';
   try {
-    // Stage recipe files and fixtures
+    // Stage fieldSelector files and fixtures
     execSync(
-      `git add field-selectors/${recipeId}/ ${fixtureGlobs} 2>/dev/null || true`,
+      `git add field-selectors/${fieldSelectorId}/ ${fixtureGlobs} 2>/dev/null || true`,
       { cwd: PROJECT_ROOT },
     );
 
@@ -373,7 +373,7 @@ function gitCheckpoint(recipeId: string, iteration: number, score: number, conti
     }
 
     execSync(
-      `git -c commit.gpgsign=false commit -m "$(cat <<'EOF'\nhardening(${recipeId}): loop ${iteration}, score ${score}/15${continuousStr}\nEOF\n)"`,
+      `git -c commit.gpgsign=false commit -m "$(cat <<'EOF'\nhardening(${fieldSelectorId}): loop ${iteration}, score ${score}/15${continuousStr}\nEOF\n)"`,
       { cwd: PROJECT_ROOT },
     );
     return execSync('git rev-parse HEAD', { cwd: PROJECT_ROOT }).toString().trim();
@@ -382,12 +382,12 @@ function gitCheckpoint(recipeId: string, iteration: number, score: number, conti
   }
 }
 
-function revertToCommit(commitSha: string, recipeId: string): void {
-  const prefixes = RECIPE_FIXTURE_PREFIXES[recipeId] ?? [recipeId.replace(/^nvca-/, '') + '-'];
+function revertToCommit(commitSha: string, fieldSelectorId: string): void {
+  const prefixes = FIELD_SELECTOR_FIXTURE_PREFIXES[fieldSelectorId] ?? [fieldSelectorId.replace(/^nvca-/, '') + '-'];
   const fixtureGlobs = prefixes.map((p) => `integration-tests/fixtures/${p}*`).join(' ');
   try {
     execSync(
-      `git checkout ${commitSha} -- field-selectors/${recipeId}/ ${fixtureGlobs} 2>/dev/null || true`,
+      `git checkout ${commitSha} -- field-selectors/${fieldSelectorId}/ ${fixtureGlobs} 2>/dev/null || true`,
       { cwd: PROJECT_ROOT },
     );
   } catch {
@@ -400,7 +400,7 @@ function revertToCommit(commitSha: string, recipeId: string): void {
 // ---------------------------------------------------------------------------
 
 interface ConvergencePoint {
-  recipe: string;
+  fieldSelector: string;
   loop: number;
   timestamp: string;
   integer_total: number;
@@ -418,14 +418,14 @@ function convergenceTsvPath(): string {
 
 function appendConvergencePoint(point: ConvergencePoint): void {
   const tsvPath = convergenceTsvPath();
-  const header = 'recipe\tloop\ttimestamp\tinteger_total\tcontinuous_total\tmax_applicable\toutcome\tS1\tS2\tS3\tS4\tS5\tS6\tS7\tB1\tB2\tB3\tB4\tF1\tF2\tF3\tF4\n';
+  const header = 'fieldSelector\tloop\ttimestamp\tinteger_total\tcontinuous_total\tmax_applicable\toutcome\tS1\tS2\tS3\tS4\tS5\tS6\tS7\tB1\tB2\tB3\tB4\tF1\tF2\tF3\tF4\n';
 
   if (!existsSync(tsvPath)) {
     writeFileSync(tsvPath, header);
   }
 
   const row = [
-    point.recipe,
+    point.fieldSelector,
     point.loop,
     point.timestamp,
     point.integer_total,
@@ -440,7 +440,7 @@ function appendConvergencePoint(point: ConvergencePoint): void {
   appendFileSync(tsvPath, row + '\n');
 }
 
-function scorecardToPerCheck(scorecard: RecipeScorecard): Record<string, number> {
+function scorecardToPerCheck(scorecard: FieldSelectorScorecard): Record<string, number> {
   const result: Record<string, number> = {};
   for (const check of scorecard.checks) {
     result[check.id] = check.score ?? (check.passed ? 1.0 : 0.0);
@@ -461,7 +461,7 @@ function consolidateConvergenceData(): void {
 // Pareto Protection
 // ---------------------------------------------------------------------------
 
-function buildCheckHighWater(scorecards: RecipeScorecard[]): Map<string, number> {
+function buildCheckHighWater(scorecards: FieldSelectorScorecard[]): Map<string, number> {
   const highWater = new Map<string, number>();
   for (const sc of scorecards) {
     for (const check of sc.checks) {
@@ -477,7 +477,7 @@ function buildCheckHighWater(scorecards: RecipeScorecard[]): Map<string, number>
 
 function findRegressedChecks(
   highWater: Map<string, number>,
-  current: RecipeScorecard,
+  current: FieldSelectorScorecard,
 ): string[] {
   const regressed: string[] = [];
   for (const check of current.checks) {
@@ -494,10 +494,10 @@ function findRegressedChecks(
 // Semantic Revisitation
 // ---------------------------------------------------------------------------
 
-function getModifiedReplacementKeys(recipeId: string): string[] {
+function getModifiedReplacementKeys(fieldSelectorId: string): string[] {
   try {
     const diff = execSync(
-      `git diff HEAD -- field-selectors/${recipeId}/replacements.json`,
+      `git diff HEAD -- field-selectors/${fieldSelectorId}/replacements.json`,
       { cwd: PROJECT_ROOT },
     ).toString();
     // Extract keys from added/removed lines
@@ -516,14 +516,14 @@ function getModifiedReplacementKeys(recipeId: string): string[] {
 }
 
 function detectSemanticRevisitation(
-  recipeId: string,
+  fieldSelectorId: string,
   modifiedKeys: string[],
 ): { revisited: boolean; message: string } {
   if (modifiedKeys.length === 0) {
     return { revisited: false, message: '' };
   }
 
-  const history = getAllHistory(recipeId);
+  const history = getAllHistory(fieldSelectorId);
   if (history.length === 0) {
     return { revisited: false, message: '' };
   }
@@ -554,33 +554,33 @@ function detectSemanticRevisitation(
 // Core hardening loop
 // ---------------------------------------------------------------------------
 
-async function hardenRecipe(
-  recipeId: string,
+async function hardenFieldSelector(
+  fieldSelectorId: string,
   maxLoops: number,
   dryRun: boolean,
   outputDir: string,
-): Promise<RecipeReport> {
-  const recipeOutputDir = join(outputDir, recipeId);
-  mkdirSync(recipeOutputDir, { recursive: true });
+): Promise<FieldSelectorReport> {
+  const fieldSelectorOutputDir = join(outputDir, fieldSelectorId);
+  mkdirSync(fieldSelectorOutputDir, { recursive: true });
 
   console.log(`\n${'='.repeat(60)}`);
-  console.log(`Recipe: ${recipeId}`);
+  console.log(`FieldSelector: ${fieldSelectorId}`);
   console.log('='.repeat(60));
 
-  const initialFixtureCount = countFixtures(recipeId);
-  const scorecards: RecipeScorecard[] = [];
+  const initialFixtureCount = countFixtures(fieldSelectorId);
+  const scorecards: FieldSelectorScorecard[] = [];
   const errors: string[] = [];
   const policyViolations: string[] = [];
 
   // Count existing journal entries for attempt numbering
-  const existingEntries = getAllHistory(recipeId);
+  const existingEntries = getAllHistory(fieldSelectorId);
   let attemptOffset = existingEntries.length;
 
   // Safe grading wrapper — returns null on error instead of crashing
-  async function safeGrade(label: string): Promise<RecipeScorecard | null> {
+  async function safeGrade(label: string): Promise<FieldSelectorScorecard | null> {
     try {
-      const vals = loadBestFixture(recipeId);
-      return await gradeRecipe(recipeId, vals, recipeOutputDir);
+      const vals = loadBestFixture(fieldSelectorId);
+      return await gradeFieldSelector(fieldSelectorId, vals, fieldSelectorOutputDir);
     } catch (err) {
       const msg = `Grade failed (${label}): ${(err as Error).message?.slice(0, 200)}`;
       console.log(`  ${msg}`);
@@ -596,7 +596,7 @@ async function hardenRecipe(
     console.log('  Baseline grading failed — Codex will attempt blind fixes');
     // Create a minimal scorecard so the loop can still run
     scorecard = {
-      recipe_id: recipeId, timestamp: new Date().toISOString(),
+      field_selector_id: fieldSelectorId, timestamp: new Date().toISOString(),
       maturity: 'scaffold', scores: { structural: '?/7', behavioral: '?/4', fill: '?/4', total: '0/15' },
       total_numeric: 0, max_score: 15, checks: [],
       continuous_total: 0, max_applicable: 15,
@@ -623,13 +623,13 @@ async function hardenRecipe(
     score: scorecard.total_numeric,
   };
   // keptScorecards excludes reverted attempts so Pareto high-water is accurate.
-  const keptScorecards: RecipeScorecard[] = [scorecard];
+  const keptScorecards: FieldSelectorScorecard[] = [scorecard];
   let bestContinuous = startContinuous;
 
   // Log baseline convergence point
   const baselinePerCheck = scorecardToPerCheck(scorecard);
   appendConvergencePoint({
-    recipe: recipeId,
+    fieldSelector: fieldSelectorId,
     loop: 0,
     timestamp: new Date().toISOString(),
     integer_total: scorecard.total_numeric,
@@ -649,7 +649,7 @@ async function hardenRecipe(
   if (scorecard.continuous_total >= scorecard.max_applicable - EPS_KEEP) {
     console.log('  Already perfect!');
     return {
-      recipeId,
+      fieldSelectorId,
       startScore: scorecard.total_numeric,
       endScore: scorecard.total_numeric,
       bestScore: scorecard.total_numeric,
@@ -668,11 +668,11 @@ async function hardenRecipe(
   if (dryRun) {
     // Write scorecard JSON for dry-run review
     writeFileSync(
-      join(recipeOutputDir, 'scorecard.json'),
+      join(fieldSelectorOutputDir, 'scorecard.json'),
       JSON.stringify(scorecard, null, 2),
     );
     return {
-      recipeId,
+      fieldSelectorId,
       startScore: scorecard.total_numeric,
       endScore: scorecard.total_numeric,
       bestScore: scorecard.total_numeric,
@@ -721,18 +721,18 @@ async function hardenRecipe(
     console.log(`\n  --- Loop ${i}/${maxLoops} ---`);
 
     // Clean handshake files before each iteration
-    cleanHandshakeFiles(recipeId);
+    cleanHandshakeFiles(fieldSelectorId);
 
     // Get experiment history for prompt
-    const experimentHistory = getRecentHistory(recipeId, 10);
+    const experimentHistory = getRecentHistory(fieldSelectorId, 10);
 
     // Build prompt
-    const existingFixtures = fixturesForRecipe(recipeId).map((f) => f.split('/').pop()!);
-    const metadataFieldNames = getMetadataFieldNames(recipeId);
-    const sourceExcerpt = await getSourceTextExcerpt(recipeId);
+    const existingFixtures = fixturesForFieldSelector(fieldSelectorId).map((f) => f.split('/').pop()!);
+    const metadataFieldNames = getMetadataFieldNames(fieldSelectorId);
+    const sourceExcerpt = await getSourceTextExcerpt(fieldSelectorId);
 
     const prompt = buildCodexPrompt({
-      recipeId,
+      fieldSelectorId,
       scorecard,
       loopIteration: i,
       sourceTextExcerpt: sourceExcerpt,
@@ -748,8 +748,8 @@ async function hardenRecipe(
     console.log(`  Codex ${codexResult.success ? 'succeeded' : 'failed'}`);
 
     // Read handshake files
-    const intentData = readIntentFile(recipeId);
-    const resultData = readResultFile(recipeId);
+    const intentData = readIntentFile(fieldSelectorId);
+    const resultData = readResultFile(fieldSelectorId);
     if (intentData) {
       console.log(`  Intent: ${intentData.hypothesis.slice(0, 120)}`);
     }
@@ -765,8 +765,8 @@ async function hardenRecipe(
     }
 
     // Detect semantic revisitation
-    const modifiedKeys = getModifiedReplacementKeys(recipeId);
-    const revisitation = detectSemanticRevisitation(recipeId, modifiedKeys);
+    const modifiedKeys = getModifiedReplacementKeys(fieldSelectorId);
+    const revisitation = detectSemanticRevisitation(fieldSelectorId, modifiedKeys);
     if (revisitation.revisited) {
       console.log(`  WARNING: ${revisitation.message}`);
     }
@@ -783,17 +783,17 @@ async function hardenRecipe(
     // Build experiment entry
     const attemptNum = attemptOffset + i;
     const baseCommit = bestCommitSha.slice(0, 12);
-    let recipeDir: string;
+    let fieldSelectorDir: string;
     try {
-      recipeDir = resolveRecipeDir(recipeId);
+      fieldSelectorDir = resolveFieldSelectorDir(fieldSelectorId);
     } catch {
-      recipeDir = join(PROJECT_ROOT, 'field-selectors', recipeId);
+      fieldSelectorDir = join(PROJECT_ROOT, 'field-selectors', fieldSelectorId);
     }
-    const treeHash = existsSync(recipeDir) ? computeRecipeTreeHash(recipeDir) : 'unknown';
+    const treeHash = existsSync(fieldSelectorDir) ? computeFieldSelectorTreeHash(fieldSelectorDir) : 'unknown';
 
     if (!regrade) {
       console.log('  Re-grade failed — Codex likely broke metadata, reverting');
-      revertToCommit(accepted.commitSha, recipeId);
+      revertToCommit(accepted.commitSha, fieldSelectorId);
       scorecard = accepted.scorecard; // reset in-memory scorecard to last kept
       noImprovementCount++;
 
@@ -811,15 +811,15 @@ async function hardenRecipe(
         checksImproved: [],
         lesson: resultData?.lesson ?? 'Grade failed — likely metadata validation error',
         base_commit: baseCommit,
-        recipe_tree_hash: treeHash,
+        fieldSelector_tree_hash: treeHash,
         grader_version: GRADER_VERSION,
       };
-      appendExperiment(recipeId, entry);
+      appendExperiment(fieldSelectorId, entry);
 
       // Log convergence point
       const perCheck = scorecardToPerCheck(scorecard);
       appendConvergencePoint({
-        recipe: recipeId,
+        fieldSelector: fieldSelectorId,
         loop: i,
         timestamp: new Date().toISOString(),
         integer_total: scorecard.total_numeric,
@@ -872,7 +872,7 @@ async function hardenRecipe(
       console.log('  Perfect score achieved!');
       bestScore = newScore;
       bestContinuous = newContinuous;
-      bestCommitSha = gitCheckpoint(recipeId, i, newScore, newContinuous);
+      bestCommitSha = gitCheckpoint(fieldSelectorId, i, newScore, newContinuous);
       keptScorecards.push(scorecard);
       accepted = { scorecard, commitSha: bestCommitSha, continuous: newContinuous, score: newScore };
 
@@ -893,15 +893,15 @@ async function hardenRecipe(
         checksImproved,
         lesson: resultData?.lesson ?? 'Perfect score achieved',
         base_commit: baseCommit,
-        recipe_tree_hash: treeHash,
+        fieldSelector_tree_hash: treeHash,
         grader_version: GRADER_VERSION,
       };
-      appendExperiment(recipeId, entry);
+      appendExperiment(fieldSelectorId, entry);
 
       // Log convergence point
       const perCheck = scorecardToPerCheck(scorecard);
       appendConvergencePoint({
-        recipe: recipeId,
+        fieldSelector: fieldSelectorId,
         loop: i,
         timestamp: new Date().toISOString(),
         integer_total: newScore,
@@ -919,7 +919,7 @@ async function hardenRecipe(
       });
 
       return {
-        recipeId,
+        fieldSelectorId,
         startScore,
         endScore: newScore,
         bestScore: newScore,
@@ -927,7 +927,7 @@ async function hardenRecipe(
         bestContinuous: newContinuous,
         loops: i,
         exitReason: 'perfect',
-        newFixtures: countFixtures(recipeId) - initialFixtureCount,
+        newFixtures: countFixtures(fieldSelectorId) - initialFixtureCount,
         scorecards,
         bestScorecard: accepted.scorecard,
         errors,
@@ -941,7 +941,7 @@ async function hardenRecipe(
       cumulativeGain += gain;
       bestScore = Math.max(bestScore, newScore);
       bestContinuous = newContinuous;
-      bestCommitSha = gitCheckpoint(recipeId, i, newScore, newContinuous);
+      bestCommitSha = gitCheckpoint(fieldSelectorId, i, newScore, newContinuous);
       keptScorecards.push(scorecard);
       accepted = { scorecard, commitSha: bestCommitSha, continuous: newContinuous, score: newScore };
       outcome = 'kept';
@@ -960,13 +960,13 @@ async function hardenRecipe(
         ? `Pareto regression on ${regressed.join(', ')}`
         : `continuous ${newContinuous.toFixed(3)} < best ${bestContinuous.toFixed(3)}`;
       console.log(`  Reverting: ${reason}`);
-      revertToCommit(accepted.commitSha, recipeId);
+      revertToCommit(accepted.commitSha, fieldSelectorId);
       scorecard = accepted.scorecard; // reset in-memory scorecard to last kept
       outcome = 'reverted';
       noImprovementCount++;
     } else {
       // Same score — still commit if there are improvements in details
-      const sha = gitCheckpoint(recipeId, i, newScore, newContinuous);
+      const sha = gitCheckpoint(fieldSelectorId, i, newScore, newContinuous);
       keptScorecards.push(scorecard);
       accepted = { scorecard, commitSha: sha, continuous: newContinuous, score: newScore };
       outcome = 'kept';
@@ -994,15 +994,15 @@ async function hardenRecipe(
       checksImproved,
       lesson: resultData?.lesson ?? `${outcome}: ${newContinuous.toFixed(3)} vs best ${bestContinuous.toFixed(3)}`,
       base_commit: baseCommit,
-      recipe_tree_hash: treeHash,
+      fieldSelector_tree_hash: treeHash,
       grader_version: GRADER_VERSION,
     };
-    appendExperiment(recipeId, entry);
+    appendExperiment(fieldSelectorId, entry);
 
     // Log convergence point
     const perCheck = scorecardToPerCheck(scorecard);
     appendConvergencePoint({
-      recipe: recipeId,
+      fieldSelector: fieldSelectorId,
       loop: i,
       timestamp: new Date().toISOString(),
       integer_total: newScore,
@@ -1023,7 +1023,7 @@ async function hardenRecipe(
     if (noImprovementCount >= STALL_LIMIT) {
       console.log(`  Stalled — ${STALL_LIMIT} consecutive iterations with no improvement`);
       return {
-        recipeId,
+        fieldSelectorId,
         startScore,
         endScore: newScore,
         bestScore,
@@ -1031,7 +1031,7 @@ async function hardenRecipe(
         bestContinuous,
         loops: i,
         exitReason: 'stalled',
-        newFixtures: countFixtures(recipeId) - initialFixtureCount,
+        newFixtures: countFixtures(fieldSelectorId) - initialFixtureCount,
         scorecards,
         bestScorecard: accepted.scorecard,
         errors,
@@ -1041,7 +1041,7 @@ async function hardenRecipe(
   }
 
   return {
-    recipeId,
+    fieldSelectorId,
     startScore,
     endScore: scorecard.total_numeric,
     bestScore,
@@ -1049,7 +1049,7 @@ async function hardenRecipe(
     bestContinuous,
     loops: maxLoops,
     exitReason: 'max_loops',
-    newFixtures: countFixtures(recipeId) - initialFixtureCount,
+    newFixtures: countFixtures(fieldSelectorId) - initialFixtureCount,
     scorecards,
     bestScorecard: accepted.scorecard,
     errors,
@@ -1062,7 +1062,7 @@ async function hardenRecipe(
 // ---------------------------------------------------------------------------
 
 function generateMorningReport(
-  reports: RecipeReport[],
+  reports: FieldSelectorReport[],
   startTime: Date,
   outputDir: string,
 ): void {
@@ -1080,11 +1080,11 @@ function generateMorningReport(
   const lines: string[] = [];
   lines.push(`# NVCA Hardening Report — ${today}`);
   lines.push('');
-  lines.push('| Recipe | Start | Best | Continuous | Loops | Exit Reason | New Fixtures | Violations |');
+  lines.push('| FieldSelector | Start | Best | Continuous | Loops | Exit Reason | New Fixtures | Violations |');
   lines.push('|--------|-------|------|------------|-------|-------------|--------------|------------|');
 
   for (const r of reports) {
-    const shortId = r.recipeId.replace(/^nvca-/, '');
+    const shortId = r.fieldSelectorId.replace(/^nvca-/, '');
     const continuousStr = `${r.startContinuous.toFixed(1)}→${r.bestContinuous.toFixed(1)}`;
     const violationCount = r.policyViolations.length;
     lines.push(
@@ -1094,7 +1094,7 @@ function generateMorningReport(
 
   lines.push('');
   lines.push(`Duration: ${durationStr}`);
-  lines.push(`Total improvement: +${totalImprovement} points across ${reports.length} recipes`);
+  lines.push(`Total improvement: +${totalImprovement} points across ${reports.length} fieldSelectors`);
   lines.push(`Total continuous improvement: +${totalContinuousImprovement.toFixed(3)}`);
 
   // Report errors if any
@@ -1103,7 +1103,7 @@ function generateMorningReport(
     lines.push('');
     lines.push('## Errors');
     for (const r of reportsWithErrors) {
-      lines.push(`### ${r.recipeId}`);
+      lines.push(`### ${r.fieldSelectorId}`);
       for (const e of r.errors) {
         lines.push(`- ${e.slice(0, 200)}`);
       }
@@ -1116,7 +1116,7 @@ function generateMorningReport(
     lines.push('');
     lines.push('## Edit Policy Violations');
     for (const r of reportsWithViolations) {
-      lines.push(`### ${r.recipeId}`);
+      lines.push(`### ${r.fieldSelectorId}`);
       const uniqueViolations = [...new Set(r.policyViolations)];
       for (const v of uniqueViolations) {
         lines.push(`- ${v}`);
@@ -1137,7 +1137,7 @@ function generateMorningReport(
 // Quality tracker updater
 // ---------------------------------------------------------------------------
 
-function updateQualityTracker(reports: RecipeReport[]): void {
+function updateQualityTracker(reports: FieldSelectorReport[]): void {
   if (!existsSync(QUALITY_TRACKER_PATH)) return;
 
   let content = readFileSync(QUALITY_TRACKER_PATH, 'utf-8');
@@ -1149,15 +1149,15 @@ function updateQualityTracker(reports: RecipeReport[]): void {
 
     const { structural, behavioral, fill } = lastScorecard.scores;
     const tier = lastScorecard.maturity;
-    const shortId = report.recipeId.replace(/^nvca-/, '');
-    const fixtures = fixturesForRecipe(report.recipeId);
+    const shortId = report.fieldSelectorId.replace(/^nvca-/, '');
+    const fixtures = fixturesForFieldSelector(report.fieldSelectorId);
     const fixtureStr = fixtures.length > 0
       ? fixtures.map((f) => f.split('/').pop()).join(', ')
       : '—';
 
-    // Replace the row for this recipe
-    const rowPattern = new RegExp(`^\\| ${escapeRegExp(report.recipeId)} \\|.*$`, 'm');
-    const newRow = `| ${report.recipeId} | ${structural} | ${behavioral} | ${fill} | ${lastScorecard.scores.total} | ${tier} | ${fixtureStr} | ${today} |`;
+    // Replace the row for this fieldSelector
+    const rowPattern = new RegExp(`^\\| ${escapeRegExp(report.fieldSelectorId)} \\|.*$`, 'm');
+    const newRow = `| ${report.fieldSelectorId} | ${structural} | ${behavioral} | ${fill} | ${lastScorecard.scores.total} | ${tier} | ${fixtureStr} | ${today} |`;
 
     if (rowPattern.test(content)) {
       content = content.replace(rowPattern, newRow);
@@ -1178,31 +1178,31 @@ async function main() {
   outputDirGlobal = outputDir;
   mkdirSync(outputDir, { recursive: true });
 
-  console.log('NVCA Recipe Hardening Loop');
+  console.log('NVCA FieldSelector Hardening Loop');
   console.log(`  Max loops: ${opts.maxLoops}`);
   console.log(`  Stall limit: ${STALL_LIMIT}`);
   console.log(`  Grader version: ${GRADER_VERSION}`);
   console.log(`  Dry run: ${opts.dryRun}`);
   console.log(`  Output dir: ${outputDir}`);
 
-  const recipesToProcess = opts.recipe
-    ? [opts.recipe]
-    : RECIPE_ORDER;
+  const fieldSelectorsToProcess = opts.fieldSelector
+    ? [opts.fieldSelector]
+    : FIELD_SELECTOR_ORDER;
 
-  console.log(`  Recipes: ${recipesToProcess.join(', ')}`);
+  console.log(`  FieldSelectors: ${fieldSelectorsToProcess.join(', ')}`);
 
   const startTime = new Date();
-  const reports: RecipeReport[] = [];
+  const reports: FieldSelectorReport[] = [];
 
-  for (const recipeId of recipesToProcess) {
+  for (const fieldSelectorId of fieldSelectorsToProcess) {
     try {
-      const report = await hardenRecipe(recipeId, opts.maxLoops, opts.dryRun, outputDir);
+      const report = await hardenFieldSelector(fieldSelectorId, opts.maxLoops, opts.dryRun, outputDir);
       reports.push(report);
     } catch (err) {
       const errMsg = (err as Error).message ?? String(err);
-      console.error(`\nError processing ${recipeId}: ${errMsg}`);
+      console.error(`\nError processing ${fieldSelectorId}: ${errMsg}`);
       reports.push({
-        recipeId,
+        fieldSelectorId,
         startScore: 0,
         endScore: 0,
         bestScore: 0,
@@ -1238,7 +1238,7 @@ async function main() {
     const deltaStr = delta > 0 ? ` (+${delta})` : '';
     const continuousDelta = r.bestContinuous - r.startContinuous;
     const continuousDeltaStr = continuousDelta > 0 ? ` (continuous +${continuousDelta.toFixed(3)})` : '';
-    console.log(`  ${r.recipeId}: ${r.startScore} → ${r.bestScore}/15${deltaStr}${continuousDeltaStr} [${r.exitReason}, ${r.loops} loops]`);
+    console.log(`  ${r.fieldSelectorId}: ${r.startScore} → ${r.bestScore}/15${deltaStr}${continuousDeltaStr} [${r.exitReason}, ${r.loops} loops]`);
   }
 }
 

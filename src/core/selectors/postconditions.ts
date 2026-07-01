@@ -1,5 +1,5 @@
 /**
- * Selector postconditions, surfaced as recipe `VerifyCheck` entries after fill.
+ * Selector postconditions, surfaced as fieldSelector `VerifyCheck` entries after fill.
  *
  * Phase 1 supports three:
  *  - `no_unresolved_placeholder` — the field's `{field_id}` tag did not survive
@@ -9,7 +9,7 @@
  *    (a remaining anchor means an occurrence rendered differently → divergence).
  *  - `no_double_dollar` — no `$$` / `$ $` artifact in the output.
  */
-import type { VerifyCheck } from '../recipe/types.js';
+import type { VerifyCheck } from '../field-selector/types.js';
 import type { FieldSelectorManifest } from './manifest-schema.js';
 
 export interface PostconditionInput {

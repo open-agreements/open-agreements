@@ -1,5 +1,5 @@
 /**
- * Zod schemas for selector-contract recipe manifests.
+ * Zod schemas for selector-contract fieldSelector manifests.
  *
  * A `FieldSelectorManifest` (`field-selectors/<id>/fields/<field_id>.json`)
  * models one fillable concept as an ordered list of deterministic locators

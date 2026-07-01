@@ -11,10 +11,10 @@ import {
 interface FillHarnessOptions {
   templateDir?: string;
   externalDir?: string;
-  recipeDir?: string;
+  fieldSelectorDir?: string;
   availableTemplateIds?: string[];
   availableExternalIds?: string[];
-  availableRecipeIds?: string[];
+  availableFieldSelectorIds?: string[];
   metadata?: {
     name: string;
     allow_derivatives: boolean;
@@ -22,7 +22,7 @@ interface FillHarnessOptions {
   };
   fillError?: Error;
   externalError?: Error;
-  recipeError?: Error;
+  fieldSelectorError?: Error;
   isEmploymentTemplateId?: (templateId: string) => boolean;
   memo?: Record<string, unknown>;
   memoMarkdown?: string;
@@ -45,14 +45,14 @@ interface FillHarness {
   spies: {
     findTemplateDir: ReturnType<typeof vi.fn>;
     findExternalDir: ReturnType<typeof vi.fn>;
-    findRecipeDir: ReturnType<typeof vi.fn>;
+    findFieldSelectorDir: ReturnType<typeof vi.fn>;
     listTemplateIds: ReturnType<typeof vi.fn>;
     listExternalIds: ReturnType<typeof vi.fn>;
-    listRecipeIds: ReturnType<typeof vi.fn>;
+    listFieldSelectorIds: ReturnType<typeof vi.fn>;
     loadMetadata: ReturnType<typeof vi.fn>;
     fillTemplate: ReturnType<typeof vi.fn>;
     runExternalFill: ReturnType<typeof vi.fn>;
-    runRecipe: ReturnType<typeof vi.fn>;
+    runFieldSelector: ReturnType<typeof vi.fn>;
     generateEmploymentMemo: ReturnType<typeof vi.fn>;
     isEmploymentTemplateId: ReturnType<typeof vi.fn>;
     renderEmploymentMemoMarkdown: ReturnType<typeof vi.fn>;
@@ -67,10 +67,10 @@ async function loadFillHarness(opts: FillHarnessOptions = {}): Promise<FillHarne
 
   const findTemplateDir = vi.fn(() => opts.templateDir);
   const findExternalDir = vi.fn(() => opts.externalDir);
-  const findRecipeDir = vi.fn(() => opts.recipeDir);
+  const findFieldSelectorDir = vi.fn(() => opts.fieldSelectorDir);
   const listTemplateIds = vi.fn(() => opts.availableTemplateIds ?? []);
   const listExternalIds = vi.fn(() => opts.availableExternalIds ?? []);
-  const listRecipeIds = vi.fn(() => opts.availableRecipeIds ?? []);
+  const listFieldSelectorIds = vi.fn(() => opts.availableFieldSelectorIds ?? []);
 
   const loadMetadata = vi.fn(() => opts.metadata ?? {
     name: 'Mock Template',
@@ -98,10 +98,10 @@ async function loadFillHarness(opts: FillHarnessOptions = {}): Promise<FillHarne
     };
   });
 
-  const runRecipe = vi.fn(async ({ outputPath }: { outputPath: string }) => {
-    if (opts.recipeError) throw opts.recipeError;
+  const runFieldSelector = vi.fn(async ({ outputPath }: { outputPath: string }) => {
+    if (opts.fieldSelectorError) throw opts.fieldSelectorError;
     return {
-      metadata: { name: 'Mock Recipe Template' },
+      metadata: { name: 'Mock FieldSelector Template' },
       outputPath,
       fieldsUsed: ['company_name'],
       stages: {},
@@ -129,10 +129,10 @@ async function loadFillHarness(opts: FillHarnessOptions = {}): Promise<FillHarne
   vi.doMock('../src/utils/paths.js', () => ({
     findTemplateDir,
     findExternalDir,
-    findRecipeDir,
+    findFieldSelectorDir,
     listTemplateIds,
     listExternalIds,
-    listRecipeIds,
+    listFieldSelectorIds,
   }));
 
   vi.doMock('../src/core/metadata.js', () => ({
@@ -147,8 +147,8 @@ async function loadFillHarness(opts: FillHarnessOptions = {}): Promise<FillHarne
     runExternalFill,
   }));
 
-  vi.doMock('../src/core/recipe/index.js', () => ({
-    runRecipe,
+  vi.doMock('../src/core/field-selector/index.js', () => ({
+    runFieldSelector,
   }));
 
   vi.doMock('../src/core/employment/memo.js', () => ({
@@ -164,14 +164,14 @@ async function loadFillHarness(opts: FillHarnessOptions = {}): Promise<FillHarne
     spies: {
       findTemplateDir,
       findExternalDir,
-      findRecipeDir,
+      findFieldSelectorDir,
       listTemplateIds,
       listExternalIds,
-      listRecipeIds,
+      listFieldSelectorIds,
       loadMetadata,
       fillTemplate,
       runExternalFill,
-      runRecipe,
+      runFieldSelector,
       generateEmploymentMemo,
       isEmploymentTemplateId,
       renderEmploymentMemoMarkdown,
@@ -283,7 +283,7 @@ describe('runFill in-process coverage', () => {
     const harness = await loadFillHarness({
       templateDir: undefined,
       externalDir: '/external/yc-safe-valuation-cap',
-      recipeDir: undefined,
+      fieldSelectorDir: undefined,
     });
 
     const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
@@ -303,23 +303,23 @@ describe('runFill in-process coverage', () => {
 
     expect(harness.spies.runExternalFill).toHaveBeenCalledTimes(1);
     expect(harness.spies.fillTemplate).not.toHaveBeenCalled();
-    expect(harness.spies.runRecipe).not.toHaveBeenCalled();
+    expect(harness.spies.runFieldSelector).not.toHaveBeenCalled();
   });
 
-  itFilling('routes recipe IDs to recipe pipeline', async () => {
+  itFilling('routes fieldSelector IDs to fieldSelector pipeline', async () => {
     const harness = await loadFillHarness({
       templateDir: undefined,
       externalDir: undefined,
-      recipeDir: '/recipes/nvca-voting-agreement',
+      fieldSelectorDir: '/fieldSelectors/nvca-voting-agreement',
     });
 
     await harness.runFill({
       template: 'nvca-voting-agreement',
-      output: '/tmp/recipe-output.docx',
+      output: '/tmp/field-selector-output.docx',
       values: { company_name: 'Acme Corp' },
     });
 
-    expect(harness.spies.runRecipe).toHaveBeenCalledTimes(1);
+    expect(harness.spies.runFieldSelector).toHaveBeenCalledTimes(1);
     expect(harness.spies.runExternalFill).not.toHaveBeenCalled();
     expect(harness.spies.fillTemplate).not.toHaveBeenCalled();
   });
@@ -328,10 +328,10 @@ describe('runFill in-process coverage', () => {
     const harness = await loadFillHarness({
       templateDir: undefined,
       externalDir: undefined,
-      recipeDir: undefined,
+      fieldSelectorDir: undefined,
       availableTemplateIds: ['common-paper-mutual-nda'],
       availableExternalIds: ['yc-safe-valuation-cap'],
-      availableRecipeIds: ['nvca-voting-agreement'],
+      availableFieldSelectorIds: ['nvca-voting-agreement'],
     });
 
     const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});

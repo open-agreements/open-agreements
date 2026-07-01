@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import AdmZip from 'adm-zip';
-import type { NormalizeConfig, RecipeMetadata } from '../metadata.js';
+import type { NormalizeConfig, FieldSelectorMetadata } from '../metadata.js';
 import { parseReplacementKey } from './replacement-keys.js';
 import { resolveSelectorContracts, type FieldSelectorManifest } from '../selectors/index.js';
 
@@ -63,7 +63,7 @@ export async function checkSelectorDrift(
 }
 
 export interface SourceDriftCheckResult {
-  recipe_id: string;
+  field_selector_id: string;
   source_path: string;
   expected_sha256?: string;
   actual_sha256: string;
@@ -132,16 +132,16 @@ function uniqueSorted(values: Iterable<string>): string[] {
   return [...new Set(values)].sort();
 }
 
-export function checkRecipeSourceDrift(input: {
-  recipeId: string;
+export function checkFieldSelectorSourceDrift(input: {
+  fieldSelectorId: string;
   sourcePath: string;
-  metadata: RecipeMetadata;
+  metadata: FieldSelectorMetadata;
   replacements: Record<string, string>;
   normalizeConfig?: NormalizeConfig;
   /** Pre-computed selector drift (from {@link checkSelectorDrift}); folded into diff + ok. */
   selectorDrift?: SelectorDriftResult;
 }): SourceDriftCheckResult {
-  const { recipeId, sourcePath, metadata, replacements, normalizeConfig, selectorDrift } = input;
+  const { fieldSelectorId, sourcePath, metadata, replacements, normalizeConfig, selectorDrift } = input;
   const paragraphs = extractDocumentParagraphs(sourcePath);
   const documentText = paragraphs.join('\n');
   const actualSha = computeSha256Hex(sourcePath);
@@ -206,7 +206,7 @@ export function checkRecipeSourceDrift(input: {
     && diff.assertion_failures.length === 0;
 
   return {
-    recipe_id: recipeId,
+    field_selector_id: fieldSelectorId,
     source_path: sourcePath,
     expected_sha256: metadata.source_sha256,
     actual_sha256: actualSha,

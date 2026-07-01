@@ -4,8 +4,8 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
 import { afterEach, describe, expect } from 'vitest';
-import type { NormalizeConfig, RecipeMetadata } from '../src/core/metadata.js';
-import { checkRecipeSourceDrift, checkSelectorDrift, computeSourceStructureSignature } from '../src/core/recipe/source-drift.js';
+import type { NormalizeConfig, FieldSelectorMetadata } from '../src/core/metadata.js';
+import { checkFieldSelectorSourceDrift, checkSelectorDrift, computeSourceStructureSignature } from '../src/core/field-selector/source-drift.js';
 import type { FieldSelectorManifest } from '../src/core/selectors/index.js';
 import { itAllure } from './helpers/allure-test.js';
 
@@ -64,9 +64,9 @@ function sha256Hex(path: string): string {
   return createHash('sha256').update(readFileSync(path)).digest('hex');
 }
 
-function makeMetadata(sourceSha: string): RecipeMetadata {
+function makeMetadata(sourceSha: string): FieldSelectorMetadata {
   return {
-    name: 'Synthetic Recipe',
+    name: 'Synthetic FieldSelector',
     description: 'Synthetic drift canary fixture',
     source_url: 'https://example.com/synthetic.docx',
     source_version: '1.0',
@@ -93,7 +93,7 @@ const NORMALIZE_CONFIG: NormalizeConfig = {
 };
 
 describe('source drift canary', () => {
-  it('passes when hash and structural anchors match recipe configuration', () => {
+  it('passes when hash and structural anchors match fieldSelector configuration', () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-source-drift-pass-'));
     tempDirs.push(dir);
     const sourcePath = join(dir, 'source.docx');
@@ -108,8 +108,8 @@ describe('source drift canary', () => {
       '[Insert Company Name]': '{company_name}',
     };
 
-    const result = checkRecipeSourceDrift({
-      recipeId: 'synthetic',
+    const result = checkFieldSelectorSourceDrift({
+      fieldSelectorId: 'synthetic',
       sourcePath,
       metadata,
       replacements,
@@ -135,8 +135,8 @@ describe('source drift canary', () => {
       '[Insert Company Name]': '{company_name}',
     };
 
-    const result = checkRecipeSourceDrift({
-      recipeId: 'synthetic',
+    const result = checkFieldSelectorSourceDrift({
+      fieldSelectorId: 'synthetic',
       sourcePath,
       metadata,
       replacements,
@@ -161,8 +161,8 @@ describe('source drift canary', () => {
       '[Insert Company Name]': '{company_name}',
     };
 
-    const result = checkRecipeSourceDrift({
-      recipeId: 'synthetic',
+    const result = checkFieldSelectorSourceDrift({
+      fieldSelectorId: 'synthetic',
       sourcePath,
       metadata,
       replacements,
@@ -226,8 +226,8 @@ describe('selector drift detection (safe-docx parse path)', () => {
     expect(drift.unresolved_selector_fields).toEqual([]);
     expect(drift.assertion_failures).toEqual([]);
 
-    const result = checkRecipeSourceDrift({
-      recipeId: 'synthetic',
+    const result = checkFieldSelectorSourceDrift({
+      fieldSelectorId: 'synthetic',
       sourcePath,
       metadata: makeMetadata(sha256Hex(sourcePath)),
       replacements: { '[Insert Company Name]': '{company_name}' },
@@ -247,8 +247,8 @@ describe('selector drift detection (safe-docx parse path)', () => {
     const drift = await checkSelectorDrift(sourcePath, [oneAnchorManifest()]);
     expect(drift.unresolved_selector_fields).toContain('company_name');
 
-    const result = checkRecipeSourceDrift({
-      recipeId: 'synthetic',
+    const result = checkFieldSelectorSourceDrift({
+      fieldSelectorId: 'synthetic',
       sourcePath,
       metadata: makeMetadata(sha256Hex(sourcePath)),
       replacements: { '[Insert Company Name]': '{company_name}' },

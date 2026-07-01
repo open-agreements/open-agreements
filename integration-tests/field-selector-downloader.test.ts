@@ -10,7 +10,7 @@ import {
 } from './helpers/allure-test.js';
 
 interface DownloaderHarness {
-  ensureSourceDocx: (recipeId: string, metadata: { name: string; source_url: string; source_sha256?: string }) => Promise<string>;
+  ensureSourceDocx: (fieldSelectorId: string, metadata: { name: string; source_url: string; source_sha256?: string }) => Promise<string>;
   homeDir: string;
 }
 
@@ -35,8 +35,8 @@ function toArrayBuffer(buffer: Buffer): ArrayBuffer {
   return buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength);
 }
 
-function cachePath(homeDir: string, recipeId: string): string {
-  return join(homeDir, '.open-agreements', 'cache', recipeId, 'source.docx');
+function cachePath(homeDir: string, fieldSelectorId: string): string {
+  return join(homeDir, '.open-agreements', 'cache', fieldSelectorId, 'source.docx');
 }
 
 async function loadDownloaderHarness(): Promise<DownloaderHarness> {
@@ -49,7 +49,7 @@ async function loadDownloaderHarness(): Promise<DownloaderHarness> {
     homedir: () => homeDir,
   }));
 
-  const module = await import('../src/core/recipe/downloader.js');
+  const module = await import('../src/core/field-selector/downloader.js');
 
   return {
     ensureSourceDocx: module.ensureSourceDocx,
@@ -60,24 +60,24 @@ async function loadDownloaderHarness(): Promise<DownloaderHarness> {
 describe('ensureSourceDocx cache and integrity behavior', () => {
   it('returns cached file when source_sha256 matches and avoids network fetch', async () => {
     const harness = await loadDownloaderHarness();
-    const recipeId = 'fixture-recipe';
+    const fieldSelectorId = 'fixture-fieldSelector';
     const bytes = Buffer.from('cached-template-bytes');
-    const path = cachePath(harness.homeDir, recipeId);
-    mkdirSync(join(harness.homeDir, '.open-agreements', 'cache', recipeId), { recursive: true });
+    const path = cachePath(harness.homeDir, fieldSelectorId);
+    mkdirSync(join(harness.homeDir, '.open-agreements', 'cache', fieldSelectorId), { recursive: true });
     writeFileSync(path, bytes);
 
     const fetchMock = vi.fn();
     vi.stubGlobal('fetch', fetchMock);
 
     const result = await allureStep('Ensure source returns cached path', async () =>
-      harness.ensureSourceDocx(recipeId, {
-        name: 'Fixture Recipe',
+      harness.ensureSourceDocx(fieldSelectorId, {
+        name: 'Fixture FieldSelector',
         source_url: 'https://example.com/source.docx',
         source_sha256: sha256(bytes),
       })
     );
 
-    await allureJsonAttachment('recipe-downloader-cache-hit.json', {
+    await allureJsonAttachment('field-selector-downloader-cache-hit.json', {
       result,
       cachePath: path,
       fetchCalls: fetchMock.mock.calls,
@@ -89,12 +89,12 @@ describe('ensureSourceDocx cache and integrity behavior', () => {
 
   it('re-downloads and replaces cache when cached hash mismatches expected hash', async () => {
     const harness = await loadDownloaderHarness();
-    const recipeId = 'fixture-recipe';
+    const fieldSelectorId = 'fixture-fieldSelector';
     const staleBytes = Buffer.from('stale-cached-bytes');
     const freshBytes = Buffer.from('fresh-downloaded-bytes');
-    const path = cachePath(harness.homeDir, recipeId);
+    const path = cachePath(harness.homeDir, fieldSelectorId);
 
-    mkdirSync(join(harness.homeDir, '.open-agreements', 'cache', recipeId), { recursive: true });
+    mkdirSync(join(harness.homeDir, '.open-agreements', 'cache', fieldSelectorId), { recursive: true });
     writeFileSync(path, staleBytes);
 
     const fetchMock = vi.fn(async () => ({
@@ -105,15 +105,15 @@ describe('ensureSourceDocx cache and integrity behavior', () => {
     }));
     vi.stubGlobal('fetch', fetchMock);
 
-    const result = await harness.ensureSourceDocx(recipeId, {
-      name: 'Fixture Recipe',
+    const result = await harness.ensureSourceDocx(fieldSelectorId, {
+      name: 'Fixture FieldSelector',
       source_url: 'https://example.com/source.docx',
       source_sha256: sha256(freshBytes),
     });
 
     const diskBytes = readFileSync(path);
 
-    await allureJsonAttachment('recipe-downloader-cache-redownload.json', {
+    await allureJsonAttachment('field-selector-downloader-cache-redownload.json', {
       result,
       cachePath: path,
       fetchCalls: fetchMock.mock.calls.length,
@@ -138,11 +138,11 @@ describe('ensureSourceDocx cache and integrity behavior', () => {
     vi.stubGlobal('fetch', fetchMock);
 
     await expect(
-      harness.ensureSourceDocx('fixture-recipe', {
-        name: 'Fixture Recipe',
+      harness.ensureSourceDocx('fixture-fieldSelector', {
+        name: 'Fixture FieldSelector',
         source_url: 'https://example.com/missing.docx',
       })
-    ).rejects.toThrow('Failed to download fixture-recipe: HTTP 404 Not Found');
+    ).rejects.toThrow('Failed to download fixture-fieldSelector: HTTP 404 Not Found');
 
     expect(fetchMock).toHaveBeenCalledTimes(1);
   });
@@ -162,34 +162,34 @@ describe('ensureSourceDocx cache and integrity behavior', () => {
     vi.stubGlobal('fetch', fetchMock);
 
     await expect(
-      harness.ensureSourceDocx('fixture-recipe', {
-        name: 'Fixture Recipe',
+      harness.ensureSourceDocx('fixture-fieldSelector', {
+        name: 'Fixture FieldSelector',
         source_url: 'https://example.com/source.docx',
         source_sha256: expectedHash,
       })
-    ).rejects.toThrow('Integrity check failed for fixture-recipe');
+    ).rejects.toThrow('Integrity check failed for fixture-fieldSelector');
 
     expect(fetchMock).toHaveBeenCalledTimes(1);
   });
 
   it('uses cached file without hash checks when source_sha256 is absent', async () => {
     const harness = await loadDownloaderHarness();
-    const recipeId = 'fixture-recipe';
+    const fieldSelectorId = 'fixture-fieldSelector';
     const bytes = Buffer.from('cache-without-hash');
-    const path = cachePath(harness.homeDir, recipeId);
+    const path = cachePath(harness.homeDir, fieldSelectorId);
 
-    mkdirSync(join(harness.homeDir, '.open-agreements', 'cache', recipeId), { recursive: true });
+    mkdirSync(join(harness.homeDir, '.open-agreements', 'cache', fieldSelectorId), { recursive: true });
     writeFileSync(path, bytes);
 
     const fetchMock = vi.fn();
     vi.stubGlobal('fetch', fetchMock);
 
-    const result = await harness.ensureSourceDocx(recipeId, {
-      name: 'Fixture Recipe',
+    const result = await harness.ensureSourceDocx(fieldSelectorId, {
+      name: 'Fixture FieldSelector',
       source_url: 'https://example.com/source.docx',
     });
 
-    await allureJsonAttachment('recipe-downloader-no-hash-cache.json', {
+    await allureJsonAttachment('field-selector-downloader-no-hash-cache.json', {
       result,
       exists: existsSync(result),
       fetchCalls: fetchMock.mock.calls.length,

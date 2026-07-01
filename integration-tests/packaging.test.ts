@@ -55,7 +55,7 @@ describe('npm packaging', () => {
     );
   });
 
-  it('includes a recipe metadata file', () => {
+  it('includes a fieldSelector metadata file', () => {
     if (!available) return;
     expect(files.some((f) => f.startsWith('field-selectors/') && f.endsWith('metadata.yaml'))).toBe(true);
   });

@@ -11,9 +11,9 @@ import {
 const runFillMock = vi.fn();
 const runValidateMock = vi.fn();
 const runListMock = vi.fn();
-const runRecipeCommandMock = vi.fn();
-const runRecipeCleanMock = vi.fn();
-const runRecipePatchMock = vi.fn();
+const runFieldSelectorCommandMock = vi.fn();
+const runFieldSelectorCleanMock = vi.fn();
+const runFieldSelectorPatchMock = vi.fn();
 const runScanMock = vi.fn();
 const runChecklistCreateMock = vi.fn();
 const runChecklistRenderMock = vi.fn();
@@ -32,10 +32,10 @@ vi.mock('../src/commands/list.js', () => ({
   runList: runListMock,
 }));
 
-vi.mock('../src/commands/recipe.js', () => ({
-  runRecipeCommand: runRecipeCommandMock,
-  runRecipeClean: runRecipeCleanMock,
-  runRecipePatch: runRecipePatchMock,
+vi.mock('../src/commands/field-selector.js', () => ({
+  runFieldSelectorCommand: runFieldSelectorCommandMock,
+  runFieldSelectorClean: runFieldSelectorCleanMock,
+  runFieldSelectorPatch: runFieldSelectorPatchMock,
 }));
 
 vi.mock('../src/commands/scan.js', () => ({
@@ -305,8 +305,8 @@ describe('CLI program wiring', () => {
     });
   });
 
-  itPlatform('forwards recipe subcommands to recipe command handlers', async () => {
-    const recipeRunArgv = [
+  itPlatform('forwards fieldSelector subcommands to fieldSelector command handlers', async () => {
+    const fieldSelectorRunArgv = [
       'node',
       'open-agreements',
       'field-selector',
@@ -323,7 +323,7 @@ describe('CLI program wiring', () => {
       '--keep-intermediate',
     ];
 
-    const recipeCleanArgv = [
+    const fieldSelectorCleanArgv = [
       'node',
       'open-agreements',
       'field-selector',
@@ -337,7 +337,7 @@ describe('CLI program wiring', () => {
       'guidance.json',
     ];
 
-    const recipePatchArgv = [
+    const fieldSelectorPatchArgv = [
       'node',
       'open-agreements',
       'field-selector',
@@ -349,29 +349,29 @@ describe('CLI program wiring', () => {
       'nvca-voting-agreement',
     ];
 
-    await allureStep('Given recipe run/clean/patch argv payloads', async () => {
-      await allureJsonAttachment('cli-recipe-argv.json', {
-        recipeRunArgv,
-        recipeCleanArgv,
-        recipePatchArgv,
+    await allureStep('Given fieldSelector run/clean/patch argv payloads', async () => {
+      await allureJsonAttachment('cli-field-selector-argv.json', {
+        fieldSelectorRunArgv,
+        fieldSelectorCleanArgv,
+        fieldSelectorPatchArgv,
       });
     });
 
-    await allureStep('When recipe subcommands are executed', async () => {
-      await runCli(recipeRunArgv);
-      await runCli(recipeCleanArgv);
-      await runCli(recipePatchArgv);
+    await allureStep('When fieldSelector subcommands are executed', async () => {
+      await runCli(fieldSelectorRunArgv);
+      await runCli(fieldSelectorCleanArgv);
+      await runCli(fieldSelectorPatchArgv);
     });
 
-    await allureJsonAttachment('cli-recipe-forwarded-calls.json', {
-      run: runRecipeCommandMock.mock.calls[0]?.[0],
-      clean: runRecipeCleanMock.mock.calls[0]?.[0],
-      patch: runRecipePatchMock.mock.calls[0]?.[0],
+    await allureJsonAttachment('cli-field-selector-forwarded-calls.json', {
+      run: runFieldSelectorCommandMock.mock.calls[0]?.[0],
+      clean: runFieldSelectorCleanMock.mock.calls[0]?.[0],
+      patch: runFieldSelectorPatchMock.mock.calls[0]?.[0],
     });
 
-    await allureStep('Then recipe run command payload is forwarded correctly', async () => {
-      expect(runRecipeCommandMock).toHaveBeenCalledWith({
-        recipeId: 'nvca-voting-agreement',
+    await allureStep('Then fieldSelector run command payload is forwarded correctly', async () => {
+      expect(runFieldSelectorCommandMock).toHaveBeenCalledWith({
+        fieldSelectorId: 'nvca-voting-agreement',
         input: 'input.docx',
         output: 'out.docx',
         data: 'values.json',
@@ -381,20 +381,20 @@ describe('CLI program wiring', () => {
       });
     });
 
-    await allureStep('And recipe clean command payload is forwarded correctly', async () => {
-      expect(runRecipeCleanMock).toHaveBeenCalledWith({
+    await allureStep('And fieldSelector clean command payload is forwarded correctly', async () => {
+      expect(runFieldSelectorCleanMock).toHaveBeenCalledWith({
         input: 'raw.docx',
         output: 'clean.docx',
-        recipe: 'nvca-voting-agreement',
+        fieldSelector: 'nvca-voting-agreement',
         extractGuidance: 'guidance.json',
       });
     });
 
-    await allureStep('And recipe patch command payload is forwarded correctly', async () => {
-      expect(runRecipePatchMock).toHaveBeenCalledWith({
+    await allureStep('And fieldSelector patch command payload is forwarded correctly', async () => {
+      expect(runFieldSelectorPatchMock).toHaveBeenCalledWith({
         input: 'clean.docx',
         output: 'patched.docx',
-        recipe: 'nvca-voting-agreement',
+        fieldSelector: 'nvca-voting-agreement',
       });
     });
   });
@@ -500,7 +500,7 @@ describe('CLI program wiring', () => {
     }
   });
 
-  itPlatform('--values alias works on recipe run command', async () => {
+  itPlatform('--values alias works on fieldSelector run command', async () => {
     const argv = [
       'node',
       'open-agreements',
@@ -515,8 +515,8 @@ describe('CLI program wiring', () => {
 
     await runCli(argv);
 
-    expect(runRecipeCommandMock).toHaveBeenCalledTimes(1);
-    expect(runRecipeCommandMock.mock.calls[0]?.[0].data).toBe('values.json');
+    expect(runFieldSelectorCommandMock).toHaveBeenCalledTimes(1);
+    expect(runFieldSelectorCommandMock.mock.calls[0]?.[0].data).toBe('values.json');
   });
 
   itPlatform('--values alias works on checklist create command', async () => {

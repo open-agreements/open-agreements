@@ -58,7 +58,7 @@ describe('computed profile evaluator', () => {
     );
 
     const artifact = buildComputedArtifact({
-      recipeId: 'fixture-recipe',
+      fieldSelectorId: 'fixture-fieldSelector',
       inputValues,
       evaluated: result,
       profileVersion: profile.version,

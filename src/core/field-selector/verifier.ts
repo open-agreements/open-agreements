@@ -29,7 +29,7 @@ export function normalizeText(text: string): string {
 }
 
 /**
- * Verify a filled recipe output DOCX:
+ * Verify a filled fieldSelector output DOCX:
  * - All context values appear in the document text
  * - No unrendered {template_tags} remain
  * - No leftover [bracketed placeholders] from the replacement map remain
