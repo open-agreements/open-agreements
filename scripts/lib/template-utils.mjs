@@ -8,7 +8,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export const REPO_ROOT = resolve(__dirname, "../..");
 export const TEMPLATES_DIR = resolve(REPO_ROOT, "templates");
-export const PREVIEWS_DIR = resolve(REPO_ROOT, "site", "assets", "previews");
+export const PREVIEWS_DIR = resolve(REPO_ROOT, "data", "template-previews");
 
 /**
  * Map every slug to its on-disk directory. Since the S3 source/rights

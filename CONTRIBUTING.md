@@ -163,7 +163,7 @@ npm run test:run
    npm run generate:template-previews
    ```
 
-   Commit the updated `site/assets/previews/<id>/page-*.png` (and any
+   Commit the updated `data/template-previews/<id>/page-*.png` (and any
    regenerated `template.docx` / `.template.generated.json`). CI's
    `preview-freshness-gate` enforces this on PRs.
 

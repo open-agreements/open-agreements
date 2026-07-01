@@ -47,7 +47,7 @@
     "SECURITY.md",
     "server.json",
     "gemini-extension.json",
-    "GEMINI.md"
+    "AGENTS.md"
   ],
   "bundleDependencies": [
     "@usejunior/docx-core"
@@ -84,22 +84,12 @@
     "test:run": "npm run build && vitest run",
     "lint": "eslint src/",
     "validate": "node bin/open-agreements.js validate",
-    "build:downloads": "node scripts/prepare_site_downloads.mjs",
-    "build:html": "npx @11ty/eleventy",
-    "build:site:indexes": "node scripts/generate_site_indexes.mjs",
-    "build:site": "npm run build:downloads && npm run check:template-previews && npm run build:html && npm run build:site:indexes",
-    "build:site:vercel": "npm run build:workspace && npm run generate:schemas && npm run build:site && npm run build:arp-manifest && npm run sign:arp-manifest",
-    "build:arp-manifest": "node scripts/build-wellknown-ai-index.cjs",
-    "sign:arp-manifest": "node scripts/sign-manifest.cjs",
     "prepare": "command -v tsc >/dev/null 2>&1 && npm run build || echo 'skip build: typescript not installed (production/omit-dev install)'",
     "report:allure": "rm -rf ./allure-report && allure awesome ./allure-results --output ./allure-report --group-by epic,feature,story && node scripts/patch_allure_html_sanitizer.mjs --report-dir ./allure-report",
     "report:allure:open": "allure open ./allure-report",
     "allure:deploy": "node scripts/deploy_allure_report.mjs",
-    "generate:template-evidence": "node scripts/generate_template_evidence.mjs",
-    "generate:changelog-data": "node scripts/generate_changelog_data.mjs",
     "check:readme": "npm run generate:readme && git diff --exit-code -- README.md",
-    "check:template-evidence": "npm run generate:template-evidence && git diff --exit-code -- site/_data/templateEvidence.json",
-    "preflight:ci": "npm run lint && npm run validate && npm run check:template-previews && npm run check:preview-freshness && npm run check:gemini-extension-manifest && npm run check:readme && npm run test:run && npm run check:template-evidence"
+    "preflight:ci": "npm run lint && npm run validate && npm run check:template-previews && npm run check:preview-freshness && npm run check:gemini-extension-manifest && npm run check:readme && npm run test:run"
   },
   "keywords": [
     "legal",
@@ -143,8 +133,6 @@
     "zod": "^4.0.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "@eslint/js": "^9.39.2",
     "@types/adm-zip": "^0.5.7",
     "@types/js-yaml": "^4.0.9",
@@ -159,7 +147,6 @@
     "fast-xml-parser": "^4.5.3",
     "globals": "^14.0.0",
     "prismjs": "^1.30.0",
-    "tailwindcss": "^3.4.0",
     "typescript": "^5.7.0",
     "typescript-eslint": "^8.54.0",
     "vitest": "^3.2.4"

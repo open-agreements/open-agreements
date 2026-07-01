@@ -86,12 +86,6 @@ describe('README generation', () => {
       expect(catalog.templates.length).toBeGreaterThan(0);
       expect(Array.isArray(catalog.categories)).toBe(true);
 
-      // The Eleventy data file re-exports the same shared helper rather than
-      // re-implementing catalog loading with site side effects.
-      const catalogDataFile = readRepoFile('site/_data/catalog.js');
-      expect(catalogDataFile).toContain('../../scripts/lib/catalog-data.mjs');
-      expect(catalogDataFile).toContain('buildCatalog');
-
       // The Legal Practice Library index is likewise a pure read of the
       // committed OKF tree; counts are derived, never hard-coded.
       const library = buildLibrary({ rootDir: ROOT });

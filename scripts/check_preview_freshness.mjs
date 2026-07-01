@@ -346,7 +346,7 @@ function matchTemplatePath(p) {
 
 /**
  * For each triggered template, check whether the diff contains at least one
- * record under site/assets/previews/<id>/page-N.png. Returns the IDs that
+ * record under data/template-previews/<id>/page-N.png. Returns the IDs that
  * do NOT have a matching preview record.
  *
  * @param {Array<{ status: string, path: string }>} records
@@ -355,7 +355,7 @@ function matchTemplatePath(p) {
  */
 export function findMissingFreshness(records, triggered) {
   const previewIdsTouched = new Set();
-  const PREVIEW_RE = /^site\/assets\/previews\/([^/]+)\/page-\d+\.png$/;
+  const PREVIEW_RE = /^data\/template-previews\/([^/]+)\/page-\d+\.png$/;
   for (const r of records) {
     const m = PREVIEW_RE.exec(r.path);
     if (m) previewIdsTouched.add(m[1]);
@@ -581,7 +581,7 @@ function formatFailureMessage(triggered, missing) {
     "For a pipeline-wide change, run: npm run generate:template-previews"
   );
   lines.push(
-    "Then commit the updated site/assets/previews/<id>/page-*.png files."
+    "Then commit the updated data/template-previews/<id>/page-*.png files."
   );
   return lines.join("\n");
 }

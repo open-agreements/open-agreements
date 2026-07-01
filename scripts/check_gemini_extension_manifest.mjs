@@ -54,7 +54,7 @@ for (const [name, packageName] of Object.entries(expectedServers)) {
 const pkgPath = resolve(process.cwd(), 'package.json');
 const pkg = JSON.parse(readFileSync(pkgPath, 'utf8'));
 const files = pkg.files || [];
-for (const required of ['gemini-extension.json', 'GEMINI.md']) {
+for (const required of ['gemini-extension.json', 'AGENTS.md']) {
   if (!files.includes(required)) {
     throw new Error(`package.json "files" array must include "${required}" or it will be excluded from the npm tarball.`);
   }

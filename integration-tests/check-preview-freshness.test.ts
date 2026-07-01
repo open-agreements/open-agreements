@@ -55,7 +55,7 @@ describe('per-template render-input rules', () => {
   it('canonical template.md change WITH matching preview → not missing', () => {
     const { missing } = runRule([
       { status: 'modified', path: 'templates/openagreements-cc-by-4.0/openagreements-board-consent-safe/template.md' },
-      { status: 'modified', path: 'site/assets/previews/openagreements-board-consent-safe/page-1.png' },
+      { status: 'modified', path: 'data/template-previews/openagreements-board-consent-safe/page-1.png' },
     ]);
     expect(missing.size).toBe(0);
   });
@@ -63,7 +63,7 @@ describe('per-template render-input rules', () => {
   it('zero-padded preview page (page-01.png) also satisfies', () => {
     const { missing } = runRule([
       { status: 'modified', path: 'templates/openagreements-cc-by-4.0/openagreements-due-diligence-request-list/template.docx' },
-      { status: 'modified', path: 'site/assets/previews/openagreements-due-diligence-request-list/page-01.png' },
+      { status: 'modified', path: 'data/template-previews/openagreements-due-diligence-request-list/page-01.png' },
     ]);
     expect(missing.size).toBe(0);
   });
@@ -240,7 +240,7 @@ describe('ownership / rename / deletion', () => {
   it('deletion of openagreements-closing-checklist WITH matching preview deletion → not missing', () => {
     const { missing } = runRule([
       { status: 'removed', path: 'templates/openagreements-cc0-1.0/openagreements-closing-checklist/template.docx' },
-      { status: 'removed', path: 'site/assets/previews/openagreements-closing-checklist/page-1.png' },
+      { status: 'removed', path: 'data/template-previews/openagreements-closing-checklist/page-1.png' },
     ]);
     expect(missing.size).toBe(0);
   });
@@ -249,8 +249,8 @@ describe('ownership / rename / deletion', () => {
     const { missing } = runRule([
       { status: 'removed', path: 'templates/openagreements-cc-by-4.0/openagreements-board-consent-safe/template.md' },
       { status: 'removed', path: 'templates/openagreements-cc-by-4.0/openagreements-board-consent-safe/template.docx' },
-      { status: 'removed', path: 'site/assets/previews/openagreements-board-consent-safe/page-1.png' },
-      { status: 'removed', path: 'site/assets/previews/openagreements-board-consent-safe/page-2.png' },
+      { status: 'removed', path: 'data/template-previews/openagreements-board-consent-safe/page-1.png' },
+      { status: 'removed', path: 'data/template-previews/openagreements-board-consent-safe/page-2.png' },
     ]);
     expect(missing.size).toBe(0);
   });
@@ -271,8 +271,8 @@ describe('ownership / rename / deletion', () => {
       },
       {
         status: 'renamed',
-        path: 'site/assets/previews/openagreements-board-consent-safe/page-1.png',
-        previousPath: 'site/assets/previews/openagreements-board-consent-safe-old/page-1.png',
+        path: 'data/template-previews/openagreements-board-consent-safe/page-1.png',
+        previousPath: 'data/template-previews/openagreements-board-consent-safe-old/page-1.png',
       },
     ]);
     expect(missing.size).toBe(0);

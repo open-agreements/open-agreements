@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 import { buildCatalog } from "./lib/catalog-data.mjs";
 import { loadSkillsCatalog } from "./lib/skills-data.mjs";
 import { buildLibrary } from "./lib/library-data.mjs";
-import docsNav from "../site/_data/docsNav.js";
+import docsNav from "./lib/docs-nav.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
