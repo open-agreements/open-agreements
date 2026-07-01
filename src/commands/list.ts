@@ -45,6 +45,8 @@ function runListJson(opts: ListOptions): void {
         source: sourceName(meta.source_url),
         attribution_text: meta.attribution_text,
         allow_derivatives: meta.allow_derivatives,
+        distribution: meta.distribution ?? 'bundled',
+        artifact_type: meta.artifact_type ?? 'template',
         credits: meta.credits ?? [],
         derived_from: meta.derived_from,
         fields: mapFields(meta.fields, meta.priority_fields),
@@ -71,6 +73,8 @@ function runListJson(opts: ListOptions): void {
           source: sourceName(meta.source_url),
           attribution_text: meta.attribution_text,
           allow_derivatives: meta.allow_derivatives,
+          distribution: meta.distribution ?? 'bundled',
+          artifact_type: meta.artifact_type ?? 'template',
           credits: meta.credits ?? [],
           derived_from: meta.derived_from,
           fields: mapFields(meta.fields, meta.priority_fields),
@@ -98,6 +102,8 @@ function runListJson(opts: ListOptions): void {
           source_version: meta.source_version,
           optional: meta.optional,
           allow_derivatives: false,
+          distribution: meta.distribution ?? 'linked',
+          artifact_type: meta.artifact_type ?? 'field-selector',
           fields: mapFields(meta.fields, meta.priority_fields),
         };
         if (meta.market_data_citations) {

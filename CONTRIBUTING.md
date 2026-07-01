@@ -189,10 +189,11 @@ npm run test:run
 ## Project Structure
 
 ```
-content/
-  templates/        # Internal templates (CC BY 4.0) — we ship the DOCX
-  external/         # External templates (CC BY-ND 4.0) — vendored unchanged
-  field-selectors/          # Field-selectors (not redistributable) — instructions only, DOCX downloaded at runtime
+templates/          # All content: templates/<source>-<rights>/<slug>/
+                    #   kind derived from metadata.yaml:
+                    #     allow_derivatives:true  → template (we ship the DOCX)
+                    #     allow_derivatives:false → external (CC BY-ND, vendored unchanged)
+                    #     artifact_type:field-selector → field-selector (instructions only)
 src/                # TypeScript source + collocated unit tests
 integration-tests/  # Integration and end-to-end tests
 skills/             # Agent Skills (Claude Code, Cursor, etc.)
@@ -223,10 +224,10 @@ Workflow guardrails:
 - **Skill Pattern**: Agent-agnostic `ToolCommandAdapter` interface
 
 ```
-content/                    # All content directories
-├── templates/              # Internal templates (CC BY 4.0)
-├── external/               # External templates (CC BY-ND 4.0)
-└── field-selectors/                # Field-selectors (downloaded at runtime)
+templates/                  # All content: templates/<source>-<rights>/<slug>/
+                            #   e.g. common-paper-cc-by-4.0/, yc-cc-by-nd-4.0/,
+                            #   nvca-free-non-redistributable/ — kind is derived
+                            #   from each slug's metadata.yaml (see above)
 
 src/                        # TypeScript source + collocated unit tests
 ├── cli/                    # Commander.js CLI

@@ -4,11 +4,12 @@ import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
 import { describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
+import { slugDir } from './helpers/template-paths.js';
 
 const it = itAllure.epic('Verification & Drift');
 
 const repoRoot = join(import.meta.dirname, '..');
-const checklistSlugs = ['closing-checklist', 'working-group-list'] as const;
+const checklistSlugs = ['openagreements-closing-checklist', 'openagreements-working-group-list'] as const;
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const FOR_RE = /\{FOR\s+(\w+)\s+IN\s+(\w+)\}/;
@@ -212,7 +213,7 @@ function extractTableSectionsFromMarkdown(mdPath: string): TableSection[] {
 describe('checklist canonical markdown structural drift', () => {
   for (const slug of checklistSlugs) {
     it(`${slug} template.md tables match template.docx structure`, () => {
-      const templateDir = join(repoRoot, 'templates', slug);
+      const templateDir = slugDir(repoRoot, slug);
       const docxSections = extractTableSectionsFromDocx(
         join(templateDir, 'template.docx')
       );

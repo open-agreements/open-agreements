@@ -5,20 +5,12 @@ import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { itAllure } from './helpers/allure-test.js';
 import { fillTemplate } from '../src/core/engine.js';
+import { slugDir } from './helpers/template-paths.js';
 
 const it = itAllure.epic('Filling & Rendering');
-const BOARD_TEMPLATE_DIR = join(
-  import.meta.dirname,
-  '..',
-  'templates',
-  'openagreements-board-consent-safe'
-);
-const STOCKHOLDER_TEMPLATE_DIR = join(
-  import.meta.dirname,
-  '..',
-  'templates',
-  'openagreements-stockholder-consent-safe'
-);
+const REPO_ROOT = join(import.meta.dirname, '..');
+const BOARD_TEMPLATE_DIR = slugDir(REPO_ROOT, 'openagreements-board-consent-safe');
+const STOCKHOLDER_TEMPLATE_DIR = slugDir(REPO_ROOT, 'openagreements-stockholder-consent-safe');
 const tempDirs: string[] = [];
 
 afterAll(() => {

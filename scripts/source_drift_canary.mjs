@@ -83,7 +83,8 @@ async function main() {
   }
 
   const root = process.cwd();
-  const fieldSelectorsRoot = join(root, 'field-selectors');
+  // NVCA field-selectors live under templates/<source>-<rights>/ since #1249.
+  const fieldSelectorsRoot = join(root, 'templates', 'nvca-free-non-redistributable');
   const fieldSelectorIds = args.fieldSelectorIds.length > 0 ? args.fieldSelectorIds : listFieldSelectorIds(fieldSelectorsRoot);
 
   const report = {

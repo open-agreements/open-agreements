@@ -6,12 +6,13 @@ import { afterEach, describe, expect } from 'vitest';
 import { evaluateComputedProfile, loadComputedProfile } from '../src/core/field-selector/computed.js';
 import { normalizeBracketArtifacts } from '../src/core/field-selector/bracket-normalizer.js';
 import { extractAllText } from '../src/core/field-selector/verifier.js';
+import { resolveFieldSelectorDir } from '../src/utils/paths.js';
 import { itAllure } from './helpers/allure-test.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const tempDirs: string[] = [];
 const FIELD_SELECTOR_ID = 'nvca-stock-purchase-agreement';
-const FIELD_SELECTOR_DIR = join(import.meta.dirname, '..', 'field-selectors', FIELD_SELECTOR_ID);
+const FIELD_SELECTOR_DIR = resolveFieldSelectorDir(FIELD_SELECTOR_ID);
 const it = itAllure.epic('NVCA SPA Template');
 
 afterEach(() => {

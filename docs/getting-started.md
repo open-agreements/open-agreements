@@ -35,7 +35,7 @@ open-agreements list
 Look at the template's metadata:
 
 ```bash
-cat templates/common-paper-mutual-nda/metadata.yaml
+cat templates/common-paper-cc-by-4.0/common-paper-mutual-nda/metadata.yaml
 ```
 
 ### 3. Create a data file

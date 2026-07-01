@@ -1,0 +1,79 @@
+name: Common Paper Term Sheet
+category: deals-partnerships
+description: >-
+  A term sheet template for outlining key business terms, based on Common Paper's standard form. A simple
+  topic-and-details format for early-stage deal discussions.
+source_url: https://commonpaper.com/standards/term-sheet
+version: '1.0'
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: >-
+  Based on the Common Paper Term Sheet, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common
+  Paper, Inc.
+fields:
+  - name: company_name
+    type: string
+    description: Official name of the company
+    section: Parties
+  - name: topic
+    type: string
+    description: Topic or subject area of the term
+    section: Terms
+  - name: topic_details
+    type: string
+    description: Details about the topic
+    section: Terms
+  - name: party_1_signatory_type
+    type: enum
+    description: Whether the first party signatory is an entity or individual
+    options:
+      - entity
+      - individual
+    default: entity
+    section: Signature Block
+  - name: party_1_signatory_name
+    type: string
+    description: Full legal name of the first party's signatory
+    section: Signature Block
+  - name: party_1_signatory_title
+    type: string
+    description: Title/role of the first party's signatory (entity only)
+    section: Signature Block
+  - name: party_1_signatory_company
+    type: string
+    description: Company name for the first party signatory (entity only)
+    section: Signature Block
+  - name: party_1_signatory_email
+    type: string
+    description: Notice email address for the first party
+    section: Signature Block
+  - name: party_2_signatory_type
+    type: enum
+    description: Whether the second party signatory is an entity or individual
+    options:
+      - entity
+      - individual
+    default: entity
+    section: Signature Block
+  - name: party_2_signatory_name
+    type: string
+    description: Full legal name of the second party's signatory
+    section: Signature Block
+  - name: party_2_signatory_title
+    type: string
+    description: Title/role of the second party's signatory (entity only)
+    section: Signature Block
+  - name: party_2_signatory_company
+    type: string
+    description: Company name for the second party signatory (entity only)
+    section: Signature Block
+  - name: party_2_signatory_email
+    type: string
+    description: Notice email address for the second party
+    section: Signature Block
+priority_fields:
+  - company_name
+  - topic
+  - topic_details

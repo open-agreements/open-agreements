@@ -112,7 +112,7 @@ export const TEMPLATE_USAGE_DEMAND = {
   "nvca-rofr-co-sale-agreement": 142,
   "bonterms-mutual-nda": 110,
   "openagreements-employment-offer-letter": 107,
-  "openagreements-employee-ip-inventions-assignment": 104,
+  "openagreements-confidentiality-invention-assignment-agreement": 104,
   "nvca-investors-rights-agreement": 88,
   "yc-safe-mfn": 88,
   "common-paper-term-sheet": 77,
@@ -121,7 +121,7 @@ export const TEMPLATE_USAGE_DEMAND = {
   "nvca-stock-purchase-agreement": 73,
   "common-paper-csa-click-through": 64,
   "openagreements-restrictive-covenant-wyoming": 64,
-  "working-group-list": 62,
+  "openagreements-working-group-list": 62,
   "yc-safe-discount": 62,
   "common-paper-data-processing-agreement": 61,
   "nvca-certificate-of-incorporation": 60,
@@ -144,9 +144,8 @@ export const TEMPLATE_USAGE_DEMAND = {
   "common-paper-ai-addendum-in-app": 40,
   "common-paper-csa-with-ai": 40,
   "common-paper-business-associate-agreement": 37,
-  "closing-checklist": 36,
+  "openagreements-closing-checklist": 36,
   "common-paper-statement-of-work": 35,
-  "openagreements-employment-confidentiality-acknowledgement": 34,
   "common-paper-amendment": 33,
   "common-paper-letter-of-intent": 33,
   "common-paper-one-way-nda": 33,
@@ -221,10 +220,38 @@ function getContentTier(id, isFieldSelector) {
   return "template";
 }
 
-function getContentRepoPath(id, contentTier) {
-  if (contentTier === "field-selector") return `field-selectors/${id}`;
-  if (contentTier === "external") return `external/${id}`;
-  return `templates/${id}`;
+// Map a slug prefix to its OA `<source>` segment key (mirrors lib/oa-segment.ts
+// in legal-explainer, the SSOT for the projection).
+const SOURCE_SEGMENT_BY_PREFIX = [
+  ["common-paper-", "common-paper"],
+  ["bonterms-", "bonterms"],
+  ["openagreements-", "openagreements"],
+  ["yc-safe-", "yc"],
+  ["nvca-", "nvca"],
+];
+
+/**
+ * Compute the `<source>-<rights>` directory segment for a slug (S3 restructure,
+ * #1249). Source comes from the longest-matching slug prefix; rights is the
+ * SPDX license lowercased. Field-selectors (nvca, no license) fall back to
+ * `free-non-redistributable`.
+ */
+function getSegment(id, license) {
+  let source;
+  for (const [prefix, key] of SOURCE_SEGMENT_BY_PREFIX) {
+    if (id.startsWith(prefix) && (!source || prefix.length > source.prefixLen)) {
+      source = { key, prefixLen: prefix.length };
+    }
+  }
+  if (!source) {
+    throw new Error(`getSegment: no known source prefix for slug "${id}"`);
+  }
+  const rights = license ? String(license).toLowerCase() : "free-non-redistributable";
+  return `${source.key}-${rights}`;
+}
+
+function getContentRepoPath(id, segment) {
+  return `templates/${segment}/${id}`;
 }
 
 function loadCatalogItems(rootDir) {
@@ -251,7 +278,8 @@ export function buildCatalog({ rootDir = REPO_ROOT } = {}) {
     const isOpenAgreements =
       item.name.startsWith("openagreements-") || sourceLabel === "OpenAgreements";
     const hasPreview = isOpenAgreements;
-    const templateDir = resolve(rootDir, "templates", item.name);
+    const segment = getSegment(item.name, item.license);
+    const templateDir = resolve(rootDir, "templates", segment, item.name);
     const hasDocxDownload =
       hasPreview &&
       flags.distributable &&
@@ -277,7 +305,10 @@ export function buildCatalog({ rootDir = REPO_ROOT } = {}) {
       hasDocxDownload,
       hasMarkdownDownload,
       contentTier,
-      repoPath: getContentRepoPath(item.name, contentTier),
+      segment,
+      distribution: item.distribution ?? (isFieldSelector ? "linked" : "bundled"),
+      artifactType: item.artifact_type ?? (isFieldSelector ? "field-selector" : "template"),
+      repoPath: getContentRepoPath(item.name, segment),
       usageDemand: TEMPLATE_USAGE_DEMAND[item.name] ?? 0,
       ...flags,
     };

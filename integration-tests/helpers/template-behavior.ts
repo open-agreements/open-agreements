@@ -1,7 +1,8 @@
-import { join } from 'node:path';
+import { dirname, join } from 'node:path';
 import { expect } from 'vitest';
 import { fillTemplate } from '../../src/core/engine.js';
 import { extractAllText } from '../../src/core/field-selector/verifier.js';
+import { slugDir } from './template-paths.js';
 
 export type TemplateTextAssertion =
   | { kind: 'contains'; text: string; label?: string }
@@ -41,8 +42,10 @@ export async function renderTemplateScenario({
   templatesRoot,
 }: RenderScenarioOptions): Promise<RenderScenarioResult> {
   const outputPath = join(outputDir, scenario.outputFilename);
+  // `templatesRoot` is `<repoRoot>/templates`; slugs now live two levels deep as
+  // `templates/<source>-<rights>/<slug>/`, so resolve the segment via slugDir.
   await fillTemplate({
-    templateDir: join(templatesRoot, scenario.templateId),
+    templateDir: slugDir(dirname(templatesRoot), scenario.templateId),
     outputPath,
     values: scenario.values,
   });

@@ -1,0 +1,76 @@
+name: Common Paper CSA Click-Through
+category: sales-licensing
+description: >-
+  A click-through cloud service agreement based on Common Paper's standard terms. Designed for self-serve SaaS products
+  where the customer accepts terms online rather than negotiating a paper agreement.
+source_url: https://commonpaper.com/standards/cloud-service-agreement/2.1
+version: '2.1'
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: >-
+  Based on the Common Paper CSA Click-Through, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright
+  Common Paper, Inc.
+fields:
+  - name: provider_name
+    type: string
+    description: Name of the cloud service provider
+    section: Parties
+  - name: cloud_service
+    type: string
+    description: Description of the cloud service
+    section: Service
+  - name: custom_order_date
+    type: string
+    description: Custom order date
+    section: Terms
+  - name: effective_date
+    type: string
+    description: Effective date of the agreement
+    section: Terms
+  - name: subscription_period
+    type: string
+    description: Length of access to the service
+    section: Terms
+  - name: payment_frequency
+    type: string
+    description: Payment frequency
+    section: Payment
+  - name: payment_terms_days
+    type: string
+    description: Days to pay after invoice
+    section: Payment
+  - name: non_renewal_notice_date
+    type: string
+    description: Non-renewal notice date requirement
+    section: Terms
+  - name: order_date
+    type: string
+    description: Order date description
+    section: Terms
+  - name: governing_law
+    type: string
+    description: Governing law jurisdiction
+    section: Legal
+  - name: jurisdiction
+    type: string
+    description: Courts with jurisdiction
+    section: Legal
+  - name: provider_email
+    type: string
+    description: Provider's email for notices
+    section: Parties
+  - name: unlimited_claims
+    type: string
+    description: Description of unlimited claims
+    section: Liability
+  - name: pricing_page
+    type: string
+    description: Reference to pricing page
+    section: Payment
+priority_fields:
+  - provider_name
+  - cloud_service
+  - governing_law
+  - jurisdiction

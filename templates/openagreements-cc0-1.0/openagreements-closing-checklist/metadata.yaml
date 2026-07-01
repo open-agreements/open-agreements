@@ -1,0 +1,82 @@
+name: Closing Checklist
+category: other
+description: A stage-first, document-first closing checklist that tracks canonical documents, action items, and open issues for a transaction, and renders a formatted document for distribution to the working group.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-closing-checklist
+version: '2.1'
+license: CC0-1.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: OpenAgreements Closing Checklist. Licensed under CC0 1.0.
+fields:
+  - name: deal_name
+    type: string
+    description: Name of the deal or transaction
+    section: Overview
+  - name: updated_at
+    type: string
+    description: Date the checklist was last updated (ISO date)
+    section: Overview
+  - name: documents
+    type: array
+    description: Closing document checklist entries
+    section: Documents
+    items:
+      - name: entry_id
+        type: string
+        description: Checklist entry number or identifier
+      - name: title
+        type: string
+        description: Title of the document
+      - name: status
+        type: string
+        description: Human-readable status of the document
+      - name: responsible
+        type: string
+        description: Party responsible for the document
+      - name: link
+        type: string
+        description: Link to the document or its location
+  - name: action_items
+    type: array
+    description: Action items tracked for the closing
+    section: Action Items
+    items:
+      - name: item_id
+        type: string
+        description: Action item identifier
+      - name: description
+        type: string
+        description: Description of the action item
+      - name: status
+        type: string
+        description: Status of the action item
+      - name: assigned_to
+        type: string
+        description: Person the action item is assigned to
+      - name: due_date
+        type: string
+        description: Due date for the action item
+  - name: open_issues
+    type: array
+    description: Open issues tracked for the closing
+    section: Open Issues
+    items:
+      - name: issue_id
+        type: string
+        description: Issue identifier
+      - name: title
+        type: string
+        description: Title of the issue
+      - name: status
+        type: string
+        description: Status of the issue
+      - name: summary
+        type: string
+        description: Summary of the issue
+      - name: citation
+        type: string
+        description: Citation or reference supporting the issue
+priority_fields:
+  - deal_name
+  - updated_at

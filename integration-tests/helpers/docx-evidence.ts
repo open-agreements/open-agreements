@@ -24,9 +24,9 @@ import { allureAttachment } from './allure-test.js';
  * as a Buffer. Uses a temporary directory for the output file.
  */
 export async function renderChecklistDocx(data: unknown): Promise<Buffer> {
-  const templateDir = findTemplateDir('closing-checklist');
+  const templateDir = findTemplateDir('openagreements-closing-checklist');
   if (!templateDir) {
-    throw new Error('closing-checklist template not found');
+    throw new Error('openagreements-closing-checklist template not found');
   }
 
   const context = buildChecklistTemplateContext(data);

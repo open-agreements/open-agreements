@@ -158,7 +158,7 @@ function getTableRowFormatting(docxPath: string): CellFormatting[][] {
 
 describe('closing-checklist rendering', () => {
   it('renders stage-first 4-column checklist with linked items and unlinked fallbacks', async () => {
-    const templateDir = findTemplateDir('closing-checklist');
+    const templateDir = findTemplateDir('openagreements-closing-checklist');
     expect(templateDir).toBeTruthy();
 
     const tempDir = mkdtempSync(join(tmpdir(), 'oa-closing-checklist-'));

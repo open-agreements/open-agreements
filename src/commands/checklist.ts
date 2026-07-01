@@ -313,7 +313,7 @@ export async function runChecklistRender(args: ChecklistRenderArgs): Promise<voi
   const state = getChecklistState(uuid);
   const outputPath = resolve(args.output ?? 'closing-checklist.docx');
 
-  const templateDir = findTemplateDir('closing-checklist');
+  const templateDir = findTemplateDir('openagreements-closing-checklist');
   if (!templateDir) {
     console.error('Error: closing-checklist template not found');
     process.exit(1);

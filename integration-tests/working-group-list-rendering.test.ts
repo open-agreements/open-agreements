@@ -85,7 +85,7 @@ function getXmlContent(docxPath: string, entryPattern: RegExp): string {
 
 describe('working-group-list rendering', () => {
   it('renders one line per working group member', async () => {
-    const templateDir = findTemplateDir('working-group-list');
+    const templateDir = findTemplateDir('openagreements-working-group-list');
     expect(templateDir).toBeTruthy();
 
     const tempDir = mkdtempSync(join(tmpdir(), 'oa-working-group-list-'));

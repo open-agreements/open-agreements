@@ -6,6 +6,7 @@ import { describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
 import { compileCanonicalSourceFile } from '../scripts/template_renderer/canonical-source.mjs';
 import { loadStyleProfile, renderFromValidatedSpec } from '../scripts/template_renderer/index.mjs';
+import { slugDir } from './helpers/template-paths.js';
 
 const it = itAllure.epic('Filling & Rendering');
 
@@ -43,7 +44,7 @@ function extractStyleBlock(stylesXml: string, styleId: string): string {
 
 async function renderTemplateBuffer(slug: string, sourceType: 'canonical' | 'json'): Promise<Buffer> {
   const style = loadStyleProfile(STYLE_PATH);
-  const templateDir = join(REPO_ROOT, 'templates', slug);
+  const templateDir = slugDir(REPO_ROOT, slug);
 
   let spec;
   if (sourceType === 'canonical') {

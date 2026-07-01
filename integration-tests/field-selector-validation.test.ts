@@ -1,7 +1,7 @@
 import { describe, expect } from 'vitest';
-import { join } from 'node:path';
 import { validateFieldSelector } from '../src/core/validation/field-selector.js';
 import { validateFieldSelectorMetadata } from '../src/core/metadata.js';
+import { resolveFieldSelectorDir } from '../src/utils/paths.js';
 import {
   allureJsonAttachment,
   allureParameter,
@@ -9,12 +9,11 @@ import {
   itAllure,
 } from './helpers/allure-test.js';
 
-const fieldSelectorsDir = join(import.meta.dirname, '..', 'field-selectors');
 const it = itAllure.epic('Verification & Drift');
 
 describe('validateFieldSelector', () => {
   it('validates nvca-voting-agreement (full fieldSelector)', async () => {
-    const dir = join(fieldSelectorsDir, 'nvca-voting-agreement');
+    const dir = resolveFieldSelectorDir('nvca-voting-agreement');
     await allureParameter('field_selector_id', 'nvca-voting-agreement');
     const result = await allureStep('Validate full fieldSelector', () =>
       validateFieldSelector(dir, 'nvca-voting-agreement')
@@ -27,7 +26,7 @@ describe('validateFieldSelector', () => {
   });
 
   it('validates nvca-certificate-of-incorporation (scaffold)', async () => {
-    const dir = join(fieldSelectorsDir, 'nvca-certificate-of-incorporation');
+    const dir = resolveFieldSelectorDir('nvca-certificate-of-incorporation');
     await allureParameter('field_selector_id', 'nvca-certificate-of-incorporation');
     const result = await allureStep('Validate scaffold fieldSelector', () =>
       validateFieldSelector(dir, 'nvca-certificate-of-incorporation')
@@ -41,7 +40,7 @@ describe('validateFieldSelector', () => {
 
 describe('validateFieldSelectorMetadata', () => {
   it('validates nvca-voting-agreement metadata', async () => {
-    const dir = join(fieldSelectorsDir, 'nvca-voting-agreement');
+    const dir = resolveFieldSelectorDir('nvca-voting-agreement');
     await allureParameter('field_selector_id', 'nvca-voting-agreement');
     const result = await allureStep('Validate fieldSelector metadata', () =>
       validateFieldSelectorMetadata(dir)
@@ -53,7 +52,7 @@ describe('validateFieldSelectorMetadata', () => {
   });
 
   it('validates scaffold metadata', async () => {
-    const dir = join(fieldSelectorsDir, 'nvca-management-rights-letter');
+    const dir = resolveFieldSelectorDir('nvca-management-rights-letter');
     await allureParameter('field_selector_id', 'nvca-management-rights-letter');
     const result = await allureStep('Validate scaffold metadata', () =>
       validateFieldSelectorMetadata(dir)
