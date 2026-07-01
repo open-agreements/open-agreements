@@ -15,7 +15,7 @@ import {
 } from './helpers/allure-test.js';
 
 // These tests rely on the existing templates in the repo
-const templatesDir = join(import.meta.dirname, '..', 'content', 'templates');
+const templatesDir = join(import.meta.dirname, '..', 'templates');
 const tempDirs: string[] = [];
 const it = itAllure.epic('Verification & Drift');
 

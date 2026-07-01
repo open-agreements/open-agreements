@@ -17,7 +17,7 @@ import { verifyTemplateFill } from '../src/core/fill-utils.js';
 
 const it = itAllure.epic('Filling & Rendering');
 
-const TEMPLATES_DIR = resolve(__dirname, '../content/templates');
+const TEMPLATES_DIR = resolve(__dirname, '../templates');
 const FIXTURES_DIR = resolve(__dirname, 'fixtures/smoke-test-data');
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -34,7 +34,7 @@ const fixtureFiles = readdirSync(FIXTURES_DIR)
   .filter((f) => f.endsWith('.json'))
   .map((f) => f.replace('.json', ''));
 
-// Only test templates that actually exist in content/templates
+// Only test templates that actually exist in templates
 const testCases = fixtureFiles.filter((id) =>
   existsSync(join(TEMPLATES_DIR, id, 'template.docx'))
 );

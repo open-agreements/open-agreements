@@ -43,7 +43,7 @@ Fill standard legal agreement templates and get signable DOCX files — party
 info, dates, and terms in, formatting-preserving Word document out. The Source
 column links to the upstream standard or canonical project page (varies by
 publisher); the License column shows redistribution terms; Repo links point to
-the GitHub content directory for each template or recipe. To fill one with an
+the GitHub content directory for each template or field-selector. To fill one with an
 agent or the CLI, see [Template Filling via MCP](#template-filling-via-mcp).
 
 {{AVAILABLE_TEMPLATES}}
@@ -136,7 +136,7 @@ open-agreements/
   content/
     templates/            # Fillable DOCX templates with {tag} placeholders
     external/             # YC SAFE templates vendored unchanged
-    recipes/              # Recipe instructions for non-redistributable sources
+    field-selectors/              # Field-selector instructions for non-redistributable sources
   legal-practice-library/ # Practice guides, surveys, and checklists (markdown)
   skills/                 # Agent skill definitions
   server.json             # MCP server manifest
@@ -144,7 +144,7 @@ open-agreements/
   README.md, LICENSE
 ```
 
-NVCA recipe templates are downloaded at runtime and are not bundled in the package.
+NVCA field-selector templates are downloaded at runtime and are not bundled in the package.
 
 <details>
 <summary><strong>CLI Reference</strong></summary>
@@ -282,7 +282,7 @@ Planned work is tracked in [open issues](https://github.com/open-agreements/open
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/open-agreements/open-agreements/blob/main/CONTRIBUTING.md) for how to add templates, recipes, and other improvements. The Legal Practice Library is generated upstream — see its [`index.md`](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/index.md) for where to send content fixes.
+See [CONTRIBUTING.md](https://github.com/open-agreements/open-agreements/blob/main/CONTRIBUTING.md) for how to add templates, field-selectors, and other improvements. The Legal Practice Library is generated upstream — see its [`index.md`](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/index.md) for where to send content fixes.
 
 ## Built With OpenAgreements
 
@@ -300,7 +300,7 @@ Project code is licensed under [Apache License 2.0](LICENSE). The Apache license
 
 - CC BY 4.0 for Common Paper, Bonterms, OpenAgreements-authored templates, and the Legal Practice Library
 - CC BY-ND 4.0 for Y Combinator SAFE templates vendored unchanged
-- proprietary or non-redistributable for NVCA source documents handled via recipe workflows
+- proprietary or non-redistributable for NVCA source documents handled via field-selector workflows
 
 See each template's `metadata.yaml` for source-specific details.
 

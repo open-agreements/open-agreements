@@ -5,11 +5,11 @@ import AdmZip from 'adm-zip';
 import { load } from 'js-yaml';
 import { describe, expect } from 'vitest';
 import { BLANK_PLACEHOLDER } from '../src/core/fill-utils.js';
-import { runRecipe } from '../src/core/recipe/index.js';
-import { extractAllText, verifyOutput } from '../src/core/recipe/verifier.js';
+import { runFieldSelector } from '../src/core/field-selector/index.js';
+import { extractAllText, verifyOutput } from '../src/core/field-selector/verifier.js';
 import { runFillPipeline } from '../src/core/unified-pipeline.js';
-import { validateRecipe } from '../src/core/validation/recipe.js';
-import { validateRecipeMetadata } from '../src/core/metadata.js';
+import { validateFieldSelector } from '../src/core/validation/field-selector.js';
+import { validateFieldSelectorMetadata } from '../src/core/metadata.js';
 import { applySelections, loadSelectionsConfig } from '../src/core/selector.js';
 import {
   allureDescriptionHtml,
@@ -28,7 +28,7 @@ interface MetadataField {
   options?: string[];
 }
 
-interface RecipeMetadataDocument {
+interface FieldSelectorMetadataDocument {
   source_url?: string;
   source_sha256?: string;
   optional?: boolean;
@@ -36,7 +36,7 @@ interface RecipeMetadataDocument {
   priority_fields?: string[];
 }
 
-type ReplacementMap = Record<string, import('../src/core/recipe/replacement-keys.js').ReplacementValue>;
+type ReplacementMap = Record<string, import('../src/core/field-selector/replacement-keys.js').ReplacementValue>;
 
 interface CleanConfig {
   removeFootnotes?: boolean;
@@ -63,8 +63,8 @@ interface FieldAssertionPolicy {
   normalize?: 'none' | 'lowercase';
 }
 
-const RECIPE_ID = 'nvca-stock-purchase-agreement';
-const RECIPE_DIR = join(import.meta.dirname, '..', 'content', 'recipes', RECIPE_ID);
+const FIELD_SELECTOR_ID = 'nvca-stock-purchase-agreement';
+const FIELD_SELECTOR_DIR = join(import.meta.dirname, '..', 'field-selectors', FIELD_SELECTOR_ID);
 
 /**
  * Context-qualified (`>`-anchor) replacement keys that have been migrated to selector contracts
@@ -75,7 +75,7 @@ const RECIPE_DIR = join(import.meta.dirname, '..', 'content', 'recipes', RECIPE_
  * verbatim and still render in the synthetic harness.
  */
 function loadMigratedContextKeys(): Set<string> {
-  const manifest = JSON.parse(readFileSync(join(RECIPE_DIR, 'template-manifest.json'), 'utf-8')) as {
+  const manifest = JSON.parse(readFileSync(join(FIELD_SELECTOR_DIR, 'template-manifest.json'), 'utf-8')) as {
     migrated_keys?: string[];
   };
   return new Set((manifest.migrated_keys ?? []).filter((key) => key.includes('>')));
@@ -337,7 +337,7 @@ function xmlEscape(value: string): string {
     .replaceAll('>', '&gt;');
 }
 
-function createSyntheticRecipeFixture(sourcePlaceholders: string[]): {
+function createSyntheticFieldSelectorFixture(sourcePlaceholders: string[]): {
   tempDir: string;
   inputPath: string;
   outputPath: string;
@@ -365,14 +365,14 @@ function createSyntheticRecipeFixture(sourcePlaceholders: string[]): {
   return { tempDir, inputPath, outputPath };
 }
 
-function loadNvcaRecipeArtifacts(): {
-  metadata: RecipeMetadataDocument;
+function loadNvcaFieldSelectorArtifacts(): {
+  metadata: FieldSelectorMetadataDocument;
   replacements: ReplacementMap;
   cleanConfig: CleanConfig;
 } {
-  const metadata = load(readFileSync(join(RECIPE_DIR, 'metadata.yaml'), 'utf-8')) as RecipeMetadataDocument;
-  const replacements = JSON.parse(readFileSync(join(RECIPE_DIR, 'replacements.json'), 'utf-8')) as ReplacementMap;
-  const cleanConfig = JSON.parse(readFileSync(join(RECIPE_DIR, 'clean.json'), 'utf-8')) as CleanConfig;
+  const metadata = load(readFileSync(join(FIELD_SELECTOR_DIR, 'metadata.yaml'), 'utf-8')) as FieldSelectorMetadataDocument;
+  const replacements = JSON.parse(readFileSync(join(FIELD_SELECTOR_DIR, 'replacements.json'), 'utf-8')) as ReplacementMap;
+  const cleanConfig = JSON.parse(readFileSync(join(FIELD_SELECTOR_DIR, 'clean.json'), 'utf-8')) as CleanConfig;
   return { metadata, replacements, cleanConfig };
 }
 
@@ -460,7 +460,7 @@ function normalizeByPolicy(value: string, policy: FieldAssertionPolicy): string 
 
 describe('NVCA SPA Template', () => {
   itDiscovery('Can counsel confirm replacement rules cover required NVCA SPA fields?', async () => {
-    await allureParameter('recipe_id', RECIPE_ID);
+    await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
     const fieldAlignmentContext: LawyerReviewContext = {
       legalQuestion: 'Do replacement rules cover each required NVCA SPA field?',
       riskTier: 'High',
@@ -470,13 +470,13 @@ describe('NVCA SPA Template', () => {
     await applyLawyerReviewContext(fieldAlignmentContext);
 
     const metadata = await allureStep('Load metadata.yaml', () =>
-      load(readFileSync(join(RECIPE_DIR, 'metadata.yaml'), 'utf-8')) as RecipeMetadataDocument
+      load(readFileSync(join(FIELD_SELECTOR_DIR, 'metadata.yaml'), 'utf-8')) as FieldSelectorMetadataDocument
     );
     const replacements = await allureStep('Load replacements.json', () =>
-      JSON.parse(readFileSync(join(RECIPE_DIR, 'replacements.json'), 'utf-8')) as ReplacementMap
+      JSON.parse(readFileSync(join(FIELD_SELECTOR_DIR, 'replacements.json'), 'utf-8')) as ReplacementMap
     );
     const normalizeConfig = await allureStep('Load normalize.json', () =>
-      JSON.parse(readFileSync(join(RECIPE_DIR, 'normalize.json'), 'utf-8')) as {
+      JSON.parse(readFileSync(join(FIELD_SELECTOR_DIR, 'normalize.json'), 'utf-8')) as {
         paragraph_rules?: Array<{ replacements?: Record<string, string> }>;
       }
     );
@@ -525,41 +525,41 @@ describe('NVCA SPA Template', () => {
     });
   });
 
-  itDiscovery('Can counsel verify the NVCA SPA recipe is structurally valid before use?', async () => {
-    await allureParameter('recipe_id', RECIPE_ID);
+  itDiscovery('Can counsel verify the NVCA SPA fieldSelector is structurally valid before use?', async () => {
+    await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
     const structuralValidationContext: LawyerReviewContext = {
-      legalQuestion: 'Is the NVCA SPA recipe structurally valid before any fill operation?',
+      legalQuestion: 'Is the NVCA SPA fieldSelector structurally valid before any fill operation?',
       riskTier: 'Medium',
-      whyItMatters: 'Invalid metadata or recipe structure can produce unreliable contract output.',
-      expectedOutcome: 'Recipe metadata and recipe validation both pass without errors.',
+      whyItMatters: 'Invalid metadata or fieldSelector structure can produce unreliable contract output.',
+      expectedOutcome: 'FieldSelector metadata and fieldSelector validation both pass without errors.',
     };
     await applyLawyerReviewContext(structuralValidationContext);
 
-    const metadataResult = await allureStep('Run validateRecipeMetadata', () =>
-      validateRecipeMetadata(RECIPE_DIR)
+    const metadataResult = await allureStep('Run validateFieldSelectorMetadata', () =>
+      validateFieldSelectorMetadata(FIELD_SELECTOR_DIR)
     );
-    const recipeResult = await allureStep('Run validateRecipe', () =>
-      validateRecipe(RECIPE_DIR, RECIPE_ID)
+    const fieldSelectorResult = await allureStep('Run validateFieldSelector', () =>
+      validateFieldSelector(FIELD_SELECTOR_DIR, FIELD_SELECTOR_ID)
     );
 
     await applyLawyerReviewContext(
       structuralValidationContext,
       renderJsonEvidenceHtml('Metadata Validation Result', metadataResult),
-      renderJsonEvidenceHtml('Recipe Validation Result', recipeResult)
+      renderJsonEvidenceHtml('FieldSelector Validation Result', fieldSelectorResult)
     );
 
     await allureStep('Assert metadata validation passes', () => {
       expect(metadataResult.valid).toBe(true);
       expect(metadataResult.errors).toEqual([]);
     });
-    await allureStep('Assert recipe validation passes', () => {
-      expect(recipeResult.valid).toBe(true);
-      expect(recipeResult.errors).toEqual([]);
+    await allureStep('Assert fieldSelector validation passes', () => {
+      expect(fieldSelectorResult.valid).toBe(true);
+      expect(fieldSelectorResult.errors).toEqual([]);
     });
   });
 
   itGovernance('Can counsel verify provenance and cleaning policy are documented?', async () => {
-    await allureParameter('recipe_id', RECIPE_ID);
+    await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
     const governanceContext: LawyerReviewContext = {
       legalQuestion: 'Is provenance and cleaning governance explicitly documented?',
       riskTier: 'High',
@@ -568,9 +568,9 @@ describe('NVCA SPA Template', () => {
     };
     await applyLawyerReviewContext(governanceContext);
 
-    const metadata = load(readFileSync(join(RECIPE_DIR, 'metadata.yaml'), 'utf-8')) as RecipeMetadataDocument;
+    const metadata = load(readFileSync(join(FIELD_SELECTOR_DIR, 'metadata.yaml'), 'utf-8')) as FieldSelectorMetadataDocument;
     const cleanConfig = JSON.parse(
-      readFileSync(join(RECIPE_DIR, 'clean.json'), 'utf-8')
+      readFileSync(join(FIELD_SELECTOR_DIR, 'clean.json'), 'utf-8')
     ) as CleanConfig;
 
     await applyLawyerReviewContext(
@@ -586,7 +586,7 @@ describe('NVCA SPA Template', () => {
     await allureStep('Assert source checksum uses 64-char SHA256', () => {
       expect(metadata.source_sha256).toMatch(/^[a-f0-9]{64}$/);
     });
-    await allureStep('Assert recipe is not optional', () => {
+    await allureStep('Assert fieldSelector is not optional', () => {
       expect(metadata.optional).toBe(false);
     });
     await allureStep('Assert cleaning removes drafting guidance markers', () => {
@@ -598,7 +598,7 @@ describe('NVCA SPA Template', () => {
   });
 
   itFilling('Can counsel confirm full-corpus synthetic rendering replaces mapped placeholders?', async () => {
-    await allureParameter('recipe_id', RECIPE_ID);
+    await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
     const fullCorpusContext: LawyerReviewContext = {
       legalQuestion: 'Does full-corpus synthetic rendering replace all mapped placeholders?',
       riskTier: 'High',
@@ -607,8 +607,8 @@ describe('NVCA SPA Template', () => {
     };
     await applyLawyerReviewContext(fullCorpusContext);
 
-    const { metadata, replacements, cleanConfig } = await allureStep('Load NVCA recipe artifacts', () =>
-      loadNvcaRecipeArtifacts()
+    const { metadata, replacements, cleanConfig } = await allureStep('Load NVCA fieldSelector artifacts', () =>
+      loadNvcaFieldSelectorArtifacts()
     );
     const migratedContextKeys = loadMigratedContextKeys();
     const legacyReplacements = Object.fromEntries(
@@ -624,7 +624,7 @@ describe('NVCA SPA Template', () => {
     });
     const verificationValues = buildVerificationValues(values, sourcePlaceholders, legacyReplacements);
 
-    const fixture = createSyntheticRecipeFixture(sourcePlaceholders);
+    const fixture = createSyntheticFieldSelectorFixture(sourcePlaceholders);
     await applyLawyerReviewContext(
       fullCorpusContext,
       renderJsonEvidenceHtml('Full-Corpus Input Values', values),
@@ -633,9 +633,9 @@ describe('NVCA SPA Template', () => {
     );
 
     try {
-      await allureStep('Run runRecipe using synthetic source DOCX', async () => {
-        await runRecipe({
-          recipeId: RECIPE_ID,
+      await allureStep('Run runFieldSelector using synthetic source DOCX', async () => {
+        await runFieldSelector({
+          fieldSelectorId: FIELD_SELECTOR_ID,
           inputPath: fixture.inputPath,
           outputPath: fixture.outputPath,
           values,
@@ -643,7 +643,7 @@ describe('NVCA SPA Template', () => {
       });
 
       const outputText = await allureStep('Extract output text', () => extractAllText(fixture.outputPath));
-      const verifyResult = await allureStep('Run recipe verifier against output', () =>
+      const verifyResult = await allureStep('Run fieldSelector verifier against output', () =>
         verifyOutput(fixture.outputPath, verificationValues, legacyReplacements, cleanConfig)
       );
 
@@ -678,7 +678,7 @@ describe('NVCA SPA Template', () => {
   });
 
   itVerification('Can counsel rely on stricter checks for high-risk NVCA fields?', async () => {
-    await allureParameter('recipe_id', RECIPE_ID);
+    await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
     const policyContext: LawyerReviewContext = {
       legalQuestion: 'Are high-risk legal anchors checked more strictly than low-risk fields?',
       riskTier: 'High',
@@ -687,8 +687,8 @@ describe('NVCA SPA Template', () => {
     };
     await applyLawyerReviewContext(policyContext);
 
-    const { metadata, replacements, cleanConfig } = await allureStep('Load NVCA recipe artifacts', () =>
-      loadNvcaRecipeArtifacts()
+    const { metadata, replacements, cleanConfig } = await allureStep('Load NVCA fieldSelector artifacts', () =>
+      loadNvcaFieldSelectorArtifacts()
     );
     const fields = metadata.fields ?? [];
     const metadataFieldNames = fields.map((field) => field.name).sort();
@@ -726,7 +726,7 @@ describe('NVCA SPA Template', () => {
       applicable_purchasers: 'North Star Ventures LLC',
     });
     const verificationValues = buildVerificationValues(values, sourcePlaceholders, legacyReplacements);
-    const fixture = createSyntheticRecipeFixture(sourcePlaceholders);
+    const fixture = createSyntheticFieldSelectorFixture(sourcePlaceholders);
     await applyLawyerReviewContext(
       policyContext,
       renderJsonEvidenceHtml('Policy Scenario Input Values', values),
@@ -734,9 +734,9 @@ describe('NVCA SPA Template', () => {
     );
 
     try {
-      await allureStep('Run runRecipe against synthetic full-corpus source', async () => {
-        await runRecipe({
-          recipeId: RECIPE_ID,
+      await allureStep('Run runFieldSelector against synthetic full-corpus source', async () => {
+        await runFieldSelector({
+          fieldSelectorId: FIELD_SELECTOR_ID,
           inputPath: fixture.inputPath,
           outputPath: fixture.outputPath,
           values,
@@ -809,7 +809,7 @@ describe('NVCA SPA Template', () => {
   itVerification(
     'computes dispute-resolution forum defaults and governing-law alignment in exported artifact',
     async () => {
-      await allureParameter('recipe_id', RECIPE_ID);
+      await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
       const computedContext: LawyerReviewContext = {
         legalQuestion: 'Do dispute-resolution mode and forum state deterministically derive district defaults and alignment against governing law?',
         riskTier: 'High',
@@ -818,7 +818,7 @@ describe('NVCA SPA Template', () => {
       };
       await applyLawyerReviewContext(computedContext);
 
-      const fixture = createSyntheticRecipeFixture([
+      const fixture = createSyntheticFieldSelectorFixture([
         '[Insert Company Name]',
         '[state]',
         '[judicial district]',
@@ -827,9 +827,9 @@ describe('NVCA SPA Template', () => {
       const computedOutPath = join(fixture.tempDir, 'computed-artifact.json');
 
       try {
-        const runResult = await allureStep('Run recipe with computed artifact output', () =>
-          runRecipe({
-            recipeId: RECIPE_ID,
+        const runResult = await allureStep('Run fieldSelector with computed artifact output', () =>
+          runFieldSelector({
+            fieldSelectorId: FIELD_SELECTOR_ID,
             inputPath: fixture.inputPath,
             outputPath: fixture.outputPath,
             values: {
@@ -860,7 +860,7 @@ describe('NVCA SPA Template', () => {
           renderJsonEvidenceHtml('Matched Rule IDs', matchedRuleIds)
         );
 
-        await allureStep('Assert recipe emits computed artifact in run result', () => {
+        await allureStep('Assert fieldSelector emits computed artifact in run result', () => {
           expect(runResult.computedOutPath).toBe(computedOutPath);
           expect(runResult.computedArtifact?.profile_present).toBe(true);
         });
@@ -898,7 +898,7 @@ describe('NVCA SPA Template', () => {
   itFilling(
     'closing_type "single" replaces Additional Closings with [Reserved]',
     async () => {
-      await allureParameter('recipe_id', RECIPE_ID);
+      await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
       const closingContext: LawyerReviewContext = {
         legalQuestion: 'Does closing_type="single" remove the Additional Closings section and replace the heading with [Reserved]?',
         riskTier: 'High',
@@ -908,7 +908,7 @@ describe('NVCA SPA Template', () => {
       await applyLawyerReviewContext(closingContext);
 
       const selectionsConfig = await allureStep('Load SPA selections.json', () =>
-        loadSelectionsConfig(join(RECIPE_DIR, 'selections.json'))
+        loadSelectionsConfig(join(FIELD_SELECTOR_DIR, 'selections.json'))
       );
 
       // Build a fixture with paragraph text that mirrors the real SPA structure
@@ -959,7 +959,7 @@ describe('NVCA SPA Template', () => {
 
   for (const scenario of DECLARATIVE_FILL_SCENARIOS) {
     itFilling(`Can counsel review declarative scenario: ${scenario.id}`, async () => {
-      await allureParameter('recipe_id', RECIPE_ID);
+      await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
       await allureParameter('scenario_id', scenario.id);
       const scenarioContext: LawyerReviewContext = {
         legalQuestion: `Does declarative scenario "${scenario.id}" render as expected?`,
@@ -969,8 +969,8 @@ describe('NVCA SPA Template', () => {
       };
       await applyLawyerReviewContext(scenarioContext);
 
-      const { metadata, replacements, cleanConfig } = await allureStep('Load NVCA recipe artifacts', () =>
-        loadNvcaRecipeArtifacts()
+      const { metadata, replacements, cleanConfig } = await allureStep('Load NVCA fieldSelector artifacts', () =>
+        loadNvcaFieldSelectorArtifacts()
       );
       const missingPlaceholders = scenario.sourcePlaceholders.filter(
         (placeholder) => !(placeholder in replacements)
@@ -991,7 +991,7 @@ describe('NVCA SPA Template', () => {
         scenario.omitFields ?? []
       );
       const verificationValues = buildVerificationValues(values, scenario.sourcePlaceholders, replacements);
-      const fixture = createSyntheticRecipeFixture(scenario.sourcePlaceholders);
+      const fixture = createSyntheticFieldSelectorFixture(scenario.sourcePlaceholders);
       await applyLawyerReviewContext(
         scenarioContext,
         renderJsonEvidenceHtml('Scenario Fill Values', values),

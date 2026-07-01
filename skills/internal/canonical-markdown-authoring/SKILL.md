@@ -40,7 +40,7 @@ Use this skill when the user wants to:
 
 This skill assumes:
 - You are working inside an OpenAgreements repo checkout. Templates live at
-  `content/templates/<template-id>/template.md`.
+  `templates/<template-id>/template.md`.
 - The shared canonical compiler (`scripts/template_renderer/canonical-source.mjs`)
   and the `cover-standard-signature-v1` layout are present.
 
@@ -75,7 +75,7 @@ template_id: openagreements-<slug>                # kebab-case, must match the d
 layout_id: cover-standard-signature-v1
 style_id: openagreements-default-v1
 outputs:
-  docx: content/templates/openagreements-<slug>/template.docx
+  docx: templates/openagreements-<slug>/template.docx
 document:
   title: <Document title>                         # MUST match the H1 below
   label: <Catalog label, e.g. "OpenAgreements XYZ">
@@ -98,9 +98,9 @@ sections:
 
 Notes:
 - Canonical sources do **not** declare `source_json`. `npm run generate:templates`
-  auto-discovers any `content/templates/<slug>/template.md` whose frontmatter
+  auto-discovers any `templates/<slug>/template.md` whose frontmatter
   declares `template_id`, `layout_id`, and `style_id`, then writes the
-  generated JSON to `content/templates/<slug>/.template.generated.json`
+  generated JSON to `templates/<slug>/.template.generated.json`
   (a hidden, do-not-edit-by-hand artifact).
 - Do **not** add `output_markdown_path` or `outputs.markdown` — the canonical
   compiler rejects them. The canonical `template.md` *is* the source.
@@ -402,11 +402,11 @@ npm run generate:templates
 The canonical compiler:
 1. Parses `template.md` → normalized model.
 2. Validates definitions, references, signers, and field-name shapes.
-3. Writes the regenerated JSON to `content/templates/<slug>/.template.generated.json`.
+3. Writes the regenerated JSON to `templates/<slug>/.template.generated.json`.
 4. Renders the DOCX via the shared layout to `outputs.docx`.
 
 After generation:
-- `git diff content/templates/<slug>/.template.generated.json` — should be empty
+- `git diff templates/<slug>/.template.generated.json` — should be empty
   if your source matches the previously committed JSON.
 - `npx vitest run integration-tests/canonical-source-sync.test.ts` — proves the
   canonical → JSON projection is in sync.
@@ -431,10 +431,10 @@ template-wide `style.defined_terms` list still applies as a fallback for
 
 Working canonical templates already in the repo:
 
-- `content/templates/openagreements-restrictive-covenant-wyoming/template.md` —
+- `templates/openagreements-restrictive-covenant-wyoming/template.md` —
   feature-rich: substantive defined terms paired with narrow cover-term anchors
   for operative concepts, group/subrow cover terms, and conditional clauses.
-- `content/templates/openagreements-employee-ip-inventions-assignment/template.md` —
+- `templates/openagreements-employee-ip-inventions-assignment/template.md` —
   simpler: 2 substantive defined terms (`Covered Inventions`, `Confidential
   Information`), present-tense IP assignment language, and all-row cover terms.
 
@@ -468,7 +468,7 @@ template_id: openagreements-example-nda
 layout_id: cover-standard-signature-v1
 style_id: openagreements-default-v1
 outputs:
-  docx: content/templates/openagreements-example-nda/template.docx
+  docx: templates/openagreements-example-nda/template.docx
 document:
   title: Example Mutual NDA
   label: OpenAgreements Example Mutual NDA

@@ -91,10 +91,10 @@ curl -L "$DOWNLOAD_URL" -o filled.docx
 
 ### Redline fields
 
-When the template has a redline recipe and `include_redline` is enabled (default
+When the template has a redline field-selector and `include_redline` is enabled (default
 `true`), the envelope additionally includes `redline_download_url`,
 `redline_download_id`, `redline_expires_at`, and `redline_stats`. These fields
-are absent when the template has no redline recipe or when the redline path
+are absent when the template has no redline field-selector or when the redline path
 failed (the parent fill still succeeds — redline generation is best-effort).
 
 ### `redline_unavailable_reason` (opt-in only)
@@ -111,7 +111,7 @@ surfaces an additional discriminator if the redline could not be produced:
 
 | Value | Meaning |
 | --- | --- |
-| `template_unsupported` | The resolved template has no redline recipe. Routine outcome, no server log emitted. |
+| `template_unsupported` | The resolved template has no redline field-selector. Routine outcome, no server log emitted. |
 | `store_unavailable` | The redline-variant download-artifact write failed because durable storage is unavailable (`DownloadStoreUnavailableError`). The server log carries `phase: 'redline_artifact'`, `parentOk: true`, and `cause: 'configuration' | 'runtime'`. |
 | `internal_error` | The redline generator itself threw, or the redline artifact write failed with a non-store error. The server log carries `phase: 'redline'` or `'redline_artifact'`, both with `parentOk: true`. |
 

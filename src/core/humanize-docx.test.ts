@@ -143,7 +143,7 @@ describe('humanize-docx — loadHumanizeContext (yaml integration)', () => {
 
   it('uses public-field-metadata.yaml label overrides over metadata.yaml descriptions', () => {
     withTempDir((dir) => {
-      const templateDir = join(dir, 'content', 'templates', 'foo-template');
+      const templateDir = join(dir, 'templates', 'foo-template');
       mkdirSync(templateDir, { recursive: true });
       writeFileSync(
         join(templateDir, 'metadata.yaml'),
@@ -184,7 +184,7 @@ describe('humanize-docx — loadHumanizeContext (yaml integration)', () => {
 
   it('does nothing when public-field-metadata path is omitted (graceful)', () => {
     withTempDir((dir) => {
-      const templateDir = join(dir, 'content', 'templates', 'bar-template');
+      const templateDir = join(dir, 'templates', 'bar-template');
       mkdirSync(templateDir, { recursive: true });
       writeFileSync(
         join(templateDir, 'metadata.yaml'),
@@ -234,7 +234,7 @@ describe('humanize-docx — humanizeDocx (file-based API)', () => {
   it('reads template.docx from disk and returns a humanized buffer', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'humanize-file-test-'));
     try {
-      const templateDir = join(dir, 'content', 'templates', 'sample-template');
+      const templateDir = join(dir, 'templates', 'sample-template');
       mkdirSync(templateDir, { recursive: true });
       writeFileSync(
         join(templateDir, 'metadata.yaml'),
@@ -283,7 +283,7 @@ describe('humanize-docx — loadHumanizeContext (template-spec rows)', () => {
 
   it('derives field labels from a template-spec rows tree (parent-row label propagates to sub-rows with generic sublabels)', () => {
     withTempDir((dir) => {
-      const templateDir = join(dir, 'content', 'templates', 'spec-template');
+      const templateDir = join(dir, 'templates', 'spec-template');
       const specsDir = join(dir, 'scripts', 'template-specs');
       mkdirSync(templateDir, { recursive: true });
       mkdirSync(specsDir, { recursive: true });
@@ -330,7 +330,7 @@ describe('humanize-docx — loadHumanizeContext (template-spec rows)', () => {
 
   it('returns null spec gracefully when the spec file is missing', () => {
     withTempDir((dir) => {
-      const templateDir = join(dir, 'content', 'templates', 'no-spec');
+      const templateDir = join(dir, 'templates', 'no-spec');
       mkdirSync(templateDir, { recursive: true });
       writeFileSync(
         join(templateDir, 'metadata.yaml'),
@@ -346,7 +346,7 @@ describe('humanize-docx — loadHumanizeContext (template-spec rows)', () => {
 
   it('returns empty fields when metadata.yaml is missing', () => {
     withTempDir((dir) => {
-      const templateDir = join(dir, 'content', 'templates', 'empty');
+      const templateDir = join(dir, 'templates', 'empty');
       mkdirSync(templateDir, { recursive: true });
       // NO metadata.yaml file written.
       const ctx = loadHumanizeContext(templateDir);
@@ -357,7 +357,7 @@ describe('humanize-docx — loadHumanizeContext (template-spec rows)', () => {
 
   it('truncates long labels to the first sentence and strips trailing period', () => {
     withTempDir((dir) => {
-      const templateDir = join(dir, 'content', 'templates', 'long-label');
+      const templateDir = join(dir, 'templates', 'long-label');
       mkdirSync(templateDir, { recursive: true });
       writeFileSync(
         join(templateDir, 'metadata.yaml'),

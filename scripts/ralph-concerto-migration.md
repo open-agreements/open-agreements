@@ -50,7 +50,7 @@ fi
 # Fix a single template
 claude -p "
 In ~/Projects/open-agreements/.worktrees/concerto-spike, fix the Concerto model
-at concerto/<template-id>.cto. Read content/templates/<template-id>/metadata.yaml
+at concerto/<template-id>.cto. Read templates/<template-id>/metadata.yaml
 for the source of truth. Ensure all field names match exactly. Run
 npm run validate:concerto after fixing.
 " --dangerously-skip-permissions --print

@@ -1,5 +1,5 @@
-import { parseReplacementKey, resolveReplacementValue } from '../recipe/replacement-keys.js';
-import type { ReplacementValue } from '../recipe/replacement-keys.js';
+import { parseReplacementKey, resolveReplacementValue } from '../field-selector/replacement-keys.js';
+import type { ReplacementValue } from '../field-selector/replacement-keys.js';
 
 const FIELD_TAG_RE = /\{([a-z_][a-z0-9_]*)\}/g;
 
@@ -30,7 +30,7 @@ function extractFieldTags(template: string): string[] {
 }
 
 /**
- * Compare short placeholders discovered via scan against recipe/template metadata
+ * Compare short placeholders discovered via scan against field-selector/template metadata
  * coverage inferred from replacements mapping.
  */
 export function assessScanMetadataCoverage(

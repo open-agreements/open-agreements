@@ -8,10 +8,10 @@ import {
 interface ValidateHarnessOptions {
   listTemplateEntries?: Array<{ id: string; dir: string }>;
   listExternalEntries?: Array<{ id: string; dir: string }>;
-  listRecipeEntries?: Array<{ id: string; dir: string }>;
+  listFieldSelectorEntries?: Array<{ id: string; dir: string }>;
   findTemplateDir?: string | undefined;
   findExternalDir?: string | undefined;
-  findRecipeDir?: string | undefined;
+  findFieldSelectorDir?: string | undefined;
 }
 
 interface ValidateHarness {
@@ -21,13 +21,13 @@ interface ValidateHarness {
     validateTemplate: ReturnType<typeof vi.fn>;
     validateLicense: ReturnType<typeof vi.fn>;
     validateExternal: ReturnType<typeof vi.fn>;
-    validateRecipe: ReturnType<typeof vi.fn>;
+    validateFieldSelector: ReturnType<typeof vi.fn>;
     listTemplateEntries: ReturnType<typeof vi.fn>;
     listExternalEntries: ReturnType<typeof vi.fn>;
-    listRecipeEntries: ReturnType<typeof vi.fn>;
+    listFieldSelectorEntries: ReturnType<typeof vi.fn>;
     findTemplateDir: ReturnType<typeof vi.fn>;
     findExternalDir: ReturnType<typeof vi.fn>;
-    findRecipeDir: ReturnType<typeof vi.fn>;
+    findFieldSelectorDir: ReturnType<typeof vi.fn>;
   };
 }
 
@@ -38,7 +38,7 @@ afterEach(() => {
   vi.unmock('../src/core/validation/template.js');
   vi.unmock('../src/core/validation/license.js');
   vi.unmock('../src/core/validation/external.js');
-  vi.unmock('../src/core/validation/recipe.js');
+  vi.unmock('../src/core/validation/field-selector.js');
   vi.unmock('../src/utils/paths.js');
   vi.restoreAllMocks();
   vi.resetModules();
@@ -51,15 +51,15 @@ async function loadValidateHarness(opts: ValidateHarnessOptions = {}): Promise<V
   const validateTemplate = vi.fn(() => ({ valid: true, errors: [] as string[], warnings: ['template warning'] }));
   const validateLicense = vi.fn(() => ({ valid: true, errors: [] as string[] }));
   const validateExternal = vi.fn(() => ({ valid: true, errors: [] as string[], warnings: ['external warning'] }));
-  const validateRecipe = vi.fn(() => ({ valid: true, errors: [] as string[], warnings: ['recipe warning'], scaffold: false }));
+  const validateFieldSelector = vi.fn(() => ({ valid: true, errors: [] as string[], warnings: ['fieldSelector warning'], scaffold: false }));
 
-  const listTemplateEntries = vi.fn(() => opts.listTemplateEntries ?? [{ id: 'tmpl-1', dir: '/content/templates/tmpl-1' }]);
-  const listExternalEntries = vi.fn(() => opts.listExternalEntries ?? [{ id: 'ext-1', dir: '/content/external/ext-1' }]);
-  const listRecipeEntries = vi.fn(() => opts.listRecipeEntries ?? [{ id: 'rcp-1', dir: '/content/recipes/rcp-1' }]);
+  const listTemplateEntries = vi.fn(() => opts.listTemplateEntries ?? [{ id: 'tmpl-1', dir: '/templates/tmpl-1' }]);
+  const listExternalEntries = vi.fn(() => opts.listExternalEntries ?? [{ id: 'ext-1', dir: '/external/ext-1' }]);
+  const listFieldSelectorEntries = vi.fn(() => opts.listFieldSelectorEntries ?? [{ id: 'rcp-1', dir: '/field-selectors/rcp-1' }]);
 
   const findTemplateDir = vi.fn(() => opts.findTemplateDir);
   const findExternalDir = vi.fn(() => opts.findExternalDir);
-  const findRecipeDir = vi.fn(() => opts.findRecipeDir);
+  const findFieldSelectorDir = vi.fn(() => opts.findFieldSelectorDir);
 
   vi.doMock('../src/core/metadata.js', () => ({
     validateMetadata,
@@ -77,17 +77,17 @@ async function loadValidateHarness(opts: ValidateHarnessOptions = {}): Promise<V
     validateExternal,
   }));
 
-  vi.doMock('../src/core/validation/recipe.js', () => ({
-    validateRecipe,
+  vi.doMock('../src/core/validation/field-selector.js', () => ({
+    validateFieldSelector,
   }));
 
   vi.doMock('../src/utils/paths.js', () => ({
     listTemplateEntries,
     listExternalEntries,
-    listRecipeEntries,
+    listFieldSelectorEntries,
     findTemplateDir,
     findExternalDir,
-    findRecipeDir,
+    findFieldSelectorDir,
   }));
 
   const module = await import('../src/commands/validate.js');
@@ -99,19 +99,19 @@ async function loadValidateHarness(opts: ValidateHarnessOptions = {}): Promise<V
       validateTemplate,
       validateLicense,
       validateExternal,
-      validateRecipe,
+      validateFieldSelector,
       listTemplateEntries,
       listExternalEntries,
-      listRecipeEntries,
+      listFieldSelectorEntries,
       findTemplateDir,
       findExternalDir,
-      findRecipeDir,
+      findFieldSelectorDir,
     },
   };
 }
 
 describe('runValidate command coverage', () => {
-  it('validates templates/external/recipes and prints PASSED in full mode', async () => {
+  it('validates templates/external/fieldSelectors and prints PASSED in full mode', async () => {
     const harness = await loadValidateHarness();
     const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
 
@@ -124,7 +124,7 @@ describe('runValidate command coverage', () => {
       templateCalls: harness.spies.validateTemplate.mock.calls,
       licenseCalls: harness.spies.validateLicense.mock.calls,
       externalCalls: harness.spies.validateExternal.mock.calls,
-      recipeCalls: harness.spies.validateRecipe.mock.calls,
+      fieldSelectorCalls: harness.spies.validateFieldSelector.mock.calls,
       logs: logSpy.mock.calls.map((call) => String(call[0])),
     });
 
@@ -132,7 +132,7 @@ describe('runValidate command coverage', () => {
     expect(harness.spies.validateTemplate).toHaveBeenCalledTimes(1);
     expect(harness.spies.validateLicense).toHaveBeenCalledTimes(1);
     expect(harness.spies.validateExternal).toHaveBeenCalledTimes(1);
-    expect(harness.spies.validateRecipe).toHaveBeenCalledTimes(1);
+    expect(harness.spies.validateFieldSelector).toHaveBeenCalledTimes(1);
     expect(logSpy.mock.calls.some((call) => String(call[0]).includes('Validation PASSED'))).toBe(true);
   });
 
@@ -159,7 +159,7 @@ describe('runValidate command coverage', () => {
     const harness = await loadValidateHarness({
       listTemplateEntries: [],
       listExternalEntries: [],
-      listRecipeEntries: [],
+      listFieldSelectorEntries: [],
     });
 
     const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
@@ -170,11 +170,11 @@ describe('runValidate command coverage', () => {
     expect(logSpy.mock.calls.some((call) => String(call[0]).includes('Validation PASSED'))).toBe(true);
   });
 
-  it('validates a single template and bypasses external/recipe validators', async () => {
+  it('validates a single template and bypasses external/fieldSelector validators', async () => {
     const harness = await loadValidateHarness({
-      findTemplateDir: '/content/templates/tmpl-single',
-      findExternalDir: '/content/external/ext-single',
-      findRecipeDir: '/content/recipes/rcp-single',
+      findTemplateDir: '/templates/tmpl-single',
+      findExternalDir: '/external/ext-single',
+      findFieldSelectorDir: '/field-selectors/rcp-single',
     });
 
     const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
@@ -184,21 +184,21 @@ describe('runValidate command coverage', () => {
     await allureJsonAttachment('validate-single-template.json', {
       templateCalls: harness.spies.validateTemplate.mock.calls,
       externalCalls: harness.spies.validateExternal.mock.calls,
-      recipeCalls: harness.spies.validateRecipe.mock.calls,
+      fieldSelectorCalls: harness.spies.validateFieldSelector.mock.calls,
       logs: logSpy.mock.calls.map((call) => String(call[0])),
     });
 
     expect(harness.spies.validateTemplate).toHaveBeenCalledTimes(1);
     expect(harness.spies.validateExternal).not.toHaveBeenCalled();
-    expect(harness.spies.validateRecipe).not.toHaveBeenCalled();
+    expect(harness.spies.validateFieldSelector).not.toHaveBeenCalled();
     expect(logSpy.mock.calls.some((call) => String(call[0]).includes('Validation PASSED'))).toBe(true);
   });
 
   it('fails single external validation when external validator returns invalid', async () => {
     const harness = await loadValidateHarness({
       findTemplateDir: undefined,
-      findExternalDir: '/content/external/ext-single',
-      findRecipeDir: '/content/recipes/rcp-single',
+      findExternalDir: '/external/ext-single',
+      findFieldSelectorDir: '/field-selectors/rcp-single',
     });
 
     harness.spies.validateExternal.mockReturnValueOnce({
@@ -216,26 +216,26 @@ describe('runValidate command coverage', () => {
 
     expect(exitSpy).toHaveBeenCalledWith(1);
     expect(errorSpy).toHaveBeenCalledWith('Validation FAILED');
-    expect(harness.spies.validateRecipe).not.toHaveBeenCalled();
+    expect(harness.spies.validateFieldSelector).not.toHaveBeenCalled();
   });
 
-  it('handles recipe scaffold output and not-found template errors in single mode', async () => {
-    const recipeHarness = await loadValidateHarness({
+  it('handles fieldSelector scaffold output and not-found template errors in single mode', async () => {
+    const fieldSelectorHarness = await loadValidateHarness({
       findTemplateDir: undefined,
       findExternalDir: undefined,
-      findRecipeDir: '/content/recipes/rcp-single',
+      findFieldSelectorDir: '/field-selectors/rcp-single',
     });
 
-    recipeHarness.spies.validateRecipe.mockReturnValueOnce({
+    fieldSelectorHarness.spies.validateFieldSelector.mockReturnValueOnce({
       valid: true,
       errors: [],
-      warnings: ['recipe warning'],
+      warnings: ['fieldSelector warning'],
       scaffold: true,
     });
 
     const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
 
-    recipeHarness.runValidate({ template: 'rcp-single', strict: true });
+    fieldSelectorHarness.runValidate({ template: 'rcp-single', strict: true });
 
     expect(logSpy.mock.calls.some((call) => String(call[0]).includes('PASS (scaffold)'))).toBe(true);
 
@@ -244,7 +244,7 @@ describe('runValidate command coverage', () => {
     const missingHarness = await loadValidateHarness({
       findTemplateDir: undefined,
       findExternalDir: undefined,
-      findRecipeDir: undefined,
+      findFieldSelectorDir: undefined,
     });
 
     const missingErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
@@ -260,7 +260,7 @@ describe('runValidate command coverage', () => {
 
     expect(exitSpy).toHaveBeenCalledWith(1);
     expect(missingErrorSpy).toHaveBeenCalledWith(
-      'Agreement "does-not-exist" not found in templates, external, or recipes.'
+      'Agreement "does-not-exist" not found in templates, external, or field-selectors.'
     );
   });
 });

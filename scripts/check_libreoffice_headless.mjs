@@ -9,7 +9,7 @@ import { resolveLibreOfficeBinary } from './libreoffice_headless.mjs';
 
 function parseArgs(argv) {
   const parsed = {
-    input: resolve('content/templates/openagreements-employment-offer-letter/template.docx'),
+    input: resolve('templates/openagreements-employment-offer-letter/template.docx'),
     quiet: false,
     json: false,
   };

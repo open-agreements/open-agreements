@@ -7,7 +7,7 @@ import yaml from "js-yaml";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export const REPO_ROOT = resolve(__dirname, "../..");
-export const TEMPLATES_DIR = resolve(REPO_ROOT, "content", "templates");
+export const TEMPLATES_DIR = resolve(REPO_ROOT, "templates");
 export const PREVIEWS_DIR = resolve(REPO_ROOT, "site", "assets", "previews");
 
 export function listTemplateIds() {

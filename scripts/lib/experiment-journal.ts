@@ -34,7 +34,7 @@ export interface ExperimentEntry {
   checksImproved: string[];
   lesson: string;
   base_commit: string;
-  recipe_tree_hash: string;
+  fieldSelector_tree_hash: string;
   grader_version: string;
 }
 
@@ -79,14 +79,14 @@ function resultPath(formId: string): string {
 }
 
 /**
- * Compute a stable hash of the recipe directory tree (metadata + replacements +
- * clean + computed) to detect when the recipe baseline has changed.
+ * Compute a stable hash of the fieldSelector directory tree (metadata + replacements +
+ * clean + computed) to detect when the fieldSelector baseline has changed.
  */
-export function computeRecipeTreeHash(recipeDir: string): string {
+export function computeFieldSelectorTreeHash(fieldSelectorDir: string): string {
   const files = ['metadata.yaml', 'replacements.json', 'clean.json', 'computed.json'];
   const hash = createHash('sha256');
   for (const f of files) {
-    const p = join(recipeDir, f);
+    const p = join(fieldSelectorDir, f);
     if (existsSync(p)) {
       hash.update(f + ':' + readFileSync(p, 'utf-8'));
     }

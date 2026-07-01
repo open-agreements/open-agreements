@@ -1,10 +1,10 @@
 /**
- * Zod schemas for selector-contract recipe manifests.
+ * Zod schemas for selector-contract fieldSelector manifests.
  *
- * A `FieldSelectorManifest` (`content/recipes/<id>/fields/<field_id>.json`)
+ * A `FieldSelectorManifest` (`field-selectors/<id>/fields/<field_id>.json`)
  * models one fillable concept as an ordered list of deterministic locators
  * (`occurrences`), one per place the value is written. A `TemplateManifest`
- * (`content/recipes/<id>/template-manifest.json`) pins the source and declares
+ * (`field-selectors/<id>/template-manifest.json`) pins the source and declares
  * which legacy `replacements.json` keys the selector engine now owns
  * (`migrated_keys`).
  *

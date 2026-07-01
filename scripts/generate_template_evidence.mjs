@@ -13,7 +13,7 @@
  * validation_status tri-state:
  *   - "validated"      — template has dedicated allure test(s) with template_id parameter
  *   - "not_covered"    — template exists but no dedicated validation test
- *   - "not_applicable" — recipe templates (downloaded at runtime, not pre-validated)
+ *   - "not_applicable" — fieldSelector templates (downloaded at runtime, not pre-validated)
  *
  * Usage:
  *   node scripts/generate_template_evidence.mjs
@@ -142,8 +142,8 @@ function main() {
 
   // Build evidence rows
   const evidence = items.map((item) => {
-    const isRecipe = !item.license;
-    const flags = isRecipe
+    const isFieldSelector = !item.license;
+    const flags = isFieldSelector
       ? { distributable: false, fillable: false }
       : LICENSE_FLAGS[item.license] || { distributable: false, fillable: false };
     const sourceLabel = getSourceLabel(item.name, item);
@@ -153,7 +153,7 @@ function main() {
     let validationStatus;
     let validationSource = "none";
 
-    if (isRecipe) {
+    if (isFieldSelector) {
       validationStatus = "not_applicable";
     } else if (validatedTemplates.has(item.name)) {
       validationStatus = "validated";
@@ -177,7 +177,7 @@ function main() {
       displayName: formatName(item.name),
       sourceLabel,
       sourceUrl,
-      license: item.license || "Recipe",
+      license: item.license || "FieldSelector",
       distributable: flags.distributable,
       fillable: flags.fillable,
       priorityFields: item.fields.filter((f) => f.required).length,

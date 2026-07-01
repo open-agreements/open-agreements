@@ -13,7 +13,7 @@ import { join, basename } from 'node:path';
 import yaml from 'js-yaml';
 
 const CONCERTO_DIR = 'concerto';
-const TEMPLATES_DIR = 'content/templates';
+const TEMPLATES_DIR = 'templates';
 
 /**
  * Extract field names from a .cto file.
@@ -52,7 +52,7 @@ function extractMetadataFields(metadataPath) {
 /**
  * Infer which template a .cto file corresponds to by matching
  * the cto filename to a template directory name.
- * E.g., bonterms-mutual-nda.cto → content/templates/bonterms-mutual-nda/
+ * E.g., bonterms-mutual-nda.cto → templates/bonterms-mutual-nda/
  */
 function findTemplateDir(ctoFilename) {
   const templateId = basename(ctoFilename, '.cto');

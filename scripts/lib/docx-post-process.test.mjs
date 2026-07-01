@@ -367,7 +367,7 @@ describe('docx post processing', () => {
     // single-line `[Content_Types].xml` / `document.xml.rels` formatting
     // that the `docx` npm library actually emits.
     const realPath = resolve(
-      'content/templates/openagreements-board-consent-safe/template.docx',
+      'templates/openagreements-board-consent-safe/template.docx',
     );
     const original = await JSZip.loadAsync(readFileSync(realPath));
     original.remove('word/theme/theme1.xml');

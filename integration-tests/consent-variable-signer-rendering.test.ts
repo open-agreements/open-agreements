@@ -10,14 +10,12 @@ const it = itAllure.epic('Filling & Rendering');
 const BOARD_TEMPLATE_DIR = join(
   import.meta.dirname,
   '..',
-  'content',
   'templates',
   'openagreements-board-consent-safe'
 );
 const STOCKHOLDER_TEMPLATE_DIR = join(
   import.meta.dirname,
   '..',
-  'content',
   'templates',
   'openagreements-stockholder-consent-safe'
 );

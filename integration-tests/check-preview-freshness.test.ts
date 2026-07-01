@@ -22,7 +22,7 @@ const SCRIPT_PATH = resolve(REPO_ROOT, 'scripts', 'check_preview_freshness.mjs')
 
 // Mirror the canonical OA-owned template inventory at HEAD. Tests build their
 // own `headOwnedIds` rather than calling listOpenAgreementsTemplateIds() so
-// they don't depend on the actual content/templates/ tree at test time.
+// they don't depend on the actual templates/ tree at test time.
 const HEAD_OA_TEMPLATE_IDS = new Set<string>([
   ...CANONICAL_TEMPLATE_IDS,
   ...JSON_SPEC_TEMPLATE_IDS,
@@ -45,14 +45,14 @@ function runRule(
 describe('per-template render-input rules', () => {
   it('canonical template.md change without preview → missing', () => {
     const { missing } = runRule([
-      { status: 'modified', path: 'content/templates/openagreements-board-consent-safe/template.md' },
+      { status: 'modified', path: 'templates/openagreements-board-consent-safe/template.md' },
     ]);
     expect(missing).toEqual(new Set(['openagreements-board-consent-safe']));
   });
 
   it('canonical template.md change WITH matching preview → not missing', () => {
     const { missing } = runRule([
-      { status: 'modified', path: 'content/templates/openagreements-board-consent-safe/template.md' },
+      { status: 'modified', path: 'templates/openagreements-board-consent-safe/template.md' },
       { status: 'modified', path: 'site/assets/previews/openagreements-board-consent-safe/page-1.png' },
     ]);
     expect(missing.size).toBe(0);
@@ -60,7 +60,7 @@ describe('per-template render-input rules', () => {
 
   it('zero-padded preview page (page-01.png) also satisfies', () => {
     const { missing } = runRule([
-      { status: 'modified', path: 'content/templates/openagreements-due-diligence-request-list/template.docx' },
+      { status: 'modified', path: 'templates/openagreements-due-diligence-request-list/template.docx' },
       { status: 'modified', path: 'site/assets/previews/openagreements-due-diligence-request-list/page-01.png' },
     ]);
     expect(missing.size).toBe(0);
@@ -68,14 +68,14 @@ describe('per-template render-input rules', () => {
 
   it('template.md change on a non-canonical template (e.g., due-diligence) → no trigger', () => {
     const { triggered } = runRule([
-      { status: 'modified', path: 'content/templates/openagreements-due-diligence-request-list/template.md' },
+      { status: 'modified', path: 'templates/openagreements-due-diligence-request-list/template.md' },
     ]);
     expect(triggered.size).toBe(0);
   });
 
   it('template.md change on closing-checklist (non-canonical, docs only) → no trigger', () => {
     const { triggered } = runRule([
-      { status: 'modified', path: 'content/templates/closing-checklist/template.md' },
+      { status: 'modified', path: 'templates/closing-checklist/template.md' },
     ]);
     expect(triggered.size).toBe(0);
   });
@@ -84,11 +84,11 @@ describe('per-template render-input rules', () => {
   // the freshness gate) is exercised end-to-end by the upstream-sync's own CI,
   // where real templates carry `template.mdoc`. It is intentionally not asserted
   // here with a synthetic fixture: that would require writing a temporary
-  // template dir under content/templates, which races OA's parallel suites.
+  // template dir under templates, which races OA's parallel suites.
 
   it('template.docx change on any OA-owned template → missing', () => {
     const { missing } = runRule([
-      { status: 'modified', path: 'content/templates/openagreements-board-consent-safe/template.docx' },
+      { status: 'modified', path: 'templates/openagreements-board-consent-safe/template.docx' },
     ]);
     expect(missing).toEqual(new Set(['openagreements-board-consent-safe']));
   });
@@ -96,7 +96,7 @@ describe('per-template render-input rules', () => {
   it('metadata.yaml change on any OA-owned template → no trigger (catalog-only)', () => {
     for (const id of HEAD_OA_TEMPLATE_IDS) {
       const { triggered } = runRule([
-        { status: 'modified', path: `content/templates/${id}/metadata.yaml` },
+        { status: 'modified', path: `templates/${id}/metadata.yaml` },
       ]);
       expect(triggered.size, `metadata.yaml on ${id} should not trigger`).toBe(0);
     }
@@ -105,7 +105,7 @@ describe('per-template render-input rules', () => {
   it('README/practice-note/reference-source/.template.generated.json → no trigger', () => {
     for (const file of ['README.md', 'practice-note.md', 'reference-source.docx', '.template.generated.json']) {
       const { triggered } = runRule([
-        { status: 'modified', path: `content/templates/openagreements-board-consent-safe/${file}` },
+        { status: 'modified', path: `templates/openagreements-board-consent-safe/${file}` },
       ]);
       expect(triggered.size, `${file} should not trigger`).toBe(0);
     }
@@ -113,7 +113,7 @@ describe('per-template render-input rules', () => {
 
   it('non-OA template edit (e.g., Common Paper) → no trigger', () => {
     const { triggered } = runRule([
-      { status: 'modified', path: 'content/templates/common-paper-mutual-nda/template.docx' },
+      { status: 'modified', path: 'templates/common-paper-mutual-nda/template.docx' },
     ]);
     expect(triggered.size).toBe(0);
   });
@@ -227,7 +227,7 @@ describe('ownership / rename / deletion', () => {
     'deletion of non-prefix OA template %s without preview deletion → missing',
     (id) => {
       const { missing } = runRule([
-        { status: 'removed', path: `content/templates/${id}/template.docx` },
+        { status: 'removed', path: `templates/${id}/template.docx` },
       ]);
       expect(missing).toEqual(new Set([id]));
     },
@@ -235,7 +235,7 @@ describe('ownership / rename / deletion', () => {
 
   it('deletion of closing-checklist WITH matching preview deletion → not missing', () => {
     const { missing } = runRule([
-      { status: 'removed', path: 'content/templates/closing-checklist/template.docx' },
+      { status: 'removed', path: 'templates/closing-checklist/template.docx' },
       { status: 'removed', path: 'site/assets/previews/closing-checklist/page-1.png' },
     ]);
     expect(missing.size).toBe(0);
@@ -243,8 +243,8 @@ describe('ownership / rename / deletion', () => {
 
   it('full template + preview folder deletion together → not missing', () => {
     const { missing } = runRule([
-      { status: 'removed', path: 'content/templates/openagreements-board-consent-safe/template.md' },
-      { status: 'removed', path: 'content/templates/openagreements-board-consent-safe/template.docx' },
+      { status: 'removed', path: 'templates/openagreements-board-consent-safe/template.md' },
+      { status: 'removed', path: 'templates/openagreements-board-consent-safe/template.docx' },
       { status: 'removed', path: 'site/assets/previews/openagreements-board-consent-safe/page-1.png' },
       { status: 'removed', path: 'site/assets/previews/openagreements-board-consent-safe/page-2.png' },
     ]);
@@ -253,7 +253,7 @@ describe('ownership / rename / deletion', () => {
 
   it('new OA-owned template added without previews → missing', () => {
     const { missing } = runRule([
-      { status: 'added', path: 'content/templates/openagreements-due-diligence-request-list/template.docx' },
+      { status: 'added', path: 'templates/openagreements-due-diligence-request-list/template.docx' },
     ]);
     expect(missing).toEqual(new Set(['openagreements-due-diligence-request-list']));
   });
@@ -262,8 +262,8 @@ describe('ownership / rename / deletion', () => {
     const { missing } = runRule([
       {
         status: 'renamed',
-        path: 'content/templates/openagreements-board-consent-safe/template.md',
-        previousPath: 'content/templates/openagreements-board-consent-safe-old/template.md',
+        path: 'templates/openagreements-board-consent-safe/template.md',
+        previousPath: 'templates/openagreements-board-consent-safe-old/template.md',
       },
       {
         status: 'renamed',
@@ -278,8 +278,8 @@ describe('ownership / rename / deletion', () => {
     const { missing } = runRule([
       {
         status: 'renamed',
-        path: 'content/templates/openagreements-board-consent-safe/template.md',
-        previousPath: 'content/templates/openagreements-board-consent-safe-old/template.md',
+        path: 'templates/openagreements-board-consent-safe/template.md',
+        previousPath: 'templates/openagreements-board-consent-safe-old/template.md',
       },
     ]);
     // Only the previous id is in CANONICAL_TEMPLATE_IDS as a known canonical
@@ -479,7 +479,7 @@ describe('CLI main-guard', () => {
         OA_CHANGED_FILES: JSON.stringify([
           {
             status: 'modified',
-            path: 'content/templates/openagreements-board-consent-safe/template.md',
+            path: 'templates/openagreements-board-consent-safe/template.md',
             previousPath: null,
           },
         ]),
@@ -489,7 +489,7 @@ describe('CLI main-guard', () => {
     });
     expect(result.status).toBe(1);
     expect(result.stderr).toMatch(/openagreements-board-consent-safe/);
-    expect(result.stderr).toMatch(/::error file=content\/templates\/openagreements-board-consent-safe\/template\.md/);
+    expect(result.stderr).toMatch(/::error file=templates\/openagreements-board-consent-safe\/template\.md/);
   });
 
   it('exits 0 on a clean diff (only README touched)', () => {
@@ -500,7 +500,7 @@ describe('CLI main-guard', () => {
         OA_CHANGED_FILES: JSON.stringify([
           {
             status: 'modified',
-            path: 'content/templates/openagreements-board-consent-safe/README.md',
+            path: 'templates/openagreements-board-consent-safe/README.md',
             previousPath: null,
           },
         ]),
@@ -520,7 +520,7 @@ describe('CLI main-guard', () => {
         OA_CHANGED_FILES: JSON.stringify([
           {
             status: 'added',
-            path: 'content/templates/openagreements-due-diligence-request-list/template.docx',
+            path: 'templates/openagreements-due-diligence-request-list/template.docx',
             previousPath: null,
           },
         ]),
@@ -563,12 +563,12 @@ describe('CLI main-guard', () => {
         OA_CHANGED_FILES: JSON.stringify([
           {
             status: 'modified',
-            path: 'content/templates/openagreements-board-consent-safe/template.docx',
+            path: 'templates/openagreements-board-consent-safe/template.docx',
             previousPath: null,
           },
           {
             status: 'modified',
-            path: 'content/templates/openagreements-board-consent-safe/template.md',
+            path: 'templates/openagreements-board-consent-safe/template.md',
             previousPath: null,
           },
         ]),
@@ -589,7 +589,7 @@ describe('CLI main-guard', () => {
         OA_CHANGED_FILES: JSON.stringify([
           {
             status: 'modified',
-            path: 'content/templates/openagreements-board-consent-safe/template.docx',
+            path: 'templates/openagreements-board-consent-safe/template.docx',
             previousPath: null,
           },
         ]),

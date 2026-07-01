@@ -5,13 +5,13 @@ import { loadMetadata } from '../core/metadata.js';
 import {
   findTemplateDir,
   findExternalDir,
-  findRecipeDir,
+  findFieldSelectorDir,
   listTemplateIds,
   listExternalIds,
-  listRecipeIds,
+  listFieldSelectorIds,
 } from '../utils/paths.js';
 import { runExternalFill } from '../core/external/index.js';
-import { runRecipe } from '../core/recipe/index.js';
+import { runFieldSelector } from '../core/field-selector/index.js';
 import {
   generateEmploymentMemo,
   isEmploymentTemplateId,
@@ -55,18 +55,18 @@ function validateTemplateFillRequest(templateDir: string, values: Record<string,
 }
 
 export async function runFill(args: FillArgs): Promise<void> {
-  // Search templates/ → external/ → recipes/
+  // Search templates/ → external/ → field-selectors/
   const templateDir = findTemplateDir(args.template);
   const externalDir = findExternalDir(args.template);
-  const recipeDir = findRecipeDir(args.template);
+  const fieldSelectorDir = findFieldSelectorDir(args.template);
 
   const isTemplate = templateDir !== undefined;
   const isExternal = !isTemplate && externalDir !== undefined;
-  const isRecipe = !isTemplate && !isExternal && recipeDir !== undefined;
+  const isFieldSelector = !isTemplate && !isExternal && fieldSelectorDir !== undefined;
 
-  if (!isTemplate && !isExternal && !isRecipe) {
+  if (!isTemplate && !isExternal && !isFieldSelector) {
     const available = getAvailableIds();
-    console.error(`Agreement "${args.template}" not found in templates, external, or recipes.`);
+    console.error(`Agreement "${args.template}" not found in templates, external, or field-selectors.`);
     if (available.length > 0) {
       console.error(`Available: ${available.join(', ')}`);
     }
@@ -83,9 +83,9 @@ export async function runFill(args: FillArgs): Promise<void> {
       );
     }
 
-    if (isRecipe) {
-      const result = await runRecipe({
-        recipeId: args.template,
+    if (isFieldSelector) {
+      const result = await runFieldSelector({
+        fieldSelectorId: args.template,
         outputPath: resolvedOutput,
         values: args.values,
       });
@@ -169,5 +169,5 @@ function getMemoOutputPaths(args: {
 }
 
 function getAvailableIds(): string[] {
-  return [...new Set([...listTemplateIds(), ...listExternalIds(), ...listRecipeIds()])];
+  return [...new Set([...listTemplateIds(), ...listExternalIds(), ...listFieldSelectorIds()])];
 }

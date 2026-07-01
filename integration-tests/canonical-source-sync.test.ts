@@ -20,7 +20,7 @@ const stylePath = join(
 const canonicalTemplates = discoverTemplateSources(repoRoot).filter((s) => s.type === 'canonical');
 
 describe('canonical Markdown -> JSON spec sync', () => {
-  it('discovers at least one canonical template under content/templates', () => {
+  it('discovers at least one canonical template under templates', () => {
     expect(canonicalTemplates.length).toBeGreaterThan(0);
   });
 

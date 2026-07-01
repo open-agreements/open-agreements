@@ -14,7 +14,7 @@ export default function () {
       section: "Guides",
       items: [
         { title: "Adding Templates", slug: "adding-templates" },
-        { title: "Adding Recipes", slug: "adding-recipes" },
+        { title: "Adding Field-selectors", slug: "adding-field-selectors" },
       ],
     },
     {

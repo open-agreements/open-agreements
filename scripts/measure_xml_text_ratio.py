@@ -5,7 +5,7 @@ Usage (from repo root):
     python scripts/measure_xml_text_ratio.py
 
 Measures word/document.xml against stripped text content for each
-.docx template in content/templates/. Useful for understanding how
+.docx template in templates/. Useful for understanding how
 much overhead raw XML adds vs. the actual text an AI agent needs to
 read.
 """
@@ -26,7 +26,7 @@ def measure_docx(path):
 
 
 def main():
-    files = sorted(glob.glob("content/templates/*/template.docx"))
+    files = sorted(glob.glob("templates/*/template.docx"))
     if not files:
         print("No templates found. Run from the repo root.")
         return

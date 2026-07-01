@@ -39,7 +39,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const OUTPUT = join(__dirname, '..', 'content', 'templates', 'working-group-list', 'template.docx');
+const OUTPUT = join(__dirname, '..', 'templates', 'working-group-list', 'template.docx');
 const STYLE_PATH = join(__dirname, 'template-specs', 'styles', 'openagreements-default-v1.json');
 
 // ---------------------------------------------------------------------------

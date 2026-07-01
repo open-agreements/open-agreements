@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "cli_version": "0.7.7",
+  "cli_version": "0.8.0",
   "items": [
     {
       "name": "bonterms-mutual-nda",
@@ -10543,11 +10543,11 @@
     },
     {
       "name": "nvca-certificate-of-incorporation",
-      "tier": "recipe",
+      "tier": "field-selector",
       "display_name": "NVCA Model Certificate of Incorporation",
       "category": "venture-financing",
       "description": "Amended and restated certificate of incorporation for venture-backed Delaware corporations, defining preferred stock rights, preferences, and privileges.",
-      "license_note": "NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation instructions, not the source document.",
+      "license_note": "NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation instructions, not the source document.",
       "source_url": "https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-COI-10-1-2025.docx",
       "source": "NVCA",
       "source_version": "10-1-2025",
@@ -10959,11 +10959,11 @@
     },
     {
       "name": "nvca-indemnification-agreement",
-      "tier": "recipe",
+      "tier": "field-selector",
       "display_name": "NVCA Model Indemnification Agreement",
       "category": "venture-financing",
       "description": "Director and officer indemnification agreement for venture-backed companies, providing indemnification and advancement of expenses.",
-      "license_note": "NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation instructions, not the source document.",
+      "license_note": "NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation instructions, not the source document.",
       "source_url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
       "source": "NVCA",
       "source_version": "2020",
@@ -11127,11 +11127,11 @@
     },
     {
       "name": "nvca-investors-rights-agreement",
-      "tier": "recipe",
+      "tier": "field-selector",
       "display_name": "NVCA Model Investors' Rights Agreement",
       "category": "venture-financing",
       "description": "Investors' rights agreement for venture financings, covering registration rights, information rights, board observer rights, and protective provisions.",
-      "license_note": "NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation instructions, not the source document.",
+      "license_note": "NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation instructions, not the source document.",
       "source_url": "https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-IRA-10-1-2025-2-1.docx",
       "source": "NVCA",
       "source_version": "10-1-2025",
@@ -11268,11 +11268,11 @@
     },
     {
       "name": "nvca-management-rights-letter",
-      "tier": "recipe",
+      "tier": "field-selector",
       "display_name": "NVCA Model Management Rights Letter",
       "category": "venture-financing",
       "description": "Management rights letter granting ERISA-qualifying management rights to venture capital fund investors.",
-      "license_note": "NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation instructions, not the source document.",
+      "license_note": "NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation instructions, not the source document.",
       "source_url": "https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx",
       "source": "NVCA",
       "source_version": "2020",
@@ -11364,11 +11364,11 @@
     },
     {
       "name": "nvca-rofr-co-sale-agreement",
-      "tier": "recipe",
+      "tier": "field-selector",
       "display_name": "NVCA Model Right of First Refusal and Co-Sale Agreement",
       "category": "venture-financing",
       "description": "Right of first refusal and co-sale agreement for venture financings, restricting transfer of founder shares and providing investor co-sale rights.",
-      "license_note": "NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation instructions, not the source document.",
+      "license_note": "NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation instructions, not the source document.",
       "source_url": "https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-ROFRA-10-1-2025.docx",
       "source": "NVCA",
       "source_version": "10-1-2025",
@@ -11523,11 +11523,11 @@
     },
     {
       "name": "nvca-stock-purchase-agreement",
-      "tier": "recipe",
+      "tier": "field-selector",
       "display_name": "NVCA Model Stock Purchase Agreement",
       "category": "venture-financing",
       "description": "Series preferred stock purchase agreement for venture capital financings, covering purchase terms, representations, and closing conditions.",
-      "license_note": "NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation instructions, not the source document.",
+      "license_note": "NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation instructions, not the source document.",
       "source_url": "https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-SPA-10-28-2025-1.docx",
       "source": "NVCA",
       "source_version": "10-28-2025",
@@ -11594,7 +11594,7 @@
           "required": false,
           "section": null,
           "description": "Series designation shown in the agreement title and share definitions",
-          "default": "A",
+          "default": "",
           "default_value_rationale": null
         },
         {
@@ -11852,11 +11852,11 @@
     },
     {
       "name": "nvca-voting-agreement",
-      "tier": "recipe",
+      "tier": "field-selector",
       "display_name": "NVCA Model Voting Agreement",
       "category": "venture-financing",
       "description": "Standard-form voting agreement for venture capital financings, covering board composition, drag-along rights, and stockholder voting obligations.",
-      "license_note": "NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation instructions, not the source document.",
+      "license_note": "NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation instructions, not the source document.",
       "source_url": "https://nvca.org/wp-content/uploads/2024/10/NVCA-Model-VA-10-1-2025.docx",
       "source": "NVCA",
       "source_version": "10-1-2025",
@@ -11989,7 +11989,7 @@
       "category": "corporate-governance",
       "description": "Action by unanimous written consent of the board of directors of a Delaware corporation approving the issuance of one or more Simple Agreements for Future Equity (SAFEs).",
       "license": "CC-BY-4.0",
-      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-board-consent-safe",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-board-consent-safe",
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Drafting structure informed by publicly available Series Seed SAFE board consent materials. Licensed under CC BY 4.0.",
       "allow_derivatives": true,
@@ -12058,7 +12058,7 @@
       "category": "deals-partnerships",
       "description": "Modular legal due diligence request list (DDRL) for corporate transactions. Ships a base form covering organization, capitalization, contracts, IP, employment, litigation, compliance, tax, insurance, debt, property, and privacy/cybersecurity. Four optional industry riders gate via boolean toggles: tech / SaaS, life sciences, healthcare provider, and cross-border / trade compliance. Drafted clean-room from public-source consensus across 15 Am Law firm, bar association, and legal publisher DDRLs; no public source language is reused. Includes per-section AI-augmentable arrays so AI workflows can append target-specific custom questions to any rider.",
       "license": "CC-BY-4.0",
-      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-due-diligence-request-list",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-due-diligence-request-list",
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Category structure and consensus framing informed by publicly available DDRLs and commentary from Cooley, Skadden, Morgan Lewis, Gunderson Dettmer, Lowenstein Sandler, Holland & Knight, Foley & Lardner, Software Equity Group, the International Bar Association, the American Bar Association, Bass Berry & Sims, and Carta. See practice note for sources. Drafted clean-room; no source language was reused. Licensed under CC BY 4.0.",
       "allow_derivatives": true,
@@ -12402,7 +12402,7 @@
       "category": "employment",
       "description": "Employee proprietary information and inventions assignment agreement with explicit prior-inventions and personal-project carveout language placeholders.",
       "license": "CC-BY-4.0",
-      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employee-ip-inventions-assignment",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employee-ip-inventions-assignment",
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Baseline structure inspired by permissive public references including the Balanced Employee IP Agreement (CC0) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
       "allow_derivatives": true,
@@ -12504,7 +12504,7 @@
           "required": false,
           "section": "Legal",
           "description": "Governing law state",
-          "default": "California",
+          "default": null,
           "default_value_rationale": null
         },
         {
@@ -12525,7 +12525,7 @@
       "category": "employment",
       "description": "Employee confidentiality and acceptable-use acknowledgement companion for onboarding packets, including reporting and post-employment handling.",
       "license": "CC-BY-4.0",
-      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employment-confidentiality-acknowledgement",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-confidentiality-acknowledgement",
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors using permissive public reference patterns from Papertrail legal-docs (CC0) and open policy frameworks. Licensed under CC BY 4.0.",
       "allow_derivatives": true,
@@ -12621,7 +12621,7 @@
       "category": "employment",
       "description": "A startup-focused employment offer letter template for full-time or part-time hiring with compensation, equity summary, and at-will framing.",
       "license": "CC-BY-4.0",
-      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employment-offer-letter",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-offer-letter",
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Drafting structure informed by publicly available permissive sources including the DocuSign template library (MIT) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
       "allow_derivatives": true,
@@ -12745,7 +12745,7 @@
           "required": false,
           "section": "Legal",
           "description": "Governing law state for the offer letter",
-          "default": "California",
+          "default": null,
           "default_value_rationale": null
         },
         {
@@ -12766,7 +12766,7 @@
       "category": "employment",
       "description": "Florida-specific employee restrictive covenant agreement with modular covenant structure (non-compete, non-solicitation, non-dealing, non-investment, confidentiality, non-disparagement). Implements Fla. Stat. section 542.335 (legitimate-business-interest recital, mandatory judicial modification of overbroad restraints, express assignee / successor / third-party-beneficiary enforcement), the section 542.336 physician specialty-monopoly carve-out, and the 2025 CHOICE Act (sections 542.41-542.45) covered-employee enhanced- enforcement track. Drafted as a starting point for licensed counsel review.",
       "license": "CC-BY-4.0",
-      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-restrictive-covenant-florida",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-florida",
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Florida-specific analysis informed by publicly available legal commentary cited in the related practice note. Licensed under CC BY 4.0.",
       "allow_derivatives": true,
@@ -12788,7 +12788,7 @@
           "required": false,
           "section": "Parties",
           "description": "Full name of the authorized signatory signing for the employer",
-          "display_label": "Employer Signatory",
+          "display_label": "Employer Signatory Name",
           "default": null,
           "default_value_rationale": null
         },
@@ -12863,49 +12863,6 @@
           "default_value_rationale": null
         },
         {
-          "name": "worker_category",
-          "type": "enum",
-          "required": false,
-          "section": "AI Analysis",
-          "description": "Employee role classification. AI-only field that drives memo warnings. Not shown in the output document. A Physician worker triggers the Fla. Stat. section 542.336 specialty-monopoly carve-out and can never be a CHOICE Act covered employee (health care practitioners are categorically excluded under Fla. Stat. section 542.43 / s. 456.001).",
-          "default": "Other",
-          "default_value_rationale": "Other is the conservative default when worker category cannot be determined from context. The calling LLM may set this explicitly based on title, scope, and duties. Setting Physician applies the section 542.336 carve-out conservatively (the specialty-monopoly condition turns on county-level market facts the drafter cannot know at signing).",
-          "options": [
-            "Executive",
-            "Management",
-            "Professional Staff",
-            "Physician",
-            "Other"
-          ]
-        },
-        {
-          "name": "covered_employee",
-          "type": "boolean",
-          "required": false,
-          "section": "AI Analysis",
-          "description": "Whether the employee is a \"covered employee\" under the 2025 CHOICE Act (Fla. Stat. sections 542.41-542.45). FULL legal-status flag, NOT a salary-only toggle: true only when the worker earns a salary greater than twice the annual mean wage of the county AND is NOT a health care practitioner as defined in s. 456.001 (Fla. Stat. section 542.43; health care practitioners are categorically excluded regardless of pay). When worker_category is Physician this MUST resolve to false. Gates the CHOICE Act confidential-information-acknowledgement clause. (The counsel-advisal-and-notice recital is separately gated by the choice_act_advance_notice_confirmed statutory-compliance representation, and garden leave by garden_leave_included.) AI-only field that drives conditional gating. Not shown as a cover-term row.",
-          "default": "false",
-          "default_value_rationale": "Defaulting to false keeps the CHOICE Act enhanced-enforcement procedural clauses off until the calling LLM affirmatively establishes covered- employee status (salary > 2x county annual mean wage AND not a health care practitioner). Over-asserting CHOICE Act status risks reciting compliance with procedural prerequisites the employer did not perform."
-        },
-        {
-          "name": "choice_act_advance_notice_confirmed",
-          "type": "boolean",
-          "required": false,
-          "section": "AI Analysis",
-          "description": "CONFIRM-BEFORE-SIGNING: set true ONLY if a human has verified that the CHOICE Act pre-execution compliance steps actually occurred — the covered employee was advised, in writing, of the right to seek counsel, and was given at least 7 days' advance notice of the proposed agreement (Fla. Stat. section 542.45(2)(a), (3); see the OpenAgreements Florida non-compete reference card at https://openagreements.org/legal/non-compete/florida, which keeps the current statute links). This is a statutory-compliance representation: its truth is a precondition to CHOICE Act enforceability, so setting it true asserts a past fact that must really have happened. This recital applies only to a covered employee; when it applies and this is false (the default), the counsel-advisal-and-notice recital renders followed by a yellow-highlighted \"[CONFIRM before signing: …]\" bracket and a matching item on the page-one confirmation notice — the clause is never silently dropped. The calling LLM MUST ask the human to confirm the advisal and 7-day notice were given before setting this true. Not shown as a cover-term row.",
-          "default": "false",
-          "default_value_rationale": "Conservative default false: the counsel-advisal/advance-notice recital is a past-tense representation of real-world statutory compliance the employer must actually have performed. Defaulting to false keeps the recital flagged with a highlighted CONFIRM bracket (rather than asserting clean compliance) until a human affirmatively confirms the advisal and 7-day notice were given, avoiding an accidental false representation."
-        },
-        {
-          "name": "garden_leave_included",
-          "type": "boolean",
-          "required": false,
-          "section": "AI Analysis",
-          "description": "Whether a covered garden leave agreement (Fla. Stat. section 542.43(5), up-to-4-year notice period) is paired with the covered-employee non-compete. Gates the CHOICE Act garden-leave day-for-day offset clause (Fla. Stat. section 542.45(2)(c)). AI-only field that drives conditional gating. Not shown as a cover-term row.",
-          "default": "false",
-          "default_value_rationale": "Default false: the employer elects garden leave affirmatively. The garden-leave clause is meaningful only on the CHOICE Act covered-employee track and is omitted unless garden leave is actually structured."
-        },
-        {
           "name": "garden_leave_notice_duration",
           "type": "string",
           "required": false,
@@ -12914,30 +12871,6 @@
           "display_label": "Garden Leave Notice Period",
           "default": "6 months",
           "default_value_rationale": "6 months is a moderate notice period well within the section 542.43(5) 4-year statutory ceiling. The employer should set this to the actual negotiated notice period; it must not exceed 4 years."
-        },
-        {
-          "name": "covenant_relationship_type",
-          "type": "enum",
-          "required": false,
-          "section": "AI Analysis",
-          "description": "The relationship the non-compete arises from. Selects the presumptively- reasonable duration window under Fla. Stat. section 542.335(1)(d)-(e): employee/agent/contractor (<=6mo reasonable / >2yr unreasonable); distributor/dealer/franchisee/licensee (<=1yr / >3yr); sale of business (<=3yr / >7yr); trade-secret-predicated (<=5yr / >10yr). AI-only field consumed for duration evaluation ONLY; never used to include or omit a clause. Not shown in the output document.",
-          "default": "employee",
-          "default_value_rationale": "employee is the most common and most strictly scrutinized window (presumptively reasonable at <=6 months, presumptively unreasonable above 2 years).",
-          "options": [
-            "employee",
-            "distributor_dealer_franchisee_licensee",
-            "sale_of_business",
-            "trade_secret_predicated"
-          ]
-        },
-        {
-          "name": "covenant_duration_months",
-          "type": "number",
-          "required": false,
-          "section": "AI Analysis",
-          "description": "The non-compete Restricted Period length in months, as an integer, for machine-checkable duration evaluation against the Fla. Stat. section 542.335(1)(d)-(e) presumption window selected by covenant_relationship_type. AI-only field. Not shown in the output document.",
-          "default": "",
-          "default_value_rationale": "No conservative default. When empty the duration check is advisory only (the numeric value is required to evaluate the statutory window). The human-readable noncompete_duration string drives the Cover Terms row."
         },
         {
           "name": "confidentiality_trade_secret_duration",
@@ -13132,13 +13065,298 @@
       ]
     },
     {
+      "name": "openagreements-restrictive-covenant-massachusetts",
+      "tier": "internal",
+      "display_name": "OpenAgreements Employee Restrictive Covenant (Massachusetts)",
+      "category": "employment",
+      "description": "Massachusetts-specific employee restrictive covenant agreement with modular covenant structure (non-compete, non-solicitation, non-dealing, non-investment, confidentiality, non-disparagement). Implements the Massachusetts Noncompetition Agreement Act, Mass. Gen. Laws ch. 149, § 24L (garden-leave or other agreed consideration, 12-month duration cap, formation-timing and notice requirements, excluded-worker categories, choice-of-law and § 24L(f) venue limits, and discretionary judicial reformation), and the profession-specific bans of Mass. Gen. Laws ch. 112, §§ 12X/74D/129B/135C and ch. 149, § 186. Generated by projecting the OpenAgreements restrictive covenant master to the Massachusetts overlay; drafted as a starting point for licensed counsel review.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-massachusetts",
+      "source": "OpenAgreements",
+      "attribution_text": "Authored by OpenAgreements contributors. Massachusetts-specific analysis informed by the quote-verified openagreements.org/legal/non-compete/massachusetts practice note. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "credits": [],
+      "fields": [
+        {
+          "name": "employer_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Legal name of the employer",
+          "display_label": "Employer",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employer_signatory_name",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Full name of the authorized signatory signing for the employer",
+          "display_label": "Employer Signatory Name",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employer_signatory_title",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Title of the authorized signatory signing for the employer",
+          "display_label": "Employer Signatory Title",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employee_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Full legal name of the employee",
+          "display_label": "Employee",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employee_title",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Employee job title or position (optional)",
+          "display_label": "Employee Title / Position",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "effective_date",
+          "type": "date",
+          "required": false,
+          "section": "Timing",
+          "description": "Effective date of this agreement",
+          "display_label": "Effective Date",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "governing_law",
+          "type": "string",
+          "required": false,
+          "section": "Legal",
+          "description": "Governing law state",
+          "display_label": "Governing Law",
+          "default": "Massachusetts",
+          "default_value_rationale": null
+        },
+        {
+          "name": "confidentiality_trade_secret_duration",
+          "type": "string",
+          "required": false,
+          "section": "Confidentiality",
+          "description": "Duration of confidentiality obligations for trade secrets",
+          "display_label": "Trade Secrets Duration",
+          "default": "Perpetual",
+          "default_value_rationale": null
+        },
+        {
+          "name": "confidentiality_other_duration",
+          "type": "string",
+          "required": false,
+          "section": "Confidentiality",
+          "description": "Duration of confidentiality obligations for non-trade-secret information",
+          "display_label": "Other Confidential Information Duration",
+          "default": "24 months",
+          "default_value_rationale": "24 months is common for non-trade-secret confidentiality obligations in employment agreements."
+        },
+        {
+          "name": "employee_nonsolicit_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Employee Non-Solicitation",
+          "description": "Whether the employee non-solicitation covenant is included",
+          "display_label": "Employee Non-Solicitation Included",
+          "default": "true",
+          "default_value_rationale": null
+        },
+        {
+          "name": "employee_nonsolicit_duration",
+          "type": "string",
+          "required": false,
+          "section": "Employee Non-Solicitation",
+          "description": "Duration of employee non-solicitation restriction",
+          "display_label": "Employee Non-Solicitation Duration",
+          "default": "12 months",
+          "default_value_rationale": "12 months is a common enforceable duration and sits within the Fla. Stat. section 542.335(1)(d) presumptively-reasonable window for former-employee covenants (<=6 months presumed reasonable; >2 years presumed unreasonable)."
+        },
+        {
+          "name": "covered_employee_period",
+          "type": "string",
+          "required": false,
+          "section": "Employee Non-Solicitation",
+          "description": "Lookback period for determining which employees are covered by the non-solicitation restriction.",
+          "display_label": "Covered Employee Period",
+          "default": "12 months",
+          "default_value_rationale": "12 months is the most common lookback period for employee non-solicitation scope."
+        },
+        {
+          "name": "customer_nonsolicit_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Customer Non-Solicitation",
+          "description": "Whether the customer/partner non-solicitation covenant is included",
+          "display_label": "Customer Non-Solicitation Included",
+          "default": "true",
+          "default_value_rationale": null
+        },
+        {
+          "name": "customer_nonsolicit_duration",
+          "type": "string",
+          "required": false,
+          "section": "Customer Non-Solicitation",
+          "description": "Duration of customer/partner non-solicitation restriction",
+          "display_label": "Customer Non-Solicitation Duration",
+          "default": "12 months",
+          "default_value_rationale": "12 months sits within the Fla. Stat. section 542.335(1)(d) presumptively-reasonable window for former-employee covenants."
+        },
+        {
+          "name": "covered_customer_period",
+          "type": "string",
+          "required": false,
+          "section": "Customer Non-Solicitation",
+          "description": "Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.",
+          "display_label": "Covered Customer Period",
+          "default": "12 months",
+          "default_value_rationale": "12 months is the most common lookback period for customer non-solicitation scope."
+        },
+        {
+          "name": "noncompete_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Whether the non-competition covenant is included. Under Fla. Stat. section 542.335 a non-compete is enforceable when supported by a legitimate business interest and reasonable in time, area, and line of business; this template recites the legitimate-business-interest basis and biases the duration into the presumptively-reasonable window.",
+          "display_label": "Non-Competition Included",
+          "default": "false",
+          "default_value_rationale": "Conservative default. Non-competes are the most heavily scrutinized covenant; include only after confirming a Fla. Stat. section 542.335(1)(b) legitimate business interest exists, the duration is within the presumptively-reasonable window, and (for a Physician) the section 542.336 specialty-monopoly carve-out is addressed."
+        },
+        {
+          "name": "noncompete_duration",
+          "type": "string",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Duration of non-competition restriction",
+          "display_label": "Non-Competition Duration",
+          "default": "12 months",
+          "default_value_rationale": "12 months sits within the Fla. Stat. section 542.335(1)(d) presumptively-reasonable window for former-employee covenants (<=6 months presumed reasonable; >2 years presumed unreasonable). The tool should not default to a presumptively-unreasonable term."
+        },
+        {
+          "name": "territory",
+          "type": "string",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Geographic scope of the non-competition restriction",
+          "display_label": "Restricted Territory",
+          "default": "the geographic area in which Employee provided services",
+          "default_value_rationale": "Tied to the employee's actual service area. Narrower geographic scope is more readily found reasonable; Florida courts will modify rather than void an overbroad territory under Fla. Stat. section 542.335(1)(c)."
+        },
+        {
+          "name": "competitive_business_definition",
+          "type": "string",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Description of the business activities that constitute competition with the employer.",
+          "display_label": "Competitive Business",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "specified_competitors",
+          "type": "string",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Optional named list of specific competitors. Narrowing the restriction to named competitors strengthens enforceability.",
+          "display_label": "Specified Competitors",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "ma_noncompete_consideration",
+          "type": "string",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Massachusetts only. The garden leave clause or other mutually-agreed upon consideration that supports the non-compete, stated in the agreement as required by Mass. Gen. Laws ch. 149, § 24L(b)(vii). A qualifying garden leave clause pays Employee, on a pro-rata basis during the entire restricted period, at least 50 percent of Employee's highest annualized base salary paid within the 2 years before termination. Whether a smaller fixed payment qualifies as \"other mutually-agreed upon consideration\" is unsettled, so size it conservatively against the garden-leave benchmark and specify the amount here. Shown in Cover Terms and recited in the garden-leave/consideration clause only when noncompete_included is true under the Massachusetts projection.",
+          "display_label": "Garden Leave or Agreed Consideration (Massachusetts)",
+          "default": "garden leave equal to at least 50% of Employee's highest annualized base salary paid within the two years before termination, paid pro rata across the Restricted Period",
+          "default_value_rationale": "The 50%-of-base-salary garden leave clause is the only consideration § 24L(b)(vii) defines, so it is the conservative default. Counsel should confirm the amount and may substitute other mutually-agreed upon consideration sized against this benchmark; the enforceability of a smaller fixed sum is unsettled."
+        },
+        {
+          "name": "nondealing_included",
+          "type": "boolean",
+          "required": false,
+          "section": "No Business with Covered Customers",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
+          "display_label": "No Business with Covered Customers Included",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "nondealing_duration",
+          "type": "string",
+          "required": false,
+          "section": "No Business with Covered Customers",
+          "description": "Duration of the no-business-with-covered-customers restriction",
+          "display_label": "No Business with Covered Customers Duration",
+          "default": "12 months",
+          "default_value_rationale": null
+        },
+        {
+          "name": "passive_public_holdings_threshold",
+          "type": "string",
+          "required": false,
+          "section": "Definitions",
+          "description": "Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.",
+          "display_label": "Passive Public Holdings Threshold",
+          "default": "five percent",
+          "default_value_rationale": "Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements."
+        },
+        {
+          "name": "noninvestment_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Non-Investment",
+          "description": "Whether the non-investment covenant is included.",
+          "display_label": "Non-Investment Included",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "noninvestment_duration",
+          "type": "string",
+          "required": false,
+          "section": "Non-Investment",
+          "description": "Duration of non-investment restriction",
+          "display_label": "Non-Investment Duration",
+          "default": "12 months",
+          "default_value_rationale": null
+        },
+        {
+          "name": "nondisparagement_duration",
+          "type": "string",
+          "required": false,
+          "section": "Non-Disparagement",
+          "description": "Duration of non-disparagement obligation (measured from termination)",
+          "display_label": "Non-Disparagement Duration",
+          "default": "24 months",
+          "default_value_rationale": "24 months is common for employment non-disparagement provisions."
+        }
+      ]
+    },
+    {
       "name": "openagreements-restrictive-covenant-wyoming",
       "tier": "internal",
       "display_name": "OpenAgreements Employee Restrictive Covenant (Wyoming)",
       "category": "employment",
-      "description": "Wyoming-specific employee restrictive covenant agreement with modular covenant structure (non-compete, non-solicitation, non-dealing, non-investment, confidentiality, non-disparagement). Incorporates Wyo. Stat. section 1-23-108 (SF 107, 2025) pathway gating for non-compete-adjacent covenants. Drafted as a starting point for licensed counsel review.",
+      "description": "Wyoming-specific employee restrictive covenant agreement with modular covenant structure (non-compete, non-solicitation, non-dealing, non-investment, confidentiality, non-disparagement). Incorporates Wyo. Stat. section 1-23-108 (SF 107, 2025) pathway gating for non-compete-adjacent covenants. Drafted as a starting point for review by licensed counsel.",
       "license": "CC-BY-4.0",
-      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-restrictive-covenant-wyoming",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-wyoming",
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Wyoming-specific analysis informed by publicly available legal commentary cited in the related practice note. Licensed under CC BY 4.0.",
       "allow_derivatives": true,
@@ -13160,7 +13378,7 @@
           "required": false,
           "section": "Parties",
           "description": "Full name of the authorized signatory signing for the employer",
-          "display_label": "Employer Signatory",
+          "display_label": "Employer Signatory Name",
           "default": null,
           "default_value_rationale": null
         },
@@ -13213,40 +13431,6 @@
           "display_label": "Governing Law",
           "default": "Wyoming",
           "default_value_rationale": null
-        },
-        {
-          "name": "worker_category",
-          "type": "enum",
-          "required": false,
-          "section": "AI Analysis",
-          "description": "Employee role classification under Wyo. Stat. section 1-23-108. AI-only field that drives memo warnings. Not shown in the output document.",
-          "default": "Other",
-          "default_value_rationale": "Other is the conservative default when worker category cannot be determined from context. The calling LLM may set this explicitly based on title, scope, and duties; absent that signal, Other avoids asserting a statutory pathway that may not apply.",
-          "options": [
-            "Executive",
-            "Management",
-            "Professional Staff",
-            "Physician",
-            "Other"
-          ]
-        },
-        {
-          "name": "applicable_noncompete_exceptions",
-          "type": "string",
-          "required": false,
-          "section": "AI Analysis",
-          "description": "Applicable statutory exception(s) under Wyo. Stat. section 1-23-108 that would permit an otherwise-prohibited non-compete-adjacent covenant. AI-only field that drives memo warnings and conditional gating. Not shown in the output document. Options: Executive or Management Personnel, Trade Secret Protection, Training Cost Recovery, Sale of Business, None.",
-          "default": "None",
-          "default_value_rationale": null
-        },
-        {
-          "name": "restrictive_covenant_entered_after_employment_started",
-          "type": "boolean",
-          "required": false,
-          "section": "AI Analysis",
-          "description": "Whether the restrictive covenant is signed AFTER the employee already started working (post-hire) vs at or before the first day of employment (at-hire). Wyoming case law (Brown v. Best Home Health & Hospice, 2021 WY 83) requires separate consideration beyond continued employment for post-hire restrictive covenants. AI-only field that drives memo warnings and conditional drafting of the separate-consideration recital. Not shown in the output document.",
-          "default": "true",
-          "default_value_rationale": "Defaulting to post-hire (true) is the conservative posture: it triggers the separate-consideration recital required by Brown. If the covenant is genuinely at-hire, the calling LLM should set this to false to suppress the recital."
         },
         {
           "name": "confidentiality_trade_secret_duration",
@@ -13447,7 +13631,7 @@
       "category": "corporate-governance",
       "description": "Action by written consent of the stockholders of a Delaware corporation approving the issuance of one or more Simple Agreements for Future Equity (SAFEs).",
       "license": "CC-BY-4.0",
-      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-stockholder-consent-safe",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-stockholder-consent-safe",
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Drafting structure informed by publicly available Series Seed SAFE stockholder consent materials. Licensed under CC BY 4.0.",
       "allow_derivatives": true,

@@ -19,7 +19,7 @@ section: Guides
 ### 1. Create the template directory
 
 ```bash
-mkdir content/templates/<template-name>
+mkdir templates/<template-name>
 ```
 
 Use kebab-case for the directory name (e.g., `common-paper-mutual-nda`).
@@ -296,6 +296,6 @@ Before adding a template, classify the source as one of:
 - `pointer-only`
 - `restricted-no-automation`
 
-Do not onboard `restricted-no-automation` sources into `content/templates/`, `content/external/`,
-or recipe auto-fetch flows without explicit written permission. Employment-pack
+Do not onboard `restricted-no-automation` sources into `templates/`, `external/`,
+or field-selector auto-fetch flows without explicit written permission. Employment-pack
 classifications are tracked in `docs/employment-source-policy.md`.

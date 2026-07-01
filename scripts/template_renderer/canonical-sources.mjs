@@ -2,7 +2,7 @@ import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { tryParseCanonicalFrontmatter } from './canonical-frontmatter.mjs';
 
-const TEMPLATES_DIR = 'content/templates';
+const TEMPLATES_DIR = 'templates';
 const CANONICAL_TEMPLATE_FILENAME = 'template.md';
 const CANONICAL_GENERATED_JSON_FILENAME = '.template.generated.json';
 const HAND_AUTHORED_JSON_FILENAME = 'template.json';

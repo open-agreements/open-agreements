@@ -3,7 +3,7 @@ import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import { evaluatePostconditions } from './postconditions.js';
 import type { FieldSelectorManifest } from './manifest-schema.js';
 
-const it = itAllure.epic('Recipes');
+const it = itAllure.epic('FieldSelectors');
 
 function manifest(postconditions: FieldSelectorManifest['postconditions']): FieldSelectorManifest {
   return {

@@ -3,15 +3,15 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
 import { afterEach, describe, expect } from 'vitest';
-import { evaluateComputedProfile, loadComputedProfile } from '../src/core/recipe/computed.js';
-import { normalizeBracketArtifacts } from '../src/core/recipe/bracket-normalizer.js';
-import { extractAllText } from '../src/core/recipe/verifier.js';
+import { evaluateComputedProfile, loadComputedProfile } from '../src/core/field-selector/computed.js';
+import { normalizeBracketArtifacts } from '../src/core/field-selector/bracket-normalizer.js';
+import { extractAllText } from '../src/core/field-selector/verifier.js';
 import { itAllure } from './helpers/allure-test.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const tempDirs: string[] = [];
-const RECIPE_ID = 'nvca-stock-purchase-agreement';
-const RECIPE_DIR = join(import.meta.dirname, '..', 'content', 'recipes', RECIPE_ID);
+const FIELD_SELECTOR_ID = 'nvca-stock-purchase-agreement';
+const FIELD_SELECTOR_DIR = join(import.meta.dirname, '..', 'field-selectors', FIELD_SELECTOR_ID);
 const it = itAllure.epic('NVCA SPA Template');
 
 afterEach(() => {
@@ -68,7 +68,7 @@ describe('NVCA option resolution policy', () => {
     const input = join(dir, 'input.docx');
     const output = join(dir, 'output.docx');
     const normalize = JSON.parse(
-      readFileSync(join(RECIPE_DIR, 'normalize.json'), 'utf-8')
+      readFileSync(join(FIELD_SELECTOR_DIR, 'normalize.json'), 'utf-8')
     ) as {
       paragraph_rules: Array<{
         id: string;
@@ -95,7 +95,7 @@ describe('NVCA option resolution policy', () => {
   });
 
   it('dispute-resolution policy defaults arbitration venue when arbitration is selected', () => {
-    const profile = loadComputedProfile(RECIPE_DIR);
+    const profile = loadComputedProfile(FIELD_SELECTOR_DIR);
     expect(profile).not.toBeNull();
 
     const evaluated = evaluateComputedProfile(profile!, {
@@ -109,7 +109,7 @@ describe('NVCA option resolution policy', () => {
   });
 
   it('dispute-resolution policy defaults courts district by state and flags alignment', () => {
-    const profile = loadComputedProfile(RECIPE_DIR);
+    const profile = loadComputedProfile(FIELD_SELECTOR_DIR);
     expect(profile).not.toBeNull();
 
     const evaluated = evaluateComputedProfile(profile!, {
@@ -129,7 +129,7 @@ describe('NVCA option resolution policy', () => {
     const input = join(dir, 'input.docx');
     const output = join(dir, 'output.docx');
     const normalize = JSON.parse(
-      readFileSync(join(RECIPE_DIR, 'normalize.json'), 'utf-8')
+      readFileSync(join(FIELD_SELECTOR_DIR, 'normalize.json'), 'utf-8')
     ) as {
       paragraph_rules: Array<{
         id: string;

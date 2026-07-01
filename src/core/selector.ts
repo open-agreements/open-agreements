@@ -12,7 +12,7 @@ import AdmZip from 'adm-zip';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document, Element, Node } from '@xmldom/xmldom';
 import { getParagraphText, replaceParagraphTextRange, SafeDocxError } from '@usejunior/docx-core';
-import { copyEntriesSkippingDirs, enumerateTextParts, getGeneralTextPartNames } from './recipe/ooxml-parts.js';
+import { copyEntriesSkippingDirs, enumerateTextParts, getGeneralTextPartNames } from './field-selector/ooxml-parts.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 

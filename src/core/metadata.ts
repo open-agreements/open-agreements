@@ -13,7 +13,7 @@ import yaml from 'js-yaml';
 export const LicenseEnum = z.enum(['CC-BY-4.0', 'CC0-1.0', 'CC-BY-ND-4.0']);
 export type License = z.infer<typeof LicenseEnum>;
 
-/** Field kinds supported by template, external-template, and recipe metadata. */
+/** Field kinds supported by template, external-template, and fieldSelector metadata. */
 const FieldTypeEnum = z.enum(['string', 'date', 'number', 'boolean', 'enum', 'array', 'multiselect']);
 export type FieldType = z.infer<typeof FieldTypeEnum>;
 const MULTISELECT_OPTION_RE = /^[A-Za-z_][A-Za-z0-9_]*$/;
@@ -404,9 +404,9 @@ export const ExternalMetadataSchema = TemplateMetadataBaseSchema.extend({
 });
 export type ExternalMetadata = z.infer<typeof ExternalMetadataSchema>;
 
-// --- Recipe schemas ---
+// --- FieldSelector schemas ---
 
-/** Declarative cleaner configuration for recipe DOCX preprocessing. */
+/** Declarative cleaner configuration for fieldSelector DOCX preprocessing. */
 export const CleanConfigSchema = z.object({
   removeFootnotes: z.boolean().default(false),
   removeBeforePattern: z.string().optional(),
@@ -446,7 +446,7 @@ export const GuidanceEntrySchema = z.object({
 });
 export type GuidanceEntry = z.infer<typeof GuidanceEntrySchema>;
 
-/** Machine-readable guidance artifact produced from recipe cleaning inputs. */
+/** Machine-readable guidance artifact produced from fieldSelector cleaning inputs. */
 export const GuidanceOutputSchema = z.object({
   extractedFrom: z.object({
     sourceHash: z.string(),
@@ -463,17 +463,17 @@ const MarketDataCitationSchema = z.object({
 });
 
 /**
- * Metadata required for recipe-based templates.
+ * Metadata required for field-selector-based templates.
  *
- * Recipes point at non-redistributable upstream source DOCX files and ship only
+ * FieldSelectors point at non-redistributable upstream source DOCX files and ship only
  * transformation instructions. Required fields are `name`, `source_url`,
  * `source_version`, and `license_note`; `fields` and `priority_fields` reuse
  * the same field-definition semantics as template metadata and default to
  * empty arrays. `optional` defaults to `false`. `source_sha256` verifies
  * provenance for upstream sources when present. `market_data_citations`
- * records optional external citation metadata used by recipe guidance.
+ * records optional external citation metadata used by fieldSelector guidance.
  */
-export const RecipeMetadataSchema = z.object({
+export const FieldSelectorMetadataSchema = z.object({
   name: z.string().trim().min(1, 'name must be a non-empty string (used as display_name on list_templates)'),
   category: z.string().optional(),
   description: z.string().optional(),
@@ -489,7 +489,7 @@ export const RecipeMetadataSchema = z.object({
   validatePriorityFields(meta.fields, meta.priority_fields, ctx);
   validateDerivedBooleanCollisions(meta.fields, ctx);
 });
-export type RecipeMetadata = z.infer<typeof RecipeMetadataSchema>;
+export type FieldSelectorMetadata = z.infer<typeof FieldSelectorMetadataSchema>;
 
 // --- Template loaders ---
 
@@ -543,17 +543,17 @@ export function validateExternalMetadata(externalDir: string): { valid: boolean;
   }
 }
 
-// --- Recipe loaders ---
+// --- FieldSelector loaders ---
 
-export function loadRecipeMetadata(recipeDir: string): RecipeMetadata {
-  const metadataPath = join(recipeDir, 'metadata.yaml');
+export function loadFieldSelectorMetadata(fieldSelectorDir: string): FieldSelectorMetadata {
+  const metadataPath = join(fieldSelectorDir, 'metadata.yaml');
   const raw = readFileSync(metadataPath, 'utf-8');
   const parsed = yaml.load(raw);
-  return RecipeMetadataSchema.parse(parsed);
+  return FieldSelectorMetadataSchema.parse(parsed);
 }
 
-export function loadCleanConfig(recipeDir: string): CleanConfig {
-  const cleanPath = join(recipeDir, 'clean.json');
+export function loadCleanConfig(fieldSelectorDir: string): CleanConfig {
+  const cleanPath = join(fieldSelectorDir, 'clean.json');
   if (!existsSync(cleanPath)) {
     return { removeFootnotes: false, removeParagraphPatterns: [], removeRanges: [], clearParts: [] };
   }
@@ -561,8 +561,8 @@ export function loadCleanConfig(recipeDir: string): CleanConfig {
   return CleanConfigSchema.parse(JSON.parse(raw));
 }
 
-export function loadNormalizeConfig(recipeDir: string): NormalizeConfig {
-  const normalizePath = join(recipeDir, 'normalize.json');
+export function loadNormalizeConfig(fieldSelectorDir: string): NormalizeConfig {
+  const normalizePath = join(fieldSelectorDir, 'normalize.json');
   if (!existsSync(normalizePath)) {
     return { paragraph_rules: [] };
   }
@@ -570,9 +570,9 @@ export function loadNormalizeConfig(recipeDir: string): NormalizeConfig {
   return NormalizeConfigSchema.parse(JSON.parse(raw));
 }
 
-export function validateRecipeMetadata(recipeDir: string): { valid: boolean; errors: string[] } {
+export function validateFieldSelectorMetadata(fieldSelectorDir: string): { valid: boolean; errors: string[] } {
   try {
-    loadRecipeMetadata(recipeDir);
+    loadFieldSelectorMetadata(fieldSelectorDir);
     return { valid: true, errors: [] };
   } catch (err) {
     if (err instanceof z.ZodError) {

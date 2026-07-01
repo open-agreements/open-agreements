@@ -60,7 +60,7 @@ style properties.
 ## Repo-wide structural lint
 
 `scripts/check_docx_structure.mjs` also runs a catalog-wide Pages guard over
-`content/templates/*/template.docx` (`word/document.xml` body). That lint
+`templates/*/template.docx` (`word/document.xml` body). That lint
 intentionally uses a narrower rule than the layout-specific tests above: for
 templates that declare the OpenAgreements Pages style contract (any `OA`-prefixed
 paragraph style), it flags visible-text paragraphs that lack `pStyle` when the

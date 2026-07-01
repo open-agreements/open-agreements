@@ -1,0 +1,88 @@
+name: NVCA Model Indemnification Agreement
+category: venture-financing
+description: >-
+  Director and officer indemnification agreement for venture-backed companies, providing indemnification and advancement
+  of expenses.
+source_url: https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx
+source_version: '2020'
+license_note: >-
+  NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation
+  instructions, not the source document.
+source_sha256: f9b61b4d99e245573de41d9469925b4332f871ec0e6ac6593055cdfe17825300
+optional: false
+fields:
+  - name: indemnitee_name
+    type: string
+    description: Full legal name of the indemnitee (director or officer)
+  - name: indemnitee_address
+    type: string
+    description: Address of the indemnitee
+  - name: company_name
+    type: string
+    description: Name of the corporation providing indemnification
+  - name: agreement_effective_date
+    type: string
+    description: Effective date in the opening clause (e.g., March 20, 2026)
+  - name: fund_sponsor_name
+    type: string
+    description: Name of the sponsoring fund or entity appointing the indemnitee
+  - name: indemnitee_role
+    type: string
+    description: Primary role being indemnified (e.g. director)
+    default: director
+  - name: indemnitee_role_plural
+    type: string
+    description: Plural form of the primary role (e.g. directors)
+    default: directors
+  - name: indemnitee_role_secondary
+    type: string
+    description: Secondary role being indemnified (e.g. officer)
+    default: officer
+  - name: indemnitee_role_secondary_plural
+    type: string
+    description: Plural form of the secondary role (e.g. officers)
+    default: officers
+  - name: indemnitee_pronoun_possessive
+    type: string
+    description: Possessive pronoun for the indemnitee entity (e.g. its)
+    default: its
+  - name: indemnitee_pronoun_possessive_plural
+    type: string
+    description: Plural possessive pronoun for the indemnitee (e.g. their)
+    default: their
+  - name: bylaws_name
+    type: string
+    description: Name of the company's bylaws document
+    default: Bylaws
+  - name: certificate_name
+    type: string
+    description: Name of the company's certificate of incorporation
+    default: Certificate of Incorporation
+  - name: and_appointing_stockholder
+    type: string
+    description: Optional additional party text or empty string
+    default: ''
+  - name: appointing_stockholder_ipo_termination_clause
+    type: string
+    description: Optional clause text that terminates Appointing Stockholder rights at IPO closing
+    default: ''
+  - name: indemnification_section_letter
+    type: string
+    description: Section reference letter for indemnification provisions in the certificate
+    default: E
+  - name: signature_page_marker
+    type: string
+    description: Signature page marker text
+    default: Signature Page Follows
+priority_fields:
+  - indemnitee_name
+  - indemnitee_address
+  - company_name
+  - agreement_effective_date
+  - indemnitee_role
+  - indemnitee_role_plural
+  - indemnitee_pronoun_possessive
+  - indemnitee_pronoun_possessive_plural
+  - bylaws_name
+  - certificate_name
+  - indemnification_section_letter

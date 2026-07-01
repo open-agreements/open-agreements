@@ -6,7 +6,7 @@ import {
   LocatorSchema,
 } from './manifest-schema.js';
 
-const it = itAllure.epic('Recipes');
+const it = itAllure.epic('FieldSelectors');
 
 function validManifest(overrides: Record<string, unknown> = {}) {
   return {

@@ -41,7 +41,7 @@ body:
     id: repo_area
     attributes:
       label: Suggested area label
-      description: Optional. Example: area/forms, area/licensing, area/recipes, area/tooling, area/docs
+      description: Optional. Example: area/forms, area/licensing, area/field-selectors, area/tooling, area/docs
       placeholder: area/forms
     validations:
       required: false

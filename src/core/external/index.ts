@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { loadExternalMetadata, loadCleanConfig } from '../metadata.js';
 import { resolveExternalDir } from '../../utils/paths.js';
-import { verifyOutput } from '../recipe/verifier.js';
+import { verifyOutput } from '../field-selector/verifier.js';
 import { runFillPipeline } from '../unified-pipeline.js';
 import type { ExternalFillOptions, ExternalFillResult } from './types.js';
 

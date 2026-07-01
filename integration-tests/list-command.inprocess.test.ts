@@ -32,7 +32,7 @@ interface TemplateMeta {
   derived_from?: string;
 }
 
-interface RecipeMeta {
+interface FieldSelectorMeta {
   name: string;
   description?: string;
   source_url: string;
@@ -46,10 +46,10 @@ interface RecipeMeta {
 interface ListHarnessOptions {
   templateEntries?: ContentEntry[];
   externalEntries?: ContentEntry[];
-  recipeEntries?: ContentEntry[];
+  fieldSelectorEntries?: ContentEntry[];
   templateByDir?: Record<string, TemplateMeta | Error>;
   externalByDir?: Record<string, TemplateMeta | Error>;
-  recipeByDir?: Record<string, RecipeMeta | Error>;
+  fieldSelectorByDir?: Record<string, FieldSelectorMeta | Error>;
 }
 
 interface ListHarness {
@@ -57,10 +57,10 @@ interface ListHarness {
   spies: {
     listTemplateEntries: ReturnType<typeof vi.fn>;
     listExternalEntries: ReturnType<typeof vi.fn>;
-    listRecipeEntries: ReturnType<typeof vi.fn>;
+    listFieldSelectorEntries: ReturnType<typeof vi.fn>;
     loadMetadata: ReturnType<typeof vi.fn>;
     loadExternalMetadata: ReturnType<typeof vi.fn>;
-    loadRecipeMetadata: ReturnType<typeof vi.fn>;
+    loadFieldSelectorMetadata: ReturnType<typeof vi.fn>;
   };
 }
 
@@ -85,10 +85,10 @@ function templateMeta(name: string, sourceUrl: string): TemplateMeta {
   };
 }
 
-function recipeMeta(name: string, sourceUrl: string): RecipeMeta {
+function fieldSelectorMeta(name: string, sourceUrl: string): FieldSelectorMeta {
   return {
     name,
-    description: `${name} recipe description`,
+    description: `${name} fieldSelector description`,
     source_url: sourceUrl,
     source_version: 'v2.0',
     license_note: 'Use per source license',
@@ -103,7 +103,7 @@ async function loadListHarness(opts: ListHarnessOptions = {}): Promise<ListHarne
 
   const listTemplateEntries = vi.fn(() => opts.templateEntries ?? []);
   const listExternalEntries = vi.fn(() => opts.externalEntries ?? []);
-  const listRecipeEntries = vi.fn(() => opts.recipeEntries ?? []);
+  const listFieldSelectorEntries = vi.fn(() => opts.fieldSelectorEntries ?? []);
 
   const loadMetadata = vi.fn((dir: string) => {
     const value = opts.templateByDir?.[dir] ?? templateMeta('Fallback Template', 'https://commonpaper.com/template');
@@ -117,8 +117,8 @@ async function loadListHarness(opts: ListHarnessOptions = {}): Promise<ListHarne
     return value;
   });
 
-  const loadRecipeMetadata = vi.fn((dir: string) => {
-    const value = opts.recipeByDir?.[dir] ?? recipeMeta('Fallback Recipe', 'https://nvca.org/forms');
+  const loadFieldSelectorMetadata = vi.fn((dir: string) => {
+    const value = opts.fieldSelectorByDir?.[dir] ?? fieldSelectorMeta('Fallback FieldSelector', 'https://nvca.org/forms');
     if (value instanceof Error) throw value;
     return value;
   });
@@ -126,13 +126,13 @@ async function loadListHarness(opts: ListHarnessOptions = {}): Promise<ListHarne
   vi.doMock('../src/utils/paths.js', () => ({
     listTemplateEntries,
     listExternalEntries,
-    listRecipeEntries,
+    listFieldSelectorEntries,
   }));
 
   vi.doMock('../src/core/metadata.js', () => ({
     loadMetadata,
     loadExternalMetadata,
-    loadRecipeMetadata,
+    loadFieldSelectorMetadata,
   }));
 
   const { runList } = await import('../src/commands/list.js');
@@ -141,10 +141,10 @@ async function loadListHarness(opts: ListHarnessOptions = {}): Promise<ListHarne
     spies: {
       listTemplateEntries,
       listExternalEntries,
-      listRecipeEntries,
+      listFieldSelectorEntries,
       loadMetadata,
       loadExternalMetadata,
-      loadRecipeMetadata,
+      loadFieldSelectorMetadata,
     },
   };
 }
@@ -164,8 +164,8 @@ describe('runList in-process coverage', () => {
       externalEntries: [
         { id: 'b-external', dir: '/external/b-external', baseDir: '/external' },
       ],
-      recipeEntries: [
-        { id: 'c-recipe', dir: '/recipes/c-recipe', baseDir: '/recipes' },
+      fieldSelectorEntries: [
+        { id: 'c-fieldSelector', dir: '/fieldSelectors/c-fieldSelector', baseDir: '/fieldSelectors' },
       ],
       templateByDir: {
         '/templates/z-template': templateMeta('Z Template', 'https://www.commonpaper.com/doc'),
@@ -174,8 +174,8 @@ describe('runList in-process coverage', () => {
       externalByDir: {
         '/external/b-external': templateMeta('B External', 'https://example.org/source'),
       },
-      recipeByDir: {
-        '/recipes/c-recipe': recipeMeta('C Recipe', 'https://nvca.org/model-docs'),
+      fieldSelectorByDir: {
+        '/fieldSelectors/c-fieldSelector': fieldSelectorMeta('C FieldSelector', 'https://nvca.org/model-docs'),
       },
     });
 
@@ -191,20 +191,20 @@ describe('runList in-process coverage', () => {
 
     await allureJsonAttachment('list-json-envelope.json', envelope);
     await allureJsonAttachment('list-json-expected-vs-actual.json', {
-      expectedSortedNames: ['a-template', 'b-external', 'c-recipe', 'z-template'],
+      expectedSortedNames: ['a-template', 'b-external', 'c-fieldSelector', 'z-template'],
       actualSortedNames: names,
       expectedSources: {
         'z-template': 'Common Paper',
         'a-template': null,
         'b-external': 'example.org',
-        'c-recipe': 'NVCA',
+        'c-fieldSelector': 'NVCA',
       },
       actualSources: Object.fromEntries(
         envelope.items.map((item: { name: string; source: string | null }) => [item.name, item.source])
       ),
     });
 
-    expect(names).toEqual(['a-template', 'b-external', 'c-recipe', 'z-template']);
+    expect(names).toEqual(['a-template', 'b-external', 'c-fieldSelector', 'z-template']);
 
     const zTemplate = envelope.items.find((item: { name: string }) => item.name === 'z-template');
     const aTemplate = envelope.items.find((item: { name: string }) => item.name === 'a-template');
@@ -421,7 +421,7 @@ describe('runList in-process coverage', () => {
     expect(template.fields[0].items[1]).not.toHaveProperty('display_label');
   });
 
-  itDiscovery('projects credits and derived_from onto internal and external templates; omits them on recipes', async () => {
+  itDiscovery('projects credits and derived_from onto internal and external templates; omits them on fieldSelectors', async () => {
     const harness = await loadListHarness({
       templateEntries: [
         { id: 'credited-template', dir: '/templates/credited-template', baseDir: '/templates' },
@@ -430,8 +430,8 @@ describe('runList in-process coverage', () => {
       externalEntries: [
         { id: 'plain-external', dir: '/external/plain-external', baseDir: '/external' },
       ],
-      recipeEntries: [
-        { id: 'plain-recipe', dir: '/recipes/plain-recipe', baseDir: '/recipes' },
+      fieldSelectorEntries: [
+        { id: 'plain-fieldSelector', dir: '/fieldSelectors/plain-fieldSelector', baseDir: '/fieldSelectors' },
       ],
       templateByDir: {
         '/templates/credited-template': {
@@ -450,8 +450,8 @@ describe('runList in-process coverage', () => {
       externalByDir: {
         '/external/plain-external': templateMeta('Plain External', 'https://example.org/plain'),
       },
-      recipeByDir: {
-        '/recipes/plain-recipe': recipeMeta('Plain Recipe', 'https://nvca.org/plain'),
+      fieldSelectorByDir: {
+        '/fieldSelectors/plain-fieldSelector': fieldSelectorMeta('Plain FieldSelector', 'https://nvca.org/plain'),
       },
     });
 
@@ -483,9 +483,9 @@ describe('runList in-process coverage', () => {
     expect(plainExternal.credits).toEqual([]);
     expect(plainExternal.derived_from).toBeUndefined();
 
-    const plainRecipe = envelope.items.find((i: { name: string }) => i.name === 'plain-recipe');
-    expect(plainRecipe.credits).toBeUndefined();
-    expect(plainRecipe.derived_from).toBeUndefined();
+    const plainFieldSelector = envelope.items.find((i: { name: string }) => i.name === 'plain-fieldSelector');
+    expect(plainFieldSelector.credits).toBeUndefined();
+    expect(plainFieldSelector.derived_from).toBeUndefined();
   });
 
   itDiscovery.skip('parse-time validation lives in the metadata loader; covered indirectly by list/fill flows that call loadMetadata, but a direct unit test is pending', () => {});
@@ -494,7 +494,7 @@ describe('runList in-process coverage', () => {
 
   itDiscovery.skip('invalid-role rejection is enforced by the metadata schema; a direct negative test is pending', () => {});
 
-  itDiscovery('collects external and recipe metadata errors in non-strict JSON mode', async () => {
+  itDiscovery('collects external and fieldSelector metadata errors in non-strict JSON mode', async () => {
     const harness = await loadListHarness({
       templateEntries: [
         { id: 'good-template', dir: '/templates/good-template', baseDir: '/templates' },
@@ -502,8 +502,8 @@ describe('runList in-process coverage', () => {
       externalEntries: [
         { id: 'bad-external', dir: '/external/bad-external', baseDir: '/external' },
       ],
-      recipeEntries: [
-        { id: 'bad-recipe', dir: '/recipes/bad-recipe', baseDir: '/recipes' },
+      fieldSelectorEntries: [
+        { id: 'bad-fieldSelector', dir: '/fieldSelectors/bad-fieldSelector', baseDir: '/fieldSelectors' },
       ],
       templateByDir: {
         '/templates/good-template': templateMeta('Good Template', 'https://commonpaper.com/good'),
@@ -511,8 +511,8 @@ describe('runList in-process coverage', () => {
       externalByDir: {
         '/external/bad-external': new Error('external metadata parse failed'),
       },
-      recipeByDir: {
-        '/recipes/bad-recipe': new Error('recipe metadata parse failed'),
+      fieldSelectorByDir: {
+        '/fieldSelectors/bad-fieldSelector': new Error('fieldSelector metadata parse failed'),
       },
     });
 
@@ -559,27 +559,27 @@ describe('runList in-process coverage', () => {
     expect(output).toContain('Could not load metadata');
   });
 
-  itDiscovery('renders external and recipe rows with success and error states in human-readable output', async () => {
+  itDiscovery('renders external and fieldSelector rows with success and error states in human-readable output', async () => {
     const harness = await loadListHarness({
       templateEntries: [],
       externalEntries: [
         { id: 'good-external', dir: '/external/good-external', baseDir: '/external' },
         { id: 'bad-external', dir: '/external/bad-external', baseDir: '/external' },
       ],
-      recipeEntries: [
-        { id: 'good-recipe', dir: '/recipes/good-recipe', baseDir: '/recipes' },
-        { id: 'bad-recipe', dir: '/recipes/bad-recipe', baseDir: '/recipes' },
+      fieldSelectorEntries: [
+        { id: 'good-fieldSelector', dir: '/fieldSelectors/good-fieldSelector', baseDir: '/fieldSelectors' },
+        { id: 'bad-fieldSelector', dir: '/fieldSelectors/bad-fieldSelector', baseDir: '/fieldSelectors' },
       ],
       externalByDir: {
         '/external/good-external': templateMeta('Good External', 'https://ycombinator.com/safe'),
         '/external/bad-external': new Error('bad external metadata'),
       },
-      recipeByDir: {
-        '/recipes/good-recipe': {
-          ...recipeMeta('Good Recipe', 'https://nvca.org/good-recipe'),
+      fieldSelectorByDir: {
+        '/fieldSelectors/good-fieldSelector': {
+          ...fieldSelectorMeta('Good FieldSelector', 'https://nvca.org/good-fieldSelector'),
           optional: true,
         },
-        '/recipes/bad-recipe': new Error('bad recipe metadata'),
+        '/fieldSelectors/bad-fieldSelector': new Error('bad fieldSelector metadata'),
       },
     });
 
@@ -588,12 +588,12 @@ describe('runList in-process coverage', () => {
     harness.runList();
 
     const output = logSpy.mock.calls.map((call) => String(call[0])).join('\n');
-    await allureJsonAttachment('list-human-external-recipe-rows.json', { output });
+    await allureJsonAttachment('list-human-external-field-selector-rows.json', { output });
     expect(output).toContain('good-external');
-    expect(output).toContain('good-recipe');
-    expect(output).toContain('recipe*');
+    expect(output).toContain('good-fieldSelector');
+    expect(output).toContain('field-selector*');
     expect(output).toContain('bad-external');
-    expect(output).toContain('bad-recipe');
+    expect(output).toContain('bad-fieldSelector');
     expect(output).toContain('Could not load metadata');
   });
 
@@ -601,7 +601,7 @@ describe('runList in-process coverage', () => {
     const harness = await loadListHarness({
       templateEntries: [],
       externalEntries: [],
-      recipeEntries: [],
+      fieldSelectorEntries: [],
     });
 
     const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});

@@ -1,8 +1,8 @@
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { loadMetadata, loadRecipeMetadata, loadExternalMetadata } from '../core/metadata.js';
+import { loadMetadata, loadFieldSelectorMetadata, loadExternalMetadata } from '../core/metadata.js';
 import { categoryFromId, sourceName, mapFields } from '../core/template-listing.js';
-import { listExternalEntries, listRecipeEntries, listTemplateEntries } from '../utils/paths.js';
+import { listExternalEntries, listFieldSelectorEntries, listTemplateEntries } from '../utils/paths.js';
 
 const pkgPath = fileURLToPath(new URL('../../package.json', import.meta.url));
 const pkg = JSON.parse(readFileSync(pkgPath, 'utf-8'));
@@ -80,15 +80,15 @@ function runListJson(opts: ListOptions): void {
       }
     }
 
-    // Recipes
-    for (const entry of listRecipeEntries()) {
+    // FieldSelectors
+    for (const entry of listFieldSelectorEntries()) {
       const id = entry.id;
       const dir = entry.dir;
       try {
-        const meta = loadRecipeMetadata(dir);
+        const meta = loadFieldSelectorMetadata(dir);
         const item: ListItem = {
           name: id,
-          tier: 'recipe' as const,
+          tier: 'field-selector' as const,
           display_name: meta.name,
           category: (meta as Record<string, unknown>).category as string ?? categoryFromId(id),
           description: meta.description ?? meta.name,
@@ -105,7 +105,7 @@ function runListJson(opts: ListOptions): void {
         }
         results.push(item);
       } catch (err) {
-        errors.push(`recipe ${id}: ${err instanceof Error ? err.message : String(err)}`);
+        errors.push(`field-selector ${id}: ${err instanceof Error ? err.message : String(err)}`);
       }
     }
 
@@ -185,13 +185,13 @@ function listAgreementsWithOptions(_opts: ListOptions): void {
       }
     }
 
-    for (const entry of listRecipeEntries()) {
+    for (const entry of listFieldSelectorEntries()) {
       const id = entry.id;
       const dir = entry.dir;
       try {
-        const meta = loadRecipeMetadata(dir);
+        const meta = loadFieldSelectorMetadata(dir);
         const priority = meta.priority_fields.length;
-        const license = meta.optional ? 'recipe*' : 'recipe';
+        const license = meta.optional ? 'field-selector*' : 'field-selector';
         rows.push({
           id,
           category: categoryFromId(id),

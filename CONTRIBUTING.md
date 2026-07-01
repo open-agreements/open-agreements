@@ -1,6 +1,6 @@
 # Contributing to OpenAgreements
 
-Thanks for your interest in contributing! OpenAgreements is an open-source tool for filling standard legal agreement templates. Contributions of new templates, recipe improvements, bug fixes, and documentation are welcome.
+Thanks for your interest in contributing! OpenAgreements is an open-source tool for filling standard legal agreement templates. Contributions of new templates, field-selector improvements, bug fixes, and documentation are welcome.
 
 Please follow our [Code of Conduct](CODE_OF_CONDUCT.md) in all project spaces.
 
@@ -27,11 +27,11 @@ Templates may carry a `credits` array naming individuals who materially shaped t
   - `reviewer` — substantive legal review of drafted text
   - `maintainer` — ongoing stewardship (not authorship)
 
-### Add a Recipe
+### Add a Field-selector
 
-Recipes handle documents that aren't redistributable (e.g., NVCA model documents). You author transformation instructions — never commit the source DOCX.
+Field-selectors handle documents that aren't redistributable (e.g., NVCA model documents). You author transformation instructions — never commit the source DOCX.
 
-See [docs/adding-recipes.md](docs/adding-recipes.md) for the full guide.
+See [docs/adding-field-selectors.md](docs/adding-field-selectors.md) for the full guide.
 
 ### Report a Bug
 
@@ -146,7 +146,7 @@ npm run test:run
 1. **Build**: `npm run build` passes
 2. **Lint**: `npm run lint` passes
 3. **Test**: `npm run test:run` passes (all 81+ tests)
-4. **Validate**: `node bin/open-agreements.js validate` passes for all templates and recipes
+4. **Validate**: `node bin/open-agreements.js validate` passes for all templates and field-selectors
 5. **Preview freshness** (OA-owned templates only): if you modified a template's
    `template.md` (canonical templates), `template.json` (the JSON-spec template),
    or `template.docx`, or any renderer/generator script (e.g., under
@@ -192,7 +192,7 @@ npm run test:run
 content/
   templates/        # Internal templates (CC BY 4.0) — we ship the DOCX
   external/         # External templates (CC BY-ND 4.0) — vendored unchanged
-  recipes/          # Recipes (not redistributable) — instructions only, DOCX downloaded at runtime
+  field-selectors/          # Field-selectors (not redistributable) — instructions only, DOCX downloaded at runtime
 src/                # TypeScript source + collocated unit tests
 integration-tests/  # Integration and end-to-end tests
 skills/             # Agent Skills (Claude Code, Cursor, etc.)
@@ -226,17 +226,17 @@ Workflow guardrails:
 content/                    # All content directories
 ├── templates/              # Internal templates (CC BY 4.0)
 ├── external/               # External templates (CC BY-ND 4.0)
-└── recipes/                # Recipes (downloaded at runtime)
+└── field-selectors/                # Field-selectors (downloaded at runtime)
 
 src/                        # TypeScript source + collocated unit tests
 ├── cli/                    # Commander.js CLI
-├── commands/               # fill, validate, list, recipe, scan
+├── commands/               # fill, validate, list, field-selector, scan
 ├── core/
 │   ├── engine.ts           # docx-templates wrapper
 │   ├── metadata.ts         # Zod schemas + loader
-│   ├── recipe/             # Recipe pipeline (clean → patch → fill → verify)
+│   ├── field-selector/             # Field-selector pipeline (clean → patch → fill → verify)
 │   ├── external/           # External template support
-│   ├── validation/         # template, license, output, recipe
+│   ├── validation/         # template, license, output, field-selector
 │   └── command-generation/
 │       ├── types.ts        # ToolCommandAdapter interface
 │       └── adapters/       # Claude Code adapter

@@ -1,14 +1,14 @@
 import { validateMetadata } from '../core/metadata.js';
 import { validateTemplate } from '../core/validation/template.js';
 import { validateLicense } from '../core/validation/license.js';
-import { validateRecipe } from '../core/validation/recipe.js';
+import { validateFieldSelector } from '../core/validation/field-selector.js';
 import { validateExternal } from '../core/validation/external.js';
 import {
   findExternalDir,
-  findRecipeDir,
+  findFieldSelectorDir,
   findTemplateDir,
   listExternalEntries,
-  listRecipeEntries,
+  listFieldSelectorEntries,
   listTemplateEntries,
 } from '../utils/paths.js';
 
@@ -37,9 +37,9 @@ export function runValidate(args: ValidateArgs): void {
     dir: entry.dir,
   }))) || hasErrors;
 
-  // Validate recipes (unless a specific template was requested)
-  hasErrors = validateRecipes(
-    listRecipeEntries().map((entry) => ({ id: entry.id, dir: entry.dir })),
+  // Validate fieldSelectors (unless a specific template was requested)
+  hasErrors = validateFieldSelectors(
+    listFieldSelectorEntries().map((entry) => ({ id: entry.id, dir: entry.dir })),
     args
   ) || hasErrors;
 
@@ -75,9 +75,9 @@ function runValidateSingle(args: ValidateArgs): void {
     return;
   }
 
-  const recipeDir = findRecipeDir(id);
-  if (recipeDir) {
-    const hasErrors = validateRecipes([{ id, dir: recipeDir }], args);
+  const fieldSelectorDir = findFieldSelectorDir(id);
+  if (fieldSelectorDir) {
+    const hasErrors = validateFieldSelectors([{ id, dir: fieldSelectorDir }], args);
     if (hasErrors) {
       console.error('Validation FAILED');
       process.exit(1);
@@ -86,7 +86,7 @@ function runValidateSingle(args: ValidateArgs): void {
     return;
   }
 
-  console.error(`Agreement "${id}" not found in templates, external, or recipes.`);
+  console.error(`Agreement "${id}" not found in templates, external, or field-selectors.`);
   process.exit(1);
 }
 
@@ -159,7 +159,7 @@ function validateExternalTemplates(entries: { id: string; dir: string }[]): bool
   return hasErrors;
 }
 
-function validateRecipes(entries: { id: string; dir: string }[], args: ValidateArgs): boolean {
+function validateFieldSelectors(entries: { id: string; dir: string }[], args: ValidateArgs): boolean {
   if (entries.length === 0) {
     return false;
   }
@@ -169,9 +169,9 @@ function validateRecipes(entries: { id: string; dir: string }[], args: ValidateA
   for (const entry of entries) {
     const id = entry.id;
     const dir = entry.dir;
-    console.log(`\nValidating recipe: ${id}`);
+    console.log(`\nValidating field-selector: ${id}`);
 
-    const result = validateRecipe(dir, id, { strict: args.strict });
+    const result = validateFieldSelector(dir, id, { strict: args.strict });
     if (!result.valid) {
       hasErrors = true;
       for (const e of result.errors) console.error(`  FAIL: ${e}`);
@@ -181,6 +181,6 @@ function validateRecipes(entries: { id: string; dir: string }[], args: ValidateA
     for (const w of result.warnings) console.log(`  WARN: ${w}`);
   }
 
-  console.log(`\n${entries.length} recipe(s) validated.`);
+  console.log(`\n${entries.length} field-selector(s) validated.`);
   return hasErrors;
 }

@@ -1,9 +1,9 @@
 /**
  * Selector-contract engine (Phase 1).
  *
- * Deterministic, drift-detecting field resolution for recipes, built on the
+ * Deterministic, drift-detecting field resolution for fieldSelectors, built on the
  * `@usejunior/docx-core` `resolveLocator` primitive. Opt-in per field via
- * `content/recipes/<id>/fields/<field_id>.json`; cutover from the legacy
+ * `field-selectors/<id>/fields/<field_id>.json`; cutover from the legacy
  * `replacements.json` path is declared in `template-manifest.json.migrated_keys`.
  *
  * Code lives under `src/core/selectors/` (NOT `src/core/selector.ts`, the

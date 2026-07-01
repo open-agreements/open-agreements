@@ -5,7 +5,7 @@ import {
   loadComputedProfile,
   type ComputedValueMap,
   type EvaluatedComputedProfile,
-} from '../src/core/recipe/computed.js';
+} from '../src/core/field-selector/computed.js';
 import {
   allureParameter,
   allureStep,
@@ -16,11 +16,11 @@ type FactorValue = string;
 type FactorDomains = Record<string, FactorValue[]>;
 type FactorCase = Record<string, FactorValue>;
 
-const RECIPE_ID = 'nvca-stock-purchase-agreement';
-const RECIPE_DIR = join(import.meta.dirname, '..', 'content', 'recipes', RECIPE_ID);
-const profile = loadComputedProfile(RECIPE_DIR);
+const FIELD_SELECTOR_ID = 'nvca-stock-purchase-agreement';
+const FIELD_SELECTOR_DIR = join(import.meta.dirname, '..', 'field-selectors', FIELD_SELECTOR_ID);
+const profile = loadComputedProfile(FIELD_SELECTOR_DIR);
 if (!profile) {
-  throw new Error(`Expected computed.json for ${RECIPE_ID}`);
+  throw new Error(`Expected computed.json for ${FIELD_SELECTOR_ID}`);
 }
 
 const itVerification = itAllure.withLabels({
@@ -220,7 +220,7 @@ function pick<T>(items: T[], rng: () => number): T {
 
 describe('NVCA computed interaction strategy', () => {
   itVerification('achieves MC/DC-style coverage for dispute-resolution forum and governing-law alignment chain', async () => {
-    await allureParameter('recipe_id', RECIPE_ID);
+    await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
     await allureParameter('strategy', 'mcdc');
 
     const baseCase: FactorCase = {
@@ -263,7 +263,7 @@ describe('NVCA computed interaction strategy', () => {
   });
 
   itVerification('uses pairwise reduction to cover interaction space without full Cartesian explosion', async () => {
-    await allureParameter('recipe_id', RECIPE_ID);
+    await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
     await allureParameter('strategy', 'pairwise');
 
     const factorNames = Object.keys(FACTOR_DOMAINS);
@@ -284,7 +284,7 @@ describe('NVCA computed interaction strategy', () => {
   });
 
   itVerification('enforces dispute-resolution invariants across deterministic pseudo-random generated states', async () => {
-    await allureParameter('recipe_id', RECIPE_ID);
+    await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
     await allureParameter('strategy', 'property-invariants');
 
     const rng = createSeededRng(20260213);
@@ -305,7 +305,7 @@ describe('NVCA computed interaction strategy', () => {
   });
 
   itVerification('applies metamorphic checks when dispute-resolution mode toggles from courts to arbitration', async () => {
-    await allureParameter('recipe_id', RECIPE_ID);
+    await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
     await allureParameter('strategy', 'metamorphic');
 
     const baseCase: FactorCase = {

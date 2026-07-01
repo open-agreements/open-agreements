@@ -1,10 +1,10 @@
 /**
- * Discover and validate selector-contract manifests for a recipe.
+ * Discover and validate selector-contract manifests for a fieldSelector.
  *
- * A recipe opts a field into the selector engine by adding
- * `content/recipes/<id>/fields/<field_id>.json`. The cutover from the legacy
- * `replacements.json` path is declared in `content/recipes/<id>/template-manifest.json`
- * via `migrated_keys`. Recipes with no `fields/` directory load nothing here and
+ * A fieldSelector opts a field into the selector engine by adding
+ * `field-selectors/<id>/fields/<field_id>.json`. The cutover from the legacy
+ * `replacements.json` path is declared in `field-selectors/<id>/template-manifest.json`
+ * via `migrated_keys`. FieldSelectors with no `fields/` directory load nothing here and
  * keep today's behavior exactly.
  */
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
@@ -22,16 +22,16 @@ export interface SelectorContracts {
 }
 
 /**
- * Load every `fields/*.json` selector manifest for a recipe plus its optional
+ * Load every `fields/*.json` selector manifest for a fieldSelector plus its optional
  * `template-manifest.json`. Returns empty manifests (and null template manifest)
- * when the recipe has no `fields/` directory.
+ * when the fieldSelector has no `fields/` directory.
  *
- * @param recipeDir absolute path to the recipe directory
- * @param metadataFieldNames the field names declared in the recipe `metadata.yaml`
+ * @param fieldSelectorDir absolute path to the fieldSelector directory
+ * @param metadataFieldNames the field names declared in the fieldSelector `metadata.yaml`
  *   — every manifest `field_id` MUST appear here (the cross-repo join key).
  */
-export function loadSelectorContracts(recipeDir: string, metadataFieldNames: Iterable<string>): SelectorContracts {
-  const fieldsDir = join(recipeDir, 'fields');
+export function loadSelectorContracts(fieldSelectorDir: string, metadataFieldNames: Iterable<string>): SelectorContracts {
+  const fieldsDir = join(fieldSelectorDir, 'fields');
   if (!existsSync(fieldsDir)) {
     return { manifests: [], templateManifest: null };
   }
@@ -77,7 +77,7 @@ export function loadSelectorContracts(recipeDir: string, metadataFieldNames: Ite
     manifests.push(manifest);
   }
 
-  const templateManifestPath = join(recipeDir, 'template-manifest.json');
+  const templateManifestPath = join(fieldSelectorDir, 'template-manifest.json');
   let templateManifest: TemplateManifest | null = null;
   if (existsSync(templateManifestPath)) {
     let parsed: unknown;

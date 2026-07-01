@@ -1,0 +1,147 @@
+name: NVCA Model Stock Purchase Agreement
+category: venture-financing
+description: >-
+  Series preferred stock purchase agreement for venture capital financings, covering purchase terms, representations,
+  and closing conditions.
+source_url: https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-SPA-10-28-2025-1.docx
+source_version: 10-28-2025
+license_note: >-
+  NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation
+  instructions, not the source document.
+source_sha256: b2c76452fa82dcda72f1fa9f82ba0ce28ea9445441c897f9cb7ac6663930dcab
+optional: false
+fields:
+  - name: company_name
+    type: string
+    description: Full legal name of the company
+  - name: investor_name
+    type: string
+    description: Full name of the investor
+  - name: company_counsel
+    type: string
+    description: Company counsel name and address
+  - name: investor_counsel
+    type: string
+    description: Investor counsel name and address
+  - name: company_counsel_name
+    type: string
+    description: Name of the company's counsel
+  - name: lead_purchaser_name
+    type: string
+    description: Name of the lead purchaser
+  - name: series_designation
+    type: string
+    description: Series designation shown in the agreement title and share definitions
+    default: ""
+  - name: agreement_date_month_day
+    type: string
+    description: Month/day portion of the agreement date in the opening paragraph
+    default: January 15
+  - name: agreement_year_two_digits
+    type: string
+    description: Two-digit year suffix used in opening date format 20[__]
+    default: "26"
+  - name: par_value_per_share
+    type: string
+    description: Par value per share inserted in the opening purchase clause
+    default: "0.0001"
+  - name: purchase_price_per_share
+    type: string
+    description: Purchase price per share inserted in the opening purchase clause
+    default: "1.00"
+  - name: applicable_word
+    type: string
+    description: Optional word inserted before Closing in bracketed templates
+    default: ""
+  - name: include_convertible_securities
+    type: boolean
+    description: Include convertible securities conversion clause in Section 1.1(b)
+    default: "false"
+  - name: include_closing_reference
+    type: boolean
+    description: Include "with respect to such Closing" bracket in purchase clause
+    default: "false"
+  - name: purchaser_scope
+    type: string
+    description: Convertible securities consent scope word — set by computed.json from bind_all_convertible_holders_to_convert
+  - name: optional_plural_suffix
+    type: string
+    description: Optional plural suffix — set by computed.json defaults
+  - name: closing_heading
+    type: string
+    description: Heading text — set by computed.json defaults
+  - name: initial_word_lower
+    type: string
+    description: Lowercase qualifier — set by computed.json defaults and rules
+  - name: initial_word_title
+    type: string
+    description: Titlecase qualifier — set by computed.json defaults and rules
+  - name: bind_all_convertible_holders_to_convert
+    type: boolean
+    description: Purchasers agree on behalf of all convertible security holders to convert (not just their own)
+    default: "true"
+  - name: closing_type
+    type: enum
+    description: Single closing or additional closings
+    options: [single, additional]
+    default: single
+  - name: dispute_resolution_mode
+    type: enum
+    description: Dispute resolution alternative in SPA (Alternative 1 arbitration or Alternative 2 courts)
+    options:
+      - arbitration
+      - courts
+    default: courts
+  - name: arbitration_location
+    type: string
+    description: Arbitration venue for Dispute Resolution Alternative 1
+  - name: judicial_district
+    type: string
+    description: Federal judicial district for disputes
+  - name: balance_sheet_date
+    type: string
+    description: Date of the company's most recent balance sheet
+  - name: benefit_plan_name
+    type: string
+    description: Plan year and name of the employee benefit plan
+  - name: signature_page_marker
+    type: string
+    description: Signature page marker text
+    default: Signature Page Follows
+  - name: state_lower
+    type: string
+    description: State name (lowercase)
+  - name: specify_percentage
+    type: string
+    description: Specified percentage threshold
+  - name: financial_reporting_period
+    type: string
+    description: Financial reporting period (e.g., monthly, quarterly)
+    default: monthly
+  - name: director_names
+    type: string
+    description: List of individual director names
+  - name: board_size
+    type: string
+    description: Authorized number of board seats at the Initial Closing
+  - name: minimum_shares_initial_closing
+    type: string
+    description: Minimum number of shares required to be sold at the Initial Closing
+  - name: applicable_purchasers
+    type: string
+    description: Names of the applicable purchasers
+priority_fields:
+  - company_name
+  - investor_name
+  - company_counsel
+  - investor_counsel
+  - company_counsel_name
+  - lead_purchaser_name
+  - judicial_district
+  - balance_sheet_date
+  - state_lower
+  - specify_percentage
+  - financial_reporting_period
+  - director_names
+  - board_size
+  - minimum_shares_initial_closing

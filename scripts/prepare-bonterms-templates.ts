@@ -18,8 +18,8 @@ import { existsSync, readFileSync, readdirSync, mkdtempSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { tmpdir } from 'node:os';
 import { rmSync } from 'node:fs';
-import { cleanDocument } from '../src/core/recipe/cleaner.js';
-import { patchDocument } from '../src/core/recipe/patcher.js';
+import { cleanDocument } from '../src/core/field-selector/cleaner.js';
+import { patchDocument } from '../src/core/field-selector/patcher.js';
 import { CleanConfigSchema } from '../src/core/metadata.js';
 
 interface SourceConfig {
@@ -44,7 +44,7 @@ async function main() {
   }
 
   const projectRoot = resolve(import.meta.dirname!, '..');
-  const templatesDir = join(projectRoot, 'content', 'templates');
+  const templatesDir = join(projectRoot, 'templates');
 
   // Discover all source.json files
   const templateDirs = readdirSync(templatesDir, { withFileTypes: true })
@@ -90,7 +90,7 @@ async function main() {
   }
 
   if (processed === 0) {
-    console.log('No source.json files found in content/templates/');
+    console.log('No source.json files found in templates/');
   } else {
     console.log(`\nDone! Processed ${processed} template(s).`);
   }

@@ -10,7 +10,7 @@
 import AdmZip from 'adm-zip';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document as XMLDocument, Element } from '@xmldom/xmldom';
-import { rezipWithoutDirEntries } from '../recipe/ooxml-parts.js';
+import { rezipWithoutDirEntries } from '../field-selector/ooxml-parts.js';
 import {
   classifyRow,
   getDirectChildRows,
@@ -24,7 +24,7 @@ import {
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
 // ---------------------------------------------------------------------------
-// XML helpers (same patterns as recipe/patcher.ts)
+// XML helpers (same patterns as field-selector/patcher.ts)
 // ---------------------------------------------------------------------------
 
 function ensureRunProperties(run: Element): Element {

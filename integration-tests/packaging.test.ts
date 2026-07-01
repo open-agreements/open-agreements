@@ -50,14 +50,14 @@ describe('npm packaging', () => {
 
   it('includes a template metadata file', () => {
     if (!available) return;
-    expect(files.some((f) => f.startsWith('content/templates/') && f.endsWith('metadata.yaml'))).toBe(
+    expect(files.some((f) => f.startsWith('templates/') && f.endsWith('metadata.yaml'))).toBe(
       true
     );
   });
 
-  it('includes a recipe metadata file', () => {
+  it('includes a fieldSelector metadata file', () => {
     if (!available) return;
-    expect(files.some((f) => f.startsWith('content/recipes/') && f.endsWith('metadata.yaml'))).toBe(true);
+    expect(files.some((f) => f.startsWith('field-selectors/') && f.endsWith('metadata.yaml'))).toBe(true);
   });
 
   it('does NOT include src/', () => {

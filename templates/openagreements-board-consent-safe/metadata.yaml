@@ -1,0 +1,53 @@
+name: Board Consent for SAFE Financing
+category: corporate-governance
+description: >-
+  Action by unanimous written consent of the board of directors of a Delaware
+  corporation approving the issuance of one or more Simple Agreements for
+  Future Equity (SAFEs).
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-board-consent-safe
+version: '1.2'
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Authored by OpenAgreements contributors. Drafting structure informed by
+  publicly available Series Seed SAFE board consent materials. Licensed under
+  CC BY 4.0.
+fields:
+  - name: company_name
+    type: string
+    description: Full legal name of the company
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Date the consent is effective
+    section: Terms
+  - name: purchase_amount
+    type: string
+    description: Aggregate SAFE purchase amount (for example, "500,000")
+    section: Deal Terms
+  - name: board_members
+    type: array
+    description: Directors signing the consent
+    section: Signatures
+    items:
+      - name: name
+        type: string
+        description: Full name of a director signing the consent
+priority_fields:
+  - company_name
+  - effective_date
+  - purchase_amount
+  - board_members
+previewSampleValues:
+  company_name: Acme Labs, Inc.
+  effective_date: April 15, 2026
+  purchase_amount: '500,000'
+  board_members:
+    - name: Alex Director
+    - name: Blair Director
+    - name: Casey Director
+credits:
+  - name: Joey Tsang
+    role: drafting_editor
+    profile_url: https://www.linkedin.com/in/joey-t-b90912b1/
+derived_from: Publicly available Series Seed SAFE board consent materials

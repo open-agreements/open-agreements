@@ -1,0 +1,202 @@
+import { readdirSync, existsSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { validateFieldSelectorMetadata, loadFieldSelectorMetadata } from '../metadata.js';
+import { CleanConfigSchema } from '../metadata.js';
+import { NormalizeConfigSchema } from '../metadata.js';
+import { parseReplacementKey } from '../field-selector/replacement-keys.js';
+import { ComputedProfileSchema } from '../field-selector/computed.js';
+
+export interface FieldSelectorValidationResult {
+  fieldSelectorId: string;
+  valid: boolean;
+  scaffold: boolean;
+  errors: string[];
+  warnings: string[];
+}
+
+/** Pattern for valid template tags within replacement values */
+const TAG_RE = /\{[a-z_][a-z0-9_]*\}/g;
+/** Pattern for any curly-brace token (to detect control tags) */
+const ANY_BRACE_RE = /\{[^}]+\}/g;
+/** Only simple identifiers inside braces are allowed */
+const SAFE_TAG_RE = /^\{[a-z_][a-z0-9_]*\}$/;
+
+/**
+ * Validate a fieldSelector directory:
+ * - No .docx files (copyrighted content must not be committed)
+ * - metadata.yaml validates against schema
+ * - For non-scaffold fieldSelectors: replacements.json present and valid
+ * - Replacement values must be valid {identifier} tags
+ * - In strict mode: scaffolds are errors, all files required
+ */
+export function validateFieldSelector(
+  fieldSelectorDir: string,
+  fieldSelectorId: string,
+  options?: { strict?: boolean }
+): FieldSelectorValidationResult {
+  const errors: string[] = [];
+  const warnings: string[] = [];
+  const strict = options?.strict ?? false;
+
+  // Check for .docx files (forbidden in fieldSelector dirs)
+  const files = readdirSync(fieldSelectorDir);
+  const docxFiles = files.filter((f) => f.toLowerCase().endsWith('.docx'));
+  if (docxFiles.length > 0) {
+    errors.push(`Copyrighted .docx file(s) found: ${docxFiles.join(', ')}. FieldSelectors must not contain source documents.`);
+  }
+
+  // Validate metadata
+  const metaResult = validateFieldSelectorMetadata(fieldSelectorDir);
+  if (!metaResult.valid) {
+    errors.push(...metaResult.errors.map((e) => `metadata: ${e}`));
+    return { fieldSelectorId, valid: false, scaffold: false, errors, warnings };
+  }
+
+  // Scaffold detection: if only metadata.yaml exists, this is a scaffold
+  const metadata = loadFieldSelectorMetadata(fieldSelectorDir);
+  const metadataFieldNames = new Set(metadata.fields.map((field) => field.name));
+  const computedPath = join(fieldSelectorDir, 'computed.json');
+  const hasReplacements = existsSync(join(fieldSelectorDir, 'replacements.json'));
+  const isScaffold = !hasReplacements;
+
+  // Validate computed.json if present
+  let computedSetFillFields: Set<string> | undefined;
+  if (existsSync(computedPath)) {
+    try {
+      const raw = readFileSync(computedPath, 'utf-8');
+      const profile = ComputedProfileSchema.parse(JSON.parse(raw));
+
+      // Collect all fields targeted by defaults or set_fill rules
+      computedSetFillFields = new Set<string>();
+      for (const field of Object.keys(profile.defaults)) {
+        computedSetFillFields.add(field);
+      }
+      for (const rule of profile.rules) {
+        for (const field of Object.keys(rule.set_fill)) {
+          computedSetFillFields.add(field);
+        }
+      }
+
+      // Validate: computed set_fill fields must not have non-empty metadata defaults.
+      // When computed.json owns a field, metadata should declare default: "" (or omit it)
+      // so that the computed rule is the single source of truth for that field's value.
+      for (const field of computedSetFillFields) {
+        const metaField = metadata.fields.find((f) => f.name === field);
+        if (metaField && metaField.default !== undefined && metaField.default !== '') {
+          errors.push(
+            `computed/metadata conflict: field "${field}" is set by computed.json set_fill ` +
+            `but has non-empty metadata default "${metaField.default}". ` +
+            `Computed-owned fields must use default: "" to avoid conflicting values.`
+          );
+        }
+      }
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'invalid format';
+      errors.push(`computed.json: ${message}`);
+    }
+  }
+
+  if (isScaffold) {
+    if (strict) {
+      errors.push('Scaffold fieldSelector (metadata-only): not runnable. Use non-strict mode to allow scaffolds.');
+    } else {
+      warnings.push('Scaffold fieldSelector (metadata-only): not runnable');
+    }
+    return { fieldSelectorId, valid: errors.length === 0, scaffold: true, errors, warnings };
+  }
+
+  // Validate replacements.json for runnable fieldSelectors.
+  try {
+    const raw = readFileSync(join(fieldSelectorDir, 'replacements.json'), 'utf-8');
+    const replacements = JSON.parse(raw);
+    if (typeof replacements !== 'object' || replacements === null) {
+      errors.push('replacements.json must be a JSON object');
+    } else {
+      const unknownTargets = new Set<string>();
+      for (const [key, rawValue] of Object.entries(replacements)) {
+        // Value can be a string or { value: string, format?: object }
+        let value: string;
+        if (typeof rawValue === 'string') {
+          value = rawValue;
+        } else if (typeof rawValue === 'object' && rawValue !== null && typeof (rawValue as Record<string, unknown>).value === 'string') {
+          value = (rawValue as Record<string, unknown>).value as string;
+        } else {
+          errors.push(`replacements.json: value for "${key}" must be a string or { value: string, format?: object }`);
+          continue;
+        }
+
+        // Value must contain at least one {identifier} tag
+        const tags = value.match(TAG_RE);
+        if (!tags || tags.length === 0) {
+          errors.push(
+            `replacements.json: value for "${key}" must contain at least one {identifier} tag, got "${value}"`
+          );
+        }
+
+        // All curly-brace tokens in value must be safe identifiers (no control tags)
+        const allBraces = value.match(ANY_BRACE_RE);
+        if (allBraces) {
+          for (const token of allBraces) {
+            if (!SAFE_TAG_RE.test(token)) {
+              errors.push(
+                `replacements.json: unsafe tag "${token}" in value for "${key}". Only {identifier} tags allowed.`
+              );
+              continue;
+            }
+            const fieldName = token.slice(1, -1);
+            if (!metadataFieldNames.has(fieldName)) {
+              unknownTargets.add(fieldName);
+            }
+          }
+        }
+
+        // Value must not contain the source key (infinite loop prevention)
+        // For qualified keys, check against the searchText, not the full key.
+        const parsed = parseReplacementKey(key, value);
+        if (parsed.type === 'simple' && value.includes(parsed.searchText)) {
+          errors.push(
+            `replacements.json: value for "${key}" contains the key itself (would cause infinite loop)`
+          );
+        } else if (parsed.type === 'context' && value.includes(parsed.searchText)) {
+          errors.push(
+            `replacements.json: value for "${key}" contains the search text "${parsed.searchText}" (would cause infinite loop)`
+          );
+        }
+      }
+      for (const fieldName of unknownTargets) {
+        warnings.push(`Replacement target {${fieldName}} not found in metadata fields`);
+      }
+    }
+  } catch (err) {
+    errors.push(`replacements.json: ${(err as Error).message}`);
+  }
+
+  // Validate clean.json if present
+  const cleanPath = join(fieldSelectorDir, 'clean.json');
+  if (existsSync(cleanPath)) {
+    try {
+      const raw = readFileSync(cleanPath, 'utf-8');
+      CleanConfigSchema.parse(JSON.parse(raw));
+    } catch {
+      errors.push(`clean.json: invalid format`);
+    }
+  }
+
+  // Validate normalize.json if present
+  const normalizePath = join(fieldSelectorDir, 'normalize.json');
+  if (existsSync(normalizePath)) {
+    try {
+      const raw = readFileSync(normalizePath, 'utf-8');
+      NormalizeConfigSchema.parse(JSON.parse(raw));
+    } catch {
+      errors.push('normalize.json: invalid format');
+    }
+  }
+
+  // Warn if source_sha256 is missing (fill will skip integrity verification)
+  if (!metadata.source_sha256) {
+    warnings.push('No source_sha256 in metadata — fill will skip integrity verification');
+  }
+
+  return { fieldSelectorId, valid: errors.length === 0, scaffold: false, errors, warnings };
+}

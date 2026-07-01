@@ -4,12 +4,12 @@ import { existsSync, mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:
 import { homedir, tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
-import { resolveRecipeDir } from '../src/utils/paths.js';
-import { loadCleanConfig, loadRecipeMetadata } from '../src/core/metadata.js';
-import replacements from '../content/recipes/nvca-stock-purchase-agreement/replacements.json' with { type: 'json' };
-import coiReplacements from '../content/recipes/nvca-certificate-of-incorporation/replacements.json' with { type: 'json' };
-import { cleanDocument } from '../src/core/recipe/cleaner.js';
-import { patchDocument } from '../src/core/recipe/patcher.js';
+import { resolveFieldSelectorDir } from '../src/utils/paths.js';
+import { loadCleanConfig, loadFieldSelectorMetadata } from '../src/core/metadata.js';
+import replacements from '../field-selectors/nvca-stock-purchase-agreement/replacements.json' with { type: 'json' };
+import coiReplacements from '../field-selectors/nvca-certificate-of-incorporation/replacements.json' with { type: 'json' };
+import { cleanDocument } from '../src/core/field-selector/cleaner.js';
+import { patchDocument } from '../src/core/field-selector/patcher.js';
 import {
   loadSelectorContracts,
   applySelectorContracts,
@@ -17,7 +17,7 @@ import {
   type FieldSelectorManifest,
 } from '../src/core/selectors/index.js';
 
-const it = itAllure.epic('Recipes');
+const it = itAllure.epic('FieldSelectors');
 
 const COMPANY_MANIFEST: FieldSelectorManifest = {
   schema_version: 1,
@@ -52,8 +52,8 @@ function textOf(docxPath: string): string {
   return [...xml.matchAll(/<w:t[^>]*>([^<]*)<\/w:t>/g)].map((m) => m[1]).join('');
 }
 
-function cachedSourcePathFor(recipeId: string): string {
-  return join(homedir(), '.open-agreements', 'cache', recipeId, 'source.docx');
+function cachedSourcePathFor(fieldSelectorId: string): string {
+  return join(homedir(), '.open-agreements', 'cache', fieldSelectorId, 'source.docx');
 }
 
 function cachedSourcePath(): string {
@@ -66,8 +66,8 @@ function fieldOfValue(value: string): string | null {
 }
 
 describe('loadSelectorContracts', () => {
-  it('[OA-SEL-009] returns nothing for a recipe with no fields/ directory', () => {
-    const dir = mkdtempSync(join(tmpdir(), 'recipe-no-fields-'));
+  it('[OA-SEL-009] returns nothing for a fieldSelector with no fields/ directory', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'field-selector-no-fields-'));
     try {
       const { manifests, templateManifest } = loadSelectorContracts(dir, ['company_name']);
       expect(manifests).toEqual([]);
@@ -78,7 +78,7 @@ describe('loadSelectorContracts', () => {
   });
 
   it('[OA-SEL-002] rejects a manifest whose field_id is not in metadata.yaml', () => {
-    const dir = mkdtempSync(join(tmpdir(), 'recipe-bad-field-'));
+    const dir = mkdtempSync(join(tmpdir(), 'field-selector-bad-field-'));
     try {
       mkdirSync(join(dir, 'fields'));
       writeFileSync(
@@ -92,9 +92,9 @@ describe('loadSelectorContracts', () => {
   });
 
   it('loads every real nvca SPA field manifest + template manifest', () => {
-    const recipeDir = resolveRecipeDir('nvca-stock-purchase-agreement');
-    const fieldNames = loadRecipeMetadata(recipeDir).fields.map((f) => f.name);
-    const { manifests, templateManifest } = loadSelectorContracts(recipeDir, fieldNames);
+    const fieldSelectorDir = resolveFieldSelectorDir('nvca-stock-purchase-agreement');
+    const fieldNames = loadFieldSelectorMetadata(fieldSelectorDir).fields.map((f) => f.name);
+    const { manifests, templateManifest } = loadSelectorContracts(fieldSelectorDir, fieldNames);
     expect(manifests.map((m) => m.field_id).sort()).toEqual([
       'agreement_date_month_day',
       'agreement_year_two_digits',
@@ -136,8 +136,8 @@ describeWithSource('selector contracts against the real NVCA source', () => {
   });
 
   it('[OA-SEL-010] selector-patched coverage matches legacy replacement-patched coverage for company_name', async () => {
-    const recipeDir = resolveRecipeDir('nvca-stock-purchase-agreement');
-    const cleanConfig = loadCleanConfig(recipeDir);
+    const fieldSelectorDir = resolveFieldSelectorDir('nvca-stock-purchase-agreement');
+    const cleanConfig = loadCleanConfig(fieldSelectorDir);
     const dir = mkdtempSync(join(tmpdir(), 'selector-parity-'));
     try {
       const cleaned = join(dir, 'cleaned.docx');
@@ -186,9 +186,9 @@ const MIGRATED_SPAN_COUNTS: Record<string, number> = {
 };
 
 describeWithSource('SPA `>`-anchor field migration parity (#476)', () => {
-  const recipeDir = resolveRecipeDir('nvca-stock-purchase-agreement');
-  const fieldNames = loadRecipeMetadata(recipeDir).fields.map((f) => f.name);
-  const { manifests, templateManifest } = loadSelectorContracts(recipeDir, fieldNames);
+  const fieldSelectorDir = resolveFieldSelectorDir('nvca-stock-purchase-agreement');
+  const fieldNames = loadFieldSelectorMetadata(fieldSelectorDir).fields.map((f) => f.name);
+  const { manifests, templateManifest } = loadSelectorContracts(fieldSelectorDir, fieldNames);
   const migratedKeys = new Set(templateManifest?.migrated_keys ?? []);
   const manifestById = new Map(manifests.map((m) => [m.field_id, m]));
   // legacy `>` keys grouped by the field_id they target ({field_id} value), restricted to migrated keys.
@@ -213,7 +213,7 @@ describeWithSource('SPA `>`-anchor field migration parity (#476)', () => {
       const dir = mkdtempSync(join(tmpdir(), `selector-parity-${field}-`));
       try {
         const cleaned = join(dir, 'cleaned.docx');
-        await cleanDocument(cachedSourcePath(), cleaned, loadCleanConfig(recipeDir));
+        await cleanDocument(cachedSourcePath(), cleaned, loadCleanConfig(fieldSelectorDir));
 
         const legacy = join(dir, 'legacy.docx');
         await patchDocument(cleaned, legacy, legacyKeys);
@@ -254,9 +254,9 @@ const COI = 'nvca-certificate-of-incorporation';
 
 describe('loadSelectorContracts (CoI)', () => {
   it('loads every real nvca CoI field manifest + template manifest', () => {
-    const recipeDir = resolveRecipeDir(COI);
-    const fieldNames = loadRecipeMetadata(recipeDir).fields.map((f) => f.name);
-    const { manifests, templateManifest } = loadSelectorContracts(recipeDir, fieldNames);
+    const fieldSelectorDir = resolveFieldSelectorDir(COI);
+    const fieldNames = loadFieldSelectorMetadata(fieldSelectorDir).fields.map((f) => f.name);
+    const { manifests, templateManifest } = loadSelectorContracts(fieldSelectorDir, fieldNames);
     // 27 fields migrated (content-only); see header note for the deferrals.
     expect(manifests).toHaveLength(27);
     expect(templateManifest?.migrated_keys).toHaveLength(69);
@@ -281,9 +281,9 @@ describe('loadSelectorContracts (CoI)', () => {
 const describeWithCoiSource = existsSync(cachedSourcePathFor(COI)) ? describe : describe.skip;
 
 describeWithCoiSource('CoI `>`-anchor field migration parity', () => {
-  const recipeDir = resolveRecipeDir(COI);
-  const fieldNames = loadRecipeMetadata(recipeDir).fields.map((f) => f.name);
-  const { manifests, templateManifest } = loadSelectorContracts(recipeDir, fieldNames);
+  const fieldSelectorDir = resolveFieldSelectorDir(COI);
+  const fieldNames = loadFieldSelectorMetadata(fieldSelectorDir).fields.map((f) => f.name);
+  const { manifests, templateManifest } = loadSelectorContracts(fieldSelectorDir, fieldNames);
   const migratedKeys = new Set(templateManifest?.migrated_keys ?? []);
   // All migrated keys (>'s AND simple) grouped by the field they target (first `{tag}` in the value).
   const legacyKeysByField = new Map<string, Record<string, string>>();
@@ -309,7 +309,7 @@ describeWithCoiSource('CoI `>`-anchor field migration parity', () => {
       const dir = mkdtempSync(join(tmpdir(), `coi-parity-${field}-`));
       try {
         const cleaned = join(dir, 'cleaned.docx');
-        await cleanDocument(cachedSourcePathFor(COI), cleaned, loadCleanConfig(recipeDir));
+        await cleanDocument(cachedSourcePathFor(COI), cleaned, loadCleanConfig(fieldSelectorDir));
 
         const legacy = join(dir, 'legacy.docx');
         await patchDocument(cleaned, legacy, legacyKeys);
