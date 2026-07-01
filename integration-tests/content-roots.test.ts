@@ -61,7 +61,8 @@ function buildMinimalDocx(documentText: string): Buffer {
 }
 
 function writeOverrideTemplate(root: string, templateId = 'override-only-template'): string {
-  const templateDir = join(root, 'templates', templateId);
+  // S3 layout (#1249): slugs live two levels deep as templates/<segment>/<slug>/.
+  const templateDir = join(root, 'templates', 'override-cc-by-4.0', templateId);
   mkdirSync(templateDir, { recursive: true });
   writeFileSync(
     join(templateDir, 'metadata.yaml'),
@@ -92,7 +93,7 @@ describe('content root overrides', () => {
     delete process.env[ENV_KEY];
     const bundled = findTemplateDir('common-paper-mutual-nda');
     expect(bundled).toBeTruthy();
-    expect(bundled).toContain('templates/common-paper-mutual-nda');
+    expect(bundled).toContain('templates/common-paper-cc-by-4.0/common-paper-mutual-nda');
   });
 
   it('discovers additional templates from OPEN_AGREEMENTS_CONTENT_ROOTS', () => {
@@ -114,7 +115,7 @@ describe('content root overrides', () => {
     tempDirs.push(root);
 
     const overriddenId = 'common-paper-mutual-nda';
-    const overrideDir = join(root, 'templates', overriddenId);
+    const overrideDir = join(root, 'templates', 'common-paper-cc-by-4.0', overriddenId);
     mkdirSync(overrideDir, { recursive: true });
 
     process.env[ENV_KEY] = root;

@@ -9,11 +9,14 @@ import { parseReplacementKey, resolveReplacementValue } from '../src/core/field-
 import type { ReplacementValue } from '../src/core/field-selector/replacement-keys.js';
 import { assessScanMetadataCoverage } from '../src/core/validation/scan-metadata.js';
 import { itAllure } from './helpers/allure-test.js';
+import { slugDir } from './helpers/template-paths.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const tempDirs: string[] = [];
 const FIELD_SELECTOR_ID = 'nvca-stock-purchase-agreement';
-const FIELD_SELECTOR_DIR = join(import.meta.dirname, '..', 'field-selectors', FIELD_SELECTOR_ID);
+// Since #1249 the `field-selectors/` top-level dir is gone; nvca-* field
+// selectors live two levels deep under templates/<segment>/<slug>/.
+const FIELD_SELECTOR_DIR = slugDir(join(import.meta.dirname, '..'), FIELD_SELECTOR_ID);
 const it = itAllure.epic('Discovery & Metadata');
 
 afterEach(() => {

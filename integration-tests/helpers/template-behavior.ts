@@ -1,8 +1,8 @@
-import { dirname, join } from 'node:path';
+import { join } from 'node:path';
 import { expect } from 'vitest';
 import { fillTemplate } from '../../src/core/engine.js';
 import { extractAllText } from '../../src/core/field-selector/verifier.js';
-import { slugDir } from './template-paths.js';
+import { findTemplateDir } from '../../src/utils/paths.js';
 
 export type TemplateTextAssertion =
   | { kind: 'contains'; text: string; label?: string }
@@ -42,10 +42,15 @@ export async function renderTemplateScenario({
   templatesRoot,
 }: RenderScenarioOptions): Promise<RenderScenarioResult> {
   const outputPath = join(outputDir, scenario.outputFilename);
-  // `templatesRoot` is `<repoRoot>/templates`; slugs now live two levels deep as
-  // `templates/<source>-<rights>/<slug>/`, so resolve the segment via slugDir.
+  // Slugs now live two levels deep as `templates/<source>-<rights>/<slug>/`;
+  // findTemplateDir resolves the correct segment (templatesRoot kept for API compatibility).
+  void templatesRoot;
+  const templateDir = findTemplateDir(scenario.templateId);
+  if (!templateDir) {
+    throw new Error(`template slug "${scenario.templateId}" not found under templates/*/`);
+  }
   await fillTemplate({
-    templateDir: slugDir(dirname(templatesRoot), scenario.templateId),
+    templateDir,
     outputPath,
     values: scenario.values,
   });

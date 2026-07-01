@@ -1,11 +1,11 @@
 import { describe, it, expect } from 'vitest';
 import { fillTemplate } from '../src/core/engine.js';
 import { existsSync, unlinkSync } from 'node:fs';
-import { resolve, join } from 'node:path';
+import { join } from 'node:path';
 import { mkdtempSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
-import { slugDir } from '../integration-tests/helpers/template-paths.js';
+import { findTemplateDir } from '../src/utils/paths.js';
 
 /**
  * Strip Concerto metadata fields from a validated instance
@@ -21,7 +21,8 @@ function stripConcertoMeta(instance: Record<string, unknown>): Record<string, un
 }
 
 describe('Concerto flat model → fill pipeline integration', () => {
-  const TEMPLATE_DIR = slugDir(resolve('.'), 'bonterms-mutual-nda');
+  const TEMPLATE_DIR = findTemplateDir('bonterms-mutual-nda');
+  if (!TEMPLATE_DIR) throw new Error('template slug "bonterms-mutual-nda" not found under templates/*/');
 
   // Data shaped as a Concerto-validated instance (includes $class, $identifier, contractId)
   const concertoInstance = {

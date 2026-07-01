@@ -14,10 +14,12 @@ import { itAllure } from './helpers/allure-test.js';
 import { seconds } from './helpers/timeouts.js';
 import { fillTemplate } from '../src/core/engine.js';
 import { verifyTemplateFill } from '../src/core/fill-utils.js';
+import { findTemplateDir, resolveTemplateDir } from '../src/utils/paths.js';
 
 const it = itAllure.epic('Filling & Rendering');
 
-const TEMPLATES_DIR = resolve(__dirname, '../templates');
+// Every slug lives two levels deep as templates/<source>-<rights>/<slug>/; resolve
+// via the metadata-derived index instead of hard-coding the segment.
 const FIXTURES_DIR = resolve(__dirname, 'fixtures/smoke-test-data');
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -35,15 +37,16 @@ const fixtureFiles = readdirSync(FIXTURES_DIR)
   .map((f) => f.replace('.json', ''));
 
 // Only test templates that actually exist in templates
-const testCases = fixtureFiles.filter((id) =>
-  existsSync(join(TEMPLATES_DIR, id, 'template.docx'))
-);
+const testCases = fixtureFiles.filter((id) => {
+  const dir = findTemplateDir(id);
+  return dir !== undefined && existsSync(join(dir, 'template.docx'));
+});
 
 describe('E2E smoke test — fill all templates with complete field data', () => {
   it.each(testCases)(
     '%s fills cleanly with all fields populated',
     async (templateId) => {
-      const templateDir = join(TEMPLATES_DIR, templateId);
+      const templateDir = resolveTemplateDir(templateId);
       const fixtureData = JSON.parse(
         readFileSync(join(FIXTURES_DIR, `${templateId}.json`), 'utf-8')
       ) as Record<string, unknown>;

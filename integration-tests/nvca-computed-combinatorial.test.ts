@@ -1,5 +1,4 @@
 import { describe, expect } from 'vitest';
-import { join } from 'node:path';
 import {
   evaluateComputedProfile,
   loadComputedProfile,

@@ -5,12 +5,13 @@ import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { itAllure } from './helpers/allure-test.js';
 import { fillTemplate } from '../src/core/engine.js';
-import { slugDir } from './helpers/template-paths.js';
+import { findTemplateDir } from '../src/utils/paths.js';
 
 const it = itAllure.epic('Filling & Rendering');
-const REPO_ROOT = join(import.meta.dirname, '..');
-const BOARD_TEMPLATE_DIR = slugDir(REPO_ROOT, 'openagreements-board-consent-safe');
-const STOCKHOLDER_TEMPLATE_DIR = slugDir(REPO_ROOT, 'openagreements-stockholder-consent-safe');
+const BOARD_TEMPLATE_DIR = findTemplateDir('openagreements-board-consent-safe');
+if (!BOARD_TEMPLATE_DIR) throw new Error('openagreements-board-consent-safe template not found');
+const STOCKHOLDER_TEMPLATE_DIR = findTemplateDir('openagreements-stockholder-consent-safe');
+if (!STOCKHOLDER_TEMPLATE_DIR) throw new Error('openagreements-stockholder-consent-safe template not found');
 const tempDirs: string[] = [];
 
 afterAll(() => {

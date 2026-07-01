@@ -4,7 +4,7 @@ import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
 import { describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
-import { slugDir } from './helpers/template-paths.js';
+import { findTemplateDir } from '../src/utils/paths.js';
 
 const it = itAllure.epic('Verification & Drift');
 
@@ -213,7 +213,8 @@ function extractTableSectionsFromMarkdown(mdPath: string): TableSection[] {
 describe('checklist canonical markdown structural drift', () => {
   for (const slug of checklistSlugs) {
     it(`${slug} template.md tables match template.docx structure`, () => {
-      const templateDir = slugDir(repoRoot, slug);
+      const templateDir = findTemplateDir(slug);
+      if (!templateDir) throw new Error(`${slug} template not found`);
       const docxSections = extractTableSectionsFromDocx(
         join(templateDir, 'template.docx')
       );

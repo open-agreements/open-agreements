@@ -1,21 +1,30 @@
-# Closing Checklist
+---
+template_id: openagreements-closing-checklist
+title: Closing Checklist
+document:
+  title: Closing Checklist
+  version: "2.1"
+  license: CC0-1.0
+---
 
-Deal: {deal_name}
+# {deal_name} — Closing Checklist
 
 Updated: {updated_at}
 
-*This checklist is a working tool to be tailored to the specifics of the transaction and is not legal advice.*
+## Documents
 
-## Checklist
+| ID | Title | Link | Status | Responsible |
+| --- | --- | --- | --- | --- |
+| {FOR d IN documents}{$d.entry_id} | {$d.title} | {$d.link} | {$d.status} | {$d.responsible}{END-FOR d} |
 
-### Documents
+## Action Items
 
-- **{entry_id}. {title}** — Status: {status} · Responsible: {responsible} · Link: {link}
+| ID | Description | Status | Assigned To | Due Date |
+| --- | --- | --- | --- | --- |
+| {FOR a IN action_items}{$a.item_id} | {$a.description} | {$a.status} | {$a.assigned_to} | {$a.due_date}{END-FOR a} |
 
-### Action Items
+## Open Issues
 
-- **{item_id}. {description}** — Status: {status} · Assigned to: {assigned_to} · Due: {due_date}
-
-### Open Issues
-
-- **{issue_id}. {title}** — Status: {status} · Summary: {summary} · Citation: {citation}
+| ID | Title | Status | Summary | Citation |
+| --- | --- | --- | --- | --- |
+| {FOR i IN open_issues}{$i.issue_id} | {$i.title} | {$i.status} | {$i.summary} | {$i.citation}{END-FOR i} |

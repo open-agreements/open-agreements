@@ -8,7 +8,7 @@ import { join } from 'node:path';
  * tests stay robust if a slug's license (and therefore its segment) changes.
  */
 
-/** Resolve the directory of `slug` under `<root>/templates/*/<slug>`, or undefined. */
+/** Resolve the directory of `slug` under `<root>/templates/<segment>/<slug>`, or undefined. */
 export function resolveSlugDir(root: string, slug: string): string | undefined {
   const templatesRoot = join(root, 'templates');
   if (!existsSync(templatesRoot)) return undefined;

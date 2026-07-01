@@ -11,7 +11,7 @@ import {
 } from './helpers/allure-test.js';
 import { fillDocx } from '../src/core/fill-pipeline.js';
 import { fillTemplate } from '../src/core/engine.js';
-import { getTemplatesDir } from '../src/utils/paths.js';
+import { resolveTemplateDir } from '../src/utils/paths.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -103,7 +103,9 @@ describe('fill security behavior', () => {
   });
 
   it('fillTemplate warns on unknown input keys', async () => {
-    const templateDir = join(getTemplatesDir(), 'common-paper-mutual-nda');
+    // Since #1249 slugs live two levels deep; resolveTemplateDir globs
+    // templates/*/<slug> and returns the concrete directory.
+    const templateDir = resolveTemplateDir('common-paper-mutual-nda');
     const outputDir = mkdtempSync(join(tmpdir(), 'oa-unknown-keys-'));
     tempDirs.push(outputDir);
     const outputPath = join(outputDir, 'filled.docx');

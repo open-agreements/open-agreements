@@ -1,9 +1,10 @@
 import { describe, expect } from 'vitest';
 import { execSync } from 'node:child_process';
 import { join } from 'node:path';
-import { readdirSync, existsSync } from 'node:fs';
+import { existsSync } from 'node:fs';
 import { ExternalMetadataSchema } from '../src/core/metadata.js';
 import { validateExternal } from '../src/core/validation/external.js';
+import { listExternalEntries } from '../src/utils/paths.js';
 import {
   allureAttachment,
   allureJsonAttachment,
@@ -14,7 +15,6 @@ import {
 
 const ROOT = new URL('..', import.meta.url).pathname;
 const BIN = join(ROOT, 'bin/open-agreements.js');
-const EXTERNAL_DIR = join(ROOT, 'external');
 const itDiscovery = itAllure.epic('Discovery & Metadata');
 const itFilling = itAllure.epic('Filling & Rendering');
 const itCompliance = itAllure.epic('Compliance & Governance');
@@ -111,15 +111,13 @@ describe('ExternalMetadataSchema', () => {
 });
 
 describe('External template validation', () => {
-  const externalIds = existsSync(EXTERNAL_DIR)
-    ? readdirSync(EXTERNAL_DIR, { withFileTypes: true })
-        .filter((d) => d.isDirectory())
-        .map((d) => d.name)
-    : [];
+  // Since #1249 the `external/` top-level dir is gone; external (no-derivatives)
+  // slugs live two levels deep under `templates/<source>-<rights>/<slug>/` and
+  // are discovered by their derived kind, not their location.
+  const externalEntries = listExternalEntries();
 
-  itCompliance.each(externalIds)('validates %s', async (id) => {
+  itCompliance.each(externalEntries)('validates $id', async ({ id, dir }) => {
     await allureParameter('external_template_id', id);
-    const dir = join(EXTERNAL_DIR, id);
     const result = await allureStep('Validate external template directory', () =>
       validateExternal(dir, id)
     );

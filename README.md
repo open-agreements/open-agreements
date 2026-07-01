@@ -323,10 +323,10 @@ open-agreements fill common-paper-mutual-nda --set party_1_name="Acme Corp" --se
 open-agreements/
   bin/                    # CLI entry point
   dist/                   # Compiled TypeScript
-  content/
-    templates/            # Fillable DOCX templates with {tag} placeholders
-    external/             # YC SAFE templates vendored unchanged
-    field-selectors/              # Field-selector instructions for non-redistributable sources
+  templates/              # All content: templates/<source>-<rights>/<slug>/
+                          #   fillable DOCX templates, vendored no-derivatives
+                          #   forms (e.g. YC SAFEs), and field-selector
+                          #   instructions — kind is set per slug in metadata.yaml
   legal-practice-library/ # Practice guides, surveys, and checklists (markdown)
   skills/                 # Agent skill definitions
   server.json             # MCP server manifest

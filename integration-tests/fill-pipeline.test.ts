@@ -2,8 +2,15 @@ import { describe, expect, vi } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
 import { seconds } from './helpers/timeouts.js';
 import { mkdtempSync, writeFileSync, readFileSync, rmSync, readdirSync } from 'node:fs';
-import { join, resolve, dirname } from 'node:path';
-import { slugDir } from './helpers/template-paths.js';
+import { join, dirname } from 'node:path';
+import { findTemplateDir } from '../src/utils/paths.js';
+
+/** Resolve a template slug to its directory under the new two-level layout, or throw. */
+function templateDirFor(slug: string): string {
+  const dir = findTemplateDir(slug);
+  if (!dir) throw new Error(`template slug "${slug}" not found under templates/*/`);
+  return dir;
+}
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { detectCurrencyFields, sanitizeCurrencyValuesFromDocx, verifyTemplateFill, BLANK_PLACEHOLDER } from '../src/core/fill-utils.js';
@@ -803,7 +810,7 @@ describe('Integration: template currency sanitization', () => {
 // ---------------------------------------------------------------------------
 
 describe('NDA signature block fields', () => {
-  const NDA_DIR = slugDir(resolve(__dirname, '..'), 'common-paper-mutual-nda');
+  const NDA_DIR = templateDirFor('common-paper-mutual-nda');
 
   /** Fill the real NDA template with the given values and return the output XML text. */
   async function fillNdaTemplate(values: Record<string, unknown>): Promise<{ xml: string; buf: Uint8Array }> {
@@ -1006,10 +1013,8 @@ function dummyAllValues(templateDir: string): Record<string, unknown> {
 }
 
 describe('Signature block fields — role-based templates', () => {
-  const ROOT = resolve(__dirname, '..');
-
   it('standard 2-party entity mode (pilot agreement)', async () => {
-    const dir = slugDir(ROOT, 'common-paper-pilot-agreement');
+    const dir = templateDirFor('common-paper-pilot-agreement');
     const xml = await fillAndExtractXml(dir, {
       company_name: 'Acme Corp',
       product_description: 'Widget Platform',
@@ -1038,7 +1043,7 @@ describe('Signature block fields — role-based templates', () => {
   });
 
   it('individual mode suppression (contractor agreement)', async () => {
-    const dir = slugDir(ROOT, 'common-paper-independent-contractor-agreement');
+    const dir = templateDirFor('common-paper-independent-contractor-agreement');
     const xml = await fillAndExtractXml(dir, {
       company_name_and_address: 'Acme Corp, 123 Main St',
       contractor_name_and_address: 'Jane Doe, 456 Oak Ave',
@@ -1073,7 +1078,7 @@ describe('Signature block fields — role-based templates', () => {
   });
 
   it('one-way NDA single party', async () => {
-    const dir = slugDir(ROOT, 'common-paper-one-way-nda');
+    const dir = templateDirFor('common-paper-one-way-nda');
     const xml = await fillAndExtractXml(dir, {
       discloser_name_and_address: 'Acme Corp, 123 Main St, Wilmington, DE',
       effective_date: '2026-03-01',
@@ -1098,7 +1103,7 @@ describe('Signature block fields — role-based templates', () => {
   });
 
   it('dual sig block (CSA)', async () => {
-    const dir = slugDir(ROOT, 'common-paper-cloud-service-agreement');
+    const dir = templateDirFor('common-paper-cloud-service-agreement');
     const xml = await fillAndExtractXml(dir, {
       provider_name: 'Acme SaaS',
       customer_name: 'Beta Corp',
@@ -1138,7 +1143,7 @@ describe('Signature block fields — role-based templates', () => {
 
 describe('Parametric smoke test — signatory fields across all templates', () => {
   // All common-paper templates live under the same source/rights segment dir.
-  const COMMON_PAPER_DIR = dirname(slugDir(resolve(__dirname, '..'), 'common-paper-mutual-nda'));
+  const COMMON_PAPER_DIR = dirname(templateDirFor('common-paper-mutual-nda'));
 
   // Discover all common-paper template dirs that have *_signatory_type fields
   const templateDirs = readdirSync(COMMON_PAPER_DIR)

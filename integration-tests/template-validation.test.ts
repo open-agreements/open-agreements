@@ -13,9 +13,13 @@ import {
   allureStep,
   itAllure,
 } from './helpers/allure-test.js';
+import { slugDir } from './helpers/template-paths.js';
 
-// These tests rely on the existing templates in the repo
-const templatesDir = join(import.meta.dirname, '..', 'templates');
+// These tests rely on the existing templates in the repo. Since the S3
+// restructure (#1249) every slug lives two levels deep under
+// `templates/<source>-<rights>/<slug>/`; resolve via slugDir rather than
+// hard-coding the segment.
+const ROOT = join(import.meta.dirname, '..');
 const tempDirs: string[] = [];
 const it = itAllure.epic('Verification & Drift');
 
@@ -109,7 +113,7 @@ function buildDocxWithoutDocumentXml(): Buffer {
 
 describe('validateTemplate', () => {
   it('validates bonterms-mutual-nda without errors', async () => {
-    const dir = join(templatesDir, 'bonterms-mutual-nda');
+    const dir = slugDir(ROOT, 'bonterms-mutual-nda');
     await allureParameter('template_id', 'bonterms-mutual-nda');
     const result = await allureStep('Validate template', () =>
       validateTemplate(dir, 'bonterms-mutual-nda')
@@ -123,7 +127,7 @@ describe('validateTemplate', () => {
   });
 
   it('validates common-paper-mutual-nda without errors', async () => {
-    const dir = join(templatesDir, 'common-paper-mutual-nda');
+    const dir = slugDir(ROOT, 'common-paper-mutual-nda');
     await allureParameter('template_id', 'common-paper-mutual-nda');
     const result = await allureStep('Validate template', () =>
       validateTemplate(dir, 'common-paper-mutual-nda')
@@ -137,7 +141,7 @@ describe('validateTemplate', () => {
   });
 
   it('validates openagreements-employment-offer-letter without errors', async () => {
-    const dir = join(templatesDir, 'openagreements-employment-offer-letter');
+    const dir = slugDir(ROOT, 'openagreements-employment-offer-letter');
     await allureParameter('template_id', 'openagreements-employment-offer-letter');
     const result = await allureStep('Validate template', () =>
       validateTemplate(dir, 'openagreements-employment-offer-letter')
@@ -150,25 +154,11 @@ describe('validateTemplate', () => {
     });
   });
 
-  it('validates openagreements-employee-ip-inventions-assignment without errors', async () => {
-    const dir = join(templatesDir, 'openagreements-employee-ip-inventions-assignment');
-    await allureParameter('template_id', 'openagreements-employee-ip-inventions-assignment');
+  it('validates openagreements-confidentiality-invention-assignment-agreement without errors', async () => {
+    const dir = slugDir(ROOT, 'openagreements-confidentiality-invention-assignment-agreement');
+    await allureParameter('template_id', 'openagreements-confidentiality-invention-assignment-agreement');
     const result = await allureStep('Validate template', () =>
-      validateTemplate(dir, 'openagreements-employee-ip-inventions-assignment')
-    );
-    await allureJsonAttachment('template-validation-result.json', result);
-
-    await allureStep('Assert template passes validation', () => {
-      expect(result.valid).toBe(true);
-      expect(result.errors).toEqual([]);
-    });
-  });
-
-  it('validates openagreements-employment-confidentiality-acknowledgement without errors', async () => {
-    const dir = join(templatesDir, 'openagreements-employment-confidentiality-acknowledgement');
-    await allureParameter('template_id', 'openagreements-employment-confidentiality-acknowledgement');
-    const result = await allureStep('Validate template', () =>
-      validateTemplate(dir, 'openagreements-employment-confidentiality-acknowledgement')
+      validateTemplate(dir, 'openagreements-confidentiality-invention-assignment-agreement')
     );
     await allureJsonAttachment('template-validation-result.json', result);
 
@@ -179,7 +169,7 @@ describe('validateTemplate', () => {
   });
 
   it('validates openagreements-restrictive-covenant-wyoming without errors', async () => {
-    const dir = join(templatesDir, 'openagreements-restrictive-covenant-wyoming');
+    const dir = slugDir(ROOT, 'openagreements-restrictive-covenant-wyoming');
     await allureParameter('template_id', 'openagreements-restrictive-covenant-wyoming');
     const result = await allureStep('Validate template', () =>
       validateTemplate(dir, 'openagreements-restrictive-covenant-wyoming')
@@ -195,7 +185,7 @@ describe('validateTemplate', () => {
 
 describe('validateMetadata', () => {
   it('validates bonterms-mutual-nda metadata', async () => {
-    const dir = join(templatesDir, 'bonterms-mutual-nda');
+    const dir = slugDir(ROOT, 'bonterms-mutual-nda');
     await allureParameter('template_id', 'bonterms-mutual-nda');
     const result = await allureStep('Validate metadata.yaml', () => validateMetadata(dir));
     await allureJsonAttachment('metadata-validation-result.json', result);
@@ -206,7 +196,7 @@ describe('validateMetadata', () => {
   });
 
   it('validates employment offer metadata', async () => {
-    const dir = join(templatesDir, 'openagreements-employment-offer-letter');
+    const dir = slugDir(ROOT, 'openagreements-employment-offer-letter');
     await allureParameter('template_id', 'openagreements-employment-offer-letter');
     const result = await allureStep('Validate metadata.yaml', () => validateMetadata(dir));
     await allureJsonAttachment('metadata-validation-result.json', result);
@@ -658,7 +648,7 @@ describe('validateTemplate multiselect coverage', () => {
     // The Florida template's regenerated template.docx carries the cover-page
     // confirmation notice gated on {IF any_confirmation_pending} (a derived
     // synthetic key, not a metadata field). Validation must not flag it.
-    const flDir = join(templatesDir, 'openagreements-restrictive-covenant-florida');
+    const flDir = slugDir(ROOT, 'openagreements-restrictive-covenant-florida');
     const result = validateTemplate(flDir, 'openagreements-restrictive-covenant-florida');
     const mentions = [...result.errors, ...result.warnings].filter((m) =>
       m.includes('any_confirmation_pending')

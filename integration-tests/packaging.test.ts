@@ -57,7 +57,13 @@ describe('npm packaging', () => {
 
   it('includes a fieldSelector metadata file', () => {
     if (!available) return;
-    expect(files.some((f) => f.startsWith('field-selectors/') && f.endsWith('metadata.yaml'))).toBe(true);
+    // S3 layout (#1249): NVCA field-selectors now live under
+    // templates/nvca-free-non-redistributable/<slug>/.
+    expect(
+      files.some(
+        (f) => f.startsWith('templates/nvca-free-non-redistributable/') && f.endsWith('metadata.yaml')
+      )
+    ).toBe(true);
   });
 
   it('does NOT include src/', () => {

@@ -1,13 +1,18 @@
-# Working Group List
+---
+template_id: openagreements-working-group-list
+title: Working Group List
+document:
+  title: Working Group List
+  version: "1.0"
+  license: CC0-1.0
+---
 
-Deal: {deal_name}
+# {deal_name} — Working Group List
 
 Updated: {updated_at}
 
-*This roster is a working tool to be tailored to the staffing of the transaction and is not legal advice.*
+## Members
 
-## Working Group
-
-### Members
-
-- **{name}** — {role}, {organization} · {email}
+| Name | Organization | Role | Email |
+| --- | --- | --- | --- |
+| {FOR m IN working_group}{$m.name} | {$m.organization} | {$m.role} | {$m.email}{END-FOR m} |

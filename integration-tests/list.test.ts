@@ -93,7 +93,8 @@ describe('list --json envelope', () => {
 describe('list options', () => {
   it('--json-strict exits non-zero on metadata errors', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-list-strict-'));
-    const templatesDir = join(root, 'templates', 'bad-template');
+    // Since #1249 slugs live two levels deep: templates/<segment>/<slug>/.
+    const templatesDir = join(root, 'templates', 'bad-cc-by-4.0', 'bad-template');
     mkdirSync(templatesDir, { recursive: true });
     writeFileSync(
       join(templatesDir, 'metadata.yaml'),
