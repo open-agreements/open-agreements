@@ -22,7 +22,7 @@ const it = itAllure.epic('Compliance & Governance');
 
 describe('employment memo generator', () => {
   it('generates disclaimer + findings + jurisdiction warnings for matching rules', () => {
-    const templateId = 'openagreements-employee-ip-inventions-assignment';
+    const templateId = 'openagreements-confidentiality-invention-assignment-agreement';
     const metadata = loadMetadata(mustFindTemplateDir(templateId));
 
     const memo = generateEmploymentMemo({
@@ -31,10 +31,14 @@ describe('employment memo generator', () => {
       generatedAt: '2026-02-13T10:00:00.000Z',
       values: {
         company_name: 'Acme, Inc.',
+        company_signatory_name: 'Dana Founder',
+        company_signatory_title: 'Chief Executive Officer',
         employee_name: 'Taylor Developer',
         effective_date: '2026-03-01',
-        confidential_information_definition: 'non-public business information',
+        prior_inventions_disclosure: 'US Patent 1,234,567',
+        excluded_inventions_statement: 'See Exhibit A',
         return_of_materials_timing: 'within 5 days of termination',
+        post_termination_assistance: 'reasonable cooperation for 12 months',
         governing_law: 'California',
         venue: 'San Francisco County, California',
       },
@@ -86,7 +90,9 @@ describe('employment memo generator', () => {
   });
 
   it('renders markdown output with mandatory disclaimer and citations', () => {
-    const templateId = 'openagreements-employment-confidentiality-acknowledgement';
+    // Retargeted from the dropped confidentiality-acknowledgement template to CIIAA
+    // to keep coverage of renderEmploymentMemoMarkdown (a still-supported template).
+    const templateId = 'openagreements-confidentiality-invention-assignment-agreement';
     const metadata = loadMetadata(mustFindTemplateDir(templateId));
 
     const memo = generateEmploymentMemo({
@@ -95,13 +101,16 @@ describe('employment memo generator', () => {
       generatedAt: '2026-02-13T10:00:00.000Z',
       values: {
         company_name: 'Acme, Inc.',
+        company_signatory_name: 'Dana Founder',
+        company_signatory_title: 'Chief Executive Officer',
         employee_name: 'Taylor Developer',
-        policy_effective_date: '2026-03-01',
-        approved_tools_scope: 'company-managed systems',
-        data_access_scope: 'least privilege',
-        security_reporting_contact: 'security@acme.example',
-        acknowledgement_date: '2026-03-01',
-        signatory_name: 'Taylor Developer',
+        effective_date: '2026-03-01',
+        prior_inventions_disclosure: 'US Patent 1,234,567',
+        excluded_inventions_statement: 'See Exhibit A',
+        return_of_materials_timing: 'within 5 days of termination',
+        post_termination_assistance: 'reasonable cooperation for 12 months',
+        governing_law: 'California',
+        venue: 'San Francisco County, California',
       },
     });
 

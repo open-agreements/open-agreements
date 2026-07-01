@@ -11,6 +11,7 @@ import {
   isUpstreamAuthored,
   listOpenAgreementsRenderedTemplateIds,
   listOpenAgreementsTemplateIds,
+  resolveTemplateSlugDir,
 } from "./lib/template-utils.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -24,13 +25,11 @@ export const CANONICAL_TEMPLATE_IDS = new Set([
   "openagreements-board-consent-safe",
   "openagreements-stockholder-consent-safe",
   "openagreements-employment-offer-letter",
-  "openagreements-employee-ip-inventions-assignment",
+  "openagreements-confidentiality-invention-assignment-agreement",
   "openagreements-restrictive-covenant-wyoming",
 ]);
 
-export const JSON_SPEC_TEMPLATE_IDS = new Set([
-  "openagreements-employment-confidentiality-acknowledgement",
-]);
+export const JSON_SPEC_TEMPLATE_IDS = new Set([]);
 
 export const SHARED_RENDERER_TEMPLATE_IDS = new Set([
   ...CANONICAL_TEMPLATE_IDS,
@@ -41,15 +40,14 @@ export const SHARED_RENDERER_TEMPLATE_IDS = new Set([
 // Needed because a deleted template directory loses its metadata.yaml, so
 // the gate can't read source_url at base; this explicit allowlist preserves
 // ownership detection. Extend if a new non-prefix OA template lands.
-export const NON_PREFIX_OA_TEMPLATE_IDS = new Set([
-  "closing-checklist",
-  "working-group-list",
-]);
+// After #1249 every OA-owned template carries the `openagreements-` prefix
+// (the old bare `closing-checklist`/`working-group-list` slugs were renamed),
+// so no non-prefix ownership allowlist is needed.
+export const NON_PREFIX_OA_TEMPLATE_IDS = new Set([]);
 
 const COVER_LAYOUT_TEMPLATE_IDS = new Set([
   "openagreements-employment-offer-letter",
-  "openagreements-employee-ip-inventions-assignment",
-  "openagreements-employment-confidentiality-acknowledgement",
+  "openagreements-confidentiality-invention-assignment-agreement",
   "openagreements-restrictive-covenant-wyoming",
 ]);
 
@@ -324,10 +322,10 @@ export function expandTriggers(records, headOwnedIds, upstreamAuthoredIds = new 
       for (const id of SHARED_STYLE_TEMPLATE_IDS) addTrigger(id, record);
     }
     if (path === CHECKLIST_GENERATOR_PATH) {
-      addTrigger("closing-checklist", record);
+      addTrigger("openagreements-closing-checklist", record);
     }
     if (path === WORKING_GROUP_GENERATOR_PATH) {
-      addTrigger("working-group-list", record);
+      addTrigger("openagreements-working-group-list", record);
     }
     if (PIPELINE_TRIGGER_PATHS.has(path)) {
       for (const id of headOwnedIds) addTrigger(id, record);
@@ -338,7 +336,8 @@ export function expandTriggers(records, headOwnedIds, upstreamAuthoredIds = new 
 }
 
 function matchTemplatePath(p) {
-  const m = /^templates\/([^/]+)\/([^/]+)$/.exec(p);
+  // Slugs live two levels deep since #1249: templates/<source>-<rights>/<slug>/<file>.
+  const m = /^templates\/[^/]+\/([^/]+)\/([^/]+)$/.exec(p);
   if (!m) return null;
   return { templateId: m[1], filename: m[2] };
 }
@@ -460,9 +459,10 @@ export function findManifestSatisfied(
     const entry = entriesById.get(id);
     if (!entry) continue;
 
-    const currentSha = sha256File(
-      path.resolve(repoRoot, "templates", id, TEMPLATE_DOCX_FILE)
-    );
+    const slugDir = resolveTemplateSlugDir(id);
+    const currentSha = slugDir
+      ? sha256File(path.resolve(slugDir, TEMPLATE_DOCX_FILE))
+      : null;
     if (currentSha !== null && entry.docxSha256 === currentSha) {
       satisfied.add(id);
     } else {
@@ -761,12 +761,15 @@ export async function main(env) {
  */
 function docxOnlyTriggeredIds(triggered) {
   const ids = [];
+  const docxTail = `/${TEMPLATE_DOCX_FILE}`;
   for (const [id, records] of triggered) {
     if (records.length === 0) continue;
     if (
       records.every(
         (record) =>
-          record.path === `templates/${id}/${TEMPLATE_DOCX_FILE}` &&
+          // templates/<source>-<rights>/<id>/template.docx (#1249, 2 levels deep).
+          record.path.endsWith(`/${id}${docxTail}`) &&
+          record.path.startsWith("templates/") &&
           record.status === "modified"
       )
     ) {

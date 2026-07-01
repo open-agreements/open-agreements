@@ -293,7 +293,7 @@ const tools: ToolDefinition[] = [
       // getChecklistState returns { checklist_id, revision, checklist: ClosingChecklist }
       const checklist = (fullState as Record<string, unknown>).checklist as Record<string, unknown>;
 
-      const templateDir = mod.findTemplateDir('closing-checklist');
+      const templateDir = mod.findTemplateDir('openagreements-closing-checklist');
       if (!templateDir) {
         return toolError('checklist_render_docx', 'TEMPLATE_NOT_FOUND', 'closing-checklist template not found');
       }

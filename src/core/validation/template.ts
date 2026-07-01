@@ -163,14 +163,30 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
     };
   }
 
-  // Templates that ship a fully-rendered, humanized DOCX (marked by a
-  // `template.mdoc` in the dir) rather than an OA fill-token document — so the
-  // `{field}` placeholder-coverage / FOR / multiselect scans below do not apply.
-  // Their metadata has already been validated
-  // above by loadMetadata, and the license check runs separately. BUT the unsafe-tag
-  // security scan is defense-in-depth and runs for EVERY committed DOCX regardless
-  // of authorship (a DOCX must never carry docx-templates control/code tags).
-  if (existsSync(join(templateDir, 'template.mdoc'))) {
+  // Skip the `{field}` placeholder-coverage / FOR / multiselect scans below ONLY
+  // for a genuinely humanized render: a DOCX that carries no OA fill tokens
+  // ({field} / {IF …} / {FOR …} / {$…} / {END…}) AND ships a `template.mdoc`
+  // provenance twin marking it as LE-authored bracketed prose for manual
+  // completion.
+  //
+  // Both signals are required, and neither alone is sufficient:
+  //   - Gating on the `.mdoc` marker alone (the previous behavior) silently
+  //     disabled fill-token validation for machine-fillable templates, because
+  //     every LE-projected template now ships a `.mdoc` twin — so a fill-token
+  //     DOCX like board-consent-safe / closing-checklist stopped being checked.
+  //   - Gating on token-absence alone masks a fill template whose DOCX is simply
+  //     MISSING its required placeholders (that must still error).
+  // So: a token-bearing DOCX is always validated; a token-less DOCX with no
+  // `.mdoc` twin is treated as a fill template with missing tokens and validated
+  // (reporting them); only token-less + `.mdoc` is a humanized render and skipped.
+  //
+  // The unsafe-tag security scan is defense-in-depth and runs for EVERY committed
+  // DOCX regardless of authorship (a DOCX must never carry docx-templates
+  // control/code tags).
+  const docxTextForTokenScan = extractDocxText(templatePath);
+  const docxHasFillTokens = /\{(?:IF |FOR |END|\$|\w+\})/.test(docxTextForTokenScan);
+  const hasMdocTwin = existsSync(join(templateDir, 'template.mdoc'));
+  if (!docxHasFillTokens && hasMdocTwin) {
     const rawXml = extractRawDocumentXml(templatePath);
     if (rawXml) {
       scanForUnsafeTemplateTags(rawXml, errors);

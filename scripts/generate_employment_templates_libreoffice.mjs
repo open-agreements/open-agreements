@@ -6,10 +6,10 @@ import { pathToFileURL } from 'node:url';
 import { resolveLibreOfficeBinary } from './libreoffice_headless.mjs';
 
 const ROOT = resolve('.');
+// Slugs live under templates/<source>-<rights>/<slug>/ since #1249.
 const TARGETS = [
-  resolve(ROOT, 'templates/openagreements-employment-offer-letter/template.docx'),
-  resolve(ROOT, 'templates/openagreements-employee-ip-inventions-assignment/template.docx'),
-  resolve(ROOT, 'templates/openagreements-employment-confidentiality-acknowledgement/template.docx'),
+  resolve(ROOT, 'templates/openagreements-cc-by-4.0/openagreements-employment-offer-letter/template.docx'),
+  resolve(ROOT, 'templates/openagreements-cc-by-4.0/openagreements-confidentiality-invention-assignment-agreement/template.docx'),
 ];
 
 function run(cmd, args, options = {}) {

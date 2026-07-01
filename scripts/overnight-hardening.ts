@@ -43,7 +43,11 @@ import type { ExperimentEntry } from './lib/experiment-journal.js';
 
 const PROJECT_ROOT = resolve(import.meta.dirname!, '..');
 const DEFAULT_OUTPUT_DIR = join(PROJECT_ROOT, '.nvca-hardening-output');
-const QUALITY_TRACKER_PATH = join(PROJECT_ROOT, 'field-selectors', 'QUALITY_TRACKER.md');
+// NVCA field-selectors live under templates/<source>-<rights>/<slug>/ after the
+// S3 restructure (#1249); their source/rights segment has no CC license.
+const NVCA_SEGMENT = 'nvca-free-non-redistributable';
+const NVCA_DIR_REL = `templates/${NVCA_SEGMENT}`;
+const QUALITY_TRACKER_PATH = join(PROJECT_ROOT, 'templates', NVCA_SEGMENT, 'QUALITY_TRACKER.md');
 const FIXTURES_DIR = join(PROJECT_ROOT, 'integration-tests', 'fixtures');
 
 /** Escape regex metacharacters so a value can be safely interpolated into a RegExp. */
@@ -75,11 +79,11 @@ const STALL_RESET_CUMULATIVE = 0.03;
 
 function getAllowedGlobs(): string[] {
   return [
-    'field-selectors/nvca-*/metadata.yaml',
-    'field-selectors/nvca-*/replacements.json',
-    'field-selectors/nvca-*/clean.json',
-    'field-selectors/nvca-*/computed.json',
-    'field-selectors/nvca-*/selections.json',
+    'templates/nvca-free-non-redistributable/nvca-*/metadata.yaml',
+    'templates/nvca-free-non-redistributable/nvca-*/replacements.json',
+    'templates/nvca-free-non-redistributable/nvca-*/clean.json',
+    'templates/nvca-free-non-redistributable/nvca-*/computed.json',
+    'templates/nvca-free-non-redistributable/nvca-*/selections.json',
     'integration-tests/fixtures/*.json',
     '.hardening-journal/*.intent.json',
     '.hardening-journal/*.result.json',
@@ -103,7 +107,7 @@ const BLOCKED_EXTENSIONS = [
   '.mjs',
   '.cjs',
   '.yml',
-  '.yaml',  // only allowed under field-selectors/nvca-*/
+  '.yaml',  // only allowed under templates/nvca-free-non-redistributable/nvca-*/
 ];
 
 function isPathBlocked(filePath: string): boolean {
@@ -112,7 +116,7 @@ function isPathBlocked(filePath: string): boolean {
   }
   // Block .yaml files unless they're fieldSelector metadata
   if (filePath.endsWith('.yaml') || filePath.endsWith('.yml')) {
-    if (filePath.match(/^field-selectors\/nvca-[^/]+\/metadata\.yaml$/)) return false;
+    if (filePath.match(/^templates\/nvca-free-non-redistributable\/nvca-[^/]+\/metadata\.yaml$/)) return false;
     return true;
   }
   for (const ext of BLOCKED_EXTENSIONS) {
@@ -124,7 +128,7 @@ function isPathBlocked(filePath: string): boolean {
 
 function isPathAllowed(filePath: string): boolean {
   // Explicit allow-list patterns
-  if (filePath.match(/^field-selectors\/nvca-[^/]+\/(metadata\.yaml|replacements\.json|clean\.json|computed\.json|selections\.json)$/)) {
+  if (filePath.match(/^templates\/nvca-free-non-redistributable\/nvca-[^/]+\/(metadata\.yaml|replacements\.json|clean\.json|computed\.json|selections\.json)$/)) {
     return true;
   }
   if (filePath.match(/^integration-tests\/fixtures\/.*\.json$/)) {
@@ -362,7 +366,7 @@ function gitCheckpoint(fieldSelectorId: string, iteration: number, score: number
   try {
     // Stage fieldSelector files and fixtures
     execSync(
-      `git add field-selectors/${fieldSelectorId}/ ${fixtureGlobs} 2>/dev/null || true`,
+      `git add ${NVCA_DIR_REL}/${fieldSelectorId}/ ${fixtureGlobs} 2>/dev/null || true`,
       { cwd: PROJECT_ROOT },
     );
 
@@ -387,7 +391,7 @@ function revertToCommit(commitSha: string, fieldSelectorId: string): void {
   const fixtureGlobs = prefixes.map((p) => `integration-tests/fixtures/${p}*`).join(' ');
   try {
     execSync(
-      `git checkout ${commitSha} -- field-selectors/${fieldSelectorId}/ ${fixtureGlobs} 2>/dev/null || true`,
+      `git checkout ${commitSha} -- ${NVCA_DIR_REL}/${fieldSelectorId}/ ${fixtureGlobs} 2>/dev/null || true`,
       { cwd: PROJECT_ROOT },
     );
   } catch {
@@ -497,7 +501,7 @@ function findRegressedChecks(
 function getModifiedReplacementKeys(fieldSelectorId: string): string[] {
   try {
     const diff = execSync(
-      `git diff HEAD -- field-selectors/${fieldSelectorId}/replacements.json`,
+      `git diff HEAD -- ${NVCA_DIR_REL}/${fieldSelectorId}/replacements.json`,
       { cwd: PROJECT_ROOT },
     ).toString();
     // Extract keys from added/removed lines
@@ -787,7 +791,7 @@ async function hardenFieldSelector(
     try {
       fieldSelectorDir = resolveFieldSelectorDir(fieldSelectorId);
     } catch {
-      fieldSelectorDir = join(PROJECT_ROOT, 'field-selectors', fieldSelectorId);
+      fieldSelectorDir = join(PROJECT_ROOT, 'templates', NVCA_SEGMENT, fieldSelectorId);
     }
     const treeHash = existsSync(fieldSelectorDir) ? computeFieldSelectorTreeHash(fieldSelectorDir) : 'unknown';
 

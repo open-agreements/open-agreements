@@ -19,10 +19,10 @@ section: Guides
 ### 1. Create the template directory
 
 ```bash
-mkdir templates/<template-name>
+mkdir -p templates/<source>-<rights>/<template-name>
 ```
 
-Use kebab-case for the directory name (e.g., `common-paper-mutual-nda`).
+Templates live two levels deep under `templates/`: a `<source>-<rights>` segment (the upstream source plus its license, e.g. `common-paper-cc-by-4.0`, `bonterms-cc0-1.0`) then the kebab-case slug (e.g., `common-paper-mutual-nda`). Slugs are globally unique across segments.
 
 ### 2. Create the DOCX template
 
@@ -296,6 +296,6 @@ Before adding a template, classify the source as one of:
 - `pointer-only`
 - `restricted-no-automation`
 
-Do not onboard `restricted-no-automation` sources into `templates/`, `external/`,
+Do not onboard `restricted-no-automation` sources into the `templates/` tree
 or field-selector auto-fetch flows without explicit written permission. Employment-pack
 classifications are tracked in `docs/employment-source-policy.md`.

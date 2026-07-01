@@ -38,8 +38,14 @@ open-agreements scan ~/Downloads/source-document.docx --output-replacements repl
 ## Step 2: Create the Field-selector Directory
 
 ```bash
-mkdir field-selectors/your-field-selector-name/
+mkdir -p templates/<source>-free-non-redistributable/your-field-selector-name/
 ```
+
+Field-selectors live under the same unified `templates/` tree as everything else,
+in the source's no-license segment (e.g. NVCA forms live under
+`templates/nvca-free-non-redistributable/`). They are distinguished from fillable
+templates by `artifact_type: field-selector` in their `metadata.yaml`, not by a
+separate top-level directory.
 
 ## Step 3: Create metadata.yaml
 

@@ -7,7 +7,10 @@ import { cleanDocument } from '../src/core/field-selector/cleaner.js';
 import { normalizeBracketArtifacts } from '../src/core/field-selector/bracket-normalizer.js';
 import type { CleanConfig } from '../src/core/metadata.js';
 import type { DeclarativeNormalizeConfig } from '../src/core/field-selector/bracket-normalizer.js';
+import { resolveFieldSelectorDir } from '../src/utils/paths.js';
 import { itAllure } from './helpers/allure-test.js';
+
+const SPA_FIELD_SELECTOR_DIR = resolveFieldSelectorDir('nvca-stock-purchase-agreement');
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const tempDirs: string[] = [];
@@ -94,7 +97,7 @@ describe('NVCA assumptions regression', () => {
     );
 
     const cleanConfig = JSON.parse(
-      readFileSync(join(process.cwd(), 'field-selectors/nvca-stock-purchase-agreement/clean.json'), 'utf-8')
+      readFileSync(join(SPA_FIELD_SELECTOR_DIR, 'clean.json'), 'utf-8')
     ) as CleanConfig;
 
     await cleanDocument(input, cleaned, cleanConfig);
@@ -123,7 +126,7 @@ describe('NVCA assumptions regression', () => {
     );
 
     const normalizeConfig = JSON.parse(
-      readFileSync(join(process.cwd(), 'field-selectors/nvca-stock-purchase-agreement/normalize.json'), 'utf-8')
+      readFileSync(join(SPA_FIELD_SELECTOR_DIR, 'normalize.json'), 'utf-8')
     ) as DeclarativeNormalizeConfig;
 
     await normalizeBracketArtifacts(input, output, {

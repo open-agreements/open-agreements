@@ -1,5 +1,4 @@
 import { describe, expect } from 'vitest';
-import { join } from 'node:path';
 import {
   evaluateComputedProfile,
   loadComputedProfile,
@@ -11,13 +10,14 @@ import {
   allureStep,
   itAllure,
 } from './helpers/allure-test.js';
+import { resolveFieldSelectorDir } from '../src/utils/paths.js';
 
 type FactorValue = string;
 type FactorDomains = Record<string, FactorValue[]>;
 type FactorCase = Record<string, FactorValue>;
 
 const FIELD_SELECTOR_ID = 'nvca-stock-purchase-agreement';
-const FIELD_SELECTOR_DIR = join(import.meta.dirname, '..', 'field-selectors', FIELD_SELECTOR_ID);
+const FIELD_SELECTOR_DIR = resolveFieldSelectorDir(FIELD_SELECTOR_ID);
 const profile = loadComputedProfile(FIELD_SELECTOR_DIR);
 if (!profile) {
   throw new Error(`Expected computed.json for ${FIELD_SELECTOR_ID}`);

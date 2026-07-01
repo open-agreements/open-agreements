@@ -1,0 +1,67 @@
+name: YC Post-Money SAFE — Valuation Cap
+category: safes
+description: >-
+  Y Combinator's Post-Money SAFE (Simple Agreement for Future Equity) with a valuation cap and no discount. The most
+  common early-stage investment instrument.
+source_url: https://www.ycombinator.com/documents
+version: '2024.12'
+license: CC-BY-ND-4.0
+allow_derivatives: false
+distribution: bundled
+artifact_type: template
+attribution_text: >-
+  Based on the Y Combinator Post-Money SAFE, available at https://www.ycombinator.com/documents. Licensed under CC BY-ND
+  4.0. Copyright Y Combinator.
+source_sha256: 185d24f5bcf13acdf1419bf1d420771088da5dea3b3f3e0cdc7fa5df643649c4
+fields:
+  - name: company_name
+    type: string
+    description: Full legal name of the company
+    section: Parties
+  - name: investor_name
+    type: string
+    description: Full legal name of the investor
+    section: Parties
+  - name: purchase_amount
+    type: string
+    description: Dollar amount of the investment (e.g., "100,000")
+    section: Deal Terms
+  - name: valuation_cap
+    type: string
+    description: Post-money valuation cap in dollars (e.g., "10,000,000")
+    section: Deal Terms
+  - name: date_of_safe
+    type: date
+    description: Date the SAFE is executed
+    section: Deal Terms
+  - name: state_of_incorporation
+    type: string
+    description: State where the company is incorporated (e.g., "Delaware")
+    section: Company Details
+  - name: governing_law_jurisdiction
+    type: string
+    description: State whose laws govern the agreement (e.g., "Delaware")
+    section: Company Details
+  - name: company
+    type: string
+    description: Company name as used in the signature block (typically matches company_name)
+    section: Signatures
+  - name: name
+    type: string
+    description: Name of the company signatory
+    section: Signatures
+  - name: title
+    type: string
+    description: Title of the company signatory (e.g., "CEO")
+    section: Signatures
+priority_fields:
+  - company_name
+  - investor_name
+  - purchase_amount
+  - valuation_cap
+  - date_of_safe
+  - state_of_incorporation
+  - governing_law_jurisdiction
+  - company
+  - name
+  - title

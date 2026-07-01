@@ -1,0 +1,93 @@
+name: Common Paper Letter of Intent
+category: deals-partnerships
+description: >-
+  A letter of intent template for SaaS and technology deals, based on Common Paper's standard form. Outlines product,
+  timeline, fees, and references an existing NDA.
+source_url: https://commonpaper.com/standards/letter-of-intent
+version: '1.0'
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: >-
+  Based on the Common Paper Letter of Intent, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright
+  Common Paper, Inc.
+fields:
+  - name: company_name
+    type: string
+    description: Official name of the company sending the letter
+    section: Parties
+  - name: product_name
+    type: string
+    description: Name of the product or service
+    section: Service
+  - name: product_description
+    type: string
+    description: Description of what the product will do
+    section: Service
+  - name: launch_date
+    type: string
+    description: Anticipated access or launch date
+    section: Terms
+  - name: fees_description
+    type: string
+    description: Description of fees and pricing
+    section: Payment
+  - name: nda_date
+    type: string
+    description: Date of the existing NDA between the parties
+    section: Terms
+  - name: provider_signatory_type
+    type: enum
+    description: Whether the Provider signatory is an entity or individual
+    options:
+      - entity
+      - individual
+    default: entity
+    section: Signature Block
+  - name: provider_signatory_name
+    type: string
+    description: Full legal name of the Provider's signatory
+    section: Signature Block
+  - name: provider_signatory_title
+    type: string
+    description: Title/role of the Provider's signatory (entity only)
+    section: Signature Block
+  - name: provider_signatory_company
+    type: string
+    description: Company name for the Provider signatory (entity only)
+    section: Signature Block
+  - name: provider_signatory_email
+    type: string
+    description: Notice email address for the Provider
+    section: Signature Block
+  - name: customer_signatory_type
+    type: enum
+    description: Whether the Customer signatory is an entity or individual
+    options:
+      - entity
+      - individual
+    default: entity
+    section: Signature Block
+  - name: customer_signatory_name
+    type: string
+    description: Full legal name of the Customer's signatory
+    section: Signature Block
+  - name: customer_signatory_title
+    type: string
+    description: Title/role of the Customer's signatory (entity only)
+    section: Signature Block
+  - name: customer_signatory_company
+    type: string
+    description: Company name for the Customer signatory (entity only)
+    section: Signature Block
+  - name: customer_signatory_email
+    type: string
+    description: Notice email address for the Customer
+    section: Signature Block
+priority_fields:
+  - company_name
+  - product_name
+  - product_description
+  - launch_date
+  - fees_description

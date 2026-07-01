@@ -1,0 +1,84 @@
+---
+template_id: openagreements-working-group-list
+name: Working Group List
+category: other
+description: >-
+  Standalone working group roster for a transaction. Tracks staffed deal team
+  members and their contact details outside the closing checklist document.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-working-group-list
+version: "1.0"
+license: CC0-1.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: >-
+  OpenAgreements Working Group List. Licensed under CC0 1.0.
+layout_id: roster-list-v1
+style_id: openagreements-default-v1
+document:
+  title: Working Group List
+  label: OpenAgreements Working Group List
+  version: "1.0"
+  license: Free to use under CC0 1.0
+  defined_term_highlight_mode: none
+sections:
+  cover_terms:
+    section_label: Overview
+    heading_title: Overview
+  standard_terms:
+    section_label: Working Group
+    heading_title: Working Group
+  signature:
+    section_label: Signature Page
+    heading_title: Signatures
+fields:
+  - name: deal_name
+    type: string
+    description: Name of the deal or transaction
+    section: Overview
+  - name: updated_at
+    type: string
+    description: Date the list was last updated (ISO date)
+    section: Overview
+  - name: working_group
+    type: array
+    description: Working group members staffed on the transaction
+    section: Working Group
+    items:
+      - name: name
+        type: string
+        description: Full name of the working group member
+      - name: organization
+        type: string
+        description: Organization or firm the member belongs to
+      - name: role
+        type: string
+        description: Role of the member on the transaction
+      - name: email
+        type: string
+        description: Contact email address for the member
+priority_fields:
+  - deal_name
+---
+
+
+# Working Group List
+
+Deal: {% field name="deal_name" /%}
+
+Updated: {% field name="updated_at" /%}
+
+*This roster is a working tool to be tailored to the staffing of the transaction and is not legal advice.*
+
+{% agreement-section type="standard_terms" %}
+## Working Group
+
+{% clause id="members" %}
+### Members
+
+{% repeat field="working_group" %}
+- **{% field name="name" /%}** — {% field name="role" /%}, {% field name="organization" /%} · {% field name="email" /%}
+{% /repeat %}
+
+{% /clause %}
+{% /agreement-section %}

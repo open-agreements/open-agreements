@@ -13,6 +13,8 @@
       "source": "Bonterms",
       "attribution_text": "Based on the Bonterms Mutual NDA Cover Page, available at https://bonterms.com/resources/mutual-nda-cover-page-example. Made available under CC0 1.0.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -270,6 +272,8 @@
       "source": "Bonterms",
       "attribution_text": "Based on the Bonterms Professional Services Agreement Cover Page, available at https://bonterms.com/resources/psa-cover-page-example. Made available under CC0 1.0.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -329,66 +333,6 @@
       ]
     },
     {
-      "name": "closing-checklist",
-      "tier": "internal",
-      "display_name": "Closing Checklist",
-      "category": "other",
-      "description": "A stage-first, document-first closing checklist that tracks canonical documents, checklist entries, signatories, action items, and issues. Accepts structured JSON input and renders a formatted DOCX for distribution.",
-      "license": "CC0-1.0",
-      "source_url": "https://github.com/open-agreements/open-agreements",
-      "source": "OpenAgreements",
-      "attribution_text": "OpenAgreements Closing Checklist. Licensed under CC0 1.0.",
-      "allow_derivatives": true,
-      "credits": [],
-      "fields": [
-        {
-          "name": "deal_name",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Name of the deal or transaction",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "updated_at",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "ISO date when the checklist was last updated",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "documents",
-          "type": "array",
-          "required": false,
-          "section": null,
-          "description": "Checklist entry rows with 4 columns: number, title, status (human-readable), responsible_party. Stage headings and citation/signatory sub-rows are included.",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "action_items",
-          "type": "array",
-          "required": false,
-          "section": null,
-          "description": "Unlinked action items (item_id, description, status, assigned_to, due_date)",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "open_issues",
-          "type": "array",
-          "required": false,
-          "section": null,
-          "description": "Unlinked issues (issue_id, title, status, summary)",
-          "default": null,
-          "default_value_rationale": null
-        }
-      ]
-    },
-    {
       "name": "common-paper-ai-addendum",
       "tier": "internal",
       "display_name": "Common Paper AI Addendum",
@@ -399,6 +343,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper AI Addendum, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -746,6 +692,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper AI Addendum In-App, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -977,6 +925,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Amendment, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -1162,6 +1112,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Business Associate Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -1500,6 +1452,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Cloud Service Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -2279,6 +2233,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper CSA Click-Through, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -2420,6 +2376,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper CSA With AI, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -3488,6 +3446,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper CSA With SLA, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -4466,6 +4426,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper CSA Without SLA, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -5381,6 +5343,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Data Processing Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -6304,6 +6268,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Design Partner Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -6606,6 +6572,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Independent Contractor Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -6800,6 +6768,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Letter of Intent, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -6967,6 +6937,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Mutual NDA, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -7152,6 +7124,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper One-Way NDA, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -7288,6 +7262,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Order Form, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -7698,6 +7674,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Order Form with SLA, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -8189,6 +8167,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Partnership Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -8915,6 +8895,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Pilot Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -9199,6 +9181,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Professional Services Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -10033,6 +10017,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Software License Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": []
     },
@@ -10047,6 +10033,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Statement of Work, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -10412,6 +10400,8 @@
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Term Sheet, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -10553,6 +10543,8 @@
       "source_version": "10-1-2025",
       "optional": false,
       "allow_derivatives": false,
+      "distribution": "linked",
+      "artifact_type": "field-selector",
       "fields": [
         {
           "name": "company_name",
@@ -10969,6 +10961,8 @@
       "source_version": "2020",
       "optional": false,
       "allow_derivatives": false,
+      "distribution": "linked",
+      "artifact_type": "field-selector",
       "fields": [
         {
           "name": "indemnitee_name",
@@ -11137,6 +11131,8 @@
       "source_version": "10-1-2025",
       "optional": false,
       "allow_derivatives": false,
+      "distribution": "linked",
+      "artifact_type": "field-selector",
       "fields": [
         {
           "name": "company_name",
@@ -11278,6 +11274,8 @@
       "source_version": "2020",
       "optional": false,
       "allow_derivatives": false,
+      "distribution": "linked",
+      "artifact_type": "field-selector",
       "fields": [
         {
           "name": "company_name_upper",
@@ -11374,6 +11372,8 @@
       "source_version": "10-1-2025",
       "optional": false,
       "allow_derivatives": false,
+      "distribution": "linked",
+      "artifact_type": "field-selector",
       "fields": [
         {
           "name": "company_name",
@@ -11533,6 +11533,8 @@
       "source_version": "10-28-2025",
       "optional": false,
       "allow_derivatives": false,
+      "distribution": "linked",
+      "artifact_type": "field-selector",
       "fields": [
         {
           "name": "company_name",
@@ -11862,6 +11864,8 @@
       "source_version": "10-1-2025",
       "optional": false,
       "allow_derivatives": false,
+      "distribution": "linked",
+      "artifact_type": "field-selector",
       "fields": [
         {
           "name": "company_name",
@@ -11993,14 +11997,9 @@
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Drafting structure informed by publicly available Series Seed SAFE board consent materials. Licensed under CC BY 4.0.",
       "allow_derivatives": true,
-      "credits": [
-        {
-          "name": "Joey Tsang",
-          "role": "drafting_editor",
-          "profile_url": "https://www.linkedin.com/in/joey-t-b90912b1/"
-        }
-      ],
-      "derived_from": "Publicly available Series Seed SAFE board consent materials",
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "credits": [],
       "fields": [
         {
           "name": "company_name",
@@ -12052,16 +12051,337 @@
       ]
     },
     {
+      "name": "openagreements-closing-checklist",
+      "tier": "internal",
+      "display_name": "Closing Checklist",
+      "category": "other",
+      "description": "A stage-first, document-first closing checklist that tracks canonical documents, action items, and open issues for a transaction, and renders a formatted document for distribution to the working group.",
+      "license": "CC0-1.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-closing-checklist",
+      "source": "OpenAgreements",
+      "attribution_text": "OpenAgreements Closing Checklist. Licensed under CC0 1.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "credits": [],
+      "fields": [
+        {
+          "name": "deal_name",
+          "type": "string",
+          "required": true,
+          "section": "Overview",
+          "description": "Name of the deal or transaction",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "updated_at",
+          "type": "string",
+          "required": true,
+          "section": "Overview",
+          "description": "Date the checklist was last updated (ISO date)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "documents",
+          "type": "array",
+          "required": false,
+          "section": "Documents",
+          "description": "Closing document checklist entries",
+          "default": null,
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "entry_id",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Checklist entry number or identifier",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Title of the document",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "status",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Human-readable status of the document",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "responsible",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Party responsible for the document",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "link",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Link to the document or its location",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
+        },
+        {
+          "name": "action_items",
+          "type": "array",
+          "required": false,
+          "section": "Action Items",
+          "description": "Action items tracked for the closing",
+          "default": null,
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "item_id",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Action item identifier",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Description of the action item",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "status",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Status of the action item",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "assigned_to",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Person the action item is assigned to",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "due_date",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Due date for the action item",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
+        },
+        {
+          "name": "open_issues",
+          "type": "array",
+          "required": false,
+          "section": "Open Issues",
+          "description": "Open issues tracked for the closing",
+          "default": null,
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "issue_id",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Issue identifier",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Title of the issue",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "status",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Status of the issue",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "summary",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Summary of the issue",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "citation",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Citation or reference supporting the issue",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "openagreements-confidentiality-invention-assignment-agreement",
+      "tier": "internal",
+      "display_name": "OpenAgreements Confidentiality & Invention Assignment Agreement (CIIAA)",
+      "category": "employment",
+      "description": "Employee proprietary information and inventions assignment agreement with explicit prior-inventions and personal-project carveout language placeholders.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-confidentiality-invention-assignment-agreement",
+      "source": "OpenAgreements",
+      "attribution_text": "Authored by OpenAgreements contributors. Baseline structure inspired by permissive public references including the Balanced Employee IP Agreement (CC0) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "credits": [],
+      "fields": [
+        {
+          "name": "company_name",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Legal name of employer",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signatory_name",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Full name of the authorized signatory signing for the company",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signatory_title",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Title of the authorized signatory signing for the company",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employee_name",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Full legal name of employee",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "effective_date",
+          "type": "date",
+          "required": false,
+          "section": "Timing",
+          "description": "Effective date of this agreement",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "prior_inventions_disclosure",
+          "type": "string",
+          "required": false,
+          "section": "Inventions",
+          "description": "List of prior inventions excluded from assignment, or None",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "excluded_inventions_statement",
+          "type": "string",
+          "required": false,
+          "section": "Inventions",
+          "description": "Carveout statement for independently developed inventions",
+          "default": "Inventions Employee develops entirely on personal time without using company equipment, supplies, facilities, or trade secret information are excluded, except for inventions that either (a) relate to company business or its actual or demonstrably anticipated research or development, or (b) result from work performed for the company.",
+          "default_value_rationale": null
+        },
+        {
+          "name": "return_of_materials_timing",
+          "type": "string",
+          "required": false,
+          "section": "Confidentiality",
+          "description": "Timing for return or deletion of company materials",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "post_termination_assistance",
+          "type": "string",
+          "required": false,
+          "section": "Inventions",
+          "description": "Cooperation obligations after termination",
+          "default": "reasonable assistance with filings and signatures related to assigned inventions",
+          "default_value_rationale": null
+        },
+        {
+          "name": "governing_law",
+          "type": "string",
+          "required": false,
+          "section": "Legal",
+          "description": "Governing law state",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "venue",
+          "type": "string",
+          "required": false,
+          "section": "Legal",
+          "description": "Venue for disputes",
+          "default": "state and federal courts in the governing law state",
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
       "name": "openagreements-due-diligence-request-list",
       "tier": "internal",
       "display_name": "OpenAgreements Legal Due Diligence Request List",
       "category": "deals-partnerships",
-      "description": "Modular legal due diligence request list (DDRL) for corporate transactions. Ships a base form covering organization, capitalization, contracts, IP, employment, litigation, compliance, tax, insurance, debt, property, and privacy/cybersecurity. Four optional industry riders gate via boolean toggles: tech / SaaS, life sciences, healthcare provider, and cross-border / trade compliance. Drafted clean-room from public-source consensus across 15 Am Law firm, bar association, and legal publisher DDRLs; no public source language is reused. Includes per-section AI-augmentable arrays so AI workflows can append target-specific custom questions to any rider.",
+      "description": "Modular legal due diligence request list (DDRL) for corporate transactions. Ships a base form covering organization, capitalization, contracts, IP, employment, litigation, compliance, tax, insurance, debt, property, and privacy/cybersecurity. Four optional industry riders gate via boolean toggles: tech / SaaS, life sciences, healthcare provider, and cross-border / trade compliance. Drafted clean-room from public-source consensus across 15 Am Law firm, bar association, and legal publisher DDRLs; no public source language is reused.",
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-due-diligence-request-list",
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Category structure and consensus framing informed by publicly available DDRLs and commentary from Cooley, Skadden, Morgan Lewis, Gunderson Dettmer, Lowenstein Sandler, Holland & Knight, Foley & Lardner, Software Equity Group, the International Bar Association, the American Bar Association, Bass Berry & Sims, and Carta. See practice note for sources. Drafted clean-room; no source language was reused. Licensed under CC BY 4.0.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -12153,15 +12473,6 @@
           ]
         },
         {
-          "name": "data_room_url",
-          "type": "string",
-          "required": false,
-          "section": "Cover Sheet",
-          "description": "URL of the virtual data room (optional; included in cover-sheet instructions if provided)",
-          "default": "",
-          "default_value_rationale": null
-        },
-        {
           "name": "materiality_threshold_usd",
           "type": "string",
           "required": true,
@@ -12184,69 +12495,9 @@
           "type": "number",
           "required": true,
           "section": "Materiality and Lookback",
-          "description": "Default lookback window in years for litigation, compliance, and operational history. Per-category overrides may extend specific sections.",
+          "description": "Lookback window in years applied across litigation, compliance, and operational history. A few sections state their own fixed period in the prose (tax is 6 years; regulatory investigations, settlements, and consent decrees are open-ended).",
           "default": "3",
-          "default_value_rationale": "3 years is consensus baseline for litigation, compliance, and operational history. Tax often warrants 6+ to mirror IRS statute of limitations; regulatory correspondence is conventionally open-ended."
-        },
-        {
-          "name": "litigation_lookback_years",
-          "type": "number",
-          "required": false,
-          "section": "Materiality and Lookback",
-          "description": "Optional per-category override for the litigation lookback window. If blank, falls through to lookback_years. 5 years is appropriate for regulated targets or where prior litigation revealed systemic process failures.",
-          "default": "",
-          "default_value_rationale": null
-        },
-        {
-          "name": "tax_lookback_years",
-          "type": "number",
-          "required": false,
-          "section": "Materiality and Lookback",
-          "description": "Optional per-category override for the tax lookback window. If blank, falls through to lookback_years. 6 years mirrors the IRS substantial- omission statute of limitations and is the safe default for most deals.",
-          "default": "",
-          "default_value_rationale": null
-        },
-        {
-          "name": "compliance_lookback_years",
-          "type": "number",
-          "required": false,
-          "section": "Materiality and Lookback",
-          "description": "Optional per-category override for routine compliance certifications. Regulatory correspondence regarding investigations, settlements, and consent decrees should be requested open-ended regardless of this value.",
-          "default": "",
-          "default_value_rationale": null
-        },
-        {
-          "name": "deal_type",
-          "type": "enum",
-          "required": true,
-          "section": "Deal Type",
-          "description": "Type of transaction the DDRL supports",
-          "default": null,
-          "default_value_rationale": null,
-          "options": [
-            "private_ma_stock_purchase",
-            "private_ma_asset_purchase",
-            "venture_financing",
-            "private_equity_buyout",
-            "ipo_preparation",
-            "public_ma",
-            "cross_border_ma"
-          ]
-        },
-        {
-          "name": "transaction_stage",
-          "type": "enum",
-          "required": true,
-          "section": "Deal Type",
-          "description": "Stage of the transaction. Pre-LOI uses lighter scope; post-LOI uses the full base form plus all triggered riders.",
-          "default": "post_loi_pre_signing",
-          "default_value_rationale": null,
-          "options": [
-            "pre_loi",
-            "post_loi_pre_signing",
-            "signing_to_closing",
-            "post_closing_review"
-          ]
+          "default_value_rationale": "3 years is consensus baseline for litigation, compliance, and operational history. Tax often warrants 6+ to track the IRS statute of limitations; regulatory correspondence is conventionally open-ended."
         },
         {
           "name": "tech_rider_enabled",
@@ -12283,334 +12534,6 @@
           "description": "Enable Section R (Cross-Border / Trade Compliance rider) covering sanctions/OFAC screening, export-control classifications, AML/KYC, FCPA compliance, government-customer exposure, and foreign-investment- screening filings. Recommended on whenever the target has foreign subsidiaries, foreign customers, government customers, or sensitive- jurisdiction exposure. Increasingly mandatory after the 2023 DOJ M&A Safe Harbor Policy.",
           "default": "false",
           "default_value_rationale": null
-        },
-        {
-          "name": "countries_of_operation",
-          "type": "string",
-          "required": false,
-          "section": "Cross-Border Specifics",
-          "description": "Comma-separated list of countries where the target operates, sells, or has employees. Optional; populated when the cross-border rider is enabled to focus the request on specific jurisdictions.",
-          "default": "",
-          "default_value_rationale": null
-        },
-        {
-          "name": "additional_questions_tech",
-          "type": "array",
-          "required": false,
-          "section": "AI Augmentation",
-          "description": "AI-augmentable list of target-specific custom questions appended to the Tech / SaaS rider. Each item is an object with a `question` field. Empty by default. Renders only when tech_rider_enabled is true.",
-          "default": "[]",
-          "default_value_rationale": null,
-          "items": [
-            {
-              "name": "question",
-              "type": "string",
-              "required": false,
-              "section": null,
-              "description": "The custom question text to render in Section O",
-              "default": null,
-              "default_value_rationale": null
-            }
-          ]
-        },
-        {
-          "name": "additional_questions_life_sciences",
-          "type": "array",
-          "required": false,
-          "section": "AI Augmentation",
-          "description": "AI-augmentable list of target-specific custom questions appended to the Life Sciences rider. Empty by default. Renders only when life_sciences_rider_enabled is true.",
-          "default": "[]",
-          "default_value_rationale": null,
-          "items": [
-            {
-              "name": "question",
-              "type": "string",
-              "required": false,
-              "section": null,
-              "description": "The custom question text to render in Section P",
-              "default": null,
-              "default_value_rationale": null
-            }
-          ]
-        },
-        {
-          "name": "additional_questions_healthcare_provider",
-          "type": "array",
-          "required": false,
-          "section": "AI Augmentation",
-          "description": "AI-augmentable list of target-specific custom questions appended to the Healthcare Provider rider. Empty by default. Renders only when healthcare_provider_rider_enabled is true.",
-          "default": "[]",
-          "default_value_rationale": null,
-          "items": [
-            {
-              "name": "question",
-              "type": "string",
-              "required": false,
-              "section": null,
-              "description": "The custom question text to render in Section Q",
-              "default": null,
-              "default_value_rationale": null
-            }
-          ]
-        },
-        {
-          "name": "additional_questions_cross_border",
-          "type": "array",
-          "required": false,
-          "section": "AI Augmentation",
-          "description": "AI-augmentable list of target-specific custom questions appended to the Cross-Border / Trade Compliance rider. Empty by default. Renders only when cross_border_rider_enabled is true.",
-          "default": "[]",
-          "default_value_rationale": null,
-          "items": [
-            {
-              "name": "question",
-              "type": "string",
-              "required": false,
-              "section": null,
-              "description": "The custom question text to render in Section R",
-              "default": null,
-              "default_value_rationale": null
-            }
-          ]
-        },
-        {
-          "name": "additional_questions_general",
-          "type": "array",
-          "required": false,
-          "section": "AI Augmentation",
-          "description": "AI-augmentable list of cross-cutting custom questions that do not belong to any specific rider. Renders at the end of the closing Response Protocol section. Empty by default.",
-          "default": "[]",
-          "default_value_rationale": null,
-          "items": [
-            {
-              "name": "question",
-              "type": "string",
-              "required": false,
-              "section": null,
-              "description": "The custom question text to render at end of document",
-              "default": null,
-              "default_value_rationale": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "openagreements-employee-ip-inventions-assignment",
-      "tier": "internal",
-      "display_name": "OpenAgreements Employee IP and Inventions Assignment",
-      "category": "employment",
-      "description": "Employee proprietary information and inventions assignment agreement with explicit prior-inventions and personal-project carveout language placeholders.",
-      "license": "CC-BY-4.0",
-      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employee-ip-inventions-assignment",
-      "source": "OpenAgreements",
-      "attribution_text": "Authored by OpenAgreements contributors. Baseline structure inspired by permissive public references including the Balanced Employee IP Agreement (CC0) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
-      "allow_derivatives": true,
-      "credits": [],
-      "fields": [
-        {
-          "name": "company_name",
-          "type": "string",
-          "required": false,
-          "section": "Parties",
-          "description": "Legal name of employer",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "company_signatory_name",
-          "type": "string",
-          "required": false,
-          "section": "Parties",
-          "description": "Full name of the authorized signatory signing for the company",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "company_signatory_title",
-          "type": "string",
-          "required": false,
-          "section": "Parties",
-          "description": "Title of the authorized signatory signing for the company",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "employee_name",
-          "type": "string",
-          "required": false,
-          "section": "Parties",
-          "description": "Full legal name of employee",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "effective_date",
-          "type": "date",
-          "required": false,
-          "section": "Timing",
-          "description": "Effective date of this agreement",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "prior_inventions_disclosure",
-          "type": "string",
-          "required": false,
-          "section": "Inventions",
-          "description": "List of prior inventions excluded from assignment, or None",
-          "default": "None listed",
-          "default_value_rationale": null
-        },
-        {
-          "name": "excluded_inventions_statement",
-          "type": "string",
-          "required": false,
-          "section": "Inventions",
-          "description": "Carveout statement for independently developed inventions",
-          "default": "Inventions developed entirely on personal time without use of company equipment, supplies, facilities, confidential information, or trade secrets are excluded to the extent permitted by applicable law.",
-          "default_value_rationale": null
-        },
-        {
-          "name": "confidential_information_definition",
-          "type": "string",
-          "required": false,
-          "section": "Confidentiality",
-          "description": "Definition summary for confidential information obligations",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "return_of_materials_timing",
-          "type": "string",
-          "required": false,
-          "section": "Confidentiality",
-          "description": "Timing for return or deletion of company materials",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "post_termination_assistance",
-          "type": "string",
-          "required": false,
-          "section": "Inventions",
-          "description": "Cooperation obligations after termination",
-          "default": "reasonable assistance with filings and signatures related to assigned inventions",
-          "default_value_rationale": null
-        },
-        {
-          "name": "governing_law",
-          "type": "string",
-          "required": false,
-          "section": "Legal",
-          "description": "Governing law state",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "venue",
-          "type": "string",
-          "required": false,
-          "section": "Legal",
-          "description": "Venue for disputes",
-          "default": "state and federal courts in the governing law state",
-          "default_value_rationale": null
-        }
-      ]
-    },
-    {
-      "name": "openagreements-employment-confidentiality-acknowledgement",
-      "tier": "internal",
-      "display_name": "OpenAgreements Employment Confidentiality Acknowledgement",
-      "category": "employment",
-      "description": "Employee confidentiality and acceptable-use acknowledgement companion for onboarding packets, including reporting and post-employment handling.",
-      "license": "CC-BY-4.0",
-      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-confidentiality-acknowledgement",
-      "source": "OpenAgreements",
-      "attribution_text": "Authored by OpenAgreements contributors using permissive public reference patterns from Papertrail legal-docs (CC0) and open policy frameworks. Licensed under CC BY 4.0.",
-      "allow_derivatives": true,
-      "credits": [],
-      "fields": [
-        {
-          "name": "company_name",
-          "type": "string",
-          "required": false,
-          "section": "Parties",
-          "description": "Legal name of the company",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "employee_name",
-          "type": "string",
-          "required": false,
-          "section": "Parties",
-          "description": "Full legal name of employee",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "policy_effective_date",
-          "type": "date",
-          "required": false,
-          "section": "Timing",
-          "description": "Effective date for this acknowledgement",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "approved_tools_scope",
-          "type": "string",
-          "required": false,
-          "section": "Data Handling",
-          "description": "Approved tools/systems scope for company data",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "data_access_scope",
-          "type": "string",
-          "required": false,
-          "section": "Data Handling",
-          "description": "Permitted access scope and business purpose",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "security_reporting_contact",
-          "type": "string",
-          "required": false,
-          "section": "Reporting",
-          "description": "Contact for reporting incidents or accidental disclosure",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "post_employment_obligations",
-          "type": "string",
-          "required": false,
-          "section": "Post-Employment",
-          "description": "Obligations after employment ends",
-          "default": "no retention, sharing, or use of company confidential information after termination",
-          "default_value_rationale": null
-        },
-        {
-          "name": "acknowledgement_date",
-          "type": "date",
-          "required": false,
-          "section": "Signature",
-          "description": "Date of employee acknowledgement",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "signatory_name",
-          "type": "string",
-          "required": false,
-          "section": "Signature",
-          "description": "Printed name used in signature block",
-          "default": null,
-          "default_value_rationale": null
         }
       ]
     },
@@ -12625,6 +12548,8 @@
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Drafting structure informed by publicly available permissive sources including the DocuSign template library (MIT) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -12745,7 +12670,16 @@
           "required": false,
           "section": "Legal",
           "description": "Governing law state for the offer letter",
-          "default": null,
+          "default": "California",
+          "default_value_rationale": null
+        },
+        {
+          "name": "california_specific_terms",
+          "type": "boolean",
+          "required": false,
+          "section": "Legal",
+          "description": "True when the employee primarily works in California, gating (via include-when) the California-Specific Terms clause (paid sick leave, workers' compensation, California Labor Code coverage). Default true because our user base skews California; when filling for an employee outside California, set this false to strip the California-specific clause.",
+          "default": "true",
           "default_value_rationale": null
         },
         {
@@ -12755,6 +12689,123 @@
           "section": "Timing",
           "description": "Date by which the offer must be accepted",
           "default": null,
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
+      "name": "openagreements-restrictive-covenant-california",
+      "tier": "internal",
+      "display_name": "OpenAgreements Employee Restrictive Covenant (California)",
+      "category": "employment",
+      "description": "California-specific employee restrictive covenant agreement centered on confidentiality, trade secret protection, property return, and non-disparagement. Omits employee competition, customer-solicitation, employee-solicitation, non-dealing, and non-investment employment restraints under Cal. Bus. & Prof. Code sections 16600, 16600.1, and 16600.5, and includes California choice-of-law and forum language reflecting Cal. Lab. Code section 925. Drafted as a starting point for licensed counsel review.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-california",
+      "source": "OpenAgreements",
+      "attribution_text": "Authored by OpenAgreements contributors. California-specific analysis informed by the quote-verified California practice note. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "credits": [],
+      "fields": [
+        {
+          "name": "employer_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Legal name of the employer",
+          "display_label": "Employer",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employer_signatory_name",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Full name of the authorized signatory signing for the employer",
+          "display_label": "Employer Signatory Name",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employer_signatory_title",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Title of the authorized signatory signing for the employer",
+          "display_label": "Employer Signatory Title",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employee_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Full legal name of the employee",
+          "display_label": "Employee",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employee_title",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Employee job title or position (optional)",
+          "display_label": "Employee Title / Position",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "effective_date",
+          "type": "date",
+          "required": false,
+          "section": "Timing",
+          "description": "Effective date of this agreement",
+          "display_label": "Effective Date",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "governing_law",
+          "type": "string",
+          "required": false,
+          "section": "Legal",
+          "description": "Governing law state",
+          "display_label": "Governing Law",
+          "default": "California",
+          "default_value_rationale": null
+        },
+        {
+          "name": "confidentiality_trade_secret_duration",
+          "type": "string",
+          "required": false,
+          "section": "Confidentiality",
+          "description": "Duration of confidentiality obligations for trade secrets",
+          "display_label": "Trade Secrets Duration",
+          "default": "Perpetual",
+          "default_value_rationale": null
+        },
+        {
+          "name": "confidentiality_other_duration",
+          "type": "string",
+          "required": false,
+          "section": "Confidentiality",
+          "description": "Duration of confidentiality obligations for non-trade-secret information",
+          "display_label": "Other Confidential Information Duration",
+          "default": "24 months",
+          "default_value_rationale": null
+        },
+        {
+          "name": "nondisparagement_duration",
+          "type": "string",
+          "required": false,
+          "section": "Non-Disparagement",
+          "description": "Duration of the non-disparagement covenant",
+          "display_label": "Non-Disparagement Duration",
+          "default": "24 months",
           "default_value_rationale": null
         }
       ]
@@ -12770,6 +12821,8 @@
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Florida-specific analysis informed by publicly available legal commentary cited in the related practice note. Licensed under CC BY 4.0.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -13065,6 +13118,293 @@
       ]
     },
     {
+      "name": "openagreements-restrictive-covenant-illinois",
+      "tier": "internal",
+      "display_name": "OpenAgreements Employee Restrictive Covenant (Illinois)",
+      "category": "employment",
+      "description": "Illinois-specific employee restrictive covenant agreement built for the Illinois Freedom to Work Act (820 ILCS 90): confidentiality and trade-secret protection, customer and employee non-solicitation gated on the $45,000 earnings floor, an optional non-compete gated on the $75,000 earnings floor, the written counsel advisal and 14-day review notice, an adequate-consideration recital, protected-worker exclusions, and discretionary judicial reformation. Drafted as a starting point for licensed counsel review.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-illinois",
+      "source": "OpenAgreements",
+      "attribution_text": "Authored by OpenAgreements contributors. Illinois-specific analysis informed by the quote-verified Illinois practice note. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "credits": [],
+      "fields": [
+        {
+          "name": "employer_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Legal name of the employer",
+          "display_label": "Employer",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employer_signatory_name",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Full name of the authorized signatory signing for the employer",
+          "display_label": "Employer Signatory Name",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employer_signatory_title",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Title of the authorized signatory signing for the employer",
+          "display_label": "Employer Signatory Title",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employee_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Full legal name of the employee",
+          "display_label": "Employee",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employee_title",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Employee job title or position (optional)",
+          "display_label": "Employee Title / Position",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "effective_date",
+          "type": "date",
+          "required": false,
+          "section": "Timing",
+          "description": "Effective date of this agreement",
+          "display_label": "Effective Date",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "governing_law",
+          "type": "string",
+          "required": false,
+          "section": "Legal",
+          "description": "Governing law state",
+          "display_label": "Governing Law",
+          "default": "Illinois",
+          "default_value_rationale": null
+        },
+        {
+          "name": "confidentiality_trade_secret_duration",
+          "type": "string",
+          "required": false,
+          "section": "Confidentiality",
+          "description": "Duration of confidentiality obligations for trade secrets",
+          "display_label": "Trade Secrets Duration",
+          "default": "Perpetual",
+          "default_value_rationale": null
+        },
+        {
+          "name": "confidentiality_other_duration",
+          "type": "string",
+          "required": false,
+          "section": "Confidentiality",
+          "description": "Duration of confidentiality obligations for non-trade-secret information",
+          "display_label": "Other Confidential Information Duration",
+          "default": "24 months",
+          "default_value_rationale": "24 months is common for non-trade-secret confidentiality obligations in employment agreements."
+        },
+        {
+          "name": "employee_nonsolicit_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Employee Non-Solicitation",
+          "description": "Whether the employee non-solicitation covenant is included",
+          "display_label": "Employee Non-Solicitation Included",
+          "default": "true",
+          "default_value_rationale": null
+        },
+        {
+          "name": "employee_nonsolicit_duration",
+          "type": "string",
+          "required": false,
+          "section": "Employee Non-Solicitation",
+          "description": "Duration of employee non-solicitation restriction",
+          "display_label": "Employee Non-Solicitation Duration",
+          "default": "12 months",
+          "default_value_rationale": "12 months is a common enforceable duration and sits within the Fla. Stat. section 542.335(1)(d) presumptively-reasonable window for former-employee covenants (<=6 months presumed reasonable; >2 years presumed unreasonable)."
+        },
+        {
+          "name": "covered_employee_period",
+          "type": "string",
+          "required": false,
+          "section": "Employee Non-Solicitation",
+          "description": "Lookback period for determining which employees are covered by the non-solicitation restriction.",
+          "display_label": "Covered Employee Period",
+          "default": "12 months",
+          "default_value_rationale": "12 months is the most common lookback period for employee non-solicitation scope."
+        },
+        {
+          "name": "customer_nonsolicit_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Customer Non-Solicitation",
+          "description": "Whether the customer/partner non-solicitation covenant is included",
+          "display_label": "Customer Non-Solicitation Included",
+          "default": "true",
+          "default_value_rationale": null
+        },
+        {
+          "name": "customer_nonsolicit_duration",
+          "type": "string",
+          "required": false,
+          "section": "Customer Non-Solicitation",
+          "description": "Duration of customer/partner non-solicitation restriction",
+          "display_label": "Customer Non-Solicitation Duration",
+          "default": "12 months",
+          "default_value_rationale": "12 months sits within the Fla. Stat. section 542.335(1)(d) presumptively-reasonable window for former-employee covenants."
+        },
+        {
+          "name": "covered_customer_period",
+          "type": "string",
+          "required": false,
+          "section": "Customer Non-Solicitation",
+          "description": "Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.",
+          "display_label": "Covered Customer Period",
+          "default": "12 months",
+          "default_value_rationale": "12 months is the most common lookback period for customer non-solicitation scope."
+        },
+        {
+          "name": "noncompete_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Whether the non-competition covenant is included. Under Fla. Stat. section 542.335 a non-compete is enforceable when supported by a legitimate business interest and reasonable in time, area, and line of business; this template recites the legitimate-business-interest basis and biases the duration into the presumptively-reasonable window.",
+          "display_label": "Non-Competition Included",
+          "default": "false",
+          "default_value_rationale": "Conservative default. Non-competes are the most heavily scrutinized covenant; include only after confirming a Fla. Stat. section 542.335(1)(b) legitimate business interest exists, the duration is within the presumptively-reasonable window, and (for a Physician) the section 542.336 specialty-monopoly carve-out is addressed."
+        },
+        {
+          "name": "noncompete_duration",
+          "type": "string",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Duration of non-competition restriction",
+          "display_label": "Non-Competition Duration",
+          "default": "12 months",
+          "default_value_rationale": "12 months sits within the Fla. Stat. section 542.335(1)(d) presumptively-reasonable window for former-employee covenants (<=6 months presumed reasonable; >2 years presumed unreasonable). The tool should not default to a presumptively-unreasonable term."
+        },
+        {
+          "name": "territory",
+          "type": "string",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Geographic scope of the non-competition restriction",
+          "display_label": "Restricted Territory",
+          "default": "the geographic area in which Employee provided services",
+          "default_value_rationale": "Tied to the employee's actual service area. Narrower geographic scope is more readily found reasonable; Florida courts will modify rather than void an overbroad territory under Fla. Stat. section 542.335(1)(c)."
+        },
+        {
+          "name": "competitive_business_definition",
+          "type": "string",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Description of the business activities that constitute competition with the employer.",
+          "display_label": "Competitive Business",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "specified_competitors",
+          "type": "string",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Optional named list of specific competitors. Narrowing the restriction to named competitors strengthens enforceability.",
+          "display_label": "Specified Competitors",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "illinois_consideration",
+          "type": "string",
+          "required": false,
+          "section": "Consideration",
+          "description": "Illinois only. The professional or financial benefit given in exchange for the restrictive covenants, recited so the consideration is adequate under 820 ILCS 90/5. Under Midwest Lending Corp. v. Horton, 2023 IL App (3d) 220132, a benefit relied on as consideration must be expressly tied to the covenant on the face of the document — a benefit described only in a separate offer letter did not support a later integrated covenant. State the specific benefit here (for example, a signing or retention bonus, equity grant, or promotion) unless the agreement instead relies on at least two years of employment after signing (the codified Fifield v. Premier Dealer Services benchmark). Shown in the Illinois timing and consideration recital when the Illinois projection is used.",
+          "display_label": "Consideration for Restrictive Covenants (Illinois)",
+          "default": "the compensation, access to Confidential Information, and other benefits Employer provides to Employee under this agreement, which the parties agree are given in exchange for the restrictive covenants",
+          "default_value_rationale": "The default recites the access-to-confidential-information and compensation that the agreement itself provides and expressly ties them to the covenants, addressing the Midwest Lending express-delineation requirement. Counsel should replace it with the specific negotiated benefit, or rely on the two-year continued-employment benchmark, as appropriate."
+        },
+        {
+          "name": "nondealing_included",
+          "type": "boolean",
+          "required": false,
+          "section": "No Business with Covered Customers",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
+          "display_label": "No Business with Covered Customers Included",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "nondealing_duration",
+          "type": "string",
+          "required": false,
+          "section": "No Business with Covered Customers",
+          "description": "Duration of the no-business-with-covered-customers restriction",
+          "display_label": "No Business with Covered Customers Duration",
+          "default": "12 months",
+          "default_value_rationale": null
+        },
+        {
+          "name": "passive_public_holdings_threshold",
+          "type": "string",
+          "required": false,
+          "section": "Definitions",
+          "description": "Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.",
+          "display_label": "Passive Public Holdings Threshold",
+          "default": "five percent",
+          "default_value_rationale": "Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements."
+        },
+        {
+          "name": "noninvestment_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Non-Investment",
+          "description": "Whether the non-investment covenant is included.",
+          "display_label": "Non-Investment Included",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "noninvestment_duration",
+          "type": "string",
+          "required": false,
+          "section": "Non-Investment",
+          "description": "Duration of non-investment restriction",
+          "display_label": "Non-Investment Duration",
+          "default": "12 months",
+          "default_value_rationale": null
+        },
+        {
+          "name": "nondisparagement_duration",
+          "type": "string",
+          "required": false,
+          "section": "Non-Disparagement",
+          "description": "Duration of non-disparagement obligation (measured from termination)",
+          "display_label": "Non-Disparagement Duration",
+          "default": "24 months",
+          "default_value_rationale": "24 months is common for employment non-disparagement provisions."
+        }
+      ]
+    },
+    {
       "name": "openagreements-restrictive-covenant-massachusetts",
       "tier": "internal",
       "display_name": "OpenAgreements Employee Restrictive Covenant (Massachusetts)",
@@ -13075,6 +13415,8 @@
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Massachusetts-specific analysis informed by the quote-verified openagreements.org/legal/non-compete/massachusetts practice note. Licensed under CC BY 4.0.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -13350,6 +13692,283 @@
       ]
     },
     {
+      "name": "openagreements-restrictive-covenant-texas",
+      "tier": "internal",
+      "display_name": "OpenAgreements Employee Restrictive Covenant (Texas)",
+      "category": "employment",
+      "description": "Texas-specific employee restrictive covenant agreement built for the Texas Covenants Not to Compete Act (Tex. Bus. & Com. Code sections 15.50-15.52): confidentiality and trade-secret protection, an ancillary-to-an-otherwise-enforceable-agreement consideration recital, customer non-solicitation and an optional non-compete drafted to reasonable time, area, and scope, mandatory judicial reformation, physician and health-care-practitioner buyout terms, and Texas choice-of-law and forum language. Drafted as a starting point for licensed counsel review.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-texas",
+      "source": "OpenAgreements",
+      "attribution_text": "Authored by OpenAgreements contributors. Texas-specific analysis informed by the quote-verified Texas practice note. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "credits": [],
+      "fields": [
+        {
+          "name": "employer_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Legal name of the employer",
+          "display_label": "Employer",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employer_signatory_name",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Full name of the authorized signatory signing for the employer",
+          "display_label": "Employer Signatory Name",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employer_signatory_title",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Title of the authorized signatory signing for the employer",
+          "display_label": "Employer Signatory Title",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employee_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Full legal name of the employee",
+          "display_label": "Employee",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employee_title",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Employee job title or position (optional)",
+          "display_label": "Employee Title / Position",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "effective_date",
+          "type": "date",
+          "required": false,
+          "section": "Timing",
+          "description": "Effective date of this agreement",
+          "display_label": "Effective Date",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "governing_law",
+          "type": "string",
+          "required": false,
+          "section": "Legal",
+          "description": "Governing law state",
+          "display_label": "Governing Law",
+          "default": "Texas",
+          "default_value_rationale": null
+        },
+        {
+          "name": "confidentiality_trade_secret_duration",
+          "type": "string",
+          "required": false,
+          "section": "Confidentiality",
+          "description": "Duration of confidentiality obligations for trade secrets",
+          "display_label": "Trade Secrets Duration",
+          "default": "Perpetual",
+          "default_value_rationale": null
+        },
+        {
+          "name": "confidentiality_other_duration",
+          "type": "string",
+          "required": false,
+          "section": "Confidentiality",
+          "description": "Duration of confidentiality obligations for non-trade-secret information",
+          "display_label": "Other Confidential Information Duration",
+          "default": "24 months",
+          "default_value_rationale": "24 months is common for non-trade-secret confidentiality obligations in employment agreements."
+        },
+        {
+          "name": "employee_nonsolicit_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Employee Non-Solicitation",
+          "description": "Whether the employee non-solicitation covenant is included",
+          "display_label": "Employee Non-Solicitation Included",
+          "default": "true",
+          "default_value_rationale": null
+        },
+        {
+          "name": "employee_nonsolicit_duration",
+          "type": "string",
+          "required": false,
+          "section": "Employee Non-Solicitation",
+          "description": "Duration of employee non-solicitation restriction",
+          "display_label": "Employee Non-Solicitation Duration",
+          "default": "12 months",
+          "default_value_rationale": "12 months is a common enforceable duration and sits within the Fla. Stat. section 542.335(1)(d) presumptively-reasonable window for former-employee covenants (<=6 months presumed reasonable; >2 years presumed unreasonable)."
+        },
+        {
+          "name": "covered_employee_period",
+          "type": "string",
+          "required": false,
+          "section": "Employee Non-Solicitation",
+          "description": "Lookback period for determining which employees are covered by the non-solicitation restriction.",
+          "display_label": "Covered Employee Period",
+          "default": "12 months",
+          "default_value_rationale": "12 months is the most common lookback period for employee non-solicitation scope."
+        },
+        {
+          "name": "customer_nonsolicit_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Customer Non-Solicitation",
+          "description": "Whether the customer/partner non-solicitation covenant is included",
+          "display_label": "Customer Non-Solicitation Included",
+          "default": "true",
+          "default_value_rationale": null
+        },
+        {
+          "name": "customer_nonsolicit_duration",
+          "type": "string",
+          "required": false,
+          "section": "Customer Non-Solicitation",
+          "description": "Duration of customer/partner non-solicitation restriction",
+          "display_label": "Customer Non-Solicitation Duration",
+          "default": "12 months",
+          "default_value_rationale": "12 months sits within the Fla. Stat. section 542.335(1)(d) presumptively-reasonable window for former-employee covenants."
+        },
+        {
+          "name": "covered_customer_period",
+          "type": "string",
+          "required": false,
+          "section": "Customer Non-Solicitation",
+          "description": "Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.",
+          "display_label": "Covered Customer Period",
+          "default": "12 months",
+          "default_value_rationale": "12 months is the most common lookback period for customer non-solicitation scope."
+        },
+        {
+          "name": "noncompete_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Whether the non-competition covenant is included. Under Fla. Stat. section 542.335 a non-compete is enforceable when supported by a legitimate business interest and reasonable in time, area, and line of business; this template recites the legitimate-business-interest basis and biases the duration into the presumptively-reasonable window.",
+          "display_label": "Non-Competition Included",
+          "default": "false",
+          "default_value_rationale": "Conservative default. Non-competes are the most heavily scrutinized covenant; include only after confirming a Fla. Stat. section 542.335(1)(b) legitimate business interest exists, the duration is within the presumptively-reasonable window, and (for a Physician) the section 542.336 specialty-monopoly carve-out is addressed."
+        },
+        {
+          "name": "noncompete_duration",
+          "type": "string",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Duration of non-competition restriction",
+          "display_label": "Non-Competition Duration",
+          "default": "12 months",
+          "default_value_rationale": "12 months sits within the Fla. Stat. section 542.335(1)(d) presumptively-reasonable window for former-employee covenants (<=6 months presumed reasonable; >2 years presumed unreasonable). The tool should not default to a presumptively-unreasonable term."
+        },
+        {
+          "name": "territory",
+          "type": "string",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Geographic scope of the non-competition restriction",
+          "display_label": "Restricted Territory",
+          "default": "the geographic area in which Employee provided services",
+          "default_value_rationale": "Tied to the employee's actual service area. Narrower geographic scope is more readily found reasonable; Florida courts will modify rather than void an overbroad territory under Fla. Stat. section 542.335(1)(c)."
+        },
+        {
+          "name": "competitive_business_definition",
+          "type": "string",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Description of the business activities that constitute competition with the employer.",
+          "display_label": "Competitive Business",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "specified_competitors",
+          "type": "string",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Optional named list of specific competitors. Narrowing the restriction to named competitors strengthens enforceability.",
+          "display_label": "Specified Competitors",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "nondealing_included",
+          "type": "boolean",
+          "required": false,
+          "section": "No Business with Covered Customers",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
+          "display_label": "No Business with Covered Customers Included",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "nondealing_duration",
+          "type": "string",
+          "required": false,
+          "section": "No Business with Covered Customers",
+          "description": "Duration of the no-business-with-covered-customers restriction",
+          "display_label": "No Business with Covered Customers Duration",
+          "default": "12 months",
+          "default_value_rationale": null
+        },
+        {
+          "name": "passive_public_holdings_threshold",
+          "type": "string",
+          "required": false,
+          "section": "Definitions",
+          "description": "Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.",
+          "display_label": "Passive Public Holdings Threshold",
+          "default": "five percent",
+          "default_value_rationale": "Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements."
+        },
+        {
+          "name": "noninvestment_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Non-Investment",
+          "description": "Whether the non-investment covenant is included.",
+          "display_label": "Non-Investment Included",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "noninvestment_duration",
+          "type": "string",
+          "required": false,
+          "section": "Non-Investment",
+          "description": "Duration of non-investment restriction",
+          "display_label": "Non-Investment Duration",
+          "default": "12 months",
+          "default_value_rationale": null
+        },
+        {
+          "name": "nondisparagement_duration",
+          "type": "string",
+          "required": false,
+          "section": "Non-Disparagement",
+          "description": "Duration of non-disparagement obligation (measured from termination)",
+          "display_label": "Non-Disparagement Duration",
+          "default": "24 months",
+          "default_value_rationale": "24 months is common for employment non-disparagement provisions."
+        }
+      ]
+    },
+    {
       "name": "openagreements-restrictive-covenant-wyoming",
       "tier": "internal",
       "display_name": "OpenAgreements Employee Restrictive Covenant (Wyoming)",
@@ -13360,6 +13979,8 @@
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Wyoming-specific analysis informed by publicly available legal commentary cited in the related practice note. Licensed under CC BY 4.0.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -13635,14 +14256,9 @@
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Drafting structure informed by publicly available Series Seed SAFE stockholder consent materials. Licensed under CC BY 4.0.",
       "allow_derivatives": true,
-      "credits": [
-        {
-          "name": "Joey Tsang",
-          "role": "drafting_editor",
-          "profile_url": "https://www.linkedin.com/in/joey-t-b90912b1/"
-        }
-      ],
-      "derived_from": "Publicly available Series Seed SAFE stockholder consent materials",
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "credits": [],
       "fields": [
         {
           "name": "company_name",
@@ -13694,23 +14310,25 @@
       ]
     },
     {
-      "name": "working-group-list",
+      "name": "openagreements-working-group-list",
       "tier": "internal",
       "display_name": "Working Group List",
       "category": "other",
-      "description": "Standalone working group roster for a transaction. Tracks staffed deal team members and contact details outside the closing checklist document.",
+      "description": "Standalone working group roster for a transaction. Tracks staffed deal team members and their contact details outside the closing checklist document.",
       "license": "CC0-1.0",
-      "source_url": "https://github.com/open-agreements/open-agreements",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-working-group-list",
       "source": "OpenAgreements",
       "attribution_text": "OpenAgreements Working Group List. Licensed under CC0 1.0.",
       "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
           "name": "deal_name",
           "type": "string",
           "required": true,
-          "section": null,
+          "section": "Overview",
           "description": "Name of the deal or transaction",
           "default": null,
           "default_value_rationale": null
@@ -13719,8 +14337,8 @@
           "name": "updated_at",
           "type": "string",
           "required": false,
-          "section": null,
-          "description": "ISO date when the list was last updated",
+          "section": "Overview",
+          "description": "Date the list was last updated (ISO date)",
           "default": null,
           "default_value_rationale": null
         },
@@ -13728,10 +14346,48 @@
           "name": "working_group",
           "type": "array",
           "required": false,
-          "section": null,
-          "description": "Array of working group members (name, organization, role, email)",
+          "section": "Working Group",
+          "description": "Working group members staffed on the transaction",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "name",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Full name of the working group member",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "organization",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Organization or firm the member belongs to",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "role",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Role of the member on the transaction",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "email",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Contact email address for the member",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
         }
       ]
     },
@@ -13746,6 +14402,8 @@
       "source": "Y Combinator",
       "attribution_text": "Based on the Y Combinator Post-Money SAFE, available at https://www.ycombinator.com/documents. Licensed under CC BY-ND 4.0. Copyright Y Combinator.",
       "allow_derivatives": false,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -13860,6 +14518,8 @@
       "source": "Y Combinator",
       "attribution_text": "Based on the Y Combinator Post-Money SAFE, available at https://www.ycombinator.com/documents. Licensed under CC BY-ND 4.0. Copyright Y Combinator.",
       "allow_derivatives": false,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -13965,6 +14625,8 @@
       "source": "Y Combinator",
       "attribution_text": "Based on the Y Combinator Pro Rata Side Letter, available at https://www.ycombinator.com/documents. Licensed under CC BY-ND 4.0. Copyright Y Combinator.",
       "allow_derivatives": false,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {
@@ -14043,6 +14705,8 @@
       "source": "Y Combinator",
       "attribution_text": "Based on the Y Combinator Post-Money SAFE, available at https://www.ycombinator.com/documents. Licensed under CC BY-ND 4.0. Copyright Y Combinator.",
       "allow_derivatives": false,
+      "distribution": "bundled",
+      "artifact_type": "template",
       "credits": [],
       "fields": [
         {

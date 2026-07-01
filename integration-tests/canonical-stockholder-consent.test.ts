@@ -9,10 +9,12 @@ import { compileCanonicalSourceFile } from '../scripts/template_renderer/canonic
 import { loadStyleProfile, renderFromValidatedSpec } from '../scripts/template_renderer/index.mjs';
 import { fillTemplate } from '../src/core/engine.js';
 import { loadMetadata } from '../src/core/metadata.js';
+import { findTemplateDir } from '../src/utils/paths.js';
 
 const it = itAllure.epic('Filling & Rendering');
 const REPO_ROOT = join(import.meta.dirname, '..');
-const TEMPLATE_DIR = join(REPO_ROOT, 'templates', 'openagreements-stockholder-consent-safe');
+const TEMPLATE_DIR = findTemplateDir('openagreements-stockholder-consent-safe');
+if (!TEMPLATE_DIR) throw new Error('openagreements-stockholder-consent-safe template not found');
 const SOURCE_PATH = join(TEMPLATE_DIR, 'template.md');
 const STYLE_PATH = join(REPO_ROOT, 'scripts', 'template-specs', 'styles', 'openagreements-default-v1.json');
 const tempDirs: string[] = [];

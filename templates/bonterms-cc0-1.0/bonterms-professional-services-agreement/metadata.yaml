@@ -1,0 +1,48 @@
+name: Bonterms Professional Services Agreement
+category: professional-services
+description: >-
+  Cover page for the Bonterms Professional Services Agreement (Version 1.2). The standard terms are incorporated by
+  reference from bonterms.com.
+source_url: https://bonterms.com/resources/psa-cover-page-example
+version: '1.2'
+license: CC0-1.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: >-
+  Based on the Bonterms Professional Services Agreement Cover Page, available at
+  https://bonterms.com/resources/psa-cover-page-example. Made available under CC0 1.0.
+fields:
+  - name: customer_name
+    type: string
+    description: Full legal name of the customer
+    section: Parties
+  - name: provider_name
+    type: string
+    description: Full legal name of the provider
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Date the agreement takes effect
+    section: Terms
+  - name: governing_law
+    type: string
+    description: State or jurisdiction whose laws govern the agreement
+    default: California
+    section: Legal
+  - name: courts
+    type: string
+    description: Courts with jurisdiction over disputes
+    default: courts located in San Francisco, California
+    section: Legal
+  - name: deliverables_type
+    type: string
+    description: 'Type of rights in deliverables: "licensed" or "assigned"'
+    default: licensed
+    section: Terms
+priority_fields:
+  - customer_name
+  - provider_name
+  - effective_date
+  - governing_law
+  - courts

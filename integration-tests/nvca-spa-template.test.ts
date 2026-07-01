@@ -11,6 +11,7 @@ import { runFillPipeline } from '../src/core/unified-pipeline.js';
 import { validateFieldSelector } from '../src/core/validation/field-selector.js';
 import { validateFieldSelectorMetadata } from '../src/core/metadata.js';
 import { applySelections, loadSelectionsConfig } from '../src/core/selector.js';
+import { resolveFieldSelectorDir } from '../src/utils/paths.js';
 import {
   allureDescriptionHtml,
   allureParameter,
@@ -64,7 +65,7 @@ interface FieldAssertionPolicy {
 }
 
 const FIELD_SELECTOR_ID = 'nvca-stock-purchase-agreement';
-const FIELD_SELECTOR_DIR = join(import.meta.dirname, '..', 'field-selectors', FIELD_SELECTOR_ID);
+const FIELD_SELECTOR_DIR = resolveFieldSelectorDir(FIELD_SELECTOR_ID);
 
 /**
  * Context-qualified (`>`-anchor) replacement keys that have been migrated to selector contracts

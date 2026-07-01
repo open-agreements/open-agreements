@@ -51,14 +51,18 @@ function extractMetadataFields(metadataPath) {
 
 /**
  * Infer which template a .cto file corresponds to by matching
- * the cto filename to a template directory name.
- * E.g., bonterms-mutual-nda.cto → templates/bonterms-mutual-nda/
+ * the cto filename to a template directory name. Slugs live two levels deep
+ * since #1249: templates/<source>-<rights>/<slug>/.
+ * E.g., bonterms-mutual-nda.cto → templates/bonterms-cc0-1.0/bonterms-mutual-nda/
  */
 function findTemplateDir(ctoFilename) {
   const templateId = basename(ctoFilename, '.cto');
-  const templateDir = join(TEMPLATES_DIR, templateId);
-  if (existsSync(join(templateDir, 'metadata.yaml'))) {
-    return templateDir;
+  for (const segment of readdirSync(TEMPLATES_DIR, { withFileTypes: true })) {
+    if (!segment.isDirectory()) continue;
+    const templateDir = join(TEMPLATES_DIR, segment.name, templateId);
+    if (existsSync(join(templateDir, 'metadata.yaml'))) {
+      return templateDir;
+    }
   }
   return null;
 }

@@ -17,19 +17,21 @@ OpenAgreements itself is licensed under the **Apache License 2.0**, which includ
 
 Each template has its own license, specified in its `metadata.yaml`. Supported licenses:
 
-| License | Can Modify Source? | Can Fill & Use? | Must Attribute? | Directory |
-|---------|-------------------|-----------------|-----------------|-----------|
-| CC BY 4.0 | Yes | Yes | Yes | `templates/` |
-| CC0 1.0 | Yes | Yes | No | `templates/` |
-| CC BY-ND 4.0 | No | Yes (fill in blanks) | Yes | `external/` |
+All content lives under a single `templates/<source>-<rights>/<slug>/` tree — the `<source>-<rights>` segment names the upstream source and its license (e.g. `common-paper-cc-by-4.0`, `yc-cc-by-nd-4.0`, `nvca-free-non-redistributable`). A template's *kind* is derived from its `metadata.yaml`, not from a separate directory:
 
-### Templates (`templates/`)
+| License | Can Modify Source? | Can Fill & Use? | Must Attribute? | Kind (from metadata) |
+|---------|-------------------|-----------------|-----------------|----------------------|
+| CC BY 4.0 | Yes | Yes | Yes | template (`allow_derivatives: true`) |
+| CC0 1.0 | Yes | Yes | No | template (`allow_derivatives: true`) |
+| CC BY-ND 4.0 | No | Yes (fill in blanks) | Yes | external (`allow_derivatives: false`) |
 
-Templates licensed under CC-BY-4.0 or CC0-1.0 allow derivative works. The DOCX files in `templates/` contain pre-baked `{tag}` placeholders and can be modified freely. These are filled directly by the template engine.
+### First-party & derivable templates
 
-### External Templates (`external/`)
+Templates licensed under CC-BY-4.0 or CC0-1.0 allow derivative works. Their DOCX files contain pre-baked `{tag}` placeholders and can be modified freely. These are filled directly by the template engine.
 
-External templates are third-party standard-form documents (e.g., Y Combinator SAFEs) that are redistributable under CC-BY-ND 4.0 but must not be modified. The original DOCX files are committed to the repo **unmodified**. At fill time, the tool applies bracket-to-tag replacement in a temporary directory, fills the values, and produces an output file — the committed source is never altered.
+### External templates (`allow_derivatives: false`)
+
+External templates are third-party standard-form documents (e.g., Y Combinator SAFEs, under `templates/yc-cc-by-nd-4.0/`) that are redistributable under CC-BY-ND 4.0 but must not be modified. The original DOCX files are committed to the repo **unmodified**. At fill time, the tool applies bracket-to-tag replacement in a temporary directory, fills the values, and produces an output file — the committed source is never altered.
 
 **What CC-BY-ND means for you:**
 - You **may** fill in the blanks and bracketed terms for your own deals (this is the intended use)
@@ -46,7 +48,7 @@ Templates licensed under CC BY 4.0 and CC BY-ND 4.0 require attribution. OpenAgr
 1. Including the `attribution_text` from `metadata.yaml` in the generated DOCX
 2. Displaying source URL and license info in the `list` command
 3. Including attribution in each template's README
-4. Maintaining a `LICENSE` file in the `external/` directory with full copyright notices
+4. Maintaining a `LICENSE` file alongside the no-derivatives templates (e.g. `templates/yc-cc-by-nd-4.0/LICENSE`) with full copyright notices
 
 ## What's Still Excluded
 

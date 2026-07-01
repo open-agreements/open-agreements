@@ -42,9 +42,8 @@ jobs:
           rm -rf runtime-pkg
           mkdir -p runtime-pkg
           cp -r dist runtime-pkg/dist
+          # All content is unified under templates/<source>-<rights>/<slug>/ (#1249).
           cp -r templates runtime-pkg/templates
-          cp -r external runtime-pkg/external
-          cp -r field-selectors runtime-pkg/field-selectors
           # bundleDependencies requires the dep to be declared in `dependencies`
           # AND present in node_modules at pack time. Pre-declaring it here lets
           # the install step run without --no-save, so npm pack sees it as bundled.
@@ -62,11 +61,9 @@ jobs:
               exports: {
                 ".": { "import": "./dist/index.js", "types": "./dist/index.d.ts" },
                 "./dist/*": "./dist/*",
-                "./templates/*": "./templates/*",
-                "./external/*": "./external/*",
-                "./field-selectors/*": "./field-selectors/*"
+                "./templates/*": "./templates/*"
               },
-              files: ["dist/", "templates/", "external/", "field-selectors/"],
+              files: ["dist/", "templates/"],
               dependencies: {
                 "@usejunior/docx-core": process.env.DOCX_CORE_VERSION,
                 "@xmldom/xmldom": "^0.9.9",

@@ -10,11 +10,31 @@ export const REPO_ROOT = resolve(__dirname, "../..");
 export const TEMPLATES_DIR = resolve(REPO_ROOT, "templates");
 export const PREVIEWS_DIR = resolve(REPO_ROOT, "site", "assets", "previews");
 
+/**
+ * Map every slug to its on-disk directory. Since the S3 source/rights
+ * restructure (#1249) slugs live two levels deep as
+ * templates/<source>-<rights>/<slug>/. Slugs are globally unique.
+ */
+export function templateSlugDirs() {
+  const map = new Map();
+  for (const segment of readdirSync(TEMPLATES_DIR, { withFileTypes: true })) {
+    if (!segment.isDirectory()) continue;
+    const segmentDir = resolve(TEMPLATES_DIR, segment.name);
+    for (const slug of readdirSync(segmentDir, { withFileTypes: true })) {
+      if (!slug.isDirectory()) continue;
+      if (!map.has(slug.name)) map.set(slug.name, resolve(segmentDir, slug.name));
+    }
+  }
+  return map;
+}
+
+/** Resolve a slug to its directory, or undefined if not present. */
+export function resolveTemplateSlugDir(templateId) {
+  return templateSlugDirs().get(templateId);
+}
+
 export function listTemplateIds() {
-  return readdirSync(TEMPLATES_DIR, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory())
-    .map((entry) => entry.name)
-    .sort();
+  return [...templateSlugDirs().keys()].sort();
 }
 
 // Load and parse a template's metadata.yaml given its directory. Returns {} when
@@ -31,7 +51,8 @@ export function loadMetadataFromDir(dir) {
 }
 
 export function loadTemplateMetadata(templateId) {
-  return loadMetadataFromDir(resolve(TEMPLATES_DIR, templateId));
+  const dir = resolveTemplateSlugDir(templateId);
+  return dir ? loadMetadataFromDir(dir) : {};
 }
 
 function hostMatches(host, domain) {
@@ -76,7 +97,8 @@ export function listOpenAgreementsTemplateIds() {
  * their preview PNGs — so the preview gates exempt them.
  */
 export function isUpstreamAuthored(templateId) {
-  return existsSync(resolve(TEMPLATES_DIR, templateId, "template.mdoc"));
+  const dir = resolveTemplateSlugDir(templateId);
+  return dir ? existsSync(resolve(dir, "template.mdoc")) : false;
 }
 
 /**

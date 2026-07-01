@@ -1,0 +1,69 @@
+name: OpenAgreements Employee Restrictive Covenant (California)
+category: employment
+description: California-specific employee restrictive covenant agreement centered on confidentiality, trade secret protection, property return, and non-disparagement. Omits employee competition, customer-solicitation, employee-solicitation, non-dealing, and non-investment employment restraints under Cal. Bus. & Prof. Code sections 16600, 16600.1, and 16600.5, and includes California choice-of-law and forum language reflecting Cal. Lab. Code section 925. Drafted as a starting point for licensed counsel review.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-california
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. California-specific analysis informed by the quote-verified California practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    default: California
+    section: Legal
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of the non-disparagement covenant
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+priority_fields:
+  - employer_name
+  - employee_name

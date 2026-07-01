@@ -36,25 +36,22 @@ const EMPLOYMENT_OFFER_REQUIRED_VALUES: Record<string, string> = {
   offer_expiration_date: '2026-02-28',
 };
 
+// The employee-IP template was renamed to the Confidentiality & Invention
+// Assignment Agreement (CIIAA, #1249). Its field set changed: no
+// `confidential_information_definition`; instead explicit prior-inventions and
+// company-signatory fields. `prior_inventions_disclosure: 'None'` with
+// California governing law also trips the CA inventions-carveout jurisdiction
+// rule (memo test below).
 const EMPLOYEE_IP_REQUIRED_VALUES: Record<string, string> = {
   company_name: 'Acme, Inc.',
+  company_signatory_name: 'Jordan Founder',
+  company_signatory_title: 'Chief Executive Officer',
   employee_name: 'Taylor Developer',
   effective_date: '2026-03-01',
-  confidential_information_definition: 'all non-public technical and business information',
+  prior_inventions_disclosure: 'None',
   return_of_materials_timing: 'within 5 business days of termination',
   governing_law: 'California',
   venue: 'state and federal courts in San Francisco County, California',
-};
-
-const CONFIDENTIALITY_ACK_REQUIRED_VALUES: Record<string, string> = {
-  company_name: 'Acme, Inc.',
-  employee_name: 'Taylor Developer',
-  policy_effective_date: '2026-03-01',
-  approved_tools_scope: 'company-managed systems and approved productivity tooling',
-  data_access_scope: 'least-privilege access for assigned job duties',
-  security_reporting_contact: 'security@acme.example',
-  acknowledgement_date: '2026-03-01',
-  signatory_name: 'Taylor Developer',
 };
 
 afterEach(() => {
@@ -144,34 +141,17 @@ describe('CLI interface behavior', () => {
     expect(existsSync(outputPath)).toBe(true);
   });
 
-  it('fill command renders output DOCX for employee IP template', () => {
+  it('fill command renders output DOCX for CIIAA template', () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-ip-fill-'));
     tempDirs.push(outDir);
     const outputPath = join(outDir, 'employment-ip.docx');
 
     const args = [
       'fill',
-      'openagreements-employee-ip-inventions-assignment',
+      'openagreements-confidentiality-invention-assignment-agreement',
       '-o',
       outputPath,
       ...Object.entries(EMPLOYEE_IP_REQUIRED_VALUES).flatMap(([key, value]) => ['--set', `${key}=${value}`]),
-    ];
-
-    runCli(args);
-    expect(existsSync(outputPath)).toBe(true);
-  });
-
-  it('fill command renders output DOCX for confidentiality acknowledgement template', () => {
-    const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-ack-fill-'));
-    tempDirs.push(outDir);
-    const outputPath = join(outDir, 'employment-confidentiality-ack.docx');
-
-    const args = [
-      'fill',
-      'openagreements-employment-confidentiality-acknowledgement',
-      '-o',
-      outputPath,
-      ...Object.entries(CONFIDENTIALITY_ACK_REQUIRED_VALUES).flatMap(([key, value]) => ['--set', `${key}=${value}`]),
     ];
 
     runCli(args);
@@ -187,7 +167,7 @@ describe('CLI interface behavior', () => {
 
     const args = [
       'fill',
-      'openagreements-employee-ip-inventions-assignment',
+      'openagreements-confidentiality-invention-assignment-agreement',
       '-o',
       outputPath,
       '--memo',
@@ -260,19 +240,19 @@ describe('CLI interface behavior', () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-memo-md-'));
     tempDirs.push(outDir);
 
-    const outputPath = join(outDir, 'employment-ack.docx');
-    const memoMarkdownPath = join(outDir, 'employment-ack.memo.md');
+    const outputPath = join(outDir, 'employment-ciiaa.docx');
+    const memoMarkdownPath = join(outDir, 'employment-ciiaa.memo.md');
 
     const args = [
       'fill',
-      'openagreements-employment-confidentiality-acknowledgement',
+      'openagreements-confidentiality-invention-assignment-agreement',
       '-o',
       outputPath,
       '--memo',
       'markdown',
       '--memo-md',
       memoMarkdownPath,
-      ...Object.entries(CONFIDENTIALITY_ACK_REQUIRED_VALUES).flatMap(([key, value]) => ['--set', `${key}=${value}`]),
+      ...Object.entries(EMPLOYEE_IP_REQUIRED_VALUES).flatMap(([key, value]) => ['--set', `${key}=${value}`]),
     ];
 
     runCli(args);
@@ -299,10 +279,16 @@ describe('CLI interface behavior', () => {
     expect(existsSync(outputPath)).toBe(true);
   });
 
-  it('fill command blocks templates marked allow_derivatives=false', () => {
+  it('fill command rejects a no-derivatives form lacking external source provenance', () => {
+    // Since #1249 a slug's kind is DERIVED from metadata: allow_derivatives=false
+    // classifies it as an `external` (no-derivatives) template, so it is filled
+    // through the external pipeline rather than the derivable-template path. That
+    // pipeline requires source provenance (`source_sha256`); a no-derivatives
+    // form without it is rejected — no-derivatives content cannot be casually
+    // filled/derived as if it were a first-party template.
     const root = mkdtempSync(join(tmpdir(), 'oa-cli-license-'));
     tempDirs.push(root);
-    const templateDir = join(root, 'templates', 'restricted-template');
+    const templateDir = join(root, 'templates', 'restricted-cc-by-nd-4.0', 'restricted-template');
     mkdirSync(templateDir, { recursive: true });
 
     writeFileSync(
@@ -334,7 +320,7 @@ describe('CLI interface behavior', () => {
         ['fill', 'restricted-template', '-o', outputPath, '--set', 'party_name=Acme Corp'],
         { OPEN_AGREEMENTS_CONTENT_ROOTS: root }
       )
-    ).toThrow(/allow_derivatives=false/);
+    ).toThrow(/source_sha256/);
   });
 
   it('list command shows templates in human-readable output', () => {

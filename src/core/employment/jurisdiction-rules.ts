@@ -27,7 +27,7 @@ export const EMPLOYMENT_JURISDICTION_RULES: JurisdictionRule[] = [
     trigger: {
       template_ids: [
         'openagreements-employment-offer-letter',
-        'openagreements-employee-ip-inventions-assignment',
+        'openagreements-confidentiality-invention-assignment-agreement',
       ],
       field_includes: {
         governing_law: 'california',
@@ -45,7 +45,7 @@ export const EMPLOYMENT_JURISDICTION_RULES: JurisdictionRule[] = [
     jurisdiction: 'California',
     category: 'employee_inventions',
     trigger: {
-      template_ids: ['openagreements-employee-ip-inventions-assignment'],
+      template_ids: ['openagreements-confidentiality-invention-assignment-agreement'],
       field_includes: {
         governing_law: 'california',
       },
@@ -66,7 +66,7 @@ export const EMPLOYMENT_JURISDICTION_RULES: JurisdictionRule[] = [
     trigger: {
       template_ids: [
         'openagreements-employment-offer-letter',
-        'openagreements-employee-ip-inventions-assignment',
+        'openagreements-confidentiality-invention-assignment-agreement',
       ],
       field_includes: {
         governing_law: 'washington',

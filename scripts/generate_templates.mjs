@@ -28,16 +28,21 @@ function writeJson(value, outPath) {
 
 async function postProcessTemplateDocxFiles() {
   const changed = [];
-  for (const entry of readdirSync(resolve(TEMPLATES_DIR), { withFileTypes: true })) {
-    if (!entry.isDirectory()) continue;
-    const docxPath = resolve(TEMPLATES_DIR, entry.name, 'template.docx');
-    if (!existsSync(docxPath)) continue;
+  // templates/<source>-<rights>/<slug>/template.docx (#1249, two levels deep).
+  for (const segment of readdirSync(resolve(TEMPLATES_DIR), { withFileTypes: true })) {
+    if (!segment.isDirectory()) continue;
+    const segmentDir = resolve(TEMPLATES_DIR, segment.name);
+    for (const entry of readdirSync(segmentDir, { withFileTypes: true })) {
+      if (!entry.isDirectory()) continue;
+      const docxPath = resolve(segmentDir, entry.name, 'template.docx');
+      if (!existsSync(docxPath)) continue;
 
-    const buffer = readFileSync(docxPath);
-    const processed = await postProcessGeneratedDocx(buffer);
-    if (processed !== buffer) {
-      writeFileSync(docxPath, processed);
-      changed.push(entry.name);
+      const buffer = readFileSync(docxPath);
+      const processed = await postProcessGeneratedDocx(buffer);
+      if (processed !== buffer) {
+        writeFileSync(docxPath, processed);
+        changed.push(entry.name);
+      }
     }
   }
   return changed;

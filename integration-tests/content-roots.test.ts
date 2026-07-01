@@ -1,11 +1,11 @@
 import AdmZip from 'adm-zip';
 import { execFileSync } from 'node:child_process';
-import { existsSync, mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
-import { findTemplateDir, listTemplateEntries } from '../src/utils/paths.js';
+import { findTemplateDir, getAllTemplatesDirs, listTemplateEntries } from '../src/utils/paths.js';
 import { runFill } from '../src/commands/fill.js';
 import { runValidate } from '../src/commands/validate.js';
 
@@ -61,7 +61,8 @@ function buildMinimalDocx(documentText: string): Buffer {
 }
 
 function writeOverrideTemplate(root: string, templateId = 'override-only-template'): string {
-  const templateDir = join(root, 'templates', templateId);
+  // S3 layout (#1249): slugs live two levels deep as templates/<segment>/<slug>/.
+  const templateDir = join(root, 'templates', 'override-cc-by-4.0', templateId);
   mkdirSync(templateDir, { recursive: true });
   writeFileSync(
     join(templateDir, 'metadata.yaml'),
@@ -92,7 +93,7 @@ describe('content root overrides', () => {
     delete process.env[ENV_KEY];
     const bundled = findTemplateDir('common-paper-mutual-nda');
     expect(bundled).toBeTruthy();
-    expect(bundled).toContain('templates/common-paper-mutual-nda');
+    expect(bundled).toContain('templates/common-paper-cc-by-4.0/common-paper-mutual-nda');
   });
 
   it('discovers additional templates from OPEN_AGREEMENTS_CONTENT_ROOTS', () => {
@@ -114,7 +115,7 @@ describe('content root overrides', () => {
     tempDirs.push(root);
 
     const overriddenId = 'common-paper-mutual-nda';
-    const overrideDir = join(root, 'templates', overriddenId);
+    const overrideDir = join(root, 'templates', 'common-paper-cc-by-4.0', overriddenId);
     mkdirSync(overrideDir, { recursive: true });
 
     process.env[ENV_KEY] = root;
@@ -168,5 +169,45 @@ describe('content root overrides', () => {
     process.env[ENV_KEY] = root;
 
     expect(() => runValidate({ template: 'override-validate-template' })).not.toThrow();
+  });
+});
+
+// Slugs are globally unique across every `templates/<source>-<rights>/` segment,
+// and the resolver indexes by bare slug (src/utils/paths.ts buildIndex). A
+// duplicate slug across two segments/roots would be silently swallowed there
+// (first content root wins), shadowing one template. Fail loudly instead: assert
+// that no slug directory name appears under more than one segment.
+describe('slug uniqueness across templates segments', () => {
+  it('has no duplicate slug directory across any templates/<segment>/', () => {
+    const seen = new Map<string, string>(); // slug -> first "segment" path that claimed it
+    const collisions: string[] = [];
+
+    for (const baseDir of getAllTemplatesDirs()) {
+      if (!existsSync(baseDir)) continue;
+      const segments = readdirSync(baseDir, { withFileTypes: true })
+        .filter((e) => e.isDirectory())
+        .map((e) => e.name);
+      for (const segment of segments) {
+        const segmentDir = join(baseDir, segment);
+        const slugs = readdirSync(segmentDir, { withFileTypes: true })
+          .filter((e) => e.isDirectory())
+          .map((e) => e.name);
+        for (const slug of slugs) {
+          const here = `${baseDir}/${segment}`;
+          const prior = seen.get(slug);
+          if (prior && prior !== here) {
+            collisions.push(`"${slug}" appears in both "${prior}" and "${here}"`);
+          } else {
+            seen.set(slug, here);
+          }
+        }
+      }
+    }
+
+    expect(
+      collisions,
+      `Duplicate template slugs across segments would be silently shadowed by the ` +
+        `glob-by-slug resolver. Rename or dedupe:\n  ${collisions.join('\n  ')}`
+    ).toEqual([]);
   });
 });

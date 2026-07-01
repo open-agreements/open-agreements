@@ -1,0 +1,248 @@
+---
+template_id: openagreements-restrictive-covenant-california
+name: OpenAgreements Employee Restrictive Covenant (California)
+category: employment
+description: >-
+  California-specific employee restrictive covenant agreement centered on confidentiality, trade
+  secret protection, property return, and non-disparagement.
+  Omits employee competition, customer-solicitation, employee-solicitation, non-dealing, and
+  non-investment employment restraints under Cal. Bus. & Prof. Code sections 16600, 16600.1, and 16600.5, and
+  includes California choice-of-law and forum language reflecting Cal. Lab. Code section 925.
+  Drafted as a starting point for licensed counsel review.
+source_url: >-
+  https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-california
+version: "0.1.0"
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: >-
+  Authored by OpenAgreements contributors. California-specific analysis informed by the
+  quote-verified California practice note. Licensed under CC BY 4.0.
+layout_id: cover-standard-signature-v1
+style_id: openagreements-default-v1
+document:
+  title: Employee Restrictive Covenant Agreement
+  label: OpenAgreements Employee Restrictive Covenant (California)
+  version: "0.1.0"
+  license: Free to use under CC BY 4.0
+  include_cloud_doc_line: true
+  defined_term_highlight_mode: definition_site_only
+  cover_row_height: 317
+sections:
+  cover_terms:
+    section_label: Cover Terms
+    heading_title: Cover Terms
+  standard_terms:
+    section_label: Standard Terms
+    heading_title: Standard Terms
+  signature:
+    section_label: Signature Page
+    heading_title: Signatures
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ""
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    default: California
+    section: Legal
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of the non-disparagement covenant
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+priority_fields:
+  - employer_name
+  - employee_name
+---
+
+# Employee Restrictive Covenant Agreement
+
+{% agreement-section type="cover_terms" %}
+## Cover Terms
+
+The terms below are incorporated into and form part of this agreement.
+
+{% cover-terms %}
+{% cover-term kind="row" label="Employer" field="employer_name" /%}
+{% cover-term kind="row" label="Employee" field="employee_name" /%}
+{% cover-term kind="row" label="Employee Title / Position" field="employee_title" include-when="employee_title" /%}
+{% cover-term kind="row" label="Effective Date" field="effective_date" /%}
+{% cover-term kind="row" label="Governing Law" field="governing_law" /%}
+{% cover-term kind="group" label="Confidentiality" /%}
+{% cover-term kind="subrow" label="Trade Secrets Duration" field="confidentiality_trade_secret_duration" /%}
+{% cover-term kind="subrow" label="Other Confidential Information Duration" field="confidentiality_other_duration" /%}
+{% cover-term kind="group" label="Non-Disparagement" /%}
+{% cover-term kind="subrow" label="Duration" field="nondisparagement_duration" /%}
+{% /cover-terms %}
+{% /agreement-section %}
+
+{% agreement-section type="standard_terms" %}
+## Standard Terms
+
+{% clause id="defined-terms" type="definitions" %}
+### Defined Terms
+
+[[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
+
+[[Protected Interests]] means Employer's trade secrets, Confidential Information, company property, and legally protected business information.
+
+[[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
+
+[[Trade Secrets]] has the meaning given in the California Uniform Trade Secrets Act, Cal. Civ. Code § 3426 et seq.
+
+{% /clause %}
+
+{% clause id="timing-and-employee-acknowledgements" %}
+### Timing and Employee Acknowledgements
+
+Employee acknowledges that the confidentiality, company-property, and non-disparagement obligations in this agreement are intended to protect Employer's Protected Interests without restraining Employee from engaging in a lawful profession, trade, or business. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
+
+{% /clause %}
+
+{% clause id="confidential-information-and-trade-secret-protection" %}
+### Confidential Information and Trade Secret Protection
+
+Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue in perpetuity. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms. Trade secrets are protected under California law, including the California Uniform Trade Secrets Act, Cal. Civ. Code § 3426.2.
+
+{% /clause %}
+{% clause id="permitted-disclosures-and-protected-conduct" %}
+### Permitted Disclosures and Protected Conduct
+
+Nothing in this agreement prohibits Employee from: (a) reporting possible violations of law to any government agency, including the Securities and Exchange Commission, the Equal Employment Opportunity Commission, the Occupational Safety and Health Administration, or any other federal, state, or local agency; (b) making disclosures protected under whistleblower provisions of any law; (c) discussing wages, hours, or other terms and conditions of employment as protected by applicable law; (d) testifying truthfully in legal proceedings; or (e) filing a sealed complaint in court using Confidential Information without liability. Pursuant to the Defend Trade Secrets Act (18 U.S.C. § 1833(b)), Employee may not be held criminally or civilly liable for disclosing a trade secret in confidence to a government official or attorney solely for the purpose of reporting or investigating a suspected violation of law, or in a sealed court filing.
+
+{% /clause %}
+{% clause id="return-deletion-and-certification-of-company-property" %}
+### Return, Deletion, and Certification of Company Property
+
+Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request.
+
+{% /clause %}
+{% clause id="non-disparagement" %}
+### Non-Disparagement
+
+During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law.
+
+{% /clause %}
+{% clause id="no-conflicting-obligations" %}
+### No Conflicting Obligations
+
+Employee represents that performing duties for Employer and complying with this agreement does not conflict with any prior agreement, court order, or legal obligation binding on Employee. Employee must promptly disclose to Employer any potential conflict that arises during employment.
+
+{% /clause %}
+{% clause id="notice-to-future-employers-and-other-third-parties" %}
+### Notice to Future Employers and Other Third Parties
+
+Employer may disclose the existence and terms of Employee's confidentiality, trade-secret, return-of-property, and other lawful obligations under this agreement to any prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach those lawful obligations. Employee consents to this disclosure.
+
+{% /clause %}
+{% clause id="remedies" %}
+### Remedies
+
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief to prevent actual or threatened misappropriation of trade secrets under the California Uniform Trade Secrets Act, including Cal. Civ. Code § 3426.2, and to enforce Employee's confidentiality and return-of-property obligations. If a party prevails in an action to enforce a lawful obligation under this agreement, the non-prevailing party must reimburse the prevailing party's reasonable attorney's fees and costs to the extent permitted by applicable law.
+
+{% /clause %}
+
+{% clause id="enforceability-and-severability" %}
+### Enforceability and Severability
+
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable.
+
+{% /clause %}
+
+{% clause id="survival-and-expiration-of-each-covenant" %}
+### Survival and Expiration of Each Covenant
+
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+
+{% /clause %}
+{% clause id="assignment-and-successors" %}
+### Assignment and Successors
+
+Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
+
+{% /clause %}
+
+{% clause id="governing-law-venue-and-dispute-process" %}
+### Governing Law, Venue, and Dispute Process
+
+This agreement is governed by the law listed in Cover Terms, including Cal. Bus. & Prof. Code §§ 16600, 16600.1, and 16600.5, and Cal. Lab. Code § 925. For an Employee who primarily resides and works in California, this agreement does not require Employee, as a condition of employment, to adjudicate a claim arising in California outside California or to waive the substantive protection of California law, except to the extent Cal. Lab. Code § 925 permits a different provision because Employee was individually represented by counsel in negotiating it.
+
+{% /clause %}
+{% clause id="entire-agreement-amendment-waiver-and-electronic-signatures" %}
+### Entire Agreement, Amendment, Waiver, and Electronic Signatures
+
+This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. This agreement may be amended only in writing signed by both parties. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
+
+{% /clause %}
+{% /agreement-section %}
+
+{% agreement-section type="signature" %}
+## Signatures
+
+{% signature-block arrangement="entity-plus-individual" %}
+
+By signing this agreement, each party acknowledges and agrees to the restrictive covenant obligations above. Employee confirms having read and understood each provision, including the Cover Terms.
+
+{% signer id="employer" kind="entity" capacity="through_representative" label="Employer" %}
+Employer: {% field name="employer_name" /%}
+
+Signature: _______________
+Signatory Name: {% field name="employer_signatory_name" /%}
+Title: {% field name="employer_signatory_title" /%}
+Date: _______________
+
+{% /signer %}
+{% signer id="employee" kind="individual" capacity="personal" label="Employee" %}
+**Employee**
+
+Signature: _______________
+Print Name: {% field name="employee_name" /%}
+Date: _______________
+{% /signer %}
+{% /signature-block %}
+{% /agreement-section %}

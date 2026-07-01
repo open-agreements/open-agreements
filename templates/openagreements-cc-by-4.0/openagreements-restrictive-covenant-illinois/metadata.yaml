@@ -1,0 +1,181 @@
+name: OpenAgreements Employee Restrictive Covenant (Illinois)
+category: employment
+description: 'Illinois-specific employee restrictive covenant agreement built for the Illinois Freedom to Work Act (820 ILCS 90): confidentiality and trade-secret protection, customer and employee non-solicitation gated on the $45,000 earnings floor, an optional non-compete gated on the $75,000 earnings floor, the written counsel advisal and 14-day review notice, an adequate-consideration recital, protected-worker exclusions, and discretionary judicial reformation. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-illinois
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Illinois-specific analysis informed by the quote-verified Illinois practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    section: Legal
+    default: Illinois
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is a common enforceable duration and sits within the Fla. Stat. section 542.335(1)(d) presumptively-reasonable window for former-employee covenants (<=6 months presumed reasonable; >2 years presumed unreasonable).
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months sits within the Fla. Stat. section 542.335(1)(d) presumptively-reasonable window for former-employee covenants.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Under Fla. Stat. section 542.335 a non-compete is enforceable when supported by a legitimate business interest and reasonable in time, area, and line of business; this template recites the legitimate-business-interest basis and biases the duration into the presumptively-reasonable window.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    default_value_rationale: Conservative default. Non-competes are the most heavily scrutinized covenant; include only after confirming a Fla. Stat. section 542.335(1)(b) legitimate business interest exists, the duration is within the presumptively-reasonable window, and (for a Physician) the section 542.336 specialty-monopoly carve-out is addressed.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    default_value_rationale: 12 months sits within the Fla. Stat. section 542.335(1)(d) presumptively-reasonable window for former-employee covenants (<=6 months presumed reasonable; >2 years presumed unreasonable). The tool should not default to a presumptively-unreasonable term.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee provided services
+    section: Non-Competition
+    default_value_rationale: Tied to the employee's actual service area. Narrower geographic scope is more readily found reasonable; Florida courts will modify rather than void an overbroad territory under Fla. Stat. section 542.335(1)(c).
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Narrowing the restriction to named competitors strengthens enforceability.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: illinois_consideration
+    type: string
+    description: Illinois only. The professional or financial benefit given in exchange for the restrictive covenants, recited so the consideration is adequate under 820 ILCS 90/5. Under Midwest Lending Corp. v. Horton, 2023 IL App (3d) 220132, a benefit relied on as consideration must be expressly tied to the covenant on the face of the document — a benefit described only in a separate offer letter did not support a later integrated covenant. State the specific benefit here (for example, a signing or retention bonus, equity grant, or promotion) unless the agreement instead relies on at least two years of employment after signing (the codified Fifield v. Premier Dealer Services benchmark). Shown in the Illinois timing and consideration recital when the Illinois projection is used.
+    display_label: Consideration for Restrictive Covenants (Illinois)
+    default: the compensation, access to Confidential Information, and other benefits Employer provides to Employee under this agreement, which the parties agree are given in exchange for the restrictive covenants
+    section: Consideration
+    default_value_rationale: The default recites the access-to-confidential-information and compensation that the agreement itself provides and expressly ties them to the covenants, addressing the Midwest Lending express-delineation requirement. Counsel should replace it with the specific negotiated benefit, or rely on the two-year continued-employment benchmark, as appropriate.
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

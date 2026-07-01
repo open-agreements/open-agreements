@@ -13,6 +13,18 @@ import yaml from 'js-yaml';
 export const LicenseEnum = z.enum(['CC-BY-4.0', 'CC0-1.0', 'CC-BY-ND-4.0']);
 export type License = z.infer<typeof LicenseEnum>;
 
+/**
+ * How a managed artifact ships (S3 source/rights restructure, #1249):
+ * `bundled` = the DOCX is committed in-repo; `linked` = only transformation
+ * instructions ship and the source is fetched from its upstream URL.
+ */
+export const DistributionEnum = z.enum(['bundled', 'linked']);
+export type Distribution = z.infer<typeof DistributionEnum>;
+
+/** Whether a directory holds a fillable template or a field-selector. */
+export const ArtifactTypeEnum = z.enum(['template', 'field-selector']);
+export type ArtifactType = z.infer<typeof ArtifactTypeEnum>;
+
 /** Field kinds supported by template, external-template, and fieldSelector metadata. */
 const FieldTypeEnum = z.enum(['string', 'date', 'number', 'boolean', 'enum', 'array', 'multiselect']);
 export type FieldType = z.infer<typeof FieldTypeEnum>;
@@ -375,6 +387,13 @@ const TemplateMetadataBaseSchema = z.object({
   license: LicenseEnum,
   allow_derivatives: z.boolean(),
   attribution_text: z.string(),
+  // Distribution/artifact metadata surfaced by the S3 source/rights restructure
+  // (#1249). `distribution` records how the artifact ships (bundled DOCX vs.
+  // linked upstream source); `artifact_type` distinguishes a fillable template
+  // from a field-selector. Both are optional so pre-restructure metadata still
+  // validates.
+  distribution: DistributionEnum.optional(),
+  artifact_type: ArtifactTypeEnum.optional(),
   fields: z.array(FieldDefinitionSchema),
   priority_fields: z.array(z.string()).default([]),
   credits: z.array(TemplateCreditSchema).default([]),
@@ -481,6 +500,8 @@ export const FieldSelectorMetadataSchema = z.object({
   source_version: z.string(),
   license_note: z.string(),
   optional: z.boolean().default(false),
+  distribution: DistributionEnum.optional(),
+  artifact_type: ArtifactTypeEnum.optional(),
   source_sha256: z.string().optional(),
   fields: z.array(FieldDefinitionSchema).default([]),
   priority_fields: z.array(z.string()).default([]),

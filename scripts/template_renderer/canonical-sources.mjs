@@ -49,8 +49,14 @@ export function discoverTemplateSources(repoRoot) {
   const templatesDir = join(repoRoot, TEMPLATES_DIR);
   const sources = [];
 
-  for (const slug of readdirSync(templatesDir)) {
-    const dir = join(templatesDir, slug);
+  // Since the source/rights restructure (#1249) slugs live two levels deep as
+  // templates/<source>-<rights>/<slug>/. Walk each segment, then each slug.
+  for (const segment of readdirSync(templatesDir)) {
+    const segmentDir = join(templatesDir, segment);
+    if (!isDirectory(segmentDir)) continue;
+
+    for (const slug of readdirSync(segmentDir)) {
+    const dir = join(segmentDir, slug);
     if (!isDirectory(dir)) continue;
 
     const canonicalPath = join(dir, CANONICAL_TEMPLATE_FILENAME);
@@ -72,6 +78,7 @@ export function discoverTemplateSources(repoRoot) {
         templatePath: null,
         jsonPath: relative(repoRoot, handAuthoredPath),
       });
+    }
     }
   }
 

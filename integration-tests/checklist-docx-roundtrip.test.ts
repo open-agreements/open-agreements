@@ -95,8 +95,8 @@ const baseChecklist: ClosingChecklist = {
 // ---------------------------------------------------------------------------
 
 async function renderChecklistDocx(checklist: ClosingChecklist): Promise<Buffer> {
-  const templateDir = findTemplateDir('closing-checklist');
-  if (!templateDir) throw new Error('closing-checklist template not found');
+  const templateDir = findTemplateDir('openagreements-closing-checklist');
+  if (!templateDir) throw new Error('openagreements-closing-checklist template not found');
 
   const tempDir = mkdtempSync(join(tmpdir(), 'oa-roundtrip-'));
   tempDirs.push(tempDir);

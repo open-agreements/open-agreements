@@ -82,15 +82,13 @@ interface ClauseSignal {
 
 const EMPLOYMENT_TEMPLATE_IDS = new Set<string>([
   'openagreements-employment-offer-letter',
-  'openagreements-employee-ip-inventions-assignment',
-  'openagreements-employment-confidentiality-acknowledgement',
+  'openagreements-confidentiality-invention-assignment-agreement',
   'openagreements-restrictive-covenant-wyoming',
 ]);
 
 const TEMPLATE_SOURCE_DATES: Record<string, string> = {
   'openagreements-employment-offer-letter': '2026-02-10',
-  'openagreements-employee-ip-inventions-assignment': '2026-02-10',
-  'openagreements-employment-confidentiality-acknowledgement': '2026-02-10',
+  'openagreements-confidentiality-invention-assignment-agreement': '2026-02-10',
   'openagreements-restrictive-covenant-wyoming': '2026-03-29',
 };
 
@@ -201,7 +199,7 @@ const CLAUSE_SIGNALS: Record<string, ClauseSignal[]> = {
         'Can licensed counsel confirm whether an offer acceptance deadline should be added?',
     },
   ],
-  'openagreements-employee-ip-inventions-assignment': [
+  'openagreements-confidentiality-invention-assignment-agreement': [
     {
       id: 'prior-inventions-disclosure',
       field: 'prior_inventions_disclosure',
@@ -234,17 +232,6 @@ const CLAUSE_SIGNALS: Record<string, ClauseSignal[]> = {
         'Can licensed counsel confirm whether a statutory carveout statement is required for this jurisdiction?',
     },
     {
-      id: 'confidential-information-definition',
-      field: 'confidential_information_definition',
-      missingSeverity: 'high',
-      missingSummary:
-        'Confidential information definition signal is missing because confidential_information_definition is blank.',
-      presentSummary:
-        'Confidential information definition signal is present based on confidential_information_definition.',
-      followUpQuestionWhenMissing:
-        'Can licensed counsel confirm whether confidential information scope is defined clearly enough?',
-    },
-    {
       id: 'return-of-materials',
       field: 'return_of_materials_timing',
       missingSeverity: 'medium',
@@ -254,51 +241,6 @@ const CLAUSE_SIGNALS: Record<string, ClauseSignal[]> = {
         'Return-of-materials signal is present based on return_of_materials_timing.',
       followUpQuestionWhenMissing:
         'Can licensed counsel confirm whether return and deletion timing should be explicit?',
-    },
-  ],
-  'openagreements-employment-confidentiality-acknowledgement': [
-    {
-      id: 'approved-tools-scope',
-      field: 'approved_tools_scope',
-      missingSeverity: 'medium',
-      missingSummary:
-        'Approved tools scope signal is missing because approved_tools_scope is blank.',
-      presentSummary:
-        'Approved tools scope signal is present based on approved_tools_scope.',
-      followUpQuestionWhenMissing:
-        'Can licensed counsel confirm whether approved tools and systems need clearer scope?',
-    },
-    {
-      id: 'data-access-scope',
-      field: 'data_access_scope',
-      missingSeverity: 'medium',
-      missingSummary:
-        'Data access scope signal is missing because data_access_scope is blank.',
-      presentSummary: 'Data access scope signal is present based on data_access_scope.',
-      followUpQuestionWhenMissing:
-        'Can licensed counsel confirm whether access scope language needs additional limits?',
-    },
-    {
-      id: 'security-reporting-contact',
-      field: 'security_reporting_contact',
-      missingSeverity: 'high',
-      missingSummary:
-        'Security reporting contact signal is missing because security_reporting_contact is blank.',
-      presentSummary:
-        'Security reporting contact signal is present based on security_reporting_contact.',
-      followUpQuestionWhenMissing:
-        'Can licensed counsel confirm whether reporting paths and notification timing should be expanded?',
-    },
-    {
-      id: 'post-employment-obligations',
-      field: 'post_employment_obligations',
-      missingSeverity: 'medium',
-      missingSummary:
-        'Post-employment obligations signal is missing because post_employment_obligations is blank.',
-      presentSummary:
-        'Post-employment obligations signal is present based on post_employment_obligations.',
-      followUpQuestionWhenMissing:
-        'Can licensed counsel confirm whether post-employment confidentiality language is complete?',
     },
   ],
   'openagreements-restrictive-covenant-wyoming': [
