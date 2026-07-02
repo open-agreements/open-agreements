@@ -36,7 +36,9 @@ describe('README generation', () => {
       expect(first).toContain('## Available Templates');
       expect(first).toContain('## Available Skills');
       expect(first).toContain('## Packages');
-      expect(first).toContain('## Template Filling via MCP');
+      // MCP/CLI setup lives in docs/using-with-ai-agents.md; the README keeps a pointer.
+      expect(first).toContain('## Use it with AI agents & the CLI');
+      expect(first).toContain('docs/using-with-ai-agents.md');
 
       // Content-first sections (Legal Practice Library leads the README).
       expect(first).toContain('## Legal Practice Library');

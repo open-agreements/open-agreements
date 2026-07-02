@@ -70,11 +70,9 @@ const CONTENTS = [
   ["Templates", "#available-templates"],
   ["Checklists", "#checklists"],
   ["Law Surveys", "#law-surveys"],
-  ["For AI Agents", "#for-ai-agents"],
   ["Available Skills", "#available-skills"],
-  ["Template Filling via MCP", "#template-filling-via-mcp"],
+  ["Use it with AI agents & the CLI", "#use-it-with-ai-agents--the-cli"],
   ["Packages", "#packages"],
-  ["Install", "#install"],
   ["Documentation", "#documentation"],
   ["Privacy", "#privacy"],
   ["See Also", "#see-also"],
@@ -140,7 +138,7 @@ function renderLegalPracticeLibrary() {
   const library = buildLibrary({ rootDir: root });
   const lines = [];
   lines.push(
-    `Primary-source-backed legal practice guides, projected from openagreements.org as plain markdown under [\`legal-practice-library/\`](${githubTreeUrl("legal-practice-library")}). Each guide cites primary law and links to its canonical page (with machine-readable twins — see [For AI Agents](#for-ai-agents)).`,
+    `Primary-source-backed legal practice guides, projected from openagreements.org as plain markdown under [\`legal-practice-library/\`](${githubTreeUrl("legal-practice-library")}). Each guide cites primary law and links to its canonical page (with machine-readable twins — see [Use it with AI agents \& the CLI](#use-it-with-ai-agents--the-cli)).`,
   );
   lines.push("");
   lines.push(

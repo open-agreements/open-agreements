@@ -37,11 +37,9 @@ document. It does not provide legal advice; consult an attorney.
 - [Templates](#available-templates)
 - [Checklists](#checklists)
 - [Law Surveys](#law-surveys)
-- [For AI Agents](#for-ai-agents)
 - [Available Skills](#available-skills)
-- [Template Filling via MCP](#template-filling-via-mcp)
+- [Use it with AI agents & the CLI](#use-it-with-ai-agents--the-cli)
 - [Packages](#packages)
-- [Install](#install)
 - [Documentation](#documentation)
 - [Privacy](#privacy)
 - [See Also](#see-also)
@@ -52,7 +50,7 @@ document. It does not provide legal advice; consult an attorney.
 
 ## Legal Practice Library
 
-Primary-source-backed legal practice guides, projected from openagreements.org as plain markdown under [`legal-practice-library/`](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library). Each guide cites primary law and links to its canonical page (with machine-readable twins — see [For AI Agents](#for-ai-agents)).
+Primary-source-backed legal practice guides, projected from openagreements.org as plain markdown under [`legal-practice-library/`](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library). Each guide cites primary law and links to its canonical page (with machine-readable twins — see [Use it with AI agents & the CLI](#use-it-with-ai-agents--the-cli)).
 
 | Topic | What it covers | Coverage | Markdown | HTML |
 |-------|----------------|----------|----------|------|
@@ -198,21 +196,6 @@ Side-by-side comparison tables across jurisdictions. The web pages also publish 
 | U.S. State Consumer Privacy Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/privacy/us.md) | [HTML](https://openagreements.org/surveys/privacy/us) |
 | Worldwide Non-Compete Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/non-compete/worldwide.md) | [HTML](https://openagreements.org/surveys/non-compete/worldwide) |
 
-## For AI Agents
-
-Every practice guide, survey, and checklist is plain markdown in
-[`legal-practice-library/`](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library) — clone or fetch it directly. The pages also publish machine-readable twins on openagreements.org, which vary by content type:
-
-| Content | Markdown | JSON | Other |
-|---------|----------|------|-------|
-| Practice guides | `.md` or `/markdown` | `.json` or `/json` | — |
-| Law surveys | — | `.json` or `/json` | `.csv` (spreadsheet import) |
-| Checklists | `.md` or `/markdown` | `.json` or `/json` | `contract-api.json` (some contract checklists) |
-
-For example: `https://openagreements.org/practice-guides/non-compete/us/texas.json`, `https://openagreements.org/surveys/non-compete/us.csv`.
-
-The Legal Practice Library is a one-way projection from the OpenAgreements publishing workflow at [openagreements.org](https://openagreements.org); fixes land upstream, not in this repo. Content is licensed CC BY 4.0.
-
 ## Available Skills
 
 Install any skill by name (paths below are for browsing only — installs are name-based and survive reorganization):
@@ -259,53 +242,11 @@ npx skills add open-agreements/open-agreements --skill <skill-name>
 
 Internal repo-maintenance skills (marked `internal: true` in their SKILL.md metadata) are excluded from this catalog and from default `npx skills add` installs.
 
-## Template Filling via MCP
+## Use it with AI agents & the CLI
 
-Discover templates, interview for field values, and render a signed-ready DOCX —
-from a coding agent (Claude Code, Cursor, Gemini CLI) over MCP, or from the CLI.
-The MCP server today focuses on **template filling**; the Legal Practice Library
-above is consumed as markdown or via the web twins.
+Fill any template from a coding agent over MCP — local stdio or the hosted server at `https://openagreements.org/api/mcp` — or from the `open-agreements` CLI, and read every guide, survey, and checklist as machine-readable JSON/CSV twins.
 
-> *Local stdio MCP and the hosted HTTP server at `openagreements.org/api/mcp` expose the same workflow; the hosted server adds a `search_templates` tool.*
-
-### Quick Start
-
-#### With Claude Code
-
-Ask Claude:
-
-```text
-Fill the Common Paper mutual NDA for my company
-```
-
-Claude can discover templates, interview you for field values, and render a signed-ready DOCX.
-
-#### With the CLI
-
-```bash
-# See all available templates
-open-agreements list
-
-# Fill a template from a JSON data file
-open-agreements fill common-paper-mutual-nda -d values.json -o my-nda.docx
-
-# Fill with inline values
-open-agreements fill common-paper-mutual-nda --set party_1_name="Acme Corp" --set governing_law="Delaware"
-```
-
-#### Example Prompts
-
-- "Draft an NDA for our construction subcontractor"
-- "Create a consulting agreement for our insurance agency"
-- "Fill the independent contractor agreement for a freelance designer"
-- "Generate a SAFE with a $5M valuation cap"
-
-#### What Happens
-
-1. The agent runs `list --json` to discover templates and their fields.
-2. It interviews you for field values grouped by section.
-3. It runs `fill <template>` to render a DOCX preserving the source formatting.
-4. You review and sign the output document.
+→ **[Using OpenAgreements with AI agents & the CLI](https://github.com/open-agreements/open-agreements/blob/main/docs/using-with-ai-agents.md)** — setup for Claude Code, Cursor, and Gemini CLI; the CLI reference; and the machine-readable twins table.
 
 ## Packages
 
@@ -316,136 +257,6 @@ open-agreements fill common-paper-mutual-nda --set party_1_name="Acme Corp" --se
 | [@open-agreements/contracts-workspace](https://github.com/open-agreements/open-agreements/blob/main/packages/contracts-workspace/README.md) | Workspace-oriented CLI for organizing and tracking contract repositories |
 | [@open-agreements/contracts-workspace-mcp](https://github.com/open-agreements/open-agreements/blob/main/packages/contracts-workspace-mcp/README.md) | Local stdio MCP server for contracts workspace operations |
 | [@open-agreements/checklist-mcp](https://github.com/open-agreements/open-agreements/blob/main/packages/checklist-mcp/README.md) | Local stdio MCP server for OpenAgreements checklist memory operations |
-
-### What Gets Installed
-
-```text
-open-agreements/
-  bin/                    # CLI entry point
-  dist/                   # Compiled TypeScript
-  templates/              # All content: templates/<source>-<rights>/<slug>/
-                          #   fillable DOCX templates, vendored no-derivatives
-                          #   forms (e.g. YC SAFEs), and field-selector
-                          #   instructions — kind is set per slug in metadata.yaml
-  legal-practice-library/ # Practice guides, surveys, and checklists (markdown)
-  skills/                 # Agent skill definitions
-  server.json             # MCP server manifest
-  gemini-extension.json   # Gemini CLI extension config
-  README.md, LICENSE
-```
-
-NVCA field-selector templates are downloaded at runtime and are not bundled in the package.
-
-<details>
-<summary><strong>CLI Reference</strong></summary>
-
-### `list`
-
-Show available templates with license info and field counts.
-
-```bash
-open-agreements list
-
-# Machine-readable JSON for agent skills and automation
-open-agreements list --json
-```
-
-### `fill <template>`
-
-Render a filled DOCX from a template.
-
-```bash
-# From a JSON data file
-open-agreements fill common-paper-mutual-nda -d data.json -o output.docx
-
-# With inline --set flags
-open-agreements fill common-paper-mutual-nda --set party_1_name="Acme Corp" --set governing_law="Delaware"
-```
-
-### `validate [template]`
-
-Run the validation pipeline on one or all templates.
-
-```bash
-open-agreements validate
-open-agreements validate common-paper-mutual-nda
-```
-
-</details>
-
-<details>
-<summary><strong>Agent Setup Details</strong></summary>
-
-### Claude Code
-
-```bash
-npx skills add open-agreements/open-agreements
-```
-
-### Gemini CLI
-
-```bash
-gemini extensions install https://github.com/open-agreements/open-agreements
-```
-
-### Cursor
-
-This repository includes a Cursor plugin manifest at `.cursor-plugin/plugin.json` with MCP wiring in `mcp.json`.
-
-### Local Vs Hosted Execution
-
-- **Local**: `npx`, global install, or stdio MCP. Processing happens on your machine.
-- **Hosted**: `https://openagreements.org/api/mcp`. Template filling runs server-side for faster setup.
-
-Choose based on document sensitivity and internal policy. See the trust checklist below for the data-flow summary.
-
-</details>
-
-## Install
-
-### Agent Skill (recommended)
-
-```bash
-npx skills add open-agreements/open-agreements
-```
-
-### Remote MCP
-
-Connect any MCP-compatible agent to the hosted server at `https://openagreements.org/api/mcp`.
-
-**Claude Code**
-
-```bash
-claude mcp add --transport http open-agreements https://openagreements.org/api/mcp
-```
-
-**Codex CLI**
-
-```bash
-codex mcp add open-agreements --url https://openagreements.org/api/mcp
-```
-
-**Other agents** — point your client at `https://openagreements.org/api/mcp` (streamable HTTP).
-
-### Gemini CLI Extension
-
-```bash
-gemini extensions install https://github.com/open-agreements/open-agreements
-```
-
-### CLI
-
-```bash
-npm install -g open-agreements
-```
-
-Or run directly with zero install:
-
-```bash
-npx -y open-agreements@latest list
-```
-
----
 
 ## Documentation
 
