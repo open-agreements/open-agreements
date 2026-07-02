@@ -132,6 +132,9 @@ jobs:
       - name: Validate generated README freshness
         run: npm run check:readme
 
+      - name: Validate generated llms.txt freshness
+        run: npm run check:llms
+
   isolated-runtime-smoke:
     runs-on: ubuntu-latest
     steps:

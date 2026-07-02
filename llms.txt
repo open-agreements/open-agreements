@@ -1,0 +1,46 @@
+# OpenAgreements
+
+> Open, primary-source-backed U.S. legal content — practice guides, 50-state surveys, reviewer checklists, and standard agreement templates. Built for legal teams and the agents helping them.
+
+Every practice guide cites primary law; templates start from recognized standard forms (Common Paper, Bonterms, NVCA, YC SAFE) and keep source, license, and validation context with each document. Plain markdown here, machine-readable JSON/CSV twins on openagreements.org. This is legal information, not legal advice — consult an attorney.
+
+## Practice Guides
+
+- [Non-Compete & Restrictive Covenants](https://openagreements.org/practice-guides/non-compete): Enforceability, blue-pencil reformation, tolling, choice of law, and FTC-rule status. (56 U.S. states + international)
+- [Consumer Data Privacy](https://openagreements.org/practice-guides/privacy/us): CCPA/CPRA and every comprehensive state privacy act — who's covered, consumer rights, opt-outs, and who enforces. (51 U.S. states)
+- [AI Vendors](https://openagreements.org/practice-guides/ai-vendors): Zero-data-retention, data residency, and the terms that matter in AI vendor contracts. (9 practice guides)
+- [AI & the Workforce](https://openagreements.org/practice-guides): AI in hiring and adverse-action, workforce AI policies, and outside-counsel transitions. (20 practice guides)
+- [Privacy-Policy Requirement Phrasings](https://openagreements.org/practice-guides/privacy/us): Preferred phrasings for what a U.S. consumer privacy policy must disclose. (8 practice guides)
+
+## Law Surveys
+
+- [U.S. 50-State Non-Compete Survey](https://openagreements.org/surveys/non-compete/us)
+- [U.S. invention-assignment survey](https://openagreements.org/surveys/invention-assignment/us)
+- [U.S. State Consumer Privacy Survey](https://openagreements.org/surveys/privacy/us)
+- [Worldwide Non-Compete Survey](https://openagreements.org/surveys/non-compete/worldwide)
+
+## Checklists
+
+- [Non-Compete review](https://openagreements.org/checklists/non-compete/us): Clause-by-clause reviewer checklists — a baseline plus 50-state overlays.
+- [Privacy-Policy review](https://openagreements.org/checklists/privacy-policy/us): What a compliant U.S. consumer privacy policy must contain.
+- [Venture Financing review](https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement): NVCA model-document review (e.g. the Stock Purchase Agreement).
+
+## Templates
+
+- [SAFEs](https://github.com/open-agreements/open-agreements/tree/main/templates) (4): Y Combinator SAFE variants for early-stage fundraising.
+- [Venture Financing](https://github.com/open-agreements/open-agreements/tree/main/templates) (7): NVCA model documents for Series A and later rounds.
+- [Deals & Partnerships](https://github.com/open-agreements/open-agreements/tree/main/templates) (6): Design partner, pilot, partnership, amendment, LOI, and term sheet agreements.
+- [Sales & Licensing](https://github.com/open-agreements/open-agreements/tree/main/templates) (8): Cloud service agreements, software licenses, and order forms.
+- [Confidentiality](https://github.com/open-agreements/open-agreements/tree/main/templates) (3): Mutual and one-way NDAs from industry-standard sources.
+- [Board & Stockholder Consents](https://github.com/open-agreements/open-agreements/tree/main/templates) (2): Written board and stockholder consents authorizing SAFE and other early-stage financings.
+- [Employment](https://github.com/open-agreements/open-agreements/tree/main/templates) (7): Offer letters, IP assignments, confidentiality acknowledgements, and restrictive covenants.
+- [Professional Services](https://github.com/open-agreements/open-agreements/tree/main/templates) (4): PSAs, SOWs, and independent contractor agreements.
+- [Data & Compliance](https://github.com/open-agreements/open-agreements/tree/main/templates) (4): DPAs, BAAs, and AI addendums for regulated workflows.
+- [Deal Process](https://github.com/open-agreements/open-agreements/tree/main/templates) (3): Working group lists, diligence request lists, and closing checklists for transactions.
+- [Other](https://github.com/open-agreements/open-agreements/tree/main/templates) (1): Additional templates that do not map to the primary categories.
+
+## Optional
+
+- [Using OpenAgreements with AI agents & MCP](https://github.com/open-agreements/open-agreements/blob/main/docs/supported-tools.md): local + hosted MCP servers, agent skills, and the CLI for programmatic template filling
+- [openagreements.org](https://openagreements.org): machine-readable JSON/CSV twins of every guide, survey, checklist, and template
+- [Contributing](https://github.com/open-agreements/open-agreements/blob/main/CONTRIBUTING.md): propose a form source, request coverage, or open a pull request
