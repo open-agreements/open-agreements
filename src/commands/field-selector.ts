@@ -47,6 +47,9 @@ export async function runFieldSelectorCommand(args: FieldSelectorRunArgs): Promi
     console.log(`Filled ${result.metadata.name}`);
     console.log(`Output: ${result.outputPath}`);
     console.log(`Fields used: ${result.fieldsUsed.join(', ')}`);
+    for (const warning of result.warnings) {
+      console.warn(`Warning: ${warning}`);
+    }
     if (result.computedOutPath && result.computedArtifact) {
       console.log(`Computed artifact: ${result.computedOutPath}`);
     }

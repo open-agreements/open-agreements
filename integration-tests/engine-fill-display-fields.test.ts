@@ -94,6 +94,9 @@ async function loadEngineHarness(opts: EngineHarnessOptions): Promise<EngineHarn
     return {
       outputPath: args.outputPath,
       fieldsUsed: Object.keys(args.values),
+      providedFieldsUsed: Object.keys(args.values),
+      fillCommandCount: 1,
+      warnings: [],
     };
   });
 

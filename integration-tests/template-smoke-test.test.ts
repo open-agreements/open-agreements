@@ -42,6 +42,15 @@ const testCases = fixtureFiles.filter((id) => {
   return dir !== undefined && existsSync(join(dir, 'template.docx'));
 });
 
+// Templates whose packaged DOCX is the humanized manual-fill variant (bracket
+// prose, zero {token} fill commands) — filling returns the document unchanged
+// with a guardrail warning. Machine-fillable twins are tracked in
+// legal-explainer #1378; when a template gains tokens, remove it from this list.
+const MANUAL_FILL_ONLY = new Set([
+  'common-paper-software-license-agreement',
+  'openagreements-restrictive-covenant-florida',
+]);
+
 describe('E2E smoke test — fill all templates with complete field data', () => {
   it.each(testCases)(
     '%s fills cleanly with all fields populated',
@@ -56,7 +65,23 @@ describe('E2E smoke test — fill all templates with complete field data', () =>
       const outputPath = join(tempDir, `${templateId}-filled.docx`);
 
       // Fill template through the full pipeline (clean → patch → selections → fill)
-      await fillTemplate({ templateDir, values: fixtureData, outputPath });
+      const result = await fillTemplate({ templateDir, values: fixtureData, outputPath });
+
+      // 0. Fill-truthfulness guardrail (issues #579/#580): token-less
+      // manual-fill documents must say so; token-bearing templates must
+      // actually consume fields and carry no zero-command warning.
+      const zeroCommandWarnings = result.warnings.filter((w) =>
+        w.includes('no machine-fillable fields')
+      );
+      if (MANUAL_FILL_ONLY.has(templateId)) {
+        expect(result.fillCommandCount, `${templateId}: expected token-less docx`).toBe(0);
+        expect(result.fieldsUsed, `${templateId}: nothing can be used`).toEqual([]);
+        expect(zeroCommandWarnings, `${templateId}: missing unchanged-document warning`).toHaveLength(1);
+      } else {
+        expect(result.fillCommandCount, `${templateId}: expected fill commands`).toBeGreaterThan(0);
+        expect(result.providedFieldsUsed.length, `${templateId}: no provided fields consumed`).toBeGreaterThan(0);
+        expect(zeroCommandWarnings, `${templateId}: unexpected zero-command warning`).toHaveLength(0);
+      }
 
       // 1. Output file exists and is non-empty
       const outputBuffer = readFileSync(outputPath);

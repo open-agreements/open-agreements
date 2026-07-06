@@ -84,6 +84,9 @@ async function loadFillHarness(opts: FillHarnessOptions = {}): Promise<FillHarne
       metadata: { name: 'Mock Template' },
       outputPath,
       fieldsUsed: ['company_name'],
+      providedFieldsUsed: ['company_name'],
+      fillCommandCount: 1,
+      warnings: [],
       verify: { passed: true, checks: [] },
     };
   });
@@ -94,6 +97,9 @@ async function loadFillHarness(opts: FillHarnessOptions = {}): Promise<FillHarne
       metadata: { name: 'Mock External Template' },
       outputPath,
       fieldsUsed: ['company_name'],
+      providedFieldsUsed: ['company_name'],
+      fillCommandCount: 1,
+      warnings: [],
       stages: {},
     };
   });
@@ -104,6 +110,9 @@ async function loadFillHarness(opts: FillHarnessOptions = {}): Promise<FillHarne
       metadata: { name: 'Mock FieldSelector Template' },
       outputPath,
       fieldsUsed: ['company_name'],
+      providedFieldsUsed: ['company_name'],
+      fillCommandCount: 1,
+      warnings: [],
       stages: {},
     };
   });

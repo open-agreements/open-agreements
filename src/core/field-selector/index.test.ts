@@ -72,6 +72,9 @@ describe('runFieldSelector', () => {
     const runFillPipelineMock = vi.fn(async ({ outputPath }: { outputPath: string }) => ({
       outputPath,
       fieldsUsed: ['company_name'],
+      providedFieldsUsed: ['company_name'],
+      fillCommandCount: 1,
+      warnings: [],
       stages: {
         cleaned: '/tmp/cleaned.docx',
         patched: '/tmp/patched.docx',
@@ -150,6 +153,9 @@ describe('runFieldSelector', () => {
     const runFillPipelineMock = vi.fn(async ({ outputPath }: { outputPath: string }) => ({
       outputPath,
       fieldsUsed: ['company_name'],
+      providedFieldsUsed: ['company_name'],
+      fillCommandCount: 1,
+      warnings: [],
       stages: {
         cleaned: '/tmp/cleaned.docx',
         patched: '/tmp/patched.docx',
@@ -215,6 +221,9 @@ describe('runFieldSelector', () => {
     const runFillPipelineMock = vi.fn(async ({ outputPath }: { outputPath: string }) => ({
       outputPath,
       fieldsUsed: ['company_name'],
+      providedFieldsUsed: ['company_name'],
+      fillCommandCount: 1,
+      warnings: [],
       stages: {
         cleaned: '/tmp/cleaned.docx',
         patched: '/tmp/patched.docx',
@@ -280,6 +289,9 @@ describe('runFieldSelector', () => {
       return {
         outputPath,
         fieldsUsed: ['company_name', 'company_counsel_name'],
+        providedFieldsUsed: ['company_name', 'company_counsel_name'],
+        fillCommandCount: 1,
+        warnings: [],
         stages: {
           cleaned: '/tmp/cleaned.docx',
           patched: '/tmp/patched.docx',

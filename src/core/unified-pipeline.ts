@@ -14,6 +14,7 @@ import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import { getParagraphText, replaceParagraphTextRange } from '@usejunior/docx-core';
+import { listCommands } from 'docx-templates';
 import { prepareFillData, fillDocx, type ConfirmClauseDescriptor } from './fill-pipeline.js';
 import { cleanDocument } from './field-selector/cleaner.js';
 import { patchDocument } from './field-selector/patcher.js';
@@ -68,8 +69,58 @@ export interface PipelineOptions {
 
 export interface PipelineResult {
   outputPath: string;
+  /**
+   * Prepared data keys that are actually referenced by a fill command
+   * ({field}, {IF field}, {FOR x IN field}) in the final pre-fill document.
+   * Includes blank-defaulted fields (they genuinely substitute an empty
+   * placeholder); excludes caller-supplied keys the document never consumes.
+   */
   fieldsUsed: string[];
+  /** Subset of fieldsUsed whose values the caller actually supplied. */
+  providedFieldsUsed: string[];
+  /** Fill commands found in the final pre-fill document (post clean/patch/selections). */
+  fillCommandCount: number;
+  /**
+   * Structured guardrail warnings for callers (CLI/API/MCP): zero-fill-command
+   * documents, failed verification checks. Other advisory console output
+   * (priority fields, selector warnings, zero-match patch keys) intentionally
+   * stays console-only for now.
+   */
+  warnings: string[];
   stages?: { clean: string; patch: string; fill: string };
+}
+
+/**
+ * Static command-reference analysis of the final pre-fill document.
+ *
+ * Uses docx-templates listCommands() — the same parser fillDocx's
+ * createReport() uses — to enumerate {…} commands and collect every
+ * identifier referenced in INS/IF/FOR command expressions. This is a static
+ * superset of what the fill will read (it does not execute conditionals),
+ * NOT runtime value-read telemetry; for the current template corpus all
+ * command expressions are bare identifiers / `FOR x IN y` / `$x.prop`, so
+ * the intersection with data keys is exact.
+ *
+ * Known accepted imprecision: fillDocx strips drafting-note paragraphs after
+ * this analysis, so a token that lives only inside a stripped drafting note
+ * would still be counted.
+ */
+async function analyzeFillCommands(templateBuf: Buffer): Promise<{
+  commandCount: number;
+  referencedIdentifiers: Set<string>;
+}> {
+  const commands = await listCommands(
+    templateBuf.buffer.slice(templateBuf.byteOffset, templateBuf.byteOffset + templateBuf.byteLength) as ArrayBuffer,
+    ['{', '}']
+  );
+  const referencedIdentifiers = new Set<string>();
+  for (const command of commands) {
+    if (command.type !== 'INS' && command.type !== 'IF' && command.type !== 'FOR') continue;
+    for (const match of command.code.matchAll(/[A-Za-z_][A-Za-z0-9_]*/g)) {
+      referencedIdentifiers.add(match[0]);
+    }
+  }
+  return { commandCount: commands.length, referencedIdentifiers };
 }
 
 /**
@@ -170,14 +221,35 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
       stages = { clean: cleanedPath, patch: patchedPath, fill: '' };
     }
 
-    // Step 4: Prepare fill data
+    // Step 4: Prepare fill data.
+    // Display-field computation is instrumented so field-usage reporting can
+    // credit the SOURCE fields consumed while deriving a computed key (e.g.
+    // party_1_company feeds party_1_company_display, and only the _display
+    // key appears in the document).
+    const computeReads = new Set<string>();
+    const computeWrites = new Set<string>();
+    const instrumentedCompute = computeDisplayFields
+      ? (d: Record<string, unknown>) => {
+          const proxy = new Proxy(d, {
+            get(target, prop, receiver) {
+              if (typeof prop === 'string') computeReads.add(prop);
+              return Reflect.get(target, prop, receiver);
+            },
+            set(target, prop, value, receiver) {
+              if (typeof prop === 'string') computeWrites.add(prop);
+              return Reflect.set(target, prop, value, receiver);
+            },
+          });
+          computeDisplayFields(proxy);
+        }
+      : undefined;
     const data = prepareFillData({
       values,
       fields,
       priorityFieldNames,
       useBlankPlaceholder: true,
       coerceBooleans,
-      computeDisplayFields,
+      computeDisplayFields: instrumentedCompute,
       confirmClauses: options.confirmClauses,
     });
 
@@ -189,6 +261,18 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
       writeFileSync(preSelectPath, templateBuf);
       await applySelections(preSelectPath, postSelectPath, selectionsConfig, data);
       templateBuf = readFileSync(postSelectPath);
+    }
+
+    // Step 5.5: Analyze fill commands on the exact buffer handed to fillDocx —
+    // after clean → selector-contracts → patch → selections, so patch-injected
+    // tokens (e.g. the yc-safe externals) are counted.
+    const warnings: string[] = [];
+    const { commandCount, referencedIdentifiers } = await analyzeFillCommands(templateBuf);
+    if (commandCount === 0) {
+      warnings.push(
+        'Template artifact contains no machine-fillable fields after clean/patch/selections; ' +
+        'the document is returned unchanged (manual-fill variant). Provided values were not applied.'
+      );
     }
 
     // Step 6: Fill
@@ -215,23 +299,44 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
       await postProcess(outputPath);
     }
 
-    // Step 8: Verify
+    // Step 8: Verify — failures surface to callers via warnings (soft; no throw)
     const verifyResult = await verify(outputPath);
     if (!verifyResult.passed) {
-      const failures = verifyResult.checks
-        .filter((c) => !c.passed)
+      const failedChecks = verifyResult.checks.filter((c) => !c.passed);
+      const failures = failedChecks
         .map((c) => `${c.name}: ${c.details ?? 'failed'}`)
         .join('; ');
       console.warn(`Warning: verification issues: ${failures}`);
+      for (const check of failedChecks) {
+        warnings.push(`verify: ${check.name}: ${check.details ?? 'failed'}`);
+      }
     }
 
     if (keepIntermediate) {
       console.log(`Intermediate files preserved at: ${tempDir}`);
     }
 
+    // A key counts as "used" when the document references it directly, or when
+    // it was read while deriving a computed key the document references
+    // (source fields of *_display values must be credited — only the computed
+    // key appears in the document).
+    const anyComputedKeyReferenced = [...computeWrites].some((key) =>
+      referencedIdentifiers.has(key)
+    );
+    const usedKeys = new Set(referencedIdentifiers);
+    if (anyComputedKeyReferenced) {
+      for (const key of computeReads) usedKeys.add(key);
+    }
+    const fieldsUsed = Object.keys(data).filter(
+      (key) => usedKeys.has(key) && !syntheticFieldKeys.has(key)
+    );
+    const providedKeys = new Set(Object.keys(values));
     return {
       outputPath,
-      fieldsUsed: Object.keys(data).filter((key) => !syntheticFieldKeys.has(key)),
+      fieldsUsed,
+      providedFieldsUsed: fieldsUsed.filter((key) => providedKeys.has(key)),
+      fillCommandCount: commandCount,
+      warnings,
       stages,
     };
   } finally {

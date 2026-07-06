@@ -67,6 +67,9 @@ describe('runExternalFill', () => {
     const runFillPipelineMock = vi.fn(async ({ outputPath }: { outputPath: string }) => ({
       outputPath,
       fieldsUsed: ['company_name'],
+      providedFieldsUsed: ['company_name'],
+      fillCommandCount: 1,
+      warnings: [],
       stages: {},
     }));
 
