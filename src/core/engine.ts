@@ -289,8 +289,14 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
     console.warn(`Warning: unknown field(s) not in metadata: ${unknownKeys.join(', ')}`);
   }
 
+  // Dual-artifact templates (LE-projected) ship a humanized `template.docx`
+  // for human download plus a machine-fillable `template.fill.docx` carrying
+  // the {field} tokens — fill from the fill variant when it exists.
+  const fillVariantPath = join(templateDir, 'template.fill.docx');
+  const templatePath = existsSync(fillVariantPath)
+    ? fillVariantPath
+    : join(templateDir, 'template.docx');
   // Build cleanPatch if replacements.json or clean.json exists
-  const templatePath = join(templateDir, 'template.docx');
   const replacementsPath = join(templateDir, 'replacements.json');
   const cleanJsonPath = join(templateDir, 'clean.json');
   const hasReplacements = existsSync(replacementsPath);

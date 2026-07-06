@@ -186,13 +186,47 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
   const docxTextForTokenScan = extractDocxText(templatePath);
   const docxHasFillTokens = /\{(?:IF |FOR |END|\$|\w+\})/.test(docxTextForTokenScan);
   const hasMdocTwin = existsSync(join(templateDir, 'template.mdoc'));
-  if (!docxHasFillTokens && hasMdocTwin) {
+
+  // Dual-artifact layout (LE-projected, #1378): `template.docx` is the
+  // humanized human download and `template.fill.docx` carries the machine-fill
+  // tokens. When the fill variant exists, the token-coverage/FOR/multiselect
+  // scans below run against IT, the human doc must itself be token-free, and
+  // the unsafe-tag security scan covers BOTH documents (the fill variant is
+  // scanned in the main branch below).
+  const fillVariantPath = join(templateDir, 'template.fill.docx');
+  const hasFillVariant = existsSync(fillVariantPath);
+  if (hasFillVariant) {
+    if (docxHasFillTokens) {
+      errors.push(
+        'template.docx must be token-free when template.fill.docx is present ' +
+        '(dual-artifact layout: humanized human doc + machine-fill variant); ' +
+        'found fill tokens in template.docx'
+      );
+    }
+    if (existsSync(join(templateDir, 'replacements.json'))) {
+      errors.push(
+        'template.fill.docx cannot be combined with replacements.json — the ' +
+        'declarative-replacements pipeline patches template.docx and would never ' +
+        'see the fill variant'
+      );
+      return { templateId, valid: false, errors, warnings };
+    }
+    const humanRawXml = extractRawDocumentXml(templatePath);
+    if (humanRawXml) {
+      scanForUnsafeTemplateTags(humanRawXml, errors);
+    }
+  } else if (!docxHasFillTokens && hasMdocTwin) {
     const rawXml = extractRawDocumentXml(templatePath);
     if (rawXml) {
       scanForUnsafeTemplateTags(rawXml, errors);
     }
     return { templateId, valid: errors.length === 0, errors, warnings };
   }
+
+  // The document the fill engine actually consumes — all token scans below
+  // target this path, and error/warning messages name it.
+  const scanPath = hasFillVariant ? fillVariantPath : templatePath;
+  const scanName = hasFillVariant ? 'template.fill.docx' : 'template.docx';
 
   const metadataFieldNames = new Set(metadata.fields.map((f) => f.name));
   const priorityFieldNames = new Set(metadata.priority_fields);
@@ -349,7 +383,7 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
     );
   } else {
     // Original behavior: scan DOCX text directly for {tags}
-    const text = extractDocxText(templatePath);
+    const text = hasFillVariant ? extractDocxText(scanPath) : docxTextForTokenScan;
     const placeholderRegex = /\{(\w+)\}/g;
     const foundTags = new Set<string>();
     let match;
@@ -416,7 +450,7 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
 
     // Security: scan for docx-templates control/code tags that should not exist
     // in open-source templates. Only simple {identifier} tags are allowed.
-    const rawXml = extractRawDocumentXml(templatePath);
+    const rawXml = extractRawDocumentXml(scanPath);
     if (rawXml) {
       scanForUnsafeTemplateTags(rawXml, errors);
     }
@@ -438,11 +472,11 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
       if (!inDocx) {
         if (priorityFieldNames.has(fieldName)) {
           errors.push(
-            `Priority field "${fieldName}" defined in metadata but not found as {${fieldName}} in template.docx`
+            `Priority field "${fieldName}" defined in metadata but not found as {${fieldName}} in ${scanName}`
           );
         } else {
           warnings.push(
-            `Optional field "${fieldName}" defined in metadata but not found as {${fieldName}} in template.docx`
+            `Optional field "${fieldName}" defined in metadata but not found as {${fieldName}} in ${scanName}`
           );
         }
       }
@@ -454,7 +488,7 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
       if (controlTokens.has(tag)) continue;
       if (!metadataFieldNames.has(tag)) {
         warnings.push(
-          `Placeholder {${tag}} found in template.docx but not defined in metadata fields`
+          `Placeholder {${tag}} found in ${scanName} but not defined in metadata fields`
         );
       }
     }

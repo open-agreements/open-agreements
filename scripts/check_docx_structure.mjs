@@ -6,7 +6,10 @@ import { fileURLToPath } from 'node:url';
 
 import JSZip from 'jszip';
 
-const DEFAULT_PATTERN = 'templates/*/*/template.docx';
+const DEFAULT_PATTERNS = [
+  'templates/*/*/template.docx',
+  'templates/*/*/template.fill.docx',
+];
 
 export const CHECKS = {
   ORPHAN_COMMENTS_PART: {
@@ -79,7 +82,7 @@ function parseArgs(argv) {
   }
 
   if (parsed.patterns.length === 0) {
-    parsed.patterns.push(DEFAULT_PATTERN);
+    parsed.patterns.push(...DEFAULT_PATTERNS);
   }
 
   return parsed;
@@ -92,7 +95,7 @@ function printHelp() {
       '',
       'Runs lightweight OOXML structural checks for Word unreadable-content failure modes.',
       '',
-      'Defaults to: templates/*/*/template.docx',
+      'Defaults to: templates/*/*/template.docx + templates/*/*/template.fill.docx',
       '',
       'Options:',
       '      --format=json   Emit machine-readable JSON output',
