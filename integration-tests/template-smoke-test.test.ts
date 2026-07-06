@@ -14,6 +14,7 @@ import { itAllure } from './helpers/allure-test.js';
 import { seconds } from './helpers/timeouts.js';
 import { fillTemplate } from '../src/core/engine.js';
 import { verifyTemplateFill } from '../src/core/fill-utils.js';
+import { extractDocxText } from '../src/core/validation/template.js';
 import { findTemplateDir, resolveTemplateDir } from '../src/utils/paths.js';
 
 const it = itAllure.epic('Filling & Rendering');
@@ -54,13 +55,8 @@ const testCases = fixtureFiles.filter((id) => {
 function isManualFillOnly(templateDir: string): boolean {
   const fillVariant = join(templateDir, 'template.fill.docx');
   const docPath = existsSync(fillVariant) ? fillVariant : join(templateDir, 'template.docx');
-  const xml = new AdmZip(docPath).getEntry('word/document.xml')?.getData().toString('utf-8') ?? '';
-  // Reassemble text per paragraph (tokens may split across runs, never across
-  // paragraphs) — same shape as validateTemplate's token sniff.
-  const paragraphs = [...xml.matchAll(/<w:p[\s>][\s\S]*?<\/w:p>/g)].map((p) =>
-    [...p[0].matchAll(/<w:t[^>]*>([^<]*)<\/w:t>/g)].map((t) => t[1]).join('')
-  );
-  return !paragraphs.some((text) => /\{(?:IF |FOR |END|\$|\w+\})/.test(text));
+  // Same extraction + token sniff validateTemplate uses on this decision.
+  return !/\{(?:IF |FOR |END|\$|\w+\})/.test(extractDocxText(docPath));
 }
 
 describe('E2E smoke test — fill all templates with complete field data', () => {
