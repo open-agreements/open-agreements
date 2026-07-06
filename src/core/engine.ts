@@ -132,6 +132,18 @@ function computeDisplayFields(data: Record<string, unknown>, fieldNames: Set<str
     }
   }
 
+  // ── Unfilled signature-block fields ──
+  // Signatory tokens sit on ruled signature lines, so an unfilled one must
+  // render as a clean rule — not a highlighted blank-underscore stub on top
+  // of the rule (open-agreements#588). deriveSignatoryFields already blanks
+  // these when the template declares a *_signatory_type field; this covers
+  // templates without one (e.g. the restrictive-covenant family).
+  for (const key of fieldNames) {
+    if (/(^|_)signatory_(name|title|email|company)$/.test(key) && isBlankPlaceholder(data[key])) {
+      data[key] = '';
+    }
+  }
+
   // ── Bonterms signatory defaults + computed fields ──
   for (const n of [1, 2]) {
     const p = `party_${n}`;

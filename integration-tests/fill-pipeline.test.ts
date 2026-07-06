@@ -1481,6 +1481,46 @@ describe('Parametric smoke test — signatory fields across all templates', () =
   }, seconds(60));
 });
 
+describe('Unfilled signature-block fields — no highlighted stub on ruled lines (issue #588)', () => {
+  // The restrictive-covenant family has employer_signatory_name/title fields but
+  // NO *_signatory_type field, so the deriveSignatoryFields path never runs. The
+  // signature "rule" is the table cell's bottom border; an unfilled signatory
+  // token must render empty, not as a highlighted _______ stub on top of the rule.
+  const RC_DIR = templateDirFor('openagreements-restrictive-covenant-wyoming');
+
+  it('omitted signatory fields render as clean rules (no blank-underscore stub)', async () => {
+    const spy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    try {
+      // dummyAllValues fills every metadata field EXCEPT signatory fields, so the
+      // signatory fields are the only ones that would blank-default.
+      const xml = await fillAndExtractXml(RC_DIR, dummyAllValues(RC_DIR));
+      expect(xml).not.toContain(BLANK_PLACEHOLDER);
+      // Signature rows themselves survive (labels + ruled cells still present)
+      expect(xml).toContain('Signatory Name');
+      expect(xml).toContain('>Title<');
+    } finally {
+      spy.mockRestore();
+    }
+  }, seconds(30));
+
+  it('provided signatory fields still render with highlight stripped', async () => {
+    const spy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    try {
+      const values = {
+        ...dummyAllValues(RC_DIR),
+        employer_signatory_name: 'Alice Johnson',
+        employer_signatory_title: 'CEO',
+      };
+      const xml = await fillAndExtractXml(RC_DIR, values);
+      expect(xml).toContain('Alice Johnson');
+      // The filled signatory runs must not keep their authoring highlight
+      expect(xml).not.toMatch(/<w:highlight[^>]*>(?:(?!<\/w:r>).)*Alice Johnson/s);
+    } finally {
+      spy.mockRestore();
+    }
+  }, seconds(30));
+});
+
 describe('confirmation cover notice + clause renumbering', () => {
   const confirmFields = [
     { name: 'covered', type: 'boolean', default: 'false' },
