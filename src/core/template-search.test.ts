@@ -8,7 +8,7 @@ import { searchTemplates } from './template-search.js';
 const TEMPLATES = [
   {
     name: 'common-paper-mutual-nda',
-    display_name: 'Common Paper Mutual NDA',
+    display_name: 'Mutual NDA',
     category: 'confidentiality',
     description: 'A mutual non-disclosure agreement cover page based on Common Paper\'s standard terms.',
     source: 'Common Paper',
@@ -21,7 +21,7 @@ const TEMPLATES = [
   },
   {
     name: 'common-paper-one-way-nda',
-    display_name: 'Common Paper One-Way NDA',
+    display_name: 'One-Way NDA',
     category: 'confidentiality',
     description: 'A one-way (unilateral) non-disclosure agreement cover page based on Common Paper\'s standard terms.',
     source: 'Common Paper',
@@ -32,7 +32,7 @@ const TEMPLATES = [
   },
   {
     name: 'common-paper-data-processing-agreement',
-    display_name: 'Common Paper Data Processing Agreement',
+    display_name: 'Data Processing Agreement',
     category: 'data-compliance',
     description: 'A data processing agreement cover page and standard terms. Covers GDPR and data protection compliance.',
     source: 'Common Paper',
@@ -43,7 +43,7 @@ const TEMPLATES = [
   },
   {
     name: 'common-paper-business-associate-agreement',
-    display_name: 'Common Paper Business Associate Agreement',
+    display_name: 'Business Associate Agreement',
     category: 'data-compliance',
     description: 'A HIPAA business associate agreement cover page and standard terms.',
     source: 'Common Paper',
@@ -75,7 +75,7 @@ const TEMPLATES = [
   },
   {
     name: 'nvca-stock-purchase-agreement',
-    display_name: 'NVCA Model Stock Purchase Agreement',
+    display_name: 'Model Stock Purchase Agreement',
     category: 'venture-financing',
     description: 'Series preferred stock purchase agreement for venture capital financings, covering purchase terms, representations, and closing conditions.',
     source: 'NVCA',
@@ -87,7 +87,7 @@ const TEMPLATES = [
   },
   {
     name: 'nvca-indemnification-agreement',
-    display_name: 'NVCA Model Indemnification Agreement',
+    display_name: 'Model Indemnification Agreement',
     category: 'venture-financing',
     description: 'Director and officer indemnification agreement for venture-backed companies.',
     source: 'NVCA',
@@ -98,7 +98,7 @@ const TEMPLATES = [
   },
   {
     name: 'common-paper-cloud-service-agreement',
-    display_name: 'Common Paper Cloud Service Agreement',
+    display_name: 'Cloud Service Agreement',
     category: 'sales-licensing',
     description: 'A cloud service agreement with order form and framework terms, based on Common Paper\'s standard terms. Covers SaaS and cloud services.',
     source: 'Common Paper',
