@@ -113,6 +113,9 @@ describe('contract-templates-mcp tools', () => {
     }
   });
 
+  // Paging with limit=2 makes ~catalog/2 tool calls, each re-reading every
+  // template's metadata — linear catalog growth costs quadratic test time, so
+  // an explicit timeout replaces the 5s default (~100 templates post-sync).
   it('paginates the catalog using cursor + limit roundtrip with no duplicates', async () => {
     const allResult = await callTool('list_templates', { limit: 100 });
     const allTemplates = ((getPayload(allResult).data as Record<string, unknown>).templates) as Array<{ template_id: string }>;
@@ -141,7 +144,7 @@ describe('contract-templates-mcp tools', () => {
     expect(seen.length).toBe(allTemplates.length); // no gaps
     expect(new Set(seen).size).toBe(seen.length); // no duplicates
     expect(seen).toEqual(allTemplates.map((t) => t.template_id)); // same order as full catalog
-  });
+  }, 60_000);
 
   it('maintains lexicographic continuity across page boundaries', async () => {
     const limit = 2;
@@ -171,7 +174,7 @@ describe('contract-templates-mcp tools', () => {
         expect(prev[prev.length - 1].template_id.localeCompare(next[0].template_id)).toBeLessThan(0);
       }
     }
-  });
+  }, 60_000);
 
   it('rejects out-of-range limit with INVALID_ARGUMENT', async () => {
     for (const bad of [0, -1, 101, 1000]) {
