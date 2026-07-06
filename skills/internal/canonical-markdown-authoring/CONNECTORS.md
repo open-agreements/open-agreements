@@ -33,7 +33,7 @@ This regenerates `templates/<slug>/.template.generated.json` and
 ### Verifying canonical → JSON sync
 
 ```bash
-npx vitest run integration-tests/canonical-source-sync.test.ts
+npx vitest run integration-tests/canonical-source-authoring.test.ts
 ```
 
 Fails if any canonical `template.md` has drifted from its committed
@@ -47,8 +47,6 @@ and the MCP fill path:
 ```bash
 npx vitest run \
   integration-tests/canonical-source-authoring.test.ts \
-  integration-tests/canonical-source-sync.test.ts \
-  integration-tests/template-renderer-json-spec.test.ts \
   integration-tests/template-validation.test.ts \
   packages/contract-templates-mcp/tests/tools.test.ts
 ```

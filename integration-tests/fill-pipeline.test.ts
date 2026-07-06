@@ -1,7 +1,7 @@
 import { describe, expect, vi } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
 import { seconds } from './helpers/timeouts.js';
-import { mkdtempSync, writeFileSync, readFileSync, rmSync, readdirSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, writeFileSync, readFileSync, rmSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { findTemplateDir } from '../src/utils/paths.js';
 
@@ -927,9 +927,44 @@ describe('runFillPipeline', () => {
 });
 
 describe('fillTemplate truthfulness guardrails (issues #579/#580)', () => {
-  it('wyoming restrictive covenant (manual-fill variant): 0 filled, warning, values not applied', async () => {
-    const templateDir = templateDirFor('openagreements-restrictive-covenant-wyoming');
-    const tempDir = mkdtempSync(join(tmpdir(), 'fill-wyoming-guardrail-'));
+  // Synthetic manual-fill template: humanized bracket prose, zero fill
+  // commands, no template.fill.docx twin. A synthetic dir rather than a live
+  // slug because the catalog no longer guarantees a manual-fill-only
+  // template — upstream syncs give every projected template a machine-fill
+  // twin (#1378), which would silently flip a live fixture to fillable.
+  it('manual-fill variant (humanized, token-less docx): 0 filled, warning, values not applied', async () => {
+    const tempDir = mkdtempSync(join(tmpdir(), 'fill-manual-guardrail-'));
+    const templateDir = join(tempDir, 'template');
+    mkdirSync(templateDir, { recursive: true });
+    writeFileSync(
+      join(templateDir, 'template.docx'),
+      buildDocxBuffer(
+        docXml([
+          'This Agreement is between [Legal name of the employer] and',
+          '[Full legal name of the employee].',
+        ])
+      )
+    );
+    writeFileSync(
+      join(templateDir, 'metadata.yaml'),
+      [
+        'name: Manual-Fill Fixture',
+        'source_url: https://example.com/template.docx',
+        'version: "1.0"',
+        'license: CC-BY-4.0',
+        'allow_derivatives: true',
+        'attribution_text: Example Attribution',
+        'fields:',
+        '  - name: employer_name',
+        '    type: string',
+        '    description: Legal name of the employer',
+        '  - name: employee_name',
+        '    type: string',
+        '    description: Full legal name of the employee',
+        'priority_fields: []',
+        '',
+      ].join('\n')
+    );
     const outputPath = join(tempDir, 'output.docx');
 
     try {
