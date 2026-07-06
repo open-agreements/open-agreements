@@ -1513,8 +1513,10 @@ describe('Unfilled signature-block fields — no highlighted stub on ruled lines
       };
       const xml = await fillAndExtractXml(RC_DIR, values);
       expect(xml).toContain('Alice Johnson');
+      expect(xml).toContain('CEO');
       // The filled signatory runs must not keep their authoring highlight
       expect(xml).not.toMatch(/<w:highlight[^>]*>(?:(?!<\/w:r>).)*Alice Johnson/s);
+      expect(xml).not.toMatch(/<w:highlight[^>]*>(?:(?!<\/w:r>).)*CEO/s);
     } finally {
       spy.mockRestore();
     }
