@@ -25,7 +25,7 @@ jobs:
             --metrics=off \
             --sarif \
             --output semgrep.sarif \
-            src packages scripts bin site
+            src packages scripts bin
 
       - name: Upload Semgrep SARIF
         uses: github/codeql-action/upload-sarif@v3
