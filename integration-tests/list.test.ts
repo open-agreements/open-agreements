@@ -31,6 +31,8 @@ describe('list --json envelope', () => {
       cwd: ROOT,
       encoding: 'utf-8',
       timeout: 10_000,
+      // The ~100-template catalog exceeds execSync's 1 MiB default (ENOBUFS).
+      maxBuffer: 16 * 1024 * 1024,
     });
     parsed = JSON.parse(output) as ListResponse;
   } catch (err) {
@@ -117,6 +119,7 @@ describe('list options', () => {
           cwd: ROOT,
           encoding: 'utf-8',
           timeout: 10_000,
+          maxBuffer: 16 * 1024 * 1024,
           env: {
             ...process.env,
             OPEN_AGREEMENTS_CONTENT_ROOTS: root,
