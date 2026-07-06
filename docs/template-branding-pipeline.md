@@ -78,9 +78,9 @@ content close to the rendered DOCX it produces.
    source automatically and writes `templates/<source>-<rights>/<your-slug>/.template.generated.json`
    alongside the rendered `template.docx`.
 4. Run targeted checks:
-   - `npm run test:run -- integration-tests/template-renderer-json-spec.test.ts`
-   - `npm run test:run -- integration-tests/canonical-source-sync.test.ts`
    - `npm run test:run -- integration-tests/canonical-source-authoring.test.ts`
+   (the canonical-source-sync / template-renderer-json-spec suites were retired
+   when the OA-canonical consent templates migrated to upstream authorship)
 
 ### Add or extend styles and layouts
 

@@ -15,8 +15,10 @@ export interface TemplateValidationResult {
  * Extract text content from a DOCX file by unzipping and reading word/document.xml.
  * Concatenates <w:t> text within each <w:p> paragraph, then joins paragraphs with
  * newlines to prevent false {tag} matches across element boundaries.
+ * Exported for consumers that need the same fill-token sniff this validator
+ * runs (e.g. the smoke test's manual-fill detection).
  */
-function extractDocxText(docxPath: string): string {
+export function extractDocxText(docxPath: string): string {
   const zip = new AdmZip(docxPath);
   const documentXml = zip.getEntry('word/document.xml');
   if (!documentXml) return '';

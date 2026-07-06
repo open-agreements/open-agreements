@@ -14,6 +14,7 @@ import { itAllure } from './helpers/allure-test.js';
 import { seconds } from './helpers/timeouts.js';
 import { fillTemplate } from '../src/core/engine.js';
 import { verifyTemplateFill } from '../src/core/fill-utils.js';
+import { extractDocxText } from '../src/core/validation/template.js';
 import { findTemplateDir, resolveTemplateDir } from '../src/utils/paths.js';
 
 const it = itAllure.epic('Filling & Rendering');
@@ -42,14 +43,21 @@ const testCases = fixtureFiles.filter((id) => {
   return dir !== undefined && existsSync(join(dir, 'template.docx'));
 });
 
-// Templates whose packaged DOCX is the humanized manual-fill variant (bracket
-// prose, zero {token} fill commands) — filling returns the document unchanged
-// with a guardrail warning. Machine-fillable twins are tracked in
-// legal-explainer #1378; when a template gains tokens, remove it from this list.
-const MANUAL_FILL_ONLY = new Set([
-  'common-paper-software-license-agreement',
-  'openagreements-restrictive-covenant-florida',
-]);
+/**
+ * A template is manual-fill-only when the document the engine will consume —
+ * `template.fill.docx` when present (#1378 dual-artifact), else
+ * `template.docx` — carries zero fill tokens (humanized bracket prose).
+ * Derived from the template dir instead of a hardcoded list so the smoke
+ * stays correct as upstream syncs add machine-fillable twins: a token-less
+ * doc must come back unchanged WITH the guardrail warning, and a
+ * token-bearing doc must actually consume fields.
+ */
+function isManualFillOnly(templateDir: string): boolean {
+  const fillVariant = join(templateDir, 'template.fill.docx');
+  const docPath = existsSync(fillVariant) ? fillVariant : join(templateDir, 'template.docx');
+  // Same extraction + token sniff validateTemplate uses on this decision.
+  return !/\{(?:IF |FOR |END|\$|\w+\})/.test(extractDocxText(docPath));
+}
 
 describe('E2E smoke test — fill all templates with complete field data', () => {
   it.each(testCases)(
@@ -73,7 +81,7 @@ describe('E2E smoke test — fill all templates with complete field data', () =>
       const zeroCommandWarnings = result.warnings.filter((w) =>
         w.includes('no machine-fillable fields')
       );
-      if (MANUAL_FILL_ONLY.has(templateId)) {
+      if (isManualFillOnly(templateDir)) {
         expect(result.fillCommandCount, `${templateId}: expected token-less docx`).toBe(0);
         expect(result.fieldsUsed, `${templateId}: nothing can be used`).toEqual([]);
         expect(zeroCommandWarnings, `${templateId}: missing unchanged-document warning`).toHaveLength(1);

@@ -125,6 +125,7 @@ describe('npm packaging', () => {
         cwd: sandbox,
         encoding: 'utf-8',
         timeout: seconds(30),
+        maxBuffer: 16 * 1024 * 1024,
       });
       const parsed = JSON.parse(output);
       expect(parsed.schema_version).toBe(1);

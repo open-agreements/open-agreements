@@ -408,9 +408,9 @@ The canonical compiler:
 After generation:
 - `git diff templates/<slug>/.template.generated.json` — should be empty
   if your source matches the previously committed JSON.
-- `npx vitest run integration-tests/canonical-source-sync.test.ts` — proves the
+- `npm run generate:templates && git diff --exit-code` — proves the
   canonical → JSON projection is in sync.
-- `npx vitest run integration-tests/canonical-source-authoring.test.ts integration-tests/template-renderer-json-spec.test.ts packages/contract-templates-mcp/tests/tools.test.ts` — broader coverage.
+- `npx vitest run integration-tests/canonical-source-authoring.test.ts packages/contract-templates-mcp/tests/tools.test.ts` — broader coverage.
 
 ## Highlight modes
 
@@ -445,7 +445,7 @@ shape reference and adapt.
 
 | Pitfall | Symptom | Fix |
 | --- | --- | --- |
-| Edited `template.md` but forgot to regenerate | `canonical-source-sync.test.ts` fails | Run `npm run generate:templates` and commit the regenerated `.template.generated.json` diff. |
+| Edited `template.md` but forgot to regenerate | `npm run generate:templates` leaves a dirty diff | Run `npm run generate:templates` and commit the regenerated `.template.generated.json` diff. |
 | H1 doesn't match `document.title` | Silent drift; renders the frontmatter title | Keep them in sync manually until cross-validation lands. |
 | `output_markdown_path` left in frontmatter | Compiler throws | Remove `outputs.markdown` and any top-level `output_markdown_path`. |
 | `source_json` left in frontmatter | Quietly ignored today; will become an error | Remove `source_json` — JSON paths are now derived from the slug. |
