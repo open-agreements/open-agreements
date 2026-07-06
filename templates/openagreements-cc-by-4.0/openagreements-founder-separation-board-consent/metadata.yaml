@@ -1,0 +1,67 @@
+name: Founder Separation Board Written Consent
+category: corporate-governance
+description: 'Action by unanimous written consent of the board of directors of a Delaware corporation memorializing a founder''s departure: accepting the resignation, removing the founder from officer titles, authorizing the repurchase of unvested shares under the founder''s existing Restricted Stock Purchase Agreement, and managing the vacated board seat. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-founder-separation-board-consent
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Licensed under CC BY 4.0.
+fields:
+  - name: company_legal_name
+    type: string
+    description: Full legal name of the Delaware corporation
+    section: Parties
+  - name: consent_date
+    type: date
+    description: Date the board consent is effective and signed
+    section: Terms
+  - name: founder_name
+    type: string
+    description: Full name of the departing founder
+    section: Parties
+  - name: removed_offices
+    type: string
+    description: Officer titles from which the founder is removed (for example, "Chief Executive Officer and Secretary")
+    section: Terms
+  - name: rspa_reference
+    type: string
+    description: Reference to the founder's existing Restricted Stock Purchase Agreement (for example, "Restricted Stock Purchase Agreement dated January 1, 2022")
+    section: Terms
+  - name: vacancy_action
+    type: enum
+    description: How the board addresses the seat the founder vacated
+    section: Terms
+    options:
+      - reduce-board-size
+      - appoint-replacement
+      - leave-vacant
+  - name: share_disposition
+    type: enum
+    description: The disposition of the repurchased shares resolved by the board — retired and restored to authorized-but-unissued, or held as treasury. Retirement of shares is a board act under DGCL Section 243(a), so the election belongs in this consent, not in an officer-level instruction.
+    section: Terms
+    options:
+      - cancelled-retired
+      - held-as-treasury
+  - name: board_size_after
+    type: number
+    description: Authorized number of directors after reduction (used when vacancy_action is reduce-board-size)
+    section: Terms
+  - name: replacement_director_name
+    type: string
+    description: Full name of the director appointed to fill the vacancy (used when vacancy_action is appoint-replacement)
+    section: Terms
+  - name: director_signatories
+    type: array
+    description: The directors signing the consent
+    section: Signatures
+    items:
+      - name: name
+        type: string
+        description: Full name of a director signing the consent
+priority_fields:
+  - company_legal_name
+  - consent_date
+  - founder_name
+  - rspa_reference

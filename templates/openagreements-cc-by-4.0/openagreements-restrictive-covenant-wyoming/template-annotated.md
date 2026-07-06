@@ -34,7 +34,7 @@ Other Confidential Information Duration
 Employee Non-Solicitation
 
 Duration
-: 12 months
+: 24 months
 
 Customer Non-Solicitation
 

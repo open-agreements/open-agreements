@@ -1,0 +1,203 @@
+name: OpenAgreements Employee Restrictive Covenant (Alabama)
+category: non-compete
+description: 'Alabama-specific employee restrictive covenant agreement built for the Alabama Restrictive Covenant Act, Ala. Code section 8-1-190 et seq.: confidentiality and trade-secret protection, a current-customer non-solicitation, an employee no-hire covenant confined to uniquely essential workers, and an optional non-compete drawn to the section 8-1-190(b)(4) employee exception. Recites the void-by-default rule and its six safe-harbor categories, ties each covenant to a section 8-1-191 protectable interest, keeps durations within the statutory presumptions (two years employee non-compete, eighteen months current-customer non-solicit), confirms the section 8-1-192 all-parties signature and adequate-consideration formalities, avoids execution before the employment relationship exists, carves out the section 8-1-196 professional exemption, treats reformation as reaching only duration, and applies Alabama''s fundamental-policy conflicts rule. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-alabama
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Alabama-specific analysis informed by the quote-verified Alabama practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: 'Employee job title or position (optional). In Alabama the title is an early warning: a member of a recognized profession (physician, certified public accountant, veterinarian, physical therapist, or the like) cannot be barred from practicing under Alabama''s professional exemption, so record the title and any licensure before including a practice-restraining covenant.'
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+    rationale_source: editorial
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement — the date the last party signs. It anchors the duration presumptions stated in Cover Terms.
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    section: Legal
+    default: Alabama
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    rationale_source: editorial
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. A finite term keeps the ordinary-confidentiality obligation from reading as an indefinite restraint on using general experience; job skills alone are not a protectable interest.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.
+    display_label: Employee No-Hire Included
+    default: true
+    section: Employee Non-Solicitation
+    rationale_source: editorial
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee no-hire / non-solicitation restriction
+    display_label: Employee No-Hire Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    rationale_source: editorial
+    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. The Act sets no express duration presumption for the no-hire category, so the uniquely-essential scope limit does the primary category work; counsel should size the term to the workforce interest actually protected.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the no-hire restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee no-hire scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+    rationale_source: editorial
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of current-customer non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.alabama.keep-durations-within-the-statutory-presumptions
+    default_value_rationale: '12 months sits well inside the presumptively reasonable window for a current-customer non-solicit: eighteen months, or for as long as post-separation consideration is paid, whichever is greater. Counsel may extend toward eighteen months, or longer while post-separation consideration is paid, where the interest supports it.'
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    rationale_source: editorial
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope. Alabama's category reaches only current customers, so the covered class is bounded to that group.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Under Alabama law an employee may agree to a geographically limited non-compete; this template recites the employee-exception basis, ties the covenant to a listed protectable interest, and biases the duration into the two-year presumptively reasonable window.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    rationale_source: editorial
+    default_value_rationale: Conservative default. Non-competes are the most heavily scrutinized covenant; include only after confirming the restraint fits Alabama's employee exception for a specified geographic area, a competing business, and an existing employment relationship; protects a listed interest; stays within the two-year presumption; will be signed by all parties, including the employer; and does not restrain a member of a recognized profession from practicing that profession. The party seeking enforcement bears the burden of proof on every element.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.alabama.keep-durations-within-the-statutory-presumptions
+    default_value_rationale: 12 months sits well inside the presumptively reasonable window for an employee non-compete; restraints of two years or less are presumed reasonable. A term outside the window forfeits the statutory presumption and invites duration reformation, so the tool defaults short.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction. Alabama's employee exception is written for a geographically limited covenant, so a defined territory is part of fitting the statutory category, not an afterthought.
+    display_label: Restricted Territory
+    default: the geographic area in which Employer carries on the business Employee served
+    section: Non-Competition
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.alabama.fit-covenant-within-a-statutory-exception
+    default_value_rationale: Tied to where Employer actually does competing business. Alabama's employee exception presupposes a geographically limited covenant; an unbounded or everywhere-we-might-expand territory undercuts the claim that the covenant fits the employee non-compete category at all.
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: 'Optional named list of specific competitors. Alabama rewards specificity: the protectable-interest list speaks in terms of specific customers and concrete relationships, and a covenant drawn to named threats is easier to defend as protecting a listed interest than one leaning on an open-ended competitive-business definition.'
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+    rationale_source: editorial
+  - name: specialized_training_recital
+    type: string
+    description: Alabama only. Where specialized training is a claimed protectable interest, Alabama law requires the specialized and unique training, involving substantial business expenditure specifically directed to this Employee, to be specifically set forth in writing as the consideration for the restraint. State that training and its anticipated expense specifically here; a generic training recital does not qualify. Leave blank if the covenants rest on trade secrets, confidential information, customer relationships, or goodwill instead.
+    display_label: Specialized Training Recital (Alabama)
+    default: ''
+    section: Consideration
+    rationale_source: editorial
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+    rationale_source: editorial
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.alabama.keep-durations-within-the-statutory-presumptions
+    default_value_rationale: 12 months sits within the current-customer window. Because non-dealing has no category of its own, it is drawn to fit inside the current-customer non-solicit exception, and its duration tracks that category's presumption.
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    rationale_source: editorial
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements. In a state whose law voids restraints except as it specifically provides, a clause forbidding ordinary public shares is gratuitous overbreadth serving no listed interest.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+    rationale_source: editorial
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+    rationale_source: editorial
+    default_value_rationale: 12 months keeps the restraint conservative. A non-investment covenant has no named Alabama category, so it is drawn to fit a listed exception or accepted as exposed to Alabama's void rule for restraints outside the listed categories; a short term minimizes that exposure.
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

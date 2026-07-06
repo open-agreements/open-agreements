@@ -1,0 +1,139 @@
+---
+template_id: openagreements-founder-ip-confidentiality-confirmation
+name: Founder IP and Confidentiality Survival Confirmation
+category: corporate-governance
+description: >-
+  A short confirmatory certificate signed by a departing founder and
+  countersigned by the Delaware corporation confirming that the founder's
+  existing Confidential Information and Invention Assignment Agreement
+  (CIIAA/PIIA) and confidentiality obligations remain in full force after
+  service ends, that all company property and repositories have been returned,
+  and that no release is intended as to those continuing obligations. It is
+  confirmatory only and creates no new restrictive covenant. Drafted as a
+  starting point for licensed counsel review.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-founder-ip-confidentiality-confirmation
+version: "0.1.0"
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: >-
+  Authored by OpenAgreements contributors. Licensed under CC BY 4.0.
+layout_id: cover-standard-signature-v1
+style_id: openagreements-default-v1
+document:
+  title: Founder IP and Confidentiality Survival Confirmation
+  label: OpenAgreements Founder IP and Confidentiality Survival Confirmation
+  version: "0.1.0"
+  license: Free to use under CC BY 4.0
+  defined_term_highlight_mode: none
+sections:
+  cover_terms:
+    section_label: Key Terms
+    heading_title: Key Terms
+  standard_terms:
+    section_label: Confirmations
+    heading_title: Confirmations
+  signature:
+    section_label: Signature Page
+    heading_title: Signatures
+fields:
+  - name: company_legal_name
+    type: string
+    description: Full legal name of the Delaware corporation
+    section: Parties
+  - name: founder_name
+    type: string
+    description: Full name of the departing founder
+    section: Parties
+  - name: ciiaa_reference
+    type: string
+    description: >-
+      Reference to the founder's existing Confidential Information and Invention
+      Assignment Agreement (for example, "Confidential Information and Invention
+      Assignment Agreement dated January 1, 2022")
+    section: Terms
+  - name: separation_date
+    type: date
+    description: Date the founder's service with the Company ended
+    section: Terms
+  - name: signatory_name
+    type: string
+    description: Full name of the authorized signatory countersigning for the Company
+    section: Parties
+  - name: signatory_title
+    type: string
+    description: Title of the authorized signatory countersigning for the Company
+    section: Parties
+priority_fields:
+  - company_legal_name
+  - founder_name
+  - ciiaa_reference
+  - separation_date
+---
+
+
+# Founder IP and Confidentiality Survival Confirmation
+
+This Confirmation is delivered by {% field name="founder_name" /%} (the "Founder") to {% field name="company_legal_name" /%}, a Delaware corporation (the "Company"), in connection with the end of the Founder's service to the Company, effective {% field name="separation_date" /%} (the "Separation Date").
+
+*Note: This Confirmation is confirmatory only. The Founder's existing {% field name="ciiaa_reference" /%} (the "CIIAA") ordinarily already survives the end of service by its own terms; this Confirmation simply memorializes that continuing effect and the return of Company property. It does NOT create any new post-separation restrictive covenant — including any non-compete, expanded non-solicitation, or broader confidentiality obligation — and it does not address the enforceability of any restrictive covenant, which is a separate matter of state employment law. Any genuinely new post-separation restraint should be prepared and reviewed by licensed counsel.*
+
+{% agreement-section type="cover_terms" %}
+## Key Terms
+
+{% cover-terms %}
+{% cover-term kind="row" label="Company" field="company_legal_name" /%}
+{% cover-term kind="row" label="Founder" field="founder_name" /%}
+{% cover-term kind="row" label="CIIAA Reference" field="ciiaa_reference" /%}
+{% cover-term kind="row" label="Separation Date" field="separation_date" /%}
+{% /cover-terms %}
+{% /agreement-section %}
+{% agreement-section type="standard_terms" %}
+## Confirmations
+
+{% clause id="survival-confirmation" %}
+### Survival of the CIIAA
+
+The Founder confirms that the CIIAA — the {% field name="ciiaa_reference" /%} between the Founder and the Company — remains valid, binding, and in full force and effect notwithstanding the end of the Founder's service on the Separation Date. In particular, the Founder confirms that the confidentiality, non-disclosure, and invention-assignment obligations set forth in the CIIAA continue to apply according to their terms following the Separation Date, and that the Founder will continue to comply with them. This confirmation restates and acknowledges obligations that already exist under the CIIAA; it does not modify, expand, or extend them.
+
+{% /clause %}
+{% clause id="property-return" %}
+### Return of Company Property and Access
+
+The Founder confirms that, on or before the Separation Date (or on such later date as the Company and the Founder have agreed in writing), the Founder has returned to the Company, or has permanently deleted or relinquished, all Company property and materials in the Founder's possession or control, including devices, documents, records, and files, together with all Confidential Information as defined in the CIIAA. The Founder further confirms that the Founder has relinquished access to, and will not further access, the Company's systems, code repositories, email and messaging accounts, cloud drives, and other accounts and services, except to the limited extent, if any, that the Company authorizes in writing. The Founder may retain copies of records the Founder is required to retain by law or that relate solely to the Founder's own compensation, equity, or tax matters.
+
+{% /clause %}
+{% clause id="no-new-covenants" %}
+### No New Covenants; No Release of Surviving Obligations
+
+**This Confirmation is confirmatory only.** It creates no new obligation, restraint, or covenant of any kind. In particular, and for the avoidance of doubt, nothing in this Confirmation imposes on the Founder any non-competition, non-solicitation, or confidentiality obligation that does not already exist under the CIIAA or applicable law, and this Confirmation does not address or affect the enforceability of any restrictive covenant under applicable state law. Any genuinely new post-separation restraint must be documented separately and reviewed by licensed counsel.
+
+Nothing in this Confirmation, and nothing in any release, separation agreement, or settlement the Founder and the Company may enter into, is intended to waive, release, discharge, or otherwise limit the surviving confidentiality and invention-assignment obligations of the CIIAA confirmed above, all of which remain in full force and effect.
+
+{% /clause %}
+{% /agreement-section %}
+{% agreement-section type="signature" %}
+## Signatures
+
+{% signature-block arrangement="entity-plus-individual" %}
+
+The Founder has executed this Confirmation, and the Company has countersigned it to acknowledge the continuing effect of the CIIAA, as of the dates set forth below.
+
+{% signer id="founder" kind="individual" capacity="personal" label="Founder" %}
+**Founder**
+
+Signature: _______________
+Print Name: {% field name="founder_name" /%}
+Date: _______________
+{% /signer %}
+{% signer id="company" kind="entity" capacity="authorized" label="Company" %}
+Company: {% field name="company_legal_name" /%}
+
+By: _______________
+Name: {% field name="signatory_name" /%}
+Title: {% field name="signatory_title" /%}
+Date: _______________
+{% /signer %}
+{% /signature-block %}
+{% /agreement-section %}

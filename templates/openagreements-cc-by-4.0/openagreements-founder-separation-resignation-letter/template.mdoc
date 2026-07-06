@@ -1,0 +1,126 @@
+---
+template_id: openagreements-founder-separation-resignation-letter
+name: Founder Resignation Letter
+category: corporate-governance
+description: >-
+  A short letter from a departing founder to the board of directors of a
+  Delaware corporation resigning from every officer and director position held,
+  with an explicit effective date. The effective date is load-bearing: it fixes
+  the termination date that starts the repurchase-option window under the
+  founder's existing Restricted Stock Purchase Agreement. Drafted as a starting
+  point for licensed counsel review.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-founder-separation-resignation-letter
+version: "0.1.0"
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: >-
+  Authored by OpenAgreements contributors. Licensed under CC BY 4.0.
+layout_id: cover-standard-signature-v1
+style_id: openagreements-default-v1
+document:
+  title: Founder Resignation Letter
+  label: OpenAgreements Founder Resignation Letter
+  version: "0.1.0"
+  license: Free to use under CC BY 4.0
+  defined_term_highlight_mode: none
+sections:
+  cover_terms:
+    section_label: Key Terms
+    heading_title: Key Terms
+  standard_terms:
+    section_label: Terms
+    heading_title: Terms
+  signature:
+    section_label: Signature Page
+    heading_title: Signature
+fields:
+  - name: company_legal_name
+    type: string
+    description: Full legal name of the Delaware corporation
+    section: Parties
+  - name: founder_name
+    type: string
+    description: Full name of the departing founder
+    section: Parties
+  - name: resignation_effective_date
+    type: date
+    description: >-
+      The explicit effective date of the resignation. This date is load-bearing:
+      it fixes the founder's termination date and starts the repurchase-option
+      window under the founder's Restricted Stock Purchase Agreement.
+    section: Terms
+  - name: resigned_positions
+    type: string
+    description: >-
+      Every officer and director position from which the founder is resigning
+      (for example, "Chief Executive Officer, Secretary, and member of the Board
+      of Directors")
+    section: Terms
+priority_fields:
+  - company_legal_name
+  - founder_name
+  - resignation_effective_date
+  - resigned_positions
+---
+
+
+# Founder Resignation Letter
+
+{% field name="resignation_effective_date" /%}
+
+To the Board of Directors of {% field name="company_legal_name" /%}, a Delaware corporation (the "Company"):
+
+*Note: The effective date stated in this letter is load-bearing. It fixes the founder's termination date, which starts the repurchase-option window under the founder's existing Restricted Stock Purchase Agreement (the "RSPA"); an informal or undated resignation can leave the actual termination date a triable question and forfeit the Company's repurchase right. Resigning the board seat voluntarily also avoids the Section 141(k) forced-removal problem — removal of a non-resigning director is a stockholder act, not a board act, so a contested departure would require a stockholder written consent. This letter confirms only the resignation; it does not waive any vested equity, accrued compensation, or indemnification right, and it does not create any new post-separation restrictive covenant. Consult counsel on the RSPA repurchase mechanics.*
+
+{% agreement-section type="cover_terms" %}
+## Key Terms
+
+{% cover-terms %}
+{% cover-term kind="row" label="Company" field="company_legal_name" /%}
+{% cover-term kind="row" label="Founder" field="founder_name" /%}
+{% cover-term kind="row" label="Effective Date" field="resignation_effective_date" /%}
+{% cover-term kind="row" label="Positions Resigned" field="resigned_positions" /%}
+{% /cover-terms %}
+{% /agreement-section %}
+{% agreement-section type="standard_terms" %}
+## Terms
+
+{% clause id="resignation" %}
+### Resignation
+
+I, {% field name="founder_name" /%} (the "Founder"), hereby resign from all positions I hold with the Company, including {% field name="resigned_positions" /%}, effective as of {% field name="resignation_effective_date" /%} (the "Effective Date").
+
+Consistent with Section 141(b) of the Delaware General Corporation Law, my resignation from the Board of Directors is effective on delivery of this letter unless a later Effective Date is specified above, in which case it is effective on that Effective Date. Consistent with Section 142(b) of the Delaware General Corporation Law, my resignation from each officer position is effective on this written notice as of the Effective Date. From and after the Effective Date, I will hold no officer or director position with the Company and will have no authority to act for or bind the Company.
+
+{% /clause %}
+{% clause id="irrevocable-and-complete" %}
+### Irrevocable and Complete
+
+This resignation is irrevocable and covers every officer and director position I hold with the Company, whether or not listed above. It is not conditioned on any action by the Company, and it takes effect on the Effective Date without the need for acceptance by the Board (though the Board may acknowledge it in its records).
+
+{% /clause %}
+{% clause id="reservation-of-rights" %}
+### No Waiver of Vested Rights or Indemnification
+
+Nothing in this letter waives, releases, or diminishes any right I have that survives my departure, including any vested equity, accrued and unpaid compensation or expense reimbursement, rights under any equity or benefit plan, or any right to indemnification, advancement of expenses, or coverage under the Company's directors-and-officers liability insurance for acts or omissions in my former capacities. This letter does not create, and shall not be read to create, any new non-competition, non-solicitation, or other post-separation restrictive covenant; any such covenant, if any, exists only under a separate written agreement.
+
+{% /clause %}
+{% /agreement-section %}
+{% agreement-section type="signature" %}
+## Signature
+
+{% signature-block arrangement="entity-plus-individual" %}
+
+Sincerely,
+
+{% signer id="founder" kind="individual" capacity="personal" label="Founder" %}
+Signature: _______________
+
+Print Name: {% field name="founder_name" /%}
+
+Date: {% field name="resignation_effective_date" /%}
+{% /signer %}
+{% /signature-block %}
+{% /agreement-section %}

@@ -1,0 +1,208 @@
+name: OpenAgreements Employee Restrictive Covenant (Georgia)
+category: non-compete
+description: 'Georgia-specific employee restrictive covenant agreement built for the Georgia Restrictive Covenants Act (O.C.G.A. § 13-8-50 et seq.): confidentiality and trade-secret protection keyed to continued protection under § 13-8-53(e), a customer non-solicitation anchored to material-contact customers under § 13-8-53(b) with no express geographic term required, an optional non-compete gated on the § 13-8-53(a) covered-employee functions and drafted to reasonable time, geographic area, and scope within the § 13-8-57(b) two-year presumption window, discretionary narrowing-only judicial modification under § 13-8-53(d), and Georgia choice-of-law language reflecting that Georgia law is the touchstone for enforceability. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-georgia
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Georgia-specific analysis informed by the quote-verified Georgia practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: covered_employee_function
+    type: string
+    description: Description of the covered-employee function under the Georgia Restrictive Covenants Act that qualifies Employee to be bound by a post-employment non-compete (customarily soliciting customers, making sales, the enumerated managerial duties, or serving as a key employee or professional). Recorded so the covenant documents that Employee falls within a covered category.
+    display_label: Covered Employee Function
+    default: Employee is a key employee or a professional, or in the course of employment customarily and regularly solicits customers or prospective customers, makes sales, or performs the managerial duties described in O.C.G.A. § 13-8-53(a).
+    section: Parties
+    default_value_rationale: The default recites the covered employee categories used by the Georgia Restrictive Covenants Act so the non-compete gate is documented before the optional non-compete is included.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.georgia.gate-non-compete-by-covered-employee-function
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement — the date the last party signs. It anchors the durations stated in Cover Terms.
+    display_label: Effective Date
+    section: Timing
+  - name: additional_consideration
+    type: string
+    description: Consideration provided to Employee for entering into this agreement. The Georgia Restrictive Covenants Act does not codify what consideration must support a covenant, and no modern Act-era appellate decision squarely holds that continued at-will employment alone supports a mid-employment covenant, so for an existing employee reciting additional consideration (a raise, bonus, promotion, or access to Confidential Information) is the conservative practice.
+    display_label: Consideration Provided
+    default: access to Employer's Confidential Information, specialized training, and Employer's customer goodwill and relationships
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    section: Legal
+    default: Georgia
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: For as long as the information remains a trade secret
+    section: Confidentiality
+    default_value_rationale: Georgia law places no fixed time limit on trade-secret protection for as long as the material remains a trade secret, so a fixed expiry would unnecessarily surrender the most durable protection.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.georgia.allow-confidentiality-to-run-while-information-remains-protected
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: For as long as the information remains confidential
+    section: Confidentiality
+    default_value_rationale: Georgia law authorizes an open-ended confidentiality obligation keyed to continued confidentiality; a stated finite term for ordinary business information remains an acceptable alternative.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.georgia.allow-confidentiality-to-run-while-information-remains-protected
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation (non-recruitment) covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation (non-recruitment) restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    default_value_rationale: Employee non-recruitment covenants are analyzed under the Georgia restrictive-covenant framework, so 24 months tracks the two-year former-employee presumption window.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.georgia.keep-duration-within-relationship-presumption-windows
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 24 months
+    section: Employee Non-Solicitation
+    default_value_rationale: Bounding the no-poach class to colleagues the departing worker actually worked with or supervised during a stated look-back window is easier to defend under the Act's reasonableness standard than a payroll-wide ban; 24 months aligns the lookback with the two-year employee covenant period.
+    rationale_source: editorial
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 24 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 24 months sits within the two-year presumptively reasonable window measured from termination of the business relationship.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.georgia.keep-duration-within-relationship-presumption-windows
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers count as material-contact customers under the Georgia Restrictive Covenants Act.
+    display_label: Covered Customer Period
+    default: 2 years
+    section: Customer Non-Solicitation
+    default_value_rationale: Georgia law defines material contact to include customers from whom the employee earned compensation within two years before termination, so the lookback tracks the statutory period.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.georgia.anchor-customer-nonsolicit-to-material-contact
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Under the Georgia Restrictive Covenants Act, a post-employment non-compete is enforceable only against an employee who performs a covered function (customarily soliciting customers, making sales, the enumerated managerial duties, or serving as a key employee or professional) and only if the restraint is reasonable in time, geographic area, and scope of prohibited activities. This template recites the covered-function basis and biases the duration into the two-year presumption window.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    default_value_rationale: Conservative default. The non-compete is the most heavily gated covenant in Georgia; include only after confirming Employee performs a covered function, the duration is within the two-year window, and Employer can plead and prove a legitimate business interest.
+    rationale_source: editorial
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 24 months
+    section: Non-Competition
+    default_value_rationale: A former-employee restraint of two years or less is presumed reasonable in time and a restraint over two years is presumed unreasonable, so the tool should not default beyond 24 months.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.georgia.keep-duration-within-relationship-presumption-windows
+  - name: territory
+    type: string
+    description: 'Geographic scope of the non-competition restriction. Optional under Georgia law: an express geographic term is not required for every enforceable non-compete.'
+    display_label: Restricted Territory
+    default: the geographic areas in which Employer conducts business
+    section: Non-Competition
+    default_value_rationale: An express territory tracking where the employer does business earns the presumption of geographic reasonableness when the total distance is reasonable or the agreement names particular competitors; leaving it blank may be permitted but forgoes that presumption.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.georgia.assess-territory-in-context-rather-than-require-express-term
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Naming competitors for a limited period is one route by which an employer's-business-areas territory earns the presumption of geographic reasonableness.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+    default_value_rationale: No default competitor list is supplied because competitor names depend on the employer's actual market and should be filled only when the employer can identify a limited, accurate list.
+    rationale_source: editorial
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 24 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements and keeps ordinary public shares and index funds out of the scope of prohibited activities the Act weighs for reasonableness.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 24 months
+    section: Non-Investment
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

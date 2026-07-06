@@ -1,0 +1,169 @@
+name: OpenAgreements Employee Restrictive Covenant (South Dakota)
+category: non-compete
+description: 'South Dakota-specific employee restrictive covenant agreement built for the SDCL chapter 53-9 statutory whitelist: confidentiality and trade-secret protection, a customer non-solicitation limited to existing customers, and an optional non-compete drawn to the § 53-9-11 employee exception — the same business or profession, a specified county, first- or second-class municipality, or other specified area, a two-year ceiling measured from the date of termination of the agreement, and the like-business condition. Customer restrictions are confined to solicitation, not acceptance, and each covenant is drafted to survive a fixed-term agreement expressly. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-south-dakota
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. South Dakota-specific analysis informed by the quote-verified South Dakota practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement — the date the last party signs. It anchors the durations stated in Cover Terms.
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state. For a South Dakota worker, restricted territory, or customer base, plan on the SDCL chapter 53-9 analysis applying whatever law the agreement names; South Dakota courts honor a choice-of-law clause only until it contravenes South Dakota public policy.
+    display_label: Governing Law
+    section: Legal
+    default: South Dakota
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    rationale_source: editorial
+    section: Confidentiality
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. South Dakota enforces confidentiality covenants only to the extent reasonably necessary to protect the employer's interest in confidential information, so a finite term keeps the clause from reading as a disguised work ban.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included. No staged South Dakota authority addresses a worker's own promise not to recruit former colleagues, so this covenant is left off by default and, if included, is drawn narrowly.
+    display_label: Employee Non-Solicitation Included
+    default: false
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    default_value_rationale: Kept within the two-year ceiling SDCL 53-9-11 fixes for the statutory employee covenants, measured from the date of termination of the agreement, even though the employee non-solicit itself is unaddressed by staged South Dakota authority.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer non-solicitation covenant is included. SDCL 53-9-11 permits an agreement not to solicit existing customers of the employer within a specified area for up to two years from the date of termination of the agreement, while the employer carries on a like business there.
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 24 months
+    section: Customer Non-Solicitation
+    default_value_rationale: SDCL 53-9-11 caps the existing-customer non-solicit at two years from the date of termination of the agreement. 24 months sits at the statutory ceiling; counsel may shorten it.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for identifying the existing customers covered by the non-solicitation restriction.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is a common lookback for identifying the existing-customer class SDCL 53-9-11 permits restraining.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. South Dakota generally voids restraints on a lawful profession, trade, or business unless a statutory exception applies; the employee exception permits a same-business restraint only within a specified area, for up to two years from the date of termination of the agreement, while the employer carries on a like business there.
+    display_label: Non-Competition Included
+    default: false
+    rationale_source: editorial
+    section: Non-Competition
+    default_value_rationale: Conservative default. In a void-by-default whitelist state the non-compete is the most exposed covenant; include it only after confirming the clause fits the employee exception (same business, specified area, like-business condition), the worker is an employee rather than an independent contractor, and — for a covered practitioner — the voidable-practice-restriction rule is addressed.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 24 months
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.cap-restricted-period-at-two-years-from-termination-of-the-agreement
+    section: Non-Competition
+    default_value_rationale: South Dakota caps the employee non-compete at two years from the date of termination of the agreement. 24 months sits at that ceiling; a term exceeding two years falls outside the exception and into the void baseline, and the exceptions are construed narrowly.
+  - name: territory
+    type: string
+    description: 'Geographic scope of the non-competition and customer non-solicitation restrictions. SDCL 53-9-11 supplies the vocabulary: a specified county, first- or second-class municipality, or other specified area in which the employer continues to carry on a like business.'
+    display_label: Restricted Territory
+    default: the specified county, first- or second-class municipality, or other specified area in which Employer carries on a like business
+    section: Non-Competition
+    default_value_rationale: Tracks the SDCL 53-9-11 statutory vocabulary. A territory that is unspecified, unbounded, or detached from where the employer actually carries on a like business does not fit the narrowly construed exception; counsel should name the actual county, municipality, or specified area.
+  - name: competitive_business_definition
+    type: string
+    description: Description of the same business or profession as that of the employer that constitutes competition under SDCL 53-9-11.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. In a narrow-construction regime, binding named competitors instead of an open-ended definition removes ambiguity a court would resolve against enforcement.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements; a clause that technically forbids holding ordinary public shares restrains more than any SDCL chapter 53-9 exception describes.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included. Investment language broad enough to operate as a restraint on the worker's own trade is what the South Dakota baseline voids, so this covenant is off by default.
+    display_label: Non-Investment Included
+    default: false
+    rationale_source: editorial
+    section: Non-Investment
+    default_value_rationale: Conservative default. Include a non-investment covenant only if it is narrowed so it does not operate as an extra restraint on the worker's own trade outside an applicable statutory exception.
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 24 months
+    section: Non-Investment
+    default_value_rationale: Kept within the two-year SDCL 53-9-11 ceiling. Because a non-investment restraint that reaches active competitive roles functions as a non-compete, it is treated on the same statutory track.
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

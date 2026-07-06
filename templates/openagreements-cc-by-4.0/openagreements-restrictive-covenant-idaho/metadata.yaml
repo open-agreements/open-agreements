@@ -1,0 +1,200 @@
+name: OpenAgreements Employee Restrictive Covenant (Idaho)
+category: non-compete
+description: 'Idaho-specific employee restrictive covenant agreement built for Idaho Code title 44, chapter 27: confidentiality and trade-secret protection, customer and employee non-solicitation with a solicitation definition drawn to the affirmative-conduct rule of Insure Idaho, LLC v. Horn, and an optional non-compete gated on the statutory key-employee / key-independent-contractor class, capped at eighteen months absent added consideration, and fitted to the worker''s actual geographic and line-of-business footprint. Includes a key-worker recital, a healthcare patient-access clause, mandatory statutory reformation under section 44-2703, and an Idaho-tribunal forum protection under section 29-110. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-idaho
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Idaho-specific analysis informed by the quote-verified Idaho practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    section: Legal
+    default: Idaho
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. Keeping ordinary confidential information on a finite, separate track from the perpetual trade-secret obligation avoids a perpetual lid on non-secret information that an Idaho court could treat as a disguised restraint.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. No Idaho statute or appellate decision addresses employee non-solicits, so the clause has no statutory shelter and a tightly-sized duration is its best defense.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    rationale_source: editorial
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is a common, defensible customer non-solicitation duration in Idaho and sits comfortably inside the eighteen-month duration presumption if a court analyzes the restraint like a direct-competition covenant.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope, bounding the class to relationships the worker actually held.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Under Idaho's Noncompetition Agreement Act, a post-employment non-compete is enforceable only against a key employee or key independent contractor, only to protect the employer's legitimate business interests, and only if reasonable as to duration, geography, and line of business without imposing a greater restraint than reasonably necessary; this template recites the key-worker basis and biases the duration into the eighteen-month presumption window.
+    display_label: Non-Competition Included
+    default: false
+    rationale_source: editorial
+    section: Non-Competition
+    default_value_rationale: Conservative default. An Idaho non-compete is a statutory creature that binds only a key employee or key independent contractor; include it only after confirming the worker is key, the duration is eighteen months or less or supported by consideration beyond employment, and the geography and work scope match the worker's actual footprint.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.idaho.cap-direct-competition-restraint-at-eighteen-months-absent-added-consideration
+    section: Non-Competition
+    default_value_rationale: 12 months sits inside the rebuttable presumption that a post-employment term of eighteen months or less is reasonable as to duration. A direct-competition restriction beyond eighteen months requires consideration in addition to employment or continued employment, so the tool should not default past the presumption window.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic areas in which Employee provided services or had a significant presence or influence for Employer
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.idaho.fit-geography-and-work-scope-to-the-workers-actual-footprint
+    section: Non-Competition
+    default_value_rationale: Tracks the statutory presumption that a covenant is reasonable as to geographic area when confined to the areas where the key worker provided services or had a significant presence or influence. A company-footprint territory forfeits that presumption.
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer, ideally limited to the type of employment or line of business the worker actually conducted for the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Narrowing the restriction to named competitors is strong tailoring evidence under Idaho's no-greater-restraint-than-necessary limit.
+    display_label: Specified Competitors
+    default: ''
+    rationale_source: editorial
+    section: Non-Competition
+    default_value_rationale: No default competitors are supplied because the list is employer-specific. Counsel should add names only when a named-competitor restriction is a narrower and more accurate fit than the broader Competitive Business definition.
+  - name: idaho_added_consideration
+    type: string
+    description: Idaho only. If the direct-competition restriction runs longer than eighteen months, Idaho requires consideration in addition to employment or continued employment. State the specific added benefit here (for example, a signing or retention bonus, equity grant, or promotion). If the restriction is eighteen months or less, continued employment alone is sufficient consideration and this field records that the parties rely on it. Shown in the Idaho timing and consideration recital.
+    display_label: Consideration for Restrictive Covenants (Idaho)
+    default: Employee's employment or continued employment with Employer, which the parties agree is sufficient consideration for a direct-competition restriction of eighteen months or less; if any direct-competition restriction runs longer than eighteen months, the additional consideration described in this agreement
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.idaho.cap-direct-competition-restraint-at-eighteen-months-absent-added-consideration
+    section: Consideration
+    default_value_rationale: Idaho admits no circumstance in which a direct-competition restriction exceeds eighteen months absent consideration beyond employment, while continued at-will employment is sufficient inside the window. Counsel should replace this with the specific negotiated benefit whenever the term exceeds eighteen months.
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included. Idaho has not resolved whether a no-service restraint enforces as written, is analyzed as a direct-competition restriction under chapter 44-27, or fails, so this covenant is off by default.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+    default_value_rationale: 12 months keeps the restraint inside the eighteen-month presumption window in case an Idaho court analyzes a no-dealing clause as a direct-competition restriction under chapter 44-27.
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    rationale_source: editorial
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements, and it helps keep the covenant from restraining more than reasonably necessary.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+    default_value_rationale: 12 months keeps an investment restraint inside the eighteen-month presumption window, since Idaho treats an investment restraint under the same reasonableness limit as any other covenant.
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+  - name: healthcare_provider
+    type: boolean
+    description: Whether Employee is a healthcare provider whose covenant implicates patient access. Idaho does not ban provider non-competes but weighs the employer's interest in patients against those patients' interests in continuity of care and choice of provider, and injunctive enforcement can fail on public-interest grounds.
+    display_label: Healthcare Provider
+    default: false
+    section: Healthcare
+priority_fields:
+  - employer_name
+  - employee_name

@@ -1,0 +1,529 @@
+---
+template_id: openagreements-restrictive-covenant-mississippi
+name: OpenAgreements Employee Restrictive Covenant (Mississippi)
+category: non-compete
+description: >-
+  Mississippi-specific employee restrictive covenant agreement built for
+  Mississippi's common-law reasonableness regime: there is no general
+  Mississippi non-compete statute, so every post-employment restraint stands
+  or falls on the three-interest reasonableness balance the courts weigh — the
+  rights of the employer, the rights of the employee, and the rights of the
+  public — with the enforcing employer carrying the burden and the disfavored
+  covenant construed strictly against the drafter. It provides confidentiality
+  and trade-secret protection independent of any covenant, a
+  continued-at-will-employment consideration recital, customer and employee
+  non-solicitation, an optional non-dealing covenant using the express
+  no-acceptance language a customer-facing restraint needs, an optional
+  non-compete tied to a legitimate protectable interest and sized to the
+  employee's real influence, an express extension-on-breach tolling clause
+  because Mississippi courts do not extend the restricted period on their own
+  but give an express extension clause effect, express and pre-departure
+  assignment to successors, a no-enforcement term for covenants invoked after
+  an arbitrary, capricious, or bad-faith termination, a lawyer
+  practice-restriction exclusion (Miss. R. Prof'l Conduct 5.6), and
+  discretionary equitable reformation that the drafting does not rely on.
+  Drafted as a starting point for licensed counsel review.
+source_url: >-
+  https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-mississippi
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: >-
+  Authored by OpenAgreements contributors. Mississippi-specific analysis
+  informed by the quote-verified Mississippi practice note. Licensed under CC BY
+  4.0.
+layout_id: cover-standard-signature-v1
+style_id: openagreements-default-v1
+document:
+  title: Employee Restrictive Covenant Agreement
+  label: OpenAgreements Employee Restrictive Covenant (Mississippi)
+  version: 0.1.0
+  license: Free to use under CC BY 4.0
+  include_cloud_doc_line: true
+  defined_term_highlight_mode: definition_site_only
+  cover_row_height: 317
+sections:
+  cover_terms:
+    section_label: Cover Terms
+    heading_title: Cover Terms
+  standard_terms:
+    section_label: Standard Terms
+    heading_title: Standard Terms
+  signature:
+    section_label: Signature Page
+    heading_title: Signatures
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: >-
+      Governing law state. For a Mississippi workforce this should ordinarily
+      remain Mississippi. The sourced Mississippi practice note identifies no
+      choice-of-law or forum-selection authority specific to these covenants,
+      so treat any out-of-state selection in a Mississippi employment
+      relationship as a counsel-review decision rather than assuming how a
+      court would resolve it.
+    display_label: Governing Law
+    section: Legal
+    default: Mississippi
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    default_value_rationale: >-
+      24 months is common for non-trade-secret confidentiality obligations in
+      employment agreements. Mississippi weighs a perpetual lid on ordinary
+      business information against the employee's freedom to work, so a finite
+      term is safer than an indefinite one.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
+    section: Employee Non-Solicitation
+    default_value_rationale: >-
+      Mississippi sets no statutory cap on duration, and no staged Mississippi authority speaks
+      specifically to employee no-poach covenants, so this restraint stands on ordinary
+      reasonableness under the Texas Road Boring three-interest balance. 24 months matches the modal
+      employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12
+      months is the common lighter alternative, and counsel should size the term to the employer's
+      actual protectable interest.
+  - name: covered_employee_period
+    type: string
+    description: >-
+      Lookback period for determining which employees are covered by the
+      non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: >-
+      12 months is the most common lookback period for employee non-solicitation
+      scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
+    section: Customer Non-Solicitation
+    default_value_rationale: >-
+      12 months is the most common customer non-solicit term in benchmarked,
+      publicly-filed employee agreements, edging out 24 months by only a narrow
+      margin. Mississippi sets no statutory cap; a customer non-solicit maps
+      directly onto the customer-goodwill interest and is often the employer's
+      sturdiest restraint here, because Mississippi recognizes that a properly
+      drafted clause reaching former customers can be reasonable and enforceable
+      (Kennedy). Counsel should size the term to the actual customer
+      relationships protected.
+  - name: covered_customer_period
+    type: string
+    description: >-
+      Lookback period for determining which customers are covered by the
+      non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: >-
+      12 months is the most common lookback period for customer non-solicitation
+      scope.
+  - name: noncompete_included
+    type: boolean
+    description: >-
+      Whether the non-competition covenant is included. Mississippi has no
+      general non-compete statute; a non-compete is disfavored, construed
+      strictly against the employer, and enforceable only if the employer
+      proves it reasonable in duration, territory, and restrained activity under
+      the three-interest balance (Texas Road Boring) and tied to a legitimate
+      protectable interest rather than ordinary competition. This template
+      recites the protectable-interest basis and sizes the restraint to the
+      employee's real influence.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    default_value_rationale: >-
+      Conservative default. The non-compete is the most heavily scrutinized
+      covenant under the Texas Road Boring reasonableness balance; a customer
+      non-solicit backstopped by trade-secret protection often protects the
+      employer as well. Include only after confirming a legitimate protectable
+      interest (confidential information, trade secrets, or customer goodwill)
+      and sizing the duration and territory to the employee's real influence
+      rather than the employer's whole footprint.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
+    section: Non-Competition
+    default_value_rationale: >-
+      12 months matches the modal non-compete term observed in benchmarked,
+      publicly-filed employee agreements — a common, conservative pick rather
+      than a Mississippi ceiling (Mississippi imposes no statutory cap on
+      duration). Courts weigh time, territory, and activity together under the
+      three-interest balance, so there is no safe-harbor number; counsel should
+      size the default to the actual role and market rather than copy from
+      another form. Note that the restricted period runs from the contractual
+      termination date and a court will not extend it at the back end absent an
+      express extension clause (Frierson).
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee provided services
+    section: Non-Competition
+    default_value_rationale: >-
+      Tied to the employee's actual service area. Mississippi imposes no
+      statutory cap on territory but measures scope against the employee's real
+      influence: a statewide restraint failed where the employee's protectable
+      relationships were local (Heatherly), while a 250-mile radius held for a
+      telephonic business whose market would have justified even a nationwide
+      limit (Timber Lake). A narrower area genuinely needed to protect customer
+      relationships or confidential information is far easier to defend than a
+      statewide ban.
+  - name: competitive_business_definition
+    type: string
+    description: >-
+      Description of the business activities that constitute competition with
+      the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: >-
+      Optional named list of specific competitors. Narrowing the restriction to
+      named competitors strengthens enforceability.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: >-
+      Maximum ownership percentage of publicly traded securities permitted under
+      the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: >-
+      Five percent of any class of publicly traded securities is the standard
+      passive investment carveout across restrictive covenant agreements.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name
+---
+# Employee Restrictive Covenant Agreement
+
+{% agreement-section type="cover_terms" %}
+## Cover Terms
+
+The terms below are incorporated into and form part of this agreement.
+
+{% cover-terms %}
+{% cover-term kind="row" label="Employer" field="employer_name" /%}
+{% cover-term kind="row" label="Employee" field="employee_name" /%}
+{% cover-term kind="row" label="Employee Title / Position" field="employee_title" include-when="employee_title" /%}
+{% cover-term kind="row" label="Effective Date" field="effective_date" /%}
+{% cover-term kind="row" label="Governing Law" field="governing_law" /%}
+{% cover-term kind="group" label="Confidentiality" /%}
+{% cover-term kind="subrow" label="Trade Secrets Duration" field="confidentiality_trade_secret_duration" /%}
+{% cover-term kind="subrow" label="Other Confidential Information Duration" field="confidentiality_other_duration" /%}
+{% cover-term kind="group" label="Employee Non-Solicitation" include-when="employee_nonsolicit_included" /%}
+{% cover-term kind="subrow" label="Duration" field="employee_nonsolicit_duration" include-when="employee_nonsolicit_included" /%}
+{% cover-term kind="group" label="Customer Non-Solicitation" include-when="customer_nonsolicit_included" /%}
+{% cover-term kind="subrow" label="Duration" field="customer_nonsolicit_duration" include-when="customer_nonsolicit_included" /%}
+{% cover-term kind="group" label="Non-Competition" include-when="noncompete_included" /%}
+{% cover-term kind="subrow" label="Duration" field="noncompete_duration" include-when="noncompete_included" /%}
+{% cover-term kind="subrow" label="Restricted Territory" field="territory" include-when="noncompete_included" /%}
+{% cover-term kind="subrow" label="Competitive Business" field="competitive_business_definition" include-when="noncompete_included" /%}
+{% cover-term kind="subrow" label="Specified Competitors" field="specified_competitors" include-when="noncompete_included" /%}
+{% cover-term kind="group" label="No Business with Covered Customers" include-when="nondealing_included" /%}
+{% cover-term kind="subrow" label="Duration" field="nondealing_duration" include-when="nondealing_included" /%}
+{% cover-term kind="group" label="Non-Investment" include-when="noninvestment_included" /%}
+{% cover-term kind="subrow" label="Duration" field="noninvestment_duration" include-when="noninvestment_included" /%}
+{% cover-term kind="group" label="Non-Disparagement" /%}
+{% cover-term kind="subrow" label="Duration" field="nondisparagement_duration" /%}
+{% /cover-terms %}
+{% /agreement-section %}
+
+{% agreement-section type="standard_terms" %}
+## Standard Terms
+
+{% clause id="defined-terms" type="definitions" %}
+### Defined Terms
+
+[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+
+[[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee and the general knowledge, skill, and experience Employee acquired during employment.
+
+[[Covered Customers]] means customers, vendors, referral sources, and business partners with whom Employee had material contact or for whom Employee had responsibility during the {% field name="covered_customer_period" /%} before termination of employment.
+
+[[Covered Employees]] means employees with whom Employee worked or whom Employee managed during the {% field name="covered_employee_period" /%} before termination of employment.
+
+[[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {% field name="passive_public_holdings_threshold" /%} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
+
+[[Protected Interests]] means Employer's legitimate business interests, including its Confidential Information, its Trade Secrets, its goodwill in its customer, vendor, referral-source, and business-partner relationships, and its investment in specialized training provided to Employee.
+
+[[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason, subject to any express extension under the Tolling During Breach section.
+
+[[Restricted Territory]] means the geographic area described in Cover Terms under Restricted Territory.
+
+[[Solicit]] means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
+
+[[Trade Secrets]] means information that derives independent economic value from not being generally known or readily ascertainable and that is the subject of efforts reasonable under the circumstances to maintain its secrecy, as protected under the Mississippi Uniform Trade Secrets Act and the federal Defend Trade Secrets Act.
+{% /clause %}
+
+{% clause id="recitals-and-legitimate-business-interest" %}
+### Recitals and Protectable Interests
+
+Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship. Employee will receive access to Employer's Confidential Information and Trade Secrets and will develop customer relationships and goodwill on Employer's behalf, and each covenant is included to protect those Protected Interests and not to restrain ordinary competition. Employer would not provide Employee with access to those Protected Interests absent the protections in this agreement. The parties agree that each covenant is reasonable in duration, territory, and restrained activity, and is sized to the work Employee actually performs and the relationships Employee actually holds rather than to the whole of Employer's business.
+{% /clause %}
+
+{% clause id="timing-and-employee-acknowledgements" %}
+### Timing, Consideration, and Employee Acknowledgements
+
+The parties acknowledge that this agreement is supported by adequate consideration. If Employee is an existing at-will employee, the consideration for Employee's covenants is Employer's continuation of Employee's employment; if this agreement is signed at the outset of employment, the consideration is the offer and commencement of employment. Employee represents that Employee is not a minor and has the legal capacity to enter this agreement. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement, and that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
+{% /clause %}
+
+{% clause id="confidential-information-and-trade-secret-protection" %}
+### Confidential Information and Trade Secret Protection
+
+Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding Trade Secrets continue in perpetuity, for as long as the information remains a trade secret. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms. This confidentiality obligation applies independent of any restrictive covenant in this agreement and does not restrict Employee's use of the general knowledge, skill, and experience Employee acquired during employment.
+{% /clause %}
+
+{% clause id="permitted-disclosures-and-protected-conduct" %}
+### Permitted Disclosures and Protected Conduct
+
+Nothing in this agreement prohibits Employee from: (a) reporting possible violations of law to any government agency, including the Securities and Exchange Commission, the Equal Employment Opportunity Commission, the Occupational Safety and Health Administration, or any other federal, state, or local agency; (b) making disclosures protected under whistleblower provisions of any law; (c) discussing wages, hours, or other terms and conditions of employment as protected by applicable law, including Section 7 of the National Labor Relations Act (29 U.S.C. § 157); (d) testifying truthfully in legal proceedings; or (e) filing a sealed complaint in court using Confidential Information without liability. Pursuant to the Defend Trade Secrets Act (18 U.S.C. § 1833(b)), Employee may not be held criminally or civilly liable for disclosing a trade secret in confidence to a government official or attorney solely for the purpose of reporting or investigating a suspected violation of law, or in a sealed court filing.
+{% /clause %}
+
+{% clause id="return-deletion-and-certification-of-company-property" %}
+### Return, Deletion, and Certification of Company Property
+
+Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request.
+{% /clause %}
+
+{% clause id="non-solicitation-of-employees" include-when="employee_nonsolicit_included" %}
+### Non-Solicitation of Employees
+
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees.
+{% /clause %}
+
+{% clause id="non-solicitation-of-customers-vendors-referral-sources-and-business-partners" include-when="customer_nonsolicit_included" %}
+### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
+
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Employee's own solicitation of a Covered Customer; except as expressly provided elsewhere in this agreement, it does not prohibit Employee from accepting business from a Covered Customer who initiates contact with Employee and whom Employee did not Solicit. This covenant is included to protect Employer's goodwill in its customer relationships and is drawn no broader than reasonably necessary to protect it.
+{% /clause %}
+
+{% clause id="no-business-with-covered-customers" include-when="nondealing_included" %}
+### No Business with Covered Customers
+
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This covenant is included to protect Employer's goodwill in its customer relationships and is drawn no broader than reasonably necessary to protect it.
+{% /clause %}
+
+{% clause id="non-competition" include-when="noncompete_included" %}
+### Non-Competition
+
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is included to protect Employer's Protected Interests, not to restrain ordinary competition, and is confined to the Restricted Territory and to the activities described in Cover Terms under Competitive Business. Where Cover Terms list Specified Competitors, this covenant is limited to those named competitors and their affiliates rather than the general Competitive Business definition. Passive Public Holdings are permitted.
+{% /clause %}
+
+{% clause id="non-investment" include-when="noninvestment_included" %}
+### Non-Investment
+
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. Passive Public Holdings are permitted.
+{% /clause %}
+
+{% clause id="non-disparagement" %}
+### Non-Disparagement
+
+During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law, including rights protected under Section 7 of the National Labor Relations Act.
+{% /clause %}
+
+{% clause id="physician-specific-rights-and-notices" %}
+### Physician and Health Care Practitioner Covenants
+
+If Employee is a physician or other health care practitioner, the parties acknowledge that each covenant in this agreement restraining Employee's practice is limited to the durations and, where applicable, the territory stated in Cover Terms, and is intended to preserve patient access and continuity of care.
+{% /clause %}
+
+{% clause id="practice-restrictions-for-lawyers-excluded" %}
+### Practice Restrictions for Lawyers Excluded
+
+If Employee is a lawyer, no covenant in this agreement restricts Employee's right to practice law after the termination of the relationship, except an agreement concerning benefits upon retirement, as provided in Miss. R. Prof'l Conduct 5.6(a). To the extent any covenant in this agreement would otherwise restrain Employee's right to practice law, that covenant does not apply to Employee.
+{% /clause %}
+
+{% clause id="no-conflicting-obligations" %}
+### No Conflicting Obligations
+
+Employee represents that performing duties for Employer and complying with this agreement does not conflict with any prior agreement, court order, or legal obligation binding on Employee. Employee must promptly disclose to Employer any potential conflict that arises during employment.
+{% /clause %}
+
+{% clause id="notice-to-future-employers-and-other-third-parties" %}
+### Notice to Future Employers and Other Third Parties
+
+Employer may disclose the existence and terms of this agreement to any prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach this agreement. Employee consents to this disclosure.
+{% /clause %}
+
+{% clause id="tolling-during-breach" %}
+### Tolling During Breach
+
+If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by the time Employee is in breach, even if the Restricted Period would otherwise have expired according to the terms of this agreement, so that the full duration of the restriction is measured by the actual period of the breach. Any extension under this section is limited to the actual period of the breach and does not otherwise extend the Restricted Period.
+{% /clause %}
+
+{% clause id="remedies" %}
+### Remedies
+
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate, and Employer may seek injunctive or other equitable relief in addition to any other remedies available at law.
+{% /clause %}
+
+{% clause id="forgo-enforcement-after-bad-faith-termination" %}
+### No Enforcement After a Bad-Faith Termination
+
+Employer will not rely on any covenant in this agreement for enforcement after Employer has terminated Employee's employment arbitrarily, capriciously, or in bad faith. Nothing in this agreement limits any right or defense available to Employee under applicable law, including any defense based on the circumstances in which Employee's employment ends.
+{% /clause %}
+
+{% clause id="enforceability-and-severability" %}
+### Enforceability and Severability
+
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable, so that a court's refusal to enforce one covenant, or a court's decision to enforce a covenant only to a reasonable extent, does not affect the others.
+{% /clause %}
+
+{% clause id="reformation" %}
+### Reformation
+
+If a court finds any restrictive covenant in this agreement overbroad, the parties request that the court enforce that covenant to the maximum extent the court finds reasonable, modifying it as needed to do so. Each restrictive covenant is intended to be enforceable as written, without reliance on judicial revision.
+{% /clause %}
+
+{% clause id="survival-and-expiration-of-each-covenant" %}
+### Survival and Expiration of Each Covenant
+
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms for that covenant. Obligations under the Confidential Information and Trade Secret Protection section survive for as long as the relevant information remains a Trade Secret. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+{% /clause %}
+
+{% clause id="assignment-and-successors" %}
+### Assignment and Successors
+
+Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. Any assignment of the covenants in this agreement in connection with a transfer of Employer's business must be made expressly and in writing. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
+{% /clause %}
+
+{% clause id="governing-law-venue-and-dispute-process" %}
+### Governing Law, Venue, and Dispute Process
+
+This agreement is governed by the law listed in Cover Terms. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
+{% /clause %}
+
+{% clause id="entire-agreement-amendment-waiver-and-electronic-signatures" %}
+### Entire Agreement, Amendment, Waiver, and Electronic Signatures
+
+This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. This agreement may be amended only in writing signed by both parties. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
+{% /clause %}
+{% /agreement-section %}
+
+{% agreement-section type="signature" %}
+## Signatures
+
+{% signature-block arrangement="entity-plus-individual" %}
+By signing this agreement, each party acknowledges and agrees to the restrictive covenant obligations above. Employee confirms having read and understood each provision, including the Cover Terms.
+
+{% signer id="employer" kind="entity" capacity="through_representative" label="Employer" %}
+Employer: {% field name="employer_name" /%}
+
+Signature: _______________
+Signatory Name: {% field name="employer_signatory_name" /%}
+Title: {% field name="employer_signatory_title" /%}
+Date: _______________
+{% /signer %}
+
+{% signer id="employee" kind="individual" capacity="personal" label="Employee" %}
+**Employee**
+
+Signature: _______________
+Print Name: {% field name="employee_name" /%}
+Date: _______________
+{% /signer %}
+{% /signature-block %}
+{% /agreement-section %}

@@ -1,0 +1,114 @@
+name: OpenAgreements Employee Restrictive Covenant (Minnesota)
+category: non-compete
+description: Minnesota-specific employee restrictive covenant agreement centered on confidentiality, trade secret protection, property return, non-disparagement, and narrowly drafted customer and employee non-solicitation. Omits any employee covenant not to compete under Minn. Stat. section 181.988, subd. 2(a), which makes covenants not to compete void and unenforceable, and preserves only the covenants the statute leaves outside its definition of a covenant not to compete under subd. 1(a) — confidentiality and trade-secret protection, non-disparagement, property return, and customer and employee non-solicitation covenants drafted to reach only customers and colleagues the worker actually dealt with, keyed to Employee-initiated solicitation and a defined Restricted Period, so they protect relationships and information rather than functioning as a restraint on competition. Includes Minnesota choice-of-law and forum language reflecting Minn. Stat. section 181.988, subd. 3. Drafted as a starting point for licensed counsel review.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-minnesota
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Minnesota-specific analysis informed by the quote-verified Minnesota practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement — the date the last party signs. It anchors the durations stated in Cover Terms.
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state. For an employee who primarily resides and works in Minnesota, the Minnesota Noncompetition Agreement Act means Minnesota law is the only selection that operates as written for a controversy under that act.
+    display_label: Governing Law
+    default: Minnesota
+    section: Legal
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.minnesota.keep-minnesota-law-and-forum-for-minnesota-employees
+    default_value_rationale: Minnesota is selected because Minnesota law supplies the required substantive protection for employees who primarily reside and work in Minnesota in covered restrictive-covenant disputes.
+  - name: governing_venue
+    type: string
+    description: County and state whose courts are the agreed forum. For a Minnesota-based employee, the Minnesota Noncompetition Agreement Act means a Minnesota forum is the only selection that operates as written for a controversy under that act.
+    display_label: Venue
+    default: the state courts located in Minnesota
+    section: Legal
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.minnesota.keep-minnesota-law-and-forum-for-minnesota-employees
+    default_value_rationale: A Minnesota forum is selected because covered employees who primarily reside and work in Minnesota cannot be required to adjudicate covered controversies outside Minnesota as a condition of employment.
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of the non-disparagement covenant
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of the customer non-solicitation restriction, measured from the end of employment. This is a surviving covenant under the Minnesota Noncompetition Agreement Act; keep it a finite, relationship-protective term so the clause does not function as a banned restraint on competition.
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common customer non-solicit term in benchmarked, publicly-filed employee agreements, edging out 24 months by only a narrow margin. Minnesota law permits customer-solicitation restrictions only when they remain relationship-protective rather than operating as a substitute restraint on competition, so counsel should shorten or narrow the term if the protected relationships do not justify a full year.
+  - name: covered_customer_period
+    type: string
+    description: Look-back window before termination used to bound the class of Covered Customers to those the employee actually dealt with or had responsibility for. The Minnesota Noncompetition Agreement Act leaves customer non-solicits lawful, but an all-customers class pushes the clause toward a banned functional non-compete, so the class is tied to a stated look-back window.
+    display_label: Covered Customer Look-Back
+    default: 12 months
+    section: Customer Non-Solicitation
+    rationale_source: editorial
+    default_value_rationale: 12 months is a conservative look-back window that limits Covered Customers to recent, relationship-based contacts. Minnesota law does not set this number, so counsel should adjust it to the employee's actual customer responsibilities and the relationships being protected.
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of the employee non-solicitation (no-poach) restriction, measured from the end of employment. This is a surviving covenant under the Minnesota Noncompetition Agreement Act; keep it finite and workforce-relationship-protective, not a substitute restraint on the employee's own work.
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
+    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. Minnesota law does not set a fixed duration, so counsel should size the period to the workforce relationships being protected and avoid using it as a substitute restraint on the employee's own work.
+  - name: covered_employee_period
+    type: string
+    description: Look-back window before termination used to bound the class of Covered Employees to colleagues the employee actually worked with or supervised. A workforce-wide class adds nothing protective and pushes a lawful no-poach toward the functional-non-compete line the statute polices by effect.
+    display_label: Covered Employee Look-Back
+    default: 12 months
+    section: Employee Non-Solicitation
+priority_fields:
+  - employer_name
+  - employee_name
+  - effective_date

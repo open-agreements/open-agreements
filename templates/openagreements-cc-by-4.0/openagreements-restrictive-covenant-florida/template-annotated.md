@@ -12,10 +12,10 @@ Employer
 : [Legal name of the employer]
 
 Employer Parent Entity
-: [Legal name of Employer's direct corporate parent entity, if any (optional). Named alongside "Employer and its Affiliates" as an expressly-identified third-party beneficiary entitled to enforce the restrictive covenants under Fla. Stat. section 542.335(1)(f). Common in PE / holding-company structures where the named Employer entity is a dedicated employment entity distinct from the operating company.]
+: [Legal name of Employer's direct corporate parent entity, if any (optional). Named alongside "Employer and its Affiliates" as an expressly-identified third-party beneficiary entitled to enforce the restrictive covenants under Florida's restrictive-covenant rules. Common in PE / holding-company structures where the named Employer entity is a dedicated employment entity distinct from the operating company.]
 
 Operating / Service-Recipient Affiliate
-: [Legal name of the operating or service-recipient Affiliate, if different from the named Employer (optional). Use this where the named Employer is a dedicated employment entity but the operating business — the entity for whom Employee actually performs services or that holds the Protected Interests — is a separate commonly controlled Affiliate (common in PE / holding-company structures). When provided, this entity is expressly named in the Fla. Stat. section 542.335(1)(f) third-party-beneficiary list, in addition to the "Employer and its Affiliates" class language, for higher enforcement certainty.]
+: [Legal name of the operating or service-recipient Affiliate, if different from the named Employer (optional). Use this where the named Employer is a dedicated employment entity but the operating business — the entity for whom Employee actually performs services or that holds the Protected Interests — is a separate commonly controlled Affiliate (common in PE / holding-company structures). When provided, this entity is expressly named in the third-party-beneficiary list, in addition to the "Employer and its Affiliates" class language, for higher enforcement certainty.]
 
 Employee
 : [Full legal name of the employee]
@@ -40,7 +40,7 @@ Other Confidential Information Duration
 Employee Non-Solicitation
 
 Duration
-: 12 months
+: 24 months
 
 Customer Non-Solicitation
 
@@ -225,3 +225,19 @@ Date: _______________
 Signature: _______________
 Print Name: [Full legal name of the employee]
 Date: _______________
+
+## Drafting notes
+
+Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Florida](/practice-guides/non-compete/us/florida).
+
+### legitimate business interest
+
+A naked interest in avoiding ordinary competition is not protectable. Plead and prove a specific interest from the statutory categories — or an analogous one supported by evidence — because a restraint not tied to a legitimate business interest is void and unenforceable .
+
+### blue-pencil tailoring
+
+Because Florida blue-pencils rather than voids, an overbroad covenant is not a _free pass_ for the worker — but neither should employers draft for the moon expecting a court to fix it. Tailor duration, geography, and scope to the proven interest so the enforced version matches the drafted version .
+
+### choice act non-solicits
+
+The CHOICE Act defines _covered noncompete_ and _covered garden leave_ agreements but does not mention non-solicitation clauses. A four-year CHOICE Act non-compete may sit beside a non-solicit that still defaults to section 542.335's two-year presumption, so draft and analyze the two clauses separately rather than assuming the four-year term carries over .

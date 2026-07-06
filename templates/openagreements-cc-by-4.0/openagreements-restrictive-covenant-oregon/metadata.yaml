@@ -1,0 +1,184 @@
+name: OpenAgreements Employee Restrictive Covenant (Oregon)
+category: non-compete
+description: 'Oregon-specific employee restrictive covenant agreement built for ORS 653.295''s void-unless regime: confidentiality and trade-secret protection, customer and employee non-solicitation and non-dealing covenants that fall outside the statutory checklist, and an optional non-compete gated on the two-week written-offer notice or bona fide advancement, exempt-salaried status above the inflation-indexed salary threshold, a statutory protectable interest, the 12-month cap, and delivery of a signed copy within 30 days after termination, with a garden-leave pay-to-enforce alternative for sub-threshold workers, the 2025 medical-licensee ban, the Workplace Fairness Act carve-out, and a draft-within-the-statute posture rather than reliance on judicial reformation. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-oregon
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Oregon-specific analysis informed by the quote-verified Oregon practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    section: Legal
+    default: Oregon
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements, and it tracks Oregon's protectable-interest line between trade secrets (perpetual) and competitively sensitive confidential information that would not qualify as a trade secret under ORS 653.295(2).
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. ORS 653.295(5)(b) carves employee non-solicits out of the non-compete checklist entirely, so the duration is judged under common-law reasonableness rather than the 12-month statutory cap that governs the non-compete.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is a common enforceable duration. ORS 653.295(5)(b) carves customer non-solicits out of the non-compete checklist, so the clause is judged under common-law reasonableness.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    rationale_source: editorial
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope, and it keeps the covered class tied to active, ongoing customer relationships.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Under ORS 653.295 an Oregon employee non-compete is void and unenforceable unless every statutory condition is met — a two-week written-offer notice or a bona fide advancement, exempt-salaried status above the inflation-indexed threshold (or the garden-leave alternative), a statutory protectable interest, a term no longer than 12 months from termination, and delivery of a signed copy within 30 days after termination.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    default_value_rationale: Conservative default. In Oregon a non-compete starts from a void-unless default; include it only after confirming the formation-timing gateway, the exempt-status and salary threshold (or a written garden-leave commitment), a statutory protectable interest, and that the worker is not a medical licensee barred under ORS 653.297.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    default_value_rationale: ORS 653.295(3) caps the term at 12 months from the date of termination and voids the excess; 12 months is therefore the statutory ceiling, not merely a conservative choice. Any longer term is dead text under Oregon law.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee provided services
+    section: Non-Competition
+    default_value_rationale: 'Tied to the employee''s actual service area. ORS 653.295 does not prescribe a territory limit, but the protectable-interest condition does the same work: a footprint that outruns the trade secrets and strategic plans the worker touched reads as a restraint on employment, and there is no judicial rewrite waiting to save an overbroad covenant in Oregon.'
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Narrowing the restriction to named competitors strengthens enforceability.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: oregon_garden_leave_pay
+    type: string
+    description: Oregon only. The employer's written garden-leave payment commitment used to enforce a non-compete against an employee who does not satisfy the exempt-status or salary-threshold conditions of ORS 653.295(1)(b) and (e). ORS 653.295(7) enforces the covenant for the full term of the agreement, for up to 12 months, only if the employer agrees in writing to pay, for the time the employee is restricted from working, the greater of (a) at least 50 percent of the employee's annual gross base salary and commissions at the time of termination or (b) 50 percent of the inflation-indexed threshold figure. State the specific payment commitment here. Shown in the Oregon garden-leave cover-term row and recited in the garden-leave clause when the non-compete is included.
+    display_label: Garden-Leave Payment Commitment (Oregon)
+    default: payment to Employee, for the time Employee is restricted from working, of the greater of (a) at least 50 percent of Employee's annual gross base salary and commissions at the time of termination or (b) 50 percent of the inflation-indexed threshold amount published by the Oregon Bureau of Labor and Industries for the calendar year preceding termination
+    section: Non-Competition
+    default_value_rationale: The default recites the two halves of the ORS 653.295(7) formula so the pay-to-enforce path is available where the employee falls below the salary threshold. Counsel should confirm the payment is actually committed in writing; the garden-leave path overrides only subsections (1)(b) and (e) — the notice-or-advancement gateway, protectable interest, and 30-day delivery conditions still apply.
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+    default_value_rationale: 12 months is a common enforceable duration. ORS 653.295(5)(b) exempts covenants not to solicit or transact business with customers of the employer from the non-compete checklist, so the non-dealing form is judged under common-law reasonableness.
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+    default_value_rationale: 12 months matches the ORS 653.295(3) non-compete cap, because an investment restraint that operates like a restraint on working enjoys none of the ORS 653.295(5) carve-out protection and is tested against the statutory gates.
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

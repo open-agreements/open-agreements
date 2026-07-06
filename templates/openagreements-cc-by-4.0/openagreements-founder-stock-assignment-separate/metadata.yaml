@@ -1,0 +1,40 @@
+name: Stock Assignment Separate from Certificate
+category: corporate-governance
+description: A stock power (assignment separate from the certificate) by which a founder, for value received, assigns repurchased shares of a Delaware corporation back to the corporation and appoints an attorney-in-fact to transfer the shares on the corporation's books. Often pre-signed at issuance and held with the Restricted Stock Purchase Agreement or in escrow; here it effects the transfer of the repurchased shares. Drafted as a starting point for licensed counsel review.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-founder-stock-assignment-separate
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Licensed under CC BY 4.0.
+fields:
+  - name: company_legal_name
+    type: string
+    description: Full legal name of the Delaware corporation
+    section: Parties
+  - name: founder_name
+    type: string
+    description: Full name of the founder assigning the shares (the Assignor)
+    section: Parties
+  - name: shares_assigned
+    type: string
+    description: Number and class of shares assigned (for example, "100,000 shares of Common Stock")
+    section: Terms
+  - name: certificate_number
+    type: string
+    description: Certificate number representing the assigned shares (or a reference to uncertificated / book-entry shares)
+    section: Terms
+  - name: attorney_in_fact
+    type: string
+    description: Person appointed as attorney-in-fact to transfer the shares on the Company's books (for example, "the Secretary of the Company")
+    section: Terms
+  - name: assignment_date
+    type: date
+    description: Date the Assignor executes the stock power
+    section: Terms
+priority_fields:
+  - company_legal_name
+  - founder_name
+  - shares_assigned
+  - certificate_number

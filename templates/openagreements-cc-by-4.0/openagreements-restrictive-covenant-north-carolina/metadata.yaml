@@ -1,0 +1,183 @@
+name: OpenAgreements Employee Restrictive Covenant (North Carolina)
+category: non-compete
+description: 'North Carolina-specific employee restrictive covenant agreement built for North Carolina''s common-law reasonableness regime with a strict-severance twist: there is no general North Carolina non-compete statute, so every post-employment restraint stands or falls on the five-element Whittaker test (in writing, part of an employment contract, based on valuable consideration, reasonable as to time and territory, and not against public policy), read strictly against the drafter against the backdrop of N.C. Gen. Stat. § 75-1''s declaration that contracts in restraint of trade are illegal. It provides confidentiality and trade-secret protection backstopped by the North Carolina Trade Secrets Protection Act (N.C. Gen. Stat. §§ 66-152, 66-154), a new-consideration recital for mid-employment covenants (Whittaker Gen. Med. Corp. v. Daniel; Emp''t Staffing Grp., Inc. v. Little; Hejl v. Hood, Hargett & Assocs.; QSP, Inc. v. Hair), a § 75-4 signed-writing acknowledgement keyed to the employee''s signature, customer and employee non-solicitation confined to actual relationships (Hejl; Inland Am. Winston Hotels, Inc. v. Crockett), an optional non-compete confined to the employee''s actual duties and customer territory (Med. Staffing Network, Inc. v. Ridgway; Hartman v. W.H. Odell & Assocs.; United Labs., Inc. v. Kuykendall), an express extension-on-breach tolling clause (Philips Elecs. N. Am. Corp. v. Hope; Southtech Orthopedics, Inc. v. Dingus), physician public-health scrutiny (Aesthetic Facial & Ocular Plastic Surgery Ctr., P.A. v. Zaldivar), an in-state forum required by N.C. Gen. Stat. § 22B-3, and severable, tiered covenants that do not rely on judicial reformation because North Carolina follows the strict blue-pencil doctrine under which a court may strike but never rewrite (Beverage Sys. of the Carolinas, LLC v. Associated Beverage Repair, LLC). Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-north-carolina
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. North Carolina-specific analysis informed by the quote-verified North Carolina practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    section: Legal
+    default: North Carolina
+  - name: mid_employment_consideration
+    type: string
+    description: The new consideration supporting the covenants where the employee signs after employment has already begun — for example a raise in pay, a new job assignment, or a stated one-time payment. Leave blank where the agreement is signed at the outset of employment, in which case the offer of employment is itself the consideration.
+    display_label: Mid-Employment Consideration
+    default: ''
+    section: Timing
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.north-carolina.support-mid-employment-covenants-with-new-consideration
+    default_value_rationale: North Carolina's mid-employment consideration rule requires new consideration for a covenant signed after the employment relationship already exists; continued at-will employment is not enough. The amount need not be large — courts do not weigh adequacy and $500 has sufficed — but it must actually move and should be recited. Left blank by default because a covenant signed at hire needs no separate payment; the offer of new employment is itself valuable consideration.
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. North Carolina construes restraints strictly against the drafter and never trims them, so a perpetual lid on ordinary business information reads as overreach.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    default_value_rationale: North Carolina sets no statutory cap on duration; an employee non-solicit has no statute of its own and stands or falls on ordinary restraint-of-trade reasonableness. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, and counsel should size the term to the employer's actual protectable interest.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: North Carolina sets no statutory cap; a customer non-solicit maps directly onto the customer-goodwill interest and is often the sturdiest restraint when held to actual relationships. 12 months is a common, conservative duration counsel should size to the actual customer relationships protected.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. North Carolina has no general non-compete statute; a non-compete is enforceable only if it satisfies all five elements of the Whittaker common-law test and is tied to a legitimate business interest rather than ordinary competition. This template confines the restraint to the employee's actual duties and customer territory and drafts it as a severable unit because North Carolina courts strike but never rewrite an overbroad covenant.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    default_value_rationale: Conservative default. The non-compete is the most heavily scrutinized covenant, one defective element defeats it, and a court will not resize an overbroad restraint — it strikes it. A customer non-solicit backstopped by the North Carolina Trade Secrets Protection Act often protects the employer as well. Include only after confirming a legitimate interest (intimate knowledge of the business not generally available to the public) and confining duration, territory, and activity to the employee's actual role and customer footprint.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    default_value_rationale: North Carolina imposes no statutory cap on duration; reasonableness is a question of law weighing time and territory together on a sliding scale, and a court will not shorten an unreasonable term — it declines the covenant. 12 months is a common, conservative default counsel should size to the actual role and market rather than copy from another form.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee provided services and built customer relationships
+    section: Non-Competition
+    default_value_rationale: Tied to where the employee actually worked and built customer relationships. A territory is reasonable only to the extent it protects the employer's interest in maintaining its customers (Hartman), so a footprint-wide or aspirational territory is among the most reliable ways to lose the whole covenant to a strike.
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer, defined by reference to the duties the employee actually performed rather than every line of the employer's business.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Binding the restriction to named competitors strengthens enforceability.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements. Because a North Carolina court strikes rather than narrows an overbroad restraint, a clean passive-holdings carve-out avoids gratuitous overbreadth like a technical ban on index funds and ordinary public shares.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

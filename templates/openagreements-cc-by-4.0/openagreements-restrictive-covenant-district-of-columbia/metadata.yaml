@@ -1,0 +1,177 @@
+name: OpenAgreements Employee Restrictive Covenant (District of Columbia)
+category: non-compete
+description: 'District of Columbia employee restrictive covenant agreement built for the Ban on Non-Compete Agreements Amendment Act of 2020 (D.C. Code §§ 32-581.01–.04b): confidentiality and trade-secret protection with the statutory information carve-out, an employee non-solicitation covenant, a customer non-solicitation covenant, and an optional non-compete confined to a highly compensated employee — one at or above the annually indexed minimum qualifying annual compensation ($162,164 for most employees in 2026; $270,274 for a medical specialist). The non-compete recites every § 32-581.03(a) validity gate: a stated functional scope and geographic limits, a term of no more than 365 calendar days from separation (730 for a medical specialist), and delivery of the covenant in writing at least 14 days in advance, with the prescribed statutory notice and the workplace-policy disclosure flagged as companion writings. For a covered employee below the threshold the covenant is banned and void as a matter of law, so the template omits it by default and never relies on judicial reformation to cure overbreadth. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-district-of-columbia
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. District of Columbia-specific analysis informed by the quote-verified District of Columbia practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement — the date the last party signs. It anchors the durations stated in Cover Terms.
+    display_label: Effective Date
+    section: Timing
+  - name: notice_date
+    type: date
+    description: Date the employer delivered the non-compete provision to the employee in writing. For a valid highly compensated employee non-compete the employer must provide it at least 14 days before the individual commences employment, or, for a current employee, at least 14 days before the employee must execute the agreement.
+    display_label: Advance Delivery Date
+    section: Timing
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.deliver-the-covenant-in-writing-fourteen-days-in-advance
+  - name: governing_law
+    type: string
+    description: Governing law jurisdiction. Coverage under the District's ban keys to where the employee works — more than 50% of work time in the District, or a District-based role with substantial District work — not to the law named in the clause, so this should remain the District of Columbia for a District-based worker.
+    display_label: Governing Law
+    section: Legal
+    default: District of Columbia
+    rationale_source: editorial
+  - name: minimum_qualifying_compensation
+    type: string
+    description: Minimum qualifying annual compensation the worker must earn to be a highly compensated employee who may be bound by a non-compete. The statutory base is $150,000, adjusted upward each year for inflation; the Department of Employment Services publishes the current figure. The default is the 2026 figure; replace it with the figure for the year the covenant is proposed.
+    display_label: Minimum Qualifying Annual Compensation
+    default: $162,164
+    section: District of Columbia Statutory Gates
+    default_value_rationale: $162,164 is the 2026 minimum qualifying annual compensation published in the D.C. Department of Employment Services Public Notice on the Prohibition on Non-Compete Clauses (Jan. 1, 2026). The statute indexes this figure to inflation each year, so counsel should confirm the published figure for the year the covenant is proposed rather than relying on the $150,000 statutory base.
+    rationale_source: regulation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.gate-non-compete-by-minimum-qualifying-compensation
+  - name: medical_specialist_threshold
+    type: string
+    description: Minimum qualifying annual compensation for a medical specialist. The statutory base is $250,000, adjusted upward each year for inflation; the Department of Employment Services publishes the current figure. The default is the 2026 figure; replace it with the figure for the year the covenant is proposed.
+    display_label: Medical Specialist Minimum Compensation
+    default: $270,274
+    section: District of Columbia Statutory Gates
+    default_value_rationale: $270,274 is the 2026 medical specialist threshold published in the D.C. Department of Employment Services Public Notice on the Prohibition on Non-Compete Clauses (Jan. 1, 2026), tracking the $250,000 statutory base as adjusted for inflation.
+    rationale_source: regulation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.gate-non-compete-by-minimum-qualifying-compensation
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. A finite term keeps the non-secret obligation from functioning as a bar on competitive employment, which would risk recharacterization as a banned non-compete provision.
+    rationale_source: editorial
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. The District's ban does not speak to employee non-solicits, so the clause is judged under common-law reasonableness; a shorter term supports treating it as a limited restraint on active solicitation.
+    rationale_source: editorial
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is a common enforceable duration. A District customer non-solicit sits outside the statutory ban but is still a restraint of trade judged for reasonableness under common law (Ellis), and a shorter term supports that characterization.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation restriction.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
+  - name: noncompete_included
+    type: boolean
+    description: 'Whether the non-competition covenant is included. Beginning October 1, 2022 an employer may not require or request that a covered employee — a District-based worker below the minimum qualifying annual compensation — sign or comply with a non-compete provision, and such a provision entered into on or after that date is void as a matter of law. A non-compete survives only against a highly compensated employee and only if it clears every statutory validity gate: a stated functional scope and geographic limits, a term of no more than 365 calendar days from separation (730 for a medical specialist), and 14-day advance written delivery. This template recites those gates when the covenant is included.'
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    default_value_rationale: Conservative default. For a covered employee a District non-compete is banned and void, and subjecting an employee to one carries monetary relief of $500–$1,000 per employee, at least $1,500 for an attempt to enforce a void covenant, and at least $3,000 for a subsequent violation, plus administrative penalties and Attorney General enforcement. Include only after confirming the worker is a highly compensated employee at or above the published threshold, the covenant states its functional scope and geography, its term stays within the calendar-day cap, and the covenant was delivered in writing at least 14 days in advance with the prescribed statutory notice.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.exclude-non-competes-for-covered-employees
+  - name: noncompete_duration
+    type: string
+    description: Duration of the non-competition restriction, measured in calendar days from separation. It must not exceed 365 calendar days from the date the employee separates, or 730 calendar days for a medical specialist.
+    display_label: Non-Competition Duration
+    default: 365 calendar days
+    section: Non-Competition
+    default_value_rationale: 365 calendar days is the statutory ceiling for a non-medical highly compensated employee measured from separation. A term stated in years risks silently overshooting the day count, so the default is expressed in calendar days; a medical specialist may run to 730 calendar days.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.cap-the-term-at-365-or-730-calendar-days
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction. Section 32-581.03(a)(1)(B) makes stated geographical limitations a condition of a valid highly compensated employee non-compete, so this must be an explicit, bounded territory matched to where the employee works.
+    display_label: Restricted Territory
+    default: the geographic area in which the Employee performed work for Employer
+    section: Non-Competition
+    default_value_rationale: Tied to where the employee actually performed work rather than the employer's entire footprint. Section 32-581.03(a)(1)(B) requires the covenant to specify its geographical limitations, and a covenant silent on geography is not valid and enforceable even for a worker far above the pay threshold.
+  - name: competitive_business_definition
+    type: string
+    description: Description of the services, roles, industry, or competing entities the employee is restricted from performing work in or on behalf of. Section 32-581.03(a)(1)(A) makes a stated functional scope a condition of a valid highly compensated employee non-compete.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competing entities. Naming the employer's real competitors is the most concrete way to satisfy the competing-entities limb of the functional-scope requirement and shrinks the scope a reviewer must defend.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.specify-functional-scope-and-geographic-limits
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

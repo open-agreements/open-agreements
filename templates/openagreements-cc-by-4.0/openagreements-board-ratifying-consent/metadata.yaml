@@ -1,0 +1,56 @@
+name: Board Consent Ratifying a Defective Corporate Act
+category: corporate-governance
+description: Action by unanimous written consent of the board of directors of a Delaware corporation ratifying one or more defective corporate acts under Section 204 of the Delaware General Corporation Law — reciting each act, its date, any putative stock, and the nature of the failure of authorization, and directing the stockholder submission, certificate of validation, and notice the statute requires.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-board-ratifying-consent
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Drafting structure informed by publicly available Delaware Section 204 ratification practice. Licensed under CC BY 4.0.
+fields:
+  - name: company_name
+    type: string
+    description: Full legal name of the Delaware corporation
+    section: Parties
+  - name: consent_date
+    type: date
+    description: Date the ratifying consent is effective and signed
+    section: Terms
+  - name: defective_acts
+    type: string
+    description: Description of each defective corporate act to be ratified (for example, "the issuance of 500,000 shares of Common Stock to Jane Founder")
+    section: Terms
+  - name: defective_act_dates
+    type: string
+    description: The date of each defective corporate act (for example, "January 1, 2022")
+    section: Terms
+  - name: putative_share_count
+    type: string
+    description: If the defect involved a stock issuance, the number of shares of putative stock issued (leave blank if not applicable)
+    section: Terms
+  - name: putative_share_type
+    type: string
+    description: If the defect involved a stock issuance, the type of shares (for example, "Common Stock") (leave blank if not applicable)
+    section: Terms
+  - name: putative_issue_dates
+    type: string
+    description: If the defect involved a stock issuance, the date(s) on which the shares were purported to have been issued (leave blank if not applicable)
+    section: Terms
+  - name: failure_of_authorization
+    type: string
+    description: The nature of the failure of authorization for each act (for example, "issued without approval of the Board of Directors")
+    section: Terms
+  - name: director_signatories
+    type: array
+    description: Directors signing the consent
+    section: Signatures
+    items:
+      - name: name
+        type: string
+        description: Full name of a director signing the consent
+priority_fields:
+  - company_name
+  - defective_acts
+  - failure_of_authorization
+  - director_signatories

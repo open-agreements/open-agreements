@@ -1,0 +1,60 @@
+name: Founder Share Repurchase Election Notice
+category: corporate-governance
+description: Written notice from a Delaware corporation to a departing founder electing to exercise the company's pre-existing right to repurchase the founder's unvested shares within the exercise window set by the founder's Restricted Stock Purchase Agreement, identifying the governing agreement, termination date, unvested share count, per-share and aggregate price, and closing date. Drafted as a starting point for licensed counsel review.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-founder-share-repurchase-notice
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Licensed under CC BY 4.0.
+fields:
+  - name: company_legal_name
+    type: string
+    description: Full legal name of the Delaware corporation
+    section: Parties
+  - name: founder_name
+    type: string
+    description: Full name of the departing founder
+    section: Parties
+  - name: rspa_reference
+    type: string
+    description: Reference to the founder's existing Restricted Stock Purchase Agreement (for example, "Restricted Stock Purchase Agreement dated January 1, 2022")
+    section: Terms
+  - name: termination_date
+    type: date
+    description: Date the founder's service terminated, which starts the RSPA exercise window
+    section: Terms
+  - name: repurchase_window_days
+    type: number
+    description: Number of days after the termination date within which the RSPA permits the company to elect the repurchase (commonly 60, 90, or 120 days)
+    section: Terms
+  - name: unvested_share_count
+    type: string
+    description: Number of unvested shares subject to repurchase (for example, "125,000 shares of Common Stock")
+    section: Terms
+  - name: repurchase_price_per_share
+    type: string
+    description: Per-share repurchase price set by the RSPA (for example, "$0.0001 per share")
+    section: Terms
+  - name: aggregate_price
+    type: string
+    description: Total repurchase price payable for the unvested shares (for example, "$12.50")
+    section: Terms
+  - name: closing_date
+    type: date
+    description: Date on which the repurchase closing will occur
+    section: Terms
+  - name: signatory_name
+    type: string
+    description: Full name of the authorized officer signing for the company
+    section: Signatures
+  - name: signatory_title
+    type: string
+    description: Title of the authorized officer signing for the company
+    section: Signatures
+priority_fields:
+  - company_legal_name
+  - founder_name
+  - rspa_reference
+  - repurchase_window_days

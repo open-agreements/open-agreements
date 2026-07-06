@@ -1,0 +1,188 @@
+name: OpenAgreements Employee Restrictive Covenant (Missouri)
+category: non-compete
+description: 'Missouri-specific employee restrictive covenant agreement built for Missouri''s common-law reasonableness regime: there is no general Missouri non-compete statute, so every post-employment restraint begins as a presumptively void restraint on trade and is enforceable only to the extent it is demonstrably reasonable AND protects the employer''s trade secrets or customer contacts — never mere competition (Healthcare Servs. of the Ozarks, Inc. v. Copeland; Payroll Advance, Inc. v. Yates), with the employer bearing the burden on the protectable interest and on time/geographic reasonableness (Whelan Sec. Co. v. Kennebrew). It provides confidentiality and trade-secret protection backstopped by the Missouri Uniform Trade Secrets Act (Mo. Rev. Stat. §§ 417.453, 417.455), an independent-consideration recital reflecting Missouri''s divided consideration law (Baker v. Bristol Care, Inc.; Durrell v. Tech Elecs., Inc.; JumboSack Corp. v. Buyck), a customer non-solicitation covenant narrowed to serviced customers rather than the whole customer book (Whelan), an employee non-solicitation covenant drawn to the one-year conclusive-presumption safe harbor of Mo. Rev. Stat. § 431.202, an optional non-compete tied to the identified trade-secret or customer-contact interest and sized to the actual footprint, a tolling clause flagged as an open Missouri question, physician covenants held to the ordinary Copeland reasonableness standard (Missouri has no physician-specific statute), and discretionary judicial modification that the drafting does not rely on (Whelan permits modification; Sigma-Aldrich Corp. v. Vikin makes it discretionary; Paradise v. Midwest Asphalt Coatings, Inc. prices overreach through the prevailing-party fee rule). Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-missouri
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Missouri-specific analysis informed by the quote-verified Missouri practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: independent_consideration
+    type: string
+    description: The concrete, independent consideration actually conferred on Employee in exchange for the covenants (for example, a signing bonus, a raise, specialized training, or another benefit beyond the mere offer or continuation of at-will employment).
+    display_label: Independent Consideration
+    default: a signing bonus, access to Employer's confidential information and customer relationships, and specialized training
+    section: Timing
+    default_value_rationale: Missouri consideration law is divided on whether continued at-will employment alone supports restrictive covenants. Reciting a concrete, independent benefit, rather than relying only on the offer or continuation of at-will employment, places the covenant on the safer side of that divide.
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.missouri.support-covenant-with-independent-consideration
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    section: Legal
+    default: Missouri
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: Missouri law gives employee no-hire and anti-raiding covenants a conclusive reasonableness presumption when the postemployment duration is no more than one year. Drawing this covenant to 12 months captures that statutory safe harbor; a longer term falls back to the facts-and-circumstances reasonableness test.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.missouri.keep-employee-no-hire-within-one-year-safe-harbor
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: Missouri sets no statutory cap on a customer non-solicit, and the employee no-hire safe harbor does not reach customer restrictions, so the covenant is judged under the common-law reasonableness test. 12 months is a common, conservative duration counsel should size to the actual customer relationships protected; the covered class matters more than the number, because customer restrictions should be limited to customers the employee actually serviced or had substantial contact with.
+    rationale_source: editorial
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Missouri has no general non-compete statute; a covenant not to compete begins as a presumptively void restraint on trade and is enforceable only to the extent it is demonstrably reasonable and protects the employer's trade secrets or customer contacts, with the employer bearing the burden on the protectable interest and on time/geographic reasonableness. This template recites the protectable-interest basis and sizes the restraint to the employer's actual footprint.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    default_value_rationale: Conservative default. The non-compete is the most heavily scrutinized covenant under Missouri law, which enforces it only in service of trade secrets or customer contacts and never against mere competition; a customer non-solicit backstopped by the Missouri Uniform Trade Secrets Act often protects the employer as well. Include only after confirming an identified trade-secret or customer-contact interest and sizing the duration and territory to the actual footprint.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    default_value_rationale: Missouri imposes no statutory cap on non-compete duration; restrictions of up to about two years are commonly within the range courts will consider, but that is a framing of case outcomes, not a safe-harbor number, and the employer must still justify the specific term on the facts. 12 months is a common, conservative default counsel should size to the actual role and market rather than copy from another form.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee provided services
+    section: Non-Competition
+    default_value_rationale: Tied to the employee's actual service area. Missouri case law puts the employer to its proof on geographic reasonableness, and a covenant with no territorial limit risks both nonenforcement and no judicial rewrite. A narrower area genuinely needed to protect the trade-secret or customer-contact interest is far easier to defend.
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.missouri.limit-covenants-to-trade-secrets-or-customer-contacts
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Narrowing the restriction to named competitors strengthens enforceability.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

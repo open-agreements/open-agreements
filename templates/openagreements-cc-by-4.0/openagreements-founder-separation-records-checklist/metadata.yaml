@@ -1,0 +1,40 @@
+name: Founder Separation Records Certificate and Minute-Book Filing Checklist
+category: corporate-governance
+description: 'A closing certificate and filing checklist for assembling a founder departure''s executed instruments into a Delaware corporation''s minute book: the board written consent, resignation letter, repurchase notice and repurchase agreement, proof of payment, any stockholder-consent notices, the IP/confidentiality confirmation, and the stock-ledger and cap-table updates. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-founder-separation-records-checklist
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Licensed under CC BY 4.0.
+fields:
+  - name: company_legal_name
+    type: string
+    description: Full legal name of the Delaware corporation
+    section: Parties
+  - name: founder_name
+    type: string
+    description: Full name of the departing founder
+    section: Parties
+  - name: minute_book_location
+    type: string
+    description: Where the corporation's minute book is maintained (for example, "Carta" or "physical minute book at the Company's principal office")
+    section: Terms
+  - name: separation_date
+    type: date
+    description: Effective date of the founder's separation
+    section: Terms
+  - name: certifying_officer_name
+    type: string
+    description: Full name of the officer certifying the records have been filed
+    section: Signatures
+  - name: certifying_officer_title
+    type: string
+    description: Title of the certifying officer (for example, "Secretary" or "Chief Executive Officer")
+    section: Signatures
+priority_fields:
+  - company_legal_name
+  - founder_name
+  - separation_date
+  - minute_book_location

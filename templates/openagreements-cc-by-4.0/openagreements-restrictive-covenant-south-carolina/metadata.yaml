@@ -1,0 +1,217 @@
+name: OpenAgreements Employee Restrictive Covenant (South Carolina)
+category: non-compete
+description: 'South Carolina-specific employee restrictive covenant agreement built for South Carolina''s common-law reasonableness regime: there is no general South Carolina non-compete statute, so every post-employment restraint stands or falls on a conjunctive five-factor reasonableness test — necessary to protect a legitimate interest, reasonably limited in time and place, not unduly harsh and oppressive, reasonable from the standpoint of sound public policy, and supported by valuable consideration — with the covenant disfavored as a restraint of trade and strictly construed against the employer. It provides confidentiality and trade-secret protection backstopped by the South Carolina Trade Secrets Act (S.C. Code Ann. § 39-8-30), a separate-consideration recital for covenants signed after employment begins, customer and employee non-solicitation scoped to the worker''s own relationships, a non-compete tied to identified protectable interests and sized to the actual footprint, a time-limited confidentiality term so nondisclosure does not operate as an untimed non-compete, and tiered, self-contained step-down covenants rather than any reliance on judicial reformation, because South Carolina courts neither blue-pencil nor reform an overbroad covenant and extension past a stated end date is against public policy. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-south-carolina
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. South Carolina-specific analysis informed by the quote-verified South Carolina practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    section: Legal
+    default: South Carolina
+  - name: signed_after_employment_began
+    type: boolean
+    description: Whether this agreement is being signed after the employee's employment has already begun, rather than at hire. South Carolina requires separate consideration beyond continued at-will employment for a covenant entered after the inception of employment.
+    display_label: Signed After Employment Began
+    default: false
+    section: Timing
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.south-carolina.support-mid-employment-covenants-with-separate-consideration
+    default_value_rationale: Defaults to false because many agreements are signed at the outset of employment. If the agreement is signed later, switch this on and identify the separate new value exchanged for the covenants.
+  - name: separate_consideration
+    type: string
+    description: The specific new value exchanged for a covenant signed after employment began — a raise, bonus, promotion, or change in status. Required to document the fifth reasonableness factor where the covenant is not signed at hire.
+    display_label: Separate Consideration
+    default: ''
+    section: Timing
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    rationale_source: editorial
+    default_value_rationale: 'A finite term is essential in South Carolina: an untimed nondisclosure provision that operates as a covenant not to compete violates public policy. 24 months is a common, conservative term for non-trade-secret confidentiality that keeps the clause from reading as an indefinite functional non-compete.'
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
+    default_value_rationale: South Carolina sets no statutory cap on duration; enforceability turns on the conjunctive five-factor reasonableness test rather than a fixed number. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, and counsel should size the term to the employer's actual protectable interest.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is a common lookback period for employee non-solicitation scope, tied to the colleagues the departing worker actually worked with.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common customer non-solicit term in benchmarked, publicly-filed employee agreements, edging out 24 months by only a narrow margin. South Carolina sets no statutory cap; a customer non-solicit maps directly onto the customer-goodwill interest and is often the better instrument than a full non-compete, so counsel should size the term to the actual customer relationships protected.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.south-carolina.limit-customer-restrictions-to-customers-the-employee-actually-served
+    default_value_rationale: '12 months tracks the look-back window a District of South Carolina court upheld: a covenant limited to customers the employee had contact with during his last twelve months of employment withstood an overbreadth challenge.'
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. South Carolina has no general non-compete statute; a non-compete is a disfavored restraint of trade enforceable only to the extent it satisfies every factor of the conjunctive five-factor reasonableness test and is tied to a protectable interest rather than ordinary competition. Because South Carolina courts neither blue-pencil nor reform, this template sizes the restraint to the employer's actual footprint and provides tiered, self-contained step-down alternatives as real agreed text.
+    display_label: Non-Competition Included
+    default: true
+    section: Non-Competition
+    rationale_source: editorial
+    default_value_rationale: Included by default because this template is built to permit and paper a reasonable non-compete. The non-compete is the most heavily scrutinized covenant under the five-factor test, and one failed factor sinks it whole with no judicial rescue; include it only after confirming an identified protectable interest (confidential information, trade secrets, or customer goodwill), sizing duration and territory to the actual role and market, and writing in the narrower step-down alternatives.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
+    section: Non-Competition
+    default_value_rationale: 12 months matches the modal non-compete term observed in benchmarked, publicly-filed employee agreements — a common, conservative pick rather than a South Carolina ceiling (South Carolina imposes no statutory cap on duration). Courts weigh time and place together against the employer's real legitimate interest under the five-factor test, so there is no safe-harbor number; counsel should size the default to the actual role and market rather than copy from another form.
+  - name: noncompete_duration_stepdown
+    type: string
+    description: A shorter alternative non-competition duration, written into the agreement as real agreed text so it can be enforced on its own terms if the primary duration is found overbroad.
+    display_label: Non-Competition Duration (Step-Down Alternative)
+    default: 6 months
+    section: Non-Competition
+    rationale_source: editorial
+    default_value_rationale: South Carolina courts will not narrow an overbroad covenant, but an alternative narrower restriction written into the original agreement can remain enforceable on its own terms. A shorter pre-agreed duration is that surviving structural protection; 6 months is a conservative step-down counsel should set to a defensible fallback.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee provided services
+    section: Non-Competition
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.south-carolina.satisfy-the-five-factor-reasonableness-test
+    default_value_rationale: Tied to the employee's actual service area. South Carolina imposes no statutory cap on territory, but a territorial scope is unreasonable if it covers an area broader than necessary to protect the employer's legitimate interest, and no court will shrink an overdrawn map - an overbroad territory fails the covenant whole.
+  - name: territory_stepdown
+    type: string
+    description: A narrower alternative restricted territory, written into the agreement as real agreed text so it can be enforced on its own terms if the primary territory is found overbroad.
+    display_label: Restricted Territory (Step-Down Alternative)
+    default: the counties in which Employee actually provided services or serviced customers
+    section: Non-Competition
+    rationale_source: editorial
+    default_value_rationale: An alternative narrower territorial restriction written into the original agreement can remain enforceable even when the primary territory is overbroad, because the court enforces language the parties actually agreed to rather than inventing it. This is the only narrowing a South Carolina covenant will ever get.
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Binding the restriction to named competitors is narrowing done at the drafting table — the only narrowing a South Carolina covenant will receive.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements, and it keeps the covenant from restraining ordinary public shareholding — an easy example against the harshness factor.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

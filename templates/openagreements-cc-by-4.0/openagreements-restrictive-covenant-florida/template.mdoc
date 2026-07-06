@@ -1,7 +1,7 @@
 ---
 template_id: openagreements-restrictive-covenant-florida
 name: OpenAgreements Employee Restrictive Covenant (Florida)
-category: employment
+category: non-compete
 description: >-
   Florida-specific employee restrictive covenant agreement with modular covenant structure
   (non-compete, non-solicitation, non-dealing, non-investment, confidentiality, non-disparagement).
@@ -72,11 +72,16 @@ fields:
     description: >-
       Legal name of Employer's direct corporate parent entity, if any (optional). Named alongside
       "Employer and its Affiliates" as an expressly-identified third-party beneficiary entitled to
-      enforce the restrictive covenants under Fla. Stat. section 542.335(1)(f). Common in PE /
+      enforce the restrictive covenants under Florida's restrictive-covenant rules. Common in PE /
       holding-company structures where the named Employer entity is a dedicated employment entity
       distinct from the operating company.
     display_label: Employer Parent Entity
     default: ""
+    default_value_rationale: >-
+      Blank is the conservative default because many employers do not have a separate parent entity
+      that should be named individually. Add the parent only when a real parent beneficiary should be
+      expressly identified.
+    rationale_source: editorial
     section: Parties
   - name: employer_operating_affiliate_name
     type: string
@@ -85,11 +90,16 @@ fields:
       Employer (optional). Use this where the named Employer is a dedicated employment entity but
       the operating business — the entity for whom Employee actually performs services or that holds
       the Protected Interests — is a separate commonly controlled Affiliate (common in PE /
-      holding-company structures). When provided, this entity is expressly named in the Fla. Stat.
-      section 542.335(1)(f) third-party-beneficiary list, in addition to the "Employer and its
-      Affiliates" class language, for higher enforcement certainty.
+      holding-company structures). When provided, this entity is expressly named in the
+      third-party-beneficiary list, in addition to the "Employer and its Affiliates" class language,
+      for higher enforcement certainty.
     display_label: Operating / Service-Recipient Affiliate
     default: ""
+    default_value_rationale: >-
+      Blank is the conservative default because the named Employer is often also the operating
+      business. Add a separate operating affiliate only when the service recipient or owner of the
+      Protected Interests is a distinct commonly controlled entity.
+    rationale_source: editorial
     section: Parties
   - name: effective_date
     type: date
@@ -106,9 +116,8 @@ fields:
     type: enum
     description: >-
       Employee role classification. AI-only field that drives memo warnings. Not shown in the output
-      document. A Physician worker triggers the Fla. Stat. section 542.336 specialty-monopoly
-      carve-out and can never be a CHOICE Act covered employee (health care practitioners are
-      categorically excluded under Fla. Stat. section 542.43 / s. 456.001).
+      document. A Physician worker triggers the Florida specialty-monopoly carve-out and can never
+      be a CHOICE Act covered employee because health care practitioners are categorically excluded.
     options:
       - Executive
       - Management
@@ -119,19 +128,19 @@ fields:
     default_value_rationale: >-
       Other is the conservative default when worker category cannot be determined from context. The
       calling LLM may set this explicitly based on title, scope, and duties. Setting Physician
-      applies the section 542.336 carve-out conservatively (the specialty-monopoly condition turns
-      on county-level market facts the drafter cannot know at signing).
+      applies the specialty-monopoly carve-out conservatively because the condition turns on
+      county-level market facts the drafter cannot know at signing.
+    rationale_source: editorial
     section: AI Analysis
     ai_only: true
   - name: covered_employee
     type: boolean
     description: >-
-      Whether the employee is a "covered employee" under the 2025 CHOICE Act (Fla. Stat. sections
-      542.41-542.45). FULL legal-status flag, NOT a salary-only toggle: true only when the worker
-      earns a salary greater than twice the annual mean wage of the county AND is NOT a health care
-      practitioner as defined in s. 456.001 (Fla. Stat. section 542.43; health care practitioners
-      are categorically excluded regardless of pay). When worker_category is Physician this MUST
-      resolve to false. Gates the CHOICE Act confidential-information-acknowledgement clause. (The
+      Whether the employee is a "covered employee" under the 2025 CHOICE Act. FULL legal-status
+      flag, NOT a salary-only toggle: true only when the worker earns a salary greater than twice
+      the annual mean wage of the county AND is NOT a health care practitioner, who is
+      categorically excluded regardless of pay. When worker_category is Physician this MUST resolve
+      to false. Gates the CHOICE Act confidential-information-acknowledgement clause. (The
       counsel-advisal-and-notice recital is separately gated by the
       choice_act_advance_notice_confirmed statutory-compliance representation, and garden leave by
       garden_leave_included.) AI-only field that drives conditional gating. Not shown as a
@@ -142,6 +151,7 @@ fields:
       calling LLM affirmatively establishes covered- employee status (salary > 2x county annual mean
       wage AND not a health care practitioner). Over-asserting CHOICE Act status risks reciting
       compliance with procedural prerequisites the employer did not perform.
+    rationale_source: editorial
     section: AI Analysis
     ai_only: true
   - name: choice_act_advance_notice_confirmed
@@ -155,16 +165,13 @@ fields:
       CONFIRM-BEFORE-SIGNING: set true ONLY if a human has verified that the CHOICE Act
       pre-execution compliance steps actually occurred — the covered employee was advised, in
       writing, of the right to seek counsel, and was given at least 7 days' advance notice of the
-      proposed agreement (Fla. Stat. section 542.45(2)(a), (3); see the OpenAgreements Florida
-      non-compete reference card at https://openagreements.org/legal/non-compete/florida, which
-      keeps the current statute links). This is a statutory-compliance representation: its truth is
-      a precondition to CHOICE Act enforceability, so setting it true asserts a past fact that must
-      really have happened. This recital applies only to a covered employee; when it applies and
-      this is false (the default), the counsel-advisal-and-notice recital renders followed by a
-      yellow-highlighted "[CONFIRM before signing: …]" bracket and a matching item on the page-one
-      confirmation notice — the clause is never silently dropped. The calling LLM MUST ask the human
-      to confirm the advisal and 7-day notice were given before setting this true. Not shown as a
-      cover-term row.
+      proposed agreement. This is a statutory-compliance representation: its truth is a precondition
+      to CHOICE Act enforceability, so setting it true asserts a past fact that must really have
+      happened. This recital applies only to a covered employee; when it applies and this is false
+      (the default), the counsel-advisal-and-notice recital renders followed by a yellow-highlighted
+      "[CONFIRM before signing: …]" bracket and a matching item on the page-one confirmation notice
+      — the clause is never silently dropped. The calling LLM MUST ask the human to confirm the
+      advisal and 7-day notice were given before setting this true. Not shown as a cover-term row.
     default: false
     default_value_rationale: >-
       Conservative default false: the counsel-advisal/advance-notice recital is a past-tense
@@ -172,43 +179,43 @@ fields:
       Defaulting to false keeps the recital flagged with a highlighted CONFIRM bracket (rather than
       asserting clean compliance) until a human affirmatively confirms the advisal and 7-day notice
       were given, avoiding an accidental false representation.
+    rationale_source: editorial
     section: AI Analysis
     ai_only: true
   - name: garden_leave_included
     type: boolean
     description: >-
-      Whether a covered garden leave agreement (Fla. Stat. section 542.43(5), up-to-4-year notice
-      period) is paired with the covered-employee non-compete. Gates the CHOICE Act garden-leave
-      day-for-day offset clause (Fla. Stat. section 542.45(2)(c)). AI-only field that drives
-      conditional gating. Not shown as a cover-term row.
+      Whether a covered garden leave agreement with an up-to-4-year notice period is paired with the
+      covered-employee non-compete. Gates the CHOICE Act garden-leave day-for-day offset clause.
+      AI-only field that drives conditional gating. Not shown as a cover-term row.
     default: false
     default_value_rationale: >-
       Default false: the employer elects garden leave affirmatively. The garden-leave clause is
       meaningful only on the CHOICE Act covered-employee track and is omitted unless garden leave is
       actually structured.
+    rationale_source: editorial
     section: AI Analysis
     ai_only: true
   - name: garden_leave_notice_duration
     type: string
     description: >-
-      Length of the covered garden leave notice period (e.g. "6 months", "1 year"). Under Fla. Stat.
-      section 542.43(5) a covered garden leave agreement may provide for up to, but no more than, 4
-      years of advance notice; after the first 90 days of the notice period the employee need not
-      provide services. Shown in Cover Terms and recited in the garden-leave clause when
-      garden_leave_included is true. The non-compete Restricted Period is reduced day-for-day by the
-      nonworking portion of this period (section 542.45(2)(c)).
+      Length of the covered garden leave notice period (e.g. "6 months", "1 year"). A covered garden
+      leave agreement may provide for up to, but no more than, 4 years of advance notice; after the
+      first 90 days of the notice period the employee need not provide services. Shown in Cover
+      Terms and recited in the garden-leave clause when garden_leave_included is true. The
+      non-compete Restricted Period is reduced day-for-day by the nonworking portion of this period.
     display_label: Garden Leave Notice Period
     default: 6 months
     default_value_rationale: >-
-      6 months is a moderate notice period well within the section 542.43(5) 4-year statutory
-      ceiling. The employer should set this to the actual negotiated notice period; it must not
-      exceed 4 years.
+      6 months is a moderate notice period well within the 4-year statutory ceiling. The employer
+      should set this to the actual negotiated notice period; it must not exceed 4 years.
+    rationale_source: editorial
     section: Garden Leave
   - name: covenant_relationship_type
     type: enum
     description: >-
       The relationship the non-compete arises from. Selects the presumptively- reasonable duration
-      window under Fla. Stat. section 542.335(1)(d)-(e): employee/agent/contractor (<=6mo reasonable
+      window under Florida's restrictive-covenant rules: employee/agent/contractor (<=6mo reasonable
       / >2yr unreasonable); distributor/dealer/franchisee/licensee (<=1yr / >3yr); sale of business
       (<=3yr / >7yr); trade-secret-predicated (<=5yr / >10yr). AI-only field consumed for duration
       evaluation ONLY; never used to include or omit a clause. Not shown in the output document.
@@ -221,18 +228,20 @@ fields:
     default_value_rationale: >-
       employee is the most common and most strictly scrutinized window (presumptively reasonable at
       <=6 months, presumptively unreasonable above 2 years).
+    rationale_source: editorial
     section: AI Analysis
     ai_only: true
   - name: covenant_duration_months
     type: number
     description: >-
       The non-compete Restricted Period length in months, as an integer, for machine-checkable
-      duration evaluation against the Fla. Stat. section 542.335(1)(d)-(e) presumption window
-      selected by covenant_relationship_type. AI-only field. Not shown in the output document.
+      duration evaluation against the Florida presumption window selected by
+      covenant_relationship_type. AI-only field. Not shown in the output document.
     default_value_rationale: >-
       No conservative default. When empty the duration check is advisory only (the numeric value is
       required to evaluate the statutory window). The human-readable noncompete_duration string
       drives the Cover Terms row.
+    rationale_source: editorial
     section: AI Analysis
     ai_only: true
   - name: confidentiality_trade_secret_duration
@@ -258,11 +267,14 @@ fields:
     type: string
     description: Duration of employee non-solicitation restriction
     display_label: Employee Non-Solicitation Duration
-    default: 12 months
+    default: 24 months
     default_value_rationale: >-
-      12 months is a common enforceable duration and sits within the Fla. Stat. section
-      542.335(1)(d) presumptively-reasonable window for former-employee covenants (<=6 months
-      presumed reasonable; >2 years presumed unreasonable).
+      24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed
+      employee agreements; 12 months is the common lighter alternative. For former-employee
+      covenants, 24 months does not exceed the 2-year presumptively-unreasonable threshold, though
+      it sits above the 6-month presumptively-reasonable window.
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
   - name: covered_employee_period
     type: string
@@ -284,9 +296,13 @@ fields:
     description: Duration of customer/partner non-solicitation restriction
     display_label: Customer Non-Solicitation Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     default_value_rationale: >-
-      12 months sits within the Fla. Stat. section 542.335(1)(d) presumptively-reasonable window for
-      former-employee covenants.
+      12 months is the most common customer non-solicit term in benchmarked, publicly-filed
+      employee agreements, edging out 24 months by only a narrow margin. It also remains below
+      the 2-year presumptively unreasonable threshold for former-employee covenants, although it
+      is above the 6-month presumptively reasonable threshold.
     section: Customer Non-Solicitation
   - name: covered_customer_period
     type: string
@@ -300,27 +316,32 @@ fields:
   - name: noncompete_included
     type: boolean
     description: >-
-      Whether the non-competition covenant is included. Under Fla. Stat. section 542.335 a
-      non-compete is enforceable when supported by a legitimate business interest and reasonable in
+      Whether the non-competition covenant is included. Under Florida's restrictive-covenant rules,
+      a non-compete is enforceable when supported by a legitimate business interest and reasonable in
       time, area, and line of business; this template recites the legitimate-business-interest basis
-      and biases the duration into the presumptively-reasonable window.
+      and biases the duration away from the presumptively unreasonable range.
     display_label: Non-Competition Included
     default: false
     default_value_rationale: >-
       Conservative default. Non-competes are the most heavily scrutinized covenant; include only
-      after confirming a Fla. Stat. section 542.335(1)(b) legitimate business interest exists, the
-      duration is within the presumptively-reasonable window, and (for a Physician) the section
-      542.336 specialty-monopoly carve-out is addressed.
+      after confirming a legitimate business interest exists, the duration is not in the
+      presumptively unreasonable range, and (for a Physician) the specialty-monopoly carve-out is
+      addressed.
+    rationale_source: editorial
     section: Non-Competition
   - name: noncompete_duration
     type: string
     description: Duration of non-competition restriction
     display_label: Non-Competition Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
     default_value_rationale: >-
-      12 months sits within the Fla. Stat. section 542.335(1)(d) presumptively-reasonable window for
-      former-employee covenants (<=6 months presumed reasonable; >2 years presumed unreasonable).
-      The tool should not default to a presumptively-unreasonable term.
+      12 months matches the modal non-compete term observed in benchmarked, publicly-filed
+      employee agreements — a common, conservative pick that also remains below the 2-year
+      presumptively unreasonable threshold for a former-employee non-compete, although it is
+      above the 6-month presumptively reasonable threshold. The tool should not default to a
+      presumptively-unreasonable term.
     section: Non-Competition
   - name: territory
     type: string
@@ -329,8 +350,8 @@ fields:
     default: the geographic area in which Employee provided services
     default_value_rationale: >-
       Tied to the employee's actual service area. Narrower geographic scope is more readily found
-      reasonable; Florida courts will modify rather than void an overbroad territory under Fla.
-      Stat. section 542.335(1)(c).
+      reasonable; Florida courts will modify rather than void an overbroad territory.
+    rationale_source: editorial
     section: Non-Competition
   - name: competitive_business_definition
     type: string

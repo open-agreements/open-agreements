@@ -1,0 +1,181 @@
+name: OpenAgreements Employee Restrictive Covenant (Alaska)
+category: non-compete
+description: 'Alaska-specific employee restrictive covenant agreement built for Alaska''s pure common-law reasonableness regime: there is no general Alaska non-compete statute, so every post-employment restraint stands or falls on Alaska Supreme Court case law — non-competition agreements are strictly construed (DeCristofaro v. Sec. Nat''l Bank) and weighed against the Data Management, Inc. v. Greene reasonableness factors (reasonably necessary to protect a legitimate business interest and no broader than needed). It provides confidentiality and trade-secret protection backstopped by the Alaska Uniform Trade Secrets Act (AS 45.50.910–.945), customer and employee non-solicitation, an optional customer non-dealing covenant scoped to the customers and information the employer procured at its own expense (Metcalfe Invs., Inc. v. Garrison), an optional non-compete drawn to the reasonable- necessity gate, optional non-investment, sale-of-business public-injury weighing for covenants tied to a business sale (Dominic Wenzell, DMD PC v. Ingrim), and a reasonable-alteration posture that the drafting does not rely on — Data Management makes judicial rescue of an overbroad covenant available only to an employer that carries the burden of proving good-faith drafting, with willful overreach forfeiting alteration. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-alaska
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Alaska-specific analysis informed by the quote-verified Alaska practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    section: Legal
+    default: Alaska
+  - name: covenant_relationship_type
+    type: string
+    description: Whether the covenants arise from ordinary employment or from the sale of a business. A sale-of-business covenant is weighed under the Wenzell balance (purchased goodwill against seller hardship and likely injury to the public), not the ordinary employment analysis.
+    display_label: Covenant Relationship Type
+    default: employment
+    section: Legal
+    default_value_rationale: Most restrictive covenants in this template arise from ordinary employment. Set to sale_of_business only where the restraint is tied to a business sale, which triggers the Wenzell public-injury weighing in the Sale-of-Business Covenants section.
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. Alaska sets no statutory term; counsel should size it to the actual sensitivity of the information.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    default_value_rationale: Alaska sets no statutory cap on duration; enforceability turns on the fact-bound Data Management reasonableness factors rather than a fixed number. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, and counsel should size the term to the employer's actual protectable interest.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: Alaska sets no statutory cap. Metcalfe upheld a narrow customer-list restraint even without a stated durational limit, but a stated period is easier to defend; 12 months is a common, conservative duration counsel should size to the actual customer relationships protected.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Alaska has no general non-compete statute; a non-compete is enforceable only to the extent it is reasonably necessary to protect a legitimate business interest and no broader than needed under the Data Management reasonableness factors, and it is strictly construed. This template recites the protectable-interest basis and sizes the restraint to the employer's actual footprint.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    default_value_rationale: Conservative default. The non-compete is the most heavily scrutinized covenant — Alaska strictly construes non-competition agreements and a restraint aimed at ordinary competition or the worker's livelihood fails the factors no matter how modest its time and territory look. A customer non-solicit backstopped by the Alaska Uniform Trade Secrets Act often protects the employer as well. Include only after confirming an identified protectable interest (confidential information, trade secrets, or customer goodwill) and sizing the duration and territory to the actual footprint.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    default_value_rationale: Alaska imposes no statutory cap on duration; time limits are one Data Management factor among many, weighed together with territory against the employer's real protectable interest, so there is no safe-harbor number. 12 months is a common, conservative default counsel should size to the actual role and market rather than copy from another form.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee provided services
+    section: Non-Competition
+    default_value_rationale: Tied to the employee's actual service area. Alaska imposes no statutory cap on territory and a statewide covenant is not automatically invalid, but every mile must map to the business interest at stake; a narrower area genuinely needed to protect customer relationships or confidential information is far easier to defend as good-faith drafting than an unexplained statewide ban.
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Narrowing the restriction to named competitors strengthens enforceability.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

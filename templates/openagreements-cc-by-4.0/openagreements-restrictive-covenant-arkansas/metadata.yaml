@@ -1,0 +1,192 @@
+name: OpenAgreements Employee Restrictive Covenant (Arkansas)
+category: non-compete
+description: 'Arkansas-specific employee restrictive covenant agreement built for Ark. Code Ann. section 4-75-101: confidentiality and trade-secret protection, employee and customer non-solicitation, a non-dealing covenant, and an optional non-compete drawn to the statutory protectable-interest and time-and-scope test. Recites the statutory categories of protectable business interest, keeps durations within the two-year presumptively-reasonable window, relies on the continued-employment consideration rule, voids any practice restriction on a physician under the 2025 amendment, flags the Title 17, Subtitle 3 licensed-professional exclusion, and acknowledges the mandatory judicial reformation remedy. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-arkansas
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Arkansas-specific analysis informed by the quote-verified Arkansas practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement — the date the last party signs. It anchors the durations stated in Cover Terms.
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    section: Legal
+    default: Arkansas
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    rationale_source: editorial
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. Arkansas keeps confidentiality agreements on a different track from covenants about competition or competitive work, so a finite term on non-secret information is a common-law reasonableness choice.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    rationale_source: editorial
+    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. Arkansas places agreements not to solicit, recruit, or hire employees outside the non-compete statute when they do not concern competition or competitive work, so this covenant is judged under common-law reasonableness and cannot borrow the statutory reformation or consideration rules.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.arkansas.keep-restricted-period-within-two-year-presumption
+    default_value_rationale: 12 months sits within the two-year presumptively reasonable window. A customer non-solicit that concerns competitive work may be tested under the statutory framework, so its duration is kept inside the presumption.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    rationale_source: editorial
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope, and a specific customer group tied to the employee's contacts is an Arkansas reasonableness factor for tailoring a customer-facing restraint.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Arkansas tests a non-compete by whether it is ancillary to the employment relationship, backed by a protectable business interest, and limited in time and scope no greater than necessary to defend that interest; this template recites the protectable-interest basis and biases the duration into the two-year presumptively reasonable window.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    rationale_source: editorial
+    default_value_rationale: Conservative default. Non-competes are the most heavily scrutinized covenant; include only after confirming a real protectable business interest, that the duration is within the two-year presumption, that the worker is not a physician whose right to practice within scope would be restricted, and that the worker does not hold a Title 17, Subtitle 3 professional license that takes the covenant outside the statute.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.arkansas.keep-restricted-period-within-two-year-presumption
+    default_value_rationale: 12 months sits well inside the two-year presumptively reasonable window. Arkansas authority has recited the historical pattern that one- and two-year limits were upheld while three- and five-year limits were unreasonable, so the tool defaults short.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction. Arkansas law does not treat a missing geographic restriction as automatically overbroad if time and scope remain no greater than necessary; where geography is stated, tie it to where the protected interest is actually at risk.
+    display_label: Restricted Territory
+    default: the geographic area in which Employee provided services or had material customer contact
+    section: Non-Competition
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.arkansas.pair-missing-geography-with-customer-or-activity-limits
+    default_value_rationale: Tied to the employee's actual service and contact area. A defined territory should track where the protected interest is at risk; where no geography is stated, Arkansas law shifts the limiting burden onto the customer and activity scope, which this template supplies.
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Limiting the restriction to a specific group of entities associated with the employer's business is an Arkansas reasonableness factor and strengthens enforceability.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+    rationale_source: editorial
+    default_value_rationale: Empty by default because named-competitor limits are deal-specific. When supplied, naming a specific competitor group can strengthen tailoring by limiting the restraint to entities connected to the employer's business.
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.arkansas.keep-restricted-period-within-two-year-presumption
+    default_value_rationale: 12 months sits within the two-year presumption. Non-dealing restrains competitive work even when the customer calls first, so it is drawn to the statutory tailoring test.
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements. A clause that forbids ordinary public shares restrains conduct that threatens no protectable interest, exactly the excess width an Arkansas court would trim.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.arkansas.keep-restricted-period-within-two-year-presumption
+    default_value_rationale: 12 months sits within the two-year presumption. An active-ownership investment restraint functions as a non-compete and is drawn to the same statutory tailoring test.
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

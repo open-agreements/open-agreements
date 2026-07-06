@@ -231,88 +231,100 @@ N.2 Indebtedness owed by or to insiders.
 
 N.3 Special-purpose-entity arrangements and any pass-through revenue or expense accounts.
 
-### Section O — Tech / SaaS Rider
+### Section O — Environmental
+
+O.1 Environmental permits, registrations, and authorizations, and any notices of violation or noncompliance within the past 3 years.
+
+O.2 Phase I and Phase II environmental site assessments and any environmental audit reports for owned or leased real property.
+
+O.3 Correspondence with the EPA or state environmental agencies regarding investigations, remediation, or alleged liability, regardless of date.
+
+O.4 Records of hazardous-materials use, storage, or disposal, and any CERCLA, RCRA, or analogous state-law liabilities, potentially-responsible-party (PRP) notices, or remediation obligations.
+
+O.5 For cloud-native or asset-light targets that own or lease no operating facilities, a written confirmation that the target has no material environmental operations or liabilities in lieu of the foregoing.
+
+### Section P — Tech / SaaS Rider
 
 The following requests apply only if the target operates a software, SaaS, platform, marketplace, or data-heavy business.
 
-O.1 Complete open-source-software (OSS) inventory by component, with the license governing each component, whether each component is statically linked, dynamically linked, or used as a service, and whether the resulting product is distributed externally. Include any output from automated OSS-scan tools (e.g., Black Duck, FOSSA, Snyk).
+P.1 Complete open-source-software (OSS) inventory by component, with the license governing each component, whether each component is statically linked, dynamically linked, or used as a service, and whether the resulting product is distributed externally. Include any output from automated OSS-scan tools (e.g., Black Duck, FOSSA, Snyk).
 
-O.2 OSS-policy documentation including approval workflows, copyleft / viral-license screening procedures, and any prior OSS license violations or remediation actions.
+P.2 OSS-policy documentation including approval workflows, copyleft / viral-license screening procedures, and any prior OSS license violations or remediation actions.
 
-O.3 Source-code escrow arrangements with customers or escrow agents, including triggers, release conditions, and current escrow contents.
+P.3 Source-code escrow arrangements with customers or escrow agents, including triggers, release conditions, and current escrow contents.
 
-O.4 All material hosted-services and IT agreements (cloud hosting, CDN, monitoring, observability, identity, payments), with change-of-control / assignment provisions identified.
+P.4 All material hosted-services and IT agreements (cloud hosting, CDN, monitoring, observability, identity, payments), with change-of-control / assignment provisions identified.
 
-O.5 Most recent SOC 2 Type II report and ISO 27001 audit results, plus any internal vulnerability scan or penetration test reports for the past 3 years.
+P.5 Most recent SOC 2 Type II report and ISO 27001 audit results, plus any internal vulnerability scan or penetration test reports for the past 3 years.
 
-O.6 Data-flow architecture diagrams showing how customer data moves through the target's systems and sub-processors.
+P.6 Data-flow architecture diagrams showing how customer data moves through the target's systems and sub-processors.
 
-O.7 Customer-facing Service Level Agreements (SLAs), including uptime commitments and credit / refund mechanics for SLA breaches.
+P.7 Customer-facing Service Level Agreements (SLAs), including uptime commitments and credit / refund mechanics for SLA breaches.
 
-O.8 Security-incident history for the past 3 years (cross-reference Section I.4 for breaches with regulatory reporting obligations).
+P.8 Security-incident history for the past 3 years (cross-reference Section I.4 for breaches with regulatory reporting obligations).
 
-O.9 GDPR / CCPA / cross-border data-transfer mechanisms (Standard Contractual Clauses, adequacy decisions, BCRs) where applicable.
+P.9 GDPR / CCPA / cross-border data-transfer mechanisms (Standard Contractual Clauses, adequacy decisions, BCRs) where applicable.
 
-### Section P — Life Sciences Rider
+### Section Q — Life Sciences Rider
 
 The following requests apply only if the target has an FDA-regulated R&D pipeline or manufacturing footprint.
 
-P.1 Schedule of all clinical trials (current and past), with phase, indication, enrollment, and current status.
+Q.1 Schedule of all clinical trials (current and past), with phase, indication, enrollment, and current status.
 
-P.2 Investigator's Brochures and clinical-trial protocols for active trials.
+Q.2 Investigator's Brochures and clinical-trial protocols for active trials.
 
-P.3 Serious Adverse Event (SAE) reports filed with the FDA or foreign regulators in the past 3 years.
+Q.3 Serious Adverse Event (SAE) reports filed with the FDA or foreign regulators in the past 3 years.
 
-P.4 Investigational New Drug (IND), New Drug Application (NDA), Biologics License Application (BLA), and 510(k) / PMA filings, including current status.
+Q.4 Investigational New Drug (IND), New Drug Application (NDA), Biologics License Application (BLA), and 510(k) / PMA filings, including current status.
 
-P.5 All correspondence with the FDA, EMA, or other applicable regulatory authorities, including Form 483 observations and Warning Letters, regardless of date.
+Q.5 All correspondence with the FDA, EMA, or other applicable regulatory authorities, including Form 483 observations and Warning Letters, regardless of date.
 
-P.6 Manufacturing-site inspection history, including 21 CFR Part 211 / Part 820 compliance records.
+Q.6 Manufacturing-site inspection history, including 21 CFR Part 211 / Part 820 compliance records.
 
-P.7 Controlled-substance registrations with the DEA and any state controlled-substance authorities.
+Q.7 Controlled-substance registrations with the DEA and any state controlled-substance authorities.
 
-P.8 CRO (Contract Research Organization) and CMO (Contract Manufacturing Organization) agreements.
+Q.8 CRO (Contract Research Organization) and CMO (Contract Manufacturing Organization) agreements.
 
-P.9 R&D collaboration, licensing, and partnering agreements (university, government, or industry).
+Q.9 R&D collaboration, licensing, and partnering agreements (university, government, or industry).
 
-P.10 Any Corporate Integrity Agreement (CIA) with HHS-OIG, DOJ, or other federal authorities.
+Q.10 Any Corporate Integrity Agreement (CIA) with HHS-OIG, DOJ, or other federal authorities.
 
-### Section Q — Healthcare Provider Rider
+### Section R — Healthcare Provider Rider
 
 The following requests apply only if the target's business model includes provider-side reimbursement risk (clinics, hospitals, physician groups, telehealth providers, lab services).
 
-Q.1 Provider licensure for each state of operation, including any prior licensure actions, suspensions, or restrictions.
+R.1 Provider licensure for each state of operation, including any prior licensure actions, suspensions, or restrictions.
 
-Q.2 Billing and coding compliance audit results for the past 3 years, including any external audits and any internal RAC / ZPIC review preparation.
+R.2 Billing and coding compliance audit results for the past 3 years, including any external audits and any internal RAC / ZPIC review preparation.
 
-Q.3 Malpractice claims history for the past 3 years, including tail-coverage status for departing providers.
+R.3 Malpractice claims history for the past 3 years, including tail-coverage status for departing providers.
 
-Q.4 HIPAA breach logs, OCR correspondence, and any corrective-action plans stemming from privacy or security incidents.
+R.4 HIPAA breach logs, OCR correspondence, and any corrective-action plans stemming from privacy or security incidents.
 
-Q.5 Payer-audit history (Medicare, Medicaid, commercial), recoupment exposure, and current open audits.
+R.5 Payer-audit history (Medicare, Medicaid, commercial), recoupment exposure, and current open audits.
 
-Q.6 Anti-Kickback Statute, Stark Law, and Physician Payment Sunshine Act compliance documentation, including transfer-of-value reporting.
+R.6 Anti-Kickback Statute, Stark Law, and Physician Payment Sunshine Act compliance documentation, including transfer-of-value reporting.
 
-Q.7 Telehealth state-licensure compliance, including any reliance on cross-state compacts (e.g., IMLC).
+R.7 Telehealth state-licensure compliance, including any reliance on cross-state compacts (e.g., IMLC).
 
-Q.8 Provider compensation arrangements that could implicate fair-market-value or commercial-reasonableness analysis.
+R.8 Provider compensation arrangements that could implicate fair-market-value or commercial-reasonableness analysis.
 
-### Section R — Cross-Border / Trade Compliance Rider
+### Section S — Cross-Border / Trade Compliance Rider
 
 The following requests apply only if the target has foreign operations, foreign customers, foreign manufacturing, government customers, or material exposure to controlled jurisdictions.
 
-R.1 Foreign-subsidiary and branch documentation, including formation documents, governance, and intercompany agreements.
+S.1 Foreign-subsidiary and branch documentation, including formation documents, governance, and intercompany agreements.
 
-R.2 Sanctions / OFAC screening procedures, screening tool documentation, and any historical hits or escalations.
+S.2 Sanctions / OFAC screening procedures, screening tool documentation, and any historical hits or escalations.
 
-R.3 Export-control classifications (ECCN, USML) for material technologies and products, plus any export licenses or commodity classification rulings.
+S.3 Export-control classifications (ECCN, USML) for material technologies and products, plus any export licenses or commodity classification rulings.
 
-R.4 AML / KYC program documentation (where applicable to the target's industry), including written policies and procedures, training records, regulator examination findings, and non-privileged audit/correspondence files. Do not produce any SARs or materials that would reveal a SAR's existence — FinCEN's SAR confidentiality rules bar disclosure to counterparties under whichever subpart applies to the target's institution type (e.g., 31 CFR 1020.320(e) for banks; 1023.320(e) for broker-dealers; 1022.320(e) for MSBs; 1021.320(e) for casinos; 1024.320(e) for mutual funds; 1025.320(e) for insurance companies; 1029.320(e) for loan/finance companies).
+S.4 AML / KYC program documentation (where applicable to the target's industry), including written policies and procedures, training records, regulator examination findings, and non-privileged audit/correspondence files. Do not produce any SARs or materials that would reveal a SAR's existence — FinCEN's SAR confidentiality rules bar disclosure to counterparties under whichever subpart applies to the target's institution type (e.g., 31 CFR 1020.320(e) for banks; 1023.320(e) for broker-dealers; 1022.320(e) for MSBs; 1021.320(e) for casinos; 1024.320(e) for mutual funds; 1025.320(e) for insurance companies; 1029.320(e) for loan/finance companies).
 
-R.5 FCPA compliance program documentation, including risk assessments, training records, third-party-intermediary diligence, and any prior internal investigations or third-party allegations.
+S.5 FCPA compliance program documentation, including risk assessments, training records, third-party-intermediary diligence, and any prior internal investigations or third-party allegations.
 
-R.6 Government-customer relationships (federal, state, local, or foreign), including contract terms with flow-down compliance obligations and any audit history. Include any GSA Schedule contracts, FAR-flowdown analysis, and SBA representations.
+S.6 Government-customer relationships (federal, state, local, or foreign), including contract terms with flow-down compliance obligations and any audit history. Include any GSA Schedule contracts, FAR-flowdown analysis, and SBA representations.
 
-R.7 Operations or sales in higher-risk corruption-index jurisdictions; specify each country of operation, sale, or employee presence.
+S.7 Operations or sales in higher-risk corruption-index jurisdictions; specify each country of operation, sale, or employee presence.
 
-R.8 Foreign-investment-screening filings (CFIUS, foreign FDI regimes), including any prior CFIUS reviews of the target or its subsidiaries.
+S.8 Foreign-investment-screening filings (CFIUS, foreign FDI regimes), including any prior CFIUS reviews of the target or its subsidiaries.

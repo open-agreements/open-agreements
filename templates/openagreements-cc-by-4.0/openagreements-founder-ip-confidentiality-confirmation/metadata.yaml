@@ -1,0 +1,40 @@
+name: Founder IP and Confidentiality Survival Confirmation
+category: corporate-governance
+description: A short confirmatory certificate signed by a departing founder and countersigned by the Delaware corporation confirming that the founder's existing Confidential Information and Invention Assignment Agreement (CIIAA/PIIA) and confidentiality obligations remain in full force after service ends, that all company property and repositories have been returned, and that no release is intended as to those continuing obligations. It is confirmatory only and creates no new restrictive covenant. Drafted as a starting point for licensed counsel review.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-founder-ip-confidentiality-confirmation
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Licensed under CC BY 4.0.
+fields:
+  - name: company_legal_name
+    type: string
+    description: Full legal name of the Delaware corporation
+    section: Parties
+  - name: founder_name
+    type: string
+    description: Full name of the departing founder
+    section: Parties
+  - name: ciiaa_reference
+    type: string
+    description: Reference to the founder's existing Confidential Information and Invention Assignment Agreement (for example, "Confidential Information and Invention Assignment Agreement dated January 1, 2022")
+    section: Terms
+  - name: separation_date
+    type: date
+    description: Date the founder's service with the Company ended
+    section: Terms
+  - name: signatory_name
+    type: string
+    description: Full name of the authorized signatory countersigning for the Company
+    section: Parties
+  - name: signatory_title
+    type: string
+    description: Title of the authorized signatory countersigning for the Company
+    section: Parties
+priority_fields:
+  - company_legal_name
+  - founder_name
+  - ciiaa_reference
+  - separation_date

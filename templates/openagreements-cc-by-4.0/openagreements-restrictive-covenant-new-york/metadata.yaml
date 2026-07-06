@@ -1,0 +1,181 @@
+name: OpenAgreements Employee Restrictive Covenant (New York)
+category: non-compete
+description: 'New York-specific employee restrictive covenant agreement built for New York''s common-law reasonableness regime: there is no general New York non-compete statute, so every post-employment restraint stands or falls on the three-pronged common-law reasonableness test, and a single failed prong invalidates the covenant. It provides confidentiality and trade-secret protection, a continued-employment consideration recital, customer and employee non-solicitation with the customer non-solicit narrowed to customers the employee actually served, an optional non-compete tied to New York''s short list of recognized protectable interests, a broadcast-employee exclusion under N.Y. Labor Law § 202-k, a sale-of-business covenant aligned with New York''s implied goodwill covenant, a governing-law clause drafted against New York''s public-policy limit on foreign choice-of-law, and a drafting posture that sizes each covenant to the protectable interest rather than relying on discretionary partial enforcement. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-new-york
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. New York-specific analysis informed by the quote-verified New York practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    section: Legal
+    default: New York
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. New York declines to protect general knowledge and routine operational information, so a finite term on ordinary confidential material avoids the appearance of overreach.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
+    section: Employee Non-Solicitation
+    default_value_rationale: New York sets no statutory cap on duration; enforceability turns on the holistic BDO Seidman reasonableness test rather than a fixed number, and New York treats employee non-recruitment clauses as inherently more reasonable and less restrictive than non-competes. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, sized to the employer's actual protectable interest.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common customer non-solicit term in benchmarked, publicly-filed employee agreements, edging out 24 months by only a narrow margin. New York sets no statutory cap; a customer non-solicit maps directly onto the client-goodwill interest BDO Seidman recognizes and is often the better instrument than a full non-compete, so counsel should size the term to the actual customer relationships protected.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope. Under Brown & Brown, the class must reach only customers the employee actually developed or serviced, so the lookback pairs with a material-contact limit rather than sweeping in the entire book of business.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. New York has no general non-compete statute; a non-compete is enforceable only to the extent it satisfies every prong of the common-law reasonableness test and is tied to a recognized protectable interest rather than ordinary competition. This template recites the protectable-interest basis and sizes the restraint to the employer's actual footprint.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    rationale_source: editorial
+    default_value_rationale: Conservative default. The non-compete is the most heavily scrutinized covenant under New York's reasonableness test, and any single failed prong invalidates it; a customer non-solicit tied to serviced relationships often protects the employer as well. Include only after confirming a recognized New York interest (trade secrets, confidential customer information, unique or extraordinary services, or client goodwill) and sizing the duration and territory to the actual footprint. Do not impose a post-employment non-compete on a broadcast employee.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
+    section: Non-Competition
+    default_value_rationale: 12 months matches the modal non-compete term observed in benchmarked, publicly-filed employee agreements — a common, conservative pick rather than a New York ceiling (New York imposes no statutory cap on duration). Courts weigh time and territory together against the employer's real protectable interest under BDO Seidman, so there is no safe-harbor number; counsel should size the default to the actual role and market. The pending S4641A bill would cap any permissible non-compete at one year if it ever becomes law (pending only; not law).
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee provided services
+    section: Non-Competition
+    default_value_rationale: Tied to the employee's actual service area. New York imposes no statutory cap on territory, but geographic scope is one of the express reasonableness factors; an area genuinely needed to protect customer relationships or confidential information is far easier to defend under BDO Seidman than an everywhere-we-operate territory, which invites a finding of overbreadth a New York court has discretion to leave unrepaired.
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Narrowing the restriction to named competitors is strong evidence the covenant reaches no further than the protectable interest requires, and it supports the good-faith, no-overreaching record on which any discretionary partial enforcement depends.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements. A carve-out below a stated threshold keeps a passive index-fund holding from adding hardship on the undue-hardship prong without protecting any recognized interest.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

@@ -74,22 +74,22 @@ fields:
     section: Materiality and Lookback
   - name: tech_rider_enabled
     type: boolean
-    description: Enable Section O (Tech / SaaS rider) covering OSS schedules with copyleft flagging, source-code escrow, hosted-services agreements, SOC 2 / ISO 27001 audits, data-flow architecture, SLAs, security- incident history, and cloud-agreement change-of-control. Recommended on for software, SaaS, platform, marketplace, or data-heavy targets.
+    description: Enable Section P (Tech / SaaS rider) covering OSS schedules with copyleft flagging, source-code escrow, hosted-services agreements, SOC 2 / ISO 27001 audits, data-flow architecture, SLAs, security- incident history, and cloud-agreement change-of-control. Recommended on for software, SaaS, platform, marketplace, or data-heavy targets.
     default: false
     section: Industry Riders
   - name: life_sciences_rider_enabled
     type: boolean
-    description: Enable Section P (Life Sciences rider) covering FDA correspondence, clinical trials, CRO agreements, Form 483s, Warning Letters, CIA, and controlled-substance registrations. Recommended on for biotech, pharma, medical-device, and diagnostics targets with FDA-regulated pipelines.
+    description: Enable Section Q (Life Sciences rider) covering FDA correspondence, clinical trials, CRO agreements, Form 483s, Warning Letters, CIA, and controlled-substance registrations. Recommended on for biotech, pharma, medical-device, and diagnostics targets with FDA-regulated pipelines.
     default: false
     section: Industry Riders
   - name: healthcare_provider_rider_enabled
     type: boolean
-    description: Enable Section Q (Healthcare Provider rider) covering HIPAA breach logs, billing/coding compliance, payer audits, malpractice claims, and Anti-Kickback / Stark / Sunshine Act compliance. Recommended on for clinics, hospitals, physician groups, and telehealth providers with payer-reimbursement exposure.
+    description: Enable Section R (Healthcare Provider rider) covering HIPAA breach logs, billing/coding compliance, payer audits, malpractice claims, and Anti-Kickback / Stark / Sunshine Act compliance. Recommended on for clinics, hospitals, physician groups, and telehealth providers with payer-reimbursement exposure.
     default: false
     section: Industry Riders
   - name: cross_border_rider_enabled
     type: boolean
-    description: Enable Section R (Cross-Border / Trade Compliance rider) covering sanctions/OFAC screening, export-control classifications, AML/KYC, FCPA compliance, government-customer exposure, and foreign-investment- screening filings. Recommended on whenever the target has foreign subsidiaries, foreign customers, government customers, or sensitive- jurisdiction exposure. Increasingly mandatory after the 2023 DOJ M&A Safe Harbor Policy.
+    description: Enable Section S (Cross-Border / Trade Compliance rider) covering sanctions/OFAC screening, export-control classifications, AML/KYC, FCPA compliance, government-customer exposure, and foreign-investment- screening filings. Recommended on whenever the target has foreign subsidiaries, foreign customers, government customers, or sensitive- jurisdiction exposure. Increasingly mandatory after the 2023 DOJ M&A Safe Harbor Policy.
     default: false
     section: Industry Riders
 priority_fields:

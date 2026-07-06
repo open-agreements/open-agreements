@@ -1,0 +1,219 @@
+> **This is a fill-in template, not legal advice.** Replace every `[bracketed field]`
+> with your own value. `[[Defined Terms]]` (double brackets) are glossary markers, not blanks.
+> Token-only (programmatic-fill) version: ./template.md
+
+# Employee Restrictive Covenant Agreement
+
+## Cover Terms
+
+The terms below are incorporated into and form part of this agreement.
+
+Employer
+: [Legal name of the employer]
+
+Employee
+: [Full legal name of the employee]
+
+Employee Title / Position
+: [Employee job title or position (optional)]
+
+Effective Date
+: [Effective date of this agreement]
+
+Governing Law
+: Alaska
+
+Covenant Relationship Type
+: employment
+
+Confidentiality
+
+Trade Secrets Duration
+: Perpetual
+
+Other Confidential Information Duration
+: 24 months
+
+Employee Non-Solicitation
+
+Duration
+: 24 months
+
+Customer Non-Solicitation
+
+Duration
+: 12 months
+
+Non-Competition
+
+Duration
+: 12 months
+
+Restricted Territory
+: the geographic area in which Employee provided services
+
+Competitive Business
+: [Description of the business activities that constitute competition with the employer.]
+
+Specified Competitors
+: [Optional named list of specific competitors. Narrowing the restriction to named competitors strengthens enforceability.]
+
+No Business with Covered Customers
+
+Duration
+: 12 months
+
+Non-Investment
+
+Duration
+: 12 months
+
+Non-Disparagement
+
+Duration
+: 24 months
+
+## Standard Terms
+
+### Defined Terms
+
+[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+
+[[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
+
+[[Covered Customers]] means customers, vendors, referral sources, and business partners whom Employer procured at its own expense and with whom Employee had material contact or for whom Employee had responsibility during the 12 months before termination of employment.
+
+[[Covered Employees]] means employees with whom Employee worked or whom Employee managed during the 12 months before termination of employment.
+
+[[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than five percent of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
+
+[[Protected Interests]] means the legitimate business interests a covenant may protect under Alaska's common-law reasonableness rule, namely Employer's Confidential Information, Employer's trade secrets as defined by the Alaska Uniform Trade Secrets Act (AS 45.50.940), and Employer's goodwill in its customer, vendor, referral-source, and business-partner relationships, but not Employer's interest in avoiding ordinary competition.
+
+[[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
+
+[[Restricted Territory]] means the geographic area described in Cover Terms under Restricted Territory.
+
+[[Solicit]] means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
+
+[[Trade Secrets]] has the meaning given in the Alaska Uniform Trade Secrets Act, AS 45.50.940.
+
+### Recitals and Protectable Interests
+
+Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to protect one or more of Employer's Protected Interests and to impose no restraint broader than is reasonably necessary for that protection. Alaska has no general non-compete statute; enforceability is governed by Alaska Supreme Court common law, under which non-competition agreements are strictly construed (DeCristofaro v. Sec. Nat'l Bank, 664 P.2d 167 (Alaska 1983)) and each restraint is tested against the reasonableness factors set out in Data Mgmt., Inc. v. Greene, 757 P.2d 62 (Alaska 1988) — including the presence of limitations as to time and space, whether Employee was the sole contact with the customer, whether Employee held confidential information or trade secrets, whether the covenant targets competition unfair to Employer or merely eliminates ordinary competition, whether it stifles Employee's inherent skill and experience, whether the benefit to Employer is disproportional to the detriment to Employee, and whether it bars Employee's sole means of support. The parties acknowledge that each covenant is meant to guard Employer's Confidential Information, trade secrets, and customer goodwill and not to eliminate ordinary competition, and that reasonableness is fact-bound — no term or territory is safe by rule, and each restraint must map to the business interest at stake.
+
+### Timing, Consideration, and Employee Acknowledgements
+
+The parties acknowledge that this agreement is supported by adequate consideration. No staged Alaska authority resolves whether continued at-will employment alone supports a covenant signed mid-employment, so the parties recite the actual exchange supporting the covenants — which may include initial or continued employment, access to Confidential Information and customer relationships, training, compensation, a raise, or a bonus — as evidence of the consideration given. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests, and understands that adequate consideration establishes only that the covenants are supported, not that they are reasonable — each covenant must independently satisfy the Data Management reasonableness factors on time, territory, and scope. This agreement is effective as of the Effective Date listed in Cover Terms.
+
+### Confidential Information and Trade Secret Protection
+
+Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue in perpetuity, for as long as the information remains a trade secret. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms. Trade secrets are protected under Alaska law, including the Alaska Uniform Trade Secrets Act, AS 45.50.910–.945, under which a court may enjoin actual or threatened misappropriation of trade secrets (AS 45.50.910(a)). This confidentiality obligation is intended to operate alongside, and independent of, any restrictive covenant, and does not restrict Employee's use of the general knowledge, skill, and experience Employee acquired during employment.
+
+### Permitted Disclosures and Protected Conduct
+
+Nothing in this agreement prohibits Employee from: (a) reporting possible violations of law to any government agency, including the Securities and Exchange Commission, the Equal Employment Opportunity Commission, the Occupational Safety and Health Administration, or any other federal, state, or local agency; (b) making disclosures protected under whistleblower provisions of any law; (c) discussing wages, hours, or other terms and conditions of employment as protected by applicable law, including Section 7 of the National Labor Relations Act (29 U.S.C. § 157); (d) testifying truthfully in legal proceedings; or (e) filing a sealed complaint in court using Confidential Information without liability. Pursuant to the Defend Trade Secrets Act (18 U.S.C. § 1833(b)), Employee may not be held criminally or civilly liable for disclosing a trade secret in confidence to a government official or attorney solely for the purpose of reporting or investigating a suspected violation of law, or in a sealed court filing.
+
+### Return, Deletion, and Certification of Company Property
+
+Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request. The parties intend that these return, deletion, and certification mechanics support Employer's protection of its trade secrets, and that a completed certification — or proof it was refused — is evidence for a motion to enjoin actual or threatened misappropriation under the Alaska Uniform Trade Secrets Act, AS 45.50.910(a).
+
+### Non-Solicitation of Employees
+
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. Alaska gives workforce restraints no separate rulebook — this covenant is weighed under the same fact-bound Data Management reasonableness factors as every other restraint in this agreement — and it reaches only Covered Employees during the Restricted Period, no broader than necessary to protect Employer's workforce stability and goodwill.
+
+### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
+
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. Consistent with Metcalfe Invs., Inc. v. Garrison, 919 P.2d 1356 (Alaska 1996), this covenant is limited to expropriating the information and customers Employer procured at its own expense; it reaches only Covered Customers with whom Employee had material contact and leaves Employee free to compete generally. This covenant maps directly onto Employer's customer-goodwill interest and, together with the confidentiality and trade-secret protections in this agreement, is often a stronger and more readily enforceable protection than a broad non-compete. This covenant does not apply where Employee had no access to Confidential Information relating to the Covered Customer, because a covenant not to contact former customers is unreasonable in that circumstance.
+
+### No Business with Covered Customers
+
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee. The parties intend it to remain limited to the customers and information Employer procured at its own expense and not to expand into a bar prohibiting Employee from practicing his or her specialty; where the customer class is so large that the restraint would amount to such a bar, Alaska requires it to be drafted more narrowly, and the parties intend this covenant to be so narrowed rather than to fail (Metcalfe Invs., Inc. v. Garrison, 919 P.2d 1356 (Alaska 1996)). It reaches only Covered Customers with whom Employee had material contact and to whom Employee had access to Confidential Information.
+
+### Non-Competition
+
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant exists to protect Employer's Protected Interests — its Confidential Information, trade secrets, and customer goodwill — and not to restrain ordinary competition. Alaska strictly construes non-competition agreements (DeCristofaro v. Sec. Nat'l Bank, 664 P.2d 167 (Alaska 1983)), and the parties intend this covenant to be reasonably necessary to protect Employer's Protected Interests and no broader than needed under the Data Management reasonableness factors, with its time and territory sized to Employee's actual role and Employer's actual market. If Employer has identified specific competitors in Cover Terms under Specified Competitors, the parties intend this covenant to be understood and, if necessary, enforced as limited to those named competitors, because a restraint bound to named competitors is strong evidence that it is no broader than required. Passive Public Holdings are permitted.
+
+### Non-Investment
+
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Because this covenant restrains active roles at and material participation in a Competitive Business, it is a post-employment restraint weighed under the Data Management reasonableness factors and is drawn no broader than necessary to protect Employer's Protected Interests. Passive Public Holdings are permitted.
+
+### Sale-of-Business Covenants
+
+Where the covenant relationship type in Cover Terms is a sale of a business, any covenant tied to that sale is drafted against Alaska's sale-of-business balance and not as an ordinary employment restraint. Alaska treats covenants arising from the sale of a business differently from ordinary employment covenants — the goodwill the buyer purchased is a recognized interest — but the restraint is read as a covenant against competition, not a ban on practicing a profession in any capacity (Dominic Wenzell, DMD PC v. Ingrim, 228 P.3d 103 (Alaska 2010)). Enforcement is weighed as a three-way balance: the buyer's need to protect the goodwill it purchased, the hardship to the seller from enforcing the covenant, and the likely injury to the public. Where the restrained work is for a federally funded nonprofit provider offering free or low-cost services to a population in need, competition will not be presumed and must be proven, and even proven competition leaves the court weighing whether enforcement would harm the public's access to those services. The parties intend any sale-of-business covenant to survive that weighing, not merely a radius-and-duration check.
+
+### Non-Disparagement
+
+During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law, including rights protected under Section 7 of the National Labor Relations Act.
+
+### Physician and Health Care Practitioner Covenants
+
+Alaska has no physician or other occupation statute governing restrictive covenants, so a covenant restraining a health-care practitioner is tested under the same common-law reasonableness as any other restraint. What Alaska adds is a public-interest lens drawn from Dominic Wenzell, DMD PC v. Ingrim, 228 P.3d 103 (Alaska 2010): where the restrained clinician serves a population in need of important low-cost care, enforcement is weighed against the harm to that access, not just against radius and duration, competition is not presumed and must be proven, and even proven competition leaves the court weighing the injury to the public. Accordingly, any covenant in this agreement restraining Employee from the practice of a health-care profession is intended to use a narrow radius and a short term, to preserve patient access and continuity of care, and to be enforced only to the extent it survives that public-interest weighing under Alaska's reasonableness factors. There is no enacted Alaska statute banning health-care non-competes, and this agreement does not assume any pending legislation.
+
+### No Conflicting Obligations
+
+Employee represents that performing duties for Employer and complying with this agreement does not conflict with any prior agreement, court order, or legal obligation binding on Employee. Employee must promptly disclose to Employer any potential conflict that arises during employment.
+
+### Notice to Future Employers and Other Third Parties
+
+Employer may disclose the existence and terms of this agreement to any prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach this agreement. Employee consents to this disclosure. Employer acknowledges that a notice built on a covenant that later fails Alaska's reasonableness analysis may expose Employer to a claim, and that it should condition any such notice on a restraint it is prepared to defend as reasonably necessary and no broader than needed.
+
+### Tolling During Breach
+
+If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, so that the full duration of the restriction runs from the date the breach ends. No staged Alaska authority addresses whether a restricted period tolls or is equitably extended during a breach or during litigation over the covenant, so the parties state their intended extension expressly here rather than rely on any implied rule. Any such extension is itself a restraint that must remain reasonable under the Data Management factors, because a longer effective restraint is weighed under the same fact-bound time-and-space analysis as the original term; the parties do not intend an open-ended or indefinite extension.
+
+### Remedies
+
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, including relief under the Alaska Uniform Trade Secrets Act, under which a court may enjoin actual or threatened misappropriation of a trade secret (AS 45.50.910(a)) independent of any covenant. Where misappropriation is wilful and malicious, that Act authorizes exemplary damages in an amount not exceeding twice the compensatory award (AS 45.50.915), a statutory remedy that exists independent of any contractual fee-shifting.
+
+### Enforceability and Severability
+
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable, so that a court's refusal to enforce one covenant, or a court's decision to enforce a covenant only to a reasonable extent, does not affect the others.
+
+### Reasonable Alteration
+
+Alaska does not follow a mechanical blue-pencil rule. Under Data Mgmt., Inc. v. Greene, 757 P.2d 62 (Alaska 1988), if an overbroad covenant not to compete can be reasonably altered to render it enforceable, the court shall do so — unless it determines the covenant was not drafted in good faith, and the burden of proving good-faith drafting is on the employer; where the employer has overreached willfully, the court should refuse to alter the covenant at all. Employer therefore requests reasonable alteration only if a restraint in this agreement is found to be overbroad, and acknowledges that this rescue is available only on a good-faith showing it must affirmatively make. Accordingly, each restrictive covenant is drawn as a tiered, severable restraint sized to the Protected Interests from the start and is intended to be enforceable as written rather than in reliance on judicial revision.
+
+### Survival and Expiration of Each Covenant
+
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+
+### Assignment and Successors
+
+Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns. The parties acknowledge that where a covenant changes hands in a business sale, its posture in Alaska changes with it — purchased goodwill is a recognized interest, but the analysis then weighs seller hardship and likely injury to the public — and the assignment should be read together with the Sale-of-Business Covenants section.
+
+### Governing Law, Venue, and Dispute Process
+
+This agreement is governed by the law listed in Cover Terms. Where Alaska law governs, the enforceability of each restrictive covenant is determined under Alaska Supreme Court common law; there is no general Alaska non-compete statute and no statutory safe harbor, so choosing Alaska selects strict construction and the fact-bound Data Management reasonableness factors for every covenant, and each covenant is drafted to survive that holistic analysis rather than to escape it. No staged Alaska authority overrides the parties' choice of law for restrictive covenants. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. The parties intend that the governing-law and venue choices match where Employee actually lives and works.
+
+### Entire Agreement, Amendment, Waiver, and Electronic Signatures
+
+This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject, whether written or oral. The parties intend this integration to be load-bearing: the Alaska Supreme Court has enforced an oral customer-list noncompetition promise despite the absence of a writing (Metcalfe Invs., Inc. v. Garrison, 919 P.2d 1356 (Alaska 1996)), so this clause is the parties' defense against any side promise ripening into an enforceable restraint the document never states. This agreement may be amended only in writing signed by both parties. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
+
+## Signatures
+
+By signing this agreement, each party acknowledges and agrees to the restrictive covenant obligations above. Employee confirms having read and understood each provision, including the Cover Terms.
+
+Employer: [Legal name of the employer]
+
+Signature: _______________
+Signatory Name: [Full name of the authorized signatory signing for the employer]
+Title: [Title of the authorized signatory signing for the employer]
+Date: _______________
+
+**Employee**
+
+Signature: _______________
+Print Name: [Full legal name of the employee]
+Date: _______________
+
+## Drafting notes
+
+Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Alaska](/practice-guides/non-compete/us/alaska).
+
+### reasonable alteration
+
+Do not call Alaska a simple blue-pencil state. _Data Management_ uses reasonable alteration, and the employer bears the good-faith burden before an overbroad covenant can be rescued .
+
+### customer-list restraints
+
+Use _Metcalfe_ carefully. It supports narrow customer-list restraints, not open-ended bans on working in the same field .

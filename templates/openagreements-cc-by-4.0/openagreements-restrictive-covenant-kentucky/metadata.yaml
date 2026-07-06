@@ -1,0 +1,193 @@
+name: OpenAgreements Employee Restrictive Covenant (Kentucky)
+category: non-compete
+description: 'Kentucky-specific employee restrictive covenant agreement built for Kentucky''s common-law reasonableness regime: there is no general Kentucky non-compete statute, so every post-employment restraint stands or falls on the fair-protection standard restated in Kegel v. Tillotson (fair protection to the covenantee''s interests, no undue hardship on the party restricted, and no interference with the public interests). It provides confidentiality and trade-secret protection backstopped by the Kentucky Uniform Trade Secrets Act (KRS 365.880-365.900), a new-consideration recital for mid-employment covenants drawn to the Creech rule (Charles T. Creech, Inc. v. Brown) — continued at-will employment alone is not enough and a bare recital does not cure the gap — customer and employee non-solicitation, an optional non-compete tied to identified protectable interests and sized to the actual footprint, discretionary judicial reformation the drafting does not rely on (Kegel''s blue-pencil rule; Hodges v. Todd supplied a missing geographic limit in a sale-of-business case), a Kentucky choice-of-law clause anchored in a genuine connection (Senture, LLC v. Dietrich; Edwards Moving & Rigging, Inc. v. W.O. Grubb Steel Erection, Inc.), a breach-tied extension flagged as an open Kentucky question, and the one categorical statutory ban — KRS 216.724 voids non-compete and buy-out clauses between a health care services agency and its temporary direct care staff. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-kentucky
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Kentucky-specific analysis informed by the quote-verified Kentucky practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: signed_after_employment_started
+    type: boolean
+    description: Whether this agreement is signed by an existing employee after employment began (true) rather than at the outset of employment (false). In Kentucky, a covenant signed by an existing employee requires independent, new consideration beyond continued at-will employment; an offer of employment at the outset is itself adequate consideration.
+    display_label: Signed After Employment Started
+    default: false
+    section: Timing
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.kentucky.provide-new-consideration-for-mid-employment-covenants
+    default_value_rationale: Default assumes the agreement is signed at the outset of employment, where the job offer supplies the exchange. If the employee is already employed, switch this on and describe the independent new consideration provided.
+  - name: new_consideration_description
+    type: string
+    description: For a covenant signed by an existing employee, the specific new value exchanged for the covenant — for example a bonus, a raise, a promotion, or specialized training. A bare recital of consideration does not cure a missing exchange under Creech.
+    display_label: New Consideration Provided
+    default: ''
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    section: Legal
+    default: Kentucky
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    default_value_rationale: Kentucky sets no statutory cap on duration; enforceability turns on the holistic Kegel fair-protection reasonableness standard rather than a fixed number. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, and counsel should size the term to the employer's actual protectable interest.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: Kentucky sets no statutory cap; a customer non-solicit maps directly onto the customer-goodwill interest and enforcement turns on proving contact with protected customers rather than meeting the statutory trade-secret threshold, so it is often the better instrument than a full non-compete. 12 months is a common, conservative duration counsel should size to the actual customer relationships protected.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Kentucky has no general non-compete statute; a non-compete is enforceable only to the extent it satisfies the common-law fair-protection reasonableness standard and is tied to a protectable interest rather than ordinary competition. This template recites the protectable-interest basis and sizes the restraint to the employer's actual footprint.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.kentucky.keep-restraints-within-the-fair-protection-standard
+    default_value_rationale: Conservative default. The non-compete is the most heavily scrutinized covenant under Kentucky's fair-protection standard; a customer non-solicit backstopped by the Kentucky Uniform Trade Secrets Act often protects the employer as well and is easier to enforce. Include only after confirming an identified protectable interest (confidential information, trade secrets, or customer goodwill), confirming valid consideration (new value for an existing employee), and sizing the duration and territory to the actual footprint.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    default_value_rationale: Kentucky imposes no statutory cap on duration; courts weigh time and territory together against the employer's real protectable interest under the Kegel fair-protection standard, so there is no safe-harbor number. 12 months is a common, conservative default counsel should size to the actual role and market rather than copy from another form.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee provided services
+    section: Non-Competition
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.kentucky.permit-reformation-but-draft-reasonable-tiers
+    default_value_rationale: Tied to the employee's actual service area. Kentucky imposes no statutory cap on territory; a narrower area genuinely needed to protect customer relationships or confidential information is far easier to defend under the fair-protection standard than a statewide ban. Kentucky case law shows a court may supply a reasonable geographic limit when a covenant omits one, but at least on that authority only in the sale-of-business context, so an employment covenant should state the territory rather than rely on judicial rescue.
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Narrowing the restriction to named competitors strengthens enforceability.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

@@ -1,5 +1,5 @@
 name: OpenAgreements Employee Restrictive Covenant (Wyoming)
-category: employment
+category: non-compete
 description: Wyoming-specific employee restrictive covenant agreement with modular covenant structure (non-compete, non-solicitation, non-dealing, non-investment, confidentiality, non-disparagement). Incorporates Wyo. Stat. section 1-23-108 (SF 107, 2025) pathway gating for non-compete-adjacent covenants. Drafted as a starting point for review by licensed counsel.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-wyoming
 version: '2.0'
@@ -69,8 +69,10 @@ fields:
     type: string
     description: Duration of employee non-solicitation restriction
     display_label: Employee Non-Solicitation Duration
-    default: 12 months
-    default_value_rationale: 12 months is the most common enforceable duration. Mayer Brown guidance states 1-2 years is the outer range of reasonableness.
+    default: 24 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
+    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. Wyoming judges the covenant on common-law reasonableness, so counsel should size the term to the employer's actual protectable interest.
     section: Employee Non-Solicitation
   - name: covered_employee_period
     type: string
@@ -90,7 +92,9 @@ fields:
     description: Duration of customer/partner non-solicitation restriction
     display_label: Customer Non-Solicitation Duration
     default: 12 months
-    default_value_rationale: 12 months is the most common enforceable duration. Compass Minerals uses 12 months for non-CEO employees and 24 months for CEO.
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
+    default_value_rationale: 12 months is the most common customer non-solicit term in benchmarked, publicly-filed employee agreements, edging out 24 months by only a narrow margin — a conservative pick counsel should size to the customer relationships actually protected.
     section: Customer Non-Solicitation
   - name: covered_customer_period
     type: string
@@ -101,17 +105,21 @@ fields:
     section: Customer Non-Solicitation
   - name: noncompete_included
     type: boolean
-    description: Whether the non-competition covenant is included. Requires a lawful restriction pathway under Wyo. Stat. section 1-23-108.
+    description: Whether the non-competition covenant is included. Requires a lawful restriction pathway under Wyoming non-compete law.
     display_label: Non-Competition Included
     default: false
-    default_value_rationale: 'Wyo. Stat. section 1-23-108 (SF 107, 2025; effective July 1, 2025) voids covered non-compete covenants unless a statutory exception applies: (1) purchase and sale of a business or business assets, (2) protection of trade secrets as defined by W.S. 6-3-501(a)(xi), (3) recovery of relocation, education, and training expenses within the statute''s tenure-based caps, or (4) executive and management personnel and officers / employees who constitute professional staff to executive and management personnel. Physician practice restrictions are separately void under subsection (b), not a permitted pathway. The drafter must include this covenant only after documenting the applicable pathway in the agreement.'
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.wyoming.gate-non-compete-by-statutory-pathway
+    default_value_rationale: 'Covered non-compete covenants are void unless a statutory exception applies: purchase and sale of a business or business assets, protection of trade secrets, recovery of relocation, education, and training expenses within the statute''s tenure-based caps, or executive and management personnel and officers / employees who constitute professional staff to executive and management personnel. Physician practice restrictions are separately void, not a permitted pathway. The drafter must include this covenant only after documenting the applicable pathway in the agreement.'
     section: Non-Competition
   - name: noncompete_duration
     type: string
     description: Duration of non-competition restriction
     display_label: Non-Competition Duration
     default: 12 months
-    default_value_rationale: 12 months is the most common enforceable duration. Hassler v. Circle C Resources (2022 WY 28) struck down a 24-month provision with broad scope. No Wyoming court has upheld a non-compete exceeding 24 months.
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
+    default_value_rationale: 12 months matches the modal non-compete term observed in benchmarked, publicly-filed employee agreements — a common, conservative pick rather than a Wyoming ceiling (Wyoming sets no fixed duration). Wyoming case law has rejected a broad 24-month non-compete, and no Wyoming court has upheld a non-compete exceeding 24 months, so the 12-month pick also stays well inside the range Wyoming courts have questioned.
     section: Non-Competition
   - name: territory
     type: string
@@ -133,9 +141,10 @@ fields:
     section: Non-Competition
   - name: nondealing_included
     type: boolean
-    description: Whether the no-business-with-covered-customers covenant is included. Requires a lawful restriction pathway under Wyo. Stat. section 1-23-108.
+    description: Whether the no-business-with-covered-customers covenant is included. Requires a lawful restriction pathway under Wyoming non-compete law.
     display_label: No Business with Covered Customers Included
     default: false
+    rationale_source: editorial
     section: No Business with Covered Customers
   - name: nondealing_duration
     type: string
@@ -152,9 +161,10 @@ fields:
     section: Definitions
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included. Requires a lawful restriction pathway under Wyo. Stat. section 1-23-108.
+    description: Whether the non-investment covenant is included. Requires a lawful restriction pathway under Wyoming non-compete law.
     display_label: Non-Investment Included
     default: false
+    rationale_source: editorial
     section: Non-Investment
   - name: noninvestment_duration
     type: string

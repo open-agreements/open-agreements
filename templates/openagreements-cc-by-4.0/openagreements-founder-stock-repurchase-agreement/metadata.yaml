@@ -1,0 +1,66 @@
+name: Founder Stock Repurchase and Cancellation Agreement
+category: corporate-governance
+description: Agreement between a Delaware corporation and a departing founder consummating the repurchase and cancellation of the founder's shares, whether as a negotiated buyback or as a belt-and-suspenders confirmation of a repurchase right exercised under the founder's existing Restricted Stock Purchase Agreement, with an optional mutual-release rider. Drafted as a starting point for licensed counsel review.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-founder-stock-repurchase-agreement
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Licensed under CC BY 4.0.
+fields:
+  - name: company_legal_name
+    type: string
+    description: Full legal name of the Delaware corporation
+    section: Parties
+  - name: founder_name
+    type: string
+    description: Full name of the founder whose shares are being repurchased
+    section: Parties
+  - name: rspa_reference
+    type: string
+    description: Reference to the founder's existing Restricted Stock Purchase Agreement (for example, "Restricted Stock Purchase Agreement dated January 1, 2022")
+    section: Terms
+  - name: shares_repurchased
+    type: string
+    description: Description of the shares repurchased (for example, "500,000 shares of Common Stock")
+    section: Terms
+  - name: repurchase_price_per_share
+    type: string
+    description: Repurchase price per share (for example, "$0.0001")
+    section: Terms
+  - name: aggregate_price
+    type: string
+    description: Aggregate repurchase price for all repurchased shares
+    section: Terms
+  - name: consideration_form
+    type: string
+    description: Form of consideration paid for the shares (for example, "cash" or "cancellation of the promissory note dated January 1, 2022")
+    section: Terms
+  - name: closing_date
+    type: date
+    description: Date the repurchase and cancellation close
+    section: Terms
+  - name: include_mutual_release
+    type: boolean
+    description: Whether to include the optional mutual-release rider (for a negotiated buyback only)
+    default: false
+    section: Terms
+  - name: release_scope
+    type: string
+    description: Description of the scope of the mutual release (used when include_mutual_release is true)
+    section: Terms
+  - name: signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the Company
+    section: Parties
+  - name: signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the Company
+    section: Parties
+priority_fields:
+  - company_legal_name
+  - founder_name
+  - rspa_reference
+  - shares_repurchased
+  - aggregate_price

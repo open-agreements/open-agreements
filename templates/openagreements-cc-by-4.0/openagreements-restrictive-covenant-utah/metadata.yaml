@@ -1,0 +1,158 @@
+name: OpenAgreements Employee Restrictive Covenant (Utah)
+category: non-compete
+description: 'Utah-specific employee restrictive covenant agreement built for the Utah Post-Employment Restrictions Act (Utah Code sections 34-51-101 through 34-51-301) and the common-law Rose Park reasonableness test: confidentiality and trade-secret protection under the Utah Uniform Trade Secrets Act, customer and employee non-solicitation (expressly outside the statutory non-compete definition and its one-year cap), and an optional non-compete capped at one year from separation and drawn to the four-part reasonableness test. Recites the statutory void consequence for over-length covenants, the section 34-51-301 employer fee-shifting exposure on failed enforcement, the sale-of-business and severance exemptions, and the 2026 healthcare-worker and veterinarian bans. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-utah
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Utah-specific analysis informed by the quote-verified Utah practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    section: Legal
+    default: Utah
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    rationale_source: editorial
+    section: Confidentiality
+    default_value_rationale: Utah leaves confidentiality agreements outside the Noncompetition Agreement Act's non-compete definition and one-year cap, but a confidentiality obligation on non-trade-secret information still should be reasonable. A finite term such as 24 months is defensible; a perpetual lid on non-secret information invites recharacterization as a disguised restraint on working.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    rationale_source: editorial
+    section: Employee Non-Solicitation
+    default_value_rationale: A nonsolicitation agreement is expressly excluded from the Noncompetition Agreement Act's non-compete definition and one-year cap, so no statute fixes its length; it answers to common-law reasonableness. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, sized to the actual protectable interest.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: No Utah statute fixes the lookback for a covered-employee class; 12 months is the most common window and keeps the no-poach class tied to colleagues the departing worker actually worked with, consistent with common-law reasonableness.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    rationale_source: editorial
+    section: Customer Non-Solicitation
+    default_value_rationale: A nonsolicitation agreement sits outside the Noncompetition Agreement Act's non-compete definition and one-year cap; its length is governed by common-law reasonableness rather than a statutory figure. 12 months is a common, defensible term.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation restriction.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: No Utah statute fixes the customer lookback; 12 months is the most common window and keeps the covered-customer class tied to relationships the worker could actually carry away, which is what Utah common law protects.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Under the Post-Employment Restrictions Act a post-employment non-compete may not run more than one year from separation and is void if it does; it must also satisfy the four-part common-law reasonableness test. This template caps the term at one year and recites the reasonableness basis.
+    display_label: Non-Competition Included
+    default: false
+    rationale_source: editorial
+    section: Non-Competition
+    default_value_rationale: 'Conservative default. A Utah non-compete carries a two-layer burden: the statutory one-year ceiling with a void consequence for over-length covenants and the full common-law reasonableness test. A failed enforcement action can also shift the employee''s fees, costs, and actual damages onto the employer. Include only after confirming a genuine protectable interest, a term within one year, and that the worker is not a healthcare worker or a veterinarian subject to the 2026 bans.'
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.utah.cap-restricted-period-at-one-year
+    section: Non-Competition
+    default_value_rationale: The Noncompetition Agreement Act caps a post-employment non-compete at one year from the day employment ends and makes an over-length covenant void, not merely voidable. 12 months sits at the statutory ceiling; a shorter term reduces the reasonableness challenge and the void risk. The tool must not default to a term that exceeds the one-year cap.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employer actually provides its products or services
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.utah.satisfy-rose-park-reasonableness-test
+    section: Non-Competition
+    default_value_rationale: 'Utah tests geographic scope against the area the business actually serves: a restraint no greater than the business''s footprint is generally enforceable, while a territory drawn from ambition rather than the actual market is where reasonableness challenges start.'
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Narrowing the restriction to named competitors strengthens enforceability.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: No Utah statute fixes a passive-investment threshold; five percent of any class of publicly traded securities is the standard passive-holdings carveout across restrictive covenant agreements and keeps the restraint from reaching index funds or a few public shares that no goodwill interest justifies.
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: Non-disparagement is not a statutory non-compete and is not governed by a Utah statutory figure; 24 months is common for employment non-disparagement provisions. Carve out truthful testimony, government reporting, and protected workplace speech regardless of the term.
+priority_fields:
+  - employer_name
+  - employee_name

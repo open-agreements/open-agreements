@@ -1,0 +1,116 @@
+name: OpenAgreements Employee Restrictive Covenant (Oklahoma)
+category: non-compete
+description: 'Oklahoma-specific employee restrictive covenant agreement centered on confidentiality, trade secret protection, property return, non-disparagement, and narrowly drafted customer and employee non-solicitation. Omits any employee covenant not to compete, because Okla. Stat. tit. 15, § 217 voids every contract restraining a person from exercising a lawful profession, trade, or business of any kind, save for the narrow statutory carve-outs in §§ 218-219 (sale of goodwill and partnership dissolution) and §§ 219A-219B. The agreement preserves only the covenants those sections leave standing for an employee: a customer non-solicitation covenant drafted to reach only the direct solicitation of the sale of goods or services from the former employer''s established customers, as § 219A(A) permits and no further; an employee anti-raiding covenant that § 219B removes from the restraint-of-trade prohibition; and confidentiality, trade-secret, property-return, and non-disparagement obligations that restrain the misuse of information rather than the exercise of a trade. Both non-solicits are keyed to a defined Restricted Period and expressly disclaim any bar on Employee working for a competitor. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-oklahoma
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Oklahoma-specific analysis informed by the quote-verified Oklahoma practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement. Oklahoma's void rule for employee non-competes does not turn on a date floor, but a stated effective date fixes when the surviving covenants begin and anchors any consideration analysis for a covenant signed after employment began.
+    display_label: Effective Date
+    section: Timing
+    rationale_source: editorial
+    default_value_rationale: No default is supplied because the effective date is transaction-specific. The field should be completed from the parties' signing or intended start date rather than inferred from Oklahoma law.
+  - name: governing_law
+    type: string
+    description: Governing law state. For an employee who resides and works in Oklahoma, an Oklahoma forum court will not apply chosen foreign law where doing so violates Oklahoma's public policy against restraints on work, so an Oklahoma selection is the one most likely to operate as written for an Oklahoma employee-restrictive-covenant dispute heard in Oklahoma.
+    display_label: Governing Law
+    default: Oklahoma
+    section: Legal
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.oklahoma.treat-out-of-state-forum-selection-as-the-operative-risk
+    default_value_rationale: Oklahoma is the correct default for an Oklahoma employee because the governing-law choice should align with the forum most likely to apply Oklahoma's public-policy limits rather than invite an out-of-state law fight.
+  - name: governing_venue
+    type: string
+    description: 'County and state whose courts are the agreed forum. A mandatory out-of-state forum clause is the operative enforcement risk in Oklahoma: a court applying another state''s law may enforce a covenant Oklahoma would void, so an Oklahoma forum keeps the dispute before a court expected to apply Oklahoma''s void rule.'
+    display_label: Venue
+    default: the state courts located in Oklahoma
+    section: Legal
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.oklahoma.treat-out-of-state-forum-selection-as-the-operative-risk
+    default_value_rationale: Oklahoma state courts are the default venue because the key enforcement risk is transfer to an out-of-state forum that may apply another state's law to covenants Oklahoma would treat as void.
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of the non-disparagement covenant
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of the customer non-solicitation restriction, measured from the end of employment. This is a surviving covenant that Oklahoma permits only to the extent it bars direct solicitation of established customers. Oklahoma fixes no statutory maximum, so keep it reasonable under the common-law rule of reason; practitioners commonly use two years or less.
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common customer non-solicit term in benchmarked, publicly-filed employee agreements, edging out 24 months by only a narrow margin. Oklahoma supplies no statutory maximum, but the term should remain reasonable and comfortably within the commonly used two-years-or-less drafting range.
+  - name: covered_customer_period
+    type: string
+    description: Look-back window before termination used to bound the class of Covered Customers to the established customers of the employer the employee actually dealt with. Section 219A(A) ties the permitted restriction to the established customers of the former employer, so the class is tied to a stated look-back window rather than reaching prospective or former customers.
+    display_label: Covered Customer Look-Back
+    default: 12 months
+    section: Customer Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of the employee anti-raiding (no-poach) restriction, measured from the end of employment. Oklahoma removes an employee-solicitation covenant from the restraint-of-trade prohibition; keep it finite and workforce-relationship-protective and measure its length against the rule of reason.
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
+    default_value_rationale: Oklahoma permits the solicitation-focused covenant shape but does not set a duration. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, and counsel should shorten or justify the period based on the workforce relationship being protected.
+  - name: covered_employee_period
+    type: string
+    description: Look-back window before termination used to bound the class of Covered Employees to colleagues the employee actually worked with or supervised. A workforce-wide class adds nothing protective; Oklahoma protects against soliciting the business's employees and independent contractors.
+    display_label: Covered Employee Look-Back
+    default: 12 months
+    section: Employee Non-Solicitation
+    rationale_source: editorial
+    default_value_rationale: 12 months is a conservative look-back window that keeps the covered class tied to employees and independent contractors with a recent workplace connection to Employee rather than the entire workforce.
+priority_fields:
+  - employer_name
+  - employee_name
+  - effective_date

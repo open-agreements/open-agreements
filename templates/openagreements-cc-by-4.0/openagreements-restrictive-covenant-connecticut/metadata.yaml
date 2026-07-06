@@ -1,0 +1,181 @@
+name: OpenAgreements Employee Restrictive Covenant (Connecticut)
+category: non-compete
+description: 'Connecticut-specific employee restrictive covenant agreement built for Connecticut''s common-law reasonableness regime: there is no general Connecticut non-compete statute, so every post-employment restraint stands or falls on the five-factor test of Scott v. General Iron & Welding Co. (partial and restricted as to time or place, fair protection of the employer, no undue hardship on the employee, no interference with the public interest, and no preclusion of the employee''s occupation and livelihood). It provides confidentiality and trade-secret protection backstopped by the Connecticut Uniform Trade Secrets Act (Conn. Gen. Stat. §§ 35-51 to 35-53), a continued-employment consideration recital drafted to prove the connection the Dur-A-Flex and Schimenti decisions require, customer and employee non-solicitation, an optional non-compete tied to a recognized protectable interest and sized to the employer''s actual footprint, a physician clause reciting the § 20-14p one-year and fifteen-mile caps and the parallel §§ 20-12k / 20-101d caps for physician assistants and APRNs, statutory carve-outs excluding security-guard (§ 31-50a), broadcast-employee (§ 31-50b), and homemaker-companion / home-health (§§ 20-681, 20-683) restraints, and separable, tiered restraints drafted within their enforceable scope rather than in reliance on discretionary judicial narrowing, which Connecticut authority leaves unsettled. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-connecticut
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Connecticut-specific analysis informed by the quote-verified Connecticut practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position. In Connecticut the worker's occupation selects the rulebook — physicians, physician assistants, APRNs, security guards, broadcast employees, and home-care workers each sit under a different statutory rule, and everyone else gets common-law balancing — so record the actual title and duties.
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: 'Effective date of this agreement. The execution date does heavy lifting for clinician covenants: the statutory caps reach covenants entered into, amended, extended, or renewed on or after July 1, 2016 for physicians and October 1, 2023 for physician assistants and APRNs.'
+    display_label: Effective Date
+    rationale_source: editorial
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state. For a Connecticut workforce the honest selection is Connecticut law and a Connecticut forum, because the covenant was drafted against the Scott five-factor test and Connecticut's occupation statutes; a foreign-law clause invites a choice-of-law fight on top of the merits.
+    display_label: Governing Law
+    section: Legal
+    default: Connecticut
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    rationale_source: editorial
+    section: Confidentiality
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. Connecticut's reasonableness test supports protecting confidential information for a reasonable period of time, not forever, so a finite term keeps the non-secret obligation within that reasonableness lens.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    default_value_rationale: Connecticut sets no statutory cap on duration; no occupation statute addresses employee non-solicits, so the clause is judged on the ordinary Scott five-factor reasonableness test. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, and counsel should size the term to the employer's actual protectable interest.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    rationale_source: editorial
+    section: Customer Non-Solicitation
+    default_value_rationale: Connecticut sets no statutory cap; a customer non-solicit limited to customers the worker serviced or solicited is the shape Connecticut courts have rewarded, and is often the better instrument than a full non-compete. 12 months is a common, conservative duration counsel should size to the actual customer relationships protected.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Connecticut has no general non-compete statute; a non-compete is enforceable only to the extent it satisfies the five-factor Connecticut reasonableness test and is tied to a recognized protectable interest rather than ordinary competition. Occupation statutes cap or bar the covenant for certain workers before any balancing begins. This template recites the protectable-interest basis and sizes the restraint to the employer's actual footprint.
+    display_label: Non-Competition Included
+    default: false
+    rationale_source: editorial
+    section: Non-Competition
+    default_value_rationale: Conservative default. The non-compete is the most heavily scrutinized covenant under Connecticut's five-factor test, and several Connecticut occupation statutes cap it for physicians, physician assistants, and APRNs or bar it outright for security guards absent proven trade secrets, broadcast employees, and homemaker-companion / home-health workers. A customer non-solicit tied to serviced-or-solicited customers often protects the employer as well. Include only after confirming the worker's occupation clears the statutory gates and after identifying a recognized protectable interest — trade secrets, confidential information, customer lists, or customer goodwill — and sizing the duration and territory to the actual footprint.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    rationale_source: editorial
+    section: Non-Competition
+    default_value_rationale: Connecticut imposes no general statutory cap on duration for ordinary employees — courts have upheld even a five-year restriction on the right record — but the period must be justified by the record and is weighed together with geography under the five-factor test, so there is no safe-harbor number. Physician, physician assistant, and APRN covenants are separately capped at one year. 12 months is a common, conservative default counsel should size to the actual role and market rather than copy from another form.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which the employer actually does business and Employee provided services
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.connecticut.keep-covenants-within-the-five-factor-reasonableness-test
+    section: Non-Competition
+    default_value_rationale: Tied to where the employer actually does business and the employee served, because a covenant that protects the employer in areas where it does not and is unlikely to do business is unreasonable as to area. Statewide can be defensible when the customer footprint is statewide, but aspiration is not a footprint, and physician, physician assistant, and APRN covenants are separately capped at fifteen miles from the primary practice site.
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Naming the employer's real competitors is self-proving narrowness under the fair-protection factor and leaves the worker free to take the rest of the industry's jobs, which defuses the livelihood objection under Scott.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements. A clause that technically forbids holding index funds or ordinary public shares adds harshness the employer cannot justify under the fair-protection factor of the Scott test.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

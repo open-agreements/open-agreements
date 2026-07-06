@@ -1,0 +1,204 @@
+name: OpenAgreements Employee Restrictive Covenant (Virginia)
+category: non-compete
+description: 'Virginia-specific employee restrictive covenant agreement built for Va. Code § 40.1-28.7:8 and Virginia''s strict common-law reasonableness test: confidentiality and trade-secret protection with the statutory nondisclosure carve-out preserved, an employee non-solicitation covenant that defaults off because it is presumptively unenforceable against a protected worker, a customer non-solicitation covenant confined to the worker''s own solicitation so customer-initiated business stays open, and an optional non-compete confined to the worker''s own role and territory. The agreement runs the statutory worker-protection gates before any covenant, states the without-cause severance-or-disclosed-compensation economics SB 170 requires for agreements entered into, amended, or renewed on or after July 1, 2026, excludes health care professionals, and — because Virginia courts do not rewrite an overbroad covenant — draws each covenant within its enforceable scope at the outset rather than relying on judicial reformation. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-virginia
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Virginia-specific analysis informed by the quote-verified Virginia practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement — the date the last party signs. It anchors the durations stated in Cover Terms.
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state. For a workforce living and working in Virginia this should remain Virginia; a clause naming another state for Virginia-based workers invites a public-policy challenge as an attempted detour around Virginia's worker-protective non-compete rules.
+    display_label: Governing Law
+    section: Legal
+    default: Virginia
+    rationale_source: editorial
+  - name: low_wage_threshold
+    type: string
+    description: Average weekly earnings figure below which Virginia bars a non-compete for the applicable year. Reference context only — surfaced as a note beneath Cover Terms, not filled into the agreement body.
+    display_label: Low-Wage Threshold (Average Weekly Earnings)
+    default: $1,507.01 per week
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.exclude-non-competes-for-low-wage-employees
+    section: Virginia Statutory Gates
+    default_value_rationale: $1,507.01 per week is the 2026 low-wage threshold published by the Virginia Department of Workforce Development and Advancement. The Department resets it annually, so counsel should confirm the figure for the covenant's execution year.
+  - name: without_cause_compensation
+    type: string
+    description: Severance benefits or other monetary payment the employer will provide, disclosed at execution, if it discharges the employee without cause. For agreements entered into, amended, or renewed on or after July 1, 2026, SB 170 makes a non-compete unenforceable after a without-cause discharge unless the employee receives severance or other prior-disclosed monetary compensation.
+    display_label: Without-Cause Severance / Disclosed Compensation
+    default: severance equal to the Employee's base salary for the length of the Restricted Period, paid over that period
+    rationale_source: editorial
+    section: Virginia Statutory Gates
+    default_value_rationale: A base-salary continuation running the length of the restricted period is a common way to satisfy the SB 170 requirement that the covenant be paired with disclosed severance or other monetary payment; the figure is a counsel-judgment starting point because the statute fixes no amount.
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. A finite term keeps the residual clause from reading as an indefinite restraint on working with what the employee knows, which matters in a state that strictly construes restraints.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included. An unpublished 2026 Virginia appellate decision read the state non-compete statute to prevent enforcing an employee non-solicit against a protected worker, so this covenant is presumptively unenforceable for a low-wage or overtime-eligible employee and defaults off.
+    display_label: Employee Non-Solicitation Included
+    default: false
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.avoid-employee-nonsolicits-for-protected-workers
+    section: Employee Non-Solicitation
+    default_value_rationale: Conservative default. For a worker the statute protects, the only Virginia appellate reading on point treats an employee non-solicit as within the covenant-not-to-compete ban; include it only after confirming the worker is outside the protected class.
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. Virginia weighs function, geography, and duration together, so the longer market term is defensible only where the other elements are tightly drawn.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is a common enforceable duration. Because Virginia assesses function, geography, and duration together, a shorter term reduces the room for a court to find the covenant broader than the employer's legitimate interest requires.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Virginia law bars an employer from entering into, enforcing, or even threatening to enforce a non-compete with a low-wage employee — a class that since July 1, 2025 also covers every FLSA-overtime-eligible worker regardless of pay, and that from July 1, 2026 also covers any health care professional. For a worker outside those classes the employer must still carry Virginia's three-part reasonableness burden, and Virginia courts will not rewrite an overbroad covenant. This template recites those gates when the covenant is included.
+    display_label: Non-Competition Included
+    default: false
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.exclude-non-competes-for-low-wage-employees
+    section: Non-Competition
+    default_value_rationale: Conservative default. Even handing a form non-compete to a covered worker is a violation of the ban's threatening-to-enforce prong, carrying a two-year private action, voiding, liquidated damages, fees, and a $10,000-per-violation civil penalty. Include only after confirming the worker is not low-wage, not overtime-eligible, not (from July 1, 2026) a health care professional, and that the restraint is drawn no broader than the employer's legitimate interest requires.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
+    section: Non-Competition
+    default_value_rationale: 12 months matches the modal non-compete term observed in benchmarked, publicly-filed employee agreements — a common, conservative pick rather than a Virginia ceiling (Virginia sets no fixed duration). Virginia never reads duration in isolation; it weighs function, geography, and duration together, so a modest period cannot redeem an immodest function or territory.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee worked or had responsibility for Employer during the last two years of employment
+    section: Non-Competition
+    default_value_rationale: Tied to where the worker actually operated rather than the employer's full footprint. Because Virginia will not narrow an overbroad covenant (Home Paramount; Motion Control), an overbroad territory is void rather than trimmed, so the default is drawn to the worker's own working area.
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Naming the employer's real competitors is strong evidence the covenant reaches no further than the legitimate business interest requires, which matters in Virginia because a court will not rewrite an overbroad similar-business definition into a lawful one.
+    display_label: Specified Competitors
+    default: ''
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.avoid-any-capacity-function-restrictions
+    section: Non-Competition
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included. A non-dealing clause bars serving a customer even when the customer calls first — the conduct Virginia's protected-worker carve-out preserves for a covered worker — so it defaults off and is presumptively broken for any protected worker.
+    display_label: No Business with Covered Customers Included
+    default: false
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.preserve-customer-initiated-business-for-protected-workers
+    section: No Business with Covered Customers
+    default_value_rationale: Conservative default. The statutory customer-initiated-business carve-out collides head-on with a non-dealing restraint for a protected worker; include only for a worker outside the protected class and as a deliberate risk decision.
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements, and a de minimis floor keeps an ownership restraint from reading as unduly harsh under the Omniplex second prong.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name
