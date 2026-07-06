@@ -260,6 +260,8 @@ function loadCatalogItems(rootDir) {
     cwd: rootDir,
     encoding: "utf-8",
     timeout: 30000,
+    // The full catalog exceeds execFileSync's 1 MiB default maxBuffer (ENOBUFS).
+    maxBuffer: 16 * 1024 * 1024,
   });
   return JSON.parse(raw).items;
 }

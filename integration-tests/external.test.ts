@@ -193,6 +193,9 @@ describe('list includes external templates', () => {
       cwd: ROOT,
       encoding: 'utf-8',
       timeout: 10_000,
+      // The full catalog (~100 templates post-sync) exceeds execSync's 1 MiB
+      // default maxBuffer and dies with ENOBUFS.
+      maxBuffer: 16 * 1024 * 1024,
     }));
     await allureAttachment('list-json-output.txt', output);
     const parsed = JSON.parse(output) as { items: ListedTemplate[] };
@@ -208,6 +211,7 @@ describe('list includes external templates', () => {
       cwd: ROOT,
       encoding: 'utf-8',
       timeout: 10_000,
+      maxBuffer: 16 * 1024 * 1024,
     }));
     const parsed = JSON.parse(output) as { items: ListedTemplate[] };
     const ycItems = parsed.items.filter((item) => item.name.startsWith('yc-safe-'));

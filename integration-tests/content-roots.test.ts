@@ -151,6 +151,7 @@ describe('content root overrides', () => {
     const output = execFileSync('node', [BIN, 'list', '--json'], {
       cwd: ROOT,
       encoding: 'utf-8',
+      maxBuffer: 16 * 1024 * 1024,
       env: {
         ...process.env,
         [ENV_KEY]: root,

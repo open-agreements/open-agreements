@@ -75,53 +75,45 @@ async function fillStockholderConsent(signerCount: number): Promise<string[]> {
   return extractParagraphs(outputPath);
 }
 
+/**
+ * Behavioral (layout-agnostic) assertions: the consents are LE-authored
+ * ("authored-wins"), so the signature-block ANATOMY is owned by the upstream
+ * renderer and has legitimately changed across syncs — underscore signature
+ * lines (OA-native traditional-consent-v1) became bordered table cells in the
+ * LE render. What must hold in EVERY layout: one signature block per signer
+ * (each signer's name exactly once), a per-signer date, and zero unfilled
+ * docx-templates commands leaking into the document.
+ */
+function assertSignerBlocks(paragraphs: string[], names: string[], date: string): void {
+  const fullText = paragraphs.join('\n');
+  for (const name of names) {
+    expect(
+      paragraphs.filter((paragraph) => paragraph.includes(name)),
+      `exactly one signature block for ${name}`
+    ).toHaveLength(1);
+  }
+  const dateOccurrences = fullText.split(date).length - 1;
+  expect(dateOccurrences, 'a filled date per signer').toBeGreaterThanOrEqual(names.length);
+  // No unfilled fill-commands may survive: {FOR …}, {END-FOR …}, {$item.x},
+  // {IF …}, or bare {field} tokens.
+  expect(fullText).not.toMatch(/\{[^}\n]*\}/);
+}
+
 describe('SAFE consent variable signer rendering', () => {
   for (const signerCount of [1, 3, 7]) {
-    it(
-      `renders board consent with exactly ${signerCount} signature blocks from canonical template output`,
-      async () => {
-        const paragraphs = await fillBoardConsent(signerCount);
+    it(`renders board consent with exactly ${signerCount} signature blocks`, async () => {
+      const paragraphs = await fillBoardConsent(signerCount);
+      const names = Array.from({ length: signerCount }, (_v, i) => `Director ${i + 1}`);
+      assertSignerBlocks(paragraphs, names, 'April 16, 2026');
+      // Out-of-range signers must not render (loop iterates the array exactly).
+      expect(paragraphs.join('\n')).not.toContain(`Director ${signerCount + 1}`);
+    });
 
-        expect(paragraphs.filter((paragraph) => paragraph === '______________________________')).toHaveLength(
-          signerCount
-        );
-        expect(paragraphs.filter((paragraph) => paragraph === `Date: April 16, 2026`)).toHaveLength(
-          signerCount
-        );
-        // traditional-consent-v1 places the bare director name under the signature line — no "Print Name:" prefix.
-        expect(paragraphs).not.toContain('_______');
-        expect(paragraphs).not.toContain('Print Name:');
-        expect(paragraphs.join('\n')).not.toContain('{FOR ');
-        expect(paragraphs.join('\n')).not.toContain('{END-FOR ');
-        expect(paragraphs.join('\n')).not.toContain('{$member.name}');
-
-        for (let i = 1; i <= signerCount; i++) {
-          expect(paragraphs).toContain(`Director ${i}`);
-        }
-      }
-    );
-
-    it(
-      `renders stockholder consent with exactly ${signerCount} signature blocks from canonical template output`,
-      async () => {
-        const paragraphs = await fillStockholderConsent(signerCount);
-
-        expect(paragraphs.filter((paragraph) => paragraph === '______________________________')).toHaveLength(
-          signerCount
-        );
-        expect(paragraphs.filter((paragraph) => paragraph === `Date: April 16, 2026`)).toHaveLength(
-          signerCount
-        );
-        expect(paragraphs).not.toContain('_______');
-        expect(paragraphs).not.toContain('Print Name:');
-        expect(paragraphs.join('\n')).not.toContain('{FOR ');
-        expect(paragraphs.join('\n')).not.toContain('{END-FOR ');
-        expect(paragraphs.join('\n')).not.toContain('{$stockholder.name}');
-
-        for (let i = 1; i <= signerCount; i++) {
-          expect(paragraphs).toContain(`Stockholder ${i}`);
-        }
-      }
-    );
+    it(`renders stockholder consent with exactly ${signerCount} signature blocks`, async () => {
+      const paragraphs = await fillStockholderConsent(signerCount);
+      const names = Array.from({ length: signerCount }, (_v, i) => `Stockholder ${i + 1}`);
+      assertSignerBlocks(paragraphs, names, 'April 16, 2026');
+      expect(paragraphs.join('\n')).not.toContain(`Stockholder ${signerCount + 1}`);
+    });
   }
 });

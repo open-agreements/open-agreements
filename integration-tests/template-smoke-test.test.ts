@@ -42,14 +42,26 @@ const testCases = fixtureFiles.filter((id) => {
   return dir !== undefined && existsSync(join(dir, 'template.docx'));
 });
 
-// Templates whose packaged DOCX is the humanized manual-fill variant (bracket
-// prose, zero {token} fill commands) — filling returns the document unchanged
-// with a guardrail warning. Machine-fillable twins are tracked in
-// legal-explainer #1378; when a template gains tokens, remove it from this list.
-const MANUAL_FILL_ONLY = new Set([
-  'common-paper-software-license-agreement',
-  'openagreements-restrictive-covenant-florida',
-]);
+/**
+ * A template is manual-fill-only when the document the engine will consume —
+ * `template.fill.docx` when present (#1378 dual-artifact), else
+ * `template.docx` — carries zero fill tokens (humanized bracket prose).
+ * Derived from the template dir instead of a hardcoded list so the smoke
+ * stays correct as upstream syncs add machine-fillable twins: a token-less
+ * doc must come back unchanged WITH the guardrail warning, and a
+ * token-bearing doc must actually consume fields.
+ */
+function isManualFillOnly(templateDir: string): boolean {
+  const fillVariant = join(templateDir, 'template.fill.docx');
+  const docPath = existsSync(fillVariant) ? fillVariant : join(templateDir, 'template.docx');
+  const xml = new AdmZip(docPath).getEntry('word/document.xml')?.getData().toString('utf-8') ?? '';
+  // Reassemble text per paragraph (tokens may split across runs, never across
+  // paragraphs) — same shape as validateTemplate's token sniff.
+  const paragraphs = [...xml.matchAll(/<w:p[\s>][\s\S]*?<\/w:p>/g)].map((p) =>
+    [...p[0].matchAll(/<w:t[^>]*>([^<]*)<\/w:t>/g)].map((t) => t[1]).join('')
+  );
+  return !paragraphs.some((text) => /\{(?:IF |FOR |END|\$|\w+\})/.test(text));
+}
 
 describe('E2E smoke test — fill all templates with complete field data', () => {
   it.each(testCases)(
@@ -73,7 +85,7 @@ describe('E2E smoke test — fill all templates with complete field data', () =>
       const zeroCommandWarnings = result.warnings.filter((w) =>
         w.includes('no machine-fillable fields')
       );
-      if (MANUAL_FILL_ONLY.has(templateId)) {
+      if (isManualFillOnly(templateDir)) {
         expect(result.fillCommandCount, `${templateId}: expected token-less docx`).toBe(0);
         expect(result.fieldsUsed, `${templateId}: nothing can be used`).toEqual([]);
         expect(zeroCommandWarnings, `${templateId}: missing unchanged-document warning`).toHaveLength(1);
