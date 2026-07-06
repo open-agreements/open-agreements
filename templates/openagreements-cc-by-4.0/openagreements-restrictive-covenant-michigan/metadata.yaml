@@ -1,0 +1,189 @@
+name: OpenAgreements Employee Restrictive Covenant (Michigan)
+category: non-compete
+description: 'Michigan-specific employee restrictive covenant agreement built for MCL § 445.774a(1): confidentiality and trade-secret protection backstopped by the Michigan Uniform Trade Secrets Act (MCL §§ 445.1901–445.1910), customer and employee non-solicitation, an optional non-compete gated on a reasonable competitive business interest and sized reasonably as to duration, geographic area, and line of business (St. Clair Medical, P.C. v. Borgiel; Mid Mich. Med. Billing Serv., Inc. v. Williams), a consideration recital keyed to Michigan''s continued-employment-in-an-at-will-setting rule (QIS, Inc. v. Industrial Quality Control, Inc.), a general-knowledge-and-skill carve-out (Follmer, Rudzewicz & Co., P.C. v. Kosco), a paired governing-law and forum-selection provision (Stryker Corp. v. Ridgeway; Barshaw v. Allegheny Performance Plastics, LLC), physician proof-of-diversion scrutiny (Isidore Steiner, DPM, PC v. Bonanni), and statutory blue-pencil reformation that the drafting does not rely on (MCL § 445.774a(1) empowers a court to limit an unreasonable covenant and enforce it as limited, but the power is discretionary). Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-michigan
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Michigan-specific analysis informed by the quote-verified Michigan practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    section: Legal
+    default: Michigan
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    rationale_source: editorial
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. Michigan enforces confidentiality-based restraints only to the extent they provide reasonable protection for the employer's confidential information, so a finite term for non-secret information is the defensible posture.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    rationale_source: editorial
+    default_value_rationale: Michigan sets no statutory cap on duration; reasonableness turns on the state's general restrictive-covenant reasonableness analysis rather than a fixed number. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative for this least-scrutinized covenant in the family, which counsel should size to the employer's actual protectable interest.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: Michigan sets no statutory cap; a customer non-solicit maps directly onto the customer-relationship interest Michigan protects and is often the better instrument than a full non-compete. 12 months is a common, conservative duration counsel should size to the actual customer relationships protected.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Michigan permits an employee non-compete when it protects a reasonable competitive business interest and is reasonable as to its duration, geographical area, and the type of employment or line of business; a covenant that does no more than suppress ordinary competition fails even though Michigan law allows non-competes. This template recites the reasonable-competitive-business- interest basis and sizes the restraint to the employer's actual footprint.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    rationale_source: editorial
+    default_value_rationale: Conservative default. The non-compete is the most heavily scrutinized covenant under Michigan's restrictive-covenant framework; a customer non-solicit backstopped by the Michigan Uniform Trade Secrets Act often protects the employer as well. Include only after confirming an identified reasonable competitive business interest (confidential information, customer relationships, or trade secrets) and sizing the duration, territory, and line of business to the actual footprint.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    rationale_source: editorial
+    default_value_rationale: Michigan imposes no statutory cap on duration; a court weighs duration, geography, and line of business together against the employer's reasonable competitive business interest, so there is no safe-harbor number. 12 months is a common, conservative default counsel should size to the actual role and market rather than copy from another form.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee provided services
+    section: Non-Competition
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.michigan.keep-duration-geography-and-line-of-business-reasonable
+    default_value_rationale: Tied to the employee's actual service area. Michigan imposes no statutory cap on territory, but its leading overbreadth decision faulted an unlimited-geography restriction and rejected an unlimited right to restrict clients' business choices; a narrower area genuinely needed to protect the interest is far easier to defend.
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Narrowing the restriction to named competitors is strong evidence the restraint targets an unfair advantage rather than ordinary competition, and spares the employer from asking a court to exercise its discretionary narrowing power.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: michigan_consideration
+    type: string
+    description: Michigan only. The consideration given in exchange for the restrictive covenants, recited so the record shows what moved. Michigan's continued- employment rule treats continued employment as sufficient consideration only in a genuine at-will setting; a covenant signed by a just-cause or contract employee who received only continued employment is void, because refusing to sign would not have been just cause for termination. State the specific benefit here (for example, a signing or retention bonus, equity grant, promotion, or new confidential access) where the worker is not genuinely at will, or rely on continued at-will employment where the worker is. Shown in the Michigan timing and consideration recital.
+    display_label: Consideration for Restrictive Covenants (Michigan)
+    default: Employee's continued at-will employment, together with the compensation and the access to Confidential Information that Employer provides Employee under this agreement, which the parties agree are given in exchange for the restrictive covenants
+    section: Consideration
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.michigan.provide-consideration-beyond-continued-employment-for-non-at-will-workers
+    default_value_rationale: The default recites continued at-will employment plus the compensation and confidential-information access the agreement itself provides. Continued employment is sufficient only where the worker is genuinely at will; counsel should replace it with a specific negotiated benefit (a raise, bonus, promotion, or new confidential access) whenever the worker has just-cause protection or an employment contract.
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

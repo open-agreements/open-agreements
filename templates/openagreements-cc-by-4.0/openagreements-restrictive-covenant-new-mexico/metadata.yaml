@@ -1,0 +1,211 @@
+name: OpenAgreements Employee Restrictive Covenant (New Mexico)
+category: non-compete
+description: 'New Mexico-specific employee restrictive covenant agreement built for the Lovelace / McGonigle common-law reasonableness standard and the health-care practitioner statute (NMSA 1978, §§ 24A-4-1 to 24A-4-5): confidentiality and trade-secret protection tied to a specific legitimate interest, an employee non-solicitation covenant, a customer non-solicitation covenant, and an optional non-compete drawn to reasonableness in time, geography, and scope rather than copied from a form. The agreement documents independent new consideration for a covenant signed after employment begins, because New Mexico treats continued at-will employment as illusory (Piano). It excludes non-competes for the ten covered health-care practitioner classes, holds the surviving practitioner fallbacks — one-year patient and employee non-solicits, early-departure repayment, NDAs, and reasonable liquidated damages — within their statutory bounds, keeps New Mexico law and a New Mexico forum for agreements covering clinical health-care services rendered in the state, and secures narrowing through an express reformation clause because New Mexico''s only staged reformation authority is contract-based (KidsKare). Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-new-mexico
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. New Mexico-specific analysis informed by the quote-verified New Mexico practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: 'Effective date of this agreement. The execution date does statutory work in New Mexico: for psychologists, physician assistants, and pharmacists, the health-care practitioner article applies only to agreements, renewals, or extensions executed on or after the effective date of the 2023 act.'
+    display_label: Effective Date
+    section: Timing
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.new-mexico.exclude-non-competes-for-covered-health-care-practitioners
+  - name: covenant_timing
+    type: string
+    description: Whether this agreement is signed as a condition of the initial offer of employment or after employment has already begun. New Mexico treats continued at-will employment as an illusory promise that cannot be consideration, so a mid-stream covenant must be supported by independent new consideration.
+    display_label: Covenant Timing
+    default: at the outset of employment as a condition of the offer
+    section: Timing
+    default_value_rationale: For a covenant signed as a condition of initial hire, the offer of employment itself can serve as consideration. Replace this with a description tied to the new consideration (raise, bonus, promotion, or equity grant) when the covenant is signed after employment began.
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.new-mexico.require-independent-consideration-for-midstream-covenants
+  - name: independent_consideration
+    type: string
+    description: The bargained-for benefit that supports this agreement. For a mid-stream covenant, describe the new consideration (a raise, bonus, promotion, equity grant, or other benefit) dated to signing, because a bare recital of continued at-will employment is illusory under New Mexico law.
+    display_label: Consideration
+    default: the offer of employment and Employee's access to Employer's Protected Interests
+    section: Timing
+    default_value_rationale: For an at-hire covenant the offer of employment supplies consideration. For a covenant signed after employment began, replace this with the specific new benefit exchanged for the covenant.
+  - name: governing_law
+    type: string
+    description: Governing law state. For an agreement covering clinical health-care services to be rendered in New Mexico, a provision choosing another state's law is void, unenforceable, and against public policy, so this should remain New Mexico for such an agreement.
+    display_label: Governing Law
+    section: Legal
+    default: New Mexico
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.new-mexico.keep-clinical-health-care-agreements-under-new-mexico-law-and-forum
+  - name: venue
+    type: string
+    description: Forum for disputes. For an agreement covering clinical health-care services rendered in New Mexico, a provision requiring litigation in another state is void, so the forum should remain New Mexico for such an agreement.
+    display_label: Venue
+    section: Legal
+    default: the state and federal courts located in New Mexico
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.new-mexico.keep-clinical-health-care-agreements-under-new-mexico-law-and-forum
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. A finite term keeps the non-secret obligation from operating as an indirect restraint on the general skills and knowledge New Mexico refuses to protect.
+    rationale_source: editorial
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is a common enforceable duration and stays within the one-year ceiling the health-care practitioner statute preserves for employee non-solicits, so the same term is safe whether or not the worker is a covered practitioner.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.new-mexico.limit-preserved-practitioner-provisions-to-statutory-bounds
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is a common enforceable duration and stays within the one-year ceiling the health-care practitioner statute preserves for patient non-solicits.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.new-mexico.limit-preserved-practitioner-provisions-to-statutory-bounds
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. New Mexico enforces a non-compete when a court deems it reasonable in time, geography, and scope and tied to a legitimate business interest. It is unenforceable, however, where it restricts a covered health-care practitioner's clinical services in New Mexico. This template recites the reasonableness basis and the practitioner exclusion when the covenant is included.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    default_value_rationale: Conservative default. A New Mexico non-compete must be justified on the facts of the particular case, and no New Mexico court is obliged to narrow an overbroad covenant absent express contract language authorizing it. Include only after confirming the worker is not one of the ten covered health-care practitioner classes and the time, territory, and scope are matched to an identified protectable interest.
+    rationale_source: editorial
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    default_value_rationale: 12 months is a common enforceable duration. New Mexico tests duration on the facts of the particular case with no fixed cap and no safe harbor so the period should be connected to the interest it protects rather than copied from a form.
+    rationale_source: editorial
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee actually worked or had material responsibility for Employer during employment
+    section: Non-Competition
+    default_value_rationale: Tied to where Employee actually worked rather than the employer's footprint. A New Mexico district court cut a one-hundred-mile dental restriction to thirty miles; geography sized to the worker's real territory is the least vulnerable to that treatment.
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.new-mexico.keep-covenants-reasonable-and-tied-to-a-legitimate-interest
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Naming the employer's real competitors is strong evidence the covenant protects an identified interest rather than punishing departure, which is exactly the showing the New Mexico reasonableness test rewards.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

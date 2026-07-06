@@ -1,0 +1,209 @@
+name: OpenAgreements Employee Restrictive Covenant (Colorado)
+category: non-compete
+description: 'Colorado-specific employee restrictive covenant agreement built for C.R.S. § 8-2-113: confidentiality and trade-secret protection with the statutory general-skills and protected-disclosure carve-outs, an employee non-solicitation covenant, a customer non-solicitation covenant gated on sixty percent of the highly compensated worker threshold ($78,008.40 for 2026), and an optional non-compete gated on the highly compensated worker threshold ($130,014 for 2026) and tied to trade-secret protection. Both earnings gates run at signing and at enforcement. The agreement flags the separate, signed 14-day advance-notice document the statute requires, excludes restrictive covenants for health-care providers under S.B. 25-083 with the patient-communication protections, keeps Colorado law and a Colorado forum for Colorado-based workers, and drafts each covenant within its enforceable scope rather than relying on discretionary judicial reformation. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-colorado
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Colorado-specific analysis informed by the quote-verified Colorado practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement — the date the last party signs. It anchors the durations and the compensation-threshold test in Cover Terms.
+    display_label: Effective Date
+    section: Timing
+  - name: notice_date
+    type: date
+    description: Date the employer delivered the separate, signed advance-notice document required by the Colorado Noncompetition Agreement Act. For a prospective worker the notice must precede acceptance of the offer; for a current worker it must be delivered at least 14 days before the earlier of the covenant's effective date or the effective date of the consideration for the covenant.
+    display_label: Advance Notice Date
+    section: Timing
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.colorado.require-advance-notice-in-separate-signed-document
+  - name: governing_law
+    type: string
+    description: Governing law state. For a worker who primarily resided and worked in Colorado at termination, Colorado law governs enforceability of the covenants notwithstanding any contrary clause, so this should remain Colorado for a Colorado-based worker.
+    display_label: Governing Law
+    section: Legal
+    default: Colorado
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.colorado.keep-colorado-law-and-forum-for-colorado-workers
+  - name: highly_compensated_threshold
+    type: string
+    description: Annualized cash compensation figure that gates the non-compete. The Division of Labor Standards and Statistics resets the highly compensated worker threshold annually through the PAY CALC Order; the controlling figure is the greater of the August 10, 2022 amount or the amount in effect when the covenant is executed. The default is the 2026 figure; replace it with the figure for the execution year.
+    display_label: Highly Compensated Worker Threshold
+    default: $130,014
+    section: Colorado Statutory Gates
+    default_value_rationale: $130,014 is the 2026 highly compensated worker threshold set by the 2026 PAY CALC Order. The Division resets it annually, so counsel should confirm the figure for the covenant's execution year.
+    rationale_source: regulation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.colorado.gate-non-compete-by-highly-compensated-worker-threshold
+  - name: customer_nonsolicit_threshold
+    type: string
+    description: Annualized cash compensation figure that gates the customer non-solicit, equal to sixty percent of the highly compensated worker threshold. The default is the 2026 derived figure; replace it with sixty percent of the threshold for the execution year.
+    display_label: Customer Non-Solicit Threshold
+    default: $78,008.40
+    section: Colorado Statutory Gates
+    default_value_rationale: $78,008.40 is sixty percent of the 2026 highly compensated worker threshold of $130,014. The PAY CALC Order does not state this figure, so confirm the current-year derived amount before using the covenant.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.colorado.gate-customer-nonsolicit-by-sixty-percent-earnings-threshold
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. Colorado builds a reasonableness requirement into its confidentiality carve-out, so a finite term keeps the non-secret obligation within the safe harbor.
+    rationale_source: editorial
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. Colorado does not statutorily address employee non-solicits, and case law treats a clause limited to active solicitation as a lesser restraint, so counsel preferring to underline that characterization can shorten the term.
+    rationale_source: editorial
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is a common enforceable duration. A Colorado customer non-solicit must be no broader than reasonably necessary to protect trade secrets, and a shorter term reduces the room for the enforcement-time earnings test to fall out from under it.
+    rationale_source: editorial
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Under the Colorado Noncompetition Agreement Act a Colorado covenant not to compete is void by default; it survives only under the highly compensated worker exception, which requires the worker to earn at or above the threshold both when the covenant is entered into and when it is enforced and requires the covenant to protect trade secrets and be no broader than reasonably necessary. This template recites those gates when the covenant is included.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    default_value_rationale: Conservative default. A Colorado non-compete is void unless the employer can fit it into the narrow highly compensated worker exception, and merely presenting a void covenant is unlawful, carrying actual damages plus a $5,000-per-worker penalty. Include only after confirming the worker clears the threshold at signing and enforcement, the covenant protects an identified trade-secret interest, the separate signed notice was delivered, and the worker is not a health-care provider barred by the 2025 health-care provider amendments.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.colorado.gate-non-compete-by-highly-compensated-worker-threshold
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    default_value_rationale: 12 months is a common enforceable duration. Because the worker must still meet the earnings threshold at the time the covenant is enforced, a longer period widens the window for the enforcement-time facts to defeat the covenant.
+    rationale_source: editorial
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which the protected trade secrets would be exploited
+    section: Non-Competition
+    default_value_rationale: Tied to where the protected trade secrets would actually be exploited rather than the employer's footprint. Colorado's exception extends only as far as reasonably necessary to protect trade secrets, and an overbroad territory should not be drafted on the assumption that a court will narrow it.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.colorado.gate-non-compete-by-highly-compensated-worker-threshold
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Naming the employer's real competitors is strong evidence the covenant is no broader than reasonably necessary, which matters in Colorado because a court will not rewrite an overbroad clause into a lawful one.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

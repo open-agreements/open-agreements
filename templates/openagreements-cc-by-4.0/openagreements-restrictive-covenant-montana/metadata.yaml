@@ -1,0 +1,189 @@
+name: OpenAgreements Employee Restrictive Covenant (Montana)
+category: non-compete
+description: 'Montana-specific employee restrictive covenant agreement built for Mont. Code Ann. § 28-2-703, where any restraint on a lawful profession, trade, or business is void except a reasonable partial restraint: confidentiality and trade-secret protection, customer and employee non-solicitation drawn as partial restraints, an optional non-compete drawn to Montana''s Dobbins reasonableness test, an independent-consideration recital for post-hire covenants, an employer-initiated-termination acknowledgement, the phased § 28-2-724 health-care provider exclusion, distinct severable promises in place of judicial reformation, and the §§ 28-2-704/705 sale-of-goodwill and partnership-dissolution exception framework. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-montana
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Montana-specific analysis informed by the quote-verified Montana practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    section: Legal
+    default: Montana
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    rationale_source: editorial
+    default_value_rationale: A finite term keeps ordinary confidential information from operating as a perpetual restraint on the trade itself; Montana's framework rewards narrow confidentiality covenants and reserves perpetual protection for trade secrets. The 24-month default is a conservative drafting choice rather than a statutory duration.
+  - name: montana_consideration
+    type: string
+    description: Montana only. The independent benefit given in exchange for the restrictive covenants when the covenant is signed after employment has begun, recited so the covenant does not rely on continued at-will employment alone. Montana case law treats continued employment alone as potentially insufficient consideration for a post-hire non-compete, and good consideration is also part of Montana's reasonableness test. State the specific benefit here (for example, a raise, a promotion, a signing or retention bonus, an equity grant, or access to trade secrets or Confidential Information tied to the new restriction). A covenant presented during pre-employment negotiations can instead use the job offer itself as the exchange. Shown in the Montana timing and consideration recital.
+    display_label: Consideration for Restrictive Covenants (Montana)
+    default: the compensation, access to Confidential Information and trade secrets, and other benefits Employer provides to Employee under this agreement, which the parties agree are given specifically in exchange for the restrictive covenants
+    section: Consideration
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.montana.require-independent-consideration-for-post-hire-covenants
+    default_value_rationale: The default recites the access-to-confidential-information and compensation the agreement itself provides and ties them to the covenants, addressing Montana's independent-consideration requirement for post-hire covenants. Counsel should replace it with the specific negotiated benefit, or rely on the job offer where the covenant is signed as part of pre-employment negotiations.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    default_value_rationale: No Montana Supreme Court decision fixes a permissible duration for a stand-alone non-solicit, so the covenant rides the Dobbins partial-restraint analysis; a stated, finite period keeps the time limb of that test beyond argument. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, and counsel should confirm the duration against the worker's actual market.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: A relationship-based class keyed to a recent lookback keeps the restraint partial rather than a workforce-wide hiring ban.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    rationale_source: editorial
+    default_value_rationale: No Montana decision fixes a permissible non-solicit duration; an enforced Montana customer-restraint pattern used a one-year window keyed to the firm's existing clients. A stated, modest 12-month period keeps the reasonableness analysis focused on a limited time period.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: Bounding the class to clients the worker actually served within a recent window keeps the covenant close to the partial-restraint pattern Montana has enforced.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Montana law voids a restraint on a lawful profession, trade, or business except where the covenant is a reasonable partial restraint; a Montana non-compete survives only if it leaves the worker a realistic way to practice and satisfies the state's three-part reasonableness test. This template draws the covenant as a partial restraint and recites that basis.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    rationale_source: editorial
+    default_value_rationale: Conservative default. In Montana a non-compete that functions as an absolute prohibition on the worker's trade is void outright, and courts do not rewrite an overbroad restraint. Include only after confirming the covenant is genuinely partial, satisfies every element of the state's reasonableness test, and that the worker is not a covered health-care provider under the Montana health-care provider restrictions.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    default_value_rationale: No Montana statute or decision fixes a permissible non-compete duration; a restraint must be limited in operation as to time or place under the first Dobbins element and must survive the balancing of burden and protection. A modest stated term keeps the time limb defensible. Counsel should size the duration to the worker's actual market.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee actually provided services
+    section: Non-Competition
+    default_value_rationale: 'Montana tests territory against the worker''s actual market: a territory that blankets everywhere the worker could realistically practice converts a nominally limited clause into an absolute restraint (Curl). Tying scope to the actual service area keeps the covenant partial. Montana courts void rather than trim an overbroad territory.'
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Naming real competitors is the cheapest way to prove the restraint is partial — the worker can practice anywhere except a handful of identified firms.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+    default_value_rationale: Non-dealing bars doing the work, not just chasing it, so it edges toward the absolute-prohibition territory the statute voids; a short stated term and a tight customer class keep it defensible as a partial restraint.
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements; a clause that forbids ordinary public shares restricts more than any protectable interest requires and pushes a Montana covenant toward the void column.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+    rationale_source: editorial
+    default_value_rationale: Rare and deliberate. An investment restriction that reaches how the worker practices or earns in the trade is itself a restraint under Montana law; a stated 12-month term and an intact passive-holdings carve-out keep it framed as partial. The 12-month duration is a conservative drafting choice, not a statutory safe harbor.
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

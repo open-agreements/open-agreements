@@ -1,7 +1,7 @@
 ---
 template_id: openagreements-restrictive-covenant-texas
 name: OpenAgreements Employee Restrictive Covenant (Texas)
-category: employment
+category: non-compete
 description: >-
   Texas-specific employee restrictive covenant agreement built for the Texas
   Covenants Not to Compete Act (Tex. Bus. & Com. Code sections 15.50-15.52):
@@ -104,13 +104,14 @@ fields:
     type: string
     description: Duration of employee non-solicitation restriction
     display_label: Employee Non-Solicitation Duration
-    default: 12 months
+    default: 24 months
     section: Employee Non-Solicitation
+    rationale_source: editorial
     default_value_rationale: >-
-      12 months is a common enforceable duration and sits within the Fla. Stat.
-      section 542.335(1)(d) presumptively-reasonable window for former-employee
-      covenants (<=6 months presumed reasonable; >2 years presumed
-      unreasonable).
+      24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed
+      employee agreements; 12 months is the common lighter alternative. Either term must satisfy the
+      Covenants Not to Compete Act's reasonableness test, which requires limitations no greater than
+      necessary to protect Employer's goodwill or other business interest.
   - name: covered_employee_period
     type: string
     description: >-
@@ -134,9 +135,11 @@ fields:
     display_label: Customer Non-Solicitation Duration
     default: 12 months
     section: Customer Non-Solicitation
+    rationale_source: editorial
     default_value_rationale: >-
-      12 months sits within the Fla. Stat. section 542.335(1)(d)
-      presumptively-reasonable window for former-employee covenants.
+      12 months is a commonly enforced duration for a customer non-solicitation
+      covenant and is reasonable under the Covenants Not to Compete Act's
+      reasonableness test.
   - name: covered_customer_period
     type: string
     description: >-
@@ -151,41 +154,48 @@ fields:
   - name: noncompete_included
     type: boolean
     description: >-
-      Whether the non-competition covenant is included. Under Fla. Stat. section
-      542.335 a non-compete is enforceable when supported by a legitimate
-      business interest and reasonable in time, area, and line of business; this
-      template recites the legitimate-business-interest basis and biases the
-      duration into the presumptively-reasonable window.
+      Whether the non-competition covenant is included. Under the Texas
+      Covenants Not to Compete Act, a non-compete is enforceable when it is
+      ancillary to an otherwise enforceable agreement and contains time,
+      geographic-area, and scope-of-activity limitations that are reasonable and
+      no greater than necessary to protect Employer's goodwill or other business
+      interest; this template recites the ancillary-consideration basis and
+      keeps the duration within a commonly enforced range.
     display_label: Non-Competition Included
     default: false
     section: Non-Competition
+    rationale_source: editorial
     default_value_rationale: >-
       Conservative default. Non-competes are the most heavily scrutinized
-      covenant; include only after confirming a Fla. Stat. section 542.335(1)(b)
-      legitimate business interest exists, the duration is within the
-      presumptively-reasonable window, and (for a Physician) the section 542.336
-      specialty-monopoly carve-out is addressed.
+      covenant; include only after confirming the covenant is ancillary to an
+      otherwise enforceable agreement supported by consideration, the time,
+      area, and scope limitations are reasonable and no greater than necessary,
+      and any applicable physician-specific requirements are satisfied.
   - name: noncompete_duration
     type: string
     description: Duration of non-competition restriction
     display_label: Non-Competition Duration
     default: 12 months
     section: Non-Competition
+    rationale_source: editorial
     default_value_rationale: >-
-      12 months sits within the Fla. Stat. section 542.335(1)(d)
-      presumptively-reasonable window for former-employee covenants (<=6 months
-      presumed reasonable; >2 years presumed unreasonable). The tool should not
-      default to a presumptively-unreasonable term.
+      12 months is a commonly enforced non-competition duration and a reasonable
+      time restraint under the Covenants Not to Compete Act's reasonableness
+      test. The tool should not default to a longer term that a court would find
+      greater than necessary to protect Employer's goodwill.
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
     display_label: Restricted Territory
     default: the geographic area in which Employee provided services
     section: Non-Competition
+    rationale_source: editorial
     default_value_rationale: >-
       Tied to the employee's actual service area. Narrower geographic scope is
-      more readily found reasonable; Florida courts will modify rather than void
-      an overbroad territory under Fla. Stat. section 542.335(1)(c).
+      more readily found reasonable under the Covenants Not to Compete Act; a
+      Texas court reforms rather than voids an overbroad covenant but awards
+      only injunctive relief for any pre-reformation breach, so the territory
+      should be drawn to its final intended scope.
   - name: competitive_business_definition
     type: string
     description: >-

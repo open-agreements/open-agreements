@@ -1,0 +1,55 @@
+name: Cap-Table Update and Certificate-Cancellation Instructions
+category: corporate-governance
+description: 'Written instructions from an authorized officer of a Delaware corporation to the corporate secretary, transfer agent, or cap-table administrator to record a completed founder share repurchase: cancel or take possession of the repurchased certificates (or make the book-entry transfer for uncertificated shares), update the stock ledger, and reflect the disposition — cancelled and retired or held as treasury — on the cap table. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-founder-separation-cap-table-update-instructions
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Licensed under CC BY 4.0.
+fields:
+  - name: company_legal_name
+    type: string
+    description: Full legal name of the Delaware corporation
+    section: Parties
+  - name: founder_name
+    type: string
+    description: Full name of the departing founder whose shares were repurchased
+    section: Parties
+  - name: certificate_numbers
+    type: string
+    description: Certificate number(s) representing the repurchased shares (for example, "CS-12"), or a note that the shares were uncertificated
+    section: Terms
+  - name: shares_cancelled
+    type: string
+    description: Number and class of repurchased shares to be recorded as cancelled or transferred (for example, "500,000 shares of Common Stock")
+    section: Terms
+  - name: cap_table_system
+    type: string
+    description: The cap-table system or administrator to be updated (for example, "Carta")
+    section: Terms
+  - name: share_disposition
+    type: enum
+    description: How the repurchased shares are to be treated — cancelled and retired to authorized-but-unissued, or held as treasury shares
+    section: Terms
+    options:
+      - cancelled-retired
+      - held-as-treasury
+  - name: signatory_name
+    type: string
+    description: Full name of the authorized officer giving these instructions
+    section: Parties
+  - name: signatory_title
+    type: string
+    description: Title of the authorized officer giving these instructions
+    section: Parties
+  - name: instruction_date
+    type: date
+    description: Date these instructions are given
+    section: Terms
+priority_fields:
+  - company_legal_name
+  - founder_name
+  - certificate_numbers
+  - shares_cancelled

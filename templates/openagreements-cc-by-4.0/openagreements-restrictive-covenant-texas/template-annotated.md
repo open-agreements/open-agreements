@@ -34,7 +34,7 @@ Other Confidential Information Duration
 Employee Non-Solicitation
 
 Duration
-: 12 months
+: 24 months
 
 Customer Non-Solicitation
 
@@ -198,3 +198,19 @@ Date: _______________
 Signature: _______________
 Print Name: [Full legal name of the employee]
 Date: _______________
+
+## Drafting notes
+
+Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Texas](/practice-guides/non-compete/us/texas).
+
+### non-compete scope and reformation exposure
+
+Do not assume a covenant that bars an employee from an entire industry across a wide region will be enforced. The Act requires the restraint to be no greater than necessary to protect a specific business interest, and an overbroad covenant is exposed to reformation down to the minimum a court finds reasonable .
+
+### tolling during a breach
+
+Do not assume a Texas court will add back time to a non-compete for a period of breach or litigation based on a tolling clause. Texas law is unsettled on contractual tolling, and any extended restraint still must satisfy § 15.50(a)'s reasonableness limit, so the more reliable path is to seek injunctive relief for ongoing violations .
+
+### confidentiality scope vs. disguised non-compete
+
+Do not draft a Texas confidentiality or non-disclosure clause so broadly that it operates as a covert non-compete. The trade-secret statute supports an injunction against misappropriation but excludes general knowledge, skill, and experience, and an NDA that effectively prevents the employee from working can be recharacterized as a non-compete subject to § 15.50 .

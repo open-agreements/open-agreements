@@ -1,0 +1,181 @@
+name: OpenAgreements Employee Restrictive Covenant (Tennessee)
+category: non-compete
+description: Tennessee-specific employee restrictive covenant agreement built for Tennessee's common-law reasonableness regime and its 2026 statutory overlay. Covenants not to compete are disfavored restraints of trade, enforceable only when they protect special facts over and above ordinary competition and stay reasonable under the Hasty v. Rent-A-Driver and Allright Auto Parks v. Berry factors. On top of that, 2026 Tenn. Pub. Acts ch. 934 (Tenn. Code Ann. §§ 50-1-210, 50-1-211), effective July 1, 2026, voids a non-compete against an employee earning under $70,000, presumes overlong time restraints unreasonable by relationship type, and expressly preserves confidentiality and customer and employee non-solicitation covenants. It provides confidentiality and trade-secret protection backstopped by the Tennessee Uniform Trade Secrets Act (Tenn. Code Ann. §§ 47-25-1701 to 47-25-1709), a continued-employment consideration recital (Central Adjustment Bureau v. Ingram), customer and employee non-solicitation, an optional non-compete drawn to the reasonableness test and the statutory threshold, the § 63-1-148 health-care-provider safe harbor with its emergency-medicine exclusion (Murfreesboro Medical Clinic v. Udom), good-faith choice of law (Vantage Technology v. Cross), and discretionary judicial reformation under the rule of reasonableness that the drafting does not rely on (Central Adjustment Bureau; Vantage; Columbus Medical Services v. Thomas). Drafted as a starting point for licensed counsel review.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-tennessee
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Tennessee-specific analysis informed by the quote-verified Tennessee practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    section: Legal
+    default: Tennessee
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    rationale_source: editorial
+    default_value_rationale: An employee non-solicitation agreement is expressly preserved from the 2026 Tennessee non-compete statute's rules, so it sits outside the statutory time presumptions and the $70,000 threshold. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, sized to the workforce actually protected.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    rationale_source: editorial
+    default_value_rationale: A client or customer non-solicitation agreement is expressly preserved from the 2026 Tennessee non-compete statute's rules. 12 months is a common, conservative duration counsel should size to the actual customer relationships protected so the covenant stays within the preserved category rather than functioning as a non-compete.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Tennessee treats a non-compete as a disfavored restraint of trade that is not void per se and is enforceable only when it protects special facts over and above ordinary competition and is reasonable under Tennessee's common-law factors. For agreements entered into, renewed, or amended on or after July 1, 2026, the covenant is also void if the employee's annualized compensation is under $70,000, and its duration is tested against the relationship-based time presumptions in Tennessee's 2026 non-compete statute.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    rationale_source: editorial
+    default_value_rationale: Conservative default. The non-compete is the most heavily scrutinized covenant, and a customer non-solicit expressly preserved by Tennessee's 2026 non-compete statute often protects the employer as well. Include only after confirming special facts over and above ordinary competition exist, the employee's annualized compensation is at least $70,000 for a covenant governed by the 2026 statute, the duration is within the applicable statutory presumption window, and the Tennessee health-care-provider safe harbor and emergency-medicine exclusion are addressed.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.tennessee.keep-time-restraints-within-the-statutory-presumption-windows
+    default_value_rationale: For a covenant governed by the 2026 statute, a court presumes a restraint against a former employee or independent contractor reasonable in time when it is two years or less, measured from the date the relationship terminates, and presumes a longer term unreasonable. 12 months sits well within that window; counsel should size it to the actual role and market rather than default to the outer bound.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee provided services
+    section: Non-Competition
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.tennessee.keep-covenants-within-the-reasonableness-test
+    default_value_rationale: 'Tied to the employee''s actual service area. Geography stays a common-law question even after the 2026 statute: the ultimate test is whether the territorial limits are greater than required to protect the employer''s business interest, so a footprint drawn to where the employee actually worked or served customers is far easier to defend than one drawn from corporate ambition.'
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Narrowing the restriction to named competitors strengthens enforceability.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

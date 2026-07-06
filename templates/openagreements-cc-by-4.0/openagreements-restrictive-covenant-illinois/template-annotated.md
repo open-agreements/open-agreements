@@ -34,7 +34,7 @@ Other Confidential Information Duration
 Employee Non-Solicitation
 
 Duration
-: 12 months
+: 24 months
 
 Customer Non-Solicitation
 
@@ -200,3 +200,15 @@ Date: _______________
 Signature: _______________
 Print Name: [Full legal name of the employee]
 Date: _______________
+
+## Drafting notes
+
+Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Illinois](/practice-guides/non-compete/us/illinois).
+
+### consideration tied to the covenant
+
+If you rely on a bonus, equity grant, or other benefit as consideration for an Illinois covenant, draft the exchange clearly and tie the benefit to the covenant. In _Midwest Lending Corp. v. Horton_, a signing bonus mentioned only in an offer letter did not support a later, integrated nonsolicitation agreement that never identified the bonus as consideration for the covenant — so do not assume a benefit described elsewhere will carry an integrated covenant .
+
+### reliance on judicial reformation
+
+Do not treat Illinois reformation as a safety net for an aggressive covenant. Section 35 lets a court reform or sever in its discretion but warns that extensive rewriting may violate public policy, and _AssuredPartners, Inc. v. Schmitt_ refused to rescue a patently overbroad restraint — so draft to the narrowest defensible scope rather than relying on a judge to cut it down .

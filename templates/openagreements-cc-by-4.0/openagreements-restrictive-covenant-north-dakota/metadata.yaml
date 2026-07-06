@@ -1,0 +1,99 @@
+name: OpenAgreements Employee Restrictive Covenant (North Dakota)
+category: non-compete
+description: North Dakota-specific employee restrictive covenant agreement centered on confidentiality, trade secret protection, property return, non-disparagement, and a narrowly drafted anti-raiding employee non-solicitation covenant. Omits any employee covenant not to compete, any customer non-solicitation covenant, and any non-dealing covenant, because N.D. Cent. Code § 9-08-06 makes a contract that restrains a lawful profession, trade, or business to that extent void, and the North Dakota Supreme Court in Warner & Co. v. Solberg held that post-employment customer solicitation and replacement restrictions are void with no statutory exception. It preserves only the covenants North Dakota law leaves enforceable — confidentiality and trade-secret protection under N.D. Cent. Code ch. 47-25.1, non-disparagement, property return, and the anti-raiding employee non-solicitation covenant Warner held is not void as a restraint of trade — each drawn to reach only Covered Employees the worker actually dealt with, keyed to Employee-initiated solicitation and a defined Restricted Period, so it protects the workforce and information rather than functioning as a restraint on competition. Includes North Dakota choice-of-law and forum language reflecting Osborne v. Brown & Saenger, Inc. and N.D. Cent. Code § 28-04.1-03. Drafted as a starting point for licensed counsel review.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-north-dakota
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. North Dakota-specific analysis informed by the quote-verified North Dakota practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement. It anchors the surviving obligations — the confidentiality term and the anti-raiding non-solicitation window — without changing the North Dakota rule that voids restraints on a lawful profession, trade, or business regardless of the date signed.
+    display_label: Effective Date
+    section: Timing
+    rationale_source: editorial
+  - name: governing_law
+    type: string
+    description: Governing law state. For an employee who primarily resides and works in North Dakota, North Dakota law is the selection that operates as written for a controversy over an alleged restraint of trade.
+    display_label: Governing Law
+    default: North Dakota
+    section: Legal
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.north-dakota.keep-north-dakota-law-and-forum-for-north-dakota-workers
+    default_value_rationale: North Dakota is selected because, for a North Dakota worker, choosing another state's law to enforce a restraint can fail against North Dakota public policy.
+  - name: governing_venue
+    type: string
+    description: County and state whose courts are the agreed forum. For a North Dakota-based employee, a North Dakota forum is the selection most likely to operate as written; a North Dakota court may decline an exclusive foreign forum that is unfair or unreasonable.
+    display_label: Venue
+    default: the state courts located in North Dakota
+    section: Legal
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.north-dakota.keep-north-dakota-law-and-forum-for-north-dakota-workers
+    default_value_rationale: A North Dakota forum keeps disputes involving a North Dakota worker in the forum whose public policy controls whether an alleged restraint operates.
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of the non-disparagement covenant
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of the employee non-solicitation (anti-raiding) restriction, measured from the end of employment. Keep it finite and workforce-relationship-protective, not a substitute restraint on the employee's own work; North Dakota treats only a narrow anti-raiding formulation as outside the void restraint rule.
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    rationale_source: editorial
+    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. North Dakota's law-backed limit is the narrow anti-raiding shape of the covenant, not a specific duration, so either finite term rides on keeping that shape.
+  - name: covered_employee_period
+    type: string
+    description: Look-back window before termination used to bound the class of Covered Employees to colleagues the employee actually worked with or supervised. A workforce-wide class adds nothing protective and pushes a lawful anti-raiding clause toward the kind of restraint North Dakota voids.
+    display_label: Covered Employee Look-Back
+    default: 12 months
+    section: Employee Non-Solicitation
+    rationale_source: editorial
+    default_value_rationale: 12 months is a conservative look-back period that ties the covered class to recent working relationships instead of sweeping in the employer's entire workforce.
+priority_fields:
+  - employer_name
+  - employee_name
+  - effective_date

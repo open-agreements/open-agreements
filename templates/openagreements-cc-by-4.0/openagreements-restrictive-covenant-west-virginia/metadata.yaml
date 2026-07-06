@@ -1,0 +1,200 @@
+name: OpenAgreements Employee Restrictive Covenant (West Virginia)
+category: non-compete
+description: 'West Virginia-specific employee restrictive covenant agreement built for West Virginia''s common-law reasonableness regime with its facial-overbreadth void trap: there is no general West Virginia non-compete statute, so every post-employment restraint stands or falls on a two-stage common-law inquiry — the employer must first show an interest requiring protection, and the restraint is then reasonable only if it is no greater than required for the employer''s protection, imposes no undue hardship on the employee, and is not injurious to the public. A covenant unreasonable on its face is utterly void with no partial enforcement, so the drafting does not rely on a savings or reformation clause to cure overbreadth. It provides confidentiality and trade-secret protection backstopped by the West Virginia Uniform Trade Secrets Act (W. Va. Code §§ 47-22-4, 47-22-7), a new-consideration recital for covenants signed after employment begins, customer restrictions drafted as true non-piracy provisions, employee non-solicitation, an optional non-compete tied to identified protectable interests and sized to the actual footprint, a sale-of-business acknowledgement under the lesser-scrutiny standard, and physician covenant limits capped at one year and thirty road miles with voidness on employer termination (W. Va. Code § 47-11E-1 to -5). Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-west-virginia
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. West Virginia-specific analysis informed by the quote-verified West Virginia practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state. For a workforce living and working in West Virginia this should remain West Virginia; the governing-law and venue choices should match where the employee actually lives and works, and any mismatch between the named state and the employee's real location is a question for counsel.
+    display_label: Governing Law
+    section: Legal
+    default: West Virginia
+    rationale_source: editorial
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. In West Virginia a perpetual lid on non-secret information can operate as a practical non-compete, so ordinary confidential information carries its own finite term.
+  - name: mid_employment_consideration
+    type: string
+    description: If this agreement is signed after employment has already begun, the specific new consideration exchanged for the covenants (a raise, bonus, promotion, equity grant, or term extension). Leave blank if the agreement is signed at the outset of employment.
+    display_label: New Consideration (if signed after hire)
+    default: ''
+    section: Timing
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.west-virginia.support-mid-employment-covenants-with-new-consideration
+    default_value_rationale: West Virginia requires new consideration for a covenant contracted after employment has commenced without restriction; continued at-will employment alone is not enough. Left blank by default because an agreement signed at the outset of employment is supported by the offer and commencement of employment; when signed later, counsel should recite the specific covenant-linked value.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
+    section: Employee Non-Solicitation
+    default_value_rationale: West Virginia sets no statutory cap on duration for a general-employment covenant; enforceability turns on the Reddy reasonableness inquiry rather than a fixed number, and no staged West Virginia case sets a separate standard for employee non-solicits. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, and counsel should size the term to the employer's actual workforce-stability interest and keep it a modest restraint rather than a de facto hiring ban.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.west-virginia.keep-customer-restrictions-as-true-non-piracy-provisions
+    default_value_rationale: West Virginia sets no statutory cap; a customer restriction earns its lighter non-piracy treatment only while it follows customers and confidential information rather than a map, and ordinarily carries no territorial limit. 12 months is a common, conservative duration counsel should size to the actual customer relationships protected.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. West Virginia has no general non-compete statute; a non-compete is enforceable only where the employer first shows an interest requiring protection and the restraint satisfies the three-part Reddy reasonableness inquiry. A covenant unreasonable on its face — excessively broad time or area, or an apparent purpose of intimidation — is utterly void with no partial enforcement, so this template sizes the restraint to the employer's actual footprint at signing rather than relying on judicial narrowing.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    default_value_rationale: Conservative default. The non-compete is the most heavily scrutinized covenant and the one exposed to the facial-voidness trap; a customer non-piracy provision backstopped by the West Virginia Uniform Trade Secrets Act often protects the employer as well. Include only after confirming an identified protectable interest (trade secrets, customer lists, customer goodwill, or unusual employer-funded training — never protection from ordinary competition) and sizing the duration and territory to the actual footprint the employer can defend at signing.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.west-virginia.cap-physician-covenants-at-one-year-and-thirty-road-miles
+    default_value_rationale: West Virginia imposes no statutory cap on duration for a general-employment non-compete; time and territory are weighed together against the employer's real protectable interest under the common-law reasonableness test, and an excessively broad time limit can make the whole covenant void on its face rather than be trimmed. 12 months is a common, conservative default counsel should size to the actual role and market. A physician covenant is separately capped at one year.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee provided services
+    section: Non-Competition
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.west-virginia.cap-physician-covenants-at-one-year-and-thirty-road-miles
+    default_value_rationale: Tied to the employee's actual service area. West Virginia imposes no statutory cap on territory for a general-employment covenant, but an excessively broad area limitation is half of the facial-unreasonableness screen — a territory drawn around ambition rather than actual business reach risks voiding the covenant outright rather than inviting a court to shrink it. A physician covenant is separately capped at thirty road miles from the primary place of practice.
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Narrowing the restriction to named competitors strengthens enforceability.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements. A clause that forbids ordinary index funds and public shares reads as gratuitous overbreadth — the kind of grasping detail that can make a covenant look designed to intimidate rather than protect.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+  - name: sale_of_business_covenant
+    type: boolean
+    description: Whether this covenant is given by Employee in connection with a genuine sale of a business or practice to Employer, rather than solely as a condition of employment.
+    display_label: Sale-of-Business Covenant
+    default: false
+    section: Non-Competition
+    rationale_source: editorial
+    default_value_rationale: Conservative default. West Virginia applies the rule of reason with lesser scrutiny to a covenant ancillary to a genuine business sale, because the seller is paid for the goodwill the covenant protects; but that breathing room belongs to the deal and does not travel to a covenant a worker signs as a condition of employment. Set true only where the covenant genuinely rides a sale and is papered in the transaction documents; a sale-related covenant routed through an employment agreement risks the stricter employment-side framework.
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

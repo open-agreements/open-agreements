@@ -1,0 +1,543 @@
+---
+template_id: openagreements-restrictive-covenant-maryland
+name: OpenAgreements Employee Restrictive Covenant (Maryland)
+category: non-compete
+description: >-
+  Maryland-specific employee restrictive covenant agreement built for Md. Code,
+  Lab. & Empl. § 3-716: confidentiality and trade-secret protection anchored on
+  the Maryland Uniform Trade Secrets Act, an employee non-solicitation covenant,
+  a customer non-solicitation covenant tied to Maryland's protectable client-
+  relationship interest and the statute's client-list carve-out, and an optional
+  non-compete drawn to the Becker reasonableness standard. The agreement recites
+  the statutory worker-class voids that make a covenant null and void outright
+  for low-wage employees (150% or less of the State minimum wage), veterinary
+  practitioners and technicians, and most direct-patient-care Health Occupations
+  Article licensees earning $350,000 or less, and it caps a covered high-earner
+  clinician covenant at one year and ten miles with the companion patient-notice
+  duty. Consideration rests on continued at-will employment under Simko, and each
+  covenant is drafted in severable tiers for Maryland's strict blue-pencil rule
+  rather than relying on discretionary judicial reformation. Drafted as a
+  starting point for licensed counsel review.
+source_url: >-
+  https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-maryland
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: >-
+  Authored by OpenAgreements contributors. Maryland-specific analysis informed
+  by the quote-verified Maryland practice note. Licensed under CC BY 4.0.
+layout_id: cover-standard-signature-v1
+style_id: openagreements-default-v1
+document:
+  title: Employee Restrictive Covenant Agreement
+  label: OpenAgreements Employee Restrictive Covenant (Maryland)
+  version: 0.1.0
+  license: Free to use under CC BY 4.0
+  include_cloud_doc_line: true
+  defined_term_highlight_mode: definition_site_only
+  cover_row_height: 317
+sections:
+  cover_terms:
+    section_label: Cover Terms
+    heading_title: Cover Terms
+  standard_terms:
+    section_label: Standard Terms
+    heading_title: Standard Terms
+  signature:
+    section_label: Signature Page
+    heading_title: Signatures
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: >-
+      Effective date of this agreement. In Maryland the execution date sorts the
+      covenant into a regime: the health-care void and the high-earner clinician
+      cap reach only agreements executed on or after July 1, 2025, and the
+      architect category reaches only agreements executed on or after October 1,
+      2026, while the veterinary ban reaches backward to existing agreements.
+    display_label: Effective Date
+    section: Timing
+    rationale_source: editorial
+  - name: governing_law
+    type: string
+    description: >-
+      Governing law state. Maryland records no statutory override of contractual
+      choice of law for restrictive covenants, but the Maryland noncompete
+      statute declares covered covenants null and void as against the public
+      policy of the State, so for a Maryland-based worker a foreign-law selection
+      invites a public-policy fight rather than a clean escape; this should
+      remain Maryland for a Maryland-based worker.
+    display_label: Governing Law
+    section: Legal
+    default: Maryland
+    rationale_source: editorial
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.tie-trade-secret-duration-to-secrecy-status
+    default_value_rationale: >-
+      Maryland's Uniform Trade Secrets Act keys trade-secret status to
+      information that stays not generally known and is subject to reasonable
+      secrecy efforts, with no expiration, so a status-bounded duration
+      captures the full protection the law allows; a shorter fixed term is
+      enforceable but gives up the tail of that protection.
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    default_value_rationale: >-
+      24 months is common for non-trade-secret confidentiality obligations in
+      employment agreements. A finite term keeps the non-secret obligation sized
+      to the interest behind it, since a perpetual lid on non-secret information
+      reads as overbreadth under the Becker reasonableness test.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    rationale_source: editorial
+    default_value_rationale: >-
+      24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed
+      employee agreements; 12 months is the common lighter alternative. Maryland's noncompete
+      statute does not address employee non-solicits, so the clause is judged on ordinary common-law
+      reasonableness, and a relationship-based term supports that characterization.
+  - name: covered_employee_period
+    type: string
+    description: >-
+      Lookback period for determining which employees are covered by the
+      non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: >-
+      12 months is the most common lookback period for employee non-solicitation
+      scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: >-
+      12 months is a common enforceable duration. Protecting client
+      relationships and client data is squarely inside the interests Maryland
+      recognizes under Becker, and the statute's (a)(2) carve-out spares
+      client-list provisions; a shorter, contact-scoped term keeps the covenant
+      no wider than reasonably necessary.
+  - name: covered_customer_period
+    type: string
+    description: >-
+      Lookback period for determining which customers are covered by the
+      non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: >-
+      12 months is the most common lookback period for customer non-solicitation
+      scope.
+  - name: noncompete_included
+    type: boolean
+    description: >-
+      Whether the non-competition covenant is included. Under the Maryland
+      noncompete statute, a noncompete is null and void outright for whole worker
+      classes: low-wage employees at or under 150% of the State minimum wage,
+      veterinary practitioners and technicians, and most direct-patient-care
+      Health Occupations Article licensees earning $350,000 or less for
+      agreements executed on or after July 1, 2025. It is also capped at one year
+      and ten miles for higher-earning clinicians. A surviving covenant must
+      still satisfy common-law reasonableness. This template recites those gates
+      when the covenant is included.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    rationale_source: editorial
+    default_value_rationale: >-
+      Conservative default. Run the worker's wage and occupation through the
+      Maryland statutory gates before including a non-compete: the covenant is
+      void regardless of drafting for a low-wage, veterinary, or covered
+      health-care worker, and for a higher-earning clinician it must stay inside
+      the one-year and ten-mile cap. Include only after confirming the worker
+      clears every void class and, where the clinician cap applies, the term and
+      radius stay within it, and after drafting the covenant to the common-law
+      reasonableness standard.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.maryland.cap-high-earner-clinician-covenant-at-one-year-and-ten-miles
+    default_value_rationale: >-
+      12 months is a common enforceable duration. Maryland sets no fixed cap for
+      an ordinary employee; the courts apply no arbitrary yardstick. But
+      a covered high-earner clinician covenant may not exceed one year from the
+      last day of employment, so a 12-month default stays within that ceiling.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee actually built customer relationships or used protected information
+    section: Non-Competition
+    rationale_source: editorial
+    default_value_rationale: >-
+      Tied to where the worker actually built relationships or used protected
+      information rather than the employer's footprint. Maryland calls a
+      restraint overbroad the moment it exceeds what is reasonably necessary to
+      protect the employer's legally protected interest, and for a covered
+      high-earner clinician the territory may not exceed ten miles from the
+      primary place of employment.
+  - name: competitive_business_definition
+    type: string
+    description: >-
+      Description of the business activities that constitute competition with
+      the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: >-
+      Optional named list of specific competitors. Naming the employer's real
+      competitors is the most concrete evidence a covenant is no broader than
+      reasonably necessary, which matters in Maryland because a court blue-pencils
+      rather than rewrites an overbroad clause into a lawful one.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: >-
+      Maximum ownership percentage of publicly traded securities permitted under
+      the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: >-
+      Five percent of any class of publicly traded securities is the standard
+      passive investment carveout across restrictive covenant agreements, and a
+      clause forbidding ordinary index funds and public shares is gratuitous
+      overbreadth that hands the employee an argument for free.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name
+---
+# Employee Restrictive Covenant Agreement
+
+{% agreement-section type="cover_terms" %}
+## Cover Terms
+
+The terms below are incorporated into and form part of this agreement.
+
+{% cover-terms %}
+{% cover-term kind="row" label="Employer" field="employer_name" /%}
+{% cover-term kind="row" label="Employee" field="employee_name" /%}
+{% cover-term kind="row" label="Employee Title / Position" field="employee_title" include-when="employee_title" /%}
+{% cover-term kind="row" label="Effective Date" field="effective_date" /%}
+{% cover-term kind="row" label="Governing Law" field="governing_law" /%}
+{% cover-term kind="group" label="Confidentiality" /%}
+{% cover-term kind="subrow" label="Trade Secrets Duration" field="confidentiality_trade_secret_duration" /%}
+{% cover-term kind="subrow" label="Other Confidential Information Duration" field="confidentiality_other_duration" /%}
+{% cover-term kind="group" label="Employee Non-Solicitation" include-when="employee_nonsolicit_included" /%}
+{% cover-term kind="subrow" label="Duration" field="employee_nonsolicit_duration" include-when="employee_nonsolicit_included" /%}
+{% cover-term kind="subrow" label="Covered Employee Period" field="covered_employee_period" include-when="employee_nonsolicit_included" /%}
+{% cover-term kind="group" label="Customer Non-Solicitation" include-when="customer_nonsolicit_included" /%}
+{% cover-term kind="subrow" label="Duration" field="customer_nonsolicit_duration" include-when="customer_nonsolicit_included" /%}
+{% cover-term kind="subrow" label="Covered Customer Period" field="covered_customer_period" include-when="customer_nonsolicit_included" /%}
+{% cover-term kind="group" label="Non-Competition" include-when="noncompete_included" /%}
+{% cover-term kind="subrow" label="Duration" field="noncompete_duration" include-when="noncompete_included" /%}
+{% cover-term kind="subrow" label="Restricted Territory" field="territory" include-when="noncompete_included" /%}
+{% cover-term kind="subrow" label="Competitive Business" field="competitive_business_definition" include-when="noncompete_included" /%}
+{% cover-term kind="subrow" label="Specified Competitors" field="specified_competitors" include-when="noncompete_included" /%}
+{% cover-term kind="group" label="No Business with Covered Customers" include-when="nondealing_included" /%}
+{% cover-term kind="subrow" label="Duration" field="nondealing_duration" include-when="nondealing_included" /%}
+{% cover-term kind="group" label="Non-Investment" include-when="noninvestment_included" /%}
+{% cover-term kind="subrow" label="Duration" field="noninvestment_duration" include-when="noninvestment_included" /%}
+{% cover-term kind="group" label="Non-Disparagement" /%}
+{% cover-term kind="subrow" label="Duration" field="nondisparagement_duration" /%}
+{% cover-term kind="group" label="Definitions" /%}
+{% cover-term kind="subrow" label="Passive Public Holdings Threshold" field="passive_public_holdings_threshold" /%}
+{% /cover-terms %}
+{% /agreement-section %}
+
+{% agreement-section type="standard_terms" %}
+## Standard Terms
+
+{% clause id="defined-terms" type="definitions" %}
+### Defined Terms
+
+[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+
+[[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer and patient lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee, information that arises from Employee's general training, knowledge, skill, or experience whether gained on the job or otherwise, information that is readily ascertainable to the public, and information Employee otherwise has a right to disclose as legally protected conduct.
+
+[[Covered Customers]] means customers, patients, vendors, referral sources, and business partners with whom Employee had material contact or for whom Employee had responsibility during the {% field name="covered_customer_period" /%} before termination of employment.
+
+[[Covered Employees]] means employees with whom Employee worked or whom Employee managed during the {% field name="covered_employee_period" /%} before termination of employment.
+
+[[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {% field name="passive_public_holdings_threshold" /%} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
+
+[[Protected Interests]] means Employer's legitimate business interests that Maryland law recognizes as supporting a restrictive covenant — namely Employer's interest in protecting unique services, Trade Secrets, routes or client lists, and against the solicitation of customers (Becker v. Bailey, 268 Md. 93 (1973)). Each covenant in this agreement is drawn no broader or more restrictive than necessary to effectuate those interests (Fowler v. Printers II, Inc., 89 Md. App. 448 (1991)).
+
+[[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
+
+[[Restricted Territory]] means the geographic area described in Cover Terms under Restricted Territory.
+
+[[Solicit]] means to directly or indirectly initiate contact with, approach, induce, or encourage any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
+
+[[Trade Secrets]] means information that qualifies as a trade secret under the Maryland Uniform Trade Secrets Act and applicable federal law, including information that derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use, and that is the subject of efforts that are reasonable under the circumstances to maintain its secrecy (Md. Code, Com. Law § 11-1201(e); see also the federal Defend Trade Secrets Act, 18 U.S.C. § 1839(3)).
+{% /clause %}
+
+{% clause id="recitals-and-protected-interest" %}
+### Recitals and Protected Interest
+
+Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship and is supported by adequate consideration, as Maryland law requires for enforcement (Becker v. Bailey, 268 Md. 93 (1973)). Employee will receive access to Employer's Confidential Information, Trade Secrets, and customer and patient relationships in the course of employment, and each covenant in this agreement is included to protect Employer's Protected Interests and is drawn no wider as to area and duration than reasonably necessary to protect those interests, without imposing undue hardship on Employee or disregarding the interests of the public. The parties intend each covenant to be enforceable as written and drawn within the scope Maryland law permits at the outset, rather than in reliance on any judicial narrowing.
+{% /clause %}
+
+{% clause id="statutory-worker-class-voids" %}
+### Maryland Statutory Worker-Class Voids
+
+Md. Code, Lab. & Empl. § 3-716 makes a noncompete or conflict-of-interest provision that restricts Employee's ability to enter into employment with a new employer or to become self-employed in the same or similar business or trade null and void as being against the public policy of the State when Employee falls within a covered class. Notwithstanding any other provision of this agreement, no such provision applies to or is enforceable against Employee if:
+
+(a) Employee earns equal to or less than 150% of the State minimum wage rate established under Md. Code, Lab. & Empl. § 3-413 (§ 3-716(a)(1)(i)1) — the State minimum wage has been $15.00 per hour since January 1, 2024, placing the covered ceiling at $22.50 per hour;
+
+(b) Employee is licensed as a veterinary practitioner or veterinary technician under Title 2, Subtitle 3 of the Agriculture Article, at any compensation level, which bar applies retroactively to agreements entered into on or before its effective date (§ 3-716(a)(1)(i); 2024 Md. Laws ch. 378, § 2); or
+
+(c) for an agreement executed on or after July 1, 2025, Employee is in a position that requires licensure under the Health Occupations Article, provides direct patient care, and earns equal to or less than $350,000 in total annual compensation (§ 3-716(a)(1)(i)2; 2024 Md. Laws ch. 378, § 3).
+
+For an agreement executed on or after October 1, 2026, the same bar extends to an employee of a licensed architect whose employer, after employing more than 30 workers based primarily in Maryland, relocates the majority of that workforce out of state or no longer maintains its principal place of business in Maryland (2026 Md. Laws ch. 301, §§ 1–2). Where any such class applies, the parties do not present or enforce the voided provision, and Employer's protection runs instead through the confidentiality, client-list, and Trade-Secret terms of this agreement, which § 3-716(a)(2) leaves intact.
+{% /clause %}
+
+{% clause id="timing-and-consideration" %}
+### Timing and Consideration
+
+This agreement is effective as of the Effective Date listed in Cover Terms. Employer and Employee acknowledge that continued at-will employment is adequate consideration for the restrictive covenants in this agreement. For a covenant Employee signs after employment begins, the parties acknowledge that Employee's continued at-will employment supplies that consideration, consistent with Simko, Inc. v. Graymar Co., 55 Md. App. 561 (1983), which reasons from the mutuality of the at-will relationship that the employer's consent not to terminate is as good as the employee's consent to continue. Employee's execution of this agreement is connected to, and given in exchange for, Employee's continued employment with Employer. Employee has had the opportunity to consult an attorney before entering into this agreement.
+{% /clause %}
+
+{% clause id="confidential-information-and-trade-secret-protection" %}
+### Confidential Information and Trade Secret Protection
+
+Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding Trade Secrets continue for the period specified in Cover Terms under Trade Secrets Duration, which is intended to last as long as the information remains a trade secret under Md. Code, Com. Law § 11-1201(e). Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms under Other Confidential Information Duration. This section does not prohibit Employee from disclosing information that arises from Employee's general training, knowledge, skill, or experience, whether gained on the job or otherwise, information that is readily ascertainable to the public, or information that Employee otherwise has a right to disclose as legally protected conduct. Where a noncompete in this agreement is void under Md. Code, Lab. & Empl. § 3-716, this section and the client-list terms remain fully effective, because § 3-716(a)(2)'s void rule does not reach provisions with respect to the taking or use of a client or patient list or other proprietary client-related or patient-related information.
+{% /clause %}
+
+{% clause id="permitted-disclosures-and-protected-conduct" %}
+### Permitted Disclosures and Protected Conduct
+
+Nothing in this agreement prohibits Employee from: (a) reporting possible violations of law to any government agency, including the Securities and Exchange Commission, the Equal Employment Opportunity Commission, the Occupational Safety and Health Administration, or any other federal, state, or local agency; (b) making disclosures protected under whistleblower provisions of any law; (c) discussing wages, hours, or other terms and conditions of employment as protected by applicable law, including Section 7 of the National Labor Relations Act, 29 U.S.C. § 157; (d) testifying truthfully in legal proceedings; (e) disclosing information that arises from Employee's general training, knowledge, skill, or experience, information readily ascertainable to the public, or information Employee otherwise has a right to disclose as legally protected conduct; or (f) filing a sealed complaint in court using Confidential Information without liability. Pursuant to the Defend Trade Secrets Act (18 U.S.C. § 1833(b)), Employee may not be held criminally or civilly liable for disclosing a trade secret in confidence to a government official or attorney solely for the purpose of reporting or investigating a suspected violation of law, or in a sealed court filing.
+{% /clause %}
+
+{% clause id="return-deletion-and-certification-of-company-property" %}
+### Return, Deletion, and Certification of Company Property
+
+Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information, including customer lists and pricing information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request. Maryland's recent trade-secret litigation turned on customer lists and pricing data leaving with departing employees (Ingram v. Cantwell-Cleary Co., 259 Md. App. 102 (2023)), and a signed certification is the cleanest contemporaneous record if that material later surfaces at a competitor.
+{% /clause %}
+
+{% clause id="non-solicitation-of-employees" include-when="employee_nonsolicit_included" %}
+### Non-Solicitation of Employees
+
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction is limited to initiating contact with or actively soliciting Covered Employees; it does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. Md. Code, Lab. & Empl. § 3-716 does not address employee non-solicits, so this covenant is judged on the ordinary Maryland reasonableness test, and it is drawn as a relationship-based restraint no broader than reasonably necessary to protect Employer's Protected Interests.
+{% /clause %}
+
+{% clause id="non-solicitation-of-customers-vendors-referral-sources-and-business-partners" include-when="customer_nonsolicit_included" %}
+### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
+
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. Protecting Employer's client relationships and against the solicitation of its customers is squarely within the interests Maryland recognizes (Becker v. Bailey, 268 Md. 93 (1973)), and Md. Code, Lab. & Empl. § 3-716(a)(2) carves provisions with respect to the taking or use of a client or patient list or other proprietary client-related or patient-related information out of the statute's void rule. This covenant is scoped to Covered Customers with whom Employee had material contact during the lookback period stated in Cover Terms and is drawn no broader than reasonably necessary to protect Employer's Protected Interests.
+{% /clause %}
+
+{% clause id="no-business-with-covered-customers" include-when="nondealing_included" %}
+### No Business with Covered Customers
+
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee, which moves the clause away from the solicitation interest Maryland protects and toward blocking ordinary competition. The parties include this covenant only where a genuine client-relationship or Trade-Secret interest supports it, and it is drawn no broader than reasonably necessary to protect Employer's Protected Interests. Its inclusion is a deliberate risk decision, not boilerplate.
+{% /clause %}
+
+{% clause id="non-competition" include-when="noncompete_included" %}
+### Non-Competition
+
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is subject in all respects to the Maryland Statutory Worker-Class Voids section above: if Employee falls within a class for which Md. Code, Lab. & Empl. § 3-716 makes a noncompete null and void, this covenant does not apply to or bind Employee. For an employee who must be licensed under the Health Occupations Article, provides direct patient care, and earns more than $350,000 in total annual compensation under an agreement executed on or after July 1, 2025, this covenant may be in effect for no longer than one year from the last day of employment and may impose no geographical restriction exceeding ten miles from the primary place of employment (§ 3-716(b)(1)–(2)); for such an employee the Restricted Period and Restricted Territory stated in Cover Terms must themselves be set at no more than one year and ten miles, and Employer must draft those Cover Terms values within the ceilings rather than rely on judicial narrowing, which Maryland's strict blue-pencil approach may decline to perform. Staying inside that cap is necessary but not sufficient: any covenant that survives § 3-716 must also satisfy the Becker common-law test — supported by adequate consideration, ancillary to the employment, and confined within limits no wider as to area and duration than reasonably necessary to protect Employer's Protected Interests, without undue hardship on Employee or harm to the public (Becker v. Bailey, 268 Md. 93 (1973)). Passive Public Holdings are permitted.
+{% /clause %}
+
+{% clause id="named-competitor-narrowing" include-when="noncompete_included" %}
+### Named-Competitor Narrowing
+
+Where Employer has identified its actual competitors in Cover Terms under Specified Competitors, the non-competition covenant binds Employee only as to those named competitors and their lines of business, rather than the open-ended Competitive Business definition. A named list is the most concrete evidence a Maryland court will accept that the covenant is tailored to what is necessary to effectuate Employer's Protected Interests (Fowler v. Printers II, Inc., 89 Md. App. 448 (1991)).
+{% /clause %}
+
+{% clause id="non-investment" include-when="noninvestment_included" %}
+### Non-Investment
+
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive Public Holdings are permitted. Because this covenant restrains active roles at and material participation in a Competitive Business, it functions as a covenant not to compete and is subject to the Maryland Statutory Worker-Class Voids section and, for a covered high-earner clinician, to the one-year and ten-mile ceilings of § 3-716(b); it is drawn no broader than reasonably necessary to protect Employer's Protected Interests.
+{% /clause %}
+
+{% clause id="non-disparagement" %}
+### Non-Disparagement
+
+During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, discussing wages, hours, or working conditions as protected by law, or otherwise exercising rights protected by law.
+{% /clause %}
+
+{% clause id="health-care-provider-notices-and-carve-outs" %}
+### Health-Care Provider Notices and Patient Communications
+
+Maryland's health care rules under Md. Code, Lab. & Empl. § 3-716 reach every Health Occupations Article licensee in a direct-patient-care role, not only physicians. For an agreement executed on or after July 1, 2025, any noncompete in this agreement is void for such an employee earning $350,000 or less (§ 3-716(a)(1)(i)2), and for such an employee earning more than $350,000 the covenant is capped at one year and ten miles under the Non-Competition section (§ 3-716(b)(1)–(2)). Where Employee is covered by § 3-716(b), Employer must, on request of a patient, provide notice to the patient of the new location where Employee will be practicing (§ 3-716(b)(3)); Employer will maintain an operational process to honor those requests. Nothing in this agreement restricts a departing clinician, or Employer, from communicating a patient's right to continue care with Employee at a new location.
+{% /clause %}
+
+{% clause id="no-conflicting-obligations" %}
+### No Conflicting Obligations
+
+Employee represents that performing duties for Employer and complying with this agreement does not conflict with any prior agreement, court order, or legal obligation binding on Employee. Employee must promptly disclose to Employer any potential conflict that arises during employment. The parties acknowledge that a covenant Employee signed for another employer may be void or unenforceable to the extent it falls within a class Md. Code, Lab. & Empl. § 3-716 protects.
+{% /clause %}
+
+{% clause id="notice-to-future-employers-and-other-third-parties" %}
+### Notice to Future Employers and Other Third Parties
+
+Employer may disclose the existence and terms of this agreement to a prospective employer or business associate of Employee only where a covenant in this agreement is enforceable against Employee and Employer has a reasonable belief that Employee may breach that covenant. Employer will not present or attempt to enforce against a third party a covenant that is void under Md. Code, Lab. & Empl. § 3-716 for Employee's worker class, because a warning letter built on a void covenant asserts rights Employer never had. Employee consents to a disclosure permitted by this section.
+{% /clause %}
+
+{% clause id="tolling-during-breach" %}
+### Tolling During Breach
+
+The parties acknowledge that no Maryland statute or appellate decision squarely authorizes automatic tolling or enforcement of an extension-on-breach clause after a covenant's stated period expires, and that the safest reading is that any extension is itself a restraint that must satisfy the same fact-specific reasonableness test as the covenant (Ruhl v. F. A. Bartlett Tree Expert Co., 245 Md. 118 (1967); Becker v. Bailey, 268 Md. 93 (1973)). Accordingly, the Restricted Period for each covenant runs from the date Employee's employment ends and is not extended by any period of breach, except that Employer may seek a separate, bounded restraint tied to the duration of a breach where a court finds it reasonable on the facts.
+{% /clause %}
+
+{% clause id="remedies" %}
+### Remedies
+
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate, and Employer may seek injunctive or other equitable relief in addition to any other remedies available at law. Independent of any covenant, actual or threatened misappropriation of Employer's Trade Secrets may be enjoined under the Maryland Uniform Trade Secrets Act (Md. Code, Com. Law § 11-1202(a)), and a court may award exemplary damages up to twice the compensatory award for willful and malicious misappropriation (§ 11-1203(d)). Consistent with Ingram v. Cantwell-Cleary Co., 259 Md. App. 102 (2023), a court's decision not to enforce a covenant or its liquidated-damages terms does not bar Employer from recovering separately for trade-secret misappropriation, and the remedy provisions are drafted to stack deliberately rather than collide. Any fee-shifting between the parties is mutual and prevailing-party based.
+{% /clause %}
+
+{% clause id="severability-and-severable-tiers" %}
+### Severability and Severable Tiers
+
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Maryland courts blue-pencil rather than rewrite: a court may cross out a violative, severable portion and enforce the remainder, but only if the remaining words still form a complete and valid contract, and an indivisible overbroad term voids the whole covenant (Holloway v. Faw, Casson & Co., 78 Md. App. 205 (1989), aff'd in part & rev'd in part, 319 Md. 324 (1990)). Each restrictive covenant in this agreement is therefore drafted as separate, severable tiers of duration, territory, and covered activity so that a court can strike an excessive tier and enforce the lawful remainder, working no injury to the public and no injustice to the parties (Hebb v. Stump, Harvey & Cook, Inc., 25 Md. App. 478 (1975)).
+{% /clause %}
+
+{% clause id="no-reliance-on-reformation" %}
+### No Reliance on Judicial Reformation
+
+This agreement does not rely on any savings or reformation clause that asks a court to redraft an indivisible overbroad covenant into a narrower one, and it does not purport to obligate any court to narrow, blue-pencil, or reform any covenant. Maryland courts blue-pencil but do not rewrite, and under the strict mechanical rule a covenant survives only if the excess restraint can be crossed out while the remaining words still constitute a complete, valid contract (Holloway v. Faw, Casson & Co., 78 Md. App. 205 (1989), aff'd in part & rev'd in part, 319 Md. 324 (1990)). Because an indivisible overbroad term gives a Maryland court nothing to enforce, each covenant here is instead drawn within the enforceable scope Maryland law permits at the outset and structured in severable tiers rather than as a single aggressive term paired with a plea for reformation.
+{% /clause %}
+
+{% clause id="survival-and-expiration-of-each-covenant" %}
+### Survival and Expiration of Each Covenant
+
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms, and each survival period is stated per covenant so that every clock is independently checkable — perpetual for Trade Secrets, finite elsewhere. Obligations under the Confidential Information and Trade Secret Protection section survive as long as the relevant information remains a trade secret. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+{% /clause %}
+
+{% clause id="assignment-and-successors" %}
+### Assignment and Successors
+
+Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. The parties acknowledge that Md. Code, Lab. & Empl. § 3-716 tests Employee's wage and occupation, not the employer's identity, so an assignment moves the covenant but never lifts Employee out of a void or capped category, and any assignee inherits the patient-notice duty along with any clinician covenant under § 3-716(b)(3). This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
+{% /clause %}
+
+{% clause id="governing-law-venue-and-dispute-process" %}
+### Governing Law, Venue, and Dispute Process
+
+This agreement is governed by the law listed in Cover Terms. Maryland records no statutory override of contractual choice of law or forum for restrictive covenants, but Md. Code, Lab. & Empl. § 3-716 declares covered covenants null and void as against the public policy of the State, so for a Maryland-based worker a court may weigh whether a foreign-law or foreign-forum selection can sidestep protections the State calls public policy. For such a worker the parties select Maryland law and a Maryland forum for disputes over the enforceability of the restrictive covenants; all other disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
+{% /clause %}
+
+{% clause id="entire-agreement-amendment-waiver-and-electronic-signatures" %}
+### Entire Agreement, Amendment, Waiver, and Electronic Signatures
+
+This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. This agreement may be amended only in writing signed by both parties; the parties acknowledge that Md. Code, Lab. & Empl. § 3-716's health care expansion reaches agreements executed on or after July 1, 2025, so re-papering or re-executing an older covenant may pull it into the modern regime the original signing predated, and any such amendment is a conscious regime choice. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
+{% /clause %}
+{% /agreement-section %}
+
+{% agreement-section type="signature" %}
+## Signatures
+
+{% signature-block arrangement="entity-plus-individual" %}
+By signing this agreement, each party acknowledges and agrees to the restrictive covenant obligations above. Employee confirms having read and understood each provision, including the Cover Terms.
+
+{% signer id="employer" kind="entity" capacity="through_representative" label="Employer" %}
+Employer: {% field name="employer_name" /%}
+
+Signature: _______________
+Signatory Name: {% field name="employer_signatory_name" /%}
+Title: {% field name="employer_signatory_title" /%}
+Date: _______________
+{% /signer %}
+
+{% signer id="employee" kind="individual" capacity="personal" label="Employee" %}
+**Employee**
+
+Signature: _______________
+Print Name: {% field name="employee_name" /%}
+Date: _______________
+{% /signer %}
+{% /signature-block %}
+{% /agreement-section %}

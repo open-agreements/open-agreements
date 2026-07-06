@@ -116,3 +116,11 @@ Date: _______________
 Signature: _______________
 Print Name: [Full legal name of the employee]
 Date: _______________
+
+## Drafting notes
+
+Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in California](/practice-guides/non-compete/us/california).
+
+### confidential information scope
+
+Do not assume _Loral_ still protects a no-hire or anti-raiding clause. After _AMN Healthcare_, an employee non-solicitation provision is more likely void than enforceable, and a clause that bars _hiring_ a former colleague who applies on their own initiative is weaker still. Protect the workforce through trade-secret and confidentiality measures rather than a raiding ban .

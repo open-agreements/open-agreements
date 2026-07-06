@@ -1,0 +1,186 @@
+---
+template_id: openagreements-board-ratifying-consent
+name: Board Consent Ratifying a Defective Corporate Act
+category: corporate-governance
+description: >-
+  Action by unanimous written consent of the board of directors of a Delaware
+  corporation ratifying one or more defective corporate acts under Section 204
+  of the Delaware General Corporation Law — reciting each act, its date, any
+  putative stock, and the nature of the failure of authorization, and directing
+  the stockholder submission, certificate of validation, and notice the statute
+  requires.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-board-ratifying-consent
+version: "0.1.0"
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: >-
+  Authored by OpenAgreements contributors. Drafting structure informed by
+  publicly available Delaware Section 204 ratification practice. Licensed under
+  CC BY 4.0.
+layout_id: traditional-consent-v1
+style_id: openagreements-default-v1
+document:
+  title: Board Consent Ratifying a Defective Corporate Act
+  label: OpenAgreements Board Consent Ratifying a Defective Corporate Act
+  version: "0.1.0"
+  license: Free to use under CC BY 4.0
+  defined_term_highlight_mode: none
+sections:
+  cover_terms:
+    section_label: Consent
+    heading_title: Consent
+  standard_terms:
+    section_label: Resolutions
+    heading_title: Resolutions
+  signature:
+    section_label: Signature Page
+    heading_title: Signatures
+fields:
+  - name: company_name
+    type: string
+    description: Full legal name of the Delaware corporation
+    section: Parties
+  - name: consent_date
+    type: date
+    description: Date the ratifying consent is effective and signed
+    section: Terms
+  - name: defective_acts
+    type: string
+    description: >-
+      Description of each defective corporate act to be ratified (for example,
+      "the issuance of 500,000 shares of Common Stock to Jane Founder")
+    section: Terms
+  - name: defective_act_dates
+    type: string
+    description: >-
+      The date of each defective corporate act (for example, "January 1, 2022")
+    section: Terms
+  - name: putative_share_count
+    type: string
+    description: >-
+      If the defect involved a stock issuance, the number of shares of putative
+      stock issued (leave blank if not applicable)
+    section: Terms
+  - name: putative_share_type
+    type: string
+    description: >-
+      If the defect involved a stock issuance, the type of shares (for example,
+      "Common Stock") (leave blank if not applicable)
+    section: Terms
+  - name: putative_issue_dates
+    type: string
+    description: >-
+      If the defect involved a stock issuance, the date(s) on which the shares
+      were purported to have been issued (leave blank if not applicable)
+    section: Terms
+  - name: failure_of_authorization
+    type: string
+    description: >-
+      The nature of the failure of authorization for each act (for example,
+      "issued without approval of the Board of Directors")
+    section: Terms
+  - name: director_signatories
+    type: array
+    description: Directors signing the consent
+    section: Signatures
+    items:
+      - name: name
+        type: string
+        description: Full name of a director signing the consent
+priority_fields:
+  - company_name
+  - defective_acts
+  - failure_of_authorization
+  - director_signatories
+---
+
+
+# Board Consent Ratifying a Defective Corporate Act
+
+The undersigned, constituting all of the members of the Board of Directors (the "Board") of {% field name="company_name" /%}, a Delaware corporation (the "Company"), pursuant to Section 141(f) of the Delaware General Corporation Law (the "DGCL"), hereby adopt the following resolutions by written consent, ratifying one or more defective corporate acts pursuant to Section 204 of the DGCL:
+
+*Note: Section 204 reaches only acts that are void or voidable solely because of a failure of authorization; it cannot create an act that was never taken, revive an act that was affirmatively rejected, or cure an act void for reasons other than a failure of authorization. Where the defective act would have required a stockholder vote, a stockholder ratifying consent is also required (Section 204(c)), and where it would have required a Delaware filing, a certificate of validation must be filed (Section 204(e)). The ratifying board must itself be validly in office. Always consult with counsel before using this consent.*
+
+{% agreement-section type="cover_terms" %}
+{% cover-terms %}
+{% cover-term kind="row" label="Company" field="company_name" /%}
+{% cover-term kind="row" label="Defective corporate act" field="defective_acts" /%}
+{% cover-term kind="row" label="Date of the act" field="defective_act_dates" /%}
+{% cover-term kind="row" label="Nature of the failure of authorization" field="failure_of_authorization" /%}
+{% cover-term kind="row" label="Consent date" field="consent_date" /%}
+{% /cover-terms %}
+{% /agreement-section %}
+{% agreement-section type="standard_terms" %}
+## Resolutions
+
+{% clause id="identify-defective-acts" %}
+### The Defective Corporate Act
+
+**WHEREAS**, the following corporate act or acts (the "Defective Corporate Act") were purportedly taken by or on behalf of the Company: {% field name="defective_acts" /%}, on or about {% field name="defective_act_dates" /%};
+
+{% /clause %}
+{% clause id="describe-putative-stock" %}
+### Putative Stock
+
+**WHEREAS**, to the extent the Defective Corporate Act involved the issuance of shares of putative stock, such issuance consisted of {% field name="putative_share_count" /%} shares of {% field name="putative_share_type" /%}, purported to have been issued on or about {% field name="putative_issue_dates" /%};
+
+{% /clause %}
+{% clause id="failure-of-authorization" %}
+### Nature of the Failure of Authorization
+
+**WHEREAS**, the Defective Corporate Act is void or voidable due to the following failure of authorization: {% field name="failure_of_authorization" /%};
+
+{% /clause %}
+{% clause id="approve-ratification" %}
+### Ratification
+
+**RESOLVED**, that the Board hereby approves the ratification of the Defective Corporate Act pursuant to Section 204 of the DGCL, and that the Defective Corporate Act, and any putative stock issued in connection therewith, be, and each hereby is, ratified in all respects;
+
+{% /clause %}
+{% clause id="direct-stockholder-submission" %}
+### Submission to Stockholders
+
+**RESOLVED FURTHER**, that if the Defective Corporate Act would have required approval of the stockholders under the DGCL, the certificate of incorporation or bylaws of the Company, or any plan or agreement to which the Company is a party (or if the Defective Corporate Act resulted from a failure to comply with Section 203 of the DGCL), the ratification of the Defective Corporate Act shall be submitted to the stockholders for approval in accordance with Section 204(c) and (d) of the DGCL;
+
+{% /clause %}
+{% clause id="authorize-certificate-of-validation" %}
+### Certificate of Validation
+
+**RESOLVED FURTHER**, that if the Defective Corporate Act would have required the filing of a certificate under Section 103 of the DGCL, the officers of the Company be, and each of them hereby is, authorized and directed to prepare, execute and file a certificate of validation with respect to the Defective Corporate Act in accordance with Sections 204(e) and 103 of the DGCL;
+
+{% /clause %}
+{% clause id="direct-notice-of-ratification" %}
+### Notice of Ratification
+
+**RESOLVED FURTHER**, that the officers of the Company be, and each of them hereby is, authorized and directed to give prompt notice of the ratification of the Defective Corporate Act to all holders of valid stock and putative stock, whether voting or nonvoting, as required by Section 204(g) of the DGCL, including the statement of the 120-day period within which any claim must be brought;
+
+{% /clause %}
+{% clause id="general-authorizing-resolution" %}
+### General Authorizing Resolution
+
+**RESOLVED FURTHER**, that the officers of the Company be, and each of them hereby is, authorized and directed, for and on behalf of the Company, to take such further actions and execute such documents as may be necessary or appropriate in order to implement the foregoing resolutions.
+
+{% /clause %}
+{% /agreement-section %}
+{% agreement-section type="signature" %}
+## Signatures
+
+{% signature-block arrangement="stacked-consent-signers" %}
+
+This Action by Written Consent shall be filed with the minutes of the proceedings of the Board of Directors of the Company.
+
+The undersigned have executed this Action by Written Consent as of the date set forth under his or her name below. Any copy, facsimile, .PDF or other reliable reproduction of this Action by Written Consent may be substituted or used in lieu of the original writing for any and all purposes for which the original writing could be used, provided that such copy, facsimile, .PDF or other reproduction be a complete reproduction of the entire original writing.
+
+{% repeat field="director_signatories" %}
+{% signer id="director" kind="individual" capacity="personal" label="Director" %}
+Signature: _______________
+
+Print Name: {% field name="name" /%}
+
+Date: {% field name="consent_date" /%}
+{% /signer %}
+{% /repeat %}
+{% /signature-block %}
+{% /agreement-section %}

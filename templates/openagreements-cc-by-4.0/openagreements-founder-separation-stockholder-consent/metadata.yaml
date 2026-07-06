@@ -1,0 +1,51 @@
+name: Founder Separation Stockholder Written Consent
+category: corporate-governance
+description: Action by written consent of the stockholders of a Delaware corporation under Section 228 of the DGCL effecting a stockholder-reserved act in connection with a founder's departure — such as the forced removal of a non-resigning director under Section 141(k), an amendment to a charter that fixes board size, or the satisfaction of a voting agreement or protective provision. Used only when a stockholder act is required; a clean voluntary separation stops at the board consent. Drafted as a starting point for licensed counsel review.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-founder-separation-stockholder-consent
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Licensed under CC BY 4.0.
+fields:
+  - name: company_legal_name
+    type: string
+    description: Full legal name of the Delaware corporation
+    section: Parties
+  - name: consent_date
+    type: date
+    description: Date the stockholder consent is effective and signed
+    section: Terms
+  - name: founder_name
+    type: string
+    description: Full name of the departing founder
+    section: Parties
+  - name: stockholder_action
+    type: enum
+    description: The stockholder-reserved act being effected by this consent (describe the act)
+    section: Terms
+    options:
+      - remove-director
+      - amend-charter-board-size
+      - other
+  - name: removed_director_name
+    type: string
+    description: Full name of the director being removed (used when stockholder_action is remove-director)
+    section: Terms
+  - name: stockholder_signatories
+    type: array
+    description: The stockholders signing the consent
+    section: Signatures
+    items:
+      - name: name
+        type: string
+        description: Full name of a stockholder signing the consent
+      - name: shares
+        type: string
+        description: Number and class of shares held by the signing stockholder (for example, "1,000,000 shares of Common Stock")
+priority_fields:
+  - company_legal_name
+  - consent_date
+  - founder_name
+  - stockholder_action

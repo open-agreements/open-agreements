@@ -1,0 +1,192 @@
+name: OpenAgreements Employee Restrictive Covenant (Rhode Island)
+category: non-compete
+description: 'Rhode Island-specific employee restrictive covenant agreement built for the Rhode Island Noncompetition Agreement Act (R.I. Gen. Laws ch. 28-59) and the Durapin/Cranston common-law reasonableness regime: confidentiality and trade-secret protection preserved by the act, an employee non-solicitation covenant, a customer non-solicitation covenant, and an optional non-compete drafted to the state''s strict-scrutiny reasonableness standard. The act bans non-competes outright for four protected worker categories — employees who are FLSA-nonexempt, undergraduate or graduate student interns, workers age 18 or younger, and low-wage employees earning not more than 250 percent of the federal poverty level for individuals — and separate statutes void any restriction of a physician''s or an advanced practice registered nurse''s right to practice. Employee and customer non-solicits and confidentiality agreements are excluded from the statutory non-compete definition, so each restraint is drafted as the covenant type it actually is and runs through common law. The agreement recites the Durapin enforcement elements, permits partial enforcement while drawing each covenant no broader than reasonably necessary, and relies on trade-secret protection as the fallback the act preserves. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-rhode-island
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Rhode Island-specific analysis informed by the quote-verified Rhode Island practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: 'Effective date of this agreement. In Rhode Island the execution date fixes which current statutes and figures frame the covenant: the APRN practice-restriction ban took effect June 17, 2024, and the low-wage category is indexed to 250 percent of the federal poverty level for individuals, which changes over time.'
+    display_label: Effective Date
+    section: Timing
+    rationale_source: editorial
+  - name: worker_category_confirmation
+    type: string
+    description: Reviewer's confirmation that the worker is NOT within any protected category the Rhode Island Noncompetition Agreement Act bars a non-compete against — not FLSA-nonexempt, not an undergraduate or graduate student intern, not age 18 or younger, and not a low-wage employee (average annual earnings not more than 250 percent of the federal poverty level for individuals) — and is not a physician or advanced practice registered nurse whose right to practice is protected by profession-specific bans. These facts are review-time facts, not contract inputs; the covenant is unenforceable against a protected worker regardless of what this field says.
+    display_label: Protected-Category Screen Confirmation
+    default: Reviewer to confirm the worker is outside every protected category before including a non-compete
+    section: Rhode Island Statutory Gates
+    rationale_source: editorial
+    default_value_rationale: Conservative review instruction. The protected-category and profession-specific screens depend on facts outside the contract fields, so the default tells the reviewer to confirm those facts before including any non-compete.
+  - name: governing_law
+    type: string
+    description: Governing law state. The Rhode Island practice note records no Rhode Island anti-evasion statute and no controlling choice-of-law decision for restrictive covenants, so a foreign-law clause covering a Rhode Island worker is unsettled risk in both directions; this should remain Rhode Island for a Rhode Island-based worker.
+    display_label: Governing Law
+    section: Legal
+    default: Rhode Island
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    rationale_source: editorial
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. The Noncompetition Agreement Act excludes nondisclosure and confidentiality agreements from the non-compete definition only so long as the clause stays a confidentiality clause; a finite term for ordinary information keeps the NDA from reading as a hidden activity restraint.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    rationale_source: editorial
+    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. Rhode Island excludes employee non-solicits from the statutory non-compete definition, routing the clause to the common-law reasonableness test, where a tightly-sized term supports the no-broader-than-apparently-necessary showing.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    rationale_source: editorial
+    default_value_rationale: 12 months is a common enforceable duration and stays comfortably inside the 24-month customer restraint the Rhode Island Supreme Court most recently enforced at the preliminary-injunction stage; duration is still measured against the legitimate interest it protects, so a shorter term eases the reasonableness showing.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Rhode Island permits non-competes for workers outside the protected categories, but the Noncompetition Agreement Act makes the covenant unenforceable against an FLSA-nonexempt employee, a student intern, a worker age 18 or younger, or a low-wage employee, and profession-specific bans void it for physicians and APRNs. For every worker who clears those gates it remains a disfavored restraint subject to strict judicial scrutiny.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    rationale_source: editorial
+    default_value_rationale: Conservative default. A Rhode Island non-compete is unenforceable outright against four protected worker categories and void for physicians and APRNs, and even for other workers it is disfavored and strictly scrutinized. Include only after confirming the worker is outside every protected category, is not a physician or APRN, and the covenant is ancillary to a valid relationship, supported by consideration, protective of an identified legitimate interest, and drawn no broader than apparently necessary under Rhode Island common law.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    rationale_source: editorial
+    default_value_rationale: 12 months is a common enforceable duration. Rhode Island measures duration against the legitimate interest the restraint protects under strict scrutiny, so a shorter, interest-justified period is easier to defend than a longer one.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employer's protected legitimate interests actually operate
+    section: Non-Competition
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.rhode-island.satisfy-common-law-reasonableness-elements
+    default_value_rationale: Tied to where Employer's protected interests actually operate rather than an open-ended footprint. Rhode Island tolerates even a restraint with no stated limits, but only to the extent necessary to protect the promisee's legitimate interests, so an everywhere territory invites the court to cut the covenant down to what the employer can prove.
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Naming the employer's real competitors is strong evidence the covenant extends no further than apparently necessary, the exact measure Rhode Island common law applies to these provisions.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+    rationale_source: editorial
+    default_value_rationale: Blank is the conservative default because a named-competitor list should be supplied only when the employer can identify actual competitors whose inclusion helps narrow the restraint.
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements. A carve-out below a stated threshold keeps the covenant from restraining ordinary public-share ownership no legitimate interest requires — gratuitous overbreadth in a state that enforces restraints only as far as apparently necessary.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

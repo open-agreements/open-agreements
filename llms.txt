@@ -32,12 +32,12 @@ Every practice guide cites primary law; templates start from recognized standard
 - [Deals & Partnerships](https://github.com/open-agreements/open-agreements/tree/main/templates) (6): Design partner, pilot, partnership, amendment, LOI, and term sheet agreements.
 - [Sales & Licensing](https://github.com/open-agreements/open-agreements/tree/main/templates) (8): Cloud service agreements, software licenses, and order forms.
 - [Confidentiality](https://github.com/open-agreements/open-agreements/tree/main/templates) (3): Mutual and one-way NDAs from industry-standard sources.
-- [Board & Stockholder Consents](https://github.com/open-agreements/open-agreements/tree/main/templates) (2): Written board and stockholder consents authorizing SAFE and other early-stage financings.
-- [Employment](https://github.com/open-agreements/open-agreements/tree/main/templates) (7): Offer letters, IP assignments, confidentiality acknowledgements, and restrictive covenants.
+- [Board & Stockholder Consents](https://github.com/open-agreements/open-agreements/tree/main/templates) (4): Written board and stockholder consents authorizing SAFE and other early-stage financings.
+- [Employment](https://github.com/open-agreements/open-agreements/tree/main/templates) (52): Offer letters, IP assignments, confidentiality acknowledgements, and restrictive covenants.
 - [Professional Services](https://github.com/open-agreements/open-agreements/tree/main/templates) (4): PSAs, SOWs, and independent contractor agreements.
 - [Data & Compliance](https://github.com/open-agreements/open-agreements/tree/main/templates) (4): DPAs, BAAs, and AI addendums for regulated workflows.
 - [Deal Process](https://github.com/open-agreements/open-agreements/tree/main/templates) (3): Working group lists, diligence request lists, and closing checklists for transactions.
-- [Other](https://github.com/open-agreements/open-agreements/tree/main/templates) (1): Additional templates that do not map to the primary categories.
+- [Other](https://github.com/open-agreements/open-agreements/tree/main/templates) (10): Additional templates that do not map to the primary categories.
 
 ## Optional
 

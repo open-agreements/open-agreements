@@ -1,0 +1,210 @@
+name: OpenAgreements Employee Restrictive Covenant (Washington)
+category: non-compete
+description: 'Washington-specific employee restrictive covenant agreement built for chapter 49.62 RCW as amended by SSB 5935 (effective 2024): confidentiality and trade-secret protection, customer and employee non-solicitation held to the statutory solicitation-only definition, and an optional non-compete gated on the inflation-adjusted earnings threshold ($126,858.83 for employees / $317,147.09 for independent contractors in 2026 per the Department of Labor & Industries), the at-hire written disclosure or post-hire independent consideration requirement, the eighteen-month duration presumption, and the layoff garden-leave-pay condition. Governing law, venue, and choice of law are locked to Washington for Washington-based workers under RCW 49.62.050, and the agreement flags the June 30, 2027 near-total ban under ESHB 1155. Because RCW 49.62.080(3) penalizes judicial reformation, each covenant is drawn to the minimum the legitimate interest requires. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-washington
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Washington-specific analysis informed by the quote-verified Washington practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state. For a Washington-based worker, Washington law voids selecting another jurisdiction's substantive law for the non-competition covenant, so this must be Washington.
+    display_label: Governing Law
+    section: Legal
+    default: Washington
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.avoid-out-of-state-law-and-forum-for-washington-workers
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. Washington excludes confidentiality agreements from the non-compete definition, so a finite, information-shaped term keeps the clause inside that exclusion.
+    rationale_source: editorial
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. Washington excludes an agreement not to solicit the employer's employees to leave from the non-compete definition entirely, so this covenant is not subject to the eighteen-month presumption that governs non-competes; the exclusion turns on the solicitation-only shape of the clause, not its length.
+    rationale_source: editorial
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is conservative and sits below the eighteen-month ceiling that ESHB 1155 will impose on the surviving customer non-solicitation exclusion effective June 30, 2027, so the clause remains within the narrowed exclusion after that date.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation restriction.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
+  - name: noncompete_included
+    type: boolean
+    description: 'Whether the non-competition covenant is included. Under Washington law, an employee non-compete is void and unenforceable unless the employer clears every statutory condition: timely written disclosure or independent consideration, the inflation-adjusted earnings threshold, and layoff garden-leave pay. Washington also presumes any term over eighteen months unreasonable, and the Noncompetition Agreement Act voids all non-competition covenants effective June 30, 2027 regardless of when they were signed.'
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    default_value_rationale: Conservative default. A Washington non-compete is void unless every statutory condition is satisfied and has a hard statutory expiry on June 30, 2027; include only after confirming the earnings threshold is met, the disclosure-or-consideration timing rule is satisfied, and the layoff garden-leave condition and eighteen-month presumption are addressed.
+    rationale_source: editorial
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    default_value_rationale: 12 months sits well within Washington's eighteen-month presumption, which treats any longer term as unreasonable and unenforceable unless the employer rebuts the presumption by clear and convincing evidence. Because reformation of an overbroad term triggers a statutory penalty, the default stays inside the presumptively reasonable window.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.limit-duration-to-eighteen-months
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee provided services
+    section: Non-Competition
+    default_value_rationale: Tied to the employee's actual service area. Washington law is silent on geography, but the surviving common-law rule enforces a restraint only to the extent reasonable and necessary, and a Washington court that narrows an overbroad territory triggers the statutory reformation penalty against the employer.
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.avoid-reliance-on-judicial-reformation
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Narrowing the restriction to named competitors reduces the risk that a court narrows it — and therefore the risk of the statutory reformation penalty.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+    rationale_source: editorial
+  - name: washington_earnings_threshold
+    type: string
+    description: Washington only. The inflation-adjusted annualized earnings floor the worker's earnings from the party seeking enforcement must exceed for the non-compete to be enforceable, as adjusted annually and published by the Department of Labor & Industries. Recited in the Washington threshold clause so the condition is testable on the face of the document. State the figure applicable to the worker type (employee or independent contractor) for the year the covenant is entered into.
+    display_label: Earnings Threshold (Washington)
+    default: $126,858.83 for an employee (or $317,147.09 for an independent contractor) annualized, as adjusted for 2026 under RCW 49.62.040
+    section: Non-Competition
+    default_value_rationale: The default recites the 2026 employee and independent-contractor thresholds published by the Department of Labor & Industries ($126,858.83 / $317,147.09). Counsel must replace it with the figure published for the year the covenant is entered into, because the amount is reset annually.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.gate-non-compete-by-earnings-threshold
+  - name: washington_consideration
+    type: string
+    description: Washington only. For a covenant entered into after employment has commenced, the independent consideration given specifically in exchange for the restrictive covenants, recited so it is identifiable new value under Washington law. Continued at-will employment alone is not consideration for a post-hire non-compete. State the specific new value here (for example, a signing or retention bonus, equity grant, or promotion). Shown in the Washington timing and consideration recital.
+    display_label: Independent Consideration for Restrictive Covenants (Washington)
+    default: the signing or retention bonus, equity grant, promotion, or other new benefit the parties identify as given specifically in exchange for the restrictive covenants
+    section: Consideration
+    default_value_rationale: For an at-hire covenant, Washington requires only timely written disclosure, not independent consideration; for a post-hire covenant, Washington requires identifiable new value. The default is a placeholder prompting counsel to name the specific benefit, because continued employment alone will not qualify.
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.require-independent-consideration-for-post-hire-covenants
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included. In Washington a clause that directly or indirectly prohibits accepting or transacting business with a customer is itself a non-competition covenant under the Noncompetition Agreement Act, so it carries every statutory non-compete condition.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+    rationale_source: editorial
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+    default_value_rationale: 12 months stays within Washington's eighteen-month presumption, which applies because Washington treats a non-dealing clause as a non-competition covenant.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.limit-duration-to-eighteen-months
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements. A carve-out that technically barred index funds and ordinary public shares would restrain more than any legitimate interest requires, inviting the statutory reformation penalty.
+    rationale_source: editorial
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+    default_value_rationale: 12 months stays within Washington's eighteen-month presumption, which applies because a covenant restraining active roles at a Competitive Business functions as a non-competition covenant.
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.limit-duration-to-eighteen-months
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

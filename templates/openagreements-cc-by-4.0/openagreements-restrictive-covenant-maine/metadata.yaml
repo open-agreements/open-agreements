@@ -1,0 +1,224 @@
+name: OpenAgreements Employee Restrictive Covenant (Maine)
+category: non-compete
+description: 'Maine-specific employee restrictive covenant agreement built for 26 M.R.S. § 599-A: confidentiality and trade-secret protection tied to the statute''s three legitimate business interests (trade secrets, non-trade-secret confidential information, and goodwill), an employee non-solicitation covenant, a customer non-solicitation covenant, and an optional non-compete drawn to Maine''s reasonableness standard. The agreement recites the § 599-A(4) pre-offer disclosure and three-business-day review window as statutory duties, states the § 599-A(5) delayed-effectiveness mechanics (no effect until the later of one year of employment or six months from signing, except for allopathic and osteopathic physicians), bars the non-compete at or below the 400% federal-poverty-level wage floor, excludes non-owner veterinarians, flags the L.D. 2200 health-care-practitioner restriction for agreements entered into or renewed on or after July 13, 2026, excludes employer-to- employer no-poach terms under § 599-B, keeps Maine law and a Maine forum for Maine-based workers, and drafts each covenant to the restraint the employer actually intends to enforce rather than relying on discretionary judicial reformation. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-maine
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Maine-specific analysis informed by the quote-verified Maine non-compete practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement. In Maine the signing date starts the six-month half of the delayed-effectiveness clock, and the date the agreement is entered into or renewed determines whether the L.D. 2200 health-care-practitioner restriction reaches it, so the date carries unusual weight.
+    display_label: Effective Date
+    section: Timing
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.maine.delay-non-compete-effect-until-statutory-employment-period
+  - name: disclosure_date
+    type: date
+    description: Date the employer disclosed to the employee or prospective employee that the position will require a non-compete. Maine requires disclosure of the non-compete requirement before the employer makes the offer of employment.
+    display_label: Pre-Offer Disclosure Date
+    section: Timing
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.maine.document-pre-offer-disclosure-and-three-business-day-review
+  - name: delivery_date
+    type: date
+    description: Date the employer delivered a copy of this agreement to the employee. Maine requires the copy to be provided not less than three business days before the required signing date so the employee has time to review and negotiate.
+    display_label: Agreement Delivery Date
+    section: Timing
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.maine.document-pre-offer-disclosure-and-three-business-day-review
+  - name: required_signing_date
+    type: date
+    description: Earliest date on which the employer requires the agreement to be signed. Maine requires this to be at least three business days after the delivery date.
+    display_label: Required Signing Date
+    section: Timing
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.maine.document-pre-offer-disclosure-and-three-business-day-review
+  - name: governing_law
+    type: string
+    description: Governing law state. For a Maine-based worker this should remain Maine so the agreement is read against Maine's non-compete disclosure, review-window, and delayed-effectiveness mechanics; a foreign choice-of-law selection for a Maine worker is a localization gap to investigate rather than a fix.
+    display_label: Governing Law
+    section: Legal
+    default: Maine
+    rationale_source: editorial
+  - name: wage_floor_reference
+    type: string
+    description: 'Reference to the wage floor below which a non-compete is prohibited: 400% of the federal poverty level. The floor is indexed and moves annually; counsel must confirm the controlling dollar figure for the year the covenant is signed (Maine''s figure was $60,240 in 2024 and $62,600 in 2025).'
+    display_label: Non-Compete Wage Floor
+    default: 400% of the federal poverty level
+    section: Maine Statutory Gates
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.maine.exclude-non-competes-below-the-poverty-level-wage-floor
+    default_value_rationale: Maine bans a non-compete for an employee earning wages at or below 400% of the federal poverty level. The dollar equivalent is indexed and updates each year, so the field references the statutory standard rather than a dollar figure that would go stale; counsel confirms the year-of-signing amount.
+  - name: noncompete_effectiveness_reference
+    type: string
+    description: 'Statement of when a non-compete takes effect: the later of one year of the employee''s employment or six months from the date the agreement was signed, except for an allopathic or osteopathic physician agreement.'
+    display_label: Non-Compete Effectiveness
+    default: the later of one year of employment or six months from signing (26 M.R.S. § 599-A(5))
+    section: Maine Statutory Gates
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.maine.delay-non-compete-effect-until-statutory-employment-period
+    default_value_rationale: Tracks the Maine delayed-effectiveness rule verbatim in effect. The allopathic/osteopathic-physician carve-out from this timing rule is recited in the Non-Competition and physician-notice clauses rather than in the cover term.
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    rationale_source: editorial
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. Maine enforces confidentiality covenants that protect specialized proprietary work while leaving general skill and knowledge free, so a finite term keeps the non-secret obligation within that line.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    rationale_source: editorial
+    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. Maine names non-solicitation agreements among the lighter alternatives its non-compete framework prefers, so a term sized to the actual workforce interest keeps the clause the lighter tool rather than a de facto hiring ban.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    rationale_source: editorial
+    default_value_rationale: 12 months is a common enforceable duration. A Maine customer non-solicit is one of the statute's preferred alternatives but must still serve goodwill or confidential information and sweep no wider than that interest requires, and a shorter term supports that reasonableness showing.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Maine treats a non-compete as contrary to public policy and enforceable only to the extent it is reasonable and no broader than necessary to protect an enumerated legitimate business interest. When included, the covenant is barred at or below the 400% federal-poverty-level wage floor, excluded for non-owner veterinarians, subject to Maine's disclosure and review-window duties and delayed-effectiveness rule, and, for an agreement entered into or renewed on or after July 13, 2026, re-checked under the L.D. 2200 health-care-practitioner restriction.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    rationale_source: editorial
+    default_value_rationale: Conservative default. Maine starts from the position that a non-compete is contrary to public policy and prefers alternative restrictive covenants first. Include only after confirming the worker earns above the 400% federal-poverty-level wage floor, is not a non-owner veterinarian, is not a health-care practitioner reached by L.D. 2200 for an agreement entered into or renewed on or after July 13, 2026, and only after Maine's pre-offer disclosure and three-business-day review window have been satisfied.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    rationale_source: editorial
+    default_value_rationale: 12 months is a common enforceable duration. Maine sets no statutory maximum; duration is judged as a fact-intensive reasonableness question considering duration, geographic scope, and the nature of the protected interest, so a modest term supports that showing. The clock also does not begin until the Maine delayed-effectiveness period runs.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which the protected goodwill or confidential information would actually be exploited
+    section: Non-Competition
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.maine.limit-non-compete-to-statutory-legitimate-interests
+    default_value_rationale: Tied to where the protected goodwill or confidential information would actually be exploited rather than the employer's footprint. Maine treats geographic scope as a fact-intensive reasonableness factor and enforces only what sweeps no wider than the protected interest requires.
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Naming the employer's real competitors is the cleanest evidence a Maine covenant is no broader than necessary, which matters because Maine assesses the restraint the employer actually seeks to apply and demands specificity about the protected interest.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+    rationale_source: editorial
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

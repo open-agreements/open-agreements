@@ -1,0 +1,190 @@
+name: OpenAgreements Employee Restrictive Covenant (Wisconsin)
+category: non-compete
+description: Wisconsin-specific employee restrictive covenant agreement built for Wis. Stat. § 103.465, where a covenant is enforceable only if reasonably necessary to protect the employer, the Star Direct five-factor test governs every post-employment restraint, and an unreasonable restraint is void in full with no judicial blue-penciling. Confidentiality and trade-secret protection scoped to protectable information, customer and employee non-solicitation (the employee no-poach limited to actual working relationships under Manitowoc Co. v. Lanning), an optional non-compete drawn to the five-factor reasonableness standard, a Runzheimer consideration recital, no extension-during-breach tolling (an H&R Block v. Swenson void-trigger), Wisconsin governing law rather than a foreign choice-of-law clause, and divisible covenants in place of reliance on reformation. Drafted as a starting point for licensed counsel review.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-wisconsin
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Wisconsin-specific analysis informed by the quote-verified Wisconsin practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    section: Legal
+    default: Wisconsin
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.wisconsin.select-wisconsin-law-rather-than-rely-on-foreign-choice-of-law
+    default_value_rationale: Wisconsin work should be governed by Wisconsin law because Wisconsin case law can reject a foreign choice-of-law clause selected to obtain more covenant-friendly treatment when Wisconsin public policy controls employee restrictive covenants.
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    rationale_source: editorial
+    section: Confidentiality
+    default_value_rationale: 24 months is an editorial finite term for non-trade-secret confidential information. A finite term helps avoid turning ordinary business information into an indefinite restraint; Wisconsin authority warns that a perpetual limit on ordinary business information can be treated as an unenforceable restraint.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    rationale_source: editorial
+    section: Employee Non-Solicitation
+    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. Either term must still read as a reasonable, fixed time limit under Wisconsin's five-factor reasonableness test, and counsel should confirm the term against the protected interest and the worker's role.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    rationale_source: editorial
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is an editorial look-back window. It ties the covered class to colleagues the departing worker actually worked with, supervised, or gained material information about, avoiding an all-workforce no-poach clause that Wisconsin authority treats as overbroad.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    rationale_source: editorial
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is an editorial starting point for a customer non-solicit. The duration must be a reasonable, definite time limit, and Wisconsin sets no statutory figure, so counsel should size the term to the protected customer relationships.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    rationale_source: editorial
+    section: Customer Non-Solicitation
+    default_value_rationale: Bounding the covered-customer class to customers the worker actually served or learned protected information about during a 12-month stated window keeps the covenant measurable as written. The 12-month window is an editorial scoping choice, not a statutory number.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Under Wisconsin's restrictive-covenant statute, a non-compete is lawful and enforceable only if the restrictions imposed are reasonably necessary for the protection of the employer, and it must satisfy all five reasonableness prerequisites; a failure on any single factor voids the restraint in full with no judicial narrowing.
+    display_label: Non-Competition Included
+    default: false
+    rationale_source: editorial
+    section: Non-Competition
+    default_value_rationale: 'Conservative default. The non-compete is the most heavily scrutinized covenant and the least forgiving: because an unreasonable restraint is void even as to the part that would have been reasonable, include it only after confirming a protectable interest and a reasonable time, territory, and scope under Wisconsin''s five-factor reasonableness test.'
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    rationale_source: editorial
+    section: Non-Competition
+    default_value_rationale: 12 months is an editorial starting point. A reasonable time limit is part of Wisconsin's five-factor reasonableness test, and the period must read as a fixed and definite stretch of time. Wisconsin sets no statutory ceiling, so counsel must justify the term against the protectable interest because a court cannot shorten an overlong one.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee provided services
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.wisconsin.satisfy-the-five-factor-reasonableness-test
+    section: Non-Competition
+    default_value_rationale: A reasonable territorial limit is part of Wisconsin's five-factor reasonableness test. Tying the territory to where the employee actually operated gives the geography a defensible basis; an everywhere-the-company-does-business territory risks voiding the whole covenant because Wisconsin does not let a court rewrite an overbroad employee restraint to a narrower lawful territory.
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Naming real competitors is the only narrowing a Wisconsin non-compete will ever get, because Wisconsin does not let a court supply a narrower competitor list later.
+    display_label: Specified Competitors
+    default: ''
+    rationale_source: editorial
+    section: Non-Competition
+    default_value_rationale: Leave this optional field blank unless counsel identifies specific competitors that should narrow the non-compete. The blank default avoids inventing competitor names.
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+    default_value_rationale: Barring the worker from serving a covered customer even on the customer's own initiative restrains accepting work, not just chasing it, and weighs on the harsh-or-oppressive Star Direct factor; a definite, reasonable term tied to a tight customer class is what keeps the restraint defensible.
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements. A clause that forbids holding ordinary public shares restrains the worker far beyond any protectable interest and feeds the harsh-or-oppressive Star Direct factor.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+    default_value_rationale: An investment restraint with indefinite reach adds exactly the harshness the Star Direct reasonableness factors count against the covenant; a definite, reasonable term paired with the Passive Public Holdings carve-out keeps it within a defensible scope.
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

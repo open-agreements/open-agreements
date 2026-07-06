@@ -1,0 +1,180 @@
+name: OpenAgreements Employee Restrictive Covenant (Nebraska)
+category: non-compete
+description: 'Nebraska-specific employee restrictive covenant agreement built for Nebraska''s strict common-law reasonableness regime: there is no general Nebraska non-compete statute, so every post-employment restraint stands or falls on the three-part Securities Acceptance Corp. v. Brown test (not injurious to the public, no greater than reasonably necessary to protect a legitimate employer interest, not unduly harsh and oppressive on the employee), restated in Aon Consulting, Inc. v. Midlands Financial Benefits, Inc. The defining constraint is Polly v. Ray D. Hilderman & Co.''s customer-specific rule: a covenant protecting customer goodwill may be valid only if limited to clients and accounts the worker actually did business with and personally contacted — a rule a 2024 federal application enforced to reject a non-solicit reaching prospective customers (Sisk v. Scripps Media, Inc.). Nebraska courts do NOT blue-pencil or reform overbroad employment covenants (Unlimited Opportunity, Inc. v. Waadah; Gaver v. Schneider''s O.K. Tire Co.), and nonseverable integrated restraints fall together (Waadah), so each covenant is drafted self-contained, severable, and scoped to personally served customers from the start rather than in reliance on judicial narrowing. It provides confidentiality and trade-secret protection backstopped by the Nebraska Trade Secrets Act (Neb. Rev. Stat. §§ 87-501 to 87-507), a customer non-solicitation limited to personally served customers, an optional non-compete tied to that same customer set rather than a market or territory, express merger-by-operation-of-law and assignment terms (Aon Consulting), and a Nebraska-first choice-of-law posture (Mertz v. Pharmacists Mutual Insurance Co.). Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-nebraska
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Nebraska-specific analysis informed by the quote-verified Nebraska practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional). Title and duties are the first evidence of which customers the worker personally served and what goodwill the worker could unfairly take — the interest a Nebraska customer covenant may protect.
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: 'Effective date of this agreement. The dates anchor the timeline every restraint runs on: when each restricted period starts and ends, and which window of customer contact the covered-customer look-back measures.'
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state. For a worker whose services, customers, and competition are centered in Nebraska, plan on Nebraska law controlling whatever law the agreement names. Nebraska courts have applied Nebraska law to an out-of-state employer's covenant on that basis, so a foreign-law selection is a risk variable rather than an enforceability strategy.
+    display_label: Governing Law
+    section: Legal
+    default: Nebraska
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.draft-to-satisfy-nebraska-law-rather-than-rely-on-a-foreign-choice-of-law
+    default_value_rationale: Nebraska is the conservative default for a Nebraska-centered worker because the governing-law choice should match the state whose law is likely to control the covenant's enforceability.
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. Nebraska measures every restraint against what is reasonably necessary and refuses to trim the excess, so a finite term keeps an open-ended lid on non-secret information from reading as unjustified breadth.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included. No staged Nebraska decision addresses a worker's own promise not to recruit former colleagues, so it is reviewed under the general three-part framework and drawn narrowly if included.
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    default_value_rationale: Nebraska sets no statutory cap on duration; enforceability turns on the three-part Securities Acceptance reasonableness test rather than a fixed number, and Nebraska courts refuse to reform an overbroad covenant. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, and counsel should size the term to the employer's actual protectable interest.
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope; keeping the class to colleagues the worker actually worked with makes it easier to defend as protecting a legitimate interest.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer non-solicitation covenant is included. This is the covenant Nebraska law is actually built around when it reaches only the clients and accounts the worker actually did business with and personally contacted.
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.limit-customer-restrictions-to-personally-served-customers
+    default_value_rationale: True is the law-backed default because Nebraska's customer-goodwill rule allows a covenant only when it is confined to the personally served customer class, making this narrower restraint the principal post-employment covenant in the template.
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: Nebraska sets no statutory cap; a customer non-solicit limited to personally served customers maps directly onto the customer-goodwill interest and is the instrument Nebraska courts actually enforce. 12 months is a common, conservative duration counsel should size to the actual customer relationships protected.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is a common lookback for identifying the personally served customer class. In Aon the upheld restriction was tied to customers the employee personally dealt with during the preceding two years, so counsel may lengthen or shorten this window to match the actual relationships the worker held.
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Nebraska has no general non-compete statute; a true non-compete for an ordinary employee is the highest-risk covenant in the suite. A ban framed around a business, market, or territory rather than personally served customers reads as an attempt to prevent ordinary competition, not improper competition. This template ties the covenant to the personally served customer set rather than a geographic or activity ban.
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.avoid-geographic-and-activity-bans-for-ordinary-employees
+    default_value_rationale: Conservative default. In Nebraska a customer non-solicit limited to personally served customers, backstopped by the Nebraska Trade Secrets Act, is the enforceable instrument; a whole-market or territory non-compete for an ordinary employee invites the ordinary-competition defect and, because Nebraska courts do not reform overbroad employment covenants, an all-or-nothing loss. Include only after confirming an identified legitimate interest and scoping the restraint to personally served customers.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    default_value_rationale: Nebraska imposes no statutory cap on duration; the three-part reasonableness test weighs the practical effect of the restraint against the employer's legitimate interest, so there is no safe-harbor number. 12 months is a common, conservative default counsel should size to the actual role and personally served customer relationships rather than copy from another form.
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer. Broad definitions that reach beyond the customers the worker actually served are high risk under Nebraska's customer-scope rule, and breadth added here cannot be trimmed by a court later.
+    display_label: Competitive Business
+    section: Non-Competition
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.limit-customer-restrictions-to-personally-served-customers
+    default_value_rationale: No default is supplied because the competitive-business definition must be drafted from the employer's actual business and kept subordinate to the personally served customer class.
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. When the employer can name its real competitors, binding those names is stronger evidence the restraint is no greater than necessary than an open-ended definition — and narrowing done at the drafting table is the only narrowing this covenant will ever get.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included. Barring the worker from serving covered customers even when the customer calls first restrains accepting work, not just chasing it, so it earns its place only with a tight, personally served customer class behind it.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+    default_value_rationale: 12 months is a common, conservative duration. Because a non-dealing clause reaches accepting work as well as soliciting it, it presses harder on the harshness prong and should be sized tightly to the personally served customer class it protects.
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements. A clause that technically forbids holding ordinary public shares restrains the worker far beyond any customer relationship or secret, which Nebraska's third requirement — undue harshness on the employee — counts against the covenant.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included. An investment restraint with indefinite reach hands the harshness requirement exactly the breadth it counts against the covenant, so it is off by default and drawn narrowly if included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+    default_value_rationale: 12 months is a common, conservative duration. Because a restraint on active competitive roles or material participation functions as a non-compete, it is analyzed under the same three-part reasonableness test and sized no broader than necessary.
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name

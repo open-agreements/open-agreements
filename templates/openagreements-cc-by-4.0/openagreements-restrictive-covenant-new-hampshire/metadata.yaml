@@ -1,0 +1,185 @@
+name: OpenAgreements Employee Restrictive Covenant (New Hampshire)
+category: non-compete
+description: 'New Hampshire-specific employee restrictive covenant agreement built for the state''s three-part reasonableness test (Smith, Batchelder & Rugg v. Foster) and its statutory traps: confidentiality and trade-secret protection under RSA chapter 350-B, customer and employee non-solicitation tied to the employee''s own sphere of customer goodwill, an optional non-compete drawn to the recognized protectable interests, the RSA 275:70 pre-acceptance delivery recital for new hires, the RSA 275:70-a low-wage exclusion, the clinician geographic-practice carve-out (RSA 329:31-a, 326-B:45-a, 326-B:45-b, 315:18), and a good-faith-preserving, drawn-narrow reformation posture rather than reliance on judicial repair. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-new-hampshire
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. New Hampshire-specific analysis informed by the quote-verified New Hampshire non-compete practice note. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    section: Legal
+    default: New Hampshire
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    section: Confidentiality
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. New Hampshire recognizes confidential information short of trade-secret status as protectable (Hobert), but a finite term keeps the obligation within the reasonableness test while trade-secret protection runs with secrecy under RSA 350-B:1.
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    display_label: Employee Non-Solicitation Included
+    default: true
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 24 months
+    section: Employee Non-Solicitation
+    default_value_rationale: '24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. New Hampshire measures duration against the interest being protected (Forbes: geography and duration narrowly tailored to the goodwill interest), so counsel should shorten the term where the underlying interest is exhausted sooner.'
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    section: Employee Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope. New Hampshire held that ordinary recruiting and hiring cost is not a protectable interest (Olsten), so the class should stay tied to colleagues the departing worker actually worked with.
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is a common enforceable duration; New Hampshire tailors duration to the goodwill interest (Forbes) rather than a round number copied forward.
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    section: Customer Non-Solicitation
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope. Near limits customer restrictions to the employee's own sphere of customer goodwill, so the lookback should capture only the customers this worker actually served.
+  - name: noncompete_included
+    type: boolean
+    description: 'Whether the non-competition covenant is included. Under New Hampshire''s three-part reasonableness test (Foster) a non-compete is enforceable only if it is no greater than necessary to protect a recognized legitimate interest, imposes no undue hardship on the employee, and is not injurious to the public. It is also subject to two statutory gates: RSA 275:70 (pre-acceptance delivery to a new hire) and RSA 275:70-a (the low-wage ban).'
+    display_label: Non-Competition Included
+    default: false
+    section: Non-Competition
+    default_value_rationale: Conservative default. The non-compete is the most heavily scrutinized covenant; include it only after confirming a recognized Hobert protectable interest exists, the employee is not a low-wage employee under RSA 275:70-a (hourly rate at or below 200 percent of the federal minimum wage), the RSA 275:70 pre-acceptance disclosure sequence was honored for a new hire, and (for a covered clinician) the RSA 329:31-a / 326-B:45-a / 326-B:45-b / 315:18 geographic-practice ban is addressed.
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    section: Non-Competition
+    default_value_rationale: 12 months is a common enforceable duration. New Hampshire requires duration to be narrowly tailored to the goodwill interest (Forbes) and declines to extend a written term where the covenant is unambiguous (Gosselin), so the tool should not default to a longer, harder-to-defend period.
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee had customer or patient contact for Employer
+    section: Non-Competition
+    default_value_rationale: Tied to the employee's actual sphere of customer goodwill. Near struck a covenant reaching customers beyond the salesperson's contacts as more restrictive than necessary, and Forbes requires geography narrowly tailored to the goodwill interest and the worker's actual contact.
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Narrowing the restriction to named competitors strengthens enforceability and the good-faith record.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: new_hampshire_consideration
+    type: string
+    description: 'New Hampshire only. The consideration supporting the restrictive covenants, recited so the timing and consideration record is complete. New Hampshire law treats continued employment after signing as consideration for a covenant not to compete, so a mid-employment covenant is supported on consideration grounds. Consideration does not, however, cure a timing defect: for a new hire required to sign as a condition of employment, the New Hampshire pre-acceptance disclosure rule makes an undisclosed noncompete unenforceable regardless of consideration. State the specific benefit here (for example, initial or continued employment, a signing or retention bonus, an equity grant, or a promotion). Shown in the New Hampshire timing and consideration recital.'
+    display_label: Consideration for Restrictive Covenants (New Hampshire)
+    default: Employee's employment or continued employment with Employer, together with the compensation and access to Confidential Information that Employer provides under this agreement, which the parties agree are given in exchange for the restrictive covenants
+    section: Consideration
+    rationale_source: case_law
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.new-hampshire.record-timing-and-continued-employment-consideration
+    default_value_rationale: The default recites employment or continued employment, a consideration basis New Hampshire accepts for a covenant not to compete, together with the compensation and confidential-information access the agreement itself provides. Counsel should replace it with the specific negotiated benefit where one exists.
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+    default_value_rationale: 12 months is a common enforceable duration. A non-dealing restraint drifts further from the worker's own customer influence than a non-solicit, so New Hampshire's no-greater-than-necessary prong (Foster) counsels a conservative term.
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    section: Definitions
+    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements. A carve-out that technically forbids index funds and ordinary public shares adds gratuitous weight to the undue-hardship prong of the Foster test.
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+    default_value_rationale: 12 months is a common enforceable duration. An investment restraint detached from customer-facing activity sits poorly with a test that asks which recognized employer interest the restriction protects (Foster, Hobert).
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    section: Non-Disparagement
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+priority_fields:
+  - employer_name
+  - employee_name
