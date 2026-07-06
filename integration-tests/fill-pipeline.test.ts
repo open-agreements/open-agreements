@@ -748,7 +748,7 @@ describe('runFillPipeline', () => {
     const tempDir = mkdtempSync(join(tmpdir(), 'fill-pipeline-fields-used-'));
     const inputPath = join(tempDir, 'source.docx');
     const outputPath = join(tempDir, 'output.docx');
-    writeFileSync(inputPath, buildDocxBuffer(docXml(['No placeholders needed'])));
+    writeFileSync(inputPath, buildDocxBuffer(docXml(['Modules: {industry_modules}'])));
 
     try {
       const result = await runFillPipeline({
@@ -768,10 +768,230 @@ describe('runFillPipeline', () => {
       });
 
       expect(result.fieldsUsed).toEqual(['industry_modules']);
+      expect(result.fillCommandCount).toBe(1);
+      expect(result.warnings).toEqual([]);
     } finally {
       rmSync(tempDir, { recursive: true, force: true });
     }
   });
+
+  it('token-less document: empty fieldsUsed, zero commands, unchanged-document warning', async () => {
+    const tempDir = mkdtempSync(join(tmpdir(), 'fill-pipeline-tokenless-'));
+    const inputPath = join(tempDir, 'source.docx');
+    const outputPath = join(tempDir, 'output.docx');
+    writeFileSync(inputPath, buildDocxBuffer(docXml(['No placeholders needed'])));
+
+    try {
+      const result = await runFillPipeline({
+        inputPath,
+        outputPath,
+        values: { employee_name: 'John Smith' },
+        fields: [{ name: 'employee_name', type: 'string', description: 'Employee' }],
+        verify: async () => ({ passed: true, checks: [] }),
+      });
+
+      expect(result.fillCommandCount).toBe(0);
+      expect(result.fieldsUsed).toEqual([]);
+      expect(result.providedFieldsUsed).toEqual([]);
+      expect(result.warnings).toHaveLength(1);
+      expect(result.warnings[0]).toContain('no machine-fillable fields');
+      expect(result.warnings[0]).toContain('returned unchanged');
+    } finally {
+      rmSync(tempDir, { recursive: true, force: true });
+    }
+  });
+
+  it('fieldsUsed reflects only fields referenced by document commands', async () => {
+    const tempDir = mkdtempSync(join(tmpdir(), 'fill-pipeline-referenced-'));
+    const inputPath = join(tempDir, 'source.docx');
+    const outputPath = join(tempDir, 'output.docx');
+    writeFileSync(
+      inputPath,
+      buildDocxBuffer(docXml(['Company: {company_name}', '{IF include_arbitration}Arbitration applies.{END-IF}']))
+    );
+
+    try {
+      const result = await runFillPipeline({
+        inputPath,
+        outputPath,
+        // extra_field is declared in metadata and provided, but never appears in the doc
+        values: { company_name: 'Acme Corp', extra_field: 'ignored', include_arbitration: true },
+        fields: [
+          { name: 'company_name', type: 'string', description: 'Company' },
+          { name: 'extra_field', type: 'string', description: 'Unused' },
+          { name: 'include_arbitration', type: 'boolean', description: 'Arbitration toggle' },
+        ],
+        coerceBooleans: true,
+        verify: async () => ({ passed: true, checks: [] }),
+      });
+
+      // INS var counted; IF condition var counted; unreferenced field excluded
+      expect(result.fieldsUsed).toEqual(['company_name', 'include_arbitration']);
+      expect(result.providedFieldsUsed).toEqual(['company_name', 'include_arbitration']);
+      expect(result.fillCommandCount).toBeGreaterThanOrEqual(2);
+      expect(result.warnings).toEqual([]);
+    } finally {
+      rmSync(tempDir, { recursive: true, force: true });
+    }
+  });
+
+  it('blank-defaulted fields count in fieldsUsed but not providedFieldsUsed', async () => {
+    const tempDir = mkdtempSync(join(tmpdir(), 'fill-pipeline-provided-'));
+    const inputPath = join(tempDir, 'source.docx');
+    const outputPath = join(tempDir, 'output.docx');
+    writeFileSync(inputPath, buildDocxBuffer(docXml(['{company_name} / {employee_name}'])));
+
+    try {
+      const result = await runFillPipeline({
+        inputPath,
+        outputPath,
+        values: { company_name: 'Acme Corp' },
+        fields: [
+          { name: 'company_name', type: 'string', description: 'Company' },
+          { name: 'employee_name', type: 'string', description: 'Employee' },
+        ],
+        verify: async () => ({ passed: true, checks: [] }),
+      });
+
+      expect(result.fieldsUsed).toEqual(['company_name', 'employee_name']);
+      expect(result.providedFieldsUsed).toEqual(['company_name']);
+    } finally {
+      rmSync(tempDir, { recursive: true, force: true });
+    }
+  });
+
+  it('patch-injected tokens (yc-safe shape) do not trigger the zero-command warning', async () => {
+    const tempDir = mkdtempSync(join(tmpdir(), 'fill-pipeline-patched-'));
+    const inputPath = join(tempDir, 'source.docx');
+    const outputPath = join(tempDir, 'output.docx');
+    // Raw source has NO {tokens} — the replacement map injects one at patch time.
+    writeFileSync(inputPath, buildDocxBuffer(docXml(['Company: [Company Name]'])));
+
+    try {
+      const result = await runFillPipeline({
+        inputPath,
+        outputPath,
+        values: { company_name: 'Acme Corp' },
+        fields: [{ name: 'company_name', type: 'string', description: 'Company' }],
+        cleanPatch: {
+          cleanConfig: {
+            removeParagraphPatterns: [],
+            removeRanges: [],
+          } as never,
+          replacements: { '[Company Name]': '{company_name}' },
+        },
+        verify: async () => ({ passed: true, checks: [] }),
+      });
+
+      expect(result.fillCommandCount).toBe(1);
+      expect(result.fieldsUsed).toEqual(['company_name']);
+      expect(result.warnings).toEqual([]);
+
+      const outZip = new AdmZip(outputPath);
+      const outText = outZip.getEntry('word/document.xml')!.getData().toString('utf-8');
+      expect(outText).toContain('Acme Corp');
+    } finally {
+      rmSync(tempDir, { recursive: true, force: true });
+    }
+  });
+
+  it('failed verify checks surface in result.warnings (soft, no throw)', async () => {
+    const tempDir = mkdtempSync(join(tmpdir(), 'fill-pipeline-verify-warn-'));
+    const inputPath = join(tempDir, 'source.docx');
+    const outputPath = join(tempDir, 'output.docx');
+    writeFileSync(inputPath, buildDocxBuffer(docXml(['Company: {company_name}'])));
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    try {
+      const result = await runFillPipeline({
+        inputPath,
+        outputPath,
+        values: { company_name: 'Acme Corp' },
+        fields: [{ name: 'company_name', type: 'string', description: 'Company' }],
+        verify: async () => ({
+          passed: false,
+          checks: [
+            { name: 'Passing check', passed: true },
+            { name: 'Failing check', passed: false, details: 'something is off' },
+          ],
+        }),
+      });
+
+      expect(result.warnings).toEqual(['verify: Failing check: something is off']);
+      expect(warnSpy).toHaveBeenCalledWith(expect.stringContaining('verification issues'));
+    } finally {
+      warnSpy.mockRestore();
+      rmSync(tempDir, { recursive: true, force: true });
+    }
+  });
+});
+
+describe('fillTemplate truthfulness guardrails (issues #579/#580)', () => {
+  it('wyoming restrictive covenant (manual-fill variant): 0 filled, warning, values not applied', async () => {
+    const templateDir = templateDirFor('openagreements-restrictive-covenant-wyoming');
+    const tempDir = mkdtempSync(join(tmpdir(), 'fill-wyoming-guardrail-'));
+    const outputPath = join(tempDir, 'output.docx');
+
+    try {
+      const result = await fillTemplate({
+        templateDir,
+        values: { employer_name: 'OM Innovation AI Inc.', employee_name: 'John Smith' },
+        outputPath,
+      });
+
+      expect(result.fillCommandCount).toBe(0);
+      expect(result.fieldsUsed).toEqual([]);
+      expect(result.providedFieldsUsed).toEqual([]);
+      expect(result.warnings.some((w) => w.includes('no machine-fillable fields'))).toBe(true);
+
+      // The document is returned unchanged — provided values must NOT appear.
+      const outZip = new AdmZip(outputPath);
+      const outText = outZip.getEntry('word/document.xml')!.getData().toString('utf-8');
+      expect(outText).not.toContain('John Smith');
+      expect(outText).toContain('[Full legal name of the employee]');
+    } finally {
+      rmSync(tempDir, { recursive: true, force: true });
+    }
+  }, seconds(30));
+
+  it('unknown caller keys are never counted as filled (filledFieldCount <= totalFieldCount invariant)', async () => {
+    const templateDir = templateDirFor('common-paper-mutual-nda');
+    const metadata = loadMetadata(templateDir);
+    const tempDir = mkdtempSync(join(tmpdir(), 'fill-nda-unknown-keys-'));
+    const outputPath = join(tempDir, 'output.docx');
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    try {
+      const result = await fillTemplate({
+        templateDir,
+        values: {
+          party_1_company: 'Acme Corp',
+          bogus_key_not_in_metadata: 'should not count',
+        },
+        outputPath,
+      });
+
+      // The invariant that failed in production (filledFieldCount 24 > totalFieldCount 18):
+      // providedFieldsUsed is what the deploy layer reports as filledFieldCount.
+      // (fieldsUsed may legitimately include computed *_display keys and their
+      // source fields, so it is not bounded by the metadata field count.)
+      expect(result.providedFieldsUsed.length).toBeLessThanOrEqual(metadata.fields.length);
+      expect(result.fieldsUsed).not.toContain('bogus_key_not_in_metadata');
+      expect(result.providedFieldsUsed).not.toContain('bogus_key_not_in_metadata');
+      // party_1_company only reaches the document via the computed
+      // party_1_company_display key — it must still be credited as used.
+      expect(result.providedFieldsUsed).toContain('party_1_company');
+      expect(result.warnings.some((w) => w.includes('bogus_key_not_in_metadata'))).toBe(true);
+
+      // And the provided value genuinely lands in the document.
+      const outZip = new AdmZip(outputPath);
+      const outText = outZip.getEntry('word/document.xml')!.getData().toString('utf-8');
+      expect(outText).toContain('Acme Corp');
+    } finally {
+      warnSpy.mockRestore();
+      rmSync(tempDir, { recursive: true, force: true });
+    }
+  }, seconds(30));
 });
 
 // ---------------------------------------------------------------------------

@@ -133,6 +133,9 @@ async function loadChecklistHarness(opts: ChecklistHarnessOptions = {}): Promise
     outputPath,
     metadata: { name: 'Closing Checklist' },
     fieldsUsed: ['deal_name'],
+    providedFieldsUsed: ['deal_name'],
+    fillCommandCount: 1,
+    warnings: [],
   }));
 
   const findTemplateDir = vi.fn(() => opts.templateDir ?? '/templates/closing-checklist');

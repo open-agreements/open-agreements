@@ -92,6 +92,9 @@ export async function runFill(args: FillArgs): Promise<void> {
       console.log(`Filled ${result.metadata.name}`);
       console.log(`Output: ${result.outputPath}`);
       console.log(`Fields used: ${result.fieldsUsed.join(', ')}`);
+      for (const warning of result.warnings) {
+        console.warn(`Warning: ${warning}`);
+      }
     } else if (isExternal) {
       const result = await runExternalFill({
         externalId: args.template,
@@ -101,6 +104,9 @@ export async function runFill(args: FillArgs): Promise<void> {
       console.log(`Filled ${result.metadata.name}`);
       console.log(`Output: ${result.outputPath}`);
       console.log(`Fields used: ${result.fieldsUsed.join(', ')}`);
+      for (const warning of result.warnings) {
+        console.warn(`Warning: ${warning}`);
+      }
     } else {
       validateTemplateFillRequest(templateDir!, args.values);
       const result = await fillTemplate({
@@ -111,6 +117,9 @@ export async function runFill(args: FillArgs): Promise<void> {
       console.log(`Filled ${result.metadata.name}`);
       console.log(`Output: ${result.outputPath}`);
       console.log(`Fields used: ${result.fieldsUsed.join(', ')}`);
+      for (const warning of result.warnings) {
+        console.warn(`Warning: ${warning}`);
+      }
 
       if (args.memo?.enabled) {
         const memo = generateEmploymentMemo({

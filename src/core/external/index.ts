@@ -56,6 +56,9 @@ export async function runExternalFill(options: ExternalFillOptions): Promise<Ext
     outputPath: result.outputPath,
     metadata,
     fieldsUsed: result.fieldsUsed,
+    providedFieldsUsed: result.providedFieldsUsed,
+    fillCommandCount: result.fillCommandCount,
+    warnings: result.warnings,
     stages: result.stages!,
   };
 }

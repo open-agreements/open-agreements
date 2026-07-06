@@ -71,6 +71,9 @@ describe('fieldSelector commands', () => {
       metadata: { name: 'NVCA Voting Agreement' },
       outputPath: join(outDir, 'out.docx'),
       fieldsUsed: ['company_name'],
+      providedFieldsUsed: ['company_name'],
+      fillCommandCount: 1,
+      warnings: [],
     });
 
     await runFieldSelectorCommand({
@@ -92,6 +95,9 @@ describe('fieldSelector commands', () => {
       metadata: { name: 'NVCA Voting Agreement' },
       outputPath: '/tmp/nvca-voting-agreement-filled.docx',
       fieldsUsed: ['company_name'],
+      providedFieldsUsed: ['company_name'],
+      fillCommandCount: 1,
+      warnings: [],
     });
 
     await runFieldSelectorCommand({
@@ -115,6 +121,9 @@ describe('fieldSelector commands', () => {
       metadata: { name: 'NVCA Voting Agreement' },
       outputPath: join(outDir, 'out.docx'),
       fieldsUsed: ['company_name'],
+      providedFieldsUsed: ['company_name'],
+      fillCommandCount: 1,
+      warnings: [],
     });
 
     await runFieldSelectorCommand({
@@ -138,6 +147,9 @@ describe('fieldSelector commands', () => {
       metadata: { name: 'NVCA Voting Agreement' },
       outputPath: join(outDir, 'out.docx'),
       fieldsUsed: ['company_name'],
+      providedFieldsUsed: ['company_name'],
+      fillCommandCount: 1,
+      warnings: [],
     });
 
     await runFieldSelectorCommand({
@@ -162,6 +174,9 @@ describe('fieldSelector commands', () => {
       metadata: { name: 'NVCA Voting Agreement' },
       outputPath: join(outDir, 'out.docx'),
       fieldsUsed: ['company_name'],
+      providedFieldsUsed: ['company_name'],
+      fillCommandCount: 1,
+      warnings: [],
       computedOutPath: computedOut,
       computedArtifact: { profile_present: true },
     });
@@ -193,6 +208,9 @@ describe('fieldSelector commands', () => {
       metadata: { name: 'NVCA Voting Agreement' },
       outputPath: join(outDir, 'out.docx'),
       fieldsUsed: ['company_name'],
+      providedFieldsUsed: ['company_name'],
+      fillCommandCount: 1,
+      warnings: [],
     });
 
     await runFieldSelectorCommand({

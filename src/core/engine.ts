@@ -42,7 +42,14 @@ export interface FillOptions {
 export interface FillResult {
   outputPath: string;
   metadata: TemplateMetadata;
+  /** Prepared data keys actually referenced by fill commands in the document. */
   fieldsUsed: string[];
+  /** Subset of fieldsUsed whose values the caller actually supplied. */
+  providedFieldsUsed: string[];
+  /** Fill commands found in the final pre-fill document; 0 = nothing was substituted. */
+  fillCommandCount: number;
+  /** Guardrail warnings (zero-fill-command, verify failures, unknown keys). */
+  warnings: string[];
 }
 
 /** Derive signatory display fields for a given prefix. Reusable across templates. */
@@ -275,7 +282,8 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
   const metadata = loadMetadata(templateDir);
   const fieldNames = new Set(metadata.fields.map((f) => f.name));
 
-  // Warn about unknown keys not in metadata
+  // Warn about unknown keys not in metadata — mirrored into result.warnings
+  // below so API/MCP callers see it too (console.warn is invisible to them).
   const unknownKeys = Object.keys(values).filter((k) => !fieldNames.has(k));
   if (unknownKeys.length > 0) {
     console.warn(`Warning: unknown field(s) not in metadata: ${unknownKeys.join(', ')}`);
@@ -318,9 +326,17 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
     confirmClauses: loadConfirmClauses(templateDir),
   });
 
+  const warnings = [...result.warnings];
+  if (unknownKeys.length > 0) {
+    warnings.push(`unknown field(s) not in metadata: ${unknownKeys.join(', ')}`);
+  }
+
   return {
     outputPath: result.outputPath,
     metadata,
     fieldsUsed: result.fieldsUsed,
+    providedFieldsUsed: result.providedFieldsUsed,
+    fillCommandCount: result.fillCommandCount,
+    warnings,
   };
 }
