@@ -4,7 +4,8 @@ import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { validateTemplate } from '../src/core/validation/template.js';
-import { validateMetadata } from '../src/core/metadata.js';
+import { validateMetadata, loadMetadata, StabilityEnum } from '../src/core/metadata.js';
+import { listTemplateEntries } from '../src/utils/paths.js';
 import { prepareFillData } from '../src/core/fill-pipeline.js';
 import {
   allureAttachment,
@@ -659,4 +660,45 @@ describe('validateTemplate multiselect coverage', () => {
     expect(result.errors.filter((e) => e.includes('statutory_compliance_representation'))).toEqual([]);
   });
 
+});
+
+// First-party stability gate (open-agreements#243). The schema keeps `stability`
+// optional so vendored/pre-#243 metadata still validates, but every first-party
+// (`openagreements-*`) template MUST declare it so a new one can't ship without a
+// maturity signal. Data-driven: derives the first-party set from disk rather than
+// pinning a literal count.
+describe('first-party stability signal (open-agreements#243)', () => {
+  const firstParty = listTemplateEntries().filter((entry) => entry.id.startsWith('openagreements-'));
+
+  it('has a non-empty first-party template set to guard', () => {
+    expect(firstParty.length).toBeGreaterThan(0);
+  });
+
+  it('every first-party template declares a valid stability value', () => {
+    const offenders: Array<{ id: string; stability: unknown }> = [];
+    for (const entry of firstParty) {
+      const meta = loadMetadata(entry.dir);
+      if (!StabilityEnum.safeParse(meta.stability).success) {
+        offenders.push({ id: entry.id, stability: meta.stability });
+      }
+    }
+    // Any offender means a first-party template is missing/misusing `stability`.
+    expect(offenders).toEqual([]);
+  });
+
+  it('does not attach stability to vendored (non-first-party) templates', () => {
+    // Third-party publishers derive maturity from upstream; they must not carry a
+    // first-party stability label. `loadMetadata` on an external dir would throw,
+    // so restrict this to entries the first-party loader can read.
+    const vendored = listTemplateEntries().filter((entry) => !entry.id.startsWith('openagreements-'));
+    for (const entry of vendored) {
+      let meta;
+      try {
+        meta = loadMetadata(entry.dir);
+      } catch {
+        continue; // external/field-selector shapes aren't first-party templates
+      }
+      expect(meta.stability).toBeUndefined();
+    }
+  });
 });
