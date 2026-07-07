@@ -1,6 +1,6 @@
 ---
 template_id: openagreements-restrictive-covenant-district-of-columbia
-name: OpenAgreements Employee Restrictive Covenant (District of Columbia)
+name: Employee Restrictive Covenant (District of Columbia)
 category: non-compete
 description: >-
   District of Columbia employee restrictive covenant agreement built for the
@@ -181,7 +181,8 @@ fields:
       employee agreements; 12 months is the common lighter alternative. The District's ban does not
       speak to employee non-solicits, so the clause is judged under common-law reasonableness; a
       shorter term supports treating it as a limited restraint on active solicitation.
-    rationale_source: editorial
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
   - name: covered_employee_period
     type: string
     description: >-
@@ -204,12 +205,15 @@ fields:
     description: Duration of customer/partner non-solicitation restriction
     display_label: Customer Non-Solicitation Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
     default_value_rationale: >-
-      12 months is a common enforceable duration. A District customer
-      non-solicit sits outside the statutory ban but is still a restraint of
-      trade judged for reasonableness under common law (Ellis), and a shorter
-      term supports that characterization.
+      12 months is the lighter side of the near-even 12/24-month split observed in
+      benchmarked, publicly-filed employee agreements and is a common enforceable
+      duration here. A District customer non-solicit sits outside the statutory ban but
+      is still a restraint of trade judged for reasonableness under common law (Ellis),
+      and a shorter term supports that characterization.
   - name: covered_customer_period
     type: string
     description: >-

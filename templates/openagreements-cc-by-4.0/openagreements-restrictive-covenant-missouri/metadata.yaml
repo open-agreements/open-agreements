@@ -1,8 +1,9 @@
-name: OpenAgreements Employee Restrictive Covenant (Missouri)
+name: Employee Restrictive Covenant (Missouri)
 category: non-compete
-description: 'Missouri-specific employee restrictive covenant agreement built for Missouri''s common-law reasonableness regime: there is no general Missouri non-compete statute, so every post-employment restraint begins as a presumptively void restraint on trade and is enforceable only to the extent it is demonstrably reasonable AND protects the employer''s trade secrets or customer contacts — never mere competition (Healthcare Servs. of the Ozarks, Inc. v. Copeland; Payroll Advance, Inc. v. Yates), with the employer bearing the burden on the protectable interest and on time/geographic reasonableness (Whelan Sec. Co. v. Kennebrew). It provides confidentiality and trade-secret protection backstopped by the Missouri Uniform Trade Secrets Act (Mo. Rev. Stat. §§ 417.453, 417.455), an independent-consideration recital reflecting Missouri''s divided consideration law (Baker v. Bristol Care, Inc.; Durrell v. Tech Elecs., Inc.; JumboSack Corp. v. Buyck), a customer non-solicitation covenant narrowed to serviced customers rather than the whole customer book (Whelan), an employee non-solicitation covenant drawn to the one-year conclusive-presumption safe harbor of Mo. Rev. Stat. § 431.202, an optional non-compete tied to the identified trade-secret or customer-contact interest and sized to the actual footprint, a tolling clause flagged as an open Missouri question, physician covenants held to the ordinary Copeland reasonableness standard (Missouri has no physician-specific statute), and discretionary judicial modification that the drafting does not rely on (Whelan permits modification; Sigma-Aldrich Corp. v. Vikin makes it discretionary; Paradise v. Midwest Asphalt Coatings, Inc. prices overreach through the prevailing-party fee rule). Drafted as a starting point for licensed counsel review.'
+description: 'Missouri-specific employee restrictive covenant agreement built for Missouri''s common-law reasonableness regime: there is no general Missouri non-compete statute, so every post-employment restraint begins as a presumptively void restraint on trade and is enforceable only to the extent it is demonstrably reasonable AND protects the employer''s trade secrets or customer contacts — never mere competition, with the employer bearing the burden on the protectable interest and on time/geographic reasonableness. It provides confidentiality and trade-secret protection backstopped by the Missouri Uniform Trade Secrets Act (Mo. Rev. Stat. §§ 417.453, 417.455), an independent-consideration recital reflecting Missouri''s divided consideration law, a customer non-solicitation covenant narrowed to serviced customers rather than the whole customer book, an employee non-solicitation covenant drawn to the one-year conclusive-presumption safe harbor of Mo. Rev. Stat. § 431.202, an optional non-compete tied to the identified trade-secret or customer-contact interest and sized to the actual footprint, a tolling clause flagged as an open Missouri question, physician covenants held to the ordinary reasonableness standard (Missouri has no physician-specific statute), and discretionary judicial modification that the drafting does not rely on (Missouri case law permits modification but treats it as discretionary and prices overreach through the prevailing-party fee rule). Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-missouri
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled
@@ -102,8 +103,9 @@ fields:
     display_label: Customer Non-Solicitation Duration
     default: 12 months
     section: Customer Non-Solicitation
-    default_value_rationale: Missouri sets no statutory cap on a customer non-solicit, and the employee no-hire safe harbor does not reach customer restrictions, so the covenant is judged under the common-law reasonableness test. 12 months is a common, conservative duration counsel should size to the actual customer relationships protected; the covered class matters more than the number, because customer restrictions should be limited to customers the employee actually serviced or had substantial contact with.
-    rationale_source: editorial
+    default_value_rationale: Missouri sets no statutory cap on a customer non-solicit, and the employee no-hire safe harbor does not reach customer restrictions, so the covenant is judged under the common-law reasonableness test. 12 months is the lighter side of the near-even 12/24-month split observed in benchmarked, publicly-filed employee agreements — a conservative duration counsel should size to the actual customer relationships protected; the covered class matters more than the number, because customer restrictions should be limited to customers the employee actually serviced or had substantial contact with.
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
   - name: covered_customer_period
     type: string
     description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
@@ -123,8 +125,10 @@ fields:
     description: Duration of non-competition restriction
     display_label: Non-Competition Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
     section: Non-Competition
-    default_value_rationale: Missouri imposes no statutory cap on non-compete duration; restrictions of up to about two years are commonly within the range courts will consider, but that is a framing of case outcomes, not a safe-harbor number, and the employer must still justify the specific term on the facts. 12 months is a common, conservative default counsel should size to the actual role and market rather than copy from another form.
+    default_value_rationale: Missouri imposes no statutory cap on non-compete duration; restrictions of up to about two years are commonly within the range courts will consider, but that is a framing of case outcomes, not a safe-harbor number, and the employer must still justify the specific term on the facts. 12 months matches the modal non-compete term observed in benchmarked, publicly-filed employee agreements — a conservative default counsel should size to the actual role and market rather than copy from another form.
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
@@ -162,8 +166,10 @@ fields:
     description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives).
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

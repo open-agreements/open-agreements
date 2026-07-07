@@ -1,8 +1,9 @@
-name: OpenAgreements Employee Restrictive Covenant (Maryland)
+name: Employee Restrictive Covenant (Maryland)
 category: non-compete
-description: 'Maryland-specific employee restrictive covenant agreement built for Md. Code, Lab. & Empl. § 3-716: confidentiality and trade-secret protection anchored on the Maryland Uniform Trade Secrets Act, an employee non-solicitation covenant, a customer non-solicitation covenant tied to Maryland''s protectable client- relationship interest and the statute''s client-list carve-out, and an optional non-compete drawn to the Becker reasonableness standard. The agreement recites the statutory worker-class voids that make a covenant null and void outright for low-wage employees (150% or less of the State minimum wage), veterinary practitioners and technicians, and most direct-patient-care Health Occupations Article licensees earning $350,000 or less, and it caps a covered high-earner clinician covenant at one year and ten miles with the companion patient-notice duty. Consideration rests on continued at-will employment under Simko, and each covenant is drafted in severable tiers for Maryland''s strict blue-pencil rule rather than relying on discretionary judicial reformation. Drafted as a starting point for licensed counsel review.'
+description: 'Maryland-specific employee restrictive covenant agreement built for Md. Code, Lab. & Empl. § 3-716: confidentiality and trade-secret protection anchored on the Maryland Uniform Trade Secrets Act, an employee non-solicitation covenant, a customer non-solicitation covenant tied to Maryland''s protectable client- relationship interest and the statute''s client-list carve-out, and an optional non-compete drawn to the common-law reasonableness standard. The agreement recites the statutory worker-class voids that make a covenant null and void outright for low-wage employees (150% or less of the State minimum wage), veterinary practitioners and technicians, and most direct-patient-care Health Occupations Article licensees earning $350,000 or less, and it caps a covered high-earner clinician covenant at one year and ten miles. Consideration rests on continued at-will employment, and each covenant is drafted in severable tiers for Maryland''s strict blue-pencil rule rather than relying on discretionary judicial reformation. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-maryland
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled
@@ -76,7 +77,8 @@ fields:
     display_label: Employee Non-Solicitation Duration
     default: 24 months
     section: Employee Non-Solicitation
-    rationale_source: editorial
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. Maryland's noncompete statute does not address employee non-solicits, so the clause is judged on ordinary common-law reasonableness, and a relationship-based term supports that characterization.
   - name: covered_employee_period
     type: string
@@ -96,8 +98,10 @@ fields:
     description: Duration of customer/partner non-solicitation restriction
     display_label: Customer Non-Solicitation Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
-    default_value_rationale: 12 months is a common enforceable duration. Protecting client relationships and client data is squarely inside the interests Maryland recognizes under Becker, and the statute's (a)(2) carve-out spares client-list provisions; a shorter, contact-scoped term keeps the covenant no wider than reasonably necessary.
+    default_value_rationale: 12 months is the lighter side of the near-even 12/24-month split observed in benchmarked, publicly-filed employee agreements and is a common enforceable duration here. Protecting client relationships and client data is squarely inside the interests Maryland recognizes under Becker, and the statute's (a)(2) carve-out spares client-list provisions; a shorter, contact-scoped term keeps the covenant no wider than reasonably necessary.
   - name: covered_customer_period
     type: string
     description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
@@ -158,8 +162,10 @@ fields:
     description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements, and a clause forbidding ordinary index funds and public shares is gratuitous overbreadth that hands the employee an argument for free.
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives), and a clause forbidding ordinary index funds and public shares is gratuitous overbreadth that hands the employee an argument for free.
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

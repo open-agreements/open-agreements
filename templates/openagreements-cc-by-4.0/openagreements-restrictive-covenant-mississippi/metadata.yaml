@@ -1,8 +1,9 @@
-name: OpenAgreements Employee Restrictive Covenant (Mississippi)
+name: Employee Restrictive Covenant (Mississippi)
 category: non-compete
 description: 'Mississippi-specific employee restrictive covenant agreement built for Mississippi''s common-law reasonableness regime: there is no general Mississippi non-compete statute, so every post-employment restraint stands or falls on the three-interest reasonableness balance the courts weigh — the rights of the employer, the rights of the employee, and the rights of the public — with the enforcing employer carrying the burden and the disfavored covenant construed strictly against the drafter. It provides confidentiality and trade-secret protection independent of any covenant, a continued-at-will-employment consideration recital, customer and employee non-solicitation, an optional non-dealing covenant using the express no-acceptance language a customer-facing restraint needs, an optional non-compete tied to a legitimate protectable interest and sized to the employee''s real influence, an express extension-on-breach tolling clause because Mississippi courts do not extend the restricted period on their own but give an express extension clause effect, express and pre-departure assignment to successors, a no-enforcement term for covenants invoked after an arbitrary, capricious, or bad-faith termination, a lawyer practice-restriction exclusion (Miss. R. Prof''l Conduct 5.6), and discretionary equitable reformation that the drafting does not rely on. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-mississippi
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled
@@ -154,8 +155,10 @@ fields:
     description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives).
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

@@ -1,6 +1,6 @@
 ---
 template_id: openagreements-restrictive-covenant-wisconsin
-name: OpenAgreements Employee Restrictive Covenant (Wisconsin)
+name: Employee Restrictive Covenant (Wisconsin)
 category: non-compete
 description: >-
   Wisconsin-specific employee restrictive covenant agreement built for Wis.
@@ -121,7 +121,8 @@ fields:
     description: Duration of employee non-solicitation restriction
     display_label: Employee Non-Solicitation Duration
     default: 24 months
-    rationale_source: editorial
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: >-
       24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed
@@ -153,13 +154,14 @@ fields:
     description: Duration of customer/partner non-solicitation restriction
     display_label: Customer Non-Solicitation Duration
     default: 12 months
-    rationale_source: editorial
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
     default_value_rationale: >-
-      12 months is an editorial starting point for a customer non-solicit. The
-      duration must be a reasonable, definite time limit, and Wisconsin sets no
-      statutory figure, so counsel should size the term to the protected
-      customer relationships.
+      12 months is the lighter side of the near-even 12/24-month split observed in
+      benchmarked, publicly-filed employee agreements. The duration must be a
+      reasonable, definite time limit, and Wisconsin sets no statutory figure, so
+      counsel should size the term to the protected customer relationships.
   - name: covered_customer_period
     type: string
     description: >-
@@ -198,14 +200,16 @@ fields:
     description: Duration of non-competition restriction
     display_label: Non-Competition Duration
     default: 12 months
-    rationale_source: editorial
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
     section: Non-Competition
     default_value_rationale: >-
-      12 months is an editorial starting point. A reasonable time limit is part
-      of Wisconsin's five-factor reasonableness test, and the period must read
-      as a fixed and definite stretch of time. Wisconsin sets no statutory
-      ceiling, so counsel must justify the term against the protectable interest
-      because a court cannot shorten an overlong one.
+      12 months matches the modal non-compete term observed in benchmarked,
+      publicly-filed employee agreements. A reasonable time limit is part of Wisconsin's
+      five-factor reasonableness test, and the period must read as a fixed and definite
+      stretch of time. Wisconsin sets no statutory ceiling, so counsel must justify the
+      term against the protectable interest because a court cannot shorten an overlong
+      one.
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
@@ -266,13 +270,16 @@ fields:
       the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
     default_value_rationale: >-
-      Five percent of any class of publicly traded securities is the standard
-      passive investment carveout across restrictive covenant agreements. A
-      clause that forbids holding ordinary public shares restrains the worker far
-      beyond any protectable interest and feeds the harsh-or-oppressive Star
-      Direct factor.
+      Five percent of any class of publicly traded securities is the modal
+      passive-investment carve-out threshold observed in benchmarked, publicly-filed
+      employee agreements that include the carve-out (lower 1-3 percent thresholds are
+      the common tighter alternatives). A clause that forbids holding ordinary public
+      shares restrains the worker far beyond any protectable interest and feeds the
+      harsh-or-oppressive Star Direct factor.
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

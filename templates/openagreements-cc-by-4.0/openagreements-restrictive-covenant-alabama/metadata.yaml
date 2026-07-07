@@ -1,8 +1,9 @@
-name: OpenAgreements Employee Restrictive Covenant (Alabama)
+name: Employee Restrictive Covenant (Alabama)
 category: non-compete
 description: 'Alabama-specific employee restrictive covenant agreement built for the Alabama Restrictive Covenant Act, Ala. Code section 8-1-190 et seq.: confidentiality and trade-secret protection, a current-customer non-solicitation, an employee no-hire covenant confined to uniquely essential workers, and an optional non-compete drawn to the section 8-1-190(b)(4) employee exception. Recites the void-by-default rule and its six safe-harbor categories, ties each covenant to a section 8-1-191 protectable interest, keeps durations within the statutory presumptions (two years employee non-compete, eighteen months current-customer non-solicit), confirms the section 8-1-192 all-parties signature and adequate-consideration formalities, avoids execution before the employment relationship exists, carves out the section 8-1-196 professional exemption, treats reformation as reaching only duration, and applies Alabama''s fundamental-policy conflicts rule. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-alabama
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled
@@ -74,7 +75,8 @@ fields:
     display_label: Employee No-Hire Duration
     default: 24 months
     section: Employee Non-Solicitation
-    rationale_source: editorial
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. The Act sets no express duration presumption for the no-hire category, so the uniquely-essential scope limit does the primary category work; counsel should size the term to the workforce interest actually protected.
   - name: covered_employee_period
     type: string
@@ -174,8 +176,9 @@ fields:
     display_label: Passive Public Holdings Threshold
     default: five percent
     section: Definitions
-    rationale_source: editorial
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements. In a state whose law voids restraints except as it specifically provides, a clause forbidding ordinary public shares is gratuitous overbreadth serving no listed interest.
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives). In a state whose law voids restraints except as it specifically provides, a clause forbidding ordinary public shares is gratuitous overbreadth serving no listed interest.
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.

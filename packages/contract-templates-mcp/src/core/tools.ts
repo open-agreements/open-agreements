@@ -88,6 +88,8 @@ interface TemplateRecord {
   source_url: string;
   source: string | null;
   attribution_text?: string;
+  /** Maturity signal (open-agreements#243); null for templates that don't declare it. */
+  stability?: string | null;
   fields: TemplateField[];
 }
 
@@ -274,6 +276,7 @@ const tools: ToolDefinition[] = [
             source_url: meta.source_url as string,
             source: mod.sourceName(meta.source_url as string),
             attribution_text: meta.attribution_text as string | undefined,
+            stability: (meta.stability as string | undefined) ?? null,
             fields: mod.mapFields(meta.fields as Record<string, unknown>[], meta.priority_fields as string[]),
           };
           return successResult('get_template', { template: normalizeTemplate(template) });
@@ -435,6 +438,7 @@ function normalizeTemplate(template: TemplateRecord): Record<string, unknown> {
     source_url: template.source_url,
     source: template.source,
     attribution_text: template.attribution_text ?? null,
+    stability: template.stability ?? null,
     fields: stripDisplayLabels(template.fields),
   };
 }
@@ -453,6 +457,7 @@ function compactTemplate(template: TemplateRecord): Record<string, unknown> {
     display_name: trimmedDisplayName && trimmedDisplayName.length > 0 ? trimmedDisplayName : template.name,
     category: template.category,
     description: template.description,
+    stability: template.stability ?? null,
     field_count: template.fields.length,
     priority_field_count: template.fields.filter((field) => field.required).length,
   };

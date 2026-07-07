@@ -553,6 +553,42 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
+  it('accepts a valid stability value and preserves it (open-agreements#243)', async () => {
+    const result = TemplateMetadataSchema.safeParse({
+      ...BASE_TEMPLATE_METADATA,
+      stability: 'experimental',
+      fields: [],
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.stability).toBe('experimental');
+    }
+  });
+
+  it('treats stability as optional (vendored/pre-#243 metadata still validates)', async () => {
+    const result = TemplateMetadataSchema.safeParse({
+      ...BASE_TEMPLATE_METADATA,
+      fields: [],
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.stability).toBeUndefined();
+    }
+  });
+
+  it('rejects a stability value outside the closed enum', async () => {
+    await expectSafeParseOutcome(
+      'TemplateMetadataSchema',
+      TemplateMetadataSchema,
+      {
+        ...BASE_TEMPLATE_METADATA,
+        stability: 'production',
+        fields: [],
+      },
+      false
+    );
+  });
+
   it('rejects metadata missing required license field', async () => {
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',

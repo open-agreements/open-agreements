@@ -1,8 +1,9 @@
-name: OpenAgreements Employee Restrictive Covenant (Oregon)
+name: Employee Restrictive Covenant (Oregon)
 category: non-compete
 description: 'Oregon-specific employee restrictive covenant agreement built for ORS 653.295''s void-unless regime: confidentiality and trade-secret protection, customer and employee non-solicitation and non-dealing covenants that fall outside the statutory checklist, and an optional non-compete gated on the two-week written-offer notice or bona fide advancement, exempt-salaried status above the inflation-indexed salary threshold, a statutory protectable interest, the 12-month cap, and delivery of a signed copy within 30 days after termination, with a garden-leave pay-to-enforce alternative for sub-threshold workers, the 2025 medical-licensee ban, the Workplace Fairness Act carve-out, and a draft-within-the-statute posture rather than reliance on judicial reformation. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-oregon
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled
@@ -70,8 +71,10 @@ fields:
     description: Duration of employee non-solicitation restriction
     display_label: Employee Non-Solicitation Duration
     default: 24 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
-    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. ORS 653.295(5)(b) carves employee non-solicits out of the non-compete checklist entirely, so the duration is judged under common-law reasonableness rather than the 12-month statutory cap that governs the non-compete.
+    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. Oregon carves employee non-solicits out of the statutory non-compete checklist entirely, so the duration is judged under common-law reasonableness rather than the 12-month statutory cap that governs the non-compete.
   - name: covered_employee_period
     type: string
     description: Lookback period for determining which employees are covered by the non-solicitation restriction.
@@ -90,8 +93,10 @@ fields:
     description: Duration of customer/partner non-solicitation restriction
     display_label: Customer Non-Solicitation Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
-    default_value_rationale: 12 months is a common enforceable duration. ORS 653.295(5)(b) carves customer non-solicits out of the non-compete checklist, so the clause is judged under common-law reasonableness.
+    default_value_rationale: 12 months is the lighter side of the near-even 12/24-month split observed in benchmarked, publicly-filed employee agreements. Oregon carves customer non-solicits out of the statutory non-compete checklist, so the clause is judged under common-law reasonableness.
   - name: covered_customer_period
     type: string
     description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
@@ -112,8 +117,10 @@ fields:
     description: Duration of non-competition restriction
     display_label: Non-Competition Duration
     default: 12 months
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.oregon.cap-non-compete-term-at-twelve-months
     section: Non-Competition
-    default_value_rationale: ORS 653.295(3) caps the term at 12 months from the date of termination and voids the excess; 12 months is therefore the statutory ceiling, not merely a conservative choice. Any longer term is dead text under Oregon law.
+    default_value_rationale: Oregon caps the non-compete term at 12 months from the date of termination and voids the excess; 12 months is therefore the statutory ceiling, not merely a conservative choice. Any longer term is dead text under Oregon law.
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
@@ -157,8 +164,10 @@ fields:
     description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives).
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

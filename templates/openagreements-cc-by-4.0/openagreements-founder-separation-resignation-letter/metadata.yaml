@@ -3,6 +3,7 @@ category: corporate-governance
 description: 'A short letter from a departing founder to the board of directors of a Delaware corporation resigning from every officer and director position held, with an explicit effective date. The effective date is load-bearing: it fixes the termination date that starts the repurchase-option window under the founder''s existing Restricted Stock Purchase Agreement. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-founder-separation-resignation-letter
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

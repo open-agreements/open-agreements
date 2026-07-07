@@ -24,12 +24,14 @@ export {
   FieldSelectorMetadataSchema,
   CleanConfigSchema,
   LicenseEnum,
+  StabilityEnum,
   FieldDefinitionSchema,
   type TemplateMetadata,
   type FieldSelectorMetadata,
   type CleanConfig,
   type FieldDefinition,
   type License,
+  type Stability,
 } from './core/metadata.js';
 
 // External template engine

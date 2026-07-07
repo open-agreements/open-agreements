@@ -30,6 +30,7 @@ interface TemplateMeta {
   priority_fields: string[];
   credits?: Array<{ name: string; role: string; profile_url?: string }>;
   derived_from?: string;
+  stability?: string;
 }
 
 interface FieldSelectorMeta {
@@ -486,6 +487,42 @@ describe('runList in-process coverage', () => {
     const plainFieldSelector = envelope.items.find((i: { name: string }) => i.name === 'plain-fieldSelector');
     expect(plainFieldSelector.credits).toBeUndefined();
     expect(plainFieldSelector.derived_from).toBeUndefined();
+  });
+
+  itDiscovery('projects the stability maturity signal onto templates and externals; null when undeclared (open-agreements#243)', async () => {
+    // loadListHarness is async; the projection assertions below need no await.
+    const harness = await loadListHarness({
+      templateEntries: [
+        { id: 'stable-template', dir: '/templates/stable-template', baseDir: '/templates' },
+        { id: 'plain-template', dir: '/templates/plain-template', baseDir: '/templates' },
+      ],
+      externalEntries: [
+        { id: 'plain-external', dir: '/external/plain-external', baseDir: '/external' },
+      ],
+      templateByDir: {
+        '/templates/stable-template': {
+          ...templateMeta('Stable Template', 'https://example.com/stable'),
+          stability: 'experimental',
+        },
+        '/templates/plain-template': templateMeta('Plain Template', 'https://example.com/plain'),
+      },
+      externalByDir: {
+        '/external/plain-external': templateMeta('Plain External', 'https://example.org/plain'),
+      },
+    });
+
+    const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
+    harness.runList({ json: true });
+    const envelope = JSON.parse(String(logSpy.mock.calls[0][0]));
+
+    const declared = envelope.items.find((i: { name: string }) => i.name === 'stable-template');
+    expect(declared.stability).toBe('experimental');
+
+    // Templates and externals that don't declare stability project an explicit null.
+    const plainTemplate = envelope.items.find((i: { name: string }) => i.name === 'plain-template');
+    expect(plainTemplate.stability).toBeNull();
+    const plainExternal = envelope.items.find((i: { name: string }) => i.name === 'plain-external');
+    expect(plainExternal.stability).toBeNull();
   });
 
   itDiscovery.skip('parse-time validation lives in the metadata loader; covered indirectly by list/fill flows that call loadMetadata, but a direct unit test is pending', () => {});

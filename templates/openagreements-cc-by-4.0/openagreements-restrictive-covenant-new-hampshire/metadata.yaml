@@ -1,8 +1,9 @@
-name: OpenAgreements Employee Restrictive Covenant (New Hampshire)
+name: Employee Restrictive Covenant (New Hampshire)
 category: non-compete
-description: 'New Hampshire-specific employee restrictive covenant agreement built for the state''s three-part reasonableness test (Smith, Batchelder & Rugg v. Foster) and its statutory traps: confidentiality and trade-secret protection under RSA chapter 350-B, customer and employee non-solicitation tied to the employee''s own sphere of customer goodwill, an optional non-compete drawn to the recognized protectable interests, the RSA 275:70 pre-acceptance delivery recital for new hires, the RSA 275:70-a low-wage exclusion, the clinician geographic-practice carve-out (RSA 329:31-a, 326-B:45-a, 326-B:45-b, 315:18), and a good-faith-preserving, drawn-narrow reformation posture rather than reliance on judicial repair. Drafted as a starting point for licensed counsel review.'
+description: 'New Hampshire-specific employee restrictive covenant agreement built for the state''s three-part reasonableness test and its statutory traps: confidentiality and trade-secret protection under RSA chapter 350-B, customer and employee non-solicitation tied to the employee''s own sphere of customer goodwill, an optional non-compete drawn to the recognized protectable interests, the RSA 275:70 pre-acceptance delivery recital for new hires, the RSA 275:70-a low-wage exclusion, the clinician geographic-practice carve-out (RSA 329:31-a, 326-B:45-a, 326-B:45-b, 315:18), and a good-faith-preserving, drawn-narrow reformation posture rather than reliance on judicial repair. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-new-hampshire
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled
@@ -70,6 +71,8 @@ fields:
     description: Duration of employee non-solicitation restriction
     display_label: Employee Non-Solicitation Duration
     default: 24 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: '24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. New Hampshire measures duration against the interest being protected (Forbes: geography and duration narrowly tailored to the goodwill interest), so counsel should shorten the term where the underlying interest is exhausted sooner.'
   - name: covered_employee_period
@@ -90,8 +93,10 @@ fields:
     description: Duration of customer/partner non-solicitation restriction
     display_label: Customer Non-Solicitation Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
-    default_value_rationale: 12 months is a common enforceable duration; New Hampshire tailors duration to the goodwill interest (Forbes) rather than a round number copied forward.
+    default_value_rationale: 12 months is the lighter side of the near-even 12/24-month split observed in benchmarked, publicly-filed employee agreements and is a common enforceable duration here; New Hampshire tailors duration to the goodwill interest (Forbes) rather than a round number copied forward.
   - name: covered_customer_period
     type: string
     description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
@@ -111,8 +116,10 @@ fields:
     description: Duration of non-competition restriction
     display_label: Non-Competition Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
     section: Non-Competition
-    default_value_rationale: 12 months is a common enforceable duration. New Hampshire requires duration to be narrowly tailored to the goodwill interest (Forbes) and declines to extend a written term where the covenant is unambiguous (Gosselin), so the tool should not default to a longer, harder-to-defend period.
+    default_value_rationale: 12 months matches the modal non-compete term observed in benchmarked, publicly-filed employee agreements and is a common enforceable duration here. New Hampshire requires duration to be narrowly tailored to the goodwill interest (Forbes) and declines to extend a written term where the covenant is unambiguous (Gosselin), so the tool should not default to a longer, harder-to-defend period.
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
@@ -158,8 +165,10 @@ fields:
     description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements. A carve-out that technically forbids index funds and ordinary public shares adds gratuitous weight to the undue-hardship prong of the Foster test.
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives). A carve-out that technically forbids index funds and ordinary public shares adds gratuitous weight to the undue-hardship prong of the Foster test.
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

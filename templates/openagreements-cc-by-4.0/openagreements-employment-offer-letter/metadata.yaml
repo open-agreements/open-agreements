@@ -1,8 +1,9 @@
-name: OpenAgreements Employment Offer Letter
+name: Employment Offer Letter
 category: employment
 description: A startup-focused employment offer letter template for full-time or part-time hiring with compensation, equity summary, and at-will framing.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-offer-letter
 version: '1.1'
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

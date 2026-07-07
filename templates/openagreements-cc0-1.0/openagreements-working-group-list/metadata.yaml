@@ -3,6 +3,7 @@ category: other
 description: Standalone working group roster for a transaction. Tracks staffed deal team members and their contact details outside the closing checklist document.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-working-group-list
 version: '1.0'
+stability: experimental
 license: CC0-1.0
 allow_derivatives: true
 distribution: bundled

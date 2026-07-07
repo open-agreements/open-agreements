@@ -1,6 +1,6 @@
 ---
 template_id: openagreements-restrictive-covenant-montana
-name: OpenAgreements Employee Restrictive Covenant (Montana)
+name: Employee Restrictive Covenant (Montana)
 category: non-compete
 description: >-
   Montana-specific employee restrictive covenant agreement built for Mont. Code
@@ -142,6 +142,8 @@ fields:
     description: Duration of employee non-solicitation restriction
     display_label: Employee Non-Solicitation Duration
     default: 24 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: >-
       No Montana Supreme Court decision fixes a permissible duration for a stand-alone non-solicit,
@@ -173,12 +175,14 @@ fields:
     display_label: Customer Non-Solicitation Duration
     default: 12 months
     section: Customer Non-Solicitation
-    rationale_source: editorial
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     default_value_rationale: >-
-      No Montana decision fixes a permissible non-solicit duration; an enforced
-      Montana customer-restraint pattern used a one-year window keyed to the
-      firm's existing clients. A stated, modest 12-month period keeps the
-      reasonableness analysis focused on a limited time period.
+      No Montana decision fixes a permissible non-solicit duration; an enforced Montana
+      customer-restraint pattern used a one-year window keyed to the firm's existing
+      clients. 12 months is the lighter side of the near-even 12/24-month split observed
+      in benchmarked, publicly-filed employee agreements, and a stated, modest period
+      keeps the reasonableness analysis focused on a limited time period.
   - name: covered_customer_period
     type: string
     description: >-
@@ -216,13 +220,16 @@ fields:
     description: Duration of non-competition restriction
     display_label: Non-Competition Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
     section: Non-Competition
     default_value_rationale: >-
       No Montana statute or decision fixes a permissible non-compete duration; a
-      restraint must be limited in operation as to time or place under the first
-      Dobbins element and must survive the balancing of burden and protection. A
-      modest stated term keeps the time limb defensible. Counsel should size the
-      duration to the worker's actual market.
+      restraint must be limited in operation as to time or place under the first Dobbins
+      element and must survive the balancing of burden and protection. 12 months matches
+      the modal non-compete term observed in benchmarked, publicly-filed employee
+      agreements, and a modest stated term keeps the time limb defensible. Counsel
+      should size the duration to the worker's actual market.
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
@@ -274,13 +281,16 @@ fields:
       the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
     default_value_rationale: >-
-      Five percent of any class of publicly traded securities is the standard
-      passive investment carveout across restrictive covenant agreements; a
-      clause that forbids ordinary public shares restricts more than any
-      protectable interest requires and pushes a Montana covenant toward the void
-      column.
+      Five percent of any class of publicly traded securities is the modal
+      passive-investment carve-out threshold observed in benchmarked, publicly-filed
+      employee agreements that include the carve-out (lower 1-3 percent thresholds are
+      the common tighter alternatives); a clause that forbids ordinary public shares
+      restricts more than any protectable interest requires and pushes a Montana
+      covenant toward the void column.
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

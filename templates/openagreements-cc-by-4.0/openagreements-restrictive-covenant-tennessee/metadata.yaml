@@ -1,8 +1,9 @@
-name: OpenAgreements Employee Restrictive Covenant (Tennessee)
+name: Employee Restrictive Covenant (Tennessee)
 category: non-compete
-description: Tennessee-specific employee restrictive covenant agreement built for Tennessee's common-law reasonableness regime and its 2026 statutory overlay. Covenants not to compete are disfavored restraints of trade, enforceable only when they protect special facts over and above ordinary competition and stay reasonable under the Hasty v. Rent-A-Driver and Allright Auto Parks v. Berry factors. On top of that, 2026 Tenn. Pub. Acts ch. 934 (Tenn. Code Ann. §§ 50-1-210, 50-1-211), effective July 1, 2026, voids a non-compete against an employee earning under $70,000, presumes overlong time restraints unreasonable by relationship type, and expressly preserves confidentiality and customer and employee non-solicitation covenants. It provides confidentiality and trade-secret protection backstopped by the Tennessee Uniform Trade Secrets Act (Tenn. Code Ann. §§ 47-25-1701 to 47-25-1709), a continued-employment consideration recital (Central Adjustment Bureau v. Ingram), customer and employee non-solicitation, an optional non-compete drawn to the reasonableness test and the statutory threshold, the § 63-1-148 health-care-provider safe harbor with its emergency-medicine exclusion (Murfreesboro Medical Clinic v. Udom), good-faith choice of law (Vantage Technology v. Cross), and discretionary judicial reformation under the rule of reasonableness that the drafting does not rely on (Central Adjustment Bureau; Vantage; Columbus Medical Services v. Thomas). Drafted as a starting point for licensed counsel review.
+description: Tennessee-specific employee restrictive covenant agreement built for Tennessee's common-law reasonableness regime and its 2026 statutory overlay. Covenants not to compete are enforceable only when they protect special facts over and above ordinary competition and stay reasonable in time, territory, and scope under Tennessee's common-law factors. On top of that, 2026 Tenn. Pub. Acts ch. 934 (Tenn. Code Ann. §§ 50-1-210, 50-1-211), effective July 1, 2026, voids a non-compete against an employee earning under $70,000, presumes overlong time restraints unreasonable by relationship type, and expressly preserves confidentiality and customer and employee non-solicitation covenants. It provides confidentiality and trade-secret protection under the Tennessee Uniform Trade Secrets Act (Tenn. Code Ann. §§ 47-25-1701 to 47-25-1709), a continued-employment consideration recital, customer and employee non-solicitation, an optional non-compete drawn to the reasonableness test and the statutory threshold, the § 63-1-148 health-care-provider safe harbor with its emergency-medicine exclusion, good-faith choice of law, and discretionary judicial reformation under the rule of reasonableness that the drafting does not rely on. Drafted as a starting point for licensed counsel review.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-tennessee
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled
@@ -71,7 +72,8 @@ fields:
     display_label: Employee Non-Solicitation Duration
     default: 24 months
     section: Employee Non-Solicitation
-    rationale_source: editorial
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     default_value_rationale: An employee non-solicitation agreement is expressly preserved from the 2026 Tennessee non-compete statute's rules, so it sits outside the statutory time presumptions and the $70,000 threshold. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, sized to the workforce actually protected.
   - name: covered_employee_period
     type: string
@@ -92,8 +94,9 @@ fields:
     display_label: Customer Non-Solicitation Duration
     default: 12 months
     section: Customer Non-Solicitation
-    rationale_source: editorial
-    default_value_rationale: A client or customer non-solicitation agreement is expressly preserved from the 2026 Tennessee non-compete statute's rules. 12 months is a common, conservative duration counsel should size to the actual customer relationships protected so the covenant stays within the preserved category rather than functioning as a non-compete.
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
+    default_value_rationale: A client or customer non-solicitation agreement is expressly preserved from the 2026 Tennessee non-compete statute's rules. 12 months is the lighter side of the near-even 12/24-month split observed in benchmarked, publicly-filed employee agreements — a conservative duration counsel should size to the actual customer relationships protected so the covenant stays within the preserved category rather than functioning as a non-compete.
   - name: covered_customer_period
     type: string
     description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
@@ -155,8 +158,10 @@ fields:
     description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives).
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

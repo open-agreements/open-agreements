@@ -1,8 +1,9 @@
-name: OpenAgreements Employee Restrictive Covenant (Hawaii)
+name: Employee Restrictive Covenant (Hawaii)
 category: non-compete
-description: 'Hawaii-specific employee restrictive covenant agreement built for HRS chapter 480''s restraint-of-trade framework: confidentiality and trade-secret protection, customer and employee non-solicitation, and an optional non-compete, each drawn to the legitimate-ancillary-purpose screen of HRS section 480-4(c) and the Traeger reasonableness factors. Non-competes and employee non-solicits are struck automatically when the employer is a technology business (HRS section 480-4(d)), leaving the trade-secret covenant as the surviving restraint. The Solicit definition tracks Gagnon''s active-initiation standard, and each restraint is drawn to its minimum supporting interest rather than in reliance on judicial narrowing. Drafted as a starting point for licensed counsel review.'
+description: 'Hawaii-specific employee restrictive covenant agreement built for HRS chapter 480''s restraint-of-trade framework: confidentiality and trade-secret protection, customer and employee non-solicitation, and an optional non-compete, each drawn to the legitimate-ancillary-purpose screen of HRS section 480-4(c) and the statutory reasonableness factors. Non-competes and employee non-solicits are struck automatically when the employer is a technology business (HRS section 480-4(d)), leaving the trade-secret covenant as the surviving restraint. The Solicit definition tracks the active-initiation standard, and each restraint is drawn to its minimum supporting interest rather than in reliance on judicial narrowing. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-hawaii
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled
@@ -80,6 +81,8 @@ fields:
     description: Duration of employee non-solicitation restriction
     display_label: Employee Non-Solicitation Duration
     default: 24 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: Hawaii fixes no statutory maximum. Length of time is one of the factors a court examines under the Traeger reasonableness test; the period should be the shortest the workforce-stability interest credibly requires. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; it is offered as a market reference, not a statutory benchmark, and counsel should shorten toward 12 months or less where the interest is exhausted sooner.
   - name: covered_employee_period
@@ -101,8 +104,10 @@ fields:
     description: Duration of customer/partner non-solicitation restriction
     display_label: Customer Non-Solicitation Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
-    default_value_rationale: Hawaii fixes no statutory maximum; duration is weighed for reasonableness under the Traeger factors. 12 months is a conservative starting point tied to the near-permanence of the customer relationship the covenant protects, for counsel to shorten or justify.
+    default_value_rationale: Hawaii fixes no statutory maximum; duration is weighed for reasonableness under the Traeger factors. 12 months is the lighter side of the near-even 12/24-month split observed in benchmarked, publicly-filed employee agreements — a conservative starting point tied to the near-permanence of the customer relationship the covenant protects, for counsel to shorten or justify.
   - name: covered_customer_period
     type: string
     description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
@@ -123,8 +128,10 @@ fields:
     description: Duration of non-competition restriction
     display_label: Non-Competition Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
     section: Non-Competition
-    default_value_rationale: Hawaii imposes no statutory maximum duration, but length of time is one of the Traeger reasonableness factors and a reasonable period is a condition of the statutory covenant framework. 12 months is a conservative starting point for counsel to shorten or justify against the specific protected interest, not a statutory safe harbor.
+    default_value_rationale: Hawaii imposes no statutory maximum duration, but length of time is one of the Traeger reasonableness factors and a reasonable period is a condition of the statutory covenant framework. 12 months matches the modal non-compete term observed in benchmarked, publicly-filed employee agreements — a conservative starting point for counsel to shorten or justify against the specific protected interest, not a statutory safe harbor.
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
@@ -161,8 +168,10 @@ fields:
     description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements, and a carve-out avoids adding undue hardship — one of the three Traeger grounds of unreasonableness — with no protected interest behind it.
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives), and a carve-out avoids adding undue hardship — one of the three Traeger grounds of unreasonableness — with no protected interest behind it.
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.
