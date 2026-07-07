@@ -1525,6 +1525,33 @@ describe('Blank placeholder on an already-ruled line (issue #588)', () => {
     expect(xml.slice(xml.indexOf('w:val="none"'))).toContain(BLANK_PLACEHOLDER);
   });
 
+  it('only clears the cell\'s last paragraph — a placeholder above the rule survives', async () => {
+    // A bottom-bordered cell with two paragraphs: the border underlines only the
+    // LAST line, so a placeholder in the FIRST paragraph is not on the rule.
+    const documentXml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      '<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>' +
+      '<w:tbl><w:tr><w:tc>' +
+      `<w:tcPr><w:tcW w:w="4320" w:type="dxa"/>${CELL_BORDER}</w:tcPr>` +
+      '<w:p><w:r><w:t xml:space="preserve">{early}</w:t></w:r></w:p>' +
+      '<w:p><w:r><w:t xml:space="preserve">{late}</w:t></w:r></w:p>' +
+      '</w:tc></w:tr></w:tbl>' +
+      '</w:body></w:document>';
+
+    const filled = await fillDocx({
+      templateBuffer: buildDocxBuffer(documentXml),
+      data: { early: BLANK_PLACEHOLDER, late: BLANK_PLACEHOLDER },
+      stripParagraphPatterns: [],
+    });
+    const xml = new AdmZip(Buffer.from(filled)).getEntry('word/document.xml')!.getData().toString('utf-8');
+
+    // Exactly one placeholder survives — the one above the rule (first paragraph).
+    expect((xml.match(new RegExp(BLANK_PLACEHOLDER, 'g')) ?? []).length).toBe(1);
+    const paras = xml.match(/<w:p>[\s\S]*?<\/w:p>/g) ?? [];
+    expect(paras[0]).toContain(BLANK_PLACEHOLDER); // above the rule: kept
+    expect(paras[paras.length - 1]).not.toContain(BLANK_PLACEHOLDER); // on the rule: cleared
+  });
+
   // The restrictive-covenant family has employer_signatory_name/title fields on
   // ruled cells and NO *_signatory_type field — the real-world motivating case.
   const RC_DIR = templateDirFor('openagreements-restrictive-covenant-wyoming');

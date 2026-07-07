@@ -581,11 +581,28 @@ function directChild(parent: Element | null, name: string): Element | null {
   return null;
 }
 
+/** Last `<w:p>` that is a direct child of `cell` — the line its bottom border underlines. */
+function lastDirectParagraph(cell: Element): Element | null {
+  let last: Element | null = null;
+  for (let i = 0; i < cell.childNodes.length; i++) {
+    const child = cell.childNodes[i] as Element;
+    if (child?.nodeType === 1 && child.localName === 'p' && child.namespaceURI === W_NS) {
+      last = child;
+    }
+  }
+  return last;
+}
+
 /**
- * True when `run` sits on a line that already carries a bottom-border rule —
- * either its enclosing table cell (`<w:tc>/<w:tcPr>/<w:tcBorders>/<w:bottom>`)
- * or its paragraph (`<w:p>/<w:pPr>/<w:pBdr>/<w:bottom>`). Purely structural: it
- * asks what the OOXML draws, never what the field means.
+ * True when `run` sits on a line that already carries a bottom-border rule:
+ * - its paragraph has its own bottom border (`<w:p>/<w:pPr>/<w:pBdr>/<w:bottom>`), or
+ * - it is in the LAST paragraph of a table cell whose bottom border is visible
+ *   (`<w:tc>/<w:tcPr>/<w:tcBorders>/<w:bottom>`).
+ *
+ * The last-paragraph guard matters: a cell's bottom border only underlines the
+ * cell's final line, so a placeholder in an earlier paragraph of a multi-line
+ * cell is NOT on the rule and must be left alone. Purely structural — it asks
+ * what the OOXML draws, never what the field means.
  */
 function sitsOnRuledLine(run: Element): boolean {
   let cell: Element | null = null;
@@ -601,9 +618,15 @@ function sitsOnRuledLine(run: Element): boolean {
     }
     node = node.parentNode;
   }
-  const cellBorders = directChild(directChild(cell, 'tcPr'), 'tcBorders');
+
   const paraBorders = directChild(directChild(para, 'pPr'), 'pBdr');
-  return hasVisibleBottomBorder(cellBorders) || hasVisibleBottomBorder(paraBorders);
+  if (hasVisibleBottomBorder(paraBorders)) return true;
+
+  const cellBorders = directChild(directChild(cell, 'tcPr'), 'tcBorders');
+  if (hasVisibleBottomBorder(cellBorders) && cell && para === lastDirectParagraph(cell)) {
+    return true;
+  }
+  return false;
 }
 
 /**
