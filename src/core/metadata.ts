@@ -25,6 +25,24 @@ export type Distribution = z.infer<typeof DistributionEnum>;
 export const ArtifactTypeEnum = z.enum(['template', 'field-selector']);
 export type ArtifactType = z.infer<typeof ArtifactTypeEnum>;
 
+/**
+ * Maturity / support expectation for a first-party template (open-agreements#243).
+ *
+ * Distinct from the SemVer `version`, which signals the *past* (was a release a
+ * breaking change?). `stability` signals the *future* support expectation:
+ *   - `experimental` — legal logic still settling; expect change.
+ *   - `beta` — schema and structure stable; legal text still hardening.
+ *   - `stable` — graduated (== SemVer 1.0): DTSA parity holds where applicable,
+ *     high-risk cover-term drafting notes are complete, and two consecutive
+ *     minor releases have shipped without legal-text rework.
+ *
+ * First-party (`openagreements-*`) templates declare this explicitly; it is
+ * optional so vendored third-party templates (whose maturity is upstream-derived)
+ * and any pre-existing metadata still validate.
+ */
+export const StabilityEnum = z.enum(['experimental', 'beta', 'stable']);
+export type Stability = z.infer<typeof StabilityEnum>;
+
 /** Field kinds supported by template, external-template, and fieldSelector metadata. */
 const FieldTypeEnum = z.enum(['string', 'date', 'number', 'boolean', 'enum', 'array', 'multiselect']);
 export type FieldType = z.infer<typeof FieldTypeEnum>;
@@ -394,6 +412,11 @@ const TemplateMetadataBaseSchema = z.object({
   // validates.
   distribution: DistributionEnum.optional(),
   artifact_type: ArtifactTypeEnum.optional(),
+  // Maturity / support signal (open-agreements#243). Optional so vendored
+  // third-party and pre-#243 metadata still validate; first-party templates
+  // declare it explicitly. All first-party templates default to `experimental`
+  // under the 0.x posture — the `stable` label stays gated on legal-context#135.
+  stability: StabilityEnum.optional(),
   fields: z.array(FieldDefinitionSchema),
   priority_fields: z.array(z.string()).default([]),
   credits: z.array(TemplateCreditSchema).default([]),

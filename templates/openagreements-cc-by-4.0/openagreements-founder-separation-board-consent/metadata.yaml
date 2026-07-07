@@ -3,6 +3,7 @@ category: corporate-governance
 description: 'Action by unanimous written consent of the board of directors of a Delaware corporation memorializing a founder''s departure: accepting the resignation, removing the founder from officer titles, authorizing the repurchase of unvested shares under the founder''s existing Restricted Stock Purchase Agreement, and managing the vacated board seat. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-founder-separation-board-consent
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

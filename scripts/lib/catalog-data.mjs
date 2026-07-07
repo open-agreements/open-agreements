@@ -310,6 +310,8 @@ export function buildCatalog({ rootDir = REPO_ROOT } = {}) {
       segment,
       distribution: item.distribution ?? (isFieldSelector ? "linked" : "bundled"),
       artifactType: item.artifact_type ?? (isFieldSelector ? "field-selector" : "template"),
+      // Maturity signal (open-agreements#243); null for templates that don't declare it.
+      stability: item.stability ?? null,
       repoPath: getContentRepoPath(item.name, segment),
       usageDemand: TEMPLATE_USAGE_DEMAND[item.name] ?? 0,
       ...flags,

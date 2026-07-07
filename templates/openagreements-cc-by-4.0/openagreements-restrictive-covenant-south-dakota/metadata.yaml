@@ -3,6 +3,7 @@ category: non-compete
 description: 'South Dakota-specific employee restrictive covenant agreement built for the SDCL chapter 53-9 statutory whitelist: confidentiality and trade-secret protection, a customer non-solicitation limited to existing customers, and an optional non-compete drawn to the § 53-9-11 employee exception — the same business or profession, a specified county, first- or second-class municipality, or other specified area, a two-year ceiling measured from the date of termination of the agreement, and the like-business condition. Customer restrictions are confined to solicitation, not acceptance, and each covenant is drafted to survive a fixed-term agreement expressly. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-south-dakota
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

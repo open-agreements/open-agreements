@@ -97,6 +97,7 @@ describe('contract-templates-mcp tools', () => {
       'display_name',
       'field_count',
       'priority_field_count',
+      'stability',
       'template_id',
     ]);
     for (const t of templates) {
@@ -107,6 +108,9 @@ describe('contract-templates-mcp tools', () => {
       expect(typeof t.description).toBe('string');
       expect(typeof t.field_count).toBe('number');
       expect(typeof t.priority_field_count).toBe('number');
+      // Maturity signal (open-agreements#243): a stability enum for first-party
+      // templates, null for vendored templates that don't declare it.
+      expect(t.stability === null || ['experimental', 'beta', 'stable'].includes(t.stability as string)).toBe(true);
       expect(t.fields).toBeUndefined();
       expect(t.license).toBeUndefined();
       expect(t.name).toBeUndefined();
@@ -236,6 +240,23 @@ describe('contract-templates-mcp tools', () => {
     const template = data.template as Record<string, unknown>;
     expect(template.template_id).toBe('common-paper-mutual-nda');
     expect(Array.isArray(template.fields)).toBe(true);
+  });
+
+  it('get_template surfaces the maturity signal (open-agreements#243)', async () => {
+    // First-party template declares stability: experimental (0.x posture; the
+    // `stable` label stays gated on legal-context#135).
+    const firstParty = getPayload(
+      await callTool('get_template', { template_id: 'openagreements-restrictive-covenant-florida' })
+    );
+    const fpTemplate = (firstParty.data as Record<string, unknown>).template as Record<string, unknown>;
+    expect(fpTemplate.stability).toBe('experimental');
+
+    // Vendored third-party template does not declare stability -> null.
+    const thirdParty = getPayload(
+      await callTool('get_template', { template_id: 'common-paper-mutual-nda' })
+    );
+    const tpTemplate = (thirdParty.data as Record<string, unknown>).template as Record<string, unknown>;
+    expect(tpTemplate.stability).toBeNull();
   });
 
   it('get_template returns options for enum fields matching source metadata', async () => {
