@@ -1552,6 +1552,29 @@ describe('Blank placeholder on an already-ruled line (issue #588)', () => {
     expect(paras[paras.length - 1]).not.toContain(BLANK_PLACEHOLDER); // on the rule: cleared
   });
 
+  it('preserves a trailing-whitespace anchor when clearing the placeholder (#109)', async () => {
+    // The placeholder run carries a trailing space that a signing field-selector
+    // might anchor on. Clearing must drop the underscores but keep the space.
+    const documentXml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      '<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>' +
+      '<w:tbl><w:tr><w:tc>' +
+      `<w:tcPr><w:tcW w:w="4320" w:type="dxa"/>${CELL_BORDER}</w:tcPr>` +
+      '<w:p><w:r><w:t xml:space="preserve">{anchored} </w:t></w:r></w:p>' +
+      '</w:tc></w:tr></w:tbl>' +
+      '</w:body></w:document>';
+
+    const filled = await fillDocx({
+      templateBuffer: buildDocxBuffer(documentXml),
+      data: { anchored: BLANK_PLACEHOLDER },
+      stripParagraphPatterns: [],
+    });
+    const xml = new AdmZip(Buffer.from(filled)).getEntry('word/document.xml')!.getData().toString('utf-8');
+
+    expect(xml).not.toContain(BLANK_PLACEHOLDER); // underscores gone
+    expect(xml).toMatch(/<w:t[^>]*>\s+<\/w:t>/); // the trailing space survives
+  });
+
   // The restrictive-covenant family has employer_signatory_name/title fields on
   // ruled cells and NO *_signatory_type field — the real-world motivating case.
   const RC_DIR = templateDirFor('openagreements-restrictive-covenant-wyoming');

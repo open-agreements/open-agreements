@@ -665,9 +665,13 @@ function stripBlankPlaceholderOnRuledLines(docxBuffer: Buffer): Buffer {
       if (extractRunText(run).trim() !== BLANK_PLACEHOLDER) continue;
       if (!sitsOnRuledLine(run)) continue;
 
-      // Clear the underscores (keep the run/paragraph so the rule survives).
+      // Remove only the placeholder underscores, preserving any surrounding
+      // whitespace — a trailing space can be a signing-anchor callers rely on
+      // (#109) — and keeping the run/paragraph so the rule itself survives.
       const tEls = run.getElementsByTagNameNS(W_NS, 't');
-      for (let t = 0; t < tEls.length; t++) tEls[t].textContent = '';
+      for (let t = 0; t < tEls.length; t++) {
+        tEls[t].textContent = (tEls[t].textContent ?? '').replace(BLANK_PLACEHOLDER, '');
+      }
 
       // Drop any leftover authoring highlight on the now-empty run.
       const rPr = run.getElementsByTagNameNS(W_NS, 'rPr');
