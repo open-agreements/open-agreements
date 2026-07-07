@@ -1,6 +1,6 @@
 ---
 template_id: openagreements-restrictive-covenant-idaho
-name: OpenAgreements Employee Restrictive Covenant (Idaho)
+name: Employee Restrictive Covenant (Idaho)
 category: non-compete
 description: >-
   Idaho-specific employee restrictive covenant agreement built for Idaho Code
@@ -110,6 +110,8 @@ fields:
     description: Duration of employee non-solicitation restriction
     display_label: Employee Non-Solicitation Duration
     default: 24 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: >-
       24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed
@@ -138,12 +140,14 @@ fields:
     description: Duration of customer/partner non-solicitation restriction
     display_label: Customer Non-Solicitation Duration
     default: 12 months
-    rationale_source: editorial
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
     default_value_rationale: >-
-      12 months is a common, defensible customer non-solicitation duration in
-      Idaho and sits comfortably inside the eighteen-month duration presumption
-      if a court analyzes the restraint like a direct-competition covenant.
+      12 months is the lighter side of the near-even 12/24-month split observed in
+      benchmarked, publicly-filed employee agreements and sits comfortably inside the
+      eighteen-month duration presumption if a court analyzes the restraint like a
+      direct-competition covenant.
   - name: covered_customer_period
     type: string
     description: >-
@@ -280,12 +284,15 @@ fields:
       the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
-    rationale_source: editorial
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
     default_value_rationale: >-
-      Five percent of any class of publicly traded securities is the standard
-      passive investment carveout across restrictive covenant agreements, and it
-      helps keep the covenant from restraining more than reasonably necessary.
+      Five percent of any class of publicly traded securities is the modal
+      passive-investment carve-out threshold observed in benchmarked, publicly-filed
+      employee agreements that include the carve-out (lower 1-3 percent thresholds are
+      the common tighter alternatives), and it helps keep the covenant from restraining
+      more than reasonably necessary.
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

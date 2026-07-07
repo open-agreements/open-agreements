@@ -1,6 +1,6 @@
-name: OpenAgreements Employee Restrictive Covenant (Iowa)
+name: Employee Restrictive Covenant (Iowa)
 category: non-compete
-description: 'Iowa-specific employee restrictive covenant agreement built for Iowa''s common-law reasonableness regime: there is no general Iowa non-compete statute, so every post-employment restraint stands or falls on the three-prong Revere Transducers / Lamp v. American Prosthetics reasonableness test (reasonably necessary to protect the employer, not unreasonably restrictive of the employee, not prejudicial to the public interest), with the employer bearing the burden of proving reasonableness (Iowa Glass Depot, Inc. v. Jindrich). It provides confidentiality and trade-secret protection backstopped by the Iowa Uniform Trade Secrets Act (Iowa Code ch. 550), a continued-employment consideration recital (Farm Bureau Serv. Co. of Maynard v. Kohls), customer and employee non-solicitation, an optional non-compete tied to identified protectable interests and sized to the actual footprint, and partial-enforcement reformation that the drafting does not rely on (Ehlers v. Iowa Warehouse Co. adopts partial enforcement subject to a bad-faith limit). It also discloses Iowa''s narrow occupation and sector rules — the licensed-mental-health-professional practice-restraint ban (Iowa Code § 147.161), the health-care staffing-agency noncompete-and-conversion-fee ban (Iowa Code § 135Q.2), the franchise market-withdrawal nonrenewal disclaimer (Iowa Code § 537A.10), and the University of Iowa Hospitals and Clinics clinical-role prohibition (2026 Iowa Acts, House File 2254). Drafted as a starting point for licensed counsel review.'
+description: 'Iowa-specific employee restrictive covenant agreement built for Iowa''s common-law reasonableness regime: there is no general Iowa non-compete statute, so every post-employment restraint stands or falls on a three-prong reasonableness test (reasonably necessary to protect the employer, not unreasonably restrictive of the employee, not prejudicial to the public interest), under which the employer seeking enforcement carries the burden of proving reasonableness. It provides confidentiality and trade-secret protection backstopped by the Iowa Uniform Trade Secrets Act (Iowa Code ch. 550), a continued-employment consideration recital, customer and employee non-solicitation, an optional non-compete tied to identified protectable interests and sized to the actual footprint, and partial-enforcement reformation that the drafting does not rely on. It also discloses Iowa''s narrow occupation and sector rules — the licensed-mental-health-professional practice-restraint ban (Iowa Code § 147.161), the health-care staffing-agency noncompete-and-conversion-fee ban (Iowa Code § 135Q.2), the franchise market-withdrawal nonrenewal disclaimer (Iowa Code § 537A.10), and the University of Iowa Hospitals and Clinics clinical-role prohibition (Iowa Code § 262.9(43)). Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-iowa
 version: 0.1.0
 stability: experimental
@@ -71,6 +71,8 @@ fields:
     description: Duration of employee non-solicitation restriction
     display_label: Employee Non-Solicitation Duration
     default: 24 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: Iowa sets no statutory cap on duration; enforceability turns on the three-prong Revere Transducers / Lamp reasonableness test rather than a fixed number. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, and counsel should size the term to the employer's actual protectable interest.
   - name: covered_employee_period
@@ -91,8 +93,10 @@ fields:
     description: Duration of customer/partner non-solicitation restriction
     display_label: Customer Non-Solicitation Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
-    default_value_rationale: Iowa sets no statutory cap; a customer non-solicit maps directly onto the customer-goodwill interest and is often the better instrument than a full non-compete. 12 months is a common, conservative duration counsel should size to the actual customer relationships protected.
+    default_value_rationale: Iowa sets no statutory cap; a customer non-solicit maps directly onto the customer-goodwill interest and is often the better instrument than a full non-compete. 12 months is the lighter side of the near-even 12/24-month split observed in benchmarked, publicly-filed employee agreements — a conservative duration counsel should size to the actual customer relationships protected.
   - name: covered_customer_period
     type: string
     description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
@@ -102,7 +106,7 @@ fields:
     default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
   - name: noncompete_included
     type: boolean
-    description: Whether the non-competition covenant is included. Iowa has no general non-compete statute; a non-compete is enforceable only to the extent it satisfies the three-prong Revere Transducers / Lamp reasonableness test — reasonably necessary to protect the employer, not unreasonably restrictive of the employee, not prejudicial to the public interest — and is tied to a protectable interest rather than ordinary competition, with the employer bearing the burden of proving reasonableness. This template recites the protectable-interest basis and sizes the restraint to the employer's actual footprint.
+    description: Whether the non-competition covenant is included. Iowa has no general non-compete statute; a non-compete is enforceable only to the extent it satisfies the three-prong reasonableness test — reasonably necessary to protect the employer, not unreasonably restrictive of the employee, not prejudicial to the public interest — and is tied to a protectable interest rather than ordinary competition, with the employer seeking enforcement carrying the burden of proving reasonableness. This template recites the protectable-interest basis and sizes the restraint to the employer's actual footprint.
     display_label: Non-Competition Included
     default: false
     section: Non-Competition
@@ -122,7 +126,7 @@ fields:
     display_label: Restricted Territory
     default: the geographic area in which Employee provided services
     section: Non-Competition
-    default_value_rationale: Tied to the employee's actual service area. Iowa imposes no statutory cap on territory; a narrower area genuinely needed to protect customer relationships or confidential information is far easier to defend under the three-prong test than a statewide ban. Iowa's reformation cases trim an overbroad territory to the footprint the worker actually served — Farm Bureau narrowed a two-county restraint to the six townships the employee worked — so an overbroad territory invites the court to cut the covenant down.
+    default_value_rationale: Tied to the employee's actual service area. Iowa imposes no statutory cap on territory; a narrower area genuinely needed to protect customer relationships or confidential information is far easier to defend under the three-prong test than a statewide ban. Iowa's reformation cases trim an overbroad territory to the footprint the worker actually served, so an overbroad territory invites the court to cut the covenant down.
   - name: competitive_business_definition
     type: string
     description: Description of the business activities that constitute competition with the employer.
@@ -151,8 +155,10 @@ fields:
     description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives).
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

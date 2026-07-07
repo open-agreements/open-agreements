@@ -1,4 +1,4 @@
-name: OpenAgreements Employee Restrictive Covenant (Wyoming)
+name: Employee Restrictive Covenant (Wyoming)
 category: non-compete
 description: Wyoming-specific employee restrictive covenant agreement with modular covenant structure (non-compete, non-solicitation, non-dealing, non-investment, confidentiality, non-disparagement). Incorporates Wyo. Stat. section 1-23-108 (SF 107, 2025) pathway gating for non-compete-adjacent covenants. Drafted as a starting point for review by licensed counsel.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-wyoming
@@ -158,7 +158,9 @@ fields:
     description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across Fortune 500 restrictive covenant agreements.
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives).
     section: Definitions
   - name: noninvestment_included
     type: boolean

@@ -1,4 +1,4 @@
-name: OpenAgreements Employee Restrictive Covenant (Washington)
+name: Employee Restrictive Covenant (Washington)
 category: non-compete
 description: 'Washington-specific employee restrictive covenant agreement built for chapter 49.62 RCW as amended by SSB 5935 (effective 2024): confidentiality and trade-secret protection, customer and employee non-solicitation held to the statutory solicitation-only definition, and an optional non-compete gated on the inflation-adjusted earnings threshold ($126,858.83 for employees / $317,147.09 for independent contractors in 2026 per the Department of Labor & Industries), the at-hire written disclosure or post-hire independent consideration requirement, the eighteen-month duration presumption, and the layoff garden-leave-pay condition. Governing law, venue, and choice of law are locked to Washington for Washington-based workers under RCW 49.62.050, and the agreement flags the June 30, 2027 near-total ban under ESHB 1155. Because RCW 49.62.080(3) penalizes judicial reformation, each covenant is drawn to the minimum the legitimate interest requires. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-washington
@@ -76,7 +76,8 @@ fields:
     default: 24 months
     section: Employee Non-Solicitation
     default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. Washington excludes an agreement not to solicit the employer's employees to leave from the non-compete definition entirely, so this covenant is not subject to the eighteen-month presumption that governs non-competes; the exclusion turns on the solicitation-only shape of the clause, not its length.
-    rationale_source: editorial
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
   - name: covered_employee_period
     type: string
     description: Lookback period for determining which employees are covered by the non-solicitation restriction.
@@ -95,8 +96,10 @@ fields:
     description: Duration of customer non-solicitation restriction
     display_label: Customer Non-Solicitation Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
-    default_value_rationale: 12 months is conservative and sits below the eighteen-month ceiling that ESHB 1155 will impose on the surviving customer non-solicitation exclusion effective June 30, 2027, so the clause remains within the narrowed exclusion after that date.
+    default_value_rationale: 12 months is the lighter side of the near-even 12/24-month split observed in benchmarked, publicly-filed employee agreements, and it sits below the eighteen-month ceiling that will govern the surviving customer non-solicitation exclusion effective June 30, 2027, so the clause remains within the narrowed exclusion after that date.
   - name: covered_customer_period
     type: string
     description: Lookback period for determining which customers are covered by the non-solicitation restriction.
@@ -182,8 +185,9 @@ fields:
     display_label: Passive Public Holdings Threshold
     default: five percent
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements. A carve-out that technically barred index funds and ordinary public shares would restrain more than any legitimate interest requires, inviting the statutory reformation penalty.
-    rationale_source: editorial
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives). A carve-out that technically barred index funds and ordinary public shares would restrain more than any legitimate interest requires, inviting the statutory reformation penalty.
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

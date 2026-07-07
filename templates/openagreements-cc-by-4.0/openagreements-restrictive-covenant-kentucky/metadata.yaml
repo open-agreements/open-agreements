@@ -1,4 +1,4 @@
-name: OpenAgreements Employee Restrictive Covenant (Kentucky)
+name: Employee Restrictive Covenant (Kentucky)
 category: non-compete
 description: 'Kentucky-specific employee restrictive covenant agreement built for Kentucky''s common-law reasonableness regime: there is no general Kentucky non-compete statute, so every post-employment restraint stands or falls on the fair-protection standard restated in Kegel v. Tillotson (fair protection to the covenantee''s interests, no undue hardship on the party restricted, and no interference with the public interests). It provides confidentiality and trade-secret protection backstopped by the Kentucky Uniform Trade Secrets Act (KRS 365.880-365.900), a new-consideration recital for mid-employment covenants drawn to the Creech rule (Charles T. Creech, Inc. v. Brown) — continued at-will employment alone is not enough and a bare recital does not cure the gap — customer and employee non-solicitation, an optional non-compete tied to identified protectable interests and sized to the actual footprint, discretionary judicial reformation the drafting does not rely on (Kegel''s blue-pencil rule; Hodges v. Todd supplied a missing geographic limit in a sale-of-business case), a Kentucky choice-of-law clause anchored in a genuine connection (Senture, LLC v. Dietrich; Edwards Moving & Rigging, Inc. v. W.O. Grubb Steel Erection, Inc.), a breach-tied extension flagged as an open Kentucky question, and the one categorical statutory ban — KRS 216.724 voids non-compete and buy-out clauses between a health care services agency and its temporary direct care staff. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-kentucky
@@ -86,6 +86,8 @@ fields:
     description: Duration of employee non-solicitation restriction
     display_label: Employee Non-Solicitation Duration
     default: 24 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: Kentucky sets no statutory cap on duration; enforceability turns on the holistic Kegel fair-protection reasonableness standard rather than a fixed number. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, and counsel should size the term to the employer's actual protectable interest.
   - name: covered_employee_period
@@ -106,8 +108,10 @@ fields:
     description: Duration of customer/partner non-solicitation restriction
     display_label: Customer Non-Solicitation Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
-    default_value_rationale: Kentucky sets no statutory cap; a customer non-solicit maps directly onto the customer-goodwill interest and enforcement turns on proving contact with protected customers rather than meeting the statutory trade-secret threshold, so it is often the better instrument than a full non-compete. 12 months is a common, conservative duration counsel should size to the actual customer relationships protected.
+    default_value_rationale: Kentucky sets no statutory cap; a customer non-solicit maps directly onto the customer-goodwill interest and enforcement turns on proving contact with protected customers rather than meeting the statutory trade-secret threshold, so it is often the better instrument than a full non-compete. 12 months is the lighter side of the near-even 12/24-month split observed in benchmarked, publicly-filed employee agreements — a conservative duration counsel should size to the actual customer relationships protected.
   - name: covered_customer_period
     type: string
     description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
@@ -129,8 +133,10 @@ fields:
     description: Duration of non-competition restriction
     display_label: Non-Competition Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
     section: Non-Competition
-    default_value_rationale: Kentucky imposes no statutory cap on duration; courts weigh time and territory together against the employer's real protectable interest under the Kegel fair-protection standard, so there is no safe-harbor number. 12 months is a common, conservative default counsel should size to the actual role and market rather than copy from another form.
+    default_value_rationale: Kentucky imposes no statutory cap on duration; courts weigh time and territory together against the employer's real protectable interest under the Kegel fair-protection standard, so there is no safe-harbor number. 12 months matches the modal non-compete term observed in benchmarked, publicly-filed employee agreements — a conservative default counsel should size to the actual role and market rather than copy from another form.
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
@@ -168,8 +174,10 @@ fields:
     description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives).
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

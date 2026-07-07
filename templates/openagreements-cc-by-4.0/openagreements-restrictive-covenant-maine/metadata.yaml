@@ -1,4 +1,4 @@
-name: OpenAgreements Employee Restrictive Covenant (Maine)
+name: Employee Restrictive Covenant (Maine)
 category: non-compete
 description: 'Maine-specific employee restrictive covenant agreement built for 26 M.R.S. § 599-A: confidentiality and trade-secret protection tied to the statute''s three legitimate business interests (trade secrets, non-trade-secret confidential information, and goodwill), an employee non-solicitation covenant, a customer non-solicitation covenant, and an optional non-compete drawn to Maine''s reasonableness standard. The agreement recites the § 599-A(4) pre-offer disclosure and three-business-day review window as statutory duties, states the § 599-A(5) delayed-effectiveness mechanics (no effect until the later of one year of employment or six months from signing, except for allopathic and osteopathic physicians), bars the non-compete at or below the 400% federal-poverty-level wage floor, excludes non-owner veterinarians, flags the L.D. 2200 health-care-practitioner restriction for agreements entered into or renewed on or after July 13, 2026, excludes employer-to- employer no-poach terms under § 599-B, keeps Maine law and a Maine forum for Maine-based workers, and drafts each covenant to the restraint the employer actually intends to enforce rather than relying on discretionary judicial reformation. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-maine
@@ -115,7 +115,8 @@ fields:
     display_label: Employee Non-Solicitation Duration
     default: 24 months
     section: Employee Non-Solicitation
-    rationale_source: editorial
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. Maine names non-solicitation agreements among the lighter alternatives its non-compete framework prefers, so a term sized to the actual workforce interest keeps the clause the lighter tool rather than a de facto hiring ban.
   - name: covered_employee_period
     type: string
@@ -136,8 +137,9 @@ fields:
     display_label: Customer Non-Solicitation Duration
     default: 12 months
     section: Customer Non-Solicitation
-    rationale_source: editorial
-    default_value_rationale: 12 months is a common enforceable duration. A Maine customer non-solicit is one of the statute's preferred alternatives but must still serve goodwill or confidential information and sweep no wider than that interest requires, and a shorter term supports that reasonableness showing.
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
+    default_value_rationale: 12 months is the lighter side of the near-even 12/24-month split observed in benchmarked, publicly-filed employee agreements and is a common enforceable duration here. A Maine customer non-solicit is one of the statute's preferred alternatives but must still serve goodwill or confidential information and sweep no wider than that interest requires, and a shorter term supports that reasonableness showing.
   - name: covered_customer_period
     type: string
     description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
@@ -159,8 +161,9 @@ fields:
     display_label: Non-Competition Duration
     default: 12 months
     section: Non-Competition
-    rationale_source: editorial
-    default_value_rationale: 12 months is a common enforceable duration. Maine sets no statutory maximum; duration is judged as a fact-intensive reasonableness question considering duration, geographic scope, and the nature of the protected interest, so a modest term supports that showing. The clock also does not begin until the Maine delayed-effectiveness period runs.
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
+    default_value_rationale: 12 months matches the modal non-compete term observed in benchmarked, publicly-filed employee agreements and is a common enforceable duration here. Maine sets no statutory maximum; duration is judged as a fact-intensive reasonableness question considering duration, geographic scope, and the nature of the protected interest, so a modest term supports that showing. The clock also does not begin until the Maine delayed-effectiveness period runs.
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
@@ -199,8 +202,10 @@ fields:
     description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives).
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

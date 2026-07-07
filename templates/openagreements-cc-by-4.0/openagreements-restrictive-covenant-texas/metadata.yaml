@@ -1,4 +1,4 @@
-name: OpenAgreements Employee Restrictive Covenant (Texas)
+name: Employee Restrictive Covenant (Texas)
 category: non-compete
 description: 'Texas-specific employee restrictive covenant agreement built for the Texas Covenants Not to Compete Act (Tex. Bus. & Com. Code sections 15.50-15.52): confidentiality and trade-secret protection, an ancillary-to-an-otherwise-enforceable-agreement consideration recital, customer non-solicitation and an optional non-compete drafted to reasonable time, area, and scope, mandatory judicial reformation, physician and health-care-practitioner buyout terms, and Texas choice-of-law and forum language. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-texas
@@ -72,7 +72,8 @@ fields:
     display_label: Employee Non-Solicitation Duration
     default: 24 months
     section: Employee Non-Solicitation
-    rationale_source: editorial
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. Either term must satisfy the Covenants Not to Compete Act's reasonableness test, which requires limitations no greater than necessary to protect Employer's goodwill or other business interest.
   - name: covered_employee_period
     type: string
@@ -93,8 +94,9 @@ fields:
     display_label: Customer Non-Solicitation Duration
     default: 12 months
     section: Customer Non-Solicitation
-    rationale_source: editorial
-    default_value_rationale: 12 months is a commonly enforced duration for a customer non-solicitation covenant and is reasonable under the Covenants Not to Compete Act's reasonableness test.
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
+    default_value_rationale: 12 months is the lighter side of the near-even 12/24-month split observed in benchmarked, publicly-filed employee agreements and is reasonable under the Covenants Not to Compete Act's reasonableness test.
   - name: covered_customer_period
     type: string
     description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
@@ -116,8 +118,9 @@ fields:
     display_label: Non-Competition Duration
     default: 12 months
     section: Non-Competition
-    rationale_source: editorial
-    default_value_rationale: 12 months is a commonly enforced non-competition duration and a reasonable time restraint under the Covenants Not to Compete Act's reasonableness test. The tool should not default to a longer term that a court would find greater than necessary to protect Employer's goodwill.
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
+    default_value_rationale: 12 months matches the modal non-compete term observed in benchmarked, publicly-filed employee agreements and is a reasonable time restraint under the Covenants Not to Compete Act's reasonableness test. The tool should not default to a longer term that a court would find greater than necessary to protect Employer's goodwill.
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
@@ -154,8 +157,10 @@ fields:
     description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives).
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

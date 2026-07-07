@@ -1,6 +1,6 @@
 ---
 template_id: openagreements-restrictive-covenant-nevada
-name: OpenAgreements Employee Restrictive Covenant (Nevada)
+name: Employee Restrictive Covenant (Nevada)
 category: non-compete
 description: >-
   Nevada-specific employee restrictive covenant agreement built for NRS 613.195
@@ -108,6 +108,8 @@ fields:
     description: Duration of employee non-solicitation restriction
     display_label: Employee Non-Solicitation Duration
     default: 24 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: >-
       Nevada does not fix a statutory duration for employee non-solicitation, so the covenant is
@@ -136,12 +138,15 @@ fields:
     description: Duration of customer/partner non-solicitation restriction
     display_label: Customer Non-Solicitation Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
     default_value_rationale: >-
-      No Nevada statute fixes a duration for customer non-solicitation; 12 months
-      is a common enforceable term drawn to the employer's actual customer
-      relationships, and the volunteer-customer carve-out limits its reach
-      regardless of duration.
+      No Nevada statute fixes a duration for customer non-solicitation; 12 months is the
+      lighter side of the near-even 12/24-month split observed in benchmarked,
+      publicly-filed employee agreements, drawn to the employer's actual customer
+      relationships, and the volunteer-customer carve-out limits its reach regardless of
+      duration.
   - name: covered_customer_period
     type: string
     description: >-
@@ -177,12 +182,15 @@ fields:
     description: Duration of non-competition restriction
     display_label: Non-Competition Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
     section: Non-Competition
     default_value_rationale: >-
-      Nevada fixes no statutory duration ceiling; NRS 613.195(6) authorizes a
-      court to revise an unreasonable time limit down to reasonableness, so the
-      duration should be drawn within the enforceable range at the outset. 12
-      months is a common enforceable term for a former-employee non-compete.
+      Nevada fixes no statutory duration ceiling; the statute authorizes a court to
+      revise an unreasonable time limit down to reasonableness, so the duration should
+      be drawn within the enforceable range at the outset. 12 months matches the modal
+      non-compete term observed in benchmarked, publicly-filed employee agreements and
+      is a common enforceable term for a former-employee non-compete.
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
@@ -257,11 +265,15 @@ fields:
       the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
     default_value_rationale: >-
-      Five percent of any class of publicly traded securities is the standard
-      passive investment carveout across restrictive covenant agreements, and
-      keeps ordinary public-share ownership off Nevada's undue-hardship scale.
+      Five percent of any class of publicly traded securities is the modal
+      passive-investment carve-out threshold observed in benchmarked, publicly-filed
+      employee agreements that include the carve-out (lower 1-3 percent thresholds are
+      the common tighter alternatives), and keeps ordinary public-share ownership off
+      Nevada's undue-hardship scale.
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.
