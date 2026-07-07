@@ -37,6 +37,11 @@ env:
   # pricing drifts.
   LLM_GATE_PRICE_PER_M_INPUT: ${{ vars.LLM_GATE_PRICE_PER_M_INPUT || '0.30' }}
   LLM_GATE_PRICE_PER_M_OUTPUT: ${{ vars.LLM_GATE_PRICE_PER_M_OUTPUT || '2.50' }}
+  # Cap the pr_diff.patch bytes inlined into each prompt. A larger path-scoped
+  # diff is truncated (with a git-diff pointer) rather than flooding the model's
+  # context / burning token quota across the parallel matrix (safe-docx#272,
+  # failure mode 2). Override per-repo if a bigger budget is warranted.
+  LLM_GATE_MAX_DIFF_BYTES: ${{ vars.LLM_GATE_MAX_DIFF_BYTES || '131072' }}
 
 jobs:
   parse-checklist:
@@ -324,11 +329,62 @@ jobs:
           gemini-cli-version: ${{ env.GEMINI_CLI_VERSION }}
           gemini-model: ${{ env.GEMINI_MODEL }}
           gemini-api-key: ${{ secrets.GEMINI_API_KEY }}
+          base-ref: ${{ needs.parse-checklist.outputs.base_ref }}
           price-per-m-input: ${{ env.LLM_GATE_PRICE_PER_M_INPUT }}
           price-per-m-output: ${{ env.LLM_GATE_PRICE_PER_M_OUTPUT }}
+          max-diff-bytes: ${{ env.LLM_GATE_MAX_DIFF_BYTES }}
           working-directory: review
 
+      # Defense-in-depth against NO RESULTS (safe-docx#272). The composite action
+      # always writes a result-<id>.json on its own — even its all-retries-failed
+      # WARN fallback does — but only if the job reaches its runtime step. Any
+      # earlier failure (npm install outage, settings-gen error, a future setup
+      # regression, or the checkout/diff steps) leaves this matrix item with no
+      # artifact, and the aggregate then has fewer rows than checks — or zero —
+      # and posts NO RESULTS. NO RESULTS is the exact "looks enforcing but isn't"
+      # state: in blocking mode it fails opaquely, in advisory mode it posts an
+      # unhelpful comment. If no result exists by now, synthesize a WARN so every
+      # check always contributes a determinate, overridable row. This step
+      # carries NO GEMINI_API_KEY — it never runs the model, only backfills a
+      # verdict.
+      - name: Ensure a result artifact exists (fallback)
+        if: always()
+        env:
+          CHECK_ID: ${{ matrix.id }}
+          QUESTION: ${{ matrix.question }}
+          GEMINI_MODEL: ${{ env.GEMINI_MODEL }}
+        run: |
+          set -euo pipefail
+          RESULT="review/results/result-${CHECK_ID}.json"
+          if [ -f "$RESULT" ]; then
+            echo "Result already present for check ${CHECK_ID}; no fallback needed."
+            exit 0
+          fi
+          echo "::warning::No result artifact for check ${CHECK_ID}; a step failed before the gate wrote its verdict. Emitting a WARN fallback so the aggregate posts a determinate row instead of NO RESULTS."
+          mkdir -p review/results
+          jq -n \
+            --arg id "$CHECK_ID" \
+            --arg question "$QUESTION" \
+            --arg model "${GEMINI_MODEL:-unknown}" \
+            '{
+              id: $id,
+              question: $question,
+              status: "WARN",
+              justification: "Unable to verify: the gate job failed before producing a result (setup/install/diff-extraction error, not a model verdict). See the workflow run logs; re-run the gate once the transient failure clears.",
+              attempts: 0,
+              estimated_input_tokens: 0,
+              estimated_output_tokens: 0,
+              estimated_usd: "0.0000",
+              model: $model
+            }' > "$RESULT"
+          cat "$RESULT"
+
       - name: Upload per-item result
+        # `always()`: the fallback above (or the composite action's own WARN
+        # result) must reach the aggregate even when an earlier step failed and
+        # marked the job red. Without this the artifact upload is skipped on a
+        # failed job and the aggregate is back to NO RESULTS.
+        if: always()
         uses: actions/upload-artifact@v5
         with:
           name: result-${{ matrix.id }}
