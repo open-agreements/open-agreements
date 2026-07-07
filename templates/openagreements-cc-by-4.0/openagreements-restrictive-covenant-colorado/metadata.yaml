@@ -3,6 +3,7 @@ category: non-compete
 description: 'Colorado-specific employee restrictive covenant agreement built for C.R.S. § 8-2-113: confidentiality and trade-secret protection with the statutory general-skills and protected-disclosure carve-outs, an employee non-solicitation covenant, a customer non-solicitation covenant gated on sixty percent of the highly compensated worker threshold ($78,008.40 for 2026), and an optional non-compete gated on the highly compensated worker threshold ($130,014 for 2026) and tied to trade-secret protection. Both earnings gates run at signing and at enforcement. The agreement flags the separate, signed 14-day advance-notice document the statute requires, excludes restrictive covenants for health-care providers under S.B. 25-083 with the patient-communication protections, keeps Colorado law and a Colorado forum for Colorado-based workers, and drafts each covenant within its enforceable scope rather than relying on discretionary judicial reformation. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-colorado
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

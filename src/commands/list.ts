@@ -47,6 +47,7 @@ function runListJson(opts: ListOptions): void {
         allow_derivatives: meta.allow_derivatives,
         distribution: meta.distribution ?? 'bundled',
         artifact_type: meta.artifact_type ?? 'template',
+        stability: meta.stability ?? null,
         credits: meta.credits ?? [],
         derived_from: meta.derived_from,
         fields: mapFields(meta.fields, meta.priority_fields),
@@ -75,6 +76,7 @@ function runListJson(opts: ListOptions): void {
           allow_derivatives: meta.allow_derivatives,
           distribution: meta.distribution ?? 'bundled',
           artifact_type: meta.artifact_type ?? 'template',
+          stability: meta.stability ?? null,
           credits: meta.credits ?? [],
           derived_from: meta.derived_from,
           fields: mapFields(meta.fields, meta.priority_fields),
@@ -133,7 +135,7 @@ function runListJson(opts: ListOptions): void {
 }
 
 function listAgreementsWithOptions(_opts: ListOptions): void {
-  interface Row { id: string; category: string; license: string; priority: number; total: number; source: string; sourceUrl: string }
+  interface Row { id: string; category: string; license: string; stability: string; priority: number; total: number; source: string; sourceUrl: string }
   const rows: Row[] = [];
   for (const entry of listTemplateEntries()) {
     const id = entry.id;
@@ -145,6 +147,7 @@ function listAgreementsWithOptions(_opts: ListOptions): void {
         id,
         category: categoryFromId(id),
         license: meta.license,
+        stability: meta.stability ?? '—',
         priority,
         total: meta.fields.length,
         source: sourceName(meta.source_url) || '—',
@@ -155,6 +158,7 @@ function listAgreementsWithOptions(_opts: ListOptions): void {
         id,
         category: categoryFromId(id),
         license: 'ERROR',
+        stability: '—',
         priority: 0,
         total: 0,
         source: '—',
@@ -173,6 +177,7 @@ function listAgreementsWithOptions(_opts: ListOptions): void {
           id,
           category: categoryFromId(id),
           license: meta.license,
+          stability: meta.stability ?? '—',
           priority,
           total: meta.fields.length,
           source: sourceName(meta.source_url) || '—',
@@ -183,6 +188,7 @@ function listAgreementsWithOptions(_opts: ListOptions): void {
           id,
           category: categoryFromId(id),
           license: 'ERROR',
+          stability: '—',
           priority: 0,
           total: 0,
           source: '—',
@@ -202,6 +208,7 @@ function listAgreementsWithOptions(_opts: ListOptions): void {
           id,
           category: categoryFromId(id),
           license,
+          stability: '—',
           priority,
           total: meta.fields.length,
           source: sourceName(meta.source_url) || '—',
@@ -212,6 +219,7 @@ function listAgreementsWithOptions(_opts: ListOptions): void {
           id,
           category: categoryFromId(id),
           license: 'ERROR',
+          stability: '—',
           priority: 0,
           total: 0,
           source: '—',
@@ -228,14 +236,14 @@ function listAgreementsWithOptions(_opts: ListOptions): void {
   rows.sort((a, b) => a.id.localeCompare(b.id));
 
   console.log(
-    `\n${'Agreement'.padEnd(40)} ${'Category'.padEnd(12)} ${'License'.padEnd(14)} ${'Fields'.padEnd(8)} ${'Source'.padEnd(16)} URL`
+    `\n${'Agreement'.padEnd(40)} ${'Category'.padEnd(12)} ${'License'.padEnd(14)} ${'Stability'.padEnd(14)} ${'Fields'.padEnd(8)} ${'Source'.padEnd(16)} URL`
   );
-  console.log('─'.repeat(120));
+  console.log('─'.repeat(130));
 
   for (const row of rows) {
     const fields = row.license === 'ERROR' ? '—' : `${row.priority}/${row.total}`;
     console.log(
-      `${row.id.padEnd(40)} ${row.category.padEnd(12)} ${row.license.padEnd(14)} ${fields.padEnd(8)} ${row.source.padEnd(16)} ${row.sourceUrl}`
+      `${row.id.padEnd(40)} ${row.category.padEnd(12)} ${row.license.padEnd(14)} ${row.stability.padEnd(14)} ${fields.padEnd(8)} ${row.source.padEnd(16)} ${row.sourceUrl}`
     );
   }
 

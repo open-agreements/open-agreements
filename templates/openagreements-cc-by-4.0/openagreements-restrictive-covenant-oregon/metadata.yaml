@@ -3,6 +3,7 @@ category: non-compete
 description: 'Oregon-specific employee restrictive covenant agreement built for ORS 653.295''s void-unless regime: confidentiality and trade-secret protection, customer and employee non-solicitation and non-dealing covenants that fall outside the statutory checklist, and an optional non-compete gated on the two-week written-offer notice or bona fide advancement, exempt-salaried status above the inflation-indexed salary threshold, a statutory protectable interest, the 12-month cap, and delivery of a signed copy within 30 days after termination, with a garden-leave pay-to-enforce alternative for sub-threshold workers, the 2025 medical-licensee ban, the Workplace Fairness Act carve-out, and a draft-within-the-statute posture rather than reliance on judicial reformation. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-oregon
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

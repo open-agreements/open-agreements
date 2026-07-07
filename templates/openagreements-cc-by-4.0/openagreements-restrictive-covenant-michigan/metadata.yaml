@@ -3,6 +3,7 @@ category: non-compete
 description: 'Michigan-specific employee restrictive covenant agreement built for MCL § 445.774a(1): confidentiality and trade-secret protection backstopped by the Michigan Uniform Trade Secrets Act (MCL §§ 445.1901–445.1910), customer and employee non-solicitation, an optional non-compete gated on a reasonable competitive business interest and sized reasonably as to duration, geographic area, and line of business (St. Clair Medical, P.C. v. Borgiel; Mid Mich. Med. Billing Serv., Inc. v. Williams), a consideration recital keyed to Michigan''s continued-employment-in-an-at-will-setting rule (QIS, Inc. v. Industrial Quality Control, Inc.), a general-knowledge-and-skill carve-out (Follmer, Rudzewicz & Co., P.C. v. Kosco), a paired governing-law and forum-selection provision (Stryker Corp. v. Ridgeway; Barshaw v. Allegheny Performance Plastics, LLC), physician proof-of-diversion scrutiny (Isidore Steiner, DPM, PC v. Bonanni), and statutory blue-pencil reformation that the drafting does not rely on (MCL § 445.774a(1) empowers a court to limit an unreasonable covenant and enforce it as limited, but the power is discretionary). Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-michigan
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

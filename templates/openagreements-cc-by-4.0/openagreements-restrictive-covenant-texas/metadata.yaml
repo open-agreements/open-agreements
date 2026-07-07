@@ -3,6 +3,7 @@ category: non-compete
 description: 'Texas-specific employee restrictive covenant agreement built for the Texas Covenants Not to Compete Act (Tex. Bus. & Com. Code sections 15.50-15.52): confidentiality and trade-secret protection, an ancillary-to-an-otherwise-enforceable-agreement consideration recital, customer non-solicitation and an optional non-compete drafted to reasonable time, area, and scope, mandatory judicial reformation, physician and health-care-practitioner buyout terms, and Texas choice-of-law and forum language. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-texas
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

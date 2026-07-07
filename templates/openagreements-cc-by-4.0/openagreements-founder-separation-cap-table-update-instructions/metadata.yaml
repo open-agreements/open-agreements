@@ -3,6 +3,7 @@ category: corporate-governance
 description: 'Written instructions from an authorized officer of a Delaware corporation to the corporate secretary, transfer agent, or cap-table administrator to record a completed founder share repurchase: cancel or take possession of the repurchased certificates (or make the book-entry transfer for uncertificated shares), update the stock ledger, and reflect the disposition — cancelled and retired or held as treasury — on the cap table. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-founder-separation-cap-table-update-instructions
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

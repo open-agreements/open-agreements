@@ -3,6 +3,7 @@ category: non-compete
 description: 'New York-specific employee restrictive covenant agreement built for New York''s common-law reasonableness regime: there is no general New York non-compete statute, so every post-employment restraint stands or falls on the three-pronged common-law reasonableness test, and a single failed prong invalidates the covenant. It provides confidentiality and trade-secret protection, a continued-employment consideration recital, customer and employee non-solicitation with the customer non-solicit narrowed to customers the employee actually served, an optional non-compete tied to New York''s short list of recognized protectable interests, a broadcast-employee exclusion under N.Y. Labor Law § 202-k, a sale-of-business covenant aligned with New York''s implied goodwill covenant, a governing-law clause drafted against New York''s public-policy limit on foreign choice-of-law, and a drafting posture that sizes each covenant to the protectable interest rather than relying on discretionary partial enforcement. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-new-york
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

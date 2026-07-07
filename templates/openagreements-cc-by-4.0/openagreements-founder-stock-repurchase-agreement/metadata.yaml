@@ -3,6 +3,7 @@ category: corporate-governance
 description: Agreement between a Delaware corporation and a departing founder consummating the repurchase and cancellation of the founder's shares, whether as a negotiated buyback or as a belt-and-suspenders confirmation of a repurchase right exercised under the founder's existing Restricted Stock Purchase Agreement, with an optional mutual-release rider. Drafted as a starting point for licensed counsel review.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-founder-stock-repurchase-agreement
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

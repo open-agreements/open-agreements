@@ -3,6 +3,7 @@ category: non-compete
 description: California-specific employee restrictive covenant agreement centered on confidentiality, trade secret protection, property return, and non-disparagement. Omits employee competition, customer-solicitation, employee-solicitation, non-dealing, and non-investment employment restraints under Cal. Bus. & Prof. Code sections 16600, 16600.1, and 16600.5, and includes California choice-of-law and forum language reflecting Cal. Lab. Code section 925. Drafted as a starting point for licensed counsel review.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-california
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

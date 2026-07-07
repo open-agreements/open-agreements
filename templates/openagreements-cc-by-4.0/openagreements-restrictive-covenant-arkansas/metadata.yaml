@@ -3,6 +3,7 @@ category: non-compete
 description: 'Arkansas-specific employee restrictive covenant agreement built for Ark. Code Ann. section 4-75-101: confidentiality and trade-secret protection, employee and customer non-solicitation, a non-dealing covenant, and an optional non-compete drawn to the statutory protectable-interest and time-and-scope test. Recites the statutory categories of protectable business interest, keeps durations within the two-year presumptively-reasonable window, relies on the continued-employment consideration rule, voids any practice restriction on a physician under the 2025 amendment, flags the Title 17, Subtitle 3 licensed-professional exclusion, and acknowledges the mandatory judicial reformation remedy. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-arkansas
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

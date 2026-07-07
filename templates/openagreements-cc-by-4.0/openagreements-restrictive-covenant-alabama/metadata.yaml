@@ -3,6 +3,7 @@ category: non-compete
 description: 'Alabama-specific employee restrictive covenant agreement built for the Alabama Restrictive Covenant Act, Ala. Code section 8-1-190 et seq.: confidentiality and trade-secret protection, a current-customer non-solicitation, an employee no-hire covenant confined to uniquely essential workers, and an optional non-compete drawn to the section 8-1-190(b)(4) employee exception. Recites the void-by-default rule and its six safe-harbor categories, ties each covenant to a section 8-1-191 protectable interest, keeps durations within the statutory presumptions (two years employee non-compete, eighteen months current-customer non-solicit), confirms the section 8-1-192 all-parties signature and adequate-consideration formalities, avoids execution before the employment relationship exists, carves out the section 8-1-196 professional exemption, treats reformation as reaching only duration, and applies Alabama''s fundamental-policy conflicts rule. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-alabama
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

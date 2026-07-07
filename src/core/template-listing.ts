@@ -37,6 +37,8 @@ export interface TemplateListItem {
   source: string | null;
   attribution_text?: string;
   allow_derivatives: boolean;
+  /** Maturity signal (open-agreements#243); undefined for templates that don't declare it. */
+  stability?: string;
   fields: TemplateListField[];
 }
 
@@ -143,6 +145,7 @@ export function listTemplateItems(): TemplateListItem[] {
         source: sourceName(meta.source_url),
         attribution_text: meta.attribution_text,
         allow_derivatives: meta.allow_derivatives,
+        ...(meta.stability !== undefined ? { stability: meta.stability } : {}),
         fields: mapFields(meta.fields, meta.priority_fields),
       });
     } catch {

@@ -3,6 +3,7 @@ category: non-compete
 description: 'Pennsylvania-specific employee restrictive covenant agreement built for Pennsylvania''s common-law reasonableness regime: there is no general Pennsylvania non-compete statute, so every post-employment restraint stands or falls on Pennsylvania''s four-part common-law test — ancillary to an employment relationship, supported by adequate consideration, reasonably limited in duration and geography, and tied to a legitimate protectable interest. It provides confidentiality and trade-secret protection, a new-consideration recital for a covenant signed after employment begins that does not lean on a Uniform Written Obligations Act recital, customer and employee non-solicitation drafted as affirmative-outreach restraints with a geographic limit, an optional non-compete tied to identified protectable interests and sized to the actual footprint under close scrutiny, a health care practitioner clause reflecting the Fair Contracting for Health Care Practitioners Act (Act 74 of 2024) one-year cap, dismissal rule, and 90-day patient-notice duty, an express assignability provision the covenant needs to reach a buyer, and separable, tiered restraints that do not rely on discretionary judicial reformation. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-pennsylvania
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

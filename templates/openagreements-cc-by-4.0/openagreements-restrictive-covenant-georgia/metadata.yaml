@@ -3,6 +3,7 @@ category: non-compete
 description: 'Georgia-specific employee restrictive covenant agreement built for the Georgia Restrictive Covenants Act (O.C.G.A. § 13-8-50 et seq.): confidentiality and trade-secret protection keyed to continued protection under § 13-8-53(e), a customer non-solicitation anchored to material-contact customers under § 13-8-53(b) with no express geographic term required, an optional non-compete gated on the § 13-8-53(a) covered-employee functions and drafted to reasonable time, geographic area, and scope within the § 13-8-57(b) two-year presumption window, discretionary narrowing-only judicial modification under § 13-8-53(d), and Georgia choice-of-law language reflecting that Georgia law is the touchstone for enforceability. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-georgia
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

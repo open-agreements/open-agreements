@@ -3,6 +3,7 @@ category: other
 description: A stage-first, document-first closing checklist that tracks canonical documents, action items, and open issues for a transaction, and renders a formatted document for distribution to the working group.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-closing-checklist
 version: '2.1'
+stability: experimental
 license: CC0-1.0
 allow_derivatives: true
 distribution: bundled
