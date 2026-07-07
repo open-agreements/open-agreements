@@ -5,7 +5,7 @@
     {
       "name": "bonterms-mutual-nda",
       "tier": "internal",
-      "display_name": "Bonterms Mutual NDA",
+      "display_name": "Mutual NDA",
       "category": "confidentiality",
       "description": "Cover page for the Bonterms Mutual NDA (Version 1.0). The standard terms are incorporated by reference from bonterms.com.",
       "license": "CC0-1.0",
@@ -264,7 +264,7 @@
     {
       "name": "bonterms-professional-services-agreement",
       "tier": "internal",
-      "display_name": "Bonterms Professional Services Agreement",
+      "display_name": "Professional Services Agreement",
       "category": "professional-services",
       "description": "Cover page for the Bonterms Professional Services Agreement (Version 1.2). The standard terms are incorporated by reference from bonterms.com.",
       "license": "CC0-1.0",
@@ -335,7 +335,7 @@
     {
       "name": "common-paper-ai-addendum",
       "tier": "internal",
-      "display_name": "Common Paper AI Addendum",
+      "display_name": "AI Addendum",
       "category": "data-compliance",
       "description": "An AI addendum cover page and standard terms, based on Common Paper's standard form. Adds AI-specific provisions to an existing agreement, covering model training, input/output rights, and AI usage policies.",
       "license": "CC-BY-4.0",
@@ -684,7 +684,7 @@
     {
       "name": "common-paper-ai-addendum-in-app",
       "tier": "internal",
-      "display_name": "Common Paper AI Addendum In-App",
+      "display_name": "AI Addendum In-App",
       "category": "data-compliance",
       "description": "An in-app AI addendum based on Common Paper's standard form. A streamlined version of the AI addendum designed to be accepted electronically within an application.",
       "license": "CC-BY-4.0",
@@ -917,7 +917,7 @@
     {
       "name": "common-paper-amendment",
       "tier": "internal",
-      "display_name": "Common Paper Amendment",
+      "display_name": "Amendment",
       "category": "deals-partnerships",
       "description": "An amendment template for modifying existing agreements, based on Common Paper's standard form. References the original agreement and details the specific changes being made.",
       "license": "CC-BY-4.0",
@@ -1104,7 +1104,7 @@
     {
       "name": "common-paper-business-associate-agreement",
       "tier": "internal",
-      "display_name": "Common Paper Business Associate Agreement",
+      "display_name": "Business Associate Agreement",
       "category": "data-compliance",
       "description": "A HIPAA business associate agreement cover page and standard terms, based on Common Paper's standard form. Covers the use and protection of protected health information (PHI) between a covered entity and a business associate.",
       "license": "CC-BY-4.0",
@@ -1444,7 +1444,7 @@
     {
       "name": "common-paper-cloud-service-agreement",
       "tier": "internal",
-      "display_name": "Common Paper Cloud Service Agreement",
+      "display_name": "Cloud Service Agreement",
       "category": "sales-licensing",
       "description": "A cloud service agreement with order form and framework terms, based on Common Paper's standard terms. Covers SaaS subscriptions, payment, SLAs, liability, and data processing. Includes full Standard Terms v2.1.",
       "license": "CC-BY-4.0",
@@ -2225,7 +2225,7 @@
     {
       "name": "common-paper-csa-click-through",
       "tier": "internal",
-      "display_name": "Common Paper CSA Click-Through",
+      "display_name": "CSA Click-Through",
       "category": "sales-licensing",
       "description": "A click-through cloud service agreement based on Common Paper's standard terms. Designed for self-serve SaaS products where the customer accepts terms online rather than negotiating a paper agreement.",
       "license": "CC-BY-4.0",
@@ -2368,7 +2368,7 @@
     {
       "name": "common-paper-csa-with-ai",
       "tier": "internal",
-      "display_name": "Common Paper CSA With AI",
+      "display_name": "CSA With AI",
       "category": "sales-licensing",
       "description": "A cloud service agreement with AI provisions, key terms, and standard terms, based on Common Paper's standard form. Extends the standard CSA with AI-specific terms covering model training, input/output rights, and AI usage policies.",
       "license": "CC-BY-4.0",
@@ -3438,7 +3438,7 @@
     {
       "name": "common-paper-csa-with-sla",
       "tier": "internal",
-      "display_name": "Common Paper CSA With SLA",
+      "display_name": "CSA With SLA",
       "category": "sales-licensing",
       "description": "A cloud service agreement with SLA provisions, key terms, and standard terms, based on Common Paper's standard form. Includes uptime targets, response times, and support schedules alongside full CSA terms.",
       "license": "CC-BY-4.0",
@@ -4418,7 +4418,7 @@
     {
       "name": "common-paper-csa-without-sla",
       "tier": "internal",
-      "display_name": "Common Paper CSA Without SLA",
+      "display_name": "CSA Without SLA",
       "category": "sales-licensing",
       "description": "A cloud service agreement with key terms and standard terms, based on Common Paper's standard form. Covers SaaS subscriptions, payment, liability, and data processing.",
       "license": "CC-BY-4.0",
@@ -5335,7 +5335,7 @@
     {
       "name": "common-paper-data-processing-agreement",
       "tier": "internal",
-      "display_name": "Common Paper Data Processing Agreement",
+      "display_name": "Data Processing Agreement",
       "category": "data-compliance",
       "description": "A data processing agreement cover page and standard terms, based on Common Paper's standard form. Covers GDPR and data protection compliance, including processor/controller roles, data transfers, subprocessors, and security measures.",
       "license": "CC-BY-4.0",
@@ -6260,7 +6260,7 @@
     {
       "name": "common-paper-design-partner-agreement",
       "tier": "internal",
-      "display_name": "Common Paper Design Partner Agreement",
+      "display_name": "Design Partner Agreement",
       "category": "deals-partnerships",
       "description": "A design partner agreement cover page and standard terms, based on Common Paper's standard form. Covers partnerships where a company provides early access to a product in development in exchange for feedback and collaboration.",
       "license": "CC-BY-4.0",
@@ -6564,7 +6564,7 @@
     {
       "name": "common-paper-independent-contractor-agreement",
       "tier": "internal",
-      "display_name": "Common Paper Independent Contractor Agreement",
+      "display_name": "Independent Contractor Agreement",
       "category": "professional-services",
       "description": "An independent contractor agreement based on Common Paper's standard form. Covers the engagement of an independent contractor, including scope of services, rates, payment, timeline, and governing law.",
       "license": "CC-BY-4.0",
@@ -6760,7 +6760,7 @@
     {
       "name": "common-paper-letter-of-intent",
       "tier": "internal",
-      "display_name": "Common Paper Letter of Intent",
+      "display_name": "Letter of Intent",
       "category": "deals-partnerships",
       "description": "A letter of intent template for SaaS and technology deals, based on Common Paper's standard form. Outlines product, timeline, fees, and references an existing NDA.",
       "license": "CC-BY-4.0",
@@ -6929,7 +6929,7 @@
     {
       "name": "common-paper-mutual-nda",
       "tier": "internal",
-      "display_name": "Common Paper Mutual NDA",
+      "display_name": "Mutual NDA",
       "category": "confidentiality",
       "description": "A mutual non-disclosure agreement cover page based on Common Paper's standard terms. The cover page references the Standard Terms posted at commonpaper.com.",
       "license": "CC-BY-4.0",
@@ -7116,7 +7116,7 @@
     {
       "name": "common-paper-one-way-nda",
       "tier": "internal",
-      "display_name": "Common Paper One-Way NDA",
+      "display_name": "One-Way NDA",
       "category": "confidentiality",
       "description": "A one-way (unilateral) non-disclosure agreement cover page based on Common Paper's standard terms. The Discloser shares confidential information with the Receiver, but not vice versa. References the Standard Terms posted at commonpaper.com.",
       "license": "CC-BY-4.0",
@@ -7254,7 +7254,7 @@
     {
       "name": "common-paper-order-form",
       "tier": "internal",
-      "display_name": "Common Paper Order Form",
+      "display_name": "Order Form",
       "category": "sales-licensing",
       "description": "An order form template for cloud service agreements, based on Common Paper's standard form. References existing Key Terms and covers subscription details, fees, pilot period, payment, and professional services.",
       "license": "CC-BY-4.0",
@@ -7666,7 +7666,7 @@
     {
       "name": "common-paper-order-form-with-sla",
       "tier": "internal",
-      "display_name": "Common Paper Order Form with SLA",
+      "display_name": "Order Form with SLA",
       "category": "sales-licensing",
       "description": "An order form template with service level agreement (SLA) provisions, based on Common Paper's standard form. Extends the standard order form with uptime targets, response times, and support schedules.",
       "license": "CC-BY-4.0",
@@ -8159,7 +8159,7 @@
     {
       "name": "common-paper-partnership-agreement",
       "tier": "internal",
-      "display_name": "Common Paper Partnership Agreement",
+      "display_name": "Partnership Agreement",
       "category": "deals-partnerships",
       "description": "A partnership agreement cover page and standard terms, based on Common Paper's standard form. Covers business partnerships including obligations, fees, territory, liability, and data processing.",
       "license": "CC-BY-4.0",
@@ -8887,7 +8887,7 @@
     {
       "name": "common-paper-pilot-agreement",
       "tier": "internal",
-      "display_name": "Common Paper Pilot Agreement",
+      "display_name": "Pilot Agreement",
       "category": "deals-partnerships",
       "description": "A pilot agreement cover page and standard terms, based on Common Paper's standard form. Covers trial or pilot periods for cloud services, including fees, support, and liability provisions.",
       "license": "CC-BY-4.0",
@@ -9173,7 +9173,7 @@
     {
       "name": "common-paper-professional-services-agreement",
       "tier": "internal",
-      "display_name": "Common Paper Professional Services Agreement",
+      "display_name": "Professional Services Agreement",
       "category": "professional-services",
       "description": "A professional services agreement with key terms, statement of work, and standard terms, based on Common Paper's standard form. Covers consulting and professional services engagements including deliverables, IP ownership, fees, and liability.",
       "license": "CC-BY-4.0",
@@ -10009,7 +10009,7 @@
     {
       "name": "common-paper-software-license-agreement",
       "tier": "internal",
-      "display_name": "Common Paper Software License Agreement",
+      "display_name": "Software License Agreement",
       "category": "sales-licensing",
       "description": "Standard terms for a software license agreement, based on Common Paper's standard form. Provides the framework terms for on-premise software licensing, to be used with a separate cover page and order form.",
       "license": "CC-BY-4.0",
@@ -10025,7 +10025,7 @@
     {
       "name": "common-paper-statement-of-work",
       "tier": "internal",
-      "display_name": "Common Paper Statement of Work",
+      "display_name": "Statement of Work",
       "category": "professional-services",
       "description": "A statement of work template for professional services engagements, based on Common Paper's standard form. References a PSA or CSA Key Terms and covers scope, deliverables, timeline, fees, and expenses.",
       "license": "CC-BY-4.0",
@@ -10392,7 +10392,7 @@
     {
       "name": "common-paper-term-sheet",
       "tier": "internal",
-      "display_name": "Common Paper Term Sheet",
+      "display_name": "Term Sheet",
       "category": "deals-partnerships",
       "description": "A term sheet template for outlining key business terms, based on Common Paper's standard form. A simple topic-and-details format for early-stage deal discussions.",
       "license": "CC-BY-4.0",
@@ -10534,7 +10534,7 @@
     {
       "name": "nvca-certificate-of-incorporation",
       "tier": "field-selector",
-      "display_name": "NVCA Model Certificate of Incorporation",
+      "display_name": "Model Certificate of Incorporation",
       "category": "venture-financing",
       "description": "Amended and restated certificate of incorporation for venture-backed Delaware corporations, defining preferred stock rights, preferences, and privileges.",
       "license_note": "NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation instructions, not the source document.",
@@ -10952,7 +10952,7 @@
     {
       "name": "nvca-indemnification-agreement",
       "tier": "field-selector",
-      "display_name": "NVCA Model Indemnification Agreement",
+      "display_name": "Model Indemnification Agreement",
       "category": "venture-financing",
       "description": "Director and officer indemnification agreement for venture-backed companies, providing indemnification and advancement of expenses.",
       "license_note": "NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation instructions, not the source document.",
@@ -11122,7 +11122,7 @@
     {
       "name": "nvca-investors-rights-agreement",
       "tier": "field-selector",
-      "display_name": "NVCA Model Investors' Rights Agreement",
+      "display_name": "Model Investors' Rights Agreement",
       "category": "venture-financing",
       "description": "Investors' rights agreement for venture financings, covering registration rights, information rights, board observer rights, and protective provisions.",
       "license_note": "NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation instructions, not the source document.",
@@ -11265,7 +11265,7 @@
     {
       "name": "nvca-management-rights-letter",
       "tier": "field-selector",
-      "display_name": "NVCA Model Management Rights Letter",
+      "display_name": "Model Management Rights Letter",
       "category": "venture-financing",
       "description": "Management rights letter granting ERISA-qualifying management rights to venture capital fund investors.",
       "license_note": "NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation instructions, not the source document.",
@@ -11363,7 +11363,7 @@
     {
       "name": "nvca-rofr-co-sale-agreement",
       "tier": "field-selector",
-      "display_name": "NVCA Model Right of First Refusal and Co-Sale Agreement",
+      "display_name": "Model Right of First Refusal and Co-Sale Agreement",
       "category": "venture-financing",
       "description": "Right of first refusal and co-sale agreement for venture financings, restricting transfer of founder shares and providing investor co-sale rights.",
       "license_note": "NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation instructions, not the source document.",
@@ -11524,7 +11524,7 @@
     {
       "name": "nvca-stock-purchase-agreement",
       "tier": "field-selector",
-      "display_name": "NVCA Model Stock Purchase Agreement",
+      "display_name": "Model Stock Purchase Agreement",
       "category": "venture-financing",
       "description": "Series preferred stock purchase agreement for venture capital financings, covering purchase terms, representations, and closing conditions.",
       "license_note": "NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation instructions, not the source document.",
@@ -11855,7 +11855,7 @@
     {
       "name": "nvca-voting-agreement",
       "tier": "field-selector",
-      "display_name": "NVCA Model Voting Agreement",
+      "display_name": "Model Voting Agreement",
       "category": "venture-financing",
       "description": "Standard-form voting agreement for venture capital financings, covering board composition, drag-along rights, and stockholder voting obligations.",
       "license_note": "NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation instructions, not the source document.",
