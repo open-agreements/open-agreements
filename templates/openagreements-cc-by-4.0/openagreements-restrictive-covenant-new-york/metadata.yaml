@@ -1,4 +1,4 @@
-name: OpenAgreements Employee Restrictive Covenant (New York)
+name: Employee Restrictive Covenant (New York)
 category: non-compete
 description: 'New York-specific employee restrictive covenant agreement built for New York''s common-law reasonableness regime: there is no general New York non-compete statute, so every post-employment restraint stands or falls on the three-pronged common-law reasonableness test, and a single failed prong invalidates the covenant. It provides confidentiality and trade-secret protection, a continued-employment consideration recital, customer and employee non-solicitation with the customer non-solicit narrowed to customers the employee actually served, an optional non-compete tied to New York''s short list of recognized protectable interests, a broadcast-employee exclusion under N.Y. Labor Law § 202-k, a sale-of-business covenant aligned with New York''s implied goodwill covenant, a governing-law clause drafted against New York''s public-policy limit on foreign choice-of-law, and a drafting posture that sizes each covenant to the protectable interest rather than relying on discretionary partial enforcement. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-new-york
@@ -155,8 +155,10 @@ fields:
     description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements. A carve-out below a stated threshold keeps a passive index-fund holding from adding hardship on the undue-hardship prong without protecting any recognized interest.
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives). A carve-out below a stated threshold keeps a passive index-fund holding from adding hardship on the undue-hardship prong without protecting any recognized interest.
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

@@ -1,6 +1,6 @@
 ---
 template_id: openagreements-restrictive-covenant-connecticut
-name: OpenAgreements Employee Restrictive Covenant (Connecticut)
+name: Employee Restrictive Covenant (Connecticut)
 category: non-compete
 description: >-
   Connecticut-specific employee restrictive covenant agreement built for
@@ -137,6 +137,8 @@ fields:
     description: Duration of employee non-solicitation restriction
     display_label: Employee Non-Solicitation Duration
     default: 24 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: >-
       Connecticut sets no statutory cap on duration; no occupation statute addresses employee
@@ -166,14 +168,16 @@ fields:
     description: Duration of customer/partner non-solicitation restriction
     display_label: Customer Non-Solicitation Duration
     default: 12 months
-    rationale_source: editorial
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
     default_value_rationale: >-
-      Connecticut sets no statutory cap; a customer non-solicit limited to
-      customers the worker serviced or solicited is the shape Connecticut courts
-      have rewarded, and is often the better instrument than a full
-      non-compete. 12 months is a common, conservative duration counsel should
-      size to the actual customer relationships protected.
+      Connecticut sets no statutory cap; a customer non-solicit limited to customers the
+      worker serviced or solicited is the shape Connecticut courts have rewarded, and is
+      often the better instrument than a full non-compete. 12 months is the lighter side
+      of the near-even 12/24-month split observed in benchmarked, publicly-filed
+      employee agreements — a conservative duration counsel should size to the actual
+      customer relationships protected.
   - name: covered_customer_period
     type: string
     description: >-
@@ -217,17 +221,18 @@ fields:
     description: Duration of non-competition restriction
     display_label: Non-Competition Duration
     default: 12 months
-    rationale_source: editorial
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
     section: Non-Competition
     default_value_rationale: >-
-      Connecticut imposes no general statutory cap on duration for ordinary
-      employees — courts have upheld even a five-year restriction on the right
-      record — but the period must be justified by the record and is weighed
-      together with geography under the five-factor test, so there is no
-      safe-harbor number. Physician, physician assistant, and APRN covenants are
-      separately capped at one year. 12 months is a common, conservative default
-      counsel should size to the actual role and market rather than copy from
-      another form.
+      Connecticut imposes no general statutory cap on duration for ordinary employees —
+      courts have upheld even a five-year restriction on the right record — but the
+      period must be justified by the record and is weighed together with geography
+      under the five-factor test, so there is no safe-harbor number. Physician,
+      physician assistant, and APRN covenants are separately capped at one year. 12
+      months matches the modal non-compete term observed in benchmarked, publicly-filed
+      employee agreements — a conservative default counsel should size to the actual
+      role and market rather than copy from another form.
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
@@ -279,13 +284,16 @@ fields:
       the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
     default_value_rationale: >-
-      Five percent of any class of publicly traded securities is the standard
-      passive investment carveout across restrictive covenant agreements. A
-      clause that technically forbids holding index funds or ordinary public
-      shares adds harshness the employer cannot justify under the fair-protection
-      factor of the Scott test.
+      Five percent of any class of publicly traded securities is the modal
+      passive-investment carve-out threshold observed in benchmarked, publicly-filed
+      employee agreements that include the carve-out (lower 1-3 percent thresholds are
+      the common tighter alternatives). A clause that technically forbids holding index
+      funds or ordinary public shares adds harshness the employer cannot justify under
+      the fair-protection factor of the Scott test.
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

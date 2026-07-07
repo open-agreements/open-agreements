@@ -1,4 +1,4 @@
-name: OpenAgreements Employee Restrictive Covenant (North Dakota)
+name: Employee Restrictive Covenant (North Dakota)
 category: non-compete
 description: North Dakota-specific employee restrictive covenant agreement centered on confidentiality, trade secret protection, property return, non-disparagement, and a narrowly drafted anti-raiding employee non-solicitation covenant. Omits any employee covenant not to compete, any customer non-solicitation covenant, and any non-dealing covenant, because N.D. Cent. Code § 9-08-06 makes a contract that restrains a lawful profession, trade, or business to that extent void, and the North Dakota Supreme Court in Warner & Co. v. Solberg held that post-employment customer solicitation and replacement restrictions are void with no statutory exception. It preserves only the covenants North Dakota law leaves enforceable — confidentiality and trade-secret protection under N.D. Cent. Code ch. 47-25.1, non-disparagement, property return, and the anti-raiding employee non-solicitation covenant Warner held is not void as a restraint of trade — each drawn to reach only Covered Employees the worker actually dealt with, keyed to Employee-initiated solicitation and a defined Restricted Period, so it protects the workforce and information rather than functioning as a restraint on competition. Includes North Dakota choice-of-law and forum language reflecting Osborne v. Brown & Saenger, Inc. and N.D. Cent. Code § 28-04.1-03. Drafted as a starting point for licensed counsel review.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-north-dakota
@@ -83,7 +83,8 @@ fields:
     display_label: Employee Non-Solicitation Duration
     default: 24 months
     section: Employee Non-Solicitation
-    rationale_source: editorial
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. North Dakota's law-backed limit is the narrow anti-raiding shape of the covenant, not a specific duration, so either finite term rides on keeping that shape.
   - name: covered_employee_period
     type: string

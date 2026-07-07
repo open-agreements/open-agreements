@@ -1,4 +1,4 @@
-name: OpenAgreements Employee Restrictive Covenant (South Dakota)
+name: Employee Restrictive Covenant (South Dakota)
 category: non-compete
 description: 'South Dakota-specific employee restrictive covenant agreement built for the SDCL chapter 53-9 statutory whitelist: confidentiality and trade-secret protection, a customer non-solicitation limited to existing customers, and an optional non-compete drawn to the § 53-9-11 employee exception — the same business or profession, a specified county, first- or second-class municipality, or other specified area, a two-year ceiling measured from the date of termination of the agreement, and the like-business condition. Customer restrictions are confined to solicitation, not acceptance, and each covenant is drafted to survive a fixed-term agreement expressly. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-south-dakota
@@ -71,8 +71,10 @@ fields:
     description: Duration of employee non-solicitation restriction
     display_label: Employee Non-Solicitation Duration
     default: 24 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
-    default_value_rationale: Kept within the two-year ceiling SDCL 53-9-11 fixes for the statutory employee covenants, measured from the date of termination of the agreement, even though the employee non-solicit itself is unaddressed by staged South Dakota authority.
+    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements, and it stays within the two-year ceiling South Dakota fixes for its statutory covenants — though the employee non-solicit itself is unaddressed by staged South Dakota authority, so the statutory clock is context, not a pin. 12 months is the common lighter alternative.
   - name: covered_employee_period
     type: string
     description: Lookback period for determining which employees are covered by the non-solicitation restriction.
@@ -91,8 +93,10 @@ fields:
     description: Duration of customer non-solicitation restriction
     display_label: Customer Non-Solicitation Duration
     default: 24 months
+    rationale_source: legislation
+    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.cap-restricted-period-at-two-years-from-termination-of-the-agreement
     section: Customer Non-Solicitation
-    default_value_rationale: SDCL 53-9-11 caps the existing-customer non-solicit at two years from the date of termination of the agreement. 24 months sits at the statutory ceiling; counsel may shorten it.
+    default_value_rationale: South Dakota caps the existing-customer non-solicit at two years from the date of termination of the agreement. 24 months sits at the statutory ceiling; counsel may shorten it.
   - name: covered_customer_period
     type: string
     description: Lookback period for identifying the existing customers covered by the non-solicitation restriction.
@@ -140,8 +144,10 @@ fields:
     description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements; a clause that technically forbids holding ordinary public shares restrains more than any SDCL chapter 53-9 exception describes.
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives); a clause that technically forbids holding ordinary public shares restrains more than any of the statutory exceptions describes.
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included. Investment language broad enough to operate as a restraint on the worker's own trade is what the South Dakota baseline voids, so this covenant is off by default.

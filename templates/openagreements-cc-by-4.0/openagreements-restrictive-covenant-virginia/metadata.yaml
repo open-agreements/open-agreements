@@ -1,4 +1,4 @@
-name: OpenAgreements Employee Restrictive Covenant (Virginia)
+name: Employee Restrictive Covenant (Virginia)
 category: non-compete
 description: 'Virginia-specific employee restrictive covenant agreement built for Va. Code § 40.1-28.7:8 and Virginia''s strict common-law reasonableness test: confidentiality and trade-secret protection with the statutory nondisclosure carve-out preserved, an employee non-solicitation covenant that defaults off because it is presumptively unenforceable against a protected worker, a customer non-solicitation covenant confined to the worker''s own solicitation so customer-initiated business stays open, and an optional non-compete confined to the worker''s own role and territory. The agreement runs the statutory worker-protection gates before any covenant, states the without-cause severance-or-disclosed-compensation economics SB 170 requires for agreements entered into, amended, or renewed on or after July 1, 2026, excludes health care professionals, and — because Virginia courts do not rewrite an overbroad covenant — draws each covenant within its enforceable scope at the outset rather than relying on judicial reformation. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-virginia
@@ -91,6 +91,8 @@ fields:
     description: Duration of employee non-solicitation restriction
     display_label: Employee Non-Solicitation Duration
     default: 24 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. Virginia weighs function, geography, and duration together, so the longer market term is defensible only where the other elements are tightly drawn.
   - name: covered_employee_period
@@ -111,8 +113,10 @@ fields:
     description: Duration of customer/partner non-solicitation restriction
     display_label: Customer Non-Solicitation Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
-    default_value_rationale: 12 months is a common enforceable duration. Because Virginia assesses function, geography, and duration together, a shorter term reduces the room for a court to find the covenant broader than the employer's legitimate interest requires.
+    default_value_rationale: 12 months is the lighter side of the near-even 12/24-month split observed in benchmarked, publicly-filed employee agreements and is a common enforceable duration here. Because Virginia assesses function, geography, and duration together, a shorter term reduces the room for a court to find the covenant broader than the employer's legitimate interest requires.
   - name: covered_customer_period
     type: string
     description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
@@ -178,8 +182,10 @@ fields:
     description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements, and a de minimis floor keeps an ownership restraint from reading as unduly harsh under the Omniplex second prong.
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives), and a de minimis floor keeps an ownership restraint from reading as unduly harsh under the Omniplex second prong.
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

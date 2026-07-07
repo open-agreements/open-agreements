@@ -1,4 +1,4 @@
-name: OpenAgreements Employee Restrictive Covenant (District of Columbia)
+name: Employee Restrictive Covenant (District of Columbia)
 category: non-compete
 description: 'District of Columbia employee restrictive covenant agreement built for the Ban on Non-Compete Agreements Amendment Act of 2020 (D.C. Code §§ 32-581.01–.04b): confidentiality and trade-secret protection with the statutory information carve-out, an employee non-solicitation covenant, a customer non-solicitation covenant, and an optional non-compete confined to a highly compensated employee — one at or above the annually indexed minimum qualifying annual compensation ($162,164 for most employees in 2026; $270,274 for a medical specialist). The non-compete recites every § 32-581.03(a) validity gate: a stated functional scope and geographic limits, a term of no more than 365 calendar days from separation (730 for a medical specialist), and delivery of the covenant in writing at least 14 days in advance, with the prescribed statutory notice and the workplace-policy disclosure flagged as companion writings. For a covered employee below the threshold the covenant is banned and void as a matter of law, so the template omits it by default and never relies on judicial reformation to cure overbreadth. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-district-of-columbia
@@ -99,7 +99,8 @@ fields:
     default: 24 months
     section: Employee Non-Solicitation
     default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. The District's ban does not speak to employee non-solicits, so the clause is judged under common-law reasonableness; a shorter term supports treating it as a limited restraint on active solicitation.
-    rationale_source: editorial
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
   - name: covered_employee_period
     type: string
     description: Lookback period for determining which employees are covered by the non-solicitation restriction.
@@ -118,8 +119,10 @@ fields:
     description: Duration of customer/partner non-solicitation restriction
     display_label: Customer Non-Solicitation Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
-    default_value_rationale: 12 months is a common enforceable duration. A District customer non-solicit sits outside the statutory ban but is still a restraint of trade judged for reasonableness under common law (Ellis), and a shorter term supports that characterization.
+    default_value_rationale: 12 months is the lighter side of the near-even 12/24-month split observed in benchmarked, publicly-filed employee agreements and is a common enforceable duration here. A District customer non-solicit sits outside the statutory ban but is still a restraint of trade judged for reasonableness under common law (Ellis), and a shorter term supports that characterization.
   - name: covered_customer_period
     type: string
     description: Lookback period for determining which customers are covered by the non-solicitation restriction.
