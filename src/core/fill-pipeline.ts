@@ -554,13 +554,131 @@ function stripEmptyTableRows(docxBuffer: Buffer): Buffer {
 }
 
 /**
+ * True if `borders` (a `<w:tcBorders>` or `<w:pBdr>` element) declares a visible
+ * bottom border — i.e. the line is already "ruled". A `<w:bottom>` with val
+ * `none`/`nil` (or absent) is not a rule.
+ */
+function hasVisibleBottomBorder(borders: Element | null): boolean {
+  if (!borders) return false;
+  const bottoms = borders.getElementsByTagNameNS(W_NS, 'bottom');
+  for (let i = 0; i < bottoms.length; i++) {
+    if (bottoms[i].parentNode !== borders) continue; // direct child only
+    const val = bottoms[i].getAttribute('w:val');
+    if (val && val !== 'none' && val !== 'nil') return true;
+  }
+  return false;
+}
+
+/** First matching `<w:NAME>` element that is a direct child of `parent`, or null. */
+function directChild(parent: Element | null, name: string): Element | null {
+  if (!parent) return null;
+  for (let i = 0; i < parent.childNodes.length; i++) {
+    const child = parent.childNodes[i] as Element;
+    if (child?.nodeType === 1 && child.localName === name && child.namespaceURI === W_NS) {
+      return child;
+    }
+  }
+  return null;
+}
+
+/**
+ * True when `run` sits on a line that already carries a bottom-border rule —
+ * either its enclosing table cell (`<w:tc>/<w:tcPr>/<w:tcBorders>/<w:bottom>`)
+ * or its paragraph (`<w:p>/<w:pPr>/<w:pBdr>/<w:bottom>`). Purely structural: it
+ * asks what the OOXML draws, never what the field means.
+ */
+function sitsOnRuledLine(run: Element): boolean {
+  let cell: Element | null = null;
+  let para: Element | null = null;
+  let node: Node | null = run.parentNode;
+  while (node) {
+    if (node.nodeType === 1) {
+      const el = node as Element;
+      if (el.namespaceURI === W_NS) {
+        if (!para && el.localName === 'p') para = el;
+        if (!cell && el.localName === 'tc') cell = el;
+      }
+    }
+    node = node.parentNode;
+  }
+  const cellBorders = directChild(directChild(cell, 'tcPr'), 'tcBorders');
+  const paraBorders = directChild(directChild(para, 'pPr'), 'pBdr');
+  return hasVisibleBottomBorder(cellBorders) || hasVisibleBottomBorder(paraBorders);
+}
+
+/**
+ * Suppress the blank-fill placeholder ('_______') on runs that already sit on a
+ * ruled line. The placeholder exists to draw a "write a value here" line where
+ * the template provides none; on a line that is already ruled (a signature
+ * block, an underlined field) it just stacks a second underline on top of the
+ * existing rule. This clears the redundant underscores — leaving the rule as the
+ * clean blank line — and drops any authoring highlight left on the run.
+ *
+ * Structural by design: it keys off the OOXML border, not off field names, so it
+ * needs no knowledge of which fields are "signatures". A blank placeholder on an
+ * un-ruled line is left untouched (its underscores are the intended cue).
+ */
+function stripBlankPlaceholderOnRuledLines(docxBuffer: Buffer): Buffer {
+  const zip = new AdmZip(docxBuffer);
+  const parser = new DOMParser();
+  const serializer = new XMLSerializer();
+  const parts = enumerateTextParts(zip);
+  const partNames = getGeneralTextPartNames(parts);
+
+  let modified = false;
+
+  for (const partName of partNames) {
+    const entry = zip.getEntry(partName);
+    if (!entry) continue;
+
+    const doc: Document = parser.parseFromString(entry.getData().toString('utf-8'), 'text/xml');
+    const runs = doc.getElementsByTagNameNS(W_NS, 'r');
+    let changed = false;
+
+    for (let i = 0; i < runs.length; i++) {
+      const run = runs[i];
+      // Only a run whose entire text IS the blank placeholder — not underscores
+      // embedded in real prose.
+      if (extractRunText(run).trim() !== BLANK_PLACEHOLDER) continue;
+      if (!sitsOnRuledLine(run)) continue;
+
+      // Clear the underscores (keep the run/paragraph so the rule survives).
+      const tEls = run.getElementsByTagNameNS(W_NS, 't');
+      for (let t = 0; t < tEls.length; t++) tEls[t].textContent = '';
+
+      // Drop any leftover authoring highlight on the now-empty run.
+      const rPr = run.getElementsByTagNameNS(W_NS, 'rPr');
+      if (rPr.length > 0) {
+        const highlights = rPr[0].getElementsByTagNameNS(W_NS, 'highlight');
+        for (let h = highlights.length - 1; h >= 0; h--) {
+          highlights[h].parentNode?.removeChild(highlights[h]);
+        }
+      }
+      changed = true;
+    }
+
+    if (changed) {
+      modified = true;
+      zip.updateFile(partName, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
+    }
+  }
+
+  if (!modified) return docxBuffer;
+
+  const outZip = new AdmZip();
+  copyEntriesSkippingDirs(zip, outZip);
+  return outZip.toBuffer();
+}
+
+/**
  * Fill a DOCX template with prepared data:
  * 1. Strip drafting note paragraphs (configurable, on by default)
  * 2. Strip highlighting from runs with filled fields (unfilled keep their highlight)
  * 3. Sanitize currency values by scanning the template buffer for ${field} patterns
  * 4. Call docx-templates createReport() with standard delimiters
  * 5. Remove structurally empty table rows left by conditional rendering
- * 6. Return the filled buffer
+ * 6. Suppress the blank-fill placeholder on lines that already carry a rule
+ * 7. Return the filled buffer
  */
 export async function fillDocx(options: FillDocxOptions): Promise<Uint8Array> {
   const {
@@ -605,8 +723,12 @@ export async function fillDocx(options: FillDocxOptions): Promise<Uint8Array> {
 
   // Step 5: Remove malformed empty table rows from conditional rendering
   const cleaned = stripEmptyTableRows(filledBuffer);
-  // Step 6: Renumber clause headings so fully-omitted clauses leave no gap
-  return renumberClauseHeadings(cleaned);
+  // Step 6: Drop the blank placeholder where the line is already ruled, so an
+  // unfilled field on a signature/underlined line shows a single clean rule
+  // instead of stacking underscores on top of the existing border.
+  const deruled = stripBlankPlaceholderOnRuledLines(cleaned);
+  // Step 7: Renumber clause headings so fully-omitted clauses leave no gap
+  return renumberClauseHeadings(deruled);
 }
 
 /** The OAClauseHeading style marks the numbered standard-terms clause headings. */

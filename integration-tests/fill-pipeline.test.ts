@@ -1481,11 +1481,52 @@ describe('Parametric smoke test — signatory fields across all templates', () =
   }, seconds(60));
 });
 
-describe('Unfilled signature-block fields — no highlighted stub on ruled lines (issue #588)', () => {
-  // The restrictive-covenant family has employer_signatory_name/title fields but
-  // NO *_signatory_type field, so the deriveSignatoryFields path never runs. The
-  // signature "rule" is the table cell's bottom border; an unfilled signatory
-  // token must render empty, not as a highlighted _______ stub on top of the rule.
+describe('Blank placeholder on an already-ruled line (issue #588)', () => {
+  // The fix is structural, not field-name-based: an unfilled field whose blank
+  // placeholder ('_______') sits on a line that already carries a bottom-border
+  // rule must render as a single clean rule, not stack underscores on top of the
+  // border ("double underline"). The signature block is the motivating case, but
+  // the rule keys off the OOXML border, not off which field is a "signatory".
+
+  const CELL_BORDER =
+    '<w:tcBorders><w:bottom w:val="single" w:sz="6" w:space="0" w:color="000000"/></w:tcBorders>';
+  const CELL_NO_BORDER =
+    '<w:tcBorders><w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/></w:tcBorders>';
+
+  /** A one-cell table row: a highlighted {token} in a cell that may/may not be ruled. */
+  function ruledRow(token: string, borders: string): string {
+    return (
+      `<w:tr><w:tc><w:tcPr><w:tcW w:w="4320" w:type="dxa"/>${borders}</w:tcPr>` +
+      '<w:p><w:r><w:rPr><w:highlight w:val="yellow"/></w:rPr>' +
+      `<w:t xml:space="preserve">{${token}}</w:t></w:r></w:p></w:tc></w:tr>`
+    );
+  }
+
+  it('clears the blank placeholder on a ruled line but keeps it on an un-ruled line', async () => {
+    const documentXml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      '<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>' +
+      `<w:tbl>${ruledRow('on_rule', CELL_BORDER)}${ruledRow('no_rule', CELL_NO_BORDER)}</w:tbl>` +
+      '</w:body></w:document>';
+
+    // Both fields unfilled → both default to the blank placeholder.
+    const filled = await fillDocx({
+      templateBuffer: buildDocxBuffer(documentXml),
+      data: { on_rule: BLANK_PLACEHOLDER, no_rule: BLANK_PLACEHOLDER },
+      stripParagraphPatterns: [],
+    });
+    const xml = new AdmZip(Buffer.from(filled)).getEntry('word/document.xml')!.getData().toString('utf-8');
+
+    // The ruled cell keeps exactly one underline (its border), no underscores.
+    const ruledCell = xml.slice(xml.indexOf('w:val="single"'), xml.indexOf('w:val="none"'));
+    expect(ruledCell).not.toContain(BLANK_PLACEHOLDER);
+    expect(ruledCell).not.toContain('<w:highlight'); // stray highlight dropped too
+    // The un-ruled cell keeps its placeholder underscores (the intended cue).
+    expect(xml.slice(xml.indexOf('w:val="none"'))).toContain(BLANK_PLACEHOLDER);
+  });
+
+  // The restrictive-covenant family has employer_signatory_name/title fields on
+  // ruled cells and NO *_signatory_type field — the real-world motivating case.
   const RC_DIR = templateDirFor('openagreements-restrictive-covenant-wyoming');
 
   it('omitted signatory fields render as clean rules (no blank-underscore stub)', async () => {
