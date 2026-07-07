@@ -1,4 +1,4 @@
-name: OpenAgreements Employee Restrictive Covenant (Colorado)
+name: Employee Restrictive Covenant (Colorado)
 category: non-compete
 description: 'Colorado-specific employee restrictive covenant agreement built for C.R.S. § 8-2-113: confidentiality and trade-secret protection with the statutory general-skills and protected-disclosure carve-outs, an employee non-solicitation covenant, a customer non-solicitation covenant gated on sixty percent of the highly compensated worker threshold ($78,008.40 for 2026), and an optional non-compete gated on the highly compensated worker threshold ($130,014 for 2026) and tied to trade-secret protection. Both earnings gates run at signing and at enforcement. The agreement flags the separate, signed 14-day advance-notice document the statute requires, excludes restrictive covenants for health-care providers under S.B. 25-083 with the patient-communication protections, keeps Colorado law and a Colorado forum for Colorado-based workers, and drafts each covenant within its enforceable scope rather than relying on discretionary judicial reformation. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-colorado
@@ -100,7 +100,8 @@ fields:
     default: 24 months
     section: Employee Non-Solicitation
     default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. Colorado does not statutorily address employee non-solicits, and case law treats a clause limited to active solicitation as a lesser restraint, so counsel preferring to underline that characterization can shorten the term.
-    rationale_source: editorial
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
   - name: covered_employee_period
     type: string
     description: Lookback period for determining which employees are covered by the non-solicitation restriction.
@@ -120,8 +121,9 @@ fields:
     display_label: Customer Non-Solicitation Duration
     default: 12 months
     section: Customer Non-Solicitation
-    default_value_rationale: 12 months is a common enforceable duration. A Colorado customer non-solicit must be no broader than reasonably necessary to protect trade secrets, and a shorter term reduces the room for the enforcement-time earnings test to fall out from under it.
-    rationale_source: editorial
+    default_value_rationale: 12 months is the lighter side of the near-even 12/24-month split observed in benchmarked, publicly-filed employee agreements and is a common enforceable duration here. A Colorado customer non-solicit must be no broader than reasonably necessary to protect trade secrets, and a shorter term reduces the room for the enforcement-time earnings test to fall out from under it.
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
   - name: covered_customer_period
     type: string
     description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
@@ -144,8 +146,9 @@ fields:
     display_label: Non-Competition Duration
     default: 12 months
     section: Non-Competition
-    default_value_rationale: 12 months is a common enforceable duration. Because the worker must still meet the earnings threshold at the time the covenant is enforced, a longer period widens the window for the enforcement-time facts to defeat the covenant.
-    rationale_source: editorial
+    default_value_rationale: 12 months matches the modal non-compete term observed in benchmarked, publicly-filed employee agreements and is a common enforceable duration here. Because the worker must still meet the earnings threshold at the time the covenant is enforced, a longer period widens the window for the enforcement-time facts to defeat the covenant.
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
@@ -183,8 +186,10 @@ fields:
     description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives).
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

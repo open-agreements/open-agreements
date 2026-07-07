@@ -1,6 +1,6 @@
-name: OpenAgreements Employee Restrictive Covenant (New Jersey)
+name: Employee Restrictive Covenant (New Jersey)
 category: non-compete
-description: 'New Jersey-specific employee restrictive covenant agreement built for New Jersey''s common-law reasonableness regime: there is no general New Jersey non-compete statute for the ordinary workforce, so every post-employment restraint stands or falls on the three-part Solari/Whitmyer test (protects the employer''s legitimate interests, imposes no undue hardship on the employee, and is not injurious to the public). It provides confidentiality and trade-secret protection backstopped by the New Jersey Trade Secrets Act (N.J.S.A. 56:15-1 et seq.), a continued-employment consideration recital (Hogan v. Bergen Brunswig Corp.), customer and employee non-solicitation, an optional non-compete tied to identified legitimate interests and sized to the actual footprint, a breach-tied tolling clause (ADP, LLC v. Kusins; Community Hospital Group, Inc. v. More), physician public-interest scrutiny (Community Hospital Group, Inc. v. More; Pierson v. Medical Health Centers, P.A.), and partial enforcement that works with the grain of the doctrine (Solari Industries, Inc. v. Malady; ADP, LLC v. Rafferty). It carves out the discrimination-claim concealment bar (N.J.S.A. 10:5-12.8; Savage v. Township of Neptune) and disclaims practice restrictions for lawyers (RPC 5.6; Jacob v. Norris, McLaughlin & Marcus) and client-access restrictions for psychologists (N.J.A.C. 13:42-10.16; Comprehensive Psychology Sys., P.C. v. Prince). Drafted as a starting point for licensed counsel review.'
+description: 'New Jersey-specific employee restrictive covenant agreement built for New Jersey''s common-law reasonableness regime: there is no general New Jersey non-compete statute for the ordinary workforce, so every post-employment restraint stands or falls on the three-part common-law reasonableness test (protects the employer''s legitimate interests, imposes no undue hardship on the employee, and is not injurious to the public). It provides confidentiality and trade-secret protection backstopped by the New Jersey Trade Secrets Act (N.J.S.A. 56:15-1 et seq.), a continued-employment consideration recital, customer and employee non-solicitation, an optional non-compete tied to identified legitimate interests and sized to the actual footprint, a breach-tied tolling clause, physician public-interest scrutiny, and partial enforcement that works with the grain of the doctrine. It carves out the discrimination-claim concealment bar (N.J.S.A. 10:5-12.8) and disclaims practice restrictions for lawyers (RPC 5.6) and client-access restrictions for psychologists (N.J.A.C. 13:42-10.16). Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-new-jersey
 version: 0.1.0
 license: CC-BY-4.0
@@ -70,6 +70,8 @@ fields:
     description: Duration of employee non-solicitation restriction
     display_label: Employee Non-Solicitation Duration
     default: 24 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: New Jersey sets no statutory cap on duration; enforceability turns on the holistic Solari/Whitmyer reasonableness test rather than a fixed number. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, and counsel should size the term to the employer's actual legitimate interest.
   - name: covered_employee_period
@@ -90,8 +92,10 @@ fields:
     description: Duration of customer/partner non-solicitation restriction
     display_label: Customer Non-Solicitation Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
-    default_value_rationale: New Jersey sets no statutory cap; a customer non-solicit maps directly onto the employer's customer-relationship interest and is often the better instrument than a full non-compete. 12 months is a common, conservative duration counsel should size to the actual customer relationships protected.
+    default_value_rationale: New Jersey sets no statutory cap; a customer non-solicit maps directly onto the employer's customer-relationship interest and is often the better instrument than a full non-compete. 12 months is the lighter side of the near-even 12/24-month split observed in benchmarked, publicly-filed employee agreements — a conservative duration counsel should size to the actual customer relationships protected.
   - name: covered_customer_period
     type: string
     description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
@@ -101,25 +105,27 @@ fields:
     default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
   - name: noncompete_included
     type: boolean
-    description: Whether the non-competition covenant is included. New Jersey has no general non-compete statute for the ordinary workforce; a non-compete is enforceable only to the extent it satisfies the three-part Solari/Whitmyer reasonableness test and is tied to a legitimate interest rather than ordinary competition. This template recites the legitimate-interest basis and sizes the restraint to the employer's actual footprint.
+    description: Whether the non-competition covenant is included. New Jersey has no general non-compete statute for the ordinary workforce; a non-compete is enforceable only to the extent it satisfies the three-part common-law reasonableness test and is tied to a legitimate interest rather than ordinary competition. This template recites the legitimate-interest basis and sizes the restraint to the employer's actual footprint.
     display_label: Non-Competition Included
     default: false
     section: Non-Competition
-    default_value_rationale: Conservative default. The non-compete is the most closely scrutinized covenant under the Solari/Whitmyer test; a customer non-solicit backstopped by the New Jersey Trade Secrets Act often protects the employer as well. Include only after confirming an identified legitimate interest (confidential business information, trade secrets, or customer relationships) and sizing the duration and territory to the actual footprint.
+    default_value_rationale: Conservative default. The non-compete is the most closely scrutinized covenant under the common-law reasonableness test; a customer non-solicit backstopped by the New Jersey Trade Secrets Act often protects the employer as well. Include only after confirming an identified legitimate interest (confidential business information, trade secrets, or customer relationships) and sizing the duration and territory to the actual footprint.
   - name: noncompete_duration
     type: string
     description: Duration of non-competition restriction
     display_label: Non-Competition Duration
     default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
     section: Non-Competition
-    default_value_rationale: New Jersey imposes no statutory cap on duration; courts weigh time and territory together against the employer's real legitimate interest under Solari/Whitmyer, so there is no safe-harbor number, though durations in the one-to-two-year range are commonly upheld where the geography is tailored. 12 months is a common, conservative default counsel should size to the actual role and market rather than copy from another form.
+    default_value_rationale: New Jersey imposes no statutory cap on duration; courts weigh time and territory together against the employer's real legitimate interest under the common-law reasonableness test, so there is no safe-harbor number, though durations in the one-to-two-year range are commonly upheld where the geography is tailored. 12 months matches the modal non-compete term observed in benchmarked, publicly-filed employee agreements — a conservative default counsel should size to the actual role and market rather than copy from another form.
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
     display_label: Restricted Territory
     default: the geographic area in which Employee provided services
     section: Non-Competition
-    default_value_rationale: Tied to the employee's actual service area. New Jersey imposes no statutory cap on territory; courts weigh territory against the public's access to the service and will shrink a radius that overreaches, so a narrower area genuinely needed to protect customer relationships or confidential information is far easier to defend under Solari/Whitmyer than a statewide ban.
+    default_value_rationale: Tied to the employee's actual service area. New Jersey imposes no statutory cap on territory; courts weigh territory against the public's access to the service and will shrink a radius that overreaches, so a narrower area genuinely needed to protect customer relationships or confidential information is far easier to defend under the common-law reasonableness test than a statewide ban.
   - name: competitive_business_definition
     type: string
     description: Description of the business activities that constitute competition with the employer.
@@ -148,8 +154,10 @@ fields:
     description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives).
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

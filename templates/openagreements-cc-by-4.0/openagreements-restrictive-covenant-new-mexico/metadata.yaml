@@ -1,6 +1,6 @@
-name: OpenAgreements Employee Restrictive Covenant (New Mexico)
+name: Employee Restrictive Covenant (New Mexico)
 category: non-compete
-description: 'New Mexico-specific employee restrictive covenant agreement built for the Lovelace / McGonigle common-law reasonableness standard and the health-care practitioner statute (NMSA 1978, §§ 24A-4-1 to 24A-4-5): confidentiality and trade-secret protection tied to a specific legitimate interest, an employee non-solicitation covenant, a customer non-solicitation covenant, and an optional non-compete drawn to reasonableness in time, geography, and scope rather than copied from a form. The agreement documents independent new consideration for a covenant signed after employment begins, because New Mexico treats continued at-will employment as illusory (Piano). It excludes non-competes for the ten covered health-care practitioner classes, holds the surviving practitioner fallbacks — one-year patient and employee non-solicits, early-departure repayment, NDAs, and reasonable liquidated damages — within their statutory bounds, keeps New Mexico law and a New Mexico forum for agreements covering clinical health-care services rendered in the state, and secures narrowing through an express reformation clause because New Mexico''s only staged reformation authority is contract-based (KidsKare). Drafted as a starting point for licensed counsel review.'
+description: 'New Mexico-specific employee restrictive covenant agreement built for the common-law reasonableness standard and the health-care practitioner statute (NMSA 1978, §§ 24A-4-1 to 24A-4-5): confidentiality and trade-secret protection tied to a specific legitimate interest, an employee non-solicitation covenant, a customer non-solicitation covenant, and an optional non-compete drawn to reasonableness in time, geography, and scope rather than copied from a form. The agreement documents independent new consideration for a covenant signed after employment begins, because New Mexico treats continued at-will employment as illusory. It excludes non-competes for the ten covered health-care practitioner classes, holds the surviving practitioner fallbacks — one-year patient and employee non-solicits, early-departure repayment, NDAs, and reasonable liquidated damages — within their statutory bounds, keeps New Mexico law and a New Mexico forum for agreements covering clinical health-care services rendered in the state, and secures narrowing through an express reformation clause because New Mexico''s only staged reformation authority is contract-based. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-new-mexico
 version: 0.1.0
 license: CC-BY-4.0
@@ -146,8 +146,9 @@ fields:
     display_label: Non-Competition Duration
     default: 12 months
     section: Non-Competition
-    default_value_rationale: 12 months is a common enforceable duration. New Mexico tests duration on the facts of the particular case with no fixed cap and no safe harbor so the period should be connected to the interest it protects rather than copied from a form.
-    rationale_source: editorial
+    default_value_rationale: 12 months matches the modal non-compete term observed in benchmarked, publicly-filed employee agreements and is a common enforceable duration here. New Mexico tests duration on the facts of the particular case with no fixed cap and no safe harbor so the period should be connected to the interest it protects rather than copied from a form.
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
@@ -185,8 +186,10 @@ fields:
     description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements.
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives).
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.
