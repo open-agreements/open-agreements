@@ -3,6 +3,7 @@ category: non-compete
 description: Wisconsin-specific employee restrictive covenant agreement built for Wis. Stat. § 103.465, where a covenant is enforceable only if reasonably necessary to protect the employer, a five-factor reasonableness test governs every post-employment restraint, and an unreasonable restraint is void in full with no judicial blue-penciling. Confidentiality and trade-secret protection scoped to protectable information, customer and employee non-solicitation (the employee no-poach limited to actual working relationships), an optional non-compete drawn to the five-factor reasonableness standard, a consideration recital resting on genuine forbearance, no extension-during-breach tolling that would void the restraint, Wisconsin governing law rather than a foreign choice-of-law clause, and divisible covenants in place of reliance on reformation. Drafted as a starting point for licensed counsel review.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-wisconsin
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

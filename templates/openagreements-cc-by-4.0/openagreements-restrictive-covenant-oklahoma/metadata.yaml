@@ -3,6 +3,7 @@ category: non-compete
 description: 'Oklahoma-specific employee restrictive covenant agreement centered on confidentiality, trade secret protection, property return, non-disparagement, and narrowly drafted customer and employee non-solicitation. Omits any employee covenant not to compete, because Okla. Stat. tit. 15, § 217 voids every contract restraining a person from exercising a lawful profession, trade, or business of any kind, save for the narrow statutory carve-outs in §§ 218-219 (sale of goodwill and partnership dissolution) and §§ 219A-219B. The agreement preserves only the covenants those sections leave standing for an employee: a customer non-solicitation covenant drafted to reach only the direct solicitation of the sale of goods or services from the former employer''s established customers, as § 219A(A) permits and no further; an employee anti-raiding covenant that § 219B removes from the restraint-of-trade prohibition; and confidentiality, trade-secret, property-return, and non-disparagement obligations that restrain the misuse of information rather than the exercise of a trade. Both non-solicits are keyed to a defined Restricted Period and expressly disclaim any bar on Employee working for a competitor. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-oklahoma
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

@@ -3,6 +3,7 @@ category: non-compete
 description: 'Ohio-specific employee restrictive covenant agreement built for Ohio''s common-law reasonableness regime: there is no general Ohio non-compete statute, so every post-employment restraint stands or falls on the three-part reasonableness test (no greater than required to protect the employer, no undue hardship on the employee, not injurious to the public). It provides confidentiality and trade-secret protection under the Ohio Uniform Trade Secrets Act (R.C. 1333.61-1333.69), a continued-at-will-employment consideration recital, customer and employee non-solicitation, an optional non-compete tied to identified protectable interests and sized to the actual footprint, a litigation-extension tolling clause, express assignment beyond a statutory merger, heightened public-interest scrutiny for physician covenants, and discretionary judicial reformation that the drafting does not rely on. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-ohio
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

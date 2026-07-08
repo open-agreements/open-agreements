@@ -3,6 +3,7 @@ category: non-compete
 description: 'Louisiana-specific employee restrictive covenant agreement built for La. R.S. 23:921''s void-unless-excepted rule: confidentiality and trade-secret protection, a customer non-solicitation and an optional non-compete drawn to fit the § 23:921(C) employee exception (named parishes or municipalities, a like business carried on there, and no more than two years from termination), an employee non-solicitation covenant reviewed under the common-law reasonableness standard, an effective-date recital tying the covenants to the start of employment, physician burn-off caps, occupation carve-outs (automobile salesmen, interns and apprentices, real estate licensees), and a Louisiana-law-and-forum selection — with no judicial reformation, because a non-compliant Louisiana covenant is severed rather than rewritten. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-louisiana
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

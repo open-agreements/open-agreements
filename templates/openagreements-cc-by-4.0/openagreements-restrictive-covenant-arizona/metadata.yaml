@@ -3,6 +3,7 @@ category: non-compete
 description: 'Arizona-specific employee restrictive covenant agreement built for Arizona''s common-law reasonableness regime: there is no general Arizona non-compete statute, so every post-employment restraint stands or falls on Arizona''s reasonableness test — a restriction is unreasonable and will not be enforced if it is greater than necessary to protect the employer''s legitimate interest, or if that interest is outweighed by hardship to the employee and likely injury to the public. It provides confidentiality and trade-secret protection backstopped by the Arizona Uniform Trade Secrets Act (A.R.S. §§ 44-401 to 44-407), a continued-at-will-employment consideration recital, customer and employee non-solicitation drawn to the protectable-interest threshold, an optional non-compete sized to the actual footprint, confidentiality and non-solicits scoped so they do not operate as de-facto non-competes, a broadcast-employer screening recital for the one statutory ban (A.R.S. § 23-494), physician covenants drafted for Arizona''s heightened public-interest scrutiny, and grammatically severable covenant drafting for Arizona''s strict trim-only blue pencil, which strikes overbroad terms but never rewrites them. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-arizona
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

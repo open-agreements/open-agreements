@@ -3,6 +3,7 @@ category: corporate-governance
 description: Action by written consent of the stockholders of a Delaware corporation approving the board's ratification of a defective corporate act under Section 204 of the Delaware General Corporation Law — approving the specifically identified act, and approving any related charter amendment or certificate of validation the cure requires.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-stockholder-ratifying-consent
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

@@ -3,6 +3,7 @@ category: non-compete
 description: 'Maryland-specific employee restrictive covenant agreement built for Md. Code, Lab. & Empl. § 3-716: confidentiality and trade-secret protection anchored on the Maryland Uniform Trade Secrets Act, an employee non-solicitation covenant, a customer non-solicitation covenant tied to Maryland''s protectable client- relationship interest and the statute''s client-list carve-out, and an optional non-compete drawn to the common-law reasonableness standard. The agreement recites the statutory worker-class voids that make a covenant null and void outright for low-wage employees (150% or less of the State minimum wage), veterinary practitioners and technicians, and most direct-patient-care Health Occupations Article licensees earning $350,000 or less, and it caps a covered high-earner clinician covenant at one year and ten miles. Consideration rests on continued at-will employment, and each covenant is drafted in severable tiers for Maryland''s strict blue-pencil rule rather than relying on discretionary judicial reformation. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-maryland
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

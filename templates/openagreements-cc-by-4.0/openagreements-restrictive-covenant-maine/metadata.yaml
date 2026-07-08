@@ -3,6 +3,7 @@ category: non-compete
 description: 'Maine-specific employee restrictive covenant agreement built for 26 M.R.S. § 599-A: confidentiality and trade-secret protection tied to the statute''s three legitimate business interests (trade secrets, non-trade-secret confidential information, and goodwill), an employee non-solicitation covenant, a customer non-solicitation covenant, and an optional non-compete drawn to Maine''s reasonableness standard. The agreement recites the § 599-A(4) pre-offer disclosure and three-business-day review window as statutory duties, states the § 599-A(5) delayed-effectiveness mechanics (no effect until the later of one year of employment or six months from signing, except for allopathic and osteopathic physicians), bars the non-compete at or below the 400% federal-poverty-level wage floor, excludes non-owner veterinarians, flags the L.D. 2200 health-care-practitioner restriction for agreements entered into or renewed on or after July 13, 2026, excludes employer-to- employer no-poach terms under § 599-B, keeps Maine law and a Maine forum for Maine-based workers, and drafts each covenant to the restraint the employer actually intends to enforce rather than relying on discretionary judicial reformation. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-maine
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

@@ -3,6 +3,7 @@ category: non-compete
 description: 'New Hampshire-specific employee restrictive covenant agreement built for the state''s three-part reasonableness test and its statutory traps: confidentiality and trade-secret protection under RSA chapter 350-B, customer and employee non-solicitation tied to the employee''s own sphere of customer goodwill, an optional non-compete drawn to the recognized protectable interests, the RSA 275:70 pre-acceptance delivery recital for new hires, the RSA 275:70-a low-wage exclusion, the clinician geographic-practice carve-out (RSA 329:31-a, 326-B:45-a, 326-B:45-b, 315:18), and a good-faith-preserving, drawn-narrow reformation posture rather than reliance on judicial repair. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-new-hampshire
 version: 0.1.0
+stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled
