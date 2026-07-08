@@ -80,7 +80,7 @@ Duration
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {passive_public_holdings_threshold} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means the legitimate business interests that justify a restrictive covenant under the Georgia Restrictive Covenants Act, which the person seeking enforcement must plead and prove under O.C.G.A. § 13-8-55, including Employer's Confidential Information, Employer's trade secrets, Employer's substantial relationships with specific prospective or existing customers, and Employer's customer goodwill.
+[[Protected Interests]] means the legitimate business interests that justify a restrictive covenant under the Georgia Restrictive Covenants Act (O.C.G.A. § 13-8-55), including Employer's Confidential Information, Employer's trade secrets, Employer's substantial relationships with specific prospective or existing customers, and Employer's customer goodwill.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -92,7 +92,7 @@ Duration
 
 ### Recitals, Consideration, and Legitimate Business Interests
 
-Employer and Employee acknowledge that this agreement is a contract between an employer and an employee, one of the relationships to which the Georgia Restrictive Covenants Act, O.C.G.A. § 13-8-50 et seq., applies (O.C.G.A. § 13-8-52(a)), and that each restrictive covenant in this agreement is supported by, and no greater than necessary to protect, one or more of Employer's Protected Interests. The Act requires the person seeking enforcement to plead and prove the existence of one or more legitimate business interests justifying the covenant (O.C.G.A. § 13-8-55), and the parties record those interests here so the agreement documents Employer's opening burden. As consideration for entering into this agreement, Employer provides Employee with {additional_consideration}. The Act does not codify what consideration must support a covenant; for an existing employee the parties intend the recited consideration to supply value beyond continued at-will employment. The restrictive covenants in this agreement contain limitations as to time, geographic area, and scope of prohibited activities that the parties intend to be reasonable and no greater than necessary to protect Employer's Protected Interests, as O.C.G.A. § 13-8-53(a) requires.
+Employer and Employee acknowledge that this agreement is a contract between an employer and an employee, one of the relationships to which the Georgia Restrictive Covenants Act, O.C.G.A. § 13-8-50 et seq., applies (O.C.G.A. § 13-8-52(a)), and that each restrictive covenant in this agreement is supported by, and no greater than necessary to protect, one or more of Employer's Protected Interests, which the parties record here. As consideration for entering into this agreement, Employer provides Employee with {additional_consideration}. For an existing employee, the parties intend the recited consideration to supply value beyond continued at-will employment. The restrictive covenants in this agreement contain limitations as to time, geographic area, and scope of prohibited activities that the parties intend to be reasonable and no greater than necessary to protect Employer's Protected Interests, as O.C.G.A. § 13-8-53(a) requires.
 
 ### Timing and Employee Acknowledgements
 
@@ -112,15 +112,15 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. Georgia courts analyze employee non-recruitment covenants under the Georgia Restrictive Covenants Act's reasonableness standard rather than the common law (Belt Power, LLC v. Reed, 354 Ga. App. 289 (2020); North American Senior Benefits, LLC v. Wimmer, 319 Ga. 641 (2024)), and this covenant is limited to Covered Employees for the stated Restricted Period so that it is no broader in time or scope than necessary. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This covenant is limited to Covered Employees for the stated Restricted Period so that it is no broader in time or scope than necessary. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees.
 
 ### Non-Solicitation of Customers
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer for purposes of providing products or services that are competitive with those provided by Employer's business. This customer non-solicitation covenant is drafted under O.C.G.A. § 13-8-53(b): it reaches only customers and prospective customers with whom Employee had material contact as defined in O.C.G.A. § 13-8-51(10), and, as § 13-8-53(b) provides, no express reference to geographic area or to the types of products or services considered competitive is required for it to be enforceable. This covenant sits outside the § 13-8-53(a) covered-employee gate and is enforceable independent of Employee's job function.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer for purposes of providing products or services that are competitive with those provided by Employer's business. This covenant reaches only Covered Customers, meaning customers and prospective customers with whom Employee had material contact, and is drawn no broader than necessary to protect Employer's Protected Interests.
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than the customer non-solicitation covenant because it reaches conduct beyond soliciting or attempting to solicit; the parties acknowledge that a Georgia court may analyze it as a restraint on competition in its own right under the Act's reasonableness standard, and possibly under the § 13-8-53(a) covered-employee gate, rather than as a routine non-solicit. It reaches only Covered Customers with whom Employee had material contact and is drawn no broader than necessary to protect Employer's Protected Interests.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction reaches conduct beyond soliciting or attempting to solicit, and reaches only Covered Customers with whom Employee had material contact. It is drawn no broader than necessary to protect Employer's Protected Interests.
 
 ### Non-Competition
 
@@ -136,7 +136,7 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 
 ### Physician and Health Care Practitioner Covenants
 
-Georgia has no physician-specific statutory carve-out from the Georgia Restrictive Covenants Act. A physician typically qualifies as a professional under O.C.G.A. § 13-8-51(14) — an employee whose primary duty requires advanced knowledge in a field of science or learning customarily acquired by a prolonged course of specialized intellectual instruction — and is therefore among the covered categories that may be bound by a non-compete under O.C.G.A. § 13-8-53(a), on the same reasonableness terms as any other covered employee. Any other health care worker is covered only if Employee independently falls within one of the § 13-8-53(a) categories. Because healthcare non-compete bills recur in the Georgia legislature, the parties should confirm the statute is unchanged before relying on a physician covenant.
+A physician or other health care practitioner is bound by the covenants in this agreement only to the extent Employee performs a covered function under O.C.G.A. § 13-8-53(a). This agreement creates no physician-specific covenant and imposes no restriction on a health care worker who does not independently fall within one of those covered categories.
 
 ### No Conflicting Obligations
 
@@ -144,15 +144,15 @@ Employee represents that performing duties for Employer and complying with this 
 
 ### Notice to Future Employers and Other Third Parties
 
-Employer may disclose the existence and terms of this agreement to any prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach this agreement. Employee consents to this disclosure. Employer acknowledges that warning a third party off Employee based on a covenant a Georgia court later finds unreasonable and declines to modify may create tortious-interference exposure, and Employer will keep any such disclosure factual and tied to covenants that comply with the Act.
+Employer may disclose the existence and terms of this agreement to any prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach this agreement. Employee consents to this disclosure. Employer will limit any such disclosure to factual statements tied to covenants that comply with the Act.
 
 ### Tolling During Breach
 
-The Restricted Period for each covenant runs from the date Employee's employment ends and expires on its stated end date. If Employee breaches a restrictive covenant, Employer's remedy is prompt enforcement within the Restricted Period, including the injunctive relief described below, rather than an extension of the period. The parties acknowledge that under Daneshgari v. Patriot Towing Services, LLC, 361 Ga. App. 555 (2021), a Georgia court cannot extend a non-compete beyond its contractual expiration, even against a party violating an injunction, and this agreement does not rely on tolling to push any restriction past its stated end date.
+The Restricted Period for each covenant runs from the date Employee's employment ends and expires on its stated end date. If Employee breaches a restrictive covenant, Employer's remedy is prompt enforcement within the Restricted Period, including the injunctive relief described below, rather than an extension of the period. This agreement does not rely on tolling to push any restriction past its stated end date.
 
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Consistent with O.C.G.A. § 13-8-58(c), a court may enforce a restrictive covenant by any appropriate and effective remedy available at law or equity, including temporary and permanent injunctions, and Employer may seek such relief in addition to any other remedies available at law, including relief available under applicable trade-secret law to prevent actual or threatened misappropriation of trade secrets. Injunctive relief runs only through the covenant's stated Restricted Period.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek temporary and permanent injunctive relief and any other appropriate and effective remedy available at law or equity, including relief available under applicable trade-secret law to prevent actual or threatened misappropriation of trade secrets, consistent with O.C.G.A. § 13-8-58(c). Injunctive relief runs only through the covenant's stated Restricted Period.
 
 ### Enforceability and Severability
 
@@ -160,7 +160,7 @@ If any provision of this agreement is found to be unenforceable, the remaining p
 
 ### Reformation
 
-The parties acknowledge that, under O.C.G.A. § 13-8-53(d), a restrictive covenant not in compliance with the Act is void and unenforceable, but a court may modify such a covenant so long as the modification does not render the covenant more restrictive than as originally drafted — a power to strike or narrow, never to add terms or supply missing limits. Consistent with O.C.G.A. § 13-8-54, the parties request that a court construe the covenants to comport with the reasonable intent of the parties and grant only the relief reasonably necessary to protect Employer's Protected Interests. This modification power is discretionary: a Georgia court may decline to modify an overbroad covenant and leave it unenforceable as written (Belt Power, LLC v. Reed, 354 Ga. App. 289 (2020)). Each restrictive covenant in this agreement is therefore sized to Employer's legitimate business interest at the outset and is intended to be enforceable as written rather than in reliance on judicial modification.
+A court may modify a restrictive covenant that does not comply with O.C.G.A. § 13-8-53(d) only so long as the modification does not render the covenant more restrictive than as originally drafted. Consistent with O.C.G.A. § 13-8-54, the parties request that a court construe the covenants to comport with the reasonable intent of the parties and grant only the relief reasonably necessary to protect Employer's Protected Interests. Each restrictive covenant in this agreement is sized to Employer's legitimate business interest at the outset and is intended to be enforceable as written rather than in reliance on judicial modification.
 
 ### Survival and Expiration of Each Covenant
 
@@ -172,7 +172,7 @@ Employee may not assign this agreement or any rights or obligations under it. Em
 
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms, including the Georgia Restrictive Covenants Act, O.C.G.A. § 13-8-50 et seq. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. For a Georgia-based Employee, the parties intend Georgia law to govern the enforceability of the restrictive covenants: under Motorsports of Conyers, LLC v. Burbach, 317 Ga. 206 (2023), Georgia law remains the touchstone for determining whether a restrictive covenant is enforceable in Georgia courts even where the contract selects another state's law, and a Georgia court will not apply foreign law to enforce a covenant that is unreasonable under the Act. The covenants in this agreement are drawn to be enforceable under the Act on their own terms rather than in reliance on any foreign choice-of-law selection.
+This agreement is governed by the law listed in Cover Terms, including the Georgia Restrictive Covenants Act, O.C.G.A. § 13-8-50 et seq. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. For a Georgia-based Employee, the parties intend Georgia law to govern the enforceability of the restrictive covenants. The covenants in this agreement are drawn to be enforceable under the Act on their own terms rather than in reliance on any foreign choice-of-law selection.
 
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 

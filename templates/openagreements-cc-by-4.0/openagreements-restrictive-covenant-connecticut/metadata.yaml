@@ -1,6 +1,6 @@
 name: Employee Restrictive Covenant (Connecticut)
 category: non-compete
-description: 'Connecticut-specific employee restrictive covenant agreement built for Connecticut''s common-law reasonableness regime: there is no general Connecticut non-compete statute, so every post-employment restraint stands or falls on the five-factor test of Scott v. General Iron & Welding Co. (partial and restricted as to time or place, fair protection of the employer, no undue hardship on the employee, no interference with the public interest, and no preclusion of the employee''s occupation and livelihood). It provides confidentiality and trade-secret protection backstopped by the Connecticut Uniform Trade Secrets Act (Conn. Gen. Stat. §§ 35-51 to 35-53), a continued-employment consideration recital drafted to prove the connection the Dur-A-Flex and Schimenti decisions require, customer and employee non-solicitation, an optional non-compete tied to a recognized protectable interest and sized to the employer''s actual footprint, a physician clause reciting the § 20-14p one-year and fifteen-mile caps and the parallel §§ 20-12k / 20-101d caps for physician assistants and APRNs, statutory carve-outs excluding security-guard (§ 31-50a), broadcast-employee (§ 31-50b), and homemaker-companion / home-health (§§ 20-681, 20-683) restraints, and separable, tiered restraints drafted within their enforceable scope rather than in reliance on discretionary judicial narrowing, which Connecticut authority leaves unsettled. Drafted as a starting point for licensed counsel review.'
+description: 'Connecticut-specific employee restrictive covenant agreement built for Connecticut''s common-law reasonableness regime: there is no general Connecticut non-compete statute, so every post-employment restraint stands or falls on the five-factor common-law reasonableness test (partial and restricted as to time or place, fair protection of the employer, no undue hardship on the employee, no interference with the public interest, and no preclusion of the employee''s occupation and livelihood). It provides confidentiality and trade-secret protection backstopped by the Connecticut Uniform Trade Secrets Act (Conn. Gen. Stat. §§ 35-51 to 35-53), a continued-employment consideration recital drafted to prove the connection Connecticut''s current consideration case law requires, customer and employee non-solicitation, an optional non-compete tied to a recognized protectable interest and sized to the employer''s actual footprint, a physician clause reciting the § 20-14p one-year and fifteen-mile caps and the parallel §§ 20-12k / 20-101d caps for physician assistants and APRNs, statutory carve-outs excluding security-guard (§ 31-50a), broadcast-employee (§ 31-50b), and homemaker-companion / home-health (§§ 20-681, 20-683) restraints, and separable, tiered restraints drafted within their enforceable scope rather than in reliance on discretionary judicial narrowing, which Connecticut authority leaves unsettled. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-connecticut
 version: 0.1.0
 stability: experimental
@@ -44,7 +44,7 @@ fields:
     section: Timing
   - name: governing_law
     type: string
-    description: Governing law state. For a Connecticut workforce the honest selection is Connecticut law and a Connecticut forum, because the covenant was drafted against the Scott five-factor test and Connecticut's occupation statutes; a foreign-law clause invites a choice-of-law fight on top of the merits.
+    description: Governing law state. For a Connecticut workforce the honest selection is Connecticut law and a Connecticut forum, because the covenant was drafted against the five-factor common-law reasonableness test and Connecticut's occupation statutes; a foreign-law clause invites a choice-of-law fight on top of the merits.
     display_label: Governing Law
     section: Legal
     default: Connecticut
@@ -76,7 +76,7 @@ fields:
     rationale_source: benchmark
     benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
-    default_value_rationale: Connecticut sets no statutory cap on duration; no occupation statute addresses employee non-solicits, so the clause is judged on the ordinary Scott five-factor reasonableness test. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, and counsel should size the term to the employer's actual protectable interest.
+    default_value_rationale: Connecticut sets no statutory cap on duration; no occupation statute addresses employee non-solicits, so the clause is judged on the ordinary five-factor common-law reasonableness test. 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative, and counsel should size the term to the employer's actual protectable interest.
   - name: covered_employee_period
     type: string
     description: Lookback period for determining which employees are covered by the non-solicitation restriction.
@@ -139,7 +139,7 @@ fields:
     section: Non-Competition
   - name: specified_competitors
     type: string
-    description: Optional named list of specific competitors. Naming the employer's real competitors is self-proving narrowness under the fair-protection factor and leaves the worker free to take the rest of the industry's jobs, which defuses the livelihood objection under Scott.
+    description: Optional named list of specific competitors. Naming the employer's real competitors is self-proving narrowness under the fair-protection factor and leaves the worker free to take the rest of the industry's jobs, which defuses the livelihood objection under the reasonableness test.
     display_label: Specified Competitors
     default: ''
     section: Non-Competition
@@ -163,7 +163,7 @@ fields:
     rationale_source: benchmark
     benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives). A clause that technically forbids holding index funds or ordinary public shares adds harshness the employer cannot justify under the fair-protection factor of the Scott test.
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives). A clause that technically forbids holding index funds or ordinary public shares adds harshness the employer cannot justify under the fair-protection factor of the reasonableness test.
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.

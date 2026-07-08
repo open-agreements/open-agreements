@@ -207,6 +207,10 @@ A Wyoming court is unlikely to rescue an overbroad covenant by narrowing it late
 
 Where a covenant falls within a statutory exception and enforceability matters, enforceability is more likely when duration and geography are tied to specific business needs and the reasonableness analysis is documented at drafting time. Because a Wyoming court will void an overbroad covenant whole rather than trim it , the upside of an aggressive scope is small relative to the risk of losing the covenant entirely.
 
+### statutory exceptions
+
+A statutory exception is not a license for loose drafting. Employer-side law-firm commentary still points to reasonable scope and legitimate business fit ; law-firm commentary also treats the breadth of the trade-secret exception as an open question .
+
 ### protected-information scope
 
 The trade-secret exception covers covenants only to the extent they protect information that meets Wyoming's statutory trade-secret definition. Enforceability is more likely when the contractual definition of protected information is tied to that statutory bar and each category is documented as meeting it, since how broadly Wyoming courts read the carveout remains an open question .
@@ -218,3 +222,7 @@ A narrow customer-relationship restriction carries less risk than language that 
 ### physician carveout language
 
 Wyoming voids physician-to-physician practice restraints and protects the departing physician's right to share continuing-practice information with rare-disorder patients . Mirroring that statutory protection in the clause itself reduces risk, and relying on the broader exec/management exception for physicians employed by non-physician entities is riskier — the between physicians language leaves that scope unsettled .
+
+### training-cost recovery
+
+A clause drafted as an expense-recovery provision carries less risk than one that operates as a disguised penalty for competition. Enforceability is more likely when the amount is tied to actual relocation, education, or training expense and the statutory percentages .

@@ -84,7 +84,7 @@ Duration
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than five percent of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means the legitimate business interests an Ohio covenant may protect under the Raimonde v. Van Vlerah reasonableness rule, namely Employer's Confidential Information, Employer's trade secrets as defined by the Ohio Uniform Trade Secrets Act (Ohio Rev. Code § 1333.61), and Employer's goodwill in its customer, vendor, referral-source, and business-partner relationships, but not Employer's interest in avoiding ordinary competition.
+[[Protected Interests]] means the legitimate business interests an Ohio covenant may protect under Ohio's common-law reasonableness rule, namely Employer's Confidential Information, Employer's trade secrets as defined by the Ohio Uniform Trade Secrets Act (Ohio Rev. Code § 1333.61), and Employer's goodwill in its customer, vendor, referral-source, and business-partner relationships, but not Employer's interest in avoiding ordinary competition.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -96,15 +96,15 @@ Duration
 
 ### Recitals and Protectable Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to protect one or more of Employer's Protected Interests and to impose no restraint greater than is required for that protection. Ohio has no general non-compete statute; enforceability is governed by the common-law reasonableness rule of Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975), under which a post-employment restraint is reasonable only if it is no greater than is required for the protection of the employer, does not impose undue hardship on the employee, and is not injurious to the public. The parties acknowledge that each covenant is meant to guard Employer's Confidential Information, trade secrets, and customer goodwill and not to eliminate ordinary competition, and that Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. Each covenant is intended to be reasonable in time, territory, and scope, to impose no undue hardship on Employee, and to cause no injury to the public.
+Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to protect one or more of Employer's Protected Interests and to impose no restraint greater than is required for that protection. The parties acknowledge that each covenant is meant to guard Employer's Confidential Information, trade secrets, and customer goodwill and not to eliminate ordinary competition, and that Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. Each covenant is intended to be no greater than is required for the protection of Employer, to impose no undue hardship on Employee, to cause no injury to the public, and to be reasonable in time, territory, and scope.
 
 ### Timing, Consideration, and Employee Acknowledgements
 
-The parties acknowledge that this agreement is supported by adequate consideration. If Employee is an existing at-will employee, the parties agree that, in exchange for Employee's assent to the covenants in this agreement, Employer continues an at-will employment relationship that it could otherwise legally have terminated without cause, which is itself sufficient consideration for the covenants under Lake Land Emp. Group of Akron, LLC v. Columber, 101 Ohio St. 3d 242, 2004-Ohio-786; no separate payment, raise, or promotion is required. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests, and understands that adequate consideration establishes only that the covenants are supported, not that they are reasonable — each covenant must independently satisfy the Raimonde reasonableness test on time, territory, and scope. This agreement is effective as of the Effective Date listed in Cover Terms.
+The parties acknowledge that this agreement is supported by adequate consideration. If Employee is an existing at-will employee, the parties agree that, in exchange for Employee's assent to the covenants in this agreement, Employer continues an at-will employment relationship that it could otherwise legally have terminated without cause, which is itself sufficient consideration for the covenants; no separate payment, raise, or promotion is required. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests, and understands that adequate consideration establishes only that the covenants are supported, not that they are reasonable — each covenant must independently be no greater than is required to protect Employer, impose no undue hardship on Employee, and cause no injury to the public. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
-Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue in perpetuity, for as long as the information remains a trade secret. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms. Trade secrets are protected under Ohio law, including the Ohio Uniform Trade Secrets Act, Ohio Rev. Code §§ 1333.61–1333.69, which defines a trade secret by its independent economic value from not being generally known and by efforts that are reasonable under the circumstances to maintain its secrecy (Ohio Rev. Code § 1333.61(D)). This confidentiality obligation is intended to operate alongside, and independent of, any restrictive covenant, and does not restrict Employee's use of the general knowledge, skill, and experience Employee acquired during employment.
+Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue in perpetuity, for as long as the information remains a trade secret. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms. This confidentiality obligation is intended to operate alongside, and independent of, any restrictive covenant, and does not restrict Employee's use of the general knowledge, skill, and experience Employee acquired during employment.
 
 ### Permitted Disclosures and Protected Conduct
 
@@ -116,23 +116,23 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. As the lightest restraint in this agreement, this covenant is analyzed under the Raimonde reasonableness rule and reaches only Covered Employees during the Restricted Period, no broader than necessary to protect Employer's workforce stability and goodwill.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is no broader than necessary to protect Employer's workforce stability and goodwill.
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. Ohio courts analyze this customer non-solicitation covenant under the Raimonde reasonableness rule (Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975)); it reaches only Covered Customers with whom Employee had material contact and is no broader than necessary to protect Employer's goodwill in its customer relationships. This covenant maps directly onto Employer's customer-goodwill interest and, together with the confidentiality and trade-secret protections in this agreement, is often a stronger and more readily enforceable protection than a broad non-compete.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers with whom Employee had material contact and is no broader than necessary to protect Employer's goodwill in its customer relationships. This covenant is directed at Employer's customer-goodwill interest and operates together with the confidentiality and trade-secret protections in this agreement.
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee, and because it presses harder on the undue-hardship prong of the Raimonde reasonableness rule it is sized tightly to the goodwill it protects and reaches only Covered Customers with whom Employee had material contact.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee; because it presses harder on Employee, it is sized tightly to the goodwill it protects and reaches only Covered Customers with whom Employee had material contact.
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant exists to protect Employer's Protected Interests — its Confidential Information, trade secrets, and customer goodwill — and not to restrain ordinary competition. Consistent with the Raimonde v. Van Vlerah reasonableness rule, the parties intend this covenant to be no greater than is required for the protection of Employer, to impose no undue hardship on Employee, and to cause no injury to the public, with its time and territory sized to Employee's actual role and Employer's actual market. If Employer has identified specific competitors in Cover Terms under Specified Competitors, the parties intend this covenant to be understood and, if necessary, enforced as limited to those named competitors, because a restraint bound to named competitors is strong evidence that it is no greater than required. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant exists to protect Employer's Protected Interests — its Confidential Information, trade secrets, and customer goodwill — and not to restrain ordinary competition. The parties intend this covenant to be no greater than is required for the protection of Employer, to impose no undue hardship on Employee, and to cause no injury to the public, with its time and territory sized to Employee's actual role and Employer's actual market. If Employer has identified specific competitors in Cover Terms under Specified Competitors, the parties intend this covenant to be understood and, if necessary, enforced as limited to those named competitors. Passive Public Holdings are permitted.
 
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Because this covenant restrains active roles at and material participation in a Competitive Business, it is a post-employment restraint analyzed under the Raimonde reasonableness rule and is drawn no broader than necessary to protect Employer's Protected Interests. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Because this covenant restrains active roles at and material participation in a Competitive Business, it is drawn no broader than necessary to protect Employer's Protected Interests. Passive Public Holdings are permitted.
 
 ### Non-Disparagement
 
@@ -140,7 +140,7 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 
 ### Physician and Health Care Practitioner Covenants
 
-If Employee is a physician, any covenant in this agreement restraining Employee from the practice of medicine is drafted against Ohio's heightened public-interest scrutiny for physician covenants and not as an ordinary commercial restraint. Ohio courts hold that a covenant restraining a physician-employee from competing with the employer is unreasonable where it imposes undue hardship on the physician and is injurious to the public because the physician's services are vital to the health, care, and treatment of the public and the demand for that medical expertise is critical to the community (MetroHealth Sys. v. Khandelwal, 2022-Ohio-77, 183 N.E.3d 590 (8th Dist.); Williams v. Hobbs, 9 Ohio App. 3d 331, 460 N.E.2d 287 (10th Dist. 1983)). Accordingly, any physician covenant in this agreement is intended to use a narrow radius and a short term, to preserve patient access and continuity of care, and to be enforced only to the extent it survives that heightened scrutiny under the Raimonde reasonableness rule. There is no enacted Ohio statute banning health-care non-competes, and this agreement does not assume any pending legislation.
+If Employee is a physician, any covenant in this agreement restraining Employee from the practice of medicine is intended to use a narrow radius and a short term, to preserve patient access and continuity of care, and to be enforced only to the extent it is no greater than is required to protect Employer, imposes no undue hardship on Employee, and causes no injury to the public. The parties intend any such covenant to operate as a restraint tied to Employer's Protected Interests and not as an ordinary commercial restraint on the practice of medicine.
 
 ### No Conflicting Obligations
 
@@ -148,15 +148,15 @@ Employee represents that performing duties for Employer and complying with this 
 
 ### Notice to Future Employers and Other Third Parties
 
-Employer may disclose the existence and terms of this agreement to any prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach this agreement. Employee consents to this disclosure. Employer acknowledges that a notice built on a covenant that later fails the Raimonde reasonableness analysis may expose Employer to a claim, and that it should condition any such notice on a restraint it is prepared to defend on all three prongs.
+Employer may disclose the existence and terms of this agreement to any prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach this agreement. Employee consents to this disclosure.
 
 ### Tolling During Breach
 
-If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, so that the full duration of the restriction runs from the date the breach ends. Consistent with Ohio law, the parties further acknowledge that a covenant not to compete may not expire while the enforceability of the agreement is being litigated, so that the Restricted Period may be equitably extended until the litigation is resolved (Homan, Inc. v. A1 AG Servs., L.L.C., 175 Ohio App. 3d 51, 2008-Ohio-277 (3d Dist.)). Any such extension is itself a restraint that must remain reasonable and bounded under the Raimonde rule; the parties do not intend an open-ended or indefinite extension.
+If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, so that the full duration of the restriction runs from the date the breach ends. The parties further agree that a covenant in this agreement may not expire while the enforceability of the agreement is being litigated, so that the Restricted Period may be equitably extended until the litigation is resolved. Any such extension is itself a restraint that must remain reasonable and bounded; the parties do not intend an open-ended or indefinite extension.
 
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, including relief under the Ohio Uniform Trade Secrets Act, Ohio Rev. Code § 1333.62(A), under which actual or threatened misappropriation of a trade secret may be enjoined independent of any covenant. Employer acknowledges that overreach has a price: where a covenant fails and the agreement contains a prevailing-party fee provision, a court applying Ohio law has required the employer to pay the former employee's attorney's fees and litigation costs under the employer's own clause (Cintas Corp. v. Perry, 517 F.3d 459 (7th Cir. 2008)).
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, including relief under the Ohio Uniform Trade Secrets Act, Ohio Rev. Code § 1333.62(A), under which actual or threatened misappropriation of a trade secret may be enjoined independent of any covenant.
 
 ### Enforceability and Severability
 
@@ -164,7 +164,7 @@ If any provision of this agreement is found to be unenforceable, the remaining p
 
 ### Reformation
 
-Ohio courts are empowered to modify or amend an overbroad covenant and to enforce it to the extent necessary to protect the employer's legitimate interests, having abandoned strict blue-penciling in Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975); Employer therefore requests reformation if any restraint in this agreement is found to be overbroad. That power is discretionary rather than automatic: an Ohio court may decline to rewrite a covenant so overbroad that reforming it would require rebuilding the agreement (Kross Acquisition Co. v. Groundworks Ohio, LLC, 2024-Ohio-592, 236 N.E.3d 453 (1st Dist.)). Accordingly, each restrictive covenant in this agreement is drawn as a tiered, severable, reasonable restraint sized to the Protected Interests from the start and is intended to be enforceable as written rather than in reliance on judicial revision.
+Employer requests that a court modify or amend any restraint in this agreement found to be overbroad and enforce it to the extent necessary to protect Employer's legitimate interests. Each restrictive covenant in this agreement is drawn as a tiered, severable, reasonable restraint sized to the Protected Interests from the start and is intended to be enforceable as written rather than in reliance on judicial revision.
 
 ### Survival and Expiration of Each Covenant
 
@@ -172,11 +172,11 @@ Each restrictive covenant in this agreement survives the termination of Employee
 
 ### Assignment and Successors
 
-Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns. The parties include this express assignment and successor language so that a buyer may enforce the covenants in transactions that are not statutory mergers; after a statutory merger, a surviving company may enforce these covenants as if it had stepped into Employer's shoes even without assignment language, provided the covenants are reasonable in its hands (Acordia of Ohio, L.L.C. v. Fishel, 133 Ohio St. 3d 356, 2012-Ohio-4648).
+Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns. This express assignment and successor-and-assigns language lets a buyer enforce the covenants in a transaction that is not a statutory merger.
 
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms. Where Ohio law governs, the enforceability of each restrictive covenant is determined under the common-law reasonableness rule of Raimonde v. Van Vlerah and its progeny; there is no general Ohio non-compete statute and no statutory safe harbor, so each covenant is drafted to survive the holistic reasonableness analysis rather than to escape it. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. The parties intend that the governing-law and venue choices match where Employee actually lives and works.
+This agreement is governed by the law listed in Cover Terms. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. The parties intend that the governing-law and venue choices match where Employee actually lives and works.
 
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 
@@ -205,20 +205,32 @@ Drafting and enforceability considerations for this template, from the related p
 
 ### reasonableness
 
-Do not assume adequate consideration cures an overbroad covenant. Continued at-will employment satisfies _Lake Land_, but a restraint that fails _Raimonde_ on time, territory, or scope is still unenforceable .
+Adequate consideration does not cure an overbroad covenant. Continued at-will employment satisfies _Lake Land_, but a restraint that fails _Raimonde_ on time, territory, or scope is unenforceable no matter how cleanly the rest of the agreement reads, because consideration establishes only that a covenant is supported, not that it is reasonable .
 
 ### protectable interests
 
-Do not use an Ohio non-compete to block competition disconnected from a protectable interest. Tie the restraint to identified confidential information, trade secrets, or customer goodwill, and keep a separate confidentiality and trade-secret strategy under R.C. 1333.61 et seq. .
+An Ohio non-compete that blocks competition disconnected from a protectable interest reaches nothing the law recognizes and fails on the interest requirement: the restraint holds only where it is tied to identified confidential information, trade secrets, or customer goodwill. A separate confidentiality and trade-secret strategy under R.C. 1333.61 et seq. survives even where the non-compete does not .
+
+### the trade-secret backstop under the Ohio Uniform Trade Secrets Act
+
+A broad Ohio non-compete draws the heaviest reasonableness scrutiny, while the Ohio Uniform Trade Secrets Act supplies a remedy that does not depend on any covenant: actual or threatened misappropriation of a trade secret may be enjoined under R.C. 1333.62, and the Act protects information that derives independent economic value from secrecy and is the subject of reasonable efforts to keep it secret . A confidentiality and customer-non-solicitation strategy built on that statutory backstop often protects the employer more durably than a non-compete that has to survive the full _Raimonde_ analysis, and it holds even where the non-compete is trimmed or declined .
 
 ### duration and territory
 
-Do not copy a fixed term or radius from another form. Match duration and territory to the employee's role and the employer's actual market, because an Ohio court evaluates the restraint as a whole and there is no safe-harbor number .
+A fixed term or radius copied from another form is measured against the employer's actual market, not the source it came from: an Ohio court evaluates the restraint as a whole against the employer's real protectable interest, with no safe-harbor number, so a duration or territory sized to a different role or market is exposed to being trimmed or declined .
 
 ### reformation
 
-Do not rely on reformation as a safety net for an aggressive Ohio covenant. Draft tiered, severable, reasonable restraints, because a court may refuse to rewrite an overbroad covenant — and a one-sided fee clause can shift fees to the departing employee when the covenant fails .
+Reformation is a discretionary repair, not a safety net an aggressive Ohio covenant can count on: a court may refuse to rewrite a covenant so overbroad that reforming it would require rebuilding the agreement, leaving it unenforceable, and a one-sided fee clause can shift fees to the departing employee when the covenant fails . Tiered, severable, reasonable restraints survive that refusal where a single grasping covenant does not.
 
 ### assignment
 
-Do not rely on _Acordia_ for every transaction. It addresses covenants that pass by statutory merger; in an asset deal, include express assignment and successor-and-assigns language so the buyer can enforce the restraint .
+_Acordia_ reaches only covenants that pass by statutory merger, so a covenant silent on assignment can raise a live assignability question in an asset deal, where the buyer may be unable to enforce the restraint. Express assignment and successor-and-assigns language carries the covenant to a buyer in a transaction that is not a statutory merger .
+
+### a bounded extension-on-breach term
+
+An Ohio covenant does not necessarily lapse on its stated end date while a dispute is pending: under _Homan_, a covenant may not expire while the enforceability of the agreement is being litigated, so the restricted period can be tolled until the case resolves . That judicial tolling is equitable rather than automatic, and any contractual extension-on-breach term is measured against the same _Raimonde_ reasonableness backdrop, so an open-ended or indefinite extension is exposed to being cut back like any other overbroad restraint, while an extension bounded to the duration of the breach stands with the covenant it protects .
+
+### heightened public-interest scrutiny for physician covenants
+
+A physician covenant drafted like an ordinary commercial restraint meets heightened public-interest scrutiny in Ohio: a covenant restraining a physician-employee is unreasonable where it imposes undue hardship on the physician and injures the public because the physician's services are vital to the community and the demand for that expertise is critical . A narrow radius and a short term that preserve patient access and continuity of care are what let such a covenant survive that scrutiny, and a covered nonprofit-hospital clinician covenant would face a further statutory ceiling if Senate Bill 301 is enacted .

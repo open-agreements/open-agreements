@@ -111,7 +111,7 @@ Employer and Employee acknowledge that each restrictive covenant in this agreeme
 
 ### Timing, Consideration, and Advance Notice
 
-This agreement is effective as of the Effective Date listed in Cover Terms. Employer and Employee acknowledge that continued at-will employment is adequate consideration for the restrictive covenants in this agreement, consistent with Lucht's Concrete Pumping, Inc. v. Horner, 255 P.3d 1058 (Colo. 2011).
+This agreement is effective as of the Effective Date listed in Cover Terms. Employer and Employee acknowledge that continued at-will employment is adequate consideration for the restrictive covenants in this agreement.
 
 For any non-compete or customer non-solicitation covenant in this agreement, Employer has provided Employee the advance notice required by C.R.S. § 8-2-113(4) in a separate signed document dated as shown in Cover Terms under Advance Notice Date. That notice is a standalone writing, separate from this agreement and any other covenant, in clear and conspicuous terms in the language in which Employer and Employee communicate about Employee's performance, identifying this agreement by name and directing Employee to the covenant's terms, and signed by Employee. Employer delivered the notice before Employee accepted the offer of employment or, for a current worker, at least fourteen days before the earlier of (a) the effective date of the covenant or (b) the effective date of any additional compensation or change in the terms or conditions of employment that provides consideration for the covenant. Employee may consult an attorney before entering into this agreement, and the advance-notice period affords time to do so.
 
@@ -129,7 +129,7 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction is limited to initiating contact with or actively soliciting Covered Employees; it does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. Consistent with Phoenix Capital, Inc. v. Dowell, 176 P.3d 835 (Colo. App. 2007), this covenant is drawn as a restraint limited to active solicitation that does not impair Employee's own ability to make a living.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction is limited to initiating contact with or actively soliciting Covered Employees; it does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees.
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
@@ -137,11 +137,11 @@ During the Restricted Period, Employee must not Solicit the business of any Cove
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee. Colorado's baseline rule voids covenants that restrict the right to receive compensation for performance of labor (C.R.S. § 8-2-113(2)(a)), and the statute provides no express exception for a non-dealing restraint; the parties include this covenant only where a genuine trade-secret interest supports it and Employee clears the applicable earnings threshold, and it is drawn no broader than reasonably necessary to protect Employer's Trade Secrets.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee. This covenant applies, and is enforceable, only where a genuine trade-secret interest supports it and Employee earns at or above the applicable earnings threshold under C.R.S. § 8-2-113 both when this agreement is entered into and when the covenant is enforced, and it is drawn no broader than reasonably necessary to protect Employer's Trade Secrets.
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. A Colorado covenant not to compete is void under C.R.S. § 8-2-113(2)(a) unless it fits the highly compensated worker exception. Accordingly, this covenant applies, and is enforceable, only if Employee earns annualized cash compensation equivalent to or greater than the Highly Compensated Worker Threshold listed in Cover Terms both at the time this agreement is entered into and at the time the covenant is enforced (C.R.S. § 8-2-113(2)(b)), and only as a restraint for the protection of Employer's Trade Secrets that is no broader than reasonably necessary to protect that interest. Employer bears the burden of establishing that the covenant falls within this exception. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. Notwithstanding any other provision of this agreement, this covenant applies, and is enforceable, only if Employee earns annualized cash compensation equivalent to or greater than the Highly Compensated Worker Threshold listed in Cover Terms both at the time this agreement is entered into and at the time the covenant is enforced (C.R.S. § 8-2-113(2)(b)), and only as a restraint for the protection of Employer's Trade Secrets that is no broader than reasonably necessary to protect that interest. Passive Public Holdings are permitted.
 
 ### Non-Investment
 
@@ -153,15 +153,15 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 
 ### Health-Care Provider Exclusion and Patient Communications
 
-For agreements entered into or renewed on or after August 6, 2025, and notwithstanding any other provision of this agreement, no covenant not to compete and no covenant not to solicit customers in this agreement applies to, or is enforceable against, Employee if Employee is a health-care provider — meaning an individual licensed to engage in the practice of medicine, registered to engage in the practice of advanced practice registered nursing, licensed to practice as a certified midwife, or licensed to engage in the practice of dentistry. The highly compensated worker exception is not available for a covenant restricting the practice of medicine, advanced practice registered nursing, or dentistry, at any compensation level, under S.B. 25-083 (2025), amending C.R.S. § 8-2-113(2)(b). In addition, nothing in this agreement restricts a departing health-care provider, or Employer, from disclosing to a patient the provider's continuing practice of medicine, the provider's new professional contact information, or the patient's right to choose a health-care provider (C.R.S. § 8-2-113(5.5)); any provision purporting to restrict those communications is void.
+For agreements entered into or renewed on or after August 6, 2025, and notwithstanding any other provision of this agreement, no covenant not to compete and no covenant not to solicit customers in this agreement applies to, or is enforceable against, Employee if Employee is a health-care provider — meaning an individual licensed to engage in the practice of medicine, registered to engage in the practice of advanced practice registered nursing, licensed to practice as a certified midwife, or licensed to engage in the practice of dentistry — regardless of Employee's compensation (C.R.S. § 8-2-113(2)(b)). In addition, nothing in this agreement restricts a departing health-care provider, or Employer, from disclosing to a patient the provider's continuing practice of medicine, the provider's new professional contact information, or the patient's right to choose a health-care provider (C.R.S. § 8-2-113(5.5)); any provision purporting to restrict those communications is void.
 
 ### Minority-Owner Sale-of-Business Duration Cap
 
-If any non-compete in this agreement is entered into in connection with the purchase and sale of a business or its assets under C.R.S. § 8-2-113(3)(c), and Employee is a minority owner who received the ownership interest as equity compensation or otherwise in connection with services rendered, the duration in years of that covenant must not exceed a number calculated by dividing the total consideration Employee received from the sale by Employee's average annualized cash compensation received from the business, including income received on account of the ownership interest, during the preceding two years or during the period Employee was affiliated with the business, whichever period is shorter, as required by S.B. 25-083 (2025), amending C.R.S. § 8-2-113(3)(c). Any stated duration that exceeds this cap is limited to the cap.
+If any non-compete in this agreement is entered into in connection with the purchase and sale of a business or its assets under C.R.S. § 8-2-113(3)(c), and Employee is a minority owner who received the ownership interest as equity compensation or otherwise in connection with services rendered, the duration in years of that covenant must not exceed a number calculated by dividing the total consideration Employee received from the sale by Employee's average annualized cash compensation received from the business, including income received on account of the ownership interest, during the preceding two years or during the period Employee was affiliated with the business, whichever period is shorter. Any stated duration that exceeds this cap is limited to the cap.
 
 ### Limits on Recovery of Training Costs
 
-Any provision under which Employer recovers the expense of educating and training Employee is limited to the recovery of the reasonable costs of training that is distinct from normal, on-the-job training, must satisfy any attorney-general rules on the transferability of the training or credentialing available to Employee, and the recoverable amount decreases over the course of the two years following the training, as required by C.R.S. § 8-2-113(3)(a). No such provision recovers ordinary onboarding or routine skills training or a flat amount untethered from documented training cost. Employer acknowledges that the attorney general may recover three times the amount of any recovery or attempted recovery made in violation of C.R.S. § 8-2-113(3)(a).
+Any provision under which Employer recovers the expense of educating and training Employee is limited to the recovery of the reasonable costs of training that is distinct from normal, on-the-job training, must satisfy any attorney-general rules on the transferability of the training or credentialing available to Employee, and the recoverable amount decreases over the course of the two years following the training, as required by C.R.S. § 8-2-113(3)(a). No such provision recovers ordinary onboarding or routine skills training or a flat amount untethered from documented training cost.
 
 ### No Conflicting Obligations
 
@@ -169,15 +169,15 @@ Employee represents that performing duties for Employer and complying with this 
 
 ### Notice to Future Employers and Other Third Parties
 
-Employer may disclose the existence and terms of this agreement to a prospective employer or business associate of Employee only where a covenant in this agreement is enforceable against Employee under C.R.S. § 8-2-113 and Employer has a reasonable belief that Employee may breach that covenant. Employer will not present or attempt to enforce a covenant that is void under C.R.S. § 8-2-113, because doing so is itself unlawful under C.R.S. § 8-2-113(8)(a). Employee consents to a disclosure permitted by this section.
+Employer may disclose the existence and terms of this agreement to a prospective employer or business associate of Employee only where a covenant in this agreement is enforceable against Employee under C.R.S. § 8-2-113 and Employer has a reasonable belief that Employee may breach that covenant. Employer will not present or attempt to enforce a covenant that is void under C.R.S. § 8-2-113. Employee consents to a disclosure permitted by this section.
 
 ### Tolling During Breach
 
-The parties acknowledge that Colorado law does not clearly authorize extending a restrictive covenant beyond its stated term, that Colorado courts have declined to extend a restraint past the term the parties specified (Phoenix Capital, Inc. v. Dowell, 176 P.3d 835 (Colo. App. 2007)), and that any non-compete or customer non-solicit must satisfy the applicable earnings threshold at the time of enforcement. Accordingly, the Restricted Period for each covenant runs from the date Employee's employment ends and is not extended by any period of breach.
+The Restricted Period for each covenant runs from the date Employee's employment ends and is not extended by any period of breach. Any non-compete or customer non-solicitation covenant must satisfy the applicable earnings threshold under C.R.S. § 8-2-113 at the time it is enforced.
 
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate, and Employer may seek injunctive or other equitable relief in addition to any other remedies available at law. At the preliminary-injunction stage, Employer must still establish that the covenant falls within a statutory exception (Phoenix Capital, Inc. v. Dowell, 176 P.3d 835 (Colo. App. 2007)); no recital substitutes for that showing. Employee acknowledges that an employer that enters into, presents as a term of employment, or attempts to enforce a covenant void under C.R.S. § 8-2-113 is liable for actual damages and a penalty of five thousand dollars per worker or prospective worker harmed by the conduct (C.R.S. § 8-2-113(8)); any fee-shifting between the parties is mutual and prevailing-party based.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate, and Employer may seek injunctive or other equitable relief in addition to any other remedies available at law. Any fee-shifting between the parties is mutual and prevailing-party based.
 
 ### Enforceability and Severability
 
@@ -185,7 +185,7 @@ If any provision of this agreement is found to be unenforceable, the remaining p
 
 ### No Reliance on Judicial Reformation
 
-Colorado courts have discretion to narrow an unenforceable covenant but are never required to do so, and the parties cannot contractually obligate a court to blue-pencil an unreasonable covenant (23 LTD v. Herman, 2019 COA 113). This agreement does not rely on any savings or reformation clause to cure overbreadth and does not purport to obligate a court to narrow any covenant. Each restrictive covenant is instead drawn within the enforceable scope Colorado law permits at the outset, because merely entering into or presenting a void covenant is unlawful under C.R.S. § 8-2-113(8)(a) and an employer cannot safely draft broad in reliance on discretionary judicial repair.
+This agreement does not rely on any savings or reformation clause to cure overbreadth and does not purport to obligate a court to narrow any covenant. Each restrictive covenant is instead drawn within the enforceable scope Colorado law permits at the outset.
 
 ### Survival and Expiration of Each Covenant
 
@@ -224,18 +224,30 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Colorado](/practice-guides/non-compete/us/colorado).
 
+### the void-by-default rule and the employer's burden
+
+A Colorado covenant not to compete is void by default and survives only where it fits the highly compensated worker exception, so a covenant that does not clear the exception is unenforceable however carefully it is drafted . The employer seeking to enforce the covenant carries the burden of establishing that it falls within the exception, including at the preliminary-injunction stage, and a recital in the agreement stating that the covenant qualifies does not carry that burden .
+
 ### separate signed advance notice
 
-Do not bury a Colorado non-compete inside an offer letter or omnibus agreement presented for immediate signature. For a current employee, deliver the separate, signed notice at least fourteen days before the covenant's effective date or before any raise or change that serves as consideration — a defect in the notice voids the covenant on its own .
+A Colorado non-compete buried inside an offer letter or omnibus agreement presented for immediate signature does not satisfy the statutory notice rule. For a current worker, the separate, signed notice must precede the covenant's effective date — or any raise or change that serves as consideration — by at least fourteen days, and a defect in the notice voids the covenant on its own .
+
+### the health-care provider void rule
+
+For an agreement entered into or renewed on or after August 6, 2025, a covenant not to compete or not to solicit customers that binds a health-care provider — a licensed physician, a registered advanced practice registered nurse, a certified midwife, or a licensed dentist — is void regardless of the provider's compensation, so the highly compensated worker threshold no longer rescues it . A clause restricting a departing provider from telling patients about the provider's continuing practice, new professional contact information, or the patient's right to choose a provider is separately void .
 
 ### minority-owner sale-of-business duration cap
 
-Do not reuse a flat multi-year sale-of-business term for a minority owner who took equity as compensation for services. Calculate the maximum duration from the statutory ratio of sale consideration to average annual compensation, and size the covenant to that cap .
+A flat multi-year sale-of-business term reused for a minority owner who took equity as compensation for services routinely exceeds the statutory cap. The maximum duration in years equals the total sale consideration divided by the owner's average annual compensation, and any term longer than that ratio is unenforceable to the extent it exceeds the cap .
+
+### the training-repayment carve-out limits
+
+A training-repayment provision reaches only the reasonable cost of training that is distinct from normal on-the-job training and that satisfies the attorney general's transferability rules, with the recoverable amount decreasing over the two years after the training; ordinary onboarding, routine skills training, and a flat amount untethered from documented cost fall outside the carve-out . The exposure for overreaching runs to the attorney general, who may recover three times the amount of any recovery or attempted recovery made in violation of the carve-out .
 
 ### confidentiality scope vs. disguised non-compete
 
-Do not draft a confidentiality clause so broadly that it functions as a non-compete. Keep it to genuine confidential information and trade secrets, and preserve the worker's right to use general skills and knowledge and to make legally protected disclosures, or the clause risks being treated as a void restraint .
+A confidentiality clause drafted so broadly that it functions as a non-compete falls outside the statutory carve-out and risks treatment as a void restraint. The carve-out reaches only a reasonable confidentiality provision relevant to the employer's business that preserves the worker's right to use general skills and knowledge and to make legally protected disclosures .
 
 ### draft within enforceable scope, not reformation
 
-Draft scope, duration, and geography to the minimum the trade-secret interest actually requires, and use separable tiers rather than an aggressive savings clause. A Colorado court may decline to narrow an overbroad covenant, and presenting a void covenant carries its own penalty .
+A Colorado court has discretion to narrow an overbroad covenant but no obligation to do so, and the parties cannot contractually compel it, so scope, duration, and geography that reach past the minimum the trade-secret interest requires stand exposed — and separable tiers survive where an aggressive savings clause does not. Presenting a void covenant carries its own penalty, so a covenant drafted broad in reliance on discretionary judicial repair adds statutory exposure on top of unenforceability .

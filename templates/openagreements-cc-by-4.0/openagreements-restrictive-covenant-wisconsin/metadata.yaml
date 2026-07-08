@@ -1,6 +1,6 @@
 name: Employee Restrictive Covenant (Wisconsin)
 category: non-compete
-description: Wisconsin-specific employee restrictive covenant agreement built for Wis. Stat. § 103.465, where a covenant is enforceable only if reasonably necessary to protect the employer, the Star Direct five-factor test governs every post-employment restraint, and an unreasonable restraint is void in full with no judicial blue-penciling. Confidentiality and trade-secret protection scoped to protectable information, customer and employee non-solicitation (the employee no-poach limited to actual working relationships under Manitowoc Co. v. Lanning), an optional non-compete drawn to the five-factor reasonableness standard, a Runzheimer consideration recital, no extension-during-breach tolling (an H&R Block v. Swenson void-trigger), Wisconsin governing law rather than a foreign choice-of-law clause, and divisible covenants in place of reliance on reformation. Drafted as a starting point for licensed counsel review.
+description: Wisconsin-specific employee restrictive covenant agreement built for Wis. Stat. § 103.465, where a covenant is enforceable only if reasonably necessary to protect the employer, a five-factor reasonableness test governs every post-employment restraint, and an unreasonable restraint is void in full with no judicial blue-penciling. Confidentiality and trade-secret protection scoped to protectable information, customer and employee non-solicitation (the employee no-poach limited to actual working relationships), an optional non-compete drawn to the five-factor reasonableness standard, a consideration recital resting on genuine forbearance, no extension-during-breach tolling that would void the restraint, Wisconsin governing law rather than a foreign choice-of-law clause, and divisible covenants in place of reliance on reformation. Drafted as a starting point for licensed counsel review.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-wisconsin
 version: 0.1.0
 stability: experimental
@@ -161,7 +161,7 @@ fields:
     display_label: No Business with Covered Customers Duration
     default: 12 months
     section: No Business with Covered Customers
-    default_value_rationale: Barring the worker from serving a covered customer even on the customer's own initiative restrains accepting work, not just chasing it, and weighs on the harsh-or-oppressive Star Direct factor; a definite, reasonable term tied to a tight customer class is what keeps the restraint defensible.
+    default_value_rationale: Barring the worker from serving a covered customer even on the customer's own initiative restrains accepting work, not just chasing it, and weighs on the harsh-or-oppressive reasonableness factor; a definite, reasonable term tied to a tight customer class is what keeps the restraint defensible.
   - name: passive_public_holdings_threshold
     type: string
     description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
@@ -170,7 +170,7 @@ fields:
     rationale_source: benchmark
     benchmark_ref: restrictive-covenant/passive-ownership-carveout
     section: Definitions
-    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives). A clause that forbids holding ordinary public shares restrains the worker far beyond any protectable interest and feeds the harsh-or-oppressive Star Direct factor.
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives). A clause that forbids holding ordinary public shares restrains the worker far beyond any protectable interest and feeds the harsh-or-oppressive reasonableness factor.
   - name: noninvestment_included
     type: boolean
     description: Whether the non-investment covenant is included.
@@ -183,7 +183,7 @@ fields:
     display_label: Non-Investment Duration
     default: 12 months
     section: Non-Investment
-    default_value_rationale: An investment restraint with indefinite reach adds exactly the harshness the Star Direct reasonableness factors count against the covenant; a definite, reasonable term paired with the Passive Public Holdings carve-out keeps it within a defensible scope.
+    default_value_rationale: An investment restraint with indefinite reach adds exactly the harshness the reasonableness factors count against the covenant; a definite, reasonable term paired with the Passive Public Holdings carve-out keeps it within a defensible scope.
   - name: nondisparagement_duration
     type: string
     description: Duration of non-disparagement obligation (measured from termination)

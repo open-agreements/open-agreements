@@ -96,11 +96,11 @@ Employer and Employee acknowledge that each restrictive covenant in this agreeme
 
 ### Timing, Consideration, and Right to Consult Counsel
 
-The parties agree that this agreement is supported by valuable consideration within the meaning of NRS 613.195(1)(a) — namely {nevada_consideration} — and that those restrictions are appropriate in relation to that consideration as NRS 613.195(1)(d) requires. Consistent with Camco, Inc. v. Baker, 113 Nev. 512, 936 P.2d 829 (1997), continued at-will employment can itself be sufficient consideration for a post-hire covenant, but where the restraint is significant Employer should record the specific additional benefit given in exchange for it. Although no Nevada statute requires it, Employer has advised Employee that Employee may consult with an attorney of Employee's choosing before entering into this agreement, and Employee acknowledges having had a reasonable opportunity to do so. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
+The parties agree that this agreement is supported by valuable consideration within the meaning of NRS 613.195(1)(a) — namely {nevada_consideration} — and that those restrictions are appropriate in relation to that consideration as NRS 613.195(1)(d) requires. Employer has advised Employee that Employee may consult with an attorney of Employee's choosing before entering into this agreement, and Employee acknowledges having had a reasonable opportunity to do so. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
-Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue in perpetuity, consistent with the Nevada Uniform Trade Secrets Act, NRS 600A.010 et seq., under which information keeps its trade-secret status only so long as it derives independent economic value from secrecy and remains the subject of reasonable secrecy efforts. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms. This confidentiality covenant is intended to fall within the exception in NRS 613.200(4) for a post-termination agreement that prohibits disclosure of trade secrets, business methods, lists of customers, secret formulas or processes, and confidential information, that is supported by valuable consideration, and that is otherwise reasonable in scope and duration; it does not restrict Employee from working elsewhere and is not intended to operate as a restraint on obtaining employment.
+Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue for as long as the information remains a Trade Secret. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms. This confidentiality covenant is intended to fall within the exception in NRS 613.200(4) for a reasonable, consideration-supported post-termination confidentiality agreement; it does not restrict Employee from working elsewhere and is not intended to operate as a restraint on obtaining employment.
 
 ### Permitted Disclosures and Protected Conduct
 
@@ -112,7 +112,7 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. Nevada's non-compete statute does not separately regulate employee non-solicitation, so this covenant is drawn no broader than necessary to protect Employer's workforce stability and is not intended to operate as a de facto bar on any former colleague obtaining employment elsewhere in Nevada, conduct NRS 613.200(1) makes a gross misdemeanor.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant is drawn no broader than necessary to protect Employer's workforce stability and does not operate as a bar on any former colleague obtaining employment elsewhere.
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
@@ -124,7 +124,7 @@ During the Restricted Period, Employee must not accept, service, or do business 
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is void and unenforceable unless it satisfies each condition of NRS 613.195(1) — valuable consideration, no restraint greater than required for Employer's protection, no undue hardship on Employee, and restrictions appropriate in relation to the consideration. This covenant does not apply to, and is void against, any Employee who is paid solely on an hourly wage basis, exclusive of any tips or gratuities (NRS 613.195(3)). It is limited by the NRS 613.195(2) volunteer-customer carve-out and by the Post-Restructuring Enforcement section. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant does not apply to, and is void against, any Employee who is paid solely on an hourly wage basis, exclusive of any tips or gratuities (NRS 613.195(3)). It is limited by the NRS 613.195(2) volunteer-customer carve-out and by the Post-Restructuring Enforcement section. Passive Public Holdings are permitted.
 
 ### Non-Investment
 
@@ -136,7 +136,7 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 
 ### Hourly-Worker Exclusion and Post-Restructuring Enforcement
 
-Notwithstanding any other provision of this agreement, no covenant not to compete in this agreement applies to, and each is void and unenforceable against, an Employee who is paid solely on an hourly wage basis, exclusive of any tips or gratuities (NRS 613.195(3)). This exclusion applies regardless of the consideration provided, the tailoring of the restraint, or any acknowledgement by Employee, and an attempt to enforce a covenant against such an Employee exposes Employer to a mandatory award of the Employee's reasonable attorney's fees and costs (NRS 613.195(7)).
+Notwithstanding any other provision of this agreement, no covenant not to compete in this agreement applies to, and each is void and unenforceable against, an Employee who is paid solely on an hourly wage basis, exclusive of any tips or gratuities (NRS 613.195(3)). This exclusion applies regardless of the consideration provided, the tailoring of the restraint, or any acknowledgement by Employee.
 
 If the termination of Employee's employment is the result of a reduction of force, reorganization, or similar restructuring of Employer, then each covenant not to compete in this agreement is enforceable only during the period in which Employer is paying Employee's salary, benefits, or equivalent compensation, including, without limitation, severance pay (NRS 613.195(5)). For such a termination, the Restricted Period runs no longer than the period for which that pay actually continues.
 
@@ -146,11 +146,11 @@ Employee represents that performing duties for Employer and complying with this 
 
 ### Notice to Future Employers and Other Third Parties
 
-Employer may disclose the existence and terms of this agreement to a prospective employer or business associate of Employee only where Employer has a reasonable, good-faith belief that Employee is likely to breach a covenant that is itself valid and enforceable under NRS 613.195. Employer will not use any such notice to willfully prevent Employee from obtaining employment elsewhere in Nevada, conduct NRS 613.200(1) makes a gross misdemeanor. Employee consents to a disclosure made within these limits.
+Employer may disclose the existence and terms of this agreement to a prospective employer or business associate of Employee only where Employer has a reasonable, good-faith belief that Employee is likely to breach a covenant that is itself valid and enforceable under NRS 613.195. Employer will not use any such notice to willfully prevent Employee from obtaining employment elsewhere in Nevada. Employee consents to a disclosure made within these limits.
 
 ### Tolling During Breach
 
-If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, up to the original duration of that covenant, so that the full duration of the restriction runs from the date the breach ends. No Nevada statute or appellate decision squarely approves or rejects tolling; this extension is drafted as a bounded, defined term so that it may be weighed with the rest of the covenant under NRS 613.195, and never as an open-ended restraint.
+If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, up to the original duration of that covenant, so that the full duration of the restriction runs from the date the breach ends. The extension operates as a bounded, defined term rather than an open-ended restraint.
 
 ### Remedies
 
@@ -162,7 +162,7 @@ If any provision of this agreement is found to be unenforceable, the remaining p
 
 ### Reformation and Mandatory Judicial Revision
 
-The parties acknowledge that NRS 613.195(6) makes judicial revision mandatory, not discretionary: where a covenant is supported by valuable consideration but its limitations as to time, geographical area, or scope of activity are unreasonable, impose a greater restraint than is necessary for Employer's protection, or impose undue hardship on Employee, the court shall revise the covenant to the extent necessary and enforce it as revised. Consistent with Tough Turtle Turf, LLC v. Scott, 139 Nev. Adv. Op. 47, 537 P.3d 883 (2023), that duty overruled the prior rule of Golden Road Motor Inn, Inc. v. Islam, 132 Nev. 476, 376 P.3d 151 (2016), under which an unreasonable covenant was wholly unenforceable — but two limits remain: a covenant unsupported by valuable consideration stays unenforceable, and a court will revise rather than rewrite, so it will not supply missing essential terms. Each restrictive covenant here is therefore drawn no broader than necessary and is intended to be enforceable as written rather than in reliance on judicial revision. Consistent with Duong v. Fielden Hanson Isaacs Miyada Robison Yeh, Ltd., 136 Nev. Adv. Op. 87, 478 P.3d 380 (2020), the parties further authorize a court to blue-pencil any overbroad restraint that the mandatory-revision statute does not reach.
+The parties acknowledge that NRS 613.195(6) makes judicial revision mandatory, not discretionary: where a covenant is supported by valuable consideration but its limitations as to time, geographical area, or scope of activity are unreasonable, impose a greater restraint than is necessary for Employer's protection, or impose undue hardship on Employee, the court shall revise the covenant to the extent necessary and enforce it as revised. Each restrictive covenant here is drawn no broader than necessary and is intended to be enforceable as written rather than in reliance on judicial revision. The parties further authorize a court to blue-pencil any overbroad restraint that the mandatory-revision statute does not reach.
 
 ### Survival and Expiration of Each Covenant
 
@@ -170,11 +170,11 @@ Each restrictive covenant in this agreement survives the termination of Employee
 
 ### Assignment and Successors
 
-Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate or to a successor that acquires Employer's business through a statutory merger, in which case the covenants pass by operation of law, consistent with HD Supply Facilities Maint., Ltd. v. Bymoen, 125 Nev. 200, 210 P.3d 183 (2009). In an asset sale, however, the covenants not to compete and not to solicit are personal in nature and are not assignable to the purchaser absent Employee's express consent, obtained through arm's-length negotiation and supported by valuable consideration beyond that necessary to support the underlying covenants, consistent with Traffic Control Servs., Inc. v. United Rentals Nw., Inc., 120 Nev. 168, 87 P.3d 1054 (2004); a general successors-and-assigns clause does not substitute for that consent. This section does not affect any reasonable sale-of-business covenant permitted under NRS 598A.040(5). This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
+Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate or to a successor that acquires Employer's business through a statutory merger, in which case the covenants pass by operation of law. In an asset sale, however, the covenants not to compete and not to solicit are personal in nature and are not assignable to the purchaser absent Employee's express consent, obtained through arm's-length negotiation and supported by valuable consideration beyond that necessary to support the underlying covenants; a general successors-and-assigns clause does not substitute for that consent. This section does not affect any reasonable sale-of-business covenant permitted under NRS 598A.040(5). This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
 
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms, including NRS 613.195 and NRS 613.200 where Nevada law applies. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. Where Employee works in Nevada, a Nevada-law, Nevada-forum resolution best matches Nevada's public-policy interest in its worker exclusion, volunteer-customer carve-out, and mandatory fee shifting.
+This agreement is governed by the law listed in Cover Terms, including NRS 613.195 and NRS 613.200 where Nevada law applies. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
 
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 
