@@ -3,7 +3,6 @@ category: non-compete
 description: 'District of Columbia employee restrictive covenant agreement built for the Ban on Non-Compete Agreements Amendment Act of 2020 (D.C. Code §§ 32-581.01–.04b): confidentiality and trade-secret protection with the statutory information carve-out, an employee non-solicitation covenant, a customer non-solicitation covenant, and an optional non-compete confined to a highly compensated employee — one at or above the annually indexed minimum qualifying annual compensation ($162,164 for most employees in 2026; $270,274 for a medical specialist). The non-compete recites every § 32-581.03(a) validity gate: a stated functional scope and geographic limits, a term of no more than 365 calendar days from separation (730 for a medical specialist), and delivery of the covenant in writing at least 14 days in advance, with the prescribed statutory notice and the workplace-policy disclosure flagged as companion writings. For a covered employee below the threshold the covenant is banned and void as a matter of law, so the template omits it by default and never relies on judicial reformation to cure overbreadth. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-district-of-columbia
 version: 0.1.0
-stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

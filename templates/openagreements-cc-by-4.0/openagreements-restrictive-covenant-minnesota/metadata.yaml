@@ -3,7 +3,6 @@ category: non-compete
 description: Minnesota-specific employee restrictive covenant agreement centered on confidentiality, trade secret protection, property return, non-disparagement, and narrowly drafted customer and employee non-solicitation. Omits any employee covenant not to compete under Minn. Stat. section 181.988, subd. 2(a), which makes covenants not to compete void and unenforceable, and preserves only the covenants the statute leaves outside its definition of a covenant not to compete under subd. 1(a) — confidentiality and trade-secret protection, non-disparagement, property return, and customer and employee non-solicitation covenants drafted to reach only customers and colleagues the worker actually dealt with, keyed to Employee-initiated solicitation and a defined Restricted Period, so they protect relationships and information rather than functioning as a restraint on competition. Includes Minnesota choice-of-law and forum language reflecting Minn. Stat. section 181.988, subd. 3. Drafted as a starting point for licensed counsel review.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-minnesota
 version: 0.1.0
-stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

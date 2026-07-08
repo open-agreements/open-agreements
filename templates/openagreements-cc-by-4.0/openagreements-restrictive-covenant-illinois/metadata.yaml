@@ -3,7 +3,6 @@ category: non-compete
 description: 'Illinois-specific employee restrictive covenant agreement built for the Illinois Freedom to Work Act (820 ILCS 90): confidentiality and trade-secret protection, customer and employee non-solicitation gated on the $45,000 earnings floor, an optional non-compete gated on the $75,000 earnings floor, the written counsel advisal and 14-day review notice, an adequate-consideration recital, protected-worker exclusions, and discretionary judicial reformation. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-illinois
 version: 0.1.0
-stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

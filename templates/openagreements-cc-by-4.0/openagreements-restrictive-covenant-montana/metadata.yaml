@@ -1,9 +1,8 @@
 name: Employee Restrictive Covenant (Montana)
 category: non-compete
-description: 'Montana-specific employee restrictive covenant agreement built for Mont. Code Ann. § 28-2-703, where any restraint on a lawful profession, trade, or business is void except a reasonable partial restraint: confidentiality and trade-secret protection, customer and employee non-solicitation drawn as partial restraints, an optional non-compete drawn to Montana''s Dobbins reasonableness test, an independent-consideration recital for post-hire covenants, an employer-initiated-termination acknowledgement, the phased § 28-2-724 health-care provider exclusion, distinct severable promises in place of judicial reformation, and the §§ 28-2-704/705 sale-of-goodwill and partnership-dissolution exception framework. Drafted as a starting point for licensed counsel review.'
+description: 'Montana-specific employee restrictive covenant agreement built for Mont. Code Ann. § 28-2-703, where any restraint on a lawful profession, trade, or business is void except a reasonable partial restraint: confidentiality and trade-secret protection, customer and employee non-solicitation drawn as partial restraints, an optional non-compete drawn to Montana''s three-part reasonableness test, an independent-consideration recital for post-hire covenants, an employer-initiated-termination acknowledgement, the phased § 28-2-724 health-care provider exclusion, distinct severable promises in place of judicial reformation, and the §§ 28-2-704/705 sale-of-goodwill and partnership-dissolution exception framework. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-montana
 version: 0.1.0
-stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

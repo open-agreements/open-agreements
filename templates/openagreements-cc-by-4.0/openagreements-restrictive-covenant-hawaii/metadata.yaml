@@ -3,7 +3,6 @@ category: non-compete
 description: 'Hawaii-specific employee restrictive covenant agreement built for HRS chapter 480''s restraint-of-trade framework: confidentiality and trade-secret protection, customer and employee non-solicitation, and an optional non-compete, each drawn to the legitimate-ancillary-purpose screen of HRS section 480-4(c) and the statutory reasonableness factors. Non-competes and employee non-solicits are struck automatically when the employer is a technology business (HRS section 480-4(d)), leaving the trade-secret covenant as the surviving restraint. The Solicit definition tracks the active-initiation standard, and each restraint is drawn to its minimum supporting interest rather than in reliance on judicial narrowing. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-hawaii
 version: 0.1.0
-stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

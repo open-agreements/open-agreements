@@ -3,7 +3,6 @@ category: non-compete
 description: 'New Jersey-specific employee restrictive covenant agreement built for New Jersey''s common-law reasonableness regime: there is no general New Jersey non-compete statute for the ordinary workforce, so every post-employment restraint stands or falls on the three-part common-law reasonableness test (protects the employer''s legitimate interests, imposes no undue hardship on the employee, and is not injurious to the public). It provides confidentiality and trade-secret protection backstopped by the New Jersey Trade Secrets Act (N.J.S.A. 56:15-1 et seq.), a continued-employment consideration recital, customer and employee non-solicitation, an optional non-compete tied to identified legitimate interests and sized to the actual footprint, a breach-tied tolling clause, physician public-interest scrutiny, and partial enforcement that works with the grain of the doctrine. It carves out the discrimination-claim concealment bar (N.J.S.A. 10:5-12.8) and disclaims practice restrictions for lawyers (RPC 5.6) and client-access restrictions for psychologists (N.J.A.C. 13:42-10.16). Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-new-jersey
 version: 0.1.0
-stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

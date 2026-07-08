@@ -3,7 +3,6 @@ category: corporate-governance
 description: Written notice from a Delaware corporation to a departing founder electing to exercise the company's pre-existing right to repurchase the founder's unvested shares within the exercise window set by the founder's Restricted Stock Purchase Agreement, identifying the governing agreement, termination date, unvested share count, per-share and aggregate price, and closing date. Drafted as a starting point for licensed counsel review.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-founder-share-repurchase-notice
 version: 0.1.0
-stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

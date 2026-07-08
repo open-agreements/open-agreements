@@ -3,7 +3,6 @@ category: non-compete
 description: 'Nevada-specific employee restrictive covenant agreement built for NRS 613.195 and NRS 613.200: confidentiality and trade-secret protection kept inside the NRS 613.200(4) safe harbor, customer and employee non-solicitation, an optional non-compete drawn to the NRS 613.195(1) four-part validity test with the categorical exclusion of solely hourly-paid workers, the volunteer-customer service carve-out, the post-restructuring continued-pay condition, an acknowledgement of Nevada''s mandatory judicial revision regime, and express-consent mechanics for an asset-sale assignment. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-nevada
 version: 0.1.0
-stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

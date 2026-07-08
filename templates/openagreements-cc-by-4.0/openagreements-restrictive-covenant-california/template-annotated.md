@@ -124,3 +124,7 @@ Drafting and enforceability considerations for this template, from the related p
 ### confidential information scope
 
 Do not assume _Loral_ still protects a no-hire or anti-raiding clause. After _AMN Healthcare_, an employee non-solicitation provision is more likely void than enforceable, and a clause that bars _hiring_ a former colleague who applies on their own initiative is weaker still. Protect the workforce through trade-secret and confidentiality measures rather than a raiding ban .
+
+### confidentiality scope
+
+Do not define _confidential information_ so broadly that it sweeps in the employee's general skills, knowledge, and industry experience — a confidentiality clause that effectively prevents the worker from practicing their profession is a _de facto_ non-compete and void under _Brown v. TGS_. Tie confidentiality to genuine, identifiable trade secrets, and rely on the Trade Secrets Act for enforcement .

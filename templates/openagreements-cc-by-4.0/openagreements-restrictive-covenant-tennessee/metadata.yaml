@@ -3,7 +3,6 @@ category: non-compete
 description: Tennessee-specific employee restrictive covenant agreement built for Tennessee's common-law reasonableness regime and its 2026 statutory overlay. Covenants not to compete are enforceable only when they protect special facts over and above ordinary competition and stay reasonable in time, territory, and scope under Tennessee's common-law factors. On top of that, 2026 Tenn. Pub. Acts ch. 934 (Tenn. Code Ann. §§ 50-1-210, 50-1-211), effective July 1, 2026, voids a non-compete against an employee earning under $70,000, presumes overlong time restraints unreasonable by relationship type, and expressly preserves confidentiality and customer and employee non-solicitation covenants. It provides confidentiality and trade-secret protection under the Tennessee Uniform Trade Secrets Act (Tenn. Code Ann. §§ 47-25-1701 to 47-25-1709), a continued-employment consideration recital, customer and employee non-solicitation, an optional non-compete drawn to the reasonableness test and the statutory threshold, the § 63-1-148 health-care-provider safe harbor with its emergency-medicine exclusion, good-faith choice of law, and discretionary judicial reformation under the rule of reasonableness that the drafting does not rely on. Drafted as a starting point for licensed counsel review.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-tennessee
 version: 0.1.0
-stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

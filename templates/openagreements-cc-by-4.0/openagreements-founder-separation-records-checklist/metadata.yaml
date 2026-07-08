@@ -3,7 +3,6 @@ category: corporate-governance
 description: 'A closing certificate and filing checklist for assembling a founder departure''s executed instruments into a Delaware corporation''s minute book: the board written consent, resignation letter, repurchase notice and repurchase agreement, proof of payment, any stockholder-consent notices, the IP/confidentiality confirmation, and the stock-ledger and cap-table updates. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-founder-separation-records-checklist
 version: 0.1.0
-stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

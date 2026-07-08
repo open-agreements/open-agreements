@@ -3,7 +3,6 @@ category: corporate-governance
 description: A short confirmatory certificate signed by a departing founder and countersigned by the Delaware corporation confirming that the founder's existing Confidential Information and Invention Assignment Agreement (CIIAA/PIIA) and confidentiality obligations remain in full force after service ends, that all company property and repositories have been returned, and that no release is intended as to those continuing obligations. It is confirmatory only and creates no new restrictive covenant. Drafted as a starting point for licensed counsel review.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-founder-ip-confidentiality-confirmation
 version: 0.1.0
-stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

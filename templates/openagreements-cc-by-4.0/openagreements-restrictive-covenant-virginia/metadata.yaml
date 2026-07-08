@@ -3,7 +3,6 @@ category: non-compete
 description: 'Virginia-specific employee restrictive covenant agreement built for Va. Code § 40.1-28.7:8 and Virginia''s strict common-law reasonableness test: confidentiality and trade-secret protection with the statutory nondisclosure carve-out preserved, an employee non-solicitation covenant that defaults off because it is presumptively unenforceable against a protected worker, a customer non-solicitation covenant confined to the worker''s own solicitation so customer-initiated business stays open, and an optional non-compete confined to the worker''s own role and territory. The agreement runs the statutory worker-protection gates before any covenant, states the without-cause severance-or-disclosed-compensation economics SB 170 requires for agreements entered into, amended, or renewed on or after July 1, 2026, excludes health care professionals, and — because Virginia courts do not rewrite an overbroad covenant — draws each covenant within its enforceable scope at the outset rather than relying on judicial reformation. Drafted as a starting point for licensed counsel review.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-virginia
 version: 0.1.0
-stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

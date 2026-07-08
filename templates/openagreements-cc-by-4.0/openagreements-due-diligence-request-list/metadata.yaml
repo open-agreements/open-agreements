@@ -3,7 +3,6 @@ category: deals-partnerships
 description: 'Modular legal due diligence request list (DDRL) for corporate transactions. Ships a base form covering organization, capitalization, contracts, IP, employment, litigation, compliance, tax, insurance, debt, property, and privacy/cybersecurity. Four optional industry riders gate via boolean toggles: tech / SaaS, life sciences, healthcare provider, and cross-border / trade compliance. Drafted clean-room from public-source consensus across 15 Am Law firm, bar association, and legal publisher DDRLs; no public source language is reused.'
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-due-diligence-request-list
 version: '1.0'
-stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled

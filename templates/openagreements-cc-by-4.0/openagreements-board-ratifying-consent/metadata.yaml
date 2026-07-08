@@ -3,7 +3,6 @@ category: corporate-governance
 description: Action by unanimous written consent of the board of directors of a Delaware corporation ratifying one or more defective corporate acts under Section 204 of the Delaware General Corporation Law — reciting each act, its date, any putative stock, and the nature of the failure of authorization, and directing the stockholder submission, certificate of validation, and notice the statute requires.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-board-ratifying-consent
 version: 0.1.0
-stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled
