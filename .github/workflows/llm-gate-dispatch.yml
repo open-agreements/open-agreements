@@ -1,0 +1,114 @@
+name: LLM Gate Central Dispatch
+
+on:
+  pull_request:
+    types: [opened, ready_for_review, synchronize, labeled, unlabeled]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: Pull request number to re-run through the central gate.
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: central-llm-gate-${{ github.event.pull_request.number || inputs.pr_number }}
+  cancel-in-progress: true
+
+jobs:
+  dispatch:
+    name: Dispatch to central LLM gate
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (
+        github.event.pull_request.draft == false &&
+        github.event.pull_request.head.repo.full_name == github.repository &&
+        (
+          (github.event.action != 'labeled' && github.event.action != 'unlabeled') ||
+          github.event.label.name == 'llm-gate/override'
+        )
+      )
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check dispatch credential
+        id: credential
+        env:
+          DISPATCH_TOKEN: ${{ secrets.LLM_GATE_DISPATCH_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "$DISPATCH_TOKEN" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::LLM_GATE_DISPATCH_TOKEN is not configured; central LLM gate dispatch skipped."
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Resolve PR request
+        if: steps.credential.outputs.enabled == 'true'
+        id: request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT_NAME: ${{ github.event_name }}
+          DISPATCH_PR_NUMBER: ${{ inputs.pr_number }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_BASE_REF: ${{ github.event.pull_request.base.ref }}
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PR_LABELS: ${{ toJSON(github.event.pull_request.labels.*.name) }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            gh pr view "$DISPATCH_PR_NUMBER" --repo "$GITHUB_REPOSITORY" --json headRefOid,baseRefName,baseRefOid,labels,headRepository,headRepositoryOwner > "$RUNNER_TEMP/pr.json"
+            head_repo=$(jq -r '.headRepositoryOwner.login + "/" + .headRepository.name' "$RUNNER_TEMP/pr.json")
+            if [ "$head_repo" != "$GITHUB_REPOSITORY" ]; then
+              echo "::error::Central LLM gate dispatch only supports same-repo PRs; got ${head_repo}."
+              exit 1
+            fi
+            jq -n \
+              --arg repo "$GITHUB_REPOSITORY" \
+              --argjson pr_number "$DISPATCH_PR_NUMBER" \
+              --arg base_ref "$(jq -r '.baseRefName' "$RUNNER_TEMP/pr.json")" \
+              --arg base_sha "$(jq -r '.baseRefOid' "$RUNNER_TEMP/pr.json")" \
+              --arg head_sha "$(jq -r '.headRefOid' "$RUNNER_TEMP/pr.json")" \
+              --arg event "workflow_dispatch" \
+              --argjson labels "$(jq -c '[.labels[].name]' "$RUNNER_TEMP/pr.json")" \
+              '{consumer_repo:$repo, pr_number:$pr_number, base_ref:$base_ref, base_sha:$base_sha, head_sha:$head_sha, event:$event, labels:$labels}' \
+              > request.json
+          else
+            if [ "$PR_HEAD_REPO" != "$GITHUB_REPOSITORY" ]; then
+              echo "::notice::Fork PRs do not dispatch to the central LLM gate."
+              exit 0
+            fi
+            jq -n \
+              --arg repo "$GITHUB_REPOSITORY" \
+              --argjson pr_number "$PR_NUMBER" \
+              --arg base_ref "$PR_BASE_REF" \
+              --arg base_sha "$PR_BASE_SHA" \
+              --arg head_sha "$PR_HEAD_SHA" \
+              --arg event "$GITHUB_EVENT_NAME" \
+              --argjson labels "$(printf '%s' "$PR_LABELS" | jq -c .)" \
+              '{consumer_repo:$repo, pr_number:$pr_number, base_ref:$base_ref, base_sha:$base_sha, head_sha:$head_sha, event:$event, labels:$labels}' \
+              > request.json
+          fi
+          echo "request_json=$(jq -c . request.json)" >> "$GITHUB_OUTPUT"
+          jq . request.json
+
+      - name: Dispatch central router
+        if: steps.credential.outputs.enabled == 'true'
+        env:
+          DISPATCH_TOKEN: ${{ secrets.LLM_GATE_DISPATCH_TOKEN }}
+          REQUEST_JSON: ${{ steps.request.outputs.request_json }}
+        run: |
+          set -euo pipefail
+          payload=$(jq -n --arg request_json "$REQUEST_JSON" '{ref:"main", inputs:{request_json:$request_json}}')
+          curl -fsS \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${DISPATCH_TOKEN}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/UseJunior/llm-gate/actions/workflows/router.yml/dispatches \
+            -d "$payload"
