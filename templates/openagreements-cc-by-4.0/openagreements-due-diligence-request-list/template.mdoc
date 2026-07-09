@@ -234,6 +234,7 @@ This request list opens the legal due diligence phase of the contemplated transa
 {% clause id="section-a-corporate-organization" %}
 ### Section A — Corporate Organization, Authority, and Governance
 
+{% requirement id="corporate-organization" %}
 A.1 Certificate of Incorporation, all amendments, and the current certified or filed version.
 
 A.2 Bylaws or operating agreement, all amendments, and the current operative version.
@@ -247,11 +248,13 @@ A.5 Certificates of good standing from the state of formation and from each stat
 A.6 Officer and director list, including titles, dates of service, and any departures within the past {% field name="lookback_years" /%} years.
 
 A.7 Beneficial Ownership Information (BOI) reports filed pursuant to the Corporate Transparency Act, and any updates, if applicable. Note: FinCEN's March 26, 2025 interim final rule exempts U.S.-formed entities and U.S. persons; only foreign reporting companies remain subject.
+{% /requirement %}
 {% /clause %}
 
 {% clause id="section-b-capitalization" %}
 ### Section B — Capitalization and Securities
 
+{% requirement id="capitalization-securities" %}
 B.1 Capitalization table as of the most recent month-end, showing authorized, issued, outstanding, and treasury securities by class.
 
 B.2 Stock ledger, option ledger, warrant ledger, SAFE ledger, and convertible-note ledger.
@@ -265,23 +268,27 @@ B.5 409A valuation reports for the past {% field name="lookback_years" /%} years
 B.6 All stockholder agreements, voting agreements, registration rights agreements, side letters, and similar arrangements.
 
 B.7 SAFE and convertible-note conversion mechanics, valuation caps, discount rates, and MFN provisions for outstanding instruments.
+{% /requirement %}
 {% /clause %}
 
 {% clause id="section-c-subsidiaries" %}
 ### Section C — Subsidiaries and Affiliates
 
+{% requirement id="subsidiaries-affiliates" %}
 C.1 Organizational chart showing the target and all subsidiaries and affiliates, with ownership percentages.
 
 C.2 Formation documents, certificates of good standing, and material governing documents for each subsidiary.
 
 C.3 Intercompany agreements (services, IP, leases, financing) currently in effect.
+{% /requirement %}
 {% /clause %}
 
 {% clause id="section-d-financial-and-tax" %}
 ### Section D — Financial and Tax
 
-D.1 Audited financial statements for the past three fiscal years; unaudited interim financials for periods since the last audit.
+{% requirement id="financial-statements" %}D.1 Audited financial statements for the past three fiscal years; unaudited interim financials for periods since the last audit.{% /requirement %}
 
+{% requirement id="tax" %}
 D.2 Federal tax returns for the past 6 years.
 
 D.3 State and local tax returns for the past 6 years in each jurisdiction of meaningful operation.
@@ -293,11 +300,13 @@ D.5 Tax-sharing agreements, tax-indemnification agreements, and any tax-related 
 D.6 Sales-and-use tax economic-nexus analysis under *Wayfair*, including registration status by state.
 
 D.7 Material correspondence with the IRS or state tax authorities regarding rulings, settlements, or contested matters.
+{% /requirement %}
 {% /clause %}
 
 {% clause id="section-e-indebtedness" %}
 ### Section E — Indebtedness, Liens, and Security Interests
 
+{% requirement id="indebtedness" %}
 E.1 All loan agreements, credit agreements, indentures, and instruments governing material indebtedness.
 
 E.2 Schedule of guarantees, letters of credit, and other contingent obligations.
@@ -305,11 +314,13 @@ E.2 Schedule of guarantees, letters of credit, and other contingent obligations.
 E.3 UCC searches and lien releases for material assets.
 
 E.4 Lender consent requirements triggered by change of control.
+{% /requirement %}
 {% /clause %}
 
 {% clause id="section-f-material-contracts" %}
 ### Section F — Material Contracts
 
+{% requirement id="material-contracts" %}
 F.1 All contracts with annual revenue or expenditure exceeding {% field name="materiality_threshold_usd" /%} or {% field name="materiality_threshold_revenue_pct" /%} of gross revenue.
 
 F.2 Top 20 customer contracts by revenue, regardless of dollar amount.
@@ -327,11 +338,13 @@ F.7 All material partnership, joint venture, alliance, or collaboration agreemen
 F.8 All material settlement and release agreements with ongoing obligations.
 
 F.9 Forms of standard customer contract, supplier contract, NDA, and any other contract regularly used by the target.
+{% /requirement %}
 {% /clause %}
 
 {% clause id="section-g-property" %}
 ### Section G — Real and Personal Property
 
+{% requirement id="real-personal-property" %}
 G.1 Schedule of all owned real property with title reports and material correspondence; if none, a written confirmation that the target owns no real property.
 
 G.2 All real property leases, subleases, licenses, and material correspondence; if none, a written confirmation that the target leases no real property.
@@ -341,11 +354,13 @@ G.3 Schedule of material personal property (servers, manufacturing equipment, ve
 G.4 Equipment leases and material personal property leases.
 
 G.5 Service-provider arrangements (coworking, virtual-office, residential-address service) used in lieu of a physical headquarters.
+{% /requirement %}
 {% /clause %}
 
 {% clause id="section-h-intellectual-property" %}
 ### Section H — Intellectual Property — Core
 
+{% requirement id="intellectual-property" %}
 H.1 Schedules of all U.S. and foreign patents, patent applications, and provisionals, including title, application/patent number, filing/issue date, status, and beneficial owner.
 
 H.2 Schedule of all registered and material unregistered trademarks, including registration number, jurisdiction, and goods/services description.
@@ -357,11 +372,13 @@ H.4 Schedule of all domain names owned or registered to the target.
 H.5 Form of, and complete executed copies of, all Proprietary Information and Inventions Agreements (or equivalent invention-assignment, work-for-hire, and confidentiality agreements) for all current and former employees, founders, officers, contractors, consultants, and advisors who contributed to the development of any material intellectual property. Identify any individuals who contributed material IP and did not execute such an agreement, and describe any subsequent assignments or remediation.
 
 H.6 All inbound and outbound IP licenses, technology licenses, and material commercial-software agreements, with each agreement marked or annotated to identify any change-of-control, anti-assignment, termination-on-acquisition, or consent-required provisions. Identify any agreements where third-party consent will be required to consummate the transaction.
+{% /requirement %}
 {% /clause %}
 
 {% clause id="section-i-privacy-cybersecurity" %}
 ### Section I — Privacy and Cybersecurity — Core
 
+{% requirement id="privacy-cybersecurity" %}
 I.1 Public-facing privacy notices, terms of use, and cookie policies.
 
 I.2 Internal data-protection and information-security policies, including incident response plan and access-control policies.
@@ -371,11 +388,13 @@ I.3 Schedule of personal-data processing activities, categories of data subjects
 I.4 Cybersecurity-incident history for the past {% field name="lookback_years" /%} years, including breach notifications to regulators, customers, or employees.
 
 I.5 GDPR / CCPA / state-privacy-law compliance documentation, including data-subject-request handling procedures and any DPIA / TIA records.
+{% /requirement %}
 {% /clause %}
 
 {% clause id="section-j-employment" %}
 ### Section J — Employment, Compensation, and Benefits
 
+{% requirement id="employment-benefits" %}
 J.1 Organizational chart with reporting lines and material compensation tiers.
 
 J.2 Standard form employment agreement, contractor agreement, and PIIA executed by all employees and material contractors.
@@ -389,11 +408,13 @@ J.5 Worker-classification analysis distinguishing exempt vs. non-exempt and empl
 J.6 Labor disputes, collective-bargaining agreements, and union activity, if applicable.
 
 J.7 Severance and retention arrangements with key employees, including any single-trigger or double-trigger acceleration.
+{% /requirement %}
 {% /clause %}
 
 {% clause id="section-k-litigation" %}
 ### Section K — Litigation, Disputes, Investigations
 
+{% requirement id="litigation-investigations" %}
 K.1 Schedule of all pending and threatened claims, lawsuits, administrative proceedings, arbitrations, and investigations within the past {% field name="lookback_years" /%} years. Include the parties, forum, claim summary, status, and amount in controversy.
 
 K.2 All settlement and release agreements with ongoing obligations regardless of date.
@@ -403,11 +424,13 @@ K.3 All consent decrees, judgments, injunctions, and similar orders binding on t
 K.4 All correspondence with regulatory bodies, government agencies, or self-regulatory organizations regarding investigations, inquiries, settlements, or consent decrees, regardless of date.
 
 K.5 Audit response letters from the target's outside counsel for the past {% field name="lookback_years" /%} years.
+{% /requirement %}
 {% /clause %}
 
 {% clause id="section-l-compliance" %}
 ### Section L — Compliance with Laws, Permits, Licenses
 
+{% requirement id="compliance-permits" %}
 L.1 Schedule of material licenses, permits, registrations, and authorizations required to operate the target's business.
 
 L.2 Routine regulatory filings and compliance certifications for the past {% field name="lookback_years" /%} years.
@@ -415,31 +438,37 @@ L.2 Routine regulatory filings and compliance certifications for the past {% fie
 L.3 Internal compliance program documentation, including code of conduct, training records, and whistleblower hotline records.
 
 L.4 Any prior compliance investigations, internal audits, or third-party allegations relating to the target's regulated operations.
+{% /requirement %}
 {% /clause %}
 
 {% clause id="section-m-insurance" %}
 ### Section M — Insurance
 
+{% requirement id="insurance" %}
 M.1 Schedule of all material insurance policies, including commercial general liability, D&O, E&O, cyber, employment-practices liability, and any industry-specific policies.
 
 M.2 Claims history for the past {% field name="lookback_years" /%} years for each policy type.
 
 M.3 Tail-coverage status and renewal terms for any claims-made policies.
+{% /requirement %}
 {% /clause %}
 
 {% clause id="section-n-related-party" %}
 ### Section N — Related-Party Transactions
 
+{% requirement id="related-party-transactions" %}
 N.1 Schedule of all transactions, agreements, or relationships between the target and any officer, director, founder, beneficial owner exceeding 5%, or family member of any of the foregoing.
 
 N.2 Indebtedness owed by or to insiders.
 
 N.3 Special-purpose-entity arrangements and any pass-through revenue or expense accounts.
+{% /requirement %}
 {% /clause %}
 
 {% clause id="section-o-environmental" %}
 ### Section O — Environmental
 
+{% requirement id="environmental" %}
 O.1 Environmental permits, registrations, and authorizations, and any notices of violation or noncompliance within the past {% field name="lookback_years" /%} years.
 
 O.2 Phase I and Phase II environmental site assessments and any environmental audit reports for owned or leased real property.
@@ -449,6 +478,7 @@ O.3 Correspondence with the EPA or state environmental agencies regarding invest
 O.4 Records of hazardous-materials use, storage, or disposal, and any CERCLA, RCRA, or analogous state-law liabilities, potentially-responsible-party (PRP) notices, or remediation obligations.
 
 O.5 For cloud-native or asset-light targets that own or lease no operating facilities, a written confirmation that the target has no material environmental operations or liabilities in lieu of the foregoing.
+{% /requirement %}
 {% /clause %}
 
 {% clause id="section-p-tech-saas-rider" include-when="tech_rider_enabled" %}
