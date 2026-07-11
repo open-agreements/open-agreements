@@ -36,12 +36,13 @@ jobs:
       - name: Check dispatch credential
         id: credential
         env:
-          DISPATCH_TOKEN: ${{ secrets.LLM_GATE_DISPATCH_TOKEN }}
+          DISPATCH_APP_ID: ${{ secrets.LLM_GATE_DISPATCH_APP_ID }}
+          DISPATCH_PRIVATE_KEY: ${{ secrets.LLM_GATE_DISPATCH_PRIVATE_KEY }}
         run: |
           set -euo pipefail
-          if [ -z "$DISPATCH_TOKEN" ]; then
+          if [ -z "$DISPATCH_APP_ID" ] || [ -z "$DISPATCH_PRIVATE_KEY" ]; then
             echo "enabled=false" >> "$GITHUB_OUTPUT"
-            echo "::notice::LLM_GATE_DISPATCH_TOKEN is not configured; central LLM gate dispatch skipped."
+            echo "::notice::LLM_GATE_DISPATCH_APP_ID or LLM_GATE_DISPATCH_PRIVATE_KEY is not configured; central LLM gate dispatch skipped."
           else
             echo "enabled=true" >> "$GITHUB_OUTPUT"
           fi
@@ -97,10 +98,20 @@ jobs:
           echo "request_json=$(jq -c . request.json)" >> "$GITHUB_OUTPUT"
           jq . request.json
 
+      - name: Create dispatch token
+        if: steps.credential.outputs.enabled == 'true'
+        id: dispatch-token
+        uses: actions/create-github-app-token@fee1f7d63c2ff003460e3d139729b119787bc349 # v2
+        with:
+          app-id: ${{ secrets.LLM_GATE_DISPATCH_APP_ID }}
+          private-key: ${{ secrets.LLM_GATE_DISPATCH_PRIVATE_KEY }}
+          owner: UseJunior
+          repositories: llm-gate
+
       - name: Dispatch central router
         if: steps.credential.outputs.enabled == 'true'
         env:
-          DISPATCH_TOKEN: ${{ secrets.LLM_GATE_DISPATCH_TOKEN }}
+          DISPATCH_TOKEN: ${{ steps.dispatch-token.outputs.token }}
           REQUEST_JSON: ${{ steps.request.outputs.request_json }}
         run: |
           set -euo pipefail
