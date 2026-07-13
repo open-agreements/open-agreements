@@ -1,15 +1,15 @@
 ---
-title: Trust Checklist
+title: Trust Boundary Status
 description: Data-flow modes and trust-boundary decisions for local vs hosted execution.
 order: 5
 section: Reference
 ---
 
-# Trust Checklist
+# Trust boundary status
 
-This checklist tracks Sprint 1 trust-boundary messaging only.
+This page tracks Sprint 1 trust-boundary messaging only.
 
-Out of scope for this checklist:
+Out of scope for this status page:
 
 - conformance harness
 - cross-app compatibility matrix (Word/LibreOffice/GDocs/Pages)

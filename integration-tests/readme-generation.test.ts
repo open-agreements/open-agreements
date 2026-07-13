@@ -13,7 +13,7 @@ import { fileURLToPath } from 'node:url';
 
 import { describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
-import { buildReadme } from '../scripts/generate_readme.mjs';
+import { buildCatalogReference, buildReadme } from '../scripts/generate_readme.mjs';
 import { buildCatalog } from '../scripts/lib/catalog-data.mjs';
 import { buildLibrary } from '../scripts/lib/library-data.mjs';
 
@@ -33,21 +33,16 @@ describe('README generation', () => {
       expect(first).toBe(second);
 
       // Stable headings sourced from the checked-in template.
-      expect(first).toContain('## Available Templates');
-      expect(first).toContain('## Available Skills');
-      expect(first).toContain('## Packages');
-      // MCP/CLI setup lives in docs/using-with-ai-agents.md; the README keeps a pointer.
-      expect(first).toContain('## Use it with AI agents & the CLI');
-      expect(first).toContain('docs/using-with-ai-agents.md');
+      expect(first).toContain('## What OpenAgreements does');
+      expect(first).toContain('## Fill your first agreement');
+      expect(first).toContain('## Understand the workflow');
+      expect(first).toContain('docs/quickstart.md');
 
-      // Content-first sections (Legal Practice Library leads the README).
-      expect(first).toContain('## Legal Practice Library');
-      expect(first).toContain('## Law Surveys');
-      expect(first).toContain('## Checklists');
-      // Library rows link to the content host, not the usejunior.com template site.
-      expect(first).toMatch(
-        /https:\/\/openagreements\.org\/practice-guides\/non-compete/,
-      );
+      // Exhaustive inventories live in the generated reference, not the front door.
+      expect(first).not.toContain('## Available Templates');
+      expect(first).not.toContain('## Available Skills');
+      expect(first).not.toContain('| Template | HTML | Source | License | Repo |');
+      expect(first).toContain('docs/reference/catalog.md');
 
       // npm-safe absolute links: repo content is linked with absolute GitHub
       // URLs (npm renders the README without repo-relative context).
@@ -60,23 +55,21 @@ describe('README generation', () => {
       // navigational words (Browse/Live/Website/Web) as column headers.
       expect(first).not.toContain('MCP Server Status');
       expect(first).not.toContain('demo-fill-nda.gif');
-      expect(first).not.toContain('| Browse |');
-      expect(first).not.toContain('| Live |');
-      expect(first).not.toContain('| Template | Website |');
-      expect(first).toContain('| Topic | What it covers | Coverage | Markdown | HTML |');
-      expect(first).toContain('| Template | HTML | Source | License | Repo |');
+      expect(first).not.toContain('## Contents');
 
-      // Content-oriented CTAs replace the tooling-flavored "Request a Feature".
-      expect(first).not.toContain('Request a Feature');
-      expect(first).toContain('[Give Feedback]');
-      expect(first).toContain('[Request Coverage]');
-
-      // The downstream repo is described as a public projection / contribution
-      // surface without naming a private implementation repository.
-      expect(first).toContain('public legal content library');
+      // Public documentation does not name a private implementation repository.
       expect(first).not.toContain('UseJunior/legal-explainer');
     },
   );
+
+  it('catalog reference is generated from repository metadata', () => {
+    const catalog = buildCatalogReference();
+    expect(catalog).toContain('## Choose an agreement template');
+    expect(catalog).toContain('## Install an agent skill');
+    expect(catalog).toContain('| Template | HTML | Source | License | Repo |');
+    expect(catalog).toMatch(/https:\/\/openagreements\.org\/practice-guides\/non-compete/);
+    expect(catalog).toBe(readRepoFile('docs/reference/catalog.md'));
+  });
 
   it(
     'README generator reads catalog data from a pure shared helper',
