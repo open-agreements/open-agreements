@@ -75,27 +75,34 @@ jobs:
       - name: Install dependencies (retry)
         uses: ./.github/actions/npm-ci-retry
 
+      # The changed-file list rides in a file, not an env var: sync PRs can
+      # touch 1,400+ files (~164 KB of JSON), which overflows the 128 KiB
+      # per-string execve limit and kills the step with "Argument list too
+      # long" before the check runs (open-agreements#603).
       - name: Collect changed files
-        id: diff
         uses: actions/github-script@v7
         with:
-          result-encoding: string
           script: |
+            const fs = require('fs');
+            const path = require('path');
             const files = await github.paginate(github.rest.pulls.listFiles, {
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: context.payload.pull_request.number,
               per_page: 100,
             });
-            return JSON.stringify(files.map((f) => ({
-              status: f.status,
-              path: f.filename,
-              previousPath: f.previous_filename ?? null,
-            })));
+            fs.writeFileSync(
+              path.join(process.env.RUNNER_TEMP, 'oa-changed-files.json'),
+              JSON.stringify(files.map((f) => ({
+                status: f.status,
+                path: f.filename,
+                previousPath: f.previous_filename ?? null,
+              })))
+            );
 
       - name: Validate preview freshness
         env:
-          OA_CHANGED_FILES: ${{ steps.diff.outputs.result }}
+          OA_CHANGED_FILES_PATH: ${{ runner.temp }}/oa-changed-files.json
           OA_GATE_REQUIRE_INPUT: "1"
           OA_PR_LABELS: ${{ join(github.event.pull_request.labels.*.name, ',') }}
         run: npm run check:preview-freshness

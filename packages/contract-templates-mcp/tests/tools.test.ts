@@ -40,6 +40,23 @@ function getPayload(result: Awaited<ReturnType<typeof callTool>>): Record<string
   return (result.structuredContent ?? {}) as Record<string, unknown>;
 }
 
+// The catalog outgrew a single max-size page (open-agreements#603), so the
+// full-catalog fetch must itself paginate rather than assume limit=100 covers
+// everything.
+async function fetchFullCatalog(): Promise<Array<{ template_id: string }>> {
+  const all: Array<{ template_id: string }> = [];
+  let cursor: string | undefined;
+  do {
+    const args: Record<string, unknown> = { limit: 100 };
+    if (cursor !== undefined) args.cursor = cursor;
+    const r = await callTool('list_templates', args);
+    const data = getPayload(r).data as Record<string, unknown>;
+    all.push(...(data.templates as Array<{ template_id: string }>));
+    cursor = (data.next_cursor as string | null) ?? undefined;
+  } while (cursor !== undefined);
+  return all;
+}
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function mockModules(overrides: Record<string, unknown> = {}): any {
   return {
@@ -121,16 +138,18 @@ describe('contract-templates-mcp tools', () => {
   // template's metadata — linear catalog growth costs quadratic test time, so
   // an explicit timeout replaces the 5s default (~100 templates post-sync).
   it('paginates the catalog using cursor + limit roundtrip with no duplicates', async () => {
-    const allResult = await callTool('list_templates', { limit: 100 });
-    const allTemplates = ((getPayload(allResult).data as Record<string, unknown>).templates) as Array<{ template_id: string }>;
+    const allTemplates = await fetchFullCatalog();
     expect(allTemplates.length).toBeGreaterThan(2); // need enough to page through
 
     const limit = 2;
+    // +2 slack: bound derived from the catalog, not hardcoded, so growth past
+    // any fixed ceiling can't turn a legitimate next_cursor into a failure.
+    const maxPages = Math.ceil(allTemplates.length / limit) + 2;
     const seen: string[] = [];
     let cursor: string | undefined;
     let totalCount: number | null = null;
     let lastNextCursor: string | null | undefined;
-    for (let i = 0; i < 50; i += 1) {
+    for (let i = 0; i < maxPages; i += 1) {
       const args: Record<string, unknown> = { limit };
       if (cursor !== undefined) args.cursor = cursor;
       const r = await callTool('list_templates', args);
@@ -152,9 +171,10 @@ describe('contract-templates-mcp tools', () => {
 
   it('maintains lexicographic continuity across page boundaries', async () => {
     const limit = 2;
+    const maxPages = Math.ceil((await fetchFullCatalog()).length / limit) + 2;
     const pages: Array<Array<{ template_id: string }>> = [];
     let cursor: string | undefined;
-    for (let i = 0; i < 50; i += 1) {
+    for (let i = 0; i < maxPages; i += 1) {
       const args: Record<string, unknown> = { limit };
       if (cursor !== undefined) args.cursor = cursor;
       const r = await callTool('list_templates', args);
