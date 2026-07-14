@@ -5,8 +5,8 @@ category: non-compete
 description: >-
   Mississippi-specific employee restrictive covenant agreement built for
   Mississippi's common-law reasonableness regime: there is no general
-  Mississippi non-compete statute, so every post-employment restraint stands
-  or falls on the three-interest reasonableness balance the courts weigh — the
+  Mississippi non-compete statute, so every post-employment restraint stands or
+  falls on the three-interest reasonableness balance the courts weigh — the
   rights of the employer, the rights of the employee, and the rights of the
   public — with the enforcing employer carrying the burden and the disfavored
   covenant construed strictly against the drafter. It provides confidentiality
@@ -18,18 +18,16 @@ description: >-
   employee's real influence, an express extension-on-breach tolling clause
   because Mississippi courts do not extend the restricted period on their own
   but give an express extension clause effect, express and pre-departure
-  assignment to successors, a no-enforcement term for covenants invoked after
-  an arbitrary, capricious, or bad-faith termination, a lawyer
-  practice-restriction exclusion (Miss. R. Prof'l Conduct 5.6), and
-  discretionary equitable reformation that the drafting does not rely on.
-  Drafted as a starting point for licensed counsel review.
+  assignment to successors, a no-enforcement term for covenants invoked after an
+  arbitrary, capricious, or bad-faith termination, a lawyer practice-restriction
+  exclusion (Miss. R. Prof'l Conduct 5.6), and discretionary equitable
+  reformation that the drafting does not rely on. Drafted as a starting point
+  for licensed counsel review.
 source_url: >-
   https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-mississippi
 version: 0.1.0
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: >-
   Authored by OpenAgreements contributors. Mississippi-specific analysis
   informed by the quote-verified Mississippi practice note. Licensed under CC BY
@@ -91,10 +89,10 @@ fields:
     description: >-
       Governing law state. For a Mississippi workforce this should ordinarily
       remain Mississippi. The sourced Mississippi practice note identifies no
-      choice-of-law or forum-selection authority specific to these covenants,
-      so treat any out-of-state selection in a Mississippi employment
-      relationship as a counsel-review decision rather than assuming how a
-      court would resolve it.
+      choice-of-law or forum-selection authority specific to these covenants, so
+      treat any out-of-state selection in a Mississippi employment relationship
+      as a counsel-review decision rather than assuming how a court would
+      resolve it.
     display_label: Governing Law
     section: Legal
     default: Mississippi
@@ -117,10 +115,15 @@ fields:
       term is safer than an indefinite one.
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee non-solicitation covenant is included
-    display_label: Employee Non-Solicitation Included
-    default: true
+    description: >-
+      Whether the employee no-hire / non-solicitation covenant is included.
+      Alabama's only category for restraints touching another party's workers is
+      the no-hire exception for workers in a position uniquely essential to the
+      management, organization, or service of the business.
+    display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
+    rationale_source: editorial
+    default: true
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee non-solicitation restriction
@@ -130,12 +133,13 @@ fields:
     benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: >-
-      Mississippi sets no statutory cap on duration, and no staged Mississippi authority speaks
-      specifically to employee no-poach covenants, so this restraint stands on ordinary
-      reasonableness under the Texas Road Boring three-interest balance. 24 months matches the modal
-      employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12
-      months is the common lighter alternative, and counsel should size the term to the employer's
-      actual protectable interest.
+      Mississippi sets no statutory cap on duration, and no staged Mississippi
+      authority speaks specifically to employee no-poach covenants, so this
+      restraint stands on ordinary reasonableness under the Texas Road Boring
+      three-interest balance. 24 months matches the modal employee non-solicit
+      term observed in benchmarked, publicly-filed employee agreements; 12
+      months is the common lighter alternative, and counsel should size the term
+      to the employer's actual protectable interest.
   - name: covered_employee_period
     type: string
     description: >-
@@ -149,10 +153,14 @@ fields:
       scope.
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the customer/partner non-solicitation covenant is included
+    description: >-
+      Whether the current-customer non-solicitation covenant is included.
+      Alabama gives this covenant its own category, limited to current
+      customers.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
+    rationale_source: editorial
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer/partner non-solicitation restriction
@@ -186,9 +194,9 @@ fields:
     description: >-
       Whether the non-competition covenant is included. Mississippi has no
       general non-compete statute; a non-compete is disfavored, construed
-      strictly against the employer, and enforceable only if the employer
-      proves it reasonable in duration, territory, and restrained activity under
-      the three-interest balance (Texas Road Boring) and tied to a legitimate
+      strictly against the employer, and enforceable only if the employer proves
+      it reasonable in duration, territory, and restrained activity under the
+      three-interest balance (Texas Road Boring) and tied to a legitimate
       protectable interest rather than ordinary competition. This template
       recites the protectable-interest basis and sizes the restraint to the
       employee's real influence.
@@ -253,10 +261,16 @@ fields:
     section: Non-Competition
   - name: nondealing_included
     type: boolean
-    description: Whether the no-business-with-covered-customers covenant is included.
+    description: >-
+      Whether the no-business-with-covered-customers covenant is included. A
+      non-dealing covenant has no named Alabama category of its own, so it must
+      be drafted to fit inside the current-customer non-solicit exception or it
+      is exposed to Alabama's void rule for restraints outside the listed
+      categories.
     display_label: No Business with Covered Customers Included
     default: false
     section: No Business with Covered Customers
+    rationale_source: editorial
   - name: nondealing_duration
     type: string
     description: Duration of the no-business-with-covered-customers restriction
@@ -275,15 +289,20 @@ fields:
     section: Definitions
     default_value_rationale: >-
       Five percent of any class of publicly traded securities is the modal
-      passive-investment carve-out threshold observed in benchmarked, publicly-filed
-      employee agreements that include the carve-out (lower 1-3 percent thresholds are
-      the common tighter alternatives).
+      passive-investment carve-out threshold observed in benchmarked,
+      publicly-filed employee agreements that include the carve-out (lower 1-3
+      percent thresholds are the common tighter alternatives).
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included.
+    description: >-
+      Whether the non-investment covenant is included. A non-investment covenant
+      has no named Alabama category; one genuine use is restraining a licensed
+      professional's business conduct outside the practice of the profession,
+      which sits outside Alabama's professional exemption.
     display_label: Non-Investment Included
     default: false
     section: Non-Investment
+    rationale_source: editorial
   - name: noninvestment_duration
     type: string
     description: Duration of non-investment restriction
@@ -297,9 +316,21 @@ fields:
     default: 24 months
     section: Non-Disparagement
     default_value_rationale: 24 months is common for employment non-disparagement provisions.
+  - name: worker_is_physician
+    type: boolean
+    description: >-
+      Whether Employee is a physician. Set this explicitly from Employee's
+      licensed role to include physician-specific terms. For Indiana, the
+      applicable provisions vary by execution date and employer type, and may
+      require a release buyout term or exclude the non-compete entirely.
+    display_label: Employee Is a Physician
+    section: Physician
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template
 ---
 # Employee Restrictive Covenant Agreement
 
@@ -351,7 +382,7 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {% field name="passive_public_holdings_threshold" /%} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means Employer's legitimate business interests, including its Confidential Information, its Trade Secrets, its goodwill in its customer, vendor, referral-source, and business-partner relationships, and its investment in specialized training provided to Employee.
+[[Protected Interests]] means Employer's Protected Interests, including its Confidential Information, its Trade Secrets, its goodwill in its customer, vendor, referral-source, and business-partner relationships, and its investment in specialized training provided to Employee.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason, subject to any express extension under the Tolling During Breach section.
 
@@ -359,19 +390,19 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Solicit]] means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] means information that derives independent economic value from not being generally known or readily ascertainable and that is the subject of efforts reasonable under the circumstances to maintain its secrecy, as protected under the Mississippi Uniform Trade Secrets Act and the federal Defend Trade Secrets Act.
+[[Trade Secrets]] means information that derives independent economic value from not being generally known or readily ascertainable and that is the subject of efforts reasonable under the circumstances to maintain its secrecy, as protected by the Mississippi Uniform Trade Secrets Act and the federal Defend Trade Secrets Act.
 {% /clause %}
 
 {% clause id="recitals-and-legitimate-business-interest" %}
 ### Recitals and Protectable Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship. Employee will receive access to Employer's Confidential Information and Trade Secrets and will develop customer relationships and goodwill on Employer's behalf, and each covenant is included to protect those Protected Interests and not to restrain ordinary competition. Employer would not provide Employee with access to those Protected Interests absent the protections in this agreement. The parties agree that each covenant is reasonable in duration, territory, and restrained activity, and is sized to the work Employee actually performs and the relationships Employee actually holds rather than to the whole of Employer's business.
+Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship. Employee will receive access to Employer's Confidential Information and Trade Secrets and will develop customer relationships and goodwill on Employer's behalf. Employer would not provide Employee with access to those Protected Interests absent the protections in this agreement.
 {% /clause %}
 
 {% clause id="timing-and-employee-acknowledgements" %}
 ### Timing, Consideration, and Employee Acknowledgements
 
-The parties acknowledge that this agreement is supported by adequate consideration. If Employee is an existing at-will employee, the consideration for Employee's covenants is Employer's continuation of Employee's employment; if this agreement is signed at the outset of employment, the consideration is the offer and commencement of employment. Employee represents that Employee is not a minor and has the legal capacity to enter this agreement. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement, and that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
+The parties acknowledge that this agreement is supported by adequate consideration. If Employee is an existing at-will employee, the consideration for Employee's covenants is Employer's continuation of Employee's employment; if this agreement is signed at the outset of employment, the consideration is the offer and commencement of employment. Employee represents that Employee is not a minor and has the legal capacity to enter this agreement. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement, and that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 {% /clause %}
 
 {% clause id="confidential-information-and-trade-secret-protection" %}
@@ -401,13 +432,13 @@ During the Restricted Period, Employee must not Solicit, recruit, hire, or attem
 {% clause id="non-solicitation-of-customers-vendors-referral-sources-and-business-partners" include-when="customer_nonsolicit_included" %}
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Employee's own solicitation of a Covered Customer; except as expressly provided elsewhere in this agreement, it does not prohibit Employee from accepting business from a Covered Customer who initiates contact with Employee and whom Employee did not Solicit. This covenant is included to protect Employer's goodwill in its customer relationships and is drawn no broader than reasonably necessary to protect it.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. Except as expressly provided elsewhere in this agreement, Employee may accept business from a Covered Customer who initiates contact and whom Employee did not Solicit.
 {% /clause %}
 
 {% clause id="no-business-with-covered-customers" include-when="nondealing_included" %}
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This covenant is included to protect Employer's goodwill in its customer relationships and is drawn no broader than reasonably necessary to protect it.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This covenant is included to protect Employer's goodwill in its customer relationships and is drawn no broader than appropriate to protect it.
 {% /clause %}
 
 {% clause id="non-competition" include-when="noncompete_included" %}
@@ -428,16 +459,16 @@ During the Restricted Period, Employee must not acquire or hold any active owner
 During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law, including rights protected under Section 7 of the National Labor Relations Act.
 {% /clause %}
 
-{% clause id="physician-specific-rights-and-notices" %}
+{% clause id="physician-specific-rights-and-notices" include-when="worker_is_physician" %}
 ### Physician and Health Care Practitioner Covenants
 
-If Employee is a physician or other health care practitioner, the parties acknowledge that each covenant in this agreement restraining Employee's practice is limited to the durations and, where applicable, the territory stated in Cover Terms, and is intended to preserve patient access and continuity of care.
+If Employee is a physician or other health care practitioner, the parties acknowledge that each covenant in this agreement restraining Employee's practice is limited to the durations and, where applicable, the territory stated in Cover Terms.
 {% /clause %}
 
 {% clause id="practice-restrictions-for-lawyers-excluded" %}
 ### Practice Restrictions for Lawyers Excluded
 
-If Employee is a lawyer, no covenant in this agreement restricts Employee's right to practice law after the termination of the relationship, except an agreement concerning benefits upon retirement, as provided in Miss. R. Prof'l Conduct 5.6(a). To the extent any covenant in this agreement would otherwise restrain Employee's right to practice law, that covenant does not apply to Employee.
+If Employee is a lawyer, no covenant in this agreement restricts Employee's right to practice law after the termination of the relationship, except an agreement concerning benefits upon retirement. To the extent any covenant in this agreement would otherwise restrain Employee's right to practice law, that covenant does not apply to Employee.
 {% /clause %}
 
 {% clause id="no-conflicting-obligations" %}
@@ -464,22 +495,10 @@ If Employee breaches any restrictive covenant in this agreement, the Restricted 
 Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate, and Employer may seek injunctive or other equitable relief in addition to any other remedies available at law.
 {% /clause %}
 
-{% clause id="forgo-enforcement-after-bad-faith-termination" %}
-### No Enforcement After a Bad-Faith Termination
-
-Employer will not rely on any covenant in this agreement for enforcement after Employer has terminated Employee's employment arbitrarily, capriciously, or in bad faith. Nothing in this agreement limits any right or defense available to Employee under applicable law, including any defense based on the circumstances in which Employee's employment ends.
-{% /clause %}
-
 {% clause id="enforceability-and-severability" %}
 ### Enforceability and Severability
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable, so that a court's refusal to enforce one covenant, or a court's decision to enforce a covenant only to a reasonable extent, does not affect the others.
-{% /clause %}
-
-{% clause id="reformation" %}
-### Reformation
-
-If a court finds any restrictive covenant in this agreement overbroad, the parties request that the court enforce that covenant to the maximum extent the court finds reasonable, modifying it as needed to do so. Each restrictive covenant is intended to be enforceable as written, without reliance on judicial revision.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect.
 {% /clause %}
 
 {% clause id="survival-and-expiration-of-each-covenant" %}

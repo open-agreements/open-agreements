@@ -73,7 +73,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business, limited to providing a product, process, or service that is similar to Employer's product, process, or service, consistent with Utah Code section 34-51-102(8)(a).
+[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business, limited to providing a product, process, or service that is similar to Employer's product, process, or service.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee and excluding Employee's general skill, knowledge, and experience.
 
@@ -83,23 +83,23 @@ Duration
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than five percent of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means Employer's legitimate business interests in its Confidential Information and trade secrets, its goodwill, and any extraordinary training Employer provided to Employee, which Utah common law recognizes as the interests a carefully drawn covenant may protect rather than ordinary competition.
+[[Protected Interests]] means Employer's Confidential Information and Trade Secrets, its goodwill, and any extraordinary training Employer provided to Employee.
 
-[[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the day on which Employee is no longer employed by Employer for any reason. For the non-competition covenant, the Restricted Period may not exceed one year from that day, and any longer term is void under Utah Code section 34-51-201(1).
+[[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the day on which Employee is no longer employed by Employer for any reason. For the non-competition covenant, the Restricted Period may not exceed one year from that day.
 
 [[Restricted Territory]] means the geographic area described in Cover Terms under Restricted Territory.
 
 [[Solicit]] means to directly or indirectly contact, approach, induce, or encourage any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] has the meaning given in the Utah Uniform Trade Secrets Act, Utah Code section 13-24-2(4): information that derives independent economic value from not being generally known or readily ascertainable and that is the subject of efforts reasonable under the circumstances to maintain its secrecy.
+[[Trade Secrets]] has the meaning given in the Utah Uniform Trade Secrets Act: information that derives independent economic value from not being generally known or readily ascertainable and that is the subject of efforts reasonable under the circumstances to maintain its secrecy.
 
-### Recitals and Legitimate Business Interests
+### Recitals and Protected Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is carefully drawn to protect one or more of Employer's Protected Interests and not to shield Employer from ordinary competition. To the extent any covenant is a non-compete, the parties intend it to be supported by consideration, negotiated in good faith, no broader than necessary to protect the goodwill of the business, and reasonable in its restrictions as to time and area.
+Employer and Employee acknowledge that each restrictive covenant in this agreement is carefully limited to protect one or more of Employer's Protected Interests and not to shield Employer from ordinary competition. To the extent any covenant is a non-compete, the parties intend it to be supported by consideration, negotiated in good faith, limited to the scope needed to protect the goodwill of the business, and reasonable in its restrictions as to time and area.
 
 ### Timing, Consideration, and Right to Consult Counsel
 
-This agreement is effective as of the Effective Date listed in Cover Terms. Employer and Employee agree that the offer of employment, including continued at-will employment, is sufficient consideration for the restrictive covenants, and that the terms of this agreement are not rendered unenforceable merely because they are harsh or the parties' obligations are unequal. Employer has given Employee a genuine opportunity to review this agreement and to consult with an attorney before signing, and confirms that it has not used a quick hire-and-fire to bind Employee to the covenants.
+This agreement is effective as of the Effective Date listed in Cover Terms. Employer and Employee agree that the offer of employment, including continued at-will employment, is sufficient consideration for the restrictive covenants. Employer has given Employee a genuine opportunity to review this agreement and to consult with an attorney before signing.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -115,7 +115,7 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant is drawn no broader than necessary to protect Employer's Protected Interests.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant is limited to the scope needed to protect Employer's Protected Interests.
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
@@ -123,15 +123,15 @@ During the Restricted Period, Employee must not Solicit the business of any Cove
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. The Restricted Period for this covenant may not exceed one year from the day on which Employee is no longer employed by Employer. This covenant is drawn no broader than necessary to protect Employer's Protected Interests. Passive Public Holdings are permitted. This covenant does not apply to a healthcare worker as a healthcare non-compete agreement, and does not apply to a veterinarian unless the veterinarian holds at least a five percent ownership interest in the business (Utah Code section 34-51-201(1)(b), (3)).
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. The Restricted Period for this covenant may not exceed one year from the day on which Employee is no longer employed by Employer. This covenant is limited to the scope needed to protect Employer's Protected Interests. Passive Public Holdings are permitted. This covenant does not apply to a healthcare worker as a healthcare non-compete agreement, and does not apply to a veterinarian unless the veterinarian holds at least a five percent ownership interest in the business.
 
 ### Non-Disparagement
 
 During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law.
 
-### Utah Statutory Limits and Exemptions
+### Utah Limits and Exclusions
 
-A post-employment non-compete under this agreement may not run more than one year from the day Employee's employment ends (Utah Code section 34-51-201(1)). The one-year cap does not apply to a covenant covered by the Act's exemptions: a reasonable severance agreement mutually and freely agreed upon in good faith at or after the time of termination, or a covenant arising out of the sale of a business where Employee receives value related to the sale; a severance agreement remains subject to common-law requirements (Utah Code section 34-51-202). Where Employer is a broadcasting company and Employee is an exempt broadcasting employee, any non-compete must sit within a written employment contract of reasonable duration and operates only where Employer terminates Employee for cause or Employee breaches the contract (Utah Code section 34-51-201(2)(a)). Employer and Employee may not enter into a healthcare non-compete agreement, may not enter into a veterinarian non-compete agreement unless the veterinarian holds at least a five percent ownership interest in the business, and may not enter into a healthcare nonsolicitation agreement that prevents a healthcare worker from informing a patient of the worker's current or future place of employment (Utah Code sections 34-51-201(1)(b), (3) and 34-51-203).
+The Restricted Period for a post-employment non-compete may not exceed one year after Employee's employment ends. The one-year cap does not apply to a covenant in a reasonable severance agreement mutually and freely agreed upon in good faith at or after the time of termination, or to a covenant arising out of the sale of a business where Employee receives value related to the sale. Where Employer is a broadcasting company and Employee is an exempt broadcasting employee, any non-compete applies only if it sits within a written employment contract of reasonable duration and only where Employer terminates Employee for cause or Employee breaches the contract. A non-compete does not apply to a healthcare worker or to a veterinarian who holds less than a five percent ownership interest in Employer. No covenant prevents a healthcare worker from informing a patient of the worker's current or future place of employment.
 
 ### No Conflicting Obligations
 
@@ -147,23 +147,19 @@ If Employee breaches a nonsolicitation, confidentiality, or non-disparagement co
 
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, including an injunction against actual or threatened misappropriation of trade secrets under the Utah Uniform Trade Secrets Act (Utah Code section 13-24-3). Any fee-shifting between the parties is mutual and prevailing-party based.
-
-### Enforceability, Severability, and Reformation
-
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect, and each restrictive covenant is intended to be independently enforceable. The parties do not rely on judicial reformation to cure an overbroad covenant. Each restrictive covenant in this agreement is drawn no broader than necessary and is intended to be enforceable as written rather than in reliance on judicial revision.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, including an injunction against actual or threatened misappropriation of trade secrets under the Utah Uniform Trade Secrets Act. Any fee-shifting between the parties is mutual and prevailing-party based.
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms, with each covenant's clock running independently. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. The non-competition covenant expires no later than one year after the day Employee's employment ends, consistent with Utah Code section 34-51-201(1). All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms, with each covenant's clock running independently. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. The non-competition covenant expires no later than one year after the day Employee's employment ends. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### Assignment and Successors
 
-Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. An assignment moves each covenant as it stands, including the non-competition covenant's one-year cap measured from Employee's separation and its reasonableness limits. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
+Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. Any assignee takes each covenant subject to its existing duration and other limitations. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
 
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms, including the Utah Post-Employment Restrictions Act, Utah Code sections 34-51-101 through 34-51-301. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. For a Utah workforce, the Act's one-year cap, void consequence, and fee-shifting are not waived or displaced by a choice of another state's law.
+For an Employee based in Utah, this agreement is governed by Utah law, and disputes will be resolved in Utah courts, subject to non-waivable rights under applicable law.
 
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 
@@ -209,10 +205,6 @@ Label is not protection. A nonsolicitation or confidentiality clause drafted so 
 ### the entered-into date and the 2026 bans
 
 The Post-Employment Restrictions Act attaches by the date an agreement is entered, so a covenant re-executed through a renewal or amendment falls under the regime in force on the new date, including the healthcare-worker and veterinarian non-compete bans for agreements entered on or after May 6, 2026 . A non-compete with a healthcare worker that was valid when first signed becomes a prohibited healthcare non-compete once it is re-signed on or after that date, and a veterinarian non-compete is void from that date unless the veterinarian holds at least a 5% ownership interest .
-
-### reformation
-
-A savings or reformation clause does not backstop an overbroad Utah non-compete. The statutory _void_ rule for over-length covenants and the common-law preference for carefully drawn restraints both cut against judicial rewriting, so a covenant that depends on a court to narrow it is exposed rather than saved .
 
 ### tolling
 

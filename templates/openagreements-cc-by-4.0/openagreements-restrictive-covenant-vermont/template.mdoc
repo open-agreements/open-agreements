@@ -9,28 +9,24 @@ description: >-
   reasonableness test (enforcement is ordered unless the covenant is contrary to
   public policy, unnecessary for the employer's protection, or unnecessarily
   restrictive of the employee), framed by the courts through Restatement
-  (Second) of Contracts § 188(1). It provides
-  confidentiality and trade-secret protection backstopped by the Vermont Trade
-  Secrets Act (9 V.S.A. §§ 4602-4603), a continued-at-will-employment
-  consideration recital, customer and employee
-  non-solicitation, an optional non-compete tied to identified protectable
-  interests and sized to the actual footprint, an express tolling clause the
-  drafting does not assume a court will supply,
-  profession-specific exclusions for barbering/cosmetology
-  trainees (26 V.S.A. § 281(c)) and lawyers (Vt. R. Prof. Conduct 5.6),
-  healthcare-professional reasonableness scrutiny without assuming any pending
-  legislation, and an ordinary severability clause the drafting treats as a
-  backstop rather than a narrowing strategy because Vermont court narrowing is
-  unsettled (the case law bars equitable rewriting of the time term while other
-  decisions carry partial-enforcement dicta). Drafted as a starting point for
-  licensed counsel review.
+  (Second) of Contracts § 188(1). It provides confidentiality and trade-secret
+  protection backstopped by the Vermont Trade Secrets Act (9 V.S.A. §§
+  4602-4603), a continued-at-will-employment consideration recital, customer and
+  employee non-solicitation, an optional non-compete tied to identified
+  protectable interests and sized to the actual footprint, an express tolling
+  clause the drafting does not assume a court will supply, profession-specific
+  exclusions for barbering/cosmetology trainees (26 V.S.A. § 281(c)) and lawyers
+  (Vt. R. Prof. Conduct 5.6), healthcare-professional reasonableness scrutiny
+  without assuming any pending legislation, and an ordinary severability clause
+  the drafting treats as a backstop rather than a narrowing strategy because
+  Vermont court narrowing is unsettled (the case law bars equitable rewriting of
+  the time term while other decisions carry partial-enforcement dicta). Drafted
+  as a starting point for licensed counsel review.
 source_url: >-
   https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-vermont
 version: 0.1.0
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: >-
   Authored by OpenAgreements contributors. Vermont-specific analysis informed by
   the quote-verified Vermont practice note. Licensed under CC BY 4.0.
@@ -112,10 +108,15 @@ fields:
       term.
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee non-solicitation covenant is included
-    display_label: Employee Non-Solicitation Included
-    default: true
+    description: >-
+      Whether the employee no-hire / non-solicitation covenant is included.
+      Alabama's only category for restraints touching another party's workers is
+      the no-hire exception for workers in a position uniquely essential to the
+      management, organization, or service of the business.
+    display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
+    rationale_source: editorial
+    default: true
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee non-solicitation restriction
@@ -125,10 +126,11 @@ fields:
     benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: >-
-      Vermont sets no statutory cap on duration; enforceability turns on the holistic Andrus
-      reasonableness test rather than a fixed number. 24 months matches the modal employee
-      non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the
-      common lighter alternative, and counsel should size the term to the employer's actual
+      Vermont sets no statutory cap on duration; enforceability turns on the
+      holistic Andrus reasonableness test rather than a fixed number. 24 months
+      matches the modal employee non-solicit term observed in benchmarked,
+      publicly-filed employee agreements; 12 months is the common lighter
+      alternative, and counsel should size the term to the employer's actual
       protectable interest.
   - name: covered_employee_period
     type: string
@@ -143,10 +145,14 @@ fields:
       scope.
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the customer/partner non-solicitation covenant is included
+    description: >-
+      Whether the current-customer non-solicitation covenant is included.
+      Alabama gives this covenant its own category, limited to current
+      customers.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
+    rationale_source: editorial
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer/partner non-solicitation restriction
@@ -156,12 +162,12 @@ fields:
     benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
     default_value_rationale: >-
-      Vermont sets no statutory cap; a customer non-solicit maps directly onto the
-      customer-relationship goodwill that Barnes recognizes as a protectable interest
-      and is often the better instrument than a full non-compete. 12 months is the
-      lighter side of the near-even 12/24-month split observed in benchmarked,
-      publicly-filed employee agreements — a conservative duration counsel should size
-      to the actual customer relationships protected.
+      Vermont sets no statutory cap; a customer non-solicit maps directly onto
+      the customer-relationship goodwill that Barnes recognizes as a protectable
+      interest and is often the better instrument than a full non-compete. 12
+      months is the lighter side of the near-even 12/24-month split observed in
+      benchmarked, publicly-filed employee agreements — a conservative duration
+      counsel should size to the actual customer relationships protected.
   - name: covered_customer_period
     type: string
     description: >-
@@ -190,8 +196,8 @@ fields:
       covenant — Vermont courts proceed with caution before enforcing restraints
       against competitive employment, and the employer carries the burden of
       proving reasonable necessity. A customer non-solicit backstopped by the
-      Vermont Trade Secrets Act often protects the employer as well. Include only
-      after confirming an identified protectable interest (confidential
+      Vermont Trade Secrets Act often protects the employer as well. Include
+      only after confirming an identified protectable interest (confidential
       information, trade secrets, or customer goodwill) and sizing the duration
       and territory to the actual footprint. Confirm the status of pending bills
       H.205 and H.583 before relying on any template.
@@ -204,14 +210,14 @@ fields:
     benchmark_ref: restrictive-covenant/non-compete-duration
     section: Non-Competition
     default_value_rationale: >-
-      Vermont imposes no statutory cap on duration; courts weigh time and territory
-      together against the employer's real protectable interest under Andrus, so there
-      is no safe-harbor number. A five-year, single-county restraint tied to the
-      employer's actual market was upheld in Andrus, but that is a ceiling on the
-      extreme facts, not a target. 12 months matches the modal non-compete term observed
-      in benchmarked, publicly-filed employee agreements — a conservative default
-      counsel should size to the actual role and market rather than copy from another
-      form.
+      Vermont imposes no statutory cap on duration; courts weigh time and
+      territory together against the employer's real protectable interest under
+      Andrus, so there is no safe-harbor number. A five-year, single-county
+      restraint tied to the employer's actual market was upheld in Andrus, but
+      that is a ceiling on the extreme facts, not a target. 12 months matches
+      the modal non-compete term observed in benchmarked, publicly-filed
+      employee agreements — a conservative default counsel should size to the
+      actual role and market rather than copy from another form.
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
@@ -243,10 +249,16 @@ fields:
     section: Non-Competition
   - name: nondealing_included
     type: boolean
-    description: Whether the no-business-with-covered-customers covenant is included.
+    description: >-
+      Whether the no-business-with-covered-customers covenant is included. A
+      non-dealing covenant has no named Alabama category of its own, so it must
+      be drafted to fit inside the current-customer non-solicit exception or it
+      is exposed to Alabama's void rule for restraints outside the listed
+      categories.
     display_label: No Business with Covered Customers Included
     default: false
     section: No Business with Covered Customers
+    rationale_source: editorial
   - name: nondealing_duration
     type: string
     description: Duration of the no-business-with-covered-customers restriction
@@ -265,15 +277,20 @@ fields:
     section: Definitions
     default_value_rationale: >-
       Five percent of any class of publicly traded securities is the modal
-      passive-investment carve-out threshold observed in benchmarked, publicly-filed
-      employee agreements that include the carve-out (lower 1-3 percent thresholds are
-      the common tighter alternatives).
+      passive-investment carve-out threshold observed in benchmarked,
+      publicly-filed employee agreements that include the carve-out (lower 1-3
+      percent thresholds are the common tighter alternatives).
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included.
+    description: >-
+      Whether the non-investment covenant is included. A non-investment covenant
+      has no named Alabama category; one genuine use is restraining a licensed
+      professional's business conduct outside the practice of the profession,
+      which sits outside Alabama's professional exemption.
     display_label: Non-Investment Included
     default: false
     section: Non-Investment
+    rationale_source: editorial
   - name: noninvestment_duration
     type: string
     description: Duration of non-investment restriction
@@ -287,9 +304,21 @@ fields:
     default: 24 months
     section: Non-Disparagement
     default_value_rationale: 24 months is common for employment non-disparagement provisions.
+  - name: worker_is_physician
+    type: boolean
+    description: >-
+      Whether Employee is a physician. Set this explicitly from Employee's
+      licensed role to include physician-specific terms. For Indiana, the
+      applicable provisions vary by execution date and employer type, and may
+      require a release buyout term or exclude the non-compete entirely.
+    display_label: Employee Is a Physician
+    section: Physician
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template
 ---
 # Employee Restrictive Covenant Agreement
 
@@ -341,7 +370,7 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {% field name="passive_public_holdings_threshold" /%} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means Employer's Confidential Information, Employer's trade secrets as defined by the Vermont Trade Secrets Act (9 V.S.A. §§ 4601–4609), and Employer's goodwill in its customer, vendor, referral-source, and business-partner relationships, but not Employer's interest in avoiding ordinary competition.
+[[Protected Interests]] means Employer's Confidential Information and Trade Secrets and Employer's goodwill in its customer, vendor, referral-source, and business-partner relationships.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -349,19 +378,19 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Solicit]] means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] has the meaning given to "trade secret" in the Vermont Trade Secrets Act, 9 V.S.A. §§ 4601–4609.
+[[Trade Secrets]] means information that qualifies as a trade secret under applicable law.
 {% /clause %}
 
 {% clause id="recitals-and-legitimate-business-interest" %}
 ### Recitals and Protectable Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to protect one or more of Employer's Protected Interests and to impose no restraint greater than is required for that protection. The parties acknowledge that each covenant is meant to guard Employer's Confidential Information, trade secrets, and customer goodwill and not to eliminate ordinary competition, and that Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. Each covenant is intended to be reasonable in time, territory, and scope, to impose no undue hardship on Employee, and to cause no injury to the public.
+Employer and Employee acknowledge that each restrictive covenant in this agreement protects one or more of Employer's Protected Interests. Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. Each covenant is limited to the time, territory, and scope stated in this agreement.
 {% /clause %}
 
 {% clause id="timing-and-employee-acknowledgements" %}
 ### Timing, Consideration, and Employee Acknowledgements
 
-The parties acknowledge that this agreement is supported by adequate consideration. If Employee is an existing at-will employee, the parties agree that continued employment alone is sufficient consideration to support the covenants in this agreement; no separate payment, raise, or promotion is required. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests, and that adequate consideration establishes only that the covenants are supported, not that they are reasonable — each covenant must independently be reasonable in time, territory, and scope. This agreement is effective as of the Effective Date listed in Cover Terms.
+This agreement is supported by Employee's continued employment or, if signed at the outset of employment, Employer's offer of employment. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 {% /clause %}
 
 {% clause id="confidential-information-and-trade-secret-protection" %}
@@ -385,31 +414,31 @@ Upon termination of employment, Employee must promptly return to Employer all do
 {% clause id="non-solicitation-of-employees" include-when="employee_nonsolicit_included" %}
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is no broader than necessary to protect Employer's workforce stability and goodwill.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is limited to the scope needed to protect Employer's workforce stability and goodwill.
 {% /clause %}
 
 {% clause id="non-solicitation-of-customers-vendors-referral-sources-and-business-partners" include-when="customer_nonsolicit_included" %}
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers with whom Employee had material contact and is no broader than necessary to protect Employer's goodwill in its customer relationships.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers with whom Employee had material contact and is limited to the scope needed to protect Employer's goodwill in its customer relationships.
 {% /clause %}
 
 {% clause id="no-business-with-covered-customers" include-when="nondealing_included" %}
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee; it is limited to the goodwill it protects and reaches only Covered Customers with whom Employee had material contact.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer with whom Employee had material contact, regardless of who initiates contact.
 {% /clause %}
 
 {% clause id="non-competition" include-when="noncompete_included" %}
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant exists to protect Employer's Protected Interests — its Confidential Information, trade secrets, and customer goodwill — and not to restrain ordinary competition. The parties intend this covenant to be no greater than is needed to protect Employer's legitimate interest, to impose no undue hardship on Employee, and to cause no injury to the public, with its time and territory sized to Employee's actual role and Employer's actual market and tied to a determinable place. If Employer has identified specific competitors in Cover Terms under Specified Competitors, the parties intend this covenant to be understood and, if necessary, enforced as limited to those named competitors. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. If Specified Competitors are listed in Cover Terms, Competitive Business is limited to those competitors. Passive Public Holdings are permitted.
 {% /clause %}
 
 {% clause id="non-investment" include-when="noninvestment_included" %}
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Because this covenant restrains active roles at and material participation in a Competitive Business, it is drawn no broader than necessary to protect Employer's Protected Interests. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. Passive Public Holdings are permitted.
 {% /clause %}
 
 {% clause id="non-disparagement" %}
@@ -418,10 +447,10 @@ During the Restricted Period, Employee must not acquire or hold any active owner
 During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law, including rights protected under Section 7 of the National Labor Relations Act.
 {% /clause %}
 
-{% clause id="physician-specific-rights-and-notices" %}
+{% clause id="physician-specific-rights-and-notices" include-when="worker_is_physician" %}
 ### Physician and Health Care Practitioner Covenants
 
-If Employee is a licensed healthcare professional, any covenant in this agreement restraining Employee from practicing is intended to use a narrow radius and a short term to preserve patient access and continuity of care, and applies only to the extent it is reasonable in time, territory, and scope.
+No covenant in this agreement restricts a licensed healthcare professional from practicing beyond the Restricted Period or outside the Restricted Territory stated in Cover Terms.
 {% /clause %}
 
 {% clause id="no-conflicting-obligations" %}
@@ -439,7 +468,7 @@ Employer may disclose the existence and terms of this agreement to any prospecti
 {% clause id="tolling-during-breach" %}
 ### Tolling During Breach
 
-If Employee breaches any restrictive covenant in this agreement, the parties intend that the Restricted Period for that covenant be extended by one day for each day of the breach, so that the full duration of the restriction runs from the date the breach ends. Any such extension is itself a restraint, is limited to what remains reasonable in time, and is not intended to be open-ended or indefinite.
+If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day the breach continues. The extension may not exceed the number of days during which the breach continued.
 {% /clause %}
 
 {% clause id="remedies" %}
@@ -451,13 +480,7 @@ Employee acknowledges that a breach of this agreement may cause Employer irrepar
 {% clause id="enforceability-and-severability" %}
 ### Enforceability and Severability
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable, so that a court's refusal to enforce one covenant does not affect the others.
-{% /clause %}
-
-{% clause id="reformation" %}
-### Reformation
-
-Each restrictive covenant in this agreement is drawn as a tiered, severable, reasonable restraint sized to the Protected Interests and is intended to be enforceable as written. If any restraint is nonetheless found overbroad, Employer requests that the covenant be enforced to the extent reasonable to the degree Vermont law permits.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect.
 {% /clause %}
 
 {% clause id="survival-and-expiration-of-each-covenant" %}
@@ -469,19 +492,19 @@ Each restrictive covenant in this agreement survives the termination of Employee
 {% clause id="assignment-and-successors" %}
 ### Assignment and Successors
 
-Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns. The parties intend that any transfer of a covenant in connection with a sale of Employer's business be stated expressly in the transaction documents.
+Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. Employer may assign this agreement to a successor in connection with a sale of its business. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
 {% /clause %}
 
 {% clause id="governing-law-venue-and-dispute-process" %}
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms. This agreement does not impose a covenant not to compete as a condition of a barbering or cosmetology school's training for licensure, and it does not restrict a lawyer's right to practice after termination of the relationship except as to benefits upon retirement, nor make any restriction on a lawyer's right to practice part of the settlement of a client controversy. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. The parties intend that the governing-law and venue choices match where Employee actually lives and works.
+This agreement is governed by the law listed in Cover Terms. This agreement does not impose a covenant not to compete as a condition of a barbering or cosmetology school's training for licensure, and it does not restrict a lawyer's right to practice after termination of the relationship except as to benefits upon retirement, nor make any restriction on a lawyer's right to practice part of the settlement of a client controversy. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
 {% /clause %}
 
 {% clause id="entire-agreement-amendment-waiver-and-electronic-signatures" %}
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 
-This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. The parties confirm that every covenant term — duration, geography, scope, and consideration — is stated in this agreement rather than deferred to a side understanding. This agreement may be amended only in writing signed by both parties. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
+This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. This agreement may be amended only in writing signed by both parties. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
 {% /clause %}
 {% /agreement-section %}
 

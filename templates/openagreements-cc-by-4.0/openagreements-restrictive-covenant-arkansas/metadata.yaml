@@ -6,8 +6,6 @@ version: 0.1.0
 stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: Authored by OpenAgreements contributors. Arkansas-specific analysis informed by the quote-verified Arkansas practice note. Licensed under CC BY 4.0.
 fields:
   - name: employer_name
@@ -63,10 +61,11 @@ fields:
     default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. Arkansas keeps confidentiality agreements on a different track from covenants about competition or competitive work, so a finite term on non-secret information is a common-law reasonableness choice.
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee non-solicitation covenant is included
-    display_label: Employee Non-Solicitation Included
-    default: true
+    description: Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.
+    display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
+    rationale_source: editorial
+    default: true
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee non-solicitation restriction
@@ -85,10 +84,11 @@ fields:
     default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the customer/partner non-solicitation covenant is included
+    description: Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
+    rationale_source: editorial
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer/partner non-solicitation restriction
@@ -147,10 +147,11 @@ fields:
     default_value_rationale: Empty by default because named-competitor limits are deal-specific. When supplied, naming a specific competitor group can strengthen tailoring by limiting the restraint to entities connected to the employer's business.
   - name: nondealing_included
     type: boolean
-    description: Whether the no-business-with-covered-customers covenant is included.
+    description: Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.
     display_label: No Business with Covered Customers Included
     default: false
     section: No Business with Covered Customers
+    rationale_source: editorial
   - name: nondealing_duration
     type: string
     description: Duration of the no-business-with-covered-customers restriction
@@ -171,10 +172,11 @@ fields:
     default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives). A clause that forbids ordinary public shares restrains conduct that threatens no protectable interest, exactly the excess width an Arkansas court would trim.
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included.
+    description: Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.
     display_label: Non-Investment Included
     default: false
     section: Non-Investment
+    rationale_source: editorial
   - name: noninvestment_duration
     type: string
     description: Duration of non-investment restriction
@@ -191,6 +193,14 @@ fields:
     default: 24 months
     section: Non-Disparagement
     default_value_rationale: 24 months is common for employment non-disparagement provisions.
+  - name: worker_is_physician
+    type: boolean
+    description: Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.
+    display_label: Employee Is a Physician
+    section: Physician
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template

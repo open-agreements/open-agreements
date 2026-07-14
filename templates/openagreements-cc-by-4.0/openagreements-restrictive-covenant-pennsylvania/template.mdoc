@@ -5,33 +5,30 @@ category: non-compete
 description: >-
   Pennsylvania-specific employee restrictive covenant agreement built for
   Pennsylvania's common-law reasonableness regime: there is no general
-  Pennsylvania non-compete statute, so every post-employment restraint stands
-  or falls on Pennsylvania's four-part common-law test — ancillary to an
-  employment relationship, supported by adequate consideration, reasonably
-  limited in duration and geography, and tied to a legitimate protectable
-  interest. It provides confidentiality and trade-secret protection, a
-  new-consideration recital for a covenant signed after employment begins that
-  does not lean on a Uniform Written Obligations Act recital, customer and
-  employee non-solicitation drafted as affirmative-outreach restraints with a
-  geographic limit, an optional non-compete tied to identified protectable
-  interests and sized to the actual footprint under close scrutiny, a health
-  care practitioner clause reflecting the Fair Contracting for Health Care
-  Practitioners Act (Act 74 of 2024) one-year cap, dismissal rule, and 90-day
-  patient-notice duty, an express assignability provision the covenant needs
-  to reach a buyer, and separable, tiered restraints that do not rely on
-  discretionary judicial reformation. Drafted as a starting point for licensed
-  counsel review.
+  Pennsylvania non-compete statute, so every post-employment restraint stands or
+  falls on Pennsylvania's four-part common-law test — ancillary to an employment
+  relationship, supported by adequate consideration, reasonably limited in
+  duration and geography, and tied to a legitimate protectable interest. It
+  provides confidentiality and trade-secret protection, a new-consideration
+  recital for a covenant signed after employment begins that does not lean on a
+  Uniform Written Obligations Act recital, customer and employee
+  non-solicitation drafted as affirmative-outreach restraints with a geographic
+  limit, an optional non-compete tied to identified protectable interests and
+  sized to the actual footprint under close scrutiny, a health care practitioner
+  clause reflecting the Fair Contracting for Health Care Practitioners Act (Act
+  74 of 2024) one-year cap, dismissal rule, and 90-day patient-notice duty, an
+  express assignability provision the covenant needs to reach a buyer, and
+  separable, tiered restraints that do not rely on discretionary judicial
+  reformation. Drafted as a starting point for licensed counsel review.
 source_url: >-
   https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-pennsylvania
 version: 0.1.0
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: >-
   Authored by OpenAgreements contributors. Pennsylvania-specific analysis
-  informed by the quote-verified Pennsylvania practice note. Licensed under
-  CC BY 4.0.
+  informed by the quote-verified Pennsylvania practice note. Licensed under CC
+  BY 4.0.
 layout_id: cover-standard-signature-v1
 style_id: openagreements-default-v1
 document:
@@ -102,14 +99,15 @@ fields:
     default: ''
     section: Timing
     rationale_source: case_law
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.pennsylvania.provide-new-consideration-for-post-hire-covenants
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.pennsylvania.provide-new-consideration-for-post-hire-covenants
     default_value_rationale: >-
       Empty by default because a covenant signed at the outset of employment is
-      supported by the offer and commencement of employment and needs no separate
-      new consideration. A covenant an existing at-will employee signs after
-      employment began requires new and valuable consideration beyond continued
-      employment; if this agreement is signed mid-employment, counsel must record
-      the specific benefit actually delivered here.
+      supported by the offer and commencement of employment and needs no
+      separate new consideration. A covenant an existing at-will employee signs
+      after employment began requires new and valuable consideration beyond
+      continued employment; if this agreement is signed mid-employment, counsel
+      must record the specific benefit actually delivered here.
   - name: confidentiality_trade_secret_duration
     type: string
     description: Duration of confidentiality obligations for trade secrets
@@ -127,10 +125,15 @@ fields:
       employment agreements.
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee non-solicitation covenant is included
-    display_label: Employee Non-Solicitation Included
-    default: true
+    description: >-
+      Whether the employee no-hire / non-solicitation covenant is included.
+      Alabama's only category for restraints touching another party's workers is
+      the no-hire exception for workers in a position uniquely essential to the
+      management, organization, or service of the business.
+    display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
+    rationale_source: editorial
+    default: true
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee non-solicitation restriction
@@ -140,11 +143,12 @@ fields:
     benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: >-
-      Pennsylvania sets no statutory cap on duration; enforceability turns on the four-part Socko
-      reasonableness test rather than a fixed number. 24 months matches the modal employee
-      non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the
-      common lighter alternative, and counsel should size the term to the employer's actual
-      protectable interest.
+      Pennsylvania sets no statutory cap on duration; enforceability turns on
+      the four-part Socko reasonableness test rather than a fixed number. 24
+      months matches the modal employee non-solicit term observed in
+      benchmarked, publicly-filed employee agreements; 12 months is the common
+      lighter alternative, and counsel should size the term to the employer's
+      actual protectable interest.
   - name: covered_employee_period
     type: string
     description: >-
@@ -158,10 +162,14 @@ fields:
       scope.
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the customer/partner non-solicitation covenant is included
+    description: >-
+      Whether the current-customer non-solicitation covenant is included.
+      Alabama gives this covenant its own category, limited to current
+      customers.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
+    rationale_source: editorial
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer/partner non-solicitation restriction
@@ -192,13 +200,13 @@ fields:
     type: boolean
     description: >-
       Whether the non-competition covenant is included. Pennsylvania has no
-      general non-compete statute; a non-compete is enforceable only to the extent
-      it satisfies Pennsylvania's four-part reasonableness test and is tied to a
-      legitimate protectable interest rather than ordinary competition. This
-      template recites the protectable-interest basis and sizes the restraint to
-      the employer's actual footprint. A non-compete against a covered health care
-      practitioner is separately limited by the Fair Contracting for Health Care
-      Practitioners Act.
+      general non-compete statute; a non-compete is enforceable only to the
+      extent it satisfies Pennsylvania's four-part reasonableness test and is
+      tied to a legitimate protectable interest rather than ordinary
+      competition. This template recites the protectable-interest basis and
+      sizes the restraint to the employer's actual footprint. A non-compete
+      against a covered health care practitioner is separately limited by the
+      Fair Contracting for Health Care Practitioners Act.
     display_label: Non-Competition Included
     default: false
     section: Non-Competition
@@ -206,12 +214,12 @@ fields:
     default_value_rationale: >-
       Conservative default. The non-compete is the most heavily scrutinized
       covenant under Pennsylvania's four-part test; a customer non-solicit
-      backstopped by trade-secret protection often protects the employer as well.
-      Include only after confirming an identified protectable interest
-      (confidential information, trade secrets, or customer goodwill), sizing the
-      duration and territory to the actual footprint, and confirming the worker is
-      not a health care practitioner covered by the Fair Contracting for Health
-      Care Practitioners Act.
+      backstopped by trade-secret protection often protects the employer as
+      well. Include only after confirming an identified protectable interest
+      (confidential information, trade secrets, or customer goodwill), sizing
+      the duration and territory to the actual footprint, and confirming the
+      worker is not a health care practitioner covered by the Fair Contracting
+      for Health Care Practitioners Act.
   - name: noncompete_duration
     type: string
     description: Duration of non-competition restriction
@@ -227,9 +235,9 @@ fields:
       ordinary workforce). Courts weigh time and territory together against the
       employer's real protectable interest under Socko and Sidco, so there is no
       safe-harbor number; counsel should size the default to the actual role and
-      market. For a covered health care practitioner, Act 74 caps any enforceable
-      non-compete at one year and voids it entirely if the employer dismissed the
-      practitioner.
+      market. For a covered health care practitioner, Act 74 caps any
+      enforceable non-compete at one year and voids it entirely if the employer
+      dismissed the practitioner.
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
@@ -240,9 +248,9 @@ fields:
       Tied to the employee's actual service area. Pennsylvania imposes no
       statutory cap on territory; a narrower area genuinely needed to protect
       customer relationships or confidential information is far easier to defend
-      under the Socko and Sidco reasonableness analysis than a statewide ban, and
-      an overbroad territory invites a court to enforce less than the employer
-      drafted, or nothing at all.
+      under the Socko and Sidco reasonableness analysis than a statewide ban,
+      and an overbroad territory invites a court to enforce less than the
+      employer drafted, or nothing at all.
   - name: competitive_business_definition
     type: string
     description: >-
@@ -260,10 +268,16 @@ fields:
     section: Non-Competition
   - name: nondealing_included
     type: boolean
-    description: Whether the no-business-with-covered-customers covenant is included.
+    description: >-
+      Whether the no-business-with-covered-customers covenant is included. A
+      non-dealing covenant has no named Alabama category of its own, so it must
+      be drafted to fit inside the current-customer non-solicit exception or it
+      is exposed to Alabama's void rule for restraints outside the listed
+      categories.
     display_label: No Business with Covered Customers Included
     default: false
     section: No Business with Covered Customers
+    rationale_source: editorial
   - name: nondealing_duration
     type: string
     description: Duration of the no-business-with-covered-customers restriction
@@ -282,15 +296,20 @@ fields:
     section: Definitions
     default_value_rationale: >-
       Five percent of any class of publicly traded securities is the modal
-      passive-investment carve-out threshold observed in benchmarked, publicly-filed
-      employee agreements that include the carve-out (lower 1-3 percent thresholds are
-      the common tighter alternatives).
+      passive-investment carve-out threshold observed in benchmarked,
+      publicly-filed employee agreements that include the carve-out (lower 1-3
+      percent thresholds are the common tighter alternatives).
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included.
+    description: >-
+      Whether the non-investment covenant is included. A non-investment covenant
+      has no named Alabama category; one genuine use is restraining a licensed
+      professional's business conduct outside the practice of the profession,
+      which sits outside Alabama's professional exemption.
     display_label: Non-Investment Included
     default: false
     section: Non-Investment
+    rationale_source: editorial
   - name: noninvestment_duration
     type: string
     description: Duration of non-investment restriction
@@ -304,9 +323,21 @@ fields:
     default: 24 months
     section: Non-Disparagement
     default_value_rationale: 24 months is common for employment non-disparagement provisions.
+  - name: worker_is_physician
+    type: boolean
+    description: >-
+      Whether Employee is a physician. Set this explicitly from Employee's
+      licensed role to include physician-specific terms. For Indiana, the
+      applicable provisions vary by execution date and employer type, and may
+      require a release buyout term or exclude the non-compete entirely.
+    display_label: Employee Is a Physician
+    section: Physician
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template
 ---
 # Employee Restrictive Covenant Agreement
 
@@ -367,19 +398,19 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Solicit]] means to affirmatively contact, approach, induce, encourage, or entice a person or entity, directed at a Covered Customer or Covered Employee, for the purpose of diverting business away from Employer or of recruiting a Covered Employee, and does not include Employee's mere acceptance of business from a Covered Customer who seeks Employee out, responding to general advertisements, or responding to unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] means information that qualifies for trade-secret protection under applicable Pennsylvania and federal law, including the Pennsylvania Uniform Trade Secrets Act, for as long as the information continues to derive independent economic value from not being generally known and remains the subject of reasonable efforts to maintain its secrecy.
+[[Trade Secrets]] means information that qualifies for trade-secret protection by applicable Pennsylvania and federal law, including the Pennsylvania Uniform Trade Secrets Act, for as long as the information continues to derive independent economic value from not being generally known and remains the subject of reasonable efforts to maintain its secrecy.
 {% /clause %}
 
 {% clause id="recitals-and-legitimate-business-interest" %}
 ### Recitals and Protectable Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to the employment relationship between them and is supported by adequate consideration. Employee will receive access to Employer's Confidential Information and trade secrets and will develop customer relationships and goodwill on Employer's behalf, and Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. The parties acknowledge that each covenant is intended to protect one or more of Employer's Protected Interests and not to eliminate ordinary competition, that each covenant imposes no restraint greater than is reasonably necessary for that protection, and that each covenant is reasonably limited in duration and geographic extent.
+Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to the employment relationship between them and is supported by adequate consideration. Employee will receive access to Employer's Confidential Information and trade secrets and will develop customer relationships and goodwill on Employer's behalf, and Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. The parties acknowledge that each covenant is intended to protect one or more of Employer's Protected Interests and not to eliminate ordinary competition, that each covenant imposes no restraint greater than is appropriate for that protection, and that each covenant is reasonably limited in duration and geographic extent.
 {% /clause %}
 
 {% clause id="timing-and-employee-acknowledgements" %}
 ### Timing, Consideration, and Employee Acknowledgements
 
-This agreement is effective as of the Effective Date listed in Cover Terms. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration for the covenants in this agreement. If Employee is an existing employee signing after employment has already begun, the covenants are instead supported by the new and valuable consideration described in Cover Terms under New Consideration for a Mid-Employment Covenant — a corresponding benefit or beneficial change in employment status, such as a raise, bonus, or promotion — which Employer has actually delivered to Employee, and the parties do not rely on continued at-will employment, or on any statement of an intent to be legally bound, to supply that consideration. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement.
+This agreement is effective as of the Effective Date listed in Cover Terms. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration for the covenants in this agreement. If Employee signs after employment has begun, Employer will provide the new consideration described in Cover Terms under New Consideration for a Mid-Employment Covenant. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement.
 {% /clause %}
 
 {% clause id="confidential-information-and-trade-secret-protection" %}
@@ -436,7 +467,7 @@ During the Restricted Period, Employee must not acquire or hold any active owner
 During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law, including rights protected under Section 7 of the National Labor Relations Act.
 {% /clause %}
 
-{% clause id="physician-specific-rights-and-notices" %}
+{% clause id="physician-specific-rights-and-notices" include-when="worker_is_physician" %}
 ### Health Care Practitioner Covenants and Patient Notice
 
 If Employee is a health care practitioner covered by the Fair Contracting for Health Care Practitioners Act — a medical doctor, a doctor of osteopathy, a certified registered nurse anesthetist, a certified registered nurse practitioner, or a physician assistant — then, notwithstanding any other provision of this agreement: (a) no noncompete covenant in this agreement restrains Employee for more than one year; (b) no noncompete covenant in this agreement is enforceable by Employer if Employer dismissed Employee; and (c) nothing in this agreement treats Employee's departure or destination as Confidential Information that Employer may not communicate to patients, and nothing in this agreement restricts or delays any notice to patients that applicable law requires Employer to provide. If any other provision of this agreement conflicts with this section, this section controls.
@@ -469,13 +500,7 @@ Employee acknowledges that a breach of this agreement may cause Employer irrepar
 {% clause id="enforceability-and-severability" %}
 ### Enforceability and Severability
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable, so that a court's refusal to enforce one covenant, or a court's decision to enforce a covenant only in part, does not affect the others. Each covenant is drawn in separable tiers, with distinct duration, geography, and scope steps, so that any separable portion may be enforced on its own.
-{% /clause %}
-
-{% clause id="reformation" %}
-### Reformation
-
-If any restraint in this agreement is found to be overbroad, Employer requests enforcement limited to those portions of the restraint that are reasonably necessary for the protection of Employer's Protected Interests. Each restrictive covenant in this agreement is drawn as a tiered, severable restraint sized to the Protected Interests, and the parties intend each covenant to be enforceable as written rather than in reliance on judicial revision.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect.
 {% /clause %}
 
 {% clause id="survival-and-expiration-of-each-covenant" %}

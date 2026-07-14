@@ -6,8 +6,6 @@ version: 0.1.0
 stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: Authored by OpenAgreements contributors. Oklahoma-specific analysis informed by the quote-verified Oklahoma practice note. Licensed under CC BY 4.0.
 fields:
   - name: employer_name
@@ -111,7 +109,10 @@ fields:
     section: Employee Non-Solicitation
     rationale_source: editorial
     default_value_rationale: 12 months is a conservative look-back window that keeps the covered class tied to employees and independent contractors with a recent workplace connection to Employee rather than the entire workforce.
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
   - effective_date
+distribution: bundled
+artifact_type: template

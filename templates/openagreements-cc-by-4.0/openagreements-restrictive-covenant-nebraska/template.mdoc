@@ -22,14 +22,13 @@ description: >-
   limited to personally served customers, an optional non-compete tied to that
   same customer set rather than a market or territory, express
   merger-by-operation-of-law and assignment terms, and a Nebraska-first
-  choice-of-law posture. Drafted as a starting point for licensed counsel review.
+  choice-of-law posture. Drafted as a starting point for licensed counsel
+  review.
 source_url: >-
   https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-nebraska
 version: 0.1.0
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: >-
   Authored by OpenAgreements contributors. Nebraska-specific analysis informed
   by the quote-verified Nebraska practice note. Licensed under CC BY 4.0.
@@ -104,11 +103,12 @@ fields:
     section: Legal
     default: Nebraska
     rationale_source: case_law
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.draft-to-satisfy-nebraska-law-rather-than-rely-on-a-foreign-choice-of-law
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.draft-to-satisfy-nebraska-law-rather-than-rely-on-a-foreign-choice-of-law
     default_value_rationale: >-
       Nebraska is the conservative default for a Nebraska-centered worker
-      because the governing-law choice should match the state whose law is likely
-      to control the covenant's enforceability.
+      because the governing-law choice should match the state whose law is
+      likely to control the covenant's enforceability.
   - name: confidentiality_trade_secret_duration
     type: string
     description: Duration of confidentiality obligations for trade secrets
@@ -130,13 +130,14 @@ fields:
   - name: employee_nonsolicit_included
     type: boolean
     description: >-
-      Whether the employee non-solicitation covenant is included. No staged
-      Nebraska decision addresses a worker's own promise not to recruit former
-      colleagues, so it is reviewed under the general three-part framework and
-      drawn narrowly if included.
-    display_label: Employee Non-Solicitation Included
-    default: true
+      Whether the employee no-hire / non-solicitation covenant is included.
+      Alabama's only category for restraints touching another party's workers is
+      the no-hire exception for workers in a position uniquely essential to the
+      management, organization, or service of the business.
+    display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
+    rationale_source: editorial
+    default: true
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee non-solicitation restriction
@@ -146,11 +147,13 @@ fields:
     benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: >-
-      Nebraska sets no statutory cap on duration; enforceability turns on the three-part Securities
-      Acceptance reasonableness test rather than a fixed number, and Nebraska courts refuse to
-      reform an overbroad covenant. 24 months matches the modal employee non-solicit term observed
-      in benchmarked, publicly-filed employee agreements; 12 months is the common lighter
-      alternative, and counsel should size the term to the employer's actual protectable interest.
+      Nebraska sets no statutory cap on duration; enforceability turns on the
+      three-part Securities Acceptance reasonableness test rather than a fixed
+      number, and Nebraska courts refuse to reform an overbroad covenant. 24
+      months matches the modal employee non-solicit term observed in
+      benchmarked, publicly-filed employee agreements; 12 months is the common
+      lighter alternative, and counsel should size the term to the employer's
+      actual protectable interest.
   - name: covered_employee_period
     type: string
     description: >-
@@ -166,20 +169,13 @@ fields:
   - name: customer_nonsolicit_included
     type: boolean
     description: >-
-      Whether the customer non-solicitation covenant is included. This is the
-      covenant Nebraska law is actually built around when it reaches only the
-      clients and accounts the worker actually did business with and personally
-      contacted.
+      Whether the current-customer non-solicitation covenant is included.
+      Alabama gives this covenant its own category, limited to current
+      customers.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
-    rationale_source: case_law
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.limit-customer-restrictions-to-personally-served-customers
-    default_value_rationale: >-
-      True is the law-backed default because Nebraska's customer-goodwill rule
-      allows a covenant only when it is confined to the personally served
-      customer class, making this narrower restraint the principal post-employment
-      covenant in the template.
+    rationale_source: editorial
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer non-solicitation restriction
@@ -189,12 +185,12 @@ fields:
     benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
     default_value_rationale: >-
-      Nebraska sets no statutory cap; a customer non-solicit limited to personally
-      served customers maps directly onto the customer-goodwill interest and is the
-      instrument Nebraska courts actually enforce. 12 months is the lighter side of the
-      near-even 12/24-month split observed in benchmarked, publicly-filed employee
-      agreements — a conservative duration counsel should size to the actual customer
-      relationships protected.
+      Nebraska sets no statutory cap; a customer non-solicit limited to
+      personally served customers maps directly onto the customer-goodwill
+      interest and is the instrument Nebraska courts actually enforce. 12 months
+      is the lighter side of the near-even 12/24-month split observed in
+      benchmarked, publicly-filed employee agreements — a conservative duration
+      counsel should size to the actual customer relationships protected.
   - name: covered_customer_period
     type: string
     description: >-
@@ -206,9 +202,9 @@ fields:
     default_value_rationale: >-
       12 months is a common lookback for identifying the personally served
       customer class. A restriction Nebraska courts upheld was tied to customers
-      the employee personally dealt with during the preceding two years, so counsel
-      may lengthen or shorten this window to match the actual relationships the
-      worker held.
+      the employee personally dealt with during the preceding two years, so
+      counsel may lengthen or shorten this window to match the actual
+      relationships the worker held.
   - name: noncompete_included
     type: boolean
     description: >-
@@ -223,15 +219,17 @@ fields:
     default: false
     section: Non-Competition
     rationale_source: case_law
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.avoid-geographic-and-activity-bans-for-ordinary-employees
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.avoid-geographic-and-activity-bans-for-ordinary-employees
     default_value_rationale: >-
       Conservative default. In Nebraska a customer non-solicit limited to
       personally served customers, backstopped by the Nebraska Trade Secrets
-      Act, is the enforceable instrument; a whole-market or territory non-compete
-      for an ordinary employee invites the ordinary-competition defect and,
-      because Nebraska courts do not reform overbroad employment covenants, an
-      all-or-nothing loss. Include only after confirming an identified legitimate
-      interest and scoping the restraint to personally served customers.
+      Act, is the enforceable instrument; a whole-market or territory
+      non-compete for an ordinary employee invites the ordinary-competition
+      defect and, because Nebraska courts do not reform overbroad employment
+      covenants, an all-or-nothing loss. Include only after confirming an
+      identified legitimate interest and scoping the restraint to personally
+      served customers.
   - name: noncompete_duration
     type: string
     description: Duration of non-competition restriction
@@ -241,12 +239,13 @@ fields:
     benchmark_ref: restrictive-covenant/non-compete-duration
     section: Non-Competition
     default_value_rationale: >-
-      Nebraska imposes no statutory cap on duration; the three-part reasonableness test
-      weighs the practical effect of the restraint against the employer's legitimate
-      interest, so there is no safe-harbor number. 12 months matches the modal
-      non-compete term observed in benchmarked, publicly-filed employee agreements — a
-      conservative default counsel should size to the actual role and personally served
-      customer relationships rather than copy from another form.
+      Nebraska imposes no statutory cap on duration; the three-part
+      reasonableness test weighs the practical effect of the restraint against
+      the employer's legitimate interest, so there is no safe-harbor number. 12
+      months matches the modal non-compete term observed in benchmarked,
+      publicly-filed employee agreements — a conservative default counsel should
+      size to the actual role and personally served customer relationships
+      rather than copy from another form.
   - name: competitive_business_definition
     type: string
     description: >-
@@ -257,7 +256,8 @@ fields:
     display_label: Competitive Business
     section: Non-Competition
     rationale_source: case_law
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.limit-customer-restrictions-to-personally-served-customers
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.limit-customer-restrictions-to-personally-served-customers
     default_value_rationale: >-
       No default is supplied because the competitive-business definition must be
       drafted from the employer's actual business and kept subordinate to the
@@ -276,13 +276,15 @@ fields:
   - name: nondealing_included
     type: boolean
     description: >-
-      Whether the no-business-with-covered-customers covenant is included.
-      Barring the worker from serving covered customers even when the customer
-      calls first restrains accepting work, not just chasing it, so it earns its
-      place only with a tight, personally served customer class behind it.
+      Whether the no-business-with-covered-customers covenant is included. A
+      non-dealing covenant has no named Alabama category of its own, so it must
+      be drafted to fit inside the current-customer non-solicit exception or it
+      is exposed to Alabama's void rule for restraints outside the listed
+      categories.
     display_label: No Business with Covered Customers Included
     default: false
     section: No Business with Covered Customers
+    rationale_source: editorial
   - name: nondealing_duration
     type: string
     description: Duration of the no-business-with-covered-customers restriction
@@ -306,22 +308,24 @@ fields:
     section: Definitions
     default_value_rationale: >-
       Five percent of any class of publicly traded securities is the modal
-      passive-investment carve-out threshold observed in benchmarked, publicly-filed
-      employee agreements that include the carve-out (lower 1-3 percent thresholds are
-      the common tighter alternatives). A clause that technically forbids holding
-      ordinary public shares restrains the worker far beyond any customer relationship
-      or secret, which Nebraska's third requirement — undue harshness on the employee —
-      counts against the covenant.
+      passive-investment carve-out threshold observed in benchmarked,
+      publicly-filed employee agreements that include the carve-out (lower 1-3
+      percent thresholds are the common tighter alternatives). A clause that
+      technically forbids holding ordinary public shares restrains the worker
+      far beyond any customer relationship or secret, which Nebraska's third
+      requirement — undue harshness on the employee — counts against the
+      covenant.
   - name: noninvestment_included
     type: boolean
     description: >-
-      Whether the non-investment covenant is included. An investment restraint
-      with indefinite reach hands the harshness requirement exactly the breadth
-      it counts against the covenant, so it is off by default and drawn narrowly
-      if included.
+      Whether the non-investment covenant is included. A non-investment covenant
+      has no named Alabama category; one genuine use is restraining a licensed
+      professional's business conduct outside the practice of the profession,
+      which sits outside Alabama's professional exemption.
     display_label: Non-Investment Included
     default: false
     section: Non-Investment
+    rationale_source: editorial
   - name: noninvestment_duration
     type: string
     description: Duration of non-investment restriction
@@ -340,9 +344,21 @@ fields:
     default: 24 months
     section: Non-Disparagement
     default_value_rationale: 24 months is common for employment non-disparagement provisions.
+  - name: worker_is_physician
+    type: boolean
+    description: >-
+      Whether Employee is a physician. Set this explicitly from Employee's
+      licensed role to include physician-specific terms. For Indiana, the
+      applicable provisions vary by execution date and employer type, and may
+      require a release buyout term or exclude the non-compete entirely.
+    display_label: Employee Is a Physician
+    section: Physician
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template
 ---
 # Employee Restrictive Covenant Agreement
 
@@ -396,7 +412,7 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {% field name="passive_public_holdings_threshold" /%} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means the legitimate business interests this agreement is intended to protect, namely Employer's Confidential Information, Employer's trade secrets as defined by the Nebraska Trade Secrets Act (Neb. Rev. Stat. § 87-502), and Employer's goodwill in the customer relationships Employee personally served, but not Employer's interest in avoiding ordinary competition from a former employee who has simply become a stronger competitor.
+[[Protected Interests]] means Employer's Confidential Information, Trade Secrets, and goodwill in the customer relationships Employee personally served.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -408,13 +424,13 @@ The terms below are incorporated into and form part of this agreement.
 {% clause id="recitals-and-legitimate-business-interest" %}
 ### Recitals and Protectable Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to protect one or more of Employer's Protected Interests and to impose no restraint greater than is reasonably necessary for that protection. The parties acknowledge that each covenant is meant to guard Employer's Confidential Information, trade secrets, and goodwill in the customer relationships Employee personally served — not to eliminate ordinary competition — and that Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. Each covenant is intended to be reasonable and no greater than necessary as written, and to stand on its own.
+Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to protect one or more of Employer's Protected Interests and to impose no restraint greater than is appropriate for that protection. The parties acknowledge that each covenant is meant to guard Employer's Confidential Information, trade secrets, and goodwill in the customer relationships Employee personally served — not to eliminate ordinary competition — and that Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. Each covenant is intended to be reasonable and no greater than necessary as written, and to stand on its own.
 {% /clause %}
 
 {% clause id="timing-and-employee-acknowledgements" %}
 ### Timing, Consideration, and Employee Acknowledgements
 
-Employee acknowledges that this agreement is supported by adequate consideration and records when it is signed relative to the first day of work, so that the timing and exchanged value are on the record. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are intended to be reasonable and no greater than necessary to protect Employer's Protected Interests, and understands that adequate consideration establishes only that the covenants are supported, not that they are reasonable, so each covenant must independently be reasonable. This agreement is effective as of the Effective Date listed in Cover Terms.
+Employee acknowledges that this agreement is supported by adequate consideration and that Employee has had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
 {% /clause %}
 
 {% clause id="confidential-information-and-trade-secret-protection" %}
@@ -432,37 +448,37 @@ Nothing in this agreement prohibits Employee from: (a) reporting possible violat
 {% clause id="return-deletion-and-certification-of-company-property" %}
 ### Return, Deletion, and Certification of Company Property
 
-Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request. The parties intend that these return, deletion, and certification mechanics serve as part of Employer's efforts reasonable under the circumstances to maintain the secrecy of its trade secrets, as contemplated by Neb. Rev. Stat. § 87-502(4).
+Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request.
 {% /clause %}
 
 {% clause id="non-solicitation-of-employees" include-when="employee_nonsolicit_included" %}
 ### Non-Solicitation of Employees
 
-During the Restricted Period specified in Cover Terms for Employee Non-Solicitation, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period, no broader than necessary to protect Employer's workforce stability and goodwill.
+During the Restricted Period specified in Cover Terms for Employee Non-Solicitation, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period, limited to the scope needed to protect Employer's workforce stability and goodwill.
 {% /clause %}
 
 {% clause id="non-solicitation-of-personally-served-customers" include-when="customer_nonsolicit_included" %}
 ### Non-Solicitation of Personally Served Customers
 
-During the Restricted Period specified in Cover Terms for Customer Non-Solicitation, Employee must not Solicit the business of any Covered Customer. This covenant reaches only clients and accounts Employee actually did business with and personally contacted. It does not reach clients Employee never personally served or prospective customers Employer merely hoped to win. This covenant maps directly onto Employer's goodwill in the customer relationships Employee personally served and, together with the confidentiality and trade-secret protections in this agreement, is the more readily enforceable protection than a broad non-compete. The personally served limit is necessary but not sufficient: this covenant is also intended to be reasonable and no greater than necessary.
+During the Restricted Period specified in Cover Terms for Customer Non-Solicitation, Employee must not Solicit the business of any Covered Customer. This covenant applies only to clients and accounts Employee actually did business with and personally contacted, and does not apply to prospective customers or clients Employee never personally served.
 {% /clause %}
 
 {% clause id="no-business-with-covered-customers" include-when="nondealing_included" %}
 ### No Business with Covered Customers
 
-During the Restricted Period specified in Cover Terms for No Business with Covered Customers, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee. It is confined to Covered Customers — clients and accounts Employee actually did business with and personally contacted — and is sized tightly to the goodwill it protects.
+During the Restricted Period specified in Cover Terms for No Business with Covered Customers, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction applies only to clients and accounts with which Employee actually did business and had personal contact.
 {% /clause %}
 
 {% clause id="non-competition" include-when="noncompete_included" %}
 ### Non-Competition
 
-During the Restricted Period specified in Cover Terms for Non-Competition, Employee must not, on behalf of a Competitive Business, solicit, work for, service, or do business with any Covered Customer. This covenant is tied to the customers Employee personally served rather than to a market, territory, or line of business. The parties intend this covenant to be no greater than is reasonably necessary to protect Employer's Protected Interests, to impose no undue hardship on Employee, and to cause no injury to the public. If Employer has identified specific competitors in Cover Terms under Specified Competitors, the parties intend this covenant to be understood as further limited to Employee's activities on behalf of those named competitors. Passive Public Holdings are permitted.
+During the Restricted Period specified in Cover Terms for Non-Competition, Employee must not, on behalf of a Competitive Business, solicit, work for, service, or do business with any Covered Customer. This covenant applies only to customers Employee personally served. If Employer has identified specific competitors in Cover Terms under Specified Competitors, this covenant applies only to Employee's activities on behalf of those named competitors. Passive Public Holdings are permitted.
 {% /clause %}
 
 {% clause id="non-investment" include-when="noninvestment_included" %}
 ### Non-Investment
 
-During the Restricted Period specified in Cover Terms for Non-Investment, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business insofar as that role would enable Employee to solicit, service, or do business with a Covered Customer. This restriction primarily targets active or material ownership in private competitors. Because this covenant restrains active roles at and material participation in a Competitive Business, it is a post-employment restraint drawn no broader than necessary to protect Employer's Protected Interests. Passive Public Holdings are permitted.
+During the Restricted Period specified in Cover Terms for Non-Investment, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business insofar as that role would enable Employee to solicit, service, or do business with a Covered Customer. Passive Public Holdings are permitted.
 {% /clause %}
 
 {% clause id="non-disparagement" %}
@@ -471,10 +487,10 @@ During the Restricted Period specified in Cover Terms for Non-Investment, Employ
 During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law, including rights protected under Section 7 of the National Labor Relations Act.
 {% /clause %}
 
-{% clause id="physician-specific-rights-and-notices" %}
+{% clause id="physician-specific-rights-and-notices" include-when="worker_is_physician" %}
 ### Physician and Health Care Practitioner Covenants
 
-If Employee is a physician or other health care practitioner, any covenant in this agreement restraining Employee is limited to the patients Employee personally served, and is intended to impose no restraint greater than is reasonably necessary to protect Employer's legitimate interest, no undue hardship on Employee, and no injury to the public, with particular attention to patient access and continuity of care.
+If Employee is a physician or other health care practitioner, any covenant in this agreement restraining Employee applies only to patients Employee personally served and does not prohibit patients from choosing a provider or obtaining continuity of care.
 {% /clause %}
 
 {% clause id="no-conflicting-obligations" %}
@@ -486,49 +502,49 @@ Employee represents that performing duties for Employer and complying with this 
 {% clause id="notice-to-future-employers-and-other-third-parties" %}
 ### Notice to Future Employers and Other Third Parties
 
-Employer may disclose the existence and terms of this agreement to any prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach this agreement. Employee consents to this disclosure. Any such notice is limited to the covenants as written and scoped to the customers Employee personally served, and Employer acknowledges that a notice asserting a covenant reaching customers Employee never personally served overstates Employer's position.
+Employer may disclose the existence and terms of this agreement to any prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach this agreement. Employee consents to this disclosure. Any such notice must be limited to the covenants as written and to Covered Customers Employee personally served.
 {% /clause %}
 
 {% clause id="tolling-during-breach" %}
 ### Tolling During Breach
 
-If Employee breaches any restrictive covenant in this agreement, Employer may seek to extend the Restricted Period for that covenant by one day for each day of the breach, so that the full duration of the restriction runs from the date the breach ends. Any such extension is itself a restraint that must be reasonable and definite in time as written. Accordingly, this extension is a separate, definite term tied to the duration of the breach, and the parties do not intend an open-ended or indefinite extension.
+If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, up to a maximum extension equal to the original Restricted Period.
 {% /clause %}
 
 {% clause id="remedies" %}
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, including relief under the Nebraska Trade Secrets Act, Neb. Rev. Stat. §§ 87-501 to 87-507, for actual or threatened misappropriation of a trade secret independent of any covenant. Any equitable relief presupposes a covenant that is enforceable as written. This agreement adopts no one-sided fee-shifting provision.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law. Each party bears its own attorney's fees and costs unless applicable law or a court order provides otherwise.
 {% /clause %}
 
 {% clause id="enforceability-and-severability" %}
-### Enforceability, Severability, and No Reformation
+### Enforceability and Severability
 
-This agreement does not ask any court to reduce, rewrite, or narrow an overbroad restraint to whatever is reasonable, and the parties do not rely on any savings, reformation, or court-may-modify mechanism to cure overbreadth. Each restrictive covenant in this agreement is instead drafted as a genuinely separate, self-contained unit — with its own scope, its own duration, and its own survival — scoped from the start to the customers Employee personally served, so that each covenant is intended to be enforceable as written and to be able to fall alone. The parties intend the covenants in this agreement to be severable from one another: a court's refusal to enforce one covenant does not affect the others, and the confidentiality and trade-secret obligations and any other separable provisions remain in full force even if a restrictive covenant is found unenforceable.
+Each restrictive covenant in this agreement is a separate, self-contained unit with its own scope, duration, and survival. Each covenant is scoped to the customers Employee personally served, is independently enforceable as written, and can fall alone without affecting the remaining covenants.
 {% /clause %}
 
 {% clause id="survival-and-expiration-of-each-covenant" %}
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms for that covenant, on its own definite schedule and read on its own. The parties intend this survival to apply covenant by covenant, so that self-contained survival language keeps a court's refusal to enforce one covenant from reaching the others. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms for that covenant, on its own definite schedule and is read on its own. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 {% /clause %}
 
 {% clause id="assignment-and-successors" %}
 ### Assignment and Successors
 
-Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns. The parties include this express assignment and successor language so that a buyer may enforce the covenants. Succession moves the covenant without improving it: any successor's right to enforce a covenant is no greater than Employer's, and each covenant must still be valid as written.
+Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns. Any successor's right to enforce a covenant is no greater than Employer's.
 {% /clause %}
 
 {% clause id="governing-law-venue-and-dispute-process" %}
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms, and it names a venue and dispute-resolution forum. Where Employee's services, customers, and competition are centered in Nebraska, the parties acknowledge that Nebraska law is likely to control the enforceability of each restrictive covenant regardless of a contrary selection. A foreign-law selection is therefore treated as a risk variable rather than the enforceability strategy, and each covenant is drafted to satisfy Nebraska law as written. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. The parties intend that the governing-law and venue choices match where Employee actually lives and works.
+This agreement is governed by the law listed in Cover Terms. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
 {% /clause %}
 
 {% clause id="entire-agreement-amendment-waiver-and-electronic-signatures" %}
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 
-This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. This agreement may be amended only in writing signed by both parties. The parties acknowledge that any amendment widening a covenant — a bigger customer class, a longer period — is judged as written on its new terms, and any amendment records what changed and when. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
+This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. This agreement may be amended only in writing signed by both parties. Any amendment widening a covenant must state the changed covenant, its effective date, and the supporting consideration. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
 {% /clause %}
 {% /agreement-section %}
 

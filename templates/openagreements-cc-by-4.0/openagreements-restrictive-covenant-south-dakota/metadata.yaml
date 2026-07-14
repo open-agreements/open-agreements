@@ -6,8 +6,6 @@ version: 0.1.0
 stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: Authored by OpenAgreements contributors. South Dakota-specific analysis informed by the quote-verified South Dakota practice note. Licensed under CC BY 4.0.
 fields:
   - name: employer_name
@@ -85,10 +83,11 @@ fields:
     default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the customer non-solicitation covenant is included. SDCL 53-9-11 permits an agreement not to solicit existing customers of the employer within a specified area for up to two years from the date of termination of the agreement, while the employer carries on a like business there.
+    description: Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
+    rationale_source: editorial
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer non-solicitation restriction
@@ -151,12 +150,11 @@ fields:
     default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives); a clause that technically forbids holding ordinary public shares restrains more than any of the statutory exceptions describes.
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included. Investment language broad enough to operate as a restraint on the worker's own trade is what the South Dakota baseline voids, so this covenant is off by default.
+    description: Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.
     display_label: Non-Investment Included
     default: false
-    rationale_source: editorial
     section: Non-Investment
-    default_value_rationale: Conservative default. Include a non-investment covenant only if it is narrowed so it does not operate as an extra restraint on the worker's own trade outside an applicable statutory exception.
+    rationale_source: editorial
   - name: noninvestment_duration
     type: string
     description: Duration of non-investment restriction
@@ -171,6 +169,14 @@ fields:
     default: 24 months
     section: Non-Disparagement
     default_value_rationale: 24 months is common for employment non-disparagement provisions.
+  - name: healthcare_provider
+    type: boolean
+    description: Whether Employee is a healthcare provider whose covenant implicates profession-specific restrictions, patient access, or continuity-of-care requirements. Set this explicitly from Employee's licensed role; do not infer it from the agreement's jurisdiction.
+    display_label: Healthcare Provider
+    section: Healthcare
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template

@@ -84,7 +84,7 @@ Duration
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than five percent of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means the legitimate business interests a New Jersey covenant may protect under the common-law reasonableness rule, namely Employer's trade secrets as defined by the New Jersey Trade Secrets Act (N.J.S.A. 56:15-2), Employer's confidential business information, and Employer's customer relationships, but not Employer's interest in avoiding ordinary competition or the employee's general skill and knowledge.
+[[Protected Interests]] means Employer's Trade Secrets, Confidential Information, and customer relationships.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -92,15 +92,15 @@ Duration
 
 [[Solicit]] means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] has the meaning given in the New Jersey Trade Secrets Act, N.J.S.A. 56:15-2.
+[[Trade Secrets]] means information qualifying as a trade secret under applicable law.
 
 ### Recitals and Legitimate Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to protect one or more of Employer's Protected Interests and to impose no restraint greater than is reasonable for that protection. The recognized Protected Interests are Employer's trade secrets, confidential business information, and customer relationships; a covenant that merely suppresses ordinary competition or the employee's general skill and knowledge protects nothing this agreement is meant to protect. The parties acknowledge that Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. Each covenant is intended to be reasonable in time, territory, and scope, to impose no undue hardship on Employee, and to cause no injury to the public.
+Employer and Employee acknowledge that each restrictive covenant in this agreement protects one or more of Employer's Protected Interests, including Employer's trade secrets, confidential business information, and customer relationships. The parties acknowledge that Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. Employer and Employee acknowledge that the covenants are reasonable in time, territory, and scope.
 
 ### Timing, Consideration, and Employee Acknowledgements
 
-The parties acknowledge that this agreement is supported by adequate consideration. If Employee is an existing employee, the parties agree that the continuation of Employee's employment after acknowledging the covenants in this agreement is itself sufficient consideration, and no separate payment, raise, or promotion is required. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests, and understands that adequate consideration establishes only that the covenants are supported, not that they are reasonable, and that each covenant must independently be reasonable in the interest it protects, the hardship it imposes, and its effect on the public. This agreement is effective as of the Effective Date listed in Cover Terms.
+The parties acknowledge that this agreement is supported by adequate consideration. If Employee is an existing employee, the consideration is the continuation of Employee's employment. If this agreement is signed at the outset of employment, the consideration is the offer and commencement of employment. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -112,47 +112,47 @@ Nothing in this agreement prohibits Employee from: (a) reporting possible violat
 
 ### Return, Deletion, and Certification of Company Property
 
-Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request. The parties intend that these return, deletion, and certification mechanics serve as part of Employer's efforts reasonable under the circumstances to maintain the secrecy of its trade secrets, as contemplated by the New Jersey Trade Secrets Act, N.J.S.A. 56:15-2.
+Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request.
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is no broader than necessary to protect Employer's workforce stability and customer relationships.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is limited to the scope needed to protect Employer's workforce stability and customer relationships.
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers with whom Employee had material contact and is no broader than necessary to protect Employer's customer relationships.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers with whom Employee had material contact and is limited to the scope needed to protect Employer's customer relationships.
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee, and it is sized tightly to the customer relationships it protects, reaching only Covered Customers with whom Employee had material contact.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer with whom Employee had material contact, whether Employee or the Covered Customer initiates contact.
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant exists to protect Employer's Protected Interests — its trade secrets, confidential business information, and customer relationships — and not to restrain ordinary competition or the general skill and knowledge Employee acquired. The parties intend this covenant to protect Employer's legitimate interests, to impose no undue hardship on Employee, and to cause no injury to the public, with its time and territory sized to Employee's actual role and Employer's actual market. If Employer has identified specific competitors in Cover Terms under Specified Competitors, the parties intend this covenant to be understood and, if necessary, enforced as limited to those named competitors. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. If Employer has identified specific competitors in Cover Terms under Specified Competitors, this covenant is limited to those named competitors. Passive Public Holdings are permitted.
 
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Because this covenant restrains active roles at and material participation in a Competitive Business, it is a post-employment restraint drawn no broader than necessary to protect Employer's Protected Interests. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. Passive Public Holdings are permitted.
 
 ### Non-Disparagement
 
-During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law, including rights protected under Section 7 of the National Labor Relations Act. Consistent with the discrimination-claim concealment carve-out below, no part of this section has the purpose or effect of concealing the details relating to a claim of discrimination, retaliation, or harassment.
+During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, exercising rights protected by law, or disclosing details relating to a claim of discrimination, retaliation, or harassment.
 
 ### Discrimination, Retaliation, and Harassment Claims Not Concealed
 
-No provision of this agreement, including any confidentiality or non-disparagement obligation, has the purpose or effect of concealing the details relating to a claim of discrimination, retaliation, or harassment. Under N.J.S.A. 10:5-12.8(a), such a provision is against public policy and unenforceable against a current or former employee, whatever the label on the clause. This carve-out is surgical: N.J.S.A. 10:5-12.8(c) expressly preserves an employer's agreement that the employee not compete and not disclose proprietary information, so the covenant suite in this agreement remains intact and only the claim-details concealment is excluded.
+This section does not limit any covenant not to compete or obligation not to disclose proprietary information.
 
 ### No Practice Restrictions for Lawyers
 
-If Employee is a lawyer, no provision of this agreement restricts Employee's right to practice law after the relationship ends, apart from an agreement concerning benefits upon retirement. RPC 5.6 bars a lawyer from participating in offering or making a partnership or employment agreement that restricts post-termination practice rights. Any covenant in this agreement is void to the extent it would operate as such a restriction on a lawyer, including on in-house or corporate counsel practicing in New Jersey.
+If Employee is a lawyer, no provision of this agreement restricts Employee's right to practice law after the relationship ends, apart from an agreement concerning benefits upon retirement.
 
 ### No Client-Access Restrictions for Psychologists
 
-If Employee is a licensed psychologist, no provision of this agreement interferes with or restricts a client's ability to see or continue to see his or her therapist of choice. N.J.A.C. 13:42-10.16 forbids a licensed psychologist from entering into any business agreement that so interferes. This bar operates independently of the common-law reasonableness weighing: a covenant whose duration and territory look reasonable still fails to the extent it would cut a client off from the treating psychologist, and any such covenant in this agreement is void to that extent.
+If Employee is a licensed psychologist, no provision of this agreement interferes with or restricts a client's ability to see or continue to see the therapist of the client's choice.
 
 ### Physician and Health Care Practitioner Covenants
 
-If Employee is a physician, any covenant in this agreement restraining Employee from the practice of medicine is drawn against New Jersey's heightened public-interest scrutiny for physician covenants and not as an ordinary commercial restraint. Any physician covenant in this agreement uses a narrow radius and a short term, preserves patient access and continuity of care, and is enforced only to the extent it survives that heightened scrutiny under the common-law reasonableness rule.
+If Employee is a physician, no covenant prohibits Employee from continuing care for an existing patient or complying with applicable patient-notification and access requirements.
 
 ### No Conflicting Obligations
 
@@ -164,19 +164,15 @@ Employer may disclose the existence and terms of this agreement to any prospecti
 
 ### Tolling During Breach
 
-If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is tolled and extended for the period during which Employee is in actual violation of the covenant, so that the full duration of the restriction runs from the date the violation ends. The extension is tied to Employee's actual violation and not to the mere passage of time or the pendency of litigation. The parties do not intend an automatic, open-ended, or indefinite extension.
+If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, up to the original Restricted Period.
 
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, including relief under the New Jersey Trade Secrets Act (N.J.S.A. 56:15-1 et seq.), under which actual or threatened misappropriation of a trade secret may be enjoined independent of any covenant.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law.
 
 ### Enforceability and Severability
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable, so that a court's refusal to enforce one covenant, or a court's decision to enforce a covenant only to a reasonable extent, does not affect the others.
-
-### Reformation
-
-If any restraint in this agreement is found to be overbroad, Employer requests that a court enforce it to the extent reasonable rather than declining to enforce it at all. That latitude is no license to overreach: reformation is an equitable remedy, so each restrictive covenant in this agreement is drawn as a tiered, severable, reasonable restraint sized to the Protected Interests from the start and is intended to be enforceable as written rather than in reliance on judicial revision.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect.
 
 ### Survival and Expiration of Each Covenant
 
@@ -188,7 +184,7 @@ Employee may not assign this agreement or any rights or obligations under it. Em
 
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. The parties intend that the governing-law and venue choices match where Employee actually lives and works, because a clause selecting another state's law requires the enforceability analysis to be re-run under that state's doctrine.
+This agreement is governed by the law listed in Cover Terms. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. The parties intend that the governing-law and venue choices match where Employee actually lives and works.
 
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 
@@ -230,14 +226,6 @@ A New Jersey covenant that blocks competition disconnected from a protectable in
 ### duration and territory
 
 A New Jersey court weighs duration and territory as a whole against the employer's real market, with no safe-harbor number, so a fixed term or radius copied from another form is measured against a market it was never sized to. A restraint matched to the employee's actual role and the employer's genuine footprint is far easier to defend, while a long, open-ended, or statewide ban is exposed on the undue-hardship and public-interest prongs .
-
-### reformation
-
-New Jersey's reformation power is not a safety net for an aggressive covenant. Reformation is an equitable remedy, so a covenant drawn from the start as a tiered, severable, reasonable restraint is enforced as written, while a court narrowing in equity may decline to rescue one it views as overreaching .
-
-### reformation as an equitable backstop
-
-Reformation is a backstop, not a license to overreach. New Jersey abandoned the void-per-se rule in favor of total or partial enforcement of a covenant to the extent reasonable, and curtailing an overbroad covenant's scope is the approach the state's courts prescribe . But reformation is an equitable remedy, so a covenant drawn from the start as a tiered, severable, reasonable restraint sized to the Protected Interests is enforced as written, while an aggressive one is exposed to a court that declines to rewrite it. That exposure carries into enforcement conduct: a notice to a future employer built on a covenant that later fails or is narrowed can support a tortious-interference claim, so a disclosure kept factual and tied to a restraint defensible on all three prongs stays within the good-faith posture the reformation power rewards .
 
 ### customer non-solicitation
 

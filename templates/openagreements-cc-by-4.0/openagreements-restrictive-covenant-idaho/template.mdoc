@@ -5,21 +5,19 @@ category: non-compete
 description: >-
   Idaho-specific employee restrictive covenant agreement built for Idaho Code
   title 44, chapter 27: confidentiality and trade-secret protection, customer
-  and employee non-solicitation with a solicitation definition drawn to
-  Idaho's affirmative-conduct rule for solicitation, and an optional
-  non-compete gated on the statutory key-employee / key-independent-contractor
-  class, capped at eighteen months absent added consideration, and fitted to the
-  worker's actual geographic and line-of-business footprint. Includes a
-  key-worker recital, a healthcare patient-access clause, mandatory statutory
-  reformation under section 44-2703, and an Idaho-tribunal forum protection under
-  section 29-110. Drafted as a starting point for licensed counsel review.
+  and employee non-solicitation with a solicitation definition drawn to Idaho's
+  affirmative-conduct rule for solicitation, and an optional non-compete gated
+  on the statutory key-employee / key-independent-contractor class, capped at
+  eighteen months absent added consideration, and fitted to the worker's actual
+  geographic and line-of-business footprint. Includes a key-worker recital, a
+  healthcare patient-access clause, mandatory statutory reformation under
+  section 44-2703, and an Idaho-tribunal forum protection under section 29-110.
+  Drafted as a starting point for licensed counsel review.
 source_url: >-
   https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-idaho
 version: 0.1.0
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: >-
   Authored by OpenAgreements contributors. Idaho-specific analysis informed by
   the quote-verified Idaho practice note. Licensed under CC BY 4.0.
@@ -101,10 +99,15 @@ fields:
       a disguised restraint.
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee non-solicitation covenant is included
-    display_label: Employee Non-Solicitation Included
-    default: true
+    description: >-
+      Whether the employee no-hire / non-solicitation covenant is included.
+      Alabama's only category for restraints touching another party's workers is
+      the no-hire exception for workers in a position uniquely essential to the
+      management, organization, or service of the business.
+    display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
+    rationale_source: editorial
+    default: true
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee non-solicitation restriction
@@ -114,10 +117,11 @@ fields:
     benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: >-
-      24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed
-      employee agreements; 12 months is the common lighter alternative. No Idaho statute or
-      appellate decision addresses employee non-solicits, so the clause has no statutory shelter and
-      a tightly-sized duration is its best defense.
+      24 months matches the modal employee non-solicit term observed in
+      benchmarked, publicly-filed employee agreements; 12 months is the common
+      lighter alternative. No Idaho statute or appellate decision addresses
+      employee non-solicits, so the clause has no statutory shelter and a
+      tightly-sized duration is its best defense.
   - name: covered_employee_period
     type: string
     description: >-
@@ -131,10 +135,14 @@ fields:
       scope.
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the customer/partner non-solicitation covenant is included
+    description: >-
+      Whether the current-customer non-solicitation covenant is included.
+      Alabama gives this covenant its own category, limited to current
+      customers.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
+    rationale_source: editorial
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer/partner non-solicitation restriction
@@ -144,10 +152,10 @@ fields:
     benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
     default_value_rationale: >-
-      12 months is the lighter side of the near-even 12/24-month split observed in
-      benchmarked, publicly-filed employee agreements and sits comfortably inside the
-      eighteen-month duration presumption if a court analyzes the restraint like a
-      direct-competition covenant.
+      12 months is the lighter side of the near-even 12/24-month split observed
+      in benchmarked, publicly-filed employee agreements and sits comfortably
+      inside the eighteen-month duration presumption if a court analyzes the
+      restraint like a direct-competition covenant.
   - name: covered_customer_period
     type: string
     description: >-
@@ -185,7 +193,8 @@ fields:
     display_label: Non-Competition Duration
     default: 12 months
     rationale_source: legislation
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.idaho.cap-direct-competition-restraint-at-eighteen-months-absent-added-consideration
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.idaho.cap-direct-competition-restraint-at-eighteen-months-absent-added-consideration
     section: Non-Competition
     default_value_rationale: >-
       12 months sits inside the rebuttable presumption that a post-employment
@@ -201,7 +210,8 @@ fields:
       the geographic areas in which Employee provided services or had a
       significant presence or influence for Employer
     rationale_source: legislation
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.idaho.fit-geography-and-work-scope-to-the-workers-actual-footprint
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.idaho.fit-geography-and-work-scope-to-the-workers-actual-footprint
     section: Non-Competition
     default_value_rationale: >-
       Tracks the statutory presumption that a covenant is reasonable as to
@@ -212,8 +222,8 @@ fields:
     type: string
     description: >-
       Description of the business activities that constitute competition with
-      the employer, ideally limited to the type of employment or line of business
-      the worker actually conducted for the employer.
+      the employer, ideally limited to the type of employment or line of
+      business the worker actually conducted for the employer.
     display_label: Competitive Business
     section: Non-Competition
   - name: specified_competitors
@@ -249,7 +259,8 @@ fields:
       restriction runs longer than eighteen months, the additional consideration
       described in this agreement
     rationale_source: legislation
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.idaho.cap-direct-competition-restraint-at-eighteen-months-absent-added-consideration
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.idaho.cap-direct-competition-restraint-at-eighteen-months-absent-added-consideration
     section: Consideration
     default_value_rationale: >-
       Idaho admits no circumstance in which a direct-competition restriction
@@ -260,13 +271,15 @@ fields:
   - name: nondealing_included
     type: boolean
     description: >-
-      Whether the no-business-with-covered-customers covenant is included. Idaho
-      has not resolved whether a no-service restraint enforces as written, is
-      analyzed as a direct-competition restriction under chapter 44-27, or fails,
-      so this covenant is off by default.
+      Whether the no-business-with-covered-customers covenant is included. A
+      non-dealing covenant has no named Alabama category of its own, so it must
+      be drafted to fit inside the current-customer non-solicit exception or it
+      is exposed to Alabama's void rule for restraints outside the listed
+      categories.
     display_label: No Business with Covered Customers Included
     default: false
     section: No Business with Covered Customers
+    rationale_source: editorial
   - name: nondealing_duration
     type: string
     description: Duration of the no-business-with-covered-customers restriction
@@ -275,8 +288,8 @@ fields:
     section: No Business with Covered Customers
     default_value_rationale: >-
       12 months keeps the restraint inside the eighteen-month presumption window
-      in case an Idaho court analyzes a no-dealing clause as a direct-competition
-      restriction under chapter 44-27.
+      in case an Idaho court analyzes a no-dealing clause as a
+      direct-competition restriction under chapter 44-27.
   - name: passive_public_holdings_threshold
     type: string
     description: >-
@@ -289,16 +302,21 @@ fields:
     section: Definitions
     default_value_rationale: >-
       Five percent of any class of publicly traded securities is the modal
-      passive-investment carve-out threshold observed in benchmarked, publicly-filed
-      employee agreements that include the carve-out (lower 1-3 percent thresholds are
-      the common tighter alternatives), and it helps keep the covenant from restraining
-      more than reasonably necessary.
+      passive-investment carve-out threshold observed in benchmarked,
+      publicly-filed employee agreements that include the carve-out (lower 1-3
+      percent thresholds are the common tighter alternatives), and it helps keep
+      the covenant from restraining more than reasonably necessary.
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included.
+    description: >-
+      Whether the non-investment covenant is included. A non-investment covenant
+      has no named Alabama category; one genuine use is restraining a licensed
+      professional's business conduct outside the practice of the profession,
+      which sits outside Alabama's professional exemption.
     display_label: Non-Investment Included
     default: false
     section: Non-Investment
+    rationale_source: editorial
   - name: noninvestment_duration
     type: string
     description: Duration of non-investment restriction
@@ -319,17 +337,18 @@ fields:
   - name: healthcare_provider
     type: boolean
     description: >-
-      Whether Employee is a healthcare provider whose covenant implicates patient
-      access. Idaho does not ban provider non-competes but weighs the employer's
-      interest in patients against those patients' interests in continuity of
-      care and choice of provider, and injunctive enforcement can fail on
-      public-interest grounds.
+      Whether Employee is a healthcare provider whose covenant implicates
+      profession-specific restrictions, patient access, or continuity-of-care
+      requirements. Set this explicitly from Employee's licensed role; do not
+      infer it from the agreement's jurisdiction.
     display_label: Healthcare Provider
-    default: false
     section: Healthcare
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template
 ---
 # Employee Restrictive Covenant Agreement
 
@@ -386,7 +405,7 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {% field name="passive_public_holdings_threshold" /%} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means Employer's legitimate business interests within the meaning of Idaho Code sections 44-2701 and 44-2702, including Employer's goodwill, technologies, intellectual property, business plans, business processes and methods of operation, customers, customer lists, customer contacts and referral sources, vendors and vendor contacts, financial and marketing information, and trade secrets as defined by chapter 8, title 48, Idaho Code.
+[[Protected Interests]] means Employer's goodwill, technologies, intellectual property, business plans, business processes and methods of operation, customers, customer lists, customer contacts and referral sources, vendors and vendor contacts, financial and marketing information, and trade secrets.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -398,21 +417,21 @@ The terms below are incorporated into and form part of this agreement.
 {% /clause %}
 
 {% clause id="recitals-key-worker-and-legitimate-business-interest" %}
-### Recitals, Key-Worker Status, and Legitimate Business Interests
+### Recitals, Key-Worker Status, and Protected Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is entered to protect one or more of Employer's Protected Interests and is intended to be no greater a restraint than is reasonably necessary to protect those interests, as Idaho Code section 44-2701 requires. Any covenant not to compete in this agreement is enforceable under Idaho Code section 44-2701 only against a key employee or key independent contractor as defined in Idaho Code section 44-2702, and Employee acknowledges being a key employee or key independent contractor within the meaning of that section. Idaho Code section 44-2701 reaches key independent contractors, so this acknowledgement applies whether Employee is engaged as an employee or as an independent contractor.
+Employer and Employee acknowledge that each restrictive covenant in this agreement protects one or more of Employer's Protected Interests. Employee acknowledges that Employee holds a key role and has access to Employer's Protected Interests.
 {% /clause %}
 
 {% clause id="timing-and-employee-acknowledgements" %}
 ### Timing, Consideration, and Right to Consult Counsel
 
-Employer has advised Employee that Employee may consult with an attorney before entering into this agreement, and Employee confirms having entered this agreement knowingly and voluntarily. The parties agree that the restrictive covenants in this agreement are supported by {% field name="idaho_added_consideration" /%}. The parties acknowledge that, under Idaho Code section 44-2704(1), a post-employment restriction of direct competition may not exceed eighteen months from termination unless consideration in addition to employment or continued employment is given to Employee, and that continued employment alone is sufficient consideration for a direct-competition restriction of eighteen months or less. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
+Employer has advised Employee that Employee may consult with an attorney before entering into this agreement, and Employee confirms having entered this agreement knowingly and voluntarily. In consideration of Employee's employment or continued employment and {% field name="idaho_added_consideration" /%}, the parties agree to the terms of this agreement. Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 {% /clause %}
 
 {% clause id="confidential-information-and-trade-secret-protection" %}
 ### Confidential Information and Trade Secret Protection
 
-Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue for the Trade Secrets Duration in Cover Terms, which is intended to last as long as the information remains a trade secret. Employee's obligations regarding other Confidential Information continue for the Other Confidential Information Duration in Cover Terms. These confidentiality and trade-secret obligations stand independent of the restrictive covenants in this agreement and survive on their own footing.
+Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue for the Trade Secrets Duration in Cover Terms, which is intended to last as long as the information remains a trade secret. Employee's obligations regarding other Confidential Information continue for the Other Confidential Information Duration in Cover Terms.
 {% /clause %}
 
 {% clause id="permitted-disclosures-and-protected-conduct" %}
@@ -436,37 +455,37 @@ During the Restricted Period, Employee must not Solicit, recruit, hire, or attem
 {% clause id="non-solicitation-of-customers-vendors-referral-sources-and-business-partners" include-when="customer_nonsolicit_included" %}
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. Because Solicit is limited to an overt act by Employee seeking the Covered Customer's business, this covenant does not restrain Employee's mere acceptance of business a Covered Customer initiates or ordinary communication between Employee and a Covered Customer. This covenant protects Employer's legitimate business interest in its relationships with specific customers, customer contacts, referral sources, vendors, and business partners under Idaho Code section 44-2702.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant does not prohibit Employee from accepting business initiated by a Covered Customer or from engaging in ordinary communications with a Covered Customer.
 {% /clause %}
 
 {% clause id="no-business-with-covered-customers" include-when="nondealing_included" %}
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction reaches business a Covered Customer initiates, which is broader than the non-solicitation covenant. This covenant is intended to be enforced only to the extent Idaho law permits.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact.
 {% /clause %}
 
 {% clause id="non-competition" include-when="noncompete_included" %}
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in employment or a line of business that is in direct competition with Employer's business, within the Restricted Territory, by engaging in, being employed by, consulting for, or having an active ownership interest in any Competitive Business. If any Specified Competitors are listed in Cover Terms, this restriction is limited to those Specified Competitors. This covenant is enforceable under Idaho Code section 44-2701 only against a key employee or key independent contractor and only to the extent it protects Employer's Protected Interests and is reasonable as to duration, geographic area, and type of employment or line of business, imposing no greater restraint than reasonably necessary. The Restricted Territory is drawn to the areas where Employee provided services or had a significant presence or influence, and the Competitive Business is drawn to the type of employment or line of business Employee conducted for Employer, so that the covenant qualifies for the Idaho Code section 44-2704(3) and (4) reasonableness presumptions. The Non-Competition Duration is intended to be eighteen months or less to qualify for the Idaho Code section 44-2704(2) duration presumption; any longer term is supported only by the additional consideration recited in this agreement, as Idaho Code section 44-2704(1) requires. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in employment or a line of business that is in direct competition with Employer's business, within the Restricted Territory, by engaging in, being employed by, consulting for, or having an active ownership interest in any Competitive Business. If any Specified Competitors are listed in Cover Terms, this restriction is limited to those Specified Competitors. The Restricted Territory is limited to the areas where Employee provided services or had a significant presence or influence, and the Competitive Business is limited to the type of employment or line of business Employee conducted for Employer. Passive Public Holdings are permitted.
 {% /clause %}
 
 {% clause id="non-investment" include-when="noninvestment_included" %}
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive Public Holdings are permitted. Because this covenant restrains active roles at and material participation in a Competitive Business, an Idaho court may treat it as a covenant not to compete under Idaho Code chapter 44-27; it therefore applies only to a key employee or key independent contractor, is limited to the restraint reasonably necessary to protect Employer's Protected Interests, and shares the eighteen-month planning cap and duration presumption that govern the non-compete in this agreement.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. Passive Public Holdings are permitted.
 {% /clause %}
 
 {% clause id="non-disparagement" %}
 ### Non-Disparagement
 
-During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law, including protected concerted activity under the National Labor Relations Act.
+During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law, including protected concerted activity by the National Labor Relations Act.
 {% /clause %}
 
 {% clause id="healthcare-provider-and-patient-access" include-when="healthcare_provider" %}
 ### Healthcare Provider and Patient Access
 
-Where Employee is a healthcare provider, on Employee's departure the parties will cooperate in good faith on patient notification, continuity of care, and the orderly handling of patient relationships and records consistent with applicable law and professional obligations. Nothing in this section enlarges any restraint beyond what Idaho Code sections 44-2701 through 44-2704 permit.
+Where Employee is a healthcare provider, on Employee's departure the parties will cooperate in good faith on patient notification, continuity of care, and the orderly handling of patient relationships and records consistent with applicable law and professional obligations.
 {% /clause %}
 
 {% clause id="no-conflicting-obligations" %}
@@ -478,43 +497,37 @@ Employee represents that performing duties for Employer and complying with this 
 {% clause id="notice-to-future-employers-and-other-third-parties" %}
 ### Notice to Future Employers and Other Third Parties
 
-Employer may disclose the existence and terms of this agreement to any prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach this agreement, and will make any such disclosure only as to a covenant that satisfies the Idaho statutory gates. Employee consents to this disclosure.
+Employer may disclose the existence and terms of this agreement to any prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach an applicable covenant in this agreement. Employee consents to this disclosure.
 {% /clause %}
 
 {% clause id="tolling-during-breach" %}
 ### Tolling During Breach
 
-If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, so that the full duration of the restriction runs from the date the breach ends. This section is intended to operate only to the extent Idaho law permits.
+If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, so that the full duration of the restriction runs from the date the breach ends.
 {% /clause %}
 
 {% clause id="remedies" %}
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, subject to the court's weighing of the public interest before enjoining Employee. Independent of any covenant, the Idaho Trade Secrets Act authorizes an injunction against actual or threatened misappropriation of a trade secret under Idaho Code section 48-802. Unless the agreement otherwise provides, each party bears its own attorney fees and costs under the American Rule; any fee-shifting the parties adopt is intended to be mutual and prevailing-party based.
-{% /clause %}
-
-{% clause id="reformation-and-severability" %}
-### Reformation and Severability
-
-If any restrictive covenant in this agreement is found unreasonable in any respect, the parties request that the court limit or modify it as necessary to reflect the parties' intent and render it reasonable, and specifically enforce it as limited or modified, as Idaho Code section 44-2703 provides. This modification duty is statutory and does not depend on any savings clause. The parties intend each restrictive covenant to give the court complete, severable terms — duration, geography, work scope, and the Protected Interest each covenant serves — that a court can narrow simply and accurately. If any provision of this agreement is found unenforceable and cannot be so modified, the remaining provisions remain in full force and effect, and each restrictive covenant is intended to be independently enforceable.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law. Each party bears its own attorney fees and costs unless this agreement or applicable law provides otherwise.
 {% /clause %}
 
 {% clause id="survival-and-expiration-of-each-covenant" %}
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms, so that each duration remains independently checkable. Obligations under the Confidential Information and Trade Secret Protection section survive to the extent they relate to trade secrets, for as long as the information remains a trade secret. All other provisions survive to the extent necessary to enforce rights that arose during employment. The eighteen-month limit attaches to the direct-competition restraint specifically, and no bundled survival term is intended to extend that restraint beyond what Idaho Code section 44-2704 permits.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive to the extent they relate to trade secrets, for as long as the information remains a trade secret. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 {% /clause %}
 
 {% clause id="assignment-and-successors" %}
 ### Assignment and Successors
 
-Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. The parties acknowledge that the key-worker analysis turns on what this Employer invested in this Employee, so a successor enforcing an assigned covenant inherits the same threshold showing. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
+Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
 {% /clause %}
 
 {% clause id="governing-law-venue-and-dispute-process" %}
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law of the Governing Law state listed in Cover Terms. Notwithstanding any other provision, nothing in this agreement requires Employee to litigate or arbitrate outside Idaho or otherwise restricts Employee from enforcing contract rights in Idaho tribunals, and any such stipulation is void under Idaho Code section 29-110(1). Disputes will be resolved in the courts of the State of Idaho, subject to non-waivable rights under applicable law.
+This agreement is governed by the law of the Governing Law state listed in Cover Terms. Notwithstanding any other provision, nothing in this agreement requires Employee to litigate or arbitrate outside Idaho or otherwise restricts Employee from enforcing contract rights in Idaho tribunals. Disputes will be resolved in the courts of the State of Idaho, subject to non-waivable rights under applicable law.
 {% /clause %}
 
 {% clause id="entire-agreement-amendment-waiver-and-electronic-signatures" %}

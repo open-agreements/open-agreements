@@ -95,15 +95,15 @@ Duration
 
 [[Solicit]] means to affirmatively contact, approach, induce, encourage, or entice a person or entity, directed at a Covered Customer or Covered Employee, for the purpose of diverting business away from Employer or of recruiting a Covered Employee, and does not include Employee's mere acceptance of business from a Covered Customer who seeks Employee out, responding to general advertisements, or responding to unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] means information that qualifies for trade-secret protection under applicable Pennsylvania and federal law, including the Pennsylvania Uniform Trade Secrets Act, for as long as the information continues to derive independent economic value from not being generally known and remains the subject of reasonable efforts to maintain its secrecy.
+[[Trade Secrets]] means information that qualifies for trade-secret protection by applicable Pennsylvania and federal law, including the Pennsylvania Uniform Trade Secrets Act, for as long as the information continues to derive independent economic value from not being generally known and remains the subject of reasonable efforts to maintain its secrecy.
 
 ### Recitals and Protectable Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to the employment relationship between them and is supported by adequate consideration. Employee will receive access to Employer's Confidential Information and trade secrets and will develop customer relationships and goodwill on Employer's behalf, and Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. The parties acknowledge that each covenant is intended to protect one or more of Employer's Protected Interests and not to eliminate ordinary competition, that each covenant imposes no restraint greater than is reasonably necessary for that protection, and that each covenant is reasonably limited in duration and geographic extent.
+Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to the employment relationship between them and is supported by adequate consideration. Employee will receive access to Employer's Confidential Information and trade secrets and will develop customer relationships and goodwill on Employer's behalf, and Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. The parties acknowledge that each covenant is intended to protect one or more of Employer's Protected Interests and not to eliminate ordinary competition, that each covenant imposes no restraint greater than is appropriate for that protection, and that each covenant is reasonably limited in duration and geographic extent.
 
 ### Timing, Consideration, and Employee Acknowledgements
 
-This agreement is effective as of the Effective Date listed in Cover Terms. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration for the covenants in this agreement. If Employee is an existing employee signing after employment has already begun, the covenants are instead supported by the new and valuable consideration described in Cover Terms under New Consideration for a Mid-Employment Covenant — a corresponding benefit or beneficial change in employment status, such as a raise, bonus, or promotion — which Employer has actually delivered to Employee, and the parties do not rely on continued at-will employment, or on any statement of an intent to be legally bound, to supply that consideration. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement.
+This agreement is effective as of the Effective Date listed in Cover Terms. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration for the covenants in this agreement. If Employee signs after employment has begun, Employer will provide the new consideration described in Cover Terms under New Consideration for a Mid-Employment Covenant. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -163,11 +163,7 @@ Employee acknowledges that a breach of this agreement may cause Employer irrepar
 
 ### Enforceability and Severability
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable, so that a court's refusal to enforce one covenant, or a court's decision to enforce a covenant only in part, does not affect the others. Each covenant is drawn in separable tiers, with distinct duration, geography, and scope steps, so that any separable portion may be enforced on its own.
-
-### Reformation
-
-If any restraint in this agreement is found to be overbroad, Employer requests enforcement limited to those portions of the restraint that are reasonably necessary for the protection of Employer's Protected Interests. Each restrictive covenant in this agreement is drawn as a tiered, severable restraint sized to the Protected Interests, and the parties intend each covenant to be enforceable as written rather than in reliance on judicial revision.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect.
 
 ### Survival and Expiration of Each Covenant
 
@@ -233,14 +229,6 @@ A Pennsylvania court evaluates the restraint as a whole against the employer's r
 ### duration and territory sized to the real market
 
 A non-compete's duration and territory hold up only when sized to the employee's real role and the employer's real market; a recital that they are sized is not enough, because a Pennsylvania court weighs time and territory together against that market . The real Specified Competitors named in Cover Terms narrow the covenant, are strong evidence the restraint is no greater than reasonably necessary, and leave the employee the rest of the industry. The remedies clause's irreparable-harm acknowledgment does not carry the equitable showing a court will demand — enforcement remains limited to restraints reasonably necessary for the employer's protection and reasonably limited in duration and geographic extent .
-
-### partial enforcement
-
-A Pennsylvania court is no guaranteed rescue for an aggressive covenant. Reformation is discretionary, and a court may refuse to narrow a covenant it sees as gratuitously overbroad — so tiered, severable, reasonable restraints stand on their own, while an aggressive covenant depends on a discretion the court may withhold .
-
-### severable tiers and defensible notice
-
-The reformation clause is no rescue for an overbroad restraint. It asks only for enforcement limited to the reasonably necessary portions, so a covenant drawn in separable tiers — customer-specific alternatives beneath broader restraints, distinct duration and geography steps — gives a court reasonable portions to enforce, where a single overbroad restraint asks the court to author the covenant itself . The partial-enforcement power is discretionary and bounded: courts warn that freely rewriting overbroad covenants would encourage employers with superior bargaining power to insist on excessive restrictions, and a court may decline to rescue a covenant drafted far broader than necessary . Because these covenants draw close scrutiny given the parties' unequal bargaining positions, a notice to a future employer carries risk unless the underlying restraint is one the employer is prepared to defend — warning a new employer off an employee based on a covenant a court would refuse to enforce, whether for missing consideration, overbreadth, or the health care rules, invites a tortious-interference claim .
 
 ### solicitation
 

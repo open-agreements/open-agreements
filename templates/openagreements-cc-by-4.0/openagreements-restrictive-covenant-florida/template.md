@@ -91,11 +91,11 @@ Duration
 
 [[Covered Employees]] means employees with whom Employee worked or whom Employee managed during the {covered_employee_period} before termination of employment.
 
-[[Legitimate Business Interests]] means one or more of the interests enumerated in Fla. Stat. § 542.335(1)(b), including Employer's trade secrets; valuable confidential business or professional information that does not otherwise qualify as a trade secret; substantial relationships with specific prospective or existing customers, patients, or clients; customer, patient, or client goodwill associated with Employer's ongoing business or professional practice, a specific geographic location, or a specific marketing or trade area; and extraordinary or specialized training provided to Employee.
+[[Protected Interests]] means one or more of the interests enumerated in Fla. Stat. § 542.335(1)(b), including Employer's trade secrets; valuable confidential business or professional information that does not otherwise qualify as a trade secret; substantial relationships with specific prospective or existing customers, patients, or clients; customer, patient, or client goodwill associated with Employer's ongoing business or professional practice, a specific geographic location, or a specific marketing or trade area; and extraordinary or specialized training provided to Employee.
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {passive_public_holdings_threshold} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means Employer's Legitimate Business Interests in its Confidential Information, customer, patient, and business-partner relationships, customer and patient goodwill, workforce stability, and any extraordinary or specialized training provided to Employee.
+[[Protected Interests]] means Employer's Protected Interests in its Confidential Information, customer, patient, and business-partner relationships, customer and patient goodwill, workforce stability, and any extraordinary or specialized training provided to Employee.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -105,17 +105,17 @@ Duration
 
 [[Trade Secrets]] has the meaning given in the Florida Uniform Trade Secrets Act, Fla. Stat. § 688.002.
 
-### Recitals and Legitimate Business Interest
+### Recitals and Protected Interest
 
-Employer and Employee acknowledge and agree that the restrictive covenants in this agreement are supported by, and reasonably necessary to protect, one or more of Employer's Legitimate Business Interests under Fla. Stat. § 542.335(1)(b), including, as applicable: (a) Employer's trade secrets; (b) Employer's valuable confidential business or professional information that does not otherwise qualify as a trade secret; (c) Employer's substantial relationships with specific prospective or existing customers, patients, or clients; (d) the customer, patient, or client goodwill associated with Employer's ongoing business or professional practice, a specific geographic location, or a specific marketing or trade area; and (e) the extraordinary or specialized training Employer provides to Employee. Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. The restraints in this agreement are reasonably necessary to protect these Protected Interests and are no broader than necessary to do so.
+Employer and Employee acknowledge and agree that the restrictive covenants in this agreement are supported by, and appropriate to protect, one or more of Employer's Protected Interests under Fla. Stat. § 542.335(1)(b), including, as applicable: (a) Employer's trade secrets; (b) Employer's valuable confidential business or professional information that does not otherwise qualify as a trade secret; (c) Employer's substantial relationships with specific prospective or existing customers, patients, or clients; (d) the customer, patient, or client goodwill associated with Employer's ongoing business or professional practice, a specific geographic location, or a specific marketing or trade area; and (e) the extraordinary or specialized training Employer provides to Employee. Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. The restraints in this agreement are appropriate to protect these Protected Interests and are limited to the scope needed to do so.
 
 ### Timing and Employee Acknowledgements
 
-Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
+Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
-Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue in perpetuity. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms. Trade secrets are protected under Florida law, including the Florida Uniform Trade Secrets Act, Fla. Stat. §§ 688.001–688.009.
+Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue for the Trade Secrets Duration specified in Cover Terms, to the extent the information remains a trade secret. Employee's obligations regarding other Confidential Information continue for the Other Confidential Information Duration specified in Cover Terms.
 
 ### Permitted Disclosures and Protected Conduct
 
@@ -131,19 +131,19 @@ During the Restricted Period, Employee must not Solicit, recruit, hire, or attem
 
 ### Non-Solicitation of Customers, Patients, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant is intended to protect Employer's substantial relationships with specific prospective or existing customers, patients, or clients and the associated goodwill, which are Legitimate Business Interests under Fla. Stat. § 542.335(1)(b).
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer.
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee. It is intended to protect Employer's substantial relationships with specific prospective or existing customers, patients, or clients and the associated goodwill, which are Legitimate Business Interests under Fla. Stat. § 542.335(1)(b).
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction protects Employer's substantial relationships with specific prospective or existing customers, patients, or clients and the associated goodwill.
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is reasonably necessary to protect Employer's Legitimate Business Interests under Fla. Stat. § 542.335(1)(b), and its duration is intended to fall within the presumptively reasonable window under Fla. Stat. § 542.335(1)(d)–(e) for the applicable relationship. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. Passive Public Holdings are permitted.
 
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. Passive Public Holdings are permitted.
 
 ### Non-Disparagement
 
@@ -151,19 +151,19 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 
 ### Physician-Specific Rights and Notices
 
-If Employee is a physician licensed under chapter 458 or chapter 459 of the Florida Statutes, then notwithstanding any other provision of this agreement, the non-compete restrictions in this agreement do not apply, and are void and unenforceable, to the extent that Fla. Stat. § 542.336 so provides. Under Fla. Stat. § 542.336, a restrictive covenant is void and unenforceable against such a physician who practices a medical specialty in a county where one entity (directly or through one or more related or affiliated entities) employs or contracts with all physicians who practice that specialty in that county, and the covenant remains void for three years after a second entity that employs or contracts with one or more physicians who practice that specialty begins offering that specialty in that county. Nothing in this agreement may be construed to restrict a physician Employee in violation of Fla. Stat. § 542.336.
+If Employee is a physician and one entity, directly or through related entities, employs or contracts with all physicians practicing Employee's specialty in the county, the non-compete does not apply. This exclusion continues for three years after another entity begins offering that specialty in the county.
 
 ### CHOICE Act Counsel Advisal and Notice (Covered Employee)
 
 Employer advised Employee, in writing, of the right to seek the advice of independent legal counsel before executing this agreement, and Employee acknowledges receiving that written advisal, in satisfaction of Fla. Stat. § 542.45(2)(a). Employer provided Employee with this proposed agreement at least seven days before the offer of employment was to expire (for a prospective covered employee) or at least seven days before the offer to enter into this agreement was to expire (for a current covered employee), in satisfaction of the notice requirement of Fla. Stat. § 542.45(3).
 
-### CHOICE Act Confidential Information Acknowledgement (Covered Employee)
+### CHOICE Act Confidential Information Acknowledgement
 
-Employee is a covered employee under the Florida Contracts Honoring Opportunity, Investment, Confidentiality, and Economic Growth (CHOICE) Act, Fla. Stat. §§ 542.41–542.45. Employee acknowledges in writing that, in the course of Employee's employment with Employer, Employee will receive confidential information or customer relationships, in satisfaction of Fla. Stat. § 542.45(2)(b). This acknowledgement is in addition to, and does not limit, the recital of Employer's Legitimate Business Interests above.
+Employee acknowledges in writing that, in the course of Employee's employment with Employer, Employee will receive confidential information or customer relationships, in satisfaction of Fla. Stat. § 542.45(2)(b). This acknowledgement is in addition to, and does not limit, the recital of Employer's Protected Interests above.
 
 ### CHOICE Act Garden Leave and Day-for-Day Offset (Covered Employee)
 
-This agreement includes a covered garden leave agreement within the meaning of Fla. Stat. § 542.43(5), under which Employer and Employee agree to a garden-leave notice period of {garden_leave_notice_duration} before the termination of employment, which may not exceed four years (Fla. Stat. § 542.43(5)). The non-compete Restricted Period is reduced day-for-day by any nonworking portion of the garden-leave notice period, pursuant to Fla. Stat. § 542.45(2)(c). After the first 90 days of the notice period, Employee need not provide services to Employer and may engage in nonwork activities during the remainder of the notice period; Employee may work for another employer during the remainder of the notice period only with Employer's permission, as provided in Fla. Stat. § 542.44(2)(c). The counsel-advisal, seven-day-notice, and written confidential-information-acknowledgement requirements of Fla. Stat. § 542.44(2)–(3) apply to this garden leave agreement; the corresponding provisions of this agreement (the CHOICE Act Counsel Advisal and Notice provision, if included, and the CHOICE Act Confidential Information Acknowledgement provision) are intended to address them.
+Employer and Employee agree to a garden-leave notice period of {garden_leave_notice_duration} before termination of employment, not exceeding four years. The non-compete Restricted Period is reduced day-for-day by any nonworking portion of that notice period. After the first 90 days, Employee need not provide services and may engage in nonwork activities; Employee may work for another employer during the remainder of the notice period only with Employer's permission.
 
 ### No Conflicting Obligations
 
@@ -179,15 +179,11 @@ If Employee breaches any restrictive covenant in this agreement, the Restricted 
 
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. The parties agree that the violation of an enforceable restrictive covenant creates a presumption of irreparable injury under Fla. Stat. § 542.335(1)(j), and Employer may seek injunctive or other equitable relief in addition to any other remedies available at law. For a covered-employee non-compete enforceable under the CHOICE Act, a court must, on Employer's application, preliminarily enjoin Employee from competing during the noncompete period, dissolvable only by Employee's clear and convincing evidence as provided in Fla. Stat. § 542.45(5). If Employer prevails in any action to enforce this agreement, Employee must reimburse Employer's reasonable attorney's fees and costs.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law. If Employer prevails in an action to enforce this agreement, Employee must reimburse Employer's reasonable attorney's fees and costs.
 
 ### Enforceability and Severability
 
 If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable.
-
-### Reformation
-
-Consistent with Fla. Stat. § 542.335(1)(c), if a court finds that any restraint in this agreement is overbroad, overlong, or otherwise not reasonably necessary to protect Employer's Legitimate Business Interests, Employer requests, and the parties agree, that the court shall modify the restraint and grant only the relief reasonably necessary to protect those interests. The parties intend that each restrictive covenant in this agreement be enforced to the fullest extent permitted by Florida law, and that any overbroad or overlong term be judicially modified rather than voided. The parties further acknowledge that, under Fla. Stat. § 542.335(1)(g)1 and (1)(h), a court shall not consider any individualized economic or other hardship to Employee and shall construe this agreement in favor of providing reasonable protection to Employer's Legitimate Business Interests.
 
 ### Survival and Expiration of Each Covenant
 
@@ -195,11 +191,11 @@ Each restrictive covenant in this agreement survives the termination of Employee
 
 ### Assignment and Successors
 
-Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement, and the restrictive covenants in it, to Employer's direct corporate parent (identified in Cover Terms under Employer Parent Entity, if any), to any of Employer's Affiliates, or to any successor or acquirer of all or substantially all of Employer's business or assets. Pursuant to Fla. Stat. § 542.335(1)(f), Employer expressly authorizes enforcement of the restrictive covenants in this agreement by Employer's assignee or successor. The parties further expressly identify, as third-party beneficiaries of this agreement entitled to enforce the restrictive covenants for their own benefit, each of the following: Employer's direct corporate parent (as identified in Cover Terms, if any); the operating or service-recipient Affiliate identified in Cover Terms (if any) on whose behalf Employee performs services or that holds any of the Protected Interests; Employer's Affiliates, including any operating company or commonly controlled entity on whose behalf Employee performs services or that holds any of the Protected Interests; and any successor or assignee of Employer. The parties expressly state that the restrictive covenants are intended for the benefit of each such expressly-identified person, as required by Fla. Stat. § 542.335(1)(f)1. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, third-party beneficiaries, and permitted assigns.
+Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement, and the restrictive covenants in it, to Employer's direct corporate parent (identified in Cover Terms under Employer Parent Entity, if any), to any of Employer's Affiliates, or to any successor or acquirer of all or substantially all of Employer's business or assets. Pursuant to Fla. Stat. § 542.335(1)(f), Employer expressly authorizes enforcement of the restrictive covenants in this agreement by Employer's assignee or successor. The parties further expressly identify, as third-party beneficiaries of this agreement entitled to enforce the restrictive covenants for their own benefit, each of the following: Employer's direct corporate parent (as identified in Cover Terms, if any); the operating or service-recipient Affiliate identified in Cover Terms (if any) on whose behalf Employee performs services or that holds any of the Protected Interests; Employer's Affiliates, including any operating company or commonly controlled entity on whose behalf Employee performs services or that holds any of the Protected Interests; and any successor or assignee of Employer. The parties expressly state that the restrictive covenants are intended for the benefit of each such expressly-identified person. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, third-party beneficiaries, and permitted assigns.
 
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms, including Fla. Stat. §§ 542.335 and 542.336 and, where applicable, the CHOICE Act, Fla. Stat. §§ 542.41–542.45. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
+This agreement is governed by the law listed in Cover Terms. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
 
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 

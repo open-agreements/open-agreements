@@ -6,8 +6,6 @@ version: 0.1.0
 stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: Authored by OpenAgreements contributors. Alabama-specific analysis informed by the quote-verified Alabama practice note. Licensed under CC BY 4.0.
 fields:
   - name: employer_name
@@ -66,9 +64,9 @@ fields:
     type: boolean
     description: Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.
     display_label: Employee No-Hire Included
-    default: true
     section: Employee Non-Solicitation
     rationale_source: editorial
+    default: true
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee no-hire / non-solicitation restriction
@@ -201,6 +199,9 @@ fields:
     default: 24 months
     section: Non-Disparagement
     default_value_rationale: 24 months is common for employment non-disparagement provisions.
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template

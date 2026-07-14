@@ -6,8 +6,6 @@ version: 0.1.0
 stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: Authored by OpenAgreements contributors. District of Columbia-specific analysis informed by the quote-verified District of Columbia practice note. Licensed under CC BY 4.0.
 fields:
   - name: employer_name
@@ -64,15 +62,6 @@ fields:
     default_value_rationale: $162,164 is the 2026 minimum qualifying annual compensation published in the D.C. Department of Employment Services Public Notice on the Prohibition on Non-Compete Clauses (Jan. 1, 2026). The statute indexes this figure to inflation each year, so counsel should confirm the published figure for the year the covenant is proposed rather than relying on the $150,000 statutory base.
     rationale_source: regulation
     requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.gate-non-compete-by-minimum-qualifying-compensation
-  - name: medical_specialist_threshold
-    type: string
-    description: Minimum qualifying annual compensation for a medical specialist. The statutory base is $250,000, adjusted upward each year for inflation; the Department of Employment Services publishes the current figure. The default is the 2026 figure; replace it with the figure for the year the covenant is proposed.
-    display_label: Medical Specialist Minimum Compensation
-    default: $270,274
-    section: District of Columbia Statutory Gates
-    default_value_rationale: $270,274 is the 2026 medical specialist threshold published in the D.C. Department of Employment Services Public Notice on the Prohibition on Non-Compete Clauses (Jan. 1, 2026), tracking the $250,000 statutory base as adjusted for inflation.
-    rationale_source: regulation
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.gate-non-compete-by-minimum-qualifying-compensation
   - name: confidentiality_trade_secret_duration
     type: string
     description: Duration of confidentiality obligations for trade secrets
@@ -89,10 +78,11 @@ fields:
     rationale_source: editorial
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee non-solicitation covenant is included
-    display_label: Employee Non-Solicitation Included
-    default: true
+    description: Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.
+    display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
+    rationale_source: editorial
+    default: true
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee non-solicitation restriction
@@ -111,10 +101,11 @@ fields:
     default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the customer/partner non-solicitation covenant is included
+    description: Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
+    rationale_source: editorial
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer/partner non-solicitation restriction
@@ -176,6 +167,9 @@ fields:
     default: 24 months
     section: Non-Disparagement
     default_value_rationale: 24 months is common for employment non-disparagement provisions.
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template

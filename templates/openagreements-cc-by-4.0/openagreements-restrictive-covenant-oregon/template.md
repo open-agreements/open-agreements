@@ -83,7 +83,7 @@ Duration
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {passive_public_holdings_threshold} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means Employer's legitimate business interests recognized by ORS 653.295(2): Employee's access to trade secrets as defined in ORS 646.461, and Employee's access to competitively sensitive confidential business or professional information that otherwise would not qualify as a trade secret, including product development plans, product launch plans, marketing strategy, and sales plans.
+[[Protected Interests]] means Employer's Trade Secrets and competitively sensitive Confidential Information, including product development plans, product launch plans, marketing strategy, and sales plans.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -91,15 +91,15 @@ Duration
 
 [[Solicit]] means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] has the meaning given in the Oregon Uniform Trade Secrets Act, ORS 646.461(4).
+[[Trade Secrets]] means information qualifying as a trade secret under applicable law.
 
 ### Recitals and Statutory Protectable Interest
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship and is supported by, and no greater than required to protect, one or more of Employer's Protected Interests. If this agreement includes a covenant not to compete, Employer represents that it has a protectable interest within the meaning of ORS 653.295(2) because Employee has access to Employer's trade secrets, as defined in ORS 646.461, or to competitively sensitive confidential business or professional information that would not qualify as a trade secret, including product development plans, product launch plans, marketing strategy, or sales plans. That protectable interest rests on the specific confidential and strategic information Employee can exploit at a competitor rather than on a generic competitive concern. Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement, and each covenant is intended to impose no undue hardship on Employee and to cause no injury to the public.
+Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship and protects one or more of Employer's Protected Interests. Employee will receive access to Employer's Protected Interests, and Employer would not provide that access absent the protections in this agreement. Employee acknowledges that the covenants are reasonable and necessary to protect Employer's Protected Interests.
 
 ### Timing and Formation of the Non-Competition Covenant
 
-If this agreement includes a covenant not to compete, that covenant rests on one of the two formation gateways required by ORS 653.295(1)(a): either Employer informed Employee, in a written employment offer received by Employee at least two weeks before the first day of Employee's employment, that a noncompetition agreement is required as a condition of employment, or the covenant was entered into upon a subsequent bona fide advancement of Employee by Employer. Continued employment alone is not a qualifying trigger; a covenant signed during employment rests on a genuine advancement rather than on continued employment. Employer has advised Employee that Employee may consult with an attorney before entering into this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
+If this agreement includes a covenant not to compete, Employee acknowledges either that Employee received a written employment offer stating that the covenant was required at least two weeks before employment began or that Employee enters into the covenant upon a bona fide advancement. Employer has advised Employee that Employee may consult with an attorney before entering into this agreement. Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -107,35 +107,35 @@ Employee must treat all Confidential Information as strictly confidential. Emplo
 
 ### Permitted Disclosures and Protected Conduct
 
-Nothing in this agreement prohibits Employee from: (a) reporting possible violations of law to any government agency, including the Securities and Exchange Commission, the Equal Employment Opportunity Commission, the Occupational Safety and Health Administration, the Oregon Bureau of Labor and Industries, or any other federal, state, or local agency; (b) making disclosures protected under whistleblower provisions of any law; (c) discussing wages, hours, or other terms and conditions of employment as protected by applicable law; (d) disclosing or discussing conduct that constitutes discrimination, harassment, or sexual assault, as protected by the Oregon Workplace Fairness Act, ORS 659A.370; (e) testifying truthfully in legal proceedings; or (f) filing a sealed complaint in court using Confidential Information without liability. Pursuant to the Defend Trade Secrets Act (18 U.S.C. § 1833(b)), Employee may not be held criminally or civilly liable for disclosing a trade secret in confidence to a government official or attorney solely for the purpose of reporting or investigating a suspected violation of law, or in a sealed court filing.
+Nothing in this agreement prohibits Employee from: (a) reporting possible violations of law to any government agency, including the Securities and Exchange Commission, the Equal Employment Opportunity Commission, the Occupational Safety and Health Administration, the Oregon Bureau of Labor and Industries, or any other federal, state, or local agency; (b) making disclosures protected under whistleblower provisions of any law; (c) discussing wages, hours, or other terms and conditions of employment as protected by applicable law; (d) disclosing or discussing conduct that constitutes discrimination, harassment, or sexual assault, as protected Under the Oregon Workplace Fairness Act, ORS 659A.370; (e) testifying truthfully in legal proceedings; or (f) filing a sealed complaint in court using Confidential Information without liability. Pursuant to the Defend Trade Secrets Act (18 U.S.C. § 1833(b)), Employee may not be held criminally or civilly liable for disclosing a trade secret in confidence to a government official or attorney solely for the purpose of reporting or investigating a suspected violation of law, or in a sealed court filing.
 
 ### Return, Deletion, and Certification of Company Property
 
-Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request. Employer will coordinate this certification with its obligation under ORS 653.295(1)(d) to provide Employee a signed, written copy of the terms of any noncompetition covenant within 30 days after the date of termination.
+Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request. Employer will provide Employee a signed copy of any noncompetition covenant within 30 days after termination.
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. Under ORS 653.295(5)(b), a covenant not to solicit employees of the employer is not subject to the noncompetition requirements of ORS 653.295(1) and (3); it is governed by common-law reasonableness.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This restriction applies only to Covered Employees during the Restricted Period.
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. Under ORS 653.295(5)(b), a covenant not to solicit or transact business with customers of the employer is not subject to the noncompetition requirements of ORS 653.295(1) and (3); it is governed by common-law reasonableness. The Covered Customers class is limited to customers with an active or ongoing relationship with Employer and does not include former or merely incidental patrons.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. The Covered Customers class is limited to customers with an active or ongoing relationship with Employer and does not include former or merely incidental patrons.
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee. Under ORS 653.295(5)(b), a covenant not to transact business with customers of the employer is not subject to the noncompetition requirements of ORS 653.295(1) and (3), so long as it stays confined to Employer's customers with an active or ongoing relationship and does not reach former or merely incidental patrons.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction applies only to Covered Customers with an active or ongoing relationship with Employer and excludes former or incidental patrons.
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is a noncompetition agreement under ORS 653.295 and applies to and is enforceable against Employee only if each statutory condition is met: Employee received the two-week written-offer notice or the covenant was entered into upon a bona fide advancement (ORS 653.295(1)(a)); Employee is an exempt salaried employee described in ORS 653.020(3) whose total annual gross salary and commissions, calculated on an annual basis at the time of termination, exceed the inflation-indexed threshold published by the Oregon Bureau of Labor and Industries (ORS 653.295(1)(b), (e)), or Employer commits to the garden-leave payment stated in Cover Terms and the garden-leave clause below (ORS 653.295(7)); Employer has a protectable interest under ORS 653.295(2); and Employer provides Employee a signed, written copy of the terms within 30 days after termination (ORS 653.295(1)(d)). The Restricted Period for this covenant does not exceed 12 months from the date of Employee's termination, and any portion of a term in excess of 12 months is void and unenforceable under ORS 653.295(3). Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant applies only if Employee's duties, salary basis, and annual compensation at termination satisfy applicable law or Employer makes the garden-leave payment stated in Cover Terms. Employer will provide Employee a signed copy of this covenant within 30 days after termination. The Restricted Period ends no later than 12 months after termination. Passive Public Holdings are permitted.
 
 ### Garden-Leave Payment Commitment (Oregon)
 
-If Employee does not satisfy the exempt-status or salary-threshold conditions of ORS 653.295(1)(b) and (e), the non-compete in this agreement is enforceable, for the full term of the agreement and for up to 12 months, only if Employer agrees in writing to the garden-leave payment stated in Cover Terms. As required by ORS 653.295(7), that payment consists of {oregon_garden_leave_pay}. This garden-leave path overrides only ORS 653.295(1)(b) and (e); the two-week written-offer notice or bona fide advancement, the statutory protectable interest, the 12-month cap, and the delivery of a signed copy within 30 days after termination all continue to apply.
+Employer agrees to pay Employee {oregon_garden_leave_pay} during the non-compete's Restricted Period when the garden-leave payment condition applies.
 
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive Public Holdings are permitted. Because this covenant restrains active roles at and material participation in a Competitive Business, it functions as a covenant not to compete and enjoys none of the ORS 653.295(5) carve-out that protects non-solicits; it therefore applies only on the same terms as the non-compete in this agreement, including the ORS 653.295(1) formation, exempt-status or garden-leave, and protectable-interest conditions and the 12-month cap of ORS 653.295(3).
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction is subject to the same conditions and Restricted Period as the Non-Competition covenant. Passive Public Holdings are permitted.
 
 ### Non-Disparagement
 
@@ -147,7 +147,7 @@ Notwithstanding any other provision of this agreement, no nondisclosure provisio
 
 ### Medical-Licensee Non-Competition Exclusion
 
-Notwithstanding any other provision of this agreement, if Employee is a medical licensee, no covenant in this agreement restricts Employee's practice of medicine or practice of nursing in favor of a person as defined in ORS 442.015, a management services organization, or a hospital as defined in ORS 442.015 or a hospital-affiliated clinic as defined in ORS 442.612; any such restriction is void and unenforceable under ORS 653.297(2)(a). This exclusion applies regardless of the agreement's effective date (ORS 653.298). The narrow exceptions are preserved: a licensee who owns or controls an ownership or membership interest equivalent to 1.5 percent or more of the entity (enforceable to the extent ORS 653.295 provides), a covenant tied to a professional medical entity's documented recruitment investment subject to the statutory multi-year caps, and a licensee who does not engage directly in providing medical, health care, or clinical services (ORS 653.297(2)(b)).
+No covenant in this agreement restricts Employee's practice of medicine or nursing where applicable law prohibits that restriction.
 
 ### No Conflicting Obligations
 
@@ -155,35 +155,31 @@ Employee represents that performing duties for Employer and complying with this 
 
 ### Notice to Future Employers and Other Third Parties
 
-Employer may disclose the existence and terms of this agreement to a prospective employer or business associate of Employee only if Employer has a reasonable belief that Employee may breach an enforceable restrictive covenant in this agreement. Employer conditions any such notice on a covenant that satisfies the statutory conditions of ORS 653.295, and Employee consents to disclosure only on that basis.
+Employer may disclose the existence and terms of this agreement to a prospective employer or business associate of Employee only if Employer has a reasonable belief that Employee may breach an enforceable restrictive covenant in this agreement. Employee consents to disclosure permitted by this section.
 
 ### Tolling During Breach
 
-If Employee breaches any restrictive covenant that is not subject to the ORS 653.295(3) non-compete cap, the Restricted Period for that covenant is extended by one day for each day of the breach. The Restricted Period for the non-compete is not extended beyond 12 months from the date of Employee's termination, and any portion of a term in excess of 12 months is void under ORS 653.295(3).
+If Employee breaches a restrictive covenant other than the non-compete, the Restricted Period for that covenant is extended by one day for each day of the breach. Tolling will not extend the non-compete beyond 12 months after termination.
 
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, and ORS 653.295(6) preserves Employer's right to protect trade secrets and proprietary information by injunction or any other lawful means regardless of the fate of any non-compete. If this agreement provides for attorney fees to enforce its provisions, that provision is mutual: under ORS 20.096(1), the party that prevails is entitled to reasonable attorney fees in addition to costs and disbursements, without regard to which party the contract specified.
-
-### Severability and No Reliance on Reformation
-
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect, and each restrictive covenant is intended to be independently enforceable. The parties do not rely on any savings or reformation clause to cure a non-conforming non-compete, and the only repair applied to the non-compete is the ORS 653.295(3) severance of any portion of a term beyond 12 months.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other lawful relief to protect its Trade Secrets and proprietary information. The prevailing party in an enforcement action is entitled to reasonable attorney fees, costs, and disbursements.
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms, except that the non-compete does not survive beyond 12 months from the date of termination and any excess is void under ORS 653.295(3). Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. The non-compete expires no later than 12 months after termination. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### Assignment and Successors
 
-Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. A successor that enforces a covenant made in the context of the employment relationship inherits the original Employer's compliance record under ORS 653.295, including the notice, delivery, and salary conditions. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
+Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. Assignment does not expand a covenant or eliminate any condition applicable to its enforcement. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
 
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms, including ORS 653.295 and, where applicable, ORS 653.297 and 653.298. No choice-of-law provision may be applied to avoid the requirements of ORS 653.295 where Employee is a resident of Oregon rendering services primarily in Oregon: under ORS 15.320(3), notwithstanding any other provision of ORS 15.300 to 15.380 and subject to the limitations of ORS 15.305, the law of Oregon applies to a contract of employment for services to be rendered primarily in Oregon by a resident of Oregon. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
+This agreement is governed by the law listed in Cover Terms. Oregon law governs to the extent required by non-waivable law. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
 
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 
-This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. This agreement may be amended only in writing signed by both parties; the parties acknowledge that an amendment introducing or broadening a non-compete is a new covenant that must independently satisfy the ORS 653.295(1)(a) formation gateway — a bona fide advancement, not continued employment alone. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
+This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. Any amendment introducing or expanding a non-compete is effective only if executed in connection with a bona fide advancement or other formation event permitted by applicable law. This agreement may otherwise be amended only in writing signed by both parties. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
 
 ## Signatures
 

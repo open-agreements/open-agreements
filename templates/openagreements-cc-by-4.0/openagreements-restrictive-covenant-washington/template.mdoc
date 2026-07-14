@@ -22,8 +22,6 @@ source_url: >-
 version: 0.1.0
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: >-
   Authored by OpenAgreements contributors. Washington-specific analysis informed
   by the quote-verified Washington practice note. Licensed under CC BY 4.0.
@@ -89,7 +87,8 @@ fields:
     section: Legal
     default: Washington
     rationale_source: legislation
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.avoid-out-of-state-law-and-forum-for-washington-workers
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.avoid-out-of-state-law-and-forum-for-washington-workers
   - name: confidentiality_trade_secret_duration
     type: string
     description: Duration of confidentiality obligations for trade secrets
@@ -110,10 +109,15 @@ fields:
     rationale_source: editorial
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee non-solicitation covenant is included
-    display_label: Employee Non-Solicitation Included
-    default: true
+    description: >-
+      Whether the employee no-hire / non-solicitation covenant is included.
+      Alabama's only category for restraints touching another party's workers is
+      the no-hire exception for workers in a position uniquely essential to the
+      management, organization, or service of the business.
+    display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
+    rationale_source: editorial
+    default: true
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee non-solicitation restriction
@@ -121,12 +125,13 @@ fields:
     default: 24 months
     section: Employee Non-Solicitation
     default_value_rationale: >-
-      24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed
-      employee agreements; 12 months is the common lighter alternative. Washington excludes an
-      agreement not to solicit the employer's employees to leave from the non-compete definition
-      entirely, so this covenant is not subject to the eighteen-month presumption that governs
-      non-competes; the exclusion turns on the solicitation-only shape of the clause, not its
-      length.
+      24 months matches the modal employee non-solicit term observed in
+      benchmarked, publicly-filed employee agreements; 12 months is the common
+      lighter alternative. Washington excludes an agreement not to solicit the
+      employer's employees to leave from the non-compete definition entirely, so
+      this covenant is not subject to the eighteen-month presumption that
+      governs non-competes; the exclusion turns on the solicitation-only shape
+      of the clause, not its length.
     rationale_source: benchmark
     benchmark_ref: restrictive-covenant/employee-non-solicit-duration
   - name: covered_employee_period
@@ -142,10 +147,14 @@ fields:
       scope.
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the customer non-solicitation covenant is included
+    description: >-
+      Whether the current-customer non-solicitation covenant is included.
+      Alabama gives this covenant its own category, limited to current
+      customers.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
+    rationale_source: editorial
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer non-solicitation restriction
@@ -155,11 +164,11 @@ fields:
     benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
     default_value_rationale: >-
-      12 months is the lighter side of the near-even 12/24-month split observed in
-      benchmarked, publicly-filed employee agreements, and it sits below the
-      eighteen-month ceiling that will govern the surviving customer non-solicitation
-      exclusion effective June 30, 2027, so the clause remains within the narrowed
-      exclusion after that date.
+      12 months is the lighter side of the near-even 12/24-month split observed
+      in benchmarked, publicly-filed employee agreements, and it sits below the
+      eighteen-month ceiling that will govern the surviving customer
+      non-solicitation exclusion effective June 30, 2027, so the clause remains
+      within the narrowed exclusion after that date.
   - name: covered_customer_period
     type: string
     description: >-
@@ -205,7 +214,8 @@ fields:
       reformation of an overbroad term triggers a statutory penalty, the default
       stays inside the presumptively reasonable window.
     rationale_source: legislation
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.limit-duration-to-eighteen-months
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.limit-duration-to-eighteen-months
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
@@ -213,13 +223,10 @@ fields:
     default: the geographic area in which Employee provided services
     section: Non-Competition
     default_value_rationale: >-
-      Tied to the employee's actual service area. Washington law is silent on
-      geography, but the surviving common-law rule enforces a restraint only to
-      the extent reasonable and necessary, and a Washington court that narrows an
-      overbroad territory triggers the statutory reformation penalty against the
-      employer.
-    rationale_source: case_law
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.avoid-reliance-on-judicial-reformation
+      Tied to the employee's actual service area so the starting value is not an
+      open-ended geographic restraint. Counsel should tailor the territory to
+      the employee's role and the employer's actual market.
+    rationale_source: editorial
   - name: competitive_business_definition
     type: string
     description: >-
@@ -239,6 +246,7 @@ fields:
     rationale_source: editorial
   - name: washington_earnings_threshold
     type: string
+    ai_only: true
     description: >-
       Washington only. The inflation-adjusted annualized earnings floor the
       worker's earnings from the party seeking enforcement must exceed for the
@@ -253,22 +261,23 @@ fields:
       annualized, as adjusted for 2026 under RCW 49.62.040
     section: Non-Competition
     default_value_rationale: >-
-      The default recites the 2026 employee and independent-contractor thresholds
-      published by the Department of Labor & Industries ($126,858.83 /
-      $317,147.09). Counsel must replace it with the figure published for the
+      The default recites the 2026 employee and independent-contractor
+      thresholds published by the Department of Labor & Industries ($126,858.83
+      / $317,147.09). Counsel must replace it with the figure published for the
       year the covenant is entered into, because the amount is reset annually.
     rationale_source: legislation
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.gate-non-compete-by-earnings-threshold
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.gate-non-compete-by-earnings-threshold
   - name: washington_consideration
     type: string
     description: >-
       Washington only. For a covenant entered into after employment has
-      commenced, the independent consideration given specifically in exchange for
-      the restrictive covenants, recited so it is identifiable new value under
-      Washington law. Continued at-will employment alone is not consideration for
-      a post-hire non-compete. State the specific new value here (for example, a
-      signing or retention bonus, equity grant, or promotion). Shown in the
-      Washington timing and consideration recital.
+      commenced, the independent consideration given specifically in exchange
+      for the restrictive covenants, recited so it is identifiable new value
+      under Washington law. Continued at-will employment alone is not
+      consideration for a post-hire non-compete. State the specific new value
+      here (for example, a signing or retention bonus, equity grant, or
+      promotion). Shown in the Washington timing and consideration recital.
     display_label: Independent Consideration for Restrictive Covenants (Washington)
     default: >-
       the signing or retention bonus, equity grant, promotion, or other new
@@ -282,15 +291,16 @@ fields:
       prompting counsel to name the specific benefit, because continued
       employment alone will not qualify.
     rationale_source: case_law
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.require-independent-consideration-for-post-hire-covenants
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.require-independent-consideration-for-post-hire-covenants
   - name: nondealing_included
     type: boolean
     description: >-
-      Whether the no-business-with-covered-customers covenant is included. In
-      Washington a clause that directly or indirectly prohibits accepting or
-      transacting business with a customer is itself a non-competition covenant
-      under the Noncompetition Agreement Act, so it carries every statutory
-      non-compete condition.
+      Whether the no-business-with-covered-customers covenant is included. A
+      non-dealing covenant has no named Alabama category of its own, so it must
+      be drafted to fit inside the current-customer non-solicit exception or it
+      is exposed to Alabama's void rule for restraints outside the listed
+      categories.
     display_label: No Business with Covered Customers Included
     default: false
     section: No Business with Covered Customers
@@ -303,10 +313,11 @@ fields:
     section: No Business with Covered Customers
     default_value_rationale: >-
       12 months stays within Washington's eighteen-month presumption, which
-      applies because Washington treats a non-dealing clause as a non-competition
-      covenant.
+      applies because Washington treats a non-dealing clause as a
+      non-competition covenant.
     rationale_source: legislation
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.limit-duration-to-eighteen-months
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.limit-duration-to-eighteen-months
   - name: passive_public_holdings_threshold
     type: string
     description: >-
@@ -317,19 +328,25 @@ fields:
     section: Definitions
     default_value_rationale: >-
       Five percent of any class of publicly traded securities is the modal
-      passive-investment carve-out threshold observed in benchmarked, publicly-filed
-      employee agreements that include the carve-out (lower 1-3 percent thresholds are
-      the common tighter alternatives). A carve-out that technically barred index funds
-      and ordinary public shares would restrain more than any legitimate interest
-      requires, inviting the statutory reformation penalty.
+      passive-investment carve-out threshold observed in benchmarked,
+      publicly-filed employee agreements that include the carve-out (lower 1-3
+      percent thresholds are the common tighter alternatives). A carve-out that
+      technically barred index funds and ordinary public shares would restrain
+      more than any legitimate interest requires, inviting the statutory
+      reformation penalty.
     rationale_source: benchmark
     benchmark_ref: restrictive-covenant/passive-ownership-carveout
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included.
+    description: >-
+      Whether the non-investment covenant is included. A non-investment covenant
+      has no named Alabama category; one genuine use is restraining a licensed
+      professional's business conduct outside the practice of the profession,
+      which sits outside Alabama's professional exemption.
     display_label: Non-Investment Included
     default: false
     section: Non-Investment
+    rationale_source: editorial
   - name: noninvestment_duration
     type: string
     description: Duration of non-investment restriction
@@ -341,7 +358,8 @@ fields:
       applies because a covenant restraining active roles at a Competitive
       Business functions as a non-competition covenant.
     rationale_source: legislation
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.limit-duration-to-eighteen-months
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.limit-duration-to-eighteen-months
   - name: nondisparagement_duration
     type: string
     description: Duration of non-disparagement obligation (measured from termination)
@@ -349,9 +367,12 @@ fields:
     default: 24 months
     section: Non-Disparagement
     default_value_rationale: 24 months is common for employment non-disparagement provisions.
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template
 ---
 # Employee Restrictive Covenant Agreement
 
@@ -378,7 +399,6 @@ The terms below are incorporated into and form part of this agreement.
 {% cover-term kind="subrow" label="Restricted Territory" field="territory" include-when="noncompete_included" /%}
 {% cover-term kind="subrow" label="Competitive Business" field="competitive_business_definition" include-when="noncompete_included" /%}
 {% cover-term kind="subrow" label="Specified Competitors" field="specified_competitors" include-when="noncompete_included" /%}
-{% cover-term kind="subrow" label="Earnings Threshold" field="washington_earnings_threshold" include-when="noncompete_included" /%}
 {% cover-term kind="group" label="No Business with Covered Customers" include-when="nondealing_included" /%}
 {% cover-term kind="subrow" label="Duration" field="nondealing_duration" include-when="nondealing_included" /%}
 {% cover-term kind="group" label="Non-Investment" include-when="noninvestment_included" /%}
@@ -396,7 +416,7 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
 
-[[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee. This definition is information-shaped and is not intended to restrain Employee from engaging in any lawful profession, trade, or business.
+[[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
 [[Covered Customers]] means current customers of Employer with whom Employee had material contact or for whom Employee had responsibility during the {% field name="covered_customer_period" /%} before termination of employment.
 
@@ -404,7 +424,7 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {% field name="passive_public_holdings_threshold" /%} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means Employer's legitimate business interests in its Confidential Information and trade secrets, its relationships with current customers, its workforce stability, and its goodwill, in each case to the extent a restraint serving that interest is reasonable and necessary.
+[[Protected Interests]] means Employer's Protected Interests in its Confidential Information and trade secrets, its relationships with current customers, its workforce stability, and its goodwill, in each case to the extent a restraint serving that interest is reasonable and necessary.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -416,21 +436,21 @@ The terms below are incorporated into and form part of this agreement.
 {% /clause %}
 
 {% clause id="recitals-and-legitimate-business-interest" %}
-### Recitals and Legitimate Business Interests
+### Recitals and Protected Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship and is supported by, and no greater than, the restraint reasonable and necessary to protect one or more of Employer's Protected Interests. The parties acknowledge that chapter 49.62 RCW governs noncompetition covenants entered into in Washington, that the nonsolicitation, confidentiality, and trade-secret covenants in this agreement are excluded from the statutory definition of a noncompetition covenant under RCW 49.62.010(4), and that any covenant in this agreement that operates as a noncompetition covenant is subject to the conditions in the Washington Statutory Conditions for Any Non-Compete section below. Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement, and each covenant is drawn to the minimum scope, duration, and geography the Protected Interest requires so that no judicial reformation is needed to enforce it.
+Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship, is supported by consideration, and protects one or more of Employer's Protected Interests.
 {% /clause %}
 
 {% clause id="timing-and-employee-acknowledgements" %}
 ### Timing, Consideration, and Right to Consult Counsel
 
-Employer has advised Employee to consult with an attorney before entering into this agreement. If this agreement is entered into at or before the commencement of Employee's employment, Employer has disclosed the terms of the restrictive covenants in writing to Employee no later than the time of Employee's initial oral or written acceptance of the offer of employment, as required by RCW 49.62.020(1)(a)(i); and if any covenant would become enforceable only at a later date because Employee's earnings then exceed the applicable threshold, Employer specifically discloses that the agreement may be enforceable against Employee in the future. If this agreement is entered into after the commencement of Employee's employment, Employer provides {% field name="washington_consideration" /%} as independent consideration given specifically in exchange for the restrictive covenants, as required by RCW 49.62.020(1)(a)(ii); the parties acknowledge that continued at-will employment alone is not independent consideration for a covenant entered into after employment has commenced. This agreement is effective as of the Effective Date listed in Cover Terms.
+Employer has advised Employee to consult with an attorney before entering into this agreement. If this agreement is entered into at or before the commencement of Employee's employment, Employer has disclosed the terms of the restrictive covenants in writing to Employee no later than the time of Employee's initial oral or written acceptance of the offer of employment; and if any covenant would become enforceable only at a later date because Employee's earnings then exceed the applicable threshold, Employer specifically discloses that the agreement may be enforceable against Employee in the future. If this agreement is entered into after the commencement of Employee's employment, Employer provides {% field name="washington_consideration" /%} as independent consideration given specifically in exchange for the restrictive covenants. This agreement is effective as of the Effective Date listed in Cover Terms.
 {% /clause %}
 
 {% clause id="confidential-information-and-trade-secret-protection" %}
 ### Confidential Information and Trade Secret Protection
 
-Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue in perpetuity for so long as the information remains a trade secret. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms. This section is a confidentiality and trade-secret covenant excluded from the definition of a noncompetition covenant under RCW 49.62.010(4).
+Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue in perpetuity for so long as the information remains a trade secret. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms.
 {% /clause %}
 
 {% clause id="permitted-disclosures-and-protected-conduct" %}
@@ -448,25 +468,25 @@ Upon termination of employment, Employee must promptly return to Employer all do
 {% clause id="non-solicitation-of-employees" include-when="employee_nonsolicit_included" %}
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit any Covered Employee to leave Employer. This restriction is limited to solicitation as defined above and does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant is a nonsolicitation agreement within RCW 49.62.010(5)(a) and is excluded from the definition of a noncompetition covenant; it is not drawn to reach the acceptance or transaction of business, which would bring it within RCW 49.62.010(4).
+During the Restricted Period, Employee must not Solicit any Covered Employee to leave Employer. This restriction is limited to solicitation as defined above and does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees.
 {% /clause %}
 
 {% clause id="non-solicitation-of-customers" include-when="customer_nonsolicit_included" %}
 ### Non-Solicitation of Customers
 
-During the Restricted Period, Employee must not Solicit any Covered Customer to cease or reduce the extent to which it is doing business with Employer. This covenant is a nonsolicitation agreement within RCW 49.62.010(5)(b) and is excluded from the definition of a noncompetition covenant. It reaches only solicitation Employee initiates and does not prohibit accepting or transacting business a Covered Customer brings to Employee; a clause that directly or indirectly prohibited the acceptance or transaction of business with a customer would be a noncompetition covenant under RCW 49.62.010(4) and subject to the Washington Statutory Conditions for Any Non-Compete section below. Effective June 30, 2027, under chapter 49.62 RCW this exclusion is limited to a Covered Customer with whom Employee established or substantially developed a direct relationship through Employee's work for Employer, with the prohibition expiring no later than eighteen months after termination of employment.
+During the Restricted Period, Employee must not Solicit any Covered Customer to cease or reduce the extent to which it is doing business with Employer. This covenant applies only to solicitation Employee initiates and does not prohibit accepting or transacting business a Covered Customer brings to Employee. It applies only to a Covered Customer with whom Employee established or substantially developed a direct relationship through Employee's work for Employer and expires no later than eighteen months after termination of employment.
 {% /clause %}
 
 {% clause id="no-business-with-covered-customers" include-when="nondealing_included" %}
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee. Because it directly or indirectly prohibits the acceptance or transaction of business with a customer, this covenant is a noncompetition covenant under RCW 49.62.010(4); it is therefore subject in full to the Washington Statutory Conditions for Any Non-Compete section below, including the earnings threshold, the disclosure-or-consideration timing rule, the layoff garden-leave condition, and the eighteen-month duration presumption.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of who initiates contact. This covenant applies only while all conditions stated in the Washington Conditions for Any Non-Compete section are satisfied.
 {% /clause %}
 
 {% clause id="non-competition" include-when="noncompete_included" %}
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant applies only to a Competitive Business and only within the Restricted Territory, and is drawn no broader in time, place, or scope than the restraint reasonable and necessary to protect Employer's Protected Interests. Passive Public Holdings are permitted. This covenant is a noncompetition covenant under chapter 49.62 RCW and is subject in full to the Washington Statutory Conditions for Any Non-Compete section below. On and after June 30, 2027, this covenant is void and unenforceable under chapter 49.62 RCW, regardless of when the parties entered into it.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. Passive Public Holdings are permitted. This covenant applies only while all conditions stated in the Washington Conditions for Any Non-Compete section are satisfied.
 {% /clause %}
 
 {% clause id="named-competitor-narrowing" include-when="noncompete_included" %}
@@ -478,7 +498,7 @@ Where Cover Terms list Specified Competitors, the Non-Competition covenant is li
 {% clause id="non-investment" include-when="noninvestment_included" %}
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive Public Holdings are permitted. Because this covenant restrains active roles at and material participation in a Competitive Business, it functions as a noncompetition covenant under RCW 49.62.010(4); it is therefore subject in full to the Washington Statutory Conditions for Any Non-Compete section below and is drawn no broader than the restraint reasonable and necessary to protect Employer's Protected Interests. On and after June 30, 2027, any provision that requires Employee to return, repay, or forfeit compensation as a consequence of engaging in a lawful profession, trade, or business is a noncompetition covenant under chapter 49.62 RCW.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. Passive Public Holdings are permitted. This covenant applies only while all conditions stated in the Washington Conditions for Any Non-Compete section are satisfied.
 {% /clause %}
 
 {% clause id="non-disparagement" %}
@@ -488,23 +508,23 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 {% /clause %}
 
 {% clause id="washington-statutory-conditions-for-any-non-compete" %}
-### Washington Statutory Conditions for Any Non-Compete
+### Washington Conditions for Any Non-Compete
 
-This section applies to every covenant in this agreement that is a noncompetition covenant under chapter 49.62 RCW, including the Non-Competition covenant, any No Business with Covered Customers covenant, and any Non-Investment covenant (each, for this section, a "Non-Compete Covenant").
+This section applies to the Non-Competition covenant, any No Business with Covered Customers covenant, and any Non-Investment covenant (each, for this section, a "Non-Compete Covenant").
 
-**Earnings threshold.** Each Non-Compete Covenant is enforceable only if Employee's earnings from Employer, when annualized, exceed the applicable threshold in Cover Terms — {% field name="washington_earnings_threshold" /%} — as required by RCW 49.62.020(1)(b) and adjusted annually under RCW 49.62.040. Where Employee is an independent contractor, the higher threshold in RCW 49.62.030 applies, and a covenant between a performer and a performance space must not exceed three calendar days under RCW 49.62.030(2). Earnings are measured from the party seeking enforcement and annualized as of the earlier of the date enforcement is sought or the date of separation, as provided in RCW 49.62.010(1).
+**Earnings condition.** Each Non-Compete Covenant does not apply unless the completed eligibility determination indicates that Employee satisfies the applicable earnings condition. Where Employee is an independent contractor, the higher contractor earnings threshold applies in place of the employee threshold. A covenant between a performer and a performance space may not exceed three calendar days.
 
-**Disclosure or independent consideration.** Each Non-Compete Covenant is enforceable only if the disclosure-or-consideration timing conditions in the Timing, Consideration, and Right to Consult Counsel section are satisfied — written disclosure of the terms no later than the time of Employee's acceptance of the offer for an at-hire covenant (RCW 49.62.020(1)(a)(i)), or independent consideration for a covenant entered into after employment has commenced (RCW 49.62.020(1)(a)(ii)).
+**Disclosure or independent consideration.** Each Non-Compete Covenant does not apply unless the disclosure-or-consideration timing conditions in the Timing, Consideration, and Right to Consult Counsel section are satisfied — written disclosure of the terms no later than the time of Employee's acceptance of the offer for an at-hire covenant (RCW 49.62.020(1)(a)(i)), or independent consideration for a covenant entered into after employment has commenced (RCW 49.62.020(1)(a)(ii)).
 
-**Layoff garden-leave pay.** If Employee is terminated as the result of a layoff, each Non-Compete Covenant is enforceable only if its enforcement includes compensation equivalent to Employee's base salary at the time of termination for the period of enforcement, minus compensation earned through subsequent employment during the period of enforcement, as required by RCW 49.62.020(1)(c). Employer's election to enforce a Non-Compete Covenant against a laid-off Employee constitutes Employer's agreement to pay that compensation.
+**Layoff garden-leave pay.** If Employee is terminated as the result of a layoff, each Non-Compete Covenant does not apply unless its enforcement includes compensation equivalent to Employee's base salary at the time of termination for the period of enforcement, minus compensation earned through subsequent employment during the period of enforcement, as required under RCW 49.62.020(1)(c). Employer's election to enforce a Non-Compete Covenant against a laid-off Employee constitutes Employer's agreement to pay that compensation.
 
 **Eighteen-month duration.** The Restricted Period for each Non-Compete Covenant does not exceed eighteen months after termination of employment, as RCW 49.62.020(2) requires.
 
-**Second-job protection.** Notwithstanding any other provision of this agreement, no covenant in this agreement restricts, restrains, or prohibits an Employee earning less than twice the applicable Washington state minimum hourly wage from having an additional job, supplementing income by working for another employer, working as an independent contractor, or being self-employed, as required by RCW 49.62.070. Any exclusivity or outside-activities obligation is limited accordingly.
+**Second-job protection.** Notwithstanding any other provision of this agreement, no covenant in this agreement restricts, restrains, or prohibits an Employee earning less than twice the applicable Washington state minimum hourly wage from having an additional job, supplementing income by working for another employer, working as an independent contractor, or being self-employed, as required under RCW 49.62.070. Any exclusivity or outside-activities obligation is limited accordingly.
 
 **No out-of-state law or forum.** For a Washington-based Employee, no provision of this agreement requires adjudication of a noncompetition covenant outside Washington, deprives Employee of the protections or benefits of chapter 49.62 RCW, or applies choice-of-law principles or the substantive law of any jurisdiction other than Washington, each of which would be void and unenforceable under RCW 49.62.050.
 
-**June 30, 2027 ban.** On and after June 30, 2027, each Non-Compete Covenant is void and unenforceable under chapter 49.62 RCW, regardless of when the parties entered into it, and from that date this agreement does not authorize enforcing, attempting to enforce, or threatening to enforce a noncompetition covenant, or representing that Employee is subject to one. Nothing in this agreement restricts or delays any notice to affected workers that applicable law requires.
+**Non-Compete exclusion.** Nothing in this agreement restricts or delays any notice to affected workers that applicable law requires.
 {% /clause %}
 
 {% clause id="no-conflicting-obligations" %}
@@ -516,43 +536,37 @@ Employee represents that performing duties for Employer and complying with this 
 {% clause id="notice-to-future-employers-and-other-third-parties" %}
 ### Notice to Future Employers and Other Third Parties
 
-Before June 30, 2027, Employer may disclose the existence and terms of this agreement to a prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach this agreement, and Employee consents to that disclosure. On and after June 30, 2027, this clause does not authorize any representation that Employee is subject to a noncompetition covenant, which chapter 49.62 RCW prohibits.
+Employer may disclose only factual information about lawful confidentiality, trade-secret, return-of-property, and other obligations that remain enforceable. Employee consents to that disclosure.
 {% /clause %}
 
 {% clause id="tolling-during-breach" %}
 ### Tolling During Breach
 
-If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, so that the full duration of the restriction runs from the date the breach ends; provided that, for any Non-Compete Covenant, the extended Restricted Period does not in total exceed eighteen months after termination of employment, so that tolling does not carry the covenant past the RCW 49.62.020(2) eighteen-month cap.
+If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, so that the full duration of the restriction runs from the date the breach ends; provided that, for any Non-Compete Covenant, the extended Restricted Period does not in total exceed eighteen months after termination of employment.
 {% /clause %}
 
 {% clause id="remedies" %}
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law. Employee acknowledges that, under RCW 49.62.080(2), if a court or arbitrator determines that a noncompetition covenant violates chapter 49.62 RCW, and under RCW 49.62.080(3), if a court or arbitrator reforms, rewrites, modifies, or only partially enforces a noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of actual damages or a statutory penalty of $5,000, plus reasonable attorneys' fees, expenses, and costs.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law.
 {% /clause %}
 
 {% clause id="enforceability-and-severability" %}
 ### Enforceability and Severability
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable. The parties intend each restrictive covenant to be enforceable as written; this section is not a request for, and does not authorize reliance on, judicial reformation of any noncompetition covenant.
-{% /clause %}
-
-{% clause id="no-reliance-on-judicial-reformation" %}
-### No Reliance on Judicial Reformation
-
-The parties acknowledge that under RCW 49.62.080(3), whenever a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of actual damages or a $5,000 statutory penalty, plus reasonable attorneys' fees, expenses, and costs. Accordingly, each restrictive covenant in this agreement is drawn to the minimum scope, duration, and geography the Protected Interest requires and is intended to be enforced as written; neither party relies on judicial reformation to cure any overbreadth, and this agreement is not to be read as inviting a court to narrow an overbroad covenant.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable.
 {% /clause %}
 
 {% clause id="survival-and-expiration-of-each-covenant" %}
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms, subject to the Washington Statutory Conditions for Any Non-Compete section and the June 30, 2027 statutory expiry of any Non-Compete Covenant under chapter 49.62 RCW. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms, subject to the Washington Conditions for Any Non-Compete section. Any Non-Compete Covenant expires no later than June 30, 2027. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 {% /clause %}
 
 {% clause id="assignment-and-successors" %}
 ### Assignment and Successors
 
-Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. Because the earnings threshold in RCW 49.62.020(1)(b) is measured from the party seeking enforcement, an assignee seeking to enforce a Non-Compete Covenant must independently satisfy that threshold as to Employee. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
+Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. An assignee may enforce a Non-Compete Covenant only while the applicable earnings condition is satisfied. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
 {% /clause %}
 
 {% clause id="governing-law-venue-and-dispute-process" %}

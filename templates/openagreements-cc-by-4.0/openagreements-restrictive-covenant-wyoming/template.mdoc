@@ -3,26 +3,26 @@ template_id: openagreements-restrictive-covenant-wyoming
 name: Employee Restrictive Covenant (Wyoming)
 category: non-compete
 description: >-
-  Wyoming-specific employee restrictive covenant agreement with modular covenant structure
-  (non-compete, non-solicitation, non-dealing, non-investment, confidentiality, non-disparagement).
-  Incorporates Wyo. Stat. section 1-23-108 (SF 107, 2025) pathway gating for non-compete-adjacent
-  covenants. Drafted as a starting point for review by licensed counsel.
+  Wyoming-specific employee restrictive covenant agreement with modular covenant
+  structure (non-compete, non-solicitation, non-dealing, non-investment,
+  confidentiality, non-disparagement). Incorporates Wyo. Stat. section 1-23-108
+  (SF 107, 2025) pathway gating for non-compete-adjacent covenants. Drafted as a
+  starting point for review by licensed counsel.
 source_url: >-
   https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-wyoming
-version: "2.0"
+version: '2.0'
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: >-
-  Authored by OpenAgreements contributors. Wyoming-specific analysis informed by publicly available
-  legal commentary cited in the related practice note. Licensed under CC BY 4.0.
+  Authored by OpenAgreements contributors. Wyoming-specific analysis informed by
+  publicly available legal commentary cited in the related practice note.
+  Licensed under CC BY 4.0.
 layout_id: cover-standard-signature-v1
 style_id: openagreements-default-v1
 document:
   title: Employee Restrictive Covenant Agreement
   label: OpenAgreements Employee Restrictive Covenant (Wyoming)
-  version: "2.0"
+  version: '2.0'
   license: Free to use under CC BY 4.0
   include_cloud_doc_line: true
   defined_term_highlight_mode: definition_site_only
@@ -62,7 +62,7 @@ fields:
     type: string
     description: Employee job title or position (optional)
     display_label: Employee Title / Position
-    default: ""
+    default: ''
     section: Parties
   - name: effective_date
     type: date
@@ -78,8 +78,9 @@ fields:
   - name: worker_category
     type: enum
     description: >-
-      Employee role classification for Wyoming non-compete pathway and physician carve-out analysis.
-      AI-only field that drives memo warnings. Not shown in the output document.
+      Employee role classification for Wyoming non-compete pathway and physician
+      carve-out analysis. AI-only field that drives memo warnings. Not shown in
+      the output document.
     options:
       - Executive
       - Management
@@ -89,40 +90,46 @@ fields:
     default: Other
     rationale_source: editorial
     default_value_rationale: >-
-      Other is the conservative default when worker category cannot be determined from context. The
-      calling LLM may set this explicitly based on title, scope, and duties; absent that signal,
-      Other avoids asserting a statutory pathway that may not apply.
+      Other is the conservative default when worker category cannot be
+      determined from context. The calling LLM may set this explicitly based on
+      title, scope, and duties; absent that signal, Other avoids asserting a
+      statutory pathway that may not apply.
     section: AI Analysis
     ai_only: true
   - name: applicable_noncompete_exceptions
     type: string
     description: >-
-      Applicable statutory exception(s) that would permit an otherwise-prohibited
-      non-compete-adjacent covenant. AI-only field that drives memo warnings and conditional gating.
-      Not shown in the output document. Options: Executive or Management Personnel, Trade Secret
+      Applicable statutory exception(s) that would permit an
+      otherwise-prohibited non-compete-adjacent covenant. AI-only field that
+      drives memo warnings and conditional gating. Not shown in the output
+      document. Options: Executive or Management Personnel, Trade Secret
       Protection, Training Cost Recovery, Sale of Business, None.
     default: None
     rationale_source: legislation
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.wyoming.gate-non-compete-by-statutory-pathway
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.wyoming.gate-non-compete-by-statutory-pathway
     default_value_rationale: >-
-      None is the conservative default unless the drafter documents a permitted pathway. The
-      agreement should not assume an exception applies without facts supporting that pathway.
+      None is the conservative default unless the drafter documents a permitted
+      pathway. The agreement should not assume an exception applies without
+      facts supporting that pathway.
     section: AI Analysis
     ai_only: true
   - name: restrictive_covenant_entered_after_employment_started
     type: boolean
     description: >-
-      Whether the restrictive covenant is signed AFTER the employee already started working
-      (post-hire) vs at or before the first day of employment (at-hire). Wyoming case law requires
-      separate consideration beyond continued employment for post-hire restrictive covenants.
-      AI-only field that drives memo warnings and conditional drafting of the separate-consideration
-      recital. Not shown in the output document.
+      Whether the restrictive covenant is signed AFTER the employee already
+      started working (post-hire) vs at or before the first day of employment
+      (at-hire). Wyoming case law requires separate consideration beyond
+      continued employment for post-hire restrictive covenants. AI-only field
+      that drives memo warnings and conditional drafting of the
+      separate-consideration recital. Not shown in the output document.
     default: true
     rationale_source: editorial
     default_value_rationale: >-
-      Defaulting to post-hire (true) is the conservative posture: it triggers the
-      separate-consideration recital for post-hire restrictive covenants. If the covenant is
-      genuinely at-hire, the calling LLM should set this to false to suppress the recital.
+      Defaulting to post-hire (true) is the conservative posture: it triggers
+      the separate-consideration recital for post-hire restrictive covenants. If
+      the covenant is genuinely at-hire, the calling LLM should set this to
+      false to suppress the recital.
     section: AI Analysis
     ai_only: true
   - name: confidentiality_trade_secret_duration
@@ -136,14 +143,21 @@ fields:
     description: Duration of confidentiality obligations for non-trade-secret information
     display_label: Other Confidential Information Duration
     default: 24 months
-    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements.
+    default_value_rationale: >-
+      24 months is common for non-trade-secret confidentiality obligations in
+      employment agreements.
     section: Confidentiality
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee non-solicitation covenant is included
-    display_label: Employee Non-Solicitation Included
-    default: true
+    description: >-
+      Whether the employee no-hire / non-solicitation covenant is included.
+      Alabama's only category for restraints touching another party's workers is
+      the no-hire exception for workers in a position uniquely essential to the
+      management, organization, or service of the business.
+    display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
+    rationale_source: editorial
+    default: true
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee non-solicitation restriction
@@ -152,26 +166,33 @@ fields:
     rationale_source: benchmark
     benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     default_value_rationale: >-
-      24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed
-      employee agreements; 12 months is the common lighter alternative. Wyoming judges the covenant
-      on common-law reasonableness, so counsel should size the term to the employer's actual
+      24 months matches the modal employee non-solicit term observed in
+      benchmarked, publicly-filed employee agreements; 12 months is the common
+      lighter alternative. Wyoming judges the covenant on common-law
+      reasonableness, so counsel should size the term to the employer's actual
       protectable interest.
     section: Employee Non-Solicitation
   - name: covered_employee_period
     type: string
     description: >-
-      Lookback period for determining which employees are covered by the non-solicitation
-      restriction.
+      Lookback period for determining which employees are covered by the
+      non-solicitation restriction.
     display_label: Covered Employee Period
     default: 12 months
-    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+    default_value_rationale: >-
+      12 months is the most common lookback period for employee non-solicitation
+      scope.
     section: Employee Non-Solicitation
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the customer/partner non-solicitation covenant is included
+    description: >-
+      Whether the current-customer non-solicitation covenant is included.
+      Alabama gives this covenant its own category, limited to current
+      customers.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
+    rationale_source: editorial
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer/partner non-solicitation restriction
@@ -180,36 +201,41 @@ fields:
     rationale_source: benchmark
     benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     default_value_rationale: >-
-      12 months is the most common customer non-solicit term in benchmarked, publicly-filed
-      employee agreements, edging out 24 months by only a narrow margin — a conservative pick
-      counsel should size to the customer relationships actually protected.
+      12 months is the most common customer non-solicit term in benchmarked,
+      publicly-filed employee agreements, edging out 24 months by only a narrow
+      margin — a conservative pick counsel should size to the customer
+      relationships actually protected.
     section: Customer Non-Solicitation
   - name: covered_customer_period
     type: string
     description: >-
-      Lookback period for determining which customers are covered by the non-solicitation and
-      non-dealing restrictions.
+      Lookback period for determining which customers are covered by the
+      non-solicitation and non-dealing restrictions.
     display_label: Covered Customer Period
     default: 12 months
-    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
+    default_value_rationale: >-
+      12 months is the most common lookback period for customer non-solicitation
+      scope.
     section: Customer Non-Solicitation
   - name: noncompete_included
     type: boolean
     description: >-
-      Whether the non-competition covenant is included. Requires a lawful restriction pathway under
-      Wyoming non-compete law.
+      Whether the non-competition covenant is included. Requires a lawful
+      restriction pathway under Wyoming non-compete law.
     display_label: Non-Competition Included
     default: false
     rationale_source: legislation
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.wyoming.gate-non-compete-by-statutory-pathway
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.wyoming.gate-non-compete-by-statutory-pathway
     default_value_rationale: >-
-      Covered non-compete covenants are void unless a statutory exception applies: purchase and sale
-      of a business or business assets, protection of trade secrets, recovery of relocation,
-      education, and training expenses within the statute's tenure-based caps, or executive and
-      management personnel and officers / employees who constitute professional staff to executive
-      and management personnel. Physician practice restrictions are separately void, not a permitted
-      pathway. The drafter must include this covenant only after documenting the applicable pathway
-      in the agreement.
+      Covered non-compete covenants are void unless a statutory exception
+      applies: purchase and sale of a business or business assets, protection of
+      trade secrets, recovery of relocation, education, and training expenses
+      within the statute's tenure-based caps, or executive and management
+      personnel and officers / employees who constitute professional staff to
+      executive and management personnel. Physician practice restrictions are
+      separately void, not a permitted pathway. The drafter must include this
+      covenant only after documenting the applicable pathway in the agreement.
     section: Non-Competition
   - name: noncompete_duration
     type: string
@@ -219,11 +245,12 @@ fields:
     rationale_source: benchmark
     benchmark_ref: restrictive-covenant/non-compete-duration
     default_value_rationale: >-
-      12 months matches the modal non-compete term observed in benchmarked, publicly-filed
-      employee agreements — a common, conservative pick rather than a Wyoming ceiling (Wyoming
-      sets no fixed duration). Wyoming case law has rejected a broad 24-month non-compete, and no
-      Wyoming court has upheld a non-compete exceeding 24 months, so the 12-month pick also stays
-      well inside the range Wyoming courts have questioned.
+      12 months matches the modal non-compete term observed in benchmarked,
+      publicly-filed employee agreements — a common, conservative pick rather
+      than a Wyoming ceiling (Wyoming sets no fixed duration). Wyoming case law
+      has rejected a broad 24-month non-compete, and no Wyoming court has upheld
+      a non-compete exceeding 24 months, so the 12-month pick also stays well
+      inside the range Wyoming courts have questioned.
     section: Non-Competition
   - name: territory
     type: string
@@ -231,31 +258,36 @@ fields:
     display_label: Restricted Territory
     default: the geographic area in which Employee provided services
     default_value_rationale: >-
-      Tied to the employee's actual service area. Narrower scope improves enforceability under
-      Wyoming's strict scrutiny.
+      Tied to the employee's actual service area. Narrower scope improves
+      enforceability under Wyoming's strict scrutiny.
     section: Non-Competition
   - name: competitive_business_definition
     type: string
-    description: Description of the business activities that constitute competition with the employer.
+    description: >-
+      Description of the business activities that constitute competition with
+      the employer.
     display_label: Competitive Business
     section: Non-Competition
   - name: specified_competitors
     type: string
     description: >-
-      Optional named list of specific competitors. Narrowing the restriction to named competitors
-      strengthens enforceability.
+      Optional named list of specific competitors. Narrowing the restriction to
+      named competitors strengthens enforceability.
     display_label: Specified Competitors
-    default: ""
+    default: ''
     section: Non-Competition
   - name: nondealing_included
     type: boolean
     description: >-
-      Whether the no-business-with-covered-customers covenant is included. Requires a lawful
-      restriction pathway under Wyoming non-compete law.
+      Whether the no-business-with-covered-customers covenant is included. A
+      non-dealing covenant has no named Alabama category of its own, so it must
+      be drafted to fit inside the current-customer non-solicit exception or it
+      is exposed to Alabama's void rule for restraints outside the listed
+      categories.
     display_label: No Business with Covered Customers Included
     default: false
-    rationale_source: editorial
     section: No Business with Covered Customers
+    rationale_source: editorial
   - name: nondealing_duration
     type: string
     description: Duration of the no-business-with-covered-customers restriction
@@ -265,27 +297,29 @@ fields:
   - name: passive_public_holdings_threshold
     type: string
     description: >-
-      Maximum ownership percentage of publicly traded securities permitted under the Passive Public
-      Holdings carveout.
+      Maximum ownership percentage of publicly traded securities permitted under
+      the Passive Public Holdings carveout.
     display_label: Passive Public Holdings Threshold
     default: five percent
     rationale_source: benchmark
     benchmark_ref: restrictive-covenant/passive-ownership-carveout
     default_value_rationale: >-
       Five percent of any class of publicly traded securities is the modal
-      passive-investment carve-out threshold observed in benchmarked, publicly-filed
-      employee agreements that include the carve-out (lower 1-3 percent thresholds are
-      the common tighter alternatives).
+      passive-investment carve-out threshold observed in benchmarked,
+      publicly-filed employee agreements that include the carve-out (lower 1-3
+      percent thresholds are the common tighter alternatives).
     section: Definitions
   - name: noninvestment_included
     type: boolean
     description: >-
-      Whether the non-investment covenant is included. Requires a lawful restriction pathway under
-      Wyoming non-compete law.
+      Whether the non-investment covenant is included. A non-investment covenant
+      has no named Alabama category; one genuine use is restraining a licensed
+      professional's business conduct outside the practice of the profession,
+      which sits outside Alabama's professional exemption.
     display_label: Non-Investment Included
     default: false
-    rationale_source: editorial
     section: Non-Investment
+    rationale_source: editorial
   - name: noninvestment_duration
     type: string
     description: Duration of non-investment restriction
@@ -308,15 +342,25 @@ fields:
   - name: cloud_drive_id_footer
     type: string
     description: Internal computed footer text for document-system traceability
-    default: ""
+    default: ''
     section: Document Management
     ai_only: true
+  - name: worker_is_physician
+    type: boolean
+    description: >-
+      Whether Employee is a physician. Set this explicitly from Employee's
+      licensed role to include physician-specific terms. For Indiana, the
+      applicable provisions vary by execution date and employer type, and may
+      require a release buyout term or exclude the non-compete entirely.
+    display_label: Employee Is a Physician
+    section: Physician
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template
 ---
-
-
 # Employee Restrictive Covenant Agreement
 
 {% agreement-section type="cover_terms" %}
@@ -367,7 +411,7 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {% field name="passive_public_holdings_threshold" /%} of any class of such company’s securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means Employer's legitimate business interests in its Confidential Information, customer and business-partner relationships, workforce stability, and goodwill.
+[[Protected Interests]] means Employer's Protected Interests in its Confidential Information, customer and business-partner relationships, workforce stability, and goodwill.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -375,19 +419,19 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Solicit]] means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] has the meaning given in Wyo. Stat. § 6-3-501(a)(xi).
+[[Trade Secrets]] means information that qualifies as a trade secret under applicable law.
 
 {% /clause %}
 {% clause id="timing-and-employee-acknowledgements" %}
 ### Timing and Employee Acknowledgements
 
-Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
+Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 {% /clause %}
 {% clause id="confidential-information-and-trade-secret-protection" %}
 ### Confidential Information and Trade Secret Protection
 
-Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue in perpetuity. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms. Trade secrets are protected under Wyoming law, including Wyo. Stat. § 6-3-501(a)(xi).
+Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue for the Trade Secrets Duration specified in Cover Terms, to the extent the information remains a trade secret. Employee's obligations regarding other Confidential Information continue for the Other Confidential Information Duration specified in Cover Terms.
 
 {% /clause %}
 {% clause id="permitted-disclosures-and-protected-conduct" %}
@@ -411,25 +455,25 @@ During the Restricted Period, Employee must not Solicit, recruit, hire, or attem
 {% clause id="non-solicitation-of-customers-vendors-referral-sources-and-business-partners" include-when="customer_nonsolicit_included" %}
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. Practitioner sources flag uncertainty about whether Wyo. Stat. § 1-23-108 could reach certain non-solicitation provisions depending on how they function.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant does not prohibit Employee from accepting or servicing business from a Covered Customer who initiates contact without solicitation by Employee.
 
 {% /clause %}
 {% clause id="no-business-with-covered-customers" include-when="nondealing_included" %}
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee. If the Cover Terms indicate that this restriction applies, it requires a lawful restriction pathway under Wyo. Stat. § 1-23-108.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of who initiates contact, subject to applicable law.
 
 {% /clause %}
 {% clause id="non-competition" include-when="noncompete_included" %}
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is included only because the restriction pathway specified by Employer supports its enforceability under Wyo. Stat. § 1-23-108. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory, subject to applicable law. Passive Public Holdings are permitted.
 
 {% /clause %}
 {% clause id="non-investment" include-when="noninvestment_included" %}
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive Public Holdings are permitted. This covenant requires a lawful restriction pathway under Wyo. Stat. § 1-23-108.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business, subject to applicable law. Passive Public Holdings are permitted.
 
 {% /clause %}
 {% clause id="non-disparagement" %}
@@ -438,10 +482,10 @@ During the Restricted Period, Employee must not acquire or hold any active owner
 During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law.
 
 {% /clause %}
-{% clause id="physician-specific-rights-and-notices" %}
+{% clause id="physician-specific-rights-and-notices" include-when="worker_is_physician" %}
 ### Physician-Specific Rights and Notices
 
-If Employee is a physician, then notwithstanding any other provision of this agreement, Wyo. Stat. § 1-23-108(b) preserves other enforceable provisions of this agreement even if a non-compete provision is void. A physician Employee with patients diagnosed with rare disorders (as defined by the National Organization for Rare Disorders) may notify those patients of their new practice location without liability under this agreement.
+If Employee is a physician, Employee may notify patients diagnosed with rare disorders of Employee's new practice location without liability under this agreement.
 
 {% /clause %}
 {% clause id="no-conflicting-obligations" %}
@@ -477,7 +521,7 @@ If any provision of this agreement is found to be unenforceable, the remaining p
 {% clause id="survival-and-expiration-of-each-covenant" %}
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive for the Trade Secrets Duration specified in Cover Terms to the extent they relate to trade secrets, and for the Other Confidential Information Duration specified in Cover Terms for other Confidential Information. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 {% /clause %}
 {% clause id="assignment-and-successors" %}
@@ -489,7 +533,7 @@ Employee may not assign this agreement or any rights or obligations under it. Em
 {% clause id="governing-law-venue-and-dispute-process" %}
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms, including Wyo. Stat. § 1-23-108 for contracts entered into on or after July 1, 2025. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
+This agreement is governed by the law listed in Cover Terms. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
 
 {% /clause %}
 {% clause id="entire-agreement-amendment-waiver-and-electronic-signatures" %}

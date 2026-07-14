@@ -3,28 +3,26 @@ template_id: openagreements-restrictive-covenant-new-york
 name: Employee Restrictive Covenant (New York)
 category: non-compete
 description: >-
-  New York-specific employee restrictive covenant agreement built for New
-  York's common-law reasonableness regime: there is no general New York
-  non-compete statute, so every post-employment restraint stands or falls on
-  the three-pronged common-law reasonableness test, and a single failed prong
+  New York-specific employee restrictive covenant agreement built for New York's
+  common-law reasonableness regime: there is no general New York non-compete
+  statute, so every post-employment restraint stands or falls on the
+  three-pronged common-law reasonableness test, and a single failed prong
   invalidates the covenant. It provides confidentiality and trade-secret
   protection, a continued-employment consideration recital, customer and
-  employee non-solicitation with the customer non-solicit narrowed to
-  customers the employee actually served, an optional non-compete tied to New
-  York's short list of recognized protectable interests, a broadcast-employee
-  exclusion under N.Y. Labor Law § 202-k, a sale-of-business covenant aligned
-  with New York's implied goodwill covenant, a governing-law clause drafted
-  against New York's public-policy limit on foreign choice-of-law, and a
-  drafting posture that sizes each covenant to the protectable interest rather
-  than relying on discretionary partial enforcement. Drafted as a starting
-  point for licensed counsel review.
+  employee non-solicitation with the customer non-solicit narrowed to customers
+  the employee actually served, an optional non-compete tied to New York's short
+  list of recognized protectable interests, a broadcast-employee exclusion under
+  N.Y. Labor Law § 202-k, a sale-of-business covenant aligned with New York's
+  implied goodwill covenant, a governing-law clause drafted against New York's
+  public-policy limit on foreign choice-of-law, and a drafting posture that
+  sizes each covenant to the protectable interest rather than relying on
+  discretionary partial enforcement. Drafted as a starting point for licensed
+  counsel review.
 source_url: >-
   https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-new-york
 version: 0.1.0
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: >-
   Authored by OpenAgreements contributors. New York-specific analysis informed
   by the quote-verified New York practice note. Licensed under CC BY 4.0.
@@ -105,10 +103,15 @@ fields:
       material avoids the appearance of overreach.
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee non-solicitation covenant is included
-    display_label: Employee Non-Solicitation Included
-    default: true
+    description: >-
+      Whether the employee no-hire / non-solicitation covenant is included.
+      Alabama's only category for restraints touching another party's workers is
+      the no-hire exception for workers in a position uniquely essential to the
+      management, organization, or service of the business.
+    display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
+    rationale_source: editorial
+    default: true
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee non-solicitation restriction
@@ -118,12 +121,13 @@ fields:
     benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: >-
-      New York sets no statutory cap on duration; enforceability turns on the holistic BDO Seidman
-      reasonableness test rather than a fixed number, and New York treats employee non-recruitment
-      clauses as inherently more reasonable and less restrictive than non-competes. 24 months
-      matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee
-      agreements; 12 months is the common lighter alternative, sized to the employer's actual
-      protectable interest.
+      New York sets no statutory cap on duration; enforceability turns on the
+      holistic BDO Seidman reasonableness test rather than a fixed number, and
+      New York treats employee non-recruitment clauses as inherently more
+      reasonable and less restrictive than non-competes. 24 months matches the
+      modal employee non-solicit term observed in benchmarked, publicly-filed
+      employee agreements; 12 months is the common lighter alternative, sized to
+      the employer's actual protectable interest.
   - name: covered_employee_period
     type: string
     description: >-
@@ -137,10 +141,14 @@ fields:
       scope.
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the customer/partner non-solicitation covenant is included
+    description: >-
+      Whether the current-customer non-solicitation covenant is included.
+      Alabama gives this covenant its own category, limited to current
+      customers.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
+    rationale_source: editorial
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer/partner non-solicitation restriction
@@ -154,8 +162,8 @@ fields:
       publicly-filed employee agreements, edging out 24 months by only a narrow
       margin. New York sets no statutory cap; a customer non-solicit maps
       directly onto the client-goodwill interest BDO Seidman recognizes and is
-      often the better instrument than a full non-compete, so counsel should size
-      the term to the actual customer relationships protected.
+      often the better instrument than a full non-compete, so counsel should
+      size the term to the actual customer relationships protected.
   - name: covered_customer_period
     type: string
     description: >-
@@ -168,7 +176,8 @@ fields:
       12 months is the most common lookback period for customer non-solicitation
       scope. Under Brown & Brown, the class must reach only customers the
       employee actually developed or serviced, so the lookback pairs with a
-      material-contact limit rather than sweeping in the entire book of business.
+      material-contact limit rather than sweeping in the entire book of
+      business.
   - name: noncompete_included
     type: boolean
     description: >-
@@ -185,12 +194,12 @@ fields:
     default_value_rationale: >-
       Conservative default. The non-compete is the most heavily scrutinized
       covenant under New York's reasonableness test, and any single failed prong
-      invalidates it; a customer non-solicit tied to serviced relationships often
-      protects the employer as well. Include only after confirming a recognized
-      New York interest (trade secrets, confidential customer information, unique
-      or extraordinary services, or client goodwill) and sizing the duration and
-      territory to the actual footprint. Do not impose a post-employment
-      non-compete on a broadcast employee.
+      invalidates it; a customer non-solicit tied to serviced relationships
+      often protects the employer as well. Include only after confirming a
+      recognized New York interest (trade secrets, confidential customer
+      information, unique or extraordinary services, or client goodwill) and
+      sizing the duration and territory to the actual footprint. Do not impose a
+      post-employment non-compete on a broadcast employee.
   - name: noncompete_duration
     type: string
     description: Duration of non-competition restriction
@@ -216,11 +225,12 @@ fields:
     section: Non-Competition
     default_value_rationale: >-
       Tied to the employee's actual service area. New York imposes no statutory
-      cap on territory, but geographic scope is one of the express reasonableness
-      factors; an area genuinely needed to protect customer relationships or
-      confidential information is far easier to defend under BDO Seidman than an
-      everywhere-we-operate territory, which invites a finding of overbreadth a
-      New York court has discretion to leave unrepaired.
+      cap on territory, but geographic scope is one of the express
+      reasonableness factors; an area genuinely needed to protect customer
+      relationships or confidential information is far easier to defend under
+      BDO Seidman than an everywhere-we-operate territory, which invites a
+      finding of overbreadth a New York court has discretion to leave
+      unrepaired.
   - name: competitive_business_definition
     type: string
     description: >-
@@ -241,10 +251,16 @@ fields:
     section: Non-Competition
   - name: nondealing_included
     type: boolean
-    description: Whether the no-business-with-covered-customers covenant is included.
+    description: >-
+      Whether the no-business-with-covered-customers covenant is included. A
+      non-dealing covenant has no named Alabama category of its own, so it must
+      be drafted to fit inside the current-customer non-solicit exception or it
+      is exposed to Alabama's void rule for restraints outside the listed
+      categories.
     display_label: No Business with Covered Customers Included
     default: false
     section: No Business with Covered Customers
+    rationale_source: editorial
   - name: nondealing_duration
     type: string
     description: Duration of the no-business-with-covered-customers restriction
@@ -263,17 +279,22 @@ fields:
     section: Definitions
     default_value_rationale: >-
       Five percent of any class of publicly traded securities is the modal
-      passive-investment carve-out threshold observed in benchmarked, publicly-filed
-      employee agreements that include the carve-out (lower 1-3 percent thresholds are
-      the common tighter alternatives). A carve-out below a stated threshold keeps a
-      passive index-fund holding from adding hardship on the undue-hardship prong
-      without protecting any recognized interest.
+      passive-investment carve-out threshold observed in benchmarked,
+      publicly-filed employee agreements that include the carve-out (lower 1-3
+      percent thresholds are the common tighter alternatives). A carve-out below
+      a stated threshold keeps a passive index-fund holding from adding hardship
+      on the undue-hardship prong without protecting any recognized interest.
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included.
+    description: >-
+      Whether the non-investment covenant is included. A non-investment covenant
+      has no named Alabama category; one genuine use is restraining a licensed
+      professional's business conduct outside the practice of the profession,
+      which sits outside Alabama's professional exemption.
     display_label: Non-Investment Included
     default: false
     section: Non-Investment
+    rationale_source: editorial
   - name: noninvestment_duration
     type: string
     description: Duration of non-investment restriction
@@ -287,9 +308,21 @@ fields:
     default: 24 months
     section: Non-Disparagement
     default_value_rationale: 24 months is common for employment non-disparagement provisions.
+  - name: worker_is_physician
+    type: boolean
+    description: >-
+      Whether Employee is a physician. Set this explicitly from Employee's
+      licensed role to include physician-specific terms. For Indiana, the
+      applicable provisions vary by execution date and employer type, and may
+      require a release buyout term or exclude the non-compete entirely.
+    display_label: Employee Is a Physician
+    section: Physician
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template
 ---
 # Employee Restrictive Covenant Agreement
 
@@ -341,7 +374,7 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {% field name="passive_public_holdings_threshold" /%} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means Employer's legitimate business interests in protection against misappropriation of Employer's trade secrets or confidential customer information, protection from competition by a former employee whose services to Employer were unique or extraordinary, and protection of client goodwill created and maintained at Employer's expense.
+[[Protected Interests]] means Employer's Protected Interests in protection against misappropriation of Employer's trade secrets or confidential customer information, protection from competition by a former employee whose services to Employer were unique or extraordinary, and protection of client goodwill created and maintained at Employer's expense.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -355,7 +388,7 @@ The terms below are incorporated into and form part of this agreement.
 {% clause id="recitals-and-legitimate-business-interest" %}
 ### Recitals and Protectable Interests
 
-Employee will receive access to Employer's Trade Secrets and other Confidential Information and will develop customer relationships and goodwill on Employer's behalf. Employer and Employee acknowledge that each restrictive covenant in this agreement is included to protect one or more of Employer's Protected Interests and not to restrain ordinary competition. The parties agree that each covenant is no greater than is required for the protection of those Protected Interests, does not impose undue hardship on Employee, is not injurious to the public, and is reasonable in time period and geographic scope, and the parties intend each covenant to be enforceable as written.
+Employee will receive access to Employer's Trade Secrets and other Confidential Information and will develop customer relationships and goodwill on Employer's behalf. Employer and Employee acknowledge that the restrictive covenants in this agreement protect those interests.
 {% /clause %}
 
 {% clause id="timing-and-employee-acknowledgements" %}
@@ -403,7 +436,7 @@ During the Restricted Period, Employee must not accept, service, or do business 
 {% clause id="non-competition" include-when="noncompete_included" %}
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is included to protect Employer's Protected Interests and not to restrain ordinary competition, and the parties intend it to be no greater than is required for that protection, to impose no undue hardship on Employee, to cause no injury to the public, and to be reasonable in time period and geographic scope, with its duration and territory sized to Employee's actual role and Employer's actual market. Where Cover Terms list Specified Competitors, this covenant is limited to those named competitors and their affiliates. This covenant is subject to the Broadcast Employee Exclusion section. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. Where Cover Terms list Specified Competitors, this covenant is limited to those named competitors and their affiliates. This covenant is subject to the Broadcast Employee Exclusion section. Passive Public Holdings are permitted.
 {% /clause %}
 
 {% clause id="non-investment" include-when="noninvestment_included" %}
@@ -418,16 +451,16 @@ During the Restricted Period, Employee must not acquire or hold any active owner
 During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law, including rights protected under Section 7 of the National Labor Relations Act (29 U.S.C. § 157).
 {% /clause %}
 
-{% clause id="physician-specific-rights-and-notices" %}
+{% clause id="physician-specific-rights-and-notices" include-when="worker_is_physician" %}
 ### Physician and Health Care Practitioner Covenants
 
-If Employee is a physician or other health care practitioner, each covenant in this agreement that restrains Employee's practice is limited to a narrow geographic radius and a short duration, and is intended to preserve patient access to care.
+If Employee is a physician or other health care practitioner, no covenant prohibits Employee from continuing care for an existing patient or complying with applicable patient-notification and access requirements.
 {% /clause %}
 
 {% clause id="broadcast-employee-exclusion" %}
 ### Broadcast Employee Exclusion
 
-If Employee is a broadcast employee of a broadcasting-industry employer within the meaning of N.Y. Labor Law § 202-k, this agreement does not impose, and no provision of this agreement may be enforced as, a post-employment restriction on Employee obtaining employment in any geographic area, for any period of time, or with any employer or in any industry. This exclusion applies only after Employee's employment concludes; it does not affect any covenant that operates during the term of Employee's employment.
+If Employee is a broadcast employee of a broadcasting-industry employer, this agreement does not impose, and no provision of this agreement may be enforced as, a post-employment restriction on Employee obtaining employment in any geographic area, for any period of time, or with any employer or in any industry. This exclusion applies only after Employee's employment concludes; it does not affect any covenant that operates during the term of Employee's employment.
 {% /clause %}
 
 {% clause id="sale-of-business-goodwill-covenant" %}
@@ -463,7 +496,7 @@ Employee acknowledges that a breach of this agreement may cause Employer irrepar
 {% clause id="draft-to-reasonable-scope-and-severability" %}
 ### Reasonable Scope and Severability
 
-Each restrictive covenant in this agreement is drawn as a reasonable restraint sized to Employer's Protected Interests from the start and is intended to be enforceable as written rather than in reliance on judicial revision. If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect, and each restrictive covenant is intended to be independently enforceable, so that a court's refusal to enforce one covenant does not affect the others.
+If any provision of this agreement is found to be unenforceable, it is severed and the remaining provisions remain in effect.
 {% /clause %}
 
 {% clause id="survival-and-expiration-of-each-covenant" %}

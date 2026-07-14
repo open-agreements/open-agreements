@@ -6,8 +6,6 @@ The undersigned stockholders of {company_name}, a Delaware corporation (the "Com
 
 **WHEREAS**, after careful consideration, the undersigned stockholders have determined that the terms and conditions of the SAFE Financing are just and equitable and fair as to the Company and that it is in the best interests of the Company and the stockholders of the Company to enter into the SAFE Financing subject to the terms and conditions set forth in each SAFE.
 
-*Note: The following resolutions do not cover all matters that may need to be addressed in connection with the SAFE financing. For example, if the Company is concurrently amending its certificate of incorporation, converting outstanding convertible notes, or granting pro rata or information rights pursuant to a side letter, additional resolutions will be needed. Always consult with counsel prior to using this consent.*
-
 ## Resolutions
 
 ### Approval of SAFE Financing
@@ -26,7 +24,7 @@ The undersigned stockholders of {company_name}, a Delaware corporation (the "Com
 
 This Action by Written Consent shall be filed with the minutes of the proceedings of the Company's stockholders.
 
-The undersigned have executed this Action by Written Consent as of the date set forth under his or her name below. Any copy, facsimile, .PDF or other reliable reproduction of this Action by Written Consent may be substituted or used in lieu of the original writing for any and all purposes for which the original writing could be used, provided that such copy, facsimile, .PDF or other reproduction be a complete reproduction of the entire original writing.
+The undersigned have executed this Action by Written Consent as of the date set forth under his or her name below. Any copy, facsimile,.PDF or other reliable reproduction of this Action by Written Consent may be substituted or used in lieu of the original writing for any and all purposes for which the original writing could be used, provided that such copy, facsimile,.PDF or other reproduction be a complete reproduction of the entire original writing.
 
 Signature: _______________
 

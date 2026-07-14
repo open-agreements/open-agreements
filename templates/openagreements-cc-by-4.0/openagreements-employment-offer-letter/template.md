@@ -44,11 +44,11 @@ Offer Expiration Date
 
 ### Position, Scope, and Reporting
 
-If Employee accepts this offer, Employee will join Company in the position listed in Cover Terms and will report to the manager or function listed in Cover Terms, with duties and responsibilities that are reasonably aligned to the role and business needs. Company may modify Employee's position, duties, and reporting relationship from time to time as business needs change.
+If Employee accepts this offer, Employee will join Company in the position listed in Cover Terms and will report to the manager or function listed in Cover Terms, with duties and responsibilities that are reasonably aligned to the role and business needs. Company may modify Employee's position, duties, reporting relationship, and other employment terms from time to time as business needs change.
 
 ### Employment Type and Work Schedule
 
-Employee will be employed on the employment basis listed in Cover Terms. Company may establish reasonable scheduling, attendance, and collaboration expectations for the role, including core hours and team coordination standards.
+Employee will be employed on the employment basis listed in Cover Terms. Company may establish reasonable scheduling, attendance, and collaboration expectations for the role, including core hours and team coordination standards. If Employee works overtime and is legally eligible for overtime pay, Company will provide overtime pay in accordance with applicable law.
 
 ### Start Date and Onboarding Conditions
 
@@ -56,23 +56,23 @@ Employment is expected to begin on the start date listed in Cover Terms, subject
 
 ### Base Compensation and Payroll
 
-Company will pay the base salary or hourly compensation listed in Cover Terms in accordance with Company payroll practices and applicable law, subject to required withholdings, deductions, and payroll tax obligations.
+Company will pay the base salary or hourly compensation listed in Cover Terms in accordance with Company's regular payroll practices, subject to required withholdings, deductions, and payroll tax obligations.
 
 ### Bonus Opportunity
 
-If bonus terms are listed in Cover Terms, those terms describe potential bonus eligibility. Bonus programs, metrics, and payout timing are administered under applicable Company plans and may depend on individual, team, and Company performance criteria.
+The bonus terms listed in Cover Terms describe potential bonus eligibility. Bonus programs, metrics, and payout timing are administered under applicable Company plans and may depend on individual, team, and Company performance criteria.
 
 ### Equity Opportunity
 
-If equity terms are listed in Cover Terms, any grant remains subject to board or committee approval, applicable equity plan documents, and separate award documentation. Vesting, exercise, and expiration terms are governed by those plan and award documents.
+Any equity grant listed in Cover Terms remains subject to board or committee approval, applicable equity plan documents, and separate award documentation. Vesting, exercise, and expiration terms are governed by those plan and award documents and any vesting summary listed in Cover Terms.
 
 ### Benefits and Time-Off Programs
 
-Employee may be eligible to participate in benefit and paid-time-off programs made available to similarly situated employees, in each case subject to plan terms, enrollment requirements, and Company policy updates permitted by law.
+Employee may be eligible to participate in benefit and paid-time-off programs made available to similarly situated employees, in each case subject to plan terms, enrollment requirements, and Company policy updates permitted by law. Company will provide legally required benefits and leave, such as paid sick leave, workers' compensation coverage, or similar statutory benefits, to the extent applicable.
 
 ### California-Specific Terms
 
-This section applies to Employee if Employee primarily works in California. Employee will accrue or be provided paid sick leave and will be covered by workers' compensation insurance as required by California law. Employee's wages, hours, meal and rest periods, and other working conditions are governed by the California Labor Code and applicable Industrial Welfare Commission wage orders. Nothing in this offer letter waives any right Employee has under California law.
+This section applies to Employee if Employee primarily works in California. Employee will accrue or be provided paid sick leave and will be covered by workers' compensation insurance as California law requires. Employee's wages, hours, meal and rest periods, wage statements, final pay, and other working conditions are governed by the California Labor Code and applicable Industrial Welfare Commission wage orders. Nothing in this offer letter waives any right Employee has by California law.
 
 ### Work Location and Business Travel
 
@@ -82,17 +82,21 @@ Employee will primarily work from the location listed in Cover Terms. Company ma
 
 As a condition of employment, Employee must comply with Company written policies, security requirements, confidentiality obligations, and lawful workplace rules, including policies covering information handling, code and device access, and return of Company property.
 
+### Outside Activities and Conflicts
+
+During employment, Employee will not engage in outside employment, consulting, business activity, or other work that materially interferes with Employee's duties to Company, misuses Company time or resources, or creates an actual conflict of interest with Company. This clause does not restrict legally protected activity, passive personal investments, or lawful off-duty conduct that does not create a material conflict with Employee's duties.
+
 ### Prior Obligations and Third-Party Information
 
 Employee represents that Employee is not subject to any agreement or obligation that would conflict with this offer or with Employee's duties for Company. Employee will not use or disclose, or bring onto Company premises or systems, any confidential information, trade secrets, or materials belonging to a former employer or other third party, and will not improperly use any such information in performing services for Company.
 
 ### At-Will Employment Relationship
 
-Unless otherwise required by law or a separate written agreement signed by an authorized Company representative, employment is at-will. This means either Employee or Company may end employment at any time, with or without advance notice, and with or without cause.
+Unless otherwise required by law or a separate written agreement signed by an authorized Company officer or other authorized representative, the at-will employment relationship may not be modified by oral statements, policies, or past practices. Employment is at-will. This means either Employee or Company may end employment at any time, with or without advance notice, and with or without cause.
 
 ### Governing Law
 
-This offer letter and any dispute regarding its interpretation are governed by the law listed in Cover Terms, without applying conflicts-of-law principles to the extent not required by applicable law.
+This offer letter and any dispute regarding its interpretation are governed by the law listed in Cover Terms, without applying conflicts-of-law principles to the extent not required by applicable law and without limiting non-waivable employment laws that apply to Employee.
 
 ### Entire Agreement
 
@@ -101,6 +105,10 @@ This offer letter, together with the documents it references, is the entire agre
 ### Severability
 
 If any provision of this offer letter is held invalid or unenforceable, that provision will be modified to the minimum extent necessary to make it enforceable or, if it cannot be modified, severed, and the remaining provisions will continue in full force and effect.
+
+### Assignment
+
+Employee may not assign this offer letter or any employment rights or obligations under it. Company may assign this offer letter to a successor or affiliate in connection with a merger, reorganization, sale of assets, or other business transfer, subject to applicable law.
 
 ### Electronic Signature and Counterparts
 

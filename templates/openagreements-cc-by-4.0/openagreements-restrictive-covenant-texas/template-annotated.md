@@ -84,7 +84,7 @@ Duration
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than five percent of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means the business interests the Texas Covenants Not to Compete Act permits a covenant to protect under Tex. Bus. & Com. Code § 15.50(a), including Employer's goodwill, Employer's Confidential Information, and Employer's trade secrets.
+[[Protected Interests]] means Employer's goodwill, Confidential Information, Trade Secrets, and customer relationships.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -92,19 +92,19 @@ Duration
 
 [[Solicit]] means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] has the meaning given in the Texas Uniform Trade Secrets Act, Tex. Civ. Prac. & Rem. Code § 134A.002(6).
+[[Trade Secrets]] means information qualifying as a trade secret under applicable law.
 
 ### Recitals, Consideration, and Ancillary Agreement
 
-Employer and Employee acknowledge that the restrictive covenants in this agreement are ancillary to and part of an otherwise enforceable agreement between them at the time this agreement is made, as required by Tex. Bus. & Com. Code § 15.50(a). As consideration, Employer agrees to provide, and during employment will provide, Employee with Confidential Information, specialized training, and access to Employer's goodwill and customer relationships; that consideration is reasonably related to Employer's interest in protecting its goodwill and other business interests worthy of protection. Because the employment relationship may be at will, the parties intend that these covenants become enforceable when Employer performs that promise by providing the Confidential Information, training, or other consideration described above, and Employee acknowledges that Employer's promise to provide Confidential Information gives rise to Employer's interest in restraining its disclosure or use. The restraints in this agreement contain limitations as to time, geographical area, and scope of activity to be restrained that are reasonable and do not impose a greater restraint than necessary to protect Employer's goodwill or other business interest, as required by Tex. Bus. & Com. Code § 15.50(a).
+In exchange for Employee's covenants in this agreement, Employer agrees to provide Employee with Confidential Information, specialized training, and access to Employer's goodwill and customer relationships. Employee acknowledges that the covenants protect Employer's Protected Interests.
 
 ### Timing and Employee Acknowledgements
 
-Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
+Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
-Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue in perpetuity. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms. Trade secrets are protected under Texas law, including the Texas Uniform Trade Secrets Act, Tex. Civ. Prac. & Rem. Code §§ 134A.001–134A.008. This confidentiality obligation does not restrict Employee's use of the general knowledge, skill, and experience Employee acquired during employment, consistent with the Texas Uniform Trade Secrets Act, Tex. Civ. Prac. & Rem. Code § 134A.003, and is not intended to operate as a covenant not to compete.
+Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue for the Trade Secrets Duration specified in Cover Terms, to the extent the information remains a trade secret. Employee's obligations regarding other Confidential Information continue for the Other Confidential Information Duration specified in Cover Terms. This confidentiality obligation does not restrict Employee's use of the general knowledge, skill, and experience Employee acquired during employment.
 
 ### Permitted Disclosures and Protected Conduct
 
@@ -120,19 +120,19 @@ During the Restricted Period, Employee must not Solicit, recruit, hire, or attem
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. Texas courts analyze this customer non-solicitation covenant under the Covenants Not to Compete Act's reasonableness test (Tex. Bus. & Com. Code § 15.50(a)); it reaches only Covered Customers with whom Employee had material contact and is no broader than necessary to protect Employer's goodwill.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. it reaches only Covered Customers with whom Employee had material contact and is limited to the scope needed to protect Employer's goodwill.
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee. This covenant is analyzed under the Covenants Not to Compete Act's reasonableness test (Tex. Bus. & Com. Code § 15.50(a)) and reaches only Covered Customers with whom Employee had material contact, no broader than necessary to protect Employer's goodwill.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact.
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant contains limitations as to time, geographic area, and scope of activity to be restrained that are reasonable and impose no greater restraint than necessary to protect Employer's goodwill and other Protected Interests, as required by Tex. Bus. & Com. Code § 15.50(a). Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. Passive Public Holdings are permitted.
 
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. Passive Public Holdings are permitted.
 
 ### Non-Disparagement
 
@@ -140,7 +140,7 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 
 ### Physician and Health Care Practitioner Covenants
 
-If Employee is a physician licensed by the Texas Medical Board and this agreement contains a covenant not to compete relating to the practice of medicine, then, as required by Tex. Bus. & Com. Code § 15.50(b): the covenant does not deny Employee access to a list of patients whom Employee has seen or treated within one year before termination; Employee is entitled, on reasonable terms, to access and copies of the medical records of those patients on the patient's authorization; the covenant provides for continuity of care during an acute illness even after the contract or employment terminates; and the covenant provides for a buyout of the covenant by Employee at a reasonable price or, at Employee's election, at a price determined by a mutually agreed arbitrator, in an amount not greater than Employee's total annual salary and wages at the time of termination (§ 15.50(b)(2)). The covenant expires no later than one year after termination, is limited to a radius of no more than five miles from the location where Employee primarily practiced, and is stated clearly and conspicuously in writing (§ 15.50(b)(4)). The practice of medicine does not include managing or directing medical services in a purely administrative capacity (§ 15.50(b-1)), and § 15.50(b) does not apply to Employee's ownership interest in a licensed hospital or licensed ambulatory surgical center (§ 15.50(c)). For an agreement entered into on or after September 1, 2025, the covenant is void and unenforceable if Employee is involuntarily discharged from contract or employment without good cause — meaning a reasonable basis for discharge that is directly related to Employee's conduct, job performance, or contract or employment record (§ 15.50(d)). If Employee is a licensed dentist, a person licensed in professional or vocational nursing, or a licensed physician assistant, then, for an agreement entered into on or after September 1, 2025, any covenant not to compete relating to that practice must provide the same salary-capped buyout, must expire no later than one year after termination, must be limited to a radius of no more than five miles from the location where Employee primarily practiced, and must be stated clearly and conspicuously in writing (§ 15.501).
+If Employee practices medicine and this agreement contains a covenant not to compete relating to that practice, Employer will provide Employee access to a list of patients whom Employee saw or treated within one year before termination and, on reasonable terms and with patient authorization, access to and copies of those patients' medical records. Employee may continue caring for a patient during an acute illness after employment ends. Employee may buy out the covenant at a reasonable price or, at Employee's election, at a price determined by a mutually agreed arbitrator, not exceeding Employee's total annual salary and wages at termination. The covenant expires no later than one year after termination and applies within no more than five miles of the location where Employee primarily practiced.
 
 ### No Conflicting Obligations
 
@@ -156,15 +156,11 @@ If Employee breaches any restrictive covenant in this agreement, the Restricted 
 
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, including relief under the Texas Uniform Trade Secrets Act, Tex. Civ. Prac. & Rem. Code § 134A.003, to prevent actual or threatened misappropriation of trade secrets. The parties acknowledge that, under Tex. Bus. & Com. Code § 15.51(c), if Employee proves that Employer knew when this agreement was executed that the covenant's limitations were not reasonable and that Employer sought to enforce the covenant to a greater extent than necessary to protect Employer's goodwill or other business interest, the court may award Employee the cost of defense, including reasonable attorney's fees.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, including relief to prevent actual or threatened misappropriation of trade secrets.
 
 ### Enforceability and Severability
 
 If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable.
-
-### Reformation
-
-Consistent with Tex. Bus. & Com. Code § 15.51(c), if a court finds that this covenant is ancillary to or part of an otherwise enforceable agreement but contains limitations as to time, geographic area, or scope of activity that are not reasonable and impose a greater restraint than necessary to protect Employer's goodwill or other business interest, the court shall reform the covenant to the extent necessary to make those limitations reasonable and shall enforce the covenant as reformed. The parties acknowledge that, on reformation, the court may not award Employer damages for any breach of the covenant occurring before reformation and may grant only injunctive relief for that period; each restrictive covenant in this agreement is therefore drawn to its final intended scope and does not rely on reformation as a drafting strategy.
 
 ### Survival and Expiration of Each Covenant
 
@@ -176,7 +172,7 @@ Employee may not assign this agreement or any rights or obligations under it. Em
 
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms, including the Texas Covenants Not to Compete Act, Tex. Bus. & Com. Code §§ 15.50–15.52. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. For a Texas-based Employee, the parties intend Texas law to govern the enforceability of the restrictive covenants: Texas treats the enforcement of covenants not to compete as a matter of fundamental policy, and a foreign choice-of-law clause will not be applied to escape that policy for a Texas worker. A mandatory forum-selection clause is enforceable in Texas, by mandamus if necessary. The criteria, procedures, and remedies of the Texas Covenants Not to Compete Act are exclusive and preempt other law, including the common law, under Tex. Bus. & Com. Code § 15.52.
+This agreement is governed by the law listed in Cover Terms. Texas law governs this agreement for an Employee who lives and works in Texas. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
 
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 

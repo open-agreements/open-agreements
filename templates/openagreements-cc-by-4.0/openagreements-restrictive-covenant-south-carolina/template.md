@@ -102,11 +102,11 @@ Duration
 
 [[Solicit]] means to directly or indirectly contact, approach, induce, or encourage any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] means information protected as a trade secret under the South Carolina Trade Secrets Act.
+[[Trade Secrets]] means information protected as a trade secret by the South Carolina Trade Secrets Act.
 
 ### Recitals and Protectable Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship. Employee will receive access to Employer's Confidential Information and Trade Secrets and will develop customer relationships and goodwill on Employer's behalf, and each covenant is included to protect those Protected Interests and not to eliminate ordinary competition. Employer would not provide Employee with access to the Protected Interests absent the protections in this agreement. Employer and Employee agree that each covenant is necessary to protect Employer's legitimate business interests, is reasonably limited in time and place, is not unduly harsh or oppressive on Employee's ability to earn a livelihood, is consistent with sound public policy, and is supported by valuable consideration, and the parties intend each covenant to be enforceable as written.
+Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship. Employee will receive access to Employer's Confidential Information and Trade Secrets and will develop customer relationships and goodwill on Employer's behalf. Employer would not provide Employee with access to the Protected Interests absent the protections in this agreement. Employee acknowledges that each covenant is necessary to protect Employer's Protected Interests and is supported by valuable consideration.
 
 ### Timing, Consideration, and Employee Acknowledgements
 
@@ -130,17 +130,17 @@ During the Restricted Period, Employee must not Solicit or induce any Covered Em
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers; it does not restrict Employee with respect to customers, vendors, referral sources, or business partners Employee never serviced or contacted. It is included to protect Employer's goodwill in its customer relationships and is drawn no broader than reasonably necessary to protect it.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant does not restrict Employee with respect to customers, vendors, referral sources, or business partners Employee never serviced or contacted.
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This covenant reaches only Covered Customers and is drawn no broader than reasonably necessary to protect Employer's goodwill in its customer relationships.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact.
 
 ### Non-Competition
 
 During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is included to protect Employer's Protected Interests — its Confidential Information, Trade Secrets, and customer goodwill — and not to restrain ordinary competition, and its duration and territory are sized to Employee's actual role and Employer's actual market. If Employer has identified specific competitors in Cover Terms under Specified Competitors, this covenant is limited to those named competitors. Passive Public Holdings are permitted.
 
-As separately enforceable alternative restrictions that the parties agree stand on their own terms, if the primary Restricted Period for this covenant is found overbroad the parties agree the shorter duration stated in Cover Terms under Duration (Step-Down Alternative) applies, and if the primary Restricted Territory is found overbroad the parties agree the narrower area stated in Cover Terms under Restricted Territory (Step-Down Alternative) applies.
+The duration and territory for this covenant are the primary Duration and Restricted Territory stated in Cover Terms.
 
 ### Non-Investment
 
@@ -168,11 +168,7 @@ Employee acknowledges that a breach of this agreement may cause Employer irrepar
 
 ### Enforceability and Severability
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable, so that a court's refusal to enforce one covenant does not affect the others.
-
-### No Reliance on Judicial Reformation; Written-In Alternatives
-
-The parties intend each covenant in this agreement to be enforceable as written. This agreement does not rely on any savings, reformation, or court-may-modify clause to cure overbreadth, and the parties do not ask any court to rewrite, blue-pencil, or reduce any covenant. Each restrictive covenant is a self-contained restraint, and the step-down duration and territory alternatives in the Non-Competition section and Cover Terms are agreed alternative restrictions that the parties intend to be separately enforceable on their own terms. If a covenant is found unenforceable, it is severed under the Enforceability and Severability section rather than rewritten.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect.
 
 ### Sale-of-Business Covenants
 

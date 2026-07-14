@@ -99,7 +99,7 @@ Duration
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than five percent of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means Employer's legitimate business interests in its Trade Secrets and other Confidential Information, its customer lists, its customer goodwill, and any unusual training in which Employer has invested, and does not include Employee's general knowledge, skill, and experience.
+[[Protected Interests]] means Employer's Protected Interests in its Trade Secrets and other Confidential Information, its customer lists, its customer goodwill, and any unusual training in which Employer has invested, and does not include Employee's general knowledge, skill, and experience.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -107,11 +107,11 @@ Duration
 
 [[Solicit]] means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] means information protected as a trade secret under the West Virginia Uniform Trade Secrets Act (W. Va. Code §§ 47-22-1 to 47-22-10) and, where applicable, the federal Defend Trade Secrets Act (18 U.S.C. § 1839).
+[[Trade Secrets]] means information that qualifies as a trade secret under applicable law.
 
 ### Recitals and Protectable Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship. Employee will receive access to Employer's Trade Secrets and other Confidential Information and will develop customer relationships and goodwill on Employer's behalf, and each covenant is included to protect those Protected Interests, not to restrain ordinary competition. Employer and Employee agree that each covenant is no greater than is required for the protection of those Protected Interests, does not impose undue hardship on Employee, and is not injurious to the public, and the parties intend each covenant to be enforceable as written.
+Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship. Employee will receive access to Employer's Trade Secrets and other Confidential Information and will develop customer relationships and goodwill on Employer's behalf. Each covenant protects those Protected Interests.
 
 ### Timing, Consideration, and Employee Acknowledgements
 
@@ -131,23 +131,23 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This covenant is included to protect Employer's workforce stability and goodwill and is drawn no broader than reasonably necessary to protect them. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees.
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers with whom Employee had material contact or for whom Employee had responsibility; it does not bar Employee from working in Employee's field or from engaging in business generally. This covenant is included to protect Employer's customer goodwill and Confidential Information and is drawn no broader than reasonably necessary to protect them.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer with whom Employee had material contact or for whom Employee had responsibility. This covenant does not bar Employee from working in Employee's field or from engaging in business generally.
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This covenant reaches only Covered Customers with whom Employee had material contact or for whom Employee had responsibility, and it is included to protect Employer's customer goodwill and drawn no broader than reasonably necessary to protect that interest.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer with whom Employee had material contact or for whom Employee had responsibility, regardless of who initiates contact.
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is included to protect Employer's Protected Interests, not to restrain ordinary competition, and its time and territory are sized to Employee's actual role and Employer's actual market at signing. Where Cover Terms list Specified Competitors, this covenant is limited to those named competitors. If Cover Terms indicate this covenant is a Sale-of-Business Covenant, it is given by Employee in connection with Employee's sale of a business or practice to Employer and is supported by the consideration paid in that transaction. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is included to protect Employer's Protected Interests, not to restrain ordinary competition, and is limited to the Competitive Business and Restricted Territory stated in Cover Terms. Where Cover Terms list Specified Competitors, this covenant is limited to those named competitors. If Cover Terms indicate this covenant is a Sale-of-Business Covenant, it is given by Employee in connection with Employee's sale of a business or practice to Employer and is supported by the consideration paid in that transaction. Passive Public Holdings are permitted.
 
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This covenant is included to protect Employer's Protected Interests and is drawn no broader than reasonably necessary to protect them. Passive Public Holdings below the threshold stated in Cover Terms are permitted.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. Passive Public Holdings below the threshold stated in Cover Terms are permitted.
 
 ### Non-Disparagement
 
@@ -155,7 +155,7 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 
 ### Physician and Health Care Practitioner Covenants
 
-If Employee is a physician, any covenant not to compete in this agreement is subject to W. Va. Code §§ 47-11E-1 to 47-11E-5 and, notwithstanding any other provision of this agreement: (a) the covenant is limited to not more than one year in duration and thirty road miles from Employee's primary place of practice with Employer; and (b) the covenant is void and unenforceable upon the termination of Employee's employment by Employer. The limits in this section do not restrict the provisions of this agreement on return of Employer property, patient lists, and records; repayment of loans, relocation expenses, signing bonuses, or recruiting, education, and training costs; nondisclosure of Confidential Information and Trade Secrets; non-solicitation of patients and employees; or liquidated damages. The limits in this section do not apply where Employee has sold his or her business or practice to Employer, or where this agreement is between physicians who are shareholders, owners, partners, members, or directors of a health care practice.
+If Employee is a physician, any covenant not to compete is limited to one year and thirty road miles from Employee's primary place of practice with Employer and does not apply if Employer terminates Employee's employment. These limitations do not apply to a covenant Employee gives in connection with the sale of Employee's business or practice or to a covenant among physicians who are owners of a health care practice.
 
 ### No Conflicting Obligations
 
@@ -175,15 +175,11 @@ Employee acknowledges that a breach of this agreement may cause Employer irrepar
 
 ### Enforceability and Severability
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable and to read on its own, so that a court's refusal to enforce one covenant does not affect the others.
-
-### No Reliance on Judicial Narrowing
-
-The parties intend each covenant in this agreement to be enforceable as written. This agreement does not rely on any savings or reformation clause to cure overbreadth and does not purport to obligate a court to narrow, reform, or blue-pencil any covenant; if a covenant is found unenforceable, it is severed under the Enforceability and Severability section rather than rewritten.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect.
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms and is intended to expire on its own definite schedule and to read on its own. Obligations under the Confidential Information and Trade Secret Protection section survive to the extent they relate to Trade Secrets, for as long as the information remains a trade secret. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive to the extent they relate to Trade Secrets, for as long as the information remains a trade secret. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### Assignment and Successors
 
@@ -221,14 +217,6 @@ Drafting and enforceability considerations for this template, from the related p
 ### protectable interest comes first
 
 A West Virginia covenant stands only on a concrete interest it protects. West Virginia has no general non-compete statute, and every post-employment restraint runs the two-stage _Reddy_ inquiry: the employer must first show an interest requiring protection, and the restraint is then reasonable only if it is no greater than required, imposes no undue hardship on the employee, and is not injurious to the public . Trade secrets, customer lists, customer goodwill, and unusual employer-funded training qualify; general managerial, supervisory, merchandising, purchasing, and advertising skills do not, and publicly available customer information plus ordinary sales work fares no better . An acknowledgement or an irreparable-harm recital does not fill that gap — where the employer fails the protectable-interest gate, a court never reaches reasonableness . The gate also travels with an assignment: an assignee or successor must itself hold the protected interest before enforcing, and there is no statutory safe harbor to fall back on.
-
-### facial overbreadth
-
-A grasping West Virginia covenant does not survive on the assumption that a judge will fix it. Facial overbreadth can make the covenant void rather than merely editable, so the restraint that holds is the narrow one the employer can defend at signing . Duration and territory are measured against what the employer could defend in court on day one — a short term, a tight territory, a purpose tied to a proven protectable interest — and anything beyond that is exposed. A savings or reformation clause imported from a general-purpose form does not rescue it: a savings clause cannot move a facially unreasonable covenant from the void column to the tailorable one, because judicial tailoring is reserved for the minor overbreadth to which a facially reasonable covenant is naturally prone . A covenant drafted to be severable and independently readable lets a sound customer non-solicit or confidentiality term outlive a failed non-compete.
-
-### notice letters that assert a void covenant
-
-A notice to a departing worker's new employer is only as sound as the covenant it invokes. A covenant unreasonable on its face is utterly void , so a notice letter waving such a covenant at a new employer asserts an instrument with no legal force and can expose the employer to a tortious-interference claim — and a court will not partially enforce a grasping covenant to save the letter .
 
 ### mid-employment consideration
 

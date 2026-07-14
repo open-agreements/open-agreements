@@ -101,7 +101,7 @@ Duration
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than five percent of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means Employer's legitimate business interests, including its Trade Secrets and other Confidential Information, its customer and referral relationships, and the goodwill Employee helped develop.
+[[Protected Interests]] means Employer's Protected Interests, including its Trade Secrets and other Confidential Information, its customer and referral relationships, and the goodwill Employee helped develop.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -109,27 +109,25 @@ Duration
 
 [[Solicit]] means to directly or indirectly initiate contact with, approach, induce, or encourage any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or to inquiries or business initiated by the customer, client, or person and not solicited by Employee.
 
-[[Trade Secrets]] means information that qualifies as a trade secret under the Virginia Uniform Trade Secrets Act, Va. Code § 59.1-336, including information that derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use, and that is the subject of efforts that are reasonable under the circumstances to maintain its secrecy, or that qualifies as a trade secret under the federal Defend Trade Secrets Act, 18 U.S.C. § 1839(3).
+[[Trade Secrets]] means information that derives independent economic value from not being generally known or readily ascertainable by proper means and is subject to reasonable efforts to maintain its secrecy.
 
 ### Recitals and Protected Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship. Employee will receive access to Employer's Trade Secrets and other Confidential Information and will develop customer relationships and goodwill on Employer's behalf, and each covenant is included to protect those Protected Interests. Employer and Employee agree that each covenant is no greater than necessary to protect a legitimate business interest of Employer, is not unduly harsh or oppressive on Employee's ability to earn a livelihood, and is consistent with sound public policy, and the parties intend each covenant to be enforceable as written.
+Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship. Employee will receive access to Employer's Trade Secrets and other Confidential Information and will develop customer relationships and goodwill on Employer's behalf. Each covenant protects those Protected Interests and is reasonably limited in duration, territory, and scope.
 
 ### Timing, Consideration, and Workplace Posting
 
 This agreement is effective as of the Effective Date listed in Cover Terms. Employee acknowledges having had a genuine opportunity to review this agreement, and to consult an attorney about it, before signing.
 
-### Virginia Statutory Worker-Protection Gates
+### Virginia Worker Exclusions
 
-No covenant in this agreement is entered into, enforced, or threatened to be enforced against Employee to the extent Va. Code § 40.1-28.7:8 prohibits it. In particular:
+(a) No covenant not to compete applies when the eligibility determination completed for Employee indicates that the applicable compensation or worker-status exclusion applies.
 
-(a) No covenant not to compete in this agreement applies to or is enforceable against Employee if Employee's average weekly earnings, for the applicable year, are less than the average weekly wage of the Commonwealth as determined under that section, or if Employee is an intern, student, apprentice, or trainee, unless Employee's earnings are derived in whole or predominant part from sales commissions, incentives, or bonuses.
-
-(b) No covenant not to compete in this agreement applies to or is enforceable against Employee if Employee is entitled to overtime compensation under 29 U.S.C. § 207 for hours worked over 40 in a workweek, regardless of Employee's average weekly earnings.
+(b) No covenant not to compete applies when Employee is eligible for overtime compensation.
 
 (c) No covenant in this agreement restricts Employee from providing a service to a customer or client of Employer if Employee does not initiate contact with or solicit that customer or client.
 
-If any other provision of this agreement conflicts with this section (Virginia Statutory Worker-Protection Gates), this section controls.
+If any other provision of this agreement conflicts with this Virginia Worker Exclusions section, this section controls.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -149,11 +147,11 @@ During the Restricted Period, Employee must not Solicit, recruit, hire, or attem
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Employee's own initiation of contact with or solicitation of a Covered Customer; it does not restrict Employee from providing a service to a Covered Customer who initiates contact with Employee and whom Employee did not solicit. This covenant is included to protect Employer's Protected Interests and is drawn no broader than reasonably necessary to protect them.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant does not restrict Employee from providing a service to a Covered Customer who initiates contact with Employee and whom Employee did not solicit.
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This covenant is included to protect Employer's Protected Interests and is drawn no broader than reasonably necessary to protect them.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of who initiates contact.
 
 ### Non-Competition
 
@@ -185,7 +183,7 @@ Employee represents that performing duties for Employer and complying with this 
 
 ### Notice to Future Employers and Other Third Parties
 
-Employer may disclose the existence and terms of this agreement to a prospective employer or business associate of Employee only where a covenant in this agreement is enforceable against Employee, and will not present, assert, or threaten to enforce against Employee any covenant that Va. Code § 40.1-28.7:8 makes unenforceable. Employee consents to a disclosure permitted by this section.
+Employer may disclose the existence and terms of obligations then in effect under this agreement to a prospective employer or business associate of Employee. Employee consents to a disclosure permitted by this section.
 
 ### Tolling During Breach
 
@@ -197,11 +195,7 @@ Employee acknowledges that a breach of this agreement may cause Employer irrepar
 
 ### Enforceability and Severability
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable and is drawn in separable tiers so that an unenforceable covenant does not affect the others.
-
-### No Reliance on Judicial Reformation
-
-The parties intend each covenant in this agreement to be enforceable as written. This agreement does not rely on any savings or reformation clause to cure overbreadth and does not purport to obligate a court to narrow any covenant; if a covenant is found unenforceable, it is severed under the Enforceability and Severability section rather than rewritten.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is independently enforceable.
 
 ### Survival and Expiration of Each Covenant
 
@@ -209,7 +203,7 @@ Each restrictive covenant in this agreement survives the termination of Employee
 
 ### Assignment and Successors
 
-Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. Any assignee or successor takes the covenants in this agreement subject to Va. Code § 40.1-28.7:8. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
+Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. Any assignee or successor takes the covenants subject to all existing limitations under this agreement and applicable law. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
 
 ### Governing Law, Venue, and Dispute Process
 
@@ -259,10 +253,6 @@ There is a statutory obligation to post a copy of § 40.1-28.7:8, or a Departmen
 ### health care professional exclusion provenance
 
 The health care exclusion states the covered licenses as an objective condition rather than labeling the worker. It implements the SB 128 categorical ban, effective July 1, 2026, for persons licensed, registered, or certified by the Board of Medicine, Nursing, Counseling, Optometry, Psychology, or Social Work — and no earnings level restores an employment non-compete for a covered professional .
-
-### no reliance on judicial reformation
-
-Do not rely on a savings clause to rescue broad language. Virginia's cases put the burden on the employer to defend the language it chose, and clear overbreadth cannot be cured by asking the court to read the covenant as if it were narrower .
 
 ### employee non-solicits and protected workers
 

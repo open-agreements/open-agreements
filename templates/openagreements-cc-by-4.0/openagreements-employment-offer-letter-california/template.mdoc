@@ -1,0 +1,267 @@
+---
+template_id: openagreements-employment-offer-letter-california
+name: Employment Offer Letter (California)
+category: employment
+description: >-
+  State-specific employee offer letter template for employees primarily working
+  in California.
+source_url: >-
+  https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-offer-letter-california
+version: 0.1.0
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Authored by OpenAgreements contributors. Projected from the master employment
+  offer letter for California; offer-letter structure benchmarked against the
+  local Cooley GO and Orrick forms and public EDGAR examples recorded in the
+  precedent audit sidecar. Licensed under CC BY 4.0.
+layout_id: cover-standard-signature-v1
+style_id: openagreements-default-v1
+document:
+  title: Employment Offer Letter
+  label: OpenAgreements Employment Offer Letter (California)
+  version: 0.1.0
+  license: Free to use under CC BY 4.0
+  include_cloud_doc_line: true
+  cover_row_height: 700
+sections:
+  cover_terms:
+    section_label: Cover Terms (California)
+    heading_title: Cover Terms
+  standard_terms:
+    section_label: Standard Terms (California)
+    heading_title: Standard Terms
+  signature:
+    section_label: Signature Page (California)
+    heading_title: Signatures
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    section: Parties
+  - name: position_title
+    type: string
+    description: Offered role title
+    section: Role
+  - name: employment_type
+    type: enum
+    description: Employment basis
+    options:
+      - full-time
+      - part-time
+    section: Role
+  - name: start_date
+    type: date
+    description: Employment start date
+    section: Timing
+  - name: reporting_manager
+    type: string
+    description: Manager or role this position reports to
+    section: Role
+  - name: base_salary
+    type: string
+    description: Base salary or hourly amount
+    section: Compensation
+  - name: bonus_terms
+    type: string
+    description: Bonus eligibility summary
+    section: Compensation
+  - name: equity_terms
+    type: string
+    description: 'Equity grant summary, if any'
+    section: Compensation
+  - name: work_location
+    type: string
+    description: Primary work location and/or remote status
+    section: Work Model
+  - name: governing_law
+    type: string
+    description: Governing law state for the offer letter
+    section: Legal
+    default: California
+  - name: offer_expiration_date
+    type: date
+    description: Date by which the offer must be accepted
+    section: Timing
+priority_fields: []
+omitted_clauses: drop
+distribution: bundled
+artifact_type: template
+---
+# Employment Offer Letter
+
+{% agreement-section type="cover_terms" %}
+## Cover Terms
+
+The key business terms of this Employment Offer Letter are as follows.
+
+{% cover-terms %}
+{% cover-term kind="row" label="Employer" field="employer_name" /%}
+{% cover-term kind="row" label="Employee" field="employee_name" /%}
+{% cover-term kind="row" label="Position Title" field="position_title" /%}
+{% cover-term kind="row" label="Employment Type" field="employment_type" /%}
+{% cover-term kind="row" label="Start Date" field="start_date" /%}
+{% cover-term kind="row" label="Reporting Manager" field="reporting_manager" /%}
+{% cover-term kind="row" label="Base Salary" field="base_salary" /%}
+{% cover-term kind="row" label="Bonus Terms" field="bonus_terms" include-when="bonus_terms" /%}
+{% cover-term kind="row" label="Equity Terms" field="equity_terms" include-when="equity_terms" /%}
+{% cover-term kind="row" label="Primary Work Location" field="work_location" /%}
+{% cover-term kind="row" label="Governing Law" field="governing_law" /%}
+{% cover-term kind="row" label="Offer Expiration Date" field="offer_expiration_date" /%}
+{% /cover-terms %}
+{% /agreement-section %}
+
+{% agreement-section type="standard_terms" %}
+## Standard Terms
+
+{% clause id="position-scope-and-reporting" %}
+### Position, Scope, and Reporting
+
+If Employee accepts this offer, {% requirement id="position-and-title" %}Employee will join Company in the position listed in Cover Terms{% /requirement %} and {% requirement id="reporting-relationship" %}will report to the manager or function listed in Cover Terms{% /requirement %}, with duties and responsibilities that are reasonably aligned to the role and business needs. {% requirement id="duties-may-change" %}Company may modify Employee's position, duties, reporting relationship, and other employment terms from time to time as business needs change{% /requirement %}.
+{% /clause %}
+
+{% clause id="employment-type-and-work-schedule" %}
+### Employment Type and Work Schedule
+
+{% requirement id="full-or-part-time-classification" %}Employee will be employed on the employment basis listed in Cover Terms{% /requirement %}. Company may establish reasonable scheduling, attendance, and collaboration expectations for the role, including core hours and team coordination standards. {% requirement id="overtime-eligibility-nonexempt" %}If Employee works overtime and is legally eligible for overtime pay, Company will provide overtime pay in accordance with applicable law{% /requirement %}.
+{% /clause %}
+
+{% clause id="start-date-and-onboarding-conditions" %}
+### Start Date and Onboarding Conditions
+
+Employment is expected to begin on the start date listed in Cover Terms, subject to completion of onboarding requirements such as {% requirement id="work-authorization-contingency" %}identity and work authorization verification{% /requirement %}, policy acknowledgements, and {% requirement id="ciiaa-execution-condition" %}execution of confidentiality and inventions assignment documents{% /requirement %}. This offer is also contingent on {% requirement id="background-or-reference-check-contingency" %}satisfactory completion of any background or reference checks Company conducts{% /requirement %}, to the extent permitted by applicable law.
+{% /clause %}
+
+{% clause id="base-compensation-and-payroll" %}
+### Base Compensation and Payroll
+
+{% requirement id="base-compensation-stated" %}Company will pay the base salary or hourly compensation listed in Cover Terms{% /requirement %} {% requirement id="payroll-schedule" %}in accordance with Company's regular payroll practices{% /requirement %}, subject to {% requirement id="tax-withholding-deductions" %}required withholdings, deductions, and payroll tax obligations{% /requirement %}.
+{% /clause %}
+
+{% clause id="state-specific-employment-notices" %}
+### California Employment Notices
+
+Company will provide Employee any notices required by applicable California employment law. Nothing in this offer letter waives any non-waivable California employment right.
+{% /clause %}
+
+{% clause id="bonus-opportunity" include-when="bonus_terms" %}
+### Bonus Opportunity
+
+{% requirement id="bonus-eligibility" %}The bonus terms listed in Cover Terms describe potential bonus eligibility{% /requirement %}. Bonus programs, metrics, and payout timing are administered under applicable Company plans and may depend on individual, team, and Company performance criteria.
+{% /clause %}
+
+{% clause id="equity-opportunity" include-when="equity_terms" %}
+### Equity Opportunity
+
+{% requirement id="equity-award-offered" %}Any equity grant listed in Cover Terms remains subject to board or committee approval, applicable equity plan documents, and separate award documentation{% /requirement %}. {% requirement id="equity-vesting-schedule-stated" value="parameterized" %}Vesting, exercise, and expiration terms are governed by those plan and award documents and any vesting summary listed in Cover Terms{% /requirement %}.
+{% /clause %}
+
+{% clause id="benefits-and-time-off-programs" %}
+### Benefits and Time-Off Programs
+
+Employee may be eligible to participate in benefit and {% requirement id="paid-time-off-addressed" %}paid-time-off programs{% /requirement %} {% requirement id="benefits-eligibility" %}made available to similarly situated employees{% /requirement %}, in each case subject to plan terms, enrollment requirements, and {% requirement id="benefits-modification-reserved" %}Company policy updates permitted by law{% /requirement %}. {% requirement id="statutory-benefits-acknowledged" %}Company will provide legally required benefits and leave, such as paid sick leave, workers' compensation coverage, or similar statutory benefits, to the extent applicable{% /requirement %}.
+{% /clause %}
+
+{% clause id="work-location-and-business-travel" %}
+### Work Location and Business Travel
+
+{% requirement id="work-location-stated" value="parameterized" %}Employee will primarily work from the location listed in Cover Terms{% /requirement %}. {% requirement id="business-travel-or-location-flexibility" %}Company may require reasonable business travel and may update workplace expectations{% /requirement %}, including on-site or remote collaboration requirements, consistent with applicable law.
+{% /clause %}
+
+{% clause id="policies-confidentiality-and-company-property" %}
+### Policies, Confidentiality, and Company Property
+
+As a condition of employment, {% requirement id="company-policies-compliance" %}Employee must comply with Company written policies, security requirements, confidentiality obligations, and lawful workplace rules{% /requirement %}, including policies covering information handling, code and device access, and return of Company property.
+{% /clause %}
+
+{% clause id="outside-activities-and-conflicts" %}
+### Outside Activities and Conflicts
+
+{% requirement id="duty-of-loyalty-outside-activities" %}During employment, Employee will not engage in outside employment, consulting, business activity, or other work that materially interferes with Employee's duties to Company, misuses Company time or resources, or creates an actual conflict of interest with Company{% /requirement %}. This clause does not restrict legally protected activity, passive personal investments, or lawful off-duty conduct that does not create a material conflict with Employee's duties.
+{% /clause %}
+
+{% clause id="prior-obligations-and-third-party-information" %}
+### Prior Obligations and Third-Party Information
+
+{% requirement id="no-conflicting-obligations" %}Employee represents that Employee is not subject to any agreement or obligation that would conflict with this offer or with Employee's duties for Company{% /requirement %}. {% requirement id="prior-employer-confidentiality" %}Employee will not use or disclose, or bring onto Company premises or systems, any confidential information, trade secrets, or materials belonging to a former employer or other third party{% /requirement %}, and will not improperly use any such information in performing services for Company.
+{% /clause %}
+
+{% clause id="at-will-employment-relationship" %}
+### At-Will Employment Relationship
+
+{% requirement id="at-will-modifiable-only-in-writing" %}Unless otherwise required by law or a separate written agreement signed by an authorized Company officer or other authorized representative, the at-will employment relationship may not be modified by oral statements, policies, or past practices{% /requirement %}. {% requirement id="at-will-employment" %}Employment is at-will. This means either Employee or Company may end employment at any time, with or without advance notice, and with or without cause{% /requirement %}.
+{% /clause %}
+
+{% clause id="governing-law" %}
+### Governing Law
+
+This offer letter and any dispute regarding its interpretation {% requirement id="governing-law" value="parameterized" %}are governed by the law listed in Cover Terms{% /requirement %}, without applying conflicts-of-law principles to the extent not required by applicable law and without limiting non-waivable employment laws that apply to Employee.
+{% /clause %}
+
+{% clause id="entire-agreement" %}
+### Entire Agreement
+
+{% requirement id="entire-agreement-integration" %}This offer letter, together with the documents it references, is the entire agreement between Employee and Company about the subject matter of the offer, and supersedes any prior or contemporaneous discussions, understandings, representations, or promises, whether oral or written{% /requirement %}.
+{% /clause %}
+
+{% clause id="severability" %}
+### Severability
+
+{% requirement id="severability-reformation" %}If any provision of this offer letter is held invalid or unenforceable, that provision will be modified to the minimum extent necessary to make it enforceable or, if it cannot be modified, severed, and the remaining provisions will continue in full force and effect{% /requirement %}.
+{% /clause %}
+
+{% clause id="assignment" %}
+### Assignment
+
+{% requirement id="no-assignment-by-employee" %}Employee may not assign this offer letter or any employment rights or obligations under it{% /requirement %}. Company may assign this offer letter to a successor or affiliate in connection with a merger, reorganization, sale of assets, or other business transfer, subject to applicable law.
+{% /clause %}
+
+{% clause id="electronic-signature-and-counterparts" %}
+### Electronic Signature and Counterparts
+
+{% requirement id="electronic-signature-counterparts" %}This offer letter may be signed electronically and in one or more counterparts, each of which is an original and all of which together form one and the same agreement{% /requirement %}.
+{% /clause %}
+
+{% clause id="offer-expiration-acceptance-and-entire-offer" %}
+### Offer Expiration and Acceptance
+
+{% requirement id="offer-expiration-date" %}This offer expires on the date listed in Cover Terms unless extended in writing by Company{% /requirement %}. By accepting, Employee agrees that {% requirement id="changes-require-writing" %}any changes must be set out in a later written document authorized by Company{% /requirement %}.
+{% /clause %}
+{% /agreement-section %}
+
+{% agreement-section type="signature" %}
+## Signatures
+
+{% signature-block arrangement="entity-plus-individual" %}
+{% requirement id="acceptance-by-signature" %}By signing this Employment Offer Letter, each party agrees to these Cover Terms and Standard Terms{% /requirement %}.
+
+{% signer id="employer" kind="entity" capacity="through_representative" label="Employer" %}
+Employer: {% field name="employer_name" /%}
+
+Signature: _______________
+Signatory Name: {% field name="employer_signatory_name" /%}
+Title: {% field name="employer_signatory_title" /%}
+Date: _______________
+{% /signer %}
+
+{% signer id="employee" kind="individual" capacity="personal" label="Employee" %}
+**Employee**
+
+Signature: _______________
+Print Name: {% field name="employee_name" /%}
+Date: _______________
+{% /signer %}
+{% /signature-block %}
+{% /agreement-section %}

@@ -6,8 +6,6 @@ version: 0.1.0
 stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: Authored by OpenAgreements contributors. Washington-specific analysis informed by the quote-verified Washington practice note. Licensed under CC BY 4.0.
 fields:
   - name: employer_name
@@ -65,10 +63,11 @@ fields:
     rationale_source: editorial
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee non-solicitation covenant is included
-    display_label: Employee Non-Solicitation Included
-    default: true
+    description: Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.
+    display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
+    rationale_source: editorial
+    default: true
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee non-solicitation restriction
@@ -87,10 +86,11 @@ fields:
     default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the customer non-solicitation covenant is included
+    description: Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
+    rationale_source: editorial
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer non-solicitation restriction
@@ -130,9 +130,8 @@ fields:
     display_label: Restricted Territory
     default: the geographic area in which Employee provided services
     section: Non-Competition
-    default_value_rationale: Tied to the employee's actual service area. Washington law is silent on geography, but the surviving common-law rule enforces a restraint only to the extent reasonable and necessary, and a Washington court that narrows an overbroad territory triggers the statutory reformation penalty against the employer.
-    rationale_source: case_law
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.avoid-reliance-on-judicial-reformation
+    default_value_rationale: Tied to the employee's actual service area so the starting value is not an open-ended geographic restraint. Counsel should tailor the territory to the employee's role and the employer's actual market.
+    rationale_source: editorial
   - name: competitive_business_definition
     type: string
     description: Description of the business activities that constitute competition with the employer.
@@ -145,15 +144,6 @@ fields:
     default: ''
     section: Non-Competition
     rationale_source: editorial
-  - name: washington_earnings_threshold
-    type: string
-    description: Washington only. The inflation-adjusted annualized earnings floor the worker's earnings from the party seeking enforcement must exceed for the non-compete to be enforceable, as adjusted annually and published by the Department of Labor & Industries. Recited in the Washington threshold clause so the condition is testable on the face of the document. State the figure applicable to the worker type (employee or independent contractor) for the year the covenant is entered into.
-    display_label: Earnings Threshold (Washington)
-    default: $126,858.83 for an employee (or $317,147.09 for an independent contractor) annualized, as adjusted for 2026 under RCW 49.62.040
-    section: Non-Competition
-    default_value_rationale: The default recites the 2026 employee and independent-contractor thresholds published by the Department of Labor & Industries ($126,858.83 / $317,147.09). Counsel must replace it with the figure published for the year the covenant is entered into, because the amount is reset annually.
-    rationale_source: legislation
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.gate-non-compete-by-earnings-threshold
   - name: washington_consideration
     type: string
     description: Washington only. For a covenant entered into after employment has commenced, the independent consideration given specifically in exchange for the restrictive covenants, recited so it is identifiable new value under Washington law. Continued at-will employment alone is not consideration for a post-hire non-compete. State the specific new value here (for example, a signing or retention bonus, equity grant, or promotion). Shown in the Washington timing and consideration recital.
@@ -165,7 +155,7 @@ fields:
     requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.require-independent-consideration-for-post-hire-covenants
   - name: nondealing_included
     type: boolean
-    description: Whether the no-business-with-covered-customers covenant is included. In Washington a clause that directly or indirectly prohibits accepting or transacting business with a customer is itself a non-competition covenant under the Noncompetition Agreement Act, so it carries every statutory non-compete condition.
+    description: Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.
     display_label: No Business with Covered Customers Included
     default: false
     section: No Business with Covered Customers
@@ -190,10 +180,11 @@ fields:
     benchmark_ref: restrictive-covenant/passive-ownership-carveout
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included.
+    description: Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.
     display_label: Non-Investment Included
     default: false
     section: Non-Investment
+    rationale_source: editorial
   - name: noninvestment_duration
     type: string
     description: Duration of non-investment restriction
@@ -210,6 +201,9 @@ fields:
     default: 24 months
     section: Non-Disparagement
     default_value_rationale: 24 months is common for employment non-disparagement provisions.
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template

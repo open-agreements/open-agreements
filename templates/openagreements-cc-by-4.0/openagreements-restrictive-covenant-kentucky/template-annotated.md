@@ -92,7 +92,7 @@ Duration
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than five percent of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means the legitimate business interests a Kentucky covenant may protect under the common-law fair-protection standard, namely Employer's Confidential Information, Employer's trade secrets as defined by the Kentucky Uniform Trade Secrets Act (KRS 365.880(4)), and Employer's goodwill in its customer, vendor, referral-source, and business-partner relationships, but not Employer's interest in avoiding ordinary competition.
+[[Protected Interests]] means Employer's Confidential Information, trade secrets, and goodwill in its customer, vendor, referral-source, and business-partner relationships, but not Employer's interest in avoiding ordinary competition.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -104,11 +104,11 @@ Duration
 
 ### Recitals and Protectable Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to protect one or more of Employer's Protected Interests and to impose no restraint greater than is required for that protection. The parties acknowledge that each covenant is meant to guard Employer's Confidential Information, trade secrets, and customer goodwill and not to eliminate ordinary competition, and that Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. Each covenant is intended to be reasonable in time, territory, and scope, to impose no undue hardship on Employee, and to cause no injury to the public.
+Employer and Employee acknowledge that each restrictive covenant in this agreement protects one or more of Employer's Protected Interests, including Employer's Confidential Information, trade secrets, and customer goodwill. Employer and Employee acknowledge that the covenants are reasonable in time, territory, and scope.
 
 ### Timing, Consideration, and Employee Acknowledgements
 
-The parties acknowledge that this agreement is supported by valid consideration and record the timing of execution relative to the start of employment in Cover Terms. If this agreement is signed at the outset of employment, the offer and commencement of employment is itself adequate consideration for the covenants. If Employee is an existing employee at the time of signing — that is, if the agreement is signed after employment began — the covenants are supported by independent, new consideration beyond continued at-will employment. For any such mid-employment covenant, the specific new value exchanged — for example a bonus, a raise, a promotion, or specialized training — is identified in Cover Terms under New Consideration Provided and was actually delivered to Employee. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
+The parties acknowledge that this agreement is supported by valid consideration and record the timing of execution relative to the start of employment in Cover Terms. If this agreement is signed at the outset of employment, the offer and commencement of employment is itself adequate consideration for the covenants. If Employee is an existing employee at the time of signing — that is, if the agreement is signed after employment began — the covenants are supported by independent, new consideration beyond continued at-will employment. For any such mid-employment covenant, the specific new value exchanged — for example a bonus, a raise, a promotion, or specialized training — is identified in Cover Terms under New Consideration Provided and was actually delivered to Employee. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -124,23 +124,23 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is no broader than necessary to protect Employer's workforce stability and goodwill.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees.
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers with whom Employee had material contact and is no broader than necessary to protect Employer's goodwill in its customer relationships.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer.
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee; it is sized to the goodwill it protects and reaches only Covered Customers with whom Employee had material contact.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact.
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant exists to protect Employer's Protected Interests — its Confidential Information, trade secrets, and customer goodwill — and not to restrain ordinary competition. The parties intend this covenant to afford only fair protection to Employer's interests, to impose no undue hardship on Employee, and to cause no injury to the public, with its time and territory sized to Employee's actual role and Employer's actual market. If Employer has identified specific competitors in Cover Terms under Specified Competitors, the parties intend this covenant to be understood and, if necessary, enforced as limited to those named competitors. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. If Employer has identified specific competitors in Cover Terms under Specified Competitors, this covenant is limited to those named competitors. Passive Public Holdings are permitted.
 
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. This covenant is a post-employment restraint drawn no broader than necessary to protect Employer's Protected Interests. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. Passive Public Holdings are permitted.
 
 ### Non-Disparagement
 
@@ -148,7 +148,7 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 
 ### Health Care Services Agency and Temporary Direct Care Staff
 
-Notwithstanding any other provision of this agreement, if Employer is a health care services agency and Employee is temporary direct care staff contracted with or employed by the agency, this agreement does not, and may not, restrict in any manner Employee's employment opportunities, including through contract buy-out provisions or contract non-compete clauses (KRS 216.724). Any covenant in this agreement that would otherwise restrain Employee's employment opportunities is of no force or effect as to Employee, and the exclusion in this section controls over any contrary provision.
+Notwithstanding any other provision of this agreement, if Employer is a health care services agency and Employee is temporary direct care staff contracted with or employed by the agency, this agreement does not, and may not, restrict in any manner Employee's employment opportunities, including through contract buy-out provisions or contract non-compete clauses. Any covenant in this agreement that would otherwise restrain Employee's employment opportunities is of no force or effect as to Employee, and the exclusion in this section controls over any contrary provision.
 
 ### No Conflicting Obligations
 
@@ -160,19 +160,15 @@ Employer may disclose the existence and terms of this agreement to any prospecti
 
 ### Extension of the Restricted Period During Breach
 
-If Employee breaches any restrictive covenant in this agreement, Employer may seek to have the Restricted Period for that covenant extended by a period equal to the duration of the breach, so that Employer receives the benefit of the full duration of the restriction. Any extension under this section is a separate, breach-tied, bounded restraint; the parties do not intend an open-ended or indefinite extension, and do not assume that a court will revive an expired covenant.
+If Employee breaches any restrictive covenant in this agreement, Employer may seek to have the Restricted Period for that covenant extended by a period equal to the duration of the breach.
 
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, including relief under the Kentucky Uniform Trade Secrets Act, KRS 365.880 through 365.900, under which actual or threatened misappropriation of a trade secret may be enjoined independent of any covenant.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law.
 
 ### Enforceability and Severability
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable, so that a court's refusal to enforce one covenant, or a court's decision to enforce a covenant only to a reasonable extent, does not affect the others.
-
-### Reformation
-
-If any restraint in this agreement is found to be overbroad, Employer requests that a court reform or amend it to the extent necessary to render it enforceable rather than declining to enforce it. Each restrictive covenant in this agreement is drawn as a tiered, severable, reasonable restraint sized to the Protected Interests from the start and is intended to be enforceable as written rather than in reliance on judicial revision.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect.
 
 ### Survival and Expiration of Each Covenant
 
@@ -184,7 +180,7 @@ Employee may not assign this agreement or any rights or obligations under it. Em
 
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms. A clause selecting Kentucky law is intended to be paired with a genuine connection to Kentucky and a covenant reasonable on its own terms, and the parties do not treat the choice-of-law clause as automatically dispositive. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. The parties intend that the governing-law and venue choices match where Employee actually lives and works.
+This agreement is governed by the law listed in Cover Terms. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. The parties intend that the governing-law and venue choices match where Employee actually lives and works.
 
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 
@@ -226,10 +222,6 @@ A Kentucky non-compete that blocks competition disconnected from a protectable i
 ### duration and territory
 
 A Kentucky court weighs duration and territory together against the employer's real market with no statutory cap and no safe-harbor number, so a term or radius copied from another form is measured against a market it was never sized to and is exposed as overbroad . The six-factor framework the Court of Appeals proposed during the _Creech_ litigation is persuasive structure a trial court may consult rather than a checklist that guarantees enforcement, because the Kentucky Supreme Court resolved _Creech_ on consideration alone and never adopted it. A non-compete confined to identified competitors is strong evidence that the restraint affords only fair protection, so a restraint keyed to the employee's actual role and the employer's actual footprint is far easier to defend than a long, open-ended, statewide ban.
-
-### reformation
-
-Kentucky's blue-pencil power is discretionary, not a safety net: its courts are empowered to reform or amend overly broad non-compete restrictions, and _Hodges_ shows the power reaching as far as supplying a missing geographic limit in the sale-of-a-business context, but reformation is not automatic and a court may decline to rewrite a covenant it views as overreaching . A covenant drafted as a tiered, severable, reasonable restraint from the start gives a court inclined to enforce workable text rather than a rescue request, while an abusively broad covenant risks being left unenforced.
 
 ### the temporary health-care staffing ban
 

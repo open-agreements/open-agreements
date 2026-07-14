@@ -10,8 +10,8 @@ description: >-
   unreasonably restrictive of the employee, not prejudicial to the public
   interest), under which the employer seeking enforcement carries the burden of
   proving reasonableness. It provides confidentiality and trade-secret
-  protection backstopped by the Iowa Uniform Trade Secrets Act (Iowa Code
-  ch. 550), a continued-employment consideration recital, customer and employee
+  protection backstopped by the Iowa Uniform Trade Secrets Act (Iowa Code ch.
+  550), a continued-employment consideration recital, customer and employee
   non-solicitation, an optional non-compete tied to identified protectable
   interests and sized to the actual footprint, and partial-enforcement
   reformation that the drafting does not rely on. It also discloses Iowa's
@@ -26,8 +26,6 @@ source_url: >-
 version: 0.1.0
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: >-
   Authored by OpenAgreements contributors. Iowa-specific analysis informed by
   the quote-verified Iowa practice note. Licensed under CC BY 4.0.
@@ -106,10 +104,15 @@ fields:
       employment agreements.
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee non-solicitation covenant is included
-    display_label: Employee Non-Solicitation Included
-    default: true
+    description: >-
+      Whether the employee no-hire / non-solicitation covenant is included.
+      Alabama's only category for restraints touching another party's workers is
+      the no-hire exception for workers in a position uniquely essential to the
+      management, organization, or service of the business.
+    display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
+    rationale_source: editorial
+    default: true
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee non-solicitation restriction
@@ -119,11 +122,12 @@ fields:
     benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: >-
-      Iowa sets no statutory cap on duration; enforceability turns on the three-prong Revere
-      Transducers / Lamp reasonableness test rather than a fixed number. 24 months matches the modal
-      employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12
-      months is the common lighter alternative, and counsel should size the term to the employer's
-      actual protectable interest.
+      Iowa sets no statutory cap on duration; enforceability turns on the
+      three-prong Revere Transducers / Lamp reasonableness test rather than a
+      fixed number. 24 months matches the modal employee non-solicit term
+      observed in benchmarked, publicly-filed employee agreements; 12 months is
+      the common lighter alternative, and counsel should size the term to the
+      employer's actual protectable interest.
   - name: covered_employee_period
     type: string
     description: >-
@@ -137,10 +141,14 @@ fields:
       scope.
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the customer/partner non-solicitation covenant is included
+    description: >-
+      Whether the current-customer non-solicitation covenant is included.
+      Alabama gives this covenant its own category, limited to current
+      customers.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
+    rationale_source: editorial
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer/partner non-solicitation restriction
@@ -152,9 +160,10 @@ fields:
     default_value_rationale: >-
       Iowa sets no statutory cap; a customer non-solicit maps directly onto the
       customer-goodwill interest and is often the better instrument than a full
-      non-compete. 12 months is the lighter side of the near-even 12/24-month split
-      observed in benchmarked, publicly-filed employee agreements — a conservative
-      duration counsel should size to the actual customer relationships protected.
+      non-compete. 12 months is the lighter side of the near-even 12/24-month
+      split observed in benchmarked, publicly-filed employee agreements — a
+      conservative duration counsel should size to the actual customer
+      relationships protected.
   - name: covered_customer_period
     type: string
     description: >-
@@ -183,10 +192,10 @@ fields:
     section: Non-Competition
     default_value_rationale: >-
       Conservative default. The non-compete is the most heavily scrutinized
-      covenant under the three-prong test, and the employer carries the burden of
-      proving reasonableness; a customer non-solicit backstopped by the Iowa
-      Uniform Trade Secrets Act often protects the employer as well. Include only
-      after confirming an identified protectable interest (confidential
+      covenant under the three-prong test, and the employer carries the burden
+      of proving reasonableness; a customer non-solicit backstopped by the Iowa
+      Uniform Trade Secrets Act often protects the employer as well. Include
+      only after confirming an identified protectable interest (confidential
       information, trade secrets, or customer goodwill) and sizing the duration
       and territory to the actual footprint.
   - name: noncompete_duration
@@ -196,7 +205,8 @@ fields:
     default: 12 months
     section: Non-Competition
     rationale_source: case_law
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.iowa.keep-covenants-within-the-three-prong-reasonableness-test
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.iowa.keep-covenants-within-the-three-prong-reasonableness-test
     default_value_rationale: >-
       Iowa imposes no statutory cap on duration; courts weigh time and territory
       together against the employer's real protectable interest under the
@@ -214,9 +224,9 @@ fields:
     default_value_rationale: >-
       Tied to the employee's actual service area. Iowa imposes no statutory cap
       on territory; a narrower area genuinely needed to protect customer
-      relationships or confidential information is far easier to defend under the
-      three-prong test than a statewide ban. Iowa's reformation cases trim an
-      overbroad territory to the footprint the worker actually served, so an
+      relationships or confidential information is far easier to defend under
+      the three-prong test than a statewide ban. Iowa's reformation cases trim
+      an overbroad territory to the footprint the worker actually served, so an
       overbroad territory invites the court to cut the covenant down.
   - name: competitive_business_definition
     type: string
@@ -235,10 +245,16 @@ fields:
     section: Non-Competition
   - name: nondealing_included
     type: boolean
-    description: Whether the no-business-with-covered-customers covenant is included.
+    description: >-
+      Whether the no-business-with-covered-customers covenant is included. A
+      non-dealing covenant has no named Alabama category of its own, so it must
+      be drafted to fit inside the current-customer non-solicit exception or it
+      is exposed to Alabama's void rule for restraints outside the listed
+      categories.
     display_label: No Business with Covered Customers Included
     default: false
     section: No Business with Covered Customers
+    rationale_source: editorial
   - name: nondealing_duration
     type: string
     description: Duration of the no-business-with-covered-customers restriction
@@ -257,15 +273,20 @@ fields:
     section: Definitions
     default_value_rationale: >-
       Five percent of any class of publicly traded securities is the modal
-      passive-investment carve-out threshold observed in benchmarked, publicly-filed
-      employee agreements that include the carve-out (lower 1-3 percent thresholds are
-      the common tighter alternatives).
+      passive-investment carve-out threshold observed in benchmarked,
+      publicly-filed employee agreements that include the carve-out (lower 1-3
+      percent thresholds are the common tighter alternatives).
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included.
+    description: >-
+      Whether the non-investment covenant is included. A non-investment covenant
+      has no named Alabama category; one genuine use is restraining a licensed
+      professional's business conduct outside the practice of the profession,
+      which sits outside Alabama's professional exemption.
     display_label: Non-Investment Included
     default: false
     section: Non-Investment
+    rationale_source: editorial
   - name: noninvestment_duration
     type: string
     description: Duration of non-investment restriction
@@ -279,9 +300,21 @@ fields:
     default: 24 months
     section: Non-Disparagement
     default_value_rationale: 24 months is common for employment non-disparagement provisions.
+  - name: worker_is_physician
+    type: boolean
+    description: >-
+      Whether Employee is a physician. Set this explicitly from Employee's
+      licensed role to include physician-specific terms. For Indiana, the
+      applicable provisions vary by execution date and employer type, and may
+      require a release buyout term or exclude the non-compete entirely.
+    display_label: Employee Is a Physician
+    section: Physician
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template
 ---
 # Employee Restrictive Covenant Agreement
 
@@ -333,7 +366,7 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {% field name="passive_public_holdings_threshold" /%} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means the legitimate business interests an Iowa covenant may protect under the three-prong reasonableness test, namely Employer's Confidential Information, Employer's trade secrets as defined by the Iowa Uniform Trade Secrets Act (Iowa Code § 550.2), and Employer's goodwill in its customer, vendor, referral-source, and business-partner relationships — including Employee's close proximity to customers and access to information peculiar to Employer's business — but not Employer's interest in avoiding ordinary competition and not the general skill and knowledge Employee acquired through experience or instruction on the job.
+[[Protected Interests]] means Employer's Confidential Information, trade secrets, and goodwill in its customer, vendor, referral-source, and business-partner relationships, including Employee's close proximity to customers and access to information peculiar to Employer's business, but not Employer's interest in avoiding ordinary competition or the general skill and knowledge Employee acquired through experience or instruction on the job.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -341,19 +374,19 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Solicit]] means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] has the meaning given in the Iowa Uniform Trade Secrets Act, Iowa Code § 550.2.
+[[Trade Secrets]] means information that qualifies as a trade secret under applicable law.
 {% /clause %}
 
 {% clause id="recitals-and-legitimate-business-interest" %}
 ### Recitals and Protectable Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to protect one or more of Employer's Protected Interests and to impose no restraint greater than is reasonably necessary for that protection. The parties acknowledge that each covenant is meant to guard Employer's Confidential Information, trade secrets, and customer goodwill, and not to eliminate ordinary competition or to preclude Employee from using the general skill and knowledge Employee acquired on the job. Each covenant is intended to be reasonably necessary for the protection of Employer, not unreasonably restrictive of Employee, and not prejudicial to the public interest, and to be reasonable in time, territory, and scope, to impose no undue hardship on Employee, and to cause no injury to the public.
+Employer and Employee acknowledge that each restrictive covenant in this agreement protects one or more of Employer's Protected Interests, including Employer's Confidential Information, trade secrets, and customer goodwill. The covenants do not preclude Employee from using the general skill and knowledge Employee acquired on the job. Employer and Employee acknowledge that the covenants are reasonable in time, territory, and scope.
 {% /clause %}
 
 {% clause id="timing-and-employee-acknowledgements" %}
 ### Timing, Consideration, and Employee Acknowledgements
 
-The parties acknowledge that this agreement is supported by adequate consideration. If Employee is an existing employee, the parties agree that, in exchange for Employee's assent to the covenants in this agreement, Employer continues Employee's employment, and continued employment for an indefinite period is sufficient consideration to support a covenant not to compete, even when the covenant is signed after employment begins; no separate payment, raise, or promotion is required. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests, and understands that adequate consideration establishes only that the covenants are supported at formation, not that they are reasonable — each covenant must independently be reasonable in time, territory, and scope, and continued employment sufficient as consideration does not by itself make an unreasonable covenant enforceable. This agreement is effective as of the Effective Date listed in Cover Terms.
+In consideration of Employee's employment or continued employment, the parties agree to the terms of this agreement. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 {% /clause %}
 
 {% clause id="confidential-information-and-trade-secret-protection" %}
@@ -371,37 +404,37 @@ Nothing in this agreement prohibits Employee from: (a) reporting possible violat
 {% clause id="return-deletion-and-certification-of-company-property" %}
 ### Return, Deletion, and Certification of Company Property
 
-Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request. The parties intend that these return, deletion, and certification mechanics form part of Employer's reasonable efforts to maintain the secrecy of its Trade Secrets.
+Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request.
 {% /clause %}
 
 {% clause id="non-solicitation-of-employees" include-when="employee_nonsolicit_included" %}
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This restriction reaches only Covered Employees during the Restricted Period and is no broader than necessary to protect Employer's workforce stability and goodwill.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees.
 {% /clause %}
 
 {% clause id="non-solicitation-of-customers-vendors-referral-sources-and-business-partners" include-when="customer_nonsolicit_included" %}
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers with whom Employee had material contact and is no broader than necessary to protect Employer's goodwill in its customer relationships. Where Employee is a licensed mental health professional, this covenant does not restrict Employee from contacting for professional services a person Employee previously treated (Iowa Code § 147.161).
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. Where Employee is a licensed mental health professional, this covenant does not restrict Employee from contacting for professional services a person Employee previously treated.
 {% /clause %}
 
 {% clause id="no-business-with-covered-customers" include-when="nondealing_included" %}
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction applies even if the Covered Customer approaches Employee, so it is sized to the goodwill it protects and reaches only Covered Customers with whom Employee had material contact.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact.
 {% /clause %}
 
 {% clause id="non-competition" include-when="noncompete_included" %}
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant exists to protect Employer's Protected Interests — its Confidential Information, trade secrets, and customer goodwill — and not to restrain ordinary competition or to preclude Employee from using the general skill and knowledge acquired on the job. The parties intend this covenant to be reasonably necessary for the protection of Employer, not unreasonably restrictive of Employee, and not prejudicial to the public interest, with its time and territory sized to Employee's actual role and Employer's actual market. If Employer has identified specific competitors in Cover Terms under Specified Competitors, the parties intend this covenant to be understood and, if necessary, enforced as limited to those named competitors. Where Employee is an independent contractor, this covenant does not require Employee to forsake customers Employee brought to the relationship. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. If Employer has identified specific competitors in Cover Terms under Specified Competitors, this covenant applies only to those named competitors. Where Employee is an independent contractor, this covenant does not require Employee to forsake customers Employee brought to the relationship. Passive Public Holdings are permitted.
 {% /clause %}
 
 {% clause id="non-investment" include-when="noninvestment_included" %}
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Because this covenant restrains active roles at and material participation in a Competitive Business, it is drawn no broader than necessary to protect Employer's Protected Interests. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. Passive Public Holdings are permitted.
 {% /clause %}
 
 {% clause id="non-disparagement" %}
@@ -410,10 +443,10 @@ During the Restricted Period, Employee must not acquire or hold any active owner
 During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law, including rights protected under Section 7 of the National Labor Relations Act.
 {% /clause %}
 
-{% clause id="physician-specific-rights-and-notices" %}
+{% clause id="physician-specific-rights-and-notices" include-when="worker_is_physician" %}
 ### Occupation- and Sector-Specific Rights and Notices
 
-This agreement yields to the following occupation- and sector-specific rules to the extent any applies. First, if Employee is a licensed mental health professional, this agreement does not limit the location at which Employee may practice, does not prohibit Employee from contacting for professional services a person Employee previously treated, and does not impose a time restriction on Employee's practice (Iowa Code § 147.161). Second, if Employer is a health-care employment agency and Employee is an agency worker, this agreement does not include any noncompete clause restricting Employee's employment opportunities and does not require liquidated damages, employment fees, or other compensation if Employee is later hired as a permanent employee of a health care entity (Iowa Code § 135Q.2). Third, if this agreement is an employment contract between the University of Iowa Hospitals and Clinics and an advanced registered nurse practitioner, licensed practical nurse, pharmacist, physician, physician assistant, or registered nurse, it does not include a noncompete clause (Iowa Code § 262.9(43)). Any covenant that would conflict with one of these rules is deemed excluded to the extent of the conflict.
+If Employee is a licensed mental health professional, this agreement does not limit the location at which Employee may practice, prohibit Employee from contacting for professional services a person Employee previously treated, or impose a time restriction on Employee's practice. If Employer is a health-care employment agency and Employee is an agency worker, this agreement does not restrict Employee's employment opportunities or require Employee to pay liquidated damages, employment fees, or other compensation if Employee is later hired by a health care entity. If Employer is the University of Iowa Hospitals and Clinics and Employee is an advanced registered nurse practitioner, licensed practical nurse, pharmacist, physician, physician assistant, or registered nurse, the non-competition covenant does not apply.
 {% /clause %}
 
 {% clause id="no-conflicting-obligations" %}
@@ -431,31 +464,25 @@ Employer may disclose the existence and terms of this agreement to any prospecti
 {% clause id="tolling-during-breach" %}
 ### Tolling During Breach
 
-If Employee breaches any restrictive covenant in this agreement, the parties intend that the Restricted Period for that covenant be extended by one day for each day of the breach, so that the full duration of the restriction runs from the date the breach ends. Any extension under this section is itself part of the restraint's duration; the parties do not intend an open-ended or indefinite extension and do not assume a court will revive an expired covenant.
+If Employee breaches any restrictive covenant in this agreement, the parties intend that the Restricted Period for that covenant be extended by one day for each day of the breach, so that the full duration of the restriction runs from the date the breach ends.
 {% /clause %}
 
 {% clause id="remedies" %}
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, including relief and damages available under the Iowa Uniform Trade Secrets Act, Iowa Code §§ 550.3–550.4.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law.
 {% /clause %}
 
 {% clause id="enforceability-and-severability" %}
 ### Enforceability and Severability
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable, so that a court's refusal to enforce one covenant, or a court's decision to enforce a covenant only to a reasonable extent, does not affect the others.
-{% /clause %}
-
-{% clause id="reformation" %}
-### Reformation
-
-Employer requests partial enforcement if any restraint in this agreement is found to be overbroad. No covenant in this agreement is placed here for any reason other than to protect Employer's legitimate interests. Each restrictive covenant in this agreement is drawn as a tiered, severable, reasonable restraint sized to the Protected Interests from the start and is intended to be enforceable as written rather than in reliance on judicial revision.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect.
 {% /clause %}
 
 {% clause id="survival-and-expiration-of-each-covenant" %}
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. Each covenant's survival is stated independently so that a defensible restraint is not bundled with a broader one. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 {% /clause %}
 
 {% clause id="assignment-and-successors" %}

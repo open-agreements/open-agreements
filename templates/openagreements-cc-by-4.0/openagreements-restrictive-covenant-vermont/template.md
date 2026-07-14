@@ -80,7 +80,7 @@ Duration
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {passive_public_holdings_threshold} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means Employer's Confidential Information, Employer's trade secrets as defined by the Vermont Trade Secrets Act (9 V.S.A. §§ 4601–4609), and Employer's goodwill in its customer, vendor, referral-source, and business-partner relationships, but not Employer's interest in avoiding ordinary competition.
+[[Protected Interests]] means Employer's Confidential Information and Trade Secrets and Employer's goodwill in its customer, vendor, referral-source, and business-partner relationships.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -88,15 +88,15 @@ Duration
 
 [[Solicit]] means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] has the meaning given to "trade secret" in the Vermont Trade Secrets Act, 9 V.S.A. §§ 4601–4609.
+[[Trade Secrets]] means information that qualifies as a trade secret under applicable law.
 
 ### Recitals and Protectable Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to protect one or more of Employer's Protected Interests and to impose no restraint greater than is required for that protection. The parties acknowledge that each covenant is meant to guard Employer's Confidential Information, trade secrets, and customer goodwill and not to eliminate ordinary competition, and that Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. Each covenant is intended to be reasonable in time, territory, and scope, to impose no undue hardship on Employee, and to cause no injury to the public.
+Employer and Employee acknowledge that each restrictive covenant in this agreement protects one or more of Employer's Protected Interests. Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. Each covenant is limited to the time, territory, and scope stated in this agreement.
 
 ### Timing, Consideration, and Employee Acknowledgements
 
-The parties acknowledge that this agreement is supported by adequate consideration. If Employee is an existing at-will employee, the parties agree that continued employment alone is sufficient consideration to support the covenants in this agreement; no separate payment, raise, or promotion is required. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests, and that adequate consideration establishes only that the covenants are supported, not that they are reasonable — each covenant must independently be reasonable in time, territory, and scope. This agreement is effective as of the Effective Date listed in Cover Terms.
+This agreement is supported by Employee's continued employment or, if signed at the outset of employment, Employer's offer of employment. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -112,23 +112,23 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is no broader than necessary to protect Employer's workforce stability and goodwill.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is limited to the scope needed to protect Employer's workforce stability and goodwill.
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers with whom Employee had material contact and is no broader than necessary to protect Employer's goodwill in its customer relationships.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers with whom Employee had material contact and is limited to the scope needed to protect Employer's goodwill in its customer relationships.
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee; it is limited to the goodwill it protects and reaches only Covered Customers with whom Employee had material contact.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer with whom Employee had material contact, regardless of who initiates contact.
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant exists to protect Employer's Protected Interests — its Confidential Information, trade secrets, and customer goodwill — and not to restrain ordinary competition. The parties intend this covenant to be no greater than is needed to protect Employer's legitimate interest, to impose no undue hardship on Employee, and to cause no injury to the public, with its time and territory sized to Employee's actual role and Employer's actual market and tied to a determinable place. If Employer has identified specific competitors in Cover Terms under Specified Competitors, the parties intend this covenant to be understood and, if necessary, enforced as limited to those named competitors. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. If Specified Competitors are listed in Cover Terms, Competitive Business is limited to those competitors. Passive Public Holdings are permitted.
 
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Because this covenant restrains active roles at and material participation in a Competitive Business, it is drawn no broader than necessary to protect Employer's Protected Interests. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. Passive Public Holdings are permitted.
 
 ### Non-Disparagement
 
@@ -136,7 +136,7 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 
 ### Physician and Health Care Practitioner Covenants
 
-If Employee is a licensed healthcare professional, any covenant in this agreement restraining Employee from practicing is intended to use a narrow radius and a short term to preserve patient access and continuity of care, and applies only to the extent it is reasonable in time, territory, and scope.
+No covenant in this agreement restricts a licensed healthcare professional from practicing beyond the Restricted Period or outside the Restricted Territory stated in Cover Terms.
 
 ### No Conflicting Obligations
 
@@ -148,7 +148,7 @@ Employer may disclose the existence and terms of this agreement to any prospecti
 
 ### Tolling During Breach
 
-If Employee breaches any restrictive covenant in this agreement, the parties intend that the Restricted Period for that covenant be extended by one day for each day of the breach, so that the full duration of the restriction runs from the date the breach ends. Any such extension is itself a restraint, is limited to what remains reasonable in time, and is not intended to be open-ended or indefinite.
+If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day the breach continues. The extension may not exceed the number of days during which the breach continued.
 
 ### Remedies
 
@@ -156,11 +156,7 @@ Employee acknowledges that a breach of this agreement may cause Employer irrepar
 
 ### Enforceability and Severability
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable, so that a court's refusal to enforce one covenant does not affect the others.
-
-### Reformation
-
-Each restrictive covenant in this agreement is drawn as a tiered, severable, reasonable restraint sized to the Protected Interests and is intended to be enforceable as written. If any restraint is nonetheless found overbroad, Employer requests that the covenant be enforced to the extent reasonable to the degree Vermont law permits.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect.
 
 ### Survival and Expiration of Each Covenant
 
@@ -168,15 +164,15 @@ Each restrictive covenant in this agreement survives the termination of Employee
 
 ### Assignment and Successors
 
-Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns. The parties intend that any transfer of a covenant in connection with a sale of Employer's business be stated expressly in the transaction documents.
+Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. Employer may assign this agreement to a successor in connection with a sale of its business. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
 
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms. This agreement does not impose a covenant not to compete as a condition of a barbering or cosmetology school's training for licensure, and it does not restrict a lawyer's right to practice after termination of the relationship except as to benefits upon retirement, nor make any restriction on a lawyer's right to practice part of the settlement of a client controversy. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. The parties intend that the governing-law and venue choices match where Employee actually lives and works.
+This agreement is governed by the law listed in Cover Terms. This agreement does not impose a covenant not to compete as a condition of a barbering or cosmetology school's training for licensure, and it does not restrict a lawyer's right to practice after termination of the relationship except as to benefits upon retirement, nor make any restriction on a lawyer's right to practice part of the settlement of a client controversy. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
 
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 
-This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. The parties confirm that every covenant term — duration, geography, scope, and consideration — is stated in this agreement rather than deferred to a side understanding. This agreement may be amended only in writing signed by both parties. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
+This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. This agreement may be amended only in writing signed by both parties. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
 
 ## Signatures
 

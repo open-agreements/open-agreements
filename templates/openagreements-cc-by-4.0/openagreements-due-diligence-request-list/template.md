@@ -47,7 +47,7 @@ This request list opens the legal due diligence phase of the contemplated transa
 
 **Foldering.** Organize responsive materials to match the section structure of this request list, with sub-folders per request. Each file should be named to identify the responsive request.
 
-**Iteration.** This is the first round of an iterative production project. Follow-up rounds typically run 5–7 business days after each prior production. Substantive completion typically requires 2–3 rounds.
+**Supplemental requests.** The requesting party may issue supplemental requests after reviewing each production.
 
 ### Section A — Corporate Organization, Authority, and Governance
 
@@ -63,7 +63,7 @@ A.5 Certificates of good standing from the state of formation and from each stat
 
 A.6 Officer and director list, including titles, dates of service, and any departures within the past {lookback_years} years.
 
-A.7 Beneficial Ownership Information (BOI) reports filed pursuant to the Corporate Transparency Act, and any updates, if applicable. Note: FinCEN's March 26, 2025 interim final rule exempts U.S.-formed entities and U.S. persons; only foreign reporting companies remain subject.
+A.7 Any Beneficial Ownership Information reports and updates required to be filed by the target.
 
 ### Section B — Capitalization and Securities
 
@@ -101,7 +101,7 @@ D.4 All tax audit correspondence, examination findings, and ongoing examinations
 
 D.5 Tax-sharing agreements, tax-indemnification agreements, and any tax-related schedules from prior acquisitions.
 
-D.6 Sales-and-use tax economic-nexus analysis under *Wayfair*, including registration status by state.
+D.6 Sales-and-use tax economic-nexus analysis, including registration status by state.
 
 D.7 Material correspondence with the IRS or state tax authorities regarding rulings, settlements, or contested matters.
 
@@ -315,7 +315,7 @@ S.2 Sanctions / OFAC screening procedures, screening tool documentation, and any
 
 S.3 Export-control classifications (ECCN, USML) for material technologies and products, plus any export licenses or commodity classification rulings.
 
-S.4 AML / KYC program documentation (where applicable to the target's industry), including written policies and procedures, training records, regulator examination findings, and non-privileged audit/correspondence files. Do not produce any SARs or materials that would reveal a SAR's existence — FinCEN's SAR confidentiality rules bar disclosure to counterparties under whichever subpart applies to the target's institution type (e.g., 31 CFR 1020.320(e) for banks; 1023.320(e) for broker-dealers; 1022.320(e) for MSBs; 1021.320(e) for casinos; 1024.320(e) for mutual funds; 1025.320(e) for insurance companies; 1029.320(e) for loan/finance companies).
+S.4 AML / KYC program documentation (where applicable to the target's industry), including written policies and procedures, training records, regulator examination findings, and non-privileged audit/correspondence files. Do not produce any suspicious activity report or material revealing that such a report exists.
 
 S.5 FCPA compliance program documentation, including risk assessments, training records, third-party-intermediary diligence, and any prior internal investigations or third-party allegations.
 

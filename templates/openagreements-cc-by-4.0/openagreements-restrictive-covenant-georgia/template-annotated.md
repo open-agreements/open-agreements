@@ -78,13 +78,13 @@ Duration
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
-[[Covered Customers]] means customers and prospective customers with whom Employee had material contact during the 2 years before termination of employment, meaning customers Employee dealt with on Employer's behalf, whose dealings with Employer Employee coordinated or supervised, about whom Employee obtained confidential information in the ordinary course of business, or from whom Employee earned compensation, commissions, or earnings, consistent with O.C.G.A. § 13-8-51(10).
+[[Covered Customers]] means customers and prospective customers with whom Employee had material contact during the 2 years before termination of employment, meaning customers Employee dealt with on Employer's behalf, whose dealings with Employer Employee coordinated or supervised, about whom Employee obtained confidential information in the ordinary course of business, or from whom Employee earned compensation, commissions, or earnings.
 
 [[Covered Employees]] means employees with whom Employee worked or whom Employee managed during the 24 months before termination of employment.
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than five percent of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means the legitimate business interests that justify a restrictive covenant under the Georgia Restrictive Covenants Act (O.C.G.A. § 13-8-55), including Employer's Confidential Information, Employer's trade secrets, Employer's substantial relationships with specific prospective or existing customers, and Employer's customer goodwill.
+[[Protected Interests]] means Employer's Confidential Information, Trade Secrets, substantial customer relationships, and customer goodwill.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -92,19 +92,19 @@ Duration
 
 [[Solicit]] means to directly or indirectly, or by assisting others, solicit or attempt to solicit business, including actively seeking prospective customers, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] means information that derives independent economic value from not being generally known and is the subject of reasonable efforts to maintain its secrecy, as described in the Defend Trade Secrets Act, 18 U.S.C. § 1839(3).
+[[Trade Secrets]] means information that derives independent economic value from not being generally known and is the subject of reasonable efforts to maintain its secrecy.
 
-### Recitals, Consideration, and Legitimate Business Interests
+### Recitals, Consideration, and Protected Interests
 
-Employer and Employee acknowledge that this agreement is a contract between an employer and an employee, one of the relationships to which the Georgia Restrictive Covenants Act, O.C.G.A. § 13-8-50 et seq., applies (O.C.G.A. § 13-8-52(a)), and that each restrictive covenant in this agreement is supported by, and no greater than necessary to protect, one or more of Employer's Protected Interests, which the parties record here. As consideration for entering into this agreement, Employer provides Employee with access to Employer's Confidential Information, specialized training, and Employer's customer goodwill and relationships. For an existing employee, the parties intend the recited consideration to supply value beyond continued at-will employment. The restrictive covenants in this agreement contain limitations as to time, geographic area, and scope of prohibited activities that the parties intend to be reasonable and no greater than necessary to protect Employer's Protected Interests, as O.C.G.A. § 13-8-53(a) requires.
+Each covenant is supported by and no broader than necessary to protect Employer's Protected Interests. In consideration for this agreement, Employer provides Employee with access to Employer's Confidential Information, specialized training, and Employer's customer goodwill and relationships.
 
 ### Timing and Employee Acknowledgements
 
-Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
+Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
-Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Consistent with O.C.G.A. § 13-8-53(e), nothing in the Georgia Restrictive Covenants Act limits the period of time for which, or the geographic area within which, a party may agree to maintain information as confidential or as a trade secret, for so long as the information remains confidential or a trade secret. Employee's obligations regarding trade secrets therefore continue for the duration specified in Cover Terms as Trade Secrets Duration, and Employee's obligations regarding other Confidential Information continue for the duration specified in Cover Terms as Other Confidential Information Duration, in each case releasing information once it is no longer confidential or a trade secret. Trade secrets remain protected for as long as they qualify as trade secrets, consistent with the Defend Trade Secrets Act, 18 U.S.C. § 1839(3), and O.C.G.A. § 13-8-53(e). This confidentiality obligation does not restrict Employee's use of the general knowledge, skill, and experience Employee acquired during employment and is not intended to operate as a covenant not to compete.
+Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's trade-secret obligations continue while the information remains a trade secret. Other confidentiality obligations continue for the duration specified in Cover Terms and end when the information is no longer confidential. This obligation does not restrict Employee's use of the general knowledge, skill, and experience Employee acquired during employment.
 
 ### Permitted Disclosures and Protected Conduct
 
@@ -116,23 +116,23 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This covenant is limited to Covered Employees for the stated Restricted Period so that it is no broader in time or scope than necessary. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees.
 
 ### Non-Solicitation of Customers
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer for purposes of providing products or services that are competitive with those provided by Employer's business. This covenant reaches only Covered Customers, meaning customers and prospective customers with whom Employee had material contact, and is drawn no broader than necessary to protect Employer's Protected Interests.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer for purposes of providing products or services that are competitive with those provided by Employer's business.
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction reaches conduct beyond soliciting or attempting to solicit, and reaches only Covered Customers with whom Employee had material contact. It is drawn no broader than necessary to protect Employer's Protected Interests.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact.
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant applies only because Employee performs a covered function under O.C.G.A. § 13-8-53(a) — Employee customarily and regularly solicits customers or prospective customers, makes sales or obtains orders or contracts, performs the enumerated managerial duties, or serves as a key employee or a professional — as recorded in Cover Terms and the recitals. Employee's covered function is: Employee is a key employee or a professional, or in the course of employment customarily and regularly solicits customers or prospective customers, makes sales, or performs the managerial duties described in O.C.G.A. § 13-8-53(a).. The covenant contains limitations as to time, geographic area, and scope of prohibited activities that the parties intend to be reasonable and impose no greater restraint than necessary to protect Employer's Protected Interests, as O.C.G.A. § 13-8-53(a) requires. Where the Restricted Territory tracks the areas in which Employer conducts business, or names particular competitors for a limited period, the parties intend it to fall within the geographic-reasonableness presumption of O.C.G.A. § 13-8-56(2). Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. Employee's covered function is: Employee is a key employee or a professional, or in the course of employment customarily and regularly solicits customers or prospective customers, makes sales, or performs the managerial duties described in O.C.G.A. § 13-8-53(a).. Passive Public Holdings are permitted.
 
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. Passive Public Holdings are permitted.
 
 ### Non-Disparagement
 
@@ -140,7 +140,7 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 
 ### Physician and Health Care Practitioner Covenants
 
-A physician or other health care practitioner is bound by the covenants in this agreement only to the extent Employee performs a covered function under O.C.G.A. § 13-8-53(a). This agreement creates no physician-specific covenant and imposes no restriction on a health care worker who does not independently fall within one of those covered categories.
+The restrictive covenants apply to a physician or other health care practitioner only if the covered function identified in Cover Terms applies to Employee.
 
 ### No Conflicting Obligations
 
@@ -148,27 +148,23 @@ Employee represents that performing duties for Employer and complying with this 
 
 ### Notice to Future Employers and Other Third Parties
 
-Employer may disclose the existence and terms of this agreement to any prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach this agreement. Employee consents to this disclosure. Employer will limit any such disclosure to factual statements tied to covenants that comply with the Act.
+Employer may disclose the existence and terms of this agreement to any prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach this agreement. Employee consents to this disclosure. Employer will limit any such disclosure to factual statements about the covenants in this agreement.
 
 ### Tolling During Breach
 
-The Restricted Period for each covenant runs from the date Employee's employment ends and expires on its stated end date. If Employee breaches a restrictive covenant, Employer's remedy is prompt enforcement within the Restricted Period, including the injunctive relief described below, rather than an extension of the period. This agreement does not rely on tolling to push any restriction past its stated end date.
+Each Restricted Period begins when Employee's employment ends and expires on its stated end date, notwithstanding any breach.
 
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek temporary and permanent injunctive relief and any other appropriate and effective remedy available at law or equity, including relief available under applicable trade-secret law to prevent actual or threatened misappropriation of trade secrets, consistent with O.C.G.A. § 13-8-58(c). Injunctive relief runs only through the covenant's stated Restricted Period.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek temporary and permanent injunctive relief and any other appropriate and effective remedy available at law or equity, including relief available under applicable trade-secret law to prevent actual or threatened misappropriation of trade secrets. Injunctive relief runs only through the covenant's stated Restricted Period.
 
 ### Enforceability and Severability
 
 If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable.
 
-### Reformation
-
-A court may modify a restrictive covenant that does not comply with O.C.G.A. § 13-8-53(d) only so long as the modification does not render the covenant more restrictive than as originally drafted. Consistent with O.C.G.A. § 13-8-54, the parties request that a court construe the covenants to comport with the reasonable intent of the parties and grant only the relief reasonably necessary to protect Employer's Protected Interests. Each restrictive covenant in this agreement is sized to Employer's legitimate business interest at the outset and is intended to be enforceable as written rather than in reliance on judicial modification.
-
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive for as long as the information remains confidential or a trade secret, consistent with O.C.G.A. § 13-8-53(e). All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive for as long as the information remains confidential or a trade secret. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### Assignment and Successors
 
@@ -176,7 +172,7 @@ Employee may not assign this agreement or any rights or obligations under it. Em
 
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms, including the Georgia Restrictive Covenants Act, O.C.G.A. § 13-8-50 et seq. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. For a Georgia-based Employee, the parties intend Georgia law to govern the enforceability of the restrictive covenants. The covenants in this agreement are drawn to be enforceable under the Act on their own terms rather than in reliance on any foreign choice-of-law selection.
+This agreement is governed by the law listed in Cover Terms. Disputes will be resolved in the courts of that state, subject to non-waivable rights under applicable law.
 
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 
@@ -218,10 +214,6 @@ A Georgia customer non-solicitation covenant reaches only material-contact custo
 ### employee non-recruitment covenants under the Act
 
 A Georgia employee non-recruitment or no-hire covenant is analyzed under the Restrictive Covenants Act, not the common law: _Belt Power v. Reed_ placed these covenants within the Act's ambit, and in _Wimmer_ the Supreme Court reviewed a two-year non-recruitment provision under O.C.G.A. § 13-8-53(a) . That places the clause under the same reasonableness standard, the same two-year employee presumption, and the same discretionary, narrowing-only modification as every other covenant — and, after _Wimmer_, without any express-geographic-term requirement — so a no-poach clause reaching beyond the colleagues the departing worker actually worked with or supervised is measured for overbreadth like any other restraint.
-
-### discretionary modification
-
-An overbroad Georgia covenant does not survive on the assumption a court will rewrite it into shape. Modification under O.C.G.A. § 13-8-53(d) is discretionary and can only narrow, never expand — and in _Belt Power v. Reed_ the court declined to modify at all, leaving the covenants unenforceable as written, so a covenant sized to the legitimate interest at the outset is the one that holds .
 
 ### foreign choice-of-law and the Georgia touchstone rule
 

@@ -5,33 +5,31 @@ category: non-compete
 description: >-
   Rhode Island-specific employee restrictive covenant agreement built for the
   Rhode Island Noncompetition Agreement Act (R.I. Gen. Laws ch. 28-59) and the
-  common-law reasonableness regime: confidentiality and
-  trade-secret protection preserved by the act, an employee non-solicitation
-  covenant, a customer non-solicitation covenant, and an optional non-compete
-  drafted to the state's strict-scrutiny reasonableness standard. The act bans
-  non-competes outright for four protected worker categories — employees who are
-  FLSA-nonexempt, undergraduate or graduate student interns, workers age 18 or
-  younger, and low-wage employees earning not more than 250 percent of the
-  federal poverty level for individuals — and separate statutes void any
-  restriction of a physician's or an advanced practice registered nurse's right
-  to practice. Employee and customer non-solicits and confidentiality agreements
-  are excluded from the statutory non-compete definition, so each restraint is
-  drafted as the covenant type it actually is and runs through common law. The
-  agreement recites the common-law enforcement elements, permits partial
-  enforcement while drawing each covenant no broader than reasonably necessary,
-  and relies on trade-secret protection as the fallback the act preserves.
-  Drafted as a starting point for licensed counsel review.
+  common-law reasonableness regime: confidentiality and trade-secret protection
+  preserved by the act, an employee non-solicitation covenant, a customer
+  non-solicitation covenant, and an optional non-compete drafted to the state's
+  strict-scrutiny reasonableness standard. The act bans non-competes outright
+  for four protected worker categories — employees who are FLSA-nonexempt,
+  undergraduate or graduate student interns, workers age 18 or younger, and
+  low-wage employees earning not more than 250 percent of the federal poverty
+  level for individuals — and separate statutes void any restriction of a
+  physician's or an advanced practice registered nurse's right to practice.
+  Employee and customer non-solicits and confidentiality agreements are excluded
+  from the statutory non-compete definition, so each restraint is drafted as the
+  covenant type it actually is and runs through common law. The agreement
+  recites the common-law enforcement elements, permits partial enforcement while
+  drawing each covenant no broader than reasonably necessary, and relies on
+  trade-secret protection as the fallback the act preserves. Drafted as a
+  starting point for licensed counsel review.
 source_url: >-
   https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-rhode-island
 version: 0.1.0
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: >-
   Authored by OpenAgreements contributors. Rhode Island-specific analysis
-  informed by the quote-verified Rhode Island practice note. Licensed under
-  CC BY 4.0.
+  informed by the quote-verified Rhode Island practice note. Licensed under CC
+  BY 4.0.
 layout_id: cover-standard-signature-v1
 style_id: openagreements-default-v1
 document:
@@ -92,15 +90,16 @@ fields:
     rationale_source: editorial
   - name: worker_category_confirmation
     type: string
+    ai_only: true
     description: >-
       Reviewer's confirmation that the worker is NOT within any protected
       category the Rhode Island Noncompetition Agreement Act bars a non-compete
       against — not FLSA-nonexempt, not an undergraduate or graduate student
       intern, not age 18 or younger, and not a low-wage employee (average annual
       earnings not more than 250 percent of the federal poverty level for
-      individuals) — and is not a physician or advanced practice registered nurse
-      whose right to practice is protected by profession-specific bans. These
-      facts are review-time facts, not contract inputs; the covenant is
+      individuals) — and is not a physician or advanced practice registered
+      nurse whose right to practice is protected by profession-specific bans.
+      These facts are review-time facts, not contract inputs; the covenant is
       unenforceable against a protected worker regardless of what this field
       says.
     display_label: Protected-Category Screen Confirmation
@@ -117,8 +116,8 @@ fields:
   - name: governing_law
     type: string
     description: >-
-      Governing law state. The Rhode Island practice note records no Rhode Island
-      anti-evasion statute and no controlling choice-of-law decision for
+      Governing law state. The Rhode Island practice note records no Rhode
+      Island anti-evasion statute and no controlling choice-of-law decision for
       restrictive covenants, so a foreign-law clause covering a Rhode Island
       worker is unsettled risk in both directions; this should remain Rhode
       Island for a Rhode Island-based worker.
@@ -143,14 +142,19 @@ fields:
       employment agreements. The Noncompetition Agreement Act excludes
       nondisclosure and confidentiality agreements from the non-compete
       definition only so long as the clause stays a confidentiality clause; a
-      finite term for ordinary information keeps the NDA from reading as a hidden
-      activity restraint.
+      finite term for ordinary information keeps the NDA from reading as a
+      hidden activity restraint.
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee non-solicitation covenant is included
-    display_label: Employee Non-Solicitation Included
-    default: true
+    description: >-
+      Whether the employee no-hire / non-solicitation covenant is included.
+      Alabama's only category for restraints touching another party's workers is
+      the no-hire exception for workers in a position uniquely essential to the
+      management, organization, or service of the business.
+    display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
+    rationale_source: editorial
+    default: true
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee non-solicitation restriction
@@ -160,10 +164,11 @@ fields:
     rationale_source: benchmark
     benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     default_value_rationale: >-
-      24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed
-      employee agreements; 12 months is the common lighter alternative. Rhode Island excludes
-      employee non-solicits from the statutory non-compete definition, routing the clause to the
-      common-law reasonableness test, where a tightly-sized term supports the
+      24 months matches the modal employee non-solicit term observed in
+      benchmarked, publicly-filed employee agreements; 12 months is the common
+      lighter alternative. Rhode Island excludes employee non-solicits from the
+      statutory non-compete definition, routing the clause to the common-law
+      reasonableness test, where a tightly-sized term supports the
       no-broader-than-apparently-necessary showing.
   - name: covered_employee_period
     type: string
@@ -178,10 +183,14 @@ fields:
       scope.
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the customer/partner non-solicitation covenant is included
+    description: >-
+      Whether the current-customer non-solicitation covenant is included.
+      Alabama gives this covenant its own category, limited to current
+      customers.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
+    rationale_source: editorial
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer/partner non-solicitation restriction
@@ -191,12 +200,13 @@ fields:
     rationale_source: benchmark
     benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     default_value_rationale: >-
-      12 months is the lighter side of the near-even 12/24-month split observed in
-      benchmarked, publicly-filed employee agreements and is a common enforceable
-      duration here and stays comfortably inside the 24-month customer restraint the
-      Rhode Island Supreme Court most recently enforced at the preliminary-injunction
-      stage; duration is still measured against the legitimate interest it protects, so
-      a shorter term eases the reasonableness showing.
+      12 months is the lighter side of the near-even 12/24-month split observed
+      in benchmarked, publicly-filed employee agreements and is a common
+      enforceable duration here and stays comfortably inside the 24-month
+      customer restraint the Rhode Island Supreme Court most recently enforced
+      at the preliminary-injunction stage; duration is still measured against
+      the legitimate interest it protects, so a shorter term eases the
+      reasonableness showing.
   - name: covered_customer_period
     type: string
     description: >-
@@ -225,12 +235,12 @@ fields:
     default_value_rationale: >-
       Conservative default. A Rhode Island non-compete is unenforceable outright
       against four protected worker categories and void for physicians and
-      APRNs, and even for other workers it is disfavored and strictly scrutinized.
-      Include only after confirming the worker is outside every protected
-      category, is not a physician or APRN, and the covenant is ancillary to a
-      valid relationship, supported by consideration, protective of an identified
-      legitimate interest, and drawn no broader than apparently necessary
-      under Rhode Island common law.
+      APRNs, and even for other workers it is disfavored and strictly
+      scrutinized. Include only after confirming the worker is outside every
+      protected category, is not a physician or APRN, and the covenant is
+      ancillary to a valid relationship, supported by consideration, protective
+      of an identified legitimate interest, and drawn no broader than apparently
+      necessary under Rhode Island common law.
   - name: noncompete_duration
     type: string
     description: Duration of non-competition restriction
@@ -241,18 +251,21 @@ fields:
     benchmark_ref: restrictive-covenant/non-compete-duration
     default_value_rationale: >-
       12 months matches the modal non-compete term observed in benchmarked,
-      publicly-filed employee agreements and is a common enforceable duration here.
-      Rhode Island measures duration against the legitimate interest the restraint
-      protects under strict scrutiny, so a shorter, interest-justified period is easier
-      to defend than a longer one.
+      publicly-filed employee agreements and is a common enforceable duration
+      here. Rhode Island measures duration against the legitimate interest the
+      restraint protects under strict scrutiny, so a shorter, interest-justified
+      period is easier to defend than a longer one.
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
     display_label: Restricted Territory
-    default: the geographic area in which Employer's protected legitimate interests actually operate
+    default: >-
+      the geographic area in which Employer's protected legitimate interests
+      actually operate
     section: Non-Competition
     rationale_source: case_law
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.rhode-island.satisfy-common-law-reasonableness-elements
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.rhode-island.satisfy-common-law-reasonableness-elements
     default_value_rationale: >-
       Tied to where Employer's protected interests actually operate rather than
       an open-ended footprint. Rhode Island tolerates even a restraint with no
@@ -283,10 +296,16 @@ fields:
       inclusion helps narrow the restraint.
   - name: nondealing_included
     type: boolean
-    description: Whether the no-business-with-covered-customers covenant is included.
+    description: >-
+      Whether the no-business-with-covered-customers covenant is included. A
+      non-dealing covenant has no named Alabama category of its own, so it must
+      be drafted to fit inside the current-customer non-solicit exception or it
+      is exposed to Alabama's void rule for restraints outside the listed
+      categories.
     display_label: No Business with Covered Customers Included
     default: false
     section: No Business with Covered Customers
+    rationale_source: editorial
   - name: nondealing_duration
     type: string
     description: Duration of the no-business-with-covered-customers restriction
@@ -305,18 +324,24 @@ fields:
     section: Definitions
     default_value_rationale: >-
       Five percent of any class of publicly traded securities is the modal
-      passive-investment carve-out threshold observed in benchmarked, publicly-filed
-      employee agreements that include the carve-out (lower 1-3 percent thresholds are
-      the common tighter alternatives). A carve-out below a stated threshold keeps the
-      covenant from restraining ordinary public-share ownership no legitimate interest
-      requires — gratuitous overbreadth in a state that enforces restraints only as far
-      as apparently necessary.
+      passive-investment carve-out threshold observed in benchmarked,
+      publicly-filed employee agreements that include the carve-out (lower 1-3
+      percent thresholds are the common tighter alternatives). A carve-out below
+      a stated threshold keeps the covenant from restraining ordinary
+      public-share ownership no legitimate interest requires — gratuitous
+      overbreadth in a state that enforces restraints only as far as apparently
+      necessary.
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included.
+    description: >-
+      Whether the non-investment covenant is included. A non-investment covenant
+      has no named Alabama category; one genuine use is restraining a licensed
+      professional's business conduct outside the practice of the profession,
+      which sits outside Alabama's professional exemption.
     display_label: Non-Investment Included
     default: false
     section: Non-Investment
+    rationale_source: editorial
   - name: noninvestment_duration
     type: string
     description: Duration of non-investment restriction
@@ -330,9 +355,21 @@ fields:
     default: 24 months
     section: Non-Disparagement
     default_value_rationale: 24 months is common for employment non-disparagement provisions.
+  - name: healthcare_provider
+    type: boolean
+    description: >-
+      Whether Employee is a healthcare provider whose covenant implicates
+      profession-specific restrictions, patient access, or continuity-of-care
+      requirements. Set this explicitly from Employee's licensed role; do not
+      infer it from the agreement's jurisdiction.
+    display_label: Healthcare Provider
+    section: Healthcare
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template
 ---
 # Employee Restrictive Covenant Agreement
 
@@ -347,8 +384,6 @@ The terms below are incorporated into and form part of this agreement.
 {% cover-term kind="row" label="Employee Title / Position" field="employee_title" include-when="employee_title" /%}
 {% cover-term kind="row" label="Effective Date" field="effective_date" /%}
 {% cover-term kind="row" label="Governing Law" field="governing_law" /%}
-{% cover-term kind="group" label="Rhode Island Statutory Gates" /%}
-{% cover-term kind="subrow" label="Protected-Category Screen Confirmation" field="worker_category_confirmation" /%}
 {% cover-term kind="group" label="Confidentiality" /%}
 {% cover-term kind="subrow" label="Trade Secrets Duration" field="confidentiality_trade_secret_duration" /%}
 {% cover-term kind="subrow" label="Other Confidential Information Duration" field="confidentiality_other_duration" /%}
@@ -390,7 +425,7 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {% field name="passive_public_holdings_threshold" /%} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means Employer's legitimate interest in protecting its Trade Secrets, other Confidential Information, confidential customer relationships, and goodwill. Protection from ordinary competition is not a Protected Interest, and each covenant in this agreement identifies the specific interest it serves.
+[[Protected Interests]] means Employer's legitimate interest in protecting its Trade Secrets, other Confidential Information, confidential customer relationships, and goodwill. Protection from ordinary competition is not a Protected Interest.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -398,19 +433,19 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Solicit]] means to directly or indirectly initiate contact with, approach, induce, or encourage any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] means information that qualifies as a trade secret under the Rhode Island Uniform Trade Secrets Act, R.I. Gen. Laws § 6-41-1(4), and under applicable federal law, including information that derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from its disclosure or use, and that is the subject of reasonable efforts to maintain its secrecy (see also the federal Defend Trade Secrets Act, 18 U.S.C. § 1839(3)).
+[[Trade Secrets]] means information that qualifies as a trade secret by the Rhode Island Uniform Trade Secrets Act, R.I. Gen. Laws § 6-41-1(4), and by applicable federal law, including information that derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from its disclosure or use, and that is the subject of reasonable efforts to maintain its secrecy.
 {% /clause %}
 
 {% clause id="recitals-and-legitimate-interest" %}
 ### Recitals and Legitimate Interest
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship. Employee will receive access to Employer's Confidential Information and Trade Secrets and will develop goodwill with Employer's customers in the course of employment, and each covenant in this agreement is included solely to protect Employer's Protected Interests and is drawn no broader than apparently necessary to protect the party in whose favor it runs. Employer would not provide Employee with access to its Confidential Information and Trade Secrets absent the protections in this agreement. The parties intend each covenant to be drawn within the scope Rhode Island law permits at the outset rather than in reliance on judicial narrowing.
+Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship. Employee will receive access to Employer's Confidential Information and Trade Secrets and will develop goodwill with Employer's customers in the course of employment. Employer would not provide Employee with access to its Confidential Information and Trade Secrets absent the protections in this agreement.
 {% /clause %}
 
 {% clause id="timing-and-consideration" %}
 ### Timing and Consideration
 
-This agreement is effective as of the Effective Date listed in Cover Terms. Employer and Employee acknowledge that the consideration exchanged for the restrictive covenants in this agreement — which may include the offer or continuation of at-will employment together with training, licensure support, access to Confidential Information and Trade Secrets, or other value — is adequate and is exchanged for those covenants, and this agreement records that consideration so the contemporaneous exchange is available if enforcement is later sought. Employee may consult an attorney before entering into this agreement.
+This agreement is effective as of the Effective Date listed in Cover Terms. Employer and Employee acknowledge that the consideration exchanged for the restrictive covenants in this agreement — which may include the offer or continuation of at-will employment together with training, licensure support, access to Confidential Information and Trade Secrets, or other value — is adequate and is exchanged for those covenants. Employee may consult an attorney before entering into this agreement.
 {% /clause %}
 
 {% clause id="confidential-information-and-trade-secret-protection" %}
@@ -440,25 +475,25 @@ During the Restricted Period, Employee must not Solicit, recruit, hire, or attem
 {% clause id="non-solicitation-of-customers-vendors-referral-sources-and-business-partners" include-when="customer_nonsolicit_included" %}
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant is scoped to Covered Customers over the Covered Customer Period rather than to a geographic territory, is included solely to protect Employer's Protected Interests, and is drawn no broader than apparently necessary to protect them. If Employee is a physician or an advanced practice registered nurse, this covenant does not apply to and is not enforceable against Employee as a restriction of the right to practice protected by R.I. Gen. Laws §§ 5-37-33 / 5-34-50.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer during the Covered Customer Period. If Employee is a physician or an advanced practice registered nurse, this covenant does not apply to Employee's practice of medicine or advanced practice nursing.
 {% /clause %}
 
 {% clause id="no-business-with-covered-customers" include-when="nondealing_included" %}
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. The parties include this covenant only where a genuine Protected Interest supports it, and it is drawn no broader than apparently necessary to protect that interest.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact.
 {% /clause %}
 
 {% clause id="non-competition" include-when="noncompete_included" %}
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant applies, and is enforceable, only if Employee is outside every worker category the Rhode Island Noncompetition Agreement Act protects: it is unenforceable against an employee who is nonexempt under the Fair Labor Standards Act, an undergraduate or graduate student intern, an employee age eighteen or younger, or an employee whose average annual earnings are not more than two hundred fifty percent of the federal poverty level for individuals (R.I. Gen. Laws §§ 28-59-3(a), 28-59-2(7)). This covenant does not apply to and is not enforceable against a physician or an advanced practice registered nurse as a restriction of the right to practice (§§ 5-37-33 / 5-34-50). This covenant is included solely to protect Employer's Protected Interests, is ancillary to a valid relationship, is supported by consideration, and is drawn no broader than apparently necessary to protect that interest. Where Employer can identify its real competitors, the Specified Competitors listed in Cover Terms bound this covenant in place of, or in addition to, the Competitive Business definition. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant does not apply if Employee is paid on an hourly basis, is eligible for overtime pay, is serving as a student intern, is age eighteen or younger, or has average annual earnings at or below the applicable amount established by law. This covenant does not restrict Employee's practice of medicine or advanced practice nursing. Where Cover Terms list Specified Competitors, this covenant is limited to those named competitors and their affiliates. Passive Public Holdings are permitted.
 {% /clause %}
 
 {% clause id="non-investment" include-when="noninvestment_included" %}
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive Public Holdings are permitted. This covenant is subject to the same Rhode Island gates as the non-competition covenant: it does not apply to a protected-category worker, a physician, or an advanced practice registered nurse; it identifies a legitimate interest that protection from the worker's capital alone will not supply; and it is drawn no broader than apparently necessary to protect Employer's Protected Interests.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. The objective exclusions in the Non-Competition section also apply to this restriction. Passive Public Holdings are permitted.
 {% /clause %}
 
 {% clause id="non-disparagement" %}
@@ -467,7 +502,7 @@ During the Restricted Period, Employee must not acquire or hold any active owner
 During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, discussing wages, hours, or working conditions as protected by law, or otherwise exercising rights protected by law.
 {% /clause %}
 
-{% clause id="physician-and-aprn-practice-rights" %}
+{% clause id="physician-and-aprn-practice-rights" include-when="healthcare_provider" %}
 ### Physician and APRN Practice Rights
 
 If Employee is a physician licensed to practice medicine, any restriction of Employee's right to practice medicine in this agreement is void and unenforceable with respect to that restriction, and the remaining provisions of this agreement stay in effect (R.I. Gen. Laws § 5-37-33). If Employee is an advanced practice registered nurse, any restriction of Employee's right to practice is likewise void and unenforceable with respect to that restriction, and the remaining provisions stay in effect (R.I. Gen. Laws § 5-34-50). For such a provider, this agreement operates only to the extent it does not restrict that right to practice.
@@ -476,13 +511,13 @@ If Employee is a physician licensed to practice medicine, any restriction of Emp
 {% clause id="no-conflicting-obligations" %}
 ### No Conflicting Obligations
 
-Employee represents that performing duties for Employer and complying with this agreement does not conflict with any prior agreement, court order, or legal obligation binding on Employee. Employee must promptly disclose to Employer any potential conflict that arises during employment. Employee's representations in this section include the facts that determine whether a covenant is enforceable against Employee under R.I. Gen. Laws § 28-59-3(a) or void under §§ 5-37-33 / 5-34-50.
+Employee represents that performing duties for Employer and complying with this agreement does not conflict with any prior agreement, court order, or legal obligation binding on Employee. Employee must promptly disclose to Employer any potential conflict that arises during employment.
 {% /clause %}
 
 {% clause id="notice-to-future-employers-and-other-third-parties" %}
 ### Notice to Future Employers and Other Third Parties
 
-Employer may disclose the existence and terms of this agreement to a prospective employer or business associate of Employee only where a covenant in this agreement is enforceable against Employee under Rhode Island law and Employer has a reasonable belief that Employee may breach that covenant. Employer will not present or attempt to enforce a covenant that is unenforceable against Employee under the Rhode Island Noncompetition Agreement Act or void under §§ 5-37-33 / 5-34-50. Employee consents to a disclosure permitted by this section.
+Employer may disclose the existence and terms of this agreement to a prospective employer or business associate of Employee only where a covenant in this agreement is enforceable against Employee under Rhode Island law and Employer has a reasonable belief that Employee may breach that covenant. Employer will not present or attempt to enforce a covenant that is unenforceable against Employee by the Rhode Island Noncompetition Agreement Act or void under §§ 5-37-33 / 5-34-50. Employee consents to a disclosure permitted by this section.
 {% /clause %}
 
 {% clause id="tolling-during-breach" %}
@@ -494,19 +529,13 @@ The Restricted Period for each covenant runs from the date Employee's employment
 {% clause id="remedies" %}
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate, and Employer may seek injunctive or other equitable relief in addition to any other remedies available at law. Where Employer's Trade Secrets are threatened, Employer may also seek an injunction against actual or threatened misappropriation under the Rhode Island Uniform Trade Secrets Act (R.I. Gen. Laws § 6-41-2(a)), and the contractual remedies in this agreement survive alongside the statutory ones (§ 6-41-7(b)). Any fee-shifting between the parties is mutual and prevailing-party based.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate, and Employer may seek injunctive or other equitable relief in addition to any other remedies available at law. Employer may also seek an injunction against actual or threatened misappropriation of Employer's Trade Secrets. Any fee-shifting between the parties is mutual and prevailing-party based.
 {% /clause %}
 
 {% clause id="enforceability-severability-and-partial-enforcement" %}
 ### Enforceability, Severability, and Partial Enforcement
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable and is drawn in separable tiers so that an unenforceable covenant does not affect the others. Consistent with R.I. Gen. Laws § 28-59-3(b), if a non-compete in this agreement is unenforceable against Employee under the Noncompetition Agreement Act, the remainder of this agreement survives.
-{% /clause %}
-
-{% clause id="partial-enforcement-not-reliance-on-reformation" %}
-### Partial Enforcement, Not Reliance on Reformation
-
-The parties intend that a court may modify and partially enforce any covenant in this agreement. Each restrictive covenant in this agreement is drawn no broader than reasonably necessary at the outset rather than in reliance on judicial narrowing.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect.
 {% /clause %}
 
 {% clause id="survival-and-expiration-of-each-covenant" %}
@@ -524,7 +553,7 @@ Employee may not assign this agreement or any rights or obligations under it. Em
 {% clause id="governing-law-venue-and-dispute-process" %}
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms. For a Rhode Island-based worker, the parties select Rhode Island law and a Rhode Island forum to keep the enforceability analysis where the covenant's facts sit. All disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
+This agreement is governed by the law listed in Cover Terms. Rhode Island law and a Rhode Island forum apply to an Employee who lives and works in Rhode Island. All disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
 {% /clause %}
 
 {% clause id="entire-agreement-amendment-waiver-and-electronic-signatures" %}

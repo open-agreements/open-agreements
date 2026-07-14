@@ -88,31 +88,31 @@ Duration
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than five percent of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means Employer's legitimate interests in its Confidential Information and trade secrets, its relationships with its existing customers, and its goodwill. The parties acknowledge that, under SDCL chapter 53-9, whether a covenant is enforceable turns on statutory fit rather than on a free-floating reasonableness test.
+[[Protected Interests]] means Employer's legitimate interests in its Confidential Information and Trade Secrets, its relationships with its existing customers, and its goodwill.
 
-[[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date of termination of the agreement and, for the non-competition and customer non-solicitation covenants, not exceeding two years from that date as required by SDCL 53-9-11.
+[[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date of termination of this agreement.
 
 [[Restricted Territory]] means the specified county, first- or second-class municipality, or other specified area described in Cover Terms under Restricted Territory in which Employer continues to carry on a like business.
 
 [[Solicit]] means to directly or indirectly contact, approach, induce, or encourage any person or entity for the purpose of diverting business away from Employer. Soliciting is affirmative outreach; it does not include accepting, servicing, or selling to a Covered Customer who initiates contact without solicitation by Employee, and it does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] has the meaning given in the South Dakota Uniform Trade Secrets Act, SDCL 37-29-1.
+[[Trade Secrets]] means information qualifying as a trade secret under applicable law.
 
 ### Recitals and Statutory Basis
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is drawn to fit within the employee exception in SDCL 53-9-11, applies only within the area, duration, and like-business limits stated in that covenant, is no broader than the exception permits, and protects Employer's Protected Interests.
+Employer and Employee acknowledge that the restrictive covenants protect Employer's Protected Interests and are limited by their stated scope, territory, and duration.
 
 ### Timing, Consideration, and Acknowledgements
 
-Employee agrees to these covenants at the time of employment or during employment, and Employee acknowledges receiving adequate consideration for them, including employment or continued employment, compensation, and access to Employer's Confidential Information. Employee acknowledges having had the opportunity to consult an attorney before signing. This agreement is effective as of the Effective Date listed in Cover Terms, which is also the date from which the statutory two-year ceiling is measured.
+Employee agrees to these covenants in exchange for employment, compensation, and access to Employer's Confidential Information. Employee acknowledges having had the opportunity to consult an attorney before signing. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
-Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue in perpetuity for as long as the information remains a trade secret. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms, and are enforced only to the extent reasonably necessary to protect Employer's interest in Confidential Information.
+Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue in perpetuity for as long as the information remains a trade secret. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms.
 
 ### Permitted Disclosures and Protected Conduct
 
-Nothing in this agreement prohibits Employee from: (a) reporting possible violations of law to any government agency, including the Securities and Exchange Commission, the Equal Employment Opportunity Commission, the Occupational Safety and Health Administration, or any other federal, state, or local agency; (b) making disclosures protected under whistleblower provisions of any law; (c) discussing wages, hours, or other terms and conditions of employment as protected by Section 7 of the National Labor Relations Act, 29 U.S.C. § 157; (d) testifying truthfully in legal proceedings; or (e) filing a sealed complaint in court using Confidential Information without liability. Pursuant to the Defend Trade Secrets Act, 18 U.S.C. § 1833(b), Employee may not be held criminally or civilly liable for disclosing a trade secret in confidence to a government official or attorney solely for the purpose of reporting or investigating a suspected violation of law, or in a sealed court filing.
+Nothing in this agreement prohibits Employee from: (a) reporting possible violations of law to any government agency, including the Securities and Exchange Commission, the Equal Employment Opportunity Commission, the Occupational Safety and Health Administration, or any other federal, state, or local agency; (b) making disclosures protected under whistleblower provisions of any law; (c) discussing wages, hours, or other terms and conditions of employment as protected by applicable law; (d) testifying truthfully in legal proceedings; or (e) filing a sealed complaint in court using Confidential Information without liability. Pursuant to the Defend Trade Secrets Act, 18 U.S.C. § 1833(b), Employee may not be held criminally or civilly liable for disclosing a trade secret in confidence to a government official or attorney solely for the purpose of reporting or investigating a suspected violation of law, or in a sealed court filing.
 
 ### Return, Deletion, and Certification of Company Property
 
@@ -124,15 +124,15 @@ During the Restricted Period specified in Cover Terms for Employee Non-Solicitat
 
 ### Non-Solicitation of Existing Customers
 
-During the Restricted Period specified in Cover Terms for Customer Non-Solicitation, Employee must not Solicit any Covered Customer within the Restricted Territory while Employer continues to carry on a like business therein. This covenant is limited to affirmative solicitation of Employer's existing customers, as SDCL 53-9-11 permits, and does not prohibit Employee from accepting, servicing, or selling to a customer who seeks out Employee without solicitation. The Restricted Period for this covenant does not exceed two years from the date of termination of the agreement.
+During the Restricted Period specified in Cover Terms for Customer Non-Solicitation, Employee must not Solicit any Covered Customer within the Restricted Territory while Employer continues to carry on a like business there. This covenant prohibits only affirmative solicitation and does not prohibit Employee from accepting, servicing, or selling to a customer who contacts Employee without solicitation. The Restricted Period does not exceed two years after termination.
 
 ### Non-Competition
 
-During the Restricted Period specified in Cover Terms for Non-Competition, Employee must not engage, directly or indirectly, in the same business or profession as that of Employer — that is, in any Competitive Business — within the Restricted Territory, while Employer continues to carry on a like business therein. This covenant relies on the employee exception in SDCL 53-9-11; its duration does not exceed two years from the date of termination of the agreement, its territory is confined to the specified county, first- or second-class municipality, or other specified area named in Cover Terms, and it operates only while Employer carries on a like business in that area. Passive Public Holdings are permitted.
+During the Restricted Period specified in Cover Terms for Non-Competition, Employee must not engage, directly or indirectly, in any Competitive Business within the Restricted Territory while Employer continues to carry on a like business there. This covenant lasts no more than two years after termination. Passive Public Holdings are permitted.
 
 ### Non-Investment
 
-During the Restricted Period specified in Cover Terms for Non-Investment, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business within the Restricted Territory. This restriction primarily targets active or material ownership in private competitors. Passive Public Holdings are permitted. Because a restraint on active roles at and material participation in a Competitive Business functions as a covenant not to compete, it is subject to the same SDCL 53-9-11 limits as the non-compete in this agreement — the specified area, the like-business condition, and the two-year ceiling measured from the date of termination of the agreement.
+During the Restricted Period specified in Cover Terms for Non-Investment, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business within the Restricted Territory. This restriction is subject to the same Restricted Territory, like-business condition, and Restricted Period as the Non-Competition covenant. Passive Public Holdings are permitted.
 
 ### Non-Disparagement
 
@@ -140,11 +140,11 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 
 ### Healthcare Practitioner Carve-Out
 
-If Employee is a practitioner as defined in SDCL 53-9-11.1 — a broad class that includes physicians, physician assistants, paramedics and emergency medical technicians, respiratory care practitioners, chiropractors, and other licensed clinical roles — then under SDCL 53-9-11.2 any provision of this agreement that would restrict Employee from practicing or otherwise providing professional services in accordance with the applicable scope of practice, after the conclusion of the employment or professional relationship, is voidable at Employee's election and Employer will not seek to enforce it as a practice restriction. This section does not apply to a provision effective upon the sale of a practice or an interest in a practice, or to a restriction on soliciting current patients or clients that complies with the geographic and temporal limitations referenced in SDCL 53-9-11.
+The post-employment restrictions do not restrict Employee from providing professional services within Employee's applicable licensed scope of practice. This exclusion does not apply to a restriction arising from the sale of a practice or to a permitted restriction on soliciting current patients or clients.
 
 ### No Restraint Through a Third-Party Agreement
 
-Employer's rights under this agreement rest on Employee's own covenants. Employer does not rely on, and this agreement does not incorporate, any no-hire, no-solicit, or no-recruit clause in any agreement between Employer and a customer, vendor, or other third party as a means of restraining Employee.
+Employer's rights under this agreement rest on Employee's own covenants. Employer does not use, and this agreement does not incorporate, any no-hire, no-solicit, or no-recruit clause in any agreement between Employer and a customer, vendor, or other third party as a means of restraining Employee.
 
 ### No Conflicting Obligations
 
@@ -152,19 +152,19 @@ Employee represents that performing duties for Employer and complying with this 
 
 ### Notice to Future Employers and Other Third Parties
 
-Employer may disclose the existence and terms of this agreement to any prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach a covenant in this agreement that fits an SDCL chapter 53-9 exception. Employee consents to this disclosure.
+Employer may disclose the existence and terms of this agreement to any prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach this agreement. Employee consents to this disclosure.
 
 ### Tolling During Breach
 
-If Employee breaches any restrictive covenant in this agreement, Employer may seek to extend the Restricted Period for that covenant by one day for each day of the breach. No extension under this section carries a covenant beyond the two-year ceiling that SDCL 53-9-11 measures from the date of termination of the agreement.
+If Employee breaches any restrictive covenant in this agreement, Employer may seek to extend the Restricted Period for that covenant by one day for each day of the breach. No extension may cause the Restricted Period to continue for more than two years after termination.
 
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate, and Employer may seek injunctive or other equitable relief in addition to any other remedies available at law. The South Dakota Uniform Trade Secrets Act, SDCL 37-29-1 et seq., supplies independent remedies for misappropriation of trade secrets that operate whether or not any covenant in this agreement survives.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate, and Employer may seek injunctive or other equitable relief in addition to any other remedies available at law. Employer may also pursue remedies for trade-secret misappropriation available under applicable law.
 
 ### Statutory Fit and Severability
 
-Each restrictive covenant in this agreement is drawn to fit within an exception to SDCL 53-9-8 and is intended to be enforceable as written rather than in reliance on judicial revision. If any restraint is found to exceed the applicable exception, it is enforced only to the extent the exception permits and is otherwise void to that extent under SDCL 53-9-8. Because the agreement is divisible, the confidentiality and trade-secret obligations and any other separable provisions remain in full force even if a restrictive covenant is found unenforceable.
+If any provision is unenforceable, it will be enforced to the maximum extent permitted by law, and the remaining provisions will remain in effect.
 
 ### Survival and Expiration of Each Covenant
 
@@ -172,7 +172,7 @@ Each restrictive covenant in this agreement expressly survives the termination o
 
 ### Assignment and Successors
 
-Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. Any successor that holds a restrictive covenant takes it subject to the same SDCL 53-9-11 limits, including the like-business condition; a successor that ceases to carry on a like business in the Restricted Territory loses the condition on which the covenant depends. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
+Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. Any assignee or successor takes this agreement subject to all limitations and conditions applicable to Employer and acquires no greater rights than Employer holds under it. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
 
 ### Governing Law, Venue, and Dispute Process
 
@@ -180,7 +180,7 @@ This agreement is governed by the law listed in Cover Terms. Disputes will be re
 
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 
-This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. This agreement may be amended only in writing signed by both parties, and any amendment must preserve the date on which the agreement was entered into and the date from which the statutory two-year ceiling runs. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
+This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. This agreement may be amended only in writing signed by both parties. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
 
 ## Signatures
 
