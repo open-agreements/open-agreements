@@ -6,7 +6,7 @@ citation: 'Baker v. Starkey, 144 N.W.2d 889 (Iowa 1966).'
 resource: 'https://www.courtlistener.com/opinion/2202172/baker-v-starkey/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/iowa'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/iowa'
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `restrictive-covenants-each-independently-includable`, `sale-of-business`
 - source_cards: `ia-baker-sale`, `q10-baker-sale-goodwill`
-- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2202172/baker-v-starkey/#:~:text=In%20determining%20the%20question%20of,business%20and%20its%20good%20will.>

@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/7970031/idbeis-v-wichita-surgical-specialists-pa/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/kansas'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/kansas'
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `healthcare`, `physician-specific-notices-and-carve-outs`
 - source_cards: `idbeis-referral-sources`, `idbeis-referral-sources-defs`, `idbeis-referral-sources-physician`
-- cited_by: [Non-Compete Agreement Review Checklist — Kansas](../checklists/non-compete/us/kansas.md), [Non-Competes in Kansas](../non-compete/us/kansas.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Kansas](../checklists/non-compete/us/kansas.md), [Non-Competes in Kansas](../non-compete/us/kansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7970031/idbeis-v-wichita-surgical-specialists-pa/#:~:text=In%20Kansas%2C%20however%2C%20the%20law,context%20of%20a%20medical%20practice.>

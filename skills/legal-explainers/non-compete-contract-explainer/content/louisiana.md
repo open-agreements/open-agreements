@@ -2,7 +2,7 @@
 jurisdiction: "Louisiana"
 slug: louisiana
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/louisiana
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/louisiana · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/louisiana · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Louisiana[^about]
 
@@ -95,7 +95,7 @@ A note on vocabulary: some Louisiana opinions use the word *reform* to describe 
 
 "Restrictive covenants are unfavored in Louisiana and are narrowly and strictly construed."[^brock-severance]
 
-The drafting lesson is the opposite of the strategy that works in reformation states. Casting a wide net in the hope a judge will trim it down is a high-risk approach in Louisiana, where the more likely outcome is total nullity of the non-compliant provision. For a clause-by-clause pass over a specific agreement against these rules, the [Louisiana non-compete review checklist](/checklists/non-compete/us/louisiana) walks the full covenant suite item by item with each requirement's force level.
+The drafting lesson is the opposite of the strategy that works in reformation states. Casting a wide net in the hope a judge will trim it down is a high-risk approach in Louisiana, where the more likely outcome is total nullity of the non-compliant provision. For a clause-by-clause pass over a specific agreement against these rules, the [Louisiana non-compete reviewer checklist](/checklists/non-compete/us/louisiana) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
@@ -223,7 +223,7 @@ A confidentiality or non-disclosure agreement is not subject to the parish-namin
 >
 > Do not draft a confidentiality agreement so broadly that it functions as a disguised non-compete. The trade-secret statute protects information and supports an injunction against misappropriation, but a confidentiality clause that effectively bars the employee from working risks being treated as a non-compete under La. R.S. 23:921 [^rs-51-1432][^q11-rs-23921-a1].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Louisiana. This article synthesizes Louisiana primary law and is not legal advice from a Louisiana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Louisiana. This article synthesizes Louisiana primary law and is not legal advice from a Louisiana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Louisiana*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/louisiana.
 
 [^rs-23921-a1]: **La. R.S. 23:921** — "Every contract or agreement, or provision thereof, by which anyone is restrained from exercising a lawful profession, trade, or business of any kind, except as provided in this Section, shall be null and void." *La. R.S. 23:921(A)(1).* <https://legis.la.gov/Legis/Law.aspx?d=84015>
 

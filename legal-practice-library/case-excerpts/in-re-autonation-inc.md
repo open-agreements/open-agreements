@@ -6,7 +6,7 @@ citation: 'In re AutoNation, Inc., 228 S.W.3d 663 (Tex. 2007).'
 resource: 'https://www.courtlistener.com/opinion/894883/in-re-autonation-inc/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/texas'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/texas'
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `choice-of-law-forum`, `governing-law-venue-dispute-process`
 - source_cards: `autonation-forum`, `tx-autonation-forum`
-- cited_by: [Non-Compete Agreement Review Checklist — Texas](../checklists/non-compete/us/texas.md), [Non-Competes in Texas](../non-compete/us/texas.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Texas](../checklists/non-compete/us/texas.md), [Non-Competes in Texas](../non-compete/us/texas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/894883/in-re-autonation-inc/#:~:text=AutoNation%20now%20seeks%20mandamus%20relief,and%20we%20conditionally%20grant%20it.>

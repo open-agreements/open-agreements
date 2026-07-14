@@ -1,9 +1,52 @@
 # Us Update Log
 
+## 2026-07-12
+* **Update**: MA non-compete: guide freshness + template operative-text cleanup with owner expert-correction checkpoint (#1561, #1718) (#1738) (bc6389f)
+
+## 2026-07-11
+* **Update**: Remove stale agreement clause promotions (acdac43)
+
+## 2026-07-10
+* **Update**: Prevent agreement strategy leakage (#1722) (418cd47)
+
+## 2026-07-09
+* **Update**: Make guided fill fields declarative (#1709) (690781f)
+
+## 2026-07-07
+* **Update**: content(non-compete): Batch 4 — relocate advisory prose out of RC operative bodies (OH, DE, SD, KS, AL, WI, MT) (#1593) (#1641) (48204d3)
+* **Update**: content(non-compete): Batch 5 — relocate advisory prose out of RC operative bodies (CT, AK, KY, CO, WA, NV, ME) (#1594) (#1649) (6ff96ae)
+* **Update**: content(non-compete): Batch 6 — relocate advisory prose out of RC operative bodies (AR, UT, GA, TX, OR, DC, ND, IL, MA, ID) (#1595) (#1658) (d872fac)
+* **Update**: content(non-compete): tag the 3 remaining projectable drafting cautions (CA, WY×2) (#1636) (e20f4f7)
+
+## 2026-07-06
+* **Update**: content(non-compete): Batch 2 — relocate advisory prose out of RC operative bodies (VT, NJ, MO, IA, NC, NH, NE) (#1591) (#1618) (6b0db34)
+* **Update**: content(non-compete): Batch 3 — relocate advisory prose out of RC operative bodies (MI, TN, HI, RI, IN, NM, MD) (#1592) (#1633) (9e3b4f9)
+* **Update**: Rename review checklists to reviewer checklists (#1631) (d88b1a2)
+
+## 2026-07-05
+* **Update**: feat(#1569): Batch 1 — relocate advisory prose out of 6 RC operative bodies (NY/SC/AZ/PA/MS/WV) (#1577) (92036a8)
+* **Update**: content(non-compete): name+link the VA form in 3 drafting cautions (#1597) (#1601) (97d7754)
+* **Update**: feat(#1545): Virginia pilot — relocate advisory prose out of the operative body (Phase 1) (#1556) (99d560a)
+* **Update**: content(non-compete): neutral-consequential register for drafting cautions (#1602) (b4db42b)
+* **Update**: feat(#1552): directionality sweep — trade-secret duration is a ceiling, not a floor (#1585) (bbde403)
+
+## 2026-07-03
+* **Update**: RC facet-core: rationale_source SSOT routing (#1501) + MA de-Florida (#19) + cover-term OR gate (#17) (#1509) (35121a8)
+* **Update**: Flip Virginia non-compete 2026 rules to current law (#1532) (bc83798)
+* **Update**: feat(invention-assignment): Phase D wave 2 Atlantic tranche — KY, MS, SC, PA, VA, ME (#1450) (#1506) (efdcf6d)
+
+## 2026-07-01
+* **Update**: content(south-dakota): flip HB 1180 to present tense (took effect July 1, 2026) (#1086) (048cb16)
+* **Update**: feat(non-compete): re-author FTC rule-status as a quote-verified note + guardrails (#1373) (#1423) (a7c6ee4)
+
+## 2026-06-30
+* **Update**: feat(freshness): LA/ND/DC non-compete surveillance profiles (Round 4) (#1294) (f4ee7d8)
+
 ## 2026-06-29
 * **Update**: Backfill non-solicit / sale-of-business cells with body + source-cards (#1213) — HELD for legal review (#1216) (95a4b4c)
 * **Update**: feat(spec): spokes carry reqId on {% answer %}/{% caution %} (#1203 WS2) (#1273) (a64d00e)
 * **Update**: feat(spec): route template drafting notes through the spec-Requirement hub (#1203 WS3) (#1289) (bcb0554)
+* **Update**: Backfill deferred non-compete comparison cells with hydrated sources (#1282) (cb7c6b5)
 
 ## 2026-06-28
 * **Update**: feat(non-compete): futureEffective[] + Legislation JSON-LD (closes #1085) (#1185) (61d26ba)

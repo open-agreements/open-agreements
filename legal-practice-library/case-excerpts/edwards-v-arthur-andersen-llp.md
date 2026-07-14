@@ -8,7 +8,7 @@ citation: 'Edwards v. Arthur Andersen LLP, 44 Cal. 4th 937 (2008).'
 resource: 'https://www.courtlistener.com/opinion/5608069/edwards-v-arthur-andersen-llp/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/california'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/california'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `customer-nonsolicitation`, `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `ca-edwards-covenants`, `edwards-reject-narrow`, `q2-edwards-reject-narrow`
-- cited_by: [Non-Compete Agreement Review Checklist — California](../checklists/non-compete/us/california.md), [Non-Competes in California](../non-compete/us/california.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — California](../checklists/non-compete/us/california.md), [Non-Competes in California](../non-compete/us/california.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5608069/edwards-v-arthur-andersen-llp/#:~:text=We%20reject%20Andersen's%20contention%20that,prohibition%2Dagainst%2Drestraint%20rule%20under%20section%2016600.>

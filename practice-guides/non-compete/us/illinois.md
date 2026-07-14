@@ -4,13 +4,14 @@ title: Non-Competes in Illinois
 description: >-
   A question-by-question summary of Illinois non-compete law under the Illinois
   Freedom to Work Act (820 ILCS 90), including the $75,000/$45,000 earnings
-  thresholds, the codified two-year consideration rule and the Midwest Lending
-  express-delineation trap, the 14-day notice requirement, the Reliable Fire
-  reasonableness test, the construction, broadcaster, nurse-agency, and
-  mental-health carve-outs, judicial reformation limits, tolling-during-breach
-  clauses, trade-secret alternatives, employee fee-shifting and Attorney General
-  enforcement, and the 2026 Workplace Transparency Act limits on out-of-state
-  choice-of-law and venue clauses.
+  thresholds, the codified two-year consideration rule and its
+  express-delineation requirement for benefit-based consideration, the 14-day
+  notice requirement, the totality-of-the-circumstances reasonableness test, the
+  construction, broadcaster, nurse-agency, and mental-health carve-outs,
+  judicial reformation limits, tolling-during-breach clauses, trade-secret
+  alternatives, employee fee-shifting and Attorney General enforcement, and the
+  2026 Workplace Transparency Act limits on out-of-state choice-of-law and venue
+  clauses.
 resource: 'https://openagreements.org/practice-guides/non-compete/us/illinois'
 timestamp: '2026-06-03'
 tags:
@@ -20,7 +21,7 @@ tags:
 
 # Non-Competes in Illinois[^about]
 
-A question-by-question summary of Illinois non-compete law under the Illinois Freedom to Work Act (820 ILCS 90), including the $75,000/$45,000 earnings thresholds, the codified two-year consideration rule and the Midwest Lending express-delineation trap, the 14-day notice requirement, the Reliable Fire reasonableness test, the construction, broadcaster, nurse-agency, and mental-health carve-outs, judicial reformation limits, tolling-during-breach clauses, trade-secret alternatives, employee fee-shifting and Attorney General enforcement, and the 2026 Workplace Transparency Act limits on out-of-state choice-of-law and venue clauses.
+A question-by-question summary of Illinois non-compete law under the Illinois Freedom to Work Act (820 ILCS 90), including the $75,000/$45,000 earnings thresholds, the codified two-year consideration rule and its express-delineation requirement for benefit-based consideration, the 14-day notice requirement, the totality-of-the-circumstances reasonableness test, the construction, broadcaster, nurse-agency, and mental-health carve-outs, judicial reformation limits, tolling-during-breach clauses, trade-secret alternatives, employee fee-shifting and Attorney General enforcement, and the 2026 Workplace Transparency Act limits on out-of-state choice-of-law and venue clauses.
 
 ## Are employee non-compete agreements enforceable in Illinois? {#employee-non-compete-enforceability}
 
@@ -30,7 +31,7 @@ Illinois is not a ban state, but it regulates employee non-competes and non-soli
 
 "A covenant not to compete or a covenant not to solicit is illegal and void unless (1) the employee receives adequate consideration, (2) the covenant is ancillary to a valid employment relationship, (3) the covenant is no greater than is required for the protection of a legitimate business interest of the employer, (4) the covenant does not impose undue hardship on the employee, and (5) the covenant is not injurious to the public."[^ifwa-15-enforceability]
 
-Clearing the statute is necessary but not sufficient: the covenant must also be reasonable under the three-prong rule of reason the Illinois Supreme Court restated in *Reliable Fire Equipment Co. v. Arredondo* [^reliable-fire-3prong]. So the practical question in Illinois is layered — does the worker earn enough to be bound, was the covenant supported and properly noticed, and is the restraint reasonable on the facts. For a clause-by-clause pass over a specific agreement against those layered gates, the [Illinois non-compete review checklist](/checklists/non-compete/us/illinois) walks the full covenant suite item by item with each requirement's force level.
+Clearing the statute is necessary but not sufficient: the covenant must also be reasonable under the three-prong rule of reason the Illinois Supreme Court restated in *Reliable Fire Equipment Co. v. Arredondo* [^reliable-fire-3prong]. So the practical question in Illinois is layered — does the worker earn enough to be bound, was the covenant supported and properly noticed, and is the restraint reasonable on the facts. For a clause-by-clause pass over a specific agreement against those layered gates, the [Illinois non-compete reviewer checklist](/checklists/non-compete/us/illinois) walks the full covenant suite item by item with each requirement's force level.
 
 This note reflects current enacted law as of the review date. Two bills introduced in the 104th General Assembly would change it — HB 3213 would prohibit covenants not to compete and not to solicit outright, and HB 1642 would raise the non-compete earnings threshold to $300,000 — but as of the review date both remained in committee and neither had been enacted, so they do not yet affect enforceability.
 
@@ -64,7 +65,7 @@ The statute offers an alternative to the two-year clock — a shorter period of 
 > [!CAUTION]
 > **Drafting note.**
 >
-> If you rely on a bonus, equity grant, or other benefit as consideration for an Illinois covenant, draft the exchange clearly and tie the benefit to the covenant. In *Midwest Lending Corp. v. Horton*, a signing bonus mentioned only in an offer letter did not support a later, integrated nonsolicitation agreement that never identified the bonus as consideration for the covenant — so do not assume a benefit described elsewhere will carry an integrated covenant [^midwest-delineation].
+> An Illinois covenant supported by a benefit rather than two years of employment stands only where the covenant document itself identifies that benefit — a bonus, equity grant, or other professional or financial benefit — as given in exchange for the restraint. In *Midwest Lending Corp. v. Horton*, a signing bonus mentioned only in an offer letter did not support a later, integrated nonsolicitation agreement that never identified the bonus as consideration for the covenant, so a benefit described elsewhere and left out of the integrated covenant leaves the restraint unsupported and exposed to being held void for want of consideration [^midwest-delineation].
 
 ## Must an Illinois employer give advance notice before a non-compete is signed? {#notice-requirement}
 
@@ -127,7 +128,7 @@ Courts weigh factors such as the fairness of the restraints as originally writte
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not treat Illinois reformation as a safety net for an aggressive covenant. Section 35 lets a court reform or sever in its discretion but warns that extensive rewriting may violate public policy, and *AssuredPartners, Inc. v. Schmitt* refused to rescue a patently overbroad restraint — so draft to the narrowest defensible scope rather than relying on a judge to cut it down [^ifwa-35-reformation][^assured-overbroad].
+> Illinois reformation is not a safety net for an aggressive covenant. Section 35 lets a court reform or sever in its discretion but warns that extensive rewriting may violate public policy, and *AssuredPartners, Inc. v. Schmitt* refused to rescue a patently overbroad restraint, so a covenant drawn wider than necessary rests on a discretion the court may decline to exercise and stands or falls on the scope defensible at signing [^ifwa-35-reformation][^assured-overbroad].
 
 ## Does a tolling or extension-during-breach clause extend an Illinois non-compete? {#extended-for-breach}
 
@@ -197,7 +198,7 @@ So an inter-employer no-poach or wage-fixing arrangement can draw antitrust expo
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Illinois. This article synthesizes Illinois primary law and is not legal advice from a Illinois-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Illinois. This article synthesizes Illinois primary law and is not legal advice from a Illinois-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Illinois*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/illinois.
 
 [^ifwa-15-enforceability]: **820 ILCS 90/15** — "A covenant not to compete or a covenant not to solicit is illegal and void unless (1) the employee receives adequate consideration, (2) the covenant is ancillary to a valid employment relationship, (3) the covenant is no greater than is required for the protection of a legitimate business interest of the employer, (4) the covenant does not impose undue hardship on the employee, and (5) the covenant is not injurious to the public." *820 ILCS 90/15.* <https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K15.htm>
 

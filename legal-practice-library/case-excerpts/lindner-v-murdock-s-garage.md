@@ -55,8 +55,8 @@ Supporting case-law excerpt. Quoted across 9 document(s) in the OpenAgreements l
 
 > An employer must be prepared to face the competition of a former employee if it comes.
 
-- supports: `enforceability`, `legitimate-interest`
-- source_cards: `lindner-face-competition`, `lindner-face-competition-interest`, `lindner-not-competition-per-se`
+- supports: `employee-non-solicitation`, `enforceability`, `legitimate-interest`
+- source_cards: `lindner-face-competition`, `lindner-face-competition-interest`, `lindner-not-competition-per-se`, `qld-empns-lindner`
 - cited_by: [Non-Competes in Australia](../non-compete/au.md), [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md), [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md), [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md), [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md), [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md), [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md), [Non-Compete Enforceability in Victoria](../non-compete/au/victoria.md), [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
 

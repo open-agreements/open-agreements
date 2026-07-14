@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/894789/alex-sheshunoff-management-services-lp-v-johnson/
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/texas'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/texas'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `at-will-enforceability`, `parties-and-cover-term-identification`, `texas-statutory-gates`, `timing-and-execution-acknowledgements`
 - source_cards: `sheshunoff-performance`, `tx-sheshunoff-cover`, `tx-sheshunoff-gate`, `tx-sheshunoff-timing`
-- cited_by: [Non-Compete Agreement Review Checklist — Texas](../checklists/non-compete/us/texas.md), [Non-Competes in Texas](../non-compete/us/texas.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Texas](../checklists/non-compete/us/texas.md), [Non-Competes in Texas](../non-compete/us/texas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/894789/alex-sheshunoff-management-services-lp-v-johnson/#:~:text=The%20fact%20that%20the%20employer,created%20a%20binding%20unilateral%20contract.>

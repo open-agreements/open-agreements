@@ -8,7 +8,7 @@ citation: 'Pemco Corp. v. Rose, 163 W. Va. 420, 257 S.E.2d 885 (1979).'
 resource: 'https://www.courtlistener.com/opinion/8217515/pemco-corp-v-rose/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/west-virginia'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/west-virginia'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `mid-employment-consideration`, `west-virginia-statutory-gates`
 - source_cards: `pemco-new-contract-new-consideration`, `wv-pemco-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/us/west-virginia.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — West Virginia](../checklists/non-compete/us/west-virginia.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8217515/pemco-corp-v-rose/#:~:text=We%20believe%20Virginia%E2%80%99s%20highest%20court,based%20upon%20a%20new%20consideration.>

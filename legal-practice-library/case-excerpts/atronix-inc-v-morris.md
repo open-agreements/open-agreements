@@ -6,7 +6,7 @@ citation: 'Atronix, Inc. v. Morris, 197 A.3d 79 (N.H. 2018).'
 resource: 'https://www.courtlistener.com/opinion/4546183/atronix-inc-v-kenneth-morris-a/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/new-hampshire'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-hampshire'
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `assignment-and-successors`, `sale-of-business`
 - source_cards: `atronix-assigned-covenant`, `nh-atronix-conveyance`
-- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4546183/atronix-inc-v-kenneth-morris-a/#:~:text=Because%20we%20conclude%20that%20Morris%E2%80%99s,arguments%20or%20the%20defendants%E2%80%99%20argument>

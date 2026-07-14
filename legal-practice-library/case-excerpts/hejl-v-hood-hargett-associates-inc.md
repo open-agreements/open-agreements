@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/1283156/hejl-v-hood-hargett-associates-inc/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/north-carolina'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/north-carolina'
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `non-solicitation`, `restrictive-covenants-each-independently-includable`
 - source_cards: `nc-hejl-actual-customers`, `nc-hejl-prospective`, `q6-hejl-prospective`
-- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1283156/hejl-v-hood-hargett-associates-inc/#:~:text=Defendant%E2%80%99s%20attempt%20to%20prevent%20Plaintiff,an%20impermissible%20restraint%20on%20Plaintiff.>
 
 ### hejl-v-hood-hargett-associates-inc-therefore-because-the-parties-dealt-at-2cbffc9d {#hejl-v-hood-hargett-associates-inc-therefore-because-the-parties-dealt-at-2cbffc9d}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `north-carolina-statutory-gates`
 - source_cards: `nc-hejl-500`, `q2-hejl-500`
-- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1283156/hejl-v-hood-hargett-associates-inc/#:~:text=Therefore%2C%20because%20the%20parties%20dealt,due%20to%20lack%20of%20consideration.>

@@ -38,6 +38,11 @@ The Iowa Supreme Court stated the test directly in *Lamp v. American Prosthetics
 
 The burden does not shift to the former employee. *Iowa Glass Depot* places reasonableness on the party seeking enforcement, and it also frames the analysis as a balance between fair protection for the employer and unnecessary interference with the employee [^q2-iowa-glass-burden].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> Every covenant in the agreement stands or falls on Iowa's three-prong reasonableness test, and there is no general Iowa non-compete statute or statutory safe harbor to fall back on: a restraint holds only where it is reasonably necessary to protect the employer, not unreasonably restrictive of the employee, and not prejudicial to the public interest [^q2-lamp-three-prong]. The employer seeking enforcement carries the burden of proving reasonableness, so an acknowledgment of reasonableness written into the agreement does not carry it — each covenant clears the test only on its own record of duration, territory, and scope [^q2-iowa-glass-burden]. Adequate consideration establishes only that the covenants are supported at formation, not that they are reasonable, and continued employment sufficient as consideration does not by itself make an unreasonable covenant enforceable. A restraint tied to named competitors and sized to the employer's actual market is the defensible one, and the gate travels with an assignment: reasonable necessity is re-weighed against a successor's own customer relationships and footprint, so a restraint sized to one employer does not automatically fit a buyer.
+
 ## What legitimate business interests can an Iowa non-compete protect? {#legitimate-business-interest}
 
 **Short answer.** Customer relationships, employer-specific information, and specialized training can matter, but ordinary competition is not enough. Iowa courts look at customer proximity, information peculiar to the employer, the nature of the business, and the restrained occupation [^q3-revere-factors].
@@ -60,6 +65,11 @@ The examples are fact-specific. In *Pro Edge*, a federal court applying Iowa law
 
 By contrast, *AG Spectrum* held a three-year restraint unreasonable on a record where the independent contractor developed his own customer base and received minimal support from the company [^q4-ag-spectrum-unreasonable]. The same case predicted that Iowa would leave enforceability to the court rather than a jury [^q4-ag-spectrum-court-question].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> An independent-contractor covenant runs the same three-prong reasonableness analysis as an employee covenant, with no lighter standard for contractor status. A restraint that requires a contractor to forsake the customers the contractor brought to the relationship is unreasonable and unenforceable [^q4-ag-spectrum-unreasonable], so a covenant reaching a contractor's own book of business is the exposed case.
+
 ## Will an Iowa court fix an overbroad non-compete or void it? {#court-narrowing}
 
 **Short answer.** Usually it may reform. Iowa rejected a strict all-or-nothing approach and allows partial enforcement to the extent reasonably necessary to protect legitimate interests, unless the facts show bad faith or oppression [^q5-ehlers-reform].
@@ -68,12 +78,17 @@ This is Iowa's version of a *purple pencil* rule. In *Ehlers*, the Iowa Supreme 
 
 "I. In view of the position we take here, it is unnecessary to discuss these propositions separately. We now overrule Brecher v. Brown (1945), 235 Iowa 627 , 17 N.W.2d 377 , and adopt the rule that unless the facts and circumstances indicate bad faith on the part of the employer, we will enforce noncompetitive covenants to the extent they are reasonably necessary to protect his legitimate interests without imposing undue hardship on the employee when the public interest is not adversely affected."[^q5-ehlers-reform]
 
-*Farm Bureau* then applied the rule, narrowing a petroleum delivery covenant to the activities and six-township territory the employee actually served [^q5-farm-bureau-partial]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Iowa non-compete review checklist](/checklists/non-compete/us/iowa) walks the full covenant suite item by item with each requirement's force level.
+*Farm Bureau* then applied the rule, narrowing a petroleum delivery covenant to the activities and six-township territory the employee actually served [^q5-farm-bureau-partial]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Iowa non-compete reviewer checklist](/checklists/non-compete/us/iowa) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not draft an intentionally oppressive covenant and assume a court will rescue it. *Ehlers* expressly preserves a bad-faith limit, and no covenant inserted for reasons other than protecting legitimate employer interests should be enforced in equity [^q5-ehlers-bad-faith].
+> An overbroad Iowa covenant is not rescued by the assumption that a court will rewrite it. Iowa has abandoned the all-or-nothing rule and enforces an overbroad restraint only to the extent reasonably necessary to protect the employer's legitimate interests, without undue hardship on the employee and where the public interest is not adversely affected [^q5-ehlers-reform], applying that rule by narrowing a covenant's activities, territory, and duration to what the worker actually handled [^q5-farm-bureau-partial]. That partial-enforcement rule carries a built-in limit: it does not reach a covenant the facts show was placed for reasons other than protecting the employer's legitimate interests, and such a covenant is not enforced in equity [^q5-ehlers-bad-faith]. The restraint that survives is the one drawn as a tiered, severable, reasonable term sized to the protectable interest from the start, not one that depends on judicial revision.
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A notice to a departing employee's prospective employer is only as sound as the covenant it invokes. A covenant an Iowa court would narrow to the activities, territory, and duration the worker actually handled [^q5-ehlers-reform], or one an occupation statute voids outright, gives the notice little to rest on and can expose the employer to a claim for interfering with the new employment. The notice that holds is built on a restraint the employer is prepared to defend on all three reasonableness prongs.
 
 ## Does an Iowa non-compete period toll or extend during breach or litigation? {#extended-for-breach}
 
@@ -86,7 +101,7 @@ A drafted extension-on-breach clause would still have to survive Iowa's ordinary
 > [!CAUTION]
 > **Drafting note.**
 >
-> Treat tolling as an open Iowa issue. A clause that extends the restricted period during breach or litigation should be drafted as a defined, reasonable term and defended under the three-prong test, because Iowa reformation cases support narrowing unreasonable restraints, not automatically extending them [^q6-ehlers-reform][^q6-farm-bureau-fixed-period].
+> Tolling is an open question in Iowa: no controlling appellate authority decides whether a non-compete period tolls during breach or enforcement litigation, and the closest doctrine is reformation, which reshapes an overbroad covenant to a reasonable scope rather than adding time back [^q6-ehlers-reform]. Iowa's leading application set a fixed period measured from the date employment terminated, not an extension for breach or litigation delay [^q6-farm-bureau-fixed-period]. An extension-on-breach clause is itself a longer restraint, so it stands or falls as part of the covenant's duration under the same reasonableness test; an open-ended or indefinite extension, or one that assumes a court will revive an expired covenant, is the exposed case.
 
 ## Are Iowa non-solicitation and no-business covenants treated like non-competes? {#non-solicitation-no-business}
 
@@ -97,6 +112,11 @@ Iowa cases often involve covenants that combine competition bans, customer-conta
 "First it appears the activities restricted were more than were necessary for plaintiff’s protection. Defendant was restricted from any ‘ * * * business activity competitive to that of the company * * It would be ample protection for the plaintiff in this case to restrict a former employee only from those activities he undertook during his employment. Similarly defendant was restricted from activity throughout a two county area. It would have sufficed to restrict him from the six townships he worked in. The trial court rightly held the covenant too broad both as to scope and area."[^q7-farm-bureau-activities]
 
 So a customer non-solicit or no-business covenant may be easier to defend than a broad no-work covenant, but only when its scope tracks the employer's actual protectable relationships and does not suppress unrelated work.
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A customer non-solicit maps directly onto the employer's customer-goodwill interest — customer proximity is among the first factors Iowa weighs — and, backstopped by confidentiality and trade-secret protection, is often a stronger and more readily enforceable protection than a broad non-compete. A no-business-with-covered-customers clause reaches even customer-initiated business, so it presses harder on the reasonableness inquiry into whether a restraint sweeps in more activity than protection requires and deprives the customer of its chosen provider. Iowa trims such a restraint to the activities and territory the worker actually served [^q7-farm-bureau-activities], so a customer restriction survives only where it is sized tightly to the goodwill it protects and confined to customers the worker actually had material contact with; stretched beyond that, it is the exposed case.
 
 ## Is continued employment enough consideration for an Iowa non-compete? {#consideration}
 
@@ -123,7 +143,7 @@ H.F. 2254 is enacted 2026 law of limited reach. It directs the Board of Regents 
 > [!NOTE]
 > **Practice note.**
 >
-> Do not overstate the 2026 UIHC law. H.F. 2254 is limited to specified clinical employment contracts with the university of Iowa hospitals and clinics entered into, extended, or renewed on or after the Act's effective date; it does not ban non-competes for every Iowa physician or health-care employer [^q9-hf2254-effective].
+> The 2026 UIHC law reaches only specified clinical employment contracts with the University of Iowa Hospitals and Clinics entered into, extended, or renewed on or after the Act's effective date, so a routine extension or renewal can pull such a contract inside the prohibition and warrants a fresh look at the occupation- and sector-specific rules. It is not a ban on non-competes for every Iowa physician or health-care employer, and reading it that broadly overstates its reach [^q9-hf2254-effective].
 
 ## How are sale-of-business non-competes treated in Iowa? {#sale-of-business}
 
@@ -152,11 +172,11 @@ Unlike some states, Iowa has not made its trade-secret statute the exclusive rou
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not use a non-compete as the only confidentiality tool. If the real concern is secrecy, draft targeted NDA, invention-assignment, and trade-secret provisions, then use chapter 550 remedies where the information meets the statutory definition and secrecy efforts can be proved [^q11-trade-secret-definition][^q11-injunctive-relief].
+> A non-compete is not the only route to protecting secrecy, and often not the strongest. Where the real concern is confidential information, targeted NDA, invention-assignment, and trade-secret provisions carry their own protection: chapter 550 supplies an injunction against actual or threatened misappropriation independent of any covenant [^q11-injunctive-relief], damages for actual loss and unjust enrichment [^q11-damages], and attorney fees where a claim is made in bad faith, an injunction-termination motion is made or resisted in bad faith, or misappropriation is willful and malicious [^q11-fees] — each available only where the information meets the statutory definition of a trade secret and reasonable secrecy efforts can be proved [^q11-trade-secret-definition]. Return, deletion, and certification of employer property are part of those reasonable secrecy efforts. Because chapter 550 does not preempt every tort theory involving trade secrets, a common-law claim can run alongside the statutory one [^q11-brandow-nonpreemption].
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Iowa. This article synthesizes Iowa primary law and is not legal advice from a Iowa-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Iowa. This article synthesizes Iowa primary law and is not legal advice from a Iowa-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Iowa*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/iowa.
 
 [^q1-revere-three-prong]: **Revere Transducers, Inc. v. Deere & Co.** — "(1) Is the restriction reasonably necessary for the protection of the employer’s business; (2) is it unreasonably restrictive of the employee’s rights; and (3) is it prejudicial to the public interest?" *Revere Transducers, Inc. v. Deere & Co., 595 N.W.2d 751 (Iowa 1999).* <https://www.courtlistener.com/opinion/1989929/revere-transducers-inc-v-deere-co/#:~:text=(1)%20Is%20the%20restriction%20reasonably,prejudicial%20to%20the%20public%20interest%3F>
 

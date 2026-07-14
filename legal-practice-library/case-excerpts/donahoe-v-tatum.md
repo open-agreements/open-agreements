@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/1748183/donahoe-v-tatum-dba-personnel-serv/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/mississippi'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/mississippi'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-non-compete-enforceability`, `mississippi-statutory-gates`
 - source_cards: `donahoe-reasonable-balance`, `ms-donahoe-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1748183/donahoe-v-tatum-dba-personnel-serv/#:~:text=It%20is%20the%20law's%20function,reasonable%20balance%20in%20this%20area.>

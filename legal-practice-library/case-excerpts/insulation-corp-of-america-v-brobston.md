@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/2383660/insulation-corp-of-america-v-brobston/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/pennsylvania'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/pennsylvania'
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `termination-effect`
 - source_cards: `brobston-distinction`, `pa-brobston-distinction-defs`
-- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2383660/insulation-corp-of-america-v-brobston/#:~:text=It%20bears%20noting%20that%20there,failing%20to%20do%20his%20job.>
 
 ### insulation-corp-of-america-v-brobston-where-an-employee-is-terminated-by-74b91930 {#insulation-corp-of-america-v-brobston-where-an-employee-is-terminated-by-74b91930}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `termination-effect`
 - source_cards: `brobston-fired`, `pa-brobston-fired-defs`
-- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2383660/insulation-corp-of-america-v-brobston/#:~:text=Where%20an%20employee%20is%20terminated,the%20employee%20in%20its%20service.>

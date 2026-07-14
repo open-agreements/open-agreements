@@ -6,7 +6,7 @@ citation: 'QSP, Inc. v. Hair, 152 N.C. App. 174 (2002).'
 resource: 'https://www.courtlistener.com/opinion/1422226/qsp-inc-v-hair/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/north-carolina'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/north-carolina'
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `north-carolina-statutory-gates`
 - source_cards: `nc-qsp-newemployment`, `q2-qsp-newemployment`
-- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1422226/qsp-inc-v-hair/#:~:text=This%20offer%2C%20made%20by%20QSP,and%20therefore%20constituted%20valuable%20consideration.>

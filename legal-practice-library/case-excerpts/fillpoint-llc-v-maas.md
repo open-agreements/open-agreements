@@ -8,7 +8,7 @@ citation: 'Fillpoint, LLC v. Maas, 208 Cal. App. 4th 1170 (2012).'
 resource: 'https://www.courtlistener.com/opinion/5811287/fillpoint-llc-v-maas/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/california'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/california'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `assignment-and-successors`, `california-statutory-gates`, `customer-nonsolicitation`, `sale-of-business`
 - source_cards: `ca-fillpoint-assignment`, `ca-fillpoint-gate`, `fillpoint-void`, `q6-fillpoint-void`
-- cited_by: [Non-Compete Agreement Review Checklist — California](../checklists/non-compete/us/california.md), [Non-Competes in California](../non-compete/us/california.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — California](../checklists/non-compete/us/california.md), [Non-Competes in California](../non-compete/us/california.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5811287/fillpoint-llc-v-maas/#:~:text=In%20this%20case%2C%20when%20we,and%20unenforceable%20under%20California%20law.>

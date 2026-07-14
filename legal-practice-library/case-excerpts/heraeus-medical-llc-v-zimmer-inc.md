@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/4683524/heraeus-medical-llc-v-zimmer-inc/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/indiana'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/indiana'
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `restrictive-covenants-each-independently-includable`
 - source_cards: `heraeus-divisibility`, `heraeus-divisibility-covenants`
-- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4683524/heraeus-medical-llc-v-zimmer-inc/#:~:text=A%20court%20can%20blue%2Dpencil%20unreasonable,unreasonable%20portions%20have%20been%20eliminated.>
 
 ### heraeus-medical-llc-v-zimmer-inc-as-written-the-kolbe-agreement-s-52f65707 {#heraeus-medical-llc-v-zimmer-inc-as-written-the-kolbe-agreement-s-52f65707}
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `non-solicitation`, `restrictive-covenants-each-independently-includable`
 - source_cards: `heraeus-all-employees-covenants`, `heraeus-all-employees-defs`, `heraeus-nosolicit-overbroad`
-- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4683524/heraeus-medical-llc-v-zimmer-inc/#:~:text=As%20written%2C%20the%20Kolbe%20Agreement's,applies%20to%20all%20Zimmer%20employees.>
 
 ### heraeus-medical-llc-v-zimmer-inc-consistent-with-the-history-and-purpose-61b0a72d {#heraeus-medical-llc-v-zimmer-inc-consistent-with-the-history-and-purpose-61b0a72d}
@@ -50,7 +50,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `heraeus-no-added-terms`, `heraeus-reformation-clause`
-- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4683524/heraeus-medical-llc-v-zimmer-inc/#:~:text=Consistent%20with%20the%20history%20and,the%20power%20to%20do%20so.>
 
 ### heraeus-medical-llc-v-zimmer-inc-the-doctrine-however-does-not-allow-650e5f7f {#heraeus-medical-llc-v-zimmer-inc-the-doctrine-however-does-not-allow-650e5f7f}
@@ -59,5 +59,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `extended-for-breach`, `tolling-during-breach`
 - source_cards: `heraeus-eraser`, `heraeus-eraser-tolling`, `q8-heraeus-eraser`
-- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4683524/heraeus-medical-llc-v-zimmer-inc/#:~:text=The%20doctrine%2C%20however%2C%20does%20not,adding%2C%20changing%2C%20or%20rearranging%20terms.>

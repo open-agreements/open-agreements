@@ -2,26 +2,29 @@
 type: Case Excerpt
 title: 'Data Management, Inc. v. Greene'
 description: >-
-  Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988). — quoted in 2
+  Data Mgmt., Inc. v. Greene, 757 P.2d 62, 64 (Alaska 1988). — quoted in 3
   document(s).
-citation: 'Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).'
+citation: 'Data Mgmt., Inc. v. Greene, 757 P.2d 62, 64 (Alaska 1988).'
 resource: 'https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/'
-timestamp: '2026-06-12'
+timestamp: '2026-07-03'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/alaska'
+  - type: State Law Practice Guide
+    resource: 'https://openagreements.org/practice-guides/invention-assignment/us/alaska'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/alaska'
 tags:
   - case-law
+  - invention-assignment
   - non-compete
 ---
 
 # Data Management, Inc. v. Greene
 
-*Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).*
+*Data Mgmt., Inc. v. Greene, 757 P.2d 62, 64 (Alaska 1988).*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -31,23 +34,23 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `alaska-statutory-gates`, `alternatives`, `definitions`, `employee-non-compete-enforceability`, `employee-non-solicitation`, `parties-and-cover-term-identification`, `reasonableness-test`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`, `writing-requirement`
 - source_cards: `ak-data-management-factors-cov`, `ak-data-management-factors-cover`, `ak-data-management-factors-defs`, `ak-data-management-factors-gate`, `ak-data-management-factors-tolling`, `ak-ens-factors`, `data-management-reasonableness-factors`, `data-management-reasonableness-factors-alternatives`, `data-management-reasonableness-factors-reasonable`, `data-management-reasonableness-factors-writing`
-- cited_by: [Non-Compete Agreement Review Checklist — Alaska](../checklists/non-compete/us/alaska.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Alaska](../checklists/non-compete/us/alaska.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=Among%20the%20factors%20properly%20to,incidental%20to%20the%20main%20employment.%E2%80%9D>
 
 ### data-management-inc-v-greene-the-third-approach-and-the-one-ac287b2c {#data-management-inc-v-greene-the-third-approach-and-the-one-ac287b2c}
 
 > The third approach, and the one we adopt, is to hold that if an overbroad covenant not to compete can be reasonably altered to render it enforceable, then the court shall do so unless it determines the covenant was not drafted in good faith. The burden of proving that the covenant was drafted in good faith is on the employer.
 
-- supports: `court-narrowing`, `severability-and-reformation`, `timing-and-execution-acknowledgements`
+- supports: `court-narrowing`, `holdover-clause-limit`, `severability-and-reformation`, `timing-and-execution-acknowledgements`
 - source_cards: `ak-data-management-alteration-sev`, `ak-data-management-good-faith-timing`, `data-management-reasonable-alteration`
-- cited_by: [Non-Compete Agreement Review Checklist — Alaska](../checklists/non-compete/us/alaska.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Alaska](../checklists/non-compete/us/alaska.md), [Employee Invention Assignment in Alaska](../invention-assignment/us/alaska.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=The%20third%20approach%2C%20and%20the,faith%20is%20on%20the%20employer.>
 
 ### data-management-inc-v-greene-the-trial-court-must-determine-whether-2053a178 {#data-management-inc-v-greene-the-trial-court-must-determine-whether-2053a178}
 
 > The trial court must determine whether an employer has overreached willfully and, if so, the court should refuse to alter the covenant.
 
-- supports: `court-narrowing`, `employee-non-solicitation`, `severability-and-reformation`
-- source_cards: `ak-data-management-overreach-sev`, `ak-ens-goodfaith`, `data-management-overreach-good-faith`
-- cited_by: [Non-Compete Agreement Review Checklist — Alaska](../checklists/non-compete/us/alaska.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
+- supports: `court-narrowing`, `employee-non-solicitation`, `holdover-clause-limit`, `severability-and-reformation`
+- source_cards: `ak-data-management-overreach-sev`, `ak-ens-goodfaith`, `data-management-good-faith-gate`, `data-management-overreach-good-faith`
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Alaska](../checklists/non-compete/us/alaska.md), [Employee Invention Assignment in Alaska](../invention-assignment/us/alaska.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=The%20trial%20court%20must%20determine,refuse%20to%20alter%20the%20covenant.>

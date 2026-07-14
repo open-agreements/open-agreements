@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/7213041/caring-hearts-personal-home-services-inc-v-hobley/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/kansas'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/kansas'
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `kansas-statutory-gates`, `reasonableness-test`
 - source_cards: `caring-hearts-public-welfare`, `caring-hearts-public-welfare-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Kansas](../checklists/non-compete/us/kansas.md), [Non-Competes in Kansas](../non-compete/us/kansas.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Kansas](../checklists/non-compete/us/kansas.md), [Non-Competes in Kansas](../non-compete/us/kansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7213041/caring-hearts-personal-home-services-inc-v-hobley/#:~:text=There%20is%20no%20evidence%20that%20enforcement,injurious%20to%20the%20public%20welfare.>

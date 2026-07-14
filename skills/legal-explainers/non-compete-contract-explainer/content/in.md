@@ -2,7 +2,7 @@
 jurisdiction: "India"
 slug: in
 countryCode: IN
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/in
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/in · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/in · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in India[^about]
 
@@ -206,7 +206,7 @@ Because Section 27 applies to all contracts, not just employment, an employer ca
 >
 > Build the protection program around what Indian law actually enforces: a confidentiality clause tied to identifiable trade secrets, a narrow non-solicitation clause, in-term exclusivity, garden leave inside the notice period, and a cost-based bond — used consistently for employees and contractors. Do not define *confidential information* so broadly that it sweeps in the worker's general skill and experience, which would make the clause a *de facto* non-compete and void under Section 27 [^vfs-confidentiality][^amex-freedom].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in India. This article summarizes publicly available India legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in India. This article summarizes publicly available India legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in India*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/in.
 
 [^stat-s27-void]: **Indian Contract Act, 1872, § 27** — "Every agreement by which any one is restrained from exercising a lawful profession, trade or business of any kind, is to that extent void." *Indian Contract Act, 1872, § 27.* <https://www.indiacode.nic.in/bitstream/123456789/2187/2/A187209.pdf>
 

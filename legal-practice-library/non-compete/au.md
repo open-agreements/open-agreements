@@ -106,14 +106,14 @@ The trap is a shared definition that contaminates every rung. In *Emeco Internat
 
 Use this national page for the common structure, then go to the local note for the governing jurisdiction:
 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
+- [New South Wales](/practice-guides/non-compete/au/new-south-wales)
+- [Victoria](/practice-guides/non-compete/au/victoria)
+- [Queensland](/practice-guides/non-compete/au/queensland)
+- [Western Australia](/practice-guides/non-compete/au/western-australia)
+- [South Australia](/practice-guides/non-compete/au/south-australia)
+- [Tasmania](/practice-guides/non-compete/au/tasmania)
+- [Australian Capital Territory](/practice-guides/non-compete/au/australian-capital-territory)
+- [Northern Territory](/practice-guides/non-compete/au/northern-territory)
 
 For cross-border context, see the [worldwide comparison](/practice-guides/non-compete/worldwide#country-au).
 
@@ -137,7 +137,7 @@ Those details are proposals, not enacted law. They come from Treasury material a
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-16. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Australia. This article summarizes publicly available Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-16. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Australia. This article summarizes publicly available Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Australia*, OpenAgreements (last updated June 16, 2026), https://openagreements.org/practice-guides/non-compete/au.
 
 [^lindner-prima-facie-void]: **Lindner v Murdock's Garage** — "Any contractual restraint of trade is prima facie unlawful and invalid." *Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per Kitto J).* <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
 

@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/1124526/hilb-rogal-hamilton-co-of-arizona-inc-v-mckinney/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/arizona'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/arizona'
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `arizona-statutory-gates`, `definitions`, `nonsolicitation-confidentiality`, `reasonableness-test`, `restrictive-covenants-each-independently-includable`
 - source_cards: `hilb-same-test-covenants`, `hilb-same-test-defs`, `hilb-same-test-gate`, `q2-hilb-protectable`, `q7-hilb-antipiracy`
-- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1124526/hilb-rogal-hamilton-co-of-arizona-inc-v-mckinney/#:~:text=A%20restrictive%20covenant%20%2D%20whether,the%20employer's%20legitimate%20business%20interest.>
 
 ### hilb-rogal-hamilton-co-of-arizona-v-mckinney-we-hold-that-hrh-had-no-b820861e {#hilb-rogal-hamilton-co-of-arizona-v-mckinney-we-hold-that-hrh-had-no-b820861e}
@@ -43,5 +43,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `arizona-statutory-gates`, `definitions`, `reasonableness-test`, `restrictive-covenants-each-independently-includable`
 - source_cards: `hilb-account-covenants`, `hilb-account-defs`, `hilb-account-gate`, `q2-hilb-holding`
-- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1124526/hilb-rogal-hamilton-co-of-arizona-inc-v-mckinney/#:~:text=We%20hold%20that%20HRH%20had,in%20the%20Bell%20Ford%20account.>

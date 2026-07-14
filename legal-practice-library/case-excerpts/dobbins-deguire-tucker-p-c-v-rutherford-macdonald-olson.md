@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/1183224/dobbins-deguire-tucker-pc-v-rutherford-macdonald-olson/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/montana'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/montana'
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `dobbins-test`, `montana-statutory-gates`, `tolling-during-breach`
 - source_cards: `dobbins-three-part-test`, `mt-dobbins-gate`, `mt-dobbins-test-defs`, `mt-dobbins-tolling`
-- cited_by: [Non-Compete Agreement Review Checklist — Montana](../checklists/non-compete/us/montana.md), [Non-Competes in Montana](../non-compete/us/montana.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Montana](../checklists/non-compete/us/montana.md), [Non-Competes in Montana](../non-compete/us/montana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1183224/dobbins-deguire-tucker-pc-v-rutherford-macdonald-olson/#:~:text=%E2%80%9C(1)%20the%20covenant%20should%20be,the%20employee%20or%20the%20public.%E2%80%9D>
 
 ### dobbins-deguire-tucker-p-c-v-rutherford-macdonald-olson-we-hold-that-the-written-contract-893477c2 {#dobbins-deguire-tucker-p-c-v-rutherford-macdonald-olson-we-hold-that-the-written-contract-893477c2}

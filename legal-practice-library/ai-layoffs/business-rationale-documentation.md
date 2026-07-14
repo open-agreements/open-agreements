@@ -82,7 +82,7 @@ Perhaps more than companies assume. Shopify-type headcount memos and Box-type ro
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-19. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-19. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Business rationale documentation for AI-driven layoffs*, OpenAgreements (last updated April 19, 2026), https://openagreements.org/practice-guides/ai-layoffs/business-rationale-documentation.
 
 [^29-c-f-r-1625-7-e]: **29 C.F.R. § 1625.7(e)** — "reasonable factor other than age" *29 C.F.R. § 1625.7(e).* <https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1625>
 

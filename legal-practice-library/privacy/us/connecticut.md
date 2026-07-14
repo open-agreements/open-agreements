@@ -50,7 +50,7 @@ There is an important timing wrinkle: the CTDPA's mandatory right-to-cure ran on
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-04. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Connecticut. This article synthesizes Connecticut primary law and is not legal advice from a Connecticut-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-04. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Connecticut. This article synthesizes Connecticut primary law and is not legal advice from a Connecticut-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Connecticut Consumer Privacy Law (CTDPA)*, OpenAgreements (last updated June 4, 2026), https://openagreements.org/practice-guides/privacy/us/connecticut.
 
 [^stat-516-apply]: **Conn. Gen. Stat. § 42-516** — "apply to persons that conduct business in this state or persons that produce products or services that are targeted to residents of this state and that during the preceding calendar year: (1) Controlled or processed the personal data of not less than one hundred thousand consumers" *Conn. Gen. Stat. § 42-516.* <https://www.cga.ct.gov/current/pub/chap_743jj.htm#sec_42-516>
 

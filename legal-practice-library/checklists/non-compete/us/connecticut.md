@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Connecticut
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Connecticut
 description: >-
   A clause-by-clause reviewer checklist for Connecticut employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Connecticut[^about]
+# Non-Compete Agreement Reviewer Checklist — Connecticut[^about]
 
 A clause-by-clause reviewer checklist for Connecticut employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the common-law five-factor reasonableness test and Connecticut's occupation-specific statutes.
 
@@ -63,9 +63,11 @@ Review every item below the way a Connecticut court would: there is no general n
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — The trade-secret obligation should last as long as secrecy does — that is how federal law defines the right, and Connecticut's own trade-secret act keys protection to continued secrecy the same way. A fixed expiry on trade-secret confidentiality quietly forfeits protection the employer is entitled to keep, and weakens the strongest interest available to support any accompanying covenant. [^dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection federal law and Connecticut's own trade-secret act give, because both key protection to continued secrecy, and that interest is the strongest one available to support any accompanying covenant. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Connecticut's leading case speaks of protecting confidential information for a reasonable period of time, not forever — a perpetual lid on non-secret material is the kind of unbounded restraint the reasonableness lens treats with suspicion, and the two-track structure keeps the perpetual obligation where it belongs. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Connecticut's leading case speaks of protecting confidential information for a reasonable period of time, not forever — a perpetual lid on non-secret material is the kind of unbounded restraint the reasonableness lens treats with suspicion, and the two-track structure keeps the status-bounded obligation where it belongs. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -157,7 +159,7 @@ The six items below exist only on this Connecticut page: the five-factor reasona
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Connecticut (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Connecticut (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Connecticut*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/connecticut.
 
 [^ct-physician-cap-cover]: **Conn. Gen. Stat. § 20-14p** — "A covenant not to compete that is entered into, amended, extended or renewed on or after July 1, 2016, shall not: (A) Restrict the physician's competitive activities (i) for a period of more than one year, and (ii) in a geographic region of more than fifteen miles from the primary site where such physician practices; or (B) be enforceable against a physician if (i) such employment contract or agreement was not made in anticipation of, or as part of, a partnership or ownership agreement and such contract or agreement expires and is not renewed, unless, prior to such expiration, the employer makes a bona fide offer to renew the contract on the same or similar terms and conditions, or (ii) the employment or contractual relationship is terminated by the employer, unless such employment or contractual relationship is terminated for cause." *Conn. Gen. Stat. § 20-14p(b)(2).* <https://www.cga.ct.gov/current/pub/chap_370.htm#sec_20-14p>
 

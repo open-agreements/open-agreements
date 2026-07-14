@@ -8,7 +8,7 @@ citation: 'Dick v. Geist, 107 Idaho 931, 693 P.2d 1133 (Ct. App. 1985).'
 resource: 'https://www.courtlistener.com/opinion/1173077/dick-v-geist/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/idaho'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/idaho'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `healthcare-providers`, `physician-specific-notices-and-carve-outs`
 - source_cards: `dick-public-welfare`, `idaho-dick-welfare-hc`
-- cited_by: [Non-Compete Agreement Review Checklist — Idaho](../checklists/non-compete/us/idaho.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Idaho](../checklists/non-compete/us/idaho.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1173077/dick-v-geist/#:~:text=It%20has%20been%20shown%2C%20in,Miles%20from%20practicing%20their%20specialty.>

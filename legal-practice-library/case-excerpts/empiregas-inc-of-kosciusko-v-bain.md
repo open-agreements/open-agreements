@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/1870077/empiregas-inc-of-kosciusko-v-bain/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/mississippi'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/mississippi'
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `bad-faith-termination`, `mississippi-statutory-gates`, `remedies`
 - source_cards: `empiregas-equity`, `ms-empiregas-equity-gate`, `ms-empiregas-remedies`
-- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1870077/empiregas-inc-of-kosciusko-v-bain/#:~:text=However%2C%20when%20the%20Chancellor%20finds,refusing%20to%20enforce%20the%20agreement.>
 
 ### empiregas-inc-of-kosciusko-v-bain-moreover-as-we-have-indicated-when-8a751938 {#empiregas-inc-of-kosciusko-v-bain-moreover-as-we-have-indicated-when-8a751938}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `bad-faith-termination`, `definitions`, `mississippi-statutory-gates`
 - source_cards: `empiregas-bad-faith`, `ms-empiregas-gate`, `ms-empiregas-termination`
-- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1870077/empiregas-inc-of-kosciusko-v-bain/#:~:text=Moreover%2C%20as%20we%20have%20indicated%2C,agreement%20will%20not%20be%20enforced.>

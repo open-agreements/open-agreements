@@ -2,18 +2,22 @@
 type: Case Excerpt
 title: Eakle v. Grinnell Corp.
 description: >-
-  Eakle v. Grinnell Corp., 272 F. Supp. 2d 1304 (E.D. Okla. 2003). — quoted in 2
+  Eakle v. Grinnell Corp., 272 F. Supp. 2d 1304 (E.D. Okla. 2003). — quoted in 3
   document(s).
 citation: 'Eakle v. Grinnell Corp., 272 F. Supp. 2d 1304 (E.D. Okla. 2003).'
 resource: 'https://www.courtlistener.com/opinion/2296282/eakle-v-grinnell-corp/'
-timestamp: '2026-06-11'
+timestamp: '2026-07-03'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/oklahoma'
+  - type: State Law Practice Guide
+    resource: >-
+      https://openagreements.org/practice-guides/invention-assignment/us/oklahoma
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/oklahoma'
 tags:
   - case-law
+  - invention-assignment
   - non-compete
 ---
 
@@ -21,7 +25,7 @@ tags:
 
 *Eakle v. Grinnell Corp., 272 F. Supp. 2d 1304 (E.D. Okla. 2003).*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -29,9 +33,9 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > As this general rule recognizes, however, the forum court will not apply the law chosen by the contracting parties should doing so violate the public policy of the forum state.
 
-- supports: `choice-of-law`, `governing-law-venue-dispute-process`, `parties-and-cover-term-identification`
-- source_cards: `eakle-public-policy`, `eakle-public-policy-cover`, `eakle-public-policy-gov`
-- cited_by: [Non-Compete Agreement Review Checklist — Oklahoma](../checklists/non-compete/us/oklahoma.md), [Non-Competes in Oklahoma](../non-compete/us/oklahoma.md)
+- supports: `choice-of-law`, `governing-law-venue-dispute-process`, `holdover-clause-limit`, `parties-and-cover-term-identification`
+- source_cards: `eakle-choice-of-law-practice`, `eakle-public-policy`, `eakle-public-policy-cover`, `eakle-public-policy-gov`
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Oklahoma](../checklists/non-compete/us/oklahoma.md), [Employee Invention Assignment in Oklahoma](../invention-assignment/us/oklahoma.md), [Non-Competes in Oklahoma](../non-compete/us/oklahoma.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2296282/eakle-v-grinnell-corp/#:~:text=As%20this%20general%20rule%20recognizes%2C,policy%20of%20the%20forum%20state.>
 
 ### eakle-v-grinnell-corp-the-oklahoma-supreme-court-has-held-8e2f9efe {#eakle-v-grinnell-corp-the-oklahoma-supreme-court-has-held-8e2f9efe}

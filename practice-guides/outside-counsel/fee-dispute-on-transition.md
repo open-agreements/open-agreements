@@ -46,7 +46,7 @@ Scope is narrower than everything that went wrong with the lawyer. These program
 
 The fourth consequence is that transition disputes often become narrower than the invoice suggests. In a live matter, prejudice to the client or successor counsel can shrink the practical value of withholding tactics. In a contingent matter, the predecessor firm's claim may not even be ripe in the ordinary sense; it may resolve later as a quantum-meruit allocation question rather than a present collection suit. [^california-state-bar-advisory-1997-03-2] So the dispute a company thinks it is having, unpaid bills, may not be the dispute the law actually hears.
 
-- 
+- Whether fee arbitration is the right forum at all when successor counsel is already in the case remains fact-dependent. Some disputes are really about quantum meruit, charging liens, or later allocation of a contingent recovery. Those fights can sit partly outside the ordinary fee-arbitration lane even when the state has a strong program. [^california-state-bar-advisory-1997-03-2] Perhaps that boundary will matter more as more legal work moves from one firm to another mid-matter rather than only at clean file close.
 
 ## Can an engagement letter force private arbitration of fee disputes? {#engagement-letter-private-arbitration-fee-disputes}
 
@@ -73,11 +73,11 @@ The second consequence is that these programs are not dormant bar artifacts. The
 
 The third consequence is that the public record on company playbooks is thin. The source set does not surface the kind of public in-house memos that exist for AI adoption or layoffs. Most visible evidence comes from bar rules, annual reports, ethics opinions, and engagement-letter commentary. [^d-c-bar-rule-xiii-2][^new-jersey-oae-annual-report-2024][^holland-knight-thoughts-on-law-firm-engagement-l-2] That likely means the real leverage sits upstream, in matter terms rather than fight terms: what the engagement letter says about arbitration, what outside-counsel guidelines say about transition work, and what local counsel expects the state bar program to do if the relationship breaks. When those terms are loose, the parties inherit the state's default machinery.
 
-- 
+- Whether the fee program is available during active retention is also not fully uniform. D.C. expressly applies to a present or former client. [^d-c-bar-rule-xiii-2] California and New York do not require formal disengagement, but their procedures become most salient once the lawyer is moving to collect or the billing fight has crystallized. [^cal-bus-prof-code-6200-c-3][^n-y-comp-codes-r-regs-tit-22-part-137-3] North Carolina's rule reaches the pre-collection stage through a good-faith participation duty, which looks like a softer but still meaningful version of the same idea. [^north-carolina-rule-of-professional-conduct-1-5-2]
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *How attorney-fee dispute programs work when changing counsel*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/outside-counsel/fee-dispute-on-transition.
 
 [^cal-bus-prof-code-6200-c]: **Cal. Bus. & Prof. Code § 6200(c)** — "Unless the client has agreed in writing to arbitration under this article of all disputes concerning fees, costs, or both, arbitration under this article shall be voluntary for a client and shall be mandatory for an attorney if commenced by a client." *Cal. Bus. & Prof. Code § 6200(c).* <https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?article=13.&chapter=4.&division=3.&lawCode=BPC&part=&title=>
 
@@ -194,3 +194,5 @@ The third consequence is that the public record on company playbooks is thin. Th
 [^d-c-bar-rule-xiii-2]: **D.C. Bar Rule XIII** — "shall be deemed to have agreed to arbitrate disputes over fees" *D.C. Bar Rule XIII.* <https://www.dccourts.gov/sites/default/files/2017-06/M-250-15.pdf>
 
 [^holland-knight-thoughts-on-law-firm-engagement-l-2]: **Holland & Knight commentary** — "The first step in avoiding unintended clients is to declare who is and who is not a client at the outset." *Holland & Knight, Thoughts on Law Firm Engagement Letters.* <https://www.hklaw.com/-/media/files/insights/publications/2022/01/insight_thoughtsonlawfirmengagementletters_20220106.pdf?la=en>
+
+[^north-carolina-rule-of-professional-conduct-1-5-2]: **North Carolina Rule of Professional Conduct 1.5(f)** — "participate in good faith" *North Carolina Rule of Professional Conduct 1.5(f).* <https://www.ncbar.gov/for-lawyers/ethics/rules-of-professional-conduct/rule-15-fees/>

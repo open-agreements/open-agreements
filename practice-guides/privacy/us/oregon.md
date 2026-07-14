@@ -51,7 +51,7 @@ There is also no longer a general right to cure. The OCPA's pre-suit notice-and-
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-05. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oregon. This article synthesizes Oregon primary law and is not legal advice from a Oregon-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-05. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oregon. This article synthesizes Oregon primary law and is not legal advice from a Oregon-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Oregon Consumer Privacy Law (OCPA)*, OpenAgreements (last updated June 5, 2026), https://openagreements.org/practice-guides/privacy/us/oregon.
 
 [^stat-572-apply]: **Or. Rev. Stat. § 646A.572** — "ORS 646A.570 to 646A.589 apply to any person that conducts business in this state, or that provides products or services to residents of this state, and that during a calendar year, controls or processes: (A) The personal data of 100,000 or more consumers, other than personal data controlled or processed solely for the purpose of completing a payment transaction; or (B) The personal data of 25,000 or more consumers, while deriving 25 percent or more of the person’s annual gross revenue from selling personal data." *Or. Rev. Stat. § 646A.572(1)(a).* <https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html>
 

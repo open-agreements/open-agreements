@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/1147183/insurance-associates-corp-v-hansen/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/idaho'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/idaho'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `duration-limits`, `timing-and-execution-acknowledgements`
 - source_cards: `hansen-consideration`, `idaho-hansen-consideration-timing`
-- cited_by: [Non-Compete Agreement Review Checklist — Idaho](../checklists/non-compete/us/idaho.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Idaho](../checklists/non-compete/us/idaho.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1147183/insurance-associates-corp-v-hansen/#:~:text=The%20Court%20of%20Appeals%20further,on%20appeal%20to%20either%20party.>

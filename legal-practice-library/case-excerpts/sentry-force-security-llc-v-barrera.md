@@ -8,9 +8,9 @@ citation: >-
   Sentry Force Sec., LLC v. Barrera, Record No. 1405-24-4, slip op. at 14 (Va.
   Ct. App. Jan. 27, 2026) (unpublished).
 resource: 'https://www.vacourts.gov/opinions/opncavwp/1405244.pdf'
-timestamp: '2026-06-11'
+timestamp: '2026-07-03'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/virginia'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/virginia'
@@ -33,7 +33,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `non-solicitation`, `restrictive-covenants-each-independently-includable`, `virginia-statutory-gates`
 - source_cards: `sentry-employee-nonsolicit`, `sentry-employee-solicitation`, `sentry-gate-no-poach`, `sentry-no-poach`
-- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../checklists/non-compete/us/virginia.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Virginia](../checklists/non-compete/us/virginia.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
 - link_to_source: <https://www.vacourts.gov/opinions/opncavwp/1405244.pdf>
 
 ### sentry-force-security-llc-v-barrera-in-short-if-the-customer-approaches-3180b4be {#sentry-force-security-llc-v-barrera-in-short-if-the-customer-approaches-3180b4be}
@@ -42,7 +42,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `non-solicitation`, `restrictive-covenants-each-independently-includable`, `virginia-statutory-gates`
 - source_cards: `sentry-customer-initiated`, `sentry-gate-passive`, `sentry-passive-customer`
-- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../checklists/non-compete/us/virginia.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Virginia](../checklists/non-compete/us/virginia.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
 - link_to_source: <https://www.vacourts.gov/opinions/opncavwp/1405244.pdf>
 
 ### sentry-force-security-llc-v-barrera-thus-even-assuming-barrera-is-a-0dedd401 {#sentry-force-security-llc-v-barrera-thus-even-assuming-barrera-is-a-0dedd401}
@@ -51,5 +51,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `non-solicitation`, `restrictive-covenants-each-independently-includable`, `virginia-statutory-gates`
 - source_cards: `sentry-customer-solicitation`, `sentry-direct-ok`, `sentry-direct-solicitation`, `sentry-gate-direct`
-- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../checklists/non-compete/us/virginia.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Virginia](../checklists/non-compete/us/virginia.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
 - link_to_source: <https://www.vacourts.gov/opinions/opncavwp/1405244.pdf>

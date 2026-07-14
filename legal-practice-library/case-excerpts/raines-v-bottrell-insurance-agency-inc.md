@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/1813535/raines-v-bottrell-ins-agency-inc/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/mississippi'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/mississippi'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `ms-raines-timing`, `raines-continued-employment`
-- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1813535/raines-v-bottrell-ins-agency-inc/#:~:text=The%20supreme%20court%2C%20however%2C%20has,consideration%20to%20uphold%20a%20contract.>

@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/6892723/lake-land-employment-group-of-akron-llc-v-columber/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/ohio'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/ohio'
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `lakeland-continued-employment`, `oh-lakeland-consideration`
-- cited_by: [Non-Compete Agreement Review Checklist — Ohio](../checklists/non-compete/us/ohio.md), [Non-Competes in Ohio](../non-compete/us/ohio.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Ohio](../checklists/non-compete/us/ohio.md), [Non-Competes in Ohio](../non-compete/us/ohio.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6892723/lake-land-employment-group-of-akron-llc-v-columber/#:~:text=We%20therefore%20hold%20that%20consideration,legally%20be%20terminated%20without%20cause.>

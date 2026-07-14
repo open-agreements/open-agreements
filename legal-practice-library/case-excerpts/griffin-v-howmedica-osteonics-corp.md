@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/docket/70562720/21/griffin-v-howmedica-osteonics-corporation/
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/oklahoma'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/oklahoma'
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `choice-of-law`, `governing-law-venue-dispute-process`
 - source_cards: `griffin-order`, `griffin-transfer-gov`
-- cited_by: [Non-Compete Agreement Review Checklist — Oklahoma](../checklists/non-compete/us/oklahoma.md), [Non-Competes in Oklahoma](../non-compete/us/oklahoma.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Oklahoma](../checklists/non-compete/us/oklahoma.md), [Non-Competes in Oklahoma](../non-compete/us/oklahoma.md)
 - link_to_source: <https://www.courtlistener.com/docket/70562720/21/griffin-v-howmedica-osteonics-corporation/#:~:text=Plaintiff%20has%20therefore%20not%20met,to%20the%20contractually%20selected%20forum.>

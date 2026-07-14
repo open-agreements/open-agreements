@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Vermont
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Vermont
 description: >-
   A clause-by-clause reviewer checklist for Vermont employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -14,7 +14,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Vermont[^about]
+# Non-Compete Agreement Reviewer Checklist — Vermont[^about]
 
 A clause-by-clause reviewer checklist for Vermont employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Andrus reasonableness test and its Restatement (Second) of Contracts § 188 framing, with Vermont's profession-specific covenant bars.
 
@@ -64,9 +64,11 @@ Review every item below the way a Vermont court would: there is no general non-c
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should run as long as secrecy does. Federal law keys protection to continued secrecy, and Vermont's trade secrets act says the same thing from the remedy side: an injunction ends when the trade secret ceases to exist, not on a calendar date. A fixed expiry on trade-secret protection gives away the one interest in the agreement that lawfully lasts. [^dtsa-trade-secret-definition][^vtsa-injunction-duration] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection the law offers: federal law keys protection to continued secrecy, and Vermont's trade secrets act says the same thing from the remedy side, ending an injunction when the trade secret ceases to exist rather than on a calendar date. That status-bounded form is the ceiling the law will back, not a required one — a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition][^vtsa-injunction-duration] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on non-secret material operates as an indirect restraint on the worker's ability to use what they know, and under the Restatement framing a restraint greater than the interest needs is unreasonable on its face — the two-track structure keeps the perpetual obligation where the law actually supports it. [^barnes-restatement-confidentiality] [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on non-secret material operates as an indirect restraint on the worker's ability to use what they know, and under the Restatement framing a restraint greater than the interest needs is unreasonable on its face — the two-track structure keeps the status-bounded obligation where the law actually supports it. [^barnes-restatement-confidentiality] [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -154,7 +156,7 @@ The four items below exist only on this Vermont page: the common-law reasonablen
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Vermont (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Vermont (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Vermont*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/vermont.
 
 [^miller-distinct-term-parties]: **Miller v. Flegenheimer** — "whether or not the contract includes a form of non compete or non solicitation agreement, the price to be paid for the shares (as opposed to the Non-Compete Agreement), and the structure of the claw-back provision." *Miller v. Flegenheimer, 2016 VT 125, ¶ 21, 203 Vt. 620, 161 A.3d 524.* <https://www.courtlistener.com/opinion/4328779/kenneth-w-miller-ii-v-eric-flegenheimer/#:~:text=whether%20or%20not%20the%20contract,structure%20of%20the%20claw%2Dback%20provision.>
 

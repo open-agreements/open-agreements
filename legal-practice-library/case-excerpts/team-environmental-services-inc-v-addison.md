@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/5925/team-environmental-services-inc-v-addison/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/louisiana'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/louisiana'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `extended-for-breach`, `severability-and-reformation`, `tolling-during-breach`
 - source_cards: `la-teamenv-sev`, `la-teamenv-tolling`, `q3-teamenv-no-reform`, `q4-teamenv-no-reform`
-- cited_by: [Non-Compete Agreement Review Checklist — Louisiana](../checklists/non-compete/us/louisiana.md), [Non-Competes in Louisiana](../non-compete/us/louisiana.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Louisiana](../checklists/non-compete/us/louisiana.md), [Non-Competes in Louisiana](../non-compete/us/louisiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5925/team-environmental-services-inc-v-addison/#:~:text=Finding%20that%20the%20agreement%20violates,render%20judgment%20for%20the%20defendants.>

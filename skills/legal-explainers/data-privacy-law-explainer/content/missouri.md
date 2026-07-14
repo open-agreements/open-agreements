@@ -2,7 +2,7 @@
 jurisdiction: "Missouri"
 slug: missouri
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/missouri
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/missouri · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/missouri · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Missouri Consumer Privacy Law[^about]
 
@@ -86,7 +86,7 @@ The MMPA is how a misleading privacy promise, an undisclosed data practice, or a
 
 Two structural features still cut in opposite directions. The exposure scales: the MMPA authorizes class actions where an unlawful practice causes similar injury to numerous persons [^q6-mmpa-class], and class representatives carry the same heightened proof elements. And the exposure has a sectoral boundary: the MMPA does not apply to entities within the listed Missouri-regulated insurance, credit-union, and finance chapters unless those regulators authorize the Attorney General to act or a statute gives the powers to the Attorney General or a private citizen [^q6-mmpa-exemption]. For everyone else, the durable takeaway is that Missouri's privacy-suit risk runs through consumer-deception law: keep the privacy policy true, and the heightened § 407.025 elements become your second line of defense rather than your first.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Missouri. This article synthesizes Missouri primary law and is not legal advice from a Missouri-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Missouri. This article synthesizes Missouri primary law and is not legal advice from a Missouri-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Missouri Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/missouri.
 
 [^stat-1500-trigger]: **Mo. Rev. Stat. § 407.1500** — "Any person that owns or licenses personal information of residents of Missouri or any person that conducts business in Missouri that owns or licenses personal information in any form of a resident of Missouri shall provide notice to the affected consumer that there has been a breach of security following discovery or notification of the breach." *Mo. Rev. Stat. § 407.1500.2(1).* <https://revisor.mo.gov/main/OneSection.aspx?section=407.1500>
 

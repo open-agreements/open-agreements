@@ -6,7 +6,7 @@ citation: 'David v. Freedom Vans, LLC, 4 Wn.3d 242 (2025).'
 resource: 'https://www.courtlistener.com/opinion/10319821/springer-v-freedom-vans-llc/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/washington'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/washington'
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `moonlighting`, `washington-statutory-gates`
 - source_cards: `david-duty-of-loyalty`, `wa-david-g`
-- cited_by: [Non-Compete Agreement Review Checklist — Washington](../checklists/non-compete/us/washington.md), [Non-Competes in Washington](../non-compete/us/washington.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Washington](../checklists/non-compete/us/washington.md), [Non-Competes in Washington](../non-compete/us/washington.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10319821/springer-v-freedom-vans-llc/#:~:text=We%20decline%20to%20adopt%20this,the%20exceptions%20be%20construed%20narrowly.>

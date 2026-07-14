@@ -86,7 +86,7 @@ The discrimination concern is easy to see, but no court cited here has yet ruled
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Proving redundancy for AI-replaced roles across the EU, UK, Canada, and Australia*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-layoffs/proving-redundancy-ai-roles-cross-border.
 
 [^council-directive-98-59-ec-art-2]: **Council Directive 98/59/EC, art. 2** — "Member States should ensure that workers' representatives and/or workers have at their disposal administrative and/or judicial procedures in order to ensure that the obligations laid down in this Directive are fulfilled;" *Council Directive 98/59/EC, art. 2.* <https://www.legislation.gov.uk/eudr/1998/59/contents/data.html>
 

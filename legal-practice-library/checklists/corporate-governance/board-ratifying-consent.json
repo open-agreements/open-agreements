@@ -1,0 +1,305 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "related-form",
+      "href": "https://openagreements.org/templates/openagreements-board-ratifying-consent",
+      "type": "text/html",
+      "title": "Board Consent Ratifying a Defective Corporate Act"
+    }
+  ],
+  "data": {
+    "topic": "corporate-governance",
+    "slug": "board-ratifying-consent",
+    "frontmatter": {
+      "title": "Board Ratifying Consent Reviewer Checklist",
+      "description": "A clause-by-clause reviewer checklist for a Delaware board written consent that ratifies a defective corporate act under DGCL § 204 — the act-specific recitals (§ 204(b)(1)(A)–(E)), valid adoption of the ratifying consent itself, and the downstream steps it must set in motion (the § 204(c) stockholder branch, the § 204(e) certificate of validation, and the § 204(g) notice), with the § 205 fallback for acts § 204 cannot reach.",
+      "eyebrow": "Reviewer Checklist",
+      "coverage": "Delaware (DGCL)",
+      "lastReviewed": "2026-07-02",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 9,
+    "sections": [
+      {
+        "sectionId": "identifying-the-defective-act",
+        "label": "Identifying the defective act"
+      },
+      {
+        "sectionId": "adopting-the-consent-validly",
+        "label": "Adopting the consent validly"
+      },
+      {
+        "sectionId": "setting-the-cure-in-motion",
+        "label": "Setting the cure in motion"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-defective-acts",
+        "specRequirementId": "REQ-corporate-governance.board-ratifying-consent.identify-defective-acts",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Each defective act and its date named specifically",
+        "sectionId": "identifying-the-defective-act",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent#identify-defective-acts",
+        "requirementGuidance": "Confirm the consent names each specific defective corporate act to be ratified and the date of each — not a blanket any and all prior acts. DGCL § 204(b)(1)(A) makes the act to be ratified the first mandatory recital, and § 204(b)(1)(B) requires the date of each act. A court cannot test whether a named act was cured if the act is never named, so a generic sweep ratifies nothing. The defective corporate act or acts to be ratified;",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q1-204-b1a",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 204(b)(1)(A)",
+            "citation": "8 Del. C. § 204(b)(1)(A).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc06/index.html",
+            "proposition": "The board's ratifying resolutions must state the specific defective corporate act or acts to be ratified — the first of five mandatory § 204(b)(1) recitals.",
+            "verbatimQuote": "The defective corporate act or acts to be ratified;",
+            "anchor": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent#src-q1-204-b1a"
+          }
+        ]
+      },
+      {
+        "requirementId": "describe-putative-stock",
+        "specRequirementId": "REQ-corporate-governance.board-ratifying-consent.describe-putative-stock",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Putative shares described by number, type, and issue date",
+        "sectionId": "identifying-the-defective-act",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent#describe-putative-stock",
+        "requirementGuidance": "Where the defect involved a stock issuance, confirm the consent states the number and type of putative shares issued and the date or dates on which they were purported to have been issued. DGCL § 204(b)(1)(C) requires this whenever the defect is an issuance or overissue — it is the recital that ties the cure to the specific shares whose validity the ratification restores. the number and type of shares of putative stock issued and the date or dates upon which such putative shares were purported to have been issued;",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q1-204-b1c",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 204(b)(1)(C)",
+            "citation": "8 Del. C. § 204(b)(1)(C).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc06/index.html",
+            "proposition": "Where the defective act involved putative stock, the resolutions must state the number and type of shares and the date(s) of the purported issuance.",
+            "verbatimQuote": "the number and type of shares of putative stock issued and the date or dates upon which such putative shares were purported to have been issued;",
+            "anchor": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent#src-q1-204-b1c"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-failure-of-authorization",
+        "specRequirementId": "REQ-corporate-governance.board-ratifying-consent.state-failure-of-authorization",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Nature of the failure of authorization stated for each act",
+        "sectionId": "identifying-the-defective-act",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent#state-failure-of-authorization",
+        "requirementGuidance": "Confirm the consent states, for each act, the nature of the failure of authorization — that the shares were issued without board approval, that the grant exceeded the plan reserve, that the charter amendment was never filed. DGCL § 204(b)(1)(D) requires naming what went wrong, because § 204 only reaches acts void or voidable solely as a result of a failure of authorization. A recital that omits the defect cannot show the act falls within the statute. The nature of the failure of authorization in respect of each defective corporate act to be ratified; and",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q1-204-b1d",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 204(b)(1)(D)",
+            "citation": "8 Del. C. § 204(b)(1)(D).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc06/index.html",
+            "proposition": "The resolutions must state the nature of the failure of authorization for each defective act — § 204 reaches only acts void or voidable solely because of such a failure.",
+            "verbatimQuote": "The nature of the failure of authorization in respect of each defective corporate act to be ratified; and",
+            "anchor": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent#src-q1-204-b1d"
+          }
+        ]
+      },
+      {
+        "requirementId": "approve-ratification",
+        "specRequirementId": "REQ-corporate-governance.board-ratifying-consent.approve-ratification",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Board expressly approves the ratification (not just the act)",
+        "sectionId": "identifying-the-defective-act",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent#approve-ratification",
+        "requirementGuidance": "Confirm the consent states that the board of directors approves the ratification of the defective act — the operative approval, distinct from approving the underlying act. DGCL § 204(b)(1)(E) makes this the resolution that actually ratifies; recitals identify the defect, but without an express approval of the ratification there is no § 204 board action. That the board of directors approves the ratification of the defective corporate act or acts.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q1-204-b1e",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 204(b)(1)(E)",
+            "citation": "8 Del. C. § 204(b)(1)(E).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc06/index.html",
+            "proposition": "The resolutions must state that the board approves the ratification of the defective act — the operative § 204(b) approval.",
+            "verbatimQuote": "That the board of directors approves the ratification of the defective corporate act or acts.",
+            "anchor": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent#src-q1-204-b1e"
+          }
+        ]
+      },
+      {
+        "requirementId": "adopt-by-valid-board-action",
+        "specRequirementId": "REQ-corporate-governance.board-ratifying-consent.adopt-by-valid-board-action",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Ratifying consent itself adopted by valid board action",
+        "sectionId": "adopting-the-consent-validly",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent#adopt-by-valid-board-action",
+        "requirementGuidance": "Confirm the ratifying consent is itself adopted by a valid board action — a meeting with a quorum, or, for action without a meeting, a written consent signed by every director under DGCL § 141(f) — applying the quorum and voting requirements for the type of act being ratified. The point is load-bearing and easy to miss: if the board whose signatures appear is not validly in place (often the very gap diligence surfaced), the § 204 resolutions inherit that defect. Sequence the cures so the ratifying instrument is not itself defective. any action required or permitted to be taken at any meeting of the board of directors or of any committee thereof may be taken without a meeting if all members of the board or committee, as the case may be, consent thereto in writing, or by electronic transmission",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q2-141f",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 141(f)",
+            "citation": "8 Del. C. § 141(f).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc04",
+            "proposition": "The board may act without a meeting only on the unanimous written consent of all directors — so a ratifying consent adopted this way must be signed by every director then validly in office.",
+            "verbatimQuote": "any action required or permitted to be taken at any meeting of the board of directors or of any committee thereof may be taken without a meeting if all members of the board or committee, as the case may be, consent thereto in writing, or by electronic transmission",
+            "anchor": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent#src-q2-141f"
+          }
+        ]
+      },
+      {
+        "requirementId": "direct-stockholder-approval-when-required",
+        "specRequirementId": "REQ-corporate-governance.board-ratifying-consent.direct-stockholder-approval-when-required",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Stockholder submission provided for where the act needed a vote",
+        "sectionId": "setting-the-cure-in-motion",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent#direct-stockholder-approval-when-required",
+        "requirementGuidance": "Where the defective act would have required a stockholder vote — or resulted from a § 203 failure — confirm the consent provides for submitting the ratification to stockholders under DGCL § 204(c). The board cannot unilaterally cure an act that needed stockholder authorization; the only carve-outs are where no law, charter, bylaw, plan, or agreement would have required a stockholder vote (and there was no § 203 failure), or where no valid stock is outstanding and entitled to vote. Each defective corporate act ratified pursuant to paragraph (b)(1) of this section shall be submitted to stockholders for approval as provided in subsection (d) of this section",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q3-204c",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 204(c)",
+            "citation": "8 Del. C. § 204(c).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc06/index.html",
+            "proposition": "A ratified defective act must be submitted to stockholders for approval, except where no stockholder vote was ever required (and no § 203 failure) or no valid stock is entitled to vote.",
+            "verbatimQuote": "Each defective corporate act ratified pursuant to paragraph (b)(1) of this section shall be submitted to stockholders for approval as provided in subsection (d) of this section",
+            "anchor": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent#src-q3-204c"
+          }
+        ]
+      },
+      {
+        "requirementId": "authorize-certificate-of-validation",
+        "specRequirementId": "REQ-corporate-governance.board-ratifying-consent.authorize-certificate-of-validation",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Certificate of validation authorized where a filing was required",
+        "sectionId": "setting-the-cure-in-motion",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent#authorize-certificate-of-validation",
+        "requirementGuidance": "Where the defective act would have required a certificate to be filed with the Delaware Secretary of State (a charter amendment, a certificate of designation, an authorized-share increase, a merger), confirm the consent authorizes filing a certificate of validation under DGCL § 204(e). The ratification is not effective as to that act until the certificate of validation is filed — so for a financing that turns on a cured charter, the filing sits on the critical path (it carries a fee and cannot be expedited). in lieu of filing the certificate otherwise required by this title, the corporation shall file a certificate of validation with respect to such defective corporate act",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q3-204e",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 204(e)",
+            "citation": "8 Del. C. § 204(e)(1).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc06/index.html",
+            "proposition": "If the defective act would have required a certificate filed under § 103, the corporation must file a certificate of validation instead — the cure is not effective as to that act until it is filed.",
+            "verbatimQuote": "in lieu of filing the certificate otherwise required by this title, the corporation shall file a certificate of validation with respect to such defective corporate act",
+            "anchor": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent#src-q3-204e"
+          }
+        ]
+      },
+      {
+        "requirementId": "direct-notice-of-ratification",
+        "specRequirementId": "REQ-corporate-governance.board-ratifying-consent.direct-notice-of-ratification",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice of ratification directed, with the 120-day statement",
+        "sectionId": "setting-the-cure-in-motion",
+        "itemNumber": "3.3",
+        "anchor": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent#direct-notice-of-ratification",
+        "requirementGuidance": "Confirm the consent provides for the § 204(g) notice of ratification to all holders of valid and putative stock — including nonvoting holders and holders as of the time of the defective act. Even when no stockholder vote is required, notice is mandatory, and it must state that any challenge must be brought within 120 days of the later of the validation effective time or the notice. A missing notice never starts that repose clock, leaving the cure open to challenge indefinitely. must be brought within 120 days from the later of the validation effective time or the time at which the notice required by this subsection is given",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q3-204g",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 204(g)",
+            "citation": "8 Del. C. § 204(g).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc06/index.html",
+            "proposition": "Prompt notice of the ratification must be given to all holders of valid and putative stock, whether voting or nonvoting — mandatory even when no stockholder vote is required.",
+            "verbatimQuote": "prompt notice of the ratification shall be given to all holders of valid stock and putative stock, whether voting or nonvoting",
+            "anchor": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent#src-q3-204g"
+          },
+          {
+            "sourceId": "q3-204g-120",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 204(g) (120-day challenge window)",
+            "citation": "8 Del. C. § 204(g).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc06/index.html",
+            "proposition": "The notice must state that any challenge to the ratification must be brought within 120 days of the later of the validation effective time or the notice — the repose clock the notice starts.",
+            "verbatimQuote": "must be brought within 120 days from the later of the validation effective time or the time at which the notice required by this subsection is given",
+            "anchor": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent#src-q3-204g-120"
+          }
+        ]
+      },
+      {
+        "requirementId": "confirm-act-is-ratifiable",
+        "specRequirementId": "REQ-corporate-governance.board-ratifying-consent.confirm-act-is-ratifiable",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Only § 204-reachable acts ratified; § 205 reserved for the rest",
+        "sectionId": "setting-the-cure-in-motion",
+        "itemNumber": "3.4",
+        "anchor": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent#confirm-act-is-ratifiable",
+        "requirementGuidance": "Confirm the consent ratifies only acts § 204 can actually reach. Section 204 cures acts void or voidable solely as a result of a failure of authorization; it cannot manufacture an act never taken, revive an act the board or stockholders affirmatively rejected, or cure an act void for substantive illegality or fiduciary breach rather than a procedural gap. Where ratification is unavailable or genuinely contested, the remedy is a § 205 petition to the Court of Chancery, which has exclusive jurisdiction to validate. no defective corporate act or putative stock shall be void or voidable solely as a result of a failure of authorization if ratified as provided in this section",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q3-204a",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 204(a)",
+            "citation": "8 Del. C. § 204(a).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc06/index.html",
+            "proposition": "Section 204 cures a defective corporate act or putative stock only where it is void or voidable solely as a result of a failure of authorization — the boundary of what ratification can reach, with § 205 as the fallback.",
+            "verbatimQuote": "no defective corporate act or putative stock shall be void or voidable solely as a result of a failure of authorization if ratified as provided in this section",
+            "anchor": "https://openagreements.org/checklists/corporate-governance/board-ratifying-consent#src-q3-204a"
+          }
+        ]
+      }
+    ]
+  }
+}

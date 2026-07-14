@@ -24,7 +24,7 @@ Corporate privilege is still client-centric. `Upjohn Co. v. United States, 449 U
 
 The file-transfer cases point in the same direction, but with sharper edges. `Sage Realty Corp. v. Proskauer Rose Goetz & Mendelsohn LLP, 91 N.Y.2d 30 (1997)` adopted the modern entire-file presumption in New York and emphasized the client's claim to work-product materials "for the creation of which they paid"[^sage-realty-corp-v-proskauer-rose-goetz-mendelso]. [^sage-realty-corp-v-proskauer-rose-goetz-mendelso] ABA Formal Opinion 471 treats surrender of electronic and paper files as part of protecting the client on termination, and ABA Formal Opinion 489 treats an orderly handoff as part of the same ethical frame when lawyers change firms. [^aba-formal-opinion-471-ethical-obligations-of-la][^aba-formal-opinion-489-obligations-related-to-no] NYSBA Opinion 1212 is useful because it marks the boundary more cleanly: absent client consent, a file can move to the client or successor counsel, but not to a nonlawyer program that does not itself represent the client. [^new-york-state-bar-association-ethics-opinion-12] In transaction settings, `Tekni-Plex, Inc. v. Meyner & Landis, 89 N.Y.2d 123 (1996)` adds that operational privilege and merger-negotiation privilege may not move together, which matters for any AI-indexed deal room treated as one undifferentiated archive. [^tekni-plex-inc-v-meyner-landis-89-n-y-2d-123-199]
 
-- 
+- Transaction files are not unitary. `Tekni-Plex` suggests that operational communications and merger-negotiation privilege can separate. A company that assumes the deal room moves as one object may be asserting more control than the law gives it, especially when the archive mixes ordinary operational advice with negotiation-specific material. [^tekni-plex-inc-v-meyner-landis-89-n-y-2d-123-199]
 
 ## Can AI search of privileged files waive attorney-client privilege? {#can-ai-search-of-privileged-files-waive-attorney-client-privilege}
 
@@ -63,7 +63,7 @@ On successor-counsel communications, the firm commentary is more aligned than th
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Privilege across a counsel transition*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/outside-counsel/privilege-across-counsel-transition.
 
 [^upjohn-co-v-united-states-449-u-s-383-1981]: **Upjohn Co. v. United States, 449 U.S. 383 (1981)** — "full and frank communication between attorneys and their clients" *Upjohn Co. v. United States, 449 U.S. 383 (1981).* <https://www.law.cornell.edu/supremecourt/text/449/383#:~:text=full%20and%20frank%20communication%20between%20attorneys%20and%20their%20clients>
 

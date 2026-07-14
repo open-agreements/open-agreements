@@ -8,7 +8,7 @@ citation: 'Balasco v. Gulf Auto Holding, Inc., 707 So. 2d 858 (Fla. 2d DCA 1998)
 resource: 'https://www.courtlistener.com/opinion/1671732/balasco-v-gulf-auto-holding-inc/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/florida'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/florida'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `non-solicitation-no-hire`, `restrictive-covenants-each-independently-includable`
 - source_cards: `q8-balasco-nohire`
-- cited_by: [Non-Compete Agreement Review Checklist — Florida](../checklists/non-compete/us/florida.md), [Non-Competes in Florida](../non-compete/us/florida.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Florida](../checklists/non-compete/us/florida.md), [Non-Competes in Florida](../non-compete/us/florida.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1671732/balasco-v-gulf-auto-holding-inc/#:~:text=We%20agree%20that%20the%20agreement,no%20more%20than%20two%20years.>

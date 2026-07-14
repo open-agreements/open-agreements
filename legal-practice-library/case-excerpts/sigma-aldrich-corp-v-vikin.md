@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/2741957/sigma-aldrich-corporation-v-omar-vikin/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/missouri'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/missouri'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `mo-sigma-refusal`, `sigma-refused-modification`
-- cited_by: [Non-Compete Agreement Review Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2741957/sigma-aldrich-corporation-v-omar-vikin/#:~:text=The%20trial%20court%20also%20did,refusing%20to%20modify%20the%20Agreement.>

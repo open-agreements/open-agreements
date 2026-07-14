@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/1625841/sanborn-manufacturing-co-v-currie/
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/minnesota'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/minnesota'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `minnesota-statutory-gates`, `pre-2023-agreements`, `timing-and-execution-acknowledgements`
 - source_cards: `sanborn-consideration-gate`, `sanborn-consideration-timing`, `sanborn-currie-independent-consideration`
-- cited_by: [Non-Compete Agreement Review Checklist — Minnesota](../checklists/non-compete/us/minnesota.md), [Employment Non-Competes in Minnesota](../non-compete/us/minnesota.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Minnesota](../checklists/non-compete/us/minnesota.md), [Employment Non-Competes in Minnesota](../non-compete/us/minnesota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1625841/sanborn-manufacturing-co-v-currie/#:~:text=Proof%20of%20continued%20employment%20is,consideration%20for%20a%20noncompetition%20agreement.>

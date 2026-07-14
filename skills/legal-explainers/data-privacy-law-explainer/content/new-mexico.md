@@ -2,7 +2,7 @@
 jurisdiction: "New Mexico"
 slug: new-mexico
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/new-mexico
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/new-mexico · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/new-mexico · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # New Mexico Consumer Privacy Law[^about]
 
@@ -87,7 +87,7 @@ On the breach-act side, the enforcement posture is public and penalty-capped. Th
 
 The Unfair Practices Act is where private exposure lives. The private remedy carries a $100 statutory floor for a person who suffered money or property loss, discretionary treble damages (or $300 if greater) for willful practices, and one-way fee-shifting in the complainant's favor [^q6-upa-private-remedy] — and the statute expressly contemplates class actions, with class members recovering their actual damages [^q6-upa-class-action]. Applied to privacy, the theory is strongest when a privacy policy or breach-response promise is a false or misleading written statement knowingly made in connection with the sale, lease, rental, or loan of goods or services, an extension of credit, or debt collection [^q6-upa-deceptive-def], and the claimant can tie the misstatement to money or property loss [^q6-upa-private-remedy]. The knowing-falsity element — the main defense-side hurdle — does not require intent to deceive, but it does require a knowing representation [^q6-upa-intent]. On the public side, the attorney general may sue whenever proceedings would be in the public interest, seeking temporary or permanent injunctions and restitution without posting bond [^q6-upa-ag-action], plus a civil penalty of up to $5,000 per violation for willful conduct [^q6-upa-civil-penalty]. One enforcement claim circulating online deserves a final correction: there is no new comprehensive-privacy enforcement regime taking effect July 1, 2026 — that regime would have come from House Bill 214, which the Legislature lists as *Died (API.)* and *Action Postponed Indefinitely* [^q6-hb214-status]; July 1, 2026 was just an effective date in the dead bill text [^q6-hb214-effective-dates]. Until the Legislature acts, the enforcement map for New Mexico privacy is exactly this: AG-only under the breach act, and AG plus private UPA exposure where the statute's transaction, knowledge, and loss elements are met.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Mexico. This article synthesizes New Mexico primary law and is not legal advice from a New Mexico-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Mexico. This article synthesizes New Mexico primary law and is not legal advice from a New Mexico-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *New Mexico Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/new-mexico.
 
 [^q1-dbna-security-duty]: **NMSA 1978, § 57-12C-4** — "A person that owns or licenses personal identifying information of a New Mexico resident shall implement and maintain reasonable security procedures and practices appropriate to the nature of the information to protect the personal identifying information from unauthorized access, destruction, use, modification or disclosure." *NMSA 1978, § 57-12C-4.* <https://nmonesource.com/nmos/nmsa/en/4423/1/document.do>
 

@@ -6,7 +6,7 @@ citation: 'Lord v. Lord, 454 A.2d 830, 834 (Me. 1983).'
 resource: 'https://www.courtlistener.com/opinion/2367150/lord-v-lord/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/maine'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/maine'
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `definitions`, `severability-and-reformation`
 - source_cards: `lord-goodwill-defs`, `lord-specificity-goodwill-restraint`, `lord-specificity-sev`
-- cited_by: [Non-Compete Agreement Review Checklist — Maine](../checklists/non-compete/us/maine.md), [Non-Competes in Maine](../non-compete/us/maine.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Maine](../checklists/non-compete/us/maine.md), [Non-Competes in Maine](../non-compete/us/maine.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2367150/lord-v-lord/#:~:text=Upon%20remand%2C%20on%20the%20basis,the%20value%20of%20the%20asset.>
 
 ### lord-v-lord-we-have-long-recognized-that-31ba07cc {#lord-v-lord-we-have-long-recognized-that-31ba07cc}
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-non-compete-enforceability`, `maine-statutory-gates`, `restrictive-covenants-each-independently-includable`, `sale-of-business`
 - source_cards: `lord-no-wider-cov`, `lord-no-wider-gate`, `lord-no-wider-than-necessary`, `me-sob-lord`
-- cited_by: [Non-Compete Agreement Review Checklist — Maine](../checklists/non-compete/us/maine.md), [Non-Competes in Maine](../non-compete/us/maine.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Maine](../checklists/non-compete/us/maine.md), [Non-Competes in Maine](../non-compete/us/maine.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2367150/lord-v-lord/#:~:text=We%20have%20long%20recognized%20that,the%20business%20interests%20in%20issue.>

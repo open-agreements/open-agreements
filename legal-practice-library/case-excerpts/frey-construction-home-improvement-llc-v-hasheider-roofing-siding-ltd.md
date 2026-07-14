@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/10293559/frey-construction-home-improvement-llc-v-hasheider-roofing-siding/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/wisconsin'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/wisconsin'
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `notice-to-future-employers-and-other-third-parties`, `remedies`
 - source_cards: `q10-frey`, `wi-frey-interference`
-- cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../checklists/non-compete/us/wisconsin.md), [Non-Competes in Wisconsin](../non-compete/us/wisconsin.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Wisconsin](../checklists/non-compete/us/wisconsin.md), [Non-Competes in Wisconsin](../non-compete/us/wisconsin.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10293559/frey-construction-home-improvement-llc-v-hasheider-roofing-siding/#:~:text=However%2C%20we%20further%20conclude%20that,intentional%20interference%20with%20contract%20claim.>

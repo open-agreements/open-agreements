@@ -9,9 +9,9 @@ resource: >-
   https://www.courtlistener.com/opinion/3135645/reliable-fire-equipment-co-v-arredondo/
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us'
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/illinois'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/illinois'
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `enforceable-when-reasonable-baseline`, `legitimate-business-interest-three-prong`, `reliable-fire-3prong`
-- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md), [Non-Competes in Illinois](../non-compete/us/illinois.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist](../checklists/non-compete/us.md), [Non-Competes in Illinois](../non-compete/us/illinois.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3135645/reliable-fire-equipment-co-v-arredondo/#:~:text=A%20restrictive%20covenant%2C%20assuming%20it,not%20injurious%20to%20the%20public.>
 
 ### reliable-fire-equipment-co-v-arredondo-further-the-extent-of-the-employer-s-e2690821 {#reliable-fire-equipment-co-v-arredondo-further-the-extent-of-the-employer-s-e2690821}
@@ -43,7 +43,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `definitions`
 - source_cards: `scope-tested-against-protected-interest`
-- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist](../checklists/non-compete/us.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3135645/reliable-fire-equipment-co-v-arredondo/#:~:text=Further%2C%20the%20extent%20of%20the,activity%2C%20geographical%20area%2C%20and%20time.>
 
 ### reliable-fire-equipment-co-v-arredondo-rather-we-adopt-the-position-of-735d3b67 {#reliable-fire-equipment-co-v-arredondo-rather-we-adopt-the-position-of-735d3b67}
@@ -52,5 +52,5 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `illinois-statutory-gates`, `reasonableness`
 - source_cards: `il-reliable-fire-totality`, `reliable-fire-totality`
-- cited_by: [Non-Compete Agreement Review Checklist — Illinois](../checklists/non-compete/us/illinois.md), [Non-Competes in Illinois](../non-compete/us/illinois.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Illinois](../checklists/non-compete/us/illinois.md), [Non-Competes in Illinois](../non-compete/us/illinois.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3135645/reliable-fire-equipment-co-v-arredondo/#:~:text=Rather%2C%20we%20adopt%20the%20position,circumstances%20of%20the%20individual%20case.>

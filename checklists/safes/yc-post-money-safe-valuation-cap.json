@@ -38,7 +38,7 @@
     "topic": "safes",
     "slug": "yc-post-money-safe-valuation-cap",
     "frontmatter": {
-      "title": "YC Post-Money SAFE (Valuation Cap) Review Checklist",
+      "title": "YC Post-Money SAFE (Valuation Cap) Reviewer Checklist",
       "description": "A fill-in and decision guide for the Y Combinator Post-Money SAFE (valuation cap). Unlike a negotiated form, the YC SAFE is byte-identical across deals and is not meant to be edited, so this checklist covers only the blanks the parties complete — the cap, the purchase amount, the entity and governing-law fields, and the signature and date lines — plus a few which-document decisions, such as confirming the post-money form and whether to add a pro rata side letter.",
       "eyebrow": "Reviewer Checklist",
       "coverage": "YC Post-Money SAFE (valuation cap)",
@@ -76,7 +76,6 @@
         "requirementId": "use-unmodified-form",
         "specRequirementId": "REQ-safes.yc-post-money-safe-valuation-cap.use-unmodified-form",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Body text left unmodified except blanks and brackets",
         "sectionId": "use-the-unmodified-form",
@@ -88,6 +87,7 @@
           {
             "sourceId": "safe-no-modification",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap)",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -98,6 +98,7 @@
           {
             "sourceId": "safe-standardized",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Y Combinator, Post-Money Safe User Guide",
             "citation": "Y Combinator, Post-Money Safe User Guide, available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -111,7 +112,6 @@
         "requirementId": "confirm-post-money-not-pre-money",
         "specRequirementId": "REQ-safes.yc-post-money-safe-valuation-cap.confirm-post-money-not-pre-money",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Post-money form, not the legacy pre-money safe",
         "sectionId": "use-the-unmodified-form",
@@ -123,6 +123,7 @@
           {
             "sourceId": "safe-price-defined",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap), Safe Price",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -133,6 +134,7 @@
           {
             "sourceId": "post-money-advantage",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Y Combinator, Post-Money Safe User Guide",
             "citation": "Y Combinator, Post-Money Safe User Guide, available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -146,7 +148,6 @@
         "requirementId": "select-cap-variant",
         "specRequirementId": "REQ-safes.yc-post-money-safe-valuation-cap.select-cap-variant",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Valuation-cap-only file matches the negotiated economics",
         "sectionId": "use-the-unmodified-form",
@@ -158,6 +159,7 @@
           {
             "sourceId": "safe-variants-appendix",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Y Combinator, Post-Money Safe User Guide, Appendix I",
             "citation": "Y Combinator, Post-Money Safe User Guide, available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -171,7 +173,6 @@
         "requirementId": "set-valuation-cap",
         "specRequirementId": "REQ-safes.yc-post-money-safe-valuation-cap.set-valuation-cap",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Post-Money Valuation Cap matches the negotiated economics",
         "sectionId": "economic-terms-you-fill-in",
@@ -183,6 +184,7 @@
           {
             "sourceId": "post-money-cap-defined",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap), Post-Money Valuation Cap",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -193,6 +195,7 @@
           {
             "sourceId": "post-money-advantage-cap",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Y Combinator, Post-Money Safe User Guide",
             "citation": "Y Combinator, Post-Money Safe User Guide, available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -203,6 +206,7 @@
           {
             "sourceId": "safe-price-defined-cap",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap), Safe Price",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -216,7 +220,6 @@
         "requirementId": "set-purchase-amount",
         "specRequirementId": "REQ-safes.yc-post-money-safe-valuation-cap.set-purchase-amount",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Purchase Amount equals the dollars wired",
         "sectionId": "economic-terms-you-fill-in",
@@ -228,6 +231,7 @@
           {
             "sourceId": "safe-preamble",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap), preamble",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -241,7 +245,6 @@
         "requirementId": "match-state-of-incorporation",
         "specRequirementId": "REQ-safes.yc-post-money-safe-valuation-cap.match-state-of-incorporation",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "State of Incorporation matches the charter",
         "sectionId": "entity-and-governing-law",
@@ -253,6 +256,7 @@
           {
             "sourceId": "safe-preamble-entity",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap), preamble",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -266,7 +270,6 @@
         "requirementId": "set-governing-law",
         "specRequirementId": "REQ-safes.yc-post-money-safe-valuation-cap.set-governing-law",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Governing Law Jurisdiction is a deliberate choice",
         "sectionId": "entity-and-governing-law",
@@ -278,6 +281,7 @@
           {
             "sourceId": "safe-governing-law",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap), Governing Law",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -291,7 +295,6 @@
         "requirementId": "name-company-exactly",
         "specRequirementId": "REQ-safes.yc-post-money-safe-valuation-cap.name-company-exactly",
         "requirementLevel": "MUST",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Company named exactly, consistently in both places",
         "sectionId": "parties-and-execution",
@@ -303,6 +306,7 @@
           {
             "sourceId": "safe-preamble-parties",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap), preamble",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -316,7 +320,6 @@
         "requirementId": "name-investor-exactly",
         "specRequirementId": "REQ-safes.yc-post-money-safe-valuation-cap.name-investor-exactly",
         "requirementLevel": "MUST",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Investor named exactly; signatory can bind an entity",
         "sectionId": "parties-and-execution",
@@ -328,6 +331,7 @@
           {
             "sourceId": "safe-preamble-parties",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap), preamble",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -341,7 +345,6 @@
         "requirementId": "complete-signature-block",
         "specRequirementId": "REQ-safes.yc-post-money-safe-valuation-cap.complete-signature-block",
         "requirementLevel": "MUST",
-        "scrutiny": "non-legal",
         "sourceFootnotes": [],
         "requirementLabel": "Signature block completed by an authorized person",
         "sectionId": "parties-and-execution",
@@ -355,7 +358,6 @@
         "requirementId": "date-the-safe",
         "specRequirementId": "REQ-safes.yc-post-money-safe-valuation-cap.date-the-safe",
         "requirementLevel": "SHOULD",
-        "scrutiny": "non-legal",
         "sourceFootnotes": [],
         "requirementLabel": "SAFE dated as of the funding date",
         "sectionId": "parties-and-execution",
@@ -367,6 +369,7 @@
           {
             "sourceId": "safe-preamble-parties",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Y Combinator Post-Money SAFE (Valuation Cap), preamble",
             "citation": "Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -380,7 +383,6 @@
         "requirementId": "address-pro-rata-side-letter",
         "specRequirementId": "REQ-safes.yc-post-money-safe-valuation-cap.address-pro-rata-side-letter",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Decide whether to grant a pro rata side letter",
         "sectionId": "side-terms-the-form-leaves-out",
@@ -392,6 +394,7 @@
           {
             "sourceId": "safe-removed-pro-rata",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Y Combinator, Post-Money Safe User Guide",
             "citation": "Y Combinator, Post-Money Safe User Guide, available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -402,6 +405,7 @@
           {
             "sourceId": "safe-pro-rata-side-letter",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Y Combinator, Post-Money Safe User Guide",
             "citation": "Y Combinator, Post-Money Safe User Guide, available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -415,7 +419,6 @@
         "requirementId": "note-mfn-absence",
         "specRequirementId": "REQ-safes.yc-post-money-safe-valuation-cap.note-mfn-absence",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Note the absence of an MFN provision",
         "sectionId": "side-terms-the-form-leaves-out",
@@ -427,6 +430,7 @@
           {
             "sourceId": "safe-mfn-variant",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Y Combinator, Post-Money Safe User Guide, Appendix I (MFN variant)",
             "citation": "Y Combinator, Post-Money Safe User Guide, available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",
@@ -437,6 +441,7 @@
           {
             "sourceId": "safe-variants-appendix-mfn",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Y Combinator, Post-Money Safe User Guide, Appendix I",
             "citation": "Y Combinator, Post-Money Safe User Guide, available at https://www.ycombinator.com/documents.",
             "url": "https://www.ycombinator.com/documents",

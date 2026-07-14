@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Wyoming
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Wyoming
 description: >-
   A clause-by-clause reviewer checklist for Wyoming employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -12,7 +12,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Wyoming[^about]
+# Non-Compete Agreement Reviewer Checklist — Wyoming[^about]
 
 A clause-by-clause reviewer checklist for Wyoming employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under Wyo. Stat. § 1-23-108 and Wyoming case law.
 
@@ -62,9 +62,11 @@ Every item below reads the agreement the way a Wyoming court would — against a
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — The trade-secret obligation should run for as long as secrecy persists — that is how federal law defines the right, and in Wyoming it also preserves the argument that an associated covenant fits the trade-secret pathway. A fixed end date concedes statutory protection for nothing in return. [^dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection federal law gives, because the definition keys the right to continued secrecy, and in Wyoming it also preserves the argument that an associated covenant fits the trade-secret pathway. That status-bounded form is the ceiling the law will back, not a required one — a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term, separate from the perpetual trade-secret obligation. A perpetual restraint on non-secret information reads as overreach in a state already primed to void rather than narrow. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term, separate from the status-bounded trade-secret obligation. A perpetual restraint on non-secret information reads as overreach in a state already primed to void rather than narrow. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -120,7 +122,7 @@ Every item below reads the agreement the way a Wyoming court would — against a
 
 ## Severability and reformation {#severability-and-reformation}
 
-- [ ] **Judicial reformation disclaimed** (Required) — Flip the usual severability instinct: in Wyoming the clause must disclaim judicial reformation, not request it. Savings language inviting a court to trim an overbroad covenant is ineffective here — the supreme court refuses to redraft non-competes, and an overbroad covenant is void in its entirety — so the agreement has to be drafted within the enforceable scope from the outset, and the severability clause should say exactly that. [^hassler-no-blue-pencil][^holland-blue-pencil-warning] [#disclaim-judicial-reformation]
+- [ ] **No judicial-reformation clause (omitted)** (Prohibited) — Flip the usual severability instinct: in Wyoming the agreement must not request judicial reformation — and it should omit a reformation clause entirely rather than affirmatively disclaim one. Savings language inviting a court to trim an overbroad covenant is ineffective here — the supreme court refuses to redraft non-competes, and an overbroad covenant is void in its entirety — so the agreement has to be drafted within the enforceable scope from the outset. Confirm the agreement contains no reformation or blue-pencil request; an affirmative disclaimer stating that the employer does not ask any court to reform the agreement is non-customary and counterproductive — it would waive a reformation the employer would want if the law later changed — so its absence is correct, not a gap. [^hassler-no-blue-pencil][^holland-blue-pencil-warning] [#disclaim-judicial-reformation]
 
 ## Survival {#survival}
 
@@ -154,7 +156,7 @@ The five items below exist only on this Wyoming page: they implement the 2025 st
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Wyoming (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Wyoming (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Wyoming*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/wyoming.
 
 [^sf107-effective-date]: **SF 107 §§ 1–3** — "This act shall apply to contracts entered into on and after July 1, 2025." *S.F. 107, Enrolled Act No. 87, §§ 1–3, 68th Leg., Gen. Sess. (Wyo. 2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
 

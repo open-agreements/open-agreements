@@ -2,17 +2,21 @@
 type: Case Excerpt
 title: Banks v. International Rental & Leasing Corp.
 description: >-
-  Banks v. Int'l Rental & Leasing Corp., 55 V.I. 967 (V.I. 2011). — quoted in 1
+  Banks v. Int'l Rental & Leasing Corp., 55 V.I. 967 (V.I. 2011). — quoted in 2
   document(s).
 citation: 'Banks v. Int''l Rental & Leasing Corp., 55 V.I. 967 (V.I. 2011).'
 resource: >-
   https://www.courtlistener.com/opinion/8676262/banks-v-international-rental-leasing-corp/
-timestamp: '2026-06-03'
+timestamp: '2026-07-02'
 document_references:
+  - type: State Law Practice Guide
+    resource: >-
+      https://openagreements.org/practice-guides/invention-assignment/us/virgin-islands
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/virgin-islands'
 tags:
   - case-law
+  - invention-assignment
   - non-compete
 ---
 
@@ -20,7 +24,7 @@ tags:
 
 *Banks v. Int'l Rental & Leasing Corp., 55 V.I. 967 (V.I. 2011).*
 
-Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -37,7 +41,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > We conclude that the Legislature did not intend for section 4 of title 1 to compel this Court to mechanically apply the most recent Restatement.
 
-- supports: `common-law-source`
-- source_cards: `banks-method`
-- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
+- supports: `common-law-source`, `employee-notice`, `holdover-clause-limit`, `statutory-carve-out`
+- source_cards: `banks-method`, `banks-no-mechanical`, `banks-no-mechanical-practice`, `banks-selection-notice`
+- cited_by: [Employee Invention Assignment in the U.S. Virgin Islands](../invention-assignment/us/virgin-islands.md), [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8676262/banks-v-international-rental-leasing-corp/#:~:text=We%20conclude%20that%20the%20Legislature,apply%20the%20most%20recent%20Restatement.>

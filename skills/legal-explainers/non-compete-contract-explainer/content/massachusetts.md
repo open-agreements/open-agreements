@@ -2,8 +2,8 @@
 jurisdiction: "Massachusetts"
 slug: massachusetts
 countryCode: US
-snapshotAsOf: "2026-06-30"
-lastReviewed: "2026-06-03"
+snapshotAsOf: "2026-07-14"
+lastReviewed: "2026-07-11"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/massachusetts
 license: CC BY 4.0
 stale: false
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/massachusetts · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/massachusetts · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Massachusetts[^about]
 
@@ -57,7 +57,7 @@ For a non-compete signed after employment begins but not at separation, the stat
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not present a Massachusetts non-compete for immediate signature on the first day of work. For a new hire, deliver it by the earlier of the formal offer or 10 business days before the start date and tell the employee in the document that they may consult counsel; for a current employee, give 10 business days' notice and provide separate consideration beyond keeping the job [^formation-newhire-timing][^formation-midemployment].
+> A Massachusetts non-compete presented for immediate signature on the first day of work misses the statute's timing gate. For a new hire, the agreement is valid only where it reaches the employee by the earlier of a formal offer or 10 business days before the start date and expressly states the employee's right to consult counsel; for a covenant signed after employment begins, the act requires at least 10 business days' notice and fair and reasonable consideration independent of continued employment. A covenant that skips those steps falls outside the act's minimum requirements and is unenforceable [^formation-newhire-timing][^formation-midemployment].
 
 ## Does Massachusetts require garden leave or extra pay for a non-compete? {#garden-leave}
 
@@ -70,7 +70,7 @@ A qualifying garden leave clause means paying the former employee, on a pro-rata
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a token payment as *other mutually-agreed upon consideration* without analysis. The only consideration the statute defines is a garden leave clause paying at least 50% of the employee's highest base salary across the restricted period; the enforceability of a smaller fixed sum is unsettled, so size the consideration conservatively and specify it in the agreement [^consideration-requirement][^garden-leave-fifty-percent].
+> A token payment offered as *other mutually-agreed upon consideration* rests on the act's least-settled term. The only consideration the statute defines is a garden leave clause paying at least 50% of the employee's highest annualized base salary across the restricted period; whether a smaller fixed sum satisfies the act is unsettled, so a covenant supported by a nominal payment carries the risk that a court finds the consideration requirement unmet — and any consideration counts only where it is specified in the agreement [^consideration-requirement][^garden-leave-fifty-percent].
 
 ## How long can a Massachusetts non-compete last? {#duration-limits}
 
@@ -125,6 +125,14 @@ These bans predate the 2018 act and operate independently of it. A contract rest
 
 The statutory bar is reinforced by Massachusetts common-law choice-of-law analysis, which can cut against a Massachusetts clause too. The Supreme Judicial Court refused to enforce a Massachusetts choice-of-law clause where applying Massachusetts law would violate the fundamental public policy of another state — California — that favors employee mobility [^oxford-choice-of-law]. Civil actions over a covered non-compete must be brought in the employee's county of residence or, by mutual agreement, in Suffolk County [^venue-statute].
 
+*Oxford* does not make a move to California an automatic defense to enforcement of a restrictive covenant, though, and especially not to enforcement of a non-compete. In *DraftKings Inc. v. Hermalyn*, the First Circuit, applying Massachusetts choice-of-law principles, upheld a Massachusetts choice-of-law clause and a one-year, nationwide preliminary injunction against a senior employee who resigned and moved to California to join a competitor [^draftkings-choice-of-law]. The First Circuit did not disturb *Oxford*; it applied *Oxford* as the framework. Under that framework, Massachusetts usually respects the parties' choice of law, and an employee who invokes the public-policy exception must prove all three of its elements, including that the other state has a materially greater interest than Massachusetts in the dispute [^draftkings-choice-of-law].
+
+"Massachusetts usually respects the parties’ choice of law. . . . But exceptions exist, each driven by public-policy concerns . . . . And the exception Hermalyn invokes requires him to show that (i) ‘application of’ Massachusetts law ‘would be contrary to a fundamental policy of’ California; (ii) California ‘has a materially greater interest than’ Massachusetts ‘in the determination of the . . . issue’; and (iii) California is the state whose law would control ‘in the absence of an effective choice of law by the parties’ — i.e., that California has ‘the most significant relationship to the transaction and the parties.’ . . . Which means Hermalyn must satisfy all of them to get anywhere. . . . But he can’t satisfy the materially-greater- interest requisite (as we explain next), thus dashing his hopes of winning the issue (even assuming without deciding that he could satisfy the others)."[^draftkings-choice-of-law]
+
+The case turned on the facts, and the facts did not look like the facts of *Oxford*. Hernandez had executed, performed, and allegedly breached his agreement in California. Hermalyn worked for Massachusetts-headquartered DraftKings from New Jersey and New York, traveled to Massachusetts for work roughly once every six weeks, never performed his DraftKings work from California, and the harm from his likely breach would be felt by DraftKings in Massachusetts, not California. On those findings, Hermalyn could not show that California's interest in the dispute was materially greater than Massachusetts's interest [^draftkings-fact-distinction]. The court added that the Massachusetts Noncompetition Agreement Act had recalibrated Massachusetts non-compete policy after *Oxford*, which reinforced its conclusion on the balance of state interests [^draftkings-mnaa-recalibration]. The court also refused to carve California out of the injunction, reasoning that the requested carve-out would give the employee a way to skirt the one-year non-compete ban [^draftkings-injunction-scope].
+
+"According to what the judge here found — and we see no convincingly developed argument contesting her findings as reversible error — (i) while ‘Hermalyn primarily worked for [Massachusetts-headquartered] DraftKings from New Jersey and New York, he traveled to Massachusetts for work at least 25 times’ during a 2½-year stretch before leaving for Fanatics — which roughly comes to ‘once every [6] weeks’; (ii) ‘Hermalyn does not contend, nor is there evidence, that he performed any of his work responsibilities for DraftKings from California’; and (iii) ‘[a]ny . . . harms flowing from Hermalyn’s likely’ noncompete breach ‘will be felt by DraftKings in Massachusetts, not California.’ Given the dissimilarities between Oxford and our case, Hermalyn’s Oxford- based arguments sputter out."[^draftkings-fact-distinction]
+
 ## Will a Massachusetts court reform an overbroad non-compete? {#court-narrowing}
 
 **Short answer.** It can, at its discretion. Section 24L expressly authorizes a court to reform or otherwise revise a noncompetition agreement to make it valid and enforceable to the extent necessary to protect the employer's legitimate business interests [^reformation-statute].
@@ -137,7 +145,7 @@ This is a discretionary power, not a guarantee. The statute lets a court rewrite
 
 **Short answer.** It can, under the material-change doctrine. Massachusetts courts have long held that far-reaching changes to the employment relationship can show the parties abandoned the old agreement and formed a new one — voiding a covenant signed under the earlier terms [^bartlett-abandonment][^bartlett-newcontract].
 
-In *F.A. Bartlett Tree Expert Co. v. Barrington*, the Supreme Judicial Court treated successive material changes in pay and position as evidence that the original contract — and its non-compete — had been abandoned and replaced [^bartlett-newcontract]. The doctrine's force after the 2018 act is unsettled, so the conservative practice is to have the employee sign a fresh, statute-compliant covenant on each material promotion or change in terms rather than rely on an old one. When re-papering or reviewing a specific agreement clause by clause, the [Massachusetts non-compete review checklist](/checklists/non-compete/us/massachusetts) walks the full covenant suite item by item with each requirement's force level.
+In *F.A. Bartlett Tree Expert Co. v. Barrington*, the Supreme Judicial Court treated successive material changes in pay and position as evidence that the original contract — and its non-compete — had been abandoned and replaced [^bartlett-newcontract]. The doctrine's force after the 2018 act is unsettled, so the conservative practice is to have the employee sign a fresh, statute-compliant covenant on each material promotion or change in terms rather than rely on an old one. When re-papering or reviewing a specific agreement clause by clause, the [Massachusetts non-compete reviewer checklist](/checklists/non-compete/us/massachusetts) walks the full covenant suite item by item with each requirement's force level.
 
 > [!NOTE]
 > **Practice note.**
@@ -159,7 +167,7 @@ The Supreme Judicial Court takes the same view of judicial extension. In *Automi
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not assume a Massachusetts court will pause the clock while the former employee competes or while litigation drags on. The only built-in extension is the statute's misconduct trigger; if you want the restricted period tolled during a breach or suit, you must draft an express tolling or extension clause — and even then keep the total restraint within the statutory cap [^duration-extension][^emc-no-extension].
+> A Massachusetts court does not pause the clock while the former employee competes or while litigation drags on. The only built-in extension is the statute's misconduct trigger; absent an express tolling or extension clause, the restricted period runs from the cessation of employment and expires on its stated term regardless of an intervening breach or suit. A covenant that depends on equitable extension is left to a damages remedy once the term lapses, and any express tolling still has to keep the total restraint within the statutory cap [^duration-extension][^emc-no-extension].
 
 ## Can a parent or affiliated company enforce a Massachusetts non-compete? {#parent-company-enforcement}
 
@@ -170,7 +178,7 @@ In *Anaplan Parent, LP v. Brennan*, the Business Litigation Session denied a pre
 > [!CAUTION]
 > **Drafting note.**
 >
-> Have the entity that actually employs the worker — not a parent, holding company, or affiliate — be the named counterparty on a Massachusetts non-compete. A covenant signed only with a parent company risks being unenforceable because the parent may not be the employee's *employer* under the act [^anaplan-employer].
+> Fill the Employer name in Cover Terms with the legal entity that actually employs the employee, not a parent, holding company, or affiliate. The Noncompetition Agreement Act governs an agreement between an *employer* and an *employee*, and a Massachusetts court has declined to let a parent company enforce a non-compete signed only with the parent, reasoning that the statutory term *employer* has not been read to include a parent corporation [^anaplan-employer]. The decision is a trial-level order, persuasive rather than binding, but naming the wrong entity puts the covenant's enforceability in Massachusetts at risk.
 
 ## If a non-compete is unavailable, what protects a Massachusetts employer? {#trade-secrets}
 
@@ -182,16 +190,17 @@ Because so many workers and covenants fall outside the act — laid-off employee
 
 **Short answer.** A 2018 statutory overhaul, a clarifying 2025 decision, and continued reform pressure. The Noncompetition Agreement Act reset the rules for agreements entered into on or after October 1, 2018, and the Supreme Judicial Court's 2025 decision in *Miele* drew a firm line keeping non-solicitation agreements — and forfeiture clauses triggered only by breaching them — outside the act [^rd-nuvasive-effective-date][^rd-miele-plain-language].
 
-- 
-- 
-- 
+- **October 1, 2018:** The Massachusetts Noncompetition Agreement Act took effect, applying only to agreements entered into on or after that date [^rd-nuvasive-effective-date].
+- **September 2024:** In *DraftKings Inc. v. Hermalyn*, the First Circuit, applying Massachusetts choice-of-law principles, upheld a Massachusetts choice-of-law clause and a one-year nationwide preliminary injunction against an executive who had relocated to California, distinguishing *Oxford* on its facts [^rd-draftkings-choice-of-law].
+- **June 2025:** In *Miele v. Foundation Medicine*, the Supreme Judicial Court held that the act does not reach non-solicitation agreements or a forfeiture clause triggered by breaching one [^rd-miele-plain-language].
+- **2025–2026 session:** Reform bills are pending but none has been enacted. S.1336 would make noncompetition agreements void and unenforceable outright, and S.1366 would void veterinarian non-competes on the model of the physician ban; both were reported favorably and referred to Senate Ways and Means on December 22, 2025 [^bill-s1336][^bill-s1366]. H.2090 would apply Massachusetts law to remote employees of employers incorporated or operating in Massachusetts absent a negotiated waiver; it was reported favorably and referred to House Ways and Means on October 29, 2025 [^bill-h2090]. Because the First Circuit already applied Massachusetts law to a remote out-of-state employee under existing choice-of-law analysis in *DraftKings*, H.2090 would largely codify that result for Massachusetts-connected employers rather than change the law's direction [^rd-draftkings-choice-of-law].
 
 > [!NOTE]
 > **Practice note.**
 >
 > Confirm the current status of pending Massachusetts non-compete legislation before relying on this summary, because reform bills are active in the 2025–2026 session. The settled law remains the 2018 act as interpreted in *Miele*, which keeps non-solicitation and confidentiality covenants outside the act's garden-leave and duration limits [^rd-miele-plain-language].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Massachusetts. This article synthesizes Massachusetts primary law and is not legal advice from a Massachusetts-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Massachusetts. This article synthesizes Massachusetts primary law and is not legal advice from a Massachusetts-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Massachusetts*, OpenAgreements (last updated July 11, 2026), https://openagreements.org/practice-guides/non-compete/us/massachusetts.
 
 [^mnaa-validity]: **Mass. Gen. Laws ch. 149, § 24L** — "To be valid and enforceable, a noncompetition agreement must meet the minimum requirements of paragraphs (i) through (viii)." *Mass. Gen. Laws ch. 149, § 24L(b).* <https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L>
 
@@ -247,6 +256,14 @@ Because so many workers and covenants fall outside the act — laid-off employee
 
 [^venue-statute]: **Mass. Gen. Laws ch. 149, § 24L** — "All civil actions relating to employee noncompetition agreements subject to this section shall be brought in the county where the employee resides or, if mutually agreed upon by the employer and employee, in Suffolk county;" *Mass. Gen. Laws ch. 149, § 24L(f).* <https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L>
 
+[^draftkings-choice-of-law]: **DraftKings Inc. v. Hermalyn** — "Massachusetts usually respects the parties’ choice of law. . . . But exceptions exist, each driven by public-policy concerns . . . . And the exception Hermalyn invokes requires him to show that (i) ‘application of’ Massachusetts law ‘would be contrary to a fundamental policy of’ California; (ii) California ‘has a materially greater interest than’ Massachusetts ‘in the determination of the . . . issue’; and (iii) California is the state whose law would control ‘in the absence of an effective choice of law by the parties’ — i.e., that California has ‘the most significant relationship to the transaction and the parties.’ . . . Which means Hermalyn must satisfy all of them to get anywhere. . . . But he can’t satisfy the materially-greater- interest requisite (as we explain next), thus dashing his hopes of winning the issue (even assuming without deciding that he could satisfy the others)." *DraftKings Inc. v. Hermalyn, 118 F.4th 416 (1st Cir. 2024).* <https://www.courtlistener.com/opinion/10125471/draftkings-inc-v-hermalyn/#:~:text=Massachusetts%20usually%20respects%20the%20parties%E2%80%99,he%20could%20satisfy%20the%20others).>
+
+[^draftkings-fact-distinction]: **DraftKings Inc. v. Hermalyn** — "According to what the judge here found — and we see no convincingly developed argument contesting her findings as reversible error — (i) while ‘Hermalyn primarily worked for [Massachusetts-headquartered] DraftKings from New Jersey and New York, he traveled to Massachusetts for work at least 25 times’ during a 2½-year stretch before leaving for Fanatics — which roughly comes to ‘once every [6] weeks’; (ii) ‘Hermalyn does not contend, nor is there evidence, that he performed any of his work responsibilities for DraftKings from California’; and (iii) ‘[a]ny . . . harms flowing from Hermalyn’s likely’ noncompete breach ‘will be felt by DraftKings in Massachusetts, not California.’ Given the dissimilarities between Oxford and our case, Hermalyn’s Oxford- based arguments sputter out." *DraftKings Inc. v. Hermalyn, 118 F.4th 416 (1st Cir. 2024).* <https://www.courtlistener.com/opinion/10125471/draftkings-inc-v-hermalyn/#:~:text=According%20to%20what%20the%20judge,Oxford%2D%20based%20arguments%20sputter%20out.>
+
+[^draftkings-mnaa-recalibration]: **DraftKings Inc. v. Hermalyn** — "But ‘a paradigm shift’ occurred when Massachusetts passed a law — the Massachusetts Noncompetition Agreement Act (‘MNAA’) — that ‘dramatically reduc[ed] the number of Massachusetts employees who can be subjected to . . . enforceable’ noncompetes" *DraftKings Inc. v. Hermalyn, 118 F.4th 416 (1st Cir. 2024).* <https://www.courtlistener.com/opinion/10125471/draftkings-inc-v-hermalyn/#:~:text=But%20%E2%80%9Ca%20paradigm%20shift%E2%80%9D%20occurred,.%20.%20.%20enforceable%E2%80%9D%20noncompetes>
+
+[^draftkings-injunction-scope]: **DraftKings Inc. v. Hermalyn** — "Clearly his requested California carveout will give him a way to skirt the countrywide preliminary injunction’s one-year noncompete ban." *DraftKings Inc. v. Hermalyn, 118 F.4th 416 (1st Cir. 2024).* <https://www.courtlistener.com/opinion/10125471/draftkings-inc-v-hermalyn/#:~:text=Clearly%20his%20requested%20California%20carveout,preliminary%20injunction%E2%80%99s%20one%2Dyear%20noncompete%20ban.>
+
 [^reformation-statute]: **Mass. Gen. Laws ch. 149, § 24L** — "A court may, in its discretion, reform or otherwise revise a noncompetition agreement so as to render it valid and enforceable to the extent necessary to protect the applicable legitimate business interests." *Mass. Gen. Laws ch. 149, § 24L(d).* <https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L>
 
 [^bartlett-abandonment]: **F.A. Bartlett Tree Expert Co. v. Barrington** — "Such far reaching changes strongly suggest that the parties had abandoned their old arrangement and had entered into a new relationship." *F.A. Bartlett Tree Expert Co. v. Barrington, 353 Mass. 585 (1968).* <https://www.courtlistener.com/opinion/2013561/f-a-bartlett-tree-expert-co-v-barrington/#:~:text=Such%20far%20reaching%20changes%20strongly,entered%20into%20a%20new%20relationship.>
@@ -270,3 +287,11 @@ Because so many workers and covenants fall outside the act — laid-off employee
 [^rd-nuvasive-effective-date]: **NuVasive, Inc. v. Day** — "the MNCA ‘only applies to employee noncompetition agreements entered into on or after October 1, 2018,’" *NuVasive, Inc. v. Day, 954 F.3d 439 (1st Cir. 2020).* <https://www.courtlistener.com/opinion/4743298/nuvasive-inc-v-day/#:~:text=the%20MNCA%20%22only%20applies%20to,or%20after%20October%201%2C%202018%2C%22>
 
 [^rd-miele-plain-language]: **Miele v. Foundation Medicine, Inc.** — "Under the plain language of the Massachusetts Noncompetition Agreement Act, (1) noncompetition agreements do not include nonsolicitation agreements, and (2) forfeiture for competition agreements are a subset of noncompetition agreements." *Miele v. Foundation Medicine, Inc., 496 Mass. 171 (2025).* <https://www.courtlistener.com/opinion/10604382/susan-miele-v-foundation-medicine-inc/#:~:text=Under%20the%20plain%20language%20of,a%20subset%20of%20noncompetition%20agreements.>
+
+[^rd-draftkings-choice-of-law]: **DraftKings Inc. v. Hermalyn** — "Hermalyn’s facts are not like Hernandez’s." *DraftKings Inc. v. Hermalyn, 118 F.4th 416 (1st Cir. 2024).* <https://www.courtlistener.com/opinion/10125471/draftkings-inc-v-hermalyn/#:~:text=Hermalyn%E2%80%99s%20facts%20are%20not%20like%20Hernandez%E2%80%99s.>
+
+[^bill-s1336]: **S.1336 — An Act relative to banning noncompetition agreements in the Commonwealth** — "Effective January 1, 2026, noncompetition agreements, as defined in this section, shall be void and unenforceable." *S.1336, 194th Gen. Court (Mass. 2025) (not enacted; reported favorably and referred to Senate Ways and Means, Dec. 22, 2025).* <https://malegislature.gov/Bills/194/S1336.pdf>
+
+[^bill-s1366]: **S.1366 — An Act relative to non-compete agreements for veterinarians** — "Any contract or agreement which creates or establishes the terms of a partnership, employment, or any other form of professional relationship with a veterinarian registered to practice veterinary medicine pursuant to section 55 of this chapter, which includes any restriction of the right of such veterinarian to practice veterinary medicine in any geographic area for any period of time after the termination of such partnership, employment or professional relationship shall be void and unenforceable with respect to said restriction; provided, however, that nothing herein shall render void or unenforceable the remaining provisions of any such contract or agreement." *S.1366, 194th Gen. Court (Mass. 2025) (not enacted; reported favorably and referred to Senate Ways and Means, Dec. 22, 2025).* <https://malegislature.gov/Bills/194/S1366.pdf>
+
+[^bill-h2090]: **H.2090 — An Act securing the application of Massachusetts law to remote employees** — "A contract designating the choice of law as a jurisdiction other than the Commonwealth shall not be effective, however, upon a showing that the Employer has failed to comply with any legal obligation imposed by the jurisdiction concerning the working terms or conditions of the Remote Employee." *H.2090, 194th Gen. Court (Mass. 2025) (not enacted; reported favorably and referred to House Ways and Means, Oct. 29, 2025).* <https://malegislature.gov/Bills/194/H2090.pdf>

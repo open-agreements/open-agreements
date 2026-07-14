@@ -51,7 +51,7 @@ There is no standalone private right of action — consumers cannot sue controll
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maryland. This article synthesizes Maryland primary law and is not legal advice from a Maryland-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maryland. This article synthesizes Maryland primary law and is not legal advice from a Maryland-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Maryland Consumer Privacy Law (MODPA)*, OpenAgreements (last updated June 6, 2026), https://openagreements.org/practice-guides/privacy/us/maryland.
 
 [^stat-4702-apply]: **Md. Code Ann., Com. Law § 14-4702** — "(1) Controlled or processed the personal data of at least 35,000 consumers, excluding personal data controlled or processed solely for the purpose of completing a payment transaction; or (2) Controlled or processed the personal data of at least 10,000 consumers and derived more than 20% of its gross revenue from the sale of personal data." *Md. Code Ann., Com. Law § 14-4702.* <https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcl&section=14-4702>
 

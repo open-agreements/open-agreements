@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Georgia
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Georgia
 description: >-
   A clause-by-clause reviewer checklist for Georgia employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Georgia[^about]
+# Non-Compete Agreement Reviewer Checklist — Georgia[^about]
 
 A clause-by-clause reviewer checklist for Georgia employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Georgia Restrictive Covenants Act's reasonableness standard, employee-category gate, and durational presumptions.
 
@@ -63,7 +63,9 @@ Work through the items below with the Georgia Restrictive Covenants Act in mind:
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations must run for as long as secrecy does — federal law defines the right that way, and Georgia's statute goes out of its way to say the Act places no time or geographic limit on keeping material protected as a trade secret. A fixed expiry on trade-secret protection is an unforced surrender of the most durable tool in the agreement. [^dtsa-trade-secret-definition][^ga-13-8-53e-duration] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection the law gives: federal law keys the right to continued secrecy, and Georgia's statute goes out of its way to say the Act places no time or geographic limit on keeping material protected as a trade secret. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition][^ga-13-8-53e-duration] [#tie-trade-secret-duration-to-secrecy-status]
+
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
 
 - [ ] **Confidentiality duration** (Optional) — Georgia removes the usual pressure for a finite confidentiality term: the Act says nothing in it limits how long, or where, a party may agree to keep information confidential, for as long as the information actually remains confidential. So an open-ended obligation keyed to continued confidentiality is statutorily sound here — what to verify instead is the conditional itself, meaning the clause releases information once it stops being confidential rather than promising secrecy forever regardless. A stated finite term for ordinary business information remains a perfectly acceptable choice. [^ga-13-8-53e-duration] [#allow-confidentiality-to-run-while-information-remains-protected]
 
@@ -155,7 +157,7 @@ The five items below exist only on this Georgia page: they implement the Act's c
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Georgia (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Georgia (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Georgia*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/georgia.
 
 [^ga-13-8-52-relationships]: **O.C.G.A. § 13-8-52** — "The provisions of this article shall be applicable only to contracts and agreements between or among: (1) Employers and employees; (2) Distributors and manufacturers; (3) Lessors and lessees; (4) Partnerships and partners; (5) Franchisors and franchisees; (6) Sellers and purchasers of a business or commercial enterprise; and (7) Two or more employers." *O.C.G.A. § 13-8-52(a).* <https://www.legis.ga.gov/api/legislation/document/20112012/114248>
 

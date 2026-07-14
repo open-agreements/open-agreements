@@ -26,13 +26,19 @@
       "rel": "agent-skill",
       "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
       "type": "text/markdown"
+    },
+    {
+      "rel": "related-form",
+      "href": "https://openagreements.org/templates/openagreements-restrictive-covenant-west-virginia",
+      "type": "text/html",
+      "title": "Employee Restrictive Covenant (West Virginia)"
     }
   ],
   "data": {
     "topic": "non-compete",
     "slug": "west-virginia",
     "frontmatter": {
-      "title": "Non-Compete Agreement Review Checklist — West Virginia",
+      "title": "Non-Compete Agreement Reviewer Checklist — West Virginia",
       "description": "A clause-by-clause reviewer checklist for West Virginia employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Reddy reasonableness framework, where a facially unreasonable covenant is void with no judicial narrowing and physician covenants are capped at one year and thirty road miles.",
       "eyebrow": "Reviewer Checklist",
       "jurisdiction": "West Virginia",
@@ -43,7 +49,7 @@
         "steven-obiajulu"
       ]
     },
-    "requirementCount": 47,
+    "requirementCount": 48,
     "sections": [
       {
         "sectionId": "parties-and-cover-term-identification",
@@ -127,7 +133,6 @@
         "requirementId": "identify-parties",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Parties identified by name",
         "sectionId": "parties-and-cover-term-identification",
@@ -139,6 +144,7 @@
           {
             "sourceId": "wv-reddy-burden-cover",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Reddy v. Community Health Foundation of Man",
             "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
             "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
@@ -154,7 +160,6 @@
         "requirementId": "identify-effective-date",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Effective date",
         "sectionId": "parties-and-cover-term-identification",
@@ -166,6 +171,7 @@
           {
             "sourceId": "wv-47-11e-5-cover",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "W. Va. Code § 47-11E-5",
             "citation": "W. Va. Code § 47-11E-5.",
             "url": "https://code.wvlegislature.gov/47-11E-5/",
@@ -179,7 +185,6 @@
         "requirementId": "identify-employee-title",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Employee title",
         "sectionId": "parties-and-cover-term-identification",
@@ -191,6 +196,7 @@
           {
             "sourceId": "wv-helms-cover",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Helms Boys, Inc. v. Brady",
             "citation": "Helms Boys, Inc. v. Brady, 171 W. Va. 66, 297 S.E.2d 840 (1982).",
             "url": "https://www.courtlistener.com/opinion/1356394/helms-boys-inc-v-brady/",
@@ -206,7 +212,6 @@
         "requirementId": "identify-governing-law",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Governing law state named",
         "sectionId": "parties-and-cover-term-identification",
@@ -220,7 +225,6 @@
         "requirementId": "define-confidential-information",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Confidential information",
         "sectionId": "definitions",
@@ -232,6 +236,7 @@
           {
             "sourceId": "wv-reddy-assets-def",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Reddy v. Community Health Foundation of Man",
             "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
             "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
@@ -247,7 +252,6 @@
         "requirementId": "define-trade-secrets",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Trade secrets",
         "sectionId": "definitions",
@@ -259,6 +263,7 @@
           {
             "sourceId": "wv-reddy-assets-def",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Reddy v. Community Health Foundation of Man",
             "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
             "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
@@ -274,7 +279,6 @@
         "requirementId": "define-restricted-period",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Restricted period",
         "sectionId": "definitions",
@@ -286,6 +290,7 @@
           {
             "sourceId": "wv-huntington-def",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Huntington Eye Associates, Inc. v. LoCascio",
             "citation": "Huntington Eye Assocs., Inc. v. LoCascio, 210 W. Va. 76, 553 S.E.2d 773 (2001).",
             "url": "https://www.courtlistener.com/opinion/1298767/huntington-eye-associates-inc-v-locascio/",
@@ -301,7 +306,6 @@
         "requirementId": "define-restricted-territory",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Restricted territory",
         "sectionId": "definitions",
@@ -313,6 +317,7 @@
           {
             "sourceId": "wv-huntington-def",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Huntington Eye Associates, Inc. v. LoCascio",
             "citation": "Huntington Eye Assocs., Inc. v. LoCascio, 210 W. Va. 76, 553 S.E.2d 773 (2001).",
             "url": "https://www.courtlistener.com/opinion/1298767/huntington-eye-associates-inc-v-locascio/",
@@ -328,7 +333,6 @@
         "requirementId": "define-covered-customers",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Covered customers",
         "sectionId": "definitions",
@@ -340,6 +344,7 @@
           {
             "sourceId": "wv-wood-territorial-def",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Wood v. Acordia of West Virginia, Inc.",
             "citation": "Wood v. Acordia of W. Va., Inc., 217 W. Va. 406, 618 S.E.2d 415 (2005).",
             "url": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/",
@@ -355,7 +360,6 @@
         "requirementId": "define-covered-employees",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Covered employees",
         "sectionId": "definitions",
@@ -369,7 +373,6 @@
         "requirementId": "define-protected-interests",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Protected business interests",
         "sectionId": "definitions",
@@ -381,6 +384,7 @@
           {
             "sourceId": "wv-reddy-burden-def",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Reddy v. Community Health Foundation of Man",
             "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
             "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
@@ -393,6 +397,7 @@
           {
             "sourceId": "wv-helms-def",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Helms Boys, Inc. v. Brady",
             "citation": "Helms Boys, Inc. v. Brady, 171 W. Va. 66, 297 S.E.2d 840 (1982).",
             "url": "https://www.courtlistener.com/opinion/1356394/helms-boys-inc-v-brady/",
@@ -408,7 +413,6 @@
         "requirementId": "define-competitive-business",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Competitive business",
         "sectionId": "definitions",
@@ -420,6 +424,7 @@
           {
             "sourceId": "wv-reddy-burden-def",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Reddy v. Community Health Foundation of Man",
             "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
             "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
@@ -435,7 +440,6 @@
         "requirementId": "permit-de-minimis-passive-public-investment-carveout",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Small public-stock carve-out",
         "sectionId": "definitions",
@@ -449,7 +453,6 @@
         "requirementId": "define-passive-public-holdings",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
         "requirementLevel": "MAY",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Passive public holdings",
         "sectionId": "definitions",
@@ -463,7 +466,6 @@
         "requirementId": "define-solicit",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "What counts as soliciting",
         "sectionId": "definitions",
@@ -475,6 +477,7 @@
           {
             "sourceId": "wv-wood-definition-def",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Wood v. Acordia of West Virginia, Inc.",
             "citation": "Wood v. Acordia of W. Va., Inc., 217 W. Va. 406, 618 S.E.2d 415 (2005).",
             "url": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/",
@@ -490,7 +493,6 @@
         "requirementId": "define-termination-of-employment",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Termination of employment",
         "sectionId": "definitions",
@@ -502,6 +504,7 @@
           {
             "sourceId": "wv-47-11e-2-termination-def",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "W. Va. Code § 47-11E-2",
             "citation": "W. Va. Code § 47-11E-2.",
             "url": "https://code.wvlegislature.gov/47-11E-2/",
@@ -515,7 +518,6 @@
         "requirementId": "acknowledge-timing",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "When the agreement was signed",
         "sectionId": "timing-and-execution-acknowledgements",
@@ -527,6 +529,7 @@
           {
             "sourceId": "wv-envprod-rule-timing",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Environmental Products Co. v. Duncan",
             "citation": "Env't Prods. Co. v. Duncan, 168 W. Va. 349, 285 S.E.2d 889 (1981).",
             "url": "https://www.courtlistener.com/opinion/8217635/environmental-products-co-v-duncan/",
@@ -542,7 +545,6 @@
         "requirementId": "acknowledge-opportunity-to-consult-counsel",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Chance to consult a lawyer",
         "sectionId": "timing-and-execution-acknowledgements",
@@ -553,21 +555,21 @@
         "sources": []
       },
       {
-        "requirementId": "treat-trade-secret-protection-as-perpetual",
-        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
-        "requirementLevel": "MUST",
-        "scrutiny": "substantive",
+        "requirementId": "tie-trade-secret-duration-to-secrecy-status",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.tie-trade-secret-duration-to-secrecy-status",
+        "requirementLevel": "SHOULD",
         "sourceFootnotes": [],
-        "requirementLabel": "Trade-secret protection without an end date",
+        "requirementLabel": "Trade-secret duration tied to secrecy status",
         "sectionId": "confidentiality-and-trade-secret-treatment",
         "itemNumber": "4.1",
-        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#treat-trade-secret-protection-as-perpetual",
-        "requirementGuidance": "The trade-secret obligation should last as long as secrecy does — that is how federal law defines the right, and West Virginia's trade-secret statute runs alongside the contract rather than replacing it: the act displaces conflicting civil remedies but expressly preserves contractual ones. A fixed expiry on trade-secret protection gives away rights the statutes would otherwise keep alive.",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#tie-trade-secret-duration-to-secrecy-status",
+        "requirementGuidance": "Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection the law offers: federal law keys the right to continued secrecy, and West Virginia's trade-secret statute runs alongside the contract rather than replacing it, displacing conflicting civil remedies while expressly preserving contractual ones. That status-bounded form is the ceiling the statutes will back, not a required one — a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it.",
         "variants": [],
         "sources": [
           {
             "sourceId": "dtsa-trade-secret-definition",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
             "citation": "18 U.S.C. § 1839(3)(B) (2018).",
             "url": "https://www.law.cornell.edu/uscode/text/18/1839",
@@ -579,6 +581,7 @@
           {
             "sourceId": "wv-47-22-7-conf",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "W. Va. Code § 47-22-7",
             "citation": "W. Va. Code § 47-22-7.",
             "url": "https://code.wvlegislature.gov/47-22-7/",
@@ -589,14 +592,26 @@
         ]
       },
       {
+        "requirementId": "avoid-untethered-indefinite-confidentiality",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.avoid-untethered-indefinite-confidentiality",
+        "requirementLevel": "MUST NOT",
+        "sourceFootnotes": [],
+        "requirementLabel": "No unbounded confidentiality obligation",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#avoid-untethered-indefinite-confidentiality",
+        "requirementGuidance": "Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form.",
+        "variants": [],
+        "sources": []
+      },
+      {
         "requirementId": "state-confidentiality-duration",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Confidentiality end date",
         "sectionId": "confidentiality-and-trade-secret-treatment",
-        "itemNumber": "4.2",
+        "itemNumber": "4.3",
         "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#state-confidentiality-duration",
         "requirementGuidance": "Give ordinary confidential information its own finite term. A perpetual lid on non-secret information is the kind of clause that operates as a practical non-compete, and in this state a confidentiality covenant earns enforcement by staying tied to actual confidential information rather than to the worker's ability to do similar work.",
         "variants": [],
@@ -604,6 +619,7 @@
           {
             "sourceId": "wv-reddy-assets-conf",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Reddy v. Community Health Foundation of Man",
             "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
             "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
@@ -619,7 +635,6 @@
         "requirementId": "disclose-dtsa-notice",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "DTSA whistleblower notice",
         "sectionId": "permitted-disclosures-and-protected-conduct",
@@ -631,6 +646,7 @@
           {
             "sourceId": "dtsa-immunity-notice",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
             "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
             "url": "https://www.law.cornell.edu/uscode/text/18/1833",
@@ -645,7 +661,6 @@
         "requirementId": "carve-out-nlra-protected-discussion",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
         "requirementLevel": "MUST",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Wage-discussion carve-out",
         "sectionId": "permitted-disclosures-and-protected-conduct",
@@ -657,6 +672,7 @@
           {
             "sourceId": "nlra-section-7-rights",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
             "citation": "29 U.S.C. § 157 (NLRA § 7).",
             "url": "https://www.law.cornell.edu/uscode/text/29/157",
@@ -668,6 +684,7 @@
           {
             "sourceId": "mclaren-macomb-protected-activity",
             "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
             "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
             "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
             "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
@@ -682,7 +699,6 @@
         "requirementId": "permit-compelled-disclosure",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Court-ordered disclosure allowed",
         "sectionId": "permitted-disclosures-and-protected-conduct",
@@ -696,7 +712,6 @@
         "requirementId": "require-property-return-and-certification",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Property return and sign-off",
         "sectionId": "property-return-and-certification",
@@ -708,6 +723,7 @@
           {
             "sourceId": "wv-47-11e-3-prop",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "W. Va. Code § 47-11E-3",
             "citation": "W. Va. Code § 47-11E-3.",
             "url": "https://code.wvlegislature.gov/47-11E-3/",
@@ -721,7 +737,6 @@
         "requirementId": "permit-employee-nonsolicit",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Employee non-solicit",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -733,6 +748,7 @@
           {
             "sourceId": "wv-47-11e-3-cov",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "W. Va. Code § 47-11E-3",
             "citation": "W. Va. Code § 47-11E-3.",
             "url": "https://code.wvlegislature.gov/47-11E-3/",
@@ -746,7 +762,6 @@
         "requirementId": "permit-customer-nonsolicit",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Customer non-solicit",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -758,6 +773,7 @@
           {
             "sourceId": "wv-wood-definition-cov",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Wood v. Acordia of West Virginia, Inc.",
             "citation": "Wood v. Acordia of W. Va., Inc., 217 W. Va. 406, 618 S.E.2d 415 (2005).",
             "url": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/",
@@ -773,7 +789,6 @@
         "requirementId": "permit-non-dealing",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Non-dealing covenant",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -785,6 +800,7 @@
           {
             "sourceId": "wv-wood-territorial-cov",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Wood v. Acordia of West Virginia, Inc.",
             "citation": "Wood v. Acordia of W. Va., Inc., 217 W. Va. 406, 618 S.E.2d 415 (2005).",
             "url": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/",
@@ -800,7 +816,6 @@
         "requirementId": "permit-non-compete",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Non-compete covenant",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -812,6 +827,7 @@
           {
             "sourceId": "wv-reddy-burden-cov",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Reddy v. Community Health Foundation of Man",
             "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
             "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
@@ -824,6 +840,7 @@
           {
             "sourceId": "wv-reddy-void-cov",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Reddy v. Community Health Foundation of Man",
             "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
             "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
@@ -839,7 +856,6 @@
         "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Named-competitor narrowing",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -851,6 +867,7 @@
           {
             "sourceId": "wv-huntington-cov",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Huntington Eye Associates, Inc. v. LoCascio",
             "citation": "Huntington Eye Assocs., Inc. v. LoCascio, 210 W. Va. 76, 553 S.E.2d 773 (2001).",
             "url": "https://www.courtlistener.com/opinion/1298767/huntington-eye-associates-inc-v-locascio/",
@@ -866,7 +883,6 @@
         "requirementId": "permit-non-investment",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Non-investment covenant",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -880,7 +896,6 @@
         "requirementId": "require-non-disparagement",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Non-disparagement",
         "sectionId": "non-disparagement",
@@ -892,6 +907,7 @@
           {
             "sourceId": "mclaren-macomb-nondisparagement",
             "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
             "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
             "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
             "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
@@ -906,7 +922,6 @@
         "requirementId": "address-physician-specific-rights",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Physician rights and notices",
         "sectionId": "physician-specific-notices-and-carve-outs",
@@ -918,6 +933,7 @@
           {
             "sourceId": "wv-47-11e-2-limits-phys",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "W. Va. Code § 47-11E-2",
             "citation": "W. Va. Code § 47-11E-2.",
             "url": "https://code.wvlegislature.gov/47-11E-2/",
@@ -928,6 +944,7 @@
           {
             "sourceId": "wv-47-11e-2-termination-phys",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "W. Va. Code § 47-11E-2",
             "citation": "W. Va. Code § 47-11E-2.",
             "url": "https://code.wvlegislature.gov/47-11E-2/",
@@ -938,6 +955,7 @@
           {
             "sourceId": "wv-47-11e-4-phys",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "W. Va. Code § 47-11E-4",
             "citation": "W. Va. Code § 47-11E-4.",
             "url": "https://code.wvlegislature.gov/47-11E-4/",
@@ -951,7 +969,6 @@
         "requirementId": "require-no-conflicting-obligations-representation",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "No conflicting obligations",
         "sectionId": "no-conflicting-obligations",
@@ -965,7 +982,6 @@
         "requirementId": "address-notice-to-future-employers",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
         "requirementLevel": "MAY",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Notice to future employers",
         "sectionId": "notice-to-future-employers-and-other-third-parties",
@@ -977,6 +993,7 @@
           {
             "sourceId": "wv-reddy-void-notice",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Reddy v. Community Health Foundation of Man",
             "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
             "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
@@ -992,7 +1009,6 @@
         "requirementId": "address-tolling-during-breach",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Restriction extended during a breach",
         "sectionId": "tolling-during-breach",
@@ -1004,6 +1020,7 @@
           {
             "sourceId": "wv-reddy-void-toll",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Reddy v. Community Health Foundation of Man",
             "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
             "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
@@ -1016,6 +1033,7 @@
           {
             "sourceId": "wv-huntington-toll",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Huntington Eye Associates, Inc. v. LoCascio",
             "citation": "Huntington Eye Assocs., Inc. v. LoCascio, 210 W. Va. 76, 553 S.E.2d 773 (2001).",
             "url": "https://www.courtlistener.com/opinion/1298767/huntington-eye-associates-inc-v-locascio/",
@@ -1028,6 +1046,7 @@
           {
             "sourceId": "wv-reddy-test-toll",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Reddy v. Community Health Foundation of Man",
             "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
             "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
@@ -1043,7 +1062,6 @@
         "requirementId": "require-injunctive-relief-availability",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Injunction availability",
         "sectionId": "remedies",
@@ -1055,6 +1073,7 @@
           {
             "sourceId": "wv-special-services-rem",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Special Services Bureau, Inc. v. Friend",
             "citation": "Special Servs. Bureau, Inc. v. Friend, No. 18-0478 (W. Va. Sept. 9, 2019) (mem. decision).",
             "url": "https://www.courtlistener.com/opinion/4659311/special-services-bureau-inc-v-stacey-elizabeth-friend/",
@@ -1070,7 +1089,6 @@
         "requirementId": "address-attorneys-fees-and-costs",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
         "requirementLevel": "MAY",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Attorney fees and costs",
         "sectionId": "remedies",
@@ -1082,6 +1100,7 @@
           {
             "sourceId": "wv-47-22-4-rem",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "W. Va. Code § 47-22-4",
             "citation": "W. Va. Code § 47-22-4.",
             "url": "https://code.wvlegislature.gov/47-22-4/",
@@ -1095,7 +1114,6 @@
         "requirementId": "draft-facially-reasonable-covenants-rather-than-rely-on-narrowing",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.west-virginia.draft-facially-reasonable-covenants-rather-than-rely-on-narrowing",
         "requirementLevel": "SHOULD NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Facially reasonable from the start, no court rescue",
         "sectionId": "severability-and-reformation",
@@ -1107,6 +1125,7 @@
           {
             "sourceId": "wv-reddy-void-sev",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Reddy v. Community Health Foundation of Man",
             "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
             "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
@@ -1119,6 +1138,7 @@
           {
             "sourceId": "wv-huntington-sev",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Huntington Eye Associates, Inc. v. LoCascio",
             "citation": "Huntington Eye Assocs., Inc. v. LoCascio, 210 W. Va. 76, 553 S.E.2d 773 (2001).",
             "url": "https://www.courtlistener.com/opinion/1298767/huntington-eye-associates-inc-v-locascio/",
@@ -1134,7 +1154,6 @@
         "requirementId": "address-survival-per-covenant",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Survival after the agreement ends",
         "sectionId": "survival",
@@ -1148,7 +1167,6 @@
         "requirementId": "address-assignment-and-successors",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Assignment and successors",
         "sectionId": "assignment-and-successors",
@@ -1162,7 +1180,6 @@
         "requirementId": "specify-governing-law-and-venue",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Governing law, venue, dispute process",
         "sectionId": "governing-law-venue-dispute-process",
@@ -1176,7 +1193,6 @@
         "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Entire agreement, amendments, e-signatures",
         "sectionId": "entire-agreement-amendment-waiver-e-signatures",
@@ -1188,6 +1204,7 @@
           {
             "sourceId": "wv-envprod-entire",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Environmental Products Co. v. Duncan",
             "citation": "Env't Prods. Co. v. Duncan, 168 W. Va. 349, 285 S.E.2d 889 (1981).",
             "url": "https://www.courtlistener.com/opinion/8217635/environmental-products-co-v-duncan/",
@@ -1200,6 +1217,7 @@
           {
             "sourceId": "wv-47-11e-5-entire",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "W. Va. Code § 47-11E-5",
             "citation": "W. Va. Code § 47-11E-5.",
             "url": "https://code.wvlegislature.gov/47-11E-5/",
@@ -1213,7 +1231,6 @@
         "requirementId": "satisfy-the-reddy-reasonableness-test",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.west-virginia.satisfy-the-reddy-reasonableness-test",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Protectable interest plus the three reasonableness checks",
         "sectionId": "west-virginia-statutory-gates",
@@ -1225,6 +1242,7 @@
           {
             "sourceId": "wv-reddy-burden-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Reddy v. Community Health Foundation of Man",
             "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
             "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
@@ -1237,6 +1255,7 @@
           {
             "sourceId": "wv-reddy-test-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Reddy v. Community Health Foundation of Man",
             "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
             "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
@@ -1249,6 +1268,7 @@
           {
             "sourceId": "wv-helms-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Helms Boys, Inc. v. Brady",
             "citation": "Helms Boys, Inc. v. Brady, 171 W. Va. 66, 297 S.E.2d 840 (1982).",
             "url": "https://www.courtlistener.com/opinion/1356394/helms-boys-inc-v-brady/",
@@ -1261,6 +1281,7 @@
           {
             "sourceId": "wv-special-services-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Special Services Bureau, Inc. v. Friend",
             "citation": "Special Servs. Bureau, Inc. v. Friend, No. 18-0478 (W. Va. Sept. 9, 2019) (mem. decision).",
             "url": "https://www.courtlistener.com/opinion/4659311/special-services-bureau-inc-v-stacey-elizabeth-friend/",
@@ -1276,7 +1297,6 @@
         "requirementId": "support-mid-employment-covenants-with-new-consideration",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.west-virginia.support-mid-employment-covenants-with-new-consideration",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "New consideration for a covenant signed after hiring",
         "sectionId": "west-virginia-statutory-gates",
@@ -1288,6 +1308,7 @@
           {
             "sourceId": "wv-envprod-rule-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Environmental Products Co. v. Duncan",
             "citation": "Env't Prods. Co. v. Duncan, 168 W. Va. 349, 285 S.E.2d 889 (1981).",
             "url": "https://www.courtlistener.com/opinion/8217635/environmental-products-co-v-duncan/",
@@ -1300,6 +1321,7 @@
           {
             "sourceId": "wv-envprod-unchanged-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Environmental Products Co. v. Duncan",
             "citation": "Env't Prods. Co. v. Duncan, 168 W. Va. 349, 285 S.E.2d 889 (1981).",
             "url": "https://www.courtlistener.com/opinion/8217635/environmental-products-co-v-duncan/",
@@ -1312,6 +1334,7 @@
           {
             "sourceId": "wv-pemco-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Pemco Corp. v. Rose",
             "citation": "Pemco Corp. v. Rose, 163 W. Va. 420, 257 S.E.2d 885 (1979).",
             "url": "https://www.courtlistener.com/opinion/8217515/pemco-corp-v-rose/",
@@ -1327,7 +1350,6 @@
         "requirementId": "cap-physician-covenants-at-one-year-and-thirty-road-miles",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.west-virginia.cap-physician-covenants-at-one-year-and-thirty-road-miles",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Physician covenant within the one-year, thirty-mile cap",
         "sectionId": "west-virginia-statutory-gates",
@@ -1339,6 +1361,7 @@
           {
             "sourceId": "wv-47-11e-2-limits-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "W. Va. Code § 47-11E-2",
             "citation": "W. Va. Code § 47-11E-2.",
             "url": "https://code.wvlegislature.gov/47-11E-2/",
@@ -1349,6 +1372,7 @@
           {
             "sourceId": "wv-47-11e-2-termination-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "W. Va. Code § 47-11E-2",
             "citation": "W. Va. Code § 47-11E-2.",
             "url": "https://code.wvlegislature.gov/47-11E-2/",
@@ -1359,6 +1383,7 @@
           {
             "sourceId": "wv-47-11e-5-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "W. Va. Code § 47-11E-5",
             "citation": "W. Va. Code § 47-11E-5.",
             "url": "https://code.wvlegislature.gov/47-11E-5/",
@@ -1369,6 +1394,7 @@
           {
             "sourceId": "wv-47-11e-4-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "W. Va. Code § 47-11E-4",
             "citation": "W. Va. Code § 47-11E-4.",
             "url": "https://code.wvlegislature.gov/47-11E-4/",
@@ -1382,7 +1408,6 @@
         "requirementId": "keep-customer-restrictions-as-true-non-piracy-provisions",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.west-virginia.keep-customer-restrictions-as-true-non-piracy-provisions",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Customer limits kept to true non-piracy terms",
         "sectionId": "west-virginia-statutory-gates",
@@ -1394,6 +1419,7 @@
           {
             "sourceId": "wv-wood-definition-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Wood v. Acordia of West Virginia, Inc.",
             "citation": "Wood v. Acordia of W. Va., Inc., 217 W. Va. 406, 618 S.E.2d 415 (2005).",
             "url": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/",
@@ -1406,6 +1432,7 @@
           {
             "sourceId": "wv-wood-territorial-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Wood v. Acordia of West Virginia, Inc.",
             "citation": "Wood v. Acordia of W. Va., Inc., 217 W. Va. 406, 618 S.E.2d 415 (2005).",
             "url": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/",
@@ -1418,6 +1445,7 @@
           {
             "sourceId": "wv-wood-three-factor-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Wood v. Acordia of West Virginia, Inc.",
             "citation": "Wood v. Acordia of W. Va., Inc., 217 W. Va. 406, 618 S.E.2d 415 (2005).",
             "url": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/",
@@ -1433,7 +1461,6 @@
         "requirementId": "review-sale-of-business-covenants-under-the-sale-standard",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.west-virginia.review-sale-of-business-covenants-under-the-sale-standard",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Sale-of-business covenants papered in the deal",
         "sectionId": "west-virginia-statutory-gates",
@@ -1445,6 +1472,7 @@
           {
             "sourceId": "wv-weaver-lesser-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Weaver v. Ritchie",
             "citation": "Weaver v. Ritchie, 197 W. Va. 690, 478 S.E.2d 363 (1996).",
             "url": "https://www.courtlistener.com/opinion/1328666/weaver-v-ritchie/",
@@ -1457,6 +1485,7 @@
           {
             "sourceId": "wv-weaver-test-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Weaver v. Ritchie",
             "citation": "Weaver v. Ritchie, 197 W. Va. 690, 478 S.E.2d 363 (1996).",
             "url": "https://www.courtlistener.com/opinion/1328666/weaver-v-ritchie/",
@@ -1469,6 +1498,7 @@
           {
             "sourceId": "wv-weaver-policy-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Weaver v. Ritchie",
             "citation": "Weaver v. Ritchie, 197 W. Va. 690, 478 S.E.2d 363 (1996).",
             "url": "https://www.courtlistener.com/opinion/1328666/weaver-v-ritchie/",

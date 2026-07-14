@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/1957320/community-hospital-group-inc-v-more/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/new-jersey'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-jersey'
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `more-no-extension`, `nj-more-no-extension`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1957320/community-hospital-group-inc-v-more/#:~:text=Because%20restrictive%20covenants%20are%20not,the%20agreement%20beyond%20that%20period.>
 
 ### community-hospital-group-inc-v-more-on-its-face-two-years-appears-025a700a {#community-hospital-group-inc-v-more-on-its-face-two-years-appears-025a700a}
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `duration-limits`
 - source_cards: `more-two-year`, `nj-more-two-year`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1957320/community-hospital-group-inc-v-more/#:~:text=On%20its%20face%20two%20years,assume%20Dr.%20More%E2%80%99s%20prior%20role.>
 
 ### community-hospital-group-inc-v-more-that-test-requires-us-to-determine-a21f53f3 {#community-hospital-group-inc-v-more-that-test-requires-us-to-determine-a21f53f3}
@@ -50,7 +50,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-non-compete-enforceability`, `new-jersey-statutory-gates`, `physician-covenants`
 - source_cards: `more-three-prong`, `nj-more-restatement`, `q8-more-three-prong`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1957320/community-hospital-group-inc-v-more/#:~:text=That%20test%20requires%20us%20to,be%20injurious%20to%20the%20public.>
 
 ### community-hospital-group-inc-v-more-we-are-satisfied-that-if-the-96e7ffd4 {#community-hospital-group-inc-v-more-we-are-satisfied-that-if-the-96e7ffd4}
@@ -59,5 +59,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `duration-limits`, `physician-covenants`, `physician-specific-notices-and-carve-outs`
 - source_cards: `more-geography-reduced`, `nj-more-public-radius`, `nj-more-radius`, `q8-more-geography-reduced`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1957320/community-hospital-group-inc-v-more/#:~:text=We%20are%20satisfied%20that%20if,public%20that%20it%20presently%20has.>

@@ -16,12 +16,17 @@ Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.
 * [Ai Policies](ai-policies/)
 * [Ai Vendors](ai-vendors/)
 * [Checklists](checklists/)
+* [Corporate Governance](corporate-governance/)
+* [Founder Separation](founder-separation/)
 * [Invention Assignment](invention-assignment/)
 * [Non Compete](non-compete/)
 * [Outside Counsel](outside-counsel/)
 * [Privacy](privacy/)
 * [Privacy Policy](privacy-policy/)
 * [Startup Financing](startup-financing/)
+* [Stay Or Pay](stay-or-pay/)
 * [Surveys](surveys/)
+* [Trade Secrets](trade-secrets/)
+* [Wage And Hour](wage-and-hour/)
 
 Supporting evidence — [verbatim passages our notes rely on](case-excerpts/), each linked to the full opinion on CourtListener (Free Law Project). Not a case database.

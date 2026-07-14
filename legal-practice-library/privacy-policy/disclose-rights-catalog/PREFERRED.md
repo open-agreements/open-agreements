@@ -19,8 +19,10 @@ Preferred phrasing for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](
 
 ## Preferred phrasing
 
-> **Your Privacy Rights.** If you are a [[Consumer]] in a state with a comprehensive privacy law, you have the right to: confirm whether we process your [[Personal Data]] and access it; correct inaccuracies; delete it; obtain a portable copy; and opt out of [[Targeted Advertising]], the [[Sale]] of your [[Personal Data]], and [[Profiling]] in furtherance of decisions that produce legal or similarly significant effects. You may also opt out of our collection of [[Sensitive Data]] and of the use of voice- or facial-recognition features.
+> ### Your Privacy Rights
+> 
+> If you are a [[Consumer]] in a state with a comprehensive privacy law, you have the right to: confirm whether we process your [[Personal Data]] and access it; correct inaccuracies; delete it; obtain a portable copy; and opt out of [[Targeted Advertising]], the [[Sale]] of your [[Personal Data]], and [[Profiling]] in furtherance of decisions that produce legal or similarly significant effects. You may also opt out of our collection of [[Sensitive Data]] and of the use of voice- or facial-recognition features.
 
 - gate: `include-when="show_rights_machinery"`
-- template_clause: `openagreements-privacy-policy/standard_terms#your-privacy-rights`
+- template_clause: `openagreements-privacy-policy/your-privacy-rights`
 - fields: none (fixed prose)

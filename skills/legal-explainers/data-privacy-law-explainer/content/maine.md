@@ -2,7 +2,7 @@
 jurisdiction: "Maine"
 slug: maine
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/maine
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/maine · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/maine · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Maine Consumer Privacy Law[^about]
 
@@ -86,7 +86,7 @@ The UTPA's private remedy is real but restitution-oriented and narrower than the
 
 Public enforcement carries the heavier artillery. The substantive prohibition is broad — unfair methods of competition and unfair or deceptive acts or practices in trade or commerce are unlawful and construed in line with FTC interpretations [^utpa-207] — and the Attorney General can seek injunctions and restitution [^utpa-ag-remedies], plus a civil penalty of up to $10,000 for each intentional violation [^utpa-ag-penalty]. How any of this maps onto the broadband privacy law remains the open question flagged above: § 9301 prescribes duties without its own penalty or enforcement provision, so whether a violation would be pursued as an unfair trade practice, through utility regulation, or otherwise is untested. A business subject to it should assume the AG would find a route rather than treat the silence as a free pass — but a consumer plaintiff invoking § 9301 directly would be in uncharted territory.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maine. This article synthesizes Maine primary law and is not legal advice from a Maine-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maine. This article synthesizes Maine primary law and is not legal advice from a Maine-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Maine Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/maine.
 
 [^isp-ban]: **35-A M.R.S. § 9301** — "A provider may not use, disclose, sell or permit access to customer personal information" *35-A M.R.S. § 9301(2).* <https://legislature.maine.gov/statutes/35-A/title35-Asec9301-3.html>
 

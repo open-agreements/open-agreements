@@ -30,6 +30,11 @@ Unlike California, North Dakota, or Oklahoma, Arizona does not void employee non
 
 Because the analysis turns on the facts of each restraint, an employer cannot assume a covenant is enforceable just because the employee signed it. The sections below walk through the reasonableness test, the unusually strict rule against judicial rewriting, and the profession- and context-specific rules.
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A clause permitting the employer to notify a prospective employer or business associate of the agreement on a reasonable belief of breach is not free-standing. Arizona treats these restraints as disfavored, and a restriction greater than necessary to protect the employer's legitimate interest — or one that interest cannot outweigh against hardship to the employee and likely injury to the public — will not be enforced [^q1-amex-disfavored][^q1-farber-reasonableness]. A notice built on a covenant that later fails that analysis can expose the employer to a claim, so a notice provision reaches only as far as the underlying restraint, which stands only where it is no broader than necessary to protect its Protected Interests.
+
 ## What makes a non-compete reasonable under Arizona law? {#reasonableness-test}
 
 **Short answer.** A restraint that is no broader than necessary to protect a legitimate business interest. The employer must identify a protectable interest — such as trade secrets, confidential information, or customer goodwill — and the restriction's duration, geography, and scope of prohibited activity must be tailored to that interest. The employee's hardship is one of the factors weighed in the analysis [^q2-amex-reasonable][^q2-amex-hardship].
@@ -46,6 +51,11 @@ Even where an interest exists, reasonableness is measured against the burden on 
 
 "Hardship to the employee, however, is one of the factors to be considered in determining reasonableness."[^q2-amex-hardship]
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> Each covenant in the family — non-compete, non-solicit, non-dealing, non-investment — depends on the legitimate business interest it protects. Arizona has no general non-compete statute and no statutory safe harbor: each covenant is enforceable only so long as it is no broader than necessary to protect that interest, and the interest inquiry is the threshold, so a covenant fails where the employer has no protectable interest in the relationship restrained [^q2-hilb-protectable][^q2-hilb-holding]. Hardship to the employee is weighed in the same analysis, so no acknowledgment, consideration recital, or irreparable-harm stipulation rescues an unreasonable restraint [^q2-amex-reasonable][^q2-amex-hardship]. Two things carry through the rest of the agreement: real Specified Competitors named in Cover Terms are strong evidence the restraint is no greater than necessary; and an assignee inherits the analysis unchanged — whoever enforces a covenant must show its own protectable interest behind the restraint, because an assignment moves the covenant without strengthening it. A non-investment covenant aimed at active or material participation in private competitors, resting on the passive-public-holdings carve-out, stays tied to the interest rather than to ordinary investing.
+
 ## Will an Arizona court narrow or rewrite an overbroad non-compete? {#court-narrowing}
 
 **Short answer.** No — not by rewriting it. Arizona follows a strict blue-pencil rule: a court may eliminate a grammatically severable unreasonable term, but it may not add language or rewrite the covenant to make it reasonable. If the unreasonable portion is not severable, the whole restraint falls [^q3-varsity-bluepencil][^q3-bryceland-severable].
@@ -60,12 +70,12 @@ Where the unreasonable language cannot be cleanly struck, the covenant is unenfo
 
 "Neither the contract itself nor other evidence in the record indicates that this unreasonable portion of the contract was severable."[^q3-bryceland-severable]
 
-For a clause-by-clause pass over a specific agreement against these drafting rules, the [Arizona non-compete review checklist](/checklists/non-compete/us/arizona) walks the full covenant suite item by item with each requirement's force level.
+For a clause-by-clause pass over a specific agreement against these drafting rules, the [Arizona non-compete reviewer checklist](/checklists/non-compete/us/arizona) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Because an Arizona court will strike — not narrow — an overbroad covenant, draft duration, geography, and prohibited activity to the minimum the legitimate business interest actually requires, and use distinct, grammatically severable clauses so a single defect does not void the entire restraint. An overbroad covenant is more likely to fall entirely than to be trimmed by the court [^q3-varsity-bluepencil][^q3-bryceland-severable].
+> Because an Arizona court will strike — not narrow — an overbroad covenant, a duration, geography, or prohibited-activity term drafted beyond the minimum the legitimate business interest actually requires puts the entire restraint at risk, while distinct, grammatically severable clauses keep a single defect from voiding the whole. An overbroad covenant is more likely to fall entirely than to be trimmed by the court [^q3-varsity-bluepencil][^q3-bryceland-severable]. A covenant drafted as a distinct, grammatically severable unit — with each duration, territory, and activity restriction within it likewise severable — survives the loss of a defective neighbor, and a savings or reformation clause does not rescue an overbroad term: a court may eliminate severable unreasonable terms but cannot add provisions or rewrite a covenant, and an appellate court reversed a trial court for doing exactly that [^q3-varsity-norewrite]. Each restraint that remains independently checkable lets a court preserve a sound covenant when it strikes a defective neighbor.
 
 ## What non-compete rules apply to physicians in Arizona? {#physician-rules}
 
@@ -84,6 +94,11 @@ But *Farber* makes clear that the public's interest weighs heavily, and that clo
 >
 > Treat a physician non-compete as enforceable only when it is narrowly tailored. Even a covenant that protects a real interest can fail if the restriction on the physician's practice harms patient access; in *Farber* the public-policy interest outweighed the employer's protectable interest [^q4-farber-publicpolicy][^q4-farber-strict].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A physician clause survives here only where the practice restraint is confined to a narrow radius and a short term, drawn to preserve patient access and continuity of care. Physician covenants are not categorically void — Arizona rejects the argument that all physician non-competes are unenforceable as against public policy [^q4-phoenix-notvoid] — but each one is strictly construed for reasonableness in light of the great public policy interest involved, and where the public interest in patients' ability to choose their doctor outweighs the employer's protectable interest, the covenant is not enforced [^q4-farber-strict][^q4-farber-publicpolicy]. No enacted Arizona statute bans health-care non-competes, so the reasonableness limit — not any statutory cap — controls the radius and term.
+
 ## Can Arizona broadcast employees be required to sign non-competes? {#broadcast-employees}
 
 **Short answer.** No. Arizona has one statutory non-compete ban, and it covers broadcast employees. Under A.R.S. § 23-494, it is unlawful for a television or radio station or network to require a current or prospective employee to agree to a noncompete clause as a condition of employment [^q5-ars-23-494-prohibition].
@@ -93,6 +108,11 @@ This is a categorical prohibition, not a reasonableness test. The statute define
 "As a condition of employment, it is unlawful for a broadcast employer to require a current or prospective employee to agree to a noncompete clause."[^q5-ars-23-494-prohibition]
 
 "‘Noncompete clause’ means a clause in an employment contract with a broadcast employer that prohibits an employee from working in a specific geographic area for a specific period of time after leaving employment with the broadcast employer."[^q5-ars-23-494-definition]
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> Any non-competition covenant depends first on whether the employer is a broadcast employer. Where the employer provides broadcasting services over a television or radio station or network, a required non-compete is unlawful: A.R.S. § 23-494 makes it unlawful, as a condition of employment, for a broadcast employer to require a current or prospective employee to agree to a noncompete clause, defined as a clause prohibiting work in a specific geographic area for a specific period after leaving the broadcast employer [^q5-ars-23-494-prohibition][^q5-ars-23-494-definition]. This is Arizona's one categorical statutory non-compete ban, and it settles the covenant before any reasonableness analysis reaches the remaining terms.
 
 ## Is continued employment enough consideration for an Arizona non-compete? {#consideration}
 
@@ -106,6 +126,11 @@ A federal court applying Arizona law reached the same result in *Compass Bank v.
 
 "In addition, the promise of continued employment validates a covenant executed after the employment relationship has commenced, even where it continues to be on an at-will basis."[^q6-compass-continued]
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A covenant an existing at-will employee signs after employment has commenced needs no separate payment, raise, or promotion — continued at-will employment is itself sufficient consideration [^q6-mattison-consideration][^q6-compass-continued]. Adequate consideration establishes only that the covenants are supported, not that they are reasonable; each covenant must still independently satisfy the reasonableness analysis on time, territory, and scope.
+
 ## Are confidentiality and non-solicitation covenants treated as non-competes in Arizona? {#nonsolicitation-confidentiality}
 
 **Short answer.** They can be. Arizona looks at the functional effect of a restraint, not its label. A confidentiality or non-solicitation covenant that is broad enough to operate as a practical bar on competition is analyzed as a non-compete and judged for reasonableness. In *Orca Communications Unlimited, LLC v. Noder*, the Court of Appeals held that an unlimited confidentiality covenant was unenforceable as the equivalent of a geographically unrestricted non-compete [^q7-orca-defacto].
@@ -117,7 +142,12 @@ The risk is greatest where a confidentiality clause has no time or geographic li
 > [!CAUTION]
 > **Drafting note.**
 >
-> Scope confidentiality and non-solicitation covenants to actual trade secrets and confidential information, with reasonable limits, rather than broadly restricting a former employee's use of general skills or knowledge. An open-ended confidentiality clause can be struck as a disguised non-compete and is subject to the same strict no-rewrite rule [^q7-orca-defacto][^q7-hilb-antipiracy].
+> A confidentiality or non-solicitation covenant scoped to actual trade secrets and confidential information, with reasonable limits, stays clear of the line; one that broadly restricts a former employee's use of general skills or knowledge does not. An open-ended confidentiality clause can be struck as a disguised non-compete and is subject to the same strict no-rewrite rule [^q7-orca-defacto][^q7-hilb-antipiracy].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A non-solicit does not escape scrutiny because it is labeled something lighter than a non-compete. Arizona runs anti-piracy covenants through the same no-broader-than-necessary test, so even the employee non-solicit — the lightest restraint in the family — reaches only covered employees during the restricted period, and the customer non-solicit reaches only as far as the employer's protectable interest in the specific customer relationships extends [^q7-hilb-antipiracy]. Arizona also classifies covenants by functional effect rather than label, so the optional non-dealing clause — which bars serving covered customers even when the customer approaches first — draws the full reasonableness analysis and stands only when sized tightly to the goodwill it protects, because it sits closer to a non-compete than to a non-solicit [^q7-orca-defacto]. A tightly drawn customer non-solicit backstopped by the confidentiality and trade-secret protections is often a stronger and more readily enforceable protection than a broad non-compete.
 
 ## How does the Arizona Uniform Trade Secrets Act interact with non-competes? {#trade-secrets}
 
@@ -134,6 +164,11 @@ Crucially, the Arizona Supreme Court held in the *Orca* appeal that AUTSA does n
 A misappropriation claim has a three-year limitations period.
 
 "An action for misappropriation must be brought within three years after the misappropriation is discovered or by the exercise of reasonable diligence should have been discovered."[^q8-ars-44-406-sol]
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A confidentiality clause scoped to defined Confidential Information and Trade Secrets with the durations set in Cover Terms, backed by return, deletion, and certification steps, supplies the reasonable secrecy efforts AUTSA requires — a trade secret earns protection only through independent economic value from secrecy plus efforts reasonable under the circumstances to maintain it — so a dated, retained certification is part of what the protection rests on [^q8-ars-44-401-definition]. A misappropriation action must be brought within three years of when the misappropriation is or reasonably should have been discovered, another reason the dated certification matters [^q8-ars-44-406-sol]. The Act displaces conflicting civil remedies for trade-secret misappropriation but expressly preserves contractual remedies whether or not based on misappropriation, so the covenant claims run alongside any statutory claim and a tightly scoped clause loses nothing the law would otherwise give [^q8-ars-44-407-displacement][^q8-ars-44-407-contract].
 
 ## Are sale-of-business non-competes treated differently in Arizona? {#sale-of-business}
 
@@ -152,7 +187,7 @@ More latitude is not a free pass. In *Berkadia Real Estate Advisors LLC v. Wadlu
 > [!CAUTION]
 > **Drafting note.**
 >
-> Tie a sale-of-business covenant's geography, duration, and scope of restricted activity to the goodwill actually being transferred. In *Berkadia* a nationwide covenant binding a seller who had only ever worked in Tucson was struck as unreasonable, and Arizona's no-rewrite rule meant the court would not pare it back [^q9-berkadia-unreasonable][^q9-gann-validity].
+> A sale-of-business covenant stands or falls on whether its geography, duration, and scope of restricted activity track the goodwill actually being transferred. In *Berkadia* a nationwide covenant binding a seller who had only ever worked in Tucson was struck as unreasonable, and Arizona's no-rewrite rule meant the court would not pare it back [^q9-berkadia-unreasonable][^q9-gann-validity].
 
 ## Does an Arizona non-compete period extend while the employee is in breach or litigation is pending? {#extended-for-breach}
 
@@ -163,7 +198,7 @@ The uncertainty is structural. Arizona has no statute on point and no controllin
 > [!CAUTION]
 > **Drafting note.**
 >
-> If you include a clause extending the restricted period for the time the employee is in breach, draft the base period and the extension so that the combined duration is still reasonable on its own terms. Under Arizona's strict no-rewrite rule, a court that finds the extended period unreasonable is more likely to void the covenant than to shorten it [^q10-varsity-norewrite][^q10-farber-reasonableness].
+> A clause extending the restricted period for the time the employee is in breach stands only where the base period and the extension together remain reasonable on their own terms. Under Arizona's strict no-rewrite rule, a court that finds the extended period unreasonable is more likely to void the covenant than to shorten it [^q10-varsity-norewrite][^q10-farber-reasonableness]. A day-for-day extension carries less of that risk than an open-ended or indefinite one: no Arizona appellate decision has decided whether a covenant period tolls during breach or enforcement litigation, and any extension counts toward the covenant's total duration, which is measured for reasonableness [^q10-farber-reasonableness].
 
 ## Can a non-signatory enforce a forum-selection clause in an Arizona contract dispute? {#non-signatory-forum-clause}
 
@@ -172,6 +207,11 @@ The uncertainty is structural. Arizona has no statute on point and no controllin
 This matters for covenant disputes, where a party often tries to invoke a contract's forum-selection clause for the benefit of someone who never signed the agreement.
 
 "We decline to adopt that doctrine with regard to forum selection clauses, holding that the provisions of the contract control and that other established doctrines providing non-signatories with benefits under a contract are ample."[^q11-henderson-forum]
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A forum-selection clause binds only its parties. The Arizona Supreme Court has declined to let a non-signatory enforce one against a signatory merely because it is closely related to a party [^q11-henderson-forum], so an affiliate, founder, or related entity cannot invoke the clause without signing; a non-signatory reaches the forum only as a party or through an express provision that addresses it.
 
 ## Can an employer use another state's law to make an Arizona non-compete easier to enforce? {#out-of-state-law}
 
@@ -186,13 +226,18 @@ In *Pathway Medical Technologies, Inc. v. Nelson*, the employer's agreement sele
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a sister-state choice-of-law clause to obtain a more lenient non-compete rule or judicial reformation for an Arizona-centered employment relationship. Where Arizona has the most significant relationship, a court may apply Arizona law — including its strict no-rewrite rule — regardless of the contract's chosen law [^qcol-pathway-187][^qcol-pathway-policy].
+> A sister-state choice-of-law clause does not reliably obtain a more lenient non-compete rule or judicial reformation for an Arizona-centered employment relationship. Where Arizona has the most significant relationship, a court may apply Arizona law — including its strict no-rewrite rule — regardless of the contract's chosen law [^qcol-pathway-187][^qcol-pathway-policy]. A Governing Law set to Arizona, with governing-law and venue choices matched to where the employee actually lives and works, aligns the agreement with that result: a clause selecting another state's more lenient regime is likely unenforceable under Restatement (Second) of Conflict of Laws § 187(2)(b) because Arizona does not approve of broad non-compete provisions [^qcol-pathway-187][^qcol-pathway-policy].
 
 ## Who pays attorney fees in an Arizona non-compete lawsuit? {#attorney-fees}
 
 **Short answer.** Either side can be ordered to. A non-compete dispute arises out of a contract, so A.R.S. § 12-341.01 lets the court award reasonable attorney fees to the successful party. The award is discretionary, but the fee-shifting risk runs both ways: an employer that loses an overreaching enforcement action can be ordered to pay the former employee's fees [^q12-ars-12-341-fees].
 
 "In any contested action arising out of a contract, express or implied, the court may award the successful party reasonable attorney fees."[^q12-ars-12-341-fees]
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A mutual, prevailing-party fee-shifting clause tracks the exposure Arizona already creates: in any contested action arising out of a contract, the court may award the successful party reasonable attorney fees, whether or not the agreement says anything about fees [^q12-ars-12-341-fees]. The award is discretionary and runs both ways — an employer that loses an overreaching enforcement action can be ordered to pay the former employee's fees — so a one-sided employer clause invites scrutiny without displacing the court's discretion.
 
 ## What are the recent developments in Arizona non-compete law? {#recent-developments}
 
@@ -204,14 +249,14 @@ Both bills used the same operative language, which would have replaced Arizona's
 
 Key developments:
 
-- 
-- 
+- **2026:** HB 2361 was introduced, proposing A.R.S. § 23-207 — a statewide ban on employer non-competes — but it has not been enacted [^q13-hb2361].
+- **2025:** HB 2589, a near-identical statewide ban, was introduced and likewise has not been enacted [^q13-hb2589].
 
 Because neither ban has become law, an Arizona non-compete is still governed by the reasonableness and strict no-rewrite rules described above, not by any statutory ban outside the broadcast-employee context.
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arizona. This article synthesizes Arizona primary law and is not legal advice from a Arizona-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arizona. This article synthesizes Arizona primary law and is not legal advice from a Arizona-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Arizona*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/arizona.
 
 [^q1-amex-disfavored]: **Amex Distributing Co. v. Mascari** — "Restrictive covenants which tend to prevent an employee from pursuing a similar vocation after termination of employment are disfavored." *Amex Distributing Co. v. Mascari, 150 Ariz. 510, 724 P.2d 596 (Ct. App. 1986).* <https://www.courtlistener.com/opinion/1211495/amex-distributing-co-inc-v-mascari/#:~:text=Restrictive%20covenants%20which%20tend%20to,termination%20of%20employment%20are%20disfavored.>
 

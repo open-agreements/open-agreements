@@ -6,7 +6,7 @@ citation: 'Roessler v. Burwell, 119 Conn. 289 (1934).'
 resource: 'https://www.courtlistener.com/opinion/3323907/roessler-v-burwell/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/connecticut'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/connecticut'
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `protectable-interests`, `restrictive-covenants-each-independently-includable`
 - source_cards: `roessler-customer-class`, `roessler-customer-goodwill-protection`, `roessler-goodwill`
-- cited_by: [Non-Compete Agreement Review Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3323907/roessler-v-burwell/#:~:text=The%20limitation%20of%20the%20solicitation,had%20done%20in%20the%20past.>
 
 ### roessler-v-burwell-the-time-was-only-for-one-b6db59bf {#roessler-v-burwell-the-time-was-only-for-one-b6db59bf}
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `duration-limits`
 - source_cards: `roessler-one-year-customer-limit`, `roessler-solicitation-limit`
-- cited_by: [Non-Compete Agreement Review Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3323907/roessler-v-burwell/#:~:text=The%20time%20was%20only%20for,of%20customers%20of%20the%20plaintiff.>

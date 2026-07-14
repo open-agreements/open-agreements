@@ -77,7 +77,7 @@ One forward-looking caveat belongs here. Revised S9269/A10357 passed both houses
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York. This article synthesizes New York primary law and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York. This article synthesizes New York primary law and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *New York Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/new-york.
 
 [^q1-shield-duty]: **N.Y. Gen. Bus. Law § 899-bb(2)(a)** — "Any person or business that owns or licenses computerized data which includes private information of a resident of New York shall develop, implement and maintain reasonable safeguards to protect the security, confidentiality and integrity of the private information including, but not limited to, disposal of data." *N.Y. Gen. Bus. Law § 899-bb(2)(a).* <https://www.nysenate.gov/legislation/laws/GBS/899-BB>
 

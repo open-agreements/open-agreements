@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Washington
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Washington
 description: >-
   A clause-by-clause reviewer checklist for Washington employee restrictive
   covenant agreements — earnings thresholds, disclosure and consideration
@@ -12,7 +12,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Washington[^about]
+# Non-Compete Agreement Reviewer Checklist — Washington[^about]
 
 A clause-by-clause reviewer checklist for Washington employee restrictive covenant agreements — earnings thresholds, disclosure and consideration timing, layoff pay, and the 2027 ban under chapter 49.62 RCW.
 
@@ -62,7 +62,9 @@ Every item below reads the agreement the way chapter 49.62 RCW does — as a lis
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — The trade-secret obligation should last as long as secrecy does — that is how federal law defines the right, and Washington expressly excludes trade-secret covenants from its non-compete restrictions, so the open-ended duration costs nothing under chapter 49.62 RCW. A fixed end date surrenders statutory protection for no benefit. [^wa-dtsa-1839-1][^wa-rcw-010-exclusions-2] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection the law offers: federal law keys the right to continued secrecy, and Washington expressly excludes trade-secret covenants from its non-compete restrictions, so the status-bounded duration costs nothing under chapter 49.62 RCW. That form is the ceiling the law will back, not a required one — a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^wa-dtsa-1839-1][^wa-rcw-010-exclusions-2] [#tie-trade-secret-duration-to-secrecy-status]
+
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
 
 - [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. The statutory exclusion shields confidentiality agreements, not open-ended restraints wearing the label — a perpetual obligation over non-secret information is the kind of overreach that invites a court to treat the clause as something other than a confidentiality agreement. [#state-confidentiality-duration]
 
@@ -162,7 +164,7 @@ The nine items below exist only on this Washington page: they implement the void
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Washington (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Washington (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Washington*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/washington.
 
 [^wa-earnings-measure-1]: **RCW 49.62.010** — "annualized and calculated as of the earlier of the date enforcement of the noncompetition covenant is sought or the date of separation from employment" *RCW 49.62.010(1).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.010>
 

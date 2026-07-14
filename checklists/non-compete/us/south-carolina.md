@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — South Carolina
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — South Carolina
 description: >-
   A clause-by-clause reviewer checklist for South Carolina employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — South Carolina[^about]
+# Non-Compete Agreement Reviewer Checklist — South Carolina[^about]
 
 A clause-by-clause reviewer checklist for South Carolina employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the five-factor common-law reasonableness test, where an overbroad covenant fails whole and no court will narrow or reform it.
 
@@ -63,7 +63,9 @@ Review every item below the way a South Carolina court would: a non-compete is a
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should run as long as secrecy does. Federal law keys trade-secret status to continued secrecy, and South Carolina's own statute says a trade secret endures and is protectable until it is disclosed or discovered by proper means — so a fixed expiry on trade-secret protection gives away the one obligation that never needed a covenant to survive. [^dtsa-trade-secret-definition][^sc-tsa-endures-conf] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection the law offers: federal law keys trade-secret status to continued secrecy, and South Carolina's own statute says a trade secret endures and is protectable until it is disclosed or discovered by proper means. That status-bounded form is the ceiling the law will back, not a required one — a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition][^sc-tsa-endures-conf] [#tie-trade-secret-duration-to-secrecy-status]
+
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
 
 - [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Nondisclosure provisions that operated as non-competes with no reasonable time restriction violated South Carolina public policy — and an open-ended lid on non-secret information is the classic way a confidentiality clause crosses that line. [^sc-fay-no-time-conf] [#state-confidentiality-duration]
 
@@ -155,7 +157,7 @@ The five items below exist only on this South Carolina page: they implement the 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for South Carolina (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for South Carolina (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — South Carolina*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/south-carolina.
 
 [^sc-kerrigan-customers-cover]: **Standard Register Co. v. Kerrigan** — "A restrictive covenant, therefore, is reasonable if it is designed to protect the employer against loss of his customers." *Standard Register Co. v. Kerrigan, 238 S.C. 54, 119 S.E.2d 533 (1961).* <https://www.courtlistener.com/opinion/1356432/standard-register-co-v-kerrigan/#:~:text=A%20restrictive%20covenant%2C%20therefore%2C%20is,against%20loss%20of%20his%20customers.>
 

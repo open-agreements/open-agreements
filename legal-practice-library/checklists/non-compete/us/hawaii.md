@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Hawaii
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Hawaii
 description: >-
   A clause-by-clause reviewer checklist for Hawaii employee restrictive covenant
   agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Hawaii[^about]
+# Non-Compete Agreement Reviewer Checklist — Hawaii[^about]
 
 A clause-by-clause reviewer checklist for Hawaii employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under HRS chapter 480's restraint-of-trade framework and the technology-business employee ban.
 
@@ -63,9 +63,11 @@ Review every item below the way a Hawaii court would: the covenant is measured a
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret protection should last as long as secrecy does — federal law keys the right to continued secrecy, and Hawaii's own statutory covenant category lets the restraint run after termination for whatever time is reasonably necessary to protect the employer. A fixed expiry on trade-secret confidentiality quietly forfeits protection the law would otherwise keep alive, and weakens the one interest Hawaii most reliably credits. [^hi-dtsa-definition][^hi-c4-duration] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection the law gives: federal law keys the right to continued secrecy, and Hawaii's own statutory covenant category lets a trade-secret restraint run after termination for whatever time is reasonably necessary to protect the employer. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^hi-dtsa-definition][^hi-c4-duration] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on non-secret material lengthens the practical restraint the antitrust framework will weigh, and the two-track structure — perpetual for trade secrets, finite for everything else — keeps each obligation matched to the interest that justifies it. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on non-secret material lengthens the practical restraint the antitrust framework will weigh, and the two-track structure — status-bounded for trade secrets, finite for everything else — keeps each obligation matched to the interest that justifies it. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -153,7 +155,7 @@ The four items below exist only on this Hawaii page: the legitimate-purpose scre
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Hawaii (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Hawaii (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Hawaii*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/hawaii.
 
 [^hi-tech-business-definition]: **HRS 480-4** — "‘Technology business’ means a trade or business that derives the majority of its gross income from the sale or license of products or services resulting from its software development or information technology development, or both. A ‘technology business’ excludes any trade or business that is considered by standard practice as part of the broadcast industry or any telecommunications carrier, as defined in section 269-1, that holds a franchise or charter enacted or granted by the legislative or executive authority of the State or its predecessor governments." *Haw. Rev. Stat. 480-4(d).* <https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm>
 

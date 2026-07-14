@@ -6,7 +6,7 @@ citation: 'Loral Corp. v. Moyes, 174 Cal. App. 3d 268 (1985).'
 resource: 'https://www.courtlistener.com/opinion/2140771/loral-corp-v-moyes/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/california'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/california'
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-nonsolicitation`, `restrictive-covenants-each-independently-includable`
 - source_cards: `ca-loral-covenants`, `ca-loral-defs`, `loral-slight`
-- cited_by: [Non-Compete Agreement Review Checklist — California](../checklists/non-compete/us/california.md), [Non-Competes in California](../non-compete/us/california.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — California](../checklists/non-compete/us/california.md), [Non-Competes in California](../non-compete/us/california.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2140771/loral-corp-v-moyes/#:~:text=This%20does%20not%20appear%20to,on%20disclosure%20of%20confidential%20information.>

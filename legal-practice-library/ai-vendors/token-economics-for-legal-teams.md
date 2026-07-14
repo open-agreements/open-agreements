@@ -76,7 +76,7 @@ These early 2026 rulings suggest that enterprise deployment and consumer deploym
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Token economics for legal teams*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-vendors/token-economics-for-legal-teams.
 
 [^openai-api-pricing]: **OpenAI API Pricing** — "Regional processing (data residency) endpoints are charged a 10% uplift for" *OpenAI API Pricing.* <https://developers.openai.com/api/docs/pricing>
 

@@ -3,17 +3,19 @@ type: Case Excerpt
 title: 'Whitewater West Industries, Ltd. v. Alleshouse'
 description: >-
   Whitewater W. Indus., Ltd. v. Alleshouse, 981 F.3d 1045 (Fed. Cir. 2020). —
-  quoted in 2 document(s).
+  quoted in 3 document(s).
 citation: 'Whitewater W. Indus., Ltd. v. Alleshouse, 981 F.3d 1045 (Fed. Cir. 2020).'
 resource: >-
   https://www.courtlistener.com/opinion/4807394/whitewater-west-industries-v-alleshouse/
-timestamp: '2026-06-29'
+timestamp: '2026-07-03'
 document_references:
   - type: Law Topic
     resource: 'https://openagreements.org/practice-guides/invention-assignment/us'
   - type: State Law Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/invention-assignment/us/california
+  - type: State Law Practice Guide
+    resource: 'https://openagreements.org/practice-guides/invention-assignment/us/guam'
 tags:
   - case-law
   - invention-assignment
@@ -23,7 +25,7 @@ tags:
 
 *Whitewater W. Indus., Ltd. v. Alleshouse, 981 F.3d 1045 (Fed. Cir. 2020).*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -53,3 +55,21 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - source_cards: `whitewater-notrade`
 - cited_by: [Employee Invention Assignment in California](../invention-assignment/us/california.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4807394/whitewater-west-industries-v-alleshouse/#:~:text=No%20trade%2Dsecret%20or%20other%20confidential,the%20assignment%20provision%20to%20apply.>
+
+### whitewater-west-industries-ltd-v-alleshouse-relying-on-those-now-undisputed-premises-f301f755 {#whitewater-west-industries-ltd-v-alleshouse-relying-on-those-now-undisputed-premises-f301f755}
+
+> Relying on those now-undisputed premises, we conclude that the assignment provision is invalid under § 16600
+
+- supports: `holdover-clause-limit`
+- source_cards: `whitewater-invalid-16600`
+- cited_by: [Employee Invention Assignment in Guam](../invention-assignment/us/guam.md)
+- link_to_source: <https://www.courtlistener.com/opinion/4807394/whitewater-west-industries-v-alleshouse/#:~:text=Relying%20on%20those%20now%2Dundisputed%20premises%2C,is%20invalid%20under%20%C2%A7%2016600>
+
+### whitewater-west-industries-ltd-v-alleshouse-we-reverse-in-particular-we-reverse-eb6a29e5 {#whitewater-west-industries-ltd-v-alleshouse-we-reverse-in-particular-we-reverse-eb6a29e5}
+
+> We reverse. In particular, we reverse the judgment of breach of contract because we hold that the assignment provision is void under California law.
+
+- supports: `holdover-clause-limit`
+- source_cards: `whitewater-void-holding`
+- cited_by: [Employee Invention Assignment in Guam](../invention-assignment/us/guam.md)
+- link_to_source: <https://www.courtlistener.com/opinion/4807394/whitewater-west-industries-v-alleshouse/#:~:text=We%20reverse.%20In%20particular%2C%20we,is%20void%20under%20California%20law.>

@@ -6,9 +6,9 @@ description: >-
   document(s).
 citation: 'NuVasive, Inc. v. Day, 954 F.3d 439 (1st Cir. 2020).'
 resource: 'https://www.courtlistener.com/opinion/4743298/nuvasive-inc-v-day/'
-timestamp: '2026-06-11'
+timestamp: '2026-07-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/massachusetts'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/massachusetts'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-non-compete-enforceability`, `parties-and-cover-term-identification`, `recent-developments`
 - source_cards: `mnaa-prospective-reach`, `nuvasive-effective-date`, `rd-nuvasive-effective-date`
-- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/us/massachusetts.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Massachusetts](../checklists/non-compete/us/massachusetts.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4743298/nuvasive-inc-v-day/#:~:text=the%20MNCA%20%22only%20applies%20to,or%20after%20October%201%2C%202018%2C%22>

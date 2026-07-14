@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/9384707/intertek-testing-services-na-inc-v-jeff-eastman/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/delaware'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/delaware'
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `definitions`, `severability-and-reformation`
 - source_cards: `de-intertek-def`, `de-intertek-sev`, `intertek-no-rescue`
-- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9384707/intertek-testing-services-na-inc-v-jeff-eastman/#:~:text=In%20my%20view%2C%20revising%20the,its%20overreach%20would%20be%20inequitable.>

@@ -2,7 +2,7 @@
 jurisdiction: "Florida"
 slug: florida
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/florida
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/florida · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/florida · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Florida[^about]
 
@@ -42,7 +42,7 @@ Florida enforces non-competes by statute and is among the most employer-friendly
 
 Florida courts treat section 542.335 as a comprehensive statutory framework for restrictive covenants. As the Fifth District put it, the statute is built on an unfair-competition approach, rather than the older common-law hostility to restraints [^q1-henao-framework].
 
-Since July 2025, Florida has run two parallel tracks. Most agreements are governed by the traditional section 542.335 standard described throughout this note. A second, even more employer-favorable track — the CHOICE Act, sections 542.41 through 542.45 — applies only to defined high-earning *covered employees*; covenants that do not fit the CHOICE Act definitions fall back to section 542.335 [^q1-choice-fallback]. Reviewers working through a specific draft can apply this framework clause by clause with the [Florida non-compete review checklist](/checklists/non-compete/us/florida).
+Since July 2025, Florida has run two parallel tracks. Most agreements are governed by the traditional section 542.335 standard described throughout this note. A second, even more employer-favorable track — the CHOICE Act, sections 542.41 through 542.45 — applies only to defined high-earning *covered employees*; covenants that do not fit the CHOICE Act definitions fall back to section 542.335 [^q1-choice-fallback]. Reviewers working through a specific draft can apply this framework clause by clause with the [Florida non-compete reviewer checklist](/checklists/non-compete/us/florida).
 
 > [!NOTE]
 > **Practice note.**
@@ -69,6 +69,13 @@ The Florida Supreme Court confirmed in *White v. Mederi Caretenders* that the st
 These are presumptions, not caps — either side can rebut them with evidence. For sale-of-business covenants the statute presumes three years or less reasonable and more than seven years unreasonable, reflecting the stronger interest a buyer has in the goodwill it paid for [^q3-542335-sale-presumption]. Geography and line-of-business scope are judged by the same reasonableness standard, and an overbroad term is narrowed rather than voided (see below) [^q3-542335-employee-presumption].
 
 The presumptions vary by the relationship between the parties; for distributors, dealers, franchisees, or licensees of a mark, a restraint of one year or less is presumed reasonable [^q3-542335-distributor-presumption].
+
+| Relationship / context | Presumed reasonable | Presumed unreasonable |
+| --- | --- | --- |
+| Former employee, agent, or independent contractor | 6 months or less | More than 2 years |
+| Distributor, dealer, franchisee, or licensee of a trademark or service mark | 1 year or less | More than 3 years |
+| Sale of a business or equity interest | 3 years or less | More than 7 years |
+| Trade-secret–predicated covenant | 5 years or less | More than 10 years |
 
 ## Will a Florida court rewrite an overbroad non-compete instead of voiding it? {#court-narrowing}
 
@@ -170,7 +177,7 @@ The Federal Register notice records that a federal court held the rule unlawful 
 
 "In the third case, the court held that the Non-Compete Rule was unlawful and set it aside."[^q14-fr-removal]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Florida. This article synthesizes Florida primary law and is not legal advice from a Florida-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Florida. This article synthesizes Florida primary law and is not legal advice from a Florida-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Florida*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/florida.
 
 [^q1-542018-baseline]: **Fla. Stat. § 542.18** — "Every contract, combination, or conspiracy in restraint of trade or commerce in this state is unlawful." *Fla. Stat. § 542.18 (2025).* <https://www.flsenate.gov/Laws/Statutes/2025/542.18>
 

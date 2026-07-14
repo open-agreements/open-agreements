@@ -69,7 +69,7 @@ On the discrimination side, the employer bar is unusually aligned. Perkins Coie 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-19. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-19. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Adverse-action procedures when AI drives the decision*, OpenAgreements (last updated April 19, 2026), https://openagreements.org/practice-guides/ai-hiring/adverse-action-ai-driven.
 
 [^consumer-financial-protection-bureau-consumer-fi]: **Consumer Financial Protection Bureau, Consumer Financial Protection Circular ...** — "obtained from third parties and used by employers to make hiring, promotion, reassignment, or retention decisions" *Consumer Financial Protection Bureau, Consumer Financial Protection Circular 2024-06: Background Dossiers and Algorithmic Scores for Hiring, Promotion, and Other Employment Decisions.* <https://www.consumerfinance.gov/compliance/circulars/consumer-financial-protection-circular-2024-06-background-dossiers-and-algorithmic-scores-for-hiring-promotion-and-other-employment-decisions/>
 

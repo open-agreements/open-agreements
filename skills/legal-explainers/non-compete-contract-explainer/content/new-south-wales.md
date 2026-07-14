@@ -2,7 +2,7 @@
 jurisdiction: "New South Wales, Australia"
 slug: new-south-wales
 countryCode: AU
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-10"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/au/new-south-wales
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/new-south-wales · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/new-south-wales · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Compete Enforceability in New South Wales[^about]
 
@@ -157,7 +157,7 @@ Because this is a future legislative matter, employers should treat the timeline
 >
 > Do not draft to a federal ban that does not yet exist. As of June 2026 no Commonwealth statute bans employee non-competes, so enforceability in New South Wales still turns on the common-law reasonableness test and the Restraints of Trade Act 1976 (NSW). Track the proposal through to enacted legislation before changing practice, because its threshold, scope, and commencement remain proposals subject to change [^rota-s4-1-reform].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-10. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in New South Wales, Australia. This article summarizes publicly available New South Wales, Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-10. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in New South Wales, Australia. This article summarizes publicly available New South Wales, Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Enforceability in New South Wales*, OpenAgreements (last updated June 10, 2026), https://openagreements.org/practice-guides/non-compete/au/new-south-wales.
 
 [^lindner-prima-facie-void]: **Lindner v Murdock's Garage** — "Any contractual restraint of trade is prima facie unlawful and invalid." *Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per Kitto J).* <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
 

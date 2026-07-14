@@ -8,9 +8,9 @@ citation: 'Hawkins Chem., Inc. v. McNea, 321 N.W.2d 918, 920 (N.D. 1982).'
 resource: 'https://www.courtlistener.com/opinion/1586088/hawkins-chemical-inc-v-mcnea/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us'
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/north-dakota'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/north-dakota'
@@ -33,5 +33,5 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `hawkins-sale-covenant-severability`, `nd-hawkins-sale-sev`
-- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md), [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/us/north-dakota.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist](../checklists/non-compete/us.md), [Non-Compete Agreement Reviewer Checklist — North Dakota](../checklists/non-compete/us/north-dakota.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1586088/hawkins-chemical-inc-v-mcnea/#:~:text=Because%20the%20property%20and%20business,be%20enforceable%20in%20that%20county.>

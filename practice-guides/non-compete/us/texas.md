@@ -4,9 +4,9 @@ title: Non-Competes in Texas
 description: >-
   A question-by-question summary of Texas non-compete law under the Covenants
   Not to Compete Act, Tex. Bus. & Com. Code §§ 15.50–15.52, including the
-  ancillary-agreement requirement, the Light–Sheshunoff–Marsh consideration
-  line, the reasonable time-geography-scope test, mandatory reformation of
-  overbroad covenants, the pre-reformation damages bar, the attorney's-fee
+  ancillary-agreement requirement, the reasonably-related-consideration
+  requirement, the reasonable time-geography-scope test, mandatory reformation
+  of overbroad covenants, the pre-reformation damages bar, the attorney's-fee
   preemption question, the physician and SB 1318 health-care-practitioner
   limits, choice-of-law and forum rules, tolling, and trade-secret alternatives.
 resource: 'https://openagreements.org/practice-guides/non-compete/us/texas'
@@ -18,7 +18,7 @@ tags:
 
 # Non-Competes in Texas[^about]
 
-A question-by-question summary of Texas non-compete law under the Covenants Not to Compete Act, Tex. Bus. & Com. Code §§ 15.50–15.52, including the ancillary-agreement requirement, the Light–Sheshunoff–Marsh consideration line, the reasonable time-geography-scope test, mandatory reformation of overbroad covenants, the pre-reformation damages bar, the attorney's-fee preemption question, the physician and SB 1318 health-care-practitioner limits, choice-of-law and forum rules, tolling, and trade-secret alternatives.
+A question-by-question summary of Texas non-compete law under the Covenants Not to Compete Act, Tex. Bus. & Com. Code §§ 15.50–15.52, including the ancillary-agreement requirement, the reasonably-related-consideration requirement, the reasonable time-geography-scope test, mandatory reformation of overbroad covenants, the pre-reformation damages bar, the attorney's-fee preemption question, the physician and SB 1318 health-care-practitioner limits, choice-of-law and forum rules, tolling, and trade-secret alternatives.
 
 ## Are employee non-compete agreements enforceable in Texas? {#employee-non-compete-enforceability}
 
@@ -28,7 +28,7 @@ Unlike states that void most worker non-competes outright, Texas enforces them w
 
 "a covenant not to compete is enforceable if it is ancillary to or part of an otherwise enforceable agreement at the time the agreement is made to the extent that it contains limitations as to time, geographical area, and scope of activity to be restrained that are reasonable and do not impose a greater restraint than is necessary to protect the goodwill or other business interest of the promisee."[^bc-1550a-test]
 
-Both halves of that sentence carry weight. A covenant that is reasonable in its limits still fails if it is not tied to an otherwise enforceable agreement, and a covenant that is properly ancillary still fails to the extent its limits are unreasonable. The sections that follow walk through how Texas courts apply each requirement. For a clause-by-clause pass over a specific agreement against these rules, the [Texas non-compete review checklist](/checklists/non-compete/us/texas) walks the full covenant suite item by item with each requirement's force level.
+Both halves of that sentence carry weight. A covenant that is reasonable in its limits still fails if it is not tied to an otherwise enforceable agreement, and a covenant that is properly ancillary still fails to the extent its limits are unreasonable. The sections that follow walk through how Texas courts apply each requirement. For a clause-by-clause pass over a specific agreement against these rules, the [Texas non-compete reviewer checklist](/checklists/non-compete/us/texas) walks the full covenant suite item by item with each requirement's force level.
 
 ## What framework governs Texas non-competes, and does it displace the common law? {#governing-framework}
 
@@ -81,7 +81,7 @@ Texas publishes no numeric ceiling for ordinary covenants, so reasonableness is 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not assume a covenant that bars an employee from an entire industry across a wide region will be enforced. The Act requires the restraint to be no greater than necessary to protect a specific business interest, and an overbroad covenant is exposed to reformation down to the minimum a court finds reasonable [^q5-bc-1550a-scope].
+> A covenant that bars an employee from an entire industry across a wide region does not hold as written on the assumption that its breadth will be enforced. The Act requires the restraint to be no greater than necessary to protect a specific business interest, so an overbroad covenant is exposed to reformation down to the minimum a court finds reasonable, and the version that survives intact is the one keyed to the specific customers, line of business, and territory the employer can actually defend [^q5-bc-1550a-scope].
 
 ## Will a Texas court reform an overbroad non-compete instead of voiding it? {#court-narrowing}
 
@@ -198,7 +198,7 @@ In practice, rather than relying on a contractual tolling provision, a Texas emp
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not assume a Texas court will add back time to a non-compete for a period of breach or litigation based on a tolling clause. Texas law is unsettled on contractual tolling, and any extended restraint still must satisfy § 15.50(a)'s reasonableness limit, so the more reliable path is to seek injunctive relief for ongoing violations [^q12-bc-1550a-reasonable].
+> A tolling clause that adds back time to a Texas non-compete for a period of breach or litigation rests on unsettled ground: no Texas statute or Texas Supreme Court decision squarely authorizes it, and any restraint extended that way still must satisfy § 15.50(a)'s reasonableness limit. The more dependable protection against ongoing violations is injunctive relief, which the Act expressly authorizes and which can run past the covenant's nominal end date without leaning on a tolling provision [^q12-bc-1550a-reasonable].
 
 ## How does Texas treat employee non-solicitation and sale-of-business covenants? {#non-solicitation-sale-of-business}
 
@@ -221,11 +221,11 @@ That statutory carve-out for *general knowledge, skill, and experience* is impor
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not draft a Texas confidentiality or non-disclosure clause so broadly that it operates as a covert non-compete. The trade-secret statute supports an injunction against misappropriation but excludes general knowledge, skill, and experience, and an NDA that effectively prevents the employee from working can be recharacterized as a non-compete subject to § 15.50 [^tutsa-injunction][^q13-bc-1550a-disguised].
+> A Texas confidentiality or non-disclosure clause drafted so broadly that it operates as a covert non-compete does not escape the Act by its label. The trade-secret statute supports an injunction against misappropriation but excludes general knowledge, skill, and experience, so an NDA that effectively prevents the employee from working can be recharacterized as a non-compete and measured against § 15.50's reasonableness test, while a clause confined to genuine secrets carries the protection the statute actually gives [^tutsa-injunction][^q13-bc-1550a-disguised].
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Texas. This article synthesizes Texas primary law and is not legal advice from a Texas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Texas. This article synthesizes Texas primary law and is not legal advice from a Texas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Texas*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/texas.
 
 [^bc-1550a-test]: **Tex. Bus. & Com. Code § 15.50** — "a covenant not to compete is enforceable if it is ancillary to or part of an otherwise enforceable agreement at the time the agreement is made to the extent that it contains limitations as to time, geographical area, and scope of activity to be restrained that are reasonable and do not impose a greater restraint than is necessary to protect the goodwill or other business interest of the promisee." *Tex. Bus. & Com. Code § 15.50(a).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
 

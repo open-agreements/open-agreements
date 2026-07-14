@@ -20,14 +20,14 @@ Arkansas non-compete law under Ark. Code Ann. § 4-75-101, enacted by Act 921 of
 
 **Short answer.** Yes, if the covenant is ancillary to employment, protects a statutory business interest, and is no broader in time and scope than necessary to defend that interest [^q1-aca-enforceable].
 
-For agreements governed by the current statute, Arkansas is a permissible, enforce-if-reasonable state rather than a ban state. Ark. Code Ann. § 4-75-101 lists protectable interests, supplies a two-year duration presumption, allows no defined geographic restriction in some cases, and requires reformation of overbroad covenants [^q1-aca-enforceable][^q1-aca-protectable][^q1-aca-reformation]. For a clause-by-clause pass over a specific agreement against these rules, the [Arkansas non-compete review checklist](/checklists/non-compete/us/arkansas) walks the full covenant suite item by item with each requirement's force level.
+For agreements governed by the current statute, Arkansas is a permissible, enforce-if-reasonable state rather than a ban state. Ark. Code Ann. § 4-75-101 lists protectable interests, supplies a two-year duration presumption, allows no defined geographic restriction in some cases, and requires reformation of overbroad covenants [^q1-aca-enforceable][^q1-aca-protectable][^q1-aca-reformation]. For a clause-by-clause pass over a specific agreement against these rules, the [Arkansas non-compete reviewer checklist](/checklists/non-compete/us/arkansas) walks the full covenant suite item by item with each requirement's force level.
 
 The effective-date line matters. *Box* treated Act 921 as effective July 22, 2015, and said the statute only arguably applied to the agreement executed after that date, while older agreements remained on the pre-Act common-law track [^q1-box-effective-date].
 
 > [!NOTE]
 > **Practice note.**
 >
-> Do not cite pre-2015 Arkansas cases as if they still supply the whole remedial rule. They remain useful for the old common-law framework and reasonableness concepts, but current covered employment covenants start with § 4-75-101 [^q1-box-effective-date][^q1-aca-reformation].
+> Pre-2015 Arkansas cases do not supply the whole remedial rule for a covered covenant. They remain useful for the old common-law framework and reasonableness concepts, but current covered employment covenants start with § 4-75-101 [^q1-box-effective-date][^q1-aca-reformation].
 
 ## What makes an Arkansas non-compete reasonable or enforceable? {#reasonableness-test}
 
@@ -63,7 +63,7 @@ The presumption is not a safe harbor for every two-year clause. The statute ties
 > [!CAUTION]
 > **Drafting note.**
 >
-> Avoid treating two years as automatic. The presumption can be overcome by case-specific facts, especially if the protected interest is narrow or the work restriction is broad [^q4-aca-two-years].
+> Two years is not automatic. The presumption is rebuttable and gives way to case-specific facts, so a two-year term measured against a narrow protectable interest or a broad work restriction can still be cut back or fail [^q4-aca-two-years].
 
 ## Will an Arkansas court reform an overbroad non-compete? {#court-narrowing}
 
@@ -79,6 +79,11 @@ The temporal framing is important. *Bendinger* and *NanoMech* remain useful for 
 > **Practice note.**
 >
 > Reformation does not remove the need to draft narrowly. The statute tells courts to reform only to the extent necessary to make the limitations reasonable and no greater than needed to protect the business interest [^q5-aca-reformation].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> Mandatory reformation is a backstop, not a drafting license. For a covered post-Act covenant a court reforms only to the extent necessary — to the minimum lawful restraint the covenant could have been written to at the outset — and enforces the reformed terms, so an overbroad covenant is trimmed to that floor rather than to whatever scope the employer hoped to keep [^q5-aca-reformation]. The reformation duty also has hard edges: it does not reach an agreement on the pre-Act track, and for that agreement the older all-or-nothing rule controls, under which an overbroad restraint is void as written because an Arkansas court will not narrow it [^q5-box-effective-date][^q5-bendinger-no-rewrite][^q5-nanomech-no-narrow]. A covenant drawn to a defensible scope on day one holds under either regime.
 
 ## Is continued employment enough consideration for an Arkansas non-compete? {#consideration}
 
@@ -101,7 +106,12 @@ Older physician cases should be framed as pre-2025 public-policy and common-law 
 > [!NOTE]
 > **Practice note.**
 >
-> Do not generalize the physician void rule to every licensed professional. The statute voids covered physician practice restrictions, while separately saying § 4-75-101 does not apply to people holding a professional license under Arkansas Code Title 17, Subtitle 3, except as provided in subsection k [^q7-aca-physician-void][^q7-aca-title-17].
+> The physician void rule does not generalize to every licensed professional. The statute voids covered physician practice restrictions, while separately saying § 4-75-101 does not apply to people holding a professional license under Arkansas Code Title 17, Subtitle 3, except as provided in subsection k [^q7-aca-physician-void][^q7-aca-title-17].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A worker who holds a professional license under Arkansas Code Title 17, Subtitle 3 sits outside § 4-75-101 except for the physician voiding rule, so the statutory framework a covered covenant leans on — mandatory reformation, the continued-employment consideration rule, the two-year presumption, and the statutory irreparable-harm rule — does not govern that worker's competition covenants [^q7-aca-title-17]. Those covenants fall back to common-law reasonableness, where an overbroad restraint is not narrowed to a reasonable version but fails as written, so for a licensee the scope has to be defensible at signing rather than salvageable in court. Whether the worker holds such a license is the threshold question the exclusion turns on, and it is a fact about the worker rather than anything the covenant recites.
 
 ## Does an Arkansas non-compete period toll or extend during breach or litigation? {#extended-for-breach}
 
@@ -114,7 +124,7 @@ That is different from saying every contract clause that automatically extends t
 > [!NOTE]
 > **Practice note.**
 >
-> Draft tolling language as a risk allocation, not as settled Arkansas law. *Bud Anderson* supports judicially fashioned prospective relief in the injunction posture; it does not squarely decide whether a private extension-on-breach clause is independently enforceable under § 4-75-101 [^q8-bud-prospective][^q8-aca-remedies].
+> Tolling language operates as a risk allocation rather than as settled Arkansas law. *Bud Anderson* supports judicially fashioned prospective relief in the injunction posture; it does not squarely decide whether a private extension-on-breach clause is independently enforceable under § 4-75-101 [^q8-bud-prospective][^q8-aca-remedies].
 
 ## What remedies are available for breach of an Arkansas non-compete? {#injunction-remedies}
 
@@ -137,11 +147,24 @@ Pre-Act cases show the difference in practice. *Bendinger* rejected the non-comp
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not label every customer, employee, confidentiality, or NDA restriction as a non-compete. Arkansas separates covered competition restraints from other agreements, and the governing standards can differ [^q10-aca-related-covenants].
+> Not every customer, employee, confidentiality, or NDA restriction is a non-compete. Arkansas separates covered competition restraints from other agreements, and the governing standards can differ [^q10-aca-related-covenants].
+
+## Are sale-of-business non-competes judged differently in Arkansas? {#sale-of-business}
+
+**Short answer.** Yes. A covenant a seller gives when selling a business is judged under common-law reasonableness, and the Arkansas Supreme Court applies less scrutiny to it than to an employment covenant — the covenant statute reaches employment covenants, not the sale of a business.
+
+Arkansas's covenant statute, Act 921 of 2015, governs employment covenants and excludes covenants ancillary to the sale or purchase of a business, leaving seller covenants to the common law. There, the Supreme Court draws an explicit line between the two settings: an employment covenant is scrutinized more strictly than one tied to a business sale [^bendinger-sale-distinction].
+
+"covenants not to compete in employment contracts are subject to stricter scrutiny than those connected with a sale of a business."[^bendinger-sale-distinction]
+
+> [!NOTE]
+> **Practice note.**
+>
+> A seller covenant still has to be reasonable in time and scope, and Arkansas does not blue-pencil an overbroad restraint — but it is reviewed less searchingly than the employment covenants this guide otherwise covers. A restraint tied to the goodwill actually sold is what survives that review [^bendinger-sale-distinction].
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arkansas. This article synthesizes Arkansas primary law and is not legal advice from a Arkansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arkansas. This article synthesizes Arkansas primary law and is not legal advice from a Arkansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Arkansas*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/arkansas.
 
 [^q1-aca-enforceable]: **Ark. Code Ann. § 4-75-101** — "A covenant not to compete agreement is enforceable if the agreement is ancillary to an employment relationship or part of an otherwise enforceable employment agreement or contract to the extent that: (1) The employer has a protectable business interest; and (2) The covenant not to compete agreement is limited with respect to time and scope in a manner that is not greater than necessary to defend the protectable business interest of the employer." *Ark. Code Ann. § 4-75-101(a).* <https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00>
 
@@ -216,3 +239,5 @@ Pre-Act cases show the difference in practice. *Bendinger* rejected the non-comp
 [^q10-aca-atsa]: **Ark. Code Ann. § 4-75-101** — "Except as provided under subsection (k) of this section, this section shall not: (1) Be read to impair, limit, or change a party's protections and rights under the Arkansas Trade Secrets Act, § 4-75-601 et seq.; or (2) Apply to a person holding a professional license under Arkansas Code Title 17, Subtitle 3." *Ark. Code Ann. § 4-75-101(j).* <https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00>
 
 [^q10-bendinger-trade-secrets]: **Bendinger v. Marshalltown Trowel Co.** — "We next turn to Marshalltown’s cross-appeal where it challenges the chancellor’s denial of injunctive relief under the Arkansas Trade Secrets Act, since this issue may have merit independent from our decision not to enforce the restrictive covenant." *Bendinger v. Marshalltown Trowel Co., 338 Ark. 410, 994 S.W.2d 468 (1999).* <https://www.courtlistener.com/opinion/2454655/bendinger-v-marshalltown-trowell-co/#:~:text=We%20next%20turn%20to%20Marshalltown%E2%80%99s,to%20enforce%20the%20restrictive%20covenant.>
+
+[^bendinger-sale-distinction]: **Bendinger v. Marshalltown Trowel Co.** — "covenants not to compete in employment contracts are subject to stricter scrutiny than those connected with a sale of a business." *Bendinger v. Marshalltown Trowel Co., 338 Ark. 410, 994 S.W.2d 468 (1999).* <https://www.courtlistener.com/opinion/2454655/bendinger-v-marshalltown-trowell-co/#:~:text=covenants%20not%20to%20compete%20in,a%20sale%20of%20a%20business.>

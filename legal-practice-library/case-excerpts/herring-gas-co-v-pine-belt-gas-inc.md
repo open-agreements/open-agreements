@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/5104773/herring-gas-co-v-pine-belt-gas-inc/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/mississippi'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/mississippi'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `assignment-and-successors`, `successor-assignment`
 - source_cards: `herring-not-enforceable`, `ms-herring-assignment`
-- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5104773/herring-gas-co-v-pine-belt-gas-inc/#:~:text=We%20find%20that%20the%20covenant,it%20occurred%20after%20Rutland%E2%80%99s%20resignation.>

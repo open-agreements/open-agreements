@@ -62,7 +62,7 @@ The first consequence is that a counsel change is not a vendor swap. Companies t
 
 The fourth consequence is that the near-term effect can be slower even when the long-term goal is faster. Tech-forward firms sell shorter cycle times. But the first transition often requires successor counsel to rebuild playbooks, map metadata, and recover context that never made it into the file. `Formal Opinion 520` matters here precisely because it recognizes that an orderly handoff can require more than document delivery when material knowledge exists only in the old team. [^american-bar-association-formal-opinion-520-2][^ilta-offboarding-managing-the-challenge-of-attor-2][^association-of-legal-administrators-best-practic-2] Companies that switch firms for workflow speed often discover that the transition itself is a legal operation first and a tooling project second.
 
-- 
+- How much unwritten transition help remains after the file moves? `Formal Opinion 520` narrows the issue but does not end it. The line is still factual: what is already known, unavailable elsewhere, and material to the same matter. That probably leaves room for future fights about whether the transfer duty stops at the file boundary or extends a little beyond it. [^american-bar-association-formal-opinion-520-2]
 
 ## What happens if old counsel withholds files after unpaid bills? {#what-happens-if-old-firm-withholds-file}
 
@@ -72,7 +72,7 @@ The second consequence is timing compression. In a live case, the business deadl
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Consequences of switching outside counsel*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/outside-counsel/switching-counsel-consequences.
 
 [^american-bar-association-model-rule-1-16-d]: **American Bar Association, Model Rule 1.16(d)** — "take steps to the extent reasonably practicable to protect a client's interests" *American Bar Association, Model Rule 1.16(d).* <https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_16_declining_or_terminating_representation/>
 

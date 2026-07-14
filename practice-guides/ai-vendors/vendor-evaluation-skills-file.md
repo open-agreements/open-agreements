@@ -74,7 +74,7 @@ And there is a structural uncertainty in publishing the file itself. Once a publ
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *AI vendor evaluation as an executable skills file*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-vendors/vendor-evaluation-skills-file.
 
 [^regulation-eu-2016-679-art-28]: **Regulation (EU) 2016/679, art. 28** — "sufficient guarantees" *Regulation (EU) 2016/679, art. 28.* <https://eur-lex.europa.eu/eli/reg/2016/679/oj>
 

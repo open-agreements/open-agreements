@@ -2,7 +2,7 @@
 jurisdiction: "Hawaii"
 slug: hawaii
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-12"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/hawaii
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/hawaii · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/hawaii · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Hawaii Consumer Privacy Law[^about]
 
@@ -80,7 +80,7 @@ The same enforcement architecture repeats across Hawaii's sectoral privacy statu
 
 The UDAP track has its own contours. Standing on the deceptive-practices side is limited: only a consumer, the attorney general, or the director of the Office of Consumer Protection may sue over unfair or deceptive acts or practices [^suit-480-2-standing] — so business-to-business plaintiffs must frame claims differently. Public UDAP enforcement is backed by civil penalties of not less than $500 and not more than $10,000 per violation, collected in actions brought by the attorney general or the Office of Consumer Protection [^suit-480-3-1-penalty], and a violation directed at an elder — a consumer sixty-two or older — can draw an additional civil penalty of up to $10,000 per violation [^suit-480-13-5-elder]. The operational takeaway: even without an omnibus privacy act, a Hawaii privacy failure can produce a private damages suit under the breach chapter, a consumer treble-damages suit under chapter 480, and stacked public penalties — so breach-response discipline and accurate privacy statements are where Hawaii exposure is actually managed.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Hawaii. This article synthesizes Hawaii primary law and is not legal advice from a Hawaii-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Hawaii. This article synthesizes Hawaii primary law and is not legal advice from a Hawaii-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Hawaii Consumer Privacy Law*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/practice-guides/privacy/us/hawaii.
 
 [^law-breach-duty]: **HRS § 487N-2** — "Any business that owns or licenses personal information of residents of Hawaii, any business that conducts business in Hawaii that owns or licenses personal information in any form (whether computerized, paper, or otherwise), or any government agency that collects personal information for specific government purposes shall provide notice to the affected person that there has been a security breach following discovery or notification of the breach." *Haw. Rev. Stat. § 487N-2(a).* <https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0487N/HRS_0487N-0002.htm>
 

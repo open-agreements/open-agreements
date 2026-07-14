@@ -39,6 +39,11 @@ Vermont also requires the employer to actually prove a protectable interest — 
 
 Geography and duration are evaluated together and on a sliding scale. Vermont has upheld a five-year, single-county restraint in *Andrus* (kitchen-installation business in Rutland County) [^andrus-five-year-county], but in *Roy's Orthopedic '82* the Supreme Court reversed enforcement because "the trial court concluded that the restrictive covenant not to compete was reasonably limited to time and place without having made a finding as to what ‘place’ was covered by the agreement."[^roys-82-no-findings-on-place]
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> Vermont has no general non-compete statute and no statutory safe harbor, so every covenant in the agreement stands or falls on the common-law reasonableness test, and a covenant that fails it is unenforceable rather than trimmed to fit. A restraint holds only where it protects a genuine interest — Vermont recognizes customer relationships and employee-specific goodwill, not merely trade secrets, but not an interest in avoiding ordinary competition — and the employer carries the burden of proving the covenant's reasonable necessity [^barnes-legitimate-interest-not-only-trade-secrets][^summits7-employer-burden]. Duration and territory are weighed together against the employer's actual market on the facts, with no safe-harbor number: a five-year, single-county restraint tied to a proven market was upheld, while a covenant whose territory the record leaves indeterminate fails for want of a finding as to what place it covered, so a term or radius copied from another form is measured against a market it was never sized to [^andrus-five-year-county][^roys-82-no-findings-on-place]. A covenant's stated term is taken literally, so a restraint does not revive after its stated duration has run, and a disclosure to a departing employee's next employer built on a covenant that later fails this analysis exposes the employer to a claim of its own.
+
 ## Is continued employment sufficient consideration for a non-compete signed mid-employment? {#mid-employment-consideration}
 
 **Short answer.** Yes. In *Summits 7, Inc. v. Kelly*, the Vermont Supreme Court held that continued at-will employment alone is sufficient consideration to support a non-compete entered into during the employment relationship.
@@ -60,12 +65,17 @@ The conservative anchor is *Roy's Orthopedic '85*. There, the Vermont Supreme Co
 
 The opposite signal comes from *Summits 7* and the Second Circuit. The Vermont Supreme Court observed that most modern courts agree that a trial court can enforce restrictive covenants to the extent that they are reasonable[^summits7-extent-reasonable], and cited *A.N. Deringer, Inc. v. Strough* — the Second Circuit's *Erie* prediction that Vermont would permit enforcement of a defective restrictive covenant to the limit of its validity[^deringer-vt-prediction].
 
-The two strands can be reconciled: Vermont will not rewrite a contract by inventing new terms (no extending time, no judicially imposed geographic line), but a court may enforce only that subset of an overbroad covenant the conduct actually breaches when that subset is plainly within a reasonable restraint. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Vermont non-compete review checklist](/checklists/non-compete/us/vermont) walks the full covenant suite item by item with each requirement's force level.
+The two strands can be reconciled: Vermont will not rewrite a contract by inventing new terms (no extending time, no judicially imposed geographic line), but a court may enforce only that subset of an overbroad covenant the conduct actually breaches when that subset is plainly within a reasonable restraint. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Vermont non-compete reviewer checklist](/checklists/non-compete/us/vermont) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not draft an intentionally overbroad covenant on the assumption that a Vermont court will narrow it. *Roy's Orthopedic '85* makes clear that Vermont judges will not equitably rewrite the contract — including by extending or shifting a time term — and the partial-enforcement dicta in *Summits 7* and *Deringer* are case-bound rather than a free pass [^roys-85-no-make-contracts][^summits7-extent-reasonable].
+> An intentionally overbroad Vermont covenant does not survive on the assumption that a court will narrow it to fit. *Roy's Orthopedic '85* makes clear that Vermont judges will not equitably rewrite the contract — including by extending or shifting a time term — so an overbroad restraint stands to fail as written rather than be trimmed to the reasonable one, and the partial-enforcement dicta in *Summits 7* and *Deringer* are case-bound rather than a free pass [^roys-85-no-make-contracts][^summits7-extent-reasonable].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A restraint whose clock runs out during a breach or the litigation over it is not extended by a Vermont court as a matter of course: the Vermont Supreme Court refused to add time to a covenant after litigation delay exhausted its term, holding that the term is a matter of contract and that a court construes contracts but will not make them for the parties, and it declined to recharacterize the extension as a postponed start date [^roys-85-no-make-contracts]. An extension therefore reaches only as far as the agreement itself provides for it, and an express tolling clause is itself an additional restraint that must independently satisfy the same reasonableness limits as the covenant it extends — an open-ended or indefinite extension is exposed on that ground, while the partial-enforcement dicta elsewhere in Vermont law are case-bound rather than a reliable source of judicially supplied time [^summits7-extent-reasonable].
 
 ## Are sale-of-business non-competes treated differently in Vermont? {#sale-of-business}
 
@@ -76,6 +86,11 @@ In *Fine Foods, Inc. v. Dahlin*, the Vermont Supreme Court enforced a five-year,
 *Foti Fuels, Inc. v. Kurrle Corp.* situates the sale-of-business covenant in damages doctrine. There, the asset-purchase agreement contained a five-year non-compete with $30,000 in dedicated consideration[^foti-fuels-five-year-sale], paid in five annual installments. Litigation over an alleged breach turned not on enforceability but on the measure of damages, and the Vermont Supreme Court rejected the trial court's rule that failure to prove lost profits is fatal — the buyer could measure loss by the value of the bargained-for non-compete itself.
 
 Sale-of-business reasoning has a contract-formation corollary in *Miller v. Flegenheimer*. The court held that a stock-sale agreement was not enforceable in part because the parties had left material terms open, including whether the contract would include a form of non-compete or non-solicitation agreement[^miller-non-compete-not-essential], the share price, and a claw-back structure. The takeaway: a non-compete is a distinct, bargained-for term in a Vermont stock sale, not an automatic incident.
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A covenant ancillary to the sale of a business is measured differently from an employment restraint: Vermont gives it more breathing room on duration and geography when it is supported by dedicated transaction consideration and sized to the acquired goodwill, so a five-year, twenty-five-mile covenant delivered at closing with a sum paid for the covenant alone held reasonable in time and place, and a five-year covenant with dedicated consideration is treated as a bargained-for transaction asset whose breach can be valued by the covenant itself [^fine-foods-five-year-twenty-five-mile][^foti-fuels-five-year-sale]. That leeway is earned by the deal structure, not presumed: a covenant is a distinct, negotiated sale term rather than an automatic incident of the transaction, and leaving material covenant terms open — including whether the deal carries a covenant at all — can defeat contract formation, so a covenant transferred in a sale that is not papered expressly, or consideration that is not tied to the covenant, leaves the restraint on ordinary employment-covenant footing when its scope is later tested [^miller-non-compete-not-essential].
 
 ## What profession-specific or context-specific limits apply to Vermont non-competes? {#profession-specific}
 
@@ -88,6 +103,21 @@ Attorneys are separately governed by [Vermont Rule of Professional Conduct 5.6](
 The Vermont Attorney General has used antitrust and consumer-protection authority to police franchisor *no-poach* clauses. The 2019 multistate [Five Guys Franchisor settlement](https://www.iowaattorneygeneral.gov/media/cms/Five_Guys_Agreement_Executed_34804FD309F89.pdf) required Five Guys to stop including no-poach provisions in new franchise agreements nationwide [^five-guys-ag-no-poach-settlement]. That enforcement is independent of the common-law non-compete framework.
 
 Healthcare-professional non-competes are not yet categorically void, but [H.583](https://legislature.vermont.gov/bill/status/2026/H.583) is moving through the General Assembly: it passed the House on March 20, 2026, the Senate proposed amendments, and on May 22, 2026 the House concurred in the Senate proposal of amendment. If enacted, H.583 would explicitly void noncompetition, nondisclosure, and nondisparagement agreements between licensed healthcare professionals and their employers — with a narrow exception for covenants ancillary to the sale of a 25%-or-greater equity interest. Until H.583 is signed into law, physician non-competes are evaluated under the same *Andrus* / *Barnes* reasonableness test as other employment covenants.
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A covenant restraining a licensed healthcare professional from practicing is not categorically void in Vermont as of this review, but it is not exempt either: it runs the same common-law reasonableness test as any other covenant, with the public-interest prong weighing patient access and continuity of care, and the employer carries the burden of proving its reasonable necessity [^andrus-reasonableness-test-physician][^summits7-employer-burden-physician]. A healthcare covenant sized to a narrow radius and a short term is the one that survives that scrutiny; a broad one is exposed on the public-interest prong. The footing is unstable: H.583 would categorically void noncompetition, nondisclosure, and nondisparagement agreements for healthcare professionals if enacted, so a covenant drafted under current law stands to be displaced on enactment [^vt-h583-status-page-physician].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A covenant not to compete imposed as a condition of training for licensure at a school of barbering or cosmetology is void outright — the one generally applicable Vermont statute that voids a category of restrictive covenant, and no drafting saves it [^vt-26-281c-cosmetology-ban]. The bar turns on the training-for-licensure relationship rather than on a job title, so a restraint the school or an affiliate extracts from a person training for licensure falls outside enforcement whatever the instrument is called.
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A partnership, shareholders, operating, or employment agreement that restricts a lawyer's right to practice after the relationship ends is barred by the rules of professional conduct, except as to benefits upon retirement, and a restriction on a lawyer's right to practice may not be made part of the settlement of a client controversy [^vt-rpc-56-firm-practice-restrictions][^vt-rpc-56-lawyer-practice-restrictions]. Because the rule polices the substance of the restriction rather than its label, a non-compete, a practice-area carve-up, or a client-facing restraint that operates as a practice restriction all sit inside the bar, so a covenant applied to an attorney is unenforceable on that ground however it is drafted.
 
 ## What pending Vermont legislation matters for restrictive covenants? {#pending-legislation}
 
@@ -116,14 +146,34 @@ Healthcare-professional non-competes are not yet categorically void, but [H.583]
 
 **Garden leave.** A paid notice-period structure keeps the employee on the payroll — employed but not working — during the notice period, so any restriction operates while the employment relationship is still intact rather than as a post-termination restraint. Vermont courts have not yet tested how that structure fares under the reasonableness analysis, so treat it as an untested option rather than a guaranteed work-around. Check pending H.205 before using any separation-payment structure, because H.205 is the active vehicle for Vermont's broader non-compete and stay-or-pay restrictions [^alternatives-vt-h205-status-page].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> Trade-secret protection and ordinary confidentiality carry different durations: a trade-secret obligation runs for as long as the information remains a trade secret, but a perpetual lid on non-secret information operates as an indirect restraint that inherits the same reasonableness scrutiny as a non-compete, so ordinary confidential information holds up only under a finite term tied to actual confidential information [^alternatives-barnes-restatement-framing]. The Vermont Trade Secrets Act supplies a remedy that stands independent of any covenant, but not an automatic one: a court may enjoin actual or threatened misappropriation of a trade secret and continue the injunction only for a reasonable period to eliminate the resulting commercial advantage, which calls for conduct- or threat-specific proof rather than the bare fact that a former employee has taken a new position [^vtsa-4602-injunctive][^vtsa-4602-injunctive-caution].
+
 > [!NOTE]
 > **Practice note.**
 >
 > Do not rely on a Vermont *inevitable disclosure* theory as a primary trade-secret strategy. The VTSA's remedy reaches only *actual or threatened* misappropriation — § 4602 authorizes an injunction against actual or threatened misappropriation, which calls for conduct- or threat-specific proof rather than a presumption that a departing employee will inevitably use trade secrets in a new role [^vtsa-4602-injunctive-caution].
 
+## Are customer and employee non-solicits enforceable in Vermont? {#non-solicitation}
+
+**Short answer.** Vermont reviews a non-solicitation covenant under the same common-law reasonableness test it applies to non-competes, and it recognizes customer relationships and goodwill as legitimate interests a covenant may protect. No Vermont decision in our review squarely decides a stand-alone customer or employee non-solicit, so this rests on the general framework.
+
+Vermont applies one reasonableness test across restrictive covenants, and in *Systems & Software, Inc. v. Barnes* the Supreme Court confirmed that protectable interests reach beyond trade secrets to customer relationships and employee-specific goodwill [^nonsolicit-barnes-interest].
+
+"noncompetition agreements may protect legitimate employer interests such as customer relationships and employee-specific goodwill that are ‘significantly broader’ than proprietary information such as trade secrets and confidential customer information."[^nonsolicit-barnes-interest]
+
+A clause barring solicitation of the employer's own workforce would be tested the same way, but we found no Vermont appellate decision squarely on an employee anti-raiding covenant — so an employer cannot assume protection against employee raiding is recognized as a distinct interest.
+
+> [!NOTE]
+> **Practice note.**
+>
+> Scope a Vermont non-solicit to the customer relationships or goodwill the employee actually worked with, and keep the duration and reach reasonable — the same factors that decide a Vermont non-compete decide a non-solicit. Do not treat the bare cost of recruiting employees as a protectable interest without authority [^nonsolicit-barnes-interest].
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-01. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Vermont. This article synthesizes Vermont primary law and is not legal advice from a Vermont-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-01. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Vermont. This article synthesizes Vermont primary law and is not legal advice from a Vermont-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Vermont*, OpenAgreements (last updated June 1, 2026), https://openagreements.org/practice-guides/non-compete/us/vermont.
 
 [^andrus-reasonableness-test]: **Vermont Electric Supply Co. v. Andrus** — "enforcement will be ordered unless the agreement is found to be contrary to public policy, unnecessary for protection of the employer, or unnecessarily restrictive of the rights of the employee, with due regard being given to the subject matter of the contract and the circumstances and conditions under which it is to be performed." *Vt. Elec. Supply Co. v. Andrus, 132 Vt. 195, 315 A.2d 456 (1974).* <https://www.courtlistener.com/opinion/1972913/vermont-electric-supply-company-inc-v-andrus/#:~:text=enforcement%20will%20be%20ordered%20unless,it%20is%20to%20be%20performed.>
 
@@ -167,6 +217,12 @@ Healthcare-professional non-competes are not yet categorically void, but [H.583]
 
 [^five-guys-ag-no-poach-settlement]: **Five Guys Franchisor, LLC Multistate Settlement Agreement** — "Five Guys agrees that it will no longer include No-Poach Provisions in any of its franchise agreements in the United States signed after the execution date of this Agreement." *Settlement Agreement Between the Settling States and Five Guys Franchisor, LLC, para. 11 (2019).* <https://www.iowaattorneygeneral.gov/media/cms/Five_Guys_Agreement_Executed_34804FD309F89.pdf>
 
+[^andrus-reasonableness-test-physician]: **Vermont Electric Supply Co. v. Andrus** — "enforcement will be ordered unless the agreement is found to be contrary to public policy, unnecessary for protection of the employer, or unnecessarily restrictive of the rights of the employee, with due regard being given to the subject matter of the contract and the circumstances and conditions under which it is to be performed." *Vt. Elec. Supply Co. v. Andrus, 132 Vt. 195, 315 A.2d 456 (1974).* <https://www.courtlistener.com/opinion/1972913/vermont-electric-supply-company-inc-v-andrus/#:~:text=enforcement%20will%20be%20ordered%20unless,it%20is%20to%20be%20performed.>
+
+[^summits7-employer-burden-physician]: **Summits 7, Inc. v. Kelly** — "[t]he employer has the burden of proving the reasonable necessity of the restrictive covenant." *Summits 7, Inc. v. Kelly, 2005 VT 97, ¶ 14, 178 Vt. 396, 886 A.2d 365.* <https://www.courtlistener.com/opinion/8209851/summits-7-inc-v-kelly/#:~:text=%5Bt%5Dhe%20employer%20has%20the%20burden,necessity%20of%20the%20restrictive%20covenant.>
+
+[^vt-h583-status-page-physician]: **Vt. H.583 (2025-2026) — Bill Status** — "An act relating to clinical decision making" *H.583, 2025-2026 Gen. Assemb., Reg. Sess. (Vt. 2026) (passed House Mar. 20, 2026; House concurred in Senate proposal of amendment, May 22, 2026).* <https://legislature.vermont.gov/bill/status/2026/H.583>
+
 [^vt-h205-status-page]: **Vt. H.205 (2025-2026) — Bill Status** — "An act relating to agreements not to compete" *H.205, 2025-2026 Gen. Assemb., Reg. Sess. (Vt. 2026) (recommitted Mar. 13, 2026).* <https://legislature.vermont.gov/bill/status/2026/H.205>
 
 [^vt-h583-status-page]: **Vt. H.583 (2025-2026) — Bill Status** — "An act relating to clinical decision making" *H.583, 2025-2026 Gen. Assemb., Reg. Sess. (Vt. 2026) (passed House Mar. 20, 2026; House concurred in Senate proposal of amendment, May 22, 2026).* <https://legislature.vermont.gov/bill/status/2026/H.583>
@@ -192,3 +248,5 @@ Healthcare-professional non-competes are not yet categorically void, but [H.583]
 [^alternatives-vt-h205-status-page]: **Vt. H.205 (2025-2026) — Bill Status** — "An act relating to agreements not to compete" *H.205, 2025-2026 Gen. Assemb., Reg. Sess. (Vt. 2026) (recommitted Mar. 13, 2026).* <https://legislature.vermont.gov/bill/status/2026/H.205>
 
 [^vtsa-4602-injunctive-caution]: **9 V.S.A. § 4602 — Injunctive relief** — "A court may enjoin actual or threatened misappropriation of a trade secret." *9 V.S.A. § 4602(a).* <https://legislature.vermont.gov/statutes/fullchapter/09/143>
+
+[^nonsolicit-barnes-interest]: **Systems & Software, Inc. v. Barnes** — "noncompetition agreements may protect legitimate employer interests such as customer relationships and employee-specific goodwill that are ‘significantly broader’ than proprietary information such as trade secrets and confidential customer information." *Sys. & Software, Inc. v. Barnes, 2005 VT 95, ¶ 5, 178 Vt. 389, 886 A.2d 762.* <https://www.courtlistener.com/opinion/2264199/systems-and-software-inc-v-barnes/#:~:text=noncompetition%20agreements%20may%20protect%20legitimate,secrets%20and%20confidential%20customer%20information.>

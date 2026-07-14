@@ -44,7 +44,7 @@ McGuireWoods is useful on the file-content fight. Its long-running privilege and
 
 Taken together, the firm-side sources are saying something narrower than the folklore. They are not saying an unpaid invoice lets counsel freeze the matter. They are saying the answer depends on the state's file-entitlement rules, the type of material, and whether withholding would prejudice the client. That is a much smaller weapon.
 
-- 
+- The retaining-lien story may keep shrinking even in states that still recognize it. A 2012 New Jersey committee recommendation, while not itself a binding rule change, captured the pressure against the doctrine well by quoting the Restatement's view that "drawbacks outweigh that advantage"[^new-jersey-supreme-court-notice-common-law-retai]. [^new-jersey-supreme-court-notice-common-law-retai] That may be the long-term direction even where the formal doctrine survives, because the doctrine is strongest only when the client's dependence on the file is greatest, and that is exactly when courts are most likely to intervene.
 
 ## Can outside counsel withhold electronic files or SaaS exports for unpaid bills? {#can-outside-counsel-withhold-electronic-files-or-saas-exports}
 
@@ -65,7 +65,7 @@ The first consequence is that the unpaid invoice is weakest as leverage when the
 
 The third consequence is that disputed fees and contingent fees are different problems from ordinary delinquency. Florida is the clearest example: if the fee or cost recovery is contingent, the bar's current view is that the firm may not assert the retaining lien before the contingency happens. [^florida-bar-ethics-opinion-88-11-reconsideration-2] New York's cases and ethics opinions point in a similar direction even outside the contingent-fee setting: where the client needs the file to proceed and the payment fight can be protected another way, courts often move the leverage away from possession and toward security or a later fee proceeding. [^new-york-county-lawyers-association-ethics-opini-2][^j-f-d-v-j-d-2014-ny-slip-op-51547-u-2]
 
-- 
+- The prejudice override is clear at the extremes and murkier in the middle. A trial next month, an imminent filing deadline, or an incarcerated former client who cannot use an electronic file are easy cases for turnover. [^j-f-d-v-j-d-2014-ny-slip-op-51547-u-2][^new-york-state-bar-association-ethics-opinion-11-2] The harder question is how much inconvenience, duplication cost, or transition friction is enough before a court concludes that continued withholding is unfair and shifts the fee fight elsewhere.
 
 ## What file-return terms should in-house counsel put in engagement letters? {#what-file-return-terms-should-go-in-engagement-letters}
 
@@ -75,7 +75,7 @@ The fourth consequence is contractual rather than doctrinal. Engagement letters 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Whether outside counsel can withhold files, work product, or exports over unpaid invoices*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/outside-counsel/counsel-file-withholding-on-unpaid-invoices.
 
 [^aba-model-rule-1-16-d]: **ABA Model Rule 1.16(d)** — "The lawyer may retain papers relating to the client to the extent permitted by other law." *ABA Model Rule 1.16(d).* <https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_16_declining_or_terminating_representation/>
 
@@ -109,6 +109,8 @@ The fourth consequence is contractual rather than doctrinal. Engagement letters 
 
 [^mcguirewoods-who-owns-the-files-a-lawyer-generat]: **McGuireWoods commentary** — "Determining ownership of a lawyer’s files requires both an ethics and a property law assessment." *McGuireWoods, Who Owns the Files a Lawyer Generates While Representing a Client?.* <https://www.mcguirewoods.com/client-resources/privilege-ethics/privilege-points/2002/12/who-owns-the-files-a-lawyer-generates-while-representing-a-client/>
 
+[^new-jersey-supreme-court-notice-common-law-retai]: **New Jersey Supreme Court Notice - Common Law Retaining Lien** — "drawbacks outweigh that advantage" *New Jersey Supreme Court Notice - Common Law Retaining Lien.* <https://www.njcourts.gov/sites/default/files/notices/2012/11/n121119c.pdf>
+
 [^aba-formal-opinion-471]: **ABA Formal Opinion 471** — "whether in paper or electronic form" *ABA Formal Opinion 471.* <https://lalegalethics.org/wp-content/uploads/aba-formal-opinion-471-re-surrendering-files.pdf>
 
 [^new-york-city-bar-formal-opinion-2008-01]: **New York City Bar Formal Opinion 2008-01** — "In New York, a client has a presumptive right to the lawyer’s entire file in connection with a representation, subject to narrow exceptions." *New York City Bar Formal Opinion 2008-01.* <https://www.nycbar.org/reports/formal-opinion-2008-01-a-lawyers-ethical-obligations-to-retain-and-to-provide-a-client-with-electronic-documents-relating-to-a-representation/>
@@ -132,6 +134,8 @@ The fourth consequence is contractual rather than doctrinal. Engagement letters 
 [^rcw-60-40-010-2]: **RCW 60.40.010** — "Upon the papers of the client" *RCW 60.40.010.* <https://app.leg.wa.gov/rcw/default.aspx?cite=60.40&full=true>
 
 [^florida-bar-ethics-opinion-88-11-reconsideration-2]: **Florida Bar Ethics Opinion 88-11 Reconsideration** — "A law firm that is discharged by a client before the client's litigation is concluded may assert a retaining lien against the case file until costs advanced on behalf of the client are either reimbursed or guaranteed." *Florida Bar Ethics Opinion 88-11 Reconsideration.* <https://www.floridabar.org/etopinions/etopinion-88-11/>
+
+[^new-york-state-bar-association-ethics-opinion-11-2]: **New York State Bar Association Ethics Opinion 1142** — "Where a lawyer keeps client files received in electronic form in that form and a former client requests a copy of the file in paper form, the lawyer must take reasonable measures to deliver the electronic documents in a form in which the client can access them." *New York State Bar Association Ethics Opinion 1142.* <https://nysba.org/ethics-opinion-1142/>
 
 [^stinson-dear-ethics-lawyer-july-15-2024-issue-2]: **Stinson commentary** — "upon termination of a representation" *Stinson, Dear Ethics Lawyer, July 15, 2024 Issue.* <https://www.stinson.com/assets/htmldocuments/Dear%20Ethics%20Lawyer%207.15.24%20Issue.pdf>
 

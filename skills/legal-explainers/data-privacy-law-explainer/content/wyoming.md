@@ -2,7 +2,7 @@
 jurisdiction: "Wyoming"
 slug: wyoming
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-12"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/wyoming
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/wyoming · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/wyoming · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Wyoming Consumer Privacy Law[^about]
 
@@ -104,7 +104,7 @@ Public enforcement carries the heavier penalties. The Attorney General — the A
 
 The genetic-data chapter stacks three enforcement layers: a misdemeanor fine, the private civil action with its sixty-day cure period and fee-shifting for prevailing parties [^genetic-private-action], and an Attorney General action — in the name of the state or as parens patriae — carrying a civil penalty of two thousand five hundred dollars per violation plus actual consumer damages and fees [^genetic-ag-penalty]. For a direct-to-consumer genetic testing company, the practical exposure is therefore both regulatory and private, and the sixty-day cure window is the moment to fix a violation before litigation attaches.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Wyoming. This article synthesizes Wyoming primary law and is not legal advice from a Wyoming-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Wyoming. This article synthesizes Wyoming primary law and is not legal advice from a Wyoming-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Wyoming Consumer Privacy Law*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/practice-guides/privacy/us/wyoming.
 
 [^breach-def]: **Wyo. Stat. § 40-12-501** — "‘Breach of the security of the data system’ means unauthorized acquisition of computerized data that materially compromises the security, confidentiality or integrity of personal identifying information maintained by a person or business and causes or is reasonably believed to cause loss or injury to a resident of this state." *Wyo. Stat. § 40-12-501(a)(i).* <https://wyoleg.gov/statutes/compress/title40.pdf>
 

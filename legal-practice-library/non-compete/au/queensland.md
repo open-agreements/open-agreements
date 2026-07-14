@@ -140,9 +140,24 @@ Because this is a future legislative matter, employers should treat the timeline
 >
 > Do not draft to a federal ban that does not yet exist. As of June 2026 no Commonwealth statute bans employee non-competes, so enforceability in Queensland still turns on the common-law reasonableness test and the blue-pencil-only severance rule [^reims-still-governs]. Track the proposal through to enacted legislation before changing practice, because its threshold, scope, and commencement remain proposals subject to change.
 
+## Are employee (anti-raiding) non-solicits enforceable in Queensland? {#employee-non-solicitation}
+
+**Short answer.** A covenant barring a former employee from soliciting the employer's staff is a restraint of trade: presumptively void and binding only so far as it is reasonable to protect a legitimate interest. An employer cannot use it to restrain ordinary competition, but it may protect a genuine interest such as the confidential information a departing employee could exploit. No Queensland decision in our review squarely recognizes protecting a stable workforce against poaching as a distinct interest.
+
+The same High Court restraint-of-trade doctrine that governs Queensland non-competes governs an employee non-solicit, because Queensland has no restraint statute. The employer must point to a legitimate interest beyond competition itself — as *Lindner v Murdock's Garage* put it, an employer must accept a former employee's competition [^qld-empns-lindner] — and a restraint is justified only where it protects something like the confidential information a departing employee could exploit [^qld-empns-aeci-interest].
+
+"An employer must be prepared to face the competition of a former employee if it comes."[^qld-empns-lindner]
+
+"It may restrain the employee from being involved with a competitive business that could use the confidential information."[^qld-empns-aeci-interest]
+
+> [!NOTE]
+> **Practice note.**
+>
+> Frame a Queensland employee non-solicit around a real interest — such as protecting confidential information — and keep its reach and duration no wider than that interest needs. A clause that just bars hiring former colleagues, untethered to a legitimate interest, risks being void with no statutory power to read it down [^qld-empns-aeci-interest].
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-10. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Queensland, Australia. This article summarizes publicly available Queensland, Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it.
+
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-10. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Queensland, Australia. This article summarizes publicly available Queensland, Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Enforceability in Queensland*, OpenAgreements (last updated June 10, 2026), https://openagreements.org/practice-guides/non-compete/au/queensland.
 
 [^aeci-presumed-void]: **AECI Australia Pty Ltd v Convey** — "A term in a contract, which is a restraint of trade ('a restraint clause'), is presumed to be void as contrary to public policy." *AECI Australia Pty Ltd v Convey [2020] QSC 207 (Bradley J), quoting Just Group Ltd v Peck (2016) 344 ALR 162.* <https://archive.sclqld.org.au/qjudgment/2020/QSC20-207.pdf>
 
@@ -201,3 +216,7 @@ Because this is a future legislative matter, employers should treat the timeline
 [^reims-anticompetitive]: **Reims Investments Pty Ltd v City Fertility Sydney CBD Pty Ltd** — "The latter is more readily described as merely anticompetitive and requires closer scrutiny." *Reims Investments Pty Ltd v City Fertility Sydney CBD Pty Ltd [2025] QCA 243 (Doyle JA).* <https://archive.sclqld.org.au/qjudgment/2025/QCA25-243.pdf>
 
 [^reims-still-governs]: **Reims Investments Pty Ltd v City Fertility Sydney CBD Pty Ltd** — "A restraint will be invalid unless it is proven to be reasonable as between the parties or if proven to be unreasonable in the public interest." *Reims Investments Pty Ltd v City Fertility Sydney CBD Pty Ltd [2025] QCA 243 (Doyle JA).* <https://archive.sclqld.org.au/qjudgment/2025/QCA25-243.pdf>
+
+[^qld-empns-lindner]: **Lindner v Murdock's Garage** — "An employer must be prepared to face the competition of a former employee if it comes." *Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per McTiernan J).* <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
+
+[^qld-empns-aeci-interest]: **AECI Australia Pty Ltd v Convey** — "It may restrain the employee from being involved with a competitive business that could use the confidential information." *AECI Australia Pty Ltd v Convey [2020] QSC 207 (Bradley J), quoting Just Group Ltd v Peck (2016) 344 ALR 162.* <https://archive.sclqld.org.au/qjudgment/2020/QSC20-207.pdf>

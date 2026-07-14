@@ -2,7 +2,7 @@
 jurisdiction: "Utah"
 slug: utah
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-04"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/utah
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/utah · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/utah · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Utah Consumer Privacy Law (UCPA)[^about]
 
@@ -68,7 +68,7 @@ This notice-and-opt-out model is the opposite of California, Colorado, and Texas
 
 Unlike Colorado, Utah's cure period has not been repealed — it remains a built-in off-ramp. Penalties run up to $7,500 per violation. The compliance posture is still to build the notice, opt-out, and contracting controls up front, but a covered business that receives a notice has a genuine window to fix the issue before penalties attach.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-04. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Utah. This article synthesizes Utah primary law and is not legal advice from a Utah-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-04. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Utah. This article synthesizes Utah primary law and is not legal advice from a Utah-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Utah Consumer Privacy Law (UCPA)*, OpenAgreements (last updated June 4, 2026), https://openagreements.org/practice-guides/privacy/us/utah.
 
 [^stat-102-apply]: **Utah Code § 13-61-102** — "This chapter applies to any controller or processor who: (a) (i) conducts business in the state; or (ii) produces a product or service that is targeted to consumers who are residents of the state; (b) has annual revenue of $25,000,000 or more; and (c) satisfies one or more of the following thresholds:" *Utah Code § 13-61-102(1).* <https://le.utah.gov/xcode/Title13/Chapter61/13-61-S102.html>
 

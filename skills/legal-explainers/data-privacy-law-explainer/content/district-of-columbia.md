@@ -2,7 +2,7 @@
 jurisdiction: "District of Columbia"
 slug: district-of-columbia
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/district-of-columbia
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/district-of-columbia · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/district-of-columbia · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # District of Columbia Consumer Privacy Law[^about]
 
@@ -78,7 +78,7 @@ The standing grants do real work, but they carry conditions. Testers must fit th
 
 **Short answer.** There is no privacy-specific regulator; public enforcement runs through the CPPA and the breach subchapter. A consumer can begin an administrative case by filing a complaint with the Department of Licensing and Consumer Protection describing the trade practice [^q7-complaint], and in that administrative path the Attorney General for the District of Columbia represents the Department in court proceedings under the Act [^q7-ag-role]. For data breaches and security failures, the breach subchapter's rights and remedies are cumulative with every other remedy available under law [^q7-cumulative]. Cumulative remedies do not erase the CPPA stay and notice rules: an overlapping Attorney General action under § 28-3909 stays public-interest-organization or general-public private claims until the Attorney General action is resolved, and those plaintiffs must notify OAG within 10 days after filing [^q7-stay].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not District of Columbia. This article synthesizes District of Columbia primary law and is not legal advice from a District of Columbia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not District of Columbia. This article synthesizes District of Columbia primary law and is not legal advice from a District of Columbia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *District of Columbia Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/district-of-columbia.
 
 [^q1-cppa-udap]: **D.C. Code § 28-3904** — "It shall be a violation of this chapter for any person to engage in an unfair or deceptive trade practice, whether or not any consumer is in fact misled, deceived, or damaged thereby" *D.C. Code § 28-3904.* <https://code.dccouncil.gov/us/dc/council/code/sections/28-3904>
 

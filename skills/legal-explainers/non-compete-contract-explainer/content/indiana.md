@@ -2,7 +2,7 @@
 jurisdiction: "Indiana"
 slug: indiana
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/indiana
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/indiana · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/indiana · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Indiana[^about]
 
@@ -57,7 +57,7 @@ Indiana's Uniform Trade Secrets Act supplies a statutory overlay that runs along
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not draft an Indiana non-compete around a general wish to avoid competition. Identify the specific goodwill, customer relationship, or confidential information at stake, because the employer must prove a legitimate protectable interest before a court will even reach the reasonableness of time, activity, or geography [^krueger-legitimate-interest].
+> An Indiana non-compete built around a general wish to avoid competition fails before reasonableness is ever reached. The employer must first prove a legitimate protectable interest — specific goodwill, a customer relationship, or confidential information — and a restraint that guards nothing more than ordinary competition is void as against public policy, so a court never tests the reasonableness of its time, activity, or geography [^krueger-legitimate-interest].
 
 ## Is continued at-will employment enough consideration for an Indiana non-compete? {#consideration}
 
@@ -78,7 +78,12 @@ The activity dimension is where covenants most often fail. In *Med-1 Solutions*,
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not bar a former employee from a competitor in *any capacity* or across business lines they never touched. Tie the restricted activity to the employee's actual role and the protected interest, because an Indiana court placed the burden on the employer and found exactly that kind of all-capacity restraint unreasonably broad [^med1-any-capacity].
+> A covenant that bars a former employee from a competitor in *any capacity*, or across business lines the employee never touched, is the activity restraint Indiana courts most often strike. The burden sits on the employer, and an all-capacity restraint reaching roles unrelated to any protectable interest is unreasonably broad and unenforceable [^med1-any-capacity]. An activity restriction confined to the employee's actual role and the protected interest is the one that survives.
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> An overbroad Indiana restraint carries enforcement risk beyond its own unenforceability. An emphatic irreparable-harm recital does not rescue an unreasonable covenant — the reported pattern is injunctions denied because the employer could not carry the reasonableness burden — and a warning letter or notice to a new employer built on a covenant that later fails the reasonableness analysis can become raw material for a tortious-interference claim [^krueger-scope-burden][^med1-any-capacity]. A restraint the employer is prepared to defend on both the legitimate-interest and the reasonableness burdens is the one that supports an injunction and any pre-litigation enforcement step taken on its strength.
 
 ## Will an Indiana court blue-pencil or reform an overbroad non-compete? {#court-narrowing}
 
@@ -86,14 +91,14 @@ The activity dimension is where covenants most often fail. In *Med-1 Solutions*,
 
 The Indiana Supreme Court reaffirmed this in *Heraeus Medical, LLC v. Zimmer, Inc.* (2019). A court may excise offending words from a divisible covenant, but it may not rewrite the agreement, and a contractual reformation or modification clause does not expand that power [^heraeus-reformation-clause]. The blue pencil is available only where the covenant is *clearly divisible* and a reasonable restriction survives after the unreasonable parts are removed [^heraeus-divisibility].
 
-That divisibility requirement is decisive. In *Clark's Sales and Service, Inc. v. Smith*, an overbroad restriction that was written as an interconnected whole could not be saved, because there was no severable language a court could strike to leave a reasonable covenant behind [^clarks-indivisible]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Indiana non-compete review checklist](/checklists/non-compete/us/indiana) walks the full covenant suite item by item with each requirement's force level.
+That divisibility requirement is decisive. In *Clark's Sales and Service, Inc. v. Smith*, an overbroad restriction that was written as an interconnected whole could not be saved, because there was no severable language a court could strike to leave a reasonable covenant behind [^clarks-indivisible]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Indiana non-compete reviewer checklist](/checklists/non-compete/us/indiana) walks the full covenant suite item by item with each requirement's force level.
 
 "The doctrine, however, does not allow a court to rewrite a noncompetition agreement by adding, changing, or rearranging terms."[^heraeus-eraser]
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a reformation or savings clause to rescue an aggressive Indiana covenant — it is a dead letter. Draft narrow, severable restrictions from the start, because an Indiana court will only erase divisible offending language and will void an indivisible overbroad covenant entirely [^heraeus-reformation-clause][^clarks-indivisible].
+> A reformation or savings clause is a dead letter against an aggressive Indiana covenant. The court will only erase divisible offending language and will not rewrite the agreement, even where the contract purports to authorize it, so an indivisible overbroad covenant is voided in its entirety rather than trimmed [^heraeus-reformation-clause][^clarks-indivisible]. A covenant drafted from the start as narrow, severable restrictions leaves a court something reasonable to enforce once the offending parts come out.
 
 ## Are customer non-solicitation and employee no-hire clauses enforceable in Indiana? {#non-solicitation}
 
@@ -104,7 +109,7 @@ In *Heraeus*, an employee non-solicitation covenant failed because it reached ev
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not draft a no-hire clause that covers *any* or *all* employees of the company. Limit it to workers who hold confidential information or specialized value, because Indiana voided a blanket employee non-solicitation covenant as overbroad and the eraser rule will not rewrite it for you [^heraeus-nosolicit-overbroad].
+> A no-hire clause reaching *any* or *all* of the company's employees is overbroad. Indiana voided exactly such a blanket employee non-solicitation covenant, and because the eraser blue pencil cannot rewrite an all-employees class into a narrower one, the covenant falls whole rather than shrinking [^heraeus-nosolicit-overbroad]. A class confined to workers who hold confidential information or specialized value is the one tied to a protectable interest and left standing.
 
 ## Are liquidated-damages clauses in Indiana non-competes enforceable? {#liquidated-damages}
 
@@ -115,7 +120,7 @@ In *American Consulting, Inc. v. Hannum Wagle & Cline Engineering, Inc.* (2019),
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not set a flat, oversized liquidated-damages figure as a non-compete enforcement substitute. Tie any stipulated sum to a reasonable estimate of anticipated loss, because Indiana struck liquidated-damages provisions that were grossly disproportionate and captured too much conduct as unenforceable penalties [^amconsulting-penalty].
+> A flat, oversized liquidated-damages figure used as an enforcement substitute is treated as an unenforceable penalty. Indiana struck liquidated-damages provisions that were grossly disproportionate to the loss or captured conduct beyond the protected interest, so a sum untethered from actual loss becomes its own litigation risk rather than a backstop [^amconsulting-penalty]. A stipulated sum tied to a documented, reasonable estimate of the anticipated loss from the specific breach it prices is the one a court will treat as liquidated damages.
 
 ## Can an employer use a choice-of-law clause or fee-shifting to strengthen an Indiana covenant? {#choice-of-law-and-fees}
 
@@ -192,7 +197,7 @@ In *Ryan LLC v. Federal Trade Commission*, a federal court set the rule aside wi
 
 "The Non-Compete Rule, 16 C.F.R. § 910.1–.6, is hereby SET ASIDE and shall not be enforced or otherwise take effect on September 4, 2024, or thereafter."[^ryan-ftc-set-aside]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Indiana. This article synthesizes Indiana primary law and is not legal advice from a Indiana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Indiana. This article synthesizes Indiana primary law and is not legal advice from a Indiana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Indiana*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/indiana.
 
 [^krueger-strict-construction]: **Central Indiana Podiatry, P.C. v. Krueger** — "We construe these covenants strictly against the employer and will not enforce an unreasonable restriction." *Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008).* <https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=We%20construe%20these%20covenants%20strictly,not%20enforce%20an%20unreasonable%20restriction.>
 

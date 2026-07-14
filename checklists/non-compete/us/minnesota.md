@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Minnesota
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Minnesota
 description: >-
   A clause-by-clause reviewer checklist for Minnesota restrictive covenant
   agreements — date-screening against the Minn. Stat. § 181.988 non-compete ban,
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Minnesota[^about]
+# Non-Compete Agreement Reviewer Checklist — Minnesota[^about]
 
 A clause-by-clause reviewer checklist for Minnesota restrictive covenant agreements — date-screening against the Minn. Stat. § 181.988 non-compete ban, then checking the confidentiality, non-solicit, and non-disparagement covenants that remain lawful.
 
@@ -63,7 +63,9 @@ Review a Minnesota agreement in a different order than most states: date-screen 
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should run for as long as the information stays secret — that is how federal law frames the right, and a fixed expiry quietly forfeits it. In Minnesota the point is sharpened by the ban: with the non-compete gone, the trade-secret and confidentiality architecture is the employer's primary protection, and it should not be the clause carrying a self-imposed sunset. [^dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information stays secret — captures the full protection federal trade-secret law gives, because the law keys the right to continued secrecy. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of the protection that, with Minnesota's non-compete ban in place, carries most of the employer's weight — and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition] [#tie-trade-secret-duration-to-secrecy-status]
+
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
 
 - [ ] **Confidentiality end date** (Recommended) — Give non-trade-secret confidential information its own finite term. A perpetual lid on ordinary business information invites a court to read the clause as overreaching — and an overreaching confidentiality clause is the kind of provision that gets examined for whether it functions as a restraint on working rather than a protection of information. [#state-confidentiality-duration]
 
@@ -153,7 +155,7 @@ The seven items below exist only on this Minnesota page: the date screen that se
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Minnesota (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Minnesota (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Minnesota*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/minnesota.
 
 [^minn-ban-void-cover]: **Minn. Stat. § 181.988, subd. 2(a)** — "Any covenant not to compete contained in a contract or agreement is void and unenforceable." *Minn. Stat. § 181.988, subd. 2(a) (2025).* <https://www.revisor.mn.gov/statutes/cite/181.988>
 

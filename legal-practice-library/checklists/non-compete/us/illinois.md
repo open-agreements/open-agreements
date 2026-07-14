@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Illinois
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Illinois
 description: >-
   A clause-by-clause reviewer checklist for Illinois employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Illinois[^about]
+# Non-Compete Agreement Reviewer Checklist — Illinois[^about]
 
 A clause-by-clause reviewer checklist for Illinois employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Illinois Freedom to Work Act (820 ILCS 90), including the earnings thresholds, consideration rule, and 14-day notice gate.
 
@@ -63,9 +63,11 @@ Every item below reads the agreement the way an Illinois court would — through
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — The trade-secret obligation should last as long as secrecy does. Federal law defines the right that way, and Illinois statute says so expressly — a secrecy duty is not void for lacking durational or geographic limits — so a fixed end date on trade-secret protection surrenders statutory coverage the drafter already had. [^dtsa-trade-secret-definition][^il-itsa-no-duration-limit] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection the law gives, because federal law keys the right to continued secrecy and Illinois statute expressly blesses the form: a secrecy duty is not void for lacking durational or geographic limits. That status-bounded form is the ceiling the law will back, not a required one — a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition][^il-itsa-no-duration-limit] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term, separate from the perpetual trade-secret duty. A perpetual restraint over non-secret material reads as a working restriction wearing a confidentiality label — the kind of breadth that pulls a clause from the Act's confidentiality exclusion back into its covenant gates. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term, separate from the status-bounded trade-secret duty. A perpetual restraint over non-secret material reads as a working restriction wearing a confidentiality label — the kind of breadth that pulls a clause from the Act's confidentiality exclusion back into its covenant gates. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -157,7 +159,7 @@ The six items below exist only on this Illinois page: they implement the Freedom
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Illinois (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Illinois (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Illinois*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/illinois.
 
 [^il-construction-carveout]: **820 ILCS 90/10(e)** — "A covenant not to compete or a covenant not to solicit is void and illegal with respect to individuals employed in construction, regardless of whether an individual is covered by a collective bargaining agreement. This subsection (e) does not apply to construction employees who primarily perform management, engineering or architectural, design, or sales functions for the employer or who are shareholders, partners, or owners in any capacity of the employer." *820 ILCS 90/10(e).* <https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K10.htm>
 

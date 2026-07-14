@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/2454655/bendinger-v-marshalltown-trowell-co/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/arkansas'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/arkansas'
@@ -26,13 +26,22 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
+### bendinger-v-marshalltown-trowel-co-covenants-not-to-compete-in-employment-fbe6ed61 {#bendinger-v-marshalltown-trowel-co-covenants-not-to-compete-in-employment-fbe6ed61}
+
+> covenants not to compete in employment contracts are subject to stricter scrutiny than those connected with a sale of a business.
+
+- supports: `sale-of-business`
+- source_cards: `bendinger-sale-distinction`
+- cited_by: [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
+- link_to_source: <https://www.courtlistener.com/opinion/2454655/bendinger-v-marshalltown-trowell-co/#:~:text=covenants%20not%20to%20compete%20in,a%20sale%20of%20a%20business.>
+
 ### bendinger-v-marshalltown-trowel-co-the-court-has-held-that-the-f0566c07 {#bendinger-v-marshalltown-trowel-co-the-court-has-held-that-the-f0566c07}
 
 > The court has held that the contract must be valid as written, and the court will not apportion or enforce a contract to the extent that it might be considered reasonable.
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `bendinger-valid-as-written`, `q5-bendinger-no-rewrite`
-- cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../checklists/non-compete/us/arkansas.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Arkansas](../checklists/non-compete/us/arkansas.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2454655/bendinger-v-marshalltown-trowell-co/#:~:text=The%20court%20has%20held%20that,it%20might%20be%20considered%20reasonable.>
 
 ### bendinger-v-marshalltown-trowel-co-we-hold-that-the-failure-of-eb69a922 {#bendinger-v-marshalltown-trowel-co-we-hold-that-the-failure-of-eb69a922}

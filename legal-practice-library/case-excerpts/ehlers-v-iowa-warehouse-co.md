@@ -8,7 +8,7 @@ citation: 'Ehlers v. Iowa Warehouse Co., 188 N.W.2d 368 (Iowa 1971).'
 resource: 'https://www.courtlistener.com/opinion/2117830/ehlers-v-iowa-warehouse-company/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/iowa'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/iowa'
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `extended-for-breach`, `severability-and-reformation`, `tolling-during-breach`
 - source_cards: `ia-ehlers-not-tolling`, `ia-ehlers-partial`, `q5-ehlers-reform`, `q6-ehlers-reform`
-- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2117830/ehlers-v-iowa-warehouse-company/#:~:text=I.%20In%20view%20of%20the,interest%20is%20not%20adversely%20affected.>
 
 ### ehlers-v-iowa-warehouse-co-no-covenant-placed-in-the-contract-635df44f {#ehlers-v-iowa-warehouse-co-no-covenant-placed-in-the-contract-635df44f}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `ia-ehlers-bad-faith`, `q5-ehlers-bad-faith`
-- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2117830/ehlers-v-iowa-warehouse-company/#:~:text=No%20covenant%20placed%20in%20the,should%20be%20enforced%20in%20equity.>

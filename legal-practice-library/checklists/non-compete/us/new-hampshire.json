@@ -26,13 +26,19 @@
       "rel": "agent-skill",
       "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
       "type": "text/markdown"
+    },
+    {
+      "rel": "related-form",
+      "href": "https://openagreements.org/templates/openagreements-restrictive-covenant-new-hampshire",
+      "type": "text/html",
+      "title": "Employee Restrictive Covenant (New Hampshire)"
     }
   ],
   "data": {
     "topic": "non-compete",
     "slug": "new-hampshire",
     "frontmatter": {
-      "title": "Non-Compete Agreement Review Checklist — New Hampshire",
+      "title": "Non-Compete Agreement Reviewer Checklist — New Hampshire",
       "description": "A clause-by-clause reviewer checklist for New Hampshire employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under RSA 275:70's pre-acceptance notice rule, the RSA 275:70-a low-wage ban, and the three-part reasonableness test.",
       "eyebrow": "Reviewer Checklist",
       "jurisdiction": "New Hampshire",
@@ -43,7 +49,7 @@
         "steven-obiajulu"
       ]
     },
-    "requirementCount": 46,
+    "requirementCount": 47,
     "sections": [
       {
         "sectionId": "parties-and-cover-term-identification",
@@ -127,7 +133,6 @@
         "requirementId": "identify-parties",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Parties identified by name",
         "sectionId": "parties-and-cover-term-identification",
@@ -139,6 +144,7 @@
           {
             "sourceId": "nh-275-70-offer-timing",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RSA 275:70",
             "citation": "RSA 275:70.",
             "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70.htm",
@@ -152,7 +158,6 @@
         "requirementId": "identify-effective-date",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Effective date",
         "sectionId": "parties-and-cover-term-identification",
@@ -164,6 +169,7 @@
           {
             "sourceId": "nh-275-70-offer-timing",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RSA 275:70",
             "citation": "RSA 275:70.",
             "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70.htm",
@@ -177,7 +183,6 @@
         "requirementId": "identify-employee-title",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Employee title",
         "sectionId": "parties-and-cover-term-identification",
@@ -189,6 +194,7 @@
           {
             "sourceId": "nh-275-70-a-wage-test",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RSA 275:70-a",
             "citation": "RSA 275:70-a, I(b).",
             "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70-a.htm",
@@ -202,7 +208,6 @@
         "requirementId": "identify-governing-law",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Governing law state named",
         "sectionId": "parties-and-cover-term-identification",
@@ -216,7 +221,6 @@
         "requirementId": "define-confidential-information",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Confidential information",
         "sectionId": "definitions",
@@ -228,6 +232,7 @@
           {
             "sourceId": "nh-hobert-interest-list",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "ACAS Acquisitions (Precitech) Inc. v. Hobert",
             "citation": "ACAS Acquisitions (Precitech) Inc. v. Hobert, 155 N.H. 381 (2007).",
             "url": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/",
@@ -242,7 +247,6 @@
         "requirementId": "define-trade-secrets",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Trade secrets",
         "sectionId": "definitions",
@@ -254,6 +258,7 @@
           {
             "sourceId": "nh-350-b-trade-secret-definition",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RSA 350-B:1",
             "citation": "RSA 350-B:1.",
             "url": "https://gc.nh.gov/rsa/html/XXXI/350-B/350-B-1.htm",
@@ -264,6 +269,7 @@
           {
             "sourceId": "nh-hobert-interest-list",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "ACAS Acquisitions (Precitech) Inc. v. Hobert",
             "citation": "ACAS Acquisitions (Precitech) Inc. v. Hobert, 155 N.H. 381 (2007).",
             "url": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/",
@@ -278,7 +284,6 @@
         "requirementId": "define-restricted-period",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Restricted period",
         "sectionId": "definitions",
@@ -290,6 +295,7 @@
           {
             "sourceId": "nh-forbes-narrow-tailoring",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Concord Orthopaedics Professional Ass'n v. Forbes",
             "citation": "Concord Orthopaedics Professional Ass'n v. Forbes, 142 N.H. 440 (1997).",
             "url": "https://www.courtlistener.com/opinion/8091834/concord-orthopaedics-professional-assn-v-forbes/",
@@ -304,7 +310,6 @@
         "requirementId": "define-restricted-territory",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Restricted territory",
         "sectionId": "definitions",
@@ -316,6 +321,7 @@
           {
             "sourceId": "nh-forbes-narrow-tailoring",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Concord Orthopaedics Professional Ass'n v. Forbes",
             "citation": "Concord Orthopaedics Professional Ass'n v. Forbes, 142 N.H. 440 (1997).",
             "url": "https://www.courtlistener.com/opinion/8091834/concord-orthopaedics-professional-assn-v-forbes/",
@@ -330,7 +336,6 @@
         "requirementId": "define-covered-customers",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Covered customers",
         "sectionId": "definitions",
@@ -342,6 +347,7 @@
           {
             "sourceId": "nh-near-customer-sphere",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Merrimack Valley Wood Products, Inc. v. Near",
             "citation": "Merrimack Valley Wood Products, Inc. v. Near, 152 N.H. 192 (2005).",
             "url": "https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/",
@@ -356,7 +362,6 @@
         "requirementId": "define-covered-employees",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Covered employees",
         "sectionId": "definitions",
@@ -368,6 +373,7 @@
           {
             "sourceId": "nh-olsten-recruiting-costs",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "National Employment Service Corp. v. Olsten Staffing Service, Inc.",
             "citation": "National Employment Service Corp. v. Olsten Staffing Service, Inc., 145 N.H. 158 (2000).",
             "url": "https://www.courtlistener.com/opinion/8092147/national-employment-service-corp-v-olsten-staffing-service-inc/",
@@ -382,7 +388,6 @@
         "requirementId": "define-protected-interests",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Protected business interests",
         "sectionId": "definitions",
@@ -394,6 +399,7 @@
           {
             "sourceId": "nh-hobert-interest-list",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "ACAS Acquisitions (Precitech) Inc. v. Hobert",
             "citation": "ACAS Acquisitions (Precitech) Inc. v. Hobert, 155 N.H. 381 (2007).",
             "url": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/",
@@ -408,7 +414,6 @@
         "requirementId": "define-competitive-business",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Competitive business",
         "sectionId": "definitions",
@@ -420,6 +425,7 @@
           {
             "sourceId": "nh-foster-three-part",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Smith, Batchelder & Rugg v. Foster",
             "citation": "Smith, Batchelder & Rugg v. Foster, 119 N.H. 679 (1979).",
             "url": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/",
@@ -434,7 +440,6 @@
         "requirementId": "permit-de-minimis-passive-public-investment-carveout",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Small public-stock carve-out",
         "sectionId": "definitions",
@@ -446,6 +451,7 @@
           {
             "sourceId": "nh-foster-three-part",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Smith, Batchelder & Rugg v. Foster",
             "citation": "Smith, Batchelder & Rugg v. Foster, 119 N.H. 679 (1979).",
             "url": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/",
@@ -460,7 +466,6 @@
         "requirementId": "define-passive-public-holdings",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
         "requirementLevel": "MAY",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Passive public holdings",
         "sectionId": "definitions",
@@ -474,7 +479,6 @@
         "requirementId": "define-solicit",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "What counts as soliciting",
         "sectionId": "definitions",
@@ -486,6 +490,7 @@
           {
             "sourceId": "nh-hobert-interest-list",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "ACAS Acquisitions (Precitech) Inc. v. Hobert",
             "citation": "ACAS Acquisitions (Precitech) Inc. v. Hobert, 155 N.H. 381 (2007).",
             "url": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/",
@@ -500,7 +505,6 @@
         "requirementId": "define-termination-of-employment",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Termination of employment",
         "sectionId": "definitions",
@@ -514,7 +518,6 @@
         "requirementId": "record-timing-and-continued-employment-consideration",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-hampshire.record-timing-and-continued-employment-consideration",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "When it was delivered, signed, and what supported it",
         "sectionId": "timing-and-execution-acknowledgements",
@@ -526,6 +529,7 @@
           {
             "sourceId": "nh-foster-continued-employment",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Smith, Batchelder & Rugg v. Foster",
             "citation": "Smith, Batchelder & Rugg v. Foster, 119 N.H. 679 (1979).",
             "url": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/",
@@ -537,6 +541,7 @@
           {
             "sourceId": "nh-275-70-disclosure-consequence",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RSA 275:70",
             "citation": "RSA 275:70.",
             "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70.htm",
@@ -547,6 +552,7 @@
           {
             "sourceId": "nh-near-good-faith",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Merrimack Valley Wood Products, Inc. v. Near",
             "citation": "Merrimack Valley Wood Products, Inc. v. Near, 152 N.H. 192 (2005).",
             "url": "https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/",
@@ -561,7 +567,6 @@
         "requirementId": "acknowledge-opportunity-to-consult-counsel",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Chance to consult a lawyer",
         "sectionId": "timing-and-execution-acknowledgements",
@@ -573,6 +578,7 @@
           {
             "sourceId": "nh-syncom-bad-faith",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Syncom Industries, Inc. v. Wood",
             "citation": "Syncom Industries, Inc. v. Wood, 155 N.H. 73 (2007).",
             "url": "https://www.courtlistener.com/opinion/1896769/syncom-industries-inc-v-wood/",
@@ -584,21 +590,21 @@
         ]
       },
       {
-        "requirementId": "treat-trade-secret-protection-as-perpetual",
-        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
-        "requirementLevel": "MUST",
-        "scrutiny": "substantive",
+        "requirementId": "tie-trade-secret-duration-to-secrecy-status",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.tie-trade-secret-duration-to-secrecy-status",
+        "requirementLevel": "SHOULD",
         "sourceFootnotes": [],
-        "requirementLabel": "Trade-secret protection without an end date",
+        "requirementLabel": "Trade-secret duration tied to secrecy status",
         "sectionId": "confidentiality-and-trade-secret-treatment",
         "itemNumber": "4.1",
-        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#treat-trade-secret-protection-as-perpetual",
-        "requirementGuidance": "Trade-secret obligations should last as long as secrecy does — both federal law and New Hampshire's chapter 350-B key trade-secret status to continued secrecy and continued secrecy efforts. The state stakes are concrete: when a noncompete fails one of the statutory gates, trade-secret protection is the remedy that keeps working, and a fixed expiry undercuts it.",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#tie-trade-secret-duration-to-secrecy-status",
+        "requirementGuidance": "Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection available, because both federal law and New Hampshire's chapter 350-B key trade-secret status to continued secrecy and continued secrecy efforts. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of the remedy that keeps working when a noncompete fails one of the statutory gates, while a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it.",
         "variants": [],
         "sources": [
           {
             "sourceId": "nh-dtsa-definition",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
             "citation": "18 U.S.C. § 1839(3)(B) (2018).",
             "url": "https://www.law.cornell.edu/uscode/text/18/1839",
@@ -610,6 +616,7 @@
           {
             "sourceId": "nh-350-b-definition-duration",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RSA 350-B:1",
             "citation": "RSA 350-B:1.",
             "url": "https://gc.nh.gov/rsa/html/XXXI/350-B/350-B-1.htm",
@@ -620,21 +627,34 @@
         ]
       },
       {
+        "requirementId": "avoid-untethered-indefinite-confidentiality",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.avoid-untethered-indefinite-confidentiality",
+        "requirementLevel": "MUST NOT",
+        "sourceFootnotes": [],
+        "requirementLabel": "No unbounded confidentiality obligation",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#avoid-untethered-indefinite-confidentiality",
+        "requirementGuidance": "Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form.",
+        "variants": [],
+        "sources": []
+      },
+      {
         "requirementId": "state-confidentiality-duration",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Confidentiality end date",
         "sectionId": "confidentiality-and-trade-secret-treatment",
-        "itemNumber": "4.2",
+        "itemNumber": "4.3",
         "anchor": "https://openagreements.org/checklists/non-compete/us/new-hampshire#state-confidentiality-duration",
-        "requirementGuidance": "Give ordinary confidential information its own finite term. New Hampshire recognizes confidential information short of trade-secret status as protectable, but a perpetual lid on everything strains reasonableness; the two-track structure keeps perpetual treatment where secrecy actually supports it.",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. New Hampshire recognizes confidential information short of trade-secret status as protectable, but a perpetual lid on everything strains reasonableness; the two-track structure keeps status-bounded treatment where secrecy actually supports it.",
         "variants": [],
         "sources": [
           {
             "sourceId": "nh-hobert-confidential-info",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "ACAS Acquisitions (Precitech) Inc. v. Hobert",
             "citation": "ACAS Acquisitions (Precitech) Inc. v. Hobert, 155 N.H. 381 (2007).",
             "url": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/",
@@ -649,7 +669,6 @@
         "requirementId": "disclose-dtsa-notice",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "DTSA whistleblower notice",
         "sectionId": "permitted-disclosures-and-protected-conduct",
@@ -661,6 +680,7 @@
           {
             "sourceId": "nh-dtsa-immunity-notice",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
             "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
             "url": "https://www.law.cornell.edu/uscode/text/18/1833",
@@ -675,7 +695,6 @@
         "requirementId": "carve-out-nlra-protected-discussion",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
         "requirementLevel": "MUST",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Wage-discussion carve-out",
         "sectionId": "permitted-disclosures-and-protected-conduct",
@@ -687,6 +706,7 @@
           {
             "sourceId": "nh-nlra-section-7",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
             "citation": "29 U.S.C. § 157 (NLRA § 7).",
             "url": "https://www.law.cornell.edu/uscode/text/29/157",
@@ -698,6 +718,7 @@
           {
             "sourceId": "nh-mclaren-macomb",
             "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
             "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
             "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
             "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
@@ -712,7 +733,6 @@
         "requirementId": "permit-compelled-disclosure",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Court-ordered disclosure allowed",
         "sectionId": "permitted-disclosures-and-protected-conduct",
@@ -726,7 +746,6 @@
         "requirementId": "require-property-return-and-certification",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Property return and sign-off",
         "sectionId": "property-return-and-certification",
@@ -740,7 +759,6 @@
         "requirementId": "permit-employee-nonsolicit",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Employee non-solicit",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -752,6 +770,7 @@
           {
             "sourceId": "nh-olsten-no-poach-interest",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "National Employment Service Corp. v. Olsten Staffing Service, Inc.",
             "citation": "National Employment Service Corp. v. Olsten Staffing Service, Inc., 145 N.H. 158 (2000).",
             "url": "https://www.courtlistener.com/opinion/8092147/national-employment-service-corp-v-olsten-staffing-service-inc/",
@@ -766,7 +785,6 @@
         "requirementId": "permit-customer-nonsolicit",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Customer non-solicit",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -778,6 +796,7 @@
           {
             "sourceId": "nh-near-sphere-covenant",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Merrimack Valley Wood Products, Inc. v. Near",
             "citation": "Merrimack Valley Wood Products, Inc. v. Near, 152 N.H. 192 (2005).",
             "url": "https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/",
@@ -792,7 +811,6 @@
         "requirementId": "permit-non-dealing",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Non-dealing covenant",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -804,6 +822,7 @@
           {
             "sourceId": "nh-foster-restraint-test",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Smith, Batchelder & Rugg v. Foster",
             "citation": "Smith, Batchelder & Rugg v. Foster, 119 N.H. 679 (1979).",
             "url": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/",
@@ -818,7 +837,6 @@
         "requirementId": "permit-non-compete",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Non-compete covenant",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -830,6 +848,7 @@
           {
             "sourceId": "nh-275-70-gate-cover",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RSA 275:70",
             "citation": "RSA 275:70.",
             "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70.htm",
@@ -840,6 +859,7 @@
           {
             "sourceId": "nh-275-70-a-void-cover",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RSA 275:70-a",
             "citation": "RSA 275:70-a, II(b).",
             "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70-a.htm",
@@ -853,7 +873,6 @@
         "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Named-competitor narrowing",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -865,6 +884,7 @@
           {
             "sourceId": "nh-hobert-enforced-tailored",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "ACAS Acquisitions (Precitech) Inc. v. Hobert",
             "citation": "ACAS Acquisitions (Precitech) Inc. v. Hobert, 155 N.H. 381 (2007).",
             "url": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/",
@@ -880,7 +900,6 @@
         "requirementId": "permit-non-investment",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Non-investment covenant",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -894,7 +913,6 @@
         "requirementId": "require-non-disparagement",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Non-disparagement",
         "sectionId": "non-disparagement",
@@ -906,6 +924,7 @@
           {
             "sourceId": "nh-mclaren-nondisparagement",
             "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
             "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
             "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
             "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
@@ -920,7 +939,6 @@
         "requirementId": "exclude-geographic-practice-restrictions-for-covered-clinicians",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-hampshire.exclude-geographic-practice-restrictions-for-covered-clinicians",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "No geographic practice bans for covered clinicians",
         "sectionId": "clinician-specific-notices-and-carve-outs",
@@ -932,6 +950,7 @@
           {
             "sourceId": "nh-329-31-a-physicians",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RSA 329:31-a",
             "citation": "RSA 329:31-a.",
             "url": "https://gc.nh.gov/rsa/html/XXX/329/329-31-a.htm",
@@ -942,6 +961,7 @@
           {
             "sourceId": "nh-326-b-45-a-nurses",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RSA 326-B:45-a",
             "citation": "RSA 326-B:45-a.",
             "url": "https://gc.nh.gov/rsa/html/XXX/326-B/326-B-45-a.htm",
@@ -952,6 +972,7 @@
           {
             "sourceId": "nh-326-b-45-b-aprns",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RSA 326-B:45-b",
             "citation": "RSA 326-B:45-b.",
             "url": "https://gc.nh.gov/rsa/html/XXX/326-B/326-B-45-b.htm",
@@ -962,6 +983,7 @@
           {
             "sourceId": "nh-315-18-podiatrists",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RSA 315:18",
             "citation": "RSA 315:18.",
             "url": "https://gc.nh.gov/rsa/html/XXX/315/315-18.htm",
@@ -975,7 +997,6 @@
         "requirementId": "require-no-conflicting-obligations-representation",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "No conflicting obligations",
         "sectionId": "no-conflicting-obligations",
@@ -989,7 +1010,6 @@
         "requirementId": "address-notice-to-future-employers",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
         "requirementLevel": "MAY",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Notice to future employers",
         "sectionId": "notice-to-future-employers-and-other-third-parties",
@@ -1001,6 +1021,7 @@
           {
             "sourceId": "nh-275-70-survival",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RSA 275:70",
             "citation": "RSA 275:70.",
             "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70.htm",
@@ -1011,6 +1032,7 @@
           {
             "sourceId": "nh-275-70-a-void-notice",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RSA 275:70-a",
             "citation": "RSA 275:70-a, II(b).",
             "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70-a.htm",
@@ -1024,7 +1046,6 @@
         "requirementId": "address-tolling-as-an-unsettled-extension-question",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-hampshire.address-tolling-as-an-unsettled-extension-question",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Restriction extended during a breach",
         "sectionId": "tolling-during-breach",
@@ -1036,6 +1057,7 @@
           {
             "sourceId": "nh-gosselin-no-extension",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Gosselin v. Archibald",
             "citation": "Gosselin v. Archibald, 121 N.H. 1016 (1981).",
             "url": "https://www.courtlistener.com/opinion/2059042/gosselin-v-archibald/",
@@ -1048,6 +1070,7 @@
           {
             "sourceId": "nh-near-narrowing-remedy",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Merrimack Valley Wood Products, Inc. v. Near",
             "citation": "Merrimack Valley Wood Products, Inc. v. Near, 152 N.H. 192 (2005).",
             "url": "https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/",
@@ -1062,7 +1085,6 @@
         "requirementId": "require-injunctive-relief-availability",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Injunction availability",
         "sectionId": "remedies",
@@ -1074,6 +1096,7 @@
           {
             "sourceId": "nh-hcc-irreparable-injury",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "HCC Specialty Underwriters, Inc. v. Woodbury",
             "citation": "HCC Specialty Underwriters, Inc. v. Woodbury, 289 F. Supp. 3d 303 (D.N.H. 2018).",
             "url": "https://www.courtlistener.com/opinion/7328330/hcc-specialty-underwriters-inc-v-woodbury/",
@@ -1085,6 +1108,7 @@
           {
             "sourceId": "nh-hcc-nondisclosure",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "HCC Specialty Underwriters, Inc. v. Woodbury",
             "citation": "HCC Specialty Underwriters, Inc. v. Woodbury, 289 F. Supp. 3d 303 (D.N.H. 2018).",
             "url": "https://www.courtlistener.com/opinion/7328330/hcc-specialty-underwriters-inc-v-woodbury/",
@@ -1099,7 +1123,6 @@
         "requirementId": "address-attorneys-fees-and-costs",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
         "requirementLevel": "MAY",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Attorney fees and costs",
         "sectionId": "remedies",
@@ -1113,7 +1136,6 @@
         "requirementId": "draft-in-good-faith-rather-than-rely-on-reformation",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-hampshire.draft-in-good-faith-rather-than-rely-on-reformation",
         "requirementLevel": "SHOULD NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Drafted narrow instead of leaning on court repair",
         "sectionId": "severability-and-reformation",
@@ -1125,6 +1147,7 @@
           {
             "sourceId": "nh-near-good-faith-reformation",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Merrimack Valley Wood Products, Inc. v. Near",
             "citation": "Merrimack Valley Wood Products, Inc. v. Near, 152 N.H. 192 (2005).",
             "url": "https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/",
@@ -1136,6 +1159,7 @@
           {
             "sourceId": "nh-syncom-reformation-bad-faith",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Syncom Industries, Inc. v. Wood",
             "citation": "Syncom Industries, Inc. v. Wood, 155 N.H. 73 (2007).",
             "url": "https://www.courtlistener.com/opinion/1896769/syncom-industries-inc-v-wood/",
@@ -1150,7 +1174,6 @@
         "requirementId": "address-survival-per-covenant",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Survival after the agreement ends",
         "sectionId": "survival",
@@ -1164,7 +1187,6 @@
         "requirementId": "address-assignment-and-successors",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Assignment and successors",
         "sectionId": "assignment-and-successors",
@@ -1176,6 +1198,7 @@
           {
             "sourceId": "nh-atronix-conveyance",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Atronix, Inc. v. Morris",
             "citation": "Atronix, Inc. v. Morris, 197 A.3d 79 (N.H. 2018).",
             "url": "https://www.courtlistener.com/opinion/4546183/atronix-inc-v-kenneth-morris-a/",
@@ -1190,7 +1213,6 @@
         "requirementId": "specify-governing-law-and-venue",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Governing law and venue",
         "sectionId": "governing-law-venue-dispute-process",
@@ -1204,7 +1226,6 @@
         "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Entire agreement, amendments, e-signatures",
         "sectionId": "entire-agreement-amendment-waiver-e-signatures",
@@ -1216,6 +1237,7 @@
           {
             "sourceId": "nh-foster-midstream-consideration",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Smith, Batchelder & Rugg v. Foster",
             "citation": "Smith, Batchelder & Rugg v. Foster, 119 N.H. 679 (1979).",
             "url": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/",
@@ -1227,6 +1249,7 @@
           {
             "sourceId": "nh-275-70-condition-of-employment",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RSA 275:70",
             "citation": "RSA 275:70.",
             "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70.htm",
@@ -1240,7 +1263,6 @@
         "requirementId": "provide-noncompete-before-offer-acceptance",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-hampshire.provide-noncompete-before-offer-acceptance",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Copy delivered before the offer was accepted",
         "sectionId": "new-hampshire-statutory-gates",
@@ -1252,6 +1274,7 @@
           {
             "sourceId": "nh-275-70-preacceptance-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RSA 275:70",
             "citation": "RSA 275:70.",
             "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70.htm",
@@ -1262,6 +1285,7 @@
           {
             "sourceId": "nh-foster-consideration-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Smith, Batchelder & Rugg v. Foster",
             "citation": "Smith, Batchelder & Rugg v. Foster, 119 N.H. 679 (1979).",
             "url": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/",
@@ -1276,7 +1300,6 @@
         "requirementId": "exclude-noncompetes-for-low-wage-employees",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-hampshire.exclude-noncompetes-for-low-wage-employees",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "No non-compete for a low-wage employee",
         "sectionId": "new-hampshire-statutory-gates",
@@ -1288,6 +1311,7 @@
           {
             "sourceId": "nh-275-70-a-prohibition",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RSA 275:70-a",
             "citation": "RSA 275:70-a, II(a).",
             "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70-a.htm",
@@ -1298,6 +1322,7 @@
           {
             "sourceId": "nh-275-70-a-void-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RSA 275:70-a",
             "citation": "RSA 275:70-a, II(b).",
             "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70-a.htm",
@@ -1308,6 +1333,7 @@
           {
             "sourceId": "nh-275-70-a-threshold-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RSA 275:70-a",
             "citation": "RSA 275:70-a, I(b).",
             "url": "https://gc.nh.gov/rsa/html/XXIII/275/275-70-a.htm",
@@ -1321,7 +1347,6 @@
         "requirementId": "limit-covenants-to-recognized-protectable-interests",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-hampshire.limit-covenants-to-recognized-protectable-interests",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "A recognized interest behind every restraint",
         "sectionId": "new-hampshire-statutory-gates",
@@ -1333,6 +1358,7 @@
           {
             "sourceId": "nh-foster-three-prong-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Smith, Batchelder & Rugg v. Foster",
             "citation": "Smith, Batchelder & Rugg v. Foster, 119 N.H. 679 (1979).",
             "url": "https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/",
@@ -1344,6 +1370,7 @@
           {
             "sourceId": "nh-hobert-interest-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "ACAS Acquisitions (Precitech) Inc. v. Hobert",
             "citation": "ACAS Acquisitions (Precitech) Inc. v. Hobert, 155 N.H. 381 (2007).",
             "url": "https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/",
@@ -1355,6 +1382,7 @@
           {
             "sourceId": "nh-olsten-cost-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "National Employment Service Corp. v. Olsten Staffing Service, Inc.",
             "citation": "National Employment Service Corp. v. Olsten Staffing Service, Inc., 145 N.H. 158 (2000).",
             "url": "https://www.courtlistener.com/opinion/8092147/national-employment-service-corp-v-olsten-staffing-service-inc/",
@@ -1369,7 +1397,6 @@
         "requirementId": "keep-restrictions-within-the-sphere-of-customer-goodwill",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.new-hampshire.keep-restrictions-within-the-sphere-of-customer-goodwill",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Scope kept to the employee's own customer goodwill",
         "sectionId": "new-hampshire-statutory-gates",
@@ -1381,6 +1408,7 @@
           {
             "sourceId": "nh-near-goodwill-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Merrimack Valley Wood Products, Inc. v. Near",
             "citation": "Merrimack Valley Wood Products, Inc. v. Near, 152 N.H. 192 (2005).",
             "url": "https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/",
@@ -1392,6 +1420,7 @@
           {
             "sourceId": "nh-forbes-tailoring-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Concord Orthopaedics Professional Ass'n v. Forbes",
             "citation": "Concord Orthopaedics Professional Ass'n v. Forbes, 142 N.H. 440 (1997).",
             "url": "https://www.courtlistener.com/opinion/8091834/concord-orthopaedics-professional-assn-v-forbes/",

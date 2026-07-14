@@ -3,18 +3,21 @@ type: Case Excerpt
 title: '7''s Enterprises, Inc. v. Del Rosario'
 description: >-
   7's Enterprises, Inc. v. Del Rosario, 111 Haw. 484, 143 P.3d 23 (2006). —
-  quoted in 2 document(s).
+  quoted in 3 document(s).
 citation: '7''s Enterprises, Inc. v. Del Rosario, 111 Haw. 484, 143 P.3d 23 (2006).'
 resource: >-
   https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/
-timestamp: '2026-06-12'
+timestamp: '2026-07-03'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/hawaii'
+  - type: State Law Practice Guide
+    resource: 'https://openagreements.org/practice-guides/invention-assignment/us/hawaii'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/hawaii'
 tags:
   - case-law
+  - invention-assignment
   - non-compete
 ---
 
@@ -22,7 +25,7 @@ tags:
 
 *7's Enterprises, Inc. v. Del Rosario, 111 Haw. 484, 143 P.3d 23 (2006).*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -32,7 +35,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `extended-for-breach`, `sale-of-business`, `tolling-during-breach`
 - source_cards: `hi-tolling-scope`, `hi-traeger-scope-factors`, `sale-traeger-scope-factors`, `tolling-traeger-scope-factors`
-- cited_by: [Non-Compete Agreement Review Checklist — Hawaii](../checklists/non-compete/us/hawaii.md), [Non-Competes in Hawaii](../non-compete/us/hawaii.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Hawaii](../checklists/non-compete/us/hawaii.md), [Non-Competes in Hawaii](../non-compete/us/hawaii.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=A%20court%20%E2%80%9Cmust%20examine%20such,placed%20on%20a%20given%20activity.%E2%80%9D>
 
 ### 7-s-enterprises-inc-v-del-rosario-as-observed-in-traeger-courts-will-79ffe199 {#7-s-enterprises-inc-v-del-rosario-as-observed-in-traeger-courts-will-79ffe199}
@@ -41,16 +44,16 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-non-compete-enforceability`, `extended-for-breach`, `hawaii-statutory-gates`, `sale-of-business`
 - source_cards: `employee-traeger-reasonableness-factors`, `hi-gate-reasonableness`, `hi-traeger-reasonableness`, `sale-traeger-reasonableness-factors`, `tolling-traeger-reasonableness-factors`
-- cited_by: [Non-Compete Agreement Review Checklist — Hawaii](../checklists/non-compete/us/hawaii.md), [Non-Competes in Hawaii](../non-compete/us/hawaii.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Hawaii](../checklists/non-compete/us/hawaii.md), [Non-Competes in Hawaii](../non-compete/us/hawaii.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=As%20observed%20in%20Traeger%2C%20courts,injury%20to%20the%20public.%E2%80%99%20%E2%80%9D>
 
 ### 7-s-enterprises-inc-v-del-rosario-hence-as-a-matter-of-law-bf02eef6 {#7-s-enterprises-inc-v-del-rosario-hence-as-a-matter-of-law-bf02eef6}
 
 > Hence, as a matter of law, we hold that training that provides skills beyond those of a general nature is a legitimate interest which may be considered in weighing the reasonableness of a non-competition covenant, when combined with other factors weighing in favor of a protectable business interest such as trade secrets, confidential information, or special customer relationships.
 
-- supports: `definitions`, `employee-non-compete-enforceability`, `protectable-interests`
-- source_cards: `employee-del-rosario-special-training`, `hi-del-rosario-protectable`, `interests-del-rosario-special-training`
-- cited_by: [Non-Compete Agreement Review Checklist — Hawaii](../checklists/non-compete/us/hawaii.md), [Non-Competes in Hawaii](../non-compete/us/hawaii.md)
+- supports: `definitions`, `employee-non-compete-enforceability`, `holdover-clause-limit`, `protectable-interests`
+- source_cards: `employee-del-rosario-special-training`, `hi-del-rosario-protectable`, `interests-del-rosario-special-training`, `sevens-enterprises-legitimate-interests`
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Hawaii](../checklists/non-compete/us/hawaii.md), [Employee Invention Assignment in Hawaii](../invention-assignment/us/hawaii.md), [Non-Competes in Hawaii](../non-compete/us/hawaii.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=Hence%2C%20as%20a%20matter%20of,information%2C%20or%20special%20customer%20relationships.>
 
 ### 7-s-enterprises-inc-v-del-rosario-the-case-is-remanded-to-the-0f0045fe {#7-s-enterprises-inc-v-del-rosario-the-case-is-remanded-to-the-0f0045fe}
@@ -59,5 +62,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `definitions`, `severability-and-reformation`
 - source_cards: `hi-del-rosario-honolulu`, `hi-narrowing-honolulu`, `narrowing-del-rosario-honolulu-limit`
-- cited_by: [Non-Compete Agreement Review Checklist — Hawaii](../checklists/non-compete/us/hawaii.md), [Non-Competes in Hawaii](../non-compete/us/hawaii.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Hawaii](../checklists/non-compete/us/hawaii.md), [Non-Competes in Hawaii](../non-compete/us/hawaii.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=The%20case%20is%20remanded%20to,to%20the%20County%20of%20Honolulu.>

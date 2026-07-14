@@ -3,17 +3,21 @@ type: Case Excerpt
 title: 'American Samoa Gov''t v. Samoa Aviation, Inc.'
 description: >-
   American Samoa Gov't v. Samoa Aviation, Inc., 13 A.S.R.2d 65 (Trial Div. 1989)
-  (on motions for new trial and modification). — quoted in 1 document(s).
+  (on motions for new trial and modification). — quoted in 2 document(s).
 citation: >-
   American Samoa Gov't v. Samoa Aviation, Inc., 13 A.S.R.2d 65 (Trial Div. 1989)
   (on motions for new trial and modification).
 resource: 'https://asbar.org/case-law/american-samoa-govt-v-samoa-aviation-inc-d96/'
-timestamp: '2026-06-03'
+timestamp: '2026-07-03'
 document_references:
+  - type: State Law Practice Guide
+    resource: >-
+      https://openagreements.org/practice-guides/invention-assignment/us/american-samoa
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/american-samoa'
 tags:
   - case-law
+  - invention-assignment
   - non-compete
 ---
 
@@ -21,7 +25,7 @@ tags:
 
 *American Samoa Gov't v. Samoa Aviation, Inc., 13 A.S.R.2d 65 (Trial Div. 1989) (on motions for new trial and modification).*
 
-Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -29,7 +33,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > Finally, it is well settled that a court can excise the illegal portions of a contract and enforce the remainder, with or without other compensating adjustments in the contractual obligations of the parties; or may modify an illegal term to make it conform to the law.
 
-- supports: `court-narrowing`
-- source_cards: `samoa-aviation-excise`
-- cited_by: [Non-Competes in American Samoa](../non-compete/us/american-samoa.md)
+- supports: `court-narrowing`, `holdover-clause-limit`
+- source_cards: `samoa-aviation-excise`, `samoa-aviation-excise-holdover`
+- cited_by: [Employee Invention Assignment in American Samoa](../invention-assignment/us/american-samoa.md), [Non-Competes in American Samoa](../non-compete/us/american-samoa.md)
 - link_to_source: <https://asbar.org/case-law/american-samoa-govt-v-samoa-aviation-inc-d96/>

@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Montana
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Montana
 description: >-
   A clause-by-clause reviewer checklist for Montana employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Montana[^about]
+# Non-Compete Agreement Reviewer Checklist — Montana[^about]
 
 A clause-by-clause reviewer checklist for Montana employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under Mont. Code Ann. § 28-2-703, where absolute restraints are void and only reasonable partial restraints survive.
 
@@ -63,9 +63,11 @@ Review every item below the way a Montana court would: the restraint-of-trade st
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret protection should run as long as secrecy does — both the federal definition and Montana's own trade-secret act key the right to continued secrecy, not to a contract term. In a state that pushes employers away from broad covenants and toward trade-secret protection, a fixed expiry on this clause gives away the most durable remedy the employer has. [^mt-dtsa-definition][^mt-mutsa-duration] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection available, because both the federal definition and Montana's own trade-secret act key the right to continued secrecy, not to a contract term. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection — a real trade-off in a state that pushes employers away from broad covenants and toward trade-secret protection — while a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^mt-dtsa-definition][^mt-mutsa-duration] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Montana's framework rewards narrow confidentiality covenants; a perpetual lid on non-secret information stretches the clause toward operating as a restraint on the trade itself, and the two-track structure keeps the perpetual obligation where the trade-secret statutes actually support it. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Montana's framework rewards narrow confidentiality covenants; a perpetual lid on non-secret information stretches the clause toward operating as a restraint on the trade itself, and the two-track structure keeps the status-bounded obligation where the trade-secret statutes actually support it. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -155,7 +157,7 @@ The five items below exist only on this Montana page: they implement the restrai
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Montana (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Montana (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Montana*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/montana.
 
 [^mt-hb620-cover]: **House Bill 620 (Ch. 698, L. 2025)** — "Applicability. [This act] applies to contracts made or renewed on or after January 1, 2026." *2025 Mont. Laws ch. 698 (HB 620), §§ 2-3.* <https://archive.legmt.gov/content/Sessions/69th/Contractor_index/CH0698.pdf>
 

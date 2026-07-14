@@ -51,7 +51,7 @@ A violation of the chapter is treated as a violation of the general regulatory p
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Rhode Island. This article synthesizes Rhode Island primary law and is not legal advice from a Rhode Island-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Rhode Island. This article synthesizes Rhode Island primary law and is not legal advice from a Rhode Island-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Rhode Island Consumer Privacy Law (RIDTPPA)*, OpenAgreements (last updated June 6, 2026), https://openagreements.org/practice-guides/privacy/us/rhode-island.
 
 [^stat-3-apply]: **R.I. Gen. Laws § 6-48.1-3** — "Any commercial website or internet service provider conducting business in Rhode Island or with customers in Rhode Island or otherwise subject to Rhode Island jurisdiction, shall designate a controller." *R.I. Gen. Laws § 6-48.1-3(a).* <https://webserver.rilegislature.gov/Statutes/TITLE6/6-48.1/6-48.1-3.htm>
 

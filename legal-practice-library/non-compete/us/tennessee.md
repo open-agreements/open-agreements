@@ -35,6 +35,11 @@ There is a threshold requirement before the factors even matter: the employer mu
 
 Once a protectable interest exists, reasonableness is fact-specific and turns on the balance of the four considerations rather than any fixed formula [^allright-factors].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A Tennessee covenant not to compete is a disfavored restraint of trade that a court enforces only when reasonableness is established, so acknowledgments of reasonableness in the agreement do not carry the covenant on their own. The threshold question comes before the balancing: an employer cannot restrain ordinary competition, and only special facts over and above ordinary competition — confidential information or trade secrets, an investment in special training, or customer relationships in which the employee is the face of the business — support the restraint at all [^hasty-no-ordinary-competition][^hasty-special-facts]. Once a protectable interest exists, the covenant stands or falls on whether its time and territory are greater than required to protect that interest, weighed against the consideration, the threatened danger to the employer, the hardship on the employee, and the public interest — a covenant reaching further than the proven interest is exposed on the element that reaches too far [^allright-ultimate-question][^allright-factors].
+
 "An employer, however, cannot by contract restrain ordinary competition."[^hasty-no-ordinary-competition]
 
 ## Can a Tennessee employer use a non-compete against an employee earning under $70,000? {#income-threshold}
@@ -48,6 +53,11 @@ Annualized compensation is defined broadly to include wages, salary, commissions
 >
 > The prohibition attaches to asking a below-threshold employee to sign, not only to suing on the covenant. Before presenting a Tennessee non-compete on or after July 1, 2026, confirm the employee's annualized compensation clears $70,000 using the statutory definition, and recalculate for hourly workers using the rate-times-40-times-52 formula [^threshold-rule][^threshold-hourly].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> From July 1, 2026, a non-compete against an employee whose annualized compensation is under $70,000 is void and unenforceable as a matter of public policy, and the bar reaches asking a below-threshold employee to sign, not only suing on the covenant [^threshold-rule][^threshold-void]. The threshold turns on the statutory definition of annualized compensation — wages, salary, commissions, nondiscretionary bonuses, and other remuneration, with an hourly rate annualized at forty hours times fifty-two weeks — so a covenant priced against base salary alone can misjudge who is covered [^threshold-hourly]. The trigger is not only a new signing: an agreement renewed or amended on or after that date is pulled into the same regime, so a notice to a future employer that rests on a non-compete has force only where the underlying covenant actually clears the threshold and the reasonableness analysis [^threshold-rule][^threshold-void].
+
 "Notwithstanding a law to the contrary, an employer shall not require, request, or enforce a noncompete agreement against an employee whose annualized compensation is less than seventy thousand dollars ($70,000)."[^threshold-rule]
 
 ## How long can a Tennessee non-compete last? {#duration-limits}
@@ -59,7 +69,7 @@ These are rebuttable presumptions, not hard caps. A court must presume that a ti
 > [!CAUTION]
 > **Drafting note.**
 >
-> For employee covenants entered into, renewed, or amended on or after July 1, 2026, draft the duration at or under two years to stay inside the presumption of reasonableness in time. A longer term is presumptively unreasonable, so the party seeking enforcement should expect to rebut that presumption, on top of the separate requirement that the covenant protect a legitimate interest and be reasonable in geography [^time-employee-2yr][^time-presumption-rule].
+> For an employee covenant entered into, renewed, or amended on or after July 1, 2026, a duration at or under two years falls inside the statutory presumption of reasonableness in time, and a longer term is presumptively unreasonable — a court applies the window as a rebuttable presumption, so a term beyond it leaves the party seeking enforcement to rebut the presumption. A within-window term is presumed reasonable in time only; geography and the protectable-interest requirement remain to be tested under the common-law reasonableness analysis, so a covenant sized to the outer bound but untethered to a legitimate interest still fails [^time-employee-2yr][^time-presumption-rule].
 
 ## Is continued at-will employment enough consideration for a Tennessee non-compete? {#consideration}
 
@@ -67,18 +77,23 @@ These are rebuttable presumptions, not hard caps. A court must presume that a ti
 
 The court enforced covenants signed after employment began because each employee continued working for the company; the length of the continued employment supplied the consideration [^central-consideration]. Tennessee has not fixed how long the continued employment must last, so the question is fact-specific: a very short tenure after signing weakens the argument, and the safer course is still to pair the covenant with employment that continues for an appreciable time or with separate consideration [^central-consideration].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A covenant an existing Tennessee employee signs after hire is supported when the employee then remains employed for an appreciable length of time; the length of the continued employment is what supplies the consideration, so a covenant paired with only a brief tenure after signing is on weaker ground [^central-consideration]. Adequate consideration establishes only that a covenant is supported, not that it is reasonable, so a covenant that clears the consideration question still has to satisfy the protectable-interest, time, territory, and scope limits on its own; where continued employment is brief, separate consideration identified in the agreement removes the doubt [^central-consideration].
+
 ## Will a Tennessee court narrow or reform an overbroad non-compete? {#court-narrowing}
 
 **Short answer.** Often yes, but not always. Tennessee follows the *rule of reasonableness* rather than the strict blue-pencil rule, so a court may modify an unreasonable covenant to make it reasonable instead of striking it — but it can refuse and void the covenant entirely when the employer drafted it in a deliberately unreasonable or oppressive way [^central-reasonableness][^central-oppressive][^vantage-modify].
 
 In *Central Adjustment Bureau*, the Tennessee Supreme Court adopted the rule of reasonableness, under which a court may enforce an overbroad covenant to the extent it is reasonable rather than rewriting only severable words [^central-reasonableness]. *Vantage Technology, LLC v. Cross* shows the rule in action: the court modified an overbroad territory and limited the restriction to the customer locations where the employee had actually worked [^vantage-modify]. The 2026 statute carries the same idea forward for covenants it governs, expressly authorizing a court to modify a restrictive covenant to render it reasonable and enforceable [^s50-1-210-modify].
 
-Reformation is discretionary, not guaranteed. A court may decline to save an oppressive covenant, and it may refuse enforcement entirely where the hardship to the employee and the harm to the public outweigh the employer's interest, as the court did in *Columbus Medical Services, LLC v. Thomas* [^central-oppressive][^columbus-refused]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Tennessee non-compete review checklist](/checklists/non-compete/us/tennessee) walks the full covenant suite item by item with each requirement's force level.
+Reformation is discretionary, not guaranteed. A court may decline to save an oppressive covenant, and it may refuse enforcement entirely where the hardship to the employee and the harm to the public outweigh the employer's interest, as the court did in *Columbus Medical Services, LLC v. Thomas* [^central-oppressive][^columbus-refused]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Tennessee non-compete reviewer checklist](/checklists/non-compete/us/tennessee) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a Tennessee court to rewrite an aggressive covenant. A deliberately unreasonable or oppressive covenant can be voided rather than trimmed, so draft duration, geography, and scope to the minimum the legitimate interest actually requires [^central-oppressive][^vantage-modify].
+> A Tennessee court is not a backstop that rewrites an aggressive covenant into a reasonable one. Tennessee follows a rule of reasonableness rather than the strict blue-pencil rule, so a court may modify an overbroad covenant to render it reasonable — and for a covenant governed by the 2026 statute that modification power is now express — but the power is discretionary and bounded [^central-reasonableness][^vantage-modify][^s50-1-210-modify]. A covenant shown by credible evidence to be deliberately unreasonable and oppressive is voided rather than trimmed, and a court may refuse enforcement entirely — even for a covenant backed by a legitimate protectable interest — where the hardship to the employee and the harm to the public interest outweigh the employer's interest [^central-oppressive][^columbus-refused]. A restraint whose duration, geography, and scope are sized to the minimum the legitimate interest requires stands on its own terms rather than on judicial rescue [^central-oppressive][^vantage-modify].
 
 "The most recent trend, therefore, has been to abandon the ‘blue pencil’ rule in favor of a rule of reasonableness."[^central-reasonableness]
 
@@ -93,6 +108,11 @@ Before the statute, Tennessee voided physician non-competes outright as contrary
 >
 > Do not impose a non-compete on an emergency-medicine physician. Section 63-1-148(d) removes them from the statute's safe harbor, and because no statute then authorizes the covenant, it remains void under *Udom*. For other covered providers, keep the term at or under two years and the area within the greater of a 10-mile radius or the county of the primary practice site to stay within the statutory safe harbor [^s63-1-148-emergency][^udom-void][^s63-1-148-deemed-reasonable].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> For a provider licensed under the listed chapters of Title 63, a covenant deemed reasonable is one in writing, running two years or less, and within the greater of a ten-mile radius from the primary practice site or the county in which it sits; a covenant tied to the purchase or sale of the practice carries a rebuttable presumption that its agreed duration and area are reasonable [^s63-1-148-deemed-reasonable][^s63-1-148-scope][^s63-1-148-sale]. Meeting the safe harbor deems the covenant reasonable in time and area only — the protectable-interest requirement and the other common-law limits still apply, so a safe-harbor-compliant covenant untethered to a legitimate interest still fails. The safe harbor does not reach a physician who specializes in emergency medicine: no statute then authorizes the covenant, so it remains void, the same result the threshold section reaches for that physician [^s63-1-148-emergency][^udom-void].
+
 "We hold that except for those specifically prescribed by statute, physicians' covenants not to compete are unenforceable and void."[^udom-void]
 
 ## Are customer non-solicits, employee non-solicits, and confidentiality agreements still allowed in Tennessee? {#non-solicitation-confidentiality}
@@ -104,7 +124,7 @@ Section 50-1-210(c) preserves these covenants from the time-presumption rules, a
 > [!CAUTION]
 > **Drafting note.**
 >
-> Keep a confidentiality or non-solicitation covenant tied to genuine confidential information, customers, or employees rather than drafting it so broadly that it bars the worker from competing at all. A clause that functions as a disguised non-compete invites the same reasonableness scrutiny — and, for a below-threshold employee, the same voidness risk — as an express non-compete [^s50-1-210-carveouts][^threshold-rule-nonsolicit].
+> The 2026 statute preserves a confidentiality or nondisclosure agreement, a customer non-solicitation agreement, and an employee non-solicitation agreement from its non-compete rules, so a covenant tied to genuine confidential information, customers, or employees sits outside the time presumptions and the $70,000 threshold; together with the trade-secret protections, a customer non-solicit is often a more readily enforceable protection than a broad non-compete [^s50-1-210-carveouts][^threshold-rule-nonsolicit]. That shelter depends on the covenant staying within its category: a non-solicitation or confidentiality clause drawn so broadly that it bars the worker from competing at all reads as a disguised non-compete and draws the same reasonableness scrutiny — and, for a below-threshold employee, the same voidness risk — as an express non-compete. A no-dealing covenant is not on the preserved list at all, so a court may test it under the disfavored-restraint framework rather than the carve-out, and a clock kept independently per covenant makes clear which covenants answer to the statute and which do not [^s50-1-210-carveouts][^threshold-rule-nonsolicit].
 
 "This section does not prohibit an employer from enforcing: (1) A confidentiality or nondisclosure agreement; (2) A client or customer nonsolicitation agreement; or (3) An employee nonsolicitation agreement."[^s50-1-210-carveouts]
 
@@ -137,13 +157,18 @@ Because Tennessee measures reasonableness in time and may reform an unreasonable
 
 Those requirements limit the common tactic of using an out-of-state choice-of-law clause to escape Tennessee's reasonableness rules. A clause picking the law of a state with no genuine connection to the parties, or one used to override Tennessee's protections — including the new $70,000 bar — is vulnerable [^vantage-choice-intent][^vantage-good-faith].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A Tennessee court honors a contractual choice of another state's law only when certain requirements are met, beginning with good-faith execution and a genuine connection between the chosen state and the parties [^vantage-choice-intent][^vantage-good-faith]. A clause picking a state with no real connection, or one deployed to escape Tennessee's protections — including the $70,000 bar — is vulnerable, so a covenant with a Tennessee worker that leans on foreign law to survive is exposed if that choice cannot be defended as genuine; governing-law and venue that track where the worker actually lives and works leave the covenant measured against the law it was drafted for [^vantage-good-faith][^vantage-choice-intent].
+
 ## What are the key recent developments in Tennessee non-compete law? {#recent-developments}
 
 **Short answer.** The headline change is the 2026 statute that, effective July 1, 2026, voids non-competes for employees earning under $70,000 and sets rebuttable time presumptions for the rest [^dev-enacted][^dev-effective].
 
-- 
-- 
-- 
+- **April 20, 2026:** The General Assembly passed House Bill 1034, substituted for Senate Bill 995; as enacted, it adds new Tenn. Code Ann. §§ 50-1-210 and 50-1-211 [^dev-enacted].
+- **May 7, 2026:** The Governor signed the bill, which became 2026 Public Chapter 934 [^dev-enacted].
+- **July 1, 2026:** The act takes effect and applies to proceedings occurring and to agreements entered into, renewed, or amended on or after that date — adding new Tenn. Code Ann. §§ 50-1-210 and 50-1-211 [^dev-effective].
 
 > [!NOTE]
 > **Practice note.**
@@ -152,7 +177,7 @@ Those requirements limit the common tactic of using an out-of-state choice-of-la
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Tennessee. This article synthesizes Tennessee primary law and is not legal advice from a Tennessee-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Tennessee. This article synthesizes Tennessee primary law and is not legal advice from a Tennessee-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Tennessee*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/tennessee.
 
 [^hasty-disfavored]: **Hasty v. Rent-A-Driver, Inc.** — "They are not, however, invalid per se and may be enforced, provided, they are reasonable under the particular circumstances." *Hasty v. Rent-A-Driver, Inc., 671 S.W.2d 471, 472 (Tenn. 1984).* <https://www.courtlistener.com/opinion/2366827/hasty-v-rent-a-driver-inc/#:~:text=They%20are%20not%2C%20however%2C%20invalid,reasonable%20under%20the%20particular%20circumstances.>
 

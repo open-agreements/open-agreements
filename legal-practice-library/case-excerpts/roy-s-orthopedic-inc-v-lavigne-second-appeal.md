@@ -8,7 +8,7 @@ citation: 'Roy''s Orthopedic, Inc. v. Lavigne, 145 Vt. 324, 487 A.2d 173 (1985).
 resource: 'https://www.courtlistener.com/opinion/2359631/roys-orthopedic-inc-v-lavigne/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/vermont'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/vermont'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `definitions`, `severability-and-reformation`, `tolling-during-breach`
 - source_cards: `roys-85-no-extension`, `roys-85-no-make-contracts`, `roys-85-no-rewrite`, `roys-85-term-defs`
-- cited_by: [Non-Compete Agreement Review Checklist — Vermont](../checklists/non-compete/us/vermont.md), [Non-Competes in Vermont](../non-compete/us/vermont.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Vermont](../checklists/non-compete/us/vermont.md), [Non-Competes in Vermont](../non-compete/us/vermont.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2359631/roys-orthopedic-inc-v-lavigne/#:~:text=The%20term%20of%20the%20noncompetition,make%20them%20for%20the%20parties.>

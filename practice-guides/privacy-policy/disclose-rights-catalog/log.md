@@ -1,5 +1,18 @@
 # Disclose Rights Catalog Update Log
 
+## 2026-07-06
+* **Update**: refactor(lib): domain subfolders for 58 flat lib files + import-boundary lint (closes #1411) (#1611) (acbbab1)
+* **Update**: Rename review checklists to reviewer checklists (#1631) (d88b1a2)
+
+## 2026-07-03
+* **Update**: fix(privacy): clause headings instead of bold lead-ins (kill kebab-id DOCX headings) (#1498) (#1499) (3872701)
+
+## 2026-07-01
+* **Update**: fix(privacy): realign minors_active prose with shipped formula + drift guard-rail (#1454) (#1465) (1318170)
+
+## 2026-06-30
+* **Update**: feat(privacy-corpus): rescue the 5 deferred broken-URL docs via a Firecrawl tier (#1089) (58f21ce)
+
 ## 2026-06-26
 * **Update**: Rename content/legal/ -> content/practice-guides/ to match URL taxonomy (#1082) (7fb9b1a)
 * **Update**: feat(privacy-corpus): codify the rescue pipeline + lift the corpus tail (30 of 36 holdouts) (#1069) (dc18933)

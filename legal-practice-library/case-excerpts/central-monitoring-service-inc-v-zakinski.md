@@ -2,29 +2,33 @@
 type: Case Excerpt
 title: 'Central Monitoring Service, Inc. v. Zakinski'
 description: >-
-  Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513. —
-  quoted in 3 document(s).
-citation: 'Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513.'
+  Central Monitoring Service, Inc. v. Zakinski, 1996 SD 116, 553 N.W.2d 513. —
+  quoted in 4 document(s).
+citation: 'Central Monitoring Service, Inc. v. Zakinski, 1996 SD 116, 553 N.W.2d 513.'
 resource: >-
   https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/
-timestamp: '2026-06-26'
+timestamp: '2026-07-02'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us'
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/south-dakota'
+  - type: State Law Practice Guide
+    resource: >-
+      https://openagreements.org/practice-guides/invention-assignment/us/south-dakota
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/south-dakota'
 tags:
   - case-law
+  - invention-assignment
   - non-compete
 ---
 
 # Central Monitoring Service, Inc. v. Zakinski
 
-*Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513.*
+*Central Monitoring Service, Inc. v. Zakinski, 1996 SD 116, 553 N.W.2d 513.*
 
-Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 4 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -34,7 +38,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `restrictive-covenants-each-independently-includable`
 - source_cards: `restatement-188-rule-of-reason`, `restatement-188-rule-of-reason-covenants`
-- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist](../checklists/non-compete/us.md)
 - link_to_source: <https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/#:~:text=A%20promise%20to%20refrain%20from,likely%20injury%20to%20the%20public.>
 
 ### central-monitoring-service-inc-v-zakinski-however-if-an-employee-is-fired-71911c83 {#central-monitoring-service-inc-v-zakinski-however-if-an-employee-is-fired-71911c83}
@@ -43,8 +47,17 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `consideration-termination`, `timing-and-execution-acknowledgements`
 - source_cards: `sd-zakinski-nofault-timing`, `zakinski-fired-no-fault`
-- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/#:~:text=However%2C%20if%20an%20employee%20is,whether%20the%20agreement%20is%20reasonable.>
+
+### central-monitoring-service-inc-v-zakinski-such-exceptions-must-be-construed-f6c79c23 {#central-monitoring-service-inc-v-zakinski-such-exceptions-must-be-construed-f6c79c23}
+
+> Such exceptions must be construed narrowly so as to promote the prohibition against contracts in restraint of trade.
+
+- supports: `holdover-clause-limit`
+- source_cards: `zakinski-narrow-construction`, `zakinski-narrow-construction-practice`
+- cited_by: [Employee Invention Assignment in South Dakota](../invention-assignment/us/south-dakota.md)
+- link_to_source: <https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/#:~:text=Such%20exceptions%20must%20be%20construed,contracts%20in%20restraint%20of%20trade.>
 
 ### central-monitoring-service-inc-v-zakinski-that-the-non-compete-and-confidentiality-a867097e {#central-monitoring-service-inc-v-zakinski-that-the-non-compete-and-confidentiality-a867097e}
 
@@ -52,5 +65,5 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `consideration-termination`, `timing-and-execution-acknowledgements`
 - source_cards: `sd-zakinski-consid-timing`, `zakinski-continued-employment`
-- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/#:~:text=That%20the%20Non%2DCompete%20and%20Confidentiality,to%20be%20binding%20and%20enforceable.>

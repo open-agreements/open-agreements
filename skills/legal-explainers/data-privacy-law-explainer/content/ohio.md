@@ -2,7 +2,7 @@
 jurisdiction: "Ohio"
 slug: ohio
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/ohio
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/ohio · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/ohio · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Ohio Consumer Privacy Law[^about]
 
@@ -84,7 +84,7 @@ The breach-statute enforcement machinery has real teeth despite the absence of c
 
 On the Consumer Sales Practices Act side, the Attorney General may seek declaratory judgments and injunctions where an act or practice violates the chapter and action is in the public interest [^q6-ag-cspa]. Attorney General class relief is separately gated to specified § 1345.02 practices, prior Attorney General rules, or prior publicly available Ohio court decisions [^q6-ag-cspa-class]. For private plaintiffs, the § 1345.09(B) gate is the controlling reality for data claims: because no prior Ohio rule or published decision appears to have declared a specific data-privacy or data-security practice deceptive, novel privacy claims start in the individual-action tier — actual economic damages, capped noneconomic damages, no trebling, no class — until a first rule or decision exists. There is a scoping question beneath even that: the statute reaches only a *consumer transaction* — a transfer of goods, a service, or an intangible to an individual for primarily personal, family, or household purposes [^q6-consumer-transaction] — and whether a zero-price, ad-funded online service fits that definition has no settled Ohio appellate answer. Post-breach plaintiffs therefore typically plead common-law negligence — which is exactly the claim the chapter 1354 affirmative defense covered above is built to answer — making the written-cybersecurity-program decision the practical center of Ohio privacy risk management.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Ohio. This article synthesizes Ohio primary law and is not legal advice from a Ohio-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Ohio. This article synthesizes Ohio primary law and is not legal advice from a Ohio-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Ohio Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/ohio.
 
 [^q1-breach-duty]: **Ohio Rev. Code § 1349.19** — "Any person that owns or licenses computerized data that includes personal information shall disclose any breach of the security of the system, following its discovery or notification of the breach of the security of the system, to any resident of this state whose personal information was, or reasonably is believed to have been, accessed and acquired by an unauthorized person if the access and acquisition by the unauthorized person causes or reasonably is believed will cause a material risk of identity theft or other fraud to the resident." *Ohio Rev. Code § 1349.19(B)(1).* <https://codes.ohio.gov/ohio-revised-code/section-1349.19>
 

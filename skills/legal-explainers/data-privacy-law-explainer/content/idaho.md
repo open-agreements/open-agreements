@@ -2,7 +2,7 @@
 jurisdiction: "Idaho"
 slug: idaho
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/idaho
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/idaho · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/idaho · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Idaho Consumer Privacy Law[^about]
 
@@ -88,7 +88,7 @@ The ICPA action comes with real teeth and real limits. A prevailing plaintiff re
 
 Public enforcement faces none of those limits. The Attorney General may sue for injunctions, consumer restitution, and civil penalties of up to $5,000 per violation plus expenses, investigative costs, and attorney's fees [^icpa-ag-penalties] — and must ordinarily first give the target written notice and an opportunity to execute an assurance of voluntary compliance or consent judgment [^icpa-avc], Idaho's nearest analog to a cure period. Two narrower sectoral remedies round out the picture. A merchant that prints more than the last five digits of a payment-card number or prints the expiration date on a receipt faces civil penalties; the cardholder's personal action is expressly keyed to a receipt that printed the payment-card number and the prosecuting attorney's failure to act within sixty days [^card-receipt-action]. And the 2026 social-media minors and conversational-AI enactments should be tracked as narrow sectoral remedy changes, not as general consumer-privacy causes of action.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Idaho. This article synthesizes Idaho primary law and is not legal advice from a Idaho-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Idaho. This article synthesizes Idaho primary law and is not legal advice from a Idaho-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Idaho Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/idaho.
 
 [^breach-duty-scope]: **Idaho Code § 28-51-105** — "A city, county or state agency, individual or a commercial entity that conducts business in Idaho and that owns or licenses computerized data that includes personal information about a resident of Idaho shall, when it becomes aware of a breach of the security of the system, conduct in good faith a reasonable and prompt investigation to determine the likelihood that personal information has been or will be misused." *Idaho Code § 28-51-105(1).* <https://legislature.idaho.gov/statutesrules/idstat/Title28/T28CH51/SECT28-51-105/>
 

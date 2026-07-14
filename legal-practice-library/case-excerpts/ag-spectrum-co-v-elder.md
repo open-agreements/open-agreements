@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/4414551/ag-spectrum-company-v-vaughn-elder/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/iowa'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/iowa'
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `duration-limits`, `iowa-statutory-gates`
 - source_cards: `ia-ag-spectrum-customers`, `q4-ag-spectrum-unreasonable`
-- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4414551/ag-spectrum-company-v-vaughn-elder/#:~:text=Because%20requiring%20Elder%20to%20forsake,demanding%20this%20result%20is%20unenforceable.>
 
 ### ag-spectrum-co-v-elder-for-two-reasons-we-think-that-f4a34816 {#ag-spectrum-co-v-elder-for-two-reasons-we-think-that-f4a34816}
@@ -50,5 +50,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `iowa-statutory-gates`, `legitimate-business-interest`
 - source_cards: `ia-ag-spectrum-training`, `q3-ag-spectrum-support`
-- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4414551/ag-spectrum-company-v-vaughn-elder/#:~:text=In%20this%20context%2C%20Ag%20Spectrum%E2%80%99s,not%20entitled%20to%20special%20protection.>

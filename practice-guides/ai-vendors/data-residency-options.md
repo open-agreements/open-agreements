@@ -45,6 +45,13 @@ The firms mostly agree on the important point: `region` is not a single legal fa
 
 For practical purposes, `region` now means at least four different things: where customer content is stored at rest, where GPU inference happens, where abuse-monitoring or safety systems run, and where system data or metadata can still be processed. The legal consequence changes at each layer.
 
+| Provider | What the current docs clearly guarantee | What still depends on configuration or product scope |
+| --- | --- | --- |
+| AWS Bedrock | `In-Region` means "Your requests never leave the AWS Region you specify"[^amazon-bedrock-regional-availability]. Geographic routing keeps prompts and outputs inside a defined geography such as the EU, Japan, or Australia. [^amazon-bedrock-regional-availability][^amazon-bedrock-geographic-cross-region-inference] | `Geo` is not single-region. Prompts and outputs may move within the geography. `Global` removes the boundary entirely. [^amazon-bedrock-regional-availability] |
+| Google Vertex AI | Google says data at rest "remains at rest in that location"[^google-cloud-data-residency], and ML processing occurs in the specific region or multi-region where the request is made for listed endpoints and models, including Canada, the UK, and Australia in the current tables. [^google-cloud-data-residency] | Google is equally clear that unlisted regional endpoints have no ML-processing location guarantee. [^google-cloud-data-residency] |
+| OpenAI API | OpenAI now offers regional storage for the API in Europe, Australia, Canada, Japan, India, Singapore, South Korea, the UK, the UAE, and the US. [^openai-data-controls-in-the-openai-platform] | Regional processing is only available in Europe and the US. OpenAI also says data residency does not apply to system data, and non-US regions require abuse-monitoring approval plus a ZDR amendment. [^openai-data-controls-in-the-openai-platform] |
+| Anthropic direct API | Anthropic's first-party API lets a caller choose `global` or `us` inference, and exposes that as a per-request control. [^anthropic-data-residency] | The workspace geo is still US only. So direct Anthropic does not presently offer EU, UK, Canadian, or Australian at-rest geography on its own platform. [^anthropic-data-residency] |
+
 Two consequences follow from that table.
 
 First, a non-US or non-EU label on a provider dashboard does not necessarily mean local inference. OpenAI's current API docs expressly separate `regional storage` from `regional processing`, and say that if the chosen region does not support regional processing, OpenAI may process and temporarily store customer content outside the region to deliver the service. [^openai-data-controls-in-the-openai-platform] That means `Canada` or `United Kingdom` can be a storage fact without being a compute fact. In EU and UK matters, that distinction is the difference between a domestic processing story and a Chapter V transfer story.
@@ -67,7 +74,7 @@ The final unsettled point is definitional. Providers increasingly separate `cust
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Data residency options for AI-assisted legal review*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-vendors/data-residency-options.
 
 [^regulation-eu-2016-679-art-44]: **Regulation (EU) 2016/679, art. 44** — "shall take place only if" *Regulation (EU) 2016/679, art. 44.* <https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=OJ%3AJOL_2016_119_R_0001>
 
@@ -102,6 +109,8 @@ The final unsettled point is definitional. Providers increasingly separate `cust
 [^openai-data-controls-in-the-openai-platform]: **OpenAI, Data controls in the OpenAI platform** — "As of March 1, 2023, data sent to the OpenAI API is not used to train or improve OpenAI models (unless you explicitly opt in to share data with us)." *OpenAI, Data controls in the OpenAI platform.* <https://developers.openai.com/api/docs/guides/your-data>
 
 [^anthropic-data-residency]: **Anthropic, Data residency** — "Data residency controls let you manage where your data is processed and stored." *Anthropic, Data residency.* <https://platform.claude.com/docs/en/build-with-claude/data-residency>
+
+[^amazon-bedrock-geographic-cross-region-inference]: **Amazon Bedrock, Geographic cross-Region inference** — "Geographic cross-Region inference keeps data processing within specified geographic boundaries (US, EU, APAC, etc.) while providing higher throughput than single-region inference." *Amazon Bedrock, Geographic cross-Region inference.* <https://docs.aws.amazon.com/bedrock/latest/userguide/geographic-cross-region-inference.html>
 
 [^openai-data-controls-in-the-openai-platform-2]: **OpenAI, Data controls in the OpenAI platform** — "As of March 1, 2023, data sent to the OpenAI API is not used to train or improve OpenAI models (unless you explicitly opt in to share data with us)." *OpenAI, Data controls in the OpenAI platform.* <https://developers.openai.com/api/docs/guides/your-data>
 

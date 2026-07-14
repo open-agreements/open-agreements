@@ -2,12 +2,8 @@
 name: non-compete-contract-explainer
 description: >-
   Explain U.S. state-by-state (and select international) non-compete and
-  restrictive-covenant law — whether a non-compete is enforceable, blue-pencil
-  reformation, tolling, choice of law, independent-contractor reach, and recent
-  bans. Reads a bundled, source-cited snapshot per jurisdiction. Use when the
-  user says "non-compete," "noncompete contract," "restrictive covenant,"
-  "non-solicit," "garden leave," "covenant not to compete," "employment
-  agreement," asks "is my non-compete enforceable," or names a U.S. state.
+  restrictive-covenant law. Reads a bundled, source-cited snapshot per
+  jurisdiction.
 license: CC-BY-4.0
 compatibility: >-
   Works with any agent. Fully offline — content ships with the skill. An
@@ -15,7 +11,7 @@ compatibility: >-
   canonical URL.
 metadata:
   author: open-agreements
-  version: "0.1.0"
+  version: "0.2.0"
 catalog_group: Legal Explainers
 catalog_order: 10
 ---

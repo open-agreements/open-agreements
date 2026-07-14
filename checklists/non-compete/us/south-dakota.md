@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — South Dakota
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — South Dakota
 description: >-
   A clause-by-clause reviewer checklist for South Dakota employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -14,7 +14,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — South Dakota[^about]
+# Non-Compete Agreement Reviewer Checklist — South Dakota[^about]
 
 A clause-by-clause reviewer checklist for South Dakota employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under SDCL 53-9-11's statutory whitelist, the two-year and specified-area limits, the existing-customer rule, and the healthcare practitioner provision.
 
@@ -64,7 +64,9 @@ Review every item below the way a South Dakota court would: the baseline statute
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should last as long as secrecy does — federal law keys the right to continued secrecy. In a state whose statute confines covenants this tightly, the trade-secret framework is the workhorse protection, so a fixed expiry on trade-secret obligations gives away the most dependable remedy for no benefit. [^dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection federal trade-secret law gives, because the law keys the right to continued secrecy; in a state whose statute confines covenants this tightly, that trade-secret framework is the workhorse protection. The status-bounded form is the ceiling the law will back, not a required one — a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition] [#tie-trade-secret-duration-to-secrecy-status]
+
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
 
 - [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term, and keep the obligation tethered to genuinely confidential material. South Dakota enforces these covenants only to the extent reasonably necessary to protect the employer's interest in confidential information — an everything-forever lid invites a court to read the clause as a disguised work ban. [^sd-rezatto-conf] [#state-confidentiality-duration]
 
@@ -158,7 +160,7 @@ The six items below exist only on this South Dakota page: they implement the cha
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for South Dakota (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for South Dakota (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — South Dakota*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/south-dakota.
 
 [^sd-5911-cover]: **S.D. Codified Laws § 53-9-11** — "Except as otherwise provided in § 53-9-11.2, an employee may agree with an employer at the time of employment or at any time during employment not to engage directly or indirectly in the same business or profession as that of the employer for any period not exceeding two years from the date of termination of the agreement and not to solicit existing customers of the employer within a specified county, first- or second-class municipality, or other specified area for any period not exceeding two years from the date of termination of the agreement, if the employer continues to carry on a like business therein." *S.D. Codified Laws § 53-9-11.* <https://sdlegislature.gov/Statutes/53-9-11>
 

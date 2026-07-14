@@ -51,7 +51,7 @@ Indiana's 30-day cure period has no sunset date — it remains a permanent, buil
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Indiana. This article synthesizes Indiana primary law and is not legal advice from a Indiana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Indiana. This article synthesizes Indiana primary law and is not legal advice from a Indiana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Indiana Consumer Privacy Law (INCDPA)*, OpenAgreements (last updated June 6, 2026), https://openagreements.org/practice-guides/privacy/us/indiana.
 
 [^stat-1-1-apply]: **Ind. Code § 24-15-1-1** — "This article applies to a person that conducts business in Indiana or produces products or services that are targeted to residents of Indiana and that during a calendar year: (1) controls or processes personal data of at least one hundred thousand (100,000) consumers who are Indiana residents; or (2) controls or processes personal data of at least twenty-five thousand (25,000) consumers who are Indiana residents and derives more than fifty percent (50%) of gross revenue from the sale of personal data." *Ind. Code § 24-15-1-1(a).* <https://iga.in.gov/ic/2024/Title_24/Article_15.pdf>
 

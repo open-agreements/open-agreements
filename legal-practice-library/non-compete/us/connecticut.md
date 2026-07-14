@@ -42,7 +42,7 @@ CUTSA supplies the trade-secret overlay. A trade secret includes information suc
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not use a non-compete to block ordinary competition disconnected from a protectable interest. Tie the restraint to specific confidential information, trade secrets, customer lists, or goodwill, and keep trade-secret remedies in a separate confidentiality and CUTSA strategy [^scott-customer-confidential-information][^cutsa-trade-secret-definition][^cutsa-injunctive-relief].
+> A Connecticut non-compete protects only a recognized protectable interest — confidential information, trade secrets, customer lists, or customer goodwill — so a restraint aimed at ordinary competition disconnected from one of those interests reaches further than the fair-protection factor of the reasonableness test allows and is exposed on that factor [^scott-customer-confidential-information][^cutsa-trade-secret-definition][^cutsa-injunctive-relief]. Trade-secret misuse is separately reachable through a confidentiality covenant and a CUTSA claim independent of any covenant, so a non-compete kept tethered to a specific interest, with trade-secret protection carried by a separate confidentiality and CUTSA strategy, stands on the interest it actually guards rather than on a general aversion to competition.
 
 ## What duration and geographic scope are reasonable for a Connecticut non-compete? {#duration-limits}
 
@@ -55,7 +55,7 @@ Customer-focused limits can be easier to defend than broad territory limits. In 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Avoid copying a duration or radius from another Connecticut form without matching the worker's role and customer exposure. A larger area may need a shorter period, a longer period may need a narrower area, and a customer-specific restriction may be safer than a broad market ban [^van-dyck-time-geography-intertwined][^roessler-one-year-customer-limit].
+> Connecticut fixes no safe-harbor duration or radius for an ordinary-employee non-compete; the reasonableness test weighs time and geography together against the employer's real market, so a term or radius copied from another form is measured against a footprint it was never sized to, and a covenant that protects the employer where it does not and is unlikely to do business is unreasonable as to area [^van-dyck-time-geography-intertwined][^roessler-one-year-customer-limit]. A larger area weighed against a shorter period, and a longer period against a narrower area, is how the balance runs, and a customer-specific restraint limited to customers the worker serviced or solicited is easier to defend than a broad market ban. Because a successor inherits that same analysis, a restraint sized to the original employer is re-weighed against the acquiring business's actual footprint and does not automatically fit it.
 
 ## Is continued at-will employment enough consideration for a Connecticut non-compete? {#continued-employment-consideration}
 
@@ -70,18 +70,23 @@ The important limitation is connection. *Schimenti* held that continued employme
 >
 > Do not rely on a recital alone. Connecticut now permits continued at-will employment as consideration, but the enforcement record is stronger when the offer letter, promotion letter, or covenant states that signing is a condition of continued employment and the employee actually receives that continued employment [^schimenti-continued-employment-rule][^schimenti-connected-consideration].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> Connecticut's current rule is that continued at-will employment can supply sufficient consideration for a covenant signed after employment has begun, but that rule turns on connection: the covenant must actually be tied to the continued employment, and a worker may still prove there was no connection between signing and continued employment [^dur-a-flex-consideration-reversal][^schimenti-continued-employment-rule][^schimenti-connected-consideration]. A recital that signing is a condition of continued employment carries weight only where the worker in fact receives that continued employment, so a bare recital on a covenant the worker gave up existing rights to sign, with continued employment not predicated on it, is where consideration failed before [^thoma-fact-specific-consideration]. And adequate consideration establishes only that a covenant is supported, not that it is reasonable, so each covenant still clears the five-factor reasonableness test on its own.
+
 ## Will a Connecticut court blue-pencil or narrow an overbroad non-compete? {#court-narrowing}
 
 **Short answer.** Do not count on judicial rewriting. Connecticut authority gives employers no reliable rule that a court will rewrite an overbroad covenant into an enforceable one — internally inconsistent restraint language can be construed against the drafter, and the one statutory severance rule in this area preserves only the *non-covenant* provisions of a contract when the covenant itself is void [^thoma-ambiguous-duration-against-drafter][^physician-void-covenant-remainder-survives].
 
-The practical lesson is to draft severable and tiered restrictions. If the contract states one indivisible radius or one indivisible activity ban, a court may have no narrower text to preserve. Separable tiers, customer-specific alternatives, and a severability clause give a court cleaner text to enforce or strike. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Connecticut non-compete review checklist](/checklists/non-compete/us/connecticut) walks the full covenant suite item by item with each requirement's force level.
+The practical lesson is to draft severable and tiered restrictions. If the contract states one indivisible radius or one indivisible activity ban, a court may have no narrower text to preserve. Separable tiers, customer-specific alternatives, and a severability clause give a court cleaner text to enforce or strike. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Connecticut non-compete reviewer checklist](/checklists/non-compete/us/connecticut) walks the full covenant suite item by item with each requirement's force level.
 
 *Thoma* illustrates the risk of internally inconsistent noncompetition language: the court could not reasonably reconcile the conflicting terms and construed the ambiguity against the drafter [^thoma-ambiguous-duration-against-drafter]. The physician statute separately shows a narrow statutory severance model — when a physician covenant is void in whole or in part, the contract's remaining provisions survive [^physician-void-covenant-remainder-survives].
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Use tiered and severable drafting rather than an aggressive savings clause. A clause that asks a court to supply a new Connecticut radius, duration, or job-function limit is riskier than contract text that lets a court strike an unenforceable tier and leave a narrower tier intact [^thoma-ambiguous-duration-against-drafter][^physician-void-covenant-remainder-survives].
+> Connecticut gives the drafter no reliable rule that a court will rewrite an overbroad covenant into an enforceable one, and whether a court will narrow an overbroad employee covenant remains unsettled, so a covenant that leans on a savings or reformation clause to supply a new radius, duration, or job-function limit rests on rescue the state does not promise [^thoma-ambiguous-duration-against-drafter][^physician-void-covenant-remainder-survives]. Internally inconsistent restraint language can be construed against the drafter where no reasonable reconciliation is possible, and the one statutory severance rule in this area is deliberately narrow — when a physician covenant is void in whole or in part, § 20-14p(c) preserves only the contract's remaining non-covenant provisions, not a narrowed restraint. A covenant drawn in separable, tiered restraints — customer-specific alternatives beneath broader ones, distinct duration and geography steps, and an ordinary severability clause — gives a court cleaner text to strike an unenforceable tier and leave a narrower tier standing.
 
 ## Which Connecticut industries and professions have special non-compete limits? {#industry-specific-limits}
 
@@ -97,6 +102,11 @@ For homemaker-companion and home-health services, Connecticut voids covenants no
 > **Practice note.**
 >
 > Do not use the ordinary *Scott* reasonableness test to rescue a covenant that a Connecticut occupation-specific statute voids. For covered workers, the statute controls first, and common-law reasonableness matters only if the statutory rule leaves room for enforcement [^physician-one-year-fifteen-mile-limit][^security-guard-trade-secret-exception][^home-health-worker-covenant-void].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> For a covered worker a Connecticut occupation statute sets the outer bound before any common-law balancing, and the physician and physician-assistant/APRN caps reach covenants entered into, amended, extended, or renewed on or after their trigger dates — July 1, 2016 for physicians and October 1, 2023 for physician assistants and advanced practice registered nurses — so a routine amendment or renewal can pull an older covenant into the one-year and fifteen-mile regime [^physician-one-year-fifteen-mile-limit][^physician-assistant-one-year-fifteen-mile-limit][^aprn-one-year-fifteen-mile-limit]. Two of these rules are absolute rather than balanced: the broadcast-employee statute bars the specified post-employment restrictions outright, and the homemaker-companion and home-health ban voids the covenant as against public policy with no compensation, consideration, or trade-secret cure, voiding an agency's client no-hire clause the same way [^broadcast-employee-restriction-ban][^home-health-worker-covenant-void][^home-health-client-no-hire-ban]. The security-guard exclusion is proof-based, not recital-based: a boilerplate acknowledgement that the guard had access to confidential material does not carry the employer's statutory burden of proving the guard obtained trade secrets [^security-guard-trade-secret-exception].
 
 ## How does Connecticut treat employee non-solicitation covenants? {#employee-non-solicitation}
 
@@ -140,9 +150,22 @@ HB 5492 would have made a covenant void and unenforceable against employees earn
 >
 > Treat a failed bill like HB 5492 as a monitoring item, not as present Connecticut law. Recheck the official Connecticut General Assembly bill status each session before changing forms or telling workers that Connecticut has enacted a general wage-threshold non-compete statute [^hb-5492-wage-threshold-bill].
 
+## Are sale-of-business non-competes judged differently in Connecticut? {#sale-of-business}
+
+**Short answer.** Yes. Connecticut has no general non-compete statute, and a covenant a seller gives as part of selling a business and its goodwill is enforced under common-law reasonableness — the buyer is entitled to protect the goodwill it paid for.
+
+In *Mattis v. Lally*, the Connecticut Supreme Court enforced a seller's covenant, explaining that the restraint must afford no more than fair protection to the buyer's purchased interest — to do otherwise would hand the seller back much of the goodwill the buyer paid for [^mattis-fair-protection].
+
+"afford no more than a fair and just protection to the interests of the party in whose favor it is to operate, without unduly interfering with the public interest."[^mattis-fair-protection]
+
+> [!NOTE]
+> **Practice note.**
+>
+> A Connecticut seller covenant is still tested for reasonable time and place, but courts read it to protect the goodwill the buyer purchased rather than under the stricter employee-mobility lens. Confine it to that goodwill [^mattis-fair-protection].
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Connecticut. This article synthesizes Connecticut primary law and is not legal advice from a Connecticut-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Connecticut. This article synthesizes Connecticut primary law and is not legal advice from a Connecticut-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Connecticut*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/connecticut.
 
 [^scott-employee-noncompete-reasonableness]: **Scott v. General Iron & Welding Co.** — "In order to be valid and binding, a covenant which restricts the activities of an employee following the termination of his employment must be partial and restricted in its operation ‘in respect either to time or place, . . . and must be reasonable — that is, it should afford only a fair protection to the interest of the party in whose favor it is made and must not be so large in its operation as to interfere with the interests of the public." *Scott v. Gen. Iron & Welding Co., 171 Conn. 132 (1976).* <https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=In%20order%20to%20be%20valid,the%20interests%20of%20the%20public.>
 
@@ -211,3 +234,5 @@ HB 5492 would have made a covenant void and unenforceable against employees earn
 [^ryan-ftc-unlawful-agency-action]: **Ryan LLC v. Federal Trade Commission** — "In sum, the Court concludes that the FTC lacks statutory authority to promulgate the Non- Compete Rule, and that the Rule is arbitrary and capricious." *Ryan LLC v. Fed. Trade Comm'n, 746 F. Supp. 3d 369 (N.D. Tex. 2024).* <https://www.courtlistener.com/opinion/10205745/ryan-llc-v-federal-trade-commission/#:~:text=In%20sum%2C%20the%20Court%20concludes%20that,Rule%20is%20arbitrary%20and%20capricious.>
 
 [^hb-5492-wage-threshold-bill]: **An Act Concerning Limitations on the Use on Noncompete Agreements (H.B. 5492)** — "A covenant not to compete shall be void and unenforceable against a worker if (1) such worker is (A) an employee whose hourly wage is less than two times the minimum fair wage, or (B) an independent contractor whose hourly wage is less than five times the minimum fair wage" *H.B. 5492, 2026 Gen. Assemb., Feb. Sess. (Conn. 2026) (File No. 393).* <https://www.cga.ct.gov/2026/fc/pdf/2026HB-05492-R000393-FC.pdf>
+
+[^mattis-fair-protection]: **Mattis v. Lally** — "afford no more than a fair and just protection to the interests of the party in whose favor it is to operate, without unduly interfering with the public interest." *Mattis v. Lally, 138 Conn. 51, 82 A.2d 155 (1951).* <https://www.courtlistener.com/opinion/2205253/mattis-v-lally/#:~:text=afford%20no%20more%20than%20a,interfering%20with%20the%20public%20interest.>

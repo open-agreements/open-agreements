@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/4394140/stryker-corporation-v-christopher-ridgeway/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/michigan'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/michigan'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `choice-of-law-forum`, `governing-law-venue-dispute-process`
 - source_cards: `mi-stryker-forum`, `stryker-michigan-clauses`
-- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../checklists/non-compete/us/michigan.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Michigan](../checklists/non-compete/us/michigan.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4394140/stryker-corporation-v-christopher-ridgeway/#:~:text=Under%20Michigan%20law%2C%20the%20Michigan,clause%20is%20valid%20and%20enforceable.>

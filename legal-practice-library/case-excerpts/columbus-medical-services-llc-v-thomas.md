@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/1050674/columbus-medical-services-llc-v-thomas/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/tennessee'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/tennessee'
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `remedies`
 - source_cards: `columbus-enforcement-refused`, `columbus-refused`
-- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../checklists/non-compete/us/tennessee.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Tennessee](../checklists/non-compete/us/tennessee.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1050674/columbus-medical-services-llc-v-thomas/#:~:text=We%20reverse%2C%20concluding%20that%2C%20while,impact%20on%20the%20public%20interest.>

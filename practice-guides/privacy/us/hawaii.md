@@ -63,7 +63,7 @@ The UDAP track has its own contours. Standing on the deceptive-practices side is
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Hawaii. This article synthesizes Hawaii primary law and is not legal advice from a Hawaii-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Hawaii. This article synthesizes Hawaii primary law and is not legal advice from a Hawaii-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Hawaii Consumer Privacy Law*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/practice-guides/privacy/us/hawaii.
 
 [^law-breach-duty]: **HRS § 487N-2** — "Any business that owns or licenses personal information of residents of Hawaii, any business that conducts business in Hawaii that owns or licenses personal information in any form (whether computerized, paper, or otherwise), or any government agency that collects personal information for specific government purposes shall provide notice to the affected person that there has been a security breach following discovery or notification of the breach." *Haw. Rev. Stat. § 487N-2(a).* <https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0487N/HRS_0487N-0002.htm>
 

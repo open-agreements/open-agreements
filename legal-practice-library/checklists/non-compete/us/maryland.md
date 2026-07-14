@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Maryland
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Maryland
 description: >-
   A clause-by-clause reviewer checklist for Maryland employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Maryland[^about]
+# Non-Compete Agreement Reviewer Checklist — Maryland[^about]
 
 A clause-by-clause reviewer checklist for Maryland employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under Md. Code, Lab. & Empl. § 3-716's worker-class voids, the clinician cap, and the Becker reasonableness test.
 
@@ -63,9 +63,11 @@ Review every item below the way a Maryland court would: a statute voids covenant
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret protection should last as long as secrecy does — Maryland's trade-secret act keys the right to information that stays not generally known and subject to reasonable secrecy efforts, with no expiration date. A contractual term that cuts trade-secret obligations off at a fixed date surrenders protection the statute would have kept alive, which matters doubly for workers whose covenants the statute voids. [^md-mutsa-definition-confid] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information stays not generally known and subject to reasonable secrecy efforts — captures the full protection Maryland's trade-secret act gives, because the statute keys the right to that status with no expiration date. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of the protection that survives even for workers whose covenants the statute voids, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^md-mutsa-definition-confid] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on non-secret information is the confidentiality version of overbreadth, and the two-track structure — perpetual for trade secrets, finite for the rest — keeps each obligation sized to the interest behind it. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on non-secret information is the confidentiality version of overbreadth, and the two-track structure — status-bounded for trade secrets, finite for the rest — keeps each obligation sized to the interest behind it. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -159,7 +161,7 @@ The seven items below exist only on this Maryland page: they implement the statu
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Maryland (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Maryland (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Maryland*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/maryland.
 
 [^md-hb1388-health-prospective-cover]: **2024 Md. Laws ch. 378 (H.B. 1388)** — "That § 3–716(a)(1)(i)2 and (b) of the Labor and Employment Article, as enacted by Section 1 of this Act, shall be construed to apply only to employment contracts or similar documents or agreements for employment executed on or after July 1, 2025." *2024 Md. Laws ch. 378, § 3 (H.B. 1388).* <https://mgaleg.maryland.gov/2024rs/Chapters_noln/CH_378_hb1388e.pdf>
 

@@ -9,9 +9,9 @@ citation: >-
   125.
 resource: >-
   https://www.courtlistener.com/opinion/1882124/communication-technical-systems-inc-v-densmore/
-timestamp: '2026-06-26'
+timestamp: '2026-07-01'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/south-dakota'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/south-dakota'
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `no-hire-third-party`, `restrictive-covenants-each-independently-includable`, `south-dakota-statutory-gates`
 - source_cards: `densmore-third-party-restraint`, `sd-densmore-cov`, `sd-densmore-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1882124/communication-technical-systems-inc-v-densmore/#:~:text=Instead%2C%20CTS%20sought%20to%20bind,this%20it%20may%20not%20do.>

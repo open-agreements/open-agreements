@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/6241502/bud-anderson-heating-cooling-inc-v-mike-neil-absolute-hvac-llc/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/arkansas'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/arkansas'
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `arkansas-statutory-gates`, `duration-limits`
 - source_cards: `bud-duration-history`, `q4-bud-duration`
-- cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../checklists/non-compete/us/arkansas.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Arkansas](../checklists/non-compete/us/arkansas.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6241502/bud-anderson-heating-cooling-inc-v-mike-neil-absolute-hvac-llc/#:~:text=%5BW%5Dhile%20the%20courts%20have%20upheld,years%20were%20unreasonable%20and%20invalid.>
 
 ### bud-anderson-heating-cooling-inc-v-neil-therefore-it-is-not-clear-and-8dee860b {#bud-anderson-heating-cooling-inc-v-neil-therefore-it-is-not-clear-and-8dee860b}
@@ -43,5 +43,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `bud-prospective-injunction`, `q8-bud-prospective`
-- cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../checklists/non-compete/us/arkansas.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Arkansas](../checklists/non-compete/us/arkansas.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6241502/bud-anderson-heating-cooling-inc-v-mike-neil-absolute-hvac-llc/#:~:text=Therefore%2C%20it%20is%20not%20clear,appeal%2C%20a%20one%2Dyear%20prospective%20injunction.>

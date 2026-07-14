@@ -70,7 +70,7 @@ Two further doors stay open. First, the UTPCPA separately allows any victim of a
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alaska. This article synthesizes Alaska primary law and is not legal advice from a Alaska-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alaska. This article synthesizes Alaska primary law and is not legal advice from a Alaska-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Alaska Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/alaska.
 
 [^pipa-covered-person]: **AS 45.48.090** — "‘covered person’ means a (A) person doing business; (B) governmental agency; or (C) person with more than 10 employees;" *AS 45.48.090(2).* <https://www.akleg.gov/basis/statutes.asp?media=print&secStart=45.48.010&secEnd=45.48.090>
 

@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — New York
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — New York
 description: >-
   A clause-by-clause reviewer checklist for New York employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — New York[^about]
+# Non-Compete Agreement Reviewer Checklist — New York[^about]
 
 A clause-by-clause reviewer checklist for New York employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the common-law BDO Seidman reasonableness test and New York case law.
 
@@ -63,7 +63,9 @@ Work through every item the way a New York court would: there is no general non-
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should run as long as secrecy does — that is how federal law defines the right. The New York angle: trade secrets sit at the top of the short list of interests that can support a restrictive covenant at all, so an agreement that lets its own trade-secret protection lapse on a calendar date saws at the branch the covenants are sitting on. [^dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection federal trade-secret law gives, because the law keys the right to continued secrecy. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of protection for trade secrets — the interest at the top of New York's short list of interests that can support a restrictive covenant at all — while a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition] [#tie-trade-secret-duration-to-secrecy-status]
+
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
 
 - [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. New York already declines to protect general knowledge and routine operational information, and a perpetual lid on non-secret material reads as the kind of overreach that costs an employer the benefit of the doubt when reasonableness is measured. [#state-confidentiality-duration]
 
@@ -157,7 +159,7 @@ The six items below exist only on this New York page: they implement the common-
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for New York (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for New York (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — New York*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/new-york.
 
 [^otg-time-area-cover]: **OTG Management, LLC v. Konstantinidis** — "In order to be enforceable, an anticompetitive covenant ancillary to an employment agreement must be reasonable in time and area, necessary to protect the employer’s legitimate interests, not harmful to the public, and not unreasonably burdensome to the employee." *OTG Mgt., LLC v. Konstantinidis, 40 Misc. 3d 617 (Sup. Ct. N.Y. County 2013).* <https://www.courtlistener.com/opinion/6314442/otg-management-llc-v-konstantinidis/#:~:text=In%20order%20to%20be%20enforceable%2C,unreasonably%20burdensome%20to%20the%20employee.>
 

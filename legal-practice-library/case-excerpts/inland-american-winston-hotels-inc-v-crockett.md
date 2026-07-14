@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/2504879/inland-american-winston-hotels-inc-v-crockett/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/north-carolina'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/north-carolina'
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `non-solicitation`, `restrictive-covenants-each-independently-includable`
 - source_cards: `nc-crockett-active-persuasion`, `nc-crockett-definitions`, `q6-crockett-definitions`
-- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2504879/inland-american-winston-hotels-inc-v-crockett/#:~:text=We%20note%20that%20all%20of,active%20persuasion%2C%20request%2C%20or%20petition.>

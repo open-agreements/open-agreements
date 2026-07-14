@@ -36,7 +36,7 @@ Forgivable loans sit on a different edge of the same problem. They promise immed
 
 The outlier structure in the source set is the forgivable loan. Alvarez & Marsal is not a law firm, but its piece is useful precisely because it describes the debt formalities in concrete terms: promissory note, stated interest, fixed maturity, actual repayment mechanics, and a real expectation of repayment. [^alvarez-marsal-warning-employee-loans-could-have] That is less a contrary school of thought than a reminder that some companies still try to buy time with debt forms when straightforward retention cash would trigger immediate tax or state-law limits.
 
-- 
+- Forgivable loans remain legally plausible and doctrinally unstable at the same time. Perhaps the real line is economic substance: if the employee never truly has to repay in cash, the IRS could continue to view the structure as compensation paid early rather than debt paid later. [^alvarez-marsal-warning-employee-loans-could-have]
 
 ## Do California and New York limit retention bonuses tied to AI pressure? {#state-limits-retention-bonuses-ai-pressure}
 
@@ -61,7 +61,7 @@ Longer-duration arrangements add change-in-control and parachute issues. Section
 
 Equity does not automatically simplify the picture either. Discounted options, RSUs that vest well before settlement, and phantom stock can create separate Section 409A exposure rather than solving the cash problem. [^26-u-s-c-sec-409a-a-1-b-i-ii-2][^the-wagner-law-group-taxation-of-deferred-compen][^almost-20-years-of-section-409a-is-your-document] In practice, AI-retention packages often accumulate legal mass by combination: cash stay bonus, equity acceleration, and deal-triggered payout each look manageable in isolation and less manageable once they are part of one transaction or one executive-compensation story.
 
-- 
+- M&A-driven edits to multi-year retention awards are another open area. Section 409A and its regulations clearly allow change-in-control payment events, but there is still limited room to rewrite time and form midstream without creating a subsequent-deferral problem, and Section 280G can make the economics worse once the deal closes. [^26-u-s-c-sec-409a-a-1-b-i-ii-2][^26-c-f-r-sec-1-409a-3][^26-u-s-c-sec-280g-b-2-a-ii]
 
 ## Does mandatory AI use change how companies should structure retention pay? {#mandatory-ai-use-retention-pay}
 
@@ -79,11 +79,11 @@ The final consequence is that legal design does not defeat market pricing. Ravio
 
 **Short answer.** Yes. U.S. tax rules can follow mobile employees even when a foreign compensation plan was not designed around Section 409A.
 
-- 
+- Cross-border retention is still easy to misread. The source set suggests that Section 409A can follow U.S. taxpayers working abroad while foreign compensation plans may not have been designed around U.S. deferral rules at all. In an AI talent market that increasingly recruits globally, that mismatch could matter more than it used to. [^the-tax-adviser-key-cross-border-compensation-is][^covington-burling-llp-the-united-states-inbound]
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Retention bonuses under competitor AI pressure*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-layoffs/retention-bonus-competitor-ai-pressure.
 
 [^26-u-s-c-sec-409a-a-1-b-i-ii]: **26 U.S.C. Sec. 409A(a)(1)(B)(i)(II)** — "For purposes of clause (i), the interest determined under this clause for any taxable year is the amount of interest at the underpayment rate plus 1 percentage point on the underpayments that would have occurred had the deferred compensation been includible in gross income for the taxable year in which first deferred or, if later, the first taxable year in which such deferred compensation is not subject to a substantial risk of forfeiture." *26 U.S.C. Sec. 409A(a)(1)(B)(i)(II).* <https://www.law.cornell.edu/uscode/text/26/409A#:~:text=For%20purposes%20of%20clause%20(i)%2C,a%20substantial%20risk%20of%20forfeiture.>
 
@@ -156,3 +156,7 @@ The final consequence is that legal design does not defeat market pricing. Ravio
 [^ravio-the-ai-compensation-and-talent-trends-shap]: **Ravio, The AI compensation and talent trends shaping the job market in 2026** — "the proportion of new hires in AI/ML roles grew by 88% this year (compared to the previous 12 months)." *Ravio, The AI compensation and talent trends shaping the job market in 2026.* <https://ravio.com/blog/ai-compensation-and-talent-trends>
 
 [^farient-the-dawn-of-ai-s-impact-on-comp-committe]: **Farient, The Dawn of AI's Impact on Comp Committees** — "While no regulations currently mandate linking compensation to AI oversight, the technology’s strategic weight is undeniable." *Farient, The Dawn of AI's Impact on Comp Committees.* <https://farient.com/2026/01/13/the-dawn-of-ai-impact-on-comp-committees/>
+
+[^the-tax-adviser-key-cross-border-compensation-is]: **The Tax Adviser, Key cross-border compensation issues** — "non-U.S. companies often do not realize that punitive U.S. tax consequences exist for awards that fail to satisfy, or fit into an exemption to, Sec. 409A rules." *The Tax Adviser, Key cross-border compensation issues.* <https://www.thetaxadviser.com/issues/2019/jun/key-cross-border-compensation-issues/>
+
+[^covington-burling-llp-the-united-states-inbound]: **Covington & Burling LLP, The United States - Inbound and Outbound Employees** — "Employers must navigate a complex legal landscape when implementing remote working programs." *Covington & Burling LLP, The United States - Inbound and Outbound Employees.* <https://www.cov.com/-/media/files/corporate/publications/2021/08/global-workforce-solutions-remote-working-across-international-borders-us-inbound-outbound.pdf>

@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist
 description: >-
   A clause-by-clause reviewer checklist for employee restrictive covenant
   agreements — confidentiality, non-solicits, non-competes, and
@@ -12,7 +12,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist[^about]
+# Non-Compete Agreement Reviewer Checklist[^about]
 
 A clause-by-clause reviewer checklist for employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement.
 
@@ -60,9 +60,11 @@ A clause-by-clause reviewer checklist for employee restrictive covenant agreemen
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Confirm the trade-secret obligation runs for as long as the information remains a trade secret, with no fixed end date. Federal and state trade-secret law defines protection by secrecy itself, so a covenant that cuts trade-secret confidentiality off at a fixed term gives away statutory protection for nothing. [^dtsa-trade-secret-secrecy] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection federal and state trade-secret law give, because the law keys protection to continued secrecy. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-secrecy] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Ordinary confidential information should carry its own finite term, separate from the perpetual trade-secret obligation. Courts are skeptical of perpetual restraints on information that never qualified as a trade secret, and the two-track duration structure is the standard cure. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [^brown-tgs][^tls-rodriguez] [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Ordinary confidential information should carry its own finite term, separate from the status-bounded trade-secret obligation. Courts are skeptical of perpetual restraints on information that never qualified as a trade secret, and the two-track duration structure is the standard cure. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -149,7 +151,7 @@ A clause-by-clause reviewer checklist for employee restrictive covenant agreemen
 - [ ] **Entire agreement, amendments, e-signatures** (Recommended) — Standard boilerplate, but check it is actually there: an entire-agreement clause, written-amendment and no-waiver mechanics, and confirmation that electronic signatures and counterparts are valid. These provisions shut down later claims of oral side deals or waiver by inaction. [#address-entire-agreement-amendment-waiver-and-e-signatures]
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Jurisdiction-neutral (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Jurisdiction-neutral (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us.
 
 [^mnaa-nonexempt-worker]: **Mass. Gen. Laws ch. 149, § 24L** — "A noncompetition agreement shall not be enforceable against the following types of workers: (i) an employee who is classified as nonexempt under the Fair Labor Standards Act, 29 U.S.C. 201-219; (ii) undergraduate or graduate students that partake in an internship or otherwise enter a short-term employment relationship with an employer, whether paid or unpaid, while enrolled in a full-time or part-time undergraduate or graduate educational institution; (iii) employees that have been terminated without cause or laid off; or (iv) employees age 18 or younger." *Mass. Gen. Laws ch. 149, § 24L(c).* <https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L>
 
@@ -182,6 +184,10 @@ A clause-by-clause reviewer checklist for employee restrictive covenant agreemen
 [^ma-counsel-advisal-notice]: **Mass. Gen. Laws ch. 149, § 24L(b)(i) — Massachusetts Noncompetition Agreement Act** — "If the agreement is entered into in connection with the commencement of employment, it must be in writing and signed by both the employer and employee and expressly state that the employee has the right to consult with counsel prior to signing." *Mass. Gen. Laws ch. 149, § 24L(b)(i).* <https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter149/Section24L>
 
 [^dtsa-trade-secret-secrecy]: **Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839** — "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information" *18 U.S.C. § 1839(3)(B) (2018).* <https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information>
+
+[^brown-tgs]: **Brown v. TGS Management Co., LLC** — "Collectively, these overly restrictive provisions operate as a de facto noncompete provision; they plainly bar Brown in perpetuity from doing any work in the securities field, much less in his chosen profession of statistical arbitrage." *Brown v. TGS Mgmt. Co., LLC, 57 Cal. App. 5th 303 (2020).* <https://www.courtlistener.com/opinion/4805583/brown-v-tgs-management-co-llc/#:~:text=Collectively%2C%20these%20overly%20restrictive,profession%20of%20statistical%20arbitrage.>
+
+[^tls-rodriguez]: **TLS Management & Marketing Services, LLC v. Rodríguez-Toledo** — "We reverse because TLS failed to satisfy its burden to prove the existence of trade secrets, and because the nondisclosure agreements are so broad as to be unenforceable." *TLS Mgmt. & Mktg. Servs., LLC v. Rodríguez-Toledo, 966 F.3d 46 (1st Cir. 2020).* <https://www.courtlistener.com/opinion/4769672/tls-mgmt-and-mktg-ser-llc-v-rodriguez-toledo/#:~:text=We%20reverse%20because%20TLS%20failed,broad%20as%20to%20be%20unenforceable.>
 
 [^dtsa-immunity-notice]: **Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)** — "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information." *18 U.S.C. § 1833(b)(3)(A) (2018).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.>
 

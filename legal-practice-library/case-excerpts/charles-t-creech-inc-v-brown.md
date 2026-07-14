@@ -2,18 +2,22 @@
 type: Case Excerpt
 title: 'Charles T. Creech, Inc. v. Brown'
 description: >-
-  Charles T. Creech, Inc. v. Brown, 433 S.W.3d 345 (Ky. 2014). — quoted in 2
+  Charles T. Creech, Inc. v. Brown, 433 S.W.3d 345 (Ky. 2014). — quoted in 3
   document(s).
 citation: 'Charles T. Creech, Inc. v. Brown, 433 S.W.3d 345 (Ky. 2014).'
 resource: 'https://www.courtlistener.com/opinion/5444327/charles-t-creech-inc-v-brown/'
-timestamp: '2026-06-12'
+timestamp: '2026-07-03'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/kentucky'
+  - type: State Law Practice Guide
+    resource: >-
+      https://openagreements.org/practice-guides/invention-assignment/us/kentucky
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/kentucky'
 tags:
   - case-law
+  - invention-assignment
   - non-compete
 ---
 
@@ -21,7 +25,7 @@ tags:
 
 *Charles T. Creech, Inc. v. Brown, 433 S.W.3d 345 (Ky. 2014).*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -31,7 +35,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `employee-non-solicitation`, `entire-agreement-amendment-waiver-e-signatures`, `restrictive-covenants-each-independently-includable`, `timing-and-execution-acknowledgements`
 - source_cards: `creech-no-consideration`, `ky-creech-covs`, `ky-creech-entire`, `ky-creech-forbearance-timing`, `ky-ens-creech`
-- cited_by: [Non-Compete Agreement Review Checklist — Kentucky](../checklists/non-compete/us/kentucky.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Kentucky](../checklists/non-compete/us/kentucky.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5444327/charles-t-creech-inc-v-brown/#:~:text=Because%20the%20Agreement%20did%20not,Creech%2C%20there%20was%20no%20consideration.>
 
 ### charles-t-creech-inc-v-brown-because-we-hold-that-this-agreement-2fb4922a {#charles-t-creech-inc-v-brown-because-we-hold-that-this-agreement-2fb4922a}
@@ -40,8 +44,17 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `duration-limits`, `kentucky-statutory-gates`
 - source_cards: `creech-consideration-only-issue`, `ky-creech-onlyissue-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Kentucky](../checklists/non-compete/us/kentucky.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Kentucky](../checklists/non-compete/us/kentucky.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5444327/charles-t-creech-inc-v-brown/#:~:text=Because%20we%20hold%20that%20this,the%20only%20issue%20we%20address.>
+
+### charles-t-creech-inc-v-brown-he-remained-an-at-will-employee-with-83864841 {#charles-t-creech-inc-v-brown-he-remained-an-at-will-employee-with-83864841}
+
+> He remained an at-will employee with no promotion, no increase in wages, and no specialized training. In short, Brown received no consideration from Creech in exchange for signing the Agreement or after he signed the Agreement. Therefore, the Agreement is not enforceable.
+
+- supports: `holdover-clause-limit`
+- source_cards: `creech-consideration`
+- cited_by: [Employee Invention Assignment in Kentucky](../invention-assignment/us/kentucky.md)
+- link_to_source: <https://www.courtlistener.com/opinion/5444327/charles-t-creech-inc-v-brown/#:~:text=He%20remained%20an%20at%2Dwill%20employee,the%20Agreement%20is%20not%20enforceable.>
 
 ### charles-t-creech-inc-v-brown-in-doing-so-the-court-proposed-5689afbd {#charles-t-creech-inc-v-brown-in-doing-so-the-court-proposed-5689afbd}
 
@@ -49,7 +62,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `duration-limits`, `kentucky-statutory-gates`
 - source_cards: `creech-six-factor-proposed`, `ky-creech-sixfactor-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Kentucky](../checklists/non-compete/us/kentucky.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Kentucky](../checklists/non-compete/us/kentucky.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5444327/charles-t-creech-inc-v-brown/#:~:text=In%20doing%20so%2C%20the%20Court%20proposed,of%20the%20Agreement%20is%20enforceable.>
 
 ### charles-t-creech-inc-v-brown-in-short-brown-received-no-consideration-e660190b {#charles-t-creech-inc-v-brown-in-short-brown-received-no-consideration-e660190b}
@@ -58,5 +71,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `parties-and-cover-term-identification`, `timing-and-execution-acknowledgements`
 - source_cards: `creech-existing-employee-nothing`, `ky-creech-incumbent-cover`, `ky-creech-nothing-timing`
-- cited_by: [Non-Compete Agreement Review Checklist — Kentucky](../checklists/non-compete/us/kentucky.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Kentucky](../checklists/non-compete/us/kentucky.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5444327/charles-t-creech-inc-v-brown/#:~:text=In%20short%2C%20Brown%20received%20no,after%20he%20signed%20the%20Agreement.>

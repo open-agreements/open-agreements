@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — North Dakota
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — North Dakota
 description: >-
   A clause-by-clause reviewer checklist for North Dakota restrictive covenant
   agreements — N.D.C.C. § 9-08-06 voids non-competes and customer non-solicits,
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — North Dakota[^about]
+# Non-Compete Agreement Reviewer Checklist — North Dakota[^about]
 
 A clause-by-clause reviewer checklist for North Dakota restrictive covenant agreements — N.D.C.C. § 9-08-06 voids non-competes and customer non-solicits, so the review screens for void restraints and then checks the confidentiality, trade-secret, and anti-raiding clauses that survive.
 
@@ -57,9 +57,11 @@ Run this checklist the way a North Dakota court would read the agreement: the st
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should run as long as secrecy does — the federal definition and North Dakota's own act both key protection to continued secrecy, not to a contract date. In a ban state this matters twice over: trade-secret law is the employer's main post-employment protection, and a fixed expiry voluntarily surrenders it. [^nd-dtsa-definition-conf][^nd-utsa-definition-conf] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection available, because the federal definition and North Dakota's own act both key protection to continued secrecy, not to a contract date. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of what is, in a ban state, the employer's main post-employment protection, while a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^nd-dtsa-definition-conf][^nd-utsa-definition-conf] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information a finite term on its own track, separate from the perpetual trade-secret obligation. An everything-forever clause is the kind of open-ended burden that invites a court to read the confidentiality covenant as a restraint on the trade rather than a guard on information. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information a finite term on its own track, separate from the status-bounded trade-secret obligation. An everything-forever clause is the kind of open-ended burden that invites a court to read the confidentiality covenant as a restraint on the trade rather than a guard on information. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -145,7 +147,7 @@ The four items below exist only on this North Dakota page: they implement the vo
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for North Dakota (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for North Dakota (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — North Dakota*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/north-dakota.
 
 [^nd-werlinger-agent-void-cover]: **Werlinger v. Mutual Service Casualty Insurance Co.** — "The trial court ruled that Paragraph 12(D) was a restraint of trade, void and unenforceable under § 9-08-06, N.D.C.C." *Werlinger v. Mut. Serv. Cas. Ins. Co., 496 N.W.2d 26, 27 (N.D. 1993).* <https://www.courtlistener.com/opinion/1282430/werlinger-v-mutual-service-casualty-insurance-co/#:~:text=The%20trial%20court%20ruled%20that,unenforceable%20under%20%C2%A7%209%2D08%2D06%2C%20N.D.C.C.>
 

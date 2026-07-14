@@ -7,9 +7,9 @@ description: >-
 citation: 'Miele v. Foundation Medicine, Inc., 496 Mass. 171 (2025).'
 resource: >-
   https://www.courtlistener.com/opinion/10604382/susan-miele-v-foundation-medicine-inc/
-timestamp: '2026-06-11'
+timestamp: '2026-07-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/massachusetts'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/massachusetts'
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `covered-agreements`, `definitions`, `recent-developments`, `restrictive-covenants-each-independently-includable`
 - source_cards: `miele-nonsolicit-boundary`, `miele-plain-language`, `miele-plain-reading`, `rd-miele-plain-language`
-- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/us/massachusetts.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Massachusetts](../checklists/non-compete/us/massachusetts.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10604382/susan-miele-v-foundation-medicine-inc/#:~:text=Under%20the%20plain%20language%20of,a%20subset%20of%20noncompetition%20agreements.>

@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — West Virginia
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — West Virginia
 description: >-
   A clause-by-clause reviewer checklist for West Virginia employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -14,7 +14,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — West Virginia[^about]
+# Non-Compete Agreement Reviewer Checklist — West Virginia[^about]
 
 A clause-by-clause reviewer checklist for West Virginia employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Reddy reasonableness framework, where a facially unreasonable covenant is void with no judicial narrowing and physician covenants are capped at one year and thirty road miles.
 
@@ -64,7 +64,9 @@ Review every item below the way a West Virginia court would: the employer must f
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — The trade-secret obligation should last as long as secrecy does — that is how federal law defines the right, and West Virginia's trade-secret statute runs alongside the contract rather than replacing it: the act displaces conflicting civil remedies but expressly preserves contractual ones. A fixed expiry on trade-secret protection gives away rights the statutes would otherwise keep alive. [^dtsa-trade-secret-definition][^wv-47-22-7-conf] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection the law offers: federal law keys the right to continued secrecy, and West Virginia's trade-secret statute runs alongside the contract rather than replacing it, displacing conflicting civil remedies while expressly preserving contractual ones. That status-bounded form is the ceiling the statutes will back, not a required one — a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition][^wv-47-22-7-conf] [#tie-trade-secret-duration-to-secrecy-status]
+
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
 
 - [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on non-secret information is the kind of clause that operates as a practical non-compete, and in this state a confidentiality covenant earns enforcement by staying tied to actual confidential information rather than to the worker's ability to do similar work. [^wv-reddy-assets-conf] [#state-confidentiality-duration]
 
@@ -156,7 +158,7 @@ The five items below exist only on this West Virginia page: they implement the p
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for West Virginia (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for West Virginia (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — West Virginia*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/west-virginia.
 
 [^wv-reddy-burden-cover]: **Reddy v. Community Health Foundation of Man** — "The employer must first show that he has an interest requiring protection." *Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).* <https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=The%20employer%20must%20first%20show,has%20an%20interest%20requiring%20protection.>
 

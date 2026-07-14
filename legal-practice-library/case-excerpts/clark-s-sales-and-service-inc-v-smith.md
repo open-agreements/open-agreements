@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/2725543/clarks-sales-and-service-inc-v-john-d-smith-and-ferguson-enterprises/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/indiana'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/indiana'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `clarks-indivisible`, `clarks-indivisible-severability`
-- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2725543/clarks-sales-and-service-inc-v-john-d-smith-and-ferguson-enterprises/#:~:text=Paragraph%207(C)%20is%20indivisible%20and,blue%20pencil%20doctrine%20is%20inapplicable.>

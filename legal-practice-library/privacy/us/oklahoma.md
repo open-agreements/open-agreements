@@ -69,7 +69,7 @@ The structure matters for scoping. The GLBA carve-out is written as *a financial
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oklahoma. This article synthesizes Oklahoma primary law and is not legal advice from a Oklahoma-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oklahoma. This article synthesizes Oklahoma primary law and is not legal advice from a Oklahoma-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Oklahoma Consumer Privacy Law (OKCDPA)*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/oklahoma.
 
 [^stat-314-apply]: **75A O.S. § 314(A) (SB 546)** — "The provisions of this act apply only to a controller or processor who: 1. Conducts business in this state or produces a product or service targeted to the residents of this state; and 2. During a calendar year, either: a. controls or processes personal data of at least one hundred thousand (100,000) consumers, or b. controls or processes personal data of at least twenty-five thousand (25,000) consumers and derives over fifty percent (50%) of gross revenue from the sale of personal data." *75A O.S. § 314(A) (SB 546, eff. Jan. 1, 2027).* <https://www.oklegislature.gov/cf_pdf/2025-26%20ENR/SB/SB546%20ENR.PDF>
 

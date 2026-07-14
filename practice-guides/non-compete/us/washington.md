@@ -56,6 +56,11 @@ That independent-consideration requirement codifies *Labriola v. Pollard Group, 
 
 "A noncompete agreement entered into after employment has commenced is validly formed only when there is independent consideration at the time the agreement is reached."[^labriola-independent-consideration]
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A restrictive covenant a worker signs after employment has already commenced is validly formed only where it is supported by independent consideration given at the time the covenant is reached; continued at-will employment alone is not consideration, so a post-hire covenant backed only by keeping an existing worker on the payroll is unsupported and unenforceable [^labriola-independent-consideration][^labriola-continued-employment][^rcw-020-consideration]. Identifiable new value given specifically in exchange for the covenant — a signing or retention bonus, an equity grant, or a promotion — is what carries a post-hire covenant across that line, and a placeholder left unfilled leaves the covenant resting on nothing the statute recognizes.
+
 ## Can a laid-off Washington employee be held to a non-compete? {#layoff-pay}
 
 **Short answer.** Only if the employer pays for it. A covenant against a worker terminated by layoff is void unless the employer pays compensation equal to the worker's base salary for the enforcement period, offset by what the worker earns elsewhere [^rcw-020-layoff].
@@ -139,12 +144,12 @@ The Act expressly does not revoke or impede the development of the common law [^
 
 Washington follows the reasonable-extent rule from *Wood v. May*: a court of equity enforces a restraint against a former employee only to the extent it is reasonable and necessary to protect a legitimate business interest [^woodmay-reasonable-extent-court-narrowing]. *Emerick* applies that to modern covenants, holding that when some terms are unreasonable the entire covenant does not fail — the court may modify it [^emerick-partial].
 
-But under the current statute, reformation is not free. RCW 49.62.080 imposes the $5,000 penalty (or greater actual damages) plus fees whenever a court reforms, rewrites, modifies, or only partially enforces a covenant [^rcw-080-reformation-penalty-court-narrowing]. For a clause-by-clause pass over a specific agreement drafted to these rules, the [Washington non-compete review checklist](/checklists/non-compete/us/washington) walks the full covenant suite item by item with each requirement's force level.
+But under the current statute, reformation is not free. RCW 49.62.080 imposes the $5,000 penalty (or greater actual damages) plus fees whenever a court reforms, rewrites, modifies, or only partially enforces a covenant [^rcw-080-reformation-penalty-court-narrowing]. For a clause-by-clause pass over a specific agreement drafted to these rules, the [Washington non-compete reviewer checklist](/checklists/non-compete/us/washington) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a Washington court to save an overbroad covenant. Even though courts can reform, the act of reforming or partially enforcing triggers the statutory penalty against the employer, so scope, duration, and geography should be drafted to the minimum the legitimate interest requires [^rcw-080-reformation-penalty-court-narrowing][^woodmay-reasonable-extent-court-narrowing].
+> A Washington court can reform an overbroad covenant rather than void it, but the act of reforming or partially enforcing one triggers the statutory penalty against the party seeking enforcement, so a covenant that leans on judicial narrowing to cure overbreadth exposes the employer to the very penalty at issue. The restraint that holds without that cost is the one already drawn to the minimum scope, duration, and geography the legitimate interest requires [^rcw-080-reformation-penalty-court-narrowing][^woodmay-reasonable-extent-court-narrowing].
 
 ## Does a Washington non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
@@ -163,10 +168,10 @@ Chapter 49.62 RCW does not address tolling or extension-on-breach clauses, and n
 
 Signed on March 23, 2026 and effective June 30, 2027, ESHB 1155 (chapter 149, Laws of 2026) converts Washington from a conditional-enforceability state into a near-total ban [^eshb1155-intent-the-2027-ban][^eshb1155-effective-date-the-2027-ban]. Several changes matter for employers planning ahead:
 
-- 
-- 
-- 
-- 
+- **Enforcement itself becomes unlawful.** It is a violation to enforce, attempt to enforce, or threaten to enforce a non-compete, to represent that a worker is subject to one, or to enter into one [^eshb1155-enforcement-violation].
+- **Affirmative notice duty.** By October 1, 2027, employers must make reasonable efforts to tell current and former workers whose covenant is still within its time period that it is void [^eshb1155-notice-duty].
+- **Forfeiture and clawback clauses are captured.** The expanded definition reaches any provision requiring a worker to return, repay, or forfeit compensation as a consequence of competing [^eshb1155-forfeiture].
+- **The thresholds disappear.** ESHB 1155 repeals the independent-contractor threshold (RCW 49.62.030), the annual-adjustment section (RCW 49.62.040), and the broadcasting-industry rule (RCW 49.44.190) [^eshb1155-repeals].
 
 > [!NOTE]
 > **Practice note.**
@@ -175,7 +180,7 @@ Signed on March 23, 2026 and effective June 30, 2027, ESHB 1155 (chapter 149, La
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Washington. This article synthesizes Washington primary law and is not legal advice from a Washington-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Washington. This article synthesizes Washington primary law and is not legal advice from a Washington-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Washington*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/washington.
 
 [^rcw-020-void-conditions]: **RCW 49.62.020** — "Unless the employee's earnings from the party seeking enforcement, when annualized, exceed one hundred thousand dollars per year." *RCW 49.62.020(1)(b).* <https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.020>
 
@@ -274,5 +279,7 @@ Signed on March 23, 2026 and effective June 30, 2027, ESHB 1155 (chapter 149, La
 [^eshb1155-repeals]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "The following acts or parts of acts are each repealed: (1) RCW 49.62.030 (When void and unenforceable against independent contractors) and 2019 c 299 s 4; (2) RCW 49.62.040 (Dollar amounts adjusted) and 2019 c 299 s 5" *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 8.* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
 
 [^eshb1155-effective-date-the-2027-ban]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "This act takes effect June 30, 2027." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 9.* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
+
+[^eshb1155-forfeiture]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "A ‘noncompetition covenant’ also includes any provision in an agreement that threatens, demands, requires, or otherwise effectuates that an individual return, repay, or forfeit any right, benefit, or compensation, as a consequence of the individual engaging in a lawful profession, trade, or business of any kind." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 3.* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>
 
 [^eshb1155-voidall]: **Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026** — "regardless of when the parties entered into the noncompetition covenant." *Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 4(1).* <https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm>

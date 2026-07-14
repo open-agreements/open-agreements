@@ -2,7 +2,7 @@
 jurisdiction: "Maine"
 slug: maine
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/maine
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/maine · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/maine · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Maine[^about]
 
@@ -44,6 +44,11 @@ The statute limits those interests to trade secrets, confidential information th
 
 Maine common law points in the same direction. *Lord* says the covenant must sweep no wider than needed to protect the business interest, and *Sisters of Charity* treats duration, geography, and the nature of the protected interest as fact-intensive reasonableness questions [^lord-no-wider-than-necessary][^sisters-duration-geography-interest].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A Maine non-compete is contrary to public policy and enforceable only to the extent it is reasonable and no broader than necessary to protect one of the statute's three legitimate business interests — trade secrets, non-trade-secret confidential information, or goodwill — so a covenant aimed at ordinary competition sits outside the statutory frame and does not hold [^maine-599a-public-policy-narrow-interests]. The common law measures the same restraint: it must sweep no wider than the interest at issue requires, and duration, geography, and the nature of the protected interest are weighed together as a fact-intensive question, so a term or radius carried from another form is measured against an interest it was never sized to [^lord-no-wider-than-necessary][^sisters-duration-geography-interest].
+
 ## Which Maine workers cannot be bound by non-competes? {#protected-workers}
 
 **Short answer.** Maine bars non-competes for employees earning at or below 400 percent of the federal poverty level and for non-owner licensed veterinarians in covered veterinary facilities [^maine-599a-prohibited-workers][^maine-599a-veterinarian-prior-agreements].
@@ -68,7 +73,7 @@ The delayed-effectiveness rule is separate from the signing rule. A compliant ag
 > [!CAUTION]
 > **Drafting note.**
 >
-> Build the notice and delay rules into onboarding workflows. A signature collected on time is not enough if the pre-offer disclosure or 3-business-day copy requirement was missed [^maine-599a-disclosure-notice].
+> Maine's pre-offer disclosure and 3-business-day copy requirements sit upstream of signing, so a signature collected on time does not cure a missed disclosure or a shortened review window, and the covenant is exposed even where the executed agreement looks complete [^maine-599a-disclosure-notice].
 
 ## Will Maine courts narrow or reform an overbroad non-compete? {#court-narrowing}
 
@@ -76,12 +81,12 @@ The delayed-effectiveness rule is separate from the signing rule. A compliant ag
 
 That makes Maine different from a strict red-pencil jurisdiction and from a mechanical blue-pencil state. The court can focus on the actual enforcement request, but the requested restraint still must be reasonable in duration, geography, and protected interest.
 
-*Lord* gives the limiting principle. The court may require specificity about what goodwill or business value needs protection before imposing or enforcing a severe restraint [^lord-specificity-goodwill-restraint]. For a clause-by-clause pass over a specific agreement against these rules, the [Maine non-compete review checklist](/checklists/non-compete/us/maine) walks the full covenant suite item by item with each requirement's force level.
+*Lord* gives the limiting principle. The court may require specificity about what goodwill or business value needs protection before imposing or enforcing a severe restraint [^lord-specificity-goodwill-restraint]. For a clause-by-clause pass over a specific agreement against these rules, the [Maine non-compete reviewer checklist](/checklists/non-compete/us/maine) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not draft broadly just because Maine recognizes as-applied review. *Lord* still requires a record showing that the scope is reasonably necessary to protect the specific goodwill or business value at issue [^lord-specificity-goodwill-restraint].
+> Maine's as-applied review is not a license for a broad covenant. Because Maine assesses a non-compete only as the employer has sought to apply it, and whether a court will rewrite an overbroad covenant as drafted is unsettled, a covenant that outruns the interest it protects is exposed rather than assured of judicial narrowing [^brignull-as-applied-review]. *Lord* supplies the limiting principle: the record must define the protected goodwill or business value first and then the scope reasonably necessary to protect it, so the restraint that holds is the one drawn to the interest the employer actually intends to enforce [^lord-specificity-goodwill-restraint].
 
 ## Are employer no-poach or no-hire agreements allowed in Maine? {#employer-no-poach}
 
@@ -90,6 +95,11 @@ That makes Maine different from a strict red-pencil jurisdiction and from a mech
 The statute reaches agreements between two or more employers, including through franchise, contractor, and subcontractor arrangements. It separately bars entering into the agreement, enforcing it, or threatening enforcement.
 
 Violations carry a civil fine of at least $5,000, and the Maine Department of Labor enforces the section [^maine-599b-penalty-enforcement].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> Section 599-B's ban is not limited to a stand-alone no-poach contract: it reaches a no-solicit or no-hire term buried in a franchise, contractor, or subcontractor arrangement between two or more employers, and it bars entering into, enforcing, or threatening to enforce such a term alike [^maine-599b-no-poach-definition-ban]. A violation is a civil violation carrying a fine of not less than $5,000 enforced by the Maine Department of Labor, so a commercial agreement that quietly restricts who may hire another employer's workers carries statutory exposure independent of any employee covenant [^maine-599b-penalty-enforcement].
 
 ## Are non-solicitation and confidentiality agreements safer alternatives in Maine? {#alternatives}
 
@@ -102,7 +112,12 @@ Maine also has a separate employment NDA statute. Section 599-C protects reporti
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not make a confidentiality clause do non-compete work. Maine allows protection for specialized confidential information, but *Bernier* distinguishes that from blocking general skill and knowledge [^bernier-confidential-not-general-skill].
+> A confidentiality covenant cannot do the work of a non-compete. Maine enforces protection for specialized, proprietary confidential information, but a clause that reaches the general skill and knowledge an employee acquired on the job crosses the line *Bernier* draws and forfeits that protection [^bernier-confidential-not-general-skill].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> Section 599-A(2) ranks the lighter tools first: a non-compete may be presumed necessary only where the legitimate business interest cannot be adequately protected through an alternative restrictive covenant, including a nonsolicitation, nondisclosure, or confidentiality agreement [^maine-599a-alternative-covenants]. A covenant that reaches for the non-compete without a record showing the alternatives were considered and found inadequate starts a step behind the statute's own ordering, and the alternatives carry their own ceiling — a confidentiality term still cannot bar the general skill and knowledge an employee acquired on the job [^bernier-confidential-not-general-skill].
 
 ## How does Maine treat sale-of-business non-compete covenants? {#sale-of-business}
 
@@ -131,7 +146,12 @@ The 2026 healthcare development is now law. Governor Mills signed L.D. 2200 on A
 >
 > Confirm the codified text before relying on the § 599-A page alone for healthcare covenants. L.D. 2200 was signed on April 15, 2026 but does not take effect until July 13, 2026, so the Revisor's current § 599-A text may still show only the wage-floor and veterinarian prohibitions until the amendment is codified [^maine-599a-current-prohibited-workers][^ebg-ld2200-effective].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maine. This article synthesizes Maine primary law and is not legal advice from a Maine-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+> [!CAUTION]
+> **Drafting note.**
+>
+> L.D. 2200's health-care-practitioner restriction applies to every non-compete entered into or renewed on or after its July 13, 2026 effective date, so the trigger is the made-or-renewed date rather than when a dispute arises [^ebg-ld2200-effective]. A covenant for a health-care worker that is signed, re-papered, or renewed on or after that date is measured against the restriction even where the original agreement predated it, and because the codified text can lag the amendment on the published § 599-A page, a covenant validated only against the pre-amendment wage-floor and veterinarian rules can miss the restriction that now governs it [^ebg-ld2200-effective].
+
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maine. This article synthesizes Maine primary law and is not legal advice from a Maine-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Maine*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/maine.
 
 [^maine-599a-public-policy-narrow-interests]: **26 M.R.S. § 599-A — Noncompete agreements** — "Noncompete agreements are contrary to public policy and are enforceable only to the extent that they are reasonable and are no broader than necessary to protect one or more of the following legitimate business interests of the employer:" *26 M.R.S. § 599-A(2).* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
 

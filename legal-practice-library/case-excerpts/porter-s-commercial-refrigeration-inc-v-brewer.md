@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/9490284/porters-commercial-refrigeration-inc-v-danny-a-brewer-jason-spears/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/arkansas'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/arkansas'
@@ -43,5 +43,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `injunction-remedies`, `remedies`
 - source_cards: `porters-statutory-harm`, `q9-porters-statutory-harm`
-- cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../checklists/non-compete/us/arkansas.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Arkansas](../checklists/non-compete/us/arkansas.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9490284/porters-commercial-refrigeration-inc-v-danny-a-brewer-jason-spears/#:~:text=This%20means%20that%20a%20party,a%20breach%20of%20the%20noncompete.>

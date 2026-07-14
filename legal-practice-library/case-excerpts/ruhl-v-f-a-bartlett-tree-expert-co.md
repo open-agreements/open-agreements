@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/2292892/ruhl-v-f-a-bartlett-tree-expert-co/
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/maryland'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/maryland'
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `md-ruhl-reasonableness-backdrop`, `ruhl-reasonableness-backdrop`
-- cited_by: [Non-Compete Agreement Review Checklist — Maryland](../checklists/non-compete/us/maryland.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Maryland](../checklists/non-compete/us/maryland.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2292892/ruhl-v-f-a-bartlett-tree-expert-co/#:~:text=Covenants%20of%20this%20nature%20are,reasonable%20on%20the%20specific%20facts.>
 
 ### ruhl-v-f-a-bartlett-tree-expert-co-there-is-no-arbitrary-yardstick-as-83e3db2f {#ruhl-v-f-a-bartlett-tree-expert-co-there-is-no-arbitrary-yardstick-as-83e3db2f}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `duration-limits`
 - source_cards: `md-ruhl-no-yardstick`, `ruhl-no-yardstick`
-- cited_by: [Non-Compete Agreement Review Checklist — Maryland](../checklists/non-compete/us/maryland.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Maryland](../checklists/non-compete/us/maryland.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2292892/ruhl-v-f-a-bartlett-tree-expert-co/#:~:text=There%20is%20no%20arbitrary%20yardstick,the%20interest%20of%20the%20public.>

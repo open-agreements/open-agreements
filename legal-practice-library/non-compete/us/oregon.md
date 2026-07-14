@@ -41,7 +41,7 @@ The 30-day post-termination copy requirement in subsection (1)(d) is easy to ove
 > [!NOTE]
 > **Practice note.**
 >
-> Calendar the 30-day post-termination copy obligation as part of every Oregon offboarding. The signed-copy delivery is an independent statutory condition, so missing it can void an otherwise compliant covenant [^q2-ors-653-295-conditions][^q2-boli-conditions].
+> The signed-copy delivery under ORS 653.295(1)(d) is an independent condition of validity that falls due within 30 days after termination — after the employment relationship has already ended — so a covenant compliant in every other respect is still void where that post-termination copy is not delivered [^q2-ors-653-295-conditions][^q2-boli-conditions].
 
 ## Which Oregon employees earn enough to be bound by a non-compete? {#salary-threshold}
 
@@ -58,7 +58,7 @@ Because the dollar figure resets every January, the relevant year is the year of
 > [!NOTE]
 > **Practice note.**
 >
-> Test the income threshold against the year of termination, not the year of hire. An employee who cleared the threshold at signing but fell below it by the termination year may be outside the statute, voiding the covenant [^q3-ors-653-295-threshold][^q3-boli-threshold].
+> ORS 653.295(1)(e) measures the salary-and-commissions threshold at the time of termination against the inflation-indexed figure for that year, not the year of hire, so an employee who cleared the threshold at signing but falls below the termination-year figure is outside the statute and the covenant is void [^q3-ors-653-295-threshold][^q3-boli-threshold].
 
 ## Can an Oregon employer enforce a non-compete against a worker below the salary threshold by paying during the restraint? {#garden-leave}
 
@@ -73,7 +73,7 @@ The labor agency describes the same option in plainer terms, framing it as enfor
 > [!CAUTION]
 > **Drafting note.**
 >
-> If you plan to rely on the garden-leave option, put the payment promise in the agreement itself. The statute conditions this path on a written agreement to pay the greater of the two amounts for the restricted period [^q4-ors-653-295-garden-leave][^q4-boli-garden-leave].
+> The garden-leave path in ORS 653.295(7) is available only where the employer's written commitment to pay — the greater of the two statutory amounts, for the time the employee is restricted from working — appears in the agreement itself, so a covenant that leans on garden leave without that written payment promise falls back onto the exempt-status and salary-threshold gates it was meant to bypass [^q4-ors-653-295-garden-leave][^q4-boli-garden-leave].
 
 ## How long can an Oregon non-compete last? {#duration-limits}
 
@@ -100,7 +100,7 @@ In *Nike v. McCarthy*, the court analyzed whether a non-compete an executive sig
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not roll out a mid-employment non-compete on continued employment alone. Tie it to a real promotion or other bona fide advancement, because the statutory timing requirement is what *Nike v. McCarthy* tested before enforcing the covenant [^q6-ors-653-295-timing][^q6-nike-timing].
+> A mid-employment non-compete rests on the ORS 653.295(1)(a) formation gateway — a written offer received at least two weeks before the first day of employment, or a subsequent bona fide advancement — and continued employment alone is not a qualifying trigger, so a covenant bolted on during employment without a genuine advancement is void. *Nike v. McCarthy* tested that timing requirement before the covenant was enforced [^q6-ors-653-295-timing][^q6-nike-timing].
 
 ## What counts as a protectable interest under Oregon's non-compete statute? {#protectable-interest}
 
@@ -121,7 +121,7 @@ A narrow third category covers certain on-air broadcasting talent, and it comes 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Document the specific confidential information the employee can access before asking a court to enforce. Oregon's protectable-interest test is concrete, and *Nike v. McCarthy* turned on the particular strategic information at risk, not a generic competitive concern [^q7-ors-653-295-interest][^q7-nike-interest].
+> Oregon's protectable-interest requirement is concrete: it turns on the specific trade secrets or competitively sensitive strategic information the employee can access and exploit at a competitor, not a generic competitive concern, so a covenant resting on an unspecified interest has nothing to satisfy ORS 653.295(1)(c) and (2). *Nike v. McCarthy* turned on the particular strategic information at risk [^q7-ors-653-295-interest][^q7-nike-interest].
 
 ## Is a defective Oregon non-compete void or merely voidable, and can a court fix it? {#void-vs-voidable}
 
@@ -131,14 +131,14 @@ The distinction is consequential. Under the prior law, a defective covenant was 
 
 "As explained below, we conclude that plaintiffs evidence established, at most, that the noncompetition agreement was voidable (not void) but remained valid and in effect at the time that defendant invoked it."[^q8-bernard-voidable]
 
-The 2021 amendments changed the default to void. A covenant that misses a statutory requirement is now unenforceable from the start, without any need for the employee to act. The statute does sever an over-long term, voiding only the portion beyond 12 months, but that targeted severance is not a general license for courts to rewrite an otherwise non-conforming covenant. For a clause-by-clause pass over a specific agreement against these statutory conditions, the [Oregon non-compete review checklist](/checklists/non-compete/us/oregon) walks the full covenant suite item by item with each requirement's force level.
+The 2021 amendments changed the default to void. A covenant that misses a statutory requirement is now unenforceable from the start, without any need for the employee to act. The statute does sever an over-long term, voiding only the portion beyond 12 months, but that targeted severance is not a general license for courts to rewrite an otherwise non-conforming covenant. For a clause-by-clause pass over a specific agreement against these statutory conditions, the [Oregon non-compete reviewer checklist](/checklists/non-compete/us/oregon) walks the full covenant suite item by item with each requirement's force level.
 
 "The remainder of a term of a noncompetition agreement in excess of 12 months is void and may not be enforced by a court of this state."[^q8-ors-653-295-void]
 
-> [!NOTE]
-> **Practice note.**
+> [!CAUTION]
+> **Drafting note.**
 >
-> Do not count on an Oregon court rescuing a non-conforming employee non-compete by narrowing it. Apart from the statutory severance of an over-long term, a non-conforming covenant is void, and the pre-2022 voidable rule from *Bernard v. S.B., Inc.* no longer applies [^q8-ors-653-295-void][^q8-bernard-voidable].
+> For agreements entered on or after January 1, 2022, a non-conforming employee non-compete is void rather than merely voidable — unenforceable from the start, with no act by the employee required — so a savings or reformation clause does not move it back into the enforceable column. ORS 653.295(3) supplies the only built-in repair: it severs the portion of a term beyond 12 months and voids the excess, which is not a license for a court to rewrite an otherwise non-conforming covenant, and the pre-2022 voidable rule from *Bernard v. S.B., Inc.* no longer applies. A covenant drawn to the ORS 653.295 checklist at the outset is the one that survives; a covenant built to be narrowed later is void as written [^q8-ors-653-295-void][^q8-bernard-voidable].
 
 ## Are non-solicitation covenants treated differently in Oregon? {#nonsolicitation}
 
@@ -161,7 +161,7 @@ The court also narrowed the meaning of the customer carve-out, rejecting a broad
 > [!CAUTION]
 > **Drafting note.**
 >
-> Draft customer non-solicitation clauses around active, ongoing customer relationships, not former or incidental patrons. *Oregon Psychiatric Partners v. Henry* read the customer carve-out narrowly, so an overbroad customer definition risks losing the protection the carve-out provides [^q9-ors-653-295-carveout][^q9-henry-customers].
+> The ORS 653.295(5)(b) carve-out reaches a covenant confined to customers with an active or ongoing relationship with the employer, not former or merely incidental patrons; *Oregon Psychiatric Partners v. Henry* read that customer carve-out narrowly, so a customer definition drawn wider than active relationships falls outside the carve-out and back into the non-compete checklist it cannot satisfy [^q9-ors-653-295-carveout][^q9-henry-customers].
 
 ## Does ORS 653.295 apply to sale-of-business and owner covenants in Oregon? {#sale-of-business}
 
@@ -176,7 +176,7 @@ Because the checklist and the 12-month limit do not reach non-employment covenan
 > [!CAUTION]
 > **Drafting note.**
 >
-> Match the legal framework to the deal. An employee non-compete must clear the ORS 653.295 checklist, but a covenant tied to a business sale or an owner's interest falls outside the statute and is judged under common-law reasonableness, so do not assume the 12-month statutory cap applies to it [^q9b-ors-653-295-employment-only].
+> An employee non-compete must clear the ORS 653.295 checklist, but a covenant given as part of a business sale or by an owner outside the employment relationship falls outside the statute and is measured under common-law reasonableness, so the 12-month cap and the salary and notice gates do not reach it; a sale-of-business restraint confined to the employee checklist gives up the wider latitude those covenants ordinarily receive [^q9b-ors-653-295-employment-only].
 
 ## Does an Oregon non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
@@ -190,10 +190,10 @@ The complication is the way the statute measures the term. The 12-month maximum 
 
 A tolling clause that extends the effective restraint beyond 12 months after termination is therefore in tension with the statutory cap, even though no Oregon decision has tested such a clause directly. Treat the question as open and draft conservatively.
 
-> [!NOTE]
-> **Practice note.**
+> [!CAUTION]
+> **Drafting note.**
 >
-> No Oregon statute or case squarely decides whether a non-compete may be tolled or extended for breach or pending litigation, and the 12-month-from-termination cap voids any excess term. Treat tolling as unsettled and avoid a clause that would push the effective restraint past 12 months after termination [^q10-ors-653-295-cap].
+> ORS 653.295(3) measures the 12-month maximum from the date of termination, not from the last day of compliance, and voids any term in excess of 12 months, so a tolling clause that pauses the non-compete during breach or litigation and pushes the effective restraint past 12 months after termination runs into the statutory cap and is void as to the excess. No Oregon statute or decision squarely approves or rejects such a clause, which leaves the fixed-from-termination cap as the controlling constraint on any tolling term [^q10-ors-653-295-cap].
 
 ## Are physician and other medical non-competes enforceable in Oregon? {#healthcare-licensees}
 
@@ -218,7 +218,7 @@ The reach is also retroactive. The 2025 law applies to qualifying medical-licens
 > [!NOTE]
 > **Practice note.**
 >
-> Do not rely on a pre-2025 physician or nurse non-compete in Oregon. ORS 653.297 voids medical-licensee non-competes absent a narrow exception, and the 2025 law reaches agreements signed before its effective date [^q11-ors-653-297-ban][^q11-ors-653-298-retro].
+> ORS 653.297 voids a non-compete restricting the practice of medicine or nursing between a medical licensee and a person, management services organization, or hospital absent a narrow exception, and ORS 653.298 reaches agreements entered before, on, or after the June 9, 2025 effective date, so a pre-2025 physician or nurse non-compete is void as well [^q11-ors-653-297-ban][^q11-ors-653-298-retro].
 
 ## What is a bonus restriction agreement, and why does it matter? {#bonus-restriction}
 
@@ -235,7 +235,7 @@ The defining feature is the limited penalty. The employee who competes loses onl
 > [!CAUTION]
 > **Drafting note.**
 >
-> If the only consequence you need is forfeiture of unpaid bonus money, use a bonus restriction agreement rather than a non-compete. The statute keeps that tool outside the non-compete checklist as long as the penalty is limited to unpaid bonus compensation [^q12-ors-653-295-bonus-carveout][^q12-ors-653-295-bonus-def].
+> A bonus restriction agreement sits outside the ORS 653.295 non-compete checklist only while its penalty for competition stays limited to forfeiture of unpaid profit sharing or bonus compensation; a forfeiture provision that reaches further — barring competing work or clawing back money already paid — loses the carve-out and is measured as a non-compete against the full statutory gates [^q12-ors-653-295-bonus-carveout][^q12-ors-653-295-bonus-def].
 
 ## Can an out-of-state employer use a choice-of-law clause to avoid ORS 653.295, and what is the fee exposure? {#choice-of-law-and-fees}
 
@@ -249,10 +249,10 @@ The fee statute then changes the litigation calculus. A contractual fee clause t
 
 "the party that prevails on the claim shall be entitled to reasonable attorney fees in addition to costs and disbursements, without regard to whether the prevailing party is the party specified in the contract and without regard to whether the prevailing party is a party to the contract."[^q13-ors-20-096]
 
-> [!NOTE]
-> **Practice note.**
+> [!CAUTION]
+> **Drafting note.**
 >
-> Do not assume a Delaware or other out-of-state choice-of-law clause will save a non-compete against an Oregon-resident employee working in Oregon. ORS 15.320 points to Oregon law, and ORS 20.096 can shift fees to a prevailing employee even under an employer-drafted one-way fee clause [^q13-ors-15-320][^q13-ors-20-096].
+> ORS 15.320(3) applies Oregon law to a contract of employment for services rendered primarily in Oregon by an Oregon resident, so an out-of-state choice-of-law clause does not carry a non-compete around ORS 653.295 for that employee. And ORS 20.096(1) gives a one-sided contractual attorney-fee clause reciprocal effect, so a prevailing employee recovers reasonable fees even under a provision the employer wrote to run only in its own favor [^q13-ors-15-320][^q13-ors-20-096].
 
 ## How do Oregon trade-secret protections and NDAs compare to non-competes? {#trade-secrets-ndas}
 
@@ -273,11 +273,11 @@ Confidentiality and non-disparagement clauses have their own statutory limit. Th
 > [!CAUTION]
 > **Drafting note.**
 >
-> Use confidentiality and trade-secret tools for secrecy interests, and scope nondisclosure and nondisparagement clauses to avoid the Workplace Fairness Act. ORS 653.295 preserves trade-secret remedies, but ORS 659A.370 bars provisions that prevent an employee from discussing discrimination or harassment [^q14-ors-653-295-preserve][^q14-ors-659a-370-wfa].
+> ORS 653.295(6) preserves the employer's trade-secret and proprietary-information remedies whatever happens to a non-compete, so confidentiality and trade-secret terms carry the secrecy interest on their own; but ORS 659A.370 makes a nondisclosure or nondisparagement provision an unlawful employment practice to the extent it has the purpose or effect of preventing an employee from disclosing or discussing discrimination, harassment, or sexual assault, so a confidentiality clause drawn wide enough to reach that conduct is unenforceable as to it [^q14-ors-653-295-preserve][^q14-ors-659a-370-wfa].
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oregon. This article synthesizes Oregon primary law and is not legal advice from a Oregon-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oregon. This article synthesizes Oregon primary law and is not legal advice from a Oregon-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Oregon*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/oregon.
 
 [^q1-ors-653-295-void-unless]: **ORS 653.295** — "A noncompetition agreement entered into between an employer and employee is void and unenforceable unless: (a)(A) The employer informs the employee in a written employment offer received by the employee at least two weeks before the first day of the employee's employment that a noncompetition agreement is required as a condition of employment; or (B) The noncompetition agreement is entered into upon a subsequent bona fide advancement of the employee by the employer" *ORS 653.295(1).* <https://www.oregonlegislature.gov/bills_laws/ors/ors653.html>
 

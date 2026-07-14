@@ -51,7 +51,7 @@ A controller that cures within the 90-day window and certifies the cure in writi
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-05. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Iowa. This article synthesizes Iowa primary law and is not legal advice from a Iowa-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-05. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Iowa. This article synthesizes Iowa primary law and is not legal advice from a Iowa-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Iowa Consumer Privacy Law (ICDPA)*, OpenAgreements (last updated June 5, 2026), https://openagreements.org/practice-guides/privacy/us/iowa.
 
 [^stat-715d2-apply]: **Iowa Code § 715D.2** — "This chapter applies to a person conducting business in the state or producing products or services that are targeted to consumers who are residents of the state and that during a calendar year does either of the following: a. Controls or processes personal data of at least one hundred thousand consumers. b. Controls or processes personal data of at least twenty-five thousand consumers and derives over fifty percent of gross revenue from the sale of personal data." *Iowa Code § 715D.2(1).* <https://www.legis.iowa.gov/docs/code/2025/715D.2.pdf>
 

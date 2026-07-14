@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — New Jersey
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — New Jersey
 description: >-
   A clause-by-clause reviewer checklist for New Jersey employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — New Jersey[^about]
+# Non-Compete Agreement Reviewer Checklist — New Jersey[^about]
 
 A clause-by-clause reviewer checklist for New Jersey employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Solari/Whitmyer three-part reasonableness test, the occupational bars, and the discrimination-claim concealment rule.
 
@@ -63,9 +63,11 @@ Review every item below the way a New Jersey court would: there is no general no
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should last as long as secrecy does: both the federal definition and New Jersey's own act key protection to continued secrecy rather than to a calendar date. A fixed expiry on trade-secret protection gives away the strongest interest the covenant suite has — and trade secrets sit first on the list of interests that can carry a New Jersey restraint. [^dtsa-trade-secret-definition][^nj-tsa-secrecy] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection available, because both the federal definition and New Jersey's own act key protection to continued secrecy rather than to a calendar date. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of protection for trade secrets, the interest that sits first on the list of interests that can carry a New Jersey restraint, while a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition][^nj-tsa-secrecy] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on non-secret material adds employee-side hardship without a matching interest, and the two-track structure keeps the perpetual obligation where the secrecy rationale actually holds. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on non-secret material adds employee-side hardship without a matching interest, and the two-track structure keeps the status-bounded obligation where the secrecy rationale actually holds. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -153,7 +155,7 @@ The four items below exist only on this New Jersey page: the common-law reasonab
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for New Jersey (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for New Jersey (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — New Jersey*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/new-jersey.
 
 [^nj-whitmyer-protectable]: **Whitmyer Bros., Inc. v. Doyle** — "But the employer has a patently legitimate interest in protecting his trade secrets as well as his confidential business information and he has an equally legitimate interest in protecting his customer relationships." *Whitmyer Bros., Inc. v. Doyle, 58 N.J. 25 (1971).* <https://www.courtlistener.com/opinion/2061132/whitmyer-bros-inc-v-doyle/#:~:text=But%20the%20employer%20has%20a,in%20protecting%20his%20customer%20relationships.>
 

@@ -57,7 +57,7 @@ That statutory-damages remedy, multiplied across a subscriber list, is what buil
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Michigan. This article synthesizes Michigan primary law and is not legal advice from a Michigan-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Michigan. This article synthesizes Michigan primary law and is not legal advice from a Michigan-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Michigan Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/michigan.
 
 [^q1-pppa-disclosure]: **MCL 445.1712** — "Subject to subsection (2) and except as provided in section 3 or as otherwise provided by law, a person, or an employee or agent of the person, engaged in the business of selling at retail, renting, or lending books or other written materials, sound recordings, or video recordings shall not knowingly disclose to any person, other than the customer, a record or information that personally identifies the customer as having purchased, leased, rented, or borrowed those materials from the person engaged in the business." *MCL 445.1712(1).* <https://legislature.mi.gov/Laws/MCL?objectName=mcl-445-1712>
 

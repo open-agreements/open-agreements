@@ -2,7 +2,7 @@
 jurisdiction: "North Carolina"
 slug: north-carolina
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/north-carolina
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/north-carolina · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/north-carolina · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # North Carolina Consumer Privacy Law[^about]
 
@@ -98,7 +98,7 @@ The absence of a cure period is a structural point, not an oversight — North C
 
 Pending proposals could change that, but no comprehensive consumer-privacy law has been enacted as of this review. The durable planning assumption is the current one: injured-consumer treble-damages suits where a section expressly bridges to § 75-1.1, Attorney General breach-report intake under § 75-65(e1), and sector regulators (the FTC, federal banking agencies, HHS) layered on top for businesses inside the federal regimes. For the student-privacy statute the Attorney General is also the named enforcer — it may bring a civil action for injunctive and other equitable relief, and that section creates no private right of action [^enforce-115c-ag].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not North Carolina. This article synthesizes North Carolina primary law and is not legal advice from a North Carolina-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not North Carolina. This article synthesizes North Carolina primary law and is not legal advice from a North Carolina-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *North Carolina Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/north-carolina.
 
 [^itpa-7560-title]: **N.C. Gen. Stat. § 75-60** — "This Article shall be known and may be cited as the ‘Identity Theft Protection Act’." *N.C. Gen. Stat. § 75-60.* <https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_75/GS_75-60.html>
 

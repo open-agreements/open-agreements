@@ -7,9 +7,9 @@ description: >-
 citation: 'Preferred Sys. Sols., Inc. v. GP Consulting, LLC, 284 Va. 382 (2012).'
 resource: >-
   https://www.courtlistener.com/opinion/1057833/preferred-systems-solutions-v-gp-consulting/
-timestamp: '2026-06-11'
+timestamp: '2026-07-03'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/virginia'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/virginia'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `reasonableness-test`
 - source_cards: `preferred-elements-together`
-- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../checklists/non-compete/us/virginia.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Virginia](../checklists/non-compete/us/virginia.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1057833/preferred-systems-solutions-v-gp-consulting/#:~:text=We%20assess%20these%20elements%20together,rather%20than%20as%20distinct%20inquiries.>

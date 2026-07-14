@@ -74,7 +74,7 @@ The technical literature makes it hard to say the risk is imaginary. Carlini and
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Trade-secret leakage into public AI models*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-vendors/trade-secret-leakage-containment.
 
 [^18-u-s-c-1839-3-a]: **18 U.S.C. § 1839(3)(A)** — "the owner thereof has taken reasonable measures to keep such information secret" *18 U.S.C. § 1839(3)(A).* <https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20owner%20thereof%20has%20taken,to%20keep%20such%20information%20secret>
 

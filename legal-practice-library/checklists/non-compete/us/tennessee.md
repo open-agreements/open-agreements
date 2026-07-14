@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Tennessee
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Tennessee
 description: >-
   A clause-by-clause reviewer checklist for Tennessee employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -14,7 +14,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Tennessee[^about]
+# Non-Compete Agreement Reviewer Checklist — Tennessee[^about]
 
 A clause-by-clause reviewer checklist for Tennessee employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Hasty reasonableness test and the 2026 statute that voids non-competes below $70,000 and presumes long time restraints unreasonable.
 
@@ -64,7 +64,9 @@ Review every item below the way a Tennessee court would: covenants not to compet
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — The trade-secret obligation should last as long as secrecy does — federal law keys the right to continued secrecy, and Tennessee's own act confirms that a contractual secrecy duty needs no time or geographic limit to be enforceable. A fixed expiry on trade-secret protection gives away the one obligation the law lets run indefinitely. [^dtsa-trade-secret-definition][^tutsa-perpetual-secrecy] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection the law offers: federal law keys the right to continued secrecy, and Tennessee's own act confirms that a contractual secrecy duty is enforceable without any time or geographic limit. That status-bounded form is the ceiling the law will back, not a required one — a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition][^tutsa-perpetual-secrecy] [#tie-trade-secret-duration-to-secrecy-status]
+
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
 
 - [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. The no-time-limit privilege belongs to trade secrets; a perpetual lid on everything else is the kind of breadth that gets a confidentiality clause examined as a restraint rather than as housekeeping. [#state-confidentiality-duration]
 
@@ -158,7 +160,7 @@ The six items below exist only on this Tennessee page: they implement the protec
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Tennessee (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Tennessee (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Tennessee*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/tennessee.
 
 [^tn-ch934-effective]: **2026 Tenn. Pub. Acts, ch. 934 (HB 1034)** — "This act takes effect July 1, 2026, the public welfare requiring it, and applies to proceedings occurring and agreements entering into, renewed, or amended, on or after that date." *2026 Tenn. Pub. Acts, ch. 934, § 3.* <https://publications.tnsosfiles.com/acts/114/pub/pc0934.pdf>
 

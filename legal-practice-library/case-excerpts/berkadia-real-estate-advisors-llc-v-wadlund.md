@@ -11,7 +11,7 @@ resource: >-
   https://www.govinfo.gov/app/details/USCOURTS-azd-4_22-cv-00049/USCOURTS-azd-4_22-cv-00049-10
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/arizona'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/arizona'
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `arizona-statutory-gates`, `sale-of-business`
 - source_cards: `berkadia-unreasonable-gate`, `q9-berkadia-unreasonable`
-- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-azd-4_22-cv-00049/USCOURTS-azd-4_22-cv-00049-10>

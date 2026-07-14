@@ -2,7 +2,7 @@
 jurisdiction: "Minnesota"
 slug: minnesota
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-05-27"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/minnesota
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/minnesota · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/minnesota · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Employment Non-Competes in Minnesota[^about]
 
@@ -40,7 +40,7 @@ A question-by-question summary of Minnesota's 2023 non-compete statute, legacy M
 
 The statute covers employees and independent contractors. It defines an employee as any individual who performs services for an employer, "including independent contractors"[^minn-181-988-includes-independent-contractors], and commentary treats that scope as broader than wage-threshold statutes in many other states [^cooley-minn-181-988-independent-contractors][^littler-minn-181-988-complete-prohibition].
 
-For a standard post-employment employee non-compete signed on or after July 1, 2023, the practical answer is to remove it rather than revise the duration, territory, or employee class. Those older drafting variables matter mainly for pre-July 1, 2023 agreements and for the statute's narrow business-sale and dissolution exceptions. For a clause-by-clause pass over a specific agreement under both regimes, the [Minnesota non-compete review checklist](/checklists/non-compete/us/minnesota) walks the full covenant suite item by item with each requirement's force level.
+For a standard post-employment employee non-compete signed on or after July 1, 2023, the practical answer is to remove it rather than revise the duration, territory, or employee class. Those older drafting variables matter mainly for pre-July 1, 2023 agreements and for the statute's narrow business-sale and dissolution exceptions. For a clause-by-clause pass over a specific agreement under both regimes, the [Minnesota non-compete reviewer checklist](/checklists/non-compete/us/minnesota) walks the full covenant suite item by item with each requirement's force level.
 
 ## What law governs Minnesota non-compete agreements signed before July 1, 2023? {#pre-2023-agreements}
 
@@ -114,7 +114,7 @@ The statute includes independent contractors in its employee definition and requ
 
 **2025 legislative context:** A 2025 bill proposed additional exceptions to section 181.988 for certain high-compensation employees [^minn-hf1768-proposed-exceptions]; it has not been enacted as of this article's publication.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-05-27. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Minnesota. This article synthesizes Minnesota primary law and is not legal advice from a Minnesota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-05-27. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Minnesota. This article synthesizes Minnesota primary law and is not legal advice from a Minnesota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Employment Non-Competes in Minnesota*, OpenAgreements (last updated May 27, 2026), https://openagreements.org/practice-guides/non-compete/us/minnesota.
 
 [^minn-181-988-voids-employment-noncompetes]: **Minn. Stat. § 181.988, subd. 2(a)** — "Any covenant not to compete contained in a contract or agreement is void and unenforceable." *Minn. Stat. § 181.988, subd. 2(a) (2025).* <https://www.revisor.mn.gov/statutes/cite/181.988>
 

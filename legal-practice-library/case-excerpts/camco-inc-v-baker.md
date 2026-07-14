@@ -8,7 +8,7 @@ citation: 'Camco, Inc. v. Baker, 113 Nev. 512, 936 P.2d 829 (1997).'
 resource: 'https://www.courtlistener.com/opinion/1224995/camco-inc-v-baker/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/nevada'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/nevada'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `nv-camco-continued-employment`, `q8-camco-consideration`
-- cited_by: [Non-Compete Agreement Review Checklist — Nevada](../checklists/non-compete/us/nevada.md), [Non-Competes in Nevada](../non-compete/us/nevada.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Nevada](../checklists/non-compete/us/nevada.md), [Non-Competes in Nevada](../non-compete/us/nevada.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1224995/camco-inc-v-baker/#:~:text=Today%20we%20adopt%20the%20majority,for%20enforcing%20a%20non%2Dcompetition%20agreement.>

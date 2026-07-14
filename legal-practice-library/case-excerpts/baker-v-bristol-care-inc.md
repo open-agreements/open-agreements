@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/2718919/carla-baker-v-bristol-care-inc-dba-bristol-manor-and-david-furnell/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/missouri'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/missouri'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `entire-agreement-amendment-waiver-e-signatures`, `missouri-statutory-gates`, `timing-and-execution-acknowledgements`
 - source_cards: `baker-illusory`, `mo-baker-amendment`, `mo-baker-gate`, `mo-baker-timing`
-- cited_by: [Non-Compete Agreement Review Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2718919/carla-baker-v-bristol-care-inc-dba-bristol-manor-and-david-furnell/#:~:text=An%20offer%20of%20continued%20at%2Dwill,not%20already%20entitled%20to%20do.>

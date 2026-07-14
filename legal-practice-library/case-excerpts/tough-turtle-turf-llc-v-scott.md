@@ -8,7 +8,7 @@ citation: 'Tough Turtle Turf, LLC v. Scott, 139 Nev. Adv. Op. 47, 537 P.3d 883 (
 resource: 'https://www.courtlistener.com/opinion/9456796/tough-turtle-turf-llc-v-scott/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/nevada'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/nevada'
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `nv-tough-turtle-mandatory`, `q3-tough-turtle-mandatory`
-- cited_by: [Non-Compete Agreement Review Checklist — Nevada](../checklists/non-compete/us/nevada.md), [Non-Competes in Nevada](../non-compete/us/nevada.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Nevada](../checklists/non-compete/us/nevada.md), [Non-Competes in Nevada](../non-compete/us/nevada.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9456796/tough-turtle-turf-llc-v-scott/#:~:text=It%20nonetheless%20mandates%20judicial%20revision,subjecting%20employees%20to%20unreasonable%20terms.>
 
 ### tough-turtle-turf-llc-v-scott-reading-subsection-1-harmoniously-with-68cb812d {#tough-turtle-turf-llc-v-scott-reading-subsection-1-harmoniously-with-68cb812d}
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `definitions`, `severability-and-reformation`
 - source_cards: `nv-rewrite-limit-defs`, `nv-tough-turtle-no-rewrite`, `q3-tough-turtle-rewrite`
-- cited_by: [Non-Compete Agreement Review Checklist — Nevada](../checklists/non-compete/us/nevada.md), [Non-Competes in Nevada](../non-compete/us/nevada.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Nevada](../checklists/non-compete/us/nevada.md), [Non-Competes in Nevada](../non-compete/us/nevada.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9456796/tough-turtle-turf-llc-v-scott/#:~:text=Reading%20subsection%20(1)%20harmoniously%20with,than%20revise%20the%20noncompete%20covenant.>
 
 ### tough-turtle-turf-llc-v-scott-this-provision-overruled-golden-road-s-d066f32b {#tough-turtle-turf-llc-v-scott-this-provision-overruled-golden-road-s-d066f32b}

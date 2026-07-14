@@ -3,19 +3,22 @@ type: Case Excerpt
 title: 'August Healthcare Group, LLC v. Manglona'
 description: >-
   August Healthcare Grp., LLC v. Manglona, No. 1:12-cv-00008, 2012 WL 12926085
-  (D. N. Mar. I. Oct. 12, 2012). — quoted in 2 document(s).
+  (D. N. Mar. I. Oct. 12, 2012). — quoted in 3 document(s).
 citation: >-
   August Healthcare Grp., LLC v. Manglona, No. 1:12-cv-00008, 2012 WL 12926085
   (D. N. Mar. I. Oct. 12, 2012).
 resource: 'https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008'
-timestamp: '2026-06-10'
+timestamp: '2026-07-02'
 document_references:
+  - type: State Law Practice Guide
+    resource: 'https://openagreements.org/practice-guides/invention-assignment/us/cnmi'
   - type: Law Topic
     resource: 'https://openagreements.org/practice-guides/non-compete/us'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/cnmi'
 tags:
   - case-law
+  - invention-assignment
   - non-compete
 ---
 
@@ -23,7 +26,7 @@ tags:
 
 *August Healthcare Grp., LLC v. Manglona, No. 1:12-cv-00008, 2012 WL 12926085 (D. N. Mar. I. Oct. 12, 2012).*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -49,9 +52,9 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > An injunction that bars Pelisamen and Takai from working for Priority Care would deprive the men of the ability to earn their livelihood in a highly specialized sector of health care on Saipan.
 
-- supports: `healthcare-public-interest`
-- source_cards: `aug-deprive`
-- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
+- supports: `healthcare-public-interest`, `holdover-clause-limit`
+- source_cards: `aug-deprive`, `aug-livelihood`
+- cited_by: [Employee Invention Assignment in the Northern Mariana Islands](../invention-assignment/us/cnmi.md), [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
 
 ### august-healthcare-group-llc-v-manglona-at-this-stage-of-the-proceedings-1114a112 {#august-healthcare-group-llc-v-manglona-at-this-stage-of-the-proceedings-1114a112}
@@ -72,6 +75,15 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
 
+### august-healthcare-group-llc-v-manglona-the-application-of-section-188-of-3616a075 {#august-healthcare-group-llc-v-manglona-the-application-of-section-188-of-3616a075}
+
+> the application of Section 188 of the Restatement is sufficient to address St. Michael’s request for a preliminary injunction and saves the issue of consideration for another day.
+
+- supports: `holdover-clause-limit`
+- source_cards: `aug-188-application`
+- cited_by: [Employee Invention Assignment in the Northern Mariana Islands](../invention-assignment/us/cnmi.md)
+- link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
+
 ### august-healthcare-group-llc-v-manglona-the-plaintiff-must-establish-that-1-3a6c1fac {#august-healthcare-group-llc-v-manglona-the-plaintiff-must-establish-that-1-3a6c1fac}
 
 > The plaintiff must establish that (1) plaintiff is likely to succeed on the merits, (2) plaintiff is likely to suffer irreparable harm in the absence of a preliminary injunction, (3) the balance of equities tips in plaintiff's favor, and (4) a preliminary injunction is in the public interest.
@@ -79,6 +91,15 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - supports: `healthcare-public-interest`
 - source_cards: `aug-four-prong`
 - cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
+- link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
+
+### august-healthcare-group-llc-v-manglona-the-subject-matter-of-a-trade-1a258baa {#august-healthcare-group-llc-v-manglona-the-subject-matter-of-a-trade-1a258baa}
+
+> The subject matter of a trade secret must be secret. Matters of public knowledge or of general knowledge in an industry cannot be appropriated by one as his secret.
+
+- supports: `holdover-clause-limit`
+- source_cards: `aug-trade-secret-secrecy`
+- cited_by: [Employee Invention Assignment in the Northern Mariana Islands](../invention-assignment/us/cnmi.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
 
 ### august-healthcare-group-llc-v-manglona-there-are-no-other-private-medical-9ef88a1b {#august-healthcare-group-llc-v-manglona-there-are-no-other-private-medical-9ef88a1b}
@@ -97,6 +118,15 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 - supports: `employee-non-compete-enforceability`
 - source_cards: `aug-no-statute`
 - cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
+- link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
+
+### august-healthcare-group-llc-v-manglona-there-is-no-specific-law-statute-252df105 {#august-healthcare-group-llc-v-manglona-there-is-no-specific-law-statute-252df105}
+
+> There is no specific law, statute, or custom in the CNMI governing covenants not to compete. In the absence of written law or local customary law, the CNMI looks to the United States common law as expressed in the Restatements. See 7 N. Mar. I. Code § 3401.
+
+- supports: `statutory-carve-out`
+- source_cards: `aug-reception-analogy`
+- cited_by: [Employee Invention Assignment in the Northern Mariana Islands](../invention-assignment/us/cnmi.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
 
 ### august-healthcare-group-llc-v-manglona-therefore-the-list-of-customers-is-7d001d04 {#august-healthcare-group-llc-v-manglona-therefore-the-list-of-customers-is-7d001d04}

@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Colorado
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Colorado
 description: >-
   A clause-by-clause reviewer checklist for Colorado employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Colorado[^about]
+# Non-Compete Agreement Reviewer Checklist — Colorado[^about]
 
 A clause-by-clause reviewer checklist for Colorado employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under C.R.S. § 8-2-113's earnings thresholds, notice rule, and health-care provider ban.
 
@@ -63,9 +63,11 @@ Review every item below the way a Colorado court would: the statute voids most l
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — The trade-secret obligation should last as long as secrecy does — that is how federal law defines the right. In Colorado the stakes are doubled: trade secrets are the only interest that can support a non-compete or customer non-solicit, so a fixed expiry on trade-secret protection undercuts both the confidentiality clause and the covenants leaning on it. [^dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection federal law gives, because the law keys the right to continued secrecy, and in Colorado that tail carries extra weight: trade secrets are the only interest that can support a non-compete or customer non-solicit. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on non-secret information strains the reasonableness requirement Colorado builds into its confidentiality carve-out, and the two-track structure keeps the perpetual obligation where the statute actually supports it. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on non-secret information strains the reasonableness requirement Colorado builds into its confidentiality carve-out, and the two-track structure keeps the status-bounded obligation where the statute actually supports it. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -159,7 +161,7 @@ The seven items below exist only on this Colorado page: they implement the statu
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Colorado (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Colorado (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Colorado*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/colorado.
 
 [^crs-threshold-execution-year]: **C.R.S. § 8-2-113** — "‘Threshold amount for highly compensated workers’ means the greater of the threshold amount for highly compensated workers as determined by the division of labor standards and statistics in the department of labor and employment: (A) As of August 10, 2022; or (B) At the time the covenant not to compete is executed by the parties." *C.R.S. § 8-2-113(2)(c)(II).* <https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf>
 

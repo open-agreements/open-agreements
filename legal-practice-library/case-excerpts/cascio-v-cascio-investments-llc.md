@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/10627857/philip-t-cascio-jr-v-cascio-investments-llc-jackie-cascio-pearson-and/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/mississippi'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/mississippi'
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `cascio-extension-effect`, `ms-cascio-effect`
-- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10627857/philip-t-cascio-jr-v-cascio-investments-llc-jackie-cascio-pearson-and/#:~:text=Also%2C%20injunctive%20relief%20was%20awarded,the%20C%2D%20Rental%20trade%20name.>
 
 ### cascio-v-cascio-investments-llc-further-in-the-event-of-any-84c1c51e {#cascio-v-cascio-investments-llc-further-in-the-event-of-any-84c1c51e}
@@ -50,7 +50,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `cascio-extension-clause`, `ms-cascio-clause`
-- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10627857/philip-t-cascio-jr-v-cascio-investments-llc-jackie-cascio-pearson-and/#:~:text=Further%2C%20in%20the%20event%20of,terms%20of%20this%20Non%2DCompetition%20Agreement.>
 
 ### cascio-v-cascio-investments-llc-regarding-the-direct-appeal-we-conclude-8a66208e {#cascio-v-cascio-investments-llc-regarding-the-direct-appeal-we-conclude-8a66208e}

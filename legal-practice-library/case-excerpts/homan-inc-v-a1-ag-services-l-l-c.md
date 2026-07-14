@@ -10,7 +10,7 @@ citation: >-
 resource: 'https://www.courtlistener.com/opinion/3953241/homan-inc-v-a1-ag-services-llc/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/ohio'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/ohio'
@@ -33,5 +33,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `homan-tolling`, `oh-homan-tolling`
-- cited_by: [Non-Compete Agreement Review Checklist — Ohio](../checklists/non-compete/us/ohio.md), [Non-Competes in Ohio](../non-compete/us/ohio.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Ohio](../checklists/non-compete/us/ohio.md), [Non-Competes in Ohio](../non-compete/us/ohio.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3953241/homan-inc-v-a1-ag-services-llc/#:~:text=The%20Sixth%20Appellate%20District%20has,that%20contract%20is%20being%20litigated.>

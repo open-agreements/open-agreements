@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/6657507/or-psychiatric-partners-llp-v-henry/
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/oregon'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/oregon'
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `nonsolicitation`, `restrictive-covenants-each-independently-includable`
 - source_cards: `or-henry-partial-covenants`, `q9-henry-partial`
-- cited_by: [Non-Compete Agreement Review Checklist — Oregon](../checklists/non-compete/us/oregon.md), [Non-Competes in Oregon](../non-compete/us/oregon.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Oregon](../checklists/non-compete/us/oregon.md), [Non-Competes in Oregon](../non-compete/us/oregon.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6657507/or-psychiatric-partners-llp-v-henry/#:~:text=For%20the%20reasons%20that%20follow%2C,factual%20issues%20that%20may%20remain.>
 
 ### oregon-psychiatric-partners-llp-v-henry-those-definitions-support-defendant-s-483508b7 {#oregon-psychiatric-partners-llp-v-henry-those-definitions-support-defendant-s-483508b7}
@@ -43,5 +43,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `nonsolicitation`, `restrictive-covenants-each-independently-includable`
 - source_cards: `or-henry-customers-covenants`, `or-henry-customers-defs`, `q9-henry-customers`
-- cited_by: [Non-Compete Agreement Review Checklist — Oregon](../checklists/non-compete/us/oregon.md), [Non-Competes in Oregon](../non-compete/us/oregon.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Oregon](../checklists/non-compete/us/oregon.md), [Non-Competes in Oregon](../non-compete/us/oregon.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6657507/or-psychiatric-partners-llp-v-henry/#:~:text=Those%20definitions%20support%20defendant's%20contention,former%20or%20merely%20incidental%20patrons.>

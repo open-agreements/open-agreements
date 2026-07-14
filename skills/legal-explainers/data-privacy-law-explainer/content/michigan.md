@@ -2,7 +2,7 @@
 jurisdiction: "Michigan"
 slug: michigan
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/michigan
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/michigan · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/michigan · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Michigan Consumer Privacy Law[^about]
 
@@ -74,7 +74,7 @@ The PPPA case law shows where the vendor line sits. In the kiosk-operator litiga
 
 That statutory-damages remedy, multiplied across a subscriber list, is what built the PPPA class-action industry against publishers and media businesses. A 2022 Eastern District of Michigan decision held that a six-year limitations period applies to PPPA claims [^q6-pratt-limitations], which made pre-amendment disclosures economically live for the second wave of cases. The retroactivity holdings come from federal district courts in New York and Michigan [^q6-boelter-retroactivity] [^q6-perlin-retroactivity]; neither the Sixth Circuit nor a Michigan appellate court appears to have squarely resolved the retroactivity or six-year limitations questions, so those points remain district-court law rather than settled appellate law. The MCPA looks like a second consumer-suit engine on paper — a person who suffers loss may sue for actual damages or $250, whichever is greater, with attorney fees [^q6-mcpa-pra], and class actions for actual damages are available [^q6-mcpa-class] — but the Michigan Supreme Court cut its practical reach in *Smith v. Globe Life Insurance Co.* The act exempts a transaction or conduct specifically authorized under laws administered by a state or federal regulatory board or officer [^q6-mcpa-exemption], and *Smith* held that the relevant inquiry is whether the general transaction is specifically authorized by law, regardless of whether the specific misconduct alleged is prohibited [^q6-smith-exemption]. Under that reading, businesses in licensed and regulated lines of business can often invoke the exemption even when the complained-of conduct itself was unlawful — and the Legislature later closed *Smith*'s own pathway, barring MCPA actions over insurance-code conduct occurring on or after March 28, 2001 [^q6-mcpa-insurance]. So an MCPA privacy claim is most viable against an ordinary, unregulated consumer business and weakest against banks, insurers, utilities, and other licensed industries. MCL 445.72 does not create an express consumer damages action for failure to notify: civil fines are recovered by the Attorney General or a prosecuting attorney, and other civil remedies remain outside subsections (12) and (13) [^q6-itpa-fines] [^q6-itpa-civil-remedies], leaving post-breach private suits to common-law theories with their usual standing hurdles.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Michigan. This article synthesizes Michigan primary law and is not legal advice from a Michigan-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Michigan. This article synthesizes Michigan primary law and is not legal advice from a Michigan-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Michigan Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/michigan.
 
 [^q1-pppa-disclosure]: **MCL 445.1712** — "Subject to subsection (2) and except as provided in section 3 or as otherwise provided by law, a person, or an employee or agent of the person, engaged in the business of selling at retail, renting, or lending books or other written materials, sound recordings, or video recordings shall not knowingly disclose to any person, other than the customer, a record or information that personally identifies the customer as having purchased, leased, rented, or borrowed those materials from the person engaged in the business." *MCL 445.1712(1).* <https://legislature.mi.gov/Laws/MCL?objectName=mcl-445-1712>
 

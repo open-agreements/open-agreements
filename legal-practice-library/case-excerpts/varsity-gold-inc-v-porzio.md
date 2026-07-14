@@ -8,7 +8,7 @@ citation: 'Varsity Gold, Inc. v. Porzio, 202 Ariz. 355, 45 P.3d 352 (Ct. App. 20
 resource: 'https://www.courtlistener.com/opinion/2638678/varsity-gold-inc-v-porzio/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/arizona'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/arizona'
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `restrictive-covenants-each-independently-includable`, `severability-and-reformation`
 - source_cards: `q3-varsity-norewrite`, `varsity-norewrite-covenants`, `varsity-norewrite-sev`
-- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2638678/varsity-gold-inc-v-porzio/#:~:text=In%20summary%2C%20we%20decide%20that,render%20it%20reasonable%20and%20enforceable.>
 
 ### varsity-gold-inc-v-porzio-the-court-explained-that-while-arizona-d298f61a {#varsity-gold-inc-v-porzio-the-court-explained-that-while-arizona-d298f61a}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `extended-for-breach`, `severability-and-reformation`, `tolling-during-breach`
 - source_cards: `q10-varsity-norewrite`, `q3-varsity-bluepencil`, `varsity-bluepencil-sev`, `varsity-bluepencil-tolling`
-- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2638678/varsity-gold-inc-v-porzio/#:~:text=The%20court%20explained%20that%2C%20while,add%20provisions%20or%20rewrite%20them.>

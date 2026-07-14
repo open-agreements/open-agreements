@@ -8,7 +8,7 @@ citation: 'Biever, Drees & Nordell v. Coutts, 305 N.W.2d 33, 36 (N.D. 1981).'
 resource: 'https://www.courtlistener.com/opinion/2226690/biever-drees-nordell-v-coutts/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/north-dakota'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/north-dakota'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-nonsolicits`, `north-dakota-statutory-gates`
 - source_cards: `biever-during-employment-solicitation`, `nd-biever-loyalty-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/us/north-dakota.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — North Dakota](../checklists/non-compete/us/north-dakota.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2226690/biever-drees-nordell-v-coutts/#:~:text=We%20believe%20the%20above%20provision,was%20employed%20by%20the%20firm.>

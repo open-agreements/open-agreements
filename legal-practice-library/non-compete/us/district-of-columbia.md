@@ -85,7 +85,7 @@ The definition does, however, leave room for a narrow set of during-employment r
 > [!CAUTION]
 > **Drafting note.**
 >
-> A restriction on a current employee's outside work survives only if it fits the statutory carve-out. Tie it to the enumerated risks — confidential information, established conflict-of-interest rules, conflict of commitment at a higher education institution, or a legal or contractual compliance concern — and to a reasonable belief that the risk applies; a broad ban on any outside work risks being treated as a prohibited non-compete provision [^outside-work-carveout].
+> A restriction on a current employee's outside work survives only where it fits the statutory carve-out — tied to one of the enumerated risks (confidential information, established conflict-of-interest rules, conflict of commitment at a higher education institution, or a legal or contractual compliance concern) and to a reasonable belief that the risk applies. A broad ban on any outside work reaches beyond that carve-out and is exposed to treatment as a prohibited non-compete provision [^outside-work-carveout].
 
 ## Are confidentiality and trade-secret protections still allowed in the District? {#confidentiality-trade-secrets}
 
@@ -96,7 +96,7 @@ The statute carves a confidentiality restriction out of the non-compete definiti
 > [!CAUTION]
 > **Drafting note.**
 >
-> Keep a confidentiality clause to genuine confidential and proprietary information. The carve-out protects restrictions on disclosing or using employer information; a nondisclosure clause drafted so broadly that it effectively prevents the employee from working for a competitor risks being recharacterized as a prohibited non-compete provision [^confidentiality-carveout].
+> A confidentiality clause stays within the statutory carve-out only where it reaches genuine confidential and proprietary information. The carve-out protects restrictions on disclosing or using employer information; a nondisclosure clause drafted so broadly that it effectively prevents the employee from working for a competitor is exposed to recharacterization as a prohibited non-compete provision [^confidentiality-carveout].
 
 ## How does the District of Columbia treat customer non-solicitation covenants? {#customer-non-solicitation}
 
@@ -114,6 +114,11 @@ The statute excludes a non-compete contained within or executed contemporaneousl
 
 "A promise is unenforceable on grounds of public policy if it is unreasonably in restraint of trade."[^ellis-reasonableness]
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> The sale-of-business exclusion reaches only a covenant contained within, or executed contemporaneously with, an agreement in which the seller of a business agrees not to compete with the buyer [^sale-carveout]. A covenant that papers a departing employee as an employee rather than as a selling owner falls outside the exclusion and back into the § 32-581.02 ban, and even a qualifying seller's covenant is enforceable only to the extent its terms are reasonable under the District's common-law rule of reason [^ellis-reasonableness]. A covenant does not acquire sale-of-business status by riding through an assignment or acquisition.
+
 ## What law applies to non-competes signed before October 1, 2022? {#older-agreements-common-law}
 
 **Short answer.** Common-law reasonableness, not the statutory ban. The voiding rule in § 32-581.02 reaches agreements entered into on or after October 1, 2022, so an earlier covenant — and any covenant outside the statute's scope — is governed by the District's common-law rule of reason [^void-rule-retroactivity][^ellis-partial][^cumulative-rule].
@@ -129,7 +134,7 @@ In *Steiner v. American Friends of Lubavitch (Chabad)*, the court adopted equita
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not draft an overbroad District covenant expecting a court to rescue it. A court may narrow an unreasonable restraint under *Steiner*, but it may not broaden one beyond the contract's terms, and for a covered or highly compensated employee the statutory rules — not judicial reformation — control whether the covenant is valid at all [^steiner-reformation][^hce-requirements-narrowing].
+> An overbroad District covenant does not survive on the assumption that a court will rescue it. A court may narrow an unreasonable restraint under *Steiner*, but it may not broaden one beyond the contract's terms, and for a covered or highly compensated employee the statutory rules — not judicial reformation — control whether the covenant is valid at all [^steiner-reformation][^hce-requirements-narrowing].
 
 ## What are the penalties for using a banned non-compete in the District? {#penalties-enforcement}
 
@@ -139,7 +144,7 @@ The statute sets graduated monetary relief: an employer that subjects an employe
 
 The chapter also forbids retaliation: an employer may not retaliate or threaten to retaliate against a covered employee for refusing, failing to comply with, or complaining about a banned non-compete, and an employer that retaliates owes each affected employee between $1,000 and $2,500 [^retaliation-ban][^retaliation-relief].
 
-Enforcement is real. In November 2023, the Attorney General announced settlements with three employers and described the ban as making it illegal to impose non-compete agreements on most District workers earning less than $150,000 a year [^oag-enforcement]. The Attorney General has also treated a franchise *no-poach* clause as violating both the ban and the District's Antitrust Act, which declares contracts in restraint of trade illegal [^oag-nopoach][^antitrust]. For a clause-by-clause exposure screen of a specific agreement against these rules, the [District of Columbia non-compete review checklist](/checklists/non-compete/us/district-of-columbia) walks the full covenant suite item by item with each requirement's force level.
+Enforcement is real. In November 2023, the Attorney General announced settlements with three employers and described the ban as making it illegal to impose non-compete agreements on most District workers earning less than $150,000 a year [^oag-enforcement]. The Attorney General has also treated a franchise *no-poach* clause as violating both the ban and the District's Antitrust Act, which declares contracts in restraint of trade illegal [^oag-nopoach][^antitrust]. For a clause-by-clause exposure screen of a specific agreement against these rules, the [District of Columbia non-compete reviewer checklist](/checklists/non-compete/us/district-of-columbia) walks the full covenant suite item by item with each requirement's force level.
 
 > [!NOTE]
 > **Practice note.**
@@ -155,11 +160,16 @@ The duration limits are written as hard caps: a non-medical highly compensated e
 > [!NOTE]
 > **Practice note.**
 >
-> Open question: District law does not say whether a clause extending the restricted period during a breach is enforceable, and the statute caps the term in calendar days measured from separation. Do not assume a District court will toll or extend an expired non-compete, and do not draft a highly compensated employee's covenant in a way that depends on running past the 365-day or 730-day cap [^tolling-duration-cap][^tolling-cumulative].
+> Open question: District law does not say whether a clause extending the restricted period during a breach is enforceable, and the statute caps the term in calendar days measured from separation. Whether a District court will toll or extend an expired non-compete is unsettled, and a highly compensated employee's covenant that depends on running past the 365-day or 730-day cap sits in tension with the statutory ceiling [^tolling-duration-cap][^tolling-cumulative].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> The District's non-compete statute sets no tolling rule, and its duration limits run as hard caps in calendar days measured from the date the employee separates — 365 days for a non-medical highly compensated employee and 730 for a medical specialist [^tolling-duration-cap]. No District decision has endorsed extending a covenant past that ceiling on breach, and the common law the statute preserves as cumulative has not endorsed extension either [^tolling-cumulative]. A highly compensated employee's covenant written to run past the cap during a period of breach reaches past the statutory ceiling and is exposed on that ground.
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not District of Columbia. This article synthesizes District of Columbia primary law and is not legal advice from a District of Columbia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not District of Columbia. This article synthesizes District of Columbia primary law and is not legal advice from a District of Columbia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in the District of Columbia*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/district-of-columbia.
 
 [^ban-covered]: **D.C. Code § 32-581.02** — "Beginning October 1, 2022, no employer may require or request that a covered employee sign an agreement or comply with a workplace policy that includes a non-compete provision." *D.C. Code § 32-581.02(a)(1).* <https://code.dccouncil.gov/us/dc/council/code/sections/32-581.02>
 

@@ -2,7 +2,7 @@
 jurisdiction: "Australia"
 slug: au
 countryCode: AU
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-16"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/au
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Australia[^about]
 
@@ -122,14 +122,14 @@ The trap is a shared definition that contaminates every rung. In *Emeco Internat
 
 Use this national page for the common structure, then go to the local note for the governing jurisdiction:
 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
+- [New South Wales](/practice-guides/non-compete/au/new-south-wales)
+- [Victoria](/practice-guides/non-compete/au/victoria)
+- [Queensland](/practice-guides/non-compete/au/queensland)
+- [Western Australia](/practice-guides/non-compete/au/western-australia)
+- [South Australia](/practice-guides/non-compete/au/south-australia)
+- [Tasmania](/practice-guides/non-compete/au/tasmania)
+- [Australian Capital Territory](/practice-guides/non-compete/au/australian-capital-territory)
+- [Northern Territory](/practice-guides/non-compete/au/northern-territory)
 
 For cross-border context, see the [worldwide comparison](/practice-guides/non-compete/worldwide#country-au).
 
@@ -151,7 +151,7 @@ Those details are proposals, not enacted law. They come from Treasury material a
 >
 > Do not draft to a federal ban that does not yet exist. As of June 2026, enforceability still turns on the common-law reasonableness test and, where NSW law applies, the Restraints of Trade Act 1976 (NSW). Re-check the enacted text before changing practice [^rota-s4-1-reform].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-16. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Australia. This article summarizes publicly available Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-16. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Australia. This article summarizes publicly available Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Australia*, OpenAgreements (last updated June 16, 2026), https://openagreements.org/practice-guides/non-compete/au.
 
 [^lindner-prima-facie-void]: **Lindner v Murdock's Garage** — "Any contractual restraint of trade is prima facie unlawful and invalid." *Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per Kitto J).* <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
 

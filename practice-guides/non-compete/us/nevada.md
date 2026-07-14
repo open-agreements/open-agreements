@@ -38,7 +38,7 @@ The fourth requirement is especially important for mid-employment agreements. It
 > [!CAUTION]
 > **Drafting note.**
 >
-> Draft the restriction around the actual interest being protected. Nevada's statutory text makes the employer justify both the business need and the fit between the restraint and the consideration [^q2-nrs-613-195-four-prong].
+> A Nevada non-compete is void and unenforceable unless it clears every condition of NRS 613.195(1): valuable consideration, no restraint greater than the employer's protection requires, no undue hardship on the employee, and restrictions appropriate in relation to the consideration supporting them [^q2-nrs-613-195-four-prong]. The conditions are conjunctive, so the covenant fails on any one of them — consideration alone does not make a restraint reasonable, and a reasonable duration does not cure an overbroad activity ban. A restraint sized to the actual protected interest and to the value actually given for the covenant is measured against the interest it was drawn for, while scope copied from another form is tested against a business it was never sized to.
 
 ## Must a Nevada court revise an overbroad non-compete instead of voiding it? {#court-narrowing}
 
@@ -52,7 +52,7 @@ That was a statutory change from the prior *Golden Road* rule. In 2016, before N
 
 "Under Nevada law, such an unreasonable provision renders the noncompete agreement wholly unenforceable."[^q3-golden-road-old-rule]
 
-The Legislature then superseded that no-reformation rule. *Tough Turtle Turf* explains the history and the current limit: the court must revise when possible, but it need not supply missing essential terms or create a new contract. For a clause-by-clause pass over a specific agreement against these rules, the [Nevada non-compete review checklist](/checklists/non-compete/us/nevada) walks the full covenant suite item by item with each requirement's force level.
+The Legislature then superseded that no-reformation rule. *Tough Turtle Turf* explains the history and the current limit: the court must revise when possible, but it need not supply missing essential terms or create a new contract. For a clause-by-clause pass over a specific agreement against these rules, the [Nevada non-compete reviewer checklist](/checklists/non-compete/us/nevada) walks the full covenant suite item by item with each requirement's force level.
 
 "This provision overruled Golden Road's holding that an unreasonable noncompete covenant can never be revised."[^q3-tough-turtle-overruled]
 
@@ -65,7 +65,7 @@ For older agreements, *Duong* adds a separate path. Even before the statute appl
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on Nevada revision to fill missing deal terms. *Tough Turtle Turf* requires revision when possible, but the court still distinguishes revising an existing covenant from writing a new one for the parties [^q3-tough-turtle-mandatory][^q3-tough-turtle-rewrite].
+> NRS 613.195(6) makes judicial revision of an overbroad but consideration-supported Nevada covenant mandatory rather than discretionary, and *Tough Turtle Turf* confirms that this duty superseded *Golden Road*'s rule that an unreasonable covenant was wholly unenforceable [^q3-nrs-613-195-revision][^q3-tough-turtle-overruled]. The revision power has limits a covenant cannot lean on: a covenant unsupported by valuable consideration stays unenforceable, and the court revises rather than rewrites, so it will not supply missing essential terms or build a new bargain for the parties [^q3-tough-turtle-rewrite]. A covenant drawn within the enforceable range at signing is enforced as written, while one drafted to be rescued by revision risks being the covenant the court declines to remake [^q3-tough-turtle-mandatory].
 
 ## Can a Nevada non-compete apply to an hourly-wage worker? {#hourly-wage-workers}
 
@@ -79,6 +79,11 @@ The important unresolved edge case is the word *solely*. Nevada appellate courts
 > **Practice note.**
 >
 > Do not assume a small add-on payment makes an hourly worker covenant enforceable. The statute creates mandatory fee risk for unlawful enforcement, and the hourly-plus-commission boundary remains unsettled [^q4-nrs-613-195-hourly][^q4-nrs-613-195-fees].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> NRS 613.195(3) bars a non-compete from applying to an employee paid solely on an hourly wage basis, exclusive of tips or gratuities, and the bar is categorical — no consideration, tailoring, or acknowledgement by the employee cures it [^q4-nrs-613-195-hourly]. The exposure is asymmetric: where a covenant reaches a subsection 3 employee, NRS 613.195(7) directs the court to award that employee reasonable attorney's fees and costs, a mandatory award rather than a discretionary prevailing-party rule [^q4-nrs-613-195-fees]. A covenant that runs against a solely hourly worker is not merely unenforceable as to that worker; the action to enforce it turns the fee statute against the employer that brought it.
 
 ## Can a Nevada employer stop a former employee from serving a customer who sought them out? {#volunteer-customers}
 
@@ -131,7 +136,7 @@ The open question is how much *Camco* survives the statutory proportionality req
 > [!CAUTION]
 > **Drafting note.**
 >
-> For a mid-employment rollout, fresh value is safer than relying only on continued employment. *Camco* supports continued employment as consideration, but the current statute separately tests whether the restriction is appropriate to the consideration [^q8-camco-consideration][^q8-nrs-613-195-consideration].
+> *Camco* holds that continued at-will employment can itself support a post-hire non-compete, but NRS 613.195(1)(d) adds a separate proportionality test — the restrictions must be appropriate in relation to the consideration given — and no Nevada appellate decision squarely decides whether continued employment alone satisfies that test for a severe restraint [^q8-camco-consideration][^q8-nrs-613-195-consideration]. For a mid-employment rollout, a covenant resting only on continued employment carries that unresolved-proportionality risk, while a covenant tied to a specific documented benefit — a signing or retention bonus, an equity grant, or a promotion — records the value the scope of the restraint is measured against.
 
 ## Does a Nevada non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
@@ -171,6 +176,11 @@ Nevada also has a separate sale-of-business antitrust carve-out. Restrictive cov
 >
 > Do not assume an employee covenant follows the assets automatically. Nevada draws a hard line between asset sales and statutory mergers, and an asset buyer should plan for employee consent, an express assignment clause, and separate consideration where *Traffic Control Services* applies [^q10-traffic-control-consent].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> *Traffic Control Services* treats employee covenants not to compete and not to solicit as personal in nature, so they do not pass to an asset purchaser absent the employee's express consent, obtained through arm's-length negotiation and supported by valuable consideration beyond that supporting the underlying covenant [^q10-traffic-control-consent]. A bare successors-and-assigns clause does not carry the covenant through an asset sale, so an asset buyer relying on general assignment language holds an unenforceable covenant against the transferred employee. A statutory merger is the exception: under *HD Supply*, the nonassignability rule does not apply where the covenants pass to a successor by operation of law [^q10-hd-supply-merger].
+
 ## Are Nevada physician and healthcare non-competes enforceable? {#healthcare-physicians}
 
 **Short answer.** No healthcare-specific ban appears in Nevada's non-compete statute, so a physician or healthcare covenant is not automatically void — but it is not automatically enforceable either. It is judged case by case under the general NRS 613.195 requirements: valuable consideration, no excessive restraint, no undue hardship, and proportional restrictions [^q11-nrs-613-195-healthcare].
@@ -205,11 +215,11 @@ NRS 613.200 separately makes it unlawful to willfully prevent a discharged or de
 > [!CAUTION]
 > **Drafting note.**
 >
-> Use confidentiality and trade-secret covenants for secrecy interests, not as a disguised non-compete. NRS 613.200 preserves reasonable NDAs, but it also prohibits willful interference with a former worker's ability to obtain other employment [^q12-nrs-613-200-nda][^q12-nrs-613-200-mobility].
+> The NRS 613.200(4) exception preserves a post-termination confidentiality agreement only where it is supported by valuable consideration and is otherwise reasonable in scope and duration, and it reaches disclosure of trade secrets, business methods, customer lists, secret formulas or processes, and confidential information [^q12-nrs-613-200-nda]. That safe harbor is what keeps the covenant clear of the surrounding rule, because NRS 613.200(1) makes it a gross misdemeanor to willfully interfere with a former worker's ability to obtain other employment in Nevada [^q12-nrs-613-200-mobility]. A confidentiality clause drafted so broadly that it operates as a restraint on working, rather than on disclosing the listed categories, sits outside the exception and forfeits the protection that made it lawful.
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nevada. This article synthesizes Nevada primary law and is not legal advice from a Nevada-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nevada. This article synthesizes Nevada primary law and is not legal advice from a Nevada-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Nevada*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/nevada.
 
 [^q1-nrs-613-195-enforceability]: **NRS 613.195** — "A noncompetition covenant is void and unenforceable unless the noncompetition covenant: (a) Is supported by valuable consideration; (b) Does not impose any restraint that is greater than is required for the protection of the employer for whose benefit the restraint is imposed; (c) Does not impose any undue hardship on the employee; and (d) Imposes restrictions that are appropriate in relation to the valuable consideration supporting the noncompetition covenant." *NRS 613.195(1).* <https://www.leg.state.nv.us/nrs/NRS-613.html>
 

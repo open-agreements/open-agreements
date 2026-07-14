@@ -68,7 +68,7 @@ Private litigation is not entirely off the table, but the privacy-specific statu
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arizona. This article synthesizes Arizona primary law and is not legal advice from a Arizona-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arizona. This article synthesizes Arizona primary law and is not legal advice from a Arizona-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Arizona Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/arizona.
 
 [^stat-breach-scope]: **A.R.S. § 18-552** — "If a person that conducts business in this state and that owns, maintains or licenses unencrypted and unredacted computerized personal information becomes aware of a security incident, the person shall conduct an investigation to promptly determine whether there has been a security system breach." *A.R.S. § 18-552(A).* <https://www.azleg.gov/ars/18/00552.htm>
 

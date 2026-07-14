@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/1058272/murfreesboro-medical-clinic-pa-v-udom/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/tennessee'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/tennessee'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `health-care-providers`, `tennessee-statutory-gates`
 - source_cards: `tn-gate-udom-void`, `udom-void`
-- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../checklists/non-compete/us/tennessee.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Tennessee](../checklists/non-compete/us/tennessee.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1058272/murfreesboro-medical-clinic-pa-v-udom/#:~:text=We%20hold%20that%20except%20for,compete%20are%20unenforceable%20and%20void.>

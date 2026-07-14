@@ -1,5 +1,12 @@
 # Non Compete Update Log
 
+## 2026-07-06
+* **Update**: feat(restrictive-covenant): employee non-solicit 24-month market default, benchmark-grounded rationales, tolling benchmark row (#1540) (#1587) (d0e30e9)
+* **Update**: Rename review checklists to reviewer checklists (#1631) (d88b1a2)
+
+## 2026-07-03
+* **Update**: feat(homepage): topics own their survey browse name + order via pillar frontmatter (#1510) (#1511) (829c4f8)
+
 ## 2026-06-29
 * **Update**: Backfill non-solicit / sale-of-business cells with body + source-cards (#1213) — HELD for legal review (#1216) (95a4b4c)
 * **Update**: Rename public "practice notes" → "practice guides" (#1245) (#1260) (99f3946)

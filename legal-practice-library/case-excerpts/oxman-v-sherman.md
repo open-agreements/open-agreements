@@ -8,7 +8,7 @@ citation: 'Oxman v. Sherman, 239 S.C. 218, 122 S.E.2d 559 (1961).'
 resource: 'https://www.courtlistener.com/opinion/1336916/oxman-v-sherman/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/south-carolina'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/south-carolina'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `protectable-interests`, `restrictive-covenants-each-independently-includable`
 - source_cards: `oxman-employee-nonsolicit`, `sc-oxman-cov`, `sc-oxman-def`
-- cited_by: [Non-Compete Agreement Review Checklist — South Carolina](../checklists/non-compete/us/south-carolina.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — South Carolina](../checklists/non-compete/us/south-carolina.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1336916/oxman-v-sherman/#:~:text=We%20construe%20the%20first%20covenant,their%20contractual%20relations%20with%20respondents.>

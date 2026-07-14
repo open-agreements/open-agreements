@@ -8,7 +8,7 @@ citation: 'Pro Edge, L.P. v. Gue, 374 F. Supp. 2d 711 (N.D. Iowa 2005).'
 resource: 'https://www.courtlistener.com/opinion/2397219/pro-edge-lp-v-gue/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/iowa'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/iowa'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `duration-limits`
 - source_cards: `ia-pro-edge-duration`, `q4-pro-edge-one-year`
-- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2397219/pro-edge-lp-v-gue/#:~:text=Further%2C%20the%20court%20finds%20that,following%20his%20separation%20from%20employment.>

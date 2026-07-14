@@ -2,18 +2,22 @@
 type: Case Excerpt
 title: Lovelace Clinic v. Murphy
 description: >-
-  Lovelace Clinic v. Murphy, 76 N.M. 645, 417 P.2d 450 (1966). — quoted in 2
+  Lovelace Clinic v. Murphy, 76 N.M. 645, 417 P.2d 450 (1966). — quoted in 3
   document(s).
 citation: 'Lovelace Clinic v. Murphy, 76 N.M. 645, 417 P.2d 450 (1966).'
 resource: 'https://www.courtlistener.com/opinion/1196089/lovelace-clinic-v-murphy/'
-timestamp: '2026-06-12'
+timestamp: '2026-07-01'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/new-mexico'
+  - type: State Law Practice Guide
+    resource: >-
+      https://openagreements.org/practice-guides/invention-assignment/us/new-mexico
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-mexico'
 tags:
   - case-law
+  - invention-assignment
   - non-compete
 ---
 
@@ -21,7 +25,7 @@ tags:
 
 *Lovelace Clinic v. Murphy, 76 N.M. 645, 417 P.2d 450 (1966).*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -29,9 +33,9 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > All of the physician and surgeon cases either expressly hold or clearly indicate that the rights and duties created by the contract of employment or association are enforceable, if the restrictions thus imposed on the employee or the associate are reasonable.
 
-- supports: `definitions`, `employee-non-compete-enforceability`, `federal-ftc-overlay`, `new-mexico-statutory-gates`
-- source_cards: `lovelace-reasonableness-defs`, `lovelace-reasonableness-gate`, `lovelace-reasonableness-test`, `q9-lovelace-state-law`
-- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
+- supports: `definitions`, `employee-non-compete-enforceability`, `federal-ftc-overlay`, `holdover-clause-limit`, `new-mexico-statutory-gates`
+- source_cards: `lovelace-reasonable`, `lovelace-reasonableness-defs`, `lovelace-reasonableness-gate`, `lovelace-reasonableness-test`, `q9-lovelace-state-law`
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Employee Invention Assignment in New Mexico](../invention-assignment/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1196089/lovelace-clinic-v-murphy/#:~:text=All%20of%20the%20physician%20and,or%20the%20associate%20are%20reasonable.>
 
 ### lovelace-clinic-v-murphy-at-the-conclusion-of-the-trial-4f4373ba {#lovelace-clinic-v-murphy-at-the-conclusion-of-the-trial-4f4373ba}
@@ -58,5 +62,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `choice-of-law`, `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `lovelace-public-interest`, `lovelace-public-interest-balance`, `q8-lovelace-public-policy`
-- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1196089/lovelace-clinic-v-murphy/#:~:text=The%20public%20has%20an%20interest,enforcing%20contractual%20rights%20and%20obligations.>

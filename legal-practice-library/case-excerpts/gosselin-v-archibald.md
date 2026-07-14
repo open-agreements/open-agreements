@@ -6,7 +6,7 @@ citation: 'Gosselin v. Archibald, 121 N.H. 1016 (1981).'
 resource: 'https://www.courtlistener.com/opinion/2059042/gosselin-v-archibald/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/new-hampshire'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-hampshire'
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `gosselin-no-extension`, `nh-gosselin-no-extension`
-- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2059042/gosselin-v-archibald/#:~:text=We%20cannot%20agree%20with%20the%20master%E2%80%99s%20extension,the%20covenant%20not%20to%20compete.>

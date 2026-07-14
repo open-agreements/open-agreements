@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Mississippi
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Mississippi
 description: >-
   A clause-by-clause reviewer checklist for Mississippi employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -14,7 +14,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Mississippi[^about]
+# Non-Compete Agreement Reviewer Checklist — Mississippi[^about]
 
 A clause-by-clause reviewer checklist for Mississippi employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Texas Road Boring reasonableness balance, the Empiregas bad-faith-termination defense, and the Frierson and Cascio tolling split.
 
@@ -64,7 +64,9 @@ Review every item below the way a Mississippi chancery court would: there is no 
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should run for as long as the information stays secret — that is how federal law defines the right — while everything else carries a finite term. Keeping the two tracks separate preserves the statutory claim that does not depend on the covenant surviving review. [^dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information stays secret — captures the full protection federal trade-secret law gives, because the law keys the right to continued secrecy, and it keeps the trade-secret track aligned with the statutory claim that does not depend on the covenant surviving review. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition] [#tie-trade-secret-duration-to-secrecy-status]
+
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
 
 - [ ] **Confidentiality end date** (Recommended) — Give non-trade-secret confidential information its own stated end date. A perpetual lid on ordinary business information reads as exactly the kind of overreach a Mississippi court weighs against the employer when it balances the restraint against the employee's freedom to work. [#state-confidentiality-duration]
 
@@ -154,7 +156,7 @@ The four items below exist only on this Mississippi page: the reasonableness bal
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Mississippi (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Mississippi (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Mississippi*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/mississippi.
 
 [^ms-wiggins-parties]: **Wiggins v. Southern Securities Group, LLC** — "Thus, based on the evidence presented at the preliminary-injunction hearing, the trial court did not err by finding that the noncompete provision was binding on Wiggins and that Wiggins was enjoined from competing with SSG" *Wiggins v. Southern Securities Group, LLC, No. 2024-CA-00251-SCT (Miss. 2025).* <https://www.courtlistener.com/opinion/10840985/robert-c-wiggins-v-southern-securities-group-llc-and-brandi-hoover/#:~:text=Thus%2C%20based%20on%20the%20evidence,enjoined%20from%20competing%20with%20SSG>
 

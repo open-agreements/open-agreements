@@ -68,7 +68,7 @@ The Unfair Practices Act is where private exposure lives. The private remedy car
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Mexico. This article synthesizes New Mexico primary law and is not legal advice from a New Mexico-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Mexico. This article synthesizes New Mexico primary law and is not legal advice from a New Mexico-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *New Mexico Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/new-mexico.
 
 [^q1-dbna-security-duty]: **NMSA 1978, § 57-12C-4** — "A person that owns or licenses personal identifying information of a New Mexico resident shall implement and maintain reasonable security procedures and practices appropriate to the nature of the information to protect the personal identifying information from unauthorized access, destruction, use, modification or disclosure." *NMSA 1978, § 57-12C-4.* <https://nmonesource.com/nmos/nmsa/en/4423/1/document.do>
 

@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: NVCA Stock Purchase Agreement Review Checklist
+type: Reviewer Checklist
+title: NVCA Stock Purchase Agreement Reviewer Checklist
 description: >-
   A clause-by-clause reviewer checklist for the NVCA Model Stock Purchase
   Agreement, covering the full agreement — the Section 1 purchase-and-sale
@@ -15,7 +15,7 @@ tags:
   - checklist
 ---
 
-# NVCA Stock Purchase Agreement Review Checklist[^about]
+# NVCA Stock Purchase Agreement Reviewer Checklist[^about]
 
 A clause-by-clause reviewer checklist for the NVCA Model Stock Purchase Agreement, covering the full agreement — the Section 1 purchase-and-sale mechanics, the Section 2 company and Section 3 purchaser representations, the Section 4 and Section 5 closing conditions, the Section 6 miscellaneous provisions, and the exhibit-package completeness checks.
 
@@ -220,7 +220,7 @@ These items are completeness checks on the exhibits and schedules the agreement 
 - [ ] **Attached companion-agreement forms are the final versions** (Recommended) — Confirm the companion transaction agreements are attached in their final negotiated forms rather than as drafts or earlier versions. The Section 4 and Section 5 conditions condition the closing on these agreements being executed, so the attached form each party signs at the closing should be the final version — check that the attached form of each companion agreement matches what the parties negotiated. This is distinct from confirming the agreement is executed as a closing condition: here the reviewer is matching the attached form to the final, not the closing mechanic. It is also distinct from the referenced-exhibits item: that item is the physical-completeness check that each referenced exhibit is present, while this item is version control — confirming the attached forms are the final negotiated versions, not stale boilerplate or an old draft. [#confirm-exhibit-forms-match-final]
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-22. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for NVCA-style venture financing stock purchase agreement coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-22. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for NVCA-style venture financing stock purchase agreement coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *NVCA Stock Purchase Agreement Reviewer Checklist*, OpenAgreements (last updated June 22, 2026), https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement.
 
 [^dgcl-151-par-value]: **8 Del. C. § 151 (Classes and series of stock)** — "Every corporation may issue 1 or more classes of stock or 1 or more series of stock within any class thereof, any or all of which classes may be of stock with par value or stock without par value and which classes or series may have such voting powers, full or limited, or no voting powers, and such designations, preferences and relative, participating, optional or other special rights, and qualifications, limitations or restrictions thereof, as shall be stated and expressed in the certificate of incorporation or of any amendment thereto, or in the resolution or resolutions providing for the issue of such stock adopted by the board of directors pursuant to authority expressly vested in it by the provisions of its certificate of incorporation." *8 Del. C. § 151(a).* <https://delcode.delaware.gov/title8/c001/sc05/index.html>
 

@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/4239128/innovation-ventures-v-liquid-manufacturing/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/michigan'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/michigan'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `business-to-business`, `michigan-statutory-gates`
 - source_cards: `innovation-rule-of-reason`, `mi-innovation-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../checklists/non-compete/us/michigan.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Michigan](../checklists/non-compete/us/michigan.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4239128/innovation-ventures-v-liquid-manufacturing/#:~:text=Commercial%20noncompete%20agreements%20between%20businesses,should%20be%20given%20due%20deference.>

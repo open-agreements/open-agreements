@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/8436739/blaskiewicz-v-spine-institute-of-idaho/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/idaho'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/idaho'
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `geography-work-scope`, `idaho-statutory-gates`
 - source_cards: `blaskiewicz-modify-work-scope`, `idaho-blaskiewicz-scope-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Idaho](../checklists/non-compete/us/idaho.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Idaho](../checklists/non-compete/us/idaho.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8436739/blaskiewicz-v-spine-institute-of-idaho/#:~:text=For%20example%2C%20it%20is%20possible,is%20otherwise%20qualified%20to%20perform.>
 
 ### blaskiewicz-v-spine-institute-of-idaho-p-a-however-even-if-the-provision-is-f6b241ea {#blaskiewicz-v-spine-institute-of-idaho-p-a-however-even-if-the-provision-is-f6b241ea}
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `blaskiewicz-blue-pencil-statute`, `idaho-blaskiewicz-modify-sev`
-- cited_by: [Non-Compete Agreement Review Checklist — Idaho](../checklists/non-compete/us/idaho.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Idaho](../checklists/non-compete/us/idaho.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8436739/blaskiewicz-v-spine-institute-of-idaho/#:~:text=However%2C%20even%20if%20the%20provision,the%20non%2Dcompete%20provision%20through%20blue%2Dpenciling.>
 
 ### blaskiewicz-v-spine-institute-of-idaho-p-a-while-intermountain-eye-and-freiburger-a984463c {#blaskiewicz-v-spine-institute-of-idaho-p-a-while-intermountain-eye-and-freiburger-a984463c}
@@ -50,5 +50,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `blaskiewicz-statute-first`, `idaho-blaskiewicz-statute-first-cov`
-- cited_by: [Non-Compete Agreement Review Checklist — Idaho](../checklists/non-compete/us/idaho.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Idaho](../checklists/non-compete/us/idaho.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8436739/blaskiewicz-v-spine-institute-of-idaho/#:~:text=While%20Intermountain%20Eye%20and%20Freiburger,relevant%20statutes%20constitutes%20clear%20error.>

@@ -2,7 +2,7 @@
 jurisdiction: "Pennsylvania"
 slug: pennsylvania
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/pennsylvania
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/pennsylvania · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/pennsylvania · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Pennsylvania[^about]
 
@@ -48,6 +48,11 @@ Pennsylvania has not enacted a general non-compete statute for the ordinary work
 >
 > Do not treat Pennsylvania as either a free-for-all or a ban state. Confirm the covenant is ancillary and supported by consideration, then test it for reasonableness in time, territory, and protectable interest, because Pennsylvania courts scrutinize restraints closely [^socko-four-part-test].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> Pennsylvania has no general non-compete statute, so nothing in the agreement substitutes for the common-law reasonableness analysis every covenant must survive: a covenant is enforceable only when it is ancillary to employment, supported by adequate consideration, reasonably limited in duration and geography, and tied to a legitimate protectable interest [^socko-four-part-test]. The acknowledgments tracking those four elements are not self-proving, and a covenant survives only where the structural work behind them holds — each covenant confined to Covered Customers or Covered Employees through the look-back windows, a real geographic limit in place, and the restraint tied to Protected Interests rather than ordinary competition — because a covenant is only *prima facie* enforceable when reasonably limited in duration and geographic extent [^morgans-prima-facie]. Governing-law and venue choices that track where the employee actually lives and works leave the covenant measured against the law it was drafted for; a mismatch tees up a choice-of-law fight on top of the merits [^socko-four-part-test].
+
 ## Is continued at-will employment enough consideration for a Pennsylvania non-compete? {#consideration}
 
 **Short answer.** No, not by itself, for an existing employee. When a covenant is added after employment has begun, it is enforceable only if the employee receives new and valuable consideration beyond merely keeping the job [^socko-mid-employment][^maintenance-continued-employment].
@@ -63,7 +68,12 @@ A separate timing rule governs covenants signed shortly after the first day of w
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on continued at-will employment, or on an *intend to be legally bound* recital, when an existing Pennsylvania employee signs a new covenant. Tie the signature to identifiable new consideration such as a raise, bonus, or promotion, and document it, because the recital did not save the agreement in *Socko* [^socko-mid-employment][^socko-uwoa].
+> When an existing Pennsylvania employee signs a new covenant, neither continued at-will employment nor an *intend to be legally bound* recital supplies the consideration the covenant needs; the recital did not save the agreement in *Socko*. A covenant supported instead by identifiable new consideration — a raise, bonus, or promotion, documented as such — stands on ground the recital cannot furnish [^socko-mid-employment][^socko-uwoa].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> The specific new consideration recorded in Cover Terms is what carries a mid-employment covenant; continued at-will employment and an intent-to-be-legally-bound recital do not. Continued employment alone is not adequate consideration for a mid-employment covenant, and the Uniform Written Obligations Act recital cannot substitute for new and valuable consideration in this context [^socko-mid-employment][^maintenance-continued-employment][^socko-uwoa]. Where the employee signs shortly after the first day of work, start-of-employment consideration holds only if the parties agreed to the covenant's essential provisions at the start of the relationship; absent that agreement the covenant needs new consideration of its own [^rullex-essential-provisions]. A covenant added or expanded by a later amendment is a later-agreed restraint that needs its own new consideration [^kistler-new-consideration]. And adequate consideration establishes only that the covenants are supported, not that they are reasonable — each covenant must independently satisfy the reasonableness elements on duration, geography, and scope [^socko-mid-employment].
 
 ## What legitimate business interests can support a Pennsylvania non-compete? {#protectable-interests}
 
@@ -76,7 +86,12 @@ The emphasis on *specialized* training matters. Courts distinguish a real, propr
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not use a Pennsylvania non-compete to block competition that is disconnected from a protectable interest. Tie the restraint to specific trade secrets, confidential information, customer goodwill, or genuinely specialized training, because a covenant aimed at ordinary competition is not reasonably necessary to protect the employer [^q3-morgans-reasonably-necessary].
+> A Pennsylvania non-compete that blocks competition disconnected from a protectable interest reaches beyond what the law will enforce. A restraint tied to specific trade secrets, confidential information, customer goodwill, or genuinely specialized training rests on a recognized interest; one aimed at ordinary competition is not reasonably necessary to protect the employer [^q3-morgans-reasonably-necessary].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> The interest behind each covenant in the agreement holds up only where it is one Pennsylvania actually recognizes — confidential information, trade secrets, customer goodwill, or the specialized training, skills, and carefully guarded methods of doing business the employer provides — and not the employer's bare interest in avoiding ordinary competition [^morgans-specialized-training]. The return, deletion, and certification mechanics are not boilerplate: they build the record of what Confidential Information left and what came back, make the Protected Interests concrete rather than rhetorical, and count as part of the employer's reasonable efforts to maintain trade-secret secrecy — which matters because these covenants are enforced only so far as reasonably necessary for the employer's protection [^q3-morgans-reasonably-necessary].
 
 ## What duration and geographic scope are reasonable for a Pennsylvania non-compete? {#duration-limits}
 
@@ -89,18 +104,28 @@ Because the analysis is holistic, time and territory are measured against the em
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not copy a fixed term or radius from another form. Match the duration and territory to the employee's role and the employer's real market, because a Pennsylvania court evaluates the restraint as a whole and there is no safe-harbor number [^sidco-general-rule][^beemac-geo-duration].
+> A Pennsylvania court evaluates the restraint as a whole against the employer's real market, with no safe-harbor number — so a fixed term or radius copied from another form is measured against a market it was never sized to, while duration and territory matched to the employee's role and that market are what the court is looking for [^sidco-general-rule][^beemac-geo-duration].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A non-compete's duration and territory hold up only when sized to the employee's real role and the employer's real market; a recital that they are sized is not enough, because a Pennsylvania court weighs time and territory together against that market [^sidco-general-rule][^beemac-geo-duration]. The real Specified Competitors named in Cover Terms narrow the covenant, are strong evidence the restraint is no greater than reasonably necessary, and leave the employee the rest of the industry. The remedies clause's irreparable-harm acknowledgment does not carry the equitable showing a court will demand — enforcement remains limited to restraints reasonably necessary for the employer's protection and reasonably limited in duration and geographic extent [^sidco-general-rule].
 
 ## Will a Pennsylvania court blue-pencil or reform an overbroad non-compete? {#court-narrowing}
 
 **Short answer.** Sometimes, but do not count on it. A Pennsylvania court of equity may enforce only the reasonable portions of an overbroad covenant, yet it will scrutinize the restraint closely and may decline to rewrite a covenant drafted far broader than necessary [^sidco-partial-enforcement][^reading-aviation-overreach].
 
-*Sidco Paper* confirms the power: where a covenant imposes restrictions broader than necessary, a court of equity may grant enforcement limited to the portions that are reasonably necessary to protect the employer [^sidco-partial-enforcement]. But the power is bounded. In *Reading Aviation Service, Inc. v. Bertolet*, the Supreme Court explained that freely rewriting overbroad covenants would encourage employers with superior bargaining power to insist on excessive restrictions, secure in the knowledge that a court will simply pare them back [^reading-aviation-overreach]. Pennsylvania courts therefore subject these covenants to close scrutiny [^reading-aviation-close-scrutiny]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Pennsylvania non-compete review checklist](/checklists/non-compete/us/pennsylvania) walks the full covenant suite item by item with each requirement's force level.
+*Sidco Paper* confirms the power: where a covenant imposes restrictions broader than necessary, a court of equity may grant enforcement limited to the portions that are reasonably necessary to protect the employer [^sidco-partial-enforcement]. But the power is bounded. In *Reading Aviation Service, Inc. v. Bertolet*, the Supreme Court explained that freely rewriting overbroad covenants would encourage employers with superior bargaining power to insist on excessive restrictions, secure in the knowledge that a court will simply pare them back [^reading-aviation-overreach]. Pennsylvania courts therefore subject these covenants to close scrutiny [^reading-aviation-close-scrutiny]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Pennsylvania non-compete reviewer checklist](/checklists/non-compete/us/pennsylvania) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a Pennsylvania court to rescue an aggressive covenant. Draft tiered, severable, reasonable restraints, because reformation is discretionary and a court may refuse to narrow a covenant it sees as gratuitously overbroad [^sidco-partial-enforcement][^reading-aviation-overreach].
+> A Pennsylvania court is no guaranteed rescue for an aggressive covenant. Reformation is discretionary, and a court may refuse to narrow a covenant it sees as gratuitously overbroad — so tiered, severable, reasonable restraints stand on their own, while an aggressive covenant depends on a discretion the court may withhold [^sidco-partial-enforcement][^reading-aviation-overreach].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> The reformation clause is no rescue for an overbroad restraint. It asks only for enforcement limited to the reasonably necessary portions, so a covenant drawn in separable tiers — customer-specific alternatives beneath broader restraints, distinct duration and geography steps — gives a court reasonable portions to enforce, where a single overbroad restraint asks the court to author the covenant itself [^sidco-partial-enforcement]. The partial-enforcement power is discretionary and bounded: courts warn that freely rewriting overbroad covenants would encourage employers with superior bargaining power to insist on excessive restrictions, and a court may decline to rescue a covenant drafted far broader than necessary [^reading-aviation-overreach]. Because these covenants draw close scrutiny given the parties' unequal bargaining positions, a notice to a future employer carries risk unless the underlying restraint is one the employer is prepared to defend — warning a new employer off an employee based on a covenant a court would refuse to enforce, whether for missing consideration, overbreadth, or the health care rules, invites a tortious-interference claim [^reading-aviation-close-scrutiny].
 
 ## Does it matter whether the employer or the employee ended the employment? {#termination-effect}
 
@@ -124,7 +149,12 @@ A 2026 Superior Court memorandum, *First National Trust Co. v. English*, illustr
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not draft a Pennsylvania non-solicitation clause that bars merely *accepting* business or that omits a geographic limit. Restrict the clause to affirmative solicitation of customers the employee actually served, because a no-accept or geographically unbounded clause invites a finding that it is unenforceable as written [^english-affirmative-act][^english-no-geo].
+> A Pennsylvania non-solicitation clause that bars merely *accepting* business or omits a geographic limit invites a finding that it is unenforceable as written. A clause restricted to affirmative solicitation of customers the employee actually served stays within the reasonableness the courts require; a no-accept or geographically unbounded clause does not [^english-affirmative-act][^english-no-geo].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A customer non-solicit reaches only affirmative outreach — solicit, divert, and entice each require an affirmative act, so a clause that reaches merely accepting business from a customer who seeks the employee out sweeps in conduct that is not a breach [^english-affirmative-act]. A clause with no geographic scope has been held unenforceable as written, which makes the geographic limit load-bearing [^english-no-geo], and a clause extended to customers whose relationships predated the employment reaches conduct held unreasonable [^english-predated-customers]. A customer non-solicit scoped this way, backed by the confidentiality and trade-secret protections, is often a stronger and more readily enforceable protection than a broad non-compete. The optional no-business covenant reaches the passive acceptance of business that the affirmative-act reading leaves free, so it presses harder on the reasonableness elements and needs its own justification, sized tightly to the goodwill it protects — a considered risk decision rather than a default [^english-affirmative-act].
 
 ## Does a Pennsylvania non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
@@ -138,6 +168,11 @@ A contractual extension-on-breach clause is therefore fact-dependent in Pennsylv
 > **Practice note.**
 >
 > Open question: Pennsylvania law is unsettled on whether an extension-on-breach or tolling clause is enforceable after the original restricted period expires. Draft any such clause as a separate, reasonable restraint tied to the breach, and do not assume a Pennsylvania court will automatically extend an expired covenant [^q8-sidco-reasonably-necessary][^q8-morgans-prima-facie].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A tolling clause holds up only where it is bounded — extending the restricted period day for day during an actual breach, not automatically or indefinitely — because no Pennsylvania statute or appellate decision squarely endorses automatic tolling, and any extension is itself a restraint that must remain reasonably necessary and reasonably limited in duration [^q8-sidco-reasonably-necessary]. A covenant is only *prima facie* enforceable when reasonably limited as to time, which cuts against an open-ended or indefinite extension; the extension stands as a separate, breach-tied restraint, and an expired covenant is not one a court will assume to revive [^q8-morgans-prima-facie].
 
 ## Are non-competes for health care practitioners restricted in Pennsylvania? {#healthcare-act74}
 
@@ -154,6 +189,16 @@ The Act covers a defined set of practitioners — medical doctors, doctors of os
 >
 > Do not apply ordinary reasonableness analysis to a covered health care non-compete. For a covered practitioner, Act 74 voids any covenant longer than one year and any covenant at all where the employer did the dismissing, regardless of how reasonable the terms look [^act74-applicability][^act74-exception].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> For any of the five covered classes — medical doctors, doctors of osteopathy, certified registered nurse anesthetists, certified registered nurse practitioners, and physician assistants — Act 74 sets the operative limits: a practitioner covenant beyond one year is void, and none is enforceable after the employer dismisses the practitioner [^act74-practitioner]. A noncompete covenant entered into after the Act's effective date of January 1, 2025 is contrary to public policy and void and unenforceable by an employer [^act74-applicability], subject only to the narrow exception where the covenant runs no more than one year and the practitioner was not dismissed [^act74-exception]; ordinary reasonableness analysis does not save a covered covenant that exceeds those limits. The Act does not bar a provision recovering reasonable, practitioner-specific expenses — relocation, training, and patient-base establishment costs accrued within the three years before separation, amortized over up to five years, unavailable after a dismissal — but the agreement does not include one, so any such provision is present only as a deliberate addition [^act74-applicability].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> The 90-day patient-notice obligation restated as an employer covenant adds nothing and creates a parallel breach claim: it is a statutory duty the employer owes regardless of the agreement [^act74-notice]. When a covered practitioner departs, the employer must notify the patients the practitioner saw within the past year — where there was an ongoing outpatient relationship of at least two years — within 90 days of the departure, whether or not any covenant survives [^act74-notice]. The risk runs the other way: a form that treats the practitioner's departure or destination as confidential information the employer cannot communicate to patients, or that otherwise restricts or delays a legally required notice, obstructs that duty. A covered practitioner's agreement thus turns, on review, on whether that notice plumbing is left unobstructed.
+
 ## Are business-to-business no-hire clauses enforceable in Pennsylvania? {#b2b-no-hire}
 
 **Short answer.** Generally no. In *Pittsburgh Logistics Systems, Inc. v. Beemac Trucking, LLC*, the Pennsylvania Supreme Court held that a no-hire clause between two businesses was unreasonably in restraint of trade and unenforceable [^beemac-unenforceable].
@@ -165,7 +210,7 @@ The clause in *Beemac* barred one company from hiring the other's employees duri
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a no-hire or no-poach clause buried in a Pennsylvania commercial services contract. After *Beemac*, such clauses are vulnerable as unreasonable restraints of trade, so protect legitimate interests through narrowly drawn confidentiality and direct restrictive covenants supported by consideration instead [^beemac-overbroad].
+> A no-hire or no-poach clause buried in a Pennsylvania commercial services contract is not a reliable protection. After *Beemac*, such clauses are vulnerable as unreasonable restraints of trade, while legitimate interests protected through narrowly drawn confidentiality and direct restrictive covenants supported by consideration rest on firmer ground [^beemac-overbroad].
 
 ## Can a buyer enforce a non-compete assigned in an asset sale? {#assignment}
 
@@ -176,7 +221,12 @@ In *Hess v. Gebhard & Co.*, the Pennsylvania Supreme Court held that a non-compe
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not assume a Pennsylvania non-compete travels with the business in an asset sale. If a buyer needs to enforce existing covenants, confirm each agreement contains an express assignability provision, because *Hess* bars automatic assignment without one [^hess-not-assignable].
+> A Pennsylvania non-compete does not travel with the business in an asset sale on its own. A buyer can enforce existing covenants only where each agreement contains an express assignability provision, because *Hess* bars automatic assignment without one [^hess-not-assignable].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> An assignment clause that expressly names each restrictive covenant, rather than a boilerplate successors-and-assigns recital, is what an asset buyer can rely on, because a Pennsylvania restrictive covenant in an employment agreement is not assignable to a purchasing entity in a sale of assets absent a specific assignability provision [^hess-not-assignable]. The covenant is otherwise personal — confined to the employer with whom the agreement was made — so a generic recital that never mentions the restrictive covenants leaves an asset buyer with nothing to enforce [^hess-personal]. An edit that trims the express covenant reference out of that clause removes what makes it enforceable.
 
 ## What Pennsylvania non-compete reform efforts should employers watch? {#pending-reform}
 
@@ -191,7 +241,7 @@ Because the enacted baseline remains common-law reasonableness plus the Act 74 h
 >
 > Treat Senate Bill 142 and Senate Bill 680 as monitoring items, not present Pennsylvania law, and do not assume any general statewide non-compete ban has passed. Recheck the General Assembly's bill status before changing forms, because only Act 74's health care restriction is currently enacted [^q12-act74-applicability].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Pennsylvania. This article synthesizes Pennsylvania primary law and is not legal advice from a Pennsylvania-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Pennsylvania. This article synthesizes Pennsylvania primary law and is not legal advice from a Pennsylvania-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Pennsylvania*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/pennsylvania.
 
 [^socko-four-part-test]: **Socko v. Mid-Atlantic Systems of CPA, Inc.** — "Consistent with this legal background, currently in Pennsylvania, restrictive covenants are enforceable only if they are: (1) ancillary to an employment relationship between an employee and an employer; (2) supported by adequate consideration; (3) the restrictions are reasonably limited in duration and geographic extent; and (4) the restrictions are designed to protect the legitimate interests of the employer." *Socko v. Mid-Atlantic Systems of CPA, Inc., 126 A.3d 1266 (Pa. 2015).* <https://www.courtlistener.com/opinion/3155889/socko-d-v-mid-atantic-systems-of-cpa-inc-aplt/#:~:text=Consistent%20with%20this%20legal%20background%2C,legitimate%20interests%20of%20the%20employer.>
 

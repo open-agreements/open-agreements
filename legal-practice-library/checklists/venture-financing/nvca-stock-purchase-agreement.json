@@ -31,7 +31,7 @@
       "rel": "related-form",
       "href": "https://openagreements.org/templates/nvca-stock-purchase-agreement",
       "type": "text/html",
-      "title": "NVCA Model Stock Purchase Agreement"
+      "title": "Model Stock Purchase Agreement"
     },
     {
       "rel": "contract-api",
@@ -44,7 +44,7 @@
     "topic": "venture-financing",
     "slug": "nvca-stock-purchase-agreement",
     "frontmatter": {
-      "title": "NVCA Stock Purchase Agreement Review Checklist",
+      "title": "NVCA Stock Purchase Agreement Reviewer Checklist",
       "description": "A clause-by-clause reviewer checklist for the NVCA Model Stock Purchase Agreement, covering the full agreement — the Section 1 purchase-and-sale mechanics, the Section 2 company and Section 3 purchaser representations, the Section 4 and Section 5 closing conditions, the Section 6 miscellaneous provisions, and the exhibit-package completeness checks.",
       "eyebrow": "Reviewer Checklist",
       "coverage": "NVCA-style venture financing stock purchase agreement",
@@ -150,7 +150,6 @@
         "requirementId": "identify-company",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.identify-company",
         "requirementLevel": "MUST",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "relatedFieldKeys": [
           "company_name"
@@ -167,7 +166,6 @@
         "requirementId": "identify-investor",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.identify-investor",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "relatedFieldKeys": [
           "investor_name"
@@ -184,7 +182,6 @@
         "requirementId": "schedule-of-purchasers",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.schedule-of-purchasers",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           106
         ],
@@ -203,7 +200,6 @@
         "requirementId": "designate-series",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.designate-series",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "relatedFieldKeys": [
           "series_designation"
@@ -220,7 +216,6 @@
         "requirementId": "set-purchase-price",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.set-purchase-price",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "relatedFieldKeys": [
           "purchase_price_per_share"
@@ -237,7 +232,6 @@
         "requirementId": "state-par-value",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.state-par-value",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "relatedFieldKeys": [
           "par_value_per_share"
@@ -252,6 +246,7 @@
           {
             "sourceId": "dgcl-151-par-value",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "8 Del. C. § 151 (Classes and series of stock)",
             "citation": "8 Del. C. § 151(a).",
             "url": "https://delcode.delaware.gov/title8/c001/sc05/index.html",
@@ -265,7 +260,6 @@
         "requirementId": "specify-closing-structure",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.specify-closing-structure",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "relatedFieldKeys": [
           "closing_type"
@@ -282,7 +276,6 @@
         "requirementId": "file-restated-certificate-before-closing",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.file-restated-certificate-before-closing",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           1
         ],
@@ -296,6 +289,7 @@
           {
             "sourceId": "nvca-spa-restated-certificate",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 1.1(a)",
             "citation": "NVCA Model Stock Purchase Agreement § 1.1(a) (v10-28-2025); see id. n.1.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -309,7 +303,6 @@
         "requirementId": "confirm-closing-deliverables",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.confirm-closing-deliverables",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           15,
           16
@@ -324,6 +317,7 @@
           {
             "sourceId": "nvca-spa-closing-deliverables",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 1.2 (Closing Deliverables)",
             "citation": "NVCA Model Stock Purchase Agreement § 1.2 (Closing Deliverables) (v10-28-2025); see id. nn.15–16.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -337,7 +331,6 @@
         "requirementId": "address-convertible-security-conversion",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.address-convertible-security-conversion",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           18,
           19
@@ -354,7 +347,6 @@
         "requirementId": "address-tranche-funding-default",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.address-tranche-funding-default",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           8,
           10
@@ -369,6 +361,7 @@
           {
             "sourceId": "edgar-durata-smc",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Durata Therapeutics, Inc., Certificate of Incorporation § 5A (Special Mandatory Conversion)",
             "citation": "Durata Therapeutics, Inc., Certificate of Incorporation § 5A (filed Mar. 22, 2012) (Series A Original Issue Price $1.00; Series A Special Mandatory Conversion Price $10.00).",
             "url": "https://www.sec.gov/Archives/edgar/data/1544116/000119312512127352/d312438dex31.htm",
@@ -383,7 +376,6 @@
         "requirementId": "represent-organization-and-good-standing",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-organization-and-good-standing",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           29
         ],
@@ -399,7 +391,6 @@
         "requirementId": "represent-capitalization",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-capitalization",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           30,
           33
@@ -414,6 +405,7 @@
           {
             "sourceId": "nvca-spa-capitalization",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 2.2 (Capitalization)",
             "citation": "NVCA Model Stock Purchase Agreement § 2.2(a)(iii) (v10-28-2025).",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -427,7 +419,6 @@
         "requirementId": "represent-subsidiaries",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-subsidiaries",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           35
         ],
@@ -443,7 +434,6 @@
         "requirementId": "represent-authorization",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-authorization",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Authorization",
         "sectionId": "company-representations-and-warranties",
@@ -457,7 +447,6 @@
         "requirementId": "represent-valid-issuance",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-valid-issuance",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           36
         ],
@@ -471,6 +460,7 @@
           {
             "sourceId": "nvca-spa-valid-issuance",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 2.5 (Valid Issuance)",
             "citation": "NVCA Model Stock Purchase Agreement § 2.5 (v10-28-2025); see id. n.36.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -481,6 +471,7 @@
           {
             "sourceId": "dgcl-152-fully-paid",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "8 Del. C. § 152 (Issuance of stock; consideration)",
             "citation": "8 Del. C. § 152(d).",
             "url": "https://delcode.delaware.gov/title8/c001/sc05/index.html",
@@ -491,6 +482,7 @@
           {
             "sourceId": "securities-act-4a2",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Securities Act of 1933 § 4(a)(2) (15 U.S.C. § 77d)",
             "citation": "Securities Act of 1933 § 4(a)(2), 15 U.S.C. § 77d(a)(2).",
             "url": "https://www.law.cornell.edu/uscode/text/15/77d",
@@ -505,7 +497,6 @@
         "requirementId": "represent-governmental-consents",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-governmental-consents",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           37
         ],
@@ -521,7 +512,6 @@
         "requirementId": "represent-litigation",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-litigation",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           38
         ],
@@ -537,7 +527,6 @@
         "requirementId": "represent-intellectual-property",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-intellectual-property",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           40,
           41
@@ -554,7 +543,6 @@
         "requirementId": "represent-employee-ip-assignment",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-employee-ip-assignment",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           43,
           44
@@ -571,7 +559,6 @@
         "requirementId": "represent-compliance-with-instruments",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-compliance-with-instruments",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Compliance with other instruments",
         "sectionId": "company-representations-and-warranties",
@@ -585,7 +572,6 @@
         "requirementId": "represent-agreements-and-actions",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-agreements-and-actions",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           47
         ],
@@ -599,6 +585,7 @@
           {
             "sourceId": "edgar-material-contract-threshold",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Encapsion, Inc. Series A Preferred Stock Purchase Agreement § 2.7 (Agreements; Action)",
             "citation": "Encapsion, Inc. Series A Preferred Stock Purchase Agreement § 2.7 (filed Mar. 31, 2015).",
             "url": "https://www.sec.gov/Archives/edgar/data/1390085/000104746915003027/a2223801zex-4_3.htm",
@@ -613,7 +600,6 @@
         "requirementId": "represent-related-party-transactions",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-related-party-transactions",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           50
         ],
@@ -629,7 +615,6 @@
         "requirementId": "represent-financial-statements",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-financial-statements",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           52
         ],
@@ -645,7 +630,6 @@
         "requirementId": "represent-no-material-adverse-change",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-no-material-adverse-change",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           55
         ],
@@ -659,6 +643,7 @@
           {
             "sourceId": "nvca-spa-mae-definition",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), Defined Terms",
             "citation": "NVCA Model Stock Purchase Agreement § 1.4 (Material Adverse Effect) (v10-28-2025).",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -672,7 +657,6 @@
         "requirementId": "represent-employee-matters",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-employee-matters",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Employee matters",
         "sectionId": "company-representations-and-warranties",
@@ -686,7 +670,6 @@
         "requirementId": "represent-tax-returns-and-payments",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-tax-returns-and-payments",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           59
         ],
@@ -702,7 +685,6 @@
         "requirementId": "represent-title-to-property",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-title-to-property",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Title to property and assets",
         "sectionId": "company-representations-and-warranties",
@@ -716,7 +698,6 @@
         "requirementId": "represent-corporate-documents",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-corporate-documents",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           61
         ],
@@ -732,7 +713,6 @@
         "requirementId": "represent-disclosure",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-disclosure",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           81
         ],
@@ -748,7 +728,6 @@
         "requirementId": "represent-qualified-small-business-stock",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-qualified-small-business-stock",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           63
         ],
@@ -762,6 +741,7 @@
           {
             "sourceId": "irc-1202-qsbs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "26 U.S.C. § 1202 (Qualified Small Business Stock)",
             "citation": "26 U.S.C. § 1202(a)(1); see NVCA Model Stock Purchase Agreement n.63.",
             "url": "https://www.law.cornell.edu/uscode/text/26/1202",
@@ -776,7 +756,6 @@
         "requirementId": "represent-fcpa-compliance",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-fcpa-compliance",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           65
         ],
@@ -792,7 +771,6 @@
         "requirementId": "represent-data-privacy",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-data-privacy",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Data privacy",
         "sectionId": "company-representations-and-warranties",
@@ -806,7 +784,6 @@
         "requirementId": "represent-environmental-compliance",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-environmental-compliance",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Environmental and safety",
         "sectionId": "company-representations-and-warranties",
@@ -820,7 +797,6 @@
         "requirementId": "represent-industry-specific-matters",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-industry-specific-matters",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           67,
           69
@@ -837,7 +813,6 @@
         "requirementId": "represent-purchaser-authorization",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-purchaser-authorization",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Purchaser authorization",
         "sectionId": "purchaser-representations-and-warranties",
@@ -851,7 +826,6 @@
         "requirementId": "represent-purchase-for-own-account",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-purchase-for-own-account",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           83
         ],
@@ -865,6 +839,7 @@
           {
             "sourceId": "nvca-spa-own-account",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 3.2 (Purchase Entirely for Own Account)",
             "citation": "NVCA Model Stock Purchase Agreement § 3.2 (Purchase Entirely for Own Account) (v10-28-2025); see id. n.83.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -878,7 +853,6 @@
         "requirementId": "represent-access-to-information",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-access-to-information",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Disclosure of information",
         "sectionId": "purchaser-representations-and-warranties",
@@ -892,7 +866,6 @@
         "requirementId": "represent-restricted-securities",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-restricted-securities",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Restricted securities",
         "sectionId": "purchaser-representations-and-warranties",
@@ -904,6 +877,7 @@
           {
             "sourceId": "nvca-spa-restricted-securities",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 3.4 (Restricted Securities)",
             "citation": "NVCA Model Stock Purchase Agreement § 3.4 (Restricted Securities) (v10-28-2025).",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -914,6 +888,7 @@
           {
             "sourceId": "rule-144-restricted-securities",
             "authorityType": "regulation",
+            "tier": "primary-source-backed",
             "title": "17 C.F.R. § 230.144(d) (Holding period for restricted securities)",
             "citation": "17 C.F.R. § 230.144(d)(1)(ii).",
             "url": "https://www.law.cornell.edu/cfr/text/17/230.144",
@@ -928,7 +903,6 @@
         "requirementId": "represent-no-public-market",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-no-public-market",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "No public market",
         "sectionId": "purchaser-representations-and-warranties",
@@ -942,7 +916,6 @@
         "requirementId": "represent-legends",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-legends",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Legends",
         "sectionId": "purchaser-representations-and-warranties",
@@ -956,7 +929,6 @@
         "requirementId": "represent-accredited-investor",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-accredited-investor",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Accredited investor",
         "sectionId": "purchaser-representations-and-warranties",
@@ -968,6 +940,7 @@
           {
             "sourceId": "nvca-spa-accredited-investor",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 3.7 (Accredited Investor)",
             "citation": "NVCA Model Stock Purchase Agreement § 3.7 (Accredited Investor) (v10-28-2025).",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -978,6 +951,7 @@
           {
             "sourceId": "rule-501-accredited-investor",
             "authorityType": "regulation",
+            "tier": "primary-source-backed",
             "title": "17 C.F.R. § 230.501(a) (Regulation D — Accredited investor)",
             "citation": "17 C.F.R. § 230.501(a).",
             "url": "https://www.law.cornell.edu/cfr/text/17/230.501",
@@ -992,7 +966,6 @@
         "requirementId": "represent-no-general-solicitation",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-no-general-solicitation",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "No general solicitation",
         "sectionId": "purchaser-representations-and-warranties",
@@ -1004,6 +977,7 @@
           {
             "sourceId": "rule-506-private-placement",
             "authorityType": "regulation",
+            "tier": "primary-source-backed",
             "title": "17 C.F.R. § 230.506(a) (Exemption for limited offers and sales)",
             "citation": "17 C.F.R. § 230.506(a).",
             "url": "https://www.law.cornell.edu/cfr/text/17/230.506",
@@ -1018,7 +992,6 @@
         "requirementId": "represent-exculpation-among-purchasers",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-exculpation-among-purchasers",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Exculpation among purchasers",
         "sectionId": "purchaser-representations-and-warranties",
@@ -1032,7 +1005,6 @@
         "requirementId": "represent-purchaser-residence",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-purchaser-residence",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Residence",
         "sectionId": "purchaser-representations-and-warranties",
@@ -1046,7 +1018,6 @@
         "requirementId": "represent-foreign-investor-status",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-foreign-investor-status",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Foreign investors",
         "sectionId": "purchaser-representations-and-warranties",
@@ -1060,7 +1031,6 @@
         "requirementId": "represent-cfius-foreign-person-status",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-cfius-foreign-person-status",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           85
         ],
@@ -1076,7 +1046,6 @@
         "requirementId": "represent-sanctions-and-country-of-concern-status",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.represent-sanctions-and-country-of-concern-status",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           86,
           87
@@ -1093,7 +1062,6 @@
         "requirementId": "condition-representations-true-at-closing",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.condition-representations-true-at-closing",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           89
         ],
@@ -1107,6 +1075,7 @@
           {
             "sourceId": "nvca-spa-bring-down",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 4.1 (Representations and Warranties)",
             "citation": "NVCA Model Stock Purchase Agreement § 4.1 (Representations and Warranties) (v10-28-2025); see id. n.89.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1120,7 +1089,6 @@
         "requirementId": "condition-performance-of-covenants",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.condition-performance-of-covenants",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Performance of covenants",
         "sectionId": "conditions-to-the-purchasers-obligations-at-closing",
@@ -1134,7 +1102,6 @@
         "requirementId": "condition-compliance-certificate",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.condition-compliance-certificate",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Compliance certificate",
         "sectionId": "conditions-to-the-purchasers-obligations-at-closing",
@@ -1148,7 +1115,6 @@
         "requirementId": "condition-securities-law-qualifications",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.condition-securities-law-qualifications",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Securities-law qualifications",
         "sectionId": "conditions-to-the-purchasers-obligations-at-closing",
@@ -1160,6 +1126,7 @@
           {
             "sourceId": "nvca-spa-qualifications",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 4.4 (Qualifications)",
             "citation": "NVCA Model Stock Purchase Agreement § 4.4 (Qualifications) (v10-28-2025).",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1173,7 +1140,6 @@
         "requirementId": "condition-companion-agreements-executed",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.condition-companion-agreements-executed",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Companion transaction agreements executed",
         "sectionId": "conditions-to-the-purchasers-obligations-at-closing",
@@ -1185,6 +1151,7 @@
           {
             "sourceId": "nvca-spa-companion-agreements",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 4.7 (Investors' Rights Agreement)",
             "citation": "NVCA Model Stock Purchase Agreement § 4.7 (Investors' Rights Agreement) (v10-28-2025); see id. §§ 4.6, 4.8–4.9.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1198,7 +1165,6 @@
         "requirementId": "condition-restated-certificate-on-file",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.condition-restated-certificate-on-file",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Restated Certificate on file at closing",
         "sectionId": "conditions-to-the-purchasers-obligations-at-closing",
@@ -1212,7 +1178,6 @@
         "requirementId": "condition-secretarys-certificate",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.condition-secretarys-certificate",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Secretary's certificate",
         "sectionId": "conditions-to-the-purchasers-obligations-at-closing",
@@ -1226,7 +1191,6 @@
         "requirementId": "condition-proceedings-and-documents",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.condition-proceedings-and-documents",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Proceedings and documents satisfactory",
         "sectionId": "conditions-to-the-purchasers-obligations-at-closing",
@@ -1240,7 +1204,6 @@
         "requirementId": "condition-opinion-of-company-counsel",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.condition-opinion-of-company-counsel",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           90
         ],
@@ -1256,7 +1219,6 @@
         "requirementId": "condition-board-of-directors-composition",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.condition-board-of-directors-composition",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           91
         ],
@@ -1272,7 +1234,6 @@
         "requirementId": "condition-minimum-shares-sold",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.condition-minimum-shares-sold",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           92
         ],
@@ -1286,6 +1247,7 @@
           {
             "sourceId": "nvca-spa-minimum-shares",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 4.13 (Minimum Number of Shares)",
             "citation": "NVCA Model Stock Purchase Agreement § 4.13 (Minimum Number of Shares) (v10-28-2025); see id. n.92.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1299,7 +1261,6 @@
         "requirementId": "condition-investor-specific-deliverables",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.condition-investor-specific-deliverables",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           93
         ],
@@ -1315,7 +1276,6 @@
         "requirementId": "condition-purchaser-representations-true-at-closing",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.condition-purchaser-representations-true-at-closing",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Purchaser representations true at closing",
         "sectionId": "conditions-of-the-companys-obligations-at-closing",
@@ -1327,6 +1287,7 @@
           {
             "sourceId": "nvca-spa-purchaser-bring-down",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 5.1 (Representations and Warranties)",
             "citation": "NVCA Model Stock Purchase Agreement § 5.1 (Representations and Warranties) (v10-28-2025); see id. n.88.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1340,7 +1301,6 @@
         "requirementId": "condition-purchaser-performance",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.condition-purchaser-performance",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Purchaser performance of obligations",
         "sectionId": "conditions-of-the-companys-obligations-at-closing",
@@ -1354,7 +1314,6 @@
         "requirementId": "condition-securities-law-qualifications-company-side",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.condition-securities-law-qualifications-company-side",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Securities-law qualifications (company side)",
         "sectionId": "conditions-of-the-companys-obligations-at-closing",
@@ -1368,7 +1327,6 @@
         "requirementId": "condition-companion-agreements-executed-by-purchasers",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.condition-companion-agreements-executed-by-purchasers",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Companion agreements executed by purchasers",
         "sectionId": "conditions-of-the-companys-obligations-at-closing",
@@ -1382,7 +1340,6 @@
         "requirementId": "condition-minimum-shares-company-side",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.condition-minimum-shares-company-side",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Minimum number of shares (company side)",
         "sectionId": "conditions-of-the-companys-obligations-at-closing",
@@ -1396,7 +1353,6 @@
         "requirementId": "address-survival-of-warranties",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.address-survival-of-warranties",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           94
         ],
@@ -1412,7 +1368,6 @@
         "requirementId": "confirm-successors-and-assigns",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.confirm-successors-and-assigns",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Successors and assigns",
         "sectionId": "miscellaneous",
@@ -1426,7 +1381,6 @@
         "requirementId": "confirm-counterparts",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.confirm-counterparts",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Counterparts",
         "sectionId": "miscellaneous",
@@ -1440,7 +1394,6 @@
         "requirementId": "confirm-titles-and-subtitles",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.confirm-titles-and-subtitles",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Titles and subtitles",
         "sectionId": "miscellaneous",
@@ -1454,7 +1407,6 @@
         "requirementId": "confirm-severability",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.confirm-severability",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Severability",
         "sectionId": "miscellaneous",
@@ -1468,7 +1420,6 @@
         "requirementId": "confirm-delays-or-omissions",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.confirm-delays-or-omissions",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Delays or omissions",
         "sectionId": "miscellaneous",
@@ -1482,7 +1433,6 @@
         "requirementId": "confirm-entire-agreement",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.confirm-entire-agreement",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Entire agreement",
         "sectionId": "miscellaneous",
@@ -1496,7 +1446,6 @@
         "requirementId": "confirm-costs-of-enforcement",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.confirm-costs-of-enforcement",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Costs of enforcement",
         "sectionId": "miscellaneous",
@@ -1510,7 +1459,6 @@
         "requirementId": "identify-governing-law",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.identify-governing-law",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           95
         ],
@@ -1526,7 +1474,6 @@
         "requirementId": "require-notice-mechanics",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.require-notice-mechanics",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           96
         ],
@@ -1542,7 +1489,6 @@
         "requirementId": "disclaim-finders-fees",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.disclaim-finders-fees",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "No finder's fees",
         "sectionId": "miscellaneous",
@@ -1556,7 +1502,6 @@
         "requirementId": "provide-investor-counsel-fee-cap",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.provide-investor-counsel-fee-cap",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           97
         ],
@@ -1570,6 +1515,7 @@
           {
             "sourceId": "nvca-spa-fee-cap",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 6.8 (Fees and Expenses)",
             "citation": "NVCA Model Stock Purchase Agreement § 6.8 (Fees and Expenses) (v10-28-2025); see id. n.97.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1580,6 +1526,7 @@
           {
             "sourceId": "feecap-practitioner-range",
             "authorityType": "law-firm-commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Altum Legal, PC — What should legal fees for a Series A financing be?",
             "citation": "Altum Legal, PC, What should legal fees for a Series A financing be? (accessed June 22, 2026).",
             "url": "https://altumlegal.com/what-should-legal-fees-for-a-series-a-financing-be",
@@ -1593,7 +1540,6 @@
         "requirementId": "set-amendment-and-waiver-threshold",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.set-amendment-and-waiver-threshold",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           98
         ],
@@ -1607,6 +1553,7 @@
           {
             "sourceId": "nvca-spa-amendment-threshold",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "NVCA Model Stock Purchase Agreement (v10-28-2025), § 6.10 (Amendments and Waivers)",
             "citation": "NVCA Model Stock Purchase Agreement § 6.10 (Amendments and Waivers) (v10-28-2025); see id. n.98.",
             "url": "https://nvca.org/document/nvca-model-stock-purchase-agreement-updated-oct-2025/",
@@ -1617,6 +1564,7 @@
           {
             "sourceId": "edgar-immunome-amendment",
             "authorityType": "commentary",
+            "tier": "lawyer-judgment-backed",
             "title": "Immunome, Inc. Series A Preferred Stock Purchase Agreement § 6.10 (Amendments and Waivers)",
             "citation": "Immunome, Inc. Series A Preferred Stock Purchase Agreement § 6.10 (filed Sept. 9, 2020).",
             "url": "https://www.sec.gov/Archives/edgar/data/1472012/000110465920103458/tm2025599d4_ex10-20.htm",
@@ -1631,7 +1579,6 @@
         "requirementId": "confirm-corporate-securities-law-legend",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.confirm-corporate-securities-law-legend",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           99
         ],
@@ -1647,7 +1594,6 @@
         "requirementId": "address-termination-of-closing-obligations",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.address-termination-of-closing-obligations",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Termination of closing obligations",
         "sectionId": "miscellaneous",
@@ -1661,7 +1607,6 @@
         "requirementId": "select-dispute-resolution-mode",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.select-dispute-resolution-mode",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           100,
           101
@@ -1681,7 +1626,6 @@
         "requirementId": "address-jury-trial-waiver",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.address-jury-trial-waiver",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [
           102
         ],
@@ -1697,7 +1641,6 @@
         "requirementId": "confirm-no-commitment-for-additional-financing",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.confirm-no-commitment-for-additional-financing",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "No commitment for additional financing",
         "sectionId": "miscellaneous",
@@ -1711,7 +1654,6 @@
         "requirementId": "confirm-waiver-of-counsel-conflicts",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.confirm-waiver-of-counsel-conflicts",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Waiver of conflicts",
         "sectionId": "miscellaneous",
@@ -1725,7 +1667,6 @@
         "requirementId": "confirm-disclosure-schedule-attached",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.confirm-disclosure-schedule-attached",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Disclosure Schedule attached and keyed to the representations",
         "sectionId": "exhibits-and-deliverables",
@@ -1739,7 +1680,6 @@
         "requirementId": "confirm-referenced-exhibits-attached",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.confirm-referenced-exhibits-attached",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Every referenced exhibit and schedule attached",
         "sectionId": "exhibits-and-deliverables",
@@ -1753,7 +1693,6 @@
         "requirementId": "confirm-exhibit-forms-match-final",
         "specRequirementId": "REQ-venture-financing.nvca-stock-purchase-agreement.confirm-exhibit-forms-match-final",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Attached companion-agreement forms are the final versions",
         "sectionId": "exhibits-and-deliverables",

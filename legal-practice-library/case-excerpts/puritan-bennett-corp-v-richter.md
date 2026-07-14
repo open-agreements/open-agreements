@@ -8,7 +8,7 @@ citation: 'Puritan-Bennett Corp. v. Richter, 8 Kan. App. 2d 311, 657 P.2d 589 (1
 resource: 'https://www.courtlistener.com/opinion/1159191/puritan-bennett-corp-v-richter/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/kansas'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/kansas'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `entire-agreement-amendment-waiver-e-signatures`, `timing-and-execution-acknowledgements`
 - source_cards: `puritan-bennett-amendments`, `puritan-bennett-consideration`, `puritan-bennett-continued-employment`
-- cited_by: [Non-Compete Agreement Review Checklist — Kansas](../checklists/non-compete/us/kansas.md), [Non-Competes in Kansas](../non-compete/us/kansas.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Kansas](../checklists/non-compete/us/kansas.md), [Non-Competes in Kansas](../non-compete/us/kansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1159191/puritan-bennett-corp-v-richter/#:~:text=After%20reviewing%20these%20authorities%2C%20we,a%20covenant%20not%20to%20compete.>
