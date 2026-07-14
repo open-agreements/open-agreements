@@ -497,7 +497,13 @@ function sha256File(filePath) {
 
 function readChangedFilesFromInput(env) {
   const requireInput = env.OA_GATE_REQUIRE_INPUT === "1";
-  const fromEnv = env.OA_CHANGED_FILES;
+  // File transport first: large PRs (1,400+ changed files) overflow the
+  // 128 KiB per-string execve limit if the JSON rides in an env var
+  // ("Argument list too long"), so CI writes it to a file and passes the path.
+  const fromEnv =
+    env.OA_CHANGED_FILES_PATH !== undefined
+      ? readFileSync(env.OA_CHANGED_FILES_PATH, "utf8")
+      : env.OA_CHANGED_FILES;
 
   if (fromEnv !== undefined) {
     const trimmed = String(fromEnv).trim();
@@ -549,7 +555,7 @@ function readChangedFilesFromInput(env) {
 }
 
 function isLocalWorktreeDirty(env) {
-  if (env.OA_CHANGED_FILES !== undefined) return false; // CI mode
+  if (env.OA_CHANGED_FILES !== undefined || env.OA_CHANGED_FILES_PATH !== undefined) return false; // CI mode
   const status = spawnSync("git", ["status", "--porcelain"], {
     cwd: REPO_ROOT,
     encoding: "utf8",
@@ -653,7 +659,7 @@ export async function main(env) {
 
   if (input.mode === "ci-missing") {
     console.error(
-      "FAIL preview-freshness gate: OA_CHANGED_FILES env is required when OA_GATE_REQUIRE_INPUT=1. " +
+      "FAIL preview-freshness gate: OA_CHANGED_FILES (or OA_CHANGED_FILES_PATH) env is required when OA_GATE_REQUIRE_INPUT=1. " +
         "Check that the CI workflow populates it from actions/github-script."
     );
     process.exit(1);
