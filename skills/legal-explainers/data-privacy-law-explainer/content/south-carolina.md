@@ -2,7 +2,7 @@
 jurisdiction: "South Carolina"
 slug: south-carolina
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/south-carolina
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/south-carolina · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/south-carolina · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # South Carolina Consumer Privacy Law[^about]
 
@@ -82,7 +82,7 @@ The statute defines a reportable breach as unauthorized access to *and* acquisit
 
 The minors' design code runs through the Attorney General: the AG shall enforce Chapter 80, a covered online service is liable for treble the financial damages incurred as a result of a violation, and officers and employees can be held personally liable for wilful and wanton violations [^q7-act96-enforcement]. The act contains no cure period and no express private right of action — but its dark-pattern prohibition is expressly routed into SCUTPA: using dark patterns constitutes an unlawful trade practice under § 39-5-20, exposing the service to SCUTPA's provisions, penalties, and damages [^q7-act96-dark-patterns], which on the statute's face connects dark-pattern violations to the individual SCUTPA damages action. The practical exposure map for a South Carolina-facing business: mishandle a breach and you face resident suits under § 39-1-90(G) on top of Department of Consumer Affairs fines; misstate your privacy policy and SCUTPA supplies a deception theory if the plaintiff satisfies the statute's loss and individual-action requirements; violate the minors' design code and you face AG enforcement with treble financial damages and personal officer exposure. SCUTPA's individually-but-not-in-a-representative-capacity wording supports the SCUTPA class-action point only; the breach statute's private action contains no express representative-capacity wording in the quoted text.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not South Carolina. This article synthesizes South Carolina primary law and is not legal advice from a South Carolina-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not South Carolina. This article synthesizes South Carolina primary law and is not legal advice from a South Carolina-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *South Carolina Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/south-carolina.
 
 [^q1-breach-scope]: **S.C. Code Ann. § 39-1-90(A)** — "A person conducting business in this State, and owning or licensing computerized data or other data that includes personal identifying information, shall disclose a breach of the security of the system following discovery or notification of the breach in the security of the data to a resident of this State whose personal identifying information that was not rendered unusable through encryption, redaction, or other methods was, or is reasonably believed to have been, acquired by an unauthorized person when the illegal use of the information has occurred or is reasonably likely to occur or use of the information creates a material risk of harm to the resident." *S.C. Code Ann. § 39-1-90(A).* <https://www.scstatehouse.gov/code/t39c001.php>
 

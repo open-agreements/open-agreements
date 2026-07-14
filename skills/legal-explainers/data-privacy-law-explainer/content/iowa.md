@@ -2,7 +2,7 @@
 jurisdiction: "Iowa"
 slug: iowa
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-05"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/iowa
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/iowa · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/iowa · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Iowa Consumer Privacy Law (ICDPA)[^about]
 
@@ -68,7 +68,7 @@ This notice-and-opt-out model is one of the features that makes the ICDPA among 
 
 A controller that cures within the 90-day window and certifies the cure in writing avoids the action; an uncured violation, or a breach of that written statement, exposes the controller to an injunction and civil penalties of up to $7,500 per violation [^stat-715d8-penalty]. The practical posture is still to build the notice, sensitive-data, and contracting controls up front, but a covered business that receives a notice has a long window to fix the issue.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-05. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Iowa. This article synthesizes Iowa primary law and is not legal advice from a Iowa-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-05. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Iowa. This article synthesizes Iowa primary law and is not legal advice from a Iowa-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Iowa Consumer Privacy Law (ICDPA)*, OpenAgreements (last updated June 5, 2026), https://openagreements.org/practice-guides/privacy/us/iowa.
 
 [^stat-715d2-apply]: **Iowa Code § 715D.2** — "This chapter applies to a person conducting business in the state or producing products or services that are targeted to consumers who are residents of the state and that during a calendar year does either of the following: a. Controls or processes personal data of at least one hundred thousand consumers. b. Controls or processes personal data of at least twenty-five thousand consumers and derives over fifty percent of gross revenue from the sale of personal data." *Iowa Code § 715D.2(1).* <https://www.legis.iowa.gov/docs/code/2025/715D.2.pdf>
 

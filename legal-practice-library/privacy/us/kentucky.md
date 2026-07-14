@@ -51,7 +51,7 @@ Like Virginia, and unlike Colorado and Connecticut, Kentucky's 30-day cure perio
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Kentucky. This article synthesizes Kentucky primary law and is not legal advice from a Kentucky-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Kentucky. This article synthesizes Kentucky primary law and is not legal advice from a Kentucky-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Kentucky Consumer Privacy Law (KCDPA)*, OpenAgreements (last updated June 6, 2026), https://openagreements.org/practice-guides/privacy/us/kentucky.
 
 [^stat-3613-apply]: **KRS 367.3613** — "KRS 367.3611 to 367.3629 apply to persons that conduct business in the Commonwealth or produce products or services that are targeted to residents of the Commonwealth and that during a calendar year control or process personal data of at least: (a) One hundred thousand (100,000) consumers; or (b) Twenty-five thousand (25,000) consumers and derive over fifty percent (50%) of gross revenue from the sale of personal data." *KRS 367.3613(1).* <https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=56648>
 

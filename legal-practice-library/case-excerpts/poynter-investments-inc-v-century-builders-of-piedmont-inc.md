@@ -3,28 +3,32 @@ type: Case Excerpt
 title: 'Poynter Investments, Inc. v. Century Builders of Piedmont, Inc.'
 description: >-
   Poynter Invs., Inc. v. Century Builders of Piedmont, Inc., 387 S.C. 583, 694
-  S.E.2d 15 (2010). — quoted in 2 document(s).
+  S.E.2d 15 (S.C. 2010). — quoted in 3 document(s).
 citation: >-
   Poynter Invs., Inc. v. Century Builders of Piedmont, Inc., 387 S.C. 583, 694
-  S.E.2d 15 (2010).
+  S.E.2d 15 (S.C. 2010).
 resource: >-
   https://www.courtlistener.com/opinion/1316178/poynter-investments-inc-v-century-builders-of-piedmont-inc/
-timestamp: '2026-06-12'
+timestamp: '2026-07-02'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/south-carolina'
+  - type: State Law Practice Guide
+    resource: >-
+      https://openagreements.org/practice-guides/invention-assignment/us/south-carolina
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/south-carolina'
 tags:
   - case-law
+  - invention-assignment
   - non-compete
 ---
 
 # Poynter Investments, Inc. v. Century Builders of Piedmont, Inc.
 
-*Poynter Invs., Inc. v. Century Builders of Piedmont, Inc., 387 S.C. 583, 694 S.E.2d 15 (2010).*
+*Poynter Invs., Inc. v. Century Builders of Piedmont, Inc., 387 S.C. 583, 694 S.E.2d 15 (S.C. 2010).*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -34,7 +38,16 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `restrictive-covenants-each-independently-includable`, `severability-and-reformation`
 - source_cards: `poynter-no-blue-pencil`, `sc-poynter-cov`, `sc-poynter-sev`
-- cited_by: [Non-Compete Agreement Review Checklist — South Carolina](../checklists/non-compete/us/south-carolina.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — South Carolina](../checklists/non-compete/us/south-carolina.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
+- link_to_source: <https://www.courtlistener.com/opinion/1316178/poynter-investments-inc-v-century-builders-of-piedmont-inc/#:~:text=These%20cases%20stand%20for%20the,fall%20on%20their%20own%20terms.>
+
+### poynter-investments-inc-v-century-builders-of-piedmont-inc-these-cases-stand-for-the-proposition-9468547b {#poynter-investments-inc-v-century-builders-of-piedmont-inc-these-cases-stand-for-the-proposition-9468547b}
+
+> These cases stand for the proposition that, in South Carolina, the restrictions in a non-compete clause cannot be rewritten by a court or limited by the parties’ agreement, but must stand or fall on their own terms.
+
+- supports: `holdover-clause-limit`
+- source_cards: `poynter-no-blue-pencil`
+- cited_by: [Employee Invention Assignment in South Carolina](../invention-assignment/us/south-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1316178/poynter-investments-inc-v-century-builders-of-piedmont-inc/#:~:text=These%20cases%20stand%20for%20the,fall%20on%20their%20own%20terms.>
 
 ### poynter-investments-inc-v-century-builders-of-piedmont-inc-we-reverse-the-order-which-purports-99fe4cfc {#poynter-investments-inc-v-century-builders-of-piedmont-inc-we-reverse-the-order-which-purports-99fe4cfc}

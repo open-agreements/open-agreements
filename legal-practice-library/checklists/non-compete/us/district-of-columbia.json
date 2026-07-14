@@ -26,13 +26,19 @@
       "rel": "agent-skill",
       "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
       "type": "text/markdown"
+    },
+    {
+      "rel": "related-form",
+      "href": "https://openagreements.org/templates/openagreements-restrictive-covenant-district-of-columbia",
+      "type": "text/html",
+      "title": "Employee Restrictive Covenant (District of Columbia)"
     }
   ],
   "data": {
     "topic": "non-compete",
     "slug": "district-of-columbia",
     "frontmatter": {
-      "title": "Non-Compete Agreement Review Checklist — District of Columbia",
+      "title": "Non-Compete Agreement Reviewer Checklist — District of Columbia",
       "description": "A clause-by-clause reviewer checklist for District of Columbia employee restrictive covenant agreements — the District bans non-competes for employees below an annually adjusted pay threshold and enforces a covenant against a highly compensated employee only if it clears strict scope, duration, and 14-day notice gates.",
       "eyebrow": "Reviewer Checklist",
       "jurisdiction": "District of Columbia",
@@ -43,7 +49,7 @@
         "steven-obiajulu"
       ]
     },
-    "requirementCount": 51,
+    "requirementCount": 52,
     "sections": [
       {
         "sectionId": "parties-and-cover-term-identification",
@@ -127,7 +133,6 @@
         "requirementId": "identify-parties",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Parties identified by name",
         "sectionId": "parties-and-cover-term-identification",
@@ -139,6 +144,7 @@
           {
             "sourceId": "dc-covered-def-parties",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(6)(A).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -153,7 +159,6 @@
         "requirementId": "identify-effective-date",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Effective date",
         "sectionId": "parties-and-cover-term-identification",
@@ -165,6 +170,7 @@
           {
             "sourceId": "dc-void-rule-parties",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.02",
             "citation": "D.C. Code § 32-581.02(a)(2).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.02",
@@ -179,7 +185,6 @@
         "requirementId": "identify-employee-title",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Employee title",
         "sectionId": "parties-and-cover-term-identification",
@@ -193,7 +198,6 @@
         "requirementId": "identify-governing-law",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Governing law state named",
         "sectionId": "parties-and-cover-term-identification",
@@ -205,6 +209,7 @@
           {
             "sourceId": "dc-covered-def-parties",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(6)(A).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -219,7 +224,6 @@
         "requirementId": "define-confidential-information",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Confidential information",
         "sectionId": "definitions",
@@ -231,6 +235,7 @@
           {
             "sourceId": "dc-confidentiality-defs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(15)(B)(i).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -245,7 +250,6 @@
         "requirementId": "define-trade-secrets",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Trade secrets",
         "sectionId": "definitions",
@@ -257,6 +261,7 @@
           {
             "sourceId": "dc-utsa-defs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 36-402",
             "citation": "D.C. Code § 36-402(a).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/36-402",
@@ -271,7 +276,6 @@
         "requirementId": "define-restricted-period",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Restricted period",
         "sectionId": "definitions",
@@ -283,6 +287,7 @@
           {
             "sourceId": "dc-duration-defs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.03",
             "citation": "D.C. Code § 32-581.03(a)(1)(C)(i).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
@@ -297,7 +302,6 @@
         "requirementId": "define-restricted-territory",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Restricted territory",
         "sectionId": "definitions",
@@ -309,6 +313,7 @@
           {
             "sourceId": "dc-scope-defs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.03",
             "citation": "D.C. Code § 32-581.03(a)(1).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
@@ -323,7 +328,6 @@
         "requirementId": "define-covered-customers",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Covered customers",
         "sectionId": "definitions",
@@ -335,6 +339,7 @@
           {
             "sourceId": "dc-definition-defs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(15).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -349,7 +354,6 @@
         "requirementId": "define-covered-employees",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Covered employees",
         "sectionId": "definitions",
@@ -363,7 +367,6 @@
         "requirementId": "define-protected-interests",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Protected business interests",
         "sectionId": "definitions",
@@ -375,6 +378,7 @@
           {
             "sourceId": "dc-confidentiality-defs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(15)(B)(i).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -389,7 +393,6 @@
         "requirementId": "define-competitive-business",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Competitive business",
         "sectionId": "definitions",
@@ -401,6 +404,7 @@
           {
             "sourceId": "dc-scope-defs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.03",
             "citation": "D.C. Code § 32-581.03(a)(1).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
@@ -415,7 +419,6 @@
         "requirementId": "permit-de-minimis-passive-public-investment-carveout",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Small public-stock carve-out",
         "sectionId": "definitions",
@@ -427,6 +430,7 @@
           {
             "sourceId": "dc-definition-defs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(15).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -441,7 +445,6 @@
         "requirementId": "define-passive-public-holdings",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
         "requirementLevel": "MAY",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Passive public holdings",
         "sectionId": "definitions",
@@ -455,7 +458,6 @@
         "requirementId": "define-solicit",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "What counts as soliciting",
         "sectionId": "definitions",
@@ -469,7 +471,6 @@
         "requirementId": "define-termination-of-employment",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Termination of employment",
         "sectionId": "definitions",
@@ -481,6 +482,7 @@
           {
             "sourceId": "dc-duration-defs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.03",
             "citation": "D.C. Code § 32-581.03(a)(1)(C)(i).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
@@ -495,7 +497,6 @@
         "requirementId": "acknowledge-timing",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "When the agreement was signed",
         "sectionId": "timing-and-execution-acknowledgements",
@@ -507,6 +508,7 @@
           {
             "sourceId": "dc-notice-timing-ack",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.03",
             "citation": "D.C. Code § 32-581.03(a)(2).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
@@ -521,7 +523,6 @@
         "requirementId": "acknowledge-opportunity-to-consult-counsel",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Chance to consult a lawyer",
         "sectionId": "timing-and-execution-acknowledgements",
@@ -532,21 +533,21 @@
         "sources": []
       },
       {
-        "requirementId": "treat-trade-secret-protection-as-perpetual",
-        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
-        "requirementLevel": "MUST",
-        "scrutiny": "substantive",
+        "requirementId": "tie-trade-secret-duration-to-secrecy-status",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.tie-trade-secret-duration-to-secrecy-status",
+        "requirementLevel": "SHOULD",
         "sourceFootnotes": [],
-        "requirementLabel": "Trade-secret protection without an end date",
+        "requirementLabel": "Trade-secret duration tied to secrecy status",
         "sectionId": "confidentiality-and-trade-secret-treatment",
         "itemNumber": "4.1",
-        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#treat-trade-secret-protection-as-perpetual",
-        "requirementGuidance": "Let trade-secret obligations run as long as secrecy does — federal law keys the right to continued secrecy, and the District's own trade-secrets act supplies the injunction. With most competition restraints banned below the pay threshold, this clause is the employer's principal protection in the District, and contractually expiring it on a fixed date surrenders a remedy the statute would otherwise extend indefinitely.",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#tie-trade-secret-duration-to-secrecy-status",
+        "requirementGuidance": "Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection the law gives: federal law keys the right to continued secrecy, the District's own trade-secrets act supplies the injunction, and with most competition restraints banned below the pay threshold this clause is the employer's principal protection in the District. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it.",
         "variants": [],
         "sources": [
           {
             "sourceId": "dc-dtsa-1839-conf",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
             "citation": "18 U.S.C. § 1839(3)(B) (2018).",
             "url": "https://www.law.cornell.edu/uscode/text/18/1839",
@@ -558,6 +559,7 @@
           {
             "sourceId": "dc-utsa-conf",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 36-402",
             "citation": "D.C. Code § 36-402(a).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/36-402",
@@ -569,14 +571,26 @@
         ]
       },
       {
+        "requirementId": "avoid-untethered-indefinite-confidentiality",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.avoid-untethered-indefinite-confidentiality",
+        "requirementLevel": "MUST NOT",
+        "sourceFootnotes": [],
+        "requirementLabel": "No unbounded confidentiality obligation",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#avoid-untethered-indefinite-confidentiality",
+        "requirementGuidance": "Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form.",
+        "variants": [],
+        "sources": []
+      },
+      {
         "requirementId": "state-confidentiality-duration",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Confidentiality end date",
         "sectionId": "confidentiality-and-trade-secret-treatment",
-        "itemNumber": "4.2",
+        "itemNumber": "4.3",
         "anchor": "https://openagreements.org/checklists/non-compete/us/district-of-columbia#state-confidentiality-duration",
         "requirementGuidance": "Give non-trade-secret confidential information its own finite term. The two-track structure also protects the clause's statutory footing in the District: the carve-out shelters restrictions on the employer's confidential and proprietary information, and a perpetual lid on everything the worker knows is the drafting pattern most likely to be read as preventing competitive employment altogether — taking the clause outside the carve-out it depends on.",
         "variants": [],
@@ -584,6 +598,7 @@
           {
             "sourceId": "dc-confidentiality-conf",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(15)(B)(i).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -598,7 +613,6 @@
         "requirementId": "disclose-dtsa-notice",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "DTSA whistleblower notice",
         "sectionId": "permitted-disclosures-and-protected-conduct",
@@ -610,6 +624,7 @@
           {
             "sourceId": "dc-dtsa-immunity",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
             "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
             "url": "https://www.law.cornell.edu/uscode/text/18/1833",
@@ -624,7 +639,6 @@
         "requirementId": "carve-out-nlra-protected-discussion",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
         "requirementLevel": "MUST",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Wage-discussion carve-out",
         "sectionId": "permitted-disclosures-and-protected-conduct",
@@ -636,6 +650,7 @@
           {
             "sourceId": "dc-nlra-7",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
             "citation": "29 U.S.C. § 157 (NLRA § 7).",
             "url": "https://www.law.cornell.edu/uscode/text/29/157",
@@ -647,6 +662,7 @@
           {
             "sourceId": "dc-mclaren-disclosures",
             "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
             "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
             "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
             "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
@@ -661,7 +677,6 @@
         "requirementId": "permit-compelled-disclosure",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Court-ordered disclosure allowed",
         "sectionId": "permitted-disclosures-and-protected-conduct",
@@ -675,7 +690,6 @@
         "requirementId": "require-property-return-and-certification",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Property return and sign-off",
         "sectionId": "property-return-and-certification",
@@ -689,7 +703,6 @@
         "requirementId": "permit-employee-nonsolicit",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Employee non-solicit",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -701,6 +714,7 @@
           {
             "sourceId": "dc-nopoach-cov",
             "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
             "title": "OAG Press Release on Non-Compete Settlements (Nov. 17, 2023)",
             "citation": "Office of the Attorney General for the District of Columbia, Press Release (Nov. 17, 2023).",
             "url": "https://oag.dc.gov/release/attorney-general-schwalb-announces-three-district",
@@ -712,6 +726,7 @@
           {
             "sourceId": "dc-antitrust-cov",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 28-4502",
             "citation": "D.C. Code § 28-4502.",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/28-4502",
@@ -726,7 +741,6 @@
         "requirementId": "permit-customer-nonsolicit",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Customer non-solicit",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -738,6 +752,7 @@
           {
             "sourceId": "dc-definition-cov",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(15).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -749,6 +764,7 @@
           {
             "sourceId": "dc-ellis-cov",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Ellis v. James V. Hurson Associates, Inc.",
             "citation": "Ellis v. James V. Hurson Assocs., Inc., 565 A.2d 615 (D.C. 1989).",
             "url": "https://www.courtlistener.com/opinion/1561257/ellis-v-james-v-hurson-associates-inc/",
@@ -764,7 +780,6 @@
         "requirementId": "permit-non-dealing",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Non-dealing covenant",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -776,6 +791,7 @@
           {
             "sourceId": "dc-definition-cov",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(15).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -790,7 +806,6 @@
         "requirementId": "exclude-non-competes-for-covered-employees",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.exclude-non-competes-for-covered-employees",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Non-compete with a below-threshold employee (void)",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -802,6 +817,7 @@
           {
             "sourceId": "dc-ban-cov",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.02",
             "citation": "D.C. Code § 32-581.02(a)(1).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.02",
@@ -813,6 +829,7 @@
           {
             "sourceId": "dc-void-cov",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.02",
             "citation": "D.C. Code § 32-581.02(a)(2).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.02",
@@ -824,6 +841,7 @@
           {
             "sourceId": "dc-threshold-cov",
             "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
             "title": "DOES Public Notice: District of Columbia Prohibition on Non-Compete Clauses (2026)",
             "citation": "D.C. Dep't of Emp't Servs., Office of Wage-Hour, Public Notice: District of Columbia Prohibition on Non-Compete Clauses (Jan. 1, 2026).",
             "url": "https://does.dc.gov/sites/default/files/dc/sites/does/publication/attachments/2026%20Ban%20on%20Non-Compete%20Clauses_0.pdf",
@@ -838,7 +856,6 @@
         "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Named-competitor narrowing",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -850,6 +867,7 @@
           {
             "sourceId": "dc-scope-cov",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.03",
             "citation": "D.C. Code § 32-581.03(a)(1).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
@@ -864,7 +882,6 @@
         "requirementId": "permit-non-investment",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Non-investment covenant",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -876,6 +893,7 @@
           {
             "sourceId": "dc-definition-cov",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(15).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -890,7 +908,6 @@
         "requirementId": "require-non-disparagement",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Non-disparagement",
         "sectionId": "non-disparagement",
@@ -902,6 +919,7 @@
           {
             "sourceId": "dc-mclaren-nondisp",
             "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
             "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
             "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
             "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
@@ -916,7 +934,6 @@
         "requirementId": "address-physician-specific-rights",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Physician rights and notices",
         "sectionId": "physician-specific-notices-and-carve-outs",
@@ -928,6 +945,7 @@
           {
             "sourceId": "dc-medical-def-phys",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(12).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -939,6 +957,7 @@
           {
             "sourceId": "dc-medical-duration-phys",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.03",
             "citation": "D.C. Code § 32-581.03(a)(1)(C)(ii).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
@@ -950,6 +969,7 @@
           {
             "sourceId": "dc-medical-threshold-phys",
             "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
             "title": "DOES Public Notice: District of Columbia Prohibition on Non-Compete Clauses (2026)",
             "citation": "D.C. Dep't of Emp't Servs., Public Notice: District of Columbia Prohibition on Non-Compete Clauses (Jan. 1, 2026).",
             "url": "https://does.dc.gov/sites/default/files/dc/sites/does/publication/attachments/2026%20Ban%20on%20Non-Compete%20Clauses_0.pdf",
@@ -964,7 +984,6 @@
         "requirementId": "require-no-conflicting-obligations-representation",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "No conflicting obligations",
         "sectionId": "no-conflicting-obligations",
@@ -978,7 +997,6 @@
         "requirementId": "address-notice-to-future-employers",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
         "requirementLevel": "MAY",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Notice to future employers",
         "sectionId": "notice-to-future-employers-and-other-third-parties",
@@ -990,6 +1008,7 @@
           {
             "sourceId": "dc-attempt-relief-notice",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.04",
             "citation": "D.C. Code § 32-581.04(d)(2)(A).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.04",
@@ -1004,7 +1023,6 @@
         "requirementId": "avoid-tolling-past-the-statutory-duration-caps",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.avoid-tolling-past-the-statutory-duration-caps",
         "requirementLevel": "SHOULD NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "No tolling past the day caps",
         "sectionId": "tolling-during-breach",
@@ -1016,6 +1034,7 @@
           {
             "sourceId": "dc-cap-tolling",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.03",
             "citation": "D.C. Code § 32-581.03(a)(1)(C)(i).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
@@ -1027,6 +1046,7 @@
           {
             "sourceId": "dc-cumulative-tolling",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.04b",
             "citation": "D.C. Code § 32-581.04b.",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.04b",
@@ -1041,7 +1061,6 @@
         "requirementId": "require-injunctive-relief-availability",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Injunction availability",
         "sectionId": "remedies",
@@ -1053,6 +1072,7 @@
           {
             "sourceId": "dc-utsa-remedies",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 36-402",
             "citation": "D.C. Code § 36-402(a).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/36-402",
@@ -1064,6 +1084,7 @@
           {
             "sourceId": "dc-attempt-relief-remedies",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.04",
             "citation": "D.C. Code § 32-581.04(d)(2)(A).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.04",
@@ -1078,7 +1099,6 @@
         "requirementId": "address-attorneys-fees-and-costs",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
         "requirementLevel": "MAY",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Attorney fees and costs",
         "sectionId": "remedies",
@@ -1090,6 +1110,7 @@
           {
             "sourceId": "dc-subjecting-relief-remedies",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.04",
             "citation": "D.C. Code § 32-581.04(d)(1)(A).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.04",
@@ -1104,7 +1125,6 @@
         "requirementId": "treat-reformation-as-narrowing-only",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.treat-reformation-as-narrowing-only",
         "requirementLevel": "SHOULD NOT",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Courts narrow, never broaden",
         "sectionId": "severability-and-reformation",
@@ -1116,6 +1136,7 @@
           {
             "sourceId": "dc-steiner-sev",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Steiner v. American Friends of Lubavitch (Chabad)",
             "citation": "Steiner v. Am. Friends of Lubavitch (Chabad), 177 A.3d 1246 (D.C. 2018).",
             "url": "https://www.courtlistener.com/opinion/4464037/yehuda-steiner-v-american-friends-of-lubavitch-chaabad/",
@@ -1128,6 +1149,7 @@
           {
             "sourceId": "dc-hce-stem-sev",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.03",
             "citation": "D.C. Code § 32-581.03(a).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
@@ -1142,7 +1164,6 @@
         "requirementId": "address-survival-per-covenant",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Survival after the agreement ends",
         "sectionId": "survival",
@@ -1156,7 +1177,6 @@
         "requirementId": "address-assignment-and-successors",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Assignment and successors",
         "sectionId": "assignment-and-successors",
@@ -1168,6 +1188,7 @@
           {
             "sourceId": "dc-sale-carveout-assign",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(15)(A).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -1182,7 +1203,6 @@
         "requirementId": "specify-governing-law-and-venue",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Governing law and venue",
         "sectionId": "governing-law-venue-dispute-process",
@@ -1194,6 +1214,7 @@
           {
             "sourceId": "dc-covered-def-gov",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(6)(A).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -1205,6 +1226,7 @@
           {
             "sourceId": "dc-cba-gov",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.04a",
             "citation": "D.C. Code § 32-581.04a.",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.04a",
@@ -1219,7 +1241,6 @@
         "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Entire agreement, amendments, e-signatures",
         "sectionId": "entire-agreement-amendment-waiver-e-signatures",
@@ -1231,6 +1252,7 @@
           {
             "sourceId": "dc-void-rule-amend",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.02",
             "citation": "D.C. Code § 32-581.02(a)(2).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.02",
@@ -1245,7 +1267,6 @@
         "requirementId": "gate-non-compete-by-minimum-qualifying-compensation",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.gate-non-compete-by-minimum-qualifying-compensation",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Pay threshold met (highly compensated employee)",
         "sectionId": "district-of-columbia-statutory-gates",
@@ -1257,6 +1278,7 @@
           {
             "sourceId": "dc-hce-def-gates",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(10).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -1268,6 +1290,7 @@
           {
             "sourceId": "dc-min-comp-gates",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(13).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -1279,6 +1302,7 @@
           {
             "sourceId": "dc-threshold-gates",
             "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
             "title": "DOES Public Notice: District of Columbia Prohibition on Non-Compete Clauses (2026)",
             "citation": "D.C. Dep't of Emp't Servs., Office of Wage-Hour, Public Notice: District of Columbia Prohibition on Non-Compete Clauses (Jan. 1, 2026).",
             "url": "https://does.dc.gov/sites/default/files/dc/sites/does/publication/attachments/2026%20Ban%20on%20Non-Compete%20Clauses_0.pdf",
@@ -1290,6 +1314,7 @@
           {
             "sourceId": "dc-broadcast-gates",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(2).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -1304,7 +1329,6 @@
         "requirementId": "specify-functional-scope-and-geographic-limits",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.specify-functional-scope-and-geographic-limits",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Functional scope and geography spelled out",
         "sectionId": "district-of-columbia-statutory-gates",
@@ -1316,6 +1340,7 @@
           {
             "sourceId": "dc-hce-stem-gates",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.03",
             "citation": "D.C. Code § 32-581.03(a).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
@@ -1327,6 +1352,7 @@
           {
             "sourceId": "dc-scope-gates",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.03",
             "citation": "D.C. Code § 32-581.03(a)(1).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
@@ -1341,7 +1367,6 @@
         "requirementId": "cap-the-term-at-365-or-730-calendar-days",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.cap-the-term-at-365-or-730-calendar-days",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "365-day cap (730 for medical specialists)",
         "sectionId": "district-of-columbia-statutory-gates",
@@ -1353,6 +1378,7 @@
           {
             "sourceId": "dc-duration-gates",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.03",
             "citation": "D.C. Code § 32-581.03(a)(1)(C)(i).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
@@ -1364,6 +1390,7 @@
           {
             "sourceId": "dc-medical-duration-gates",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.03",
             "citation": "D.C. Code § 32-581.03(a)(1)(C)(ii).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
@@ -1378,7 +1405,6 @@
         "requirementId": "deliver-the-covenant-in-writing-fourteen-days-in-advance",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.deliver-the-covenant-in-writing-fourteen-days-in-advance",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "14-day advance delivery",
         "sectionId": "district-of-columbia-statutory-gates",
@@ -1390,6 +1416,7 @@
           {
             "sourceId": "dc-notice-timing-gates",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.03",
             "citation": "D.C. Code § 32-581.03(a)(2).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03",
@@ -1404,7 +1431,6 @@
         "requirementId": "provide-the-prescribed-statutory-notice",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.provide-the-prescribed-statutory-notice",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Statutory notice handed over",
         "sectionId": "district-of-columbia-statutory-gates",
@@ -1416,6 +1442,7 @@
           {
             "sourceId": "dc-statutory-notice-gates",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.03a",
             "citation": "D.C. Code § 32-581.03a(b).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03a",
@@ -1427,6 +1454,7 @@
           {
             "sourceId": "dc-disclosure-relief-gates",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.04",
             "citation": "D.C. Code § 32-581.04(d)(4).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.04",
@@ -1441,7 +1469,6 @@
         "requirementId": "disclose-workplace-policy-carveouts-in-writing",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.disclose-workplace-policy-carveouts-in-writing",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Workplace-policy carve-outs disclosed in writing",
         "sectionId": "district-of-columbia-statutory-gates",
@@ -1453,6 +1480,7 @@
           {
             "sourceId": "dc-policy-disclosure-gates",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.03a",
             "citation": "D.C. Code § 32-581.03a(a).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.03a",
@@ -1464,6 +1492,7 @@
           {
             "sourceId": "dc-disclosure-relief-gates",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.04",
             "citation": "D.C. Code § 32-581.04(d)(4).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.04",
@@ -1478,7 +1507,6 @@
         "requirementId": "confine-outside-work-restrictions-to-the-statutory-carveout",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.confine-outside-work-restrictions-to-the-statutory-carveout",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Outside-work limits within the carve-out",
         "sectionId": "district-of-columbia-statutory-gates",
@@ -1490,6 +1518,7 @@
           {
             "sourceId": "dc-definition-gates",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(15).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -1501,6 +1530,7 @@
           {
             "sourceId": "dc-policy-def-gates",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(19).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -1512,6 +1542,7 @@
           {
             "sourceId": "dc-outside-work-gates",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(15)(B)(ii).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -1526,7 +1557,6 @@
         "requirementId": "avoid-retaliation-for-asserting-non-compete-rights",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.avoid-retaliation-for-asserting-non-compete-rights",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "No retaliation for asserting ban rights",
         "sectionId": "district-of-columbia-statutory-gates",
@@ -1538,6 +1568,7 @@
           {
             "sourceId": "dc-retaliation-ban-gates",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.02",
             "citation": "D.C. Code § 32-581.02(b).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.02",
@@ -1549,6 +1580,7 @@
           {
             "sourceId": "dc-retaliation-relief-gates",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.04",
             "citation": "D.C. Code § 32-581.04(d)(3)(A).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.04",
@@ -1563,7 +1595,6 @@
         "requirementId": "confine-sale-of-business-covenants-to-the-seller-carveout",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.district-of-columbia.confine-sale-of-business-covenants-to-the-seller-carveout",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Sale-of-business covenant in its lane",
         "sectionId": "district-of-columbia-statutory-gates",
@@ -1575,6 +1606,7 @@
           {
             "sourceId": "dc-sale-carveout-gates",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "D.C. Code § 32-581.01",
             "citation": "D.C. Code § 32-581.01(15)(A).",
             "url": "https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01",
@@ -1586,6 +1618,7 @@
           {
             "sourceId": "dc-ellis-gates",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Ellis v. James V. Hurson Associates, Inc.",
             "citation": "Ellis v. James V. Hurson Assocs., Inc., 565 A.2d 615 (D.C. 1989).",
             "url": "https://www.courtlistener.com/opinion/1561257/ellis-v-james-v-hurson-associates-inc/",

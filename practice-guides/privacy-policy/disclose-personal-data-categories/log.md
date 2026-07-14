@@ -1,5 +1,8 @@
 # Disclose Personal Data Categories Update Log
 
+## 2026-06-30
+* **Update**: feat(privacy-corpus): rescue the 5 deferred broken-URL docs via a Firecrawl tier (#1089) (58f21ce)
+
 ## 2026-06-26
 * **Update**: feat(privacy-corpus): codify the rescue pipeline + lift the corpus tail (30 of 36 holdouts) (#1069) (dc18933)
 * **Update**: feat(privacy-corpus): propagate 3M email correction to published content (#1059) (#1076) (e554d23)

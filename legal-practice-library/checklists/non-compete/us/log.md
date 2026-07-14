@@ -1,5 +1,21 @@
 # Us Update Log
 
+## 2026-07-06
+* **Update**: feat(checklists): reader-first restructure — statutory gates first + discoverable section spine (#1586) (#1609) (020cff2)
+* **Update**: Rename review checklists to reviewer checklists (#1631) (d88b1a2)
+
+## 2026-07-05
+* **Update**: feat(#1552): directionality sweep — trade-secret duration is a ceiling, not a floor (#1585) (bbde403)
+
+## 2026-07-03
+* **Update**: RC facet-core: rationale_source SSOT routing (#1501) + MA de-Florida (#19) + cover-term OR gate (#17) (#1509) (35121a8)
+* **Update**: Flip Virginia non-compete 2026 rules to current law (#1532) (bc83798)
+* **Update**: feat(invention-assignment): Phase D wave 2 Atlantic tranche — KY, MS, SC, PA, VA, ME (#1450) (#1506) (efdcf6d)
+
+## 2026-06-30
+* **Update**: feat(agreements): facet-model the restrictive-covenant master + California pilot (#1316) (637f5f9)
+* **Update**: refactor(conformance): drop `scrutiny` from the requirement record (#1006) (#1320) (f743920)
+
 ## 2026-06-28
 * **Update**: feat(restrictive-covenant): project the agreement master to Massachusetts (§24L overlay) (#1155) (a42b078)
 

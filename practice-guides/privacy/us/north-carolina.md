@@ -79,7 +79,7 @@ Pending proposals could change that, but no comprehensive consumer-privacy law h
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not North Carolina. This article synthesizes North Carolina primary law and is not legal advice from a North Carolina-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not North Carolina. This article synthesizes North Carolina primary law and is not legal advice from a North Carolina-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *North Carolina Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/north-carolina.
 
 [^itpa-7560-title]: **N.C. Gen. Stat. § 75-60** — "This Article shall be known and may be cited as the ‘Identity Theft Protection Act’." *N.C. Gen. Stat. § 75-60.* <https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_75/GS_75-60.html>
 

@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Pennsylvania
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Pennsylvania
 description: >-
   A clause-by-clause reviewer checklist for Pennsylvania employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Pennsylvania[^about]
+# Non-Compete Agreement Reviewer Checklist — Pennsylvania[^about]
 
 A clause-by-clause reviewer checklist for Pennsylvania employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Socko four-part test, the new-consideration rule for mid-employment covenants, and Act 74's health care restrictions.
 
@@ -63,9 +63,11 @@ Review every item below the way a Pennsylvania court would: there is no general 
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — The trade-secret obligation should last as long as secrecy does — that is how federal law defines the right. A fixed expiry on trade-secret confidentiality quietly forfeits protection the employer is entitled to keep, and in a state where the covenant must be tethered to a genuine protectable interest, weakening the trade-secret position weakens the covenant resting on it. [^dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection federal law gives, because the right is keyed to continued secrecy. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection — worth weighing in a state where the covenant is tethered to a genuine protectable interest like trade secrets — while a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Pennsylvania measures every restraint against what is reasonably necessary, and a perpetual lid on non-secret material is exactly the kind of unbounded obligation that draws an overbreadth attack — the two-track structure keeps the perpetual duty where it belongs. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Pennsylvania measures every restraint against what is reasonably necessary, and a perpetual lid on non-secret material is exactly the kind of unbounded obligation that draws an overbreadth attack — the two-track structure keeps the status-bounded duty where it belongs. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -153,7 +155,7 @@ The four items below exist only on this Pennsylvania page: the four-part enforce
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Pennsylvania (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Pennsylvania (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Pennsylvania*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/pennsylvania.
 
 [^pa-act74-applicability-cover]: **Fair Contracting for Health Care Practitioners Act § 4(a)** — "(a) Applicability.--Except as provided under subsection (b), a noncompete covenant entered into after the effective date of this subsection is deemed contrary to the public policy and is void and unenforceable by an employer." *Fair Contracting for Health Care Practitioners Act, Act of July 17, 2024, P.L. 846, No. 74, § 4(a) (Pa.).* <https://www.legis.state.pa.us/WU01/LI/LI/US/HTM/2024/0/0074..HTM>
 

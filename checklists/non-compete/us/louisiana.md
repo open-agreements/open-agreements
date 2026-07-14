@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Louisiana
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Louisiana
 description: >-
   A clause-by-clause reviewer checklist for Louisiana employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Louisiana[^about]
+# Non-Compete Agreement Reviewer Checklist — Louisiana[^about]
 
 A clause-by-clause reviewer checklist for Louisiana employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under La. R.S. 23:921's void-unless-excepted rule, parish-naming requirement, two-year cap, and occupation carve-outs.
 
@@ -63,7 +63,9 @@ Review every item below the way a Louisiana court would: the statute opens by de
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should last as long as secrecy does — federal law keys the right to continued secrecy. In Louisiana the trade-secret framework is the workhorse protection when the covenant itself fails, so a fixed expiry on trade-secret obligations gives away the most dependable remedy for no benefit. [^dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information stays secret — captures the full protection federal trade-secret law gives, because the law keys the right to continued secrecy, and in Louisiana that framework is the workhorse protection when the covenant itself fails. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition] [#tie-trade-secret-duration-to-secrecy-status]
+
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
 
 - [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. An everything-forever confidentiality lid edges toward functioning as a restraint on working in the field — and a clause that operates that way gets tested under the statute the drafter was trying to stay out of. [^la-a1-confidentiality] [#state-confidentiality-duration]
 
@@ -161,7 +163,7 @@ The eight items below exist only on this Louisiana page: they implement the stat
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Louisiana (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Louisiana (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Louisiana*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/louisiana.
 
 [^la-c-cover]: **La. R.S. 23:921** — "Any person, including a corporation and the individual shareholders of such corporation, who is employed as an agent, servant, or employee may agree with his employer to refrain from carrying on or engaging in a business similar to that of the employer and/or from soliciting customers of the employer within a specified parish or parishes, municipality or municipalities, or parts thereof, so long as the employer carries on a like business therein, not to exceed a period of two years from termination of employment." *La. R.S. 23:921(C).* <https://legis.la.gov/Legis/Law.aspx?d=84015>
 

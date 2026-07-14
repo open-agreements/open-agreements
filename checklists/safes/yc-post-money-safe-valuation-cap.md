@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: YC Post-Money SAFE (Valuation Cap) Review Checklist
+type: Reviewer Checklist
+title: YC Post-Money SAFE (Valuation Cap) Reviewer Checklist
 description: >-
   A fill-in and decision guide for the Y Combinator Post-Money SAFE (valuation
   cap). Unlike a negotiated form, the YC SAFE is byte-identical across deals and
@@ -16,7 +16,7 @@ tags:
   - checklist
 ---
 
-# YC Post-Money SAFE (Valuation Cap) Review Checklist[^about]
+# YC Post-Money SAFE (Valuation Cap) Reviewer Checklist[^about]
 
 A fill-in and decision guide for the Y Combinator Post-Money SAFE (valuation cap). Unlike a negotiated form, the YC SAFE is byte-identical across deals and is not meant to be edited, so this checklist covers only the blanks the parties complete — the cap, the purchase amount, the entity and governing-law fields, and the signature and date lines — plus a few which-document decisions, such as confirming the post-money form and whether to add a pro rata side letter.
 
@@ -68,7 +68,7 @@ Some rights an investor may expect are deliberately absent from this file and li
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-24. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for YC Post-Money SAFE (valuation cap) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-24. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for YC Post-Money SAFE (valuation cap) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *YC Post-Money SAFE (Valuation Cap) Reviewer Checklist*, OpenAgreements (last updated June 24, 2026), https://openagreements.org/checklists/safes/yc-post-money-safe-valuation-cap.
 
 [^safe-no-modification]: **Y Combinator Post-Money SAFE (Valuation Cap)** — "This Safe is one of the forms available at http://ycombinator.com/documents and the Company and the Investor agree that neither one has modified the form, except to fill in blanks and bracketed terms." *Y Combinator, Post-Money SAFE (Valuation Cap) (standard form), available at https://www.ycombinator.com/documents.* <https://www.ycombinator.com/documents>
 

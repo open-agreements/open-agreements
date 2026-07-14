@@ -2,7 +2,7 @@
 jurisdiction: "Idaho"
 slug: idaho
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/idaho
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/idaho · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/idaho · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Idaho[^about]
 
@@ -39,14 +39,14 @@ A question-by-question summary of Idaho non-compete law under Idaho Code title 4
 
 **Short answer.** Yes, but only for key employees or key independent contractors and only if the covenant is reasonable. Idaho Code § 44-2701 makes a qualifying covenant enforceable if reasonable[^idaho-44-2701-key-employee-enforceable] as to duration, geography, work scope, and business need.
 
-Idaho is a statute-first jurisdiction for employment non-competes. The chapter 44-27 framework is employer-friendly, but it is not open-ended: the worker must be key, the restraint must protect legitimate business interests, and it cannot impose more restraint than reasonably necessary [^idaho-44-2701-key-employee-enforceable]. For a clause-by-clause pass over a specific agreement against these rules, the [Idaho non-compete review checklist](/checklists/non-compete/us/idaho) walks the full covenant suite item by item with each requirement's force level.
+Idaho is a statute-first jurisdiction for employment non-competes. The chapter 44-27 framework is employer-friendly, but it is not open-ended: the worker must be key, the restraint must protect legitimate business interests, and it cannot impose more restraint than reasonably necessary [^idaho-44-2701-key-employee-enforceable]. For a clause-by-clause pass over a specific agreement against these rules, the [Idaho non-compete reviewer checklist](/checklists/non-compete/us/idaho) walks the full covenant suite item by item with each requirement's force level.
 
 Idaho courts still treat employment covenants as disfavored and strictly construed against the employer. *Blaskiewicz* reversed summary judgment because the district court skipped the Idaho statutes, while also preserving the older reasonableness and public-policy limits [^blaskiewicz-statute-first].
 
 > [!NOTE]
 > **Practice note.**
 >
-> Do not draft Idaho as a common-law-only state. A court should start with Idaho Code §§ 44-2701 through 44-2704, then evaluate the facts that bear on reasonableness, business interest, worker hardship, and public injury [^idaho-44-2701-key-employee-enforceable][^blaskiewicz-statute-first].
+> Idaho is a statute-first jurisdiction, so a covenant analyzed as though Idaho were common-law-only skips the governing framework: a court starts with Idaho Code §§ 44-2701 through 44-2704 and then evaluates the facts that bear on reasonableness, business interest, worker hardship, and public injury [^idaho-44-2701-key-employee-enforceable][^blaskiewicz-statute-first].
 
 ## Who is a key employee or key independent contractor under Idaho non-compete law? {#key-employees}
 
@@ -61,7 +61,7 @@ Independent contractors can be covered if they are key independent contractors. 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on salary rank alone when the worker is outside the top five percent or when rebuttal evidence is likely. The agreement and enforcement record should identify the inside knowledge, public exposure, customer influence, or similar facts that make the worker key [^idaho-44-2702-key-worker-definition][^idaho-44-2704-top-five-presumption].
+> Salary rank carries a covenant only so far: the highest-paid-five-percent presumption is rebuttable, and outside the top five percent it does not apply at all, so a covenant against a worker who is not demonstrably key holds only where the record shows the inside knowledge, public exposure, customer influence, or similar facts that make the worker key [^idaho-44-2702-key-worker-definition][^idaho-44-2704-top-five-presumption]. A covenant resting on pay rank alone stands exposed where the worker rebuts the presumption or falls outside it.
 
 ## What counts as a legitimate business interest for an Idaho non-compete? {#legitimate-business-interests}
 
@@ -74,7 +74,7 @@ That broad definition does not eliminate tailoring. Idaho Code § 44-2701 still 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Name the protected interest and connect it to the worker. A generic competition ban is weaker than a covenant tied to the actual customer contacts, referral sources, confidential processes, technologies, or similar interests the worker can use against the employer [^idaho-44-2702-legitimate-interests][^idaho-44-2701-tailoring].
+> A covenant enforces only so far as it protects a legitimate business interest and reaches no further than reasonably necessary, so a generic competition ban untied to a named interest is measured against nothing the employer can point to and is weaker than a covenant tied to the actual customer contacts, referral sources, confidential processes, technologies, or similar interests the worker can turn against the employer [^idaho-44-2702-legitimate-interests][^idaho-44-2701-tailoring]. A restraint pitched at ordinary competition rather than a named protectable interest is the one most exposed to the no-greater-restraint-than-necessary limit.
 
 ## How long can an Idaho non-compete last, and what consideration is required? {#duration-limits}
 
@@ -87,7 +87,7 @@ That means continued at-will employment can support an eighteen-month-or-shorter
 > [!CAUTION]
 > **Drafting note.**
 >
-> If the business needs more than eighteen months, document independent consideration and expect to lose the duration presumption. Without that additional consideration, section 44-2704 makes the over-eighteen-month term vulnerable at the threshold [^idaho-44-2704-duration-consideration].
+> A direct-competition restraint longer than eighteen months falls outside the duration presumption and, absent consideration beyond employment or continued employment, section 44-2704 leaves the over-eighteen-month term vulnerable at the threshold [^idaho-44-2704-duration-consideration]. A term that runs past eighteen months on continued employment alone is the one section 44-2704(1) reaches first, so a restraint kept inside the window or backed by documented independent consideration is the one that holds.
 
 ## What geographic and line-of-business limits apply to Idaho non-competes? {#geography-work-scope}
 
@@ -100,7 +100,7 @@ Those presumptions matter in practice because a court may still ask whether the 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Avoid statewide or all-industry language unless the facts justify it. Idaho's presumptions are strongest when the territory tracks the worker's actual service area or influence and the restricted business tracks the worker's actual work for the employer [^idaho-44-2704-geographic-presumption][^idaho-44-2704-line-of-business-presumption].
+> Idaho's geographic and line-of-business presumptions attach only where the territory tracks the worker's actual service area or influence and the restricted business tracks the worker's actual work for the employer, so statewide or all-industry language unsupported by the facts forfeits those presumptions and leaves the covenant to prove reasonableness from scratch [^idaho-44-2704-geographic-presumption][^idaho-44-2704-line-of-business-presumption]. A radius or industry sweep broader than the worker's real footprint is the part a court measures against the no-greater-restraint limit.
 
 ## Will an Idaho court modify an overbroad non-compete? {#court-narrowing}
 
@@ -115,7 +115,7 @@ In practice, *Brand Makers Promotional Products, LLC v. Archibald* refused to re
 > [!CAUTION]
 > **Drafting note.**
 >
-> Give the court something workable to modify. Section 44-2703 supports narrowing unreasonable terms, but strict construction and the simple-and-accurate limit make absent geography, absent work scope, or a missing protectable-interest theory materially riskier [^idaho-44-2703-mandatory-modification][^intermountain-simple-blue-pencil].
+> Section 44-2703 directs a court to narrow unreasonable terms, but strict construction and the simple-and-accurate limit mean a court blue-pencils only what it can fix simply and accurately, so a covenant missing geography, missing work scope, or a protectable-interest theory gives the court nothing workable to modify and is materially riskier than one that supplies complete, severable terms [^idaho-44-2703-mandatory-modification][^intermountain-simple-blue-pencil]. A restraint the court would have to rewrite rather than trim is the one most likely to fall entirely.
 
 ## Are customer non-solicitation clauses enforceable in Idaho, and what counts as solicitation? {#customer-nonsolicits}
 
@@ -128,7 +128,7 @@ That makes no-service or non-dealing clauses a drafting risk. A clause that bars
 > [!CAUTION]
 > **Drafting note.**
 >
-> Draft customer restrictions around affirmative solicitation, not passive acceptance of unsolicited work. If the business wants a no-service or non-dealing restriction, treat it as an unsettled Idaho question and analyze whether it functions as a direct-competition restraint under chapter 44-27 [^horn-overt-act][^horn-no-mere-acceptance].
+> Under *Horn*, solicitation requires an overt act seeking the customer's business, so a customer restriction built around affirmative solicitation stays inside the settled rule, while one that bars accepting unsolicited work reaches conduct *Horn* holds is not solicitation and functions as something broader [^horn-overt-act][^horn-no-mere-acceptance]. Idaho has not resolved whether a no-service or non-dealing restraint enforces as written, is analyzed as a direct-competition restraint under chapter 44-27 with the key-worker gate and eighteen-month cap, or fails, so a covenant confined to affirmative solicitation carries the least of that risk.
 
 ## Are non-competes for Idaho healthcare providers enforceable? {#healthcare-providers}
 
@@ -154,7 +154,7 @@ That leaves an unresolved question: if a tolling or extension-on-breach clause p
 > [!NOTE]
 > **Practice note.**
 >
-> Treat tolling and extension-on-breach language as an open Idaho drafting question, not a settled remedy. A clause that extends the effective restraint past eighteen months risks losing the statutory duration presumption and triggering the additional-consideration requirement, even though section 44-2703 may let a court modify unreasonable terms [^idaho-44-2704-tolling-tension][^idaho-44-2703-tolling-modification].
+> Tolling and extension-on-breach language is an open Idaho drafting question rather than a settled remedy: a clause that extends the effective restraint past eighteen months risks losing the statutory duration presumption and triggering the additional-consideration requirement, even though section 44-2703 may let a court modify unreasonable terms [^idaho-44-2704-tolling-tension][^idaho-44-2703-tolling-modification].
 
 ## Will Idaho enforce an out-of-state choice-of-law or forum-selection clause? {#choice-of-law-forum}
 
@@ -167,7 +167,7 @@ Section 29-110 is not a non-compete statute, but it matters in Idaho restrictive
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not assume a foreign law or out-of-state forum clause will move an Idaho resident's restrictive-covenant dispute out of Idaho. At minimum, separate forum, arbitration location, and choice-of-law analysis and account for Idaho Code § 29-110 [^idaho-29-110-public-policy][^off-spec-strong-policy].
+> Idaho Code § 29-110 voids a stipulation that keeps an Idaho party from enforcing contract rights in Idaho tribunals, and its arbitration carve-out does not protect out-of-state arbitration, so a foreign-law or out-of-state-forum clause does not reliably move an Idaho resident's restrictive-covenant dispute out of Idaho [^idaho-29-110-public-policy][^off-spec-strong-policy]. Forum, arbitration location, and choice of law each turn on that policy separately, and a clause that ignores § 29-110 is the one an Idaho court sets aside.
 
 ## Are sale-of-business non-competes treated differently in Idaho? {#sale-of-business}
 
@@ -180,7 +180,7 @@ Sale covenants still must be reasonable in time, scope, and territory. In *Bybee
 > [!CAUTION]
 > **Drafting note.**
 >
-> Tie the restraint to the sold business and its goodwill. Sale-of-business status helps, but it does not eliminate the reasonableness requirement for duration, geography, and scope [^bybee-sale-goodwill][^bybee-not-overbroad].
+> A sale-of-business covenant draws more deference because it protects purchased goodwill, but that deference does not displace the reasonableness requirement for duration, geography, and scope, so a sale covenant untethered from the goodwill actually bought is still measured for reasonableness like any other restraint [^bybee-sale-goodwill][^bybee-not-overbroad]. The covenant tied to the sold business and its goodwill is the one the deference actually reaches.
 
 ## What trade-secret protection remains if an Idaho non-compete fails? {#trade-secrets}
 
@@ -193,9 +193,9 @@ The remedy is also different. A trade-secret injunction targets actual or threat
 > [!CAUTION]
 > **Drafting note.**
 >
-> Separate confidentiality, trade-secret, and non-compete obligations. If the real risk is misuse of secret information, an Idaho Trade Secrets Act claim may be better tailored than a broad work ban, but the employer still needs secrecy efforts and misappropriation evidence [^idaho-48-801-trade-secret-definition][^idaho-48-802-injunction].
+> Trade-secret protection survives independently of chapter 44-27, so where the real risk is misuse of secret information an Idaho Trade Secrets Act claim, resting on actual or threatened misappropriation, is often better tailored than a broad work ban that must clear the key-worker gate and reasonableness limits [^idaho-48-801-trade-secret-definition][^idaho-48-802-injunction]. That protection depends on demonstrated secrecy efforts and misappropriation evidence, so confidentiality, trade-secret, and non-compete obligations kept on separate footing each stand or fall on their own terms rather than dragging one another down.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Idaho. This article synthesizes Idaho primary law and is not legal advice from a Idaho-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Idaho. This article synthesizes Idaho primary law and is not legal advice from a Idaho-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Idaho*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/idaho.
 
 [^idaho-44-2701-key-employee-enforceable]: **Idaho Code § 44-2701** — "A key employee or key independent contractor may enter into a written agreement or covenant that protects the employer’s legitimate business interests and prohibits the key employee or key independent contractor from engaging in employment or a line of business that is in direct competition with the employer’s business after termination of employment, and the same shall be enforceable, if the agreement or covenant is reasonable as to its duration, geographical area, type of employment or line of business, and does not impose a greater restraint than is reasonably necessary to protect the employer’s legitimate business interests." *Idaho Code § 44-2701.* <https://legislature.idaho.gov/statutesrules/idstat/Title44/T44CH27/SECT44-2701/>
 

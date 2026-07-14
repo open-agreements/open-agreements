@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Indiana
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Indiana
 description: >-
   A clause-by-clause reviewer checklist for Indiana employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Indiana[^about]
+# Non-Compete Agreement Reviewer Checklist — Indiana[^about]
 
 A clause-by-clause reviewer checklist for Indiana employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the common-law reasonableness test, the strict eraser blue pencil, and the layered physician statutes.
 
@@ -63,9 +63,11 @@ Review every item below the way an Indiana court would: there is no general non-
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should last as long as secrecy does — both the federal definition and Indiana's act key protection to continued secrecy, not a contract date. A fixed expiry quietly converts a statutory right into a lapsing contractual one, and in Indiana the trade-secret layer often matters most where the covenant itself is shaky or, for hospital-employed physicians, statutorily void. [^dtsa-trade-secret-definition][^iutsa-secrecy-duration] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information stays secret — captures the full protection available, because both the federal definition and Indiana's act key the right to continued secrecy rather than a contract date. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection — a tail worth weighing in Indiana, where the trade-secret layer often matters most when the covenant itself is shaky or, for hospital-employed physicians, statutorily void. A fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves the full protection. [^dtsa-trade-secret-definition][^iutsa-secrecy-duration] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term, separate from the perpetual trade-secret track. A perpetual lid on non-secret information is the kind of unreasonable reach Indiana courts refuse to enforce — and the two-track structure is itself a severability play, keeping the defensible obligation divisible from the aggressive one. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term, separate from the status-bounded trade-secret track. A perpetual lid on non-secret information is the kind of unreasonable reach Indiana courts refuse to enforce — and the two-track structure is itself a severability play, keeping the defensible obligation divisible from the aggressive one. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -155,7 +157,7 @@ The five items below exist only on this Indiana page: the common-law reasonablen
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Indiana (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Indiana (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Indiana*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/indiana.
 
 [^sea475-date-cover]: **Senate Enrolled Act 475 (2025), Ind. Code § 25-22.5-5.5-2.3** — "Any agreement in violation of this section is void and unenforceable." *Ind. Code § 25-22.5-5.5-2.3(c) (Senate Enrolled Act 475, P.L. 207-2025).* <https://iga.in.gov/pdf-documents/124/2025/senate/bills/SB0475/SB0475.04.ENRH.pdf>
 

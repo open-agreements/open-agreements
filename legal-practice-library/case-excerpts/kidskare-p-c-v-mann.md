@@ -8,7 +8,7 @@ citation: 'KidsKare, P.C. v. Mann, 2015-NMCA-064, 350 P.3d 1228.'
 resource: 'https://www.courtlistener.com/opinion/2789328/kidskare-v-mann/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/new-mexico'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-mexico'
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `duration-limits`
 - source_cards: `kidskare-facts-reformed-limits`, `kidskare-thirty-miles`
-- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2789328/kidskare-v-mann/#:~:text=As%20its%20remedy%2C%20the%20district,the%20covenant%20was%20thus%20enforceable.>
 
 ### kidskare-p-c-v-mann-as-reformed-by-the-district-7-25b22fd3 {#kidskare-p-c-v-mann-as-reformed-by-the-district-7-25b22fd3}
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `kidskare-fixed-period`, `q6-kidskare-fixed-period`
-- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2789328/kidskare-v-mann/#:~:text=As%20reformed%20by%20the%20district,compete%20was%20reasonable%20and%20enforceable.>
 
 ### kidskare-p-c-v-mann-because-we-conclude-that-an-alternative-503ad571 {#kidskare-p-c-v-mann-because-we-conclude-that-an-alternative-503ad571}
@@ -49,7 +49,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `kidskare-no-general-ruling`
-- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2789328/kidskare-v-mann/#:~:text=Because%20we%20conclude%20that%20an,regarding%20New%20Mexico%20case%20law.>
 
 ### kidskare-p-c-v-mann-reformation-of-5-unreasonable-clauses-7a197282 {#kidskare-p-c-v-mann-reformation-of-5-unreasonable-clauses-7a197282}
@@ -67,5 +67,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `kidskare-contract-reformation`
-- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2789328/kidskare-v-mann/#:~:text=We%20hold%20that%2C%20contrary%20to,by%20the%20reviewing%2014%20court.>

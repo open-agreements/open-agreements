@@ -51,7 +51,7 @@ Enforcement of Pennsylvania's one statewide data-security duty is therefore a pu
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-07. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Pennsylvania. This article synthesizes Pennsylvania primary law and is not legal advice from a Pennsylvania-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-07. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Pennsylvania. This article synthesizes Pennsylvania primary law and is not legal advice from a Pennsylvania-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Pennsylvania Consumer Privacy Law*, OpenAgreements (last updated June 7, 2026), https://openagreements.org/practice-guides/privacy/us/pennsylvania.
 
 [^stat-2302-entity]: **73 P.S. § 2302** — "‘Entity.’ A State agency, a political subdivision of the Commonwealth or an individual or a business doing business in this Commonwealth." *73 P.S. § 2302.* <https://codes.findlaw.com/pa/title-73-ps-trade-and-commerce/pa-st-sect-73-2302/>
 

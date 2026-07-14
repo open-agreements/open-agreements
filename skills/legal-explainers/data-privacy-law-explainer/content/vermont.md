@@ -2,7 +2,7 @@
 jurisdiction: "Vermont"
 slug: vermont
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-12"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/vermont
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/vermont · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/vermont · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Vermont Consumer Privacy Law[^about]
 
@@ -122,7 +122,7 @@ How those two design choices interact is the open question. Because the privacy 
 
 S.71 would make the private-action question explicit rather than interpretive: it would channel all private enforcement into a single narrow lane [^q9-s71-pra-exclusive], letting a consumer harmed by a *data broker's* or *large data holder's* violation of specified duties sue in Superior Court for the greater of $5,000 or actual damages [^q9-s71-pra] — after pre-suit notice to the Attorney General and a frivolousness screen [^q9-s71-presuit] — while barring private actions for everything else in the chapter [^q9-s71-pra-limits]. The broad private right of action in the 2024 predecessor bill was a stated reason for that bill's veto; the narrowed design is one of the changes this bill made on its way to the Governor's desk.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Vermont. This article synthesizes Vermont primary law and is not legal advice from a Vermont-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Vermont. This article synthesizes Vermont primary law and is not legal advice from a Vermont-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Vermont Consumer Privacy Law*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/practice-guides/privacy/us/vermont.
 
 [^q1-breach-act-title]: **9 V.S.A. § 2435** — "This section shall be known as the Security Breach Notice Act." *9 V.S.A. § 2435(a).* <https://legislature.vermont.gov/statutes/fullchapter/09/062>
 

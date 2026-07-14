@@ -79,7 +79,7 @@ The law, codified at S.D. Codified Laws §§ 53-12-51 to 53-12-55, goes beyond a
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not South Dakota. This article synthesizes South Dakota primary law and is not legal advice from a South Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not South Dakota. This article synthesizes South Dakota primary law and is not legal advice from a South Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *South Dakota Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/south-dakota.
 
 [^q1-breach-scope]: **S.D. Codified Laws § 22-40-19** — "(3) ‘Information holder,’ any person or business that conducts business in this state, and that owns or licenses computerized personal or protected information of residents of this state;" *S.D. Codified Laws § 22-40-19(3).* <https://sdlegislature.gov/Statutes/22-40-19>
 

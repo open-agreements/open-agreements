@@ -82,7 +82,7 @@ DCWP says some fully remote jobs tied to a NYC office are covered. Illinois keys
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Can AI make hiring decisions?*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-hiring/can-ai-make-hiring-decisions.
 
 [^42-u-s-c-2000e-2-k]: **42 U.S.C. § 2000e-2(k)** — "job related for the position in question and consistent with business necessity" *42 U.S.C. § 2000e-2(k).* <https://uscode.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title42-section2000e-2>
 

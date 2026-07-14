@@ -2,7 +2,7 @@
 jurisdiction: "North Dakota"
 slug: north-dakota
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/north-dakota
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/north-dakota · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/north-dakota · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in North Dakota[^about]
 
@@ -41,7 +41,7 @@ North Dakota voids employee non-competes under N.D. Cent. Code § 9-08-06, one o
 
 For employees, that is a prohibition, not a reasonableness test. The two statutory exceptions cover sale-of-goodwill and owner dissociation settings; ordinary employment non-competes do not fit either exception. North Dakota cases apply the rule strictly, including to insurance agents and emergency-room physicians [^werlinger-employee-noncompete-void][^spectrum-physician-employment-void].
 
-That does not make every workplace covenant invalid. A confidentiality clause, trade-secret remedy, or during-employment loyalty claim may stand on different law. But a post-employment covenant that keeps a worker from practicing the same lawful trade is usually void. For a clause-by-clause pass over a specific agreement under these rules, the [North Dakota non-compete review checklist](/checklists/non-compete/us/north-dakota) walks the surviving covenant suite item by item with each requirement's force level.
+That does not make every workplace covenant invalid. A confidentiality clause, trade-secret remedy, or during-employment loyalty claim may stand on different law. But a post-employment covenant that keeps a worker from practicing the same lawful trade is usually void. For a clause-by-clause pass over a specific agreement under these rules, the [North Dakota non-compete reviewer checklist](/checklists/non-compete/us/north-dakota) walks the surviving covenant suite item by item with each requirement's force level.
 
 ## What statutory exceptions permit North Dakota non-competes? {#statutory-exceptions}
 
@@ -54,7 +54,7 @@ A covenant inside an exception is not automatically enforceable. The exception k
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not treat a small equity repurchase or routine employment exit as a sale-of-goodwill non-compete. *Warner* held that a sale of 1/200th of the company could not transfer business goodwill as a matter of law [^warner-small-stock-goodwill].
+> A small equity repurchase or a routine employment exit does not qualify as a sale-of-goodwill covenant. *Warner* held that a sale of 1/200th of the company could not transfer business goodwill as a matter of law, so a covenant leaning on a token equity interest to reach the exception falls back under the general ban [^warner-small-stock-goodwill].
 
 ## Do North Dakota courts blue-pencil an overbroad non-compete? {#court-narrowing}
 
@@ -65,7 +65,7 @@ There is an important sale-of-business nuance. Older goodwill cases such as *Igo
 > [!CAUTION]
 > **Drafting note.**
 >
-> For employment covenants, draft as if an invalid restraint will be struck. North Dakota's main employment cases do not apply a general blue-pencil rescue to ordinary post-employment non-competes or customer restrictions [^warner-replacement-clause-void].
+> For an employment covenant, an invalid restraint is struck rather than trimmed to the bounds of reason: North Dakota's main employment cases apply no general blue-pencil rescue to ordinary post-employment non-competes or customer restrictions, so a savings clause inviting a court to rewrite the restraint has no rule to invoke and the overbroad covenant simply falls [^warner-replacement-clause-void].
 
 ## Can an out-of-state employer use a choice-of-law or forum-selection clause to enforce a North Dakota non-compete? {#choice-of-law-forum}
 
@@ -74,6 +74,11 @@ There is an important sale-of-business nuance. Older goodwill cases such as *Igo
 *Osborne* involved a South Dakota choice-of-law and forum clause in an employment agreement with a North Dakota sales representative. The North Dakota Supreme Court refused to enforce the forum clause because it would let the employer route around § 9-08-06.
 
 North Dakota's jurisdiction-by-agreement statute also gives a court room to refuse a foreign-forum clause when enforcement would be unfair or unreasonable [^north-dakota-foreign-forum-unreasonable].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> For an employee who primarily lives and works in North Dakota, a foreign choice-of-law or forum-selection clause does not survive where its natural result is enforcing a non-compete against North Dakota work: the North Dakota Supreme Court refused to honor exactly that South Dakota clause because it would route around § 9-08-06 [^osborne-choice-forum-unenforceable]. The foreign-forum statute independently lets a North Dakota court decline an exclusive out-of-state forum whose enforcement would be unfair or unreasonable, so an out-of-state law-and-forum pair copied from a national form is measured against a public policy it cannot contract past [^north-dakota-foreign-forum-unreasonable].
 
 ## Are customer non-solicitation covenants enforceable in North Dakota? {#customer-nonsolicits}
 
@@ -84,7 +89,7 @@ North Dakota's jurisdiction-by-agreement statute also gives a court room to refu
 > [!NOTE]
 > **Practice note.**
 >
-> A North Dakota customer covenant should not be drafted as a substitute non-compete. If the real concern is confidential customer information, use trade-secret and confidentiality tools instead of a post-employment ban on doing business with customers [^warner-trade-secret-rationale].
+> A North Dakota customer covenant drafted as a substitute non-compete carries the same exposure as the ban it stands in for: where the real concern is confidential customer information, trade-secret and confidentiality tools reach it, while a post-employment ban on doing business with customers is a restraint the statute voids [^warner-trade-secret-rationale].
 
 ## Are employee or anti-raiding non-solicits enforceable in North Dakota? {#employee-nonsolicits}
 
@@ -93,6 +98,11 @@ North Dakota's jurisdiction-by-agreement statute also gives a court room to refu
 That answer is narrower than it sounds. The clause in *Warner* targeted solicitation or influence of employees, not competition for customers. *Pruco* read *Warner* the same way but denied preliminary relief on the facts, emphasizing the lack of clear solicitation evidence [^pruco-no-clear-solicitation].
 
 North Dakota also recognizes a separate duty during employment. An employee may prepare to leave, but cannot secretly solicit the employer's clients or business for the employee's own account while still employed [^biever-during-employment-solicitation].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> An employee non-solicitation covenant clears § 9-08-06 only in the narrow anti-raiding shape the North Dakota Supreme Court left standing: one that penalizes soliciting or influencing an employee to leave, reaches only colleagues the departing worker actually worked with, and leaves the worker free to compete [^warner-employee-nonsolicit-not-void]. A version that bars hiring without solicitation, sweeps in the whole workforce, or shades into competing for customers loses that shelter and falls back into the void rule as a restraint of trade. The shelter is also only as strong as the proof: even a lawful anti-raiding clause yields no injunction on a record devoid of competent evidence of actual solicitation [^pruco-no-clear-solicitation].
 
 ## Are forfeiture-for-competition clauses enforceable in North Dakota? {#forfeiture-for-competition}
 
@@ -127,12 +137,12 @@ North Dakota's Uniform Trade Secrets Act allows injunctions against actual or th
 
 Employers also can enforce ordinary loyalty duties while employment continues. Section 34-02-14 requires an employee transacting similar business on the employee's own account to prefer the employer's business [^north-dakota-loyalty-duty].
 
-> [!NOTE]
-> **Practice note.**
+> [!CAUTION]
+> **Drafting note.**
 >
-> Do not repackage a non-compete as confidentiality. A valid alternative should target misuse of protected information or disloyal conduct, not ordinary work for a competitor after employment ends [^north-dakota-trade-secret-definition].
+> In a ban state, a North Dakota employer's post-employment protection runs through trade-secret and misappropriation remedies and during-employment loyalty duties, not a covenant against competition [^north-dakota-trade-secret-injunction][^north-dakota-trade-secret-definition]. A confidentiality, return-of-property, or invention-assignment clause holds only while it targets misuse of protected information or disloyal conduct; construed to bar ordinary work for a competitor or ordinary dealing with customers, it inherits the void rule of § 9-08-06 rather than the trade-secret safe ground, and gains nothing the misappropriation remedy did not already supply.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not North Dakota. This article synthesizes North Dakota primary law and is not legal advice from a North Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not North Dakota. This article synthesizes North Dakota primary law and is not legal advice from a North Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in North Dakota*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/north-dakota.
 
 [^north-dakota-business-restraint-void]: **N.D. Cent. Code § 9-08-06** — "A contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind is to that extent void, except: 1. A person that sells the goodwill of a business and the person's partners, members, or shareholders may agree with the buyer to refrain from carrying on a similar business within a reasonable geographic area and for a reasonable length of time, if the buyer or any person deriving title to the goodwill from the buyer carries on a like business in that area." *N.D. Cent. Code § 9-08-06.* <https://ndlegis.gov/cencode/t09c08.pdf>
 

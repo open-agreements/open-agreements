@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/4549721/amn-healthcare-inc-v-aya-healthcare-services-inc/
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/california'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/california'
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-nonsolicitation`, `restrictive-covenants-each-independently-includable`
 - source_cards: `amn-void`, `ca-amn-covenants`, `ca-amn-defs`
-- cited_by: [Non-Compete Agreement Review Checklist — California](../checklists/non-compete/us/california.md), [Non-Competes in California](../non-compete/us/california.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — California](../checklists/non-compete/us/california.md), [Non-Competes in California](../non-compete/us/california.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4549721/amn-healthcare-inc-v-aya-healthcare-services-inc/#:~:text=Turning%20to%20the%20instant%20case%2C,is%20void%20under%20section%2016600.>

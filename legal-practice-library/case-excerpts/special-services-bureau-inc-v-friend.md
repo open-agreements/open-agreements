@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/4659311/special-services-bureau-inc-v-stacey-elizabeth-friend/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/west-virginia'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/west-virginia'
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-non-compete-enforceability`, `remedies`, `west-virginia-statutory-gates`
 - source_cards: `special-services-protectable-interest-gate`, `wv-special-services-gate`, `wv-special-services-rem`
-- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/us/west-virginia.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — West Virginia](../checklists/non-compete/us/west-virginia.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4659311/special-services-bureau-inc-v-stacey-elizabeth-friend/#:~:text=The%20circuit%20court%E2%80%99s%20consideration%20of,covenant%20failed%20on%20other%20grounds.>

@@ -2,14 +2,8 @@
 name: data-privacy-law-explainer
 description: >-
   Explain U.S. state-by-state consumer data-privacy law (CCPA/CPRA, TDPSA,
-  VCDPA, CPA, and the other comprehensive state acts) — who a law covers,
-  applicability thresholds, privacy-policy requirements, consumer rights and
-  opt-outs, private rights of action, and who enforces. Reads a bundled,
-  source-cited snapshot per state. Use when the user says "CCPA," "CPRA,"
-  "state privacy law," "privacy policy," "data subject request," "consumer
-  rights request," "opt-out of sale," "data broker," "sensitive data," asks
-  "do I need to comply with <state>'s privacy law," or names a U.S. state
-  together with privacy.
+  VCDPA, CPA, and the other comprehensive state acts). Reads a bundled,
+  source-cited snapshot per state.
 license: CC-BY-4.0
 compatibility: >-
   Works with any agent. Fully offline — content ships with the skill. An
@@ -17,7 +11,7 @@ compatibility: >-
   canonical URL.
 metadata:
   author: open-agreements
-  version: "0.1.0"
+  version: "0.2.0"
 catalog_group: Legal Explainers
 catalog_order: 20
 ---

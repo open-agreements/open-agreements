@@ -26,13 +26,19 @@
       "rel": "agent-skill",
       "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
       "type": "text/markdown"
+    },
+    {
+      "rel": "related-form",
+      "href": "https://openagreements.org/templates/openagreements-restrictive-covenant-california",
+      "type": "text/html",
+      "title": "Employee Restrictive Covenant (California)"
     }
   ],
   "data": {
     "topic": "non-compete",
     "slug": "california",
     "frontmatter": {
-      "title": "Non-Compete Agreement Review Checklist — California",
+      "title": "Non-Compete Agreement Reviewer Checklist — California",
       "description": "A clause-by-clause reviewer checklist for California employee restrictive covenant agreements — Bus. & Prof. Code § 16600 voids non-competes and customer non-solicits by default, so the review screens for void clauses that create employer liability and checks the surviving confidentiality suite.",
       "eyebrow": "Reviewer Checklist",
       "jurisdiction": "California",
@@ -43,7 +49,7 @@
         "steven-obiajulu"
       ]
     },
-    "requirementCount": 42,
+    "requirementCount": 43,
     "sections": [
       {
         "sectionId": "parties-and-cover-term-identification",
@@ -123,7 +129,6 @@
         "requirementId": "identify-parties",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Parties identified by name",
         "sectionId": "parties-and-cover-term-identification",
@@ -137,7 +142,6 @@
         "requirementId": "identify-effective-date",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Effective date",
         "sectionId": "parties-and-cover-term-identification",
@@ -149,6 +153,7 @@
           {
             "sourceId": "ca-16600-5-when-signed",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16600.5",
             "citation": "Cal. Bus. & Prof. Code § 16600.5(a).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.5",
@@ -162,7 +167,6 @@
         "requirementId": "identify-employee-title",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Employee title",
         "sectionId": "parties-and-cover-term-identification",
@@ -176,7 +180,6 @@
         "requirementId": "identify-governing-law",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Governing law state named",
         "sectionId": "parties-and-cover-term-identification",
@@ -188,6 +191,7 @@
           {
             "sourceId": "ca-925-conditions",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Lab. Code § 925",
             "citation": "Cal. Lab. Code § 925(a).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=925",
@@ -201,7 +205,6 @@
         "requirementId": "define-confidential-information",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Confidential information",
         "sectionId": "definitions",
@@ -213,6 +216,7 @@
           {
             "sourceId": "ca-brown-de-facto-defs",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Brown v. TGS Management Co., LLC",
             "citation": "Brown v. TGS Mgmt. Co., 57 Cal. App. 5th 303 (2020).",
             "url": "https://www.courtlistener.com/opinion/4805583/brown-v-tgs-management-co-llc/",
@@ -228,7 +232,6 @@
         "requirementId": "define-trade-secrets",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Trade secrets",
         "sectionId": "definitions",
@@ -240,6 +243,7 @@
           {
             "sourceId": "ca-cutsa-injunction-defs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Civ. Code § 3426.2",
             "citation": "Cal. Civ. Code § 3426.2(a).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=3426.2",
@@ -250,6 +254,7 @@
           {
             "sourceId": "ca-2019-210-particularity",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Civ. Proc. Code § 2019.210",
             "citation": "Cal. Civ. Proc. Code § 2019.210.",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CCP&sectionNum=2019.210",
@@ -263,7 +268,6 @@
         "requirementId": "define-restricted-period",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Restricted period",
         "sectionId": "definitions",
@@ -277,7 +281,6 @@
         "requirementId": "define-covered-employees",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Covered employees",
         "sectionId": "definitions",
@@ -289,6 +292,7 @@
           {
             "sourceId": "ca-amn-defs",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "AMN Healthcare, Inc. v. Aya Healthcare Services, Inc.",
             "citation": "AMN Healthcare, Inc. v. Aya Healthcare Servs., Inc., 28 Cal. App. 5th 923 (2018).",
             "url": "https://www.courtlistener.com/opinion/4549721/amn-healthcare-inc-v-aya-healthcare-services-inc/",
@@ -304,7 +308,6 @@
         "requirementId": "define-protected-interests",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Protected business interests",
         "sectionId": "definitions",
@@ -316,6 +319,7 @@
           {
             "sourceId": "ca-16600-void-defs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16600",
             "citation": "Cal. Bus. & Prof. Code § 16600(a).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600",
@@ -329,7 +333,6 @@
         "requirementId": "permit-de-minimis-passive-public-investment-carveout",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Small public-stock carve-out",
         "sectionId": "definitions",
@@ -341,6 +344,7 @@
           {
             "sourceId": "ca-16600-void-defs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16600",
             "citation": "Cal. Bus. & Prof. Code § 16600(a).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600",
@@ -354,7 +358,6 @@
         "requirementId": "define-passive-public-holdings",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
         "requirementLevel": "MAY",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Passive public holdings",
         "sectionId": "definitions",
@@ -368,7 +371,6 @@
         "requirementId": "define-solicit",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "What counts as soliciting",
         "sectionId": "definitions",
@@ -380,6 +382,7 @@
           {
             "sourceId": "ca-loral-defs",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Loral Corp. v. Moyes",
             "citation": "Loral Corp. v. Moyes, 174 Cal. App. 3d 268 (1985).",
             "url": "https://www.courtlistener.com/opinion/2140771/loral-corp-v-moyes/",
@@ -392,6 +395,7 @@
           {
             "sourceId": "ca-amn-defs",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "AMN Healthcare, Inc. v. Aya Healthcare Services, Inc.",
             "citation": "AMN Healthcare, Inc. v. Aya Healthcare Servs., Inc., 28 Cal. App. 5th 923 (2018).",
             "url": "https://www.courtlistener.com/opinion/4549721/amn-healthcare-inc-v-aya-healthcare-services-inc/",
@@ -407,7 +411,6 @@
         "requirementId": "define-termination-of-employment",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Termination of employment",
         "sectionId": "definitions",
@@ -421,7 +424,6 @@
         "requirementId": "acknowledge-timing",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "When the agreement was signed",
         "sectionId": "timing-and-execution-acknowledgements",
@@ -433,6 +435,7 @@
           {
             "sourceId": "ca-925-timing",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Lab. Code § 925",
             "citation": "Cal. Lab. Code § 925(a).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=925",
@@ -446,7 +449,6 @@
         "requirementId": "acknowledge-opportunity-to-consult-counsel",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Chance to consult a lawyer",
         "sectionId": "timing-and-execution-acknowledgements",
@@ -458,6 +460,7 @@
           {
             "sourceId": "ca-925-timing",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Lab. Code § 925",
             "citation": "Cal. Lab. Code § 925(a).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=925",
@@ -468,21 +471,21 @@
         ]
       },
       {
-        "requirementId": "treat-trade-secret-protection-as-perpetual",
-        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
-        "requirementLevel": "MUST",
-        "scrutiny": "substantive",
+        "requirementId": "tie-trade-secret-duration-to-secrecy-status",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.tie-trade-secret-duration-to-secrecy-status",
+        "requirementLevel": "SHOULD",
         "sourceFootnotes": [],
-        "requirementLabel": "Trade-secret protection without an end date",
+        "requirementLabel": "Trade-secret duration tied to secrecy status",
         "sectionId": "confidentiality-and-trade-secret-treatment",
         "itemNumber": "4.1",
-        "anchor": "https://openagreements.org/checklists/non-compete/us/california#treat-trade-secret-protection-as-perpetual",
-        "requirementGuidance": "Let the trade-secret obligation run as long as secrecy does — federal law defines the right that way, and in California this clause is not a supplement to the covenant program, it is the program. With every competition restraint off the table, an employer that contractually expires its own trade-secret protection on a fixed date has surrendered its principal remaining remedy for nothing.",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#tie-trade-secret-duration-to-secrecy-status",
+        "requirementGuidance": "Check how the trade-secret obligation's duration is bounded — in California, with every competition restraint off the table, this clause is not a supplement to the covenant program, it is the program. Tying duration to status — for so long as the information remains a trade secret — captures the full protection federal law gives, because the law keys the right to continued secrecy. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it.",
         "variants": [],
         "sources": [
           {
             "sourceId": "ca-dtsa-1839",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
             "citation": "18 U.S.C. § 1839(3)(B) (2018).",
             "url": "https://www.law.cornell.edu/uscode/text/18/1839",
@@ -494,21 +497,34 @@
         ]
       },
       {
+        "requirementId": "avoid-untethered-indefinite-confidentiality",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.avoid-untethered-indefinite-confidentiality",
+        "requirementLevel": "MUST NOT",
+        "sourceFootnotes": [],
+        "requirementLabel": "No unbounded confidentiality obligation",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/california#avoid-untethered-indefinite-confidentiality",
+        "requirementGuidance": "Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form.",
+        "variants": [],
+        "sources": []
+      },
+      {
         "requirementId": "state-confidentiality-duration",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Confidentiality end date",
         "sectionId": "confidentiality-and-trade-secret-treatment",
-        "itemNumber": "4.2",
+        "itemNumber": "4.3",
         "anchor": "https://openagreements.org/checklists/non-compete/us/california#state-confidentiality-duration",
-        "requirementGuidance": "Give ordinary, non-secret confidential information its own finite term. In California a perpetual lid on everything the worker ever learned is more than untidy drafting — paired with a broad definition, it is the pattern courts have condemned as a non-compete in disguise, voiding the provisions outright. The two-track structure keeps perpetual protection where the law supports it and a sunset everywhere else.",
+        "requirementGuidance": "Give ordinary, non-secret confidential information its own finite term. In California a perpetual lid on everything the worker ever learned is more than untidy drafting — paired with a broad definition, it is the pattern courts have condemned as a non-compete in disguise, voiding the provisions outright. The two-track structure keeps status-bounded protection where the law supports it and a sunset everywhere else.",
         "variants": [],
         "sources": [
           {
             "sourceId": "ca-brown-duration",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Brown v. TGS Management Co., LLC",
             "citation": "Brown v. TGS Mgmt. Co., 57 Cal. App. 5th 303 (2020).",
             "url": "https://www.courtlistener.com/opinion/4805583/brown-v-tgs-management-co-llc/",
@@ -524,7 +540,6 @@
         "requirementId": "disclose-dtsa-notice",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "DTSA whistleblower notice",
         "sectionId": "permitted-disclosures-and-protected-conduct",
@@ -536,6 +551,7 @@
           {
             "sourceId": "ca-dtsa-immunity-notice",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
             "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
             "url": "https://www.law.cornell.edu/uscode/text/18/1833",
@@ -550,7 +566,6 @@
         "requirementId": "carve-out-nlra-protected-discussion",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
         "requirementLevel": "MUST",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Wage-discussion carve-out",
         "sectionId": "permitted-disclosures-and-protected-conduct",
@@ -562,6 +577,7 @@
           {
             "sourceId": "ca-nlra-section-7",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
             "citation": "29 U.S.C. § 157 (NLRA § 7).",
             "url": "https://www.law.cornell.edu/uscode/text/29/157",
@@ -573,6 +589,7 @@
           {
             "sourceId": "ca-mclaren-protected-activity",
             "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
             "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
             "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
             "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
@@ -587,7 +604,6 @@
         "requirementId": "permit-compelled-disclosure",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Court-ordered disclosure allowed",
         "sectionId": "permitted-disclosures-and-protected-conduct",
@@ -601,7 +617,6 @@
         "requirementId": "require-property-return-and-certification",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Property return and sign-off",
         "sectionId": "property-return-and-certification",
@@ -615,7 +630,6 @@
         "requirementId": "treat-employee-nonsolicit-as-presumptively-void",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.treat-employee-nonsolicit-as-presumptively-void",
         "requirementLevel": "SHOULD NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Employee non-solicit (probably void)",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -627,6 +641,7 @@
           {
             "sourceId": "ca-amn-covenants",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "AMN Healthcare, Inc. v. Aya Healthcare Services, Inc.",
             "citation": "AMN Healthcare, Inc. v. Aya Healthcare Servs., Inc., 28 Cal. App. 5th 923 (2018).",
             "url": "https://www.courtlistener.com/opinion/4549721/amn-healthcare-inc-v-aya-healthcare-services-inc/",
@@ -639,6 +654,7 @@
           {
             "sourceId": "ca-loral-covenants",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Loral Corp. v. Moyes",
             "citation": "Loral Corp. v. Moyes, 174 Cal. App. 3d 268 (1985).",
             "url": "https://www.courtlistener.com/opinion/2140771/loral-corp-v-moyes/",
@@ -654,7 +670,6 @@
         "requirementId": "flag-customer-nonsolicit-as-void-restraint",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.flag-customer-nonsolicit-as-void-restraint",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Customer non-solicit (void here)",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -666,6 +681,7 @@
           {
             "sourceId": "ca-edwards-covenants",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Edwards v. Arthur Andersen LLP",
             "citation": "Edwards v. Arthur Andersen LLP, 44 Cal. 4th 937 (2008).",
             "url": "https://www.courtlistener.com/opinion/5608069/edwards-v-arthur-andersen-llp/",
@@ -678,6 +694,7 @@
           {
             "sourceId": "ca-16600-1-covenants",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16600.1",
             "citation": "Cal. Bus. & Prof. Code § 16600.1(a).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.1",
@@ -691,7 +708,6 @@
         "requirementId": "flag-non-dealing-as-void-restraint",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.flag-non-dealing-as-void-restraint",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Non-dealing covenant (void here)",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -703,6 +719,7 @@
           {
             "sourceId": "ca-16600-void-covenants",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16600",
             "citation": "Cal. Bus. & Prof. Code § 16600(a).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600",
@@ -716,7 +733,6 @@
         "requirementId": "exclude-employee-non-compete-as-void-and-unlawful",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.exclude-employee-non-compete-as-void-and-unlawful",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Non-compete covenant (void and unlawful)",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -728,6 +744,7 @@
           {
             "sourceId": "ca-16600-broadly-covenants",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16600",
             "citation": "Cal. Bus. & Prof. Code § 16600(b)(1).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600",
@@ -738,6 +755,7 @@
           {
             "sourceId": "ca-16600-5-covenants",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16600.5",
             "citation": "Cal. Bus. & Prof. Code § 16600.5(d).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.5",
@@ -751,7 +769,6 @@
         "requirementId": "permit-non-investment",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Non-investment covenant",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -763,6 +780,7 @@
           {
             "sourceId": "ca-16600-void-covenants",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16600",
             "citation": "Cal. Bus. & Prof. Code § 16600(a).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600",
@@ -776,7 +794,6 @@
         "requirementId": "require-non-disparagement",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Non-disparagement",
         "sectionId": "non-disparagement",
@@ -788,6 +805,7 @@
           {
             "sourceId": "ca-mclaren-nondisparagement",
             "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
             "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
             "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
             "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
@@ -802,7 +820,6 @@
         "requirementId": "address-physician-specific-rights",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Physician rights and notices",
         "sectionId": "physician-specific-notices-and-carve-outs",
@@ -814,6 +831,7 @@
           {
             "sourceId": "ca-sb351-ban",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Health & Safety Code § 1191 (SB 351)",
             "citation": "Cal. Health & Safety Code § 1191(d)(1).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1191",
@@ -824,6 +842,7 @@
           {
             "sourceId": "ca-sb351-sale-line",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Health & Safety Code § 1191 (SB 351)",
             "citation": "Cal. Health & Safety Code § 1191(d)(3)(A).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1191",
@@ -837,7 +856,6 @@
         "requirementId": "require-no-conflicting-obligations-representation",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "No conflicting obligations",
         "sectionId": "no-conflicting-obligations",
@@ -849,6 +867,7 @@
           {
             "sourceId": "ca-16600-5-incoming",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16600.5",
             "citation": "Cal. Bus. & Prof. Code § 16600.5(a).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.5",
@@ -862,7 +881,6 @@
         "requirementId": "address-notice-to-future-employers",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
         "requirementLevel": "MAY",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Notice to future employers",
         "sectionId": "notice-to-future-employers-and-other-third-parties",
@@ -874,6 +892,7 @@
           {
             "sourceId": "ca-16600-5-attempt",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16600.5",
             "citation": "Cal. Bus. & Prof. Code § 16600.5(d).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.5",
@@ -887,7 +906,6 @@
         "requirementId": "require-injunctive-relief-availability",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Injunction availability",
         "sectionId": "remedies",
@@ -899,6 +917,7 @@
           {
             "sourceId": "ca-cutsa-injunction-remedies",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Civ. Code § 3426.2",
             "citation": "Cal. Civ. Code § 3426.2(a).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=3426.2",
@@ -912,7 +931,6 @@
         "requirementId": "address-attorneys-fees-and-costs",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
         "requirementLevel": "MAY",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Attorney fees and costs",
         "sectionId": "remedies",
@@ -924,6 +942,7 @@
           {
             "sourceId": "ca-16600-5-fees",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16600.5",
             "citation": "Cal. Bus. & Prof. Code § 16600.5(e)(2).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.5",
@@ -937,7 +956,6 @@
         "requirementId": "draft-without-reliance-on-judicial-narrowing",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.draft-without-reliance-on-judicial-narrowing",
         "requirementLevel": "SHOULD NOT",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "No court will narrow it",
         "sectionId": "severability-and-reformation",
@@ -949,6 +967,7 @@
           {
             "sourceId": "ca-16600-broadly-sev",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16600",
             "citation": "Cal. Bus. & Prof. Code § 16600(b)(1).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600",
@@ -959,6 +978,7 @@
           {
             "sourceId": "ca-16600-1-sev",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16600.1",
             "citation": "Cal. Bus. & Prof. Code § 16600.1(a).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.1",
@@ -972,7 +992,6 @@
         "requirementId": "address-survival-per-covenant",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Survival after the agreement ends",
         "sectionId": "survival",
@@ -986,7 +1005,6 @@
         "requirementId": "address-assignment-and-successors",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Assignment and successors",
         "sectionId": "assignment-and-successors",
@@ -998,6 +1016,7 @@
           {
             "sourceId": "ca-fillpoint-assignment",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Fillpoint, LLC v. Maas",
             "citation": "Fillpoint, LLC v. Maas, 208 Cal. App. 4th 1170 (2012).",
             "url": "https://www.courtlistener.com/opinion/5811287/fillpoint-llc-v-maas/",
@@ -1013,7 +1032,6 @@
         "requirementId": "keep-california-law-and-forum-for-california-employees",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.keep-california-law-and-forum-for-california-employees",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "California law and forum for California employees",
         "sectionId": "governing-law-venue-dispute-process",
@@ -1025,6 +1043,7 @@
           {
             "sourceId": "ca-925-forum",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Lab. Code § 925",
             "citation": "Cal. Lab. Code § 925(a).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=925",
@@ -1035,6 +1054,7 @@
           {
             "sourceId": "ca-16600-5-anywhere-gov",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16600.5",
             "citation": "Cal. Bus. & Prof. Code § 16600.5(a).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.5",
@@ -1045,6 +1065,7 @@
           {
             "sourceId": "ca-draftkings",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "DraftKings Inc. v. Hermalyn",
             "citation": "DraftKings Inc. v. Hermalyn, 118 F.4th 416 (1st Cir. 2024).",
             "url": "https://www.courtlistener.com/opinion/10125471/draftkings-inc-v-hermalyn/",
@@ -1060,7 +1081,6 @@
         "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Entire agreement, amendments, e-signatures",
         "sectionId": "entire-agreement-amendment-waiver-e-signatures",
@@ -1072,6 +1092,7 @@
           {
             "sourceId": "ca-925-modified",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Lab. Code § 925",
             "citation": "Cal. Lab. Code § 925(a).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=925",
@@ -1082,6 +1103,7 @@
           {
             "sourceId": "ca-16608-prospective",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16608 (AB 692)",
             "citation": "Cal. Bus. & Prof. Code § 16608(c).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16608",
@@ -1095,7 +1117,6 @@
         "requirementId": "confirm-ab1076-notice-to-affected-workers",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.confirm-ab1076-notice-to-affected-workers",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Notice for past void clauses sent",
         "sectionId": "california-statutory-gates",
@@ -1107,6 +1128,7 @@
           {
             "sourceId": "ca-16600-1-ucl",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16600.1",
             "citation": "Cal. Bus. & Prof. Code § 16600.1(c).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.1",
@@ -1117,6 +1139,7 @@
           {
             "sourceId": "ca-ag-alert",
             "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
             "title": "California Attorney General — Consumer Alert on Noncompete Agreements",
             "citation": "Cal. Att'y Gen., Consumer Alert: Noncompete Agreements (Oct. 15, 2024).",
             "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-issues-consumer-alert-reminding-california-workers-their",
@@ -1131,7 +1154,6 @@
         "requirementId": "confine-noncompete-to-sale-of-business-pathway",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.confine-noncompete-to-sale-of-business-pathway",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Sale-of-business covenant kept in its lane",
         "sectionId": "california-statutory-gates",
@@ -1143,6 +1165,7 @@
           {
             "sourceId": "ca-16601-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16601",
             "citation": "Cal. Bus. & Prof. Code § 16601.",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16601",
@@ -1153,6 +1176,7 @@
           {
             "sourceId": "ca-fillpoint-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Fillpoint, LLC v. Maas",
             "citation": "Fillpoint, LLC v. Maas, 208 Cal. App. 4th 1170 (2012).",
             "url": "https://www.courtlistener.com/opinion/5811287/fillpoint-llc-v-maas/",
@@ -1165,6 +1189,7 @@
           {
             "sourceId": "ca-blue-mountain-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Blue Mountain Enterprises, LLC v. Owen",
             "citation": "Blue Mountain Enters., LLC v. Owen, 74 Cal. App. 5th 537 (2022).",
             "url": "https://www.courtlistener.com/opinion/6246635/blue-mountain-enterprises-llc-v-owen/",
@@ -1177,6 +1202,7 @@
           {
             "sourceId": "ca-samuelian-partial",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Samuelian v. Life Generations Healthcare, LLC",
             "citation": "Samuelian v. Life Generations Healthcare, LLC (Cal. Ct. App. 2024).",
             "url": "https://www.courtlistener.com/opinion/10118817/samuelian-v-life-generations-healthcare-llc/",
@@ -1192,7 +1218,6 @@
         "requirementId": "prevent-confidentiality-from-operating-as-de-facto-noncompete",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.prevent-confidentiality-from-operating-as-de-facto-noncompete",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Confidentiality not a non-compete in disguise",
         "sectionId": "california-statutory-gates",
@@ -1204,6 +1229,7 @@
           {
             "sourceId": "ca-brown-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Brown v. TGS Management Co., LLC",
             "citation": "Brown v. TGS Mgmt. Co., 57 Cal. App. 5th 303 (2020).",
             "url": "https://www.courtlistener.com/opinion/4805583/brown-v-tgs-management-co-llc/",
@@ -1219,7 +1245,6 @@
         "requirementId": "exclude-stay-or-pay-and-training-repayment-terms",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.exclude-stay-or-pay-and-training-repayment-terms",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "No stay-or-pay or training-repayment penalties",
         "sectionId": "california-statutory-gates",
@@ -1231,6 +1256,7 @@
           {
             "sourceId": "ca-16608-penalty-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16608 (AB 692)",
             "citation": "Cal. Bus. & Prof. Code § 16608(b)(1)(C).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16608",
@@ -1241,6 +1267,7 @@
           {
             "sourceId": "ca-16608-void-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16608 (AB 692)",
             "citation": "Cal. Bus. & Prof. Code § 16608(c).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16608",
@@ -1251,6 +1278,7 @@
           {
             "sourceId": "ca-926-damages-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Lab. Code § 926 (AB 692)",
             "citation": "Cal. Lab. Code § 926(c).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=926",
@@ -1264,7 +1292,6 @@
         "requirementId": "exclude-provider-noncompetes-in-private-equity-healthcare-contracts",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.california.exclude-provider-noncompetes-in-private-equity-healthcare-contracts",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "No provider non-competes in investor contracts",
         "sectionId": "california-statutory-gates",
@@ -1276,6 +1303,7 @@
           {
             "sourceId": "ca-sb351-mgmt-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Health & Safety Code § 1191 (SB 351)",
             "citation": "Cal. Health & Safety Code § 1191(d)(1).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1191",
@@ -1286,6 +1314,7 @@
           {
             "sourceId": "ca-sb351-employee-line-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Health & Safety Code § 1191 (SB 351)",
             "citation": "Cal. Health & Safety Code § 1191(d)(3)(A).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=1191",

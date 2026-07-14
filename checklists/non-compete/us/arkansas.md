@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Arkansas
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Arkansas
 description: >-
   A clause-by-clause reviewer checklist for Arkansas employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Arkansas[^about]
+# Non-Compete Agreement Reviewer Checklist — Arkansas[^about]
 
 A clause-by-clause reviewer checklist for Arkansas employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under Ark. Code Ann. § 4-75-101's protectable-interest test, two-year presumption, mandatory reformation, and physician ban.
 
@@ -63,9 +63,11 @@ Review every item below the way an Arkansas court would: the statute enforces a 
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — The trade-secret obligation should last as long as secrecy does — that is how federal law defines the right, and Arkansas's non-compete statute expressly leaves Arkansas Trade Secrets Act protections untouched. A fixed expiry on trade-secret protection gives away rights both statutes preserve. [^dtsa-trade-secret-definition][^aca-atsa-perpetual] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection the law gives: federal law keys the right to continued secrecy, and Arkansas's non-compete statute expressly leaves Arkansas Trade Secrets Act protections untouched. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition][^aca-atsa-perpetual] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Confidentiality clauses in Arkansas are judged under common-law standards rather than the non-compete statute, and a perpetual lid on non-secret information is the kind of overreach that draws scrutiny — the two-track structure keeps the perpetual obligation where the law actually supports it. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Confidentiality clauses in Arkansas are judged under common-law standards rather than the non-compete statute, and a perpetual lid on non-secret information is the kind of overreach that draws scrutiny — the two-track structure keeps the status-bounded obligation where the law actually supports it. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -149,7 +151,7 @@ The six items below exist only on this Arkansas page: they implement the statute
 
 - [ ] **No geography needs another limit** (Recommended) — If the covenant states no territory, look for the substitute limit that keeps it tailored — a customer-group restriction, an activity-scope restriction, or a business-scope restriction tied to the protected interest. The statute forgives missing geography only when time and scope stay no greater than necessary, and its reasonableness factors ask in terms whether a geographic limit was feasible and whether the restriction is confined to specific customers or entities. A covenant with neither geography nor any substitute is the classic overbreadth fact pattern. [^aca-no-geography-gate][^aca-factors-gate] [#pair-missing-geography-with-customer-or-activity-limits]
 
-- [ ] **Two-year presumptive duration** (Recommended) — Check the post-termination period against two years: a term at or under it starts presumptively reasonable, and a longer one starts from nothing. The presumption bends to case-specific facts in both directions — a narrow interest can make even two years too long — and the historical pattern the court of appeals has recited points the same way: one- and two-year limits upheld, three- and five-year limits unreasonable or invalid. [^aca-two-years-gate][^bud-duration-history] [#keep-restricted-period-within-two-year-presumption]
+- [ ] **Duration within the two-year presumption** (Recommended) — Check the post-termination period against two years: a term at or under it starts presumptively reasonable, and a longer one starts from nothing. The presumption bends to case-specific facts in both directions — a narrow interest can make even two years too long — and the historical pattern the court of appeals has recited points the same way: one- and two-year limits upheld, three- and five-year limits unreasonable or invalid. [^aca-two-years-gate][^bud-duration-history] [#keep-restricted-period-within-two-year-presumption]
 
 - [ ] **No practice restrictions for physicians** (Prohibited) — If the worker is a physician, stop at this gate: a covenant restricting the physician's right to practice within scope is void under the 2025 amendment, at any compensation level and for any stated interest. The statutory definition covers persons licensed under the Arkansas Medical Practices Act and persons authorized to practice osteopathy — both kinds of physician, and only physicians. Confirm the agreement imposes no practice restriction on a covered worker, and treat any that appears as void rather than negotiable. [^aca-physician-void-gate][^aca-physician-definition-gate] [#exclude-physician-practice-restrictions]
 
@@ -157,7 +159,7 @@ The six items below exist only on this Arkansas page: they implement the statute
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Arkansas (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Arkansas (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Arkansas*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/arkansas.
 
 [^aca-interest-list-cover]: **Ark. Code Ann. § 4-75-101** — "For the purposes of subsection (a) of this section, the protectable business interest of the employer includes the employer's: (1) Trade secrets; (2) Intellectual property; (3) Customer lists; (4) Goodwill with customers; (5) Knowledge of his or her business practices; (6) Methods; (7) Profit margins; (8) Costs; (9) Other confidential business information that is confidential, proprietary, and increases in value from not being known by a competitor; (10) Training and education of the employer's employees; and (11) Other valuable employer data that the employer has provided to an employee that an employer would reasonably seek to protect or safeguard from a competitor in the interest of fairness." *Ark. Code Ann. § 4-75-101(b).* <https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00>
 

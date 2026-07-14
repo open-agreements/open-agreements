@@ -2,7 +2,7 @@
 jurisdiction: "Singapore"
 slug: sg
 countryCode: SG
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/sg
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/sg · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/sg · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Singapore[^about]
 
@@ -168,7 +168,7 @@ The Ministry of Manpower, the National Trades Union Congress, and the Singapore 
 >
 > Do not draft to an anticipated tripartite guideline that does not yet exist. No MOM restraint-of-trade guideline is in force as of June 2026, so the enforceability of a Singapore non-compete still turns entirely on the common-law restraint-of-trade test, and any future guideline is expected to build on those same court-articulated principles [^mom-pq].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Singapore. This article summarizes publicly available Singapore legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Singapore. This article summarizes publicly available Singapore legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Singapore*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/sg.
 
 [^mf-prima-facie-void]: **Man Financial (S) Pte Ltd v Wong Bark Chuan David** — "All interference with individual liberty of action in trading, and all restraints of trade of themselves, if there is nothing more, are contrary to public policy, and therefore void." *Man Financial (S) Pte Ltd v Wong Bark Chuan David [2007] SGCA 53; [2008] 1 SLR(R) 663.* <https://www.elitigation.sg/gdviewer/s/2007_SGCA_53>
 

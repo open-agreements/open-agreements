@@ -8,7 +8,7 @@ citation: 'AssuredPartners, Inc. v. Schmitt, 2015 IL App (1st) 141863.'
 resource: 'https://www.courtlistener.com/opinion/3173530/assuredpartners-inc-v-schmitt/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/illinois'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/illinois'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `definitions`, `severability-and-reformation`
 - source_cards: `assured-overbroad`, `il-assured-no-rescue`, `il-assured-patently-overbroad`
-- cited_by: [Non-Compete Agreement Review Checklist — Illinois](../checklists/non-compete/us/illinois.md), [Non-Competes in Illinois](../non-compete/us/illinois.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Illinois](../checklists/non-compete/us/illinois.md), [Non-Competes in Illinois](../non-compete/us/illinois.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3173530/assuredpartners-inc-v-schmitt/#:~:text=We%20decline%20to%20rescue%20a,covenant%20that%20is%20patently%20overbroad.>

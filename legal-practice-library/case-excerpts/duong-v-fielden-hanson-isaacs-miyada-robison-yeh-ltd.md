@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/5304741/duong-md-vs-fielden-hanson-isaacs-miyada-robison-yeh-ltd/
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/nevada'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/nevada'
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `nv-duong-savings`, `q3-duong-savings-clause`
-- cited_by: [Non-Compete Agreement Review Checklist — Nevada](../checklists/non-compete/us/nevada.md), [Non-Competes in Nevada](../non-compete/us/nevada.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Nevada](../checklists/non-compete/us/nevada.md), [Non-Competes in Nevada](../non-compete/us/nevada.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5304741/duong-md-vs-fielden-hanson-isaacs-miyada-robison-yeh-ltd/#:~:text=We%20hold%20that%20Golden%20Road,agreement%20itself%20allows%20for%20it.>

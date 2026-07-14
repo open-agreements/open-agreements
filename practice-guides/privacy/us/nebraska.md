@@ -51,7 +51,7 @@ A controller that cures within the 30-day window and provides the required writt
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nebraska. This article synthesizes Nebraska primary law and is not legal advice from a Nebraska-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nebraska. This article synthesizes Nebraska primary law and is not legal advice from a Nebraska-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Nebraska Consumer Privacy Law (Data Privacy Act)*, OpenAgreements (last updated June 6, 2026), https://openagreements.org/practice-guides/privacy/us/nebraska.
 
 [^stat-1103-apply]: **Neb. Rev. Stat. § 87-1103** — "The Data Privacy Act applies only to a person that: (a) Conducts business in this state or produces a product or service consumed by residents of this state; (b) Processes or engages in the sale of personal data; and (c) Is not a small business as determined under the federal Small Business Act, as such act existed on January 1, 2024, except to the extent that section 87-1118 applies to a person described by this subdivision." *Neb. Rev. Stat. § 87-1103(1).* <https://nebraskalegislature.gov/laws/statutes.php?statute=87-1103>
 

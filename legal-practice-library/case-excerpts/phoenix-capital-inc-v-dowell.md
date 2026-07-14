@@ -8,9 +8,9 @@ citation: 'Phoenix Capital, Inc. v. Dowell, 176 P.3d 835 (Colo. App. 2007).'
 resource: 'https://www.courtlistener.com/opinion/2633761/phoenix-capital-inc-v-dowell/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us'
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/colorado'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/colorado'
@@ -33,7 +33,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `phoenix-no-extension`
-- cited_by: [Non-Compete Agreement Review Checklist — Colorado](../checklists/non-compete/us/colorado.md), [Non-Competes in Colorado](../non-compete/us/colorado.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Colorado](../checklists/non-compete/us/colorado.md), [Non-Competes in Colorado](../non-compete/us/colorado.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2633761/phoenix-capital-inc-v-dowell/#:~:text=Consequently%2C%20we%20discern%20no%20error,specified%20in%20the%20parties'%20agreement.>
 
 ### phoenix-capital-inc-v-dowell-in-contrast-an-agreement-not-to-46709c5b {#phoenix-capital-inc-v-dowell-in-contrast-an-agreement-not-to-46709c5b}
@@ -42,7 +42,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `employee-nonsolicitation`, `restrictive-covenants-each-independently-includable`
 - source_cards: `phoenix-livelihood-distinction`
-- cited_by: [Non-Compete Agreement Review Checklist — Colorado](../checklists/non-compete/us/colorado.md), [Non-Competes in Colorado](../non-compete/us/colorado.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Colorado](../checklists/non-compete/us/colorado.md), [Non-Competes in Colorado](../non-compete/us/colorado.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2633761/phoenix-capital-inc-v-dowell/#:~:text=In%20contrast%2C%20an%20agreement%20not,ability%20to%20make%20a%20living.>
 
 ### phoenix-capital-inc-v-dowell-in-the-preliminary-injunction-context-846f9f49 {#phoenix-capital-inc-v-dowell-in-the-preliminary-injunction-context-846f9f49}
@@ -51,7 +51,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `employee-non-compete-enforceability`, `remedies`, `restrictive-covenants-each-independently-includable`
 - source_cards: `phoenix-employer-burden`, `phoenix-exception-burden`, `phoenix-injunction-burden`
-- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md), [Non-Compete Agreement Review Checklist — Colorado](../checklists/non-compete/us/colorado.md), [Non-Competes in Colorado](../non-compete/us/colorado.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist](../checklists/non-compete/us.md), [Non-Compete Agreement Reviewer Checklist — Colorado](../checklists/non-compete/us/colorado.md), [Non-Competes in Colorado](../non-compete/us/colorado.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2633761/phoenix-capital-inc-v-dowell/#:~:text=In%20the%20preliminary%20injunction%20context%2C,one%20of%20those%20narrow%20exceptions.>
 
 ### phoenix-capital-inc-v-dowell-we-conclude-that-although-the-invalidity-79e41d54 {#phoenix-capital-inc-v-dowell-we-conclude-that-although-the-invalidity-79e41d54}
@@ -69,5 +69,5 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-nonsolicitation`, `restrictive-covenants-each-independently-includable`
 - source_cards: `phoenix-active-solicitation`, `phoenix-employee-nonsolicit`, `phoenix-employee-nonsolicit-survives`
-- cited_by: [Non-Compete Agreement Review Checklist — Colorado](../checklists/non-compete/us/colorado.md), [Non-Competes in Colorado](../non-compete/us/colorado.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Colorado](../checklists/non-compete/us/colorado.md), [Non-Competes in Colorado](../non-compete/us/colorado.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2633761/phoenix-capital-inc-v-dowell/#:~:text=Where%20a%20nonsolicitation%20provision%20is,of%20an%20accompanying%20noncompetition%20provision.>

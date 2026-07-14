@@ -2,7 +2,7 @@
 jurisdiction: "Virginia"
 slug: virginia
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-04"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/virginia
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/virginia · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/virginia · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Virginia Consumer Privacy Law (VCDPA)[^about]
 
@@ -68,7 +68,7 @@ This is the opt-in model shared by California, Colorado, and Texas — the oppos
 
 Unlike Colorado and Connecticut, Virginia's 30-day cure period has not sunset — it remains a permanent, built-in off-ramp. A controller that cures within the window and certifies it in writing avoids the action; an uncured violation exposes it to civil penalties of up to $7,500 per violation. The practical posture is still to build the notice, consent, and contracting controls up front, but a covered business that receives a notice has a genuine window to fix the issue.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-04. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Virginia. This article synthesizes Virginia primary law and is not legal advice from a Virginia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-04. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Virginia. This article synthesizes Virginia primary law and is not legal advice from a Virginia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Virginia Consumer Privacy Law (VCDPA)*, OpenAgreements (last updated June 4, 2026), https://openagreements.org/practice-guides/privacy/us/virginia.
 
 [^stat-576-apply]: **Va. Code § 59.1-576** — "This chapter applies to persons that conduct business in the Commonwealth or produce products or services that are targeted to residents of the Commonwealth and that (i) during a calendar year, control or process personal data of at least 100,000 consumers or (ii) control or process personal data of at least 25,000 consumers and derive over 50 percent of gross revenue from the sale of personal data." *Va. Code § 59.1-576(A).* <https://law.lis.virginia.gov/vacode/59.1-576/>
 

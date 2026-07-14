@@ -9,9 +9,9 @@ resource: >-
   https://www.courtlistener.com/opinion/2830060/robert-emerick-v-cardiac-study-center-incps/
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us'
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/washington'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/washington'
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `emerick-partial`, `wa-emerick-partial-1`
-- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md), [Non-Compete Agreement Review Checklist — Washington](../checklists/non-compete/us/washington.md), [Non-Competes in Washington](../non-compete/us/washington.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist](../checklists/non-compete/us.md), [Non-Compete Agreement Reviewer Checklist — Washington](../checklists/non-compete/us/washington.md), [Non-Competes in Washington](../non-compete/us/washington.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2830060/robert-emerick-v-cardiac-study-center-incps/#:~:text=If%20the%20trial%20court%20determines,entire%20covenant%20does%20not%20fail.>
 
 ### emerick-v-cardiac-study-center-inc-under-washington-law-noncompete-3c073569 {#emerick-v-cardiac-study-center-inc-under-washington-law-noncompete-3c073569}

@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Alaska
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Alaska
 description: >-
   A clause-by-clause reviewer checklist for Alaska employee restrictive covenant
   agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Alaska[^about]
+# Non-Compete Agreement Reviewer Checklist — Alaska[^about]
 
 A clause-by-clause reviewer checklist for Alaska employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Data Management reasonable-necessity test and Alaska's good-faith reasonable-alteration rule.
 
@@ -63,9 +63,11 @@ Read every item below the way an Alaska court would: there is no Alaska non-comp
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret confidentiality runs as long as secrecy does, not to a fixed date. Federal law defines the asset by its continued secrecy, and Alaska's trade-secret remedies protect that same statutorily defined asset — a contractual expiry date on trade-secret protection surrenders rights both regimes would otherwise preserve. [^dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection the law gives, because federal law defines the asset by its continued secrecy and Alaska's trade-secret remedies protect that same statutorily defined asset. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on material that never rose to trade-secret status is the kind of unexplained breadth that invites the overreach inquiry, and the two-track structure keeps perpetual obligations where the statutes actually support them. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on material that never rose to trade-secret status is the kind of unexplained breadth that invites the overreach inquiry, and the two-track structure keeps status-bounded obligations where the statutes actually support them. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -151,7 +153,7 @@ The three items below exist only on this Alaska page: they implement the reasona
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Alaska (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Alaska (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Alaska*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/alaska.
 
 [^ak-decristofaro-strict-cover]: **DeCristofaro v. Security Nat. Bank** — "They are, therefore, strictly construed." *DeCristofaro v. Sec. Nat'l Bank, 664 P.2d 167, 168-69 (Alaska 1983).* <https://www.courtlistener.com/opinion/1234367/decristofaro-v-security-national-bank/#:~:text=They%20are%2C%20therefore%2C%20strictly%20construed.>
 

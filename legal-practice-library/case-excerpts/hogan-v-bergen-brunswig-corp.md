@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/2358200/hogan-v-bergen-brunswig-corporation/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/new-jersey'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-jersey'
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `hogan-three-years`, `nj-hogan-continuation`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2358200/hogan-v-bergen-brunswig-corporation/#:~:text=The%20continuation%20of%20plaintiff's%20employment,consideration%20for%20the%20restrictive%20covenant.>
 
 ### hogan-v-bergen-brunswig-corp-the-existence-of-sufficient-93e47015 {#hogan-v-bergen-brunswig-corp-the-existence-of-sufficient-93e47015}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `hogan-continued-employment`, `nj-hogan-consideration`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2358200/hogan-v-bergen-brunswig-corporation/#:~:text=The%20existence%20of%20sufficient%20consideration,part%2C%20the%20continuation%20of%20employment.>

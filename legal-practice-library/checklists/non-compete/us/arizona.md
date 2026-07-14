@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Arizona
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Arizona
 description: >-
   A clause-by-clause reviewer checklist for Arizona employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -14,7 +14,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Arizona[^about]
+# Non-Compete Agreement Reviewer Checklist — Arizona[^about]
 
 A clause-by-clause reviewer checklist for Arizona employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Valley Medical Specialists v. Farber reasonableness test and Arizona's strict trim-only blue pencil, which strikes overbroad terms but never rewrites them.
 
@@ -64,9 +64,11 @@ Review every item below the way an Arizona court would: restrictive covenants ar
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — The trade-secret obligation should run as long as secrecy does — that is how the law defines the right, and a fixed expiry quietly licenses use of information the statute still protects. Arizona pairs the federal definition with its own trade-secrets act, and contractual remedies survive alongside the statutory ones, so this tier of the clause carries real weight. [^dtsa-definition-conf] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection the law gives: Arizona pairs the federal definition with its own trade-secrets act, both keyed to continued secrecy, and contractual remedies survive alongside the statutory ones. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-definition-conf] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. In Arizona this split is load-bearing: a confidentiality clause with no time limit reaching non-secret information has been struck as the equivalent of a geographically unrestricted non-compete, so the perpetual tier should hold trade secrets only, with everything else on a clock. [^orca-defacto-conf] [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. In Arizona this split is load-bearing: a confidentiality clause with no time limit reaching non-secret information has been struck as the equivalent of a geographically unrestricted non-compete, so the status-bounded tier should hold trade secrets only, with everything else on a clock. [^orca-defacto-conf] [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -154,7 +156,7 @@ The four items below exist only on this Arizona page: the common-law reasonablen
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Arizona (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Arizona (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Arizona*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/arizona.
 
 [^farber-strict-cover]: **Valley Medical Specialists v. Farber** — "In light of the great public policy interest involved in covenants not to compete between physicians, each agreement will be strictly construed for reasonableness." *Valley Medical Specialists v. Farber, 194 Ariz. 363, 982 P.2d 1277 (1999).* <https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/#:~:text=In%20light%20of%20the%20great,be%20strictly%20construed%20for%20reasonableness.>
 

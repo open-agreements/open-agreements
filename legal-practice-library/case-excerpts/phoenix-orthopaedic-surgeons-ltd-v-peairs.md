@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/1425574/phoenix-orthopaedic-surgeons-ltd-v-peairs/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/arizona'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/arizona'
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `physician-rules`, `physician-specific-notices-and-carve-outs`
 - source_cards: `phoenix-notvoid-physician`, `q4-phoenix-notvoid`
-- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1425574/phoenix-orthopaedic-surgeons-ltd-v-peairs/#:~:text=We%20reject%2C%20however%2C%20Dr.%20Peairs',unenforceable%20as%20against%20public%20policy.>

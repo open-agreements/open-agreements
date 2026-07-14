@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/4739986/fp-uc-holdings-llc-fpmcm-llc-and-fast-pace-medical-clinic-pllc-v/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/delaware'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/delaware'
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `delaware-choice-of-law`, `governing-law-venue-dispute-process`
 - source_cards: `de-fp-uc-col-gov`, `fp-uc-choice-law-limit`
-- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4739986/fp-uc-holdings-llc-fpmcm-llc-and-fast-pace-medical-clinic-pllc-v/#:~:text=If%20these%20narrow%20%E2%80%9Cquestions%20are,apply%20notwithstanding%20the%20choice%2Dof%2Dlaw%20provision.%E2%80%9D>
 
 ### fp-uc-holdings-llc-v-hamilton-instead-our-courts-carefully-review-the-b723dd0b {#fp-uc-holdings-llc-v-hamilton-instead-our-courts-carefully-review-the-b723dd0b}
@@ -43,7 +43,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `delaware-statutory-gates`, `employee-non-compete-enforceability`, `non-solicitation`, `restrictive-covenants-each-independently-includable`
 - source_cards: `de-cust-fp-reasonableness`, `de-fp-uc-test-cov`, `de-fp-uc-test-def`, `de-fp-uc-test-gate`, `fp-uc-reasonableness-test`
-- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4739986/fp-uc-holdings-llc-fpmcm-llc-and-fast-pace-medical-clinic-pllc-v/#:~:text=Instead%2C%20our%20courts%20carefully%20review,a%20balancing%20of%20the%20equities.%E2%80%9D>
 
 ### fp-uc-holdings-llc-v-hamilton-under-delaware-law-a-non-solicitation-b168e248 {#fp-uc-holdings-llc-v-hamilton-under-delaware-law-a-non-solicitation-b168e248}

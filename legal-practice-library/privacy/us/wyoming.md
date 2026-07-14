@@ -85,7 +85,7 @@ The genetic-data chapter stacks three enforcement layers: a misdemeanor fine, th
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Wyoming. This article synthesizes Wyoming primary law and is not legal advice from a Wyoming-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Wyoming. This article synthesizes Wyoming primary law and is not legal advice from a Wyoming-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Wyoming Consumer Privacy Law*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/practice-guides/privacy/us/wyoming.
 
 [^breach-def]: **Wyo. Stat. § 40-12-501** — "‘Breach of the security of the data system’ means unauthorized acquisition of computerized data that materially compromises the security, confidentiality or integrity of personal identifying information maintained by a person or business and causes or is reasonably believed to cause loss or injury to a resident of this state." *Wyo. Stat. § 40-12-501(a)(i).* <https://wyoleg.gov/statutes/compress/title40.pdf>
 

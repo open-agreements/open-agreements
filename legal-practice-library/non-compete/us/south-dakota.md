@@ -4,11 +4,11 @@ title: Non-Competes in South Dakota
 description: >-
   A question-by-question summary of South Dakota non-compete law under SDCL
   chapter 53-9, including employee covenants, customer non-solicits, healthcare
-  practitioners, sale-of-business covenants, a new owner non-compete exception
-  for transfers of ownership interests in business entities effective July 1,
-  2026, independent contractors, and trade-secret alternatives.
+  practitioners, sale-of-business covenants, an owner non-compete exception for
+  transfers of ownership interests in business entities (HB 1180), independent
+  contractors, and trade-secret alternatives.
 resource: 'https://openagreements.org/practice-guides/non-compete/us/south-dakota'
-timestamp: '2026-06-26'
+timestamp: '2026-07-01'
 tags:
   - non-compete
   - South Dakota
@@ -16,7 +16,7 @@ tags:
 
 # Non-Competes in South Dakota[^about]
 
-A question-by-question summary of South Dakota non-compete law under SDCL chapter 53-9, including employee covenants, customer non-solicits, healthcare practitioners, sale-of-business covenants, a new owner non-compete exception for transfers of ownership interests in business entities effective July 1, 2026, independent contractors, and trade-secret alternatives.
+A question-by-question summary of South Dakota non-compete law under SDCL chapter 53-9, including employee covenants, customer non-solicits, healthcare practitioners, sale-of-business covenants, an owner non-compete exception for transfers of ownership interests in business entities (HB 1180), independent contractors, and trade-secret alternatives.
 
 ## Are employee non-compete agreements enforceable in South Dakota? {#employee-non-compete-enforceability}
 
@@ -29,7 +29,7 @@ For employees, the core drafting limits are two years or less, a specified count
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not treat statutory compliance as optional style. If the covenant restrains work but does not fit an exception in SDCL chapter 53-9, the baseline statute voids it to that extent [^sdcl-53-9-8-void-baseline].
+> A covenant that restrains work but fits no exception in SDCL chapter 53-9 is void to that extent under the baseline statute, which starts from voidness rather than a free-floating reasonableness test [^sdcl-53-9-8-void-baseline]. The exceptions are construed narrowly to promote the proscription against general restraints on trade, so a covenant drawn past the exception it invokes is not read charitably back into bounds, and a restraint the chapter voids gives the employer no enforceable covenant to assert [^american-rim-narrow-exception][^dolly-narrow-exception].
 
 ## Are customer non-solicitation agreements enforceable in South Dakota? {#customer-nonsolicits}
 
@@ -42,7 +42,7 @@ That reading is consistent with *Dolly*, which interpreted the closely similar c
 > [!CAUTION]
 > **Drafting note.**
 >
-> Avoid no-service, no-sale, and no-acceptance language in a South Dakota customer non-solicit. The safer clause targets affirmative solicitation of existing customers in the specified area and leaves unsolicited customer choice alone [^miller-unsolicited-business][^dolly-solicit-not-sell].
+> A South Dakota customer non-solicit that reaches beyond affirmative solicitation — no-service, no-sale, or no-acceptance language — falls outside every statutory exception and into the section 53-9-8 void zone, because an agreement not to solicit is not an agreement not to sell and no exception permits barring acceptance of unsolicited business [^miller-unsolicited-business][^dolly-solicit-not-sell]. A covenant confined to affirmative solicitation of existing customers within the specified area holds where a broader no-dealing clause does not.
 
 ## Can South Dakota independent contractors be bound by non-competes? {#independent-contractors}
 
@@ -66,7 +66,7 @@ In *Densmore*, a company tried to keep a departing worker in place by relying on
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a no-poach or no-hire clause in a customer, vendor, or services agreement to lock in a South Dakota worker. If the worker has signed no valid SDCL 53-9-11 covenant, the third-party clause will not supply one [^densmore-third-party-restraint].
+> A no-poach or no-hire clause in a customer, vendor, or services agreement does not restrain a South Dakota worker who has signed no valid SDCL 53-9-11 covenant: an employer may not bind its own employee through an agreement with a third party, and a court treats the no-recruit clause as a variation on the covenant not to compete governed by section 53-9-11 and the section 53-9-8 baseline [^densmore-third-party-restraint]. A third-party clause can supplement a valid employee covenant, but it cannot substitute for one.
 
 ## What special non-compete rules apply to South Dakota healthcare practitioners? {#healthcare-practitioners}
 
@@ -79,7 +79,7 @@ The statute preserves two important categories. It does not apply to a contractu
 > [!CAUTION]
 > **Drafting note.**
 >
-> Use the statutory word *voidable*, not *void*, for covered practitioner restrictions. Also separate a practice restriction from a compliant current-patient or current-client solicitation restriction because section 53-9-11.2 treats those differently [^sdcl-53-9-11-2-practitioner-voidable][^sdcl-53-9-11-2-practitioner-exceptions].
+> For a contract entered into on or after July 1, 2023, section 53-9-11.2 makes a provision restricting a covered practitioner from practicing or providing professional services after the relationship ends voidable — not void — at the practitioner's election, and the statutory class reaches far beyond physicians. Because the provision stands unless the practitioner avoids it, and because the section treats a practice restriction and a compliant current-patient or current-client solicitation restriction differently, a practice restriction bundled with an otherwise-compliant patient non-solicit leaves the compliant piece exposed to the voidable one [^sdcl-53-9-11-2-practitioner-voidable][^sdcl-53-9-11-2-practitioner-exceptions].
 
 ## Are sale-of-business non-competes enforceable in South Dakota? {#sale-of-business}
 
@@ -91,12 +91,12 @@ The key drafting move is to tie the restriction to purchased goodwill. A buyer m
 
 South Dakota also recognizes a parallel exception for partnerships. On or in anticipation of dissolution, partners may agree not to carry on a similar business, though the permitted geography is tighter than the goodwill-sale rule, reaching only the same municipality where the partnership did business [^sdcl-53-9-10-partnership-dissolution].
 
-A new statutory exception is on the way. South Dakota has enacted House Bill 1180, which takes effect July 1, 2026 and adds a separate sale-of-business lane for transfers of ownership interests in business entities. Beginning on that date, the parties to a business entity's governing document, or to a contract for the purchase, sale, or transfer of an ownership interest in the entity, will be able to agree that a departing owner not engage in the same or similar business within the entity's specified geographic area for up to three years from the date of transfer [^hb-1180-owner-entity-transfer]. That will fill the space between the goodwill-sale exception in SDCL 53-9-9 and the partnership-dissolution exception in SDCL 53-9-10 by expressly reaching transfers of ownership interests in entities such as LLCs and corporations, and will permit a longer three-year restriction than the two-year ceiling on employee covenants.
+South Dakota recognizes a third sale-of-business lane for ownership-interest transfers. Under House Bill 1180, which took effect July 1, 2026, the parties to a business entity's governing document, or to a contract for the purchase, sale, or transfer of an ownership interest in the entity, may agree that a departing owner not engage in the same or similar business within the entity's specified geographic area for up to three years from the date of transfer [^hb-1180-owner-entity-transfer]. That fills the space between the goodwill-sale exception in SDCL 53-9-9 and the partnership-dissolution exception in SDCL 53-9-10 by expressly reaching transfers of ownership interests in entities such as LLCs and corporations, and permits a longer three-year restriction than the two-year ceiling on employee covenants.
 
-> [!NOTE]
-> **Practice note.**
+> [!CAUTION]
+> **Drafting note.**
 >
-> This exception is not yet in force. House Bill 1180 takes effect July 1, 2026, so a covenant signed before that date on the transfer of an entity ownership interest still depends on the existing goodwill-sale and partnership-dissolution exceptions. For transfers on or after July 1, 2026, draft the owner covenant to the House Bill 1180 limits, namely the same or similar business, the entity's specified geographic area, and no more than three years from the date of transfer [^hb-1180-owner-entity-transfer].
+> An owner covenant under House Bill 1180 holds only inside its limits — the same or similar business, the entity's specified geographic area, and no more than three years from the date of transfer; a covenant reaching past those bounds falls outside the exception. A covenant entered before July 1, 2026 instead depends on the goodwill-sale and partnership-dissolution exceptions rather than the owner-transfer lane [^hb-1180-owner-entity-transfer].
 
 ## Will South Dakota courts narrow an overbroad non-compete? {#overbroad-covenants}
 
@@ -104,12 +104,12 @@ A new statutory exception is on the way. South Dakota has enacted House Bill 118
 
 In *Franklin*, the court held that the sale-of-business covenant was broader than SDCL 53-9-9 allowed, but it did not invalidate the entire provision. It remanded for relief consistent with the narrower statutory construction [^franklin-partial-enforcement].
 
-For employment covenants, *Rezatto* also matters because SDCL 53-9-8 voids a contract only to the extent it restrains trade, and divisible nondisclosure or confidentiality promises can survive even when a non-compete fails [^rezatto-divisible-nda]. For a clause-by-clause pass over a specific agreement against these rules, the [South Dakota non-compete review checklist](/checklists/non-compete/us/south-dakota) walks the full covenant suite item by item with each requirement's force level.
+For employment covenants, *Rezatto* also matters because SDCL 53-9-8 voids a contract only to the extent it restrains trade, and divisible nondisclosure or confidentiality promises can survive even when a non-compete fails [^rezatto-divisible-nda]. For a clause-by-clause pass over a specific agreement against these rules, the [South Dakota non-compete reviewer checklist](/checklists/non-compete/us/south-dakota) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Partial enforcement is a backstop, not a drafting strategy. South Dakota cases still construe exceptions narrowly and refuse to invent statutory exceptions that the Legislature did not adopt [^franklin-partial-enforcement][^miller-no-new-exception].
+> South Dakota recognizes partial enforcement, but a court modifies an overbroad covenant only to conform it to the statutory limits and refuses to read in exceptions the Legislature did not adopt, so a covenant drafted past the chapter 53-9 line is narrowed to the exception at best and void beyond it at worst — never rewritten into the broader restraint the drafter wanted [^franklin-partial-enforcement][^miller-no-new-exception]. What survives a failed non-compete is the divisible remainder: section 53-9-8 voids a contract only to the extent it restrains trade, so separable confidentiality and nondisclosure promises can stand even when a covenant falls [^rezatto-divisible-nda].
 
 ## Does continued employment or termination status matter for South Dakota non-competes? {#consideration-termination}
 
@@ -132,6 +132,11 @@ The public-policy point is important because SDCL 53-9-8 is not merely a private
 
 For drafting, that means a South Dakota worker, South Dakota restricted territory, or South Dakota customer base should be analyzed under South Dakota chapter 53-9 even if the template names another state's law.
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> An out-of-state choice-of-law clause does not save a covenant that chapter 53-9 would condemn. South Dakota courts honor a contractual choice of law only until it contravenes South Dakota public policy, and section 53-9-8 is a legislative public-policy expression rather than a private default, so a South Dakota worker, a South Dakota restricted territory, or a South Dakota customer base is measured under chapter 53-9 whatever law the agreement names [^miller-choice-law-public-policy]. A covenant built to satisfy another state's looser rule but not the South Dakota exception stays exposed on the covenant that matters.
+
 ## Are trade-secret and confidentiality protections still available in South Dakota? {#trade-secrets-ndas}
 
 **Short answer.** Yes. South Dakota non-compete limits do not eliminate confidentiality and trade-secret tools, and the South Dakota Uniform Trade Secrets Act includes fee-shifting and a three-year limitations period [^rezatto-confidentiality-public-policy][^sdcl-37-29-4-fees][^sdcl-37-29-6-limitations].
@@ -143,7 +148,7 @@ The statutory trade-secret remedies can matter in both directions. Bad-faith mis
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not use an NDA as a disguised work ban. South Dakota supports confidential-information protection, but *Rezatto* enforces those covenants only to the extent reasonably necessary to protect confidential information [^rezatto-confidentiality-public-policy].
+> An NDA drafted as a disguised work ban does not gain South Dakota's protection for confidential information. A confidentiality covenant is strictly construed and enforced only to the extent reasonably necessary to protect the employer's interest in confidential information, so a clause that sweeps past that interest is exposed on the same ground a non-compete would be [^rezatto-confidentiality-public-policy].
 
 ## What survival-drafting issue should South Dakota non-compete templates avoid? {#survival-drafting}
 
@@ -153,9 +158,14 @@ The case is a drafting warning, not a new statutory exception. In the acquisitio
 
 For templates, align the duration clause, agreement term, termination language, and restrictive-covenant survival clause. A covenant that appears enforceable under SDCL 53-9-11 may still fail if the contract itself ends before the restriction is triggered.
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> Restrictive covenants in a fixed-term South Dakota agreement that lacks express survival language end when the agreement ends: where the parties performed a fixed-term agreement to its stated end, the Eighth Circuit held the restrictive covenants terminated with it because nothing said they survived [^wilbur-ellis-no-survival]. The trap compounds with the statutory clock, which measures the two-year ceiling from the date of termination of the agreement, so the agreement term, the termination language, the per-covenant durations, and the survival clause have to align — a covenant impeccable under section 53-9-11 still fails if the contract ends before the restriction is triggered [^wilbur-ellis-statutory-context].
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-26. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not South Dakota. This article synthesizes South Dakota primary law and is not legal advice from a South Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-01. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not South Dakota. This article synthesizes South Dakota primary law and is not legal advice from a South Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in South Dakota*, OpenAgreements (last updated July 1, 2026), https://openagreements.org/practice-guides/non-compete/us/south-dakota.
 
 [^sdcl-53-9-8-void-baseline]: **S.D. Codified Laws § 53-9-8** — "Any contract restraining exercise of a lawful profession, trade, or business is void to that extent, except as provided by §§ 53-9-9 to 53-9-12, inclusive." *S.D. Codified Laws § 53-9-8.* <https://sdlegislature.gov/Statutes/53-9-8>
 

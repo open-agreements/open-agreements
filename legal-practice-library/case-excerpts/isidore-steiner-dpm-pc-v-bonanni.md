@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/8006439/isidore-steiner-dpm-pc-v-bonanni/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/michigan'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/michigan'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `physician-rules`, `physician-specific-notices-and-carve-outs`
 - source_cards: `mi-steiner-privilege`, `steiner-patient-privilege`
-- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../checklists/non-compete/us/michigan.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Michigan](../checklists/non-compete/us/michigan.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8006439/isidore-steiner-dpm-pc-v-bonanni/#:~:text=Because%20Michigan%20law%20is%20more,discovery%20of%20defendant's%20patient%20information.>

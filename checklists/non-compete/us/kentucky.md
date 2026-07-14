@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Kentucky
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Kentucky
 description: >-
   A clause-by-clause reviewer checklist for Kentucky employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -14,7 +14,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Kentucky[^about]
+# Non-Compete Agreement Reviewer Checklist — Kentucky[^about]
 
 A clause-by-clause reviewer checklist for Kentucky employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the common-law fair-protection standard, the Creech new-consideration rule for existing employees, and the temporary health-care staffing ban.
 
@@ -64,9 +64,11 @@ Review every item below the way a Kentucky court would: there is no general non-
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — The trade-secret obligation should last as long as secrecy does — that is how federal law defines the right, and Kentucky's own trade-secret act keys protection to the same combination of value-from-secrecy and reasonable secrecy efforts. A fixed expiry on trade-secret confidentiality quietly forfeits protection the employer is entitled to keep, and weakens the strongest interest its covenants can claim. [^dtsa-trade-secret-definition][^ky-kutsa-conf] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection available, because federal law and Kentucky's own trade-secret act both key the right to the same combination of value-from-secrecy and reasonable secrecy efforts. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of protection behind the strongest interest the covenants can claim, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition][^ky-kutsa-conf] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Kentucky tests every restraint for overall fairness, and a perpetual lid on non-secret information is exactly the kind of unbounded obligation that draws an overbreadth attack — the two-track structure keeps the perpetual duty where the law actually supports it. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Kentucky tests every restraint for overall fairness, and a perpetual lid on non-secret information is exactly the kind of unbounded obligation that draws an overbreadth attack — the two-track structure keeps the status-bounded duty where the law actually supports it. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -154,7 +156,7 @@ The four items below exist only on this Kentucky page: the common-law fair-prote
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Kentucky (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Kentucky (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Kentucky*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/kentucky.
 
 [^ky-creech-incumbent-cover]: **Charles T. Creech, Inc. v. Brown** — "In short, Brown received no consideration from Creech in exchange for signing the Agreement or after he signed the Agreement." *Charles T. Creech, Inc. v. Brown, 433 S.W.3d 345 (Ky. 2014).* <https://www.courtlistener.com/opinion/5444327/charles-t-creech-inc-v-brown/#:~:text=In%20short%2C%20Brown%20received%20no,after%20he%20signed%20the%20Agreement.>
 

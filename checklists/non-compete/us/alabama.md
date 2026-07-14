@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Alabama
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Alabama
 description: >-
   A clause-by-clause reviewer checklist for Alabama employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Alabama[^about]
+# Non-Compete Agreement Reviewer Checklist — Alabama[^about]
 
 A clause-by-clause reviewer checklist for Alabama employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Restrictive Covenant Act's void-by-default rule, safe-harbor categories, signature formalities, and professional exemption.
 
@@ -63,9 +63,11 @@ Review every item below the way an Alabama court would: the Restrictive Covenant
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — The trade-secret obligation should last as long as secrecy does — that is how federal law defines the right, and Alabama's protectable-interest list reaches trade secrets through its own trade-secrets statute on the same logic. A fixed expiry on trade-secret protection gives away the one interest the covenant suite most reliably stands on. [^dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection federal law gives, and Alabama's protectable-interest list reaches trade secrets through its own trade-secrets statute on the same continued-secrecy logic. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. The two-track structure — perpetual for trade secrets, dated for everything else — keeps the open-ended obligation where the law actually supports it and spares the broader clause from reading as an indefinite restraint on using general experience. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. The two-track structure — status-bounded for trade secrets, dated for everything else — keeps the open-ended obligation where the law actually supports it and spares the broader clause from reading as an indefinite restraint on using general experience. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -159,7 +161,7 @@ The seven items below exist only on this Alabama page: they implement the Restri
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Alabama (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Alabama (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Alabama*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/alabama.
 
 [^ala-192-signature-cover]: **Ala. Code § 8-1-192** — "In order to be valid, any contract or agreement executed pursuant to this article shall be reduced to writing, signed by all parties, and be supported by adequate consideration." *Ala. Code § 8-1-192.* <https://alison.legislature.state.al.us/code-of-alabama/8-1-192>
 

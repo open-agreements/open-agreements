@@ -34,7 +34,7 @@ The larger legal shift comes from classification doctrine. In California's ABC t
 
 The unstable pattern is the long-tenure quasi-employee: one client, work near the center of the product or operations, internal AI tools directing pace or quality, and termination soon after the contractor helped build or train the replacement system. There the same sentence that explains the business case also helps the worker. `AI now does the work` can sound like efficiency. It can also sound like an admission that the work was part of the business all along. [^dynamex-operations-west-inc-v-superior-court][^independent-contractor-compliance-artificial-int][^restatement-second-of-contracts-section-205-quot-2]
 
-- 
+- Whether automation concedes that the work sat inside the company's usual course of business. Perhaps the strongest contractor argument is that companies do not internalize with software what they truly regard as peripheral. The company-side response is that automation proves the task was standardized and ancillary. *Dynamex* does not answer that AI-specific version on its face. [^dynamex-operations-west-inc-v-superior-court]
 
 ## Can AI contractor displacement trigger WARN Act or benefits claims? {#ai-contractor-warn-benefits-claims}
 
@@ -48,8 +48,8 @@ Ogletree and Troutman add the outer edges. Ogletree's point is temporal: HR and 
 
 Outside the United States, the same move can pick up other theories. Dentons' dependent-contractor analysis and Ogletree's EU AI Act summary point toward reasonable-notice and governance obligations that do not depend on U.S. ABC-test doctrine at all. [^dentons-is-your-contractor-really-an-employee-2][^ogletree-deakins-cybersecurity-awareness-month-i] The consequence is not one global rule. It is several overlapping ones attached to the same efficiency story.
 
-- 
-- 
+- Whether the contractor who helped train the replacement system can convert that history into a good-faith or profit-participation claim. The commission and vesting cases in the source set give plaintiffs an analogy: termination used to capture value already created by the worker. Companies will answer that a termination-for-convenience clause allowed technological adaptation all along. The sources provide the analogy, not a direct holding on model-training fact patterns. [^restatement-second-of-contracts-section-205-quot-3][^hunton-andrews-kurth-llp-california-supreme-cour-2]
+- How far notice liability travels once the contractor is outside the United States or inside an intermediate category such as dependent contractor. Dentons and Ogletree point to reasonable-notice and AI-governance theories that do not map neatly onto U.S. ABC-test analysis. The consequence is less a single global rule than several local ones. [^dentons-is-your-contractor-really-an-employee-2][^ogletree-deakins-cybersecurity-awareness-month-i]
 
 ## Does mandatory AI tooling make contractors look like employees? {#mandatory-ai-tooling-contractor-control}
 
@@ -57,7 +57,7 @@ Outside the United States, the same move can pick up other theories. Dentons' de
 
 Whiteford and CDF Labor Law focus on algorithmic process risk. Whiteford describes current AI-employment litigation as one suit that "attacks outcomes; the other attacks process"[^whiteford-employment-law-update-ai-hiring-under]. [^whiteford-employment-law-update-ai-hiring-under] CDF's writeup of the Eightfold AI case makes the same point from the vendor side: once software scoring or filtering becomes part of a personnel decision, employers can inherit arguments about the process itself. [^cdf-labor-law-llp-ai-lawsuit-pushes-the-boundari] That litigation is about applicants rather than contractor displacement, but the extension to contractor pools managed or culled through internal AI systems is not hard to see.
 
-- 
+- Whether enterprise AI tooling counts as control or just infrastructure. The worker-side story is that a queueing, scoring, and monitoring system acts like a digital supervisor. The company-side story is that the tool is no different from a portal, ticketing system, or security requirement. The source set shows live allegations, not a clean appellate AI-specific holding. [^independent-contractor-compliance-artificial-int-2][^dynamex-operations-west-inc-v-superior-court-2]
 
 ## Can replacing contractors with AI create vendor lock-in risk? {#ai-contractor-vendor-lock-in}
 
@@ -71,7 +71,7 @@ There is a second-order consequence too. Replacing contractors with AI may reduc
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Contractor displacement on AI-efficiency grounds*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-layoffs/contractor-displacement-ai-efficiency.
 
 [^restatement-second-of-contracts-section-205-quot]: **Crowell & Moring LLP commentary** — "It remains a touchstone in federal contracting law that when the government enters the marketplace, it ‘contracts as does a private person, under the broad dictates of the common law.’" *Crowell & Moring LLP, Good Faith in the Termination and Formation of Federal Contracts.* <https://www.crowell.com/a/web/9aDDExPHgBQqp1qysMF8UX/4TtkNo/docassocfktype_articles_481.pdf>
 
@@ -101,9 +101,15 @@ There is a second-order consequence too. Replacing contractors with AI may reduc
 
 [^dentons-is-your-contractor-really-an-employee-2]: **Dentons commentary** — "akin to that of employees, and thus dependent contractors are entitled to common law reasonable notice upon termination" *Dentons, Is your contractor really an employee?.* <https://www.dentons.com/en/insights/articles/2023/september/15/is-your-contractor-really-an-employee>
 
+[^restatement-second-of-contracts-section-205-quot-3]: **Crowell & Moring LLP commentary** — "It remains a touchstone in federal contracting law that when the government enters the marketplace, it ‘contracts as does a private person, under the broad dictates of the common law.’" *Crowell & Moring LLP, Good Faith in the Termination and Formation of Federal Contracts.* <https://www.crowell.com/a/web/9aDDExPHgBQqp1qysMF8UX/4TtkNo/docassocfktype_articles_481.pdf>
+
 [^whiteford-employment-law-update-ai-hiring-under]: **Whiteford commentary** — "attacks outcomes; the other attacks process" *Whiteford, Employment Law Update: AI Hiring Under Fire: Algorithmic Screening Enters The Chat.* <https://www.whitefordlaw.com/news-events/employment-law-update-ai-hiring-under-fire-algorithmic-screening-enters-the-chat>
 
 [^cdf-labor-law-llp-ai-lawsuit-pushes-the-boundari]: **CDF Labor Law LLP commentary** — "the complaint asserts that Eightfold AI’s hiring and screening platform collects extensive applicant data – including social media profiles, LinkedIn histories, location data, and online activity – to create individualized ‘likelihood of success’ assessments." *CDF Labor Law LLP, AI Lawsuit Pushes the Boundaries of AI Litigation-and May Signal a New Wave.* <https://www.cdflaborlaw.com/blog/ai-lawsuit-pushes-the-boundaries-of-ai-litigationand-may-signal-a-new-wave>
+
+[^independent-contractor-compliance-artificial-int-2]: **Independent Contractor Compliance, Artificial Intelligence Industry Targeted for Independent Contractor Misclassification Lawsuits: May 2025 IC Legal News Update** — "nothing in particular about the AI industry should dissuade AI businesses from structuring, documenting, and implementing their IC relationships in a manner that complies with federal and almost all state laws governing ICs." *Independent Contractor Compliance, Artificial Intelligence Industry Targeted for Independent Contractor Misclassification Lawsuits: May 2025 IC Legal News Update.* <https://www.independentcontractorcompliance.com/2025/06/16/artificial-intelligence-industry-targeted-for-independent-contractor-misclassification-lawsuits-may-2025-ic-legal-news-update/>
+
+[^dynamex-operations-west-inc-v-superior-court-2]: **Dynamex Operations West, Inc. v. Superior Court** — "free from the control and direction" *Dynamex Operations West, Inc. v. Superior Court.* <https://www.courtlistener.com/opinion/4493839/dynamex-operations-w-inc-v-superior-court-of-l-a-cnty#:~:text=free%20from%20the%20control%20and%20direction>
 
 [^dentons-is-your-contractor-really-an-employee-3]: **Dentons commentary** — "akin to that of employees, and thus dependent contractors are entitled to common law reasonable notice upon termination" *Dentons, Is your contractor really an employee?.* <https://www.dentons.com/en/insights/articles/2023/september/15/is-your-contractor-really-an-employee>
 

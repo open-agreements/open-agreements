@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/6604207/orca-communications-unlimited-llc-v-noder/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/arizona'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/arizona'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `arizona-statutory-gates`, `confidentiality-and-trade-secret-treatment`, `definitions`, `nonsolicitation-confidentiality`, `restrictive-covenants-each-independently-includable`
 - source_cards: `orca-defacto-conf`, `orca-defacto-covenants`, `orca-defacto-defs`, `orca-defacto-gate`, `q7-orca-defacto`
-- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6604207/orca-communications-unlimited-llc-v-noder/#:~:text=Thus%2C%20the%20trial%20court%20did,a%20geographically%20unrestricted%20non%2Dcompetition%20agreement.>

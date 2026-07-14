@@ -26,13 +26,19 @@
       "rel": "agent-skill",
       "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
       "type": "text/markdown"
+    },
+    {
+      "rel": "related-form",
+      "href": "https://openagreements.org/templates/openagreements-restrictive-covenant-south-dakota",
+      "type": "text/html",
+      "title": "Employee Restrictive Covenant (South Dakota)"
     }
   ],
   "data": {
     "topic": "non-compete",
     "slug": "south-dakota",
     "frontmatter": {
-      "title": "Non-Compete Agreement Review Checklist — South Dakota",
+      "title": "Non-Compete Agreement Reviewer Checklist — South Dakota",
       "description": "A clause-by-clause reviewer checklist for South Dakota employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under SDCL 53-9-11's statutory whitelist, the two-year and specified-area limits, the existing-customer rule, and the healthcare practitioner provision.",
       "eyebrow": "Reviewer Checklist",
       "jurisdiction": "South Dakota",
@@ -43,7 +49,7 @@
         "steven-obiajulu"
       ]
     },
-    "requirementCount": 48,
+    "requirementCount": 49,
     "sections": [
       {
         "sectionId": "parties-and-cover-term-identification",
@@ -127,7 +133,6 @@
         "requirementId": "identify-parties",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Parties identified by name",
         "sectionId": "parties-and-cover-term-identification",
@@ -139,6 +144,7 @@
           {
             "sourceId": "sd-5911-cover",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-11",
             "citation": "S.D. Codified Laws § 53-9-11.",
             "url": "https://sdlegislature.gov/Statutes/53-9-11",
@@ -152,7 +158,6 @@
         "requirementId": "identify-effective-date",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Effective date",
         "sectionId": "parties-and-cover-term-identification",
@@ -164,6 +169,7 @@
           {
             "sourceId": "sd-5911-cover",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-11",
             "citation": "S.D. Codified Laws § 53-9-11.",
             "url": "https://sdlegislature.gov/Statutes/53-9-11",
@@ -174,6 +180,7 @@
           {
             "sourceId": "sd-1122-cover",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-11.2",
             "citation": "S.D. Codified Laws § 53-9-11.2.",
             "url": "https://sdlegislature.gov/Statutes/53-9-11.2",
@@ -187,7 +194,6 @@
         "requirementId": "identify-employee-title",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Employee title",
         "sectionId": "parties-and-cover-term-identification",
@@ -199,6 +205,7 @@
           {
             "sourceId": "sd-1111-cover",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-11.1",
             "citation": "S.D. Codified Laws § 53-9-11.1.",
             "url": "https://sdlegislature.gov/Statutes/53-9-11.1",
@@ -212,7 +219,6 @@
         "requirementId": "identify-governing-law",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Governing law state named",
         "sectionId": "parties-and-cover-term-identification",
@@ -224,6 +230,7 @@
           {
             "sourceId": "sd-miller-col-cover",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Miller v. Honkamp Krueger Financial Services, Inc.",
             "citation": "Miller v. Honkamp Krueger Fin. Servs., Inc., 9 F.4th 1011, 1018 (8th Cir. 2021).",
             "url": "https://www.courtlistener.com/opinion/5040408/cara-miller-v-honkamp-krueger-financial/",
@@ -239,7 +246,6 @@
         "requirementId": "define-confidential-information",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Confidential information",
         "sectionId": "definitions",
@@ -251,6 +257,7 @@
           {
             "sourceId": "sd-rezatto-defs",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "1st American Systems, Inc. v. Rezatto",
             "citation": "1st American Systems, Inc. v. Rezatto, 311 N.W.2d 51, 57 (S.D. 1981).",
             "url": "https://www.courtlistener.com/opinion/2193337/1st-american-systems-inc-v-rezatto/",
@@ -266,7 +273,6 @@
         "requirementId": "define-trade-secrets",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Trade secrets",
         "sectionId": "definitions",
@@ -278,6 +284,7 @@
           {
             "sourceId": "sd-37294-defs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 37-29-4",
             "citation": "S.D. Codified Laws § 37-29-4.",
             "url": "https://sdlegislature.gov/Statutes/37-29-4",
@@ -291,7 +298,6 @@
         "requirementId": "cap-restricted-period-at-two-years-from-termination-of-the-agreement",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.cap-restricted-period-at-two-years-from-termination-of-the-agreement",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Restricted period capped at two years",
         "sectionId": "definitions",
@@ -303,6 +309,7 @@
           {
             "sourceId": "sd-5911-defs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-11",
             "citation": "S.D. Codified Laws § 53-9-11.",
             "url": "https://sdlegislature.gov/Statutes/53-9-11",
@@ -316,7 +323,6 @@
         "requirementId": "specify-statutory-area-for-restricted-territory",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.specify-statutory-area-for-restricted-territory",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Territory uses the statutory area",
         "sectionId": "definitions",
@@ -328,6 +334,7 @@
           {
             "sourceId": "sd-5911-defs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-11",
             "citation": "S.D. Codified Laws § 53-9-11.",
             "url": "https://sdlegislature.gov/Statutes/53-9-11",
@@ -338,6 +345,7 @@
           {
             "sourceId": "sd-amrim-defs",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "American Rim & Brake, Inc. v. Zoellner",
             "citation": "American Rim & Brake, Inc. v. Zoellner, 382 N.W.2d 421, 424 (S.D. 1986).",
             "url": "https://www.courtlistener.com/opinion/1585102/american-rim-brake-inc-v-zoellner/",
@@ -353,7 +361,6 @@
         "requirementId": "limit-covered-customers-to-existing-customers",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.limit-covered-customers-to-existing-customers",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Covered customers limited to existing customers",
         "sectionId": "definitions",
@@ -365,6 +372,7 @@
           {
             "sourceId": "sd-5911-defs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-11",
             "citation": "S.D. Codified Laws § 53-9-11.",
             "url": "https://sdlegislature.gov/Statutes/53-9-11",
@@ -375,6 +383,7 @@
           {
             "sourceId": "sd-dolly-sell-defs",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Farm Bureau Life Ins. Co. v. Dolly",
             "citation": "Farm Bureau Life Ins. Co. v. Dolly, 2018 S.D. 28, ¶ 10, 910 N.W.2d 196.",
             "url": "https://www.courtlistener.com/opinion/4479790/farm-bureau-life-ins-co-v-dolly/",
@@ -390,7 +399,6 @@
         "requirementId": "define-covered-employees",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Covered employees",
         "sectionId": "definitions",
@@ -404,7 +412,6 @@
         "requirementId": "define-protected-interests",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Protected business interests",
         "sectionId": "definitions",
@@ -416,6 +423,7 @@
           {
             "sourceId": "sd-amrim-defs",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "American Rim & Brake, Inc. v. Zoellner",
             "citation": "American Rim & Brake, Inc. v. Zoellner, 382 N.W.2d 421, 424 (S.D. 1986).",
             "url": "https://www.courtlistener.com/opinion/1585102/american-rim-brake-inc-v-zoellner/",
@@ -431,7 +439,6 @@
         "requirementId": "define-competitive-business",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Competitive business",
         "sectionId": "definitions",
@@ -443,6 +450,7 @@
           {
             "sourceId": "sd-5911-defs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-11",
             "citation": "S.D. Codified Laws § 53-9-11.",
             "url": "https://sdlegislature.gov/Statutes/53-9-11",
@@ -456,7 +464,6 @@
         "requirementId": "permit-de-minimis-passive-public-investment-carveout",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Small public-stock carve-out",
         "sectionId": "definitions",
@@ -468,6 +475,7 @@
           {
             "sourceId": "sd-538-defs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-8",
             "citation": "S.D. Codified Laws § 53-9-8.",
             "url": "https://sdlegislature.gov/Statutes/53-9-8",
@@ -481,7 +489,6 @@
         "requirementId": "define-passive-public-holdings",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
         "requirementLevel": "MAY",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Passive public holdings",
         "sectionId": "definitions",
@@ -495,7 +502,6 @@
         "requirementId": "define-solicit",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "What counts as soliciting",
         "sectionId": "definitions",
@@ -507,6 +513,7 @@
           {
             "sourceId": "sd-miller-unsol-defs",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Miller v. Honkamp Krueger Financial Services, Inc.",
             "citation": "Miller v. Honkamp Krueger Fin. Servs., Inc., 9 F.4th 1011, 1019 (8th Cir. 2021).",
             "url": "https://www.courtlistener.com/opinion/5040408/cara-miller-v-honkamp-krueger-financial/",
@@ -522,7 +529,6 @@
         "requirementId": "define-termination-of-employment",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Termination of employment",
         "sectionId": "definitions",
@@ -534,6 +540,7 @@
           {
             "sourceId": "sd-5911-defs",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-11",
             "citation": "S.D. Codified Laws § 53-9-11.",
             "url": "https://sdlegislature.gov/Statutes/53-9-11",
@@ -547,7 +554,6 @@
         "requirementId": "acknowledge-timing",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "When the agreement was signed",
         "sectionId": "timing-and-execution-acknowledgements",
@@ -559,6 +565,7 @@
           {
             "sourceId": "sd-5911-timing",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-11",
             "citation": "S.D. Codified Laws § 53-9-11.",
             "url": "https://sdlegislature.gov/Statutes/53-9-11",
@@ -569,6 +576,7 @@
           {
             "sourceId": "sd-zakinski-consid-timing",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Central Monitoring Service, Inc. v. Zakinski",
             "citation": "Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513.",
             "url": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/",
@@ -581,6 +589,7 @@
           {
             "sourceId": "sd-zakinski-nofault-timing",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Central Monitoring Service, Inc. v. Zakinski",
             "citation": "Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513.",
             "url": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/",
@@ -596,7 +605,6 @@
         "requirementId": "acknowledge-opportunity-to-consult-counsel",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Chance to consult a lawyer",
         "sectionId": "timing-and-execution-acknowledgements",
@@ -607,21 +615,21 @@
         "sources": []
       },
       {
-        "requirementId": "treat-trade-secret-protection-as-perpetual",
-        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
-        "requirementLevel": "MUST",
-        "scrutiny": "substantive",
+        "requirementId": "tie-trade-secret-duration-to-secrecy-status",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.tie-trade-secret-duration-to-secrecy-status",
+        "requirementLevel": "SHOULD",
         "sourceFootnotes": [],
-        "requirementLabel": "Trade-secret protection without an end date",
+        "requirementLabel": "Trade-secret duration tied to secrecy status",
         "sectionId": "confidentiality-and-trade-secret-treatment",
         "itemNumber": "4.1",
-        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#treat-trade-secret-protection-as-perpetual",
-        "requirementGuidance": "Trade-secret obligations should last as long as secrecy does — federal law keys the right to continued secrecy. In a state whose statute confines covenants this tightly, the trade-secret framework is the workhorse protection, so a fixed expiry on trade-secret obligations gives away the most dependable remedy for no benefit.",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#tie-trade-secret-duration-to-secrecy-status",
+        "requirementGuidance": "Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection federal trade-secret law gives, because the law keys the right to continued secrecy; in a state whose statute confines covenants this tightly, that trade-secret framework is the workhorse protection. The status-bounded form is the ceiling the law will back, not a required one — a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it.",
         "variants": [],
         "sources": [
           {
             "sourceId": "dtsa-trade-secret-definition",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
             "citation": "18 U.S.C. § 1839(3)(B) (2018).",
             "url": "https://www.law.cornell.edu/uscode/text/18/1839",
@@ -633,14 +641,26 @@
         ]
       },
       {
+        "requirementId": "avoid-untethered-indefinite-confidentiality",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.avoid-untethered-indefinite-confidentiality",
+        "requirementLevel": "MUST NOT",
+        "sourceFootnotes": [],
+        "requirementLabel": "No unbounded confidentiality obligation",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#avoid-untethered-indefinite-confidentiality",
+        "requirementGuidance": "Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form.",
+        "variants": [],
+        "sources": []
+      },
+      {
         "requirementId": "state-confidentiality-duration",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Confidentiality end date",
         "sectionId": "confidentiality-and-trade-secret-treatment",
-        "itemNumber": "4.2",
+        "itemNumber": "4.3",
         "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#state-confidentiality-duration",
         "requirementGuidance": "Give ordinary confidential information its own finite term, and keep the obligation tethered to genuinely confidential material. South Dakota enforces these covenants only to the extent reasonably necessary to protect the employer's interest in confidential information — an everything-forever lid invites a court to read the clause as a disguised work ban.",
         "variants": [],
@@ -648,6 +668,7 @@
           {
             "sourceId": "sd-rezatto-conf",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "1st American Systems, Inc. v. Rezatto",
             "citation": "1st American Systems, Inc. v. Rezatto, 311 N.W.2d 51, 57 (S.D. 1981).",
             "url": "https://www.courtlistener.com/opinion/2193337/1st-american-systems-inc-v-rezatto/",
@@ -663,7 +684,6 @@
         "requirementId": "disclose-dtsa-notice",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "DTSA whistleblower notice",
         "sectionId": "permitted-disclosures-and-protected-conduct",
@@ -675,6 +695,7 @@
           {
             "sourceId": "dtsa-immunity-notice",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
             "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
             "url": "https://www.law.cornell.edu/uscode/text/18/1833",
@@ -689,7 +710,6 @@
         "requirementId": "carve-out-nlra-protected-discussion",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
         "requirementLevel": "MUST",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Wage-discussion carve-out",
         "sectionId": "permitted-disclosures-and-protected-conduct",
@@ -701,6 +721,7 @@
           {
             "sourceId": "nlra-section-7-rights",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
             "citation": "29 U.S.C. § 157 (NLRA § 7).",
             "url": "https://www.law.cornell.edu/uscode/text/29/157",
@@ -712,6 +733,7 @@
           {
             "sourceId": "mclaren-macomb-protected-activity",
             "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
             "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
             "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
             "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
@@ -726,7 +748,6 @@
         "requirementId": "permit-compelled-disclosure",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Court-ordered disclosure allowed",
         "sectionId": "permitted-disclosures-and-protected-conduct",
@@ -740,7 +761,6 @@
         "requirementId": "require-property-return-and-certification",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Property return and sign-off",
         "sectionId": "property-return-and-certification",
@@ -754,7 +774,6 @@
         "requirementId": "permit-employee-nonsolicit",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Employee non-solicit",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -766,6 +785,7 @@
           {
             "sourceId": "sd-densmore-cov",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Communication Technical Sys., Inc. v. Densmore",
             "citation": "Communication Technical Sys., Inc. v. Densmore, 1998 S.D. 87, ¶ 27, 583 N.W.2d 125.",
             "url": "https://www.courtlistener.com/opinion/1882124/communication-technical-systems-inc-v-densmore/",
@@ -781,7 +801,6 @@
         "requirementId": "permit-customer-nonsolicit",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Customer non-solicit",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -793,6 +812,7 @@
           {
             "sourceId": "sd-5911-cov",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-11",
             "citation": "S.D. Codified Laws § 53-9-11.",
             "url": "https://sdlegislature.gov/Statutes/53-9-11",
@@ -806,7 +826,6 @@
         "requirementId": "permit-non-dealing",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Non-dealing covenant",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -818,6 +837,7 @@
           {
             "sourceId": "sd-miller-cov",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Miller v. Honkamp Krueger Financial Services, Inc.",
             "citation": "Miller v. Honkamp Krueger Fin. Servs., Inc., 9 F.4th 1011, 1019 (8th Cir. 2021).",
             "url": "https://www.courtlistener.com/opinion/5040408/cara-miller-v-honkamp-krueger-financial/",
@@ -833,7 +853,6 @@
         "requirementId": "permit-non-compete",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Non-compete covenant",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -845,6 +864,7 @@
           {
             "sourceId": "sd-538-cov",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-8",
             "citation": "S.D. Codified Laws § 53-9-8.",
             "url": "https://sdlegislature.gov/Statutes/53-9-8",
@@ -855,6 +875,7 @@
           {
             "sourceId": "sd-dolly-narrow-cov",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Farm Bureau Life Ins. Co. v. Dolly",
             "citation": "Farm Bureau Life Ins. Co. v. Dolly, 2018 S.D. 28, ¶ 13, 910 N.W.2d 196.",
             "url": "https://www.courtlistener.com/opinion/4479790/farm-bureau-life-ins-co-v-dolly/",
@@ -870,7 +891,6 @@
         "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Named-competitor narrowing",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -882,6 +902,7 @@
           {
             "sourceId": "sd-dolly-narrow-cov",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Farm Bureau Life Ins. Co. v. Dolly",
             "citation": "Farm Bureau Life Ins. Co. v. Dolly, 2018 S.D. 28, ¶ 13, 910 N.W.2d 196.",
             "url": "https://www.courtlistener.com/opinion/4479790/farm-bureau-life-ins-co-v-dolly/",
@@ -897,7 +918,6 @@
         "requirementId": "permit-non-investment",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Non-investment covenant",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -909,6 +929,7 @@
           {
             "sourceId": "sd-538-cov",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-8",
             "citation": "S.D. Codified Laws § 53-9-8.",
             "url": "https://sdlegislature.gov/Statutes/53-9-8",
@@ -922,7 +943,6 @@
         "requirementId": "require-non-disparagement",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Non-disparagement",
         "sectionId": "non-disparagement",
@@ -934,6 +954,7 @@
           {
             "sourceId": "mclaren-macomb-nondisparagement",
             "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
             "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
             "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
             "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
@@ -948,7 +969,6 @@
         "requirementId": "address-physician-specific-rights",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Physician rights and notices",
         "sectionId": "physician-specific-notices-and-carve-outs",
@@ -960,6 +980,7 @@
           {
             "sourceId": "sd-1122-phys",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-11.2",
             "citation": "S.D. Codified Laws § 53-9-11.2.",
             "url": "https://sdlegislature.gov/Statutes/53-9-11.2",
@@ -970,6 +991,7 @@
           {
             "sourceId": "sd-1111-phys",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-11.1",
             "citation": "S.D. Codified Laws § 53-9-11.1.",
             "url": "https://sdlegislature.gov/Statutes/53-9-11.1",
@@ -980,6 +1002,7 @@
           {
             "sourceId": "sd-1122-exc-phys",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-11.2",
             "citation": "S.D. Codified Laws § 53-9-11.2(1)-(2).",
             "url": "https://sdlegislature.gov/Statutes/53-9-11.2",
@@ -993,7 +1016,6 @@
         "requirementId": "require-no-conflicting-obligations-representation",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "No conflicting obligations",
         "sectionId": "no-conflicting-obligations",
@@ -1007,7 +1029,6 @@
         "requirementId": "address-notice-to-future-employers",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
         "requirementLevel": "MAY",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Notice to future employers",
         "sectionId": "notice-to-future-employers-and-other-third-parties",
@@ -1021,7 +1042,6 @@
         "requirementId": "address-tolling-during-breach",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Restriction extended during a breach",
         "sectionId": "tolling-during-breach",
@@ -1033,6 +1053,7 @@
           {
             "sourceId": "sd-5911-tolling",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-11",
             "citation": "S.D. Codified Laws § 53-9-11.",
             "url": "https://sdlegislature.gov/Statutes/53-9-11",
@@ -1046,7 +1067,6 @@
         "requirementId": "require-injunctive-relief-availability",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Injunction availability",
         "sectionId": "remedies",
@@ -1058,6 +1078,7 @@
           {
             "sourceId": "sd-37294-rem",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 37-29-4",
             "citation": "S.D. Codified Laws § 37-29-4.",
             "url": "https://sdlegislature.gov/Statutes/37-29-4",
@@ -1071,7 +1092,6 @@
         "requirementId": "address-attorneys-fees-and-costs",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
         "requirementLevel": "MAY",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Attorney fees and costs",
         "sectionId": "remedies",
@@ -1083,6 +1103,7 @@
           {
             "sourceId": "sd-37294-rem",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 37-29-4",
             "citation": "S.D. Codified Laws § 37-29-4.",
             "url": "https://sdlegislature.gov/Statutes/37-29-4",
@@ -1093,6 +1114,7 @@
           {
             "sourceId": "sd-37296-rem",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 37-29-6",
             "citation": "S.D. Codified Laws § 37-29-6.",
             "url": "https://sdlegislature.gov/Statutes/37-29-6",
@@ -1106,7 +1128,6 @@
         "requirementId": "draft-within-statutory-limits-rather-than-rely-on-partial-enforcement",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.draft-within-statutory-limits-rather-than-rely-on-partial-enforcement",
         "requirementLevel": "SHOULD NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "No reliance on court narrowing",
         "sectionId": "severability-and-reformation",
@@ -1118,6 +1139,7 @@
           {
             "sourceId": "sd-franklin-partial-sev",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Franklin v. Forever Venture, Inc.",
             "citation": "Franklin v. Forever Venture, Inc., 2005 S.D. 53, ¶ 15, 696 N.W.2d 545.",
             "url": "https://www.courtlistener.com/opinion/901375/franklin-v-forever-venture-inc/",
@@ -1130,6 +1152,7 @@
           {
             "sourceId": "sd-miller-noexc-sev",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Miller v. Honkamp Krueger Financial Services, Inc.",
             "citation": "Miller v. Honkamp Krueger Fin. Servs., Inc., 9 F.4th 1011, 1019 (8th Cir. 2021).",
             "url": "https://www.courtlistener.com/opinion/5040408/cara-miller-v-honkamp-krueger-financial/",
@@ -1142,6 +1165,7 @@
           {
             "sourceId": "sd-rezatto-div-sev",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "1st American Systems, Inc. v. Rezatto",
             "citation": "1st American Systems, Inc. v. Rezatto, 311 N.W.2d 51, 57 (S.D. 1981).",
             "url": "https://www.courtlistener.com/opinion/2193337/1st-american-systems-inc-v-rezatto/",
@@ -1157,7 +1181,6 @@
         "requirementId": "ensure-covenants-expressly-survive-a-fixed-term-agreement",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.ensure-covenants-expressly-survive-a-fixed-term-agreement",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Covenants expressly survive the agreement",
         "sectionId": "survival",
@@ -1169,6 +1192,7 @@
           {
             "sourceId": "sd-wilbur-surv",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Wilbur-Ellis Co. v. Erikson",
             "citation": "Wilbur-Ellis Co. v. Erikson, 103 F.4th 1352, 1357 (8th Cir. 2024).",
             "url": "https://www.courtlistener.com/opinion/9511796/wilbur-ellis-company-v-kevin-erikson/",
@@ -1181,6 +1205,7 @@
           {
             "sourceId": "sd-wilbur-context-surv",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Wilbur-Ellis Co. v. Erikson",
             "citation": "Wilbur-Ellis Co. v. Erikson, 103 F.4th 1352, 1356 (8th Cir. 2024).",
             "url": "https://www.courtlistener.com/opinion/9511796/wilbur-ellis-company-v-kevin-erikson/",
@@ -1196,7 +1221,6 @@
         "requirementId": "address-assignment-and-successors",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Assignment and successors",
         "sectionId": "assignment-and-successors",
@@ -1210,7 +1234,6 @@
         "requirementId": "expect-south-dakota-law-to-govern-south-dakota-covenants",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.expect-south-dakota-law-to-govern-south-dakota-covenants",
         "requirementLevel": "SHOULD NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "South Dakota law expected to apply",
         "sectionId": "governing-law-venue-dispute-process",
@@ -1222,6 +1245,7 @@
           {
             "sourceId": "sd-miller-gov",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Miller v. Honkamp Krueger Financial Services, Inc.",
             "citation": "Miller v. Honkamp Krueger Fin. Servs., Inc., 9 F.4th 1011, 1018 (8th Cir. 2021).",
             "url": "https://www.courtlistener.com/opinion/5040408/cara-miller-v-honkamp-krueger-financial/",
@@ -1237,7 +1261,6 @@
         "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Entire agreement, amendments, e-signatures",
         "sectionId": "entire-agreement-amendment-waiver-e-signatures",
@@ -1251,7 +1274,6 @@
         "requirementId": "gate-employee-covenant-on-statutory-exception",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.gate-employee-covenant-on-statutory-exception",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Covenant fits a statutory exception",
         "sectionId": "south-dakota-statutory-gates",
@@ -1263,6 +1285,7 @@
           {
             "sourceId": "sd-538-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-8",
             "citation": "S.D. Codified Laws § 53-9-8.",
             "url": "https://sdlegislature.gov/Statutes/53-9-8",
@@ -1273,6 +1296,7 @@
           {
             "sourceId": "sd-amrim-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "American Rim & Brake, Inc. v. Zoellner",
             "citation": "American Rim & Brake, Inc. v. Zoellner, 382 N.W.2d 421, 424 (S.D. 1986).",
             "url": "https://www.courtlistener.com/opinion/1585102/american-rim-brake-inc-v-zoellner/",
@@ -1288,7 +1312,6 @@
         "requirementId": "confine-customer-restrictions-to-solicitation-not-acceptance",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.confine-customer-restrictions-to-solicitation-not-acceptance",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Solicitation restricted, acceptance left alone",
         "sectionId": "south-dakota-statutory-gates",
@@ -1300,6 +1323,7 @@
           {
             "sourceId": "sd-miller-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Miller v. Honkamp Krueger Financial Services, Inc.",
             "citation": "Miller v. Honkamp Krueger Fin. Servs., Inc., 9 F.4th 1011, 1019 (8th Cir. 2021).",
             "url": "https://www.courtlistener.com/opinion/5040408/cara-miller-v-honkamp-krueger-financial/",
@@ -1312,6 +1336,7 @@
           {
             "sourceId": "sd-dolly-sell-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Farm Bureau Life Ins. Co. v. Dolly",
             "citation": "Farm Bureau Life Ins. Co. v. Dolly, 2018 S.D. 28, ¶ 10, 910 N.W.2d 196.",
             "url": "https://www.courtlistener.com/opinion/4479790/farm-bureau-life-ins-co-v-dolly/",
@@ -1327,7 +1352,6 @@
         "requirementId": "avoid-voidable-practice-restrictions-for-healthcare-practitioners",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.avoid-voidable-practice-restrictions-for-healthcare-practitioners",
         "requirementLevel": "SHOULD NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Healthcare practitioner restrictions are voidable",
         "sectionId": "south-dakota-statutory-gates",
@@ -1339,6 +1363,7 @@
           {
             "sourceId": "sd-1122-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-11.2",
             "citation": "S.D. Codified Laws § 53-9-11.2.",
             "url": "https://sdlegislature.gov/Statutes/53-9-11.2",
@@ -1349,6 +1374,7 @@
           {
             "sourceId": "sd-1111-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-11.1",
             "citation": "S.D. Codified Laws § 53-9-11.1.",
             "url": "https://sdlegislature.gov/Statutes/53-9-11.1",
@@ -1359,6 +1385,7 @@
           {
             "sourceId": "sd-1122-exc-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-11.2",
             "citation": "S.D. Codified Laws § 53-9-11.2(1)-(2).",
             "url": "https://sdlegislature.gov/Statutes/53-9-11.2",
@@ -1372,7 +1399,6 @@
         "requirementId": "gate-contractor-covenants-on-the-captive-insurance-agent-exception",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.gate-contractor-covenants-on-the-captive-insurance-agent-exception",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Contractors fall outside the employee exception",
         "sectionId": "south-dakota-statutory-gates",
@@ -1384,6 +1410,7 @@
           {
             "sourceId": "sd-aqreva-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Aqreva, LLC v. Eide Bailly, LLP",
             "citation": "Aqreva, LLC v. Eide Bailly, LLP, 2020 S.D. 59, ¶ 32, 950 N.W.2d 774.",
             "url": "https://www.courtlistener.com/opinion/9507869/aqreva-llc-v-eide-bailly-llp/",
@@ -1396,6 +1423,7 @@
           {
             "sourceId": "sd-5912-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-12",
             "citation": "S.D. Codified Laws § 53-9-12.",
             "url": "https://sdlegislature.gov/Statutes/53-9-12",
@@ -1409,7 +1437,6 @@
         "requirementId": "exclude-third-party-no-hire-restraints",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.exclude-third-party-no-hire-restraints",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "No restraint through a third-party contract",
         "sectionId": "south-dakota-statutory-gates",
@@ -1421,6 +1448,7 @@
           {
             "sourceId": "sd-densmore-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Communication Technical Sys., Inc. v. Densmore",
             "citation": "Communication Technical Sys., Inc. v. Densmore, 1998 S.D. 87, ¶ 27, 583 N.W.2d 125.",
             "url": "https://www.courtlistener.com/opinion/1882124/communication-technical-systems-inc-v-densmore/",
@@ -1436,7 +1464,6 @@
         "requirementId": "confine-sale-of-goodwill-covenant-to-similar-business-in-specified-area",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.confine-sale-of-goodwill-covenant-to-similar-business-in-specified-area",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Sale-of-goodwill covenant limits",
         "sectionId": "south-dakota-statutory-gates",
@@ -1448,6 +1475,7 @@
           {
             "sourceId": "sd-539-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-9",
             "citation": "S.D. Codified Laws § 53-9-9.",
             "url": "https://sdlegislature.gov/Statutes/53-9-9",
@@ -1458,6 +1486,7 @@
           {
             "sourceId": "sd-franklin-similar-gate",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Franklin v. Forever Venture, Inc.",
             "citation": "Franklin v. Forever Venture, Inc., 2005 S.D. 53, ¶ 14, 696 N.W.2d 545.",
             "url": "https://www.courtlistener.com/opinion/901375/franklin-v-forever-venture-inc/",
@@ -1470,6 +1499,7 @@
           {
             "sourceId": "sd-5310-gate",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "S.D. Codified Laws § 53-9-10",
             "citation": "S.D. Codified Laws § 53-9-10.",
             "url": "https://sdlegislature.gov/Statutes/53-9-10",

@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/8399125/palmetto-mortuary-transp-inc-v-knight-sys-inc/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/south-carolina'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/south-carolina'
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`, `south-carolina-statutory-gates`
 - source_cards: `palmetto-relaxed-scrutiny`, `sc-palmetto-relaxed-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — South Carolina](../checklists/non-compete/us/south-carolina.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — South Carolina](../checklists/non-compete/us/south-carolina.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8399125/palmetto-mortuary-transp-inc-v-knight-sys-inc/#:~:text=Non%2Dcompete%20covenants%20executed%20in%20conjunction,in%20conjunction%20with%20employment%20contracts.>
 
 ### palmetto-mortuary-transport-inc-v-knight-systems-inc-we-hold-the-territorial-restriction-of-d863b166 {#palmetto-mortuary-transport-inc-v-knight-systems-inc-we-hold-the-territorial-restriction-of-d863b166}
@@ -43,5 +43,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`, `south-carolina-statutory-gates`
 - source_cards: `palmetto-enforced`, `sc-palmetto-enforced-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — South Carolina](../checklists/non-compete/us/south-carolina.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — South Carolina](../checklists/non-compete/us/south-carolina.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8399125/palmetto-mortuary-transp-inc-v-knight-sys-inc/#:~:text=We%20hold%20the%20territorial%20restriction,sustaining%20grounds%20are%20without%20merit.>

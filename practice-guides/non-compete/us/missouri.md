@@ -44,7 +44,7 @@ The trade-secret interest is defined by the Missouri Uniform Trade Secrets Act, 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not write a covenant to block ordinary competition disconnected from a protectable interest. Tie the restraint to specific trade secrets or to customers the employee actually serviced, and keep a separate trade-secret strategy under the Uniform Trade Secrets Act [^copeland-two-interests][^mutsa-trade-secret-definition].
+> A Missouri covenant reaches only two protectable interests — specific trade secrets and the customers the employee actually serviced — so a restraint written to block ordinary competition disconnected from either interest guards nothing the law will enforce and does not survive no matter how it is drafted. A covenant tied to identified trade secrets or serviced customers is measured against the interest it protects, and the trade-secret protections available under the Uniform Trade Secrets Act stand independently of the covenant's reach [^copeland-two-interests][^mutsa-trade-secret-definition].
 
 ## How does Missouri treat employee no-hire and customer non-solicitation covenants? {#non-solicitation-431-202}
 
@@ -61,6 +61,16 @@ Customer non-solicitation is a separate, common-law inquiry. In *Whelan*, the Mi
 >
 > Draft an employee no-hire or anti-raiding covenant to one year or less to capture the section 431.202 conclusive presumption, and do not rely on the one-year route for purely secretarial or clerical staff. For a customer non-solicit — which section 431.202 does not cover — the safest course is to limit it to customers the employee actually serviced, the group *Whelan* left enforceable after striking the overbroad reach [^section-431-202-presumption][^section-431-202-clerical][^whelan-customer-overbroad].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> An employee no-hire or anti-raiding covenant in the agreement is measured against the section 431.202 safe harbor: a covenant resting on no separate protectable interest is conclusively presumed reasonable only where its post-employment duration runs no more than one year, so a term set past one year loses that conclusive presumption and falls back to a facts-and-circumstances reasonableness inquiry [^section-431-202-presumption]. The one-year route does not reach an employee who provided only secretarial or clerical services, so a covenant that binds clerical staff on the strength of duration alone sits outside the safe harbor and stands only on an independent protectable interest [^section-431-202-clerical].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> Section 431.202 does not reach a customer non-solicitation covenant, so a customer restriction stands or falls on the common-law reasonableness test rather than the one-year safe harbor. A covenant that reaches customers regardless of the employee's relationship with them — including prospective customers the employee never served — is broader than the employer's legitimate customer-contacts interest and overbroad as written, the defect that left the *Whelan* clause enforceable only as to its serviced-customer core [^whelan-customer-overbroad]. A customer non-solicit confined to customers the employee actually serviced or had substantial contact with is measured against the interest it protects, and it pairs with the confidentiality and trade-secret protections that do not depend on the covenant's reach.
+
 ## What consideration is required to support a Missouri non-compete? {#consideration}
 
 **Short answer.** This is unsettled. Missouri appellate cases have treated continued at-will employment plus access to the employer's customers or trade secrets as adequate consideration, but the Missouri Supreme Court's reasoning that an at-will promise is illusory — and a federal court applying it to a non-compete — has cast real doubt on relying on continued employment alone [^jumbosack-consideration][^baker-illusory][^durrell-at-will].
@@ -74,13 +84,13 @@ Because *Baker* arose in the arbitration context and the Missouri Supreme Court 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on continued at-will employment as the only consideration for a Missouri non-compete. Support the covenant with independent consideration — a signing bonus, a raise, specialized training, or another concrete benefit — and document it, because *Baker* and *Durrell* make bare continued-employment consideration a litigation risk [^baker-illusory][^durrell-at-will][^jumbosack-consideration].
+> A Missouri non-compete resting on continued at-will employment as its only consideration rests on a promise the employer was already free to withhold — *Baker* held such a promise illusory, and *Durrell* applied that reasoning directly to a non-compete — so bare continued-employment consideration is a standing litigation risk rather than a settled footing [^baker-illusory][^durrell-at-will][^jumbosack-consideration]. A covenant supported by independent consideration — a signing bonus, a raise, specialized training, or another concrete benefit documented at signing — rests on ground *Baker* and *Durrell* do not reach, while a covenant staked on the *JumboSack* continued-employment-plus-access theory alone hangs enforceability on a question Missouri has not resolved.
 
 ## Will a Missouri court modify (blue-pencil) an overbroad non-compete? {#court-narrowing}
 
 **Short answer.** It can, but it does not have to. Missouri courts have authority to refuse to enforce unreasonable terms or to modify an overbroad covenant to make it reasonable, yet modification is discretionary — a court may instead decline to enforce the covenant at all [^whelan-modification][^sigma-refused-modification].
 
-In *Sigma-Aldrich*, the court of appeals affirmed both the trial court's refusal to enforce a covenant that lacked any geographic or other non-temporal limit and its discretionary decision not to rewrite it [^sigma-refused-modification]. There is also a litigation-economics trap: an employer that needs the court to blue-pencil its overbroad agreement may not qualify as the prevailing party and can lose its contractual right to attorney's fees [^paradise-prevailing-party]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Missouri non-compete review checklist](/checklists/non-compete/us/missouri) walks the full covenant suite item by item with each requirement's force level.
+In *Sigma-Aldrich*, the court of appeals affirmed both the trial court's refusal to enforce a covenant that lacked any geographic or other non-temporal limit and its discretionary decision not to rewrite it [^sigma-refused-modification]. There is also a litigation-economics trap: an employer that needs the court to blue-pencil its overbroad agreement may not qualify as the prevailing party and can lose its contractual right to attorney's fees [^paradise-prevailing-party]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Missouri non-compete reviewer checklist](/checklists/non-compete/us/missouri) walks the full covenant suite item by item with each requirement's force level.
 
 "Accordingly, when the provisions of a non-compete clause impose a restraint that is unreasonably broad, appellate courts still can give effect to its purpose by refusing to give effect to the unreasonable terms or modifying the terms of the contract to be reasonable."[^whelan-modification]
 
@@ -88,6 +98,11 @@ In *Sigma-Aldrich*, the court of appeals affirmed both the trial court's refusal
 > **Practice note.**
 >
 > Do not rely on a court to rewrite an overbroad covenant. Drafting to the outer edge risks both non-enforcement, if the court declines to modify, and forfeiture of a contractual attorney's-fee award even when the covenant is ultimately enforced as modified [^sigma-refused-modification][^paradise-prevailing-party].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A Missouri court that finds a covenant overbroad may either strike the unreasonable terms or rewrite the covenant to a reasonable scope, but that power is discretionary, not a safety net [^whelan-modification]. A court may instead decline both to enforce and to modify — the outcome in *Sigma-Aldrich*, where a covenant carrying no geographic or other non-temporal limit was left unenforced rather than rewritten — so a covenant drafted to the outer edge on the assumption a judge will narrow it risks total non-enforcement [^sigma-refused-modification]. The cost compounds at the fee stage: a contractual attorney-fee award runs only to the prevailing party, so an employer that needs the court to narrow its own covenant before enforcing it may forfeit the fee award even where the covenant is ultimately enforced as modified [^paradise-prevailing-party]. A covenant sized to a reasonable scope and a proven protectable interest from the outset is enforceable as written rather than in reliance on judicial revision.
 
 ## Does a Missouri non-compete period toll or extend during a breach or litigation? {#extended-for-breach}
 
@@ -99,6 +114,11 @@ This is an open question, so treat it conservatively. The statutory presumptions
 > **Practice note.**
 >
 > If you want the restricted period to extend during a breach, say so expressly in the covenant rather than assuming a court will toll it — Missouri has no clear authority requiring judicial tolling. But keep the total potential restraint within a reasonable duration: an extension that pushes a one-year non-solicit past the section 431.202 safe harbor, or a non-compete past what *Whelan* would consider reasonable in time, may invite a reasonableness challenge [^tolling-431-202-duration][^tolling-whelan-time].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> Missouri law does not clearly require a court to toll or extend a restricted period during a breach or during litigation, so an extension-on-breach term operates as a contractual extension whose added time is itself part of the restraint measured for reasonableness. An extension that pushes an employee non-solicitation covenant past the one-year duration keyed to the section 431.202 conclusive presumption trades a known-good duration for an open reasonableness question [^tolling-431-202-duration]. An extension that stretches any covenant beyond its stated time terms is tested against the same time-and-geography reasonableness the covenant must satisfy in the first place, so a tolling clause left open-ended or indefinite exposes the covenant to a reasonableness challenge it would otherwise avoid [^tolling-whelan-time].
 
 ## What rules apply to owner and sale-of-business covenants under section 431.204? {#owner-sale-of-business-431-204}
 
@@ -124,6 +144,11 @@ Missouri legislators have repeatedly introduced bills to cap physician covenants
 >
 > Do not assume Missouri has a physician non-compete cap; healthcare covenants are still tested under the *Copeland* reasonableness standard. Watch the legislature, because the 365-day, five-mile framework in HB 2979 could re-emerge in a future session [^physician-copeland][^hb-2979-physician-bill].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A physician or other health-care covenant in the agreement is tested under the ordinary *Copeland* reasonableness standard, not a profession-specific cap: Missouri fixes no statutory duration or radius for physician non-competes, so a physician restraint holds only to the extent it is no more restrictive than is necessary to protect the employer's trade secrets or customer contacts — here, patient and referral relationships [^physician-copeland]. A physician covenant carried over from a jurisdiction that does cap duration or radius, or drafted to a broad radius and a long term, is measured against that reasonableness standard alone and against the patient-access and continuity-of-care interests a court weighs. The 365-day, five-mile framework proposed for nonprofit-employer physician covenants in HB 2979 had not been enacted as of this review, so a covenant drafted in anticipation of it rests on law that does not yet govern [^hb-2979-physician-bill].
+
 ## What remedies are available when a Missouri non-compete is breached? {#remedies}
 
 **Short answer.** Damages, injunctive relief, and a parallel trade-secret track. A liquidated-damages clause is enforceable if it is a reasonable forecast of damages rather than a penalty, and the Uniform Trade Secrets Act separately authorizes injunctions against actual or threatened trade-secret misappropriation [^mayer-liquidated-damages][^mutsa-injunction].
@@ -135,11 +160,11 @@ A liquidated-damages provision is valid in Missouri when the amount is a reasona
 > [!CAUTION]
 > **Drafting note.**
 >
-> Draft any liquidated-damages clause as a genuine, reasonable forecast of hard-to-measure harm, not a deterrent penalty, or it will not be enforced. Keep a separate confidentiality and trade-secret strategy under the Uniform Trade Secrets Act so relief does not depend solely on the covenant [^mayer-liquidated-damages][^mutsa-contractual-remedies].
+> A liquidated-damages clause holds in Missouri only as a genuine, reasonable forecast of hard-to-measure harm; one set as a deterrent penalty is unenforceable, leaving actual damages to be proven the hard way. Relief that rides solely on the covenant fails with the covenant, so a separate confidentiality and trade-secret strategy under the Uniform Trade Secrets Act supplies an independent path to relief that survives even where the covenant is narrow or unenforceable [^mayer-liquidated-damages][^mutsa-contractual-remedies].
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Missouri. This article synthesizes Missouri primary law and is not legal advice from a Missouri-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Missouri. This article synthesizes Missouri primary law and is not legal advice from a Missouri-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Missouri*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/missouri.
 
 [^copeland-reasonable-standard]: **Healthcare Services of the Ozarks, Inc. v. Copeland** — "In practical terms, a non-compete agreement is reasonable if it is no more restrictive than is necessary to protect the legitimate interests of the employer." *Healthcare Servs. of the Ozarks, Inc. v. Copeland, 198 S.W.3d 604 (Mo. banc 2006).* <https://www.courtlistener.com/opinion/1654936/healthcare-services-of-the-ozarks-inc-v-copeland/#:~:text=In%20practical%20terms%2C%20a%20non%2Dcompete,legitimate%20interests%20of%20the%20employer.>
 

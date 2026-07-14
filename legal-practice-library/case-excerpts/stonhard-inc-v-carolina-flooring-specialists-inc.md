@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/1202971/stonhard-inc-v-carolina-flooring-specialists-inc/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/south-carolina'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/south-carolina'
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `sc-stonhard-extension-toll`, `stonhard-no-extension`
-- cited_by: [Non-Compete Agreement Review Checklist — South Carolina](../checklists/non-compete/us/south-carolina.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — South Carolina](../checklists/non-compete/us/south-carolina.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1202971/stonhard-inc-v-carolina-flooring-specialists-inc/#:~:text=Accordingly%2C%20any%20extension%20of%20the,party's%20private%20right%20to%20contract.>
 
 ### stonhard-inc-v-carolina-flooring-specialists-inc-we-hold-therefore-that-the-contract-5b37a9fd {#stonhard-inc-v-carolina-flooring-specialists-inc-we-hold-therefore-that-the-contract-5b37a9fd}
@@ -43,5 +43,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `sc-stonhard-sev`, `stonhard-no-reformation`
-- cited_by: [Non-Compete Agreement Review Checklist — South Carolina](../checklists/non-compete/us/south-carolina.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — South Carolina](../checklists/non-compete/us/south-carolina.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1202971/stonhard-inc-v-carolina-flooring-specialists-inc/#:~:text=We%20hold%2C%20therefore%2C%20that%20the,neither%20of%20the%20parties%20agreed.>

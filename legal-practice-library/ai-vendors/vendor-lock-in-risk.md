@@ -35,7 +35,7 @@ Alston & Bird and Hogan Lovells supply the stronger legal analogy. Alston's Sept
 
 There is not much real disagreement across these firms. The disagreement, if any, is about where to look first. RPC emphasizes onboarding knowledge and interoperability. DLA Piper emphasizes the upstream vendor chain. Alston and Hogan emphasize statutory switching mechanics. Together they point to the same conclusion: AI lock-in usually arrives through technical dependency that the contract merely ratifies.
 
-- 
+- Perhaps the first unresolved issue is coverage. The EU Data Act clearly reaches `data processing services`, but it is still not fully tested how neatly that category maps onto foundation-model APIs sold through different commercial forms. The better the AI product looks like managed cloud infrastructure, the stronger the analogy appears. The more bespoke the arrangement, the less certain that fit becomes. [^regulation-eu-2023-2854-art-23][^hogan-lovells-eu-data-act-series-part-7-easy-swi]
 
 ## Can prompts and fine-tuned AI models move to another vendor? {#prompts-fine-tunes-ai-vendor-portability}
 
@@ -45,7 +45,7 @@ The contract can be portable while the system is not. Prompt libraries export as
 
 Fine-tunes split into two markets. OpenAI and Anthropic are customer-favorable on ownership of inputs and outputs and on not training on customer content by default. That matters, but it is not the same as promising export of the resulting custom model weights or a portable fine-tuning artifact. In the source set, Google's public documentation is friendlier to export for some model artifacts, Azure exposes downloadable artifacts for open models in its catalog, and AWS is the clearest on the open-weight path because Bedrock supports import of customized open-source models in hosted form. [^openai-openai-services-agreement][^anthropic-commercial-terms-of-service][^google-cloud-export-model-artifacts-for-inferenc][^microsoft-learn-explore-microsoft-foundry-models][^aws-docs-use-custom-model-import-to-import-a-cus] The consequence is that a closed-provider custom model can be `yours` in the ordinary commercial sense while still not being portable in the operational sense.
 
-- 
+- Prompt portability is also still contested in practice. One side says frontier models are now similar enough that most prompt assets move with limited revision, especially when the workload stays near ordinary chat, tools, and retrieval. The other side points to provider-specific tool semantics, reasoning scaffolds, and safety behavior that make heavily optimized systems much harder to move than a text export suggests. We think both are true at different depths of integration. [^langchain-docs-chat-model-integrations][^llamaindex-docs-available-llm-integrations][^deepseek-r1-model-card]
 
 ## Why do retrieval systems make AI vendor switching more expensive? {#retrieval-systems-ai-vendor-switching}
 
@@ -69,12 +69,12 @@ Open models improve the exit option without making it free. Meta, Mistral, and D
 
 Abstraction layers change the location of dependence more than they erase it. LangChain and LlamaIndex are right that a common interface lowers direct API switching cost. Box's multi-model AI posture shows the same idea at the application layer: keep the content and governance layer stable and let the inference provider vary. [^langchain-docs-langchain-overview][^llamaindex-docs-using-llms][^box-box-ai][^box-developer-docs-supported-ai-models] That is a meaningful reduction in one kind of lock-in. It is not the same thing as zero lock-in. The dependency often moves upward into routing rules, provider adapters, tracing, message schemas, and evaluation harnesses.
 
-- 
-- 
+- Open-weight models may reduce bargaining asymmetry without eliminating total switching cost. They preserve a more credible exit path where weights and artifacts are preserved. They also shift cost into hosting, safety review, monitoring, and regional deployment. That looks less like `no lock-in` and more like a different lock-in curve. [^aws-docs-use-custom-model-import-to-import-a-cus-2][^meta-llama][^mistral-ai-docs-api-access-with-ai-studio-server][^deepseek-r1-model-card-2]
+- The last open question is whether abstraction should be understood as lower lock-in or relocated lock-in. It probably depends on what was scarce in the first place. If the bottleneck was a single model API, a neutral orchestration layer can help a lot. If the bottleneck becomes one framework's tracing, routing, and eval conventions, the dependency has not disappeared. It has changed address. [^langchain-docs-langchain-overview][^llamaindex-docs-using-llms][^box-box-ai]
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Vendor lock-in risk in AI service agreements*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-vendors/vendor-lock-in-risk.
 
 [^regulation-eu-2023-2854-art-23]: **Regulation (EU) 2023/2854, art. 23** — "commercial, technical, contractual and organisational obstacles" *Regulation (EU) 2023/2854, art. 23.* <https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng>
 
@@ -109,6 +109,8 @@ Abstraction layers change the location of dependence more than they erase it. La
 [^microsoft-learn-explore-microsoft-foundry-models]: **Microsoft Learn, Explore Microsoft Foundry Models in Azure Machine Learning** — "Models from providers other than Microsoft are Non-Microsoft Products as defined in Microsoft Product Terms and are subject to the terms provided with the models." *Microsoft Learn, Explore Microsoft Foundry Models in Azure Machine Learning.* <https://learn.microsoft.com/en-us/azure/machine-learning/foundry-models-overview>
 
 [^aws-docs-use-custom-model-import-to-import-a-cus]: **AWS Docs, Use Custom model import to import a customized open-source model into Amazon Bedrock** — "You can create a custom model in Amazon Bedrock by using the Amazon Bedrock Custom Model Import feature to import Foundation Models that you have customized in other environments, such as Amazon SageMaker AI." *AWS Docs, Use Custom model import to import a customized open-source model into Amazon Bedrock.* <https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-import-model.html>
+
+[^langchain-docs-chat-model-integrations]: **LangChain Docs, Chat model integrations** — "Chat models are language models that use a sequence of messages as inputs and return messages as outputs ." *LangChain Docs, Chat model integrations.* <https://docs.langchain.com/oss/python/integrations/chat>
 
 [^google-cloud-get-text-embeddings]: **Google Cloud, Get text embeddings** — "Dense vector embedding models use deep-learning methods similar to the ones used by large language models." *Google Cloud, Get text embeddings.* <https://docs.cloud.google.com/vertex-ai/generative-ai/docs/embeddings/get-text-embeddings>
 
@@ -145,3 +147,7 @@ Abstraction layers change the location of dependence more than they erase it. La
 [^box-box-ai]: **Box, Box AI** — "Rely on Box’s existing security and privacy for your most sensitive content generated by Box AI." *Box, Box AI.* <https://www.box.com/ai>
 
 [^box-developer-docs-supported-ai-models]: **Box Developer Docs, Supported AI models** — "Customer-enabled models | Require activation by Box admins in the Admin Console or a request to Box. Some models may be subject to additional terms or pricing." *Box Developer Docs, Supported AI models.* <https://developer.box.com/guides/box-ai/ai-models>
+
+[^aws-docs-use-custom-model-import-to-import-a-cus-2]: **AWS Docs, Use Custom model import to import a customized open-source model into Amazon Bedrock** — "You can create a custom model in Amazon Bedrock by using the Amazon Bedrock Custom Model Import feature to import Foundation Models that you have customized in other environments, such as Amazon SageMaker AI." *AWS Docs, Use Custom model import to import a customized open-source model into Amazon Bedrock.* <https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-import-model.html>
+
+[^deepseek-r1-model-card-2]: **DeepSeek-R1 model card** — "DeepSeek-R1 series support commercial use, allow for any modifications and derivative works, including, but not limited to, distillation for training other LLMs." *DeepSeek-R1 model card.* <https://huggingface.co/deepseek-ai/DeepSeek-R1>

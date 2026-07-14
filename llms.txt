@@ -6,7 +6,7 @@ Every practice guide cites primary law; templates start from recognized standard
 
 ## Practice Guides
 
-- [Non-Compete & Restrictive Covenants](https://openagreements.org/practice-guides/non-compete): Enforceability, blue-pencil reformation, tolling, choice of law, and FTC-rule status. (56 U.S. states + international)
+- [Non-Compete & Restrictive Covenants](https://openagreements.org/practice-guides/non-compete): Enforceability, blue-pencil reformation, tolling, choice of law, and FTC-rule status. (57 U.S. states + international)
 - [Consumer Data Privacy](https://openagreements.org/practice-guides/privacy/us): CCPA/CPRA and every comprehensive state privacy act — who's covered, consumer rights, opt-outs, and who enforces. (51 U.S. states)
 - [AI Vendors](https://openagreements.org/practice-guides/ai-vendors): Zero-data-retention, data residency, and the terms that matter in AI vendor contracts. (9 practice guides)
 - [AI & the Workforce](https://openagreements.org/practice-guides): AI in hiring and adverse-action, workforce AI policies, and outside-counsel transitions. (20 practice guides)
@@ -15,6 +15,10 @@ Every practice guide cites primary law; templates start from recognized standard
 ## Law Surveys
 
 - [U.S. 50-State Non-Compete Survey](https://openagreements.org/surveys/non-compete/us)
+- [U.S. 50-State Stay-or-Pay & Employee Repayment Survey](https://openagreements.org/surveys/stay-or-pay/us)
+- [U.S. 50-State Wage & Hour Survey](https://openagreements.org/surveys/wage-and-hour/us)
+- [U.S. corporate-governance survey](https://openagreements.org/surveys/corporate-governance/us)
+- [U.S. founder-separation survey](https://openagreements.org/surveys/founder-separation/us)
 - [U.S. invention-assignment survey](https://openagreements.org/surveys/invention-assignment/us)
 - [U.S. State Consumer Privacy Survey](https://openagreements.org/surveys/privacy/us)
 - [Worldwide Non-Compete Survey](https://openagreements.org/surveys/non-compete/worldwide)

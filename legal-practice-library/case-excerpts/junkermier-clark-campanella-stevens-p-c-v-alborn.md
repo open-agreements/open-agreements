@@ -8,7 +8,7 @@ citation: 'Junkermier, Clark, Campanella, Stevens, P.C. v. Alborn, 2020 MT 179.'
 resource: 'https://www.courtlistener.com/opinion/4767942/jccs-v-alborn/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/montana'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/montana'
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `customer-fee-restraints`, `montana-statutory-gates`
 - source_cards: `jccs-client-payment`, `mt-jccs-dobbins-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Montana](../checklists/non-compete/us/montana.md), [Non-Competes in Montana](../non-compete/us/montana.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Montana](../checklists/non-compete/us/montana.md), [Non-Competes in Montana](../non-compete/us/montana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4767942/jccs-v-alborn/#:~:text=After%20conducting%20a%20bench%20trial%2C,based%20on%20the%20Dobbins%20factors.>
 
 ### junkermier-clark-campanella-stevens-p-c-v-alborn-appellants-owed-jccs-2-353-463-27-4c22e08e {#junkermier-clark-campanella-stevens-p-c-v-alborn-appellants-owed-jccs-2-353-463-27-4c22e08e}
@@ -49,5 +49,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `customer-fee-restraints`, `definitions`
 - source_cards: `jccs-legitimate-client-base`, `mt-jccs-clientbase-defs`
-- cited_by: [Non-Compete Agreement Review Checklist — Montana](../checklists/non-compete/us/montana.md), [Non-Competes in Montana](../non-compete/us/montana.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Montana](../checklists/non-compete/us/montana.md), [Non-Competes in Montana](../non-compete/us/montana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4767942/jccs-v-alborn/#:~:text=We%20conclude%20the%20District%20Court,of%20protecting%20its%20client%20base.>

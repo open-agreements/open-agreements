@@ -2,7 +2,7 @@
 jurisdiction: "Kansas"
 slug: kansas
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/kansas
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/kansas · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/kansas · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Kansas[^about]
 
@@ -57,6 +57,11 @@ Enforceability is a question Kansas appellate courts decide without deference to
 
 The public-welfare factor is a real limit, not a formality. In *Caring Hearts*, the Kansas Court of Appeals applied the same four questions to home-health workers and found no public-welfare problem on the facts [^caring-hearts-public-welfare].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> Each covenant in the agreement clears the four-factor reasonableness test on its own, and the employer carries the burden of showing that a legitimate interest, no undue burden on the employee, no injury to the public welfare, and reasonable time and territory are all satisfied [^q2-weber-four-factor]. Adequate consideration establishes only that a covenant is supported, not that it is reasonable, so a covenant that clears the consideration question can still fail this test. Enforceability is reviewed without deference on appeal, so a covenant that survives the trial court can be retested in full, and a recital of irreparable harm smooths the path to interim relief but does not substitute for a covenant that survives the four factors [^doan-de-novo]. A disclosure to a departing employee's next employer built on a covenant a court later narrows or declines to enforce exposes the employer to a claim of its own, so the restraint worth papering is one the employer is prepared to defend on all four factors.
+
 ## Will a Kansas court narrow an overbroad non-compete instead of voiding it? {#court-narrowing}
 
 **Short answer.** Usually it narrows. Kansas courts have long used their equitable power to reduce an overbroad restraint and enforce it as reduced, rather than striking the whole covenant [^eastern-equitable-reduction].
@@ -67,12 +72,12 @@ The modern rule has a common-law root. In *Eastern Distributing*, the Kansas Sup
 
 Reformation has a ceiling, though. A court reforms an *unreasonable* term; it may not rewrite a term that was already reasonable. In *Doan*, the Court of Appeals held the trial court erred when it cut a reasonable two-year term down to one year [^doan-no-rewrite].
 
-The 2025 statutory amendments add a separate, mandatory reformation command, but it is aimed at the covenants the Kansas Restraint of Trade Act actually governs. K.S.A. 50-163 directs a court to modify and enforce an overbroad covenant that is *not* conclusively presumed enforceable [^q3-ksa-50-163-reform], yet the same statute excludes covenants not to compete from the Act altogether [^q3-ksa-50-163-noncompete-exclusion]. For a traditional non-compete, the operative reformation authority remains the common-law equity power recognized in *Eastern Distributing*, not the statute. No published Kansas decision has yet construed that exclusion as applied to a non-compete, so this reading rests on the statute's plain text. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Kansas non-compete review checklist](/checklists/non-compete/us/kansas) walks the full covenant suite item by item with each requirement's force level.
+The 2025 statutory amendments add a separate, mandatory reformation command, but it is aimed at the covenants the Kansas Restraint of Trade Act actually governs. K.S.A. 50-163 directs a court to modify and enforce an overbroad covenant that is *not* conclusively presumed enforceable [^q3-ksa-50-163-reform], yet the same statute excludes covenants not to compete from the Act altogether [^q3-ksa-50-163-noncompete-exclusion]. For a traditional non-compete, the operative reformation authority remains the common-law equity power recognized in *Eastern Distributing*, not the statute. No published Kansas decision has yet construed that exclusion as applied to a non-compete, so this reading rests on the statute's plain text. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Kansas non-compete reviewer checklist](/checklists/non-compete/us/kansas) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on reformation as a license to overreach. Kansas will narrow an unreasonable restraint, but *Doan* shows a court will refuse to rewrite a term that is already reasonable, and an employer that drafts too broadly risks getting only the minimum relief a court considers necessary [^doan-no-rewrite][^eastern-equitable-reduction].
+> Reformation is not a license to overreach. Kansas narrows an unreasonable restraint, but *Doan* shows a court refuses to rewrite a term that is already reasonable, so a covenant drafted too broadly leaves the employer with only the minimum relief a court considers necessary rather than the restraint as written [^doan-no-rewrite][^eastern-equitable-reduction]. The statutory modify-and-enforce command reaches only covenants the Restraint of Trade Act governs, and § 50-163(e)(6) excludes covenants not to compete, so for a traditional non-compete the narrowing authority is the common-law equity power rather than the statute.
 
 ## Does a tolling or extension-during-breach clause extend a Kansas non-compete? {#extended-for-breach}
 
@@ -91,7 +96,7 @@ No Kansas case approves judicial or equitable extension of a covenant period eit
 > [!CAUTION]
 > **Drafting note.**
 >
-> Avoid an open-ended tolling-during-breach-and-litigation clause in a Kansas non-compete. *Doan* refused to enforce one as an unreasonable, potentially indefinite restraint, so a defined and reasonable fixed term is the safer drafting choice [^doan-tolling-declined][^doan-tolling-indefinite].
+> An open-ended tolling-during-breach-and-litigation clause in a Kansas non-compete is a serious enforcement risk rather than a safety net. *Doan* refused to enforce one as an unreasonable, potentially indefinite restraint, so the time such a clause purports to add back may simply not be enforced, while a defined and reasonable fixed term stands on the ground *Doan* approved [^doan-tolling-declined][^doan-tolling-indefinite].
 
 ## How did the 2025 SB 241 amendments change Kansas restrictive-covenant law? {#sb-241-changes}
 
@@ -121,6 +126,11 @@ The statute defines who counts as a material contact customer, which is the key 
 Owner covenants get a longer runway. A written covenant by an owner not to solicit the entity's customers is conclusively presumed enforceable if it is limited to material contact customers and does not run more than four years after the owner's relationship with the business ends [^ksa-50-163-owner-nonsolicit].
 
 The presumption is strong but not absolute. Even for a covenant inside a safe harbor, the statute lets the employee or owner raise any available legal or equitable defense for the court to consider [^ksa-50-163-defenses].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> The statutory safe harbors are covenant-specific. A customer non-solicit limited to material contact customers and capped at two years is conclusively presumed enforceable and not a restraint of trade, and — mapped to the employer's customer-goodwill interest — it is often a more readily enforceable protection than a broad non-compete, which stays on the common-law reasonableness test [^ksa-50-163-customer-nonsolicit]. A covenant drawn wider than the safe harbor, through an entire-book-of-business scope or a term past two years, forfeits the presumption and falls back to the general reasonableness baseline. The safe harbors do not reach an employer-employee covenant not to recruit coworkers: no conclusive presumption covers that restraint, so a coworker no-recruit clause stands on ordinary reasonableness and holds only where it reaches no further than the employer's interest in workforce stability [^ksa-50-163-owner-nonsolicit].
 
 ## What consideration supports a Kansas non-compete? {#consideration}
 
@@ -160,7 +170,7 @@ The Act is the exclusive route for trade-secret recovery. In *Wolfe Electric*, t
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on the trade-secret statute to protect ordinary confidential information. *Wolfe Electric* confirms the Act is the exclusive remedy for trade-secret misappropriation, so non-trade-secret information should be protected by a separate, reasonable confidentiality covenant [^wolfe-kutsa-exclusive][^ksa-60-3326-contract].
+> The trade-secret statute does not reach ordinary confidential information. *Wolfe Electric* confirms the Act is the exclusive remedy for trade-secret misappropriation and reaches only information meeting the statutory definition, so information that falls short of trade-secret status is protected only by a separate, reasonable confidentiality covenant, and an agreement that lumps everything under a trade-secret label leaves its non-secret information unprotected [^wolfe-kutsa-exclusive][^ksa-60-3326-contract].
 
 ## How are Kansas sale-of-business and owner covenants treated? {#sale-of-business}
 
@@ -174,7 +184,7 @@ The statute defines owner broadly to include sellers of business assets and equi
 
 A 2026 bill, HB 2650, would have voided non-competes on the sale or change in control of an employer, but it also died in the 2025 to 2026 session and is not law.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Kansas. This article synthesizes Kansas primary law and is not legal advice from a Kansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Kansas. This article synthesizes Kansas primary law and is not legal advice from a Kansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Kansas*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/kansas.
 
 [^weber-governing-standard]: **Weber v. Tillman** — "A noncompetition covenant ancillary to an employment contract is valid and enforceable if the restraint is reasonable under the circumstances and not adverse to the public welfare." *Weber v. Tillman, 259 Kan. 457, 913 P.2d 84 (1996).* <https://www.courtlistener.com/opinion/7969238/weber-v-tillman/#:~:text=A%20noncompetition%20covenant%20ancillary%20to,adverse%20to%20the%20public%20welfare.>
 

@@ -8,7 +8,7 @@ citation: 'Bessemer Trust Co., N.A. v. Branin, 16 N.Y.3d 549 (2011).'
 resource: 'https://www.courtlistener.com/opinion/2526164/bessemer-trust-co-na-v-branin/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/new-york'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-york'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `new-york-doctrine-gates`, `sale-of-business`
 - source_cards: `bessemer-implied-covenant`, `bessemer-implied-covenant-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/us/new-york.md), [Non-Competes in New York](../non-compete/us/new-york.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New York](../checklists/non-compete/us/new-york.md), [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2526164/bessemer-trust-co-na-v-branin/#:~:text=In%20answering%20the%20certified%20question%2C,improperly%20soliciting%20his%20former%20clients.>

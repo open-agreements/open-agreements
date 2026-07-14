@@ -2,7 +2,7 @@
 jurisdiction: "Philippines"
 slug: ph
 countryCode: PH
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/ph
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/ph · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/ph · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in the Philippines[^about]
 
@@ -162,7 +162,7 @@ Reform of employee non-competes has been a topic of legislative and practitioner
 >
 > Do not draft to an anticipated Philippine non-compete statute. None is in force as of June 2026, so enforceability still rests entirely on the Civil Code and the courts' reasonableness test, read against the Constitution's policy that no combinations in restraint of trade shall be allowed [^consti-art12].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Philippines. This article summarizes publicly available Philippines legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Philippines. This article summarizes publicly available Philippines legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in the Philippines*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/ph.
 
 [^civilcode-1306]: **Civil Code of the Philippines (RA 386), Art. 1306** — "Article 1306. The contracting parties may establish such stipulations, clauses, terms and conditions as they may deem convenient, provided they are not contrary to law, morals, good customs, public order, or public policy." *Civil Code of the Philippines, Republic Act No. 386, Art. 1306.* <https://lawphil.net/statutes/repacts/ra1949/ra_386_1949.html>
 

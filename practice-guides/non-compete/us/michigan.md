@@ -21,7 +21,7 @@ Michigan enforces employee non-competes only when they are reasonable under MCL 
 
 **Short answer.** Yes, sometimes. Michigan is a reasonableness state, not a general-ban state: MCL 445.774a lets an employer enforce a covenant that protects a reasonable competitive business interest and is reasonable in duration, geographic area, and the type of employment restricted [^mcl-774a-employer-may-obtain][^borgiel-unfair-advantage].
 
-The governing statute is part of the Michigan Antitrust Reform Act. A covenant is valid only if it does more than block ordinary competition — under *St. Clair Medical, P.C. v. Borgiel* it must protect against the employee gaining an *unfair* competitive advantage and may not stop the employee from using general knowledge or skill [^borgiel-unfair-advantage]. For a clause-by-clause pass over a specific agreement against these rules, the [Michigan non-compete review checklist](/checklists/non-compete/us/michigan) walks the full covenant suite item by item with each requirement's force level.
+The governing statute is part of the Michigan Antitrust Reform Act. A covenant is valid only if it does more than block ordinary competition — under *St. Clair Medical, P.C. v. Borgiel* it must protect against the employee gaining an *unfair* competitive advantage and may not stop the employee from using general knowledge or skill [^borgiel-unfair-advantage]. For a clause-by-clause pass over a specific agreement against these rules, the [Michigan non-compete reviewer checklist](/checklists/non-compete/us/michigan) walks the full covenant suite item by item with each requirement's force level.
 
 "To be reasonable in relation to an employer's competitive business interest, a restrictive covenant must protect against the employee's gaining some unfair advantage in competition with the employer, but not prohibit the employee from using general knowledge or skill."[^borgiel-unfair-advantage]
 
@@ -29,6 +29,11 @@ The governing statute is part of the Michigan Antitrust Reform Act. A covenant i
 > **Practice note.**
 >
 > Do not treat Michigan as a total-ban state, and do not assume a covenant is enforceable just because the statute permits non-competes. Start with the reasonable-competitive-business-interest test and the duration, geography, and type-of-employment limits, because a covenant that merely suppresses competition fails even though the statute allows non-competes [^mcl-774a-employer-may-obtain][^borgiel-unfair-advantage].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A Michigan non-compete is measured against MCL 445.774a, so a covenant that does no more than suppress ordinary competition fails even though the statute permits non-competes: it protects a reasonable competitive business interest only where it guards against the employee gaining an unfair advantage rather than shielding the employer from lawful rivalry [^mcl-774a-employer-may-obtain][^borgiel-unfair-advantage]. A covenant whose recited purpose is ordinary competition, or one bolted onto a role that touches no confidential information, customer relationship, or trade secret, has no interest to defend and is exposed on that ground before duration or geography is ever reached.
 
 ## What legitimate business interests can support a Michigan non-compete? {#protectable-interests}
 
@@ -39,6 +44,11 @@ In *Follmer, Rudzewicz & Co., P.C. v. Kosco*, the Michigan Supreme Court held th
 The Michigan Uniform Trade Secrets Act supplies the trade-secret overlay. A trade secret is information that derives independent economic value from not being generally known and is the subject of reasonable secrecy efforts [^mutsa-trade-secret-definition].
 
 "To the extent such an agreement provides reasonable protection for the confidential information of the employer, it does not violate the statute and is enforceable."[^follmer-confidential-info]
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A Michigan covenant reaches only as far as the confidential information it reasonably protects and no further, so a restraint that sweeps in the general knowledge, skill, and experience the employee acquired on the job is enforceable only to the extent it guards real confidential information [^follmer-confidential-info][^borgiel-general-skill]. A confidentiality definition that carves out general skill, and a covenant tied to identified protectable interests rather than to the employee's expertise, keep the restraint on the enforceable side of that line; a covenant that would bar the employee from using ordinary professional ability is unenforceable to that extent.
 
 ## How long and how broad can a Michigan non-compete be? {#duration-limits}
 
@@ -51,7 +61,7 @@ Reasonableness is fact-specific, but the outer bounds are clear: in *Mid Michiga
 > [!CAUTION]
 > **Drafting note.**
 >
-> Tie duration, geography, and covered activity to the specific interest the covenant protects rather than copying a long default term. *Mid Michigan Billing* shows that an unlimited or open-ended client restriction is vulnerable as unreasonable, so a narrower, interest-matched scope is more defensible [^mcl-774a-reasonable-scope][^mid-michigan-unlimited].
+> Duration, geography, and covered activity are measured against the specific interest the covenant protects, so a long default term copied from another form is tested against a market it was never sized to. An unlimited or open-ended client restriction is vulnerable as unreasonable, and a narrower, interest-matched scope is the one a court is more likely to leave standing [^mcl-774a-reasonable-scope][^mid-michigan-unlimited].
 
 ## Is continued employment enough consideration for a Michigan non-compete? {#continued-employment-consideration}
 
@@ -64,7 +74,7 @@ The outcome in *QIS* is the cautionary part. The court agreed the agreement was 
 > [!CAUTION]
 > **Drafting note.**
 >
-> For a non-at-will or just-cause employee, do not rely on continued employment alone as consideration. *QIS* held a covenant void in that setting because refusing to sign would not have been just cause for termination, so provide separate, identifiable consideration when the worker is not at will [^qis-just-cause].
+> Continued employment alone is sufficient consideration for a Michigan covenant only where the worker is genuinely at will. Where the worker is a just-cause or contract employee, a covenant supported by nothing more than continued employment is void, because refusing to sign would not have been just cause for termination, so a covenant in that setting stands only on separate, identifiable consideration such as a signing or retention bonus, a raise, a promotion, or new confidential access [^qis-just-cause].
 
 ## Can a Michigan court rewrite or limit an overbroad non-compete? {#court-narrowing}
 
@@ -77,7 +87,7 @@ This power is real but discretionary, not guaranteed. In *Mid Michigan Medical B
 > [!CAUTION]
 > **Drafting note.**
 >
-> Because the statute says a court *may* limit an overbroad covenant, not that it must, do not rely on judicial narrowing as a safety net. Draft scope, geography, and duration to the minimum the protectable interest requires, since a court may decline to save a covenant it views as punitive [^mcl-774a-court-may-limit][^mid-michigan-limited].
+> MCL 445.774a lets a court limit an overbroad covenant, but the power is discretionary — the statute says a court *may* narrow a covenant, not that it must, and a court may decline to save one it views as punitive [^mcl-774a-court-may-limit][^mid-michigan-limited]. A covenant drawn to the minimum scope, geography, and duration the protectable interest requires does not depend on that discretion, while one that reaches wide on the assumption a judge will trim it is exposed if the judge declines. That same discretion shapes what an employer can safely tell third parties about the covenant: a notice to a prospective employer built on a restraint a court later narrows or refuses to enforce can expose the employer to a tortious-interference claim, so a disclosure keyed to the covenant as it would actually be enforced carries less risk than one keyed to its full drafted breadth [^mcl-774a-court-may-limit].
 
 ## Are Michigan business-to-business or sale-of-business non-competes judged differently? {#business-to-business}
 
@@ -92,6 +102,11 @@ The rule of reason flows from the Michigan Antitrust Reform Act, which makes con
 >
 > Identify which framework applies before assessing a covenant. *Innovation Ventures* routes true commercial covenants, including transaction-ancillary covenants, to the antitrust rule of reason, so applying the MCL 445.774a employee duration-geography test to a genuine business-to-business covenant analyzes it under the wrong standard [^innovation-rule-of-reason][^mcl-772-restraint].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> An employee restrictive covenant and a covenant ancillary to the sale of a business or between businesses run on different tracks in Michigan: a genuine commercial covenant is judged under the antitrust rule of reason, not the MCL 445.774a duration-geography-and-line-of-business test [^innovation-rule-of-reason][^mcl-772-restraint]. A covenant that mislabels a business-to-business restraint as an employee covenant, or the reverse, is analyzed under the wrong standard, and a restraint sized to satisfy one framework can fail the other; an employee agreement kept clear of transaction-ancillary restraints leaves each covenant measured against the standard it was drafted for.
+
 ## What special non-compete issues affect Michigan physicians? {#physician-rules}
 
 **Short answer.** Michigan does not categorically ban physician non-competes — they are analyzed under the ordinary MCL 445.774a reasonableness test, and *Borgiel* itself upheld a physician covenant [^borgiel-physician-upheld]. The distinctive problem is evidentiary, not categorical.
@@ -105,6 +120,11 @@ In *Isidore Steiner, DPM, PC v. Bonanni*, the Court of Appeals held that Michiga
 >
 > A physician non-solicitation or non-compete can be valid yet hard to enforce in practice. *Steiner* shows that patient-privilege limits on discovery can deprive a medical employer of the nonparty-patient evidence it needs to prove a breach, so build the enforcement case on non-privileged proof [^steiner-patient-privilege].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> Michigan applies no categorical physician rule: a physician covenant runs through the ordinary MCL 445.774a reasonable-competitive-business-interest test and can satisfy it [^borgiel-physician-upheld]. The distinctive Michigan problem is proof rather than validity — the physician-patient privilege can block discovery of nonparty patient information, so a covenant that reads well can still be hard to enforce where the employer's diversion case depends on patient records it cannot reach [^steiner-patient-privilege]. A radius and term sized to the interest protected, and an enforcement theory resting on non-privileged evidence of diversion, are what carry a physician restraint in practice rather than only on paper.
+
 ## How does Michigan's trade-secret act interact with non-competes? {#trade-secret-overlay}
 
 **Short answer.** The Michigan Uniform Trade Secrets Act runs alongside a non-compete: it displaces conflicting common-law tort remedies for misappropriation but preserves contract remedies, so a confidentiality and trade-secret strategy can backstop or substitute for a covenant [^mutsa-displacement].
@@ -112,6 +132,11 @@ In *Isidore Steiner, DPM, PC v. Bonanni*, the Court of Appeals held that Michiga
 MUTSA has its own timing and fee rules that a non-compete does not. A misappropriation claim must be brought within three years of discovery [^mutsa-limitations], and a court may award attorney fees for bad-faith claims or willful and malicious misappropriation — relief the non-compete statute itself does not provide [^mutsa-fees].
 
 "Except as provided in subsection (2), this act displaces conflicting tort, restitutionary, and other law of this state providing civil remedies for misappropriation of a trade secret."[^mutsa-displacement]
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> Confidentiality and trade-secret protection run independent of any covenant and outlast it: a trade-secret obligation holds for as long as the information keeps the secrecy that makes it a trade secret, and the Michigan Uniform Trade Secrets Act supplies remedies for misappropriation whether or not a non-compete survives [^mutsa-displacement]. Return, deletion, and certification mechanics matter here because they are part of the reasonable secrecy efforts a trade secret requires, so a program that fails to reclaim confidential material can forfeit trade-secret status altogether. Fee exposure runs both ways: the non-compete statute carries no fee award, while the trade-secret act lets a court award fees to the prevailing party for a bad-faith misappropriation claim or willful and malicious misappropriation, so an aggressive or unfounded misappropriation theory carries its own downside [^mutsa-fees].
 
 ## Will Michigan enforce a non-compete's choice-of-law or forum-selection clause? {#choice-of-law-forum}
 
@@ -132,6 +157,11 @@ The relevant backdrop cuts against assuming an automatic extension. MCL 445.774a
 >
 > Open question: Michigan law is unsettled on whether an extension-on-breach clause is enforceable after the original restricted period expires. Draft any tolling clause as a separate, reasonable restraint tied to the duration of the breach and a legitimate interest, and do not assume a Michigan court will extend an expired covenant automatically [^mcl-774a-tolling-backdrop][^coates-tolling-backdrop].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> Whether a Michigan court will extend a covenant past its stated end date for a period of breach is unsettled, and the statutory text cuts against assuming it will: MCL 445.774a authorizes a court to limit an unreasonable covenant, not to expand one, and any extension is itself a restraint that must clear the same reasonableness test [^mcl-774a-tolling-backdrop][^coates-tolling-backdrop]. An extension-on-breach clause written as an open-ended toll that lengthens as litigation drags on invites the very unreasonableness the statute targets, while one bounded to the duration of the breach and tied to a legitimate interest stays inside the framework a court would apply as a question of law when the facts are undisputed.
+
 ## What Michigan non-compete reform should employers watch? {#pending-reform}
 
 **Short answer.** None is currently law. The bill to watch is House Bill 4040 (2025), which would amend MCL 445.774a to bar nearly all worker non-competes; as of June 3, 2026 it remains in committee and has not been enacted [^hb-4040-worker-ban][^hb-4040-status].
@@ -147,9 +177,22 @@ A separate 2025 development affects onboarding paperwork that bundles covenants.
 >
 > Treat HB 4040 as a monitoring item, not as present Michigan law. Recheck the official Michigan Legislature bill status before changing forms or telling workers that Michigan has enacted a general non-compete ban [^hb-4040-worker-ban].
 
+## How does Michigan treat employee (anti-raiding) non-solicits? {#employee-non-solicitation}
+
+**Short answer.** Michigan analyzes a nonsolicitation covenant — including one barring solicitation or hiring of a former employer's employees — under common-law reasonableness, not the MCL 445.774a non-compete statute.
+
+In *Total Quality, Inc. v. Fewless*, the nonsolicitation agreement barred a departing employee from soliciting the employer's customers and business relationships and from inducing or hiring its employees. The Court of Appeals held that such a nonsolicitation agreement is not governed by MCL 445.774a — the statute the rest of this guide applies to employee non-competes — because the defendants pointed to no authority subjecting a nonsolicitation agreement to it, leaving the covenant to common-law reasonableness [^fewless-not-statute].
+
+"The provision at issue in this case is a nonsolicitation agreement, and defendants have not cited authority in support of the contention that nonsolicitation agreements are subject to MCL 445.774a(1)."[^fewless-not-statute]
+
+> [!NOTE]
+> **Practice note.**
+>
+> Because the statute does not govern, a Michigan employee non-solicit stands or falls on common-law reasonableness — a reasonable competitive business interest plus reasonable duration and scope. Aim it at a real competitive business interest, not at barring ordinary competition [^fewless-not-statute].
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Michigan. This article synthesizes Michigan primary law and is not legal advice from a Michigan-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Michigan. This article synthesizes Michigan primary law and is not legal advice from a Michigan-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Michigan*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/michigan.
 
 [^mcl-774a-employer-may-obtain]: **MCL § 445.774a** — "An employer may obtain from an employee an agreement or covenant which protects an employer's reasonable competitive business interests and expressly prohibits an employee from engaging in employment or a line of business after termination of employment if the agreement or covenant is reasonable as to its duration, geographical area, and the type of employment or line of business." *MCL § 445.774a(1).* <https://legislature.mi.gov/Laws/MCL?objectName=mcl-445-774a>
 
@@ -204,3 +247,5 @@ A separate 2025 development affects onboarding paperwork that bundles covenants.
 [^hb-4040-status]: **Michigan House Bill 4040 (2025) — bill status** — "referred to Committee on Economic Competitiveness" *2025 Mich. H.B. 4040, Bill Status (Mich. Legislature).* <https://www.legislature.mi.gov/Bills/Bill?ObjectName=2025-HB-4040>
 
 [^rayford-adhesion-reasonableness]: **Rayford v. American House Roseville I, LLC** — "A shortened limitations provision contained in such an agreement must be examined for reasonableness." *Rayford v. American House Roseville I, LLC, ___ Mich. ___ (2025) (Docket No. 163989).* <https://www.courtlistener.com/opinion/10645648/timika-rayford-v-american-house-roseville-i-llc/#:~:text=A%20shortened%20limitations%20provision%20contained,must%20be%20examined%20for%20reasonableness.>
+
+[^fewless-not-statute]: **Total Quality, Inc. v. Fewless** — "The provision at issue in this case is a nonsolicitation agreement, and defendants have not cited authority in support of the contention that nonsolicitation agreements are subject to MCL 445.774a(1)." *Total Quality, Inc. v. Fewless, 332 Mich. App. 681, 958 N.W.2d 294 (2020).* <https://www.courtlistener.com/opinion/4767006/total-quality-inc-v-terry-l-fewless/#:~:text=The%20provision%20at%20issue%20in,are%20subject%20to%20MCL%20445.774a(1).>

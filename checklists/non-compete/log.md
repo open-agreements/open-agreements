@@ -1,5 +1,15 @@
 # Non Compete Update Log
 
+## 2026-07-06
+* **Update**: feat(templates): graduate the restrictive-covenant master to a public jurisdiction-selector page (#1625) (6b9fc15)
+* **Update**: Rename review checklists to reviewer checklists (#1631) (d88b1a2)
+
+## 2026-07-05
+* **Update**: feat(#1552): directionality sweep — trade-secret duration is a ceiling, not a floor (#1585) (bbde403)
+
+## 2026-06-30
+* **Update**: refactor(conformance): drop `scrutiny` from the requirement record (#1006) (#1320) (f743920)
+
 ## 2026-06-28
 * **Update**: feat(checklist): general Restatement §188-via-case authority for base reasonableness items (#582) (#1130) (327c25b)
 

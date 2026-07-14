@@ -8,7 +8,7 @@ citation: 'Williams v. Hobbs, 9 Ohio App. 3d 331, 460 N.E.2d 287 (10th Dist. 198
 resource: 'https://www.courtlistener.com/opinion/4007467/williams-v-hobbs/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/ohio'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/ohio'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `industry-specific-limits`, `physician-specific-notices-and-carve-outs`
 - source_cards: `oh-williams-public-injury`, `williams-public-injury`
-- cited_by: [Non-Compete Agreement Review Checklist — Ohio](../checklists/non-compete/us/ohio.md), [Non-Competes in Ohio](../non-compete/us/ohio.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Ohio](../checklists/non-compete/us/ohio.md), [Non-Competes in Ohio](../non-compete/us/ohio.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4007467/williams-v-hobbs/#:~:text=The%20covenant%20imposes%20an%20undue,is%20injurious%20to%20the%20public.>

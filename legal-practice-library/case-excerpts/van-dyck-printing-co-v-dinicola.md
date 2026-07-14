@@ -8,7 +8,7 @@ citation: 'Van Dyck Printing Co. v. DiNicola, 43 Conn. Supp. 191 (1993).'
 resource: 'https://www.courtlistener.com/opinion/3334840/van-dyck-printing-co-v-dinicola/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/connecticut'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/connecticut'
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `van-dyck-injunction-moot-after-period`, `van-dyck-moot`
-- cited_by: [Non-Compete Agreement Review Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3334840/van-dyck-printing-co-v-dinicola/#:~:text=Because%20the%20plaintiffs%20claim%20concerning,injunctive%20relief%20has%20become%20moot.>

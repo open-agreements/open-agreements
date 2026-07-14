@@ -65,7 +65,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > It may restrain the employee from being involved with a competitive business that could use the confidential information.
 
-- supports: `legitimate-interest`
-- source_cards: `aeci-confidential-restraint`
+- supports: `employee-non-solicitation`, `legitimate-interest`
+- source_cards: `aeci-confidential-restraint`, `qld-empns-aeci-interest`
 - cited_by: [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md)
 - link_to_source: <https://archive.sclqld.org.au/qjudgment/2020/QSC20-207.pdf>

@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/10118817/samuelian-v-life-generations-healthcare-llc/
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/california'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/california'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `california-statutory-gates`, `sale-of-business`
 - source_cards: `ca-samuelian-partial`, `samuelian-reasonableness`
-- cited_by: [Non-Compete Agreement Review Checklist — California](../checklists/non-compete/us/california.md), [Non-Competes in California](../non-compete/us/california.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — California](../checklists/non-compete/us/california.md), [Non-Competes in California](../non-compete/us/california.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10118817/samuelian-v-life-generations-healthcare-llc/#:~:text=We%20agree%20the%20reasonableness%20standard%20applies%20to%20partial%20sales.>

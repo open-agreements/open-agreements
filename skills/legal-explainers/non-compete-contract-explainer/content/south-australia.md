@@ -2,7 +2,7 @@
 jurisdiction: "South Australia, Australia"
 slug: south-australia
 countryCode: AU
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-10"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/au/south-australia
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/south-australia · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/south-australia · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Compete Enforceability in South Australia[^about]
 
@@ -165,7 +165,7 @@ Because this is a future legislative matter, employers should treat the timeline
 >
 > Do not draft to a federal ban that does not yet exist. As of June 2026 no Commonwealth statute bans employee non-competes, so enforceability in South Australia still turns on the common-law reasonableness test and the blue-pencil-only severance rule [^dmytrenko-still-governs]. Track the proposal through to enacted legislation before changing practice, because its threshold, scope, and commencement remain proposals subject to change.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-10. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in South Australia, Australia. This article summarizes publicly available South Australia, Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-10. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in South Australia, Australia. This article summarizes publicly available South Australia, Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Enforceability in South Australia*, OpenAgreements (last updated June 10, 2026), https://openagreements.org/practice-guides/non-compete/au/south-australia.
 
 [^dmytrenko-presumed-void]: **International Cleaning Services (Australia) Pty Ltd v Dmytrenko** — "At common law a restraint of trade is contrary to public policy and void unless it can be shown that the restraint is, in the particular circumstances of the case, reasonable." *International Cleaning Services (Australia) Pty Ltd v Dmytrenko [2020] SASC 222 (Stanley J).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2020/222.html>
 

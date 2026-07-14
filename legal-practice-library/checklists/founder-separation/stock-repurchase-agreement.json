@@ -1,0 +1,243 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "related-form",
+      "href": "https://openagreements.org/templates/openagreements-founder-stock-repurchase-agreement",
+      "type": "text/html",
+      "title": "Founder Stock Repurchase and Cancellation Agreement"
+    }
+  ],
+  "data": {
+    "topic": "founder-separation",
+    "slug": "stock-repurchase-agreement",
+    "frontmatter": {
+      "title": "Founder Stock Repurchase Agreement Reviewer Checklist",
+      "description": "A clause-by-clause reviewer checklist for a Delaware founder stock repurchase and cancellation agreement — party and RSPA identification, the timeliness recital, price and consideration, the DGCL § 160 capital-impairment limit, transfer and cancellation mechanics, and the conditional mutual-release rider with its party-scoping, OWBPA, and § 1542 traps.",
+      "eyebrow": "Reviewer Checklist",
+      "coverage": "Delaware founder stock repurchase and cancellation agreement",
+      "lastReviewed": "2026-07-02",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 8,
+    "sections": [
+      {
+        "sectionId": "parties-and-governing-agreement",
+        "label": "Parties and governing agreement"
+      },
+      {
+        "sectionId": "repurchase-mechanics",
+        "label": "Repurchase mechanics"
+      },
+      {
+        "sectionId": "release-rider-and-continuing-obligations",
+        "label": "Release rider and continuing obligations"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties-and-rspa",
+        "specRequirementId": "REQ-founder-separation.stock-repurchase-agreement.identify-parties-and-rspa",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Company, founder, shares, and governing RSPA identified",
+        "sectionId": "parties-and-governing-agreement",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement#identify-parties-and-rspa",
+        "requirementGuidance": "Confirm the agreement identifies the company, the founder, the shares being repurchased, and the governing RSPA or other stock restriction agreement under which the repurchase right arises. The DGCL supplies the corporation's power to acquire its own shares, but the exercise window, price formula, and vested/unvested treatment live in the RSPA — the agreement references those terms rather than restating them, so an agreement that never names the governing instrument leaves the repurchase right's source unresolvable.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ra1-dgcl-160a",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 160(a)",
+            "citation": "8 Del. C. § 160(a).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc05",
+            "proposition": "The DGCL supplies the corporation's power to repurchase its own shares; the window and price are private ordering in the founder's RSPA.",
+            "verbatimQuote": "Every corporation may purchase, redeem, receive, take or otherwise acquire, own and hold, sell, lend, exchange, transfer or otherwise dispose of, pledge, use and otherwise deal in and with its own shares",
+            "anchor": "https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement#src-ra1-dgcl-160a"
+          }
+        ]
+      },
+      {
+        "requirementId": "recite-timely-election",
+        "specRequirementId": "REQ-founder-separation.stock-repurchase-agreement.recite-timely-election",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination date and timely window exercise recited",
+        "sectionId": "parties-and-governing-agreement",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement#recite-timely-election",
+        "requirementGuidance": "Check that the agreement recites the founder's service-termination date and that the company exercised its repurchase right within the RSPA's exercise window. The window is contractual, not statutory — commonly 60, 90, or 120 days from termination — and missing it can forfeit the repurchase right entirely, so the recital is the document's own evidence that the closing it effects was timely. Where the separation is a negotiated buyback rather than a window exercise, the recital should say so instead.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "state-price-and-consideration",
+        "specRequirementId": "REQ-founder-separation.stock-repurchase-agreement.state-price-and-consideration",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Per-share and aggregate price and consideration stated",
+        "sectionId": "repurchase-mechanics",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement#state-price-and-consideration",
+        "requirementGuidance": "Confirm the agreement states the per-share and aggregate repurchase price and the form of consideration. Even a nominal original-price repurchase of unvested shares involves real consideration that must actually move — the payment is what closes the transfer and what the proof-of-payment record in the minute book later evidences — and a stated price the company never pays leaves the founder's title argument alive.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "comply-with-surplus-limit",
+        "specRequirementId": "REQ-founder-separation.stock-repurchase-agreement.comply-with-surplus-limit",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Consistent with the § 160 capital-impairment limit",
+        "sectionId": "repurchase-mechanics",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement#comply-with-surplus-limit",
+        "requirementGuidance": "Confirm the agreement is consistent with the capital-impairment limit: a corporation may not purchase its own shares for cash or other property when its capital is impaired or when the purchase would cause an impairment. For unvested shares bought back at their nominal original price this is rarely a live constraint; for a cash buyback of vested shares it can be, and directors are jointly and severally liable for a wilful or negligent violation for up to six years — which is why the template carries an express no-impairment representation for counsel to verify rather than assume. Purchase or redeem its own shares of capital stock for cash or other property when the capital of the corporation is impaired or when such purchase or redemption would cause any impairment of the capital of the corporation",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ra2-dgcl-160a1",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 160(a)(1)",
+            "citation": "8 Del. C. § 160(a)(1).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc05",
+            "proposition": "A corporation may not repurchase its own shares for cash or property when its capital is impaired or when the repurchase would cause impairment — the live constraint on a cash buyback of vested shares.",
+            "verbatimQuote": "Purchase or redeem its own shares of capital stock for cash or other property when the capital of the corporation is impaired or when such purchase or redemption would cause any impairment of the capital of the corporation",
+            "anchor": "https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement#src-ra2-dgcl-160a1"
+          },
+          {
+            "sourceId": "ra2-dgcl-174",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 174(a)",
+            "citation": "8 Del. C. § 174(a).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc05",
+            "proposition": "Directors are jointly and severally liable for up to six years for a wilful or negligent unlawful stock repurchase — the personal-liability stakes behind the § 160 surplus test.",
+            "verbatimQuote": "the directors under whose administration the same may happen shall be jointly and severally liable, at any time within 6 years after paying such unlawful dividend or after such unlawful stock purchase or redemption, to the corporation",
+            "anchor": "https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement#src-ra2-dgcl-174"
+          }
+        ]
+      },
+      {
+        "requirementId": "transfer-and-cancellation-mechanics",
+        "specRequirementId": "REQ-founder-separation.stock-repurchase-agreement.transfer-and-cancellation-mechanics",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Transfer, cancellation, and records mechanics provided",
+        "sectionId": "repurchase-mechanics",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement#transfer-and-cancellation-mechanics",
+        "requirementGuidance": "Confirm the agreement provides the transfer and records mechanics of the closing: the founder's transfer of title free and clear, cancellation or possession of the certificates (or the book-entry adjustment for uncertificated shares), and the update of the stock ledger and capitalization records. Shares are personal property transferable on the corporation's books, and because repurchased shares are not automatically retired, the records direction must track the board's § 243 disposition election — retirement or treasury — rather than make that election itself. The shares of stock in every corporation shall be deemed personal property and transferable as provided in Article 8 of subtitle I of Title 6.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ra2-dgcl-159",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 159",
+            "citation": "8 Del. C. § 159.",
+            "url": "https://delcode.delaware.gov/title8/c001/sc05",
+            "proposition": "Shares are personal property transferable per UCC Article 8 — the basis for the transfer and ledger-update mechanics.",
+            "verbatimQuote": "The shares of stock in every corporation shall be deemed personal property and transferable as provided in Article 8 of subtitle I of Title 6.",
+            "anchor": "https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement#src-ra2-dgcl-159"
+          },
+          {
+            "sourceId": "ra2-dgcl-160b",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 160(b)",
+            "citation": "8 Del. C. § 160(b).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc05",
+            "proposition": "Shares repurchased out of surplus are not automatically retired — the records direction must track the board's election rather than make it.",
+            "verbatimQuote": "any of its shares theretofore purchased or redeemed out of surplus and which have not been, or are not required by the certificate of incorporation to be, retired",
+            "anchor": "https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement#src-ra2-dgcl-160b"
+          }
+        ]
+      },
+      {
+        "requirementId": "include-release-only-when-negotiated",
+        "specRequirementId": "REQ-founder-separation.stock-repurchase-agreement.include-release-only-when-negotiated",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Release included only for a negotiated buyback, with carve-outs",
+        "sectionId": "release-rider-and-continuing-obligations",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement#include-release-only-when-negotiated",
+        "requirementGuidance": "Where the agreement includes a mutual release, check that the separation is actually a negotiated buyback rather than a bare exercise of an existing repurchase right, and that the release carries standard carve-outs for vested rights, indemnification and advancement, D&O coverage, and rights as a continuing equity holder. The release is contractual private ordering riding on the repurchase — the DGCL supplies only the underlying power to acquire the shares — and a broad release shifts the matter from records hygiene toward negotiated settlement, so it is out of place in a routine unvested-share repurchase under a strong RSPA.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ra3-dgcl-160a",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 160(a)",
+            "citation": "8 Del. C. § 160(a).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc05",
+            "proposition": "The DGCL supplies the corporation's power to acquire its own shares; the release riding on a negotiated buyback is contractual private ordering, not a statutory requirement.",
+            "verbatimQuote": "Every corporation may purchase, redeem, receive, take or otherwise acquire, own and hold, sell, lend, exchange, transfer or otherwise dispose of, pledge, use and otherwise deal in and with its own shares",
+            "anchor": "https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement#src-ra3-dgcl-160a"
+          }
+        ]
+      },
+      {
+        "requirementId": "scope-release-to-parties",
+        "specRequirementId": "REQ-founder-separation.stock-repurchase-agreement.scope-release-to-parties",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Release scoped to claims the parties actually hold",
+        "sectionId": "release-rider-and-continuing-obligations",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement#scope-release-to-parties",
+        "requirementGuidance": "Where a release is included, confirm each releasor releases only claims it holds in its own right — the releasing party (with its successors and assigns) on the giving side, and a defined set of released parties on the receiving side. A release drafted to have non-parties give up their claims purports to do something the signatories cannot deliver. Two statute-specific traps need counsel's attention before signing: a founder age 40 or over releasing federal age-discrimination claims needs the OWBPA's knowing-and-voluntary mechanics (including the 21-day review and 7-day revocation periods), and a release governed by or enforced under California law does not reach unknown claims without an express Civil Code § 1542 waiver.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "preserve-continuing-obligations",
+        "specRequirementId": "REQ-founder-separation.stock-repurchase-agreement.preserve-continuing-obligations",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Surviving CIIAA/confidentiality obligations not released",
+        "sectionId": "release-rider-and-continuing-obligations",
+        "itemNumber": "3.3",
+        "anchor": "https://openagreements.org/checklists/founder-separation/stock-repurchase-agreement#preserve-continuing-obligations",
+        "requirementGuidance": "Check that the founder's surviving confidentiality and invention-assignment obligations (CIIAA/PIIA) are not discharged by any release the agreement contains. Those covenants are private ordering that ordinarily survives termination on their own terms, and the pack's companion IP-and-confidentiality confirmation documents that survival — but a mutual release whose scope is drafted loosely can sweep them in, so confirm the release scope or its carve-outs leaves the continuing obligations intact.",
+        "variants": [],
+        "sources": []
+      }
+    ]
+  }
+}

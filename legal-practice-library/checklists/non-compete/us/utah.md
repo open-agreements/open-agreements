@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Utah
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Utah
 description: >-
   A clause-by-clause reviewer checklist for Utah employee restrictive covenant
   agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Utah[^about]
+# Non-Compete Agreement Reviewer Checklist — Utah[^about]
 
 A clause-by-clause reviewer checklist for Utah employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Post-Employment Restrictions Act's one-year cap, employer fee-shifting, and the 2026 healthcare and veterinarian bans.
 
@@ -63,9 +63,11 @@ Review every item below the way a Utah court would: the Post-Employment Restrict
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should last as long as secrecy does — that is how federal law defines the right, and Utah's own trade-secrets act works the same way. In a state that caps the non-compete at a single year, the perpetual trade-secret obligation is the long-tail protection the employer actually keeps; an expiry date on it gives away the one covenant the legislature left untouched. [^ut-dtsa-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection federal law and Utah's own trade-secrets act give, because both key the right to continued secrecy; in a state that caps the non-compete at a single year, that status-bounded obligation is the long-tail protection the legislature left untouched. The status-bounded form is the ceiling the law will back, not a required one — a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^ut-dtsa-definition] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term, separate from the perpetual trade-secret track. Utah exempts confidentiality agreements from the one-year cap, but they still answer to common-law reasonableness — and a perpetual lid on non-secret information is the sort of overreach that invites a court to read the clause as a disguised restraint on working. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term, separate from the status-bounded trade-secret track. Utah exempts confidentiality agreements from the one-year cap, but they still answer to common-law reasonableness — and a perpetual lid on non-secret information is the sort of overreach that invites a court to read the clause as a disguised restraint on working. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -155,7 +157,7 @@ The five items below exist only on this Utah page: they implement the common-law
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Utah (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Utah (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Utah*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/utah.
 
 [^ut-hc-ban-cover]: **Utah Code § 34-51-201** — "On or after May 6, 2026, a person and a healthcare worker may not enter into a healthcare non-compete agreement." *Utah Code Ann. § 34-51-201(1)(b).* <https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html>
 

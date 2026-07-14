@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/1305744/hartman-v-wh-odell-and-associates-inc/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/north-carolina'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/north-carolina'
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `duration-limits`, `north-carolina-statutory-gates`
 - source_cards: `nc-hartman-customer-territory`, `nc-hartman-territory`, `q3-hartman-territory`
-- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1305744/hartman-v-wh-odell-and-associates-inc/#:~:text=A%20restriction%20as%20to%20territory,employer%20in%20maintaining%20%5Bits%5D%20customers.>
 
 ### hartman-v-w-h-odell-associates-inc-the-party-who-seeks-the-enforcement-8e7b878a {#hartman-v-w-h-odell-associates-inc-the-party-who-seeks-the-enforcement-8e7b878a}
@@ -50,7 +50,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `duration-limits`, `remedies`
 - source_cards: `nc-hartman-burden`, `q3-hartman-burden`
-- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1305744/hartman-v-wh-odell-and-associates-inc/#:~:text=The%20party%20who%20seeks%20the,that%20the%20covenant%20is%20reasonable.>
 
 ### hartman-v-w-h-odell-associates-inc-the-reasonableness-of-a-noncompetition-c8598031 {#hartman-v-w-h-odell-associates-inc-the-reasonableness-of-a-noncompetition-c8598031}

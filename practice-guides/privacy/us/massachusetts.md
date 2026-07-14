@@ -104,7 +104,7 @@ One nuance worth getting right: because § 6 routes the Attorney General to c. 9
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Massachusetts. This article synthesizes Massachusetts primary law and is not legal advice from a Massachusetts-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Massachusetts. This article synthesizes Massachusetts primary law and is not legal advice from a Massachusetts-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Massachusetts Consumer Privacy Law*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/practice-guides/privacy/us/massachusetts.
 
 [^q1-93h-breach-def]: **Mass. Gen. Laws ch. 93H, § 1** — "''Breach of security'', the unauthorized acquisition or unauthorized use of unencrypted data or, encrypted electronic data and the confidential process or key that is capable of compromising the security, confidentiality, or integrity of personal information, maintained by a person or agency that creates a substantial risk of identity theft or fraud against a resident of the commonwealth." *Mass. Gen. Laws ch. 93H, § 1(a).* <https://malegislature.gov/Laws/GeneralLaws/Chapter93H/Section1>
 

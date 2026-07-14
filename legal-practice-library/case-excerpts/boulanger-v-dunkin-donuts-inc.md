@@ -6,9 +6,9 @@ description: >-
   document(s).
 citation: 'Boulanger v. Dunkin'' Donuts Inc., 442 Mass. 635 (2004).'
 resource: 'https://www.courtlistener.com/opinion/6579005/boulanger-v-dunkin-donuts-inc/'
-timestamp: '2026-06-11'
+timestamp: '2026-07-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/massachusetts'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/massachusetts'
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-non-compete-enforceability`, `massachusetts-statutory-gates`
 - source_cards: `boulanger-reasonable-restraint`, `boulanger-reasonableness`, `boulanger-time-and-space`
-- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/us/massachusetts.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Massachusetts](../checklists/non-compete/us/massachusetts.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6579005/boulanger-v-dunkin-donuts-inc/#:~:text=A%20covenant%20not%20to%20compete%20is,consonant%20with%20the%20public%20interest.>
 
 ### boulanger-v-dunkin-donuts-inc-legitimate-business-interests-include-39aaa7de {#boulanger-v-dunkin-donuts-inc-legitimate-business-interests-include-39aaa7de}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `legitimate-interests`, `massachusetts-statutory-gates`
 - source_cards: `boulanger-codified-interests`, `boulanger-interest-list`, `boulanger-interests`
-- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/us/massachusetts.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Massachusetts](../checklists/non-compete/us/massachusetts.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6579005/boulanger-v-dunkin-donuts-inc/#:~:text=Legitimate%20business%20interests%20include%20protection,confidential%20information%2C%20and%20good%20will.>

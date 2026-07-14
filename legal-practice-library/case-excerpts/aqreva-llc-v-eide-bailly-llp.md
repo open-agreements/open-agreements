@@ -6,9 +6,9 @@ description: >-
   in 2 document(s).
 citation: 'Aqreva, LLC v. Eide Bailly, LLP, 2020 S.D. 59, ¶ 32, 950 N.W.2d 774.'
 resource: 'https://www.courtlistener.com/opinion/9507869/aqreva-llc-v-eide-bailly-llp/'
-timestamp: '2026-06-26'
+timestamp: '2026-07-01'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/south-dakota'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/south-dakota'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `independent-contractors`, `south-dakota-statutory-gates`
 - source_cards: `aqreva-employee-exception-limited`, `sd-aqreva-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9507869/aqreva-llc-v-eide-bailly-llp/#:~:text=Per%20the%20plain%20language%20of,to%20compete%20with%20his%20employer.%E2%80%9D>

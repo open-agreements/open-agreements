@@ -1,0 +1,519 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/invention-assignment/us",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/invention-assignment/us.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/invention-assignment/us",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/invention-assignment/us/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/invention-assignment/us/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "related-form",
+      "href": "https://openagreements.org/templates/openagreements-confidentiality-invention-assignment-agreement",
+      "type": "text/html",
+      "title": "Confidentiality & Invention Assignment Agreement (CIIAA)"
+    }
+  ],
+  "data": {
+    "topic": "invention-assignment",
+    "slug": "us",
+    "frontmatter": {
+      "title": "Confidentiality and Invention Assignment Agreement Reviewer Checklist",
+      "description": "A document-type reviewer checklist for a confidentiality and invention assignment agreement, covering present assignment mechanics, lawful carve-outs and notices, confidentiality scope, post-employment cooperation, return obligations, monitoring disclosures, and technology controls.",
+      "eyebrow": "Reviewer Checklist",
+      "coverage": "U.S. confidentiality and invention assignment agreement",
+      "lastReviewed": "2026-07-07",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 27,
+    "sections": [
+      {
+        "sectionId": "assignment-mechanics",
+        "label": "Assignment mechanics"
+      },
+      {
+        "sectionId": "carve-outs-and-notices",
+        "label": "Carve-outs and notices"
+      },
+      {
+        "sectionId": "confidentiality",
+        "label": "Confidentiality"
+      },
+      {
+        "sectionId": "post-employment-obligations",
+        "label": "Post-employment obligations"
+      },
+      {
+        "sectionId": "return-monitoring-and-conduct",
+        "label": "Return, monitoring, and conduct"
+      },
+      {
+        "sectionId": "technology-and-compliance-controls",
+        "label": "Technology and compliance controls"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "use-present-assignment-language",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.use-present-assignment-language",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Present assignment language used",
+        "sectionId": "assignment-mechanics",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#use-present-assignment-language",
+        "requirementGuidance": "Confirm the assignment clause effects a present transfer of covered inventions, not only a future promise. The usual formulation pairs a present assignment with an agreement to assign later-arising inventions, so the company has an immediate ownership hook while still covering inventions that do not yet exist at signing.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "limit-assignment-to-lawful-scope",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.limit-assignment-to-lawful-scope",
+        "requirementLevel": "MUST NOT",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment does not reach employee-owned inventions",
+        "sectionId": "assignment-mechanics",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#limit-assignment-to-lawful-scope",
+        "requirementGuidance": "Confirm the agreement does not purport to assign inventions that applicable law leaves with the employee. The assignment clause, state-specific notice, and survival language should all point the same way: company inventions transfer, but inventions protected by an own-time carve-out or other state-law limit do not.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "stat-140-carveout",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "RCW 49.44.140",
+            "citation": "RCW 49.44.140(1).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.44.140",
+            "proposition": "RCW 49.44.140(1) makes an assignment clause inapplicable to an invention the employee developed entirely on their own time without the employer's equipment, supplies, facilities, or trade secret information, unless the invention relates directly to the employer's business or to its actual or demonstrably anticipated research or development, or results from the employee's work.",
+            "verbatimQuote": "A provision in an employment agreement which provides that an employee shall assign or offer to assign any of the employee's rights in an invention to the employer does not apply to an invention for which no equipment, supplies, facilities, or trade secret information of the employer was used and which was developed entirely on the employee's own time, unless (a) the invention relates (i) directly to the business of the employer, or (ii) to the employer's actual or demonstrably anticipated research or development, or (b) the invention results from any work performed by the employee for the employer.",
+            "anchor": "https://openagreements.org/checklists/invention-assignment/us#src-stat-140-carveout"
+          },
+          {
+            "sourceId": "stat-140-void",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "RCW 49.44.140",
+            "citation": "RCW 49.44.140(1).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.44.140",
+            "proposition": "RCW 49.44.140(1) declares that any provision purporting to apply to an own-time, own-resource invention outside the statute's exceptions is to that extent against the public policy of the state and void and unenforceable.",
+            "verbatimQuote": "Any provision which purports to apply to such an invention is to that extent against the public policy of this state and is to that extent void and unenforceable.",
+            "anchor": "https://openagreements.org/checklists/invention-assignment/us#src-stat-140-void"
+          }
+        ]
+      },
+      {
+        "requirementId": "future-assignment",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.future-assignment",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Future inventions assignment promise included where needed",
+        "sectionId": "assignment-mechanics",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#future-assignment",
+        "requirementGuidance": "If the draft covers inventions made after signing, check whether it includes a promise to assign or agree to assign those later-arising inventions. This is the forward-looking companion to present assignment language; without it, the agreement may be strong for existing inventions but thin for inventions conceived later during employment.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "work-for-hire",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.work-for-hire",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Work-made-for-hire language backed by assignment",
+        "sectionId": "assignment-mechanics",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#work-for-hire",
+        "requirementGuidance": "Where the agreement addresses copyrightable works, check that it treats qualifying employee works as works made for hire and also includes an assignment backstop. The backstop matters because not every work that a company wants to own will fit the statutory work-made-for-hire categories.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "continuations-in-part",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.continuations-in-part",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Patent-family continuation rights covered",
+        "sectionId": "assignment-mechanics",
+        "itemNumber": "1.5",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#continuations-in-part",
+        "requirementGuidance": "If patentable inventions are in scope, check whether the assignment reaches priority claims and later patent-family filings, including continuations, continuations-in-part, divisions, reissues, and foreign counterparts. This prevents the assignment from stopping at the initial disclosure while later filings around the same invention remain ambiguous.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "moral-rights-waiver",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.moral-rights-waiver",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Moral rights addressed only to the extent waivable",
+        "sectionId": "assignment-mechanics",
+        "itemNumber": "1.6",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#moral-rights-waiver",
+        "requirementGuidance": "If the draft includes moral-rights language, confirm it is framed as a waiver or assignment only to the extent applicable law permits. A blanket transfer of non-transferable rights overstates what the employee can give and should be narrowed to a lawful waiver mechanism.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "government-directed-assignment",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.government-directed-assignment",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Government-directed assignment included only when relevant",
+        "sectionId": "assignment-mechanics",
+        "itemNumber": "1.7",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#government-directed-assignment",
+        "requirementGuidance": "For federally funded, defense, or government-contract work, check whether the agreement lets the company direct assignment or licensing to the United States or another required third party. For ordinary private-sector employment, this may be unnecessary complexity.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "provide-own-time-carve-out-by-contract",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.provide-own-time-carve-out-by-contract",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Own-time invention carve-out included",
+        "sectionId": "carve-outs-and-notices",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#provide-own-time-carve-out-by-contract",
+        "requirementGuidance": "Confirm the agreement carves out inventions developed entirely on the employee's own time, without company resources or trade secrets, that do not relate to the company's business or research and do not result from company work. In statute states this is the legal floor; elsewhere it is the contract boundary that keeps the assignment from looking overbroad.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "stat-140-carveout-practice",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "RCW 49.44.140",
+            "citation": "RCW 49.44.140(1).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.44.140",
+            "proposition": "RCW 49.44.140(1) makes an assignment clause inapplicable to an invention the employee developed entirely on their own time without the employer's equipment, supplies, facilities, or trade secret information, unless the invention relates directly to the employer's business or to its actual or demonstrably anticipated research or development, or results from the employee's work.",
+            "verbatimQuote": "A provision in an employment agreement which provides that an employee shall assign or offer to assign any of the employee's rights in an invention to the employer does not apply to an invention for which no equipment, supplies, facilities, or trade secret information of the employer was used and which was developed entirely on the employee's own time, unless (a) the invention relates (i) directly to the business of the employer, or (ii) to the employer's actual or demonstrably anticipated research or development, or (b) the invention results from any work performed by the employee for the employer.",
+            "anchor": "https://openagreements.org/checklists/invention-assignment/us#src-stat-140-carveout-practice"
+          }
+        ]
+      },
+      {
+        "requirementId": "provide-prior-inventions-disclosure-mechanism",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.provide-prior-inventions-disclosure-mechanism",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Prior inventions disclosure mechanism provided",
+        "sectionId": "carve-outs-and-notices",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#provide-prior-inventions-disclosure-mechanism",
+        "requirementGuidance": "Check that the employee has a schedule or other mechanism to identify prior inventions excluded from the assignment, and that the agreement records whether the list is complete. The disclosure is the clean boundary between what the employee brought to the company and what the company later claims.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "give-statutory-carve-out-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.give-statutory-carve-out-notice",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Statutory carve-out notice delivered in writing",
+        "sectionId": "carve-outs-and-notices",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#give-statutory-carve-out-notice",
+        "requirementGuidance": "Confirm the agreement gives written notice of any statutory own-time invention carve-out in the signed agreement itself. Several states require written notice, and embedding the notice in the agreement avoids a separate proof problem over whether the employee received it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "stat-140-notice",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "RCW 49.44.140",
+            "citation": "RCW 49.44.140(3).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.44.140",
+            "proposition": "RCW 49.44.140(3) requires an employer whose agreement contains an assignment provision to give the employee, at the time the agreement is made, a written notification that the agreement does not apply to a qualifying own-time, own-resource invention.",
+            "verbatimQuote": "If an employment agreement entered into after September 1, 1979, contains a provision requiring the employee to assign any of the employee's rights in any invention to the employer, the employer must also, at the time the agreement is made, provide a written notification to the employee that the agreement does not apply to an invention for which no equipment, supplies, facility, or trade secret information of the employer was used and which was developed entirely on the employee's own time",
+            "anchor": "https://openagreements.org/checklists/invention-assignment/us#src-stat-140-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-inventions-for-carve-out-review",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.disclose-inventions-for-carve-out-review",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Review disclosure duty calibrated",
+        "sectionId": "carve-outs-and-notices",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#disclose-inventions-for-carve-out-review",
+        "requirementGuidance": "If the draft requires disclosure of inventions the employee believes are carved out, confirm the duty is limited to review and does not convert protected employee inventions into assigned company property. The disclosure mechanism should help classify inventions, not erase the carve-out.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "stat-150-disclose",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "RCW 49.44.150",
+            "citation": "RCW 49.44.150.",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.44.150",
+            "proposition": "RCW 49.44.150 requires the employee, even after meeting the burden of proving the RCW 49.44.140 carve-out conditions, to disclose all inventions being developed for the purpose of determining employer or employee rights.",
+            "verbatimQuote": "Even though the employee meets the burden of proving the conditions specified in RCW 49.44.140 , the employee shall, at the time of employment or thereafter, disclose all inventions being developed by the employee, for the purpose of determining employer or employee rights.",
+            "anchor": "https://openagreements.org/checklists/invention-assignment/us#src-stat-150-disclose"
+          }
+        ]
+      },
+      {
+        "requirementId": "license-back-for-employee-ip",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.license-back-for-employee-ip",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "License-back included for embedded employee IP",
+        "sectionId": "carve-outs-and-notices",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#license-back-for-employee-ip",
+        "requirementGuidance": "Where employee-owned or prior IP may be incorporated into company products, check whether the company receives a license to use that embedded IP. This is situational: it should solve an actual product-use dependency rather than swallow all employee property as a workaround around the carve-out.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "residuals-clause",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.residuals-clause",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "General skill and experience not treated as confidential information",
+        "sectionId": "confidentiality",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#residuals-clause",
+        "requirementGuidance": "If the agreement includes a residuals or general-knowledge carve-out, confirm it preserves the employee's ordinary skill, experience, and unaided memory while still protecting true confidential information and trade secrets. This keeps confidentiality from functioning as a disguised post-employment restraint.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "confidentiality-duration-tiered",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.confidentiality-duration-tiered",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality duration tiered by information type",
+        "sectionId": "confidentiality",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#confidentiality-duration-tiered",
+        "requirementGuidance": "Check whether the confidentiality term distinguishes trade secrets from ordinary confidential information. A tiered structure can keep trade secrets protected while giving non-trade-secret confidential information a more practical finite duration.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "trade-secret-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.trade-secret-confidentiality-duration",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret duration tied to trade-secret status",
+        "sectionId": "confidentiality",
+        "itemNumber": "3.3",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#trade-secret-confidentiality-duration",
+        "requirementGuidance": "Where trade secrets are covered, check whether the duty lasts only while the information remains a trade secret. That formulation tracks the legal reason for protection and avoids an untethered indefinite obligation for information that no longer qualifies.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "avoid-holdover-assignment-beyond-lawful-limits",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.avoid-holdover-assignment-beyond-lawful-limits",
+        "requirementLevel": "MUST NOT",
+        "sourceFootnotes": [],
+        "requirementLabel": "No unlawful post-employment holdover assignment",
+        "sectionId": "post-employment-obligations",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#avoid-holdover-assignment-beyond-lawful-limits",
+        "requirementGuidance": "Confirm the agreement does not require assignment of inventions conceived after employment beyond what the governing jurisdiction permits. The safest baseline is to limit assignment to inventions made during employment and avoid post-employment holdover language unless state law and business need both support it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "guth-holdover",
+            "authorityType": "case-law",
+            "tier": "primary-source-backed",
+            "title": "Guth v. Minnesota Mining & Mfg. Co.",
+            "citation": "Guth v. Minnesota Mining & Mfg. Co., 72 F.2d 385 (7th Cir. 1934).",
+            "url": "https://www.courtlistener.com/opinion/1549623/guth-v-minnesota-mining-mfg-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1549623/guth-v-minnesota-mining-mfg-co/#:~:text=those%20provisions%20of%20the%20contract,were%20contrary%20to%20public%20policy.",
+            "proposition": "Guth holds that invention-assignment provisions limitless in extent of time and in subject matter of invention are contrary to public policy.",
+            "verbatimQuote": "those provisions of the contract which were limitless in extent of time and in subject matter of invention were contrary to public policy.",
+            "date": "1934-07-30",
+            "anchor": "https://openagreements.org/checklists/invention-assignment/us#src-guth-holdover"
+          }
+        ]
+      },
+      {
+        "requirementId": "bound-post-termination-assistance",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.bound-post-termination-assistance",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Post-termination assistance reasonably bounded",
+        "sectionId": "post-employment-obligations",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#bound-post-termination-assistance",
+        "requirementGuidance": "Check that post-termination cooperation duties are limited to reasonable times, reasonable notice, and reimbursed out-of-pocket expenses. The obligation should read as ministerial help with filings and enforcement, not as an open-ended restraint on the former employee.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "include-further-assurances-and-attorney-in-fact",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.include-further-assurances-and-attorney-in-fact",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Further assurances and attorney-in-fact mechanics included",
+        "sectionId": "post-employment-obligations",
+        "itemNumber": "4.3",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#include-further-assurances-and-attorney-in-fact",
+        "requirementGuidance": "Confirm the agreement includes further-assurances language and, where appropriate, an attorney-in-fact appointment coupled with an interest. These mechanics let the company perfect or record title if a former employee later cannot or will not sign routine documents.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "maintain-records",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.maintain-records",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Invention records obligation included",
+        "sectionId": "post-employment-obligations",
+        "itemNumber": "4.4",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#maintain-records",
+        "requirementGuidance": "If the draft requires invention records or notebooks, check that it says those records are company property and must be maintained with enough detail to support disclosure, prosecution, or ownership review. The duty should support the invention process rather than create a vague paperwork breach.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "post-employment-assistance-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.post-employment-assistance-duration",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assistance duration has a defined endpoint",
+        "sectionId": "post-employment-obligations",
+        "itemNumber": "4.5",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#post-employment-assistance-duration",
+        "requirementGuidance": "Where the draft states a duration for post-employment IP assistance, confirm the endpoint is tied to the relevant IP or another defensible period. A defined duration helps keep the surviving duty narrow and administrative.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "trailing-disclosure-after-termination",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.trailing-disclosure-after-termination",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trailing disclosure stays within holdover limits",
+        "sectionId": "post-employment-obligations",
+        "itemNumber": "4.6",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#trailing-disclosure-after-termination",
+        "requirementGuidance": "If the agreement requires post-termination disclosure of later inventions or filings, confirm that window stays within the governing jurisdiction's holdover limits. Treat the trailing disclosure duty like a holdover clause: it needs a lawful scope, a clear duration, and a reason tied to company work.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "guth-holdover-disclosure",
+            "authorityType": "case-law",
+            "tier": "primary-source-backed",
+            "title": "Guth v. Minnesota Mining & Mfg. Co.",
+            "citation": "Guth v. Minnesota Mining & Mfg. Co., 72 F.2d 385 (7th Cir. 1934).",
+            "url": "https://www.courtlistener.com/opinion/1549623/guth-v-minnesota-mining-mfg-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1549623/guth-v-minnesota-mining-mfg-co/#:~:text=those%20provisions%20of%20the%20contract,were%20contrary%20to%20public%20policy.",
+            "proposition": "Guth holds that invention-assignment provisions limitless in extent of time and in subject matter of invention are contrary to public policy.",
+            "verbatimQuote": "those provisions of the contract which were limitless in extent of time and in subject matter of invention were contrary to public policy.",
+            "date": "1934-07-30",
+            "anchor": "https://openagreements.org/checklists/invention-assignment/us#src-guth-holdover-disclosure"
+          }
+        ]
+      },
+      {
+        "requirementId": "personal-system-deletion",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.personal-system-deletion",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Personal device and account deletion addressed",
+        "sectionId": "return-monitoring-and-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#personal-system-deletion",
+        "requirementGuidance": "If company information may sit on personal devices, accounts, or cloud services, check whether the return clause also requires deletion and reasonable verification. Physical return language alone does not cover modern bring-your-own-device storage.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "system-monitoring-no-privacy",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.system-monitoring-no-privacy",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "System monitoring notice included where used",
+        "sectionId": "return-monitoring-and-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#system-monitoring-no-privacy",
+        "requirementGuidance": "If the company monitors systems or devices, check whether the agreement gives a no-expectation-of-privacy and monitoring disclosure consistent with applicable notice laws. The clause should match the actual monitoring program rather than reserve a surveillance right the company does not operate.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "duty-of-loyalty-during-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.duty-of-loyalty-during-employment",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "During-employment loyalty covenant separated from post-employment restraints",
+        "sectionId": "return-monitoring-and-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#duty-of-loyalty-during-employment",
+        "requirementGuidance": "If the agreement restricts competing or conflicting work during employment, confirm the restriction ends with employment and does not blur into a post-employment non-compete. During-employment loyalty language belongs in a different risk category than a continuing restraint after termination.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "export-control",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.export-control",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Export-control handling addressed where technical data is involved",
+        "sectionId": "technology-and-compliance-controls",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#export-control",
+        "requirementGuidance": "For employees handling controlled technology or technical data, check whether the agreement prohibits export or re-export in violation of applicable law. This is most useful when the employee's work actually touches export-controlled materials.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "ai-tool-use-restriction",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.ai-tool-use-restriction",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "AI tool use restricted for company information",
+        "sectionId": "technology-and-compliance-controls",
+        "itemNumber": "6.2",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#ai-tool-use-restriction",
+        "requirementGuidance": "If employees use generative AI or automated coding tools, check whether the agreement restricts submitting company confidential information, source code, or work product into unauthorized tools. The clause should align with the company's actual acceptable-use and security policies.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "software-copyleft-restriction",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.software-copyleft-restriction",
+        "requirementLevel": "MAY",
+        "sourceFootnotes": [],
+        "requirementLabel": "Copyleft and open-source restrictions calibrated",
+        "sectionId": "technology-and-compliance-controls",
+        "itemNumber": "6.3",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#software-copyleft-restriction",
+        "requirementGuidance": "For software roles, check whether the agreement addresses unauthorized introduction of copyleft or other open-source components into company products. The restriction should point to policy and approval workflow rather than ban ordinary developer knowledge or lawful open-source use outright.",
+        "variants": [],
+        "sources": []
+      }
+    ]
+  }
+}

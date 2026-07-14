@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/1770475/redd-pest-control-co-inc-v-foster/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/mississippi'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/mississippi'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `ms-redd-foster-covenants`, `ms-redd-foster-interests`, `redd-foster-disfavored`
-- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1770475/redd-pest-control-co-inc-v-foster/#:~:text=Contracts%20which%20contain%20non%2Dcompete%20agreements,not%20favored%20by%20the%20law.>

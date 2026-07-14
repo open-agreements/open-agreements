@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — California
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — California
 description: >-
   A clause-by-clause reviewer checklist for California employee restrictive
   covenant agreements — Bus. & Prof. Code § 16600 voids non-competes and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — California[^about]
+# Non-Compete Agreement Reviewer Checklist — California[^about]
 
 A clause-by-clause reviewer checklist for California employee restrictive covenant agreements — Bus. & Prof. Code § 16600 voids non-competes and customer non-solicits by default, so the review screens for void clauses that create employer liability and checks the surviving confidentiality suite.
 
@@ -57,9 +57,11 @@ This page reviews a California agreement differently from a tailoring-state chec
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Let the trade-secret obligation run as long as secrecy does — federal law defines the right that way, and in California this clause is not a supplement to the covenant program, it *is* the program. With every competition restraint off the table, an employer that contractually expires its own trade-secret protection on a fixed date has surrendered its principal remaining remedy for nothing. [^ca-dtsa-1839] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded — in California, with every competition restraint off the table, this clause is not a supplement to the covenant program, it *is* the program. Tying duration to status — for so long as the information remains a trade secret — captures the full protection federal law gives, because the law keys the right to continued secrecy. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^ca-dtsa-1839] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary, non-secret confidential information its own finite term. In California a perpetual lid on everything the worker ever learned is more than untidy drafting — paired with a broad definition, it is the pattern courts have condemned as a non-compete in disguise, voiding the provisions outright. The two-track structure keeps perpetual protection where the law supports it and a sunset everywhere else. [^ca-brown-duration] [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary, non-secret confidential information its own finite term. In California a perpetual lid on everything the worker ever learned is more than untidy drafting — paired with a broad definition, it is the pattern courts have condemned as a non-compete in disguise, voiding the provisions outright. The two-track structure keeps status-bounded protection where the law supports it and a sunset everywhere else. [^ca-brown-duration] [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -143,7 +145,7 @@ The five items below exist only on this California page: they implement the clea
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for California (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for California (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — California*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/california.
 
 [^ca-16600-5-when-signed]: **Cal. Bus. & Prof. Code § 16600.5** — "Any contract that is void under this chapter is unenforceable regardless of where and when the contract was signed." *Cal. Bus. & Prof. Code § 16600.5(a).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600.5>
 

@@ -60,7 +60,7 @@ The standing grants do real work, but they carry conditions. Testers must fit th
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not District of Columbia. This article synthesizes District of Columbia primary law and is not legal advice from a District of Columbia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not District of Columbia. This article synthesizes District of Columbia primary law and is not legal advice from a District of Columbia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *District of Columbia Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/district-of-columbia.
 
 [^q1-cppa-udap]: **D.C. Code § 28-3904** — "It shall be a violation of this chapter for any person to engage in an unfair or deceptive trade practice, whether or not any consumer is in fact misled, deceived, or damaged thereby" *D.C. Code § 28-3904.* <https://code.dccouncil.gov/us/dc/council/code/sections/28-3904>
 

@@ -75,7 +75,7 @@ Operationally, that means the Arkansas regulator-relations file is a single file
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arkansas. This article synthesizes Arkansas primary law and is not legal advice from a Arkansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arkansas. This article synthesizes Arkansas primary law and is not legal advice from a Arkansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Arkansas Consumer Privacy Law*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/practice-guides/privacy/us/arkansas.
 
 [^pipa-title]: **Ark. Code Ann. § 4-110-101** — "This chapter shall be known and cited as the ‘Personal Information Protection Act’." *Ark. Code Ann. § 4-110-101.* <https://law.justia.com/codes/arkansas/2024/title-4/subtitle-7/chapter-110/section-4-110-101/#:~:text=This%20chapter%20shall%20be%20known,the%20%22Personal%20Information%20Protection%20Act%22.>
 

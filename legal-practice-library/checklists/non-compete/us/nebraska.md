@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Nebraska
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Nebraska
 description: >-
   A clause-by-clause reviewer checklist for Nebraska employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -14,7 +14,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Nebraska[^about]
+# Non-Compete Agreement Reviewer Checklist — Nebraska[^about]
 
 A clause-by-clause reviewer checklist for Nebraska employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under Nebraska's three-part reasonableness test, where a customer covenant survives only when limited to customers the employee personally served and no court will rewrite an overbroad restraint.
 
@@ -64,9 +64,11 @@ Review every item below the way a Nebraska court would: a restraint of trade sur
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should run as long as secrecy does. Federal law keys trade-secret status to continued secrecy, and Nebraska's statutory definition is built the same way — value from not being known, plus reasonable efforts to keep it that way — so a fixed expiry on trade-secret protection gives away the one obligation that outlasts every covenant on this page. [^dtsa-trade-secret-definition][^ne-tsa-definition-conf] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection available, because federal law keys trade-secret status to continued secrecy and Nebraska's statutory definition is built the same way: value from not being known, plus reasonable efforts to keep it that way. That status-bounded form is the ceiling the law will back, not a required one — a shorter fixed term is enforceable and simply gives up the tail of the one obligation that can outlast every covenant on this page, while a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition][^ne-tsa-definition-conf] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term, separate from the perpetual trade-secret obligation. An open-ended lid on non-secret information is breadth without a matching interest — and in a state that measures every restraint against what is reasonably necessary and refuses to trim the excess, unjustified breadth is risk the employer carries, not slack a court absorbs. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term, separate from the status-bounded trade-secret obligation. An open-ended lid on non-secret information is breadth without a matching interest — and in a state that measures every restraint against what is reasonably necessary and refuses to trim the excess, unjustified breadth is risk the employer carries, not slack a court absorbs. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -156,7 +158,7 @@ The five items below exist only on this Nebraska page: they implement the three-
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Nebraska (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Nebraska (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Nebraska*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/nebraska.
 
 [^ne-polly-personal-cover]: **Polly v. Ray D. Hilderman & Co.** — "Such a covenant may be valid only if it restricts the former employee from working for or soliciting the former employer’s clients or accounts with whom the former employee actually did business and has personal contact." *Polly v. Ray D. Hilderman & Co., 225 Neb. 662, 668, 407 N.W.2d 751 (1987).* <https://www.courtlistener.com/opinion/1235956/polly-v-ray-d-hilderman-co/#:~:text=Such%20a%20covenant%20may%20be,business%20and%20has%20personal%20contact.>
 

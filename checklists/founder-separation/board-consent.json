@@ -1,0 +1,280 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/founder-separation/board-consent",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/founder-separation/board-consent.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/founder-separation/board-consent",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/founder-separation/board-consent/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/founder-separation/board-consent/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "related-form",
+      "href": "https://openagreements.org/templates/openagreements-founder-separation-board-consent",
+      "type": "text/html",
+      "title": "Founder Separation Board Written Consent"
+    }
+  ],
+  "data": {
+    "topic": "founder-separation",
+    "slug": "board-consent",
+    "frontmatter": {
+      "title": "Founder Separation Board Consent Reviewer Checklist",
+      "description": "A clause-by-clause reviewer checklist for a Delaware board written consent documenting a founder separation — unanimous adoption and minute-book filing under DGCL § 141(f), acceptance of the resignation, officer-title removal, the § 141(k) director-removal guardrail, the vacated board seat, and the repurchase authorization with the board's § 243 share-disposition election.",
+      "eyebrow": "Reviewer Checklist",
+      "coverage": "Delaware board written consent (founder separation)",
+      "lastReviewed": "2026-07-02",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 8,
+    "sections": [
+      {
+        "sectionId": "adoption-and-unanimity",
+        "label": "Adoption and unanimity"
+      },
+      {
+        "sectionId": "resignation-offices-and-the-vacated-seat",
+        "label": "Resignation, offices, and the vacated seat"
+      },
+      {
+        "sectionId": "repurchase-authorization-and-share-disposition",
+        "label": "Repurchase authorization and share disposition"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "unanimous-director-signatures",
+        "specRequirementId": "REQ-founder-separation.board-consent.unanimous-director-signatures",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Signed by every director then in office",
+        "sectionId": "adoption-and-unanimity",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/founder-separation/board-consent#unanimous-director-signatures",
+        "requirementGuidance": "Confirm the consent is signed by every director then in office. The board may act without a meeting only if all directors consent, so a missing signature invalidates the action rather than weakening it. Watch the sequencing trap: if the founder's resignation takes effect on a later date, the founder is still a director then in office until that time, so the consent must either be adopted on or after the resignation's effective date or include the founder as a signatory. consent thereto in writing, or by electronic transmission",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "bc1-dgcl-141f",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 141(f)",
+            "citation": "8 Del. C. § 141(f).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc04",
+            "proposition": "The board may act without a meeting only if every director consents in writing (or by electronic transmission) — so the separation consent must be unanimous among sitting directors.",
+            "verbatimQuote": "any action required or permitted to be taken at any meeting of the board of directors or of any committee thereof may be taken without a meeting if all members of the board or committee, as the case may be, consent thereto in writing, or by electronic transmission",
+            "anchor": "https://openagreements.org/checklists/founder-separation/board-consent#src-bc1-dgcl-141f"
+          }
+        ]
+      },
+      {
+        "requirementId": "file-with-minutes",
+        "specRequirementId": "REQ-founder-separation.board-consent.file-with-minutes",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Filing with the board minutes provided for",
+        "sectionId": "adoption-and-unanimity",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/founder-separation/board-consent#file-with-minutes",
+        "requirementGuidance": "Confirm the consent provides for filing with the minutes of the board's proceedings. The statute directs that the executed consent be filed with the minutes in the same form as the minutes are maintained — a consent that never reaches the minute book undermines the evidentiary value the instrument exists to create. After an action is taken, the consent or consents relating thereto shall be filed with the minutes of the proceedings of the board of directors, or the committee thereof, in the same paper or electronic form as the minutes are maintained.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "bc1-dgcl-141f-filing",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 141(f) (filing with the minutes)",
+            "citation": "8 Del. C. § 141(f).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc04",
+            "proposition": "After a written-consent action is taken, the consent must be filed with the minutes of the board's proceedings.",
+            "verbatimQuote": "After an action is taken, the consent or consents relating thereto shall be filed with the minutes of the proceedings of the board of directors, or the committee thereof, in the same paper or electronic form as the minutes are maintained.",
+            "anchor": "https://openagreements.org/checklists/founder-separation/board-consent#src-bc1-dgcl-141f-filing"
+          }
+        ]
+      },
+      {
+        "requirementId": "recite-resignation",
+        "specRequirementId": "REQ-founder-separation.board-consent.recite-resignation",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Resignation recited and accepted with its effective date",
+        "sectionId": "resignation-offices-and-the-vacated-seat",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/founder-separation/board-consent#recite-resignation",
+        "requirementGuidance": "Confirm the consent recites and accepts the founder's written resignation, including its explicit effective date. A resignation is effective on delivery unless it names a later date, and the effective date is load-bearing: it starts the contractual repurchase-option window in the founder's RSPA, so a consent that accepts an undated or oral resignation leaves the actual termination date — and the repurchase window it anchors — a triable question. A resignation is effective when the resignation is delivered unless the resignation specifies a later effective date or an effective date determined upon the happening of an event or events.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "bc2-dgcl-141b",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 141(b)",
+            "citation": "8 Del. C. § 141(b).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc04",
+            "proposition": "A director's resignation takes effect on delivery unless it names a later effective date, which is why the consent must recite an explicit effective date.",
+            "verbatimQuote": "A resignation is effective when the resignation is delivered unless the resignation specifies a later effective date or an effective date determined upon the happening of an event or events.",
+            "anchor": "https://openagreements.org/checklists/founder-separation/board-consent#src-bc2-dgcl-141b"
+          }
+        ]
+      },
+      {
+        "requirementId": "remove-officer-titles",
+        "specRequirementId": "REQ-founder-separation.board-consent.remove-officer-titles",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Residual officer titles and authority expressly ended",
+        "sectionId": "resignation-offices-and-the-vacated-seat",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/founder-separation/board-consent#remove-officer-titles",
+        "requirementGuidance": "Where the founder held officer titles the resignation does not cleanly end, check that the consent expressly removes the founder from those offices and terminates residual signing, banking, and transaction authority. Officer removal is left to the bylaws or a board resolution — the DGCL does not itself impose a with-or-without-cause standard on officer removal (that phrase is the § 141(k) rule for directors) — so the consent should cite the bylaws alongside § 142(b). Any officer may resign at any time upon written notice to the corporation.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "bc2-dgcl-142b",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 142(b)",
+            "citation": "8 Del. C. § 142(b).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc04",
+            "proposition": "Officer tenure and resignation are governed by § 142(b); removal mechanics come from the bylaws or a board resolution, not a statutory with-or-without-cause standard.",
+            "verbatimQuote": "Any officer may resign at any time upon written notice to the corporation.",
+            "anchor": "https://openagreements.org/checklists/founder-separation/board-consent#src-bc2-dgcl-142b"
+          }
+        ]
+      },
+      {
+        "requirementId": "no-director-removal",
+        "specRequirementId": "REQ-founder-separation.board-consent.no-director-removal",
+        "requirementLevel": "MUST NOT",
+        "sourceFootnotes": [],
+        "requirementLabel": "No purported board removal of a non-resigning director",
+        "sectionId": "resignation-offices-and-the-vacated-seat",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/founder-separation/board-consent#no-director-removal",
+        "requirementGuidance": "Confirm the consent does not purport to remove a non-resigning director. Director removal is a stockholder power — the single most common founder misconception in this area — so a contested departure needs a stockholder written consent under § 228, not a board resolution. A board consent that recites the removal of a director who has not resigned documents an act the board had no power to take. Any director or the entire board of directors may be removed, with or without cause, by the holders of a majority of the shares then entitled to vote at an election of directors",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "bc2-dgcl-141k",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 141(k)",
+            "citation": "8 Del. C. § 141(k).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc04",
+            "proposition": "A director may be removed only by the stockholders — the board cannot remove a non-resigning director.",
+            "verbatimQuote": "Any director or the entire board of directors may be removed, with or without cause, by the holders of a majority of the shares then entitled to vote at an election of directors",
+            "anchor": "https://openagreements.org/checklists/founder-separation/board-consent#src-bc2-dgcl-141k"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-board-vacancy",
+        "specRequirementId": "REQ-founder-separation.board-consent.address-board-vacancy",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Vacated seat addressed by exactly one path",
+        "sectionId": "resignation-offices-and-the-vacated-seat",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/founder-separation/board-consent#address-board-vacancy",
+        "requirementGuidance": "Check that the consent addresses the seat the founder vacated by exactly one of three mutually exclusive paths: reduce the authorized board size, fill the vacancy, or expressly leave the seat open pending a later appointment or the next election (common where the seat is designated by a class of stock or a voting agreement). A vacancy may be filled by a majority of the directors then in office, even less than a quorum, and the parallel rule fills a vacated office as the bylaws provide. If the certificate of incorporation fixes the number of directors, reducing the board requires a charter amendment — a stockholder act — rather than a bare board resolution. Any vacancy occurring in any office of the corporation by death, resignation, removal or otherwise, shall be filled as the bylaws provide.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "bc2-dgcl-223",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 223(a)",
+            "citation": "8 Del. C. § 223(a).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc07/index.html",
+            "proposition": "A vacancy left by the departing founder's board seat may be filled by a majority of the directors then in office, even less than a quorum.",
+            "verbatimQuote": "may be filled by a majority of the directors then in office, although less than a quorum, or by a sole remaining director",
+            "anchor": "https://openagreements.org/checklists/founder-separation/board-consent#src-bc2-dgcl-223"
+          },
+          {
+            "sourceId": "bc2-dgcl-142e",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 142(e)",
+            "citation": "8 Del. C. § 142(e).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc04",
+            "proposition": "An office vacated by the founder is filled as the bylaws provide, or by the board.",
+            "verbatimQuote": "Any vacancy occurring in any office of the corporation by death, resignation, removal or otherwise, shall be filled as the bylaws provide.",
+            "anchor": "https://openagreements.org/checklists/founder-separation/board-consent#src-bc2-dgcl-142e"
+          }
+        ]
+      },
+      {
+        "requirementId": "authorize-repurchase",
+        "specRequirementId": "REQ-founder-separation.board-consent.authorize-repurchase",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Repurchase authorized with scope matching the transaction",
+        "sectionId": "repurchase-authorization-and-share-disposition",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/founder-separation/board-consent#authorize-repurchase",
+        "requirementGuidance": "Confirm the consent authorizes the company's exercise of its repurchase right, identifies the governing RSPA and the shares covered, and directs the officers to deliver the election notice and close within the RSPA's exercise window. The DGCL supplies the corporation's power to acquire its own shares; the window and price are private ordering in the RSPA. Check that the authorization's scope matches the transaction actually closed: the default resolution covers only unvested shares at the RSPA price, so a negotiated buyback of vested shares or at a premium needs its own tailored authorization.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "bc3-dgcl-160a",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 160(a)",
+            "citation": "8 Del. C. § 160(a).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc05",
+            "proposition": "The DGCL supplies the corporation's power to repurchase its own shares; the window and price come from the RSPA, not the statute.",
+            "verbatimQuote": "Every corporation may purchase, redeem, receive, take or otherwise acquire, own and hold, sell, lend, exchange, transfer or otherwise dispose of, pledge, use and otherwise deal in and with its own shares",
+            "anchor": "https://openagreements.org/checklists/founder-separation/board-consent#src-bc3-dgcl-160a"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-share-disposition",
+        "specRequirementId": "REQ-founder-separation.board-consent.state-share-disposition",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Board's disposition election stated (retire or treasury)",
+        "sectionId": "repurchase-authorization-and-share-disposition",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/founder-separation/board-consent#state-share-disposition",
+        "requirementGuidance": "Confirm the consent states the board's election on the disposition of the repurchased shares — retired and restored to authorized-but-unissued status (with any related capital reduction under §§ 243–244), or held as treasury shares. Repurchased shares are not automatically retired, and retirement is a board act under § 243(a), so the election belongs in the consent itself rather than in an officer-level ledger instruction. any of its shares theretofore purchased or redeemed out of surplus and which have not been, or are not required by the certificate of incorporation to be, retired",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "bc3-dgcl-160b",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 160(b)",
+            "citation": "8 Del. C. § 160(b).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc05",
+            "proposition": "Shares repurchased out of surplus are not automatically retired — which is why the consent must state whether the shares are retired or held as treasury.",
+            "verbatimQuote": "any of its shares theretofore purchased or redeemed out of surplus and which have not been, or are not required by the certificate of incorporation to be, retired",
+            "anchor": "https://openagreements.org/checklists/founder-separation/board-consent#src-bc3-dgcl-160b"
+          }
+        ]
+      }
+    ]
+  }
+}

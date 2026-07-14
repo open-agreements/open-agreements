@@ -27,7 +27,7 @@ The first consequence is that the legal problem is mostly geometry, not rhetoric
 
 The second consequence is that phased AI rollouts do not necessarily stay phased for legal purposes. The federal 90-day aggregation rule means several smaller reductions can be treated as one event unless they were genuinely separate and distinct. Perhaps separate workstreams on different products, vendors, or geographies can remain separate. Perhaps not, especially if the internal record ties them to one automation program or one cost-reduction thesis. [^29-u-s-c-2102-d] The more coherent the AI roadmap is as business strategy, the harder it can be to argue that the resulting layoffs were unrelated for WARN purposes.
 
-- 
+- Whether separate AI workstreams can stay separate under the 90-day aggregation rule. The statute allows an employer to prove separate and distinct actions and causes. Perhaps a company can do that when the reductions truly arise from unrelated systems or business lines. Perhaps a common automation thesis, common budget, or one board-approved AI program will make that harder than it sounds. [^29-u-s-c-2102-d]
 
 ## How should remote employees be counted for AI-driven WARN Act layoffs? {#remote-employees-ai-warn-act-layoffs}
 
@@ -39,7 +39,7 @@ The firm commentary in the source set is more uniform than the topic might sugge
 
 On remote workers, Hunton Andrews Kurth and Maynard Nexsen lean on *Piron* and *Hoover* to say the danger is under-aggregation, not over-aggregation. [^hunton-andrews-kurth-llp-employers-be-warned-rem][^maynard-nexsen-compliance-with-warn-for-remote-w-2] In that reading, remote employees do not disappear from the count just because they never come into the office. [^20-c-f-r-639-3-i-6-2][^maynard-nexsen-compliance-with-warn-for-remote-w-2]
 
-- 
+- How far remote-worker aggregation will go when reporting lines are genuinely diffuse. *Piron* and *Hoover* push toward aggregation. *Storehouse* shows an older, narrower telecommuter view. Perhaps the hard cases are not fully remote employees tied to one office, but matrixed teams assigned across several offices or managers. [^hunton-andrews-kurth-llp-employers-be-warned-rem][^maynard-nexsen-compliance-with-warn-for-remote-w-2]
 
 ## Can an AI efficiency project use the WARN Act unforeseeable business exception? {#ai-efficiency-warn-act-unforeseeable-exception}
 
@@ -51,7 +51,7 @@ On the federal exception question, the practical message is blunt even when the 
 
 The fourth consequence is that internal AI deployment often weakens the best federal exception available. A management team that studied vendors, ran pilots, announced AI expectations, or built an integration schedule has created the opposite of a sudden external shock. [^29-u-s-c-2102-b-2-a-2][^the-national-law-review-employers-reliance-on-ex] Perhaps the harder cases will involve external AI shocks: a competitor release, price collapse, or abrupt revenue loss linked to the market's adoption of a new model. The source set leaves room for that argument. It does not support much room for the internally planned `we automated faster than expected` version.
 
-- 
+- Whether an external AI shock can qualify as an unforeseeable business circumstance. The statutory language is broad enough to invite the argument, and the firm commentary leaves space for a real outside-the-company shock. The source set does not support the same argument for an internal AI-efficiency program that management planned and procured in the ordinary course. [^29-u-s-c-2102-b-2-a-2][^the-national-law-review-employers-reliance-on-ex]
 
 ## Which state mini-WARN laws matter most for AI-driven layoffs? {#state-mini-warn-ai-driven-layoffs}
 
@@ -77,11 +77,11 @@ The fifth consequence is that acquisitions do not reset the problem. If post-clo
 
 The one place the firms are talking about change rather than current law is Congress. Proskauer and Law and the Workplace both treat the Fair Warning Act as a serious proposal to expand federal WARN, especially on remote workers and lower thresholds, but still only a proposal as of April 2026. [^proskauer-congress-proposes-major-overhaul-of-wa][^law-and-the-workplace-congress-proposes-major-ov] The firms are reading the same tea leaves: remote-work ambiguity is now on lawmakers' radar.
 
-- 
+- How much mini-WARN expansion remains ahead. The Fair Warning Act is only a bill, but it would lower federal thresholds sharply and codify an expansive remote-worker test. [^proskauer-congress-proposes-major-overhaul-of-wa][^law-and-the-workplace-congress-proposes-major-ov] For now it is a signal, not a rule.
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *WARN Act exposure in AI-driven workforce reductions*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-layoffs/warn-act-ai-reductions.
 
 [^29-u-s-c-2101]: **29 U.S.C. 2101** — "the term ‘plant closing’ means the permanent or temporary shutdown of a single site of employment, or one or more facilities or operating units within a single site of employment, if the shutdown results in an employment loss at the single site of employment during any 30-day period for 50 or more employees excluding any part-time employees" *29 U.S.C. 2101.* <https://www.law.cornell.edu/uscode/text/29/2101#:~:text=the%20term%20%E2%80%9Cplant%20closing%E2%80%9D%20means,employees%20excluding%20any%20part%2Dtime%20employees>
 

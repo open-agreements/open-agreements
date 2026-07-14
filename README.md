@@ -54,13 +54,13 @@ Primary-source-backed legal practice guides, projected from openagreements.org a
 
 | Topic | What it covers | Coverage | Markdown | HTML |
 |-------|----------------|----------|----------|------|
-| Non-Compete & Restrictive Covenants | Enforceability, blue-pencil reformation, tolling, choice of law, and FTC-rule status. | 56 U.S. states + international | [Markdown](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/non-compete) | [HTML](https://openagreements.org/practice-guides/non-compete) |
+| Non-Compete & Restrictive Covenants | Enforceability, blue-pencil reformation, tolling, choice of law, and FTC-rule status. | 57 U.S. states + international | [Markdown](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/non-compete) | [HTML](https://openagreements.org/practice-guides/non-compete) |
 | Consumer Data Privacy | CCPA/CPRA and every comprehensive state privacy act — who's covered, consumer rights, opt-outs, and who enforces. | 51 U.S. states | [Markdown](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/privacy) | [HTML](https://openagreements.org/practice-guides/privacy/us) |
 | AI Vendors | Zero-data-retention, data residency, and the terms that matter in AI vendor contracts. | 9 practice guides | [Markdown](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/ai-vendors) | [HTML](https://openagreements.org/practice-guides/ai-vendors) |
 | AI & the Workforce | AI in hiring and adverse-action, workforce AI policies, and outside-counsel transitions. | 20 practice guides | [Markdown](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library) | [HTML](https://openagreements.org/practice-guides) |
 | Privacy-Policy Requirement Phrasings | Preferred phrasings for what a U.S. consumer privacy policy must disclose. | 8 practice guides | [Markdown](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/privacy-policy) | [HTML](https://openagreements.org/practice-guides/privacy/us) |
 
-Backed by 519 verbatim [case excerpts](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/case-excerpts) — the passages our practice guides rely on, each linked to the full opinion on CourtListener. Supporting evidence, not a case database.
+Backed by 648 verbatim [case excerpts](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/case-excerpts) — the passages our practice guides rely on, each linked to the full opinion on CourtListener. Supporting evidence, not a case database.
 
 ## Available Templates
 
@@ -256,6 +256,10 @@ Side-by-side comparison tables across jurisdictions. The web pages also publish 
 | Survey | Markdown | HTML |
 |--------|----------|------|
 | U.S. 50-State Non-Compete Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/non-compete/us.md) | [HTML](https://openagreements.org/surveys/non-compete/us) |
+| U.S. 50-State Stay-or-Pay & Employee Repayment Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/stay-or-pay/us.md) | [HTML](https://openagreements.org/surveys/stay-or-pay/us) |
+| U.S. 50-State Wage & Hour Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/wage-and-hour/us.md) | [HTML](https://openagreements.org/surveys/wage-and-hour/us) |
+| U.S. corporate-governance survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/corporate-governance/us.md) | [HTML](https://openagreements.org/surveys/corporate-governance/us) |
+| U.S. founder-separation survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/founder-separation/us.md) | [HTML](https://openagreements.org/surveys/founder-separation/us) |
 | U.S. invention-assignment survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/invention-assignment/us.md) | [HTML](https://openagreements.org/surveys/invention-assignment/us) |
 | U.S. State Consumer Privacy Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/privacy/us.md) | [HTML](https://openagreements.org/surveys/privacy/us) |
 | Worldwide Non-Compete Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/non-compete/worldwide.md) | [HTML](https://openagreements.org/surveys/non-compete/worldwide) |
@@ -272,8 +276,8 @@ npx skills add open-agreements/open-agreements --skill <skill-name>
 
 | Skill | Description |
 |-------|-------------|
-| [non-compete-contract-explainer](https://github.com/open-agreements/open-agreements/tree/main/skills/legal-explainers/non-compete-contract-explainer) | Explain U.S. state-by-state (and select international) non-compete and restrictive-covenant law — whether a non-compete is enforceable, blue-pencil reformation, tolling, choice of law, independent-contractor reach, and recent bans. Reads a bundled, source-cited snapshot per jurisdiction. Use when the user says "non-compete," "noncompete contract," "restrictive covenant," "non-solicit," "garden leave," "covenant not to compete," "employment agreement," asks "is my non-compete enforceable," or names a U.S. state. |
-| [data-privacy-law-explainer](https://github.com/open-agreements/open-agreements/tree/main/skills/legal-explainers/data-privacy-law-explainer) | Explain U.S. state-by-state consumer data-privacy law (CCPA/CPRA, TDPSA, VCDPA, CPA, and the other comprehensive state acts) — who a law covers, applicability thresholds, privacy-policy requirements, consumer rights and opt-outs, private rights of action, and who enforces. Reads a bundled, source-cited snapshot per state. Use when the user says "CCPA," "CPRA," "state privacy law," "privacy policy," "data subject request," "consumer rights request," "opt-out of sale," "data broker," "sensitive data," asks "do I need to comply with <state>'s privacy law," or names a U.S. state together with privacy. |
+| [non-compete-contract-explainer](https://github.com/open-agreements/open-agreements/tree/main/skills/legal-explainers/non-compete-contract-explainer) | Explain U.S. state-by-state (and select international) non-compete and restrictive-covenant law. Reads a bundled, source-cited snapshot per jurisdiction. |
+| [data-privacy-law-explainer](https://github.com/open-agreements/open-agreements/tree/main/skills/legal-explainers/data-privacy-law-explainer) | Explain U.S. state-by-state consumer data-privacy law (CCPA/CPRA, TDPSA, VCDPA, CPA, and the other comprehensive state acts). Reads a bundled, source-cited snapshot per state. |
 
 ### Agreement Drafting And Filling
 

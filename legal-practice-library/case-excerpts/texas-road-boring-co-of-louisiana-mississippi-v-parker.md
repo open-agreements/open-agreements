@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/1880375/texas-road-boring-co-of-louisiana-miss-v-parker/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/mississippi'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/mississippi'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-non-compete-enforceability`, `extended-for-breach`, `mississippi-statutory-gates`, `restrictive-covenants-each-independently-includable`
 - source_cards: `ms-texas-road-boring-covenants`, `ms-texas-road-boring-gate`, `q7-texas-road-boring`, `texas-road-boring-three-aspects`
-- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1880375/texas-road-boring-co-of-louisiana-miss-v-parker/#:~:text=Non%2Dcompetition%20agreements%20are%20not%20favored,the%20rights%20of%20the%20public.>

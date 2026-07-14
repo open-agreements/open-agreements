@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Missouri
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Missouri
 description: >-
   A clause-by-clause reviewer checklist for Missouri employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Missouri[^about]
+# Non-Compete Agreement Reviewer Checklist — Missouri[^about]
 
 A clause-by-clause reviewer checklist for Missouri employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Copeland trade-secrets-or-customer-contacts test and the section 431.202 and 431.204 safe harbors.
 
@@ -63,9 +63,11 @@ Read every item below the way a Missouri court would: a restrictive covenant sta
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — The trade-secret obligation should last as long as secrecy does — federal law keys the right to continued secrecy, and Missouri's own act defines the asset the same way. The stakes are doubled here: a trade secret is one of the two interests every covenant in the agreement leans on, so a fixed expiry on trade-secret protection undercuts the restrictive covenants along with the confidentiality clause. [^dtsa-trade-secret-definition][^mo-mutsa-secrecy] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information stays secret — captures the full protection available, because federal law keys the right to continued secrecy and Missouri's own act defines the asset the same way. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of protection behind one of the two interests every covenant in the agreement leans on, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition][^mo-mutsa-secrecy] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on material that never qualified as a trade secret is the same overreach Missouri polices in the covenants themselves, and the two-track structure keeps the perpetual obligation where the law actually supports it. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on material that never qualified as a trade secret is the same overreach Missouri polices in the covenants themselves, and the two-track structure keeps the status-bounded obligation where the law actually supports it. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -155,7 +157,7 @@ The five items below exist only on this Missouri page: they implement the trade-
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Missouri (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Missouri (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Missouri*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/missouri.
 
 [^mo-whelan-burden-cover]: **Whelan Security Co. v. Kennebrew** — "The employer has the burden to prove that the non-compete agreement protects its legitimate interests in trade secrets or customer contacts and that the agreement is reasonable as to time and geographic space." *Whelan Sec. Co. v. Kennebrew, 379 S.W.3d 835 (Mo. banc 2012).* <https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/#:~:text=The%20employer%20has%20the%20burden,to%20time%20and%20geographic%20space.>
 

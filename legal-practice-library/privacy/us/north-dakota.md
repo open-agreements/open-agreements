@@ -65,7 +65,7 @@ The private path is narrower than the public one, and its boundary comes from th
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not North Dakota. This article synthesizes North Dakota primary law and is not legal advice from a North Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not North Dakota. This article synthesizes North Dakota primary law and is not legal advice from a North Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *North Dakota Consumer Privacy Law*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/practice-guides/privacy/us/north-dakota.
 
 [^stat-51-30-02-duty]: **N.D. Cent. Code § 51-30-02** — "Any person that owns or licenses computerized data that includes personal information, shall disclose any breach of the security system following discovery or notification of the breach in the security of the data to any resident of the state whose unencrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person." *N.D. Cent. Code § 51-30-02.* <https://ndlegis.gov/cencode/t51c30.pdf>
 

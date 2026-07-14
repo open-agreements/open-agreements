@@ -39,6 +39,11 @@ That does not make those covenants automatically enforceable. It means the RINAA
 
 For drafting, the most important consequence is precision. A customer non-solicit should be written as a customer restraint, a confidentiality clause as a confidentiality clause, and a sale covenant as a sale covenant, because calling every restraint a non-compete can blur the statutory analysis.
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> An employee non-solicit, a customer non-solicit, and a confidentiality clause sit outside the Chapter 28-59 definition of a noncompetition agreement, so the worker-category ban does not decide their fate and each runs through common law or trade-secret law instead [^rinaa-noncompete-definition][^rinaa-confidentiality-exclusion]. That exclusion holds only while each restraint stays the covenant type it claims to be: a customer non-solicit confined to served customers, a confidentiality clause confined to protecting information, and a no-business restraint that reaches customers who approach the worker sitting at the strict end of the reasonableness test because it restrains doing the work rather than chasing it. A restraint labeled a non-solicit or an NDA but drafted to bar ordinary competition reads as an activity restraint in disguise, which pulls it back under the definition it was meant to sit outside and invites analysis under the least favorable regime.
+
 ## What common-law test applies to Rhode Island restrictive covenants not banned by statute? {#common-law-reasonableness}
 
 **Short answer.** Rhode Island applies strict reasonableness review. The party seeking enforcement must show a valid underlying relationship, adequate consideration, a legitimate interest, and a restraint no broader than reasonably necessary [^durapin-enforcement-elements][^cranston-strict-scrutiny].
@@ -46,6 +51,11 @@ For drafting, the most important consequence is precision. A customer non-solici
 *Durapin* supplies the core framework. Rhode Island recognizes that non-competes can serve legitimate purposes, but treats them as disfavored restraints. The key practical point is that ordinary competition is not enough. The promisee needs a legitimate interest such as confidential customer relationships, goodwill, trade secrets, or another protectable interest.
 
 *Cranston Print Works* reinforces the same standard and calls for strict judicial scrutiny. It also warns that covenants lacking both time and geographic limits may still be enforceable in some settings, but only to the extent necessary to protect legitimate interests [^cranston-necessity-limit].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> Every covenant not banned by statute is a disfavored restraint subject to strict judicial scrutiny, and the party seeking enforcement carries the burden of the full showing: that the covenant is ancillary to a valid relationship, supported by consideration, protective of a legitimate interest, and no broader than apparently necessary [^durapin-enforcement-elements][^cranston-strict-scrutiny]. Protection from ordinary competition is not a legitimate interest, so a covenant that names Protected Interests without a real interest behind it — confidential customer relationships, goodwill, or trade secrets — leaves nothing for the restraint to protect when the burden is tested. A covenant with no stated time or geographic limit is not automatically void, but it is enforced only to the extent necessary to protect the promisee's legitimate interests, so an open-ended restraint is measured down to what the record proves rather than to what it says [^cranston-necessity-limit]. An assignment moves the covenant without lightening that showing: whoever enforces it carries the same elements the original employer would.
 
 ## Does continued employment support a Rhode Island restrictive covenant? {#continued-employment-termination}
 
@@ -60,18 +70,23 @@ The restraint in *Walls* was customer-focused. It barred solicitation and pest-c
 >
 > Read *Walls* for what it is. The Rhode Island Supreme Court affirmed a *preliminary* injunction under deferential abuse-of-discretion review, not a final judgment on the covenant's validity [^walls-pi-posture]. It is a strong signal on consideration and customer-scope drafting, but a defendant can still develop a fuller record on reasonableness and legitimate interest at trial.
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> Consideration is one of the enforcement elements the employer must prove, so a covenant signed during employment stands on what the record shows moved in exchange for it. Rhode Island treats continued at-will employment, plus training and licensure support, as part of a lawful exchange that can support a restraint agreed mid-employment, and it enforced such a covenant even after an involuntary termination where the covenant applied on any termination without language tied to the reason for departure [^walls-continued-employment][^walls-involuntary-termination]. That signal is strong but not final: it came from the affirmance of a preliminary injunction reviewed for abuse of discretion, not a final judgment on validity, so a covenant that rests on a thin or unrecorded exchange is exposed once a fuller record is developed [^walls-pi-posture]. The restraint that carried was customer-scoped rather than a broad activity ban, which is the shape a mid-employment refresh is measured against [^walls-customer-scope].
+
 ## Will Rhode Island courts narrow an overbroad non-compete? {#court-narrowing}
 
 **Short answer.** Usually yes if equitable. *Durapin* adopted partial enforcement rather than an all-or-nothing or mechanical blue-pencil rule, absent bad faith or deliberate overreaching [^durapin-partial-enforcement].
 
-Partial enforcement is not a drafting strategy. Even under *Durapin*, the court should go no further than reasonably necessary to protect the promisee's legitimate interests [^durapin-no-further-than-necessary]. Overbreadth still creates litigation risk and may leave the employer without meaningful relief if the employee did not jeopardize a protectable interest. For a clause-by-clause pass over a specific agreement against these limits, the [Rhode Island non-compete review checklist](/checklists/non-compete/us/rhode-island) walks the full covenant suite item by item with each requirement's force level.
+Partial enforcement is not a drafting strategy. Even under *Durapin*, the court should go no further than reasonably necessary to protect the promisee's legitimate interests [^durapin-no-further-than-necessary]. Overbreadth still creates litigation risk and may leave the employer without meaningful relief if the employee did not jeopardize a protectable interest. For a clause-by-clause pass over a specific agreement against these limits, the [Rhode Island non-compete reviewer checklist](/checklists/non-compete/us/rhode-island) walks the full covenant suite item by item with each requirement's force level.
 
 RINAA also has a severability rule for contracts containing a non-compete that is unenforceable under § 28-59-3. That rule preserves the remainder of the contract and allows a court to impose a non-compete restriction as a remedy for breach of another agreement or duty [^rinaa-severability-remedy].
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not confuse statutory severability with automatic enforcement. Rhode Island may preserve the rest of the contract, but common-law reformation still depends on reasonableness, legitimate interests, and equitable limits [^durapin-partial-enforcement][^rinaa-severability-remedy].
+> Statutory severability is not automatic enforcement. Rhode Island permits a court to modify and enforce an unreasonable restraint whether or not its terms are divisible, but that reformation still turns on reasonableness, legitimate interests, and equitable limits, and a court goes no further than is reasonably necessary to protect the promisee's legitimate interests [^durapin-partial-enforcement][^durapin-no-further-than-necessary]. Deliberate overreaching is the one posture that forfeits that modification, so a covenant drafted broad in reliance on judicial rescue is the covenant most likely to lose it. The act's severability layer runs the same way: where a non-compete is unenforceable against the worker, the remainder of the contract survives and a court may still impose a restriction as a remedy for breach of another agreement or duty, but that preserves the contract, not the banned covenant [^rinaa-severability-remedy].
 
 ## Which Rhode Island professions have special non-compete bans? {#profession-specific-bans}
 
@@ -80,6 +95,11 @@ RINAA also has a severability rule for contracts containing a non-compete that i
 The physician statute voids restrictions on the right to practice medicine, including geographic practice limits and limits on treating, consulting with, or soliciting current patients. The APRN statute uses parallel language for APRNs licensed under Rhode Island nursing law.
 
 Both statutes share the same shape: a categorical ban on practice restrictions, paired with a sale-of-practice exception capped at five years. Outside these regulated professions, Rhode Island has no other occupation-specific non-compete ban, so most workers fall under Chapter 28-59 and common law.
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> The physician and APRN bans void any restriction of the right to practice, and they reach further than a clause labeled non-compete: geographic practice limits and limits on treating, consulting with, or soliciting current patients are all restrictions of the right to practice [^physician-restrictive-covenants][^aprn-restrictive-covenants]. A customer non-solicit aimed at a provider's patients therefore sits inside the ban even though it would otherwise fall outside Chapter 28-59, so a restraint that captures a physician's or an advanced practice registered nurse's patients is void as to that restriction while the rest of the agreement survives. Each statute shares one exception — a covenant made in connection with the sale of a practice that lasts no more than five years — and the APRN ban has applied since June 17, 2024, so a covenant against an APRN signed on or after that date is measured against it.
 
 ## How do Rhode Island trade-secret rules affect non-compete drafting? {#trade-secrets}
 
@@ -90,6 +110,11 @@ RINAA itself preserves agreements not to share trade-secret information after em
 "Nothing in this section shall preclude an employer from entering into an agreement with an employee not to share any information, including after the employee is no longer employed by the employer, regarding the employer or the employment that is a trade secret."[^rinaa-trade-secret-preserved]
 
 RIUTSA also preserves contractual remedies, so a well-drafted NDA can operate alongside statutory trade-secret claims. The safer approach is to define confidential information carefully, reserve trade-secret protection for information that meets the statutory definition, and avoid writing an NDA so broadly that it functions like a hidden non-compete.
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> When a worker falls inside a non-compete ban or a broad activity restraint is hard to justify, the confidentiality and trade-secret terms carry the entire protective load, and Rhode Island preserves them for that role: the act expressly permits an agreement not to share employer trade-secret information after employment [^rinaa-trade-secret-preserved]. That fallback holds only while the confidentiality clause stays a confidentiality clause. An NDA written broadly enough to bar ordinary post-employment work functions as a hidden non-compete and invites reclassification under the very regime the drafter was avoiding, so reserving trade-secret treatment for information that meets the statutory definition, and keeping a written return-and-certification record, are what stand up when protected material later surfaces at a competitor [^riutsa-trade-secret-definition][^riutsa-contract-remedies].
 
 ## What recent Rhode Island and federal developments should employers monitor? {#recent-developments}
 
@@ -106,7 +131,7 @@ The federal FTC Non-Compete Rule is also background rather than an operative Rho
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Rhode Island. This article synthesizes Rhode Island primary law and is not legal advice from a Rhode Island-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Rhode Island. This article synthesizes Rhode Island primary law and is not legal advice from a Rhode Island-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Rhode Island*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/rhode-island.
 
 [^rinaa-covered-workers]: **R.I. Gen. Laws § 28-59-3** — "A noncompetition agreement shall not be enforceable against the following types of workers:" *R.I. Gen. Laws § 28-59-3(a).* <https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-3.htm>
 
@@ -117,6 +142,8 @@ The federal FTC Non-Compete Rule is also background rather than an operative Rho
 [^durapin-reasonableness-baseline]: **Durapin, Inc. v. American Products, Inc.** — "However, since such provisions are not favored, they are subject to judicial scrutiny and will be enforced as written only if the contract is reasonable and does not extend beyond what is apparently necessary for the protection of those in whose favor it runs." *Durapin, Inc. v. Am. Prods., Inc., 559 A.2d 1051, 1053 (R.I. 1989).* <https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/#:~:text=However%2C%20since%20such%20provisions%20are,in%20whose%20favor%20it%20runs.>
 
 [^rinaa-noncompete-definition]: **R.I. Gen. Laws § 28-59-2** — "‘Noncompetition agreement’ means an agreement between an employer and an employee, or otherwise arising out of an existing or anticipated employment relationship, under which the employee or expected employee agrees that he or she will not engage in certain specified activities competitive with his or her employer after the employment relationship has ended." *R.I. Gen. Laws § 28-59-2(8).* <https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-2.htm>
+
+[^rinaa-confidentiality-exclusion]: **R.I. Gen. Laws § 28-59-2** — "(vi) Nondisclosure or confidentiality agreements;" *R.I. Gen. Laws § 28-59-2(8)(vi).* <https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-2.htm>
 
 [^durapin-enforcement-elements]: **Durapin, Inc. v. American Products, Inc.** — "Before a court reaches this question, however, the party seeking to enforce a noncompetition provision must show that (1) the provision is ancillary to an otherwise valid transaction or relationship, such as an employment contract or a contract for the purchase and sale of a business, Restatement (Second)" *Durapin, Inc. v. Am. Prods., Inc., 559 A.2d 1051, 1053 (R.I. 1989).* <https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/#:~:text=Before%20a%20court%20reaches%20this,of%20a%20business%2C%20Restatement%20(Second)>
 
@@ -147,6 +174,8 @@ The federal FTC Non-Compete Rule is also background rather than an operative Rho
 [^riutsa-injunctive-relief]: **R.I. Gen. Laws § 6-41-2** — "Actual or threatened misappropriation may be enjoined." *R.I. Gen. Laws § 6-41-2(a).* <https://webserver.rilegislature.gov/Statutes/TITLE6/6-41/6-41-2.htm>
 
 [^rinaa-trade-secret-preserved]: **R.I. Gen. Laws § 28-59-3** — "Nothing in this section shall preclude an employer from entering into an agreement with an employee not to share any information, including after the employee is no longer employed by the employer, regarding the employer or the employment that is a trade secret." *R.I. Gen. Laws § 28-59-3(c).* <https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-3.htm>
+
+[^riutsa-contract-remedies]: **R.I. Gen. Laws § 6-41-7** — "This chapter does not affect:" *R.I. Gen. Laws § 6-41-7(b).* <https://webserver.rilegislature.gov/Statutes/TITLE6/6-41/6-41-7.htm>
 
 [^rinaa-current-baseline]: **R.I. Gen. Laws §§ 28-59-1 to 28-59-3** — "This chapter shall be known and may be cited as the ‘Rhode Island Noncompetition Agreement Act.’" *R.I. Gen. Laws § 28-59-1.* <https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-1.htm>
 

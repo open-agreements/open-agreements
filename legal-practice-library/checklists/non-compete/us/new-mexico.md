@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — New Mexico
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — New Mexico
 description: >-
   A clause-by-clause reviewer checklist for New Mexico employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — New Mexico[^about]
+# Non-Compete Agreement Reviewer Checklist — New Mexico[^about]
 
 A clause-by-clause reviewer checklist for New Mexico employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Lovelace reasonableness test, the Piano consideration rule, and the § 24A-4-2 health-care practitioner ban.
 
@@ -63,9 +63,11 @@ Review every item below the way a New Mexico court would: an ordinary covenant l
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should run as long as secrecy does — federal law and New Mexico's trade secrets act both key the right to continued secrecy rather than to a calendar date. A fixed expiry on trade-secret protection gives away the one interest in the agreement that lawfully lasts forever. [^dtsa-trade-secret-definition][^utsa-secrecy-keyed] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection available, because federal law and New Mexico's trade secrets act both key the right to continued secrecy rather than to a calendar date. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of the one interest the law protects for as long as secrecy holds, while a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition][^utsa-secrecy-keyed] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on non-secret material operates as an indirect restraint on working with general knowledge — exactly the category New Mexico refuses to protect — and the two-track structure keeps the perpetual obligation where the law actually supports it. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on non-secret material operates as an indirect restraint on working with general knowledge — exactly the category New Mexico refuses to protect — and the two-track structure keeps the status-bounded obligation where the law actually supports it. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -153,7 +155,7 @@ The four items below exist only on this New Mexico page: the common-law reasonab
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for New Mexico (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for New Mexico (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — New Mexico*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/new-mexico.
 
 [^hc-owner-exemption-parties]: **NMSA 1978, § 24A-4-5** — "Chapter 24, Article 1I NMSA 1978 [Chapter 24A, Article 4 NMSA 1978] does not apply to agreements between health care practitioners who are shareholders, owners, partners or directors of a health care practice." *NMSA 1978, § 24A-4-5(A).* <https://nmonesource.com/nmos/nmsa/en/18973/1/document.do>
 

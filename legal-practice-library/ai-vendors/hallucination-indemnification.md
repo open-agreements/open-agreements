@@ -68,7 +68,7 @@ The interesting disagreement is not whether hallucination indemnity exists today
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Hallucination indemnification in AI vendor contracts*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-vendors/hallucination-indemnification.
 
 [^openai-service-terms-and-openai-services-agreeme]: **OpenAI, Service terms and OpenAI Services Agreement** — "OpenAI’s indemnification obligations to API customers under the Agreement include any third party claim that Customer’s use or distribution of Output infringes a third party’s intellectual property right." *OpenAI, Service terms and OpenAI Services Agreement.* <https://openai.com/policies/service-terms/>
 

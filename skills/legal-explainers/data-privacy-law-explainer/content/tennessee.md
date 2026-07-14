@@ -2,7 +2,7 @@
 jurisdiction: "Tennessee"
 slug: tennessee
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-06"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/tennessee
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/tennessee · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/tennessee · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Tennessee Consumer Privacy Law (TIPA)[^about]
 
@@ -68,7 +68,7 @@ This is the opt-in model, the opposite of a notice-and-opt-out approach. TIPA do
 
 A controller that cures within the 60-day window and certifies the cure in writing avoids the action; an uncured violation exposes it to civil penalties of up to $7,500 per violation, with treble damages for willful or knowing violations. Tennessee's signature feature is the affirmative defense in section 47-18-3314: a controller or processor that creates, maintains, and complies with a written privacy program conforming to the NIST privacy framework (or a comparable framework) and providing consumers the substantive rights TIPA requires can raise that program as a defense. No other state pairs comprehensive privacy duties with a NIST-based safe harbor like this, which makes building a documented, framework-aligned program both a compliance step and a litigation shield.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Tennessee. This article synthesizes Tennessee primary law and is not legal advice from a Tennessee-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Tennessee. This article synthesizes Tennessee primary law and is not legal advice from a Tennessee-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Tennessee Consumer Privacy Law (TIPA)*, OpenAgreements (last updated June 6, 2026), https://openagreements.org/practice-guides/privacy/us/tennessee.
 
 [^stat-3303-apply]: **Tenn. Code Ann. § 47-18-3303** — "This part applies to persons that conduct business in this state producing products or services that target residents of this state and that: - (1) Exceed twenty-five million dollars ($25,000,000) in revenue; and (2) - (A) Control or process personal information of at least twenty-five thousand (25,000) consumers and derive more than fifty percent (50%) of gross revenue from the sale of personal information; or - (B) During a calendar year, control or process personal information of at least one hundred seventy-five thousand (175,000) consumers." *Tenn. Code Ann. § 47-18-3303.* <https://law.justia.com/codes/tennessee/title-47/chapter-18/part-33/section-47-18-3303/#:~:text=This%20part%20applies%20to%20persons,hundred%20seventy%2Dfive%20thousand%20(175%2C000)%20consumers.>
 

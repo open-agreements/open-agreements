@@ -2,7 +2,7 @@
 jurisdiction: "Kansas"
 slug: kansas
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/kansas
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/kansas · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/kansas · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Kansas Consumer Privacy Law[^about]
 
@@ -88,7 +88,7 @@ The penalty mechanics reward early correction. A supplier that willfully violate
 
 Enforcement posture follows the statutes rather than a standalone privacy agency. County and district attorneys share KCPA enforcement, with recovered penalties flowing to the county where the proceedings were brought. For licensed insurers, the commissioner's exclusive breach-enforcement lane is the Kansas-specific privacy enforcement rule to build into incident-response routing.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Kansas. This article synthesizes Kansas primary law and is not legal advice from a Kansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Kansas. This article synthesizes Kansas primary law and is not legal advice from a Kansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Kansas Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/kansas.
 
 [^stat-7a02-scope]: **K.S.A. 50-7a02** — "A person that conducts business in this state, or a government, governmental subdivision or agency that owns or licenses computerized data that includes personal information shall, when it becomes aware of any breach of the security of the system, conduct in good faith a reasonable and prompt investigation to determine the likelihood that personal information has been or will be misused." *K.S.A. 50-7a02(a).* <https://www.ksrevisor.gov/statutes/chapters/ch50/050_007a_0002.html>
 

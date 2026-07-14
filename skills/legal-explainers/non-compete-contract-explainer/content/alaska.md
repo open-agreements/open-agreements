@@ -2,7 +2,7 @@
 jurisdiction: "Alaska"
 slug: alaska
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-01"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/alaska
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/alaska · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/alaska · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Alaska[^about]
 
@@ -50,18 +50,23 @@ In employment cases, *Data Management* points courts to practical factors: time 
 
 That makes reasonableness fact-bound. A statewide or long covenant is not automatically invalid, and a short covenant is not automatically valid. The drafting question is whether each restraint maps to the business interest at stake.
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> Every covenant in the agreement stands or falls on Alaska's common-law reasonableness analysis: there is no general non-compete statute, non-competition agreements are strictly construed, and a restraint aimed at eliminating ordinary competition or cutting off the worker's livelihood fails no matter how modestly its time and territory are drawn [^decristofaro-strict-construction-practice]. Reasonableness is fact-bound and weighed across the *Data Management* factors — the time-and-space limits, whether the worker was the sole customer contact, whether the worker held confidential information or trade secrets, whether the restraint targets unfair competition or merely ordinary competition, the hardship to the worker, and whether it bars the worker's sole means of support — so no term or territory is safe by rule and each restraint is measured against the interest at stake [^data-management-reasonableness-factors-reasonable]. Adequate consideration establishes only that a covenant is supported, not that it is reasonable, and an extension of the restricted period for breach is itself a restraint measured under those same fact-bound factors, so the covenant that survives is the one sized to the employer's actual footprint at signing rather than copied from another form [^data-management-reasonableness-factors-reasonable].
+
 ## Will Alaska courts rewrite an overbroad non-compete? {#court-narrowing}
 
 **Short answer.** Often yes, through reasonable alteration, but only if the covenant can be made enforceable and the employer proves it was drafted in good faith [^data-management-reasonable-alteration].
 
 Alaska does not follow a mechanical blue-pencil rule. *Data Management* rejected word-deletion formalism and adopted a reasonableness-based alteration approach that lets the court tailor a covenant to the facts.
 
-That doctrine is not a drafting license. If the employer willfully overreached, the court should refuse alteration [^data-management-overreach-good-faith]. The safest drafting posture is to write the covenant as narrowly as the evidence will support, then treat reasonable alteration as a backstop for good-faith excess. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Alaska non-compete review checklist](/checklists/non-compete/us/alaska) walks the full covenant suite item by item with each requirement's force level.
+That doctrine is not a drafting license. If the employer willfully overreached, the court should refuse alteration [^data-management-overreach-good-faith]. The safest drafting posture is to write the covenant as narrowly as the evidence will support, then treat reasonable alteration as a backstop for good-faith excess. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Alaska non-compete reviewer checklist](/checklists/non-compete/us/alaska) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not call Alaska a simple blue-pencil state. *Data Management* uses reasonable alteration, and the employer bears the good-faith burden before an overbroad covenant can be rescued [^data-management-reasonable-alteration].
+> Alaska is not a mechanical blue-pencil state: its narrowing power is a reasonable-alteration rewrite rather than word deletion, and a court reforms an overbroad covenant only where the covenant can be made enforceable and the employer carries the burden of proving it was drafted in good faith [^data-management-reasonable-alteration]. Where the employer has overreached willfully the court refuses to alter the covenant at all, so a covenant that drafts broad and counts on judicial rescue stakes its enforceability on a good-faith showing the employer must affirmatively win [^data-management-overreach-good-faith]. A covenant drawn as a tiered, severable restraint sized to the protectable interest at signing stands on its own terms rather than on that rescue.
 
 ## Must an Alaska non-compete include geographic and time limits? {#duration-limits}
 
@@ -74,7 +79,7 @@ The same opinion gives the limiting principle. A customer restriction can become
 > [!CAUTION]
 > **Drafting note.**
 >
-> Use *Metcalfe* carefully. It supports narrow customer-list restraints, not open-ended bans on working in the same field [^metcalfe-no-time-geography-required][^metcalfe-specialty-bar].
+> A customer restraint in the agreement earns *Metcalfe*'s lighter treatment only by staying tied to the information and customers the employer procured at its own expense; so scoped, it can survive even without a stated territory or duration because the worker remains free to compete generally [^metcalfe-no-time-geography-required]. Two limits define the edge: a customer set so broad that the restraint amounts to a bar on practicing the specialty is drafted too wide, and a court requires narrower drafting, while a covenant not to contact former customers is unreasonable where the worker had no access to confidential information about them [^metcalfe-specialty-bar][^metcalfe-confidential-info]. A restraint pushed past those limits reads as an open-ended ban on working in the field rather than a customer-list restraint, and loses the narrower analysis *Metcalfe* allows.
 
 ## How are sale-of-business and healthcare covenants treated in Alaska? {#sale-healthcare-covenants}
 
@@ -88,6 +93,11 @@ Healthcare facts sharpen the public-interest analysis. Because the challenged wo
 > **Practice note.**
 >
 > Alaska has no published blanket ban on healthcare non-competes, but *Wenzell* makes access-to-care facts important. A provider covenant that affects low-cost services for a population in need should be tested against public injury, not just geographic radius and duration [^wenzell-public-interest-low-cost].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A sale-of-business covenant in the agreement is read as a covenant against competition protecting the goodwill the buyer purchased, not as a ban on practicing the profession in any capacity, and it is weighed as a three-way balance: the buyer's need to protect that goodwill, the hardship to the seller, and the likely injury to the public [^wenzell-sale-business-test]. That public-injury prong sharpens on health-care facts — where the restrained work serves a population needing important low-cost care, competition is not presumed and must be proven, and even proven competition leaves the court weighing the harm to patient access [^wenzell-low-cost-competition-proof][^wenzell-public-interest-low-cost]. A covenant tied to a sale, or one restraining a clinician, that is sized only to a radius and a duration is measured against a balance it was never drafted to survive, so the covenant that holds is drawn to the purchased goodwill and the public interest it affects — and where the covenant later changes hands in the sale, that same balance travels with it.
 
 ## How does Alaska treat employee non-solicitation covenants? {#employee-non-solicitation}
 
@@ -121,13 +131,15 @@ Confidentiality and trade-secret clauses should be drafted separately from non-c
 
 Garden leave is a general option rather than an Alaska-specific doctrine; no published Alaska decision squarely addresses it. If used, it should pay the worker during a short transition, be tied to defined customer, confidentiality, or trade-secret risk, and be tested against the same Alaska reasonableness factors that govern other restraints [^data-management-reasonableness-factors-alternatives].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-01. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alaska. This article synthesizes Alaska primary law and is not legal advice from a Alaska-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-01. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alaska. This article synthesizes Alaska primary law and is not legal advice from a Alaska-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Alaska*, OpenAgreements (last updated June 1, 2026), https://openagreements.org/practice-guides/non-compete/us/alaska.
 
 [^decristofaro-disfavored-strictly-construed]: **DeCristofaro v. Security Nat. Bank** — "They are, therefore, strictly construed." *DeCristofaro v. Sec. Nat'l Bank, 664 P.2d 167, 168-69 (Alaska 1983).* <https://www.courtlistener.com/opinion/1234367/decristofaro-v-security-national-bank/#:~:text=They%20are%2C%20therefore%2C%20strictly%20construed.>
 
 [^data-management-reasonableness-factors]: **Data Management, Inc. v. Greene** — "Among the factors properly to be considered are: ‘[t]he absence or presence of limitations as to time and space, * * * whether the employee represents the sole contact with the customer; whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition; whether the covenant seeks to stifle the inherent skill and experience of the employee; whether the benefit to the employer is disproportional to the detriment to the employee; whether the covenant operates as a bar to the employee’s sole means of support; whether the employee’s talent which the employer seeks to suppress was actually developed during the period of employment; and whether the forbidden employment is merely incidental to the main employment.’" *Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).* <https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=Among%20the%20factors%20properly%20to,incidental%20to%20the%20main%20employment.%E2%80%9D>
 
 [^data-management-reasonableness-factors-reasonable]: **Data Management, Inc. v. Greene** — "Among the factors properly to be considered are: ‘[t]he absence or presence of limitations as to time and space, * * * whether the employee represents the sole contact with the customer; whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition; whether the covenant seeks to stifle the inherent skill and experience of the employee; whether the benefit to the employer is disproportional to the detriment to the employee; whether the covenant operates as a bar to the employee’s sole means of support; whether the employee’s talent which the employer seeks to suppress was actually developed during the period of employment; and whether the forbidden employment is merely incidental to the main employment.’" *Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).* <https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=Among%20the%20factors%20properly%20to,incidental%20to%20the%20main%20employment.%E2%80%9D>
+
+[^decristofaro-strict-construction-practice]: **DeCristofaro v. Security Nat. Bank** — "They are, therefore, strictly construed." *DeCristofaro v. Sec. Nat'l Bank, 664 P.2d 167, 168-69 (Alaska 1983).* <https://www.courtlistener.com/opinion/1234367/decristofaro-v-security-national-bank/#:~:text=They%20are%2C%20therefore%2C%20strictly%20construed.>
 
 [^data-management-reasonable-alteration]: **Data Management, Inc. v. Greene** — "The third approach, and the one we adopt, is to hold that if an overbroad covenant not to compete can be reasonably altered to render it enforceable, then the court shall do so unless it determines the covenant was not drafted in good faith. The burden of proving that the covenant was drafted in good faith is on the employer." *Data Mgmt., Inc. v. Greene, 757 P.2d 62, 64 (Alaska 1988).* <https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=The%20third%20approach%2C%20and%20the,faith%20is%20on%20the%20employer.>
 

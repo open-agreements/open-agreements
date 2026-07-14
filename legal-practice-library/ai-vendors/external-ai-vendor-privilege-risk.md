@@ -55,7 +55,7 @@ The more useful disagreement is not over public chat tools. It is over what foll
 
 DLA Piper adds a useful comparative caution. Its view is that English legal advice privilege could be even less hospitable than the American `Kovel` line because English courts may be less willing to treat generative AI as a mere conduit for communication. [^dla-piper-us-court-holds-privilege-doesn-t-apply] That does not decide US law, but it does show how much the enterprise-friendly argument still depends on analogy rather than settled doctrine.
 
-- 
+- The central doctrinal question is whether a zero-retention, single-tenant, counsel-directed AI deployment can qualify as a `Kovel` agent. The argument for yes is functional: the system may do what a paralegal, translator, or e-discovery vendor does at machine scale. The argument against is that `Kovel` was built around human intermediaries inside a professional relationship, not commercial software products. [^united-states-v-kovel-296-f-2d-918-2d-cir-1961][^harvard-journal-of-law-technology-against-an-ai]
 
 ## What AI vendor controls should legal teams require before use? {#legal-team-ai-vendor-controls}
 
@@ -69,7 +69,7 @@ The ethics layer is not itself privilege law, but it will likely influence what 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Privilege risk when legal teams use external AI vendors*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-vendors/external-ai-vendor-privilege-risk.
 
 [^federal-rule-of-evidence-502-b]: **Federal Rule of Evidence 502(b)** — "reasonable steps to prevent disclosure" *Federal Rule of Evidence 502(b).* <https://www.law.cornell.edu/rules/fre/rule_502#:~:text=reasonable%20steps%20to%20prevent%20disclosure>
 
@@ -114,6 +114,8 @@ The ethics layer is not itself privilege law, but it will likely influence what 
 [^ogletree-deakins-the-intersection-of-ai-and-atto-2]: **Ogletree Deakins commentary** — "A federal judge in New York ruled that documents generated using a publicly available AI tool are not protected by attorney-client privilege or the work product doctrine." *Ogletree Deakins, The Intersection of AI and Attorney-Client Privilege: A Cautionary Tale.* <https://ogletree.com/insights-resources/blog-posts/the-intersection-of-ai-and-attorney-client-privilege-a-cautionary-tale/>
 
 [^dla-piper-us-court-holds-privilege-doesn-t-apply]: **DLA Piper commentary** — "An AI System cannot itself give privileged legal advice – whether in the context of litigation or otherwise; there is no ‘AI Privilege’." *DLA Piper, US Court Holds Privilege Doesn't Apply to Public AI-Generated Documents.* <https://www.dlapiper.com/en/insights/publications/2026/03/us-court-holds-privilege-doesnt-apply-to-public-ai-generated-documents>
+
+[^harvard-journal-of-law-technology-against-an-ai]: **Harvard Journal of Law & Technology, Against an AI Privilege** — "This Essay argues that—at least under current technological, social, and institutional conditions—any such privilege would be premature, unworkable, and inconsistent with the historically rooted approach to evidentiary privileges." *Harvard Journal of Law & Technology, Against an AI Privilege.* <https://jolt.law.harvard.edu/digest/against-an-ai-privilege>
 
 [^american-bar-association-formal-opinion-512]: **American Bar Association, Formal Opinion 512** — "To ensure clients are protected, lawyers using generative artificial intelligence tools must fully consider their applicable ethical obligations, including their duties to provide competent legal representation, to protect client information, to communicate with clients, to supervise their employees and agents, to advance only meritorious claims and contentions, to ensure candor toward the tribunal, and to charge reasonable fees." *American Bar Association, Formal Opinion 512.* <https://www.americanbar.org/content/dam/aba/administrative/professional_responsibility/ethics-opinions/aba-formal-opinion-512.pdf>
 

@@ -80,7 +80,7 @@ Perhaps yes when the tool's voice, reading, summarization, or keyboard features 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Mandatory AI use and accommodation risk*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-policies/mandatory-ai-use-accommodation-risk.
 
 [^42-u-s-c-section-12111-10]: **42 U.S.C. section 12111(10)** — "significant difficulty or expense" *42 U.S.C. section 12111(10).* <https://uscode.house.gov/view.xhtml?req=%28title%3A42+section%3A12111+edition%3Aprelim%29>
 

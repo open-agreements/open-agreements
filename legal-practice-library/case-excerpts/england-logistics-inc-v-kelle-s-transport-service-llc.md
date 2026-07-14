@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/10141125/england-logistics-v-kelles-transport-service/
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/utah'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/utah'
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `geographic-scope`
 - source_cards: `geo-no-greater`, `ut-geo-defs`
-- cited_by: [Non-Compete Agreement Review Checklist — Utah](../checklists/non-compete/us/utah.md), [Non-Competes in Utah](../non-compete/us/utah.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Utah](../checklists/non-compete/us/utah.md), [Non-Competes in Utah](../non-compete/us/utah.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10141125/england-logistics-v-kelles-transport-service/#:~:text=a%20restrictive%20covenant%20is%20generally,to%20which%20the%20business%20extends.>
 
 ### england-logistics-inc-v-kelle-s-transport-service-llc-addressing-the-employee-s-concerns-about-c59a2ebf {#england-logistics-inc-v-kelle-s-transport-service-llc-addressing-the-employee-s-concerns-about-c59a2ebf}
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `reasonableness-test`, `timing-and-execution-acknowledgements`
 - source_cards: `consid-good-faith`, `reason-good-faith`, `ut-good-faith-timing`
-- cited_by: [Non-Compete Agreement Review Checklist — Utah](../checklists/non-compete/us/utah.md), [Non-Competes in Utah](../non-compete/us/utah.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Utah](../checklists/non-compete/us/utah.md), [Non-Competes in Utah](../non-compete/us/utah.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10141125/england-logistics-v-kelles-transport-service/#:~:text=Addressing%20the%20employee%E2%80%99s%20concerns%20about,to%20a%20long%20restrictive%20covenant.>
 
 ### england-logistics-inc-v-kelle-s-transport-service-llc-regardless-of-what-other-jurisdictions-737f321c {#england-logistics-inc-v-kelle-s-transport-service-llc-regardless-of-what-other-jurisdictions-737f321c}
@@ -50,7 +50,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `consid-england`, `ut-consideration-timing`
-- cited_by: [Non-Compete Agreement Review Checklist — Utah](../checklists/non-compete/us/utah.md), [Non-Competes in Utah](../non-compete/us/utah.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Utah](../checklists/non-compete/us/utah.md), [Non-Competes in Utah](../non-compete/us/utah.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10141125/england-logistics-v-kelles-transport-service/#:~:text=Regardless%20of%20what%20other%20jurisdictions,consideration%20for%20a%20noncompete%20agreement.>
 
 ### england-logistics-inc-v-kelle-s-transport-service-llc-the-reasonableness-of-the-restraints-in-9175f375 {#england-logistics-inc-v-kelle-s-transport-service-llc-the-reasonableness-of-the-restraints-in-9175f375}
@@ -59,7 +59,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-test`, `utah-statutory-gates`
 - source_cards: `reason-case-by-case`, `ut-case-by-case-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Utah](../checklists/non-compete/us/utah.md), [Non-Competes in Utah](../non-compete/us/utah.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Utah](../checklists/non-compete/us/utah.md), [Non-Competes in Utah](../non-compete/us/utah.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10141125/england-logistics-v-kelles-transport-service/#:~:text=The%20reasonableness%20of%20the%20restraints,case%20and%20the%20subject%20covenant.>
 
 ### england-logistics-inc-v-kelle-s-transport-service-llc-these-requirements-are-1-the-covenant-d9db7580 {#england-logistics-inc-v-kelle-s-transport-service-llc-these-requirements-are-1-the-covenant-d9db7580}
@@ -68,7 +68,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-non-compete-enforceability`, `reasonableness-test`, `restrictive-covenants-each-independently-includable`, `utah-statutory-gates`
 - source_cards: `england-rose-park-test`, `reason-four-part`, `ut-rose-park-cov`, `ut-rose-park-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Utah](../checklists/non-compete/us/utah.md), [Non-Competes in Utah](../non-compete/us/utah.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Utah](../checklists/non-compete/us/utah.md), [Non-Competes in Utah](../non-compete/us/utah.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10141125/england-logistics-v-kelles-transport-service/#:~:text=These%20requirements%20are%3A%20(1)%20the,as%20to%20time%20and%20area.>
 
 ### england-logistics-inc-v-kelle-s-transport-service-llc-we-disagree-with-the-assertion-that-a1c36744 {#england-logistics-inc-v-kelle-s-transport-service-llc-we-disagree-with-the-assertion-that-a1c36744}

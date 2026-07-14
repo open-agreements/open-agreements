@@ -69,7 +69,7 @@ Enforcement posture follows the statutes rather than a standalone privacy agency
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Kansas. This article synthesizes Kansas primary law and is not legal advice from a Kansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Kansas. This article synthesizes Kansas primary law and is not legal advice from a Kansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Kansas Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/kansas.
 
 [^stat-7a02-scope]: **K.S.A. 50-7a02** — "A person that conducts business in this state, or a government, governmental subdivision or agency that owns or licenses computerized data that includes personal information shall, when it becomes aware of any breach of the security of the system, conduct in good faith a reasonable and prompt investigation to determine the likelihood that personal information has been or will be misused." *K.S.A. 50-7a02(a).* <https://www.ksrevisor.gov/statutes/chapters/ch50/050_007a_0002.html>
 

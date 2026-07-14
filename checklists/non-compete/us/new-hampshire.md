@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — New Hampshire
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — New Hampshire
 description: >-
   A clause-by-clause reviewer checklist for New Hampshire employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — New Hampshire[^about]
+# Non-Compete Agreement Reviewer Checklist — New Hampshire[^about]
 
 A clause-by-clause reviewer checklist for New Hampshire employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under RSA 275:70's pre-acceptance notice rule, the RSA 275:70-a low-wage ban, and the three-part reasonableness test.
 
@@ -63,9 +63,11 @@ Review every item below the way a New Hampshire court would: the covenant must p
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should last as long as secrecy does — both federal law and New Hampshire's chapter 350-B key trade-secret status to continued secrecy and continued secrecy efforts. The state stakes are concrete: when a noncompete fails one of the statutory gates, trade-secret protection is the remedy that keeps working, and a fixed expiry undercuts it. [^nh-dtsa-definition][^nh-350-b-definition-duration] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection available, because both federal law and New Hampshire's chapter 350-B key trade-secret status to continued secrecy and continued secrecy efforts. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of the remedy that keeps working when a noncompete fails one of the statutory gates, while a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^nh-dtsa-definition][^nh-350-b-definition-duration] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. New Hampshire recognizes confidential information short of trade-secret status as protectable, but a perpetual lid on everything strains reasonableness; the two-track structure keeps perpetual treatment where secrecy actually supports it. [^nh-hobert-confidential-info] [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. New Hampshire recognizes confidential information short of trade-secret status as protectable, but a perpetual lid on everything strains reasonableness; the two-track structure keeps status-bounded treatment where secrecy actually supports it. [^nh-hobert-confidential-info] [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -153,7 +155,7 @@ The four items below exist only on this New Hampshire page: they implement the p
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for New Hampshire (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for New Hampshire (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — New Hampshire*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/new-hampshire.
 
 [^nh-275-70-offer-timing]: **RSA 275:70** — "Any employer who requires an employee who has not previously been employed by the employer to execute a noncompete agreement as a condition of employment shall provide a copy of such agreement to the potential employee prior to the employee's acceptance of an offer of employment. A noncompete agreement that has not been disclosed to an employee as required by this section shall not be enforceable against the employee, but all other provisions of any employment, confidentiality, nondisclosure, trade secret, intellectual property assignment, or any other type of employment agreement or provision shall remain in full force and effect." *RSA 275:70.* <https://gc.nh.gov/rsa/html/XXIII/275/275-70.htm>
 

@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Florida
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Florida
 description: >-
   A clause-by-clause reviewer checklist for Florida employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -12,7 +12,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Florida[^about]
+# Non-Compete Agreement Reviewer Checklist — Florida[^about]
 
 A clause-by-clause reviewer checklist for Florida employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under Fla. Stat. § 542.335 and the 2025 CHOICE Act.
 
@@ -62,7 +62,9 @@ This checklist reads a restrictive covenant agreement against Florida's statutor
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — No end date on trade-secret obligations: protection lasts as long as secrecy under federal law and FUTSA alike, and a fixed term needlessly surrenders it. The perpetual obligation also underpins any later claim to the trade-secret duration presumption. [^dtsa-trade-secret-secrecy] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection federal law and FUTSA give, because both key protection to continued secrecy, and the status-bounded form also underpins any later claim to the trade-secret duration presumption. That form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-secrecy] [#tie-trade-secret-duration-to-secrecy-status]
+
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
 
 - [ ] **Confidentiality end date** (Recommended) — Ordinary confidential information gets its own finite term. The two-track structure also maps onto Florida's duration scheme, where only a covenant genuinely predicated on trade secrets earns the five-to-ten-year presumption window. [^q3-542335-tradesecret-presumption] [#state-confidentiality-duration]
 
@@ -164,7 +166,7 @@ These three items apply only when the worker is a covered employee — a salary 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Florida (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Florida (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Florida*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/florida.
 
 [^fl-choice-effective]: **Ch. 2025-213, Laws of Fla. (Florida CHOICE Act)** — "This act shall take effect July 1, 2025." *Ch. 2025-213, Laws of Fla., § 22.* <https://laws.flrules.org/2025/213>
 

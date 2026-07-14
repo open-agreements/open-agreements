@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Texas
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Texas
 description: >-
   A clause-by-clause reviewer checklist for Texas employee restrictive covenant
   agreements — confidentiality, non-solicits, non-competes, and
@@ -14,7 +14,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Texas[^about]
+# Non-Compete Agreement Reviewer Checklist — Texas[^about]
 
 A clause-by-clause reviewer checklist for Texas employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under Tex. Bus. & Com. Code § 15.50's ancillary-agreement test, mandatory reformation, and the physician and health-care-practitioner buyout rules.
 
@@ -64,9 +64,11 @@ Work through every item the way a Texas court would: one statute — the Covenan
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should last as long as secrecy does — that is how federal law defines the right, and Texas trade-secret remedies assume it. A fixed expiry on trade-secret protection hands back the strongest covenant-independent protection the employer has in this state. [^tx-dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection the law offers: federal law defines the right by continued secrecy, and Texas trade-secret remedies, the strongest covenant-independent protection the employer has in this state, run on the same premise. That status-bounded form is the ceiling the law will back, not a required one — a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^tx-dtsa-trade-secret-definition] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Beyond the usual reasonableness concern, Texas adds a recharacterization risk: a confidentiality clause broad enough to keep the worker from functioning in the field can be treated as a non-compete and tested under the Act, reformation and all. A two-track structure — perpetual for secrets, finite for the rest — stays clear of that line. [^tx-1550a-disguised-duration] [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Beyond the usual reasonableness concern, Texas adds a recharacterization risk: a confidentiality clause broad enough to keep the worker from functioning in the field can be treated as a non-compete and tested under the Act, reformation and all. A two-track structure — status-bounded for secrets, finite for the rest — stays clear of that line. [^tx-1550a-disguised-duration] [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -158,7 +160,7 @@ The six items below exist only on this Texas page: they implement the Covenants 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Texas (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Texas (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Texas*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/texas.
 
 [^tx-sheshunoff-cover]: **Alex Sheshunoff Management Services, L.P. v. Johnson** — "The fact that the employer was not bound to perform because he could have fired the employee is irrelevant; if he has performed, he has accepted the employee's offer and created a binding unilateral contract." *Alex Sheshunoff Mgmt. Servs., L.P. v. Johnson, 209 S.W.3d 644 (Tex. 2006).* <https://www.courtlistener.com/opinion/894789/alex-sheshunoff-management-services-lp-v-johnson/#:~:text=The%20fact%20that%20the%20employer,created%20a%20binding%20unilateral%20contract.>
 

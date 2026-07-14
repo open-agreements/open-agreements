@@ -2,7 +2,7 @@
 jurisdiction: "New Mexico"
 slug: new-mexico
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/new-mexico
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-mexico · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-mexico · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in New Mexico[^about]
 
@@ -48,6 +48,11 @@ That does not mean every New Mexico covenant is enforceable. The employer still 
 >
 > Do not treat New Mexico as either a general ban state or an automatic-enforcement state. Start with consideration and then test the covenant against reasonableness, legitimate interest, employee hardship, and public impact [^lovelace-public-interest][^lovelace-reasonableness-test].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> New Mexico has no general non-compete statute for ordinary employees, so every covenant in the agreement stands or falls on the common-law requirement that it be reasonable in time, geography, and scope and tied to a legitimate protectable interest rather than a naked restraint on work [^lovelace-reasonableness-test][^mcgonigle-ordinary-enforceability]. Reasonableness is decided on the facts of the particular case, with no fixed cap and no safe-harbor number, so a term or radius carried over from another form is measured against a market it was never sized to [^bowen-facts-particular-case-practice]. General skills and knowledge, and customer information that is not peculiar or special, are not protectable interests, so a covenant resting on them protects nothing the law recognizes [^mcgonigle-general-skills-practice]. A no-dealing restraint reaching customers who approach the former employee weighs harder against the employee and the public interest in open competition, and survives only where a genuine protectable interest supports it [^lovelace-public-interest].
+
 ## Is continued at-will employment enough consideration for a New Mexico non-compete? {#consideration}
 
 **Short answer.** Probably not by itself for an existing at-will employee. *Piano v. Premier Distributing Co.* was an arbitration-agreement case, not a non-compete case, but it states New Mexico's general consideration rule: continued at-will employment is an illusory promise and cannot supply consideration [^piano-continued-employment-illusory][^piano-no-constraints].
@@ -59,7 +64,7 @@ The key point is not that *Piano* decided a non-compete dispute. It did not. The
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a bare recital of continued at-will employment for a mid-stream New Mexico covenant. Document the new consideration in the agreement, because if consideration is missing, New Mexico treats the agreement as never formed [^piano-contract-never-formed][^piano-continued-employment-illusory].
+> A mid-stream New Mexico covenant that rests on a bare recital of continued at-will employment rests on nothing: continued at-will employment is an illusory promise that cannot be consideration, and where consideration is missing New Mexico treats the agreement as never formed rather than merely unenforceable [^piano-contract-never-formed][^piano-continued-employment-illusory]. New consideration dated to signing — a raise, bonus, promotion, or equity grant separate from the promise to keep employing the worker — is what carries a covenant signed after employment has already begun.
 
 ## What legitimate business interests can support a New Mexico non-compete? {#protectable-interests}
 
@@ -85,7 +90,7 @@ For employment covenants, the safer drafting pattern is to match the radius to t
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not copy a New Mexico duration or radius from another form. A term that worked in a physician-clinic, dental, or business-sale case may fail for a different employee if the employer cannot connect the time and territory to its actual protectable interest [^bowen-facts-particular-case][^kidskare-facts-reformed-limits].
+> A New Mexico duration or radius carried over from another form is measured against the facts of this employment, not the case it came from: a term that held in a physician-clinic, dental, or business-sale dispute can fail for a different worker where the employer cannot connect the time and territory to an actual protectable interest [^bowen-facts-particular-case][^kidskare-facts-reformed-limits]. A radius matched to where the worker actually worked, and a duration matched to the life of the interest, are what a court measures as reasonable.
 
 ## Will a New Mexico court narrow or reform an overbroad non-compete? {#court-narrowing}
 
@@ -93,12 +98,12 @@ For employment covenants, the safer drafting pattern is to match the radius to t
 
 New Mexico's reformation rule is narrow. In *KidsKare*, the court of appeals expressly avoided deciding the broader argument about New Mexico case law on reformation because the contract itself supplied the basis for modifying the covenant [^kidskare-no-general-ruling].
 
-The drafting takeaway is direct: include an express severability and reformation clause if the employer wants a court to enforce the covenant to the maximum reasonable extent. Even then, reformation is not a substitute for drafting a reasonable covenant in the first place. For a clause-by-clause pass over a specific agreement against these drafting rules, the [New Mexico non-compete review checklist](/checklists/non-compete/us/new-mexico) walks the full covenant suite item by item with each requirement's force level.
+The drafting takeaway is direct: include an express severability and reformation clause if the employer wants a court to enforce the covenant to the maximum reasonable extent. Even then, reformation is not a substitute for drafting a reasonable covenant in the first place. For a clause-by-clause pass over a specific agreement against these drafting rules, the [New Mexico non-compete reviewer checklist](/checklists/non-compete/us/new-mexico) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a New Mexico court to rewrite a bare overbroad covenant. Include a clear reformation and severability clause, and draft the primary restriction narrowly enough that the court does not need to rescue it [^kidskare-contract-reformation][^kidskare-no-general-ruling].
+> A bare overbroad New Mexico covenant has no assured rescue: the only staged authority for narrowing one is contract-based, upheld precisely because the agreement itself authorized amendment of an unenforceable provision, and the court declined to decide whether a court may narrow an overbroad covenant without that language [^kidskare-contract-reformation][^kidskare-no-general-ruling]. An express reformation and severability clause supplies that basis, but a primary restriction drawn narrowly at the outset is what survives without needing it.
 
 ## Does a New Mexico non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
@@ -127,6 +132,11 @@ Two additional limits matter. First, a covered clinical-services agreement canno
 > **Practice note.**
 >
 > Do not use ordinary common-law reasonableness to rescue a covered New Mexico health-care practitioner non-compete. If § 24A-4-2 applies, the non-compete provision is unenforceable, and drafting should shift to the statute's preserved tools: NDAs, capped non-solicits, repayment provisions, and reasonable liquidated damages [^healthcare-ban][^healthcare-nda-nonsolicit][^healthcare-liquidated-damages].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> The health-care practitioner non-compete ban reaches not only the original agreement but any renewal or extension of it, so a covenant renewed or amended after the covered relationship began can fall within the statute even where the original did not [^healthcare-ban]. For psychologists, physician assistants, and pharmacists the ban attaches to agreements, renewals, or extensions executed on or after the 2023 amendment's effective date, so the execution date fixes whether those three classes are covered [^healthcare-effective-dates]. A non-compete the statute makes unenforceable gains nothing from ordinary reasonableness drafting, and presenting or enforcing it against a prospective employer on the strength of an unenforceable covenant exposes the enforcing party to a tortious-interference claim. A liquidated-damages provision offered in place of a foreclosed restraint holds only in an amount reasonable at signing in light of the anticipated harm; an unreasonably large amount operates as an unenforceable penalty [^healthcare-liquidated-damages].
 
 ## Will a choice-of-law or venue clause avoid New Mexico non-compete law? {#choice-of-law}
 
@@ -165,15 +175,19 @@ The sale context does not eliminate reasonableness. It changes the facts that su
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not use an employment covenant form for a New Mexico business sale. Draft the covenant around the purchased goodwill, the seller's role, the buyer's actual market, the purchase price, and the payout structure, because those facts drove the result in *Bowen* [^q10-bowen-sale-valid][^q10-bowen-enforced-written].
+> An employment covenant form dropped onto a New Mexico business sale is measured against the wrong facts. A sale covenant is valid within reasonable limits of time and space and is disturbed less readily than an employment restraint, but the reasonableness that supports it rests on the purchased goodwill, the seller's role and prominence, the buyer's actual market, the purchase price, and the payout structure — the facts that carried the covenant in *Bowen* [^q10-bowen-sale-valid][^q10-bowen-enforced-written].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Mexico. This article synthesizes New Mexico primary law and is not legal advice from a New Mexico-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Mexico. This article synthesizes New Mexico primary law and is not legal advice from a New Mexico-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in New Mexico*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/new-mexico.
 
 [^lovelace-reasonableness-test]: **Lovelace Clinic v. Murphy** — "All of the physician and surgeon cases either expressly hold or clearly indicate that the rights and duties created by the contract of employment or association are enforceable, if the restrictions thus imposed on the employee or the associate are reasonable." *Lovelace Clinic v. Murphy, 76 N.M. 645, 417 P.2d 450 (1966).* <https://www.courtlistener.com/opinion/1196089/lovelace-clinic-v-murphy/#:~:text=All%20of%20the%20physician%20and,or%20the%20associate%20are%20reasonable.>
 
 [^mcgonigle-ordinary-enforceability]: **Insure New Mexico, LLC v. McGonigle** — "Non-competition covenants are ordinarily enforceable as long as a court deems them reasonable." *Insure New Mexico, LLC v. McGonigle, 2000-NMCA-018, 995 P.2d 1053.* <https://www.courtlistener.com/opinion/1291299/insure-new-mexico-llc-v-mcgonigle/#:~:text=Non%2Dcompetition%20covenants%20are%20ordinarily%20enforceable,a%20court%20deems%20them%20reasonable.>
 
 [^lovelace-public-interest]: **Lovelace Clinic v. Murphy** — "The public has an interest in seeing that competition is not unreasonably limited or restricted, but it also has an interest in protecting the freedom of persons to contract, and in enforcing contractual rights and obligations." *Lovelace Clinic v. Murphy, 76 N.M. 645, 417 P.2d 450 (1966).* <https://www.courtlistener.com/opinion/1196089/lovelace-clinic-v-murphy/#:~:text=The%20public%20has%20an%20interest,enforcing%20contractual%20rights%20and%20obligations.>
+
+[^bowen-facts-particular-case-practice]: **Bowen v. Carlsbad Insurance & Real Estate, Inc.** — "Whether there is a reasonable restraint depends on the facts of a particular case, D. W. Trowbridge Ford, Inc. v. Galyen, 200 Neb. 103, 106 , 262 N.W.2d 442, 445 (1978), and is a matter of law for the courts to decide." *Bowen v. Carlsbad Ins. & Real Estate, Inc., 104 N.M. 514, 724 P.2d 223 (1986).* <https://www.courtlistener.com/opinion/1211410/bowen-v-carlsbad-insurance-real-estate-inc/#:~:text=Whether%20there%20is%20a%20reasonable,for%20the%20courts%20to%20decide.>
+
+[^mcgonigle-general-skills-practice]: **Insure New Mexico, LLC v. McGonigle** — "General skills and knowledge do not rise to the level of trade secrets." *Insure New Mexico, LLC v. McGonigle, 2000-NMCA-018, 995 P.2d 1053.* <https://www.courtlistener.com/opinion/1291299/insure-new-mexico-llc-v-mcgonigle/#:~:text=General%20skills%20and%20knowledge%20do,the%20level%20of%20trade%20secrets.>
 
 [^piano-continued-employment-illusory]: **Piano v. Premier Distributing Co.** — "Continued at-will employment is an illusory promise that cannot be consideration." *Piano v. Premier Distrib. Co., 2005-NMCA-018, 107 P.3d 11.* <https://www.courtlistener.com/opinion/2509475/piano-v-premier-distributing-co/#:~:text=Continued%20at%2Dwill%20employment%20is%20an,promise%20that%20cannot%20be%20consideration.>
 

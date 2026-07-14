@@ -2,7 +2,7 @@
 jurisdiction: "Massachusetts"
 slug: massachusetts
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-12"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/massachusetts
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/massachusetts · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/massachusetts · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Massachusetts Consumer Privacy Law[^about]
 
@@ -123,7 +123,7 @@ In practice the Attorney General's office actively enforces this stack — c. 93
 
 One nuance worth getting right: because § 6 routes the Attorney General to c. 93A § 4 *remedies* rather than declaring a c. 93H violation a per se unfair or deceptive act, whether a consumer can build a private § 9 claim on a bare breach-notification violation is not settled by the statutory text — injury and causation do the work in private breach suits [^q8-93h-route]. Both pending MCDPA versions, by contrast, contain an express bridge: a violation of the new chapter would constitute an unfair or deceptive trade practice for purposes of chapter 93A, with the Attorney General's authority exclusive across the board in the Senate text [^q8-s2619-enforcement] — which would also authorize civil penalties of up to $5,000 per violation [^q8-s2619-penalty] — and exclusive except as to large data holders in the House text [^q8-h5479-enforcement]. The Senate text would also require a pre-suit notice of violation with a 60-day cure window before the Attorney General files, unless cure is impossible or immediate enforcement is required [^q8-s2619-cure]; the House text has no cure provision — another item on the conference table.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Massachusetts. This article synthesizes Massachusetts primary law and is not legal advice from a Massachusetts-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Massachusetts. This article synthesizes Massachusetts primary law and is not legal advice from a Massachusetts-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Massachusetts Consumer Privacy Law*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/practice-guides/privacy/us/massachusetts.
 
 [^q1-93h-breach-def]: **Mass. Gen. Laws ch. 93H, § 1** — "''Breach of security'', the unauthorized acquisition or unauthorized use of unencrypted data or, encrypted electronic data and the confidential process or key that is capable of compromising the security, confidentiality, or integrity of personal information, maintained by a person or agency that creates a substantial risk of identity theft or fraud against a resident of the commonwealth." *Mass. Gen. Laws ch. 93H, § 1(a).* <https://malegislature.gov/Laws/GeneralLaws/Chapter93H/Section1>
 

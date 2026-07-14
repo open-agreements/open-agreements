@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Nevada
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Nevada
 description: >-
   A clause-by-clause reviewer checklist for Nevada employee restrictive covenant
   agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Nevada[^about]
+# Non-Compete Agreement Reviewer Checklist — Nevada[^about]
 
 A clause-by-clause reviewer checklist for Nevada employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under NRS 613.195's four-part test, hourly-worker ban, volunteer-customer carve-out, and mandatory judicial revision.
 
@@ -63,9 +63,11 @@ Review every item below the way a Nevada court would: the statute voids any cove
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should run as long as secrecy does, because that is how the right itself is defined: Nevada's Uniform Trade Secrets Act keys protection to information that stays valuable by staying secret and remains subject to reasonable secrecy efforts. A fixed expiry on trade-secret confidentiality contradicts the statutory framework and hands the worker an argument that secrecy was abandoned by contract. [^nv-secrecy-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection available, because Nevada's Uniform Trade Secrets Act keys the right to information that stays valuable by staying secret and remains subject to reasonable secrecy efforts. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, while a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^nv-secrecy-definition] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Nevada's safe harbor for post-termination confidentiality agreements requires the agreement to be reasonable in scope and duration — a perpetual lid on non-secret information presses on exactly that condition, while the two-track structure keeps the perpetual obligation where the trade-secret statute supports it. [^nv-nda-duration] [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Nevada's safe harbor for post-termination confidentiality agreements requires the agreement to be reasonable in scope and duration — a perpetual lid on non-secret information presses on exactly that condition, while the two-track structure keeps the status-bounded obligation where the trade-secret statute supports it. [^nv-nda-duration] [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -155,7 +157,7 @@ The five items below exist only on this Nevada page: they implement the statute'
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Nevada (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Nevada (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Nevada*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/nevada.
 
 [^nv-benefit-employer]: **NRS 613.195** — "A noncompetition covenant is void and unenforceable unless the noncompetition covenant: (a) Is supported by valuable consideration; (b) Does not impose any restraint that is greater than is required for the protection of the employer for whose benefit the restraint is imposed; (c) Does not impose any undue hardship on the employee; and (d) Imposes restrictions that are appropriate in relation to the valuable consideration supporting the noncompetition covenant." *NRS 613.195(1)(b).* <https://www.leg.state.nv.us/nrs/NRS-613.html>
 

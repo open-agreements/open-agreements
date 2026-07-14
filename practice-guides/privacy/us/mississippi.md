@@ -68,7 +68,7 @@ For privacy disputes, the practical distinction is this: a missed breach-notice 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Mississippi. This article synthesizes Mississippi primary law and is not legal advice from a Mississippi-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Mississippi. This article synthesizes Mississippi primary law and is not legal advice from a Mississippi-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Mississippi Consumer Privacy Law*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/practice-guides/privacy/us/mississippi.
 
 [^ms-breach-scope]: **Miss. Code Ann. § 75-24-29** — "This section applies to any person who conducts business in this state and who, in the ordinary course of the person’s business functions, owns, licenses or maintains personal information of any resident of this state." *Miss. Code Ann. § 75-24-29(1).* <https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=%2Fshared%2Fdocument%2Fstatutes-legislation%2Furn%3AcontentItem%3A627R-MSW3-GXJ9-31CB-00008-00>
 

@@ -8,7 +8,7 @@ citation: 'Follmer, Rudzewicz & Co., P.C. v. Kosco, 420 Mich. 394 (1984).'
 resource: 'https://www.courtlistener.com/opinion/1708749/follmer-rudzewicz-co-v-kosco/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/michigan'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/michigan'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `confidentiality-and-trade-secret-treatment`, `definitions`, `michigan-statutory-gates`, `protectable-interests`
 - source_cards: `follmer-confidential-info`, `mi-follmer-defs`, `mi-follmer-duration`, `mi-follmer-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../checklists/non-compete/us/michigan.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Michigan](../checklists/non-compete/us/michigan.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1708749/follmer-rudzewicz-co-v-kosco/#:~:text=To%20the%20extent%20such%20an,the%20statute%20and%20is%20enforceable.>

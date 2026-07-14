@@ -38,6 +38,16 @@ The writing requirement is statutory. Section 75-4 makes any agreement limiting 
 >
 > Treat a North Carolina non-compete as enforceable only if every one of the five elements is met. Because the agreement must satisfy § 75-4's writing-and-signature rule and the covenant is read strictly against the drafter, a single defective element defeats enforcement [^q1-ridgway-five-factor][^q1-gs-75-4].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> North Carolina has no general non-compete statute, so every covenant in the agreement is a partial restraint of trade that stands or falls on the five-element common-law test: it must be in writing, part of an employment contract, supported by valuable consideration, reasonable as to time and territory, and designed to protect a legitimate business interest and not against public policy [^q1-ridgway-five-factor][^q1-daniel-five-factor]. Because the covenant is read strictly against the drafter, a single defective element defeats the whole restraint and a North Carolina court will not rewrite an overbroad one — a category the state's restraint-of-trade statute already disfavors [^q1-gs-75-1][^q1-kuykendall-partial-restraint]. The broader covenants in the family are measured the same way: a no-business-with-covered-customers restraint reaches even customer-initiated business and survives only where it is supported by consideration, reasonably necessary to protect the covenantee, and not against public policy, and a non-investment restraint sits under that same reasonableness test rather than outside it [^q1-kuykendall-partial-restraint]. The analysis travels with an assignment — a successor enforcing an assigned covenant faces the same five-element test and the same strike-only severance the original employer faced, so an assignment moves the covenant without strengthening it [^q1-ridgway-five-factor].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A notice to a departing employee's prospective employer is only as sound as the covenant it invokes. A covenant that later fails any element of the five-element enforceability test has no force to assert, so a notice letter waving such a covenant at a new employer rests on an unenforceable restraint and can expose the employer to a tortious-interference claim [^q1-ridgway-five-factor]. A notice grounded in a restraint the employer is prepared to defend as reasonable carries the weight the letter otherwise lacks.
+
 ## What consideration does a North Carolina non-compete require? {#consideration}
 
 **Short answer.** It depends on timing. A covenant signed at the start of employment is supported by the offer of employment itself [^q2-qsp-newemployment], but a covenant imposed on an existing employee must be supported by *new* consideration — continued at-will employment is not enough [^q2-empt-staffing-milner]. The new consideration can be modest; North Carolina courts do not weigh its adequacy, and payments as small as a few hundred dollars have been upheld [^q2-hejl-500][^q2-empt-staffing-amount].
@@ -57,7 +67,7 @@ Once some new consideration is present, courts do not second-guess its amount. A
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on continued at-will employment as consideration for a covenant signed by a current employee. Pair the covenant with a raise, bonus, promotion, or other new benefit and document it, because a mid-employment covenant must rest on new consideration to be enforceable [^q2-empt-staffing-milner][^q2-daniel-consideration].
+> A covenant signed at the outset of employment rests on the offer of employment itself, but a covenant a current employee signs after the relationship already exists needs new consideration, and continued at-will employment is not enough — a mid-employment covenant unsupported by a new benefit is unenforceable for want of consideration [^q2-empt-staffing-milner][^q2-daniel-consideration]. A raise, bonus, promotion, new assignment, or other benefit that actually moves and is recited in the agreement supplies that support; North Carolina courts do not weigh the adequacy of the new consideration, and a payment as small as a few hundred dollars has sufficed [^q2-qsp-newemployment][^q2-hejl-500][^q2-empt-staffing-amount]. Consideration establishes only that the covenants are supported, not that they are reasonable, so each covenant must still clear the reasonableness test on its own.
 
 ## How do North Carolina courts judge a non-compete's time and territory? {#duration-limits}
 
@@ -97,7 +107,7 @@ The restriction must also be limited to the kind of work the employee performed.
 > [!CAUTION]
 > **Drafting note.**
 >
-> Define the restricted activities by reference to the employee's actual role, not every line of the company's business. A covenant that bars an employee from any capacity at a competitor, including work the employee never performed, reaches beyond a legitimate interest and risks non-enforcement [^q4-ridgway-duties].
+> A North Carolina covenant reaches a legitimate interest only where the employee acquired intimate knowledge of the business not generally available to the public, and only for work within the duties the employee actually performed; a covenant that bars any capacity at a competitor, including work the employee never did, reaches past that interest and is unenforceable [^q4-kuykendall-interest][^q4-ridgway-duties]. Restricted activities defined by the employee's real role, rather than every line of the company's business, stay inside that interest, and a covenant expressly limited to named competitors is stronger evidence still that it reaches no further than reasonably necessary [^q4-ridgway-duties].
 
 ## Can a North Carolina court rewrite or blue-pencil an overbroad non-compete? {#court-narrowing}
 
@@ -111,14 +121,14 @@ The Court of Appeals draws the same line: a court may decline to enforce a disti
 
 "A court at most may choose not to enforce a distinctly separable part of a covenant in order to render the provision reasonable."[^q5-hartman-separable]
 
-Critically, a contractual clause purporting to authorize the court to revise the covenant does not work. The Supreme Court held that parties cannot confer a power the court does not possess. For a clause-by-clause pass over a specific agreement against these drafting rules, the [North Carolina non-compete review checklist](/checklists/non-compete/us/north-carolina) walks the full covenant suite item by item with each requirement's force level.
+Critically, a contractual clause purporting to authorize the court to revise the covenant does not work. The Supreme Court held that parties cannot confer a power the court does not possess. For a clause-by-clause pass over a specific agreement against these drafting rules, the [North Carolina non-compete reviewer checklist](/checklists/non-compete/us/north-carolina) walks the full covenant suite item by item with each requirement's force level.
 
 "However, parties cannot contract to give a court power that it does not have."[^q5-beverage-contract]
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Draft each restriction to be reasonable on its own, and separate the time, territory, and scope terms into distinct, severable provisions so a court can strike an overbroad one without voiding the rest. Do not rely on a reformation or savings clause to rescue an overbroad covenant — North Carolina courts will not rewrite it, even when the contract asks them to [^q5-beverage-contract][^q5-daniel-rewrite].
+> North Carolina follows the strict blue-pencil doctrine, so a court may strike a distinctly separable, unreasonable provision but will not rewrite an overbroad one, even when the contract asks it to, and a reformation or savings clause cannot confer a power the court does not have [^q5-beverage-contract][^q5-daniel-rewrite]. A covenant that bundles time, territory, and scope into a single indivisible restraint therefore falls whole once any part reaches too far, while restrictions written as distinct, independently reasonable provisions let a court strike the overbroad one and leave the rest standing. A covenant that leans on a savings clause to be reformed leans on relief North Carolina withholds.
 
 ## How does North Carolina treat customer and employee non-solicitation covenants? {#non-solicitation}
 
@@ -139,7 +149,7 @@ A customer non-solicit also has to stay within the employer's actual customer re
 > [!CAUTION]
 > **Drafting note.**
 >
-> Match the operative verb to the conduct you want to reach. If you intend to bar hiring as well as solicitation, say so expressly, because a covenant limited to *solicit, recruit, or induce* requires active persuasion and will not reach a passive hire; and confine customer non-solicits to actual, not prospective, customers [^q6-crockett-definitions][^q6-hejl-prospective].
+> The operative verb sets the reach of a non-solicitation covenant. North Carolina courts read *solicit, recruit, or induce* to require active persuasion, so a covenant confined to those verbs reaches only active persuasion and not a passive hire, and a customer non-solicit that extends to prospective customers or clients the employer never had is an impermissible restraint [^q6-crockett-definitions][^q6-hejl-prospective]. A covenant meant to bar hiring as well as solicitation reaches that conduct only through express hiring language, and one confined to actual customers stays within the interest the law protects; a covenant that names only the solicitation verbs leaves a passive hire and a never-served prospect outside its reach.
 
 ## Does a North Carolina non-compete period toll or extend during a breach or litigation? {#extended-for-breach}
 
@@ -162,6 +172,11 @@ The Eastern District reached the same result, giving effect to a clause that tol
 >
 > If you want the restricted period to extend for the time an employee spends breaching, include an express extension-on-breach (tolling) clause; do not assume a court will lengthen the period on its own. Federal courts applying North Carolina law have enforced express tolling clauses, but no North Carolina appellate decision recognizes equitable tolling without one [^q7-philips-valid][^q7-southtech-tolls].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A restricted period does not lengthen itself. North Carolina has no appellate decision recognizing equitable tolling of a covenant, so a restraint that runs while the former employee violates it simply expires on schedule unless the agreement provides otherwise. An express extension-on-breach clause fills that gap: federal courts applying North Carolina law have enforced clauses that toll or extend the period for the time spent in breach [^q7-philips-valid][^q7-southtech-tolls]. Any such extension is itself a restraint, so an open-ended or indefinite one draws the same reasonableness scrutiny as the covenant it lengthens, while a bounded day-for-day extension tracks the breach without overreaching.
+
 ## Are physician and health-care non-competes enforceable in North Carolina? {#physicians}
 
 **Short answer.** Not categorically, and they face an extra public-policy hurdle. North Carolina courts will refuse to enforce a physician covenant when doing so would create a substantial question of potential harm to the public health, weighing factors such as the shortage of specialists in the restricted area, the risk of a local monopoly, emergency availability, and patient choice [^q8-zaldivar-balance][^q8-zaldivar-factors]. A pending bill, SB 673, would go further and ban non-competes for hospital-employed health-care professionals — defined as licensed physicians, physician assistants, advanced practice registered nurses, and registered nurses — outright [^q8-sb673][^q8-sb673-def].
@@ -183,6 +198,11 @@ The court applies a set of public-health factors to that question.
 >
 > For physician and other health-care covenants, evaluate the public-health impact before relying on the restraint, and watch SB 673. The covenant can fail on public-policy grounds even if its time and territory are otherwise reasonable, and a pending bill would bar hospital health-care non-competes entirely [^q8-zaldivar-balance][^q8-sb673].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A physician covenant carries a hurdle no recital removes. North Carolina courts refuse to enforce a covenant restraining the practice of medicine where enforcement would create a substantial question of potential harm to the public health, weighing the shortage of specialists in the restricted area, the risk of a local monopoly and its effect on future fees and emergency availability, and the public interest in patient choice of physician [^q8-zaldivar-balance][^q8-zaldivar-factors]. A physician covenant can fail on that public-policy ground even where its time and territory are otherwise reasonable, so a narrow radius and a short term tied to continuity of patient care are what survive the scrutiny; a broad medical restraint is the one that falls.
+
 ## Can an out-of-state employer force a North Carolina non-compete dispute into another state's courts? {#out-of-state-employers}
 
 **Short answer.** Not for a contract entered into in North Carolina. North Carolina voids any provision in a contract entered into in the State that requires a lawsuit or arbitration arising from the contract to be brought or heard in another state [^q9-gs-22b-3]. A national employer that drops its standard out-of-state forum or venue clause into an agreement entered into in North Carolina cannot count on that clause to move the dispute out of state. Section 22B-3 reaches forum and arbitration provisions; it does not by itself void an out-of-state choice-of-law clause.
@@ -195,6 +215,11 @@ Section 22B-3 directly targets out-of-state forum-selection clauses.
 > **Practice note.**
 >
 > Do not rely on an out-of-state forum, venue, or arbitration clause for a covenant entered into in North Carolina. Section 22B-3 makes such a provision void as against public policy, so the action can proceed in a North Carolina forum [^q9-gs-22b-3].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> An out-of-state forum, venue, or arbitration clause dropped into an agreement entered into in North Carolina does not move the dispute out of state: Section 22B-3 makes any such provision void and unenforceable as against public policy, so the action can proceed in a North Carolina court [^q9-gs-22b-3]. The bar reaches forum-selection and arbitration-venue terms but does not by itself void an out-of-state choice-of-law clause, so a governing-law selection and a forum selection are measured separately — and a governing-law and venue pairing that tracks where the employee actually lives and works leaves the covenant measured against the law it was drafted for.
 
 ## Can a party recover attorney fees in a North Carolina non-compete dispute? {#attorney-fees}
 
@@ -212,6 +237,11 @@ A separate, narrower fee path exists for unfair-trade-practices claims, which so
 > **Practice note.**
 >
 > Do not assume a fee-shifting clause in an employment non-compete will be enforced. Section 6-21.6 excludes employment contracts from the reciprocal business-contract fee statute, so fee recovery generally depends on a separate statutory hook such as a § 75-1.1 unfair-trade-practices claim [^q10-gs-6-21-6][^q10-gs-75-16-1].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A fee-shifting clause in an employment non-compete generally does not deliver a fee award. North Carolina's reciprocal business-contract fee statute expressly excludes employment contracts from its definition of a covered business contract, so a fee provision in this employment covenant usually will not support an award [^q10-gs-6-21-6]. Attorney-fee recovery instead runs through separate statutory hooks — most often the discretionary award available to a prevailing party on an unfair-or-deceptive-trade-practices claim, and only on findings of willfulness or a frivolous and malicious action — so a one-sided fee clause promises a recovery the governing law does not underwrite [^q10-gs-75-16-1].
 
 ## How do North Carolina trade-secret protections compare to a non-compete? {#trade-secrets}
 
@@ -253,7 +283,7 @@ SB 673 would impose a categorical ban for hospital-employed health-care professi
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not North Carolina. This article synthesizes North Carolina primary law and is not legal advice from a North Carolina-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not North Carolina. This article synthesizes North Carolina primary law and is not legal advice from a North Carolina-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in North Carolina*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/north-carolina.
 
 [^q1-ridgway-five-factor]: **Medical Staffing Network, Inc. v. Ridgway** — "To be enforceable under North Carolina law, a non-competition agreement must be: (1) in writing; (2) part of an employment contract; (3) based on valuable consideration; (4) reasonable as to time and territory; and (5) designed to protect a legitimate business interest." *Med. Staffing Network, Inc. v. Ridgway, 194 N.C. App. 649 (2009).* <https://www.courtlistener.com/opinion/1156110/medical-staffing-network-inc-v-ridgway/#:~:text=To%20be%20enforceable%20under%20North,protect%20a%20legitimate%20business%20interest.>
 

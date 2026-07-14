@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Idaho
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Idaho
 description: >-
   A clause-by-clause reviewer checklist for Idaho employee restrictive covenant
   agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Idaho[^about]
+# Non-Compete Agreement Reviewer Checklist — Idaho[^about]
 
 A clause-by-clause reviewer checklist for Idaho employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under Idaho Code title 44, chapter 27's key-employee gate, eighteen-month safe harbor, and mandatory judicial modification.
 
@@ -63,9 +63,11 @@ Review every item below the way an Idaho court would: one short statutory chapte
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — The trade-secret obligation should last as long as secrecy does — that is how the law defines the right, federally and under Idaho's own act. A fixed expiry on trade-secret protection gives away the one obligation Idaho lets the employer keep even when the covenant itself is narrowed or fails. [^dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection the law gives, federally and under Idaho's own act, and that obligation is the one Idaho lets the employer keep even when the covenant itself is narrowed or fails. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term, separate from the perpetual trade-secret track. A perpetual lid on non-secret information is the kind of overreach that invites an Idaho court to treat the clause as a disguised restraint instead of a confidentiality provision — and strict construction against the employer decides close calls. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term, separate from the status-bounded trade-secret track. A perpetual lid on non-secret information is the kind of overreach that invites an Idaho court to treat the clause as a disguised restraint instead of a confidentiality provision — and strict construction against the employer decides close calls. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -155,7 +157,7 @@ The five items below exist only on this Idaho page: they implement the chapter 4
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Idaho (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Idaho (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Idaho*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/idaho.
 
 [^idaho-top-five-cover]: **Idaho Code § 44-2704** — "(5) It shall be a rebuttable presumption that an employee or independent contractor who is among the highest paid five percent (5%) of the employer’s employees or independent contractors is a ‘key employee’ or a ‘key independent contractor.’" *Idaho Code § 44-2704.* <https://legislature.idaho.gov/statutesrules/idstat/Title44/T44CH27/SECT44-2704/>
 

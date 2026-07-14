@@ -68,7 +68,7 @@ Public enforcement carries the heavier artillery. The substantive prohibition is
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maine. This article synthesizes Maine primary law and is not legal advice from a Maine-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maine. This article synthesizes Maine primary law and is not legal advice from a Maine-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Maine Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/maine.
 
 [^isp-ban]: **35-A M.R.S. § 9301** — "A provider may not use, disclose, sell or permit access to customer personal information" *35-A M.R.S. § 9301(2).* <https://legislature.maine.gov/statutes/35-A/title35-Asec9301-3.html>
 

@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/1984610/jacob-v-norris-mclaughlin-marcus/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/new-jersey'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-jersey'
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `new-jersey-statutory-gates`, `professional-carveouts`
 - source_cards: `jacob-indirect-restriction`, `nj-jacob-indirect`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1984610/jacob-v-norris-mclaughlin-marcus/#:~:text=We%20believe%20that%20indirect%20restrictions,the%20spirit%20of%20RPC%205.6.>
 
 ### jacob-v-norris-mclaughlin-marcus-we-conclude-that-the-agreement-s-b7168b70 {#jacob-v-norris-mclaughlin-marcus-we-conclude-that-the-agreement-s-b7168b70}

@@ -6,7 +6,7 @@ citation: 'Sidco Paper Co. v. Aaron, 351 A.2d 250 (Pa. 1976).'
 resource: 'https://www.courtlistener.com/opinion/1437137/sidco-paper-company-v-aaron/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/pennsylvania'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/pennsylvania'
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `pa-sidco-partial`, `sidco-partial-enforcement`
-- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1437137/sidco-paper-company-v-aaron/#:~:text=However%2C%20where%20the%20covenant%20imposes,the%20protection%20of%20the%20employer.>
 
 ### sidco-paper-co-v-aaron-our-courts-will-permit-the-equitable-40cd41ef {#sidco-paper-co-v-aaron-our-courts-will-permit-the-equitable-40cd41ef}
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `duration-limits`, `extended-for-breach`, `remedies`, `tolling-during-breach`
 - source_cards: `pa-sidco-equitable-remedies`, `pa-sidco-standard-defs`, `pa-sidco-tolling`, `q8-sidco-reasonably-necessary`, `sidco-general-rule`
-- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1437137/sidco-paper-company-v-aaron/#:~:text=Our%20courts%20will%20permit%20the,in%20duration%20and%20geographic%20extent.>

@@ -6,9 +6,9 @@ citation: '23 LTD v. Herman, 2019 COA 113.'
 resource: 'https://www.courtlistener.com/opinion/4644233/23-ltd-v-herman/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us'
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/colorado'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/colorado'
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `restrictive-covenants-each-independently-includable`
 - source_cards: `twentythree-ltd-no-rewrite`, `twentythree-no-rewrite`
-- cited_by: [Non-Compete Agreement Review Checklist — Colorado](../checklists/non-compete/us/colorado.md), [Non-Competes in Colorado](../non-compete/us/colorado.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Colorado](../checklists/non-compete/us/colorado.md), [Non-Competes in Colorado](../non-compete/us/colorado.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4644233/23-ltd-v-herman/#:~:text=It%20is%20not%20the%20function,public%20policy%20of%20the%20state.>
 
 ### 23-ltd-v-herman-they-have-made-clear-that-trial-c68f516a {#23-ltd-v-herman-they-have-made-clear-that-trial-c68f516a}
@@ -49,5 +49,5 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `twentythree-ltd-no-contractual-compulsion`, `twentythree-no-compulsion`
-- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md), [Non-Compete Agreement Review Checklist — Colorado](../checklists/non-compete/us/colorado.md), [Non-Competes in Colorado](../non-compete/us/colorado.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist](../checklists/non-compete/us.md), [Non-Compete Agreement Reviewer Checklist — Colorado](../checklists/non-compete/us/colorado.md), [Non-Competes in Colorado](../non-compete/us/colorado.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4644233/23-ltd-v-herman/#:~:text=Thus%2C%20parties%20to%20an%20employment,that%20it%20determines%20are%20unreasonable.>

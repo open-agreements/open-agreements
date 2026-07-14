@@ -2,7 +2,7 @@
 jurisdiction: "Colorado"
 slug: colorado
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/colorado
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/colorado · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/colorado · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Colorado[^about]
 
@@ -46,6 +46,11 @@ The statute leaves a limited set of covenants in play: non-competes and customer
 
 A covenant that fits a statutory exception is not automatically enforceable. It still must be for the protection of trade secrets and no broader than reasonably necessary, and the separate-notice rule and the other limits described below still apply [^crs-hcw-exception].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A Colorado covenant not to compete is void by default and survives only where it fits the highly compensated worker exception, so a covenant that does not clear the exception is unenforceable however carefully it is drafted [^crs-void-rule][^crs-hcw-exception]. The employer seeking to enforce the covenant carries the burden of establishing that it falls within the exception, including at the preliminary-injunction stage, and a recital in the agreement stating that the covenant qualifies does not carry that burden [^phoenix-employer-burden].
+
 "Except as provided in subsections (2)(b) and (3) of this section, any covenant not to compete that restricts the right of any person to receive compensation for performance of labor for any employer is void."[^crs-void-rule]
 
 ## When can a Colorado employer use a non-compete or customer non-solicit agreement? {#highly-compensated-threshold}
@@ -72,7 +77,7 @@ The notice must be a standalone document, written in clear and conspicuous terms
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not bury a Colorado non-compete inside an offer letter or omnibus agreement presented for immediate signature. For a current employee, deliver the separate, signed notice at least fourteen days before the covenant's effective date or before any raise or change that serves as consideration — a defect in the notice voids the covenant on its own [^crs-notice-timing][^crs-notice-separate-document].
+> A Colorado non-compete buried inside an offer letter or omnibus agreement presented for immediate signature does not satisfy the statutory notice rule. For a current worker, the separate, signed notice must precede the covenant's effective date — or any raise or change that serves as consideration — by at least fourteen days, and a defect in the notice voids the covenant on its own [^crs-notice-timing][^crs-notice-separate-document].
 
 ## Are non-competes enforceable against Colorado physicians and other health-care providers? {#health-care-providers}
 
@@ -81,6 +86,11 @@ The notice must be a standalone document, written in clear and conspicuous terms
 The highly compensated worker exception no longer rescues a covenant that restricts the practice of medicine, advanced practice registered nursing, or dentistry, so these providers cannot be bound even if they earn well above the wage threshold [^sb25083-health-care-carveout].
 
 Colorado previously allowed physician agreements to require liquidated damages tied to a competitive departure, even though an outright practice restraint was void. SB 25-083 removed that path for the listed providers and added patient-communication protections, so a covenant is void if it prevents a departing provider from telling patients about the provider's continuing practice, new contact information, or the patient's right to choose their provider [^sb25083-health-care-carveout][^sb25083-patient-communication].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> For an agreement entered into or renewed on or after August 6, 2025, a covenant not to compete or not to solicit customers that binds a health-care provider — a licensed physician, a registered advanced practice registered nurse, a certified midwife, or a licensed dentist — is void regardless of the provider's compensation, so the highly compensated worker threshold no longer rescues it [^sb25083-health-care-carveout][^sb25083-health-care-provider-definition]. A clause restricting a departing provider from telling patients about the provider's continuing practice, new professional contact information, or the patient's right to choose a provider is separately void [^sb25083-patient-communication].
 
 > [!NOTE]
 > **Practice note.**
@@ -96,13 +106,18 @@ The cap applies to a minority owner who received the ownership share as equity c
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not reuse a flat multi-year sale-of-business term for a minority owner who took equity as compensation for services. Calculate the maximum duration from the statutory ratio of sale consideration to average annual compensation, and size the covenant to that cap [^sb25083-minority-owner-formula].
+> A flat multi-year sale-of-business term reused for a minority owner who took equity as compensation for services routinely exceeds the statutory cap. The maximum duration in years equals the total sale consideration divided by the owner's average annual compensation, and any term longer than that ratio is unenforceable to the extent it exceeds the cap [^sb25083-minority-owner-formula].
 
 ## Can a Colorado employer recover training costs through a repayment agreement (TRAP)? {#training-repayment}
 
 **Short answer.** Only within strict limits. A training-repayment provision is permitted only when the training is distinct from normal on-the-job training and meets the attorney general's rules on transferability of the training or credential, and the recoverable amount is capped at reasonable costs that decrease over two years [^crs-traps].
 
 If the employer overreaches, the attorney general can recover three times the amount of any recovery or attempted recovery on an unlawful training-repayment provision [^crs-traps-treble].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A training-repayment provision reaches only the reasonable cost of training that is distinct from normal on-the-job training and that satisfies the attorney general's transferability rules, with the recoverable amount decreasing over the two years after the training; ordinary onboarding, routine skills training, and a flat amount untethered from documented cost fall outside the carve-out [^crs-traps]. The exposure for overreaching runs to the attorney general, who may recover three times the amount of any recovery or attempted recovery made in violation of the carve-out [^crs-traps-treble].
 
 > [!NOTE]
 > **Practice note.**
@@ -118,7 +133,7 @@ The carve-out has limits built in: a confidentiality provision cannot bar the wo
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not draft a confidentiality clause so broadly that it functions as a non-compete. Keep it to genuine confidential information and trade secrets, and preserve the worker's right to use general skills and knowledge and to make legally protected disclosures, or the clause risks being treated as a void restraint [^crs-confidentiality].
+> A confidentiality clause drafted so broadly that it functions as a non-compete falls outside the statutory carve-out and risks treatment as a void restraint. The carve-out reaches only a reasonable confidentiality provision relevant to the employer's business that preserves the worker's right to use general skills and knowledge and to make legally protected disclosures [^crs-confidentiality].
 
 ## What are the penalties for presenting or enforcing a void Colorado non-compete? {#penalties}
 
@@ -147,12 +162,12 @@ That common-law rule survives the statute, but it now operates alongside the pro
 
 **Short answer.** Do not count on it. Colorado courts have discretion to blue-pencil an overbroad covenant but are not required to, and parties cannot contractually force a court to rewrite one [^twentythree-ltd-discretion][^twentythree-ltd-no-contractual-compulsion].
 
-In *23 LTD v. Herman*, the court explained that it is not a court's function to rewrite a contract to enable enforcement of terms that violate Colorado public policy, and a severability clause cannot compel the court to do so [^twentythree-ltd-no-rewrite][^twentythree-ltd-no-contractual-compulsion]. The risk is compounded by the penalty regime: because merely presenting a void covenant is unlawful, an employer cannot safely assume a court will trim an overbroad covenant into a lawful one [^crs-present-void-narrowing]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Colorado non-compete review checklist](/checklists/non-compete/us/colorado) walks the full covenant suite item by item with each requirement's force level.
+In *23 LTD v. Herman*, the court explained that it is not a court's function to rewrite a contract to enable enforcement of terms that violate Colorado public policy, and a severability clause cannot compel the court to do so [^twentythree-ltd-no-rewrite][^twentythree-ltd-no-contractual-compulsion]. The risk is compounded by the penalty regime: because merely presenting a void covenant is unlawful, an employer cannot safely assume a court will trim an overbroad covenant into a lawful one [^crs-present-void-narrowing]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Colorado non-compete reviewer checklist](/checklists/non-compete/us/colorado) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Draft scope, duration, and geography to the minimum the trade-secret interest actually requires, and use separable tiers rather than an aggressive savings clause. A Colorado court may decline to narrow an overbroad covenant, and presenting a void covenant carries its own penalty [^twentythree-ltd-no-rewrite][^crs-present-void-narrowing].
+> A Colorado court has discretion to narrow an overbroad covenant but no obligation to do so, and the parties cannot contractually compel it, so scope, duration, and geography that reach past the minimum the trade-secret interest requires stand exposed — and separable tiers survive where an aggressive savings clause does not. Presenting a void covenant carries its own penalty, so a covenant drafted broad in reliance on discretionary judicial repair adds statutory exposure on top of unenforceability [^twentythree-ltd-no-rewrite][^crs-present-void-narrowing].
 
 ## Are employee non-solicitation (no-hire) clauses enforceable in Colorado? {#employee-nonsolicitation}
 
@@ -180,17 +195,17 @@ The best Colorado authority points toward caution. In *Phoenix Capital, Inc. v. 
 
 **Short answer.** Colorado has tightened its non-compete law in four steps since 2022, moving from a title-based exception regime to objective wage thresholds, then to training-repayment and health-care restrictions [^dev-misdemeanor][^dev-hb22-1317][^dev-hb24-1324][^dev-sb25-083].
 
-- 
-- 
-- 
-- 
+- **March 1, 2022:** A class 2 misdemeanor took effect for using force, threats, or intimidation to keep a person from a lawful occupation [^dev-misdemeanor].
+- **August 10, 2022:** House Bill 22-1317 replaced the old executive-and-management exception with the highly compensated worker thresholds, added the separate-notice rule, and created the $5,000-per-worker penalty [^dev-hb22-1317].
+- **August 7, 2024:** House Bill 24-1324 tightened training-repayment provisions and authorized the attorney general to recover treble damages for unlawful recovery attempts [^dev-hb24-1324].
+- **August 6, 2025:** Senate Bill 25-083 voided non-competes for health-care providers and capped minority-owner sale-of-business covenants by formula [^dev-sb25-083].
 
 > [!NOTE]
 > **Practice note.**
 >
 > Because the wage thresholds reset every year and the health-care and minority-owner rules apply to agreements entered into or renewed on or after their effective dates, recheck the current C.R.S. § 8-2-113 text and the latest PAY CALC Order before relying on a Colorado covenant or updating a form [^dev-sb25-083][^ebg-recent-thresholds].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Colorado. This article synthesizes Colorado primary law and is not legal advice from a Colorado-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Colorado. This article synthesizes Colorado primary law and is not legal advice from a Colorado-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Colorado*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/colorado.
 
 [^crs-void-rule]: **C.R.S. § 8-2-113** — "Except as provided in subsections (2)(b) and (3) of this section, any covenant not to compete that restricts the right of any person to receive compensation for performance of labor for any employer is void." *C.R.S. § 8-2-113(2)(a).* <https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf>
 

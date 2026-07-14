@@ -1,15 +1,18 @@
 ---
 type: Case Excerpt
 title: Pangelinan v. Pangelinan
-description: 'Pangelinan v. Pangelinan, 2024 MP 5. — quoted in 1 document(s).'
+description: 'Pangelinan v. Pangelinan, 2024 MP 5. — quoted in 2 document(s).'
 citation: 'Pangelinan v. Pangelinan, 2024 MP 5.'
 resource: 'https://www.courtlistener.com/opinion/10124676/pangelinan-v-pangelinan/'
-timestamp: '2026-06-03'
+timestamp: '2026-07-02'
 document_references:
+  - type: State Law Practice Guide
+    resource: 'https://openagreements.org/practice-guides/invention-assignment/us/cnmi'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/cnmi'
 tags:
   - case-law
+  - invention-assignment
   - non-compete
 ---
 
@@ -17,7 +20,7 @@ tags:
 
 *Pangelinan v. Pangelinan, 2024 MP 5.*
 
-Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -25,9 +28,9 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > first look to local written law, which includes our case law adopting and/or adapting Restatement provisions. To the extent local written law is lacking, the Restatement fills the gaps.
 
-- supports: `court-narrowing`
-- source_cards: `pang-gapfill`
-- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
+- supports: `court-narrowing`, `default-ownership`
+- source_cards: `pang-gapfill`, `pang-gapfill-ownership`
+- cited_by: [Employee Invention Assignment in the Northern Mariana Islands](../invention-assignment/us/cnmi.md), [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10124676/pangelinan-v-pangelinan/#:~:text=first%20look%20to%20local%20written,the%20Restatement%20fills%20the%20gaps.>
 
 ### pangelinan-v-pangelinan-shall-be-the-rules-of-decision-07db66f9 {#pangelinan-v-pangelinan-shall-be-the-rules-of-decision-07db66f9}

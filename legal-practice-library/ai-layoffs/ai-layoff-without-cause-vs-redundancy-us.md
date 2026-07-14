@@ -84,7 +84,7 @@ The employment-law answer is not yet in the source set. But the general pattern 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-19. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-19. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *AI-driven layoffs: without cause or redundancy in U.S. employment law*, OpenAgreements (last updated April 19, 2026), https://openagreements.org/practice-guides/ai-layoffs/ai-layoff-without-cause-vs-redundancy-us.
 
 [^squire-patton-boggs-global-guide-on-redundancies]: **Squire Patton Boggs commentary** — "There are no specific rules about redundancy. It is likely a dismissal on grounds of redundancy would be considered a dismissal without cause." *Squire Patton Boggs, Global Guide on Redundancies.* <https://www.squirepattonboggs.com/media/o3qp4fx3/global-guide-on-redundancies-brochure.pdf>
 

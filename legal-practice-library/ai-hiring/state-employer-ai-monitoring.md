@@ -76,7 +76,7 @@ Union and federal-law overlay remains a separate uncertainty. The authorities ci
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *State laws on employer AI monitoring*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-hiring/state-employer-ai-monitoring.
 
 [^n-y-civ-rights-law-52-c]: **N.Y. Civ. Rights Law § 52-c** — "may be subject to monitoring at any and all times and by any lawful means" *N.Y. Civ. Rights Law § 52-c.* <https://www.nysenate.gov/legislation/laws/CVR/52-C%2A2>
 

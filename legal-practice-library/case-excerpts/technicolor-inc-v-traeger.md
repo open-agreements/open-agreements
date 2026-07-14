@@ -2,16 +2,19 @@
 type: Case Excerpt
 title: 'Technicolor, Inc. v. Traeger'
 description: >-
-  Technicolor, Inc. v. Traeger, 57 Haw. 113, 551 P.2d 163 (1976). — quoted in 1
+  Technicolor, Inc. v. Traeger, 57 Haw. 113, 551 P.2d 163 (1976). — quoted in 2
   document(s).
 citation: 'Technicolor, Inc. v. Traeger, 57 Haw. 113, 551 P.2d 163 (1976).'
 resource: 'https://www.courtlistener.com/opinion/1175722/technicolor-inc-v-traeger/'
-timestamp: '2026-06-02'
+timestamp: '2026-07-03'
 document_references:
+  - type: State Law Practice Guide
+    resource: 'https://openagreements.org/practice-guides/invention-assignment/us/hawaii'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/hawaii'
 tags:
   - case-law
+  - invention-assignment
   - non-compete
 ---
 
@@ -19,17 +22,26 @@ tags:
 
 *Technicolor, Inc. v. Traeger, 57 Haw. 113, 551 P.2d 163 (1976).*
 
-Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
+
+### technicolor-inc-v-traeger-i-it-is-greater-than-required-0f8006c1 {#technicolor-inc-v-traeger-i-it-is-greater-than-required-0f8006c1}
+
+> (i) it is greater than required for the protection of the person for whose benefit it is imposed; (ii) it imposes undue hardship on the person restricted; or(iii) its benefit to the covenantee is outweighed by injury to the public.
+
+- supports: `holdover-clause-limit`
+- source_cards: `technicolor-goldschmid-three-factors`
+- cited_by: [Employee Invention Assignment in Hawaii](../invention-assignment/us/hawaii.md)
+- link_to_source: <https://www.courtlistener.com/opinion/1175722/technicolor-inc-v-traeger/#:~:text=(i)%20it%20is%20greater%20than,by%20injury%20to%20the%20public.>
 
 ### technicolor-inc-v-traeger-our-understanding-of-the-above-committee-cd8e8e8c {#technicolor-inc-v-traeger-our-understanding-of-the-above-committee-cd8e8e8c}
 
 > Our understanding of the above committee report is that the restrictive covenants and agreements enumerated under § 480-4(c) were not meant to be exclusive in their respective fields.
 
-- supports: `protectable-interests`
-- source_cards: `interests-traeger-not-exclusive`
-- cited_by: [Non-Competes in Hawaii](../non-compete/us/hawaii.md)
+- supports: `holdover-clause-limit`, `protectable-interests`
+- source_cards: `interests-traeger-not-exclusive`, `technicolor-c-list-non-exclusive`
+- cited_by: [Employee Invention Assignment in Hawaii](../invention-assignment/us/hawaii.md), [Non-Competes in Hawaii](../non-compete/us/hawaii.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1175722/technicolor-inc-v-traeger/#:~:text=Our%20understanding%20of%20the%20above,exclusive%20in%20their%20respective%20fields.>
 
 ### technicolor-inc-v-traeger-this-reasonableness-analysis-is-done-by-b1b5241c {#technicolor-inc-v-traeger-this-reasonableness-analysis-is-done-by-b1b5241c}

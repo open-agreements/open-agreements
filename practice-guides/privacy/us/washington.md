@@ -95,7 +95,7 @@ The breach statute carries its own, separate consumer remedy: an action to enfor
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Washington. This article synthesizes Washington primary law and is not legal advice from a Washington-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Washington. This article synthesizes Washington primary law and is not legal advice from a Washington-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Washington Consumer Privacy Law (My Health My Data Act)*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/washington.
 
 [^q1-regulated-entity]: **RCW 19.373.010(23)** — "‘Regulated entity’ means any legal entity that: (a) Conducts business in Washington, or produces or provides products or services that are targeted to consumers in Washington; and (b) alone or jointly with others, determines the purpose and means of collecting, processing, sharing, or selling of consumer health data." *Wash. Rev. Code § 19.373.010(23).* <https://app.leg.wa.gov/RCW/default.aspx?cite=19.373.010>
 

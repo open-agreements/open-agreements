@@ -50,7 +50,7 @@ Unlike Colorado and Connecticut, Virginia's 30-day cure period has not sunset �
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-04. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Virginia. This article synthesizes Virginia primary law and is not legal advice from a Virginia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-04. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Virginia. This article synthesizes Virginia primary law and is not legal advice from a Virginia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Virginia Consumer Privacy Law (VCDPA)*, OpenAgreements (last updated June 4, 2026), https://openagreements.org/practice-guides/privacy/us/virginia.
 
 [^stat-576-apply]: **Va. Code § 59.1-576** — "This chapter applies to persons that conduct business in the Commonwealth or produce products or services that are targeted to residents of the Commonwealth and that (i) during a calendar year, control or process personal data of at least 100,000 consumers or (ii) control or process personal data of at least 25,000 consumers and derive over 50 percent of gross revenue from the sale of personal data." *Va. Code § 59.1-576(A).* <https://law.lis.virginia.gov/vacode/59.1-576/>
 

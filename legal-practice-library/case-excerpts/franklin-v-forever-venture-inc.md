@@ -6,9 +6,9 @@ description: >-
   quoted in 2 document(s).
 citation: 'Franklin v. Forever Venture, Inc., 2005 S.D. 53, ¶ 14, 696 N.W.2d 545.'
 resource: 'https://www.courtlistener.com/opinion/901375/franklin-v-forever-venture-inc/'
-timestamp: '2026-06-26'
+timestamp: '2026-07-01'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/south-dakota'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/south-dakota'
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`, `south-dakota-statutory-gates`
 - source_cards: `franklin-overbroad-goodwill`, `sd-franklin-similar-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/901375/franklin-v-forever-venture-inc/#:~:text=Therefore%2C%20to%20the%20extent%20that,void%20as%20against%20public%20policy.>
 
 ### franklin-v-forever-venture-inc-we-conclude-that-a-determination-of-ebcbf27a {#franklin-v-forever-venture-inc-we-conclude-that-a-determination-of-ebcbf27a}
@@ -49,5 +49,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `overbroad-covenants`, `severability-and-reformation`
 - source_cards: `franklin-partial-enforcement`, `sd-franklin-partial-sev`
-- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/901375/franklin-v-forever-venture-inc/#:~:text=Yet%2C%20despite%20the%20covenant%20being,not%20invalidate%20the%20entire%20provision.>

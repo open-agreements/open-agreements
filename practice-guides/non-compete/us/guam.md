@@ -128,7 +128,7 @@ The court drew that line itself. *Island Eye* rejected the *inevitable disclosur
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Guam. This article synthesizes Guam primary law and is not legal advice from a Guam-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Guam. This article synthesizes Guam primary law and is not legal advice from a Guam-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Guam*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/guam.
 
 [^stat-88105]: **18 GCA § 88105 — Contracts in Restraint of Trade** — "Every contract, by which anyone is restrained from exercising a lawful profession, trade, or business of any kind, otherwise than is provided in the next two sections, is to that extent void." *18 GCA § 88105.* <https://col.guamcourts.gov/sites/default/files/18gc088.pdf>
 

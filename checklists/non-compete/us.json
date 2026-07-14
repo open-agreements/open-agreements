@@ -29,16 +29,16 @@
     },
     {
       "rel": "related-form",
-      "href": "https://openagreements.org/templates/openagreements-restrictive-covenant-wyoming",
+      "href": "https://openagreements.org/templates/openagreements-restrictive-covenant-general",
       "type": "text/html",
-      "title": "Employee Restrictive Covenant (Wyoming)"
+      "title": "Employee Restrictive Covenant (General)"
     }
   ],
   "data": {
     "topic": "non-compete",
     "slug": "us",
     "frontmatter": {
-      "title": "Non-Compete Agreement Review Checklist",
+      "title": "Non-Compete Agreement Reviewer Checklist",
       "description": "A clause-by-clause reviewer checklist for employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement.",
       "eyebrow": "Reviewer Checklist",
       "coverage": "Jurisdiction-neutral (US)",
@@ -48,7 +48,7 @@
         "steven-obiajulu"
       ]
     },
-    "requirementCount": 42,
+    "requirementCount": 43,
     "sections": [
       {
         "sectionId": "parties-and-cover-term-identification",
@@ -128,7 +128,6 @@
         "requirementId": "identify-parties",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Parties identified by name",
         "sectionId": "parties-and-cover-term-identification",
@@ -142,7 +141,6 @@
         "requirementId": "identify-effective-date",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Effective date",
         "sectionId": "parties-and-cover-term-identification",
@@ -156,7 +154,6 @@
         "requirementId": "identify-employee-title",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Employee title",
         "sectionId": "parties-and-cover-term-identification",
@@ -168,6 +165,7 @@
           {
             "sourceId": "mnaa-nonexempt-worker",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Mass. Gen. Laws ch. 149, § 24L",
             "citation": "Mass. Gen. Laws ch. 149, § 24L(c).",
             "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
@@ -179,6 +177,7 @@
           {
             "sourceId": "il-noncompete-floor",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "820 ILCS 90/10(a)",
             "citation": "820 ILCS 90/10(a).",
             "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K10.htm",
@@ -192,7 +191,6 @@
         "requirementId": "identify-governing-law",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Governing law state named",
         "sectionId": "parties-and-cover-term-identification",
@@ -204,6 +202,7 @@
           {
             "sourceId": "restatement-187-fundamental-policy-limit",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Cardoni v. Prosperity Bank",
             "citation": "Cardoni v. Prosperity Bank, 805 F.3d 573 (5th Cir. 2015).",
             "url": "https://www.courtlistener.com/opinion/3150844/chris-cardoni-v-prosperity-bank/",
@@ -216,6 +215,7 @@
           {
             "sourceId": "q12-brown-publicpolicy",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Brown & Brown, Inc. v. Johnson",
             "citation": "Brown & Brown, Inc. v. Johnson, 25 N.Y.3d 364 (2015).",
             "url": "https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/",
@@ -231,7 +231,6 @@
         "requirementId": "define-confidential-information",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Confidential information",
         "sectionId": "definitions",
@@ -243,6 +242,7 @@
           {
             "sourceId": "overbroad-nda-de-facto-noncompete",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "TLS Management & Marketing Services, LLC v. Rodríguez-Toledo",
             "citation": "TLS Mgmt. & Mktg. Servs., LLC v. Rodríguez-Toledo, 966 F.3d 46 (1st Cir. 2020).",
             "url": "https://www.courtlistener.com/opinion/4769672/tls-mgmt-and-mktg-ser-llc-v-rodriguez-toledo/",
@@ -258,7 +258,6 @@
         "requirementId": "define-trade-secrets",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Trade secrets",
         "sectionId": "definitions",
@@ -270,6 +269,7 @@
           {
             "sourceId": "dtsa-trade-secret-definition",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
             "citation": "18 U.S.C. § 1839(3)(B) (2018).",
             "url": "https://www.law.cornell.edu/uscode/text/18/1839",
@@ -284,7 +284,6 @@
         "requirementId": "define-restricted-period",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Restricted period",
         "sectionId": "definitions",
@@ -298,7 +297,6 @@
         "requirementId": "define-restricted-territory",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Restricted territory",
         "sectionId": "definitions",
@@ -310,6 +308,7 @@
           {
             "sourceId": "restatement-188-rule-of-reason",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Restatement (Second) of Contracts § 188 (as quoted in Central Monitoring Service, Inc. v. Zakinski)",
             "citation": "Restatement (Second) of Contracts § 188(1) (Am. L. Inst. 1981), quoted in Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513, 518.",
             "url": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/",
@@ -321,6 +320,7 @@
           {
             "sourceId": "scope-tested-against-protected-interest",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Reliable Fire Equipment Co. v. Arredondo",
             "citation": "Reliable Fire Equip. Co. v. Arredondo, 2011 IL 111871, 965 N.E.2d 393.",
             "url": "https://www.courtlistener.com/opinion/3135645/reliable-fire-equipment-co-v-arredondo/",
@@ -336,7 +336,6 @@
         "requirementId": "define-covered-customers",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Covered customers",
         "sectionId": "definitions",
@@ -348,6 +347,7 @@
           {
             "sourceId": "restatement-188-rule-of-reason",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Restatement (Second) of Contracts § 188 (as quoted in Central Monitoring Service, Inc. v. Zakinski)",
             "citation": "Restatement (Second) of Contracts § 188(1) (Am. L. Inst. 1981), quoted in Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513, 518.",
             "url": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/",
@@ -359,6 +359,7 @@
           {
             "sourceId": "vessel-personal-contact",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Vessel Medical, Inc. v. Elliott",
             "citation": "Vessel Med., Inc. v. Elliott, No. 6:15-cv-00330-MGL, 2015 U.S. Dist. LEXIS 122436 (D.S.C. Sept. 15, 2015).",
             "url": "https://www.courtlistener.com/docket/5358739/vessel-medical-inc-v-elliott/",
@@ -371,6 +372,7 @@
           {
             "sourceId": "fournil-no-legitimate-interest",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Fournil v. Turbeville Insurance Agency, Inc.",
             "citation": "Fournil v. Turbeville Ins. Agency, Inc., No. 3:07-cv-03836-JFA (D.S.C. Mar. 2, 2009).",
             "url": "https://www.courtlistener.com/docket/4822524/fournil-v-turbeville-insurance-agency-inc/",
@@ -386,7 +388,6 @@
         "requirementId": "define-covered-employees",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Covered employees",
         "sectionId": "definitions",
@@ -400,7 +401,6 @@
         "requirementId": "define-protected-interests",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Protected business interests",
         "sectionId": "definitions",
@@ -412,6 +412,7 @@
           {
             "sourceId": "restatement-188-rule-of-reason",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Restatement (Second) of Contracts § 188 (as quoted in Central Monitoring Service, Inc. v. Zakinski)",
             "citation": "Restatement (Second) of Contracts § 188(1) (Am. L. Inst. 1981), quoted in Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513, 518.",
             "url": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/",
@@ -423,6 +424,7 @@
           {
             "sourceId": "legitimate-business-interest-three-prong",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Reliable Fire Equipment Co. v. Arredondo",
             "citation": "Reliable Fire Equip. Co. v. Arredondo, 2011 IL 111871, 965 N.E.2d 393.",
             "url": "https://www.courtlistener.com/opinion/3135645/reliable-fire-equipment-co-v-arredondo/",
@@ -438,7 +440,6 @@
         "requirementId": "define-competitive-business",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Competitive business",
         "sectionId": "definitions",
@@ -452,7 +453,6 @@
         "requirementId": "permit-de-minimis-passive-public-investment-carveout",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Small public-stock carve-out",
         "sectionId": "definitions",
@@ -466,7 +466,6 @@
         "requirementId": "define-passive-public-holdings",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
         "requirementLevel": "MAY",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Passive public holdings",
         "sectionId": "definitions",
@@ -480,7 +479,6 @@
         "requirementId": "define-solicit",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "What counts as soliciting",
         "sectionId": "definitions",
@@ -492,6 +490,7 @@
           {
             "sourceId": "mere-acceptance-of-business-not-solicitation",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Insure Idaho, LLC v. Horn",
             "citation": "Insure Idaho, LLC v. Horn, No. 49936 (Idaho July 11, 2025).",
             "url": "https://www.courtlistener.com/opinion/10634458/insure-idaho-v-horn/",
@@ -507,7 +506,6 @@
         "requirementId": "define-termination-of-employment",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Termination of employment",
         "sectionId": "definitions",
@@ -521,7 +519,6 @@
         "requirementId": "acknowledge-timing",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "When the agreement was signed",
         "sectionId": "timing-and-execution-acknowledgements",
@@ -533,6 +530,7 @@
           {
             "sourceId": "mnaa-midemployment-consideration",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Mass. Gen. Laws ch. 149, § 24L",
             "citation": "Mass. Gen. Laws ch. 149, § 24L(b)(ii).",
             "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
@@ -544,6 +542,7 @@
           {
             "sourceId": "il-consideration-def",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "820 ILCS 90/5",
             "citation": "820 ILCS 90/5.",
             "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K5.htm",
@@ -557,7 +556,6 @@
         "requirementId": "acknowledge-opportunity-to-consult-counsel",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Chance to consult a lawyer",
         "sectionId": "timing-and-execution-acknowledgements",
@@ -569,6 +567,7 @@
           {
             "sourceId": "ma-counsel-advisal-notice",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Mass. Gen. Laws ch. 149, § 24L(b)(i) — Massachusetts Noncompetition Agreement Act",
             "citation": "Mass. Gen. Laws ch. 149, § 24L(b)(i).",
             "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter149/Section24L",
@@ -580,28 +579,69 @@
         ]
       },
       {
-        "requirementId": "treat-trade-secret-protection-as-perpetual",
-        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
-        "requirementLevel": "MUST",
-        "scrutiny": "substantive",
+        "requirementId": "tie-trade-secret-duration-to-secrecy-status",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.tie-trade-secret-duration-to-secrecy-status",
+        "requirementLevel": "SHOULD",
         "sourceFootnotes": [],
-        "requirementLabel": "Trade-secret protection without an end date",
+        "requirementLabel": "Trade-secret duration tied to secrecy status",
         "sectionId": "confidentiality-and-trade-secret-treatment",
         "itemNumber": "4.1",
-        "anchor": "https://openagreements.org/checklists/non-compete/us#treat-trade-secret-protection-as-perpetual",
-        "requirementGuidance": "Confirm the trade-secret obligation runs for as long as the information remains a trade secret, with no fixed end date. Federal and state trade-secret law defines protection by secrecy itself, so a covenant that cuts trade-secret confidentiality off at a fixed term gives away statutory protection for nothing.",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#tie-trade-secret-duration-to-secrecy-status",
+        "requirementGuidance": "Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection federal and state trade-secret law give, because the law keys protection to continued secrecy. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it.",
         "variants": [],
         "sources": [
           {
             "sourceId": "dtsa-trade-secret-secrecy",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
             "citation": "18 U.S.C. § 1839(3)(B) (2018).",
             "url": "https://www.law.cornell.edu/uscode/text/18/1839",
             "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
-            "proposition": "Federal law keys trade-secret status to continued secrecy — value from not being generally known — which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "proposition": "Federal law keys trade-secret status to continued secrecy — value from not being generally known — which is why a status-bounded obligation captures the full duration the law protects.",
             "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
             "anchor": "https://openagreements.org/checklists/non-compete/us#src-dtsa-trade-secret-secrecy"
+          }
+        ]
+      },
+      {
+        "requirementId": "avoid-untethered-indefinite-confidentiality",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.avoid-untethered-indefinite-confidentiality",
+        "requirementLevel": "MUST NOT",
+        "sourceFootnotes": [],
+        "requirementLabel": "No unbounded confidentiality obligation",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us#avoid-untethered-indefinite-confidentiality",
+        "requirementGuidance": "Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "brown-tgs",
+            "authorityType": "case-law",
+            "tier": "primary-source-backed",
+            "title": "Brown v. TGS Management Co., LLC",
+            "citation": "Brown v. TGS Mgmt. Co., LLC, 57 Cal. App. 5th 303 (2020).",
+            "url": "https://www.courtlistener.com/opinion/4805583/brown-v-tgs-management-co-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4805583/brown-v-tgs-management-co-llc/#:~:text=Collectively%2C%20these%20overly%20restrictive,profession%20of%20statistical%20arbitrage.",
+            "proposition": "A California appellate court held that confidentiality provisions broad enough to bar the employee from working in his field operated as a de facto non-compete and were void as an unlawful restraint on competition.",
+            "verbatimQuote": "Collectively, these overly restrictive provisions operate as a de facto noncompete provision; they plainly bar Brown in perpetuity from doing any work in the securities field, much less in his chosen profession of statistical arbitrage.",
+            "date": "2020-11-12",
+            "pullQuoteLocator": "Collectively, these overly restrictive|profession of statistical arbitrage.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-brown-tgs"
+          },
+          {
+            "sourceId": "tls-rodriguez",
+            "authorityType": "case-law",
+            "tier": "primary-source-backed",
+            "title": "TLS Management & Marketing Services, LLC v. Rodríguez-Toledo",
+            "citation": "TLS Mgmt. & Mktg. Servs., LLC v. Rodríguez-Toledo, 966 F.3d 46 (1st Cir. 2020).",
+            "url": "https://www.courtlistener.com/opinion/4769672/tls-mgmt-and-mktg-ser-llc-v-rodriguez-toledo/",
+            "deepLink": "https://www.courtlistener.com/opinion/4769672/tls-mgmt-and-mktg-ser-llc-v-rodriguez-toledo/#:~:text=We%20reverse%20because%20TLS%20failed,broad%20as%20to%20be%20unenforceable.",
+            "proposition": "The First Circuit refused to enforce non-disclosure agreements that were so broad they reached beyond protectable trade secrets, functioning like a non-compete.",
+            "verbatimQuote": "We reverse because TLS failed to satisfy its burden to prove the existence of trade secrets, and because the nondisclosure agreements are so broad as to be unenforceable.",
+            "date": "2020-07-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us#src-tls-rodriguez"
           }
         ]
       },
@@ -609,13 +649,12 @@
         "requirementId": "state-confidentiality-duration",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Confidentiality end date",
         "sectionId": "confidentiality-and-trade-secret-treatment",
-        "itemNumber": "4.2",
+        "itemNumber": "4.3",
         "anchor": "https://openagreements.org/checklists/non-compete/us#state-confidentiality-duration",
-        "requirementGuidance": "Ordinary confidential information should carry its own finite term, separate from the perpetual trade-secret obligation. Courts are skeptical of perpetual restraints on information that never qualified as a trade secret, and the two-track duration structure is the standard cure.",
+        "requirementGuidance": "Ordinary confidential information should carry its own finite term, separate from the status-bounded trade-secret obligation. Courts are skeptical of perpetual restraints on information that never qualified as a trade secret, and the two-track duration structure is the standard cure.",
         "variants": [],
         "sources": []
       },
@@ -623,7 +662,6 @@
         "requirementId": "disclose-dtsa-notice",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "DTSA whistleblower notice",
         "sectionId": "permitted-disclosures-and-protected-conduct",
@@ -635,6 +673,7 @@
           {
             "sourceId": "dtsa-immunity-notice",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
             "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
             "url": "https://www.law.cornell.edu/uscode/text/18/1833",
@@ -649,7 +688,6 @@
         "requirementId": "carve-out-nlra-protected-discussion",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
         "requirementLevel": "MUST",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Wage-discussion carve-out",
         "sectionId": "permitted-disclosures-and-protected-conduct",
@@ -661,6 +699,7 @@
           {
             "sourceId": "nlra-section-7-rights",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
             "citation": "29 U.S.C. § 157 (NLRA § 7).",
             "url": "https://www.law.cornell.edu/uscode/text/29/157",
@@ -672,6 +711,7 @@
           {
             "sourceId": "mclaren-macomb-protected-activity",
             "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
             "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
             "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs, Board Rules That Employers May Not Offer Severance Agreements Requiring Employees to Broadly Waive Labor Law Rights (Feb. 21, 2023).",
             "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
@@ -686,7 +726,6 @@
         "requirementId": "permit-compelled-disclosure",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Court-ordered disclosure allowed",
         "sectionId": "permitted-disclosures-and-protected-conduct",
@@ -700,7 +739,6 @@
         "requirementId": "require-property-return-and-certification",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Property return and sign-off",
         "sectionId": "property-return-and-certification",
@@ -714,7 +752,6 @@
         "requirementId": "permit-employee-nonsolicit",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Employee non-solicit",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -726,6 +763,7 @@
           {
             "sourceId": "workforce-stability-legitimate-interest",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Prudential Locations, LLC v. Gagnon",
             "citation": "Prudential Locations, LLC v. Gagnon, 151 Haw. 136, 509 P.3d 1099 (2022).",
             "url": "https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/",
@@ -741,7 +779,6 @@
         "requirementId": "permit-customer-nonsolicit",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Customer non-solicit",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -753,6 +790,7 @@
           {
             "sourceId": "solicitation-requires-overt-act",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Insure Idaho, LLC v. Horn",
             "citation": "Insure Idaho, LLC v. Horn, No. 49936 (Idaho July 11, 2025).",
             "url": "https://www.courtlistener.com/opinion/10634458/insure-idaho-v-horn/",
@@ -768,7 +806,6 @@
         "requirementId": "permit-non-dealing",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Non-dealing covenant",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -780,6 +817,7 @@
           {
             "sourceId": "acceptance-vs-solicitation-split",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Insure Idaho, LLC v. Horn",
             "citation": "Insure Idaho, LLC v. Horn, No. 49936 (Idaho July 11, 2025).",
             "url": "https://www.courtlistener.com/opinion/10634458/insure-idaho-v-horn/",
@@ -795,7 +833,6 @@
         "requirementId": "permit-non-compete",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Non-compete covenant",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -807,6 +844,7 @@
           {
             "sourceId": "restatement-188-rule-of-reason-covenants",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Restatement (Second) of Contracts § 188 (as quoted in Central Monitoring Service, Inc. v. Zakinski)",
             "citation": "Restatement (Second) of Contracts § 188(1) (Am. L. Inst. 1981), quoted in Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513, 518.",
             "url": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/",
@@ -818,6 +856,7 @@
           {
             "sourceId": "enforceable-when-reasonable-baseline",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Reliable Fire Equipment Co. v. Arredondo",
             "citation": "Reliable Fire Equip. Co. v. Arredondo, 2011 IL 111871, 965 N.E.2d 393.",
             "url": "https://www.courtlistener.com/opinion/3135645/reliable-fire-equipment-co-v-arredondo/",
@@ -830,6 +869,7 @@
           {
             "sourceId": "california-void-pole-ixchel",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Ixchel Pharma, LLC v. Biogen, Inc.",
             "citation": "Ixchel Pharma, LLC v. Biogen, Inc., 9 Cal. 5th 1130, 470 P.3d 571 (2020).",
             "url": "https://www.courtlistener.com/opinion/4772471/ixchel-pharma-llc-v-biogen-inc/",
@@ -845,7 +885,6 @@
         "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Named-competitor narrowing",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -857,6 +896,7 @@
           {
             "sourceId": "restatement-188-rule-of-reason-covenants",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Restatement (Second) of Contracts § 188 (as quoted in Central Monitoring Service, Inc. v. Zakinski)",
             "citation": "Restatement (Second) of Contracts § 188(1) (Am. L. Inst. 1981), quoted in Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513, 518.",
             "url": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/",
@@ -868,6 +908,7 @@
           {
             "sourceId": "three-state-approaches-overbroad-covenants",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Steiner v. American Friends of Lubavitch (Chabad)",
             "citation": "Steiner v. Am. Friends of Lubavitch (Chabad), 177 A.3d 1246 (D.C. 2018).",
             "url": "https://www.courtlistener.com/opinion/4464037/yehuda-steiner-v-american-friends-of-lubavitch-chaabad/",
@@ -883,7 +924,6 @@
         "requirementId": "permit-non-investment",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
         "requirementLevel": "MAY",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Non-investment covenant",
         "sectionId": "restrictive-covenants-each-independently-includable",
@@ -897,7 +937,6 @@
         "requirementId": "require-non-disparagement",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Non-disparagement",
         "sectionId": "non-disparagement",
@@ -909,6 +948,7 @@
           {
             "sourceId": "mclaren-macomb-nondisparagement",
             "authorityType": "agency-guidance",
+            "tier": "official-source-backed",
             "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
             "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs, Board Rules That Employers May Not Offer Severance Agreements Requiring Employees to Broadly Waive Labor Law Rights (Feb. 21, 2023).",
             "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
@@ -923,7 +963,6 @@
         "requirementId": "address-physician-specific-rights",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Physician rights and notices",
         "sectionId": "physician-specific-notices-and-carve-outs",
@@ -948,6 +987,7 @@
           {
             "sourceId": "q7-542336-trigger",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Fla. Stat. § 542.336",
             "citation": "Fla. Stat. § 542.336 (2025).",
             "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.336",
@@ -958,6 +998,7 @@
           {
             "sourceId": "wyo-1-23-physician-bc",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Wyo. Stat. § 1-23-108(b)–(c)",
             "citation": "Wyo. Stat. § 1-23-108(b)–(c) (2025).",
             "url": "https://wyoleg.gov/2025/Enroll/SF0107.pdf",
@@ -971,7 +1012,6 @@
         "requirementId": "require-no-conflicting-obligations-representation",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "No conflicting obligations",
         "sectionId": "no-conflicting-obligations",
@@ -985,7 +1025,6 @@
         "requirementId": "address-notice-to-future-employers",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
         "requirementLevel": "MAY",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Notice to future employers",
         "sectionId": "notice-to-future-employers-and-other-third-parties",
@@ -999,7 +1038,6 @@
         "requirementId": "address-tolling-during-breach",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Restriction extended during a breach",
         "sectionId": "tolling-during-breach",
@@ -1011,6 +1049,7 @@
           {
             "sourceId": "no-equitable-extension-absent-tolling-clause",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "EMC Corp. v. Arturi",
             "citation": "EMC Corp. v. Arturi, 655 F.3d 75, 77-78 (1st Cir. 2011) (Souter, J.).",
             "url": "https://www.courtlistener.com/opinion/612666/emc-corp-v-arturi/",
@@ -1026,7 +1065,6 @@
         "requirementId": "require-injunctive-relief-availability",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Injunction availability",
         "sectionId": "remedies",
@@ -1038,6 +1076,7 @@
           {
             "sourceId": "phoenix-injunction-burden",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Phoenix Capital, Inc. v. Dowell",
             "citation": "Phoenix Capital, Inc. v. Dowell, 176 P.3d 835 (Colo. App. 2007).",
             "url": "https://www.courtlistener.com/opinion/2633761/phoenix-capital-inc-v-dowell/",
@@ -1053,7 +1092,6 @@
         "requirementId": "address-attorneys-fees-and-costs",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
         "requirementLevel": "MAY",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Attorney fees and costs",
         "sectionId": "remedies",
@@ -1065,6 +1103,7 @@
           {
             "sourceId": "fees-bad-faith",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Ind. Code § 34-52-1-1",
             "citation": "Ind. Code § 34-52-1-1.",
             "url": "https://iga.in.gov/laws/2025/ic/titles/34",
@@ -1079,7 +1118,6 @@
         "requirementId": "permit-blue-pencil-by-default",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-blue-pencil-by-default",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Court narrowing",
         "sectionId": "severability-and-reformation",
@@ -1152,6 +1190,7 @@
           {
             "sourceId": "reformation-188-rule",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Restatement (Second) of Contracts § 188 (as quoted in Ellis v. James V. Hurson Associates, Inc.)",
             "citation": "Restatement (Second) of Contracts § 188(1) (Am. L. Inst. 1981), quoted in Ellis v. James V. Hurson Assocs., Inc., 565 A.2d 615, 618 (D.C. 1989).",
             "url": "https://www.courtlistener.com/opinion/1561257/ellis-v-james-v-hurson-associates-inc/",
@@ -1164,6 +1203,7 @@
           {
             "sourceId": "overbroad-covenant-three-approaches",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Steiner v. American Friends of Lubavitch (Chabad)",
             "citation": "Steiner v. Am. Friends of Lubavitch (Chabad), 177 A.3d 1246 (D.C. 2018).",
             "url": "https://www.courtlistener.com/opinion/4464037/yehuda-steiner-v-american-friends-of-lubavitch-chaabad/",
@@ -1176,6 +1216,7 @@
           {
             "sourceId": "q4-542335-modify",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Fla. Stat. § 542.335",
             "citation": "Fla. Stat. § 542.335(1)(c) (2025).",
             "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
@@ -1186,6 +1227,7 @@
           {
             "sourceId": "hassler-no-blue-pencil",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Hassler v. Circle C Resources",
             "citation": "Hassler v. Circle C Resources, 2022 WY 28, 505 P.3d 169.",
             "url": "https://www.courtlistener.com/opinion/9998701/charlene-hassler-v-circle-c-resources/",
@@ -1197,6 +1239,7 @@
           {
             "sourceId": "ca-16600-broadly-sev",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Bus. & Prof. Code § 16600",
             "citation": "Cal. Bus. & Prof. Code § 16600(b)(1).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600",
@@ -1207,6 +1250,7 @@
           {
             "sourceId": "twentythree-no-compulsion",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "23 LTD v. Herman",
             "citation": "23 LTD v. Herman, 2019 COA 113.",
             "url": "https://www.courtlistener.com/opinion/4644233/23-ltd-v-herman/",
@@ -1219,6 +1263,7 @@
           {
             "sourceId": "ga-beltpower-decline-modify",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Belt Power, LLC v. Reed",
             "citation": "Belt Power, LLC v. Reed, 354 Ga. App. 289 (2020).",
             "url": "https://www.courtlistener.com/opinion/4735721/belt-power-llc-v-steve-reed/",
@@ -1231,6 +1276,7 @@
           {
             "sourceId": "il-reformation-discretion",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "820 ILCS 90/35",
             "citation": "820 ILCS 90/35.",
             "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K35.htm",
@@ -1241,6 +1287,7 @@
           {
             "sourceId": "mnaa-discretionary-reformation",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Mass. Gen. Laws ch. 149, § 24L",
             "citation": "Mass. Gen. Laws ch. 149, § 24L(d).",
             "url": "https://malegislature.gov/Laws/GeneralLaws/Chapter149/Section24L",
@@ -1252,6 +1299,7 @@
           {
             "sourceId": "nd-statute-extent-sev",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "N.D. Cent. Code § 9-08-06",
             "citation": "N.D. Cent. Code § 9-08-06.",
             "url": "https://ndlegis.gov/cencode/t09c08.pdf",
@@ -1262,6 +1310,7 @@
           {
             "sourceId": "nd-hawkins-sale-sev",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Hawkins Chemical, Inc. v. McNea",
             "citation": "Hawkins Chem., Inc. v. McNea, 321 N.W.2d 918, 920 (N.D. 1982).",
             "url": "https://www.courtlistener.com/opinion/1586088/hawkins-chemical-inc-v-mcnea/",
@@ -1274,6 +1323,7 @@
           {
             "sourceId": "tx-1551c-reform",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Tex. Bus. & Com. Code § 15.51",
             "citation": "Tex. Bus. & Com. Code § 15.51(c).",
             "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm",
@@ -1284,6 +1334,7 @@
           {
             "sourceId": "wa-emerick-partial-1",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Emerick v. Cardiac Study Center, Inc.",
             "citation": "Emerick v. Cardiac Study Ctr., Inc., 189 Wn. App. 711 (2015).",
             "url": "https://www.courtlistener.com/opinion/2830060/robert-emerick-v-cardiac-study-center-incps/",
@@ -1296,6 +1347,7 @@
           {
             "sourceId": "wa-rcw-080-reform-2",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RCW 49.62.080",
             "citation": "RCW 49.62.080(3).",
             "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.080",
@@ -1310,7 +1362,6 @@
         "requirementId": "address-survival-per-covenant",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Survival after the agreement ends",
         "sectionId": "survival",
@@ -1324,7 +1375,6 @@
         "requirementId": "address-assignment-and-successors",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
         "requirementLabel": "Assignment and successors",
         "sectionId": "assignment-and-successors",
@@ -1336,6 +1386,7 @@
           {
             "sourceId": "hess-not-assignable",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Hess v. Gebhard & Co.",
             "citation": "Hess v. Gebhard & Co. Inc., 808 A.2d 912 (Pa. 2002).",
             "url": "https://www.courtlistener.com/opinion/1931597/hess-v-gebhard-co-inc/",
@@ -1348,6 +1399,7 @@
           {
             "sourceId": "acordia-successor",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Acordia of Ohio, L.L.C. v. Fishel",
             "citation": "Acordia of Ohio, L.L.C. v. Fishel, 133 Ohio St. 3d 356, 2012-Ohio-4648, 978 N.E.2d 823.",
             "url": "https://www.courtlistener.com/opinion/2690659/acordia-of-ohio-llc-v-fishel/",
@@ -1363,7 +1415,6 @@
         "requirementId": "specify-governing-law-and-venue",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Governing law and venue",
         "sectionId": "governing-law-venue-dispute-process",
@@ -1375,6 +1426,7 @@
           {
             "sourceId": "choice-of-law-fundamental-policy-limit",
             "authorityType": "case-law",
+            "tier": "primary-source-backed",
             "title": "Cardoni v. Prosperity Bank",
             "citation": "Cardoni v. Prosperity Bank, 805 F.3d 573 (5th Cir. 2015).",
             "url": "https://www.courtlistener.com/opinion/3150844/chris-cardoni-v-prosperity-bank/",
@@ -1390,7 +1442,6 @@
         "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
         "requirementLabel": "Entire agreement, amendments, e-signatures",
         "sectionId": "entire-agreement-amendment-waiver-e-signatures",

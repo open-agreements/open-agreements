@@ -26,7 +26,7 @@ This makes Oklahoma one of the most employee-protective jurisdictions in the cou
 
 The U.S. Supreme Court later vacated that 2011 decision on arbitration-procedure grounds, so the void rule's firmest anchors are the statute itself and the Court of Civil Appeals' decision in *Autry v. Acosta, Inc.*, discussed below [^stat-217-general-void].
 
-What an Oklahoma employer *can* protect instead is a defined slice: direct solicitation of established customers, raiding of its workforce, the goodwill it buys when it acquires a business, and its trade secrets and confidential information. Each of those is addressed in its own question below. For a clause-by-clause pass over a specific agreement against these rules, the [Oklahoma non-compete review checklist](/checklists/non-compete/us/oklahoma) walks the surviving covenant suite item by item with each requirement's force level.
+What an Oklahoma employer *can* protect instead is a defined slice: direct solicitation of established customers, raiding of its workforce, the goodwill it buys when it acquires a business, and its trade secrets and confidential information. Each of those is addressed in its own question below. For a clause-by-clause pass over a specific agreement against these rules, the [Oklahoma non-compete reviewer checklist](/checklists/non-compete/us/oklahoma) walks the surviving covenant suite item by item with each requirement's force level.
 
 > [!NOTE]
 > **Practice note.**
@@ -136,7 +136,7 @@ The veto left the strict § 219A regime — and the *Autry* prohibition on reach
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oklahoma. This article synthesizes Oklahoma primary law and is not legal advice from a Oklahoma-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oklahoma. This article synthesizes Oklahoma primary law and is not legal advice from a Oklahoma-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Oklahoma*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/oklahoma.
 
 [^stat-217-general-void]: **15 O.S. § 217** — "Every contract by which any one is restrained from exercising a lawful profession, trade or business of any kind, otherwise than as provided by Sections 218 and 219 of this title, or otherwise than as provided by Section 2 of this act, is to that extent void." *Okla. Stat. tit. 15, § 217.* <https://oksenate.gov/sites/default/files/2022-05/os15.pdf>
 

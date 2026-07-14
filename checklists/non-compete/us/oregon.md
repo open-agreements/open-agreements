@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Oregon
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Oregon
 description: >-
   A clause-by-clause reviewer checklist for Oregon employee restrictive covenant
   agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Oregon[^about]
+# Non-Compete Agreement Reviewer Checklist — Oregon[^about]
 
 A clause-by-clause reviewer checklist for Oregon employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under ORS 653.295's notice rule, salary threshold, 12-month cap, garden-leave path, and the 2025 medical-licensee ban.
 
@@ -63,9 +63,11 @@ Review every item below the way an Oregon court would: ORS 653.295 starts from a
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — The trade-secret obligation should run as long as secrecy does — that is how federal law defines the right, and Oregon's non-compete statute expressly leaves trade-secret remedies untouched no matter what happens to the covenant. A fixed expiry on trade-secret protection gives away the one protection that survives even a void non-compete. [^dtsa-trade-secret-definition][^or-preserve-remedies] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection available, because federal law keys the right to continued secrecy and Oregon's non-compete statute expressly leaves trade-secret remedies untouched no matter what happens to the covenant. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of the protection that survives even a void non-compete, while a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition][^or-preserve-remedies] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Oregon's protectable-interest framework already distinguishes trade secrets from competitively sensitive information that does not qualify as one — the two-track duration structure mirrors that statutory line and keeps the perpetual obligation where the law actually supports it. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Oregon's protectable-interest framework already distinguishes trade secrets from competitively sensitive information that does not qualify as one — the two-track duration structure mirrors that statutory line and keeps the status-bounded obligation where the law actually supports it. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -161,7 +163,7 @@ The eight items below exist only on this Oregon page: they implement the statute
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Oregon (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Oregon (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Oregon*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/oregon.
 
 [^or-notice-gateway-cover]: **ORS 653.295** — "A noncompetition agreement entered into between an employer and employee is void and unenforceable unless: (a)(A) The employer informs the employee in a written employment offer received by the employee at least two weeks before the first day of the employee's employment that a noncompetition agreement is required as a condition of employment; or (B) The noncompetition agreement is entered into upon a subsequent bona fide advancement of the employee by the employer" *ORS 653.295(1)(a).* <https://www.oregonlegislature.gov/bills_laws/ors/ors653.html>
 

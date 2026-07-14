@@ -50,7 +50,7 @@ One Colorado wrinkle raises the stakes: the CPA's right-to-cure provision was re
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-04. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Colorado. This article synthesizes Colorado primary law and is not legal advice from a Colorado-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-04. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Colorado. This article synthesizes Colorado primary law and is not legal advice from a Colorado-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Colorado Consumer Privacy Law (CPA)*, OpenAgreements (last updated June 4, 2026), https://openagreements.org/practice-guides/privacy/us/colorado.
 
 [^stat-1304-apply]: **Colo. Rev. Stat. § 6-1-1304** — "this part 13 applies to a controller that: (a) Conducts business in Colorado or produces or delivers commercial products or services that are intentionally targeted to residents of Colorado; and (b) Satisfies one or both of the following thresholds:" *Colo. Rev. Stat. § 6-1-1304(1).* <https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-06.pdf>
 

@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/new-hampshire'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-hampshire'
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `hobert-reasonable-enforceable`, `nh-hobert-enforced-tailored`
-- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/#:~:text=Accordingly%2C%20we%20conclude%20that%20the%20defendant%E2%80%99s%20non%2Dcompetition%20covenant%20was%20reasonable%20and%20enforceable.>
 
 ### acas-acquisitions-precitech-inc-v-hobert-legitimate-interests-of-an-employer-that-a2d94a6d {#acas-acquisitions-precitech-inc-v-hobert-legitimate-interests-of-an-employer-that-a2d94a6d}
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `confidentiality-and-trade-secret-treatment`, `definitions`, `legitimate-interests`, `new-hampshire-statutory-gates`
 - source_cards: `hobert-legitimate-interests`, `nh-hobert-confidential-info`, `nh-hobert-interest-gate`, `nh-hobert-interest-list`
-- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/#:~:text=Legitimate%20interests%20of%20an%20employer,goodwill%20and%20a%20positive%20image.>
 
 ### acas-acquisitions-precitech-inc-v-hobert-the-first-step-in-determining-the-cd41ec52 {#acas-acquisitions-precitech-inc-v-hobert-the-first-step-in-determining-the-cd41ec52}

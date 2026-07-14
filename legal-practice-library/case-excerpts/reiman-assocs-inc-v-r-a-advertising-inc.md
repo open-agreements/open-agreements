@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/2033820/reiman-associates-inc-v-ra-advertising-inc/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/wisconsin'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/wisconsin'
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`, `wisconsin-statutory-gates`
 - source_cards: `q8-reiman`, `wi-reiman-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../checklists/non-compete/us/wisconsin.md), [Non-Competes in Wisconsin](../non-compete/us/wisconsin.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Wisconsin](../checklists/non-compete/us/wisconsin.md), [Non-Competes in Wisconsin](../non-compete/us/wisconsin.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2033820/reiman-associates-inc-v-ra-advertising-inc/#:~:text=Additionally%2C%20covenants%20incidental%20to%20the,and%20reasonable%20under%20the%20circumstances.>

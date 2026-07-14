@@ -2,7 +2,7 @@
 jurisdiction: "Montana"
 slug: montana
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/montana
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/montana · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/montana · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Montana[^about]
 
@@ -56,6 +56,11 @@ The first element is phrased as time *or* place, not necessarily both. That stil
 
 *Alborn* later applied the same framework to a shareholder accounting-firm covenant, explaining that partial restraints require a reasonableness determination rather than automatic invalidation [^alborn-dobbins-partial].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A Montana partial restraint stands or falls on the three-part *Dobbins* test: it must be limited in operation as to time or place, rest on good consideration, and afford reasonable protection to the employer without an unreasonable burden on the employee or the public [^dobbins-three-part-test]. Because the first element is phrased as time or place rather than both while the third requires balancing, a covenant with a technical time or territory limit still fails where the employer's protection is disproportionate to the burden, and a recital of reasonableness or of irreparable harm does not supply the legitimate interest the employer must prove. A stand-alone customer or employee non-solicit rides the same analysis with no safe-harbor duration or scope fixed by any Montana decision, so it is measured — like the fee-for-service structure the *Alborn* appeals enforced — against the served-client relationships and the stated period it actually protects [^alborn-dobbins-partial].
+
 ## Is continued employment enough consideration for a Montana non-compete signed after hire? {#consideration-after-hire}
 
 **Short answer.** Usually no for an at-will employee. *Access Organics* held that simple continued employment did not supply good consideration for a non-compete signed more than four months after hiring [^access-continued-employment].
@@ -67,7 +72,7 @@ The practical rule is timing-sensitive. A covenant presented as part of pre-empl
 > [!CAUTION]
 > **Drafting note.**
 >
-> For an existing Montana employee, do not rely on continued at-will employment alone. Tie the covenant to new consideration and document the exchange at the time the covenant is signed [^access-continued-employment][^access-independent-consideration].
+> A Montana covenant signed after employment has begun does not draw its consideration from continued at-will employment alone; the simple fact of continued employment may not serve as good consideration for a post-hire non-compete [^access-continued-employment]. Because good consideration is also the second element of the reasonableness test, a post-hire covenant resting on nothing new fails twice over — as a matter of contract formation and as a matter of the restraint's reasonableness — while a covenant tied to a new benefit documented at signing, such as a raise, a promotion, or access to trade secrets or confidential information, carries its own exchange [^access-independent-consideration]. A covenant presented as part of pre-employment negotiations instead rests on the job offer itself, and past raises or the bare fact of prior employment do not count.
 
 ## Can a Montana employer enforce a non-compete after terminating the employee without cause? {#termination-without-cause}
 
@@ -81,6 +86,11 @@ The reason is practical and equitable. If the employer could avoid competition b
 > **Practice note.**
 >
 > Before sending an enforcement letter after a layoff, nonrenewal, or termination without cause, identify a Montana-specific legitimate interest beyond ordinary competition. *Wrigg* makes employer-initiated separation a major enforcement problem [^wrigg-employer-termination].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> In Montana the manner of separation does outcome-level work: under *Wrigg*, the disfavor of restraints heightens when an employer chooses to end the employment relationship and still seeks to enforce the covenant, so an employer normally lacks a legitimate business interest in enforcement after a layoff, nonrenewal, or termination without cause [^wrigg-employer-termination]. The exception is conduct-based and employer-proven — whether the former employee used trade secrets, customer relationships, or proprietary information for an unfair advantage — and an enforcement notice sent after an employer-initiated separation runs into the same rule absent that showing [^wrigg-misconduct-exception]. A termination definition that lumps resignation, dismissal, and expiration together buries the single fact most likely to decide enforceability, so a covenant that records the separation type keeps the posture visible on the face of the agreement.
 
 ## Are fee-for-service and customer-fee clauses enforceable in Montana? {#customer-fee-restraints}
 
@@ -103,7 +113,7 @@ A pure customer non-solicitation clause is different from the fee-for-service pr
 > [!CAUTION]
 > **Drafting note.**
 >
-> Montana's partial-restraint cases are not permission to draft a broad no-work clause. If the restraint functions as an absolute prohibition in the worker's actual market, *Curl* and *Mungas* point toward invalidity [^curl-unreasonable-restraint][^mungas-absolute-prohibition].
+> Montana's partial-restraint cases are not a license for a broad no-work clause. Section 28-2-703 voids any contract restraining a lawful profession, trade, or business except a reasonable partial restraint, and the line the cases draw is functional rather than nominal: a covenant that leaves the worker no realistic way to practice the trade in the actual market is an absolute prohibition and unlawful, even when it carries a facial time or territory limit [^curl-unreasonable-restraint]. A restraint that is not an absolute prohibition draws a factual reasonableness determination instead of automatic invalidation, so the covenant that survives is the one keyed to a limited client set, territory, time, or fee consequence while practice stays open [^mungas-absolute-prohibition]. Montana courts void an overbroad restraint rather than trimming it, so the restraint that holds is the one sized to the worker's real market at signing.
 
 ## What are the sale-of-business and partnership exceptions in Montana? {#sale-partnership-exceptions}
 
@@ -112,6 +122,11 @@ A pure customer non-solicitation clause is different from the fee-for-service pr
 The sale-of-goodwill exception lets a seller agree with the buyer not to carry on a similar business in specified areas while the buyer or successor carries on a like business there. The geographic menu is statutory: the principal-office city or county, adjacent cities or counties, or a combination of those areas [^montana-goodwill-areas].
 
 The partnership exception is narrower and tracks the same geographic areas. It applies when partners dissolve the partnership and agree that one or more partners may not carry on a similar business within the § 28-2-704 territory.
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A covenant claiming Montana's statutory exceptions holds only where an actual qualifying transaction supports it and the geography stays inside the statutory menu — the principal-office city or county, an adjacent city or county, or a combination of those [^montana-goodwill-sale][^montana-goodwill-areas]. The exception is substance-tested rather than label-driven: a partnership document's recital does not create a goodwill sale, and where no sale of property for pecuniary consideration occurred the exception does not apply [^mungas-no-goodwill-sale-practice]. A sale-of-business or dissolution covenant drawn to a statewide or multi-state territory exceeds what §§ 28-2-704 and 28-2-705 authorize, and outside the exceptions the covenant falls back to the § 28-2-703 baseline and its partial-restraint analysis [^montana-partnership-dissolution].
 
 ## What special non-compete rules apply to Montana health-care providers? {#health-care-providers}
 
@@ -124,7 +139,7 @@ The 2025 amendments matter for timing. HB 198 added naturopathic physicians, RNs
 > [!CAUTION]
 > **Drafting note.**
 >
-> For covered providers, do not try to convert a non-compete into a patient non-solicit. Section 28-2-724 reaches both practice restrictions and restrictions on treating, advising, consulting with, establishing relationships with, or soliciting covered patients [^montana-healthcare-practice-ban].
+> For a covered provider, § 28-2-724 reaches practice restrictions and restrictions on treating, advising, consulting with, establishing relationships with, or soliciting covered patients alike, so a non-compete recast as a patient non-solicit is void to the same extent as the practice ban it replaces [^montana-healthcare-practice-ban]. Coverage is phased by when the contract was made or renewed: the behavioral-health classes predate the 2025 amendments, HB 198 added naturopathic physicians, registered professional nurses, advanced practice registered nurses, and physician assistants for contracts made or renewed on or after April 16, 2025, and HB 620 added all physicians licensed under Title 37, chapter 3 for contracts made or renewed on or after January 1, 2026, so a renewal or amendment can pull an older agreement into the current regime by its made-or-renewed date [^hb198-effective][^hb620-effective]. The two statutory exceptions are narrow: a covenant tied to the sale and purchase of a practice, and a decreasing-payback repayment provision written for physicians only, which is not an opening for the other covered classes [^montana-healthcare-exceptions].
 
 ## What trade-secret and severance alternatives remain in Montana? {#trade-secrets-severance}
 
@@ -132,14 +147,14 @@ The 2025 amendments matter for timing. HB 198 added naturopathic physicians, RNs
 
 MUTSA defines trade secrets as information or software that has independent economic value from not being generally known or readily ascertainable and is subject to reasonable secrecy efforts [^mutsa-trade-secret-definition]. It also authorizes injunctions for actual or threatened misappropriation, with limited royalty and affirmative-act remedies in appropriate cases [^mutsa-injunction].
 
-Section 28-2-604 gives Montana courts a partial-void rule when a contract has distinct lawful and unlawful objects. But restrictive covenants are strictly construed, and cases like *Curl* void overbroad restraints rather than rewriting them into better covenants. Treat severability as a cleanup rule for distinct promises, not a drafting strategy for an aggressive non-compete. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Montana non-compete review checklist](/checklists/non-compete/us/montana) walks the full covenant suite item by item with each requirement's force level.
+Section 28-2-604 gives Montana courts a partial-void rule when a contract has distinct lawful and unlawful objects. But restrictive covenants are strictly construed, and cases like *Curl* void overbroad restraints rather than rewriting them into better covenants. Treat severability as a cleanup rule for distinct promises, not a drafting strategy for an aggressive non-compete. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Montana non-compete reviewer checklist](/checklists/non-compete/us/montana) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not assume Montana will rewrite an overbroad covenant into a narrower one. Draft separate confidentiality, trade-secret, customer, repayment, and competition provisions so lawful objects can stand on their own if a restraint fails [^montana-partial-void][^curl-void-covenant].
+> A savings or reformation clause does not rescue an overbroad Montana restraint, because Montana courts construe restrictive covenants strictly and void an overbroad restraint outright rather than narrowing it into a lawful one [^curl-void-covenant]. The structural protection the state supplies is § 28-2-604: where a contract has several distinct objects, at least one lawful and one unlawful, it is void as to the unlawful object and valid as to the rest — a cleanup rule for distinct promises, not a repair shop for a single aggressive clause [^montana-partial-void]. Separate confidentiality, trade-secret, customer, repayment, and competition provisions, each sized to a lawful scope at the outset, leave the lawful promises standing on their own if a restraint fails.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Montana. This article synthesizes Montana primary law and is not legal advice from a Montana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Montana. This article synthesizes Montana primary law and is not legal advice from a Montana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Montana*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/montana.
 
 [^montana-restraint-baseline]: **Mont. Code Ann. § 28-2-703** — "28-2-703. Contracts in restraint of trade generally void. Any contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind, otherwise than is provided for by 28-2-704 or 28-2-705, is to that extent void." *Mont. Code Ann. § 28-2-703.* <https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0030/0280-0020-0070-0030.html>
 
@@ -180,6 +195,8 @@ Section 28-2-604 gives Montana courts a partial-void rule when a contract has di
 [^montana-partnership-dissolution]: **Mont. Code Ann. § 28-2-705** — "28-2-705. Exception -- dissolution of partnership. Partners may, upon dissolution of the partnership, agree that one or more of them may not carry on a similar business within the areas provided in 28-2-704(2)." *Mont. Code Ann. § 28-2-705.* <https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0050/0280-0020-0070-0050.html>
 
 [^montana-goodwill-areas]: **Mont. Code Ann. § 28-2-704** — "(2) The agreement authorized in subsection (1) may apply in: (a) the city where the principal office of the business is located; (b) the county where the principal office of the business is located; (c) a city in any county adjacent to the county in which the principal office of the business is located; (d) any county adjacent to the county in which the principal office of the business is located; or (e) any combination of the areas in subsections (2)(a) through (2)(d)." *Mont. Code Ann. § 28-2-704(2)(e).* <https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0040/0280-0020-0070-0040.html>
+
+[^mungas-no-goodwill-sale-practice]: **Mungas v. Great Falls Clinic, LLP** — "Section 28-2-704(1), MCA, the sale of goodwill exception to the prohibition on contracts in restraint of trade, does not apply to the partnership agreements at issue in this case." *Mungas v. Great Falls Clinic, LLP, 2009 MT 426, 354 Mont. 50, 221 P.3d 1230.* <https://www.courtlistener.com/opinion/888694/mungas-v-great-falls-clinic-llp/#:~:text=Section%2028%2D2%2D704(1)%2C%20MCA%2C%20the%20sale,at%20issue%20in%20this%20case.>
 
 [^montana-healthcare-practice-ban]: **Mont. Code Ann. § 28-2-724** — "(1) A contract that creates or establishes the terms of employment, a partnership, or any other form of professional relationship with a health care provider described in subsection (2) may not restrict the right of the health care provider, after the termination of the employment, partnership, or other form of professional relationship, to: (a) practice or provide services for which the provider is licensed, in any geographic area and for any period; (b) treat, advise, consult with, or establish a provider-patient relationship with any current patient of the employer or with a patient affiliated with a partnership or other form of professional relationship; or (c) solicit or seek to establish a provider-patient relationship with any current patient of the employer or with a patient affiliated with a partnership or other form of professional relationship." *Mont. Code Ann. § 28-2-724(1).* <https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0240/0280-0020-0070-0240.html>
 

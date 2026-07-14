@@ -93,7 +93,7 @@ For most founders, then, a SAFE is the better starting point than a note, and th
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-24. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for US (Delaware-governed by default) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-24. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for US (Delaware-governed by default) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Which YC SAFE should I use?*, OpenAgreements (last updated June 24, 2026), https://openagreements.org/practice-guides/startup-financing/which-yc-safe-to-use.
 
 [^carta-cap-no-discount-standard]: **Carta, State of Pre-Seed: 2025 in review** — "The post-money SAFE with a valuation cap but no discount continues to be the standard pre-seed instrument." *Carta, State of Pre-Seed: 2025 in review (Feb. 19, 2026).* <https://carta.com/data/state-of-pre-seed-2025/>
 

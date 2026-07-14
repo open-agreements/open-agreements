@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Maine
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Maine
 description: >-
   A clause-by-clause reviewer checklist for Maine employee restrictive covenant
   agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Maine[^about]
+# Non-Compete Agreement Reviewer Checklist — Maine[^about]
 
 A clause-by-clause reviewer checklist for Maine employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under 26 M.R.S. § 599-A's wage-floor ban, disclosure duties, and delayed-effectiveness rule.
 
@@ -63,9 +63,11 @@ Review every item below the way a Maine court would: the statute declares non-co
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — The trade-secret obligation should last as long as secrecy does — that is how federal law defines the right, and Maine's own act protects the same status. The stakes compound here because trade secrets head the short list of interests that can carry a Maine non-compete at all: a fixed expiry on trade-secret protection undercuts the confidentiality clause and the covenant leaning on it in the same stroke. [^dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection available, because federal law keys the right to continued secrecy and Maine's own act protects the same status. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of protection behind the interest that heads the short list able to carry a Maine non-compete at all, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Maine enforces confidentiality covenants that protect specialized proprietary work while leaving general skill and knowledge free — a perpetual lid on everything the worker ever learned strains that line, and the two-track structure keeps the perpetual obligation where the law actually supports it. [^bernier-skill-duration] [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Maine enforces confidentiality covenants that protect specialized proprietary work while leaving general skill and knowledge free — a perpetual lid on everything the worker ever learned strains that line, and the two-track structure keeps the status-bounded obligation where the law actually supports it. [^bernier-skill-duration] [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -159,7 +161,7 @@ The seven items below exist only on this Maine page: they implement the wage-flo
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Maine (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Maine (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Maine*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/maine.
 
 [^me-599a-delayed-cover]: **26 M.R.S. § 599-A — Noncompete agreements** — "Except for a noncompete agreement between an employer and an allopathic physician or an osteopathic physician licensed under Title 32, chapter 48 or chapter 36, respectively, the terms of a noncompete agreement do not take effect until after one year of the employee's employment with the employer or a period of 6 months from the date the agreement was signed, whichever is later." *26 M.R.S. § 599-A(5).* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
 

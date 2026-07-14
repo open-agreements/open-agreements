@@ -6,7 +6,7 @@ citation: 'Friddle v. Raymond, 575 So. 2d 1038 (Ala. 1991).'
 resource: 'https://www.courtlistener.com/opinion/1839261/friddle-v-raymond/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/alabama'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/alabama'
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `alabama-statutory-gates`, `professional-exemption`
 - source_cards: `friddle-cannot-fall`, `friddle-cannot-fall-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Alabama](../checklists/non-compete/us/alabama.md), [Non-Competes in Alabama](../non-compete/us/alabama.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Alabama](../checklists/non-compete/us/alabama.md), [Non-Competes in Alabama](../non-compete/us/alabama.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1839261/friddle-v-raymond/#:~:text=this%20Court%20has%20stated%20on,fall%20within%20these%20statutory%20exceptions.>
 
 ### friddle-v-raymond-this-court-stated-several-relevant-6e217653 {#friddle-v-raymond-this-court-stated-several-relevant-6e217653}

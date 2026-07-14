@@ -79,7 +79,7 @@ As of January 13, 2026, Wilson Sonsini wrote that specific EU AI Act transparenc
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *What company AI acceptable use policies need to cover*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-policies/company-aup-essentials.
 
 [^820-ilcs-42-5]: **820 ILCS 42/5** — "artificial intelligence may be used to analyze the applicant's video interview" *820 ILCS 42/5.* <https://www.ilga.gov/legislation/ilcs/documents/082000420K5.htm>
 

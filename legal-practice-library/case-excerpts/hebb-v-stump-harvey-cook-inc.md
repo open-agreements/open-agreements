@@ -8,7 +8,7 @@ citation: 'Hebb v. Stump, Harvey & Cook, Inc., 25 Md. App. 478 (1975).'
 resource: 'https://www.courtlistener.com/opinion/2195970/hebb-v-stump-harvey-cook-inc/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/maryland'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/maryland'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `hebb-severable-partial-enforcement`, `md-hebb-severable`
-- cited_by: [Non-Compete Agreement Review Checklist — Maryland](../checklists/non-compete/us/maryland.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Maryland](../checklists/non-compete/us/maryland.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2195970/hebb-v-stump-harvey-cook-inc/#:~:text=In%20the%20instant%20case%20the,severable%20and%20thus%20partially%20enforceable.>

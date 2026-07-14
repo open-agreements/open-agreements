@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/10627678/watercolor-salon-llc-v-nealie-hixon/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/mississippi'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/mississippi'
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `parties-and-cover-term-identification`, `who-is-bound`
 - source_cards: `ms-watercolor-parties`, `watercolor-disaffirm`
-- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10627678/watercolor-salon-llc-v-nealie-hixon/#:~:text=And%20because%20Nealie%20disaffirmed%20the,it%20is%20unenforceable%20against%20her.>

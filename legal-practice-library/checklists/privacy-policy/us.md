@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Privacy Policy Review Checklist
+type: Reviewer Checklist
+title: Privacy Policy Reviewer Checklist
 description: >-
   A clause-by-clause reviewer checklist for privacy policies covering business
   identification, data disclosures, consumer rights, opt-outs, consent, and
@@ -12,7 +12,7 @@ tags:
   - checklist
 ---
 
-# Privacy Policy Review Checklist[^about]
+# Privacy Policy Reviewer Checklist[^about]
 
 A clause-by-clause reviewer checklist for privacy policies covering business identification, data disclosures, consumer rights, opt-outs, consent, and maintenance.
 
@@ -84,7 +84,7 @@ A clause-by-clause reviewer checklist for privacy policies covering business ide
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-17. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Jurisdiction-neutral (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-17. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Jurisdiction-neutral (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Privacy Policy Reviewer Checklist*, OpenAgreements (last updated June 17, 2026), https://openagreements.org/checklists/privacy-policy/us.
 
 [^nj-notice-contact]: **N.J.S.A. 56:8-166.6** — "(7) an active electronic mail address or other online mechanism that the consumer may use to contact the controller." *N.J.S.A. 56:8-166.6(a)(7).* <https://pub.njleg.gov/bills/2022/PL23/266_.PDF>
 

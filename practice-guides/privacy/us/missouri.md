@@ -65,7 +65,7 @@ Two structural features still cut in opposite directions. The exposure scales: t
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Missouri. This article synthesizes Missouri primary law and is not legal advice from a Missouri-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Missouri. This article synthesizes Missouri primary law and is not legal advice from a Missouri-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Missouri Consumer Privacy Law*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/practice-guides/privacy/us/missouri.
 
 [^stat-1500-trigger]: **Mo. Rev. Stat. § 407.1500** — "Any person that owns or licenses personal information of residents of Missouri or any person that conducts business in Missouri that owns or licenses personal information in any form of a resident of Missouri shall provide notice to the affected consumer that there has been a breach of security following discovery or notification of the breach." *Mo. Rev. Stat. § 407.1500.2(1).* <https://revisor.mo.gov/main/OneSection.aspx?section=407.1500>
 

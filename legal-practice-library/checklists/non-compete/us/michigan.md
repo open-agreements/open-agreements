@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Michigan
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Michigan
 description: >-
   A clause-by-clause reviewer checklist for Michigan employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Michigan[^about]
+# Non-Compete Agreement Reviewer Checklist — Michigan[^about]
 
 A clause-by-clause reviewer checklist for Michigan employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under MCL § 445.774a's reasonable-competitive-business-interest test and scope limits.
 
@@ -63,7 +63,9 @@ Review every item below the way a Michigan court would: the statute permits an e
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should last as long as secrecy does — federal and Michigan law both key the right to continued secrecy, not to a contract year. A fixed expiry on trade-secret protection reads as a concession that the information stops being secret on schedule. [^mi-dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information stays secret — captures the full protection available, because federal and Michigan law both key the right to continued secrecy rather than a contract year. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^mi-dtsa-trade-secret-definition] [#tie-trade-secret-duration-to-secrecy-status]
+
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
 
 - [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Michigan enforces confidentiality-based restraints only to the extent of reasonable protection, and a perpetual lid on non-secret information is the kind of further reach the enforceability line cuts off. [^mi-follmer-duration] [#state-confidentiality-duration]
 
@@ -155,7 +157,7 @@ The five items below exist only on this Michigan page: they implement the statut
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Michigan (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Michigan (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Michigan*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/michigan.
 
 [^mi-774a-cover]: **MCL § 445.774a** — "An employer may obtain from an employee an agreement or covenant which protects an employer's reasonable competitive business interests and expressly prohibits an employee from engaging in employment or a line of business after termination of employment if the agreement or covenant is reasonable as to its duration, geographical area, and the type of employment or line of business." *MCL § 445.774a(1).* <https://legislature.mi.gov/Laws/MCL?objectName=mcl-445-774a>
 

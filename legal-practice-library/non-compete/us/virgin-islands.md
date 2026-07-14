@@ -124,7 +124,7 @@ For planning, the audience that matters is a Virgin Islands judge applying the *
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not U.S. Virgin Islands. This article synthesizes U.S. Virgin Islands primary law and is not legal advice from a U.S. Virgin Islands-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not U.S. Virgin Islands. This article synthesizes U.S. Virgin Islands primary law and is not legal advice from a U.S. Virgin Islands-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in the U.S. Virgin Islands*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/virgin-islands.
 
 [^arvidson-enforceable]: **Arvidson v. Buchar** — "Accordingly, the Arvidsons have met their summary judgment burden, and the Court finds the covenant to not compete invalid and unenforceable as a matter of law" *Arvidson v. Buchar, 2019 VI SUPER 122 (Super. Ct. V.I. Sept. 10, 2019).* <https://usvipublicportal-api.vicourts.org/courts/87edff36-c02b-4073-aea4-c0652bc123d9/cms/case/7432A3F8-AD71-45C5-B028-B4471D746A4E/docketentrydocuments/27b98266-7d9f-405f-b7ba-c221f8db0a97>
 

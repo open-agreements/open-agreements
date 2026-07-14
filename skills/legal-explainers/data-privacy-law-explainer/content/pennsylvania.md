@@ -2,7 +2,7 @@
 jurisdiction: "Pennsylvania"
 slug: pennsylvania
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-07"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/pennsylvania
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/pennsylvania · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/pennsylvania · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Pennsylvania Consumer Privacy Law[^about]
 
@@ -68,7 +68,7 @@ This is the one prong where Pennsylvania imposes a hard, statutory clock, so it 
 
 Enforcement of Pennsylvania's one statewide data-security duty is therefore a public matter: the Attorney General, through the Bureau of Consumer Protection, brings UTPCPL actions for failures to notify or to secure data, seeking injunctions, restitution, and civil penalties. That does not mean a Pennsylvania business faces no litigation exposure — it means the exposure comes from other doors. Plaintiffs routinely plead common-law theories such as negligence and breach of implied contract after a breach, though those face steep standing hurdles absent actual misuse of the data. The fastest-growing exposure is WESCA: after Popa, plaintiffs' firms have filed waves of class actions treating third-party session-replay, chat, and advertising-pixel code as an unlawful two-party-consent interception, and the practical defense is to obtain the visitor's consent to that tracking before it runs. The durable takeaway: the Breach Act itself is AG-enforced only, but a Pennsylvania privacy program still has to manage real private-suit exposure under the wiretap law.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-07. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Pennsylvania. This article synthesizes Pennsylvania primary law and is not legal advice from a Pennsylvania-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-07. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Pennsylvania. This article synthesizes Pennsylvania primary law and is not legal advice from a Pennsylvania-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Pennsylvania Consumer Privacy Law*, OpenAgreements (last updated June 7, 2026), https://openagreements.org/practice-guides/privacy/us/pennsylvania.
 
 [^stat-2302-entity]: **73 P.S. § 2302** — "‘Entity.’ A State agency, a political subdivision of the Commonwealth or an individual or a business doing business in this Commonwealth." *73 P.S. § 2302.* <https://codes.findlaw.com/pa/title-73-ps-trade-and-commerce/pa-st-sect-73-2302/>
 

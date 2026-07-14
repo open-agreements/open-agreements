@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Kansas
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Kansas
 description: >-
   A clause-by-clause reviewer checklist for Kansas employee restrictive covenant
   agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Kansas[^about]
+# Non-Compete Agreement Reviewer Checklist — Kansas[^about]
 
 A clause-by-clause reviewer checklist for Kansas employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the four-factor Weber v. Tillman reasonableness test and the K.S.A. 50-163 non-solicitation safe harbors.
 
@@ -63,7 +63,9 @@ Review every item below the way a Kansas court would: the covenant must be ancil
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should run as long as secrecy does — that is how the federal definition works, and the Kansas act is built on the same secrecy-keyed structure. A fixed expiry on trade-secret protection volunteers away the strongest interest the covenant suite protects. [^dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information stays secret — captures the full protection available, because the federal definition and the Kansas act are both built on the same secrecy-keyed structure. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of protection behind the strongest interest the covenant suite protects, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition] [#tie-trade-secret-duration-to-secrecy-status]
+
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
 
 - [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Kansas protects non-secret information through contract alone, and contracts are enforced only as far as they are reasonable — a perpetual lid on non-secret information is the kind of overreach a Kansas court trims to the minimum it considers necessary. [#state-confidentiality-duration]
 
@@ -155,7 +157,7 @@ The five items below exist only on this Kansas page: they implement the four-fac
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Kansas (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Kansas (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Kansas*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/kansas.
 
 [^weber-ancillary-cover]: **Weber v. Tillman** — "A noncompetition covenant ancillary to an employment contract is valid and enforceable if the restraint is reasonable under the circumstances and not adverse to the public welfare." *Weber v. Tillman, 259 Kan. 457, 913 P.2d 84 (1996).* <https://www.courtlistener.com/opinion/7969238/weber-v-tillman/#:~:text=A%20noncompetition%20covenant%20ancillary%20to,adverse%20to%20the%20public%20welfare.>
 

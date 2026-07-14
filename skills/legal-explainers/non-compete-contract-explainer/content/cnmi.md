@@ -2,7 +2,7 @@
 jurisdiction: "Northern Mariana Islands"
 slug: cnmi
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/cnmi
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/cnmi · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/cnmi · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in the Northern Mariana Islands[^about]
 
@@ -135,7 +135,7 @@ Two widely publicized changes do not reach the CNMI on their own force. The fede
 
 The practical takeaway is stability with a thin margin. Because the framework is judge-made, the most reliable signal of change would be a new CNMI Supreme Court or federal decision deciding one of the open questions, consideration, reformation, or tolling, rather than a bill.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Northern Mariana Islands. This article synthesizes Northern Mariana Islands primary law and is not legal advice from a Northern Mariana Islands-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Northern Mariana Islands. This article synthesizes Northern Mariana Islands primary law and is not legal advice from a Northern Mariana Islands-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in the Northern Mariana Islands*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/cnmi.
 
 [^cmc-3401]: **7 CMC § 3401** — "In all proceedings, the rules of the common law, as expressed in the restatements of the law approved by the American Law Institute and, to the extent not so expressed as generally understood and applied in the United States, shall be the rules of decision in the courts of the Commonwealth, in the absence of written law or local customary law to the contrary" *7 CMC § 3401.* <https://cnmilaw.org/pdf/cmc_section/T7/3401.pdf>
 

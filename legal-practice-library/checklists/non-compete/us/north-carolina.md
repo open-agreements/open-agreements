@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — North Carolina
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — North Carolina
 description: >-
   A clause-by-clause reviewer checklist for North Carolina employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — North Carolina[^about]
+# Non-Compete Agreement Reviewer Checklist — North Carolina[^about]
 
 A clause-by-clause reviewer checklist for North Carolina employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Whittaker five-element test, the § 75-4 signed-writing rule, and the strict blue-pencil doctrine.
 
@@ -63,7 +63,9 @@ Review every item below the way a North Carolina court would: the covenant is a 
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should run as long as secrecy does — that is how federal law defines the right — while everything else gets a finite term. The two-track structure matters in North Carolina because the trade-secret claim is the protection that survives a failed covenant; a fixed expiry quietly surrenders it. [^dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection federal law gives, because the right is keyed to continued secrecy. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of the trade-secret claim that survives a failed covenant in North Carolina, while a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition] [#tie-trade-secret-duration-to-secrecy-status]
+
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
 
 - [ ] **Confidentiality end date** (Recommended) — Give non-trade-secret confidential information its own stated end date. A perpetual lid on ordinary business information reads as overreach in a state that construes restraints strictly against the drafter and never trims them down to reasonable. [#state-confidentiality-duration]
 
@@ -153,7 +155,7 @@ The four items below exist only on this North Carolina page: they implement the 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for North Carolina (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for North Carolina (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — North Carolina*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/north-carolina.
 
 [^nc-daniel-consideration-cover]: **Whittaker General Medical Corp. v. Daniel** — "When the relationship of employer and employee is established before the covenant not to compete is signed there must be consideration for the covenant such as a raise in pay or a new job assignment." *Whittaker Gen. Med. Corp. v. Daniel, 324 N.C. 523 (1989).* <https://www.courtlistener.com/opinion/1205500/whittaker-general-medical-corp-v-daniel/#:~:text=When%20the%20relationship%20of%20employer,or%20a%20new%20job%20assignment.>
 

@@ -82,7 +82,7 @@ In the baseline states, enforcement runs through general consumer-protection and
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + 50-state + DC coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + 50-state + DC coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Privacy Policies: What U.S. State Privacy Laws Require a Business to Post, Say, and Honor*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/practice-guides/privacy/us.
 
 [^tx-tdpsa-apply]: **Tex. Bus. & Com. Code § 541.002** — "This chapter applies only to a person that: (1) conducts business in this state or produces a product or service consumed by residents of this state; (2) processes or engages in the sale of personal data; and (3) is not a small business as defined by the United States Small Business Administration, except to the extent that Section 541.107 applies to a person described by this subdivision." *Tex. Bus. & Com. Code § 541.002(a).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm>
 

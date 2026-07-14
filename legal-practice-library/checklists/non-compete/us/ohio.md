@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Ohio
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Ohio
 description: >-
   A clause-by-clause reviewer checklist for Ohio employee restrictive covenant
   agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Ohio[^about]
+# Non-Compete Agreement Reviewer Checklist — Ohio[^about]
 
 A clause-by-clause reviewer checklist for Ohio employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Raimonde reasonableness test, with discretionary reformation and litigation tolling in view.
 
@@ -63,9 +63,11 @@ Review every item below the way an Ohio court would: there is no general non-com
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret protection should last as long as secrecy does — that is how both the federal definition and Ohio's statutory definition frame the right. A fixed expiry on trade-secret obligations gives away protection the law would otherwise supply indefinitely. [^dtsa-trade-secret-definition][^oh-outsa-definition-confidentiality] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection available, because both the federal definition and Ohio's statutory definition key the right to continued secrecy. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of protection the law would otherwise supply for as long as secrecy holds, while a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition][^oh-outsa-definition-confidentiality] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. The two-track structure keeps the perpetual obligation where the trade-secret statutes actually support it, and a bounded term for everything else sits far more comfortably with a reasonableness court than a perpetual lid on non-secret information. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. The two-track structure keeps the status-bounded obligation where the trade-secret statutes actually support it, and a bounded term for everything else sits far more comfortably with a reasonableness court than a perpetual lid on non-secret information. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -153,7 +155,7 @@ The four items below exist only on this Ohio page: they implement the three-pron
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Ohio (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Ohio (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Ohio*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/ohio.
 
 [^oh-raimonde-factors-cover]: **Raimonde v. Van Vlerah** — "whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition" *Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975).* <https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/#:~:text=whether%20the%20employee%20is%20possessed,seeks%20to%20eliminate%20ordinary%20competition>
 

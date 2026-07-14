@@ -30,6 +30,11 @@ Because the restraint must protect a legitimate business interest — trade secr
 >
 > Do not treat a Mississippi covenant as automatically valid or automatically void. Confirm that the restraint protects a real business interest and is reasonable in time, territory, and activity, because the employer bears the burden of proving reasonableness and the court will construe ambiguity against the drafter [^texas-road-boring-three-aspects].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> Mississippi has no general non-compete statute, so every covenant in the agreement stands or falls on the balance of three interests — the rights of the employer, the rights of the employee, and the rights of the public — and the employer carries the burden of proving the restraint reasonable in time, territory, and restrained activity [^texas-road-boring-three-aspects]. A court treats these covenants as restraints on trade and individual freedom, so they are disfavored and any ambiguity is construed strictly against the drafting employer [^redd-foster-disfavored], weighed to maintain a reasonable balance between the employer's protection and the employee's freedom to work [^donahoe-reasonable-balance]. A covenant that cannot be tied to customer goodwill, confidential information, or another protectable interest fails that test — the investment restraint is the hardest of all to justify. Trade-secret protection, in turn, survives only on the reasonable efforts that surround it: the return, deletion, and certification of confidential material form the contemporaneous record an employer would need if protected material later surfaced at a competitor.
+
 ## Is continued at-will employment enough consideration for a Mississippi non-compete? {#consideration}
 
 **Short answer.** Yes. Unlike states that demand fresh consideration for a covenant signed after hire, Mississippi treats continued at-will employment as sufficient consideration to support a restrictive covenant [^raines-continued-employment].
@@ -41,7 +46,7 @@ That said, timing still matters. Mississippi courts have suggested that a covena
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not assume the consideration question disappears in Mississippi just because continued employment can suffice. Document the covenant's tie to the employment relationship, and pair it with new consideration where practical, because Mississippi still construes the agreement strictly and scrutinizes the circumstances of signing [^raines-continued-employment].
+> The consideration question does not disappear in Mississippi merely because continued employment can suffice; the agreement is still construed strictly, and the circumstances of signing are scrutinized, so a documented tie to the employment relationship — paired with fresh consideration where practical — stands on firmer ground [^raines-continued-employment]. For an existing at-will employee, continued employment is itself the consideration, and no separate payment, raise, or promotion is needed to support the covenant [^raines-continued-employment]. Adequate consideration, however, only supports the covenants — it does not make them reasonable, and each covenant must still independently satisfy the reasonableness balance on time, territory, and restrained activity.
 
 ## What duration and geographic scope are reasonable for a Mississippi non-compete? {#duration-limits}
 
@@ -54,7 +59,12 @@ Remote work does not dissolve a geographic limit. In *Timber Lake Foods v. Estes
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not copy a fixed radius or term from another form. Match the territory to the employer's real market and the employee's actual reach, and remember that a remote worker located inside the restricted area is still bound — geography is measured by where the employee operates, not only where the customers sit [^timber-lake-home-in-radius].
+> A fixed radius or term copied from another form is measured against a market it was never sized to; a Mississippi court instead weighs the territory against the employer's real market and the employee's actual reach. A remote worker located inside the restricted area is still bound — geography is measured by where the employee operates, not only where the customers sit [^timber-lake-home-in-radius].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A territory tied to the geographic area in which the employee actually provided services, and sized to the employee's real influence rather than the employer's whole footprint, is the defensible one. A statewide restraint failed where the employee's protectable relationships were limited to one local area [^heatherly-statewide-unreasonable], while a 250-mile radius held for a telephonic business whose market would have justified even a nationwide limit [^timber-lake-radius-reasonable]. There is no statutory cap on duration or territory; a court weighs time, territory, and restrained activity together, so a restraint measured to where the employee worked and whom they influenced fares best. Naming the specific Specified Competitors in Cover Terms, rather than leaving the restrained activity open-ended, is strong evidence it reaches no further than required.
 
 ## Will a Mississippi court reform or blue-pencil an overbroad non-compete? {#court-narrowing}
 
@@ -62,12 +72,12 @@ Remote work does not dissolve a geographic limit. In *Timber Lake Foods v. Estes
 
 *Redd Pest Control Co. v. Heatherly* is the classic example. The covenant on its face barred competition across the entire state, but the court enforced it only within Tupelo and a fifty-mile radius — the area where the employee actually held customer relationships — and remanded for an injunction limited to that reasonable scope [^heatherly-enforce-reasonable-part]. The court framed the issue as whether a restraint reasonable in part and unreasonable in the rest should be enforced as to the reasonable part, and answered yes [^heatherly-partial-enforcement-issue].
 
-This power is broader than a strict blue pencil that only crosses out severable words, but it is not a safety net for abusive drafting. Reformation rests on the chancellor's equitable discretion, and a grossly overbroad covenant invites a court to decline enforcement rather than rewrite it. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Mississippi non-compete review checklist](/checklists/non-compete/us/mississippi) walks the full covenant suite item by item with each requirement's force level.
+This power is broader than a strict blue pencil that only crosses out severable words, but it is not a safety net for abusive drafting. Reformation rests on the chancellor's equitable discretion, and a grossly overbroad covenant invites a court to decline enforcement rather than rewrite it. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Mississippi non-compete reviewer checklist](/checklists/non-compete/us/mississippi) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on Mississippi's reformation power to rescue an aggressive covenant. Draft tiered, severable, and genuinely reasonable restraints, because partial enforcement is a discretionary equitable remedy and a chancellor may refuse to narrow a covenant that overreaches [^heatherly-enforce-reasonable-part].
+> Mississippi's reformation power is no rescue for an aggressive covenant. Partial enforcement is a discretionary equitable remedy, and a chancellor may refuse to narrow a covenant that overreaches [^heatherly-enforce-reasonable-part], so a tiered, severable, and genuinely reasonable restraint is the one that survives. Mississippi will enforce an overbroad covenant only to its reasonable extent — the leading case framed the question as whether the reasonable part of a partly unreasonable covenant should be enforced, answered yes, and cut a facially statewide restraint down to one town and a fifty-mile radius [^heatherly-partial-enforcement-issue]. A covenant that stands as written, rather than in reliance on that judicial revision, carries no such risk.
 
 ## Can a Mississippi employer enforce a non-compete after a bad-faith termination? {#bad-faith-termination}
 
@@ -84,6 +94,11 @@ The defense has a clear limit: it turns on how the employment ended. An employee
 >
 > Do not fire an employee arbitrarily and expect to enforce the non-compete in Mississippi. Document a legitimate, good-faith basis for any termination before seeking an injunction, because a bad-faith discharge forfeits the equitable enforcement of the covenant [^empiregas-bad-faith].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> No clause can draft around Mississippi's bad-faith defense: when an employer terminates an employee in bad faith, the terms of a non-competition agreement will not be enforced [^empiregas-bad-faith]. An injunction is an equitable remedy — a chancellor who finds the termination arbitrary, capricious, or in bad faith can refuse to lend the hand of equity, and no recital added to the agreement can clean the employer's hands [^empiregas-equity]. The defense turns on how the employment ended: an employee who voluntarily resigns generally cannot invoke it, and the covenant is then tested on ordinary reasonableness grounds. The same limit governs any notice to a future employer — a notice built on a covenant the employer forfeited through a bad-faith discharge, or one that fails the reasonableness balance, can expose the employer to a claim, and holds up only on a restraint the employer is prepared to defend.
+
 ## How do Mississippi courts read customer non-solicitation clauses? {#non-solicitation}
 
 **Short answer.** Strictly, and against the drafter. A clause that bars an employee from acting to *divert* business does not necessarily stop the employee from passively *accepting* business from former customers who seek the employee out on their own, unless the contract clearly says so [^kennedy-ambiguous-accepting].
@@ -93,7 +108,12 @@ In *Kennedy v. Metropolitan Life Insurance Co.*, the covenant barred conduct tha
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not assume a standard non-solicitation clause stops a former employee from serving customers who come to them. If the goal is to bar servicing former clients regardless of who makes first contact, use explicit non-dealing or no-acceptance language, because Mississippi reads ambiguity against the employer [^kennedy-ambiguous-accepting].
+> A standard non-solicitation clause does not necessarily stop a former employee from serving customers who come to them. Barring the service of former clients regardless of who makes first contact takes explicit non-dealing or no-acceptance language, because Mississippi reads ambiguity against the employer [^kennedy-ambiguous-accepting].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> Each restraint reaches only the conduct it names. A customer non-solicit built on the Solicit definition reaches only the employee's active diversion; stopping a former employee from serving customers who come to them on their own falls to the separate No Business with Covered Customers covenant and its express no-acceptance language. A clause barring conduct that would tend to divert business was held ambiguous precisely because it did not expressly prohibit accepting business from former customers who came over on their own initiative, and the court construed that ambiguity against the employer [^kennedy-ambiguous-accepting]. An express no-acceptance provision can, in appropriate cases, be reasonable and enforceable [^kennedy-accepting-can-be-valid]. That no-acceptance covenant is the heavier restraint, defensible only where it is genuinely needed and sized at least as tightly to the customer goodwill it protects; a customer non-solicit backed by the confidentiality and trade-secret terms is often a sturdier, more readily enforceable protection than a broad non-compete.
 
 ## Does a Mississippi non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
@@ -108,7 +128,7 @@ Any such extension still has to satisfy ordinary reasonableness. A clause tied t
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a Mississippi court to add time to an expired covenant on its own — under *Frierson* it will not. If you need the clock to pause during a breach, draft an explicit extension-on-breach clause tied to the actual period of breach, because that contractual route, not judicial tolling, is what Mississippi courts have enforced [^frierson-no-extension][^cascio-extension-effect].
+> A Mississippi court will not, on its own, add time to an expired covenant — under *Frierson* it cannot. Pausing the clock during a breach depends on an explicit extension-on-breach clause tied to the actual period of breach, because that contractual route, not judicial tolling, is what Mississippi courts have enforced [^frierson-no-extension][^cascio-extension-effect]. Such a clause holds up where it extends each covenant only by the actual period of breach and caps the extension at that period, because an extension is itself a restraint that must stay reasonable rather than a lever that turns a fixed term into a perpetual one [^q7-texas-road-boring].
 
 ## Are sale-of-business and ownership covenants treated differently in Mississippi? {#sale-of-business}
 
@@ -131,6 +151,11 @@ This is the mirror image of the sale-of-business rule. A covenant given by the *
 >
 > Do not assume an asset purchase sweeps in the seller's employee non-competes. Identify each restrictive covenant in diligence and assign it expressly and before closing, because in *Herring Gas* a post-resignation assignment and silent deal documents left the buyer unable to enforce [^herring-not-enforceable].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> An employee covenant transfers only where it is assigned expressly and in writing in the transaction documents, because Mississippi will not supply a transfer the deal papers omit: the buyer of a propane business could not enforce an employee's covenant where the asset-purchase agreement's plain language did not transfer the employment contract, and a later assignment was of no effect because it came after the employee had already resigned [^herring-not-enforceable]. An assignment made before the employee departs, not after, is the one that takes. A covenant given by the seller of a business is the mirror image — it travels with the goodwill conveyed and is given general application unless its own terms make it personal to the original obligee — but a covenant given by an employee of the seller is just another contract that must be deliberately assigned.
+
 ## Which Mississippi workers cannot be bound by a non-compete? {#who-is-bound}
 
 **Short answer.** Two categories stand out. A worker who was a minor when signing can disaffirm the agreement, and a lawyer cannot be bound by a practice-restricting non-compete in a partnership or employment agreement: Mississippi Rule of Professional Conduct 5.6 prohibits it [^watercolor-disaffirm][^rule-5-6-ban].
@@ -138,6 +163,11 @@ This is the mirror image of the sale-of-business rule. A covenant given by the *
 In *Watercolor Salon v. Hixon*, a stylist signed a non-compete at twenty — a minor under Mississippi law at the time — and later disaffirmed it; the Supreme Court agreed the agreement was unenforceable against her [^watercolor-disaffirm]. For lawyers, Rule 5.6 forbids a partnership or employment agreement that restricts a lawyer's right to practice after the relationship ends, except an agreement about retirement benefits [^rule-5-6-ban]; it also does not reach a restriction included in the sale of a law practice under Rule 1.17 [^rule-5-6-sale-exception].
 
 Outside these categories, Mississippi has no statutory wage floor or occupational exemption. Low-wage and entry-level workers are protected only by the general reasonableness analysis — because the employer must prove a legitimate business interest, a restraint on an unskilled, entry-level worker is often hard to justify.
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A practice restriction on a lawyer is unenforceable whatever the lawyer's pay or seniority: a partnership or employment agreement that restricts a lawyer's right to practice after the relationship ends is prohibited, except an agreement concerning benefits upon retirement [^rule-5-6-ban]. The rule's only other carve-out is a restriction included in the terms of the sale of a law practice under Rule 1.17 — a sale context an ordinary employment agreement does not present [^rule-5-6-sale-exception]. Signer capacity turns on the same kind of threshold: a worker who signed as a minor and disaffirms the agreement cannot be bound by it, so a covenant's force depends on the signer's age and capacity at signing [^watercolor-disaffirm].
 
 ## Has Mississippi banned non-competes for physicians or health care providers? {#healthcare-reform}
 
@@ -162,7 +192,7 @@ In *Ryan LLC v. FTC*, a federal court held the agency lacked authority to issue 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Mississippi. This article synthesizes Mississippi primary law and is not legal advice from a Mississippi-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Mississippi. This article synthesizes Mississippi primary law and is not legal advice from a Mississippi-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Mississippi*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/mississippi.
 
 [^texas-road-boring-three-aspects]: **Texas Road Boring Co. of Louisiana-Mississippi v. Parker** — "Non-competition agreements are not favored in law and in considering them, courts recognize there are three major aspects to be looked to: the rights of the employer, the rights of the employee, and the rights of the public." *Texas Road Boring Co. of La.-Miss. v. Parker, 194 So. 2d 885 (Miss. 1967).* <https://www.courtlistener.com/opinion/1880375/texas-road-boring-co-of-louisiana-miss-v-parker/#:~:text=Non%2Dcompetition%20agreements%20are%20not%20favored,the%20rights%20of%20the%20public.>
 

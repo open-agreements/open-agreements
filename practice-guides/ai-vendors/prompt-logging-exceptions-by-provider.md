@@ -64,6 +64,13 @@ What the firms do not provide is just as important. None of the firm sources in 
 
 **Short answer.** A vendor exception does not eliminate the total prompt record; it may leave residual provider retention, disable functionality, or shift durable logs to the customer. The open issues are metadata scope, revocation, contract placement, and customer-side safety work. [^google-cloud-log-requests-and-responses-2][^openai-data-controls-in-the-openai-platform-4][^xai-documentation-faq-security-3]
 
+| Provider | Public gate | Residual logging or retention that still survives in public docs |
+| --- | --- | --- |
+| OpenAI | Prior approval for Modified Abuse Monitoring or ZDR on eligible endpoints | Legal-hold rights, abusive-content carveouts, and stateful or ZDR-ineligible features still persist. [^openai-data-controls-in-the-openai-platform-4][^openai-services-agreement-3] |
+| Anthropic | ZDR arrangement through contract or account team, plus feature-level eligibility | Flagged sessions can be retained up to 2 years; many features, connectors, and product interfaces remain outside ZDR. [^anthropic-api-and-data-retention-3][^anthropic-zero-data-retention-for-claude-code-2] |
+| Google | Abuse-monitoring exception request for the approved Cloud account | Search and Maps grounding keep data for 30 days; some live-session features keep 24-hour state; customer-side BigQuery logs are separate. [^google-cloud-vertex-ai-and-zero-data-retention-2][^google-cloud-log-requests-and-responses-2] |
+| xAI | Enterprise-only ZDR for the API | Real-time moderation still runs; no server-side conversation history; legal, safety, and compliance carveouts remain. [^xai-documentation-faq-security-3][^xai-terms-of-service-enterprise-3] |
+
 The real comparison is not by price bucket. It is by gate. That table sounds obvious once stated, but most provider marketing does not present the issue that way. Enterprise privacy pages are written around training, security, and business-data separation. Prompt-logging exceptions live deeper in API docs, exception forms, trust pages, or account-team flows. A company reading only the top-line enterprise promise will often overread what it bought. [^openai-enterprise-privacy-at-openai-2][^openai-business-data-privacy-security-and-compli-2][^anthropic-api-and-data-retention-3][^google-cloud-abuse-monitoring-3][^xai-documentation-faq-security-3]
 
 The second consequence is that the trade is often functionality for visibility. OpenAI's lighter control leaves more features intact than full ZDR. Anthropic's ZDR excludes meaningful parts of the product surface, including some stateful or connector-heavy features. Google cannot disable retention for some grounding features because the retention is tied to debugging and reliability engineering. xAI's ZDR removes server-side conversation history. Perhaps the cleanest way to say it is this: the stricter the retention promise, the more likely it is that statefulness, observability, or managed safety review moves somewhere else or disappears. [^openai-data-controls-in-the-openai-platform-4][^anthropic-features-overview-2][^google-cloud-vertex-ai-and-zero-data-retention-2][^xai-documentation-faq-security-3]
@@ -72,15 +79,15 @@ The third consequence is that provider-side minimization and customer-side loggi
 
 The fourth consequence is that the exceptions are real, not hypothetical. Morgan Stanley's OpenAI case study says zero data retention addressed a central security concern in that deployment. Cursor publicly says it has zero-data-retention agreements with OpenAI, Anthropic, Google Vertex, and xAI. Glean's administrative guidance assumes OpenAI zero-retention requests are a live operational path, while also noting that some features still require modified abuse monitoring. [^openai-morgan-stanley-uses-ai-evals-to-shape-the][^cursor-security-2][^glean-set-up-glean-with-openai-gpt-models] Public uptake exists. What is still missing is a public schedule that explains exactly who qualifies, how quickly, and at what contract value. The materials are good on scope and carveouts, fair on gating language, and thin on economics. [^openai-data-controls-in-the-openai-platform-4][^anthropic-api-and-data-retention-3][^google-cloud-abuse-monitoring-3][^xai-documentation-faq-security-3]
 
-- 
-- 
-- 
-- 
-- 
+- Does each exception cover only prompts and completions, or also derived metadata such as classifier outputs, moderation signals, and operational traces? OpenAI's default logs expressly include classifier outputs, xAI expressly says associated metadata is not persisted under ZDR, and Google's public language is mostly about prompts. The public record does not support one uniform answer across providers. [^openai-data-controls-in-the-openai-platform-4][^google-cloud-platform-terms-of-service-3][^xai-documentation-faq-security-3]
+- Is contract size the real gate even if no provider publishes it? Reuters' procurement piece suggests vendors are more flexible in higher-value engagements, but none of the provider docs here states a fixed annual minimum for the exception itself. Perhaps the real gate is some combination of spend, regulated workload, and willingness to accept shifted abuse-monitoring responsibility. [^reuters-westlaw-today-ai-focused-procurement-pla-2][^openai-enterprise-privacy-at-openai-2][^anthropic-api-and-data-retention-3]
+- Can an exception be revoked in practice? No public document in this source set lays out a clean revocation procedure. What the documents do preserve are override rights for flagged misuse, legal demands, safety review, or sensitive-model access. That could amount to a functional revocation even if the contract never uses that word. [^openai-trusted-access-for-the-next-era-of-cyber][^anthropic-frontier-safety-roadmap-2][^xai-terms-of-service-enterprise-3][^google-cloud-platform-terms-of-service-3]
+- How much of the commitment is written in public materials versus tucked into order forms, amendments, or account emails? The public docs clearly show that manual approval exists. They do not disclose standard turnaround times or complete eligibility criteria. That leaves a gap between what the market knows and what the account team knows. [^openai-data-controls-in-the-openai-platform-4][^anthropic-zero-data-retention-for-claude-code-2][^google-cloud-abuse-monitoring-3][^xai-documentation-faq-security-3]
+- How much debugging and safety work moves back to the customer once the provider stops retaining content? Debevoise's snippet and OpenAI's own language both point in that direction, but the public record is still thin on how much provider review is replaced by customer monitoring in practice. [^debevoise-plimpton-llp-generative-ai-contracting-2][^openai-data-controls-in-the-openai-platform-4]
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Prompt-logging exceptions by provider*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-vendors/prompt-logging-exceptions-by-provider.
 
 [^openai-data-controls-in-the-openai-platform]: **OpenAI, Data controls in the OpenAI platform** — "abuse monitoring logs are generated for all API feature usage and retained for up to 30 days" *OpenAI, Data controls in the OpenAI platform.* <https://developers.openai.com/api/docs/guides/your-data>
 
@@ -146,17 +153,23 @@ The fourth consequence is that the exceptions are real, not hypothetical. Morgan
 
 [^xai-documentation-faq-security-3]: **xAI Documentation, FAQ - Security** — "exclusively available to enterprise accounts" *xAI Documentation, FAQ - Security.* <https://docs.x.ai/developers/faq/security>
 
+[^openai-services-agreement-3]: **OpenAI, Services Agreement** — "As between Customer and OpenAI, to the extent permitted by applicable law, Customer: (a) retains all ownership rights in Input; and (b) owns all Output. OpenAI hereby assigns to Customer all OpenAI’s right, title, and interest, if any, in and to Output." *OpenAI, Services Agreement.* <https://openai.com/policies/services-agreement/>
+
+[^anthropic-api-and-data-retention-3]: **Anthropic, API and data retention** — "Customer data is not stored at rest after the API response is returned, except where needed to comply with law or combat misuse" *Anthropic, API and data retention.* <https://platform.claude.com/docs/en/build-with-claude/api-and-data-retention>
+
+[^anthropic-zero-data-retention-for-claude-code-2]: **Anthropic, Zero data retention for Claude Code** — "When ZDR is enabled, prompts and model responses generated during Claude Code sessions are processed in real time and not stored by Anthropic after the response is returned" *Anthropic, Zero data retention for Claude Code.* <https://code.claude.com/docs/en/zero-data-retention>
+
+[^google-cloud-vertex-ai-and-zero-data-retention-2]: **Google Cloud, Vertex AI and zero data retention** — "Google won't use your data to train or fine-tune any AI/ML models without your prior permission or instruction." *Google Cloud, Vertex AI and zero data retention.* <https://docs.cloud.google.com/vertex-ai/generative-ai/docs/vertex-ai-zero-data-retention>
+
+[^xai-terms-of-service-enterprise-3]: **xAI, Terms of Service - Enterprise** — "Customer acknowledges that no xAI intellectual property rights are assigned or transferred to Customer hereunder. Customer is obtaining only a limited right to access and use the Services during the Subscription Term of this Agreement." *xAI, Terms of Service - Enterprise.* <https://x.ai/legal/terms-of-service-enterprise>
+
 [^openai-enterprise-privacy-at-openai-2]: **OpenAI, Enterprise privacy at OpenAI** — "We do not train our models on your data by default" *OpenAI, Enterprise privacy at OpenAI.* <https://openai.com/enterprise-privacy/>
 
 [^openai-business-data-privacy-security-and-compli-2]: **OpenAI, Business data privacy, security, and compliance** — "By default, we do not use data from ChatGPT Enterprise, ChatGPT Business, ChatGPT Edu, ChatGPT for Healthcare, ChatGPT for Teachers, or our API platform—including inputs or outputs—for training or improving our models." *OpenAI, Business data privacy, security, and compliance.* <https://openai.com/business-data/>
 
-[^anthropic-api-and-data-retention-3]: **Anthropic, API and data retention** — "Customer data is not stored at rest after the API response is returned, except where needed to comply with law or combat misuse" *Anthropic, API and data retention.* <https://platform.claude.com/docs/en/build-with-claude/api-and-data-retention>
-
 [^google-cloud-abuse-monitoring-3]: **Google Cloud, Abuse monitoring** — "Google uses automated safety classifiers to detect potential abuse and violations." *Google Cloud, Abuse monitoring.* <https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/abuse-monitoring>
 
 [^anthropic-features-overview-2]: **Anthropic, Features overview** — "With Citations, Claude can provide detailed references to the exact sentences and passages it uses to generate responses, leading to more verifiable, trustworthy outputs." *Anthropic, Features overview.* <https://platform.claude.com/docs/en/build-with-claude/overview>
-
-[^google-cloud-vertex-ai-and-zero-data-retention-2]: **Google Cloud, Vertex AI and zero data retention** — "Google won't use your data to train or fine-tune any AI/ML models without your prior permission or instruction." *Google Cloud, Vertex AI and zero data retention.* <https://docs.cloud.google.com/vertex-ai/generative-ai/docs/vertex-ai-zero-data-retention>
 
 [^reuters-westlaw-today-ai-focused-procurement-pla-2]: **Skadden commentary** — "Playbooks should require counsel review to these terms together with the enterprise licensing agreement, and if possible, to negotiate so that such terms remain fixed or consent is required for material changes." *Skadden, AI-focused procurement playbook refresh.* <https://www.reuters.com/legal/legalindustry/ai-focused-procurement-playbook-refresh-2024-04-10/>
 
@@ -165,3 +178,11 @@ The fourth consequence is that the exceptions are real, not hypothetical. Morgan
 [^cursor-security-2]: **Cursor, Security** — "Infrastructure access is granted according to the principle of least privilege. We enforce multi-factor authentication, deploy cybersecurity tools, and monitor system logs and activity." *Cursor, Security.* <https://cursor.com/security>
 
 [^glean-set-up-glean-with-openai-gpt-models]: **Glean, Set up Glean with OpenAI GPT Models** — "customers hosted on GCP or AWS to configure Glean to use GPT models directly through their own OpenAI account for billing and capacity management." *Glean, Set up Glean with OpenAI GPT Models.* <https://docs.glean.com/administration/assistant/features/open-ai-setup>
+
+[^google-cloud-platform-terms-of-service-3]: **Google Cloud Platform Terms of Service** — "may log Customer prompts solely for the purpose of reviewing and determining whether a violation has occurred" *Google Cloud Platform Terms of Service.* <https://cloud.google.com/terms>
+
+[^openai-trusted-access-for-the-next-era-of-cyber]: **OpenAI, Trusted access for the next era of cyber defense** — "To enable responsible use at scale, we need systems that can validate trustworthy users and use cases in more automated and more objective ways." *OpenAI, Trusted access for the next era of cyber defense.* <https://openai.com/index/scaling-trusted-access-for-cyber-defense/>
+
+[^anthropic-frontier-safety-roadmap-2]: **Anthropic, Frontier Safety Roadmap** — "We believe the right framework is a regulatory ladder: requirements that scale with risk." *Anthropic, Frontier Safety Roadmap.* <https://www.anthropic.com/responsible-scaling-policy/roadmap>
+
+[^debevoise-plimpton-llp-generative-ai-contracting-2]: **Debevoise & Plimpton commentary** — "Licensees must ensure that the license grant is broad enough to permit the full range of necessary activities for its intended GenAI development." *Debevoise & Plimpton, Generative AI Contracting in the Media Industry.* <https://www.debevoise.com/-/media/files/insights/publications/2024/12/generative-ai-contracting-in-the-media-industry.pdf>

@@ -40,7 +40,7 @@ New York City's AEDT law is the clearest positive-law answer because it actually
 
 DLA Piper adds a different concern. Its January 30, 2026 note on a critical public audit of NYC enforcement reads less like a dispute about the statute and more like a warning that audit quality is becoming visible. Once public audit summaries, watchdog reports, and regulator scrutiny enter the picture, a thin annual deliverable can start to look worse than no grand claims at all. Perhaps that is the most practical recent development in this area: the market is no longer debating only whether an audit exists, but whether the audit says anything useful. [^dla-piper-critical-audit-of-nyc-s-ai-hiring-law][^dla-piper-us-new-york-city-set-to-enforce-ai-law]
 
-- 
+- How weak can a technically compliant audit be? The source set points to a real possibility that a NYC audit can satisfy the statute while staying silent on age, disability, proxy variables, language status, or model drift, because the statute is narrower than the larger employment-law question. [^new-york-city-department-of-consumer-and-worker-2][^42-u-s-c-2000e-2-k-1-a-i-2][^dla-piper-critical-audit-of-nyc-s-ai-hiring-law]
 
 ## Do Colorado and the EU require AI hiring bias audits? {#do-colorado-and-eu-require-ai-hiring-bias-audits}
 
@@ -62,7 +62,7 @@ This follows directly from the law. New York City created the first recurring pu
 
 Third-party independence is likewise regime-specific. NYC clearly requires an independent auditor. Colorado and the EU do not copy that rule, and internal teams may actually see more of the model, the data pipeline, and the post-deployment drift than an outside reviewer can. That leaves the market in an understandable but awkward place: outside review carries credibility, while internal review often carries access. A defensible record increasingly looks like both rather than either. [^new-york-city-department-of-consumer-and-worker-3][^colorado-general-assembly-sb24-205-consumer-prot-2][^regulation-eu-2024-1689-3][^inioluwa-deborah-raji-et-al-closing-the-ai-accou-2]
 
-- 
+- When is outside review legally required versus merely market-preferred? New York City supplies one clear answer for one regime. Colorado and the EU do not. The harder long-term question may be whether credibility pressure and procurement norms make independent review functionally standard even where the statute does not require it. [^new-york-city-department-of-consumer-and-worker-3][^colorado-general-assembly-sb24-205-consumer-prot-2][^regulation-eu-2024-1689-3][^dci-consulting-nyc-local-law-144-choose-your-aud]
 
 ## What statistical methods matter for small AI hiring bias audits? {#what-statistics-matter-for-ai-hiring-bias-audits}
 
@@ -76,7 +76,7 @@ Small and segmented hiring funnels are where this gap is sharpest. UGESP insists
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-20. License: CC BY 4.0. Steven Obiajulu, J.D. edits this topic article for Federal + multi-state coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Defensible bias audits for HR AI tools*, OpenAgreements (last updated April 20, 2026), https://openagreements.org/practice-guides/ai-hiring/hr-ai-bias-audit-requirements.
 
 [^new-york-city-department-of-consumer-and-worker]: **New York City Department of Consumer and Worker Protection, Automated Employm...** — "has been subject to a bias audit within one year of the use" *New York City Department of Consumer and Worker Protection, Automated Employment Decision Tools (AEDT).* <https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page>
 
@@ -117,6 +117,8 @@ Small and segmented hiring funnels are where this gap is sharpest. UGESP insists
 [^dla-piper-critical-audit-of-nyc-s-ai-hiring-law]: **DLA Piper commentary** — "The New York State Comptroller’s December 2025 audit evaluated the New York City Department of Consumer and Worker Protection’s (DCWP) enforcement of Local Law 144, which regulates the use of automated employment decision tools (AEDTs) in hiring and promotion." *DLA Piper, Critical audit of NYC's AI hiring law signals increased risk for employers.* <https://www.dlapiper.com/insights/publications/2026/01/critical-audit-of-nyc-ai-hiring-law-signals-increased-risk-for-employers>
 
 [^dla-piper-us-new-york-city-set-to-enforce-ai-law]: **DLA Piper, US: New York City set to enforce AI law** — "Local Law 144 of 2021, which took effect on 1 January 2023, regulates employers’ use of automated employment decision tools (AEDTs) in making hiring and promotion decisions." *DLA Piper, US: New York City set to enforce AI law.* <https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/us-new-york-city-set-to-enforce-ai-law>
+
+[^42-u-s-c-2000e-2-k-1-a-i-2]: **42 U.S.C. § 2000e-2(k)(1)(A)(i)** — "an unlawful employment practice is established when the complaining party demonstrates that race, color, religion, sex, or national origin was a motivating factor for any employment practice, even though other factors also motivated the practice." *42 U.S.C. § 2000e-2(k)(1)(A)(i).* <https://www.law.cornell.edu/uscode/text/42/2000e-2#:~:text=an%20unlawful%20employment%20practice%20is,factors%20also%20motivated%20the%20practice.>
 
 [^colorado-general-assembly-sb24-205-consumer-prot]: **Colorado General Assembly, SB24-205 Consumer Protections for Artificial Intel...** — "On and after February 1, 2026, the act requires a developer of a high-risk artificial intelligence system (high-risk system) to use reasonable care to protect consumers from any known or reasonably foreseeable risks of algorithmic discrimination" *Colorado General Assembly, SB24-205 Consumer Protections for Artificial Intelligence.* <https://leg.colorado.gov/bills/sb24-205>
 

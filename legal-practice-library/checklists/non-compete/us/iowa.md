@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Iowa
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Iowa
 description: >-
   A clause-by-clause reviewer checklist for Iowa employee restrictive covenant
   agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Iowa[^about]
+# Non-Compete Agreement Reviewer Checklist — Iowa[^about]
 
 A clause-by-clause reviewer checklist for Iowa employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Revere Transducers three-prong reasonableness test and Iowa's narrow occupation statutes.
 
@@ -63,9 +63,11 @@ Review every item below the way an Iowa court would: there is no general non-com
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — The trade-secret obligation should last as long as secrecy does — that is how federal law defines the right, and Iowa's chapter 550 keys protection to continued secrecy the same way. A fixed expiry on trade-secret confidentiality quietly forfeits protection the employer is entitled to keep, and weakens the strongest interest available to support any accompanying covenant. [^fed-dtsa-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information stays secret — captures the full protection available, because federal law and Iowa's chapter 550 both key the right to continued secrecy. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of protection behind the strongest interest available to support any accompanying covenant, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^fed-dtsa-definition] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on material that never met the trade-secret definition is exactly the kind of unbounded restraint Iowa's reasonableness lens treats with suspicion, and the two-track structure keeps the perpetual obligation where the law actually supports it. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on material that never met the trade-secret definition is exactly the kind of unbounded restraint Iowa's reasonableness lens treats with suspicion, and the two-track structure keeps the status-bounded obligation where the law actually supports it. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -159,7 +161,7 @@ The seven items below exist only on this Iowa page: the three-prong reasonablene
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Iowa (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Iowa (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Iowa*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/iowa.
 
 [^ia-hf2254-dates]: **2026 Iowa Acts, House File 2254** — "This subsection applies to all employment contracts between an advanced registered nurse practitioner, a licensed practical nurse, a pharmacist, a physician, a physician assistant, or a registered nurse and the university of Iowa hospitals and clinics entered into, extended, or renewed on or after the effective date of this Act." *2026 Iowa Acts, House File 2254 (codified at Iowa Code § 262.9(43)).* <https://www.legis.iowa.gov/docs/publications/LGE/91/HF2254.pdf>
 

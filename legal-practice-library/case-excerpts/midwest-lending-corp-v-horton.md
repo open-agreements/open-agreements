@@ -8,7 +8,7 @@ citation: 'Midwest Lending Corp. v. Horton, 2023 IL App (3d) 220132.'
 resource: 'https://www.courtlistener.com/opinion/9401053/midwest-lending-corp-v-horton/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/illinois'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/illinois'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `adequate-consideration`, `entire-agreement-amendment-waiver-e-signatures`, `illinois-statutory-gates`
 - source_cards: `il-midwest-express-tie`, `il-midwest-integration`, `midwest-delineation`
-- cited_by: [Non-Compete Agreement Review Checklist — Illinois](../checklists/non-compete/us/illinois.md), [Non-Competes in Illinois](../non-compete/us/illinois.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Illinois](../checklists/non-compete/us/illinois.md), [Non-Competes in Illinois](../non-compete/us/illinois.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9401053/midwest-lending-corp-v-horton/#:~:text=Accordingly%2C%20we%20reject%20Midwest's%20argument,agreement%20to%20the%20nonsolicitation%20provision.>

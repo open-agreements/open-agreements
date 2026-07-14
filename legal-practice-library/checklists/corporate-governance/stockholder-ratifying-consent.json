@@ -1,0 +1,229 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "related-form",
+      "href": "https://openagreements.org/templates/openagreements-stockholder-ratifying-consent",
+      "type": "text/html",
+      "title": "Stockholder Consent Ratifying a Defective Corporate Act"
+    }
+  ],
+  "data": {
+    "topic": "corporate-governance",
+    "slug": "stockholder-ratifying-consent",
+    "frontmatter": {
+      "title": "Stockholder Ratifying Consent Reviewer Checklist",
+      "description": "A clause-by-clause reviewer checklist for a Delaware stockholder written consent that approves a board's DGCL § 204 ratification of a defective corporate act — approving the specifically identified act, applying the § 204(d) current-law quorum and voting standard, excluding the putative shares being cured from the vote (§ 204(d)(5)), and satisfying the § 204(d)/§ 228 notice requirement.",
+      "eyebrow": "Reviewer Checklist",
+      "coverage": "Delaware (DGCL)",
+      "lastReviewed": "2026-07-02",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 6,
+    "sections": [
+      {
+        "sectionId": "approving-the-boards-ratification",
+        "label": "Approving the board's ratification"
+      },
+      {
+        "sectionId": "the-putative-stock-voting-trap",
+        "label": "The putative-stock voting trap"
+      },
+      {
+        "sectionId": "notice-and-related-filings",
+        "label": "Notice and related filings"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "approve-identified-act",
+        "specRequirementId": "REQ-corporate-governance.stockholder-ratifying-consent.approve-identified-act",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Approves the same specifically identified act the board ratified",
+        "sectionId": "approving-the-boards-ratification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent#approve-identified-act",
+        "requirementGuidance": "Confirm the consent approves the ratification of the specifically identified defective act(s) the board already approved, referencing or attaching the board's § 204(b) ratifying resolutions. DGCL § 204(c) frames the stockholder approval as an approval of a defined act to be submitted under subsection (d), and § 204(d)(3) requires the accompanying notice to carry those resolutions — so the stockholder consent must approve the same named acts, not a free-standing sweep. Each defective corporate act ratified pursuant to paragraph (b)(1) of this section shall be submitted to stockholders for approval as provided in subsection (d) of this section",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q1-204c",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 204(c)",
+            "citation": "8 Del. C. § 204(c).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc06/index.html",
+            "proposition": "A ratified defective act must be submitted to stockholders for approval under subsection (d) where the act would have required a stockholder vote — so the stockholder consent approves a defined, board-identified act.",
+            "verbatimQuote": "Each defective corporate act ratified pursuant to paragraph (b)(1) of this section shall be submitted to stockholders for approval as provided in subsection (d) of this section",
+            "anchor": "https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent#src-q1-204c"
+          }
+        ]
+      },
+      {
+        "requirementId": "apply-contemporaneous-quorum-voting",
+        "specRequirementId": "REQ-corporate-governance.stockholder-ratifying-consent.apply-contemporaneous-quorum-voting",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Current-law quorum and voting denominator, not the original cap table",
+        "sectionId": "approving-the-boards-ratification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent#apply-contemporaneous-quorum-voting",
+        "requirementGuidance": "Confirm the approval is computed under the quorum and voting requirements applicable to the type of act at the time of the ratification — subject to any larger threshold the charter, bylaws, or a plan or agreement required as of the defective act — not the historic cap table. DGCL § 204(d)(4) fixes the denominator to current law; taken by written consent, the consent must be signed by holders of at least the minimum votes needed to approve the ratification at a meeting. the quorum and voting requirements applicable to the type of defective corporate act proposed to be ratified at the time of the approval of the ratification",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q1-204d4",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 204(d)(4)",
+            "citation": "8 Del. C. § 204(d)(4).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc06/index.html",
+            "proposition": "The stockholder quorum and voting requirements are those applicable to the type of act at the time of the approval of the ratification — the current-law denominator, subject to any larger historic threshold.",
+            "verbatimQuote": "the quorum and voting requirements applicable to the type of defective corporate act proposed to be ratified at the time of the approval of the ratification",
+            "anchor": "https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent#src-q1-204d4"
+          },
+          {
+            "sourceId": "q1-228a",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 228(a)",
+            "citation": "8 Del. C. § 228(a).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc07/index.html",
+            "proposition": "Stockholders may act by written consent signed by holders of at least the minimum number of votes needed to authorize the action at a meeting — the mechanism for a closely held company's ratifying consent.",
+            "verbatimQuote": "may be taken without a meeting, without prior notice and without a vote, if a consent or consents, setting forth the action so taken, shall be signed by the holders of outstanding stock having not less than the minimum number of votes that would be necessary to authorize or take such action at a meeting at which all shares entitled to vote thereon were present and voted",
+            "anchor": "https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent#src-q1-228a"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-putative-stock-from-vote",
+        "specRequirementId": "REQ-corporate-governance.stockholder-ratifying-consent.exclude-putative-stock-from-vote",
+        "requirementLevel": "MUST NOT",
+        "sourceFootnotes": [],
+        "requirementLabel": "Putative shares being cured excluded from the vote and quorum",
+        "sectionId": "the-putative-stock-voting-trap",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent#exclude-putative-stock-from-vote",
+        "requirementGuidance": "Confirm the approving percentage is computed without the putative shares being cured. DGCL § 204(d)(5) provides that putative stock as of the board's adoption of the ratifying resolutions is neither entitled to vote nor counted for quorum on the ratification — the shares whose validity is in question cannot supply the approval that would validate them. Counting them is the single most common error in a § 204 stockholder consent and produces an invalid approval. shall neither be entitled to vote nor counted for quorum purposes in any vote to ratify any defective corporate act.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q2-204d5",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 204(d)(5)",
+            "citation": "8 Del. C. § 204(d)(5).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc06/index.html",
+            "proposition": "Putative stock as of the board's adoption of the ratifying resolutions is neither entitled to vote nor counted for quorum in the vote to ratify — the shares being cured cannot vote on their own cure.",
+            "verbatimQuote": "shall neither be entitled to vote nor counted for quorum purposes in any vote to ratify any defective corporate act.",
+            "anchor": "https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent#src-q2-204d5"
+          }
+        ]
+      },
+      {
+        "requirementId": "satisfy-notice-requirement",
+        "specRequirementId": "REQ-corporate-governance.stockholder-ratifying-consent.satisfy-notice-requirement",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "§ 204(d)/§ 228 notice given, including past-time and nonvoting holders",
+        "sectionId": "notice-and-related-filings",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent#satisfy-notice-requirement",
+        "requirementGuidance": "Confirm the § 204(d) notice requirement is met — at least 20 days' notice of the meeting to each holder of valid and putative stock (voting and nonvoting, and including holders as of the time of the defective act), or, for a written consent, the corresponding notice with the ratifying resolutions and the 120-day-challenge statement. The reach is the trap: notice extends beyond the current voting cap table, so a current stockholders only distribution is itself a defect. A less-than-unanimous written consent also triggers § 228(e) notice to non-consenting holders. due notice of the time, place, if any, and purpose of the meeting shall be given at least 20 days before the date of the meeting to each holder of valid stock and putative stock, whether voting or nonvoting",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q3-204d1",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 204(d)(1)",
+            "citation": "8 Del. C. § 204(d)(1).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc06/index.html",
+            "proposition": "At least 20 days' notice of the ratification meeting must go to each holder of valid and putative stock, whether voting or nonvoting — the notice reaches beyond the current voting cap table.",
+            "verbatimQuote": "due notice of the time, place, if any, and purpose of the meeting shall be given at least 20 days before the date of the meeting to each holder of valid stock and putative stock, whether voting or nonvoting",
+            "anchor": "https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent#src-q3-204d1"
+          },
+          {
+            "sourceId": "q3-228e",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 228(e)",
+            "citation": "8 Del. C. § 228(e).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc07/index.html",
+            "proposition": "When stockholders act by less-than-unanimous written consent, prompt notice must be given to those who did not consent — an independent notice obligation on a signed ratifying consent.",
+            "verbatimQuote": "prompt notice of the taking of the action by consent shall be given to those stockholders or members as of the record date for the action by consent who have not consented",
+            "anchor": "https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent#src-q3-228e"
+          }
+        ]
+      },
+      {
+        "requirementId": "approve-related-filing-when-required",
+        "specRequirementId": "REQ-corporate-governance.stockholder-ratifying-consent.approve-related-filing-when-required",
+        "requirementLevel": "MUST",
+        "sourceFootnotes": [],
+        "requirementLabel": "Any charter amendment / certificate of validation also approved",
+        "sectionId": "notice-and-related-filings",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent#approve-related-filing-when-required",
+        "requirementGuidance": "Where the cure requires a Delaware filing that itself needs stockholder approval — most often a charter amendment ratified together with the act — confirm the consent approves that amendment and the related certificate of validation under DGCL § 204(e) (and § 242 for the charter change). Approving the ratification but not the charter change it depends on leaves the authorized-share increase (or other charter act) uncured even after the vote. in lieu of filing the certificate otherwise required by this title, the corporation shall file a certificate of validation with respect to such defective corporate act",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q3-204e",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "8 Del. C. § 204(e)",
+            "citation": "8 Del. C. § 204(e)(1).",
+            "url": "https://delcode.delaware.gov/title8/c001/sc06/index.html",
+            "proposition": "If the defective act would have required a certificate filed under § 103, the corporation must file a certificate of validation — a related charter amendment ratified with the act needs stockholder approval too.",
+            "verbatimQuote": "in lieu of filing the certificate otherwise required by this title, the corporation shall file a certificate of validation with respect to such defective corporate act",
+            "anchor": "https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent#src-q3-204e"
+          }
+        ]
+      },
+      {
+        "requirementId": "apply-special-vote-when-required",
+        "specRequirementId": "REQ-corporate-governance.stockholder-ratifying-consent.apply-special-vote-when-required",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Special vote applied for a director-election or § 203-failure ratification",
+        "sectionId": "notice-and-related-filings",
+        "itemNumber": "3.3",
+        "anchor": "https://openagreements.org/checklists/corporate-governance/stockholder-ratifying-consent#apply-special-vote-when-required",
+        "requirementGuidance": "Where the ratification is of a director election or arises from a § 203 failure, confirm the consent applies the special voting rule § 204(d)(4) supplies: a director-election ratification requires the affirmative vote of a majority of shares present and entitled to vote on that election, and a § 203-failure ratification requires the vote set out in § 203(a)(3) regardless of whether it would otherwise have been required. These override the ordinary denominator and are easy to miss when drafting from a generic majority-approval template.",
+        "variants": [],
+        "sources": []
+      }
+    ]
+  }
+}

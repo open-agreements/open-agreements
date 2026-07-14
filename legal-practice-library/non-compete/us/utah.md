@@ -42,7 +42,7 @@ Broadcasting is the one narrow statutory exception with its own rules. A non-com
 > [!CAUTION]
 > **Drafting note.**
 >
-> A covenant drafted for eighteen months or two years should not be expected to be trimmed to one year by a Utah court; the statute makes it void, and trying to enforce it exposes the employer to the statute's fee-shifting penalty. Draft to one year or less from the outset [^dur-void][^dur-one-year].
+> A covenant drafted for eighteen months or two years is not trimmed to one year by a Utah court; the statute makes the over-length covenant void, and an attempt to enforce it exposes the employer to the statute's fee-shifting penalty. A covenant sized to one year or less from the outset is the one that survives [^dur-void][^dur-one-year].
 
 ## What makes a Utah non-compete reasonable under the common law? {#reasonableness-test}
 
@@ -56,6 +56,11 @@ Good faith is a live part of the test, not a formality. The Court of Appeals not
 > **Practice note.**
 >
 > Tie the restriction to a specific, provable interest. A covenant that reaches an employee's general skills or ordinary competition, rather than the employer's goodwill or confidential information, risks being held unreasonable even within the one-year cap [^reason-legitimate-interests][^reason-four-part].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A Utah non-compete stands or falls on the four-part common-law reasonableness test, not on the one-year cap alone: the Post-Employment Restrictions Act supplements rather than replaces the common law, so a covenant that fits inside the cap is still unenforceable where it lacks consideration, was negotiated in bad faith, protects no goodwill, or reaches further in time or area than the business needs [^reason-four-part]. A covenant confined to the employer's legitimate interests — goodwill, confidential information, or extraordinary training — survives where one that reaches an employee's ordinary skills or ordinary competition does not [^reason-legitimate-interests]. Consideration is the loose prong, satisfied by an offer of employment or continued at-will employment, but the good-faith prong is live: a covenant extracted through a quick hire-and-fire used solely to bind a worker to a long restraint is exposed on that ground [^reason-good-faith].
 
 ## Is continued or at-will employment enough consideration for a Utah non-compete? {#consideration}
 
@@ -89,6 +94,11 @@ This asymmetric fee-shifting is the teeth of the Act. It applies not only to non
 > **Practice note.**
 >
 > Before sending an enforcement demand or filing suit on a Utah non-compete, weigh the downside: losing on enforceability does not just void the clause, it transfers the employee's fees, costs, and damages to the employer [^fee-shift].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> Utah's fee-shifting runs one direction only: an employer that seeks arbitration or files suit to enforce a non-compete, healthcare non-compete, nondisclosure clause, or nonsolicitation agreement later found unenforceable is liable for the employee's arbitration costs, attorney fees and court costs, and actual damages, whether or not the agreement says anything about fees [^fee-shift]. A one-way, employer-favoring fee clause cannot contract around that exposure, and escalating from a notice letter to an enforcement action on a covenant that turns out to be invalid is what triggers it; a mutual, prevailing-party fee provision sits alongside the statutory baseline rather than purporting to displace it [^fee-shift].
 
 ## Do Utah's one-year cap and penalties apply to non-solicitation and nondisclosure agreements? {#non-solicitation-nda}
 
@@ -125,16 +135,21 @@ The bans reach beyond pure non-competes. From the same date, a healthcare nonsol
 >
 > Treat the May 6, 2026 healthcare and veterinarian provisions as the current rule, not pending legislation; they are codified in the Post-Employment Restrictions Act and took effect on that date. The bans apply to agreements *entered into* on or after May 6, 2026, so audit your templates and any covenant with clinical staff or veterinarians that you sign, renew, or amend on or after that date [^hc-ban][^vet-ban].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> The Post-Employment Restrictions Act attaches by the date an agreement is entered, so a covenant re-executed through a renewal or amendment falls under the regime in force on the new date, including the healthcare-worker and veterinarian non-compete bans for agreements entered on or after May 6, 2026 [^hc-ban][^vet-ban]. A non-compete with a healthcare worker that was valid when first signed becomes a prohibited healthcare non-compete once it is re-signed on or after that date, and a veterinarian non-compete is void from that date unless the veterinarian holds at least a 5% ownership interest [^vet-exception].
+
 ## Will a Utah court blue-pencil or rewrite an overbroad non-compete? {#court-narrowing}
 
 **Short answer.** Probably not for the duration problem, and the broader reformation question is unsettled. The statute makes an over-length covenant void rather than voidable, which most commentary reads as stripping courts of the power to trim it to a lawful term [^narrow-void].
 
-For overbreadth in scope or activity, Utah's common law has historically been reluctant to rewrite restraints, preferring to enforce only covenants that were carefully drawn in the first place [^narrow-careful-drafting]. There is no modern Utah Supreme Court decision squarely reconciling the equitable blue-pencil doctrine with the 2016 statute's *void* language, so the safest assumption is that a Utah court will not rescue a defective covenant. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Utah non-compete review checklist](/checklists/non-compete/us/utah) walks the full covenant suite item by item with each requirement's force level.
+For overbreadth in scope or activity, Utah's common law has historically been reluctant to rewrite restraints, preferring to enforce only covenants that were carefully drawn in the first place [^narrow-careful-drafting]. There is no modern Utah Supreme Court decision squarely reconciling the equitable blue-pencil doctrine with the 2016 statute's *void* language, so the safest assumption is that a Utah court will not rescue a defective covenant. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Utah non-compete reviewer checklist](/checklists/non-compete/us/utah) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a savings or reformation clause to backstop an overbroad Utah non-compete. The statutory *void* rule for over-length covenants and the common-law preference for carefully drawn restraints both cut against judicial rewriting [^narrow-void][^narrow-careful-drafting].
+> A savings or reformation clause does not backstop an overbroad Utah non-compete. The statutory *void* rule for over-length covenants and the common-law preference for carefully drawn restraints both cut against judicial rewriting, so a covenant that depends on a court to narrow it is exposed rather than saved [^narrow-void][^narrow-careful-drafting].
 
 ## Does the restricted period toll or extend during breach or litigation in Utah? {#extended-for-breach}
 
@@ -147,7 +162,7 @@ No source in this corpus resolves whether a Utah court would order equitable tol
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not draft a Utah non-compete that tolls or extends during breach or litigation past the one-year mark. The statute fixes the period at one year from separation and voids longer covenants, so an extension clause is a concrete overbreadth and void risk, not a safe equitable backstop [^toll-one-year][^toll-void].
+> A tolling or extension-on-breach clause that keeps a Utah non-compete alive past the one-year mark is a concrete void risk, not a safe equitable backstop. The statute fixes the period at one year from separation and voids longer covenants, so an extension that pushes the non-compete past that point exposes the whole covenant [^toll-one-year][^toll-void].
 
 ## What can Utah employers use instead of a non-compete? {#alternatives}
 
@@ -158,11 +173,11 @@ The trade-secret route has real remedies. Actual or threatened misappropriation 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Keep confidentiality and trade-secret protections tied to actual secret information and reasonable secrecy efforts. A definition that sweeps in ordinary know-how will not qualify as a trade secret and a confidentiality clause that functions as a work ban can be recharacterized as a non-compete [^alt-trade-secret-def][^alt-carveout].
+> Confidentiality and trade-secret protections hold only where they are tied to actual secret information and reasonable secrecy efforts. A definition that sweeps in ordinary know-how does not qualify as a trade secret, and a confidentiality clause that functions as a work ban can be recharacterized as a non-compete and pulled back under the one-year cap [^alt-trade-secret-def][^alt-carveout].
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Utah. This article synthesizes Utah primary law and is not legal advice from a Utah-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Utah. This article synthesizes Utah primary law and is not legal advice from a Utah-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Utah*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/utah.
 
 [^upera-one-year]: **Utah Code § 34-51-201** — "an employer and an employee may not enter into a non-compete agreement for a period of more than one year from the day on which the employee is no longer employed by the employer." *Utah Code Ann. § 34-51-201(1)(a).* <https://le.utah.gov/xcode/Title34/Chapter51/34-51-S201.html>
 

@@ -2,7 +2,7 @@
 jurisdiction: "Wisconsin"
 slug: wisconsin
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/wisconsin
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wisconsin · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wisconsin · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Wisconsin[^about]
 
@@ -49,6 +49,11 @@ The Wisconsin Supreme Court has distilled that standard into five prerequisites,
 
 The practical consequence, explored in the questions below, is that drafting precision matters more in Wisconsin than in most states: a covenant that reaches even slightly too far is not narrowed by the court — it is struck down in full.
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> Every post-employment restraint in the agreement — non-compete, customer or employee non-solicit, no-business-with-customers, and non-investment alike — stands or falls on the same five prerequisites, because § 103.465 makes a covenant enforceable only if the restrictions imposed are reasonably necessary for the protection of the employer [^q1-103465-core]. A restraint must be necessary to a protectable interest, reasonable in time, reasonable in territory, no harsher than that protection requires, and not contrary to public policy; a failure on any single factor is fatal, and because § 103.465 voids an unreasonable restraint in full, a covenant that reaches even slightly too far is struck rather than narrowed [^q1-star-direct-test].
+
 ## Can a Wisconsin court blue-pencil or narrow an overbroad non-compete? {#court-narrowing}
 
 **Short answer.** No. Wis. Stat. § 103.465 declares that a covenant imposing an unreasonable restraint is void and unenforceable *even as to any part* that would have been a reasonable restraint, so Wisconsin courts do not rewrite, narrow, or blue-pencil an overbroad covenant. The Court of Appeals has confirmed that a contractual modification or savings clause cannot rescue a covenant that violates the statute [^q2-103465-void][^q2-diamond-modification].
@@ -57,14 +62,14 @@ This is the defining feature of Wisconsin restrictive-covenant law. In most reas
 
 "Any covenant, described in this section, imposing an unreasonable restraint is illegal, void and unenforceable even as to any part of the covenant or performance that would be a reasonable restraint."[^q2-103465-void]
 
-Employers sometimes try to engineer around the rule with a clause authorizing a court to modify the covenant to whatever scope is enforceable. Wisconsin courts give such clauses no effect, because a provision that conflicts with § 103.465 cannot itself supply the missing reasonableness. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Wisconsin non-compete review checklist](/checklists/non-compete/us/wisconsin) walks the full covenant suite item by item with each requirement's force level.
+Employers sometimes try to engineer around the rule with a clause authorizing a court to modify the covenant to whatever scope is enforceable. Wisconsin courts give such clauses no effect, because a provision that conflicts with § 103.465 cannot itself supply the missing reasonableness. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Wisconsin non-compete reviewer checklist](/checklists/non-compete/us/wisconsin) walks the full covenant suite item by item with each requirement's force level.
 
 "Given that the modification provision is contrary to WIS. STAT. § 103.465, it could have no effect here."[^q2-diamond-modification]
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a reformation, savings, or *court-may-modify* clause to backstop an aggressive Wisconsin non-compete. Section 103.465 voids an unreasonable restraint even as to the part that would have been reasonable, and *Diamond Assets* held that a modification clause contrary to the statute has no effect [^q2-103465-void][^q2-diamond-modification].
+> A reformation, savings, or *court-may-modify* clause does not backstop an aggressive Wisconsin covenant. Section 103.465 voids an unreasonable restraint even as to the part that would have been reasonable, and *Diamond Assets* held that a modification clause contrary to the statute has no effect, so a covenant that reaches too far falls in full rather than shrinking to a lawful core [^q2-103465-void][^q2-diamond-modification].
 
 ## Are separate restrictive covenants in one Wisconsin agreement severable? {#divisibility}
 
@@ -79,7 +84,7 @@ The structural lesson is to draft each restraint — non-compete, customer non-s
 > [!CAUTION]
 > **Drafting note.**
 >
-> Write each restraint as a separate, independently enforceable covenant. Under *Star Direct*, distinct covenants supporting different interests are divisible, so isolating each one limits the damage if a court voids the most aggressive restraint [^q3-star-direct-divisible].
+> Each restraint drafted as a separate, independently enforceable covenant stands on its own if another falls. Under *Star Direct*, distinct covenants supporting different interests are divisible, so a covenant isolated from the others survives the voiding of the most aggressive restraint, while restraints interlocked in one sprawling clause can fall together [^q3-star-direct-divisible].
 
 ## Are employee and customer non-solicitation covenants governed by § 103.465? {#nonsolicitation}
 
@@ -96,7 +101,7 @@ Because the clause swept in every Manitowoc employee — regardless of role, loc
 > [!CAUTION]
 > **Drafting note.**
 >
-> Narrow an employee non-solicitation clause to the employees the departing worker actually worked with or supervised, not the whole company. *Manitowoc v. Lanning* treats employee non-solicitation as a § 103.465 restraint and voided an all-employees clause as overbroad on its face [^q4-lanning-governed][^q4-lanning-overbroad].
+> An employee non-solicitation clause reaching the whole workforce, rather than the colleagues the departing worker actually worked with or supervised, is exposed on its face. *Manitowoc v. Lanning* treats employee non-solicitation as a § 103.465 restraint and voided an all-employees clause as overbroad on its face — and because § 103.465 voids in full, the covenant disappears rather than shrinking to a lawful core, taking any fee award built on it along [^q4-lanning-governed][^q4-lanning-overbroad].
 
 ## What consideration supports a Wisconsin non-compete signed during employment? {#consideration}
 
@@ -130,7 +135,7 @@ Because § 103.465 requires a reasonable — and therefore definite — time lim
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not include a clause that extends a Wisconsin non-compete for periods of the employee's breach. *H&R Block v. Swenson* held that such an extension makes the duration indefinite and voids the entire clause under § 103.465, and Wisconsin courts will not blue-pencil it back to a fixed term; a pending-litigation tolling clause, while untested, carries the same risk [^q6-hrblock-extension][^q6-hrblock-void].
+> A clause extending a Wisconsin covenant for periods of the employee's breach makes the duration indefinite rather than fixed. *H&R Block v. Swenson* held that such an extension voids the entire clause under § 103.465, and because Wisconsin courts will not blue-pencil it back to a fixed term, the tolling language destroys the covenant it was meant to protect; a pending-litigation tolling clause, while untested, raises the same definiteness problem [^q6-hrblock-extension][^q6-hrblock-void].
 
 ## Are confidentiality and non-disclosure clauses subject to § 103.465 in Wisconsin? {#confidentiality-ndas}
 
@@ -145,7 +150,7 @@ The takeaway is to scope confidentiality obligations to genuine trade secrets an
 > [!CAUTION]
 > **Drafting note.**
 >
-> Scope confidentiality and non-disclosure clauses to actual trade secrets and competitively sensitive information. *Diamond Assets* held an overbroad confidentiality covenant unenforceable under § 103.465 on a motion to dismiss, so a catch-all NDA can fall the same way an overbroad non-compete does [^q7-diamond-nda].
+> A confidentiality or non-disclosure clause that sweeps in ordinary, non-secret business information rather than actual trade secrets and competitively sensitive information is judged as a restraint of trade. *Diamond Assets* held an overbroad confidentiality covenant unenforceable under § 103.465 on a motion to dismiss, so a catch-all NDA falls the same way an overbroad non-compete does — regardless of the evidence the employer might later offer [^q7-diamond-nda].
 
 ## Are sale-of-business and ownership covenants treated differently in Wisconsin? {#sale-of-business}
 
@@ -162,7 +167,7 @@ The statute by its terms governs covenants by an employee or agent. A covenant g
 > [!CAUTION]
 > **Drafting note.**
 >
-> Match the legal framework to the deal. A covenant given as part of a genuine business sale or equity transaction — one separable from the employment relationship and not imposed through the employer's hiring leverage — is judged under the common-law rule of reason, which allows partial enforcement, while an employee covenant is locked into § 103.465's all-or-nothing rule, so do not assume the two are interchangeable [^q8-reiman][^q8-selmer].
+> The legal framework follows the substance of the deal, not the caption on the document. A covenant given as part of a genuine business sale or equity transaction — one separable from the employment relationship and not imposed through the employer's hiring leverage — is judged under the common-law rule of reason, which allows partial enforcement, while an employee covenant is locked into § 103.465's all-or-nothing rule; a sale-related covenant routed through an employment agreement risks recharacterization as an employee covenant and the harsher rule that comes with it [^q8-reiman][^q8-selmer].
 
 ## Can an out-of-state choice-of-law clause avoid Wisconsin's non-compete rules? {#choice-of-law}
 
@@ -227,6 +232,11 @@ All three measures failed to pass when the 2025-26 session ended, so none became
 >
 > Treat Wisconsin non-compete law as governed by § 103.465 and the case law, not by the 2025-26 bills. Assembly Bill 567 and the medical-practitioner bills (Assembly Bill 675 and Senate Bill 657) failed to pass, so re-check the legislature's status before relying on any of them, and remember that SCR 20:5.6 already bars most lawyer non-competes [^q11-ab567][^q11-scr].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A covenant that would restrict a licensed lawyer's right to practice after the relationship ends does not hold in Wisconsin. SCR 20:5.6 bars a lawyer from participating in offering or making an agreement that restricts the right to practice after termination — with exceptions only for retirement-benefit agreements and restrictions settling a client controversy — and reaches the offering firm as well as the signing lawyer; no level of compensation and no showing of reasonableness cures a violation, so a practice restraint against a lawyer is void whatever consideration supports it [^q11-scr].
+
 ## How do trade-secret protections compare to a non-compete in Wisconsin? {#trade-secrets}
 
 **Short answer.** They are often the more reliable tool. Wisconsin has adopted the Uniform Trade Secrets Act at Wis. Stat. § 134.90, which protects qualifying information and authorizes injunctions and damages without the overbreadth risk that defeats so many non-competes — so an employer that cannot enforce a covenant may still protect genuine secrets [^q12-wutsa].
@@ -240,9 +250,9 @@ A trade-secret claim does not depend on a signed covenant and is not subject to 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Build the protection program around trade-secret safeguards — access controls, confidentiality designations, and exit procedures — rather than relying on a non-compete alone. Wis. Stat. § 134.90 protects qualifying secrets regardless of § 103.465, but only if the information meets the statutory definition and was kept reasonably secret [^q12-wutsa].
+> A protection program resting on a non-compete alone is only as durable as the covenant, while trade-secret safeguards — access controls, confidentiality designations, and exit procedures — do not depend on § 103.465. Wis. Stat. § 134.90 protects qualifying secrets regardless of a covenant's survival, but only where the information meets the statutory definition and was kept reasonably secret, so a program that neglects those safeguards leaves the secrets exposed if the covenant is void [^q12-wutsa].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Wisconsin. This article synthesizes Wisconsin primary law and is not legal advice from a Wisconsin-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Wisconsin. This article synthesizes Wisconsin primary law and is not legal advice from a Wisconsin-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Wisconsin*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/wisconsin.
 
 [^q1-103465-core]: **Wis. Stat. § 103.465** — "A covenant by an assistant, servant or agent not to compete with his or her employer or principal during the term of the employment or agency, or after the termination of that employment or agency, within a specified territory and during a specified time is lawful and enforceable only if the restrictions imposed are reasonably necessary for the protection of the employer or principal." *Wis. Stat. § 103.465.* <https://docs.legis.wisconsin.gov/statutes/statutes/103/465>
 

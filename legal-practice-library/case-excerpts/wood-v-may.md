@@ -6,7 +6,7 @@ citation: 'Wood v. May, 73 Wn.2d 307 (1968).'
 resource: 'https://www.courtlistener.com/opinion/1207148/wood-v-may/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/washington'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/washington'
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `definitions`, `extended-for-breach`, `tolling-during-breach`
 - source_cards: `wa-woodmay-1`, `wa-woodmay-2`, `woodmay-reasonable-extent-court-narrowing`, `woodmay-reasonable-extent-tolling`
-- cited_by: [Non-Compete Agreement Review Checklist — Washington](../checklists/non-compete/us/washington.md), [Non-Competes in Washington](../non-compete/us/washington.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Washington](../checklists/non-compete/us/washington.md), [Non-Competes in Washington](../non-compete/us/washington.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1207148/wood-v-may/#:~:text=It%20is%20well%20settled%20that,business%20interest%20of%20the%20employer.>

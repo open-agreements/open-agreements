@@ -2,7 +2,7 @@
 jurisdiction: "Delaware"
 slug: delaware
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/delaware
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/delaware · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/delaware · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Delaware[^about]
 
@@ -43,6 +43,11 @@ Delaware has no general wage-threshold, notice, or garden-leave statute for ordi
 
 The practical posture is pro-enforcement only for disciplined drafting. A Delaware choice of law clause, executive status, or equity grant does not replace the reasonableness inquiry for a true restraint on post-employment competition.
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> Every covenant in a Delaware agreement stands or falls on the Court of Chancery's three-part review — reasonable in geographic scope and temporal duration, advancing a legitimate economic interest, and surviving a balancing of the equities — and the court reviews the restraint holistically, weighing each dimension and how it operates alongside every other restriction in the contract [^fp-uc-reasonableness-test][^sunder-chancery-holistic-review]. Because the review reaches every dimension, added duration is measured too: a tolling extension that lengthens a restricted period during a breach is itself more duration the same holistic review weighs, so an open-ended or indefinite extension is exposed like any other overbroad term. Adequate consideration establishes only that a covenant is supported, not that it is reasonable, and even injunctive relief presupposes a covenant that first survives this review — a restraint that fails it is not rescued by a strong consideration recital or an irreparable-harm stipulation [^sunder-chancery-holistic-review].
+
 ## What makes a Delaware non-compete reasonable? {#reasonableness-test}
 
 **Short answer.** Delaware looks at the covenant's time, geography, activity scope, protected interest, consideration, and equitable effect together. A covenant should be no broader than the business interest it protects [^payscale-legitimate-interests].
@@ -55,12 +60,12 @@ That is not a safe harbor for nationwide clauses. It is a procedural and factual
 
 **Short answer.** Usually not as a litigation strategy. Delaware courts retain equitable discretion, but recent Chancery and Supreme Court decisions warn that overbroad covenants may fall rather than be rewritten [^sunder-supreme-blue-pencil-discretion].
 
-The modern no-blue-pencil spine comes from *Kodiak*, *Intertek*, and *Sunder*. The reason is incentive-based: if courts routinely trim overbroad restrictions, employers can draft broadly, chill workers, and still get a lawful restraint if challenged [^kodiak-blue-pencil-inequity][^intertek-no-rescue][^sunder-supreme-perverse-incentives]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Delaware non-compete review checklist](/checklists/non-compete/us/delaware) walks the full covenant suite item by item with each requirement's force level.
+The modern no-blue-pencil spine comes from *Kodiak*, *Intertek*, and *Sunder*. The reason is incentive-based: if courts routinely trim overbroad restrictions, employers can draft broadly, chill workers, and still get a lawful restraint if challenged [^kodiak-blue-pencil-inequity][^intertek-no-rescue][^sunder-supreme-perverse-incentives]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Delaware non-compete reviewer checklist](/checklists/non-compete/us/delaware) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not draft a Delaware covenant on the assumption that a court will narrow it later. Put the actual enforceable scope in the contract: protected business, restricted activities, customer set, geography, and duration [^sunder-supreme-blue-pencil-discretion][^intertek-no-rescue].
+> A Delaware covenant drafted on the assumption that a court will narrow it later carries the risk the covenant fails instead: recent Chancery and Supreme Court decisions increasingly refuse to blue-pencil an overbroad restraint and let it fall rather than rewrite it, calling partial enforcement of an overbroad covenant inequitable and warning that rescuing unreasonable covenants creates perverse incentives to overdraft [^sunder-supreme-blue-pencil-discretion][^intertek-no-rescue]. The scope a covenant can actually hold is the one written into the contract at signing — the protected business, restricted activities, customer set, geography, and duration — because a savings or reformation clause does not move a facially overbroad covenant back into the enforceable column. Severability earns its keep here: a sound non-solicit or confidentiality term drafted to stand on its own can survive a failed non-compete in a jurisdiction whose courts decline to repair the failed clause. A notice to a future employer that asserts a covenant a Delaware court would refuse to enforce or narrow overstates the sender's position and can create its own interference exposure.
 
 ## How does Delaware treat sale-of-business non-competes? {#sale-of-business}
 
@@ -73,7 +78,7 @@ The modern no-blue-pencil spine comes from *Kodiak*, *Intertek*, and *Sunder*. T
 > [!CAUTION]
 > **Drafting note.**
 >
-> In a Delaware M&A covenant, define the restricted business by the acquired business and the goodwill actually purchased. Do not use buyer-family affiliate language to protect unrelated legacy businesses unless the record supports that scope [^kodiak-goodwill-limit].
+> A Delaware M&A covenant reaches only as far as the acquired business and the goodwill actually purchased; buyer-family affiliate language that sweeps in unrelated legacy businesses exceeds the interest bought in the transaction and is exposed to the same refusal to blue-pencil that governs employment covenants [^kodiak-goodwill-limit]. The same goodwill match follows the covenant when it is assigned: a successor whose business does not correspond to the goodwill and confidential information the covenant was written to protect inherits the covenant's posture and may find it harder to enforce in its hands.
 
 ## How does Delaware treat customer and employee non-solicitation covenants? {#non-solicitation}
 
@@ -82,6 +87,11 @@ The modern no-blue-pencil spine comes from *Kodiak*, *Intertek*, and *Sunder*. T
 *Sunder Energy* itself turned on restrictive covenants of exactly these kinds: a customer restriction barring any business with the company's customers [^de-cust-sunder-restriction] and a personnel restriction barring recruitment of its people [^de-emp-sunder-restriction].
 
 The Delaware Supreme Court treated the personnel restriction as a true employee non-solicit and held it overbroad because it reached anyone ever employed for any period of time [^de-emp-sunder-overbroad], applied the four-part non-solicitation test [^de-emp-fp-test], and declined to blue-pencil the covenant [^de-ns-sunder-refuse][^de-cust-sunder-noblue].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> Delaware reviews customer and employee non-solicitation covenants for reasonableness the same way it reviews a non-compete and refuses to blue-pencil an overbroad one, so a personnel restriction reaching anyone ever employed for any period, or a customer restriction untethered from the accounts an employee actually touched, is exposed to being voided whole rather than trimmed [^de-cust-fp-reasonableness][^de-emp-sunder-overbroad]. The scope Delaware credits is the narrow one tied to specific, identified relationships — the customers an employee had material contact with, protected through a defined look-back window — which is often a stronger and more readily enforceable protection than a broad non-compete when it sits beside the confidentiality and trade-secret terms [^de-cust-sunder-noblue].
 
 ## Are equity-forfeiture or forfeiture-for-competition provisions enforceable in Delaware? {#forfeiture-for-competition}
 
@@ -101,6 +111,11 @@ Do not overread the doctrine. It governs forfeiture conditions on deferred benef
 
 Consideration is not the whole analysis. A covenant supported by employment, promotion, cash, or equity still must satisfy the Delaware reasonableness test if it restrains post-employment competition. *Doorly* fixes whether consideration *exists* at formation, but the *adequacy* of that consideration is not irrelevant — the balancing of the equities still lets a court weigh how much the employee actually received against the breadth of the restraint [^payscale-adequacy-equities].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> Delaware measures consideration at the moment a covenant is formed, not at enforcement, so a covenant supported when signed is not unwound by a later forfeiture or change in benefits — and a covenant re-papered by amendment is its own formation event, which is why the value that moved at each signing is worth recording [^powell-continued-employment][^doorly-formation-timing]. Continued at-will employment can supply that consideration where signing is a condition of keeping the position, but a bare adequacy recital does less work than the specific value named: adequacy is not irrelevant, because the balancing of the equities still lets a court weigh how much the employee actually received against the breadth of the restraint [^payscale-adequacy-equities].
+
 ## Are physician non-competes allowed in Delaware? {#physician-noncompetes}
 
 **Short answer.** No, not if the covenant restricts a physician's right to practice medicine by place or time after termination. Delaware Code § 2707 makes that type of physician non-compete void [^delaware-physician-void].
@@ -110,7 +125,7 @@ The statute is targeted. It applies to physician covenants in employment, partne
 > [!CAUTION]
 > **Drafting note.**
 >
-> For Delaware physician agreements, separate any damages clause from a prohibited practice restriction and tie the damages amount to actual injury. Section 2707 voids the locale-or-time restraint but preserves reasonably related damages provisions [^delaware-physician-void][^delaware-physician-damages].
+> In a Delaware physician agreement, a covenant that restricts a physician's right to practice medicine by locale or for a defined period after termination is void under Section 2707, which severs the practice restraint while leaving the rest of the agreement enforceable, including a damages provision in an amount reasonably related to the injury from termination [^delaware-physician-void][^delaware-physician-damages]. A damages clause bundled into the voided practice restraint, or set at an amount untethered to actual injury, sits outside what the statute preserves; the damages provision that survives is the one kept separate from any practice restriction and tied to reasonably related injury.
 
 ## Can a contract choose Delaware law to govern a non-compete? {#delaware-choice-of-law}
 
@@ -119,6 +134,11 @@ The statute is targeted. It applies to physician covenants in employment, partne
 Section 2708 creates a strong Delaware-law anchor when the written contract selects Delaware law and the parties are subject to Delaware jurisdiction and service. The statute excludes contracts involving less than $100,000 [^delaware-choice-law-threshold].
 
 But *Ascension* refused to let Delaware's contractarian policy automatically override California's statutory policy for a California employee and California-centered performance. *FP UC Holdings* applied the same Restatement-style framework when Alabama had the stronger interest in an Alabama non-compete issue [^ascension-public-policy-limit][^fp-uc-choice-law-limit].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> Section 2708 gives a written Delaware choice-of-law selection a strong anchor — conclusively presumed to bear a significant, material, and reasonable relationship with Delaware and enforceable whether or not other relationships exist — but it does not reach a contract involving less than $100,000, so a selection resting on it in a smaller-value agreement rests on nothing [^delaware-choice-law-statute][^delaware-choice-law-threshold]. The anchor is not a universal workaround either: Delaware's own courts have declined to let its freedom-of-contract interest always trump another state's fundamental policy and have applied that other state's law where it had the materially greater interest, so a Delaware clause used against a worker whose residence and work center on another state invites a choice-of-law fight measured by the default state's policy and interest, not by the clause alone [^ascension-public-policy-limit][^fp-uc-choice-law-limit].
 
 > [!NOTE]
 > **Practice note.**
@@ -133,6 +153,11 @@ DUTSA authorizes injunctions for actual or threatened misappropriation, damages 
 
 It also preserves contract remedies, whether or not based on trade-secret misappropriation. That matters for confidentiality clauses, but a confidentiality clause should still be drafted around actual confidential information rather than as an indefinite non-compete by another name [^dutsa-contract-remedies].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> A confidentiality obligation drawn so broadly that it functions as an indefinite bar on competition invites the reasonableness review a properly bounded confidentiality clause is meant to avoid; scoped to genuinely confidential information, it operates alongside a covenant rather than as a restraint on work, and it does not reach the general knowledge, skill, and experience an employee builds on the job [^dutsa-contract-remedies]. DUTSA supplies its own remedies independent of any covenant — an injunction against actual or threatened misappropriation, and fee-shifting to a prevailing party in specified bad-faith or wilful-and-malicious cases — so a one-sided contractual fee clause is not the only path to fees, and a fee provision written to run only one way is worth checking for mutuality against the statute's even-handed standard [^dutsa-injunctive-relief][^dutsa-fees].
+
 ## Are there other Delaware statutory non-compete limits? {#home-inspector-trainees}
 
 **Short answer.** Yes. Delaware separately protects home inspector trainees: a trainee cannot be required to sign a non-compete with a supervising licensed home inspector as a condition of satisfying trainee requirements [^home-inspector-trainee-ban].
@@ -143,15 +168,15 @@ This is a narrow licensing rule, not a general employee non-compete statute. It 
 
 **Short answer.** From 2024 through 2026, the Delaware Supreme Court issued a run of restrictive-covenant decisions spanning the employee-choice doctrine, blue-pencil discretion, consideration timing, and pleading-stage treatment of broad employee covenants [^ainslie-recent-track][^lkq-recent-track][^sunder-recent-track][^doorly-recent-track][^payscale-recent-track].
 
-- 
-- 
-- 
-- 
-- 
+- **January 29, 2024:** *Ainslie* held that limited partnership forfeiture-for-competition provisions are not reviewed like ordinary non-competes when sophisticated parties agreed to the condition [^ainslie-recent-track].
+- **December 10, 2024:** *Sunder* affirmed refusal to blue-pencil exceptionally broad covenants and warned against incentives for overbroad drafting [^sunder-recent-track].
+- **December 18, 2024:** *LKQ Corp. v. Rutledge* confirmed that *Ainslie*'s employee-choice doctrine is not limited to limited partnerships and reaches corporate equity forfeiture-for-competition provisions [^lkq-recent-track].
+- **February 3, 2026:** *Doorly* held that consideration is measured at contract formation, not at enforcement after equity forfeiture [^doorly-recent-track].
+- **March 19, 2026:** *Payscale* reversed dismissal and rejected a pleading-stage inference against a nationwide covenant where the plaintiff pleaded specific business interests [^payscale-recent-track].
 
 The through-line is not that Delaware became anti-enforcement. It is that Delaware separates contract forms carefully and demands fact-specific tailoring before enforcing true restraints on work.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Delaware. This article synthesizes Delaware primary law and is not legal advice from a Delaware-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Delaware. This article synthesizes Delaware primary law and is not legal advice from a Delaware-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Delaware*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/delaware.
 
 [^fp-uc-reasonableness-test]: **FP UC Holdings, LLC v. Hamilton** — "Instead, our courts carefully review the covenants to assure they ‘(1) [are] reasonable in geographic scope and temporal duration, (2) advance a legitimate economic interest of the party seeking its enforcement, and (3) survive a balancing of the equities.’" *FP UC Holdings, LLC v. Hamilton, 2020 WL 1492783, at *6 (Del. Ch. Mar. 27, 2020).* <https://www.courtlistener.com/opinion/4739986/fp-uc-holdings-llc-fpmcm-llc-and-fast-pace-medical-clinic-pllc-v/#:~:text=Instead%2C%20our%20courts%20carefully%20review,a%20balancing%20of%20the%20equities.%E2%80%9D>
 

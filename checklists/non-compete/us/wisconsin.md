@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Wisconsin
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Wisconsin
 description: >-
   A clause-by-clause reviewer checklist for Wisconsin employee restrictive
   covenant agreements — confidentiality, non-solicits, non-competes, and
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Wisconsin[^about]
+# Non-Compete Agreement Reviewer Checklist — Wisconsin[^about]
 
 A clause-by-clause reviewer checklist for Wisconsin employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under Wis. Stat. § 103.465, where an overbroad term voids the covenant in full and no court will narrow it.
 
@@ -63,7 +63,9 @@ Review every item below the way a Wisconsin court would: Wis. Stat. § 103.465 e
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should run as long as secrecy does — that is how the federal definition works, and Wisconsin's own trade-secret act keys protection to continued secrecy in the same way. A fixed expiry on trade-secret protection gives away the one obligation that never needed a covenant to survive. [^dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection the law offers, because the federal definition and Wisconsin's own trade-secret act both key protection to continued secrecy. That status-bounded form is the ceiling the law will back, not a required one — a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition] [#tie-trade-secret-duration-to-secrecy-status]
+
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
 
 - [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. A perpetual lid on non-secret information is precisely the breadth that converts a confidentiality clause into a restraint judged under § 103.465 — and one such covenant was held unenforceable at the pleadings stage. [^wi-diamond-nda-duration] [#state-confidentiality-duration]
 
@@ -155,7 +157,7 @@ The five items below exist only on this Wisconsin page: they implement the statu
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Wisconsin (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Wisconsin (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Wisconsin*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/checklists/non-compete/us/wisconsin.
 
 [^wi-103465-scope]: **Wis. Stat. § 103.465** — "A covenant by an assistant, servant or agent not to compete with his or her employer or principal during the term of the employment or agency, or after the termination of that employment or agency, within a specified territory and during a specified time is lawful and enforceable only if the restrictions imposed are reasonably necessary for the protection of the employer or principal." *Wis. Stat. § 103.465.* <https://docs.legis.wisconsin.gov/statutes/statutes/103/465>
 

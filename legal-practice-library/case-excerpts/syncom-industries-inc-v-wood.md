@@ -8,7 +8,7 @@ citation: 'Syncom Industries, Inc. v. Wood, 155 N.H. 73 (2007).'
 resource: 'https://www.courtlistener.com/opinion/1896769/syncom-industries-inc-v-wood/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/new-hampshire'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-hampshire'
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`, `timing-and-execution-acknowledgements`
 - source_cards: `nh-syncom-bad-faith`, `nh-syncom-reformation-bad-faith`, `syncom-bad-faith-reformation`
-- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1896769/syncom-industries-inc-v-wood/#:~:text=If%20the%20trial%20court%20were,to%20further%20address%20their%20enforceability.>

@@ -2,18 +2,22 @@
 type: Case Excerpt
 title: 'Inergy Propane, LLC v. Lundy'
 description: >-
-  Inergy Propane, LLC v. Lundy, 2009 OK CIV APP 8, 219 P.3d 547. — quoted in 2
+  Inergy Propane, LLC v. Lundy, 2009 OK CIV APP 8, 219 P.3d 547. — quoted in 3
   document(s).
 citation: 'Inergy Propane, LLC v. Lundy, 2009 OK CIV APP 8, 219 P.3d 547.'
 resource: 'https://www.courtlistener.com/opinion/2629577/inergy-propane-llc-v-lundy/'
-timestamp: '2026-06-11'
+timestamp: '2026-07-03'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/oklahoma'
+  - type: State Law Practice Guide
+    resource: >-
+      https://openagreements.org/practice-guides/invention-assignment/us/oklahoma
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/oklahoma'
 tags:
   - case-law
+  - invention-assignment
   - non-compete
 ---
 
@@ -21,7 +25,7 @@ tags:
 
 *Inergy Propane, LLC v. Lundy, 2009 OK CIV APP 8, 219 P.3d 547.*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -29,7 +33,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > That does not, however, require abandonment of the rule of reason analysis required by previously established case law.
 
-- supports: `customer-nonsolicitation`, `definitions`, `oklahoma-statutory-gates`, `tolling-during-breach`
+- supports: `customer-nonsolicitation`, `definitions`, `holdover-clause-limit`, `oklahoma-statutory-gates`, `tolling-during-breach`
 - source_cards: `inergy-rule-of-reason`, `inergy-rule-of-reason-defs`, `inergy-rule-of-reason-gate`, `inergy-rule-of-reason-tolling`
-- cited_by: [Non-Compete Agreement Review Checklist — Oklahoma](../checklists/non-compete/us/oklahoma.md), [Non-Competes in Oklahoma](../non-compete/us/oklahoma.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Oklahoma](../checklists/non-compete/us/oklahoma.md), [Employee Invention Assignment in Oklahoma](../invention-assignment/us/oklahoma.md), [Non-Competes in Oklahoma](../non-compete/us/oklahoma.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2629577/inergy-propane-llc-v-lundy/#:~:text=That%20does%20not%2C%20however%2C%20require,by%20previously%20established%20case%20law.>

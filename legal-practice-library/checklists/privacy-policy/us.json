@@ -26,13 +26,25 @@
       "rel": "agent-skill",
       "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
       "type": "text/markdown"
+    },
+    {
+      "rel": "related-form",
+      "href": "https://openagreements.org/templates/openagreements-privacy-policy",
+      "type": "text/html",
+      "title": "Consumer Privacy Policy"
+    },
+    {
+      "rel": "clause-conformance",
+      "href": "https://openagreements.org/checklists/privacy-policy/us/conformance.json",
+      "type": "application/json",
+      "title": "Clause↔requirement conformance map for the template that implements this checklist"
     }
   ],
   "data": {
     "topic": "privacy-policy",
     "slug": "us",
     "frontmatter": {
-      "title": "Privacy Policy Review Checklist",
+      "title": "Privacy Policy Reviewer Checklist",
       "description": "A clause-by-clause reviewer checklist for privacy policies covering business identification, data disclosures, consumer rights, opt-outs, consent, and maintenance.",
       "eyebrow": "Reviewer Checklist",
       "coverage": "Jurisdiction-neutral (US)",
@@ -92,8 +104,12 @@
           }
         ],
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "who-we-are",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-who-we-are"
+        },
         "requirementLabel": "Business identified with a contact method",
         "sectionId": "identity-scope-and-contact",
         "itemNumber": "1.1",
@@ -104,6 +120,7 @@
           {
             "sourceId": "nj-notice-contact",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "N.J.S.A. 56:8-166.6",
             "citation": "N.J.S.A. 56:8-166.6(a)(7).",
             "url": "https://pub.njleg.gov/bills/2022/PL23/266_.PDF",
@@ -117,8 +134,12 @@
         "requirementId": "state-effective-date",
         "specRequirementId": "REQ-privacy-law.privacy-policy.state-effective-date",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "effective-date",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-effective-date"
+        },
         "requirementLabel": "Effective date stated",
         "sectionId": "identity-scope-and-contact",
         "itemNumber": "1.2",
@@ -129,6 +150,7 @@
           {
             "sourceId": "nv-operator-notice",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "NRS 603A.340",
             "citation": "NRS 603A.340(1).",
             "url": "https://www.leg.state.nv.us/nrs/NRS-603A.html",
@@ -142,8 +164,12 @@
         "requirementId": "disclose-personal-data-categories",
         "specRequirementId": "REQ-privacy-law.privacy-policy.disclose-personal-data-categories",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "information-we-collect",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-information-we-collect"
+        },
         "requirementLabel": "Categories of data collected",
         "sectionId": "data-collection-and-use-disclosures",
         "itemNumber": "2.1",
@@ -154,6 +180,7 @@
           {
             "sourceId": "tx-tdpsa-notice-contents-2",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Tex. Bus. & Com. Code § 541.102",
             "citation": "Tex. Bus. & Com. Code § 541.102(a).",
             "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm",
@@ -167,8 +194,12 @@
         "requirementId": "disclose-processing-purposes",
         "specRequirementId": "REQ-privacy-law.privacy-policy.disclose-processing-purposes",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "why-we-collect-it",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-why-we-collect-it"
+        },
         "requirementLabel": "Why the data is used",
         "sectionId": "data-collection-and-use-disclosures",
         "itemNumber": "2.2",
@@ -179,6 +210,7 @@
           {
             "sourceId": "tx-tdpsa-notice-contents-2",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Tex. Bus. & Com. Code § 541.102",
             "citation": "Tex. Bus. & Com. Code § 541.102(a).",
             "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm",
@@ -192,8 +224,12 @@
         "requirementId": "describe-third-party-recipients",
         "specRequirementId": "REQ-privacy-law.privacy-policy.describe-third-party-recipients",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "how-we-share-it",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-how-we-share-it"
+        },
         "requirementLabel": "Who the data is shared with",
         "sectionId": "data-collection-and-use-disclosures",
         "itemNumber": "2.3",
@@ -204,6 +240,7 @@
           {
             "sourceId": "or-ocpa-notice-detail",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Or. Rev. Stat. § 646A.578",
             "citation": "Or. Rev. Stat. § 646A.578(4).",
             "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html",
@@ -232,8 +269,12 @@
           }
         ],
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "your-privacy-rights",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-your-privacy-rights"
+        },
         "requirementLabel": "Rights catalog disclosed",
         "sectionId": "consumer-rights-and-request-handling",
         "itemNumber": "3.1",
@@ -244,6 +285,7 @@
           {
             "sourceId": "fl-fdbr-rights",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Fla. Stat. § 501.705(2)",
             "citation": "Fla. Stat. § 501.705(2).",
             "url": "https://www.flsenate.gov/Laws/Statutes/2025/501.705",
@@ -257,8 +299,12 @@
         "requirementId": "provide-rights-request-method",
         "specRequirementId": "REQ-privacy-law.privacy-policy.provide-rights-request-method",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "how-to-exercise-your-rights",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-how-to-exercise-your-rights"
+        },
         "requirementLabel": "How to submit a rights request",
         "sectionId": "consumer-rights-and-request-handling",
         "itemNumber": "3.2",
@@ -269,6 +315,7 @@
           {
             "sourceId": "or-ocpa-notice-detail-2",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Or. Rev. Stat. § 646A.578",
             "citation": "Or. Rev. Stat. § 646A.578(4).",
             "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html",
@@ -283,8 +330,12 @@
         "requirementId": "state-response-timeline",
         "specRequirementId": "REQ-privacy-law.privacy-policy.state-response-timeline",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "our-response",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-our-response"
+        },
         "requirementLabel": "Response timeline stated",
         "sectionId": "consumer-rights-and-request-handling",
         "itemNumber": "3.3",
@@ -295,6 +346,7 @@
           {
             "sourceId": "fl-fdbr-response-clock",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Fla. Stat. § 501.706(2)",
             "citation": "Fla. Stat. § 501.706(2).",
             "url": "https://www.flsenate.gov/Laws/Statutes/2025/501.706",
@@ -308,8 +360,12 @@
         "requirementId": "provide-appeal-process",
         "specRequirementId": "REQ-privacy-law.privacy-policy.provide-appeal-process",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "appeals",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-appeals"
+        },
         "requirementLabel": "Appeal process for refusals",
         "sectionId": "consumer-rights-and-request-handling",
         "itemNumber": "3.4",
@@ -320,6 +376,7 @@
           {
             "sourceId": "fl-fdbr-appeal",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Fla. Stat. § 501.707",
             "citation": "Fla. Stat. § 501.707.",
             "url": "https://www.flsenate.gov/Laws/Statutes/2025/501.707",
@@ -333,8 +390,12 @@
         "requirementId": "disclose-sale-and-targeted-ad-opt-out",
         "specRequirementId": "REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-ad-opt-out",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "sale-and-targeted-advertising",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-sale-and-targeted-advertising"
+        },
         "requirementLabel": "Sale and ad-targeting opt-out",
         "sectionId": "sale-targeted-advertising-and-opt-out-signals",
         "itemNumber": "4.1",
@@ -345,6 +406,7 @@
           {
             "sourceId": "ia-icdpa-sale-disclosure",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Iowa Code § 715D.4",
             "citation": "Iowa Code § 715D.4(6).",
             "url": "https://www.legis.iowa.gov/docs/code/2025/715D.4.pdf",
@@ -359,8 +421,12 @@
         "requirementId": "disclose-profiling-opt-out",
         "specRequirementId": "REQ-privacy-law.privacy-policy.disclose-profiling-opt-out",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "profiling",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-profiling"
+        },
         "requirementLabel": "Profiling opt-out",
         "sectionId": "sale-targeted-advertising-and-opt-out-signals",
         "itemNumber": "4.2",
@@ -371,6 +437,7 @@
           {
             "sourceId": "fl-fdbr-rights-2",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Fla. Stat. § 501.705(2)",
             "citation": "Fla. Stat. § 501.705(2).",
             "url": "https://www.flsenate.gov/Laws/Statutes/2025/501.705",
@@ -384,8 +451,12 @@
         "requirementId": "honor-universal-opt-out-signal",
         "specRequirementId": "REQ-privacy-law.privacy-policy.honor-universal-opt-out-signal",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "universal-opt-out-signals",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-universal-opt-out-signals"
+        },
         "requirementLabel": "Universal opt-out signal honored",
         "sectionId": "sale-targeted-advertising-and-opt-out-signals",
         "itemNumber": "4.3",
@@ -396,6 +467,7 @@
           {
             "sourceId": "co-cpa-uoom",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Colo. Rev. Stat. § 6-1-1306",
             "citation": "Colo. Rev. Stat. § 6-1-1306(1)(a)(IV)(B).",
             "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-06.pdf",
@@ -409,8 +481,12 @@
         "requirementId": "obtain-consent-for-sensitive-data",
         "specRequirementId": "REQ-privacy-law.privacy-policy.obtain-consent-for-sensitive-data",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "sensitive-data-consent",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-sensitive-data-consent"
+        },
         "requirementLabel": "Opt-in consent for sensitive data",
         "sectionId": "sensitive-data-consent",
         "itemNumber": "5.1",
@@ -421,6 +497,7 @@
           {
             "sourceId": "ia-icdpa-sensitive-optout",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Iowa Code § 715D.4",
             "citation": "Iowa Code § 715D.4(2).",
             "url": "https://www.legis.iowa.gov/docs/code/2025/715D.4.pdf",
@@ -432,6 +509,7 @@
           {
             "sourceId": "tx-tdpsa-sensitive-consent",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Tex. Bus. & Com. Code § 541.101",
             "citation": "Tex. Bus. & Com. Code § 541.101(b)(4).",
             "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm",
@@ -445,8 +523,12 @@
         "requirementId": "route-known-child-data-through-coppa",
         "specRequirementId": "REQ-privacy-law.privacy-policy.route-known-child-data-through-coppa",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "children-under-13",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-children-under-13"
+        },
         "requirementLabel": "Known child data routed through COPPA",
         "sectionId": "sensitive-data-consent",
         "itemNumber": "5.2",
@@ -457,6 +539,7 @@
           {
             "sourceId": "tx-tdpsa-sensitive-consent",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Tex. Bus. & Com. Code § 541.101",
             "citation": "Tex. Bus. & Com. Code § 541.101(b)(4).",
             "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm",
@@ -470,8 +553,12 @@
         "requirementId": "keep-policy-current",
         "specRequirementId": "REQ-privacy-law.privacy-policy.keep-policy-current",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "keeping-this-policy-current",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-keeping-this-policy-current"
+        },
         "requirementLabel": "Policy reviewed and refreshed",
         "sectionId": "maintenance-and-accuracy",
         "itemNumber": "6.1",
@@ -482,6 +569,7 @@
           {
             "sourceId": "ca-ccpa-policy-contents",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Cal. Civ. Code § 1798.130",
             "citation": "Cal. Civ. Code § 1798.130(a)(5).",
             "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.130",
@@ -495,8 +583,12 @@
         "requirementId": "describe-material-change-process",
         "specRequirementId": "REQ-privacy-law.privacy-policy.describe-material-change-process",
         "requirementLevel": "SHOULD",
-        "scrutiny": "standard-provision",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "changes-to-this-policy",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-changes-to-this-policy"
+        },
         "requirementLabel": "Material-change notice described",
         "sectionId": "maintenance-and-accuracy",
         "itemNumber": "6.2",
@@ -507,6 +599,7 @@
           {
             "sourceId": "nv-operator-notice-2",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "NRS 603A.340",
             "citation": "NRS 603A.340(1).",
             "url": "https://www.leg.state.nv.us/nrs/NRS-603A.html",
@@ -520,8 +613,11 @@
         "requirementId": "ensure-policy-accuracy",
         "specRequirementId": "REQ-privacy-law.privacy-policy.ensure-policy-accuracy",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "not-template-checkable",
+          "coverageNote": "Enforcement floor (FTC Act §5 / state UDAP): the policy must match the business’s actual practice. This governs the whole document, not a single clause."
+        },
         "requirementLabel": "Policy matches actual practice",
         "sectionId": "maintenance-and-accuracy",
         "itemNumber": "6.3",
@@ -532,6 +628,7 @@
           {
             "sourceId": "ftc-act-5-deceptive",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "FTC Act § 5",
             "citation": "15 U.S.C. § 45(a)(1).",
             "url": "https://www.law.cornell.edu/uscode/text/15/45",
@@ -546,8 +643,12 @@
         "requirementId": "provide-sensitive-data-sale-notice",
         "specRequirementId": "REQ-privacy-law.privacy-policy.provide-sensitive-data-sale-notice",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "texas-sensitive-data-sale-notice",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-texas-sensitive-data-sale-notice"
+        },
         "requirementLabel": "Sensitive-data sale notice",
         "sectionId": "data-type-and-status-modules-conditional",
         "itemNumber": "7.1",
@@ -558,6 +659,7 @@
           {
             "sourceId": "tx-tdpsa-sale-notice",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "Tex. Bus. & Com. Code § 541.102(b)",
             "citation": "Tex. Bus. & Com. Code § 541.102(b).",
             "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm",
@@ -571,8 +673,12 @@
         "requirementId": "maintain-biometric-retention-policy",
         "specRequirementId": "REQ-privacy-law.privacy-policy.maintain-biometric-retention-policy",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "biometric-data-retention",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-biometric-data-retention"
+        },
         "requirementLabel": "Biometric retention schedule",
         "sectionId": "data-type-and-status-modules-conditional",
         "itemNumber": "7.2",
@@ -583,6 +689,7 @@
           {
             "sourceId": "il-bipa-written-policy",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "740 ILCS 14/15(a)",
             "citation": "740 ILCS 14/15(a).",
             "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/074000140K15.htm",
@@ -597,8 +704,12 @@
         "requirementId": "obtain-biometric-written-release",
         "specRequirementId": "REQ-privacy-law.privacy-policy.obtain-biometric-written-release",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "biometric-consent",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-biometric-consent"
+        },
         "requirementLabel": "Biometric written release",
         "sectionId": "data-type-and-status-modules-conditional",
         "itemNumber": "7.3",
@@ -609,6 +720,7 @@
           {
             "sourceId": "il-bipa-consent",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "740 ILCS 14/15(b)",
             "citation": "740 ILCS 14/15(b).",
             "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/074000140K15.htm",
@@ -623,8 +735,12 @@
         "requirementId": "maintain-consumer-health-data-policy",
         "specRequirementId": "REQ-privacy-law.privacy-policy.maintain-consumer-health-data-policy",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "consumer-health-data",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-consumer-health-data"
+        },
         "requirementLabel": "Consumer-health-data policy",
         "sectionId": "data-type-and-status-modules-conditional",
         "itemNumber": "7.4",
@@ -635,6 +751,7 @@
           {
             "sourceId": "wa-mhmda-policy",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RCW 19.373.020(1)(a)",
             "citation": "Wash. Rev. Code § 19.373.020(1)(a).",
             "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.373.020",
@@ -648,8 +765,12 @@
         "requirementId": "gate-consumer-health-data-on-consent",
         "specRequirementId": "REQ-privacy-law.privacy-policy.gate-consumer-health-data-on-consent",
         "requirementLevel": "MUST NOT",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "consent-for-health-data",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-consent-for-health-data"
+        },
         "requirementLabel": "Consent gate for health data",
         "sectionId": "data-type-and-status-modules-conditional",
         "itemNumber": "7.5",
@@ -660,6 +781,7 @@
           {
             "sourceId": "wa-mhmda-consent",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "RCW 19.373.030(1)(a)",
             "citation": "Wash. Rev. Code § 19.373.030(1)(a).",
             "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.373.030",
@@ -673,8 +795,12 @@
         "requirementId": "provide-website-operator-notice",
         "specRequirementId": "REQ-privacy-law.privacy-policy.provide-website-operator-notice",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "website-notice",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-website-notice"
+        },
         "requirementLabel": "Website-operator notice",
         "sectionId": "data-type-and-status-modules-conditional",
         "itemNumber": "7.6",
@@ -685,6 +811,7 @@
           {
             "sourceId": "nv-operator-notice-3",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "NRS 603A.340",
             "citation": "NRS 603A.340(1).",
             "url": "https://www.leg.state.nv.us/nrs/NRS-603A.html",
@@ -698,8 +825,12 @@
         "requirementId": "provide-minor-user-disclosures",
         "specRequirementId": "REQ-privacy-law.privacy-policy.provide-minor-user-disclosures",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "minors",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-minors"
+        },
         "requirementLabel": "Minor-user disclosures",
         "sectionId": "data-type-and-status-modules-conditional",
         "itemNumber": "7.7",
@@ -712,8 +843,12 @@
         "requirementId": "disclose-data-broker-opt-out",
         "specRequirementId": "REQ-privacy-law.privacy-policy.disclose-data-broker-opt-out",
         "requirementLevel": "SHOULD",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "implemented",
+          "clauseId": "data-broker-opt-out",
+          "clauseHref": "https://openagreements.org/templates/openagreements-privacy-policy#clause-data-broker-opt-out"
+        },
         "requirementLabel": "Data-broker opt-out disclosure",
         "sectionId": "data-type-and-status-modules-conditional",
         "itemNumber": "7.8",
@@ -724,6 +859,7 @@
           {
             "sourceId": "vt-db-definition",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "9 V.S.A. § 2430",
             "citation": "9 V.S.A. § 2430(4)(A).",
             "url": "https://legislature.vermont.gov/statutes/fullchapter/09/062",
@@ -734,6 +870,7 @@
           {
             "sourceId": "vt-db-optout",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "9 V.S.A. § 2446",
             "citation": "9 V.S.A. § 2446(a)(3)(B).",
             "url": "https://legislature.vermont.gov/statutes/fullchapter/09/062",
@@ -747,8 +884,11 @@
         "requirementId": "register-as-data-broker",
         "specRequirementId": "REQ-privacy-law.privacy-policy.register-as-data-broker",
         "requirementLevel": "MUST",
-        "scrutiny": "substantive",
         "sourceFootnotes": [],
+        "clauseBinding": {
+          "conformanceClass": "not-template-checkable",
+          "coverageNote": "A registration/filing duty outside the privacy policy’s four corners (e.g. data-broker registration) — an action the business takes, not text the policy contains."
+        },
         "requirementLabel": "Data-broker registration",
         "sectionId": "data-type-and-status-modules-conditional",
         "itemNumber": "7.9",
@@ -759,6 +899,7 @@
           {
             "sourceId": "vt-db-registration-2",
             "authorityType": "primary-law",
+            "tier": "primary-source-backed",
             "title": "9 V.S.A. § 2446",
             "citation": "9 V.S.A. § 2446(a).",
             "url": "https://legislature.vermont.gov/statutes/fullchapter/09/062",

@@ -40,7 +40,7 @@ The rule is not a blank check. Continued employment supplies the consideration, 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not assume adequate consideration cures an overbroad covenant. Continued at-will employment satisfies *Lake Land*, but a restraint that fails *Raimonde* on time, territory, or scope is still unenforceable [^lakeland-continued-employment][^q2-raimonde-reasonableness].
+> Adequate consideration does not cure an overbroad covenant. Continued at-will employment satisfies *Lake Land*, but a restraint that fails *Raimonde* on time, territory, or scope is unenforceable no matter how cleanly the rest of the agreement reads, because consideration establishes only that a covenant is supported, not that it is reasonable [^lakeland-continued-employment][^q2-raimonde-reasonableness].
 
 ## What legitimate business interests can support an Ohio non-compete? {#protectable-interests}
 
@@ -53,7 +53,12 @@ The Ohio Uniform Trade Secrets Act, codified at R.C. 1333.61 through 1333.69, de
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not use an Ohio non-compete to block competition disconnected from a protectable interest. Tie the restraint to identified confidential information, trade secrets, or customer goodwill, and keep a separate confidentiality and trade-secret strategy under R.C. 1333.61 et seq. [^outsa-trade-secret-definition][^raimonde-confidential-factor].
+> An Ohio non-compete that blocks competition disconnected from a protectable interest reaches nothing the law recognizes and fails on the interest requirement: the restraint holds only where it is tied to identified confidential information, trade secrets, or customer goodwill. A separate confidentiality and trade-secret strategy under R.C. 1333.61 et seq. survives even where the non-compete does not [^outsa-trade-secret-definition][^raimonde-confidential-factor].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A broad Ohio non-compete draws the heaviest reasonableness scrutiny, while the Ohio Uniform Trade Secrets Act supplies a remedy that does not depend on any covenant: actual or threatened misappropriation of a trade secret may be enjoined under R.C. 1333.62, and the Act protects information that derives independent economic value from secrecy and is the subject of reasonable efforts to keep it secret [^outsa-injunction][^outsa-trade-secret-definition]. A confidentiality and customer-non-solicitation strategy built on that statutory backstop often protects the employer more durably than a non-compete that has to survive the full *Raimonde* analysis, and it holds even where the non-compete is trimmed or declined [^raimonde-confidential-factor].
 
 ## What duration and geographic scope are reasonable for an Ohio non-compete? {#duration-limits}
 
@@ -66,7 +71,7 @@ When a covenant overshoots, an Ohio court may trim it. In *MetroHealth System v.
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not copy a fixed term or radius from another form. Match duration and territory to the employee's role and the employer's actual market, because an Ohio court evaluates the restraint as a whole and there is no safe-harbor number [^q4-raimonde-factors][^metrohealth-modified].
+> A fixed term or radius copied from another form is measured against the employer's actual market, not the source it came from: an Ohio court evaluates the restraint as a whole against the employer's real protectable interest, with no safe-harbor number, so a duration or territory sized to a different role or market is exposed to being trimmed or declined [^q4-raimonde-factors][^metrohealth-modified].
 
 ## Will an Ohio court reform or refuse to enforce an overbroad non-compete? {#court-narrowing}
 
@@ -74,12 +79,12 @@ When a covenant overshoots, an Ohio court may trim it. In *MetroHealth System v.
 
 *Raimonde* holds that a covenant imposing unreasonable restrictions will be enforced to the extent necessary to protect the employer's legitimate interests, giving Ohio courts the power to modify rather than void [^raimonde-reformation]. But that power is not automatic. In *Kross Acquisition Co. v. Groundworks Ohio, LLC*, the First District confirmed that modifying a covenant is within the trial court's discretion, and it affirmed a refusal to rewrite a covenant so overbroad that reforming it would require the court to rebuild the agreement from scratch [^kross-discretionary].
 
-There is also a real cost to overreaching. In *Cintas Corp. v. Perry*, applying Ohio law, the employer's own prevailing-party fee clause boomeranged: after the covenant failed, the court held the former employee was entitled to recover his attorney's fees and litigation costs under that contract [^cintas-fee-shift]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Ohio non-compete review checklist](/checklists/non-compete/us/ohio) walks the full covenant suite item by item with each requirement's force level.
+There is also a real cost to overreaching. In *Cintas Corp. v. Perry*, applying Ohio law, the employer's own prevailing-party fee clause boomeranged: after the covenant failed, the court held the former employee was entitled to recover his attorney's fees and litigation costs under that contract [^cintas-fee-shift]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Ohio non-compete reviewer checklist](/checklists/non-compete/us/ohio) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on reformation as a safety net for an aggressive Ohio covenant. Draft tiered, severable, reasonable restraints, because a court may refuse to rewrite an overbroad covenant — and a one-sided fee clause can shift fees to the departing employee when the covenant fails [^kross-discretionary][^cintas-fee-shift].
+> Reformation is a discretionary repair, not a safety net an aggressive Ohio covenant can count on: a court may refuse to rewrite a covenant so overbroad that reforming it would require rebuilding the agreement, leaving it unenforceable, and a one-sided fee clause can shift fees to the departing employee when the covenant fails [^kross-discretionary][^cintas-fee-shift]. Tiered, severable, reasonable restraints survive that refusal where a single grasping covenant does not.
 
 ## Can a successor company enforce a non-compete after a merger in Ohio? {#successor-enforcement}
 
@@ -92,7 +97,7 @@ That holding turns on a statutory merger. A deal structured as an asset purchase
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on *Acordia* for every transaction. It addresses covenants that pass by statutory merger; in an asset deal, include express assignment and successor-and-assigns language so the buyer can enforce the restraint [^acordia-successor].
+> *Acordia* reaches only covenants that pass by statutory merger, so a covenant silent on assignment can raise a live assignability question in an asset deal, where the buyer may be unable to enforce the restraint. Express assignment and successor-and-assigns language carries the covenant to a buyer in a transaction that is not a statutory merger [^acordia-successor].
 
 ## Does an Ohio non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
@@ -107,6 +112,11 @@ This judicial tolling is equitable rather than automatic, and it operates agains
 >
 > Do not assume a fixed Ohio covenant simply lapses on its stated end date while a dispute is pending. Under *Homan*, the period can be tolled during litigation — but draft any extension-on-breach clause as a reasonable, bounded restraint tied to the breach, not an indefinite one [^homan-tolling][^q7-raimonde-reasonableness].
 
+> [!CAUTION]
+> **Drafting note.**
+>
+> An Ohio covenant does not necessarily lapse on its stated end date while a dispute is pending: under *Homan*, a covenant may not expire while the enforceability of the agreement is being litigated, so the restricted period can be tolled until the case resolves [^homan-tolling]. That judicial tolling is equitable rather than automatic, and any contractual extension-on-breach term is measured against the same *Raimonde* reasonableness backdrop, so an open-ended or indefinite extension is exposed to being cut back like any other overbroad restraint, while an extension bounded to the duration of the breach stands with the covenant it protects [^q7-raimonde-reasonableness].
+
 ## Which Ohio workers face special non-compete treatment? {#industry-specific-limits}
 
 **Short answer.** Physicians are the established category receiving special scrutiny. Ohio enforces their covenants but tests them closely under the public-injury prong, and a pending bill would add statutory limits for certain nonprofit-hospital clinicians [^metrohealth-physician-standard][^williams-public-injury][^sb301-healthcare-cap].
@@ -119,6 +129,11 @@ There is no enacted Ohio statute banning health care non-competes today. A pendi
 > **Practice note.**
 >
 > Do not draft a physician or other health care non-compete in Ohio as if it were an ordinary commercial restraint. Expect heightened public-interest scrutiny under *MetroHealth* and *Williams*, and monitor Senate Bill 301, which would cap covered hospital clinician covenants if enacted [^metrohealth-physician-standard][^sb301-healthcare-cap].
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A physician covenant drafted like an ordinary commercial restraint meets heightened public-interest scrutiny in Ohio: a covenant restraining a physician-employee is unreasonable where it imposes undue hardship on the physician and injures the public because the physician's services are vital to the community and the demand for that expertise is critical [^metrohealth-physician-standard][^williams-public-injury]. A narrow radius and a short term that preserve patient access and continuity of care are what let such a covenant survive that scrutiny, and a covered nonprofit-hospital clinician covenant would face a further statutory ceiling if Senate Bill 301 is enacted [^sb301-healthcare-cap].
 
 ## Did the FTC's federal non-compete rule change Ohio non-compete law? {#federal-ftc-overlay}
 
@@ -143,9 +158,22 @@ The enacted baseline therefore remains common-law reasonableness under *Raimonde
 >
 > Treat Senate Bill 11 as a monitoring item, not present Ohio law. Recheck the Ohio General Assembly's bill status before changing forms or telling workers that Ohio has banned non-competes, and note that S.B. 11 as drafted would apply only to agreements made or modified after its effective date [^sb11-prohibition][^sb11-prospective].
 
+## How does Ohio treat employee (anti-raiding) non-solicits? {#employee-non-solicitation}
+
+**Short answer.** Ohio judges a nonsolicitation covenant — including one barring solicitation of a former employer's employees — under the same Raimonde reasonableness test it applies to non-competes. We found no Ohio decision squarely holding an employee anti-raiding clause reasonable, but the test is the same.
+
+In *UZ Engineered Products Co. v. Midwest Motor Supply Co.*, the covenants at issue included a bar on soliciting the employer's other employees, and the Court of Appeals applied the Raimonde standard — a restraint is enforced only to the extent reasonably necessary to protect the employer's legitimate interests [^uz-reasonable-extent].
+
+"Covenants not to compete will be enforced only to the extent that the restrictions imposed on an employee are reasonably necessary to protect the employer's legitimate business interests."[^uz-reasonable-extent]
+
+> [!NOTE]
+> **Practice note.**
+>
+> The same reasonableness limits that govern an Ohio non-compete govern an employee non-solicit: no broader than needed, not unduly harsh, not injurious to the public. An overbroad anti-raiding clause is reformed or struck under Raimonde, not enforced as written [^uz-reasonable-extent].
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Ohio. This article synthesizes Ohio primary law and is not legal advice from a Ohio-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Ohio. This article synthesizes Ohio primary law and is not legal advice from a Ohio-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Ohio*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/ohio.
 
 [^raimonde-reasonableness-test]: **Raimonde v. Van Vlerah** — "A covenant restraining an employee from competing with his former employer upon termination of employment is reasonable if it is no greater than is required for the protection of the employer, does not impose undue hardship on the employee, and is not injurious to the public." *Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975).* <https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/#:~:text=A%20covenant%20restraining%20an%20employee,not%20injurious%20to%20the%20public.>
 
@@ -188,3 +216,5 @@ The enacted baseline therefore remains common-law reasonableness under *Raimonde
 [^sb11-prohibition]: **Ohio S.B. 11 (136th General Assembly)** — "Beginning on the effective date of this section, no employer shall enter into, attempt to enter into, present to a worker or prospective worker as a term of hire, or attempt to enforce an agreement, or part of an agreement, that prohibits the worker from, penalizes the worker for, or functions to prevent the worker from seeking or accepting work with a person, or operating a business, after the conclusion of the relationship between the employer and worker, including any of the following:" *S.B. 11, 136th Gen. Assemb. (Ohio 2025).* <https://www.legislature.ohio.gov/legislation/136/sb11>
 
 [^sb11-prospective]: **Ohio S.B. 11 (136th General Assembly)** — "An agreement, or part of an agreement, between an employer and worker entered into, modified, or extended on or after the effective date of this section that is prohibited under division (A) of this section is void." *S.B. 11, 136th Gen. Assemb. (Ohio 2025).* <https://www.legislature.ohio.gov/legislation/136/sb11>
+
+[^uz-reasonable-extent]: **UZ Engineered Products Co. v. Midwest Motor Supply Co.** — "Covenants not to compete will be enforced only to the extent that the restrictions imposed on an employee are reasonably necessary to protect the employer's legitimate business interests." *UZ Engineered Prods. Co. v. Midwest Motor Supply Co., No. 01AP-551, 2001-Ohio-8779 (Ohio Ct. App. 10th Dist.).* <https://www.supremecourt.ohio.gov/rod/docs/pdf/10/2001/2001-Ohio-8779.pdf>

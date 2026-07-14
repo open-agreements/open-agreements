@@ -8,7 +8,7 @@ citation: 'Bennett v. Storz Broadcasting Co., 270 Minn. 525, 134 N.W.2d 892 (196
 resource: 'https://www.courtlistener.com/opinion/1689754/bennett-v-storz-broadcasting-co/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/minnesota'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/minnesota'
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `minnesota-statutory-gates`, `pre-2023-agreements`
 - source_cards: `bennett-balance-gate`, `bennett-storz-fact-specific-balance`
-- cited_by: [Non-Compete Agreement Review Checklist — Minnesota](../checklists/non-compete/us/minnesota.md), [Employment Non-Competes in Minnesota](../non-compete/us/minnesota.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Minnesota](../checklists/non-compete/us/minnesota.md), [Employment Non-Competes in Minnesota](../non-compete/us/minnesota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1689754/bennett-v-storz-broadcasting-co/#:~:text=the%20court%20must%20consider%20not,the%20circumstances%20of%20the%20case>

@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/10291288/sunder-energy-llc-v-tyler-jackson/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/delaware'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/delaware'
@@ -77,7 +77,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `restrictive-covenants-each-independently-includable`
 - source_cards: `de-sunder-perverse-cov`, `sunder-supreme-perverse-incentives`
-- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10291288/sunder-energy-llc-v-tyler-jackson/#:~:text=This%20argument%2C%20however%2C%20turns%20the,reasonable%20restrictions%20from%20the%20outset.>
 
 ### sunder-energy-llc-v-jackson-this-is-not-to-say-that-ca6da819 {#sunder-energy-llc-v-jackson-this-is-not-to-say-that-ca6da819}
@@ -86,5 +86,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `de-sunder-discretion-sev`, `sunder-supreme-blue-pencil-discretion`
-- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10291288/sunder-energy-llc-v-tyler-jackson/#:~:text=This%20is%20not%20to%20say,reformation%20of%20the%20parties%E2%80%99%20agreement.>

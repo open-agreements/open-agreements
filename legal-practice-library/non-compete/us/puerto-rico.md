@@ -106,7 +106,7 @@ The practical takeaway is stability with a narrow margin. Because the framework 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Puerto Rico. This article synthesizes Puerto Rico primary law and is not legal advice from a Puerto Rico-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Puerto Rico. This article synthesizes Puerto Rico primary law and is not legal advice from a Puerto Rico-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Puerto Rico*, OpenAgreements (last updated June 2, 2026), https://openagreements.org/practice-guides/non-compete/us/puerto-rico.
 
 [^ay-test]: **Arthur Young & Co. v. Vega III** — "Para ser razonable, un acuerdo de no competir debe reunir los siguientes requisitos: (1) debe ser necesario para proteger un interés legítimo del patrono, (2) no debe imponer al empleado una carga demasiado onerosa, (3) y no debe afectar demasiado al público." *Arthur Young & Co. v. Vega III, 136 D.P.R. 157 (1994).* <https://aldia.microjuris.com/wp-content/uploads/2022/09/136DPR157.pdf>
 

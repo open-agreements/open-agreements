@@ -8,9 +8,9 @@ citation: 'Cardoni v. Prosperity Bank, 805 F.3d 573 (5th Cir. 2015).'
 resource: 'https://www.courtlistener.com/opinion/3150844/chris-cardoni-v-prosperity-bank/'
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us'
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/texas'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/texas'
@@ -33,7 +33,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `governing-law-venue-dispute-process`, `parties-and-cover-term-identification`
 - source_cards: `choice-of-law-fundamental-policy-limit`, `restatement-187-fundamental-policy-limit`
-- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist](../checklists/non-compete/us.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3150844/chris-cardoni-v-prosperity-bank/#:~:text=Even%20when%20a%20reasonable%20basis,of%20the%20chosen%20state%E2%80%99s%20law.>
 
 ### cardoni-v-prosperity-bank-texas-generally-allows-them-so-long-f4e613dd {#cardoni-v-prosperity-bank-texas-generally-allows-them-so-long-f4e613dd}
@@ -42,5 +42,5 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `choice-of-law-forum`, `governing-law-venue-dispute-process`
 - source_cards: `cardoni-conflicts`, `tx-cardoni-conflicts`
-- cited_by: [Non-Compete Agreement Review Checklist — Texas](../checklists/non-compete/us/texas.md), [Non-Competes in Texas](../non-compete/us/texas.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Texas](../checklists/non-compete/us/texas.md), [Non-Competes in Texas](../non-compete/us/texas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3150844/chris-cardoni-v-prosperity-bank/#:~:text=Texas%20generally%20allows%20them%20so,limited%20both%20geographically%20and%20temporally.>

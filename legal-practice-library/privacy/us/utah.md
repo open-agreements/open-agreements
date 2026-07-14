@@ -51,7 +51,7 @@ Unlike Colorado, Utah's cure period has not been repealed — it remains a built
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-04. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Utah. This article synthesizes Utah primary law and is not legal advice from a Utah-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-04. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Utah. This article synthesizes Utah primary law and is not legal advice from a Utah-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Utah Consumer Privacy Law (UCPA)*, OpenAgreements (last updated June 4, 2026), https://openagreements.org/practice-guides/privacy/us/utah.
 
 [^stat-102-apply]: **Utah Code § 13-61-102** — "This chapter applies to any controller or processor who: (a) (i) conducts business in the state; or (ii) produces a product or service that is targeted to consumers who are residents of the state; (b) has annual revenue of $25,000,000 or more; and (c) satisfies one or more of the following thresholds:" *Utah Code § 13-61-102(1).* <https://le.utah.gov/xcode/Title13/Chapter61/13-61-S102.html>
 

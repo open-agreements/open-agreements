@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — District of Columbia
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — District of Columbia
 description: >-
   A clause-by-clause reviewer checklist for District of Columbia employee
   restrictive covenant agreements — the District bans non-competes for employees
@@ -14,7 +14,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — District of Columbia[^about]
+# Non-Compete Agreement Reviewer Checklist — District of Columbia[^about]
 
 A clause-by-clause reviewer checklist for District of Columbia employee restrictive covenant agreements — the District bans non-competes for employees below an annually adjusted pay threshold and enforces a covenant against a highly compensated employee only if it clears strict scope, duration, and 14-day notice gates.
 
@@ -64,7 +64,9 @@ A District review runs on two tracks at once. First, classify the worker: below 
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Let trade-secret obligations run as long as secrecy does — federal law keys the right to continued secrecy, and the District's own trade-secrets act supplies the injunction. With most competition restraints banned below the pay threshold, this clause is the employer's principal protection in the District, and contractually expiring it on a fixed date surrenders a remedy the statute would otherwise extend indefinitely. [^dc-dtsa-1839-conf][^dc-utsa-conf] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection the law gives: federal law keys the right to continued secrecy, the District's own trade-secrets act supplies the injunction, and with most competition restraints banned below the pay threshold this clause is the employer's principal protection in the District. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of that protection, and a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dc-dtsa-1839-conf][^dc-utsa-conf] [#tie-trade-secret-duration-to-secrecy-status]
+
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
 
 - [ ] **Confidentiality end date** (Recommended) — Give non-trade-secret confidential information its own finite term. The two-track structure also protects the clause's statutory footing in the District: the carve-out shelters restrictions on the employer's confidential and proprietary information, and a perpetual lid on everything the worker knows is the drafting pattern most likely to be read as preventing competitive employment altogether — taking the clause outside the carve-out it depends on. [^dc-confidentiality-conf] [#state-confidentiality-duration]
 
@@ -164,7 +166,7 @@ The nine items below exist only on this District of Columbia page: they implemen
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for District of Columbia (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for District of Columbia (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — District of Columbia*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/district-of-columbia.
 
 [^dc-covered-def-parties]: **D.C. Code § 32-581.01** — "an employee who is not a highly compensated employee and: (A) If the employee has commenced work for the employer: (i) Spends more than 50% of his or her work time for the employer working in the District; or (ii) Whose employment for the employer is based in the District and the employee regularly spends a substantial amount of his or her work time for the employer in the District and not more than 50% of his or her work time for that employer in another jurisdiction" *D.C. Code § 32-581.01(6)(A).* <https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01>
 

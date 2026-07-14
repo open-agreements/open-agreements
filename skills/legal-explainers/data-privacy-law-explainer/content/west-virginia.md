@@ -2,7 +2,7 @@
 jurisdiction: "West Virginia"
 slug: west-virginia
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-12"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/west-virginia
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/west-virginia · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/west-virginia · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # West Virginia Consumer Privacy Law[^about]
 
@@ -74,7 +74,7 @@ The practical shape of private privacy litigation in West Virginia follows from 
 
 The enforcement picture for a West Virginia-facing privacy program therefore has three tiers. First, breach-notice failures: an Attorney General matter only, with civil-penalty exposure reserved for repeated and willful non-compliance and capped at $150,000 per breach or related series. Second, deceptive privacy practices generally: the Attorney General enforces the WVCCPA's deceptive-practices article, and consumers hold the parallel private action described in the previous answer, so a misleading privacy policy carries both public and private exposure. Third, the federal layer: the FTC enforces Section 5, GLBA, and COPPA against businesses in their scope, and HHS enforces HIPAA — none of which depends on West Virginia law. The operational takeaway is that West Virginia's own enforcement risk concentrates on two failure modes — not notifying after a qualifying breach, and saying things about your data practices that are not true — and a program that handles both has covered the state-law field as it stands today.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not West Virginia. This article synthesizes West Virginia primary law and is not legal advice from a West Virginia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not West Virginia. This article synthesizes West Virginia primary law and is not legal advice from a West Virginia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *West Virginia Consumer Privacy Law*, OpenAgreements (last updated June 12, 2026), https://openagreements.org/practice-guides/privacy/us/west-virginia.
 
 [^q1-stat-102a-duty]: **W. Va. Code § 46A-2A-102** — "An individual or entity that owns or licenses computerized data that includes personal information shall give notice of any breach of the security of the system following discovery or notification of the breach of the security of the system to any resident of this state whose unencrypted and unredacted personal information was or is reasonably believed to have been accessed and acquired by an unauthorized person and that causes, or the individual or entity reasonably believes has caused or will cause, identity theft or other fraud to any resident of this state." *W. Va. Code § 46A-2A-102(a).* <https://code.wvlegislature.gov/46A-2A-102/>
 

@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/10680273/north-american-senior-benefits-llc-v-wimmer/
 timestamp: '2026-06-11'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/georgia'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/georgia'
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-nonsolicit`, `georgia-statutory-gates`, `restrictive-covenants-each-independently-includable`
 - source_cards: `ga-wimmer-gate`, `ga-wimmer-nonrecruit`, `q6-wimmer-nonrecruit`
-- cited_by: [Non-Compete Agreement Review Checklist — Georgia](../checklists/non-compete/us/georgia.md), [Non-Competes in Georgia](../non-compete/us/georgia.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Georgia](../checklists/non-compete/us/georgia.md), [Non-Competes in Georgia](../non-compete/us/georgia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10680273/north-american-senior-benefits-llc-v-wimmer/#:~:text=In%20light%20of%20the%20statutory,this%20case%20for%20further%20proceedings.>
 
 ### north-american-senior-benefits-llc-v-wimmer-the-petitioner-a-georgia-corporation-b0bb4f2d {#north-american-senior-benefits-llc-v-wimmer-the-petitioner-a-georgia-corporation-b0bb4f2d}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `geography`
 - source_cards: `ga-wimmer-defs`, `q4-wimmer-no-express-term`
-- cited_by: [Non-Compete Agreement Review Checklist — Georgia](../checklists/non-compete/us/georgia.md), [Non-Competes in Georgia](../non-compete/us/georgia.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Georgia](../checklists/non-compete/us/georgia.md), [Non-Competes in Georgia](../non-compete/us/georgia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10680273/north-american-senior-benefits-llc-v-wimmer/#:~:text=The%20petitioner%20%E2%80%94%20a%20Georgia,this%20case%20for%20further%20proceedings.>

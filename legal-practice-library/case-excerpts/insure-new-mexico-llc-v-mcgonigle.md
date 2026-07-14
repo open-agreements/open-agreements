@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/1291299/insure-new-mexico-llc-v-mcgonigle/
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/new-mexico'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-mexico'
@@ -32,16 +32,16 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `protectable-interests`
 - source_cards: `mcgonigle-customers-not-special`, `mcgonigle-not-special`
-- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1291299/insure-new-mexico-llc-v-mcgonigle/#:~:text=For%20this%20reason%2C%20there%20was,did%20not%20require%20special%20information.>
 
 ### insure-new-mexico-llc-v-mcgonigle-general-skills-and-knowledge-do-not-bffdf2ae {#insure-new-mexico-llc-v-mcgonigle-general-skills-and-knowledge-do-not-bffdf2ae}
 
 > General skills and knowledge do not rise to the level of trade secrets.
 
-- supports: `definitions`, `new-mexico-statutory-gates`, `protectable-interests`
-- source_cards: `mcgonigle-general-skills`, `mcgonigle-general-skills-def`, `mcgonigle-general-skills-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
+- supports: `definitions`, `employee-non-compete-enforceability`, `new-mexico-statutory-gates`, `protectable-interests`
+- source_cards: `mcgonigle-general-skills`, `mcgonigle-general-skills-def`, `mcgonigle-general-skills-gate`, `mcgonigle-general-skills-practice`
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1291299/insure-new-mexico-llc-v-mcgonigle/#:~:text=General%20skills%20and%20knowledge%20do,the%20level%20of%20trade%20secrets.>
 
 ### insure-new-mexico-llc-v-mcgonigle-non-competition-covenants-are-ordinarily-dea5be07 {#insure-new-mexico-llc-v-mcgonigle-non-competition-covenants-are-ordinarily-dea5be07}
@@ -50,5 +50,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-non-compete-enforceability`, `new-mexico-statutory-gates`, `restrictive-covenants-each-independently-includable`
 - source_cards: `mcgonigle-ordinary-covenants`, `mcgonigle-ordinary-enforceability`, `mcgonigle-ordinary-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1291299/insure-new-mexico-llc-v-mcgonigle/#:~:text=Non%2Dcompetition%20covenants%20are%20ordinarily%20enforceable,a%20court%20deems%20them%20reasonable.>

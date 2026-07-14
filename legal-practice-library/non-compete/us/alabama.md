@@ -5,8 +5,8 @@ description: >-
   A question-by-question summary of Alabama non-compete law under the 2016
   Restrictive Covenant Act (Ala. Code § 8-1-190 et seq.), including the
   void-by-default rule, the six statutory exceptions and their duration
-  presumptions, protectable interests, the all-parties signature requirement
-  after Amanda Howard, judicial reformation, the professional exemption,
+  presumptions, protectable interests, the Ala. Code § 8-1-192 all-parties
+  signature requirement, judicial reformation, the professional exemption,
   tolling-during-breach clauses, and choice-of-law limits.
 resource: 'https://openagreements.org/practice-guides/non-compete/us/alabama'
 timestamp: '2026-06-03'
@@ -17,7 +17,7 @@ tags:
 
 # Non-Competes in Alabama[^about]
 
-A question-by-question summary of Alabama non-compete law under the 2016 Restrictive Covenant Act (Ala. Code § 8-1-190 et seq.), including the void-by-default rule, the six statutory exceptions and their duration presumptions, protectable interests, the all-parties signature requirement after Amanda Howard, judicial reformation, the professional exemption, tolling-during-breach clauses, and choice-of-law limits.
+A question-by-question summary of Alabama non-compete law under the 2016 Restrictive Covenant Act (Ala. Code § 8-1-190 et seq.), including the void-by-default rule, the six statutory exceptions and their duration presumptions, protectable interests, the Ala. Code § 8-1-192 all-parties signature requirement, judicial reformation, the professional exemption, tolling-during-breach clauses, and choice-of-law limits.
 
 ## Are employee non-compete agreements enforceable in Alabama? {#employee-non-compete-enforceability}
 
@@ -28,6 +28,11 @@ Alabama is not a reasonableness state in the usual sense. Restrictive covenants 
 "Every contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind otherwise than is provided by this section is to that extent void."[^ala-8-1-190-void]
 
 An employee non-compete escapes that rule only if it fits the employee exception in § 8-1-190(b)(4), which requires a specified geographic area and a competing business by the employer, and which builds in a durational presumption [^ala-8-1-190-employee]. Fitting a statutory category is necessary but not sufficient: the covenant still has to protect a statutory protectable interest, satisfy the writing-and-signature and consideration rules, and survive the professional exemption and any other defense. So the practical question in Alabama is rarely whether a covenant is generally reasonable; it is whether the covenant fits a statutory category and clears those additional limits.
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> Alabama voids every restraint by default and enforces only a covenant that fits one of the six exceptions in Ala. Code § 8-1-190(b), so a covenant that fits no listed category, or that reaches only the employee's general job skills rather than a listed interest, is void no matter how carefully it is drafted [^ala-8-1-190-void]. The employee non-compete, the current-customer non-solicit, and the uniquely-essential no-hire each have a named category, but a non-dealing or non-investment restraint has none of its own: it holds only where it is confined to fit inside a listed exception, and a version that reaches past that boundary is exposed to the § 8-1-190(a) void rule rather than to mere narrowing [^ala-8-1-190-employee].
 
 ## Which restrictive covenants does the Alabama Restrictive Covenant Act allow? {#allowed-covenants}
 
@@ -40,6 +45,11 @@ For a sale-of-business covenant, a one-year restraint is presumed reasonable [^a
 "Restraints of 18 months or for as long as post-separation consideration is paid for such agreement, whichever is greater, are presumed to be reasonable."[^ala-8-1-190-nonsolicit]
 
 The employee no-hire category is unusually narrow. A covenant restricting the hiring of another party's workers is allowed only where the worker holds a position uniquely essential to the business [^ala-8-1-190-no-hire], a high bar that few rank-and-file or mid-level employees will meet.
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A covenant restricting the hire or employment of another party's workers fits Ala. Code § 8-1-190(b)(1) only where the worker holds a position uniquely essential to the management, organization, or service of the business — a high bar few rank-and-file or mid-level employees meet [^ala-8-1-190-no-hire]. A workforce-wide no-hire or no-poach clause fits no § 8-1-190(b) category, so it is exposed to being voided in its entirety rather than narrowed, and a covenant confined to the uniquely-essential class at the outset is the one that survives.
 
 ## What is a protectable interest under Alabama law? {#protectable-interest}
 
@@ -56,7 +66,7 @@ Specialized training counts, but only if the employer takes a specific drafting 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not rely on a generic recital of training to support an Alabama covenant. Section 8-1-191 makes specialized training a protectable interest only when the training and its anticipated expense are specifically set forth in writing in the agreement as consideration for the restraint, so a boilerplate reference will not qualify [^ala-8-1-191-training].
+> Specialized training supports an Alabama covenant only on a specific drafting condition. Section 8-1-191 makes specialized training a protectable interest only when the training and its anticipated expense are specifically set forth in writing in the agreement as consideration for the restraint, so a covenant resting on a generic or boilerplate training recital protects no listed interest and fails on that element [^ala-8-1-191-training].
 
 ## Must an Alabama non-compete be signed by all parties, including the employer? {#signature-requirement}
 
@@ -75,7 +85,7 @@ The Court rejected the employer's arguments that mutual assent shown by conduct,
 > [!CAUTION]
 > **Drafting note.**
 >
-> Make sure the company itself signs the exact document that contains the non-compete, while the employment relationship is in place. After *Amanda Howard Real Estate v. Lee*, an employer's failure to timely sign the covenant document defeats enforcement of that covenant, and a much-later signature, payment, or assent shown by conduct will not cure it; a fresh, properly signed covenant going forward must itself satisfy § 8-1-192 [^howard-affirm][^howard-thing-signed].
+> An Alabama covenant stands only where the company itself signs the exact document that contains the non-compete while the employment relationship is in place. After *Amanda Howard Real Estate v. Lee*, an employer's failure to timely sign the covenant document leaves that covenant void, and a much-later signature, payment, or assent shown by conduct does not cure it; a fresh covenant going forward is enforceable only where it independently satisfies § 8-1-192 [^howard-affirm][^howard-thing-signed].
 
 ## When does an Alabama non-compete have to be signed relative to employment? {#timing-of-signing}
 
@@ -100,12 +110,12 @@ Alabama gives courts a limited blue-pencil power. If the problem is an unreasona
 
 "If a contractually specified restraint is overly broad or unreasonable in its duration, a court may void the restraint in part and reform it to preserve the protectable interest or interests."[^ala-8-1-193-reform]
 
-But reformation has a hard limit. A court can fix an overbroad term inside a valid category; it cannot rewrite a covenant that never fit a statutory exception to begin with [^ala-8-1-193-void]. For a restraint that is not tethered to a protectable interest, or that falls outside the six categories, the statute authorizes a court to void it in its entirety rather than narrow it. For a clause-by-clause pass over a specific agreement against these rules, the [Alabama non-compete review checklist](/checklists/non-compete/us/alabama) walks the full covenant suite item by item with each requirement's force level.
+But reformation has a hard limit. A court can fix an overbroad term inside a valid category; it cannot rewrite a covenant that never fit a statutory exception to begin with [^ala-8-1-193-void]. For a restraint that is not tethered to a protectable interest, or that falls outside the six categories, the statute authorizes a court to void it in its entirety rather than narrow it. For a clause-by-clause pass over a specific agreement against these rules, the [Alabama non-compete reviewer checklist](/checklists/non-compete/us/alabama) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not treat Alabama's blue-pencil power as a safety net for an overreaching covenant. Section 8-1-193 lets a court reform an overbroad *duration*, but it authorizes the court to void the entire restraint if the covenant does not fit one of the six § 8-1-190(b) exceptions, so a covenant that misses a statutory category should not be treated as salvageable through duration reformation [^ala-8-1-193-void].
+> Alabama's blue-pencil power is not a safety net for an overreaching covenant. Section 8-1-193 lets a court reform an overbroad *duration*, but it authorizes the court to void the entire restraint where the covenant does not fit one of the six § 8-1-190(b) exceptions, so a covenant that misses a statutory category is exposed to being voided in its entirety rather than salvaged through duration reformation [^ala-8-1-193-void].
 
 ## Does Alabama exempt professionals from non-compete agreements? {#professional-exemption}
 
@@ -126,6 +136,11 @@ The exemption is not blanket immunity, though. It protects the professional in t
 "A doctor is, instead, protected only in his practice of medicine, for the purpose of the protection is the interest of the public in being able to receive the doctor's professional services."[^benchmark-scope]
 
 So a professional cannot be barred from practicing, but conduct outside that practice — *Benchmark* used the example of acquiring competing practices purely as an investment, without managing them — can still be restrained.
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> A member of a recognized Alabama profession cannot be barred from practicing that profession, even by a covenant that would otherwise fit a § 8-1-190(b) category: § 8-1-196 preserves the common-law professional exemption, and a professional cannot fall within the statutory exceptions at all, so a covenant restraining professional practice is void on that ground [^ala-8-1-196][^friddle-cannot-fall]. The exemption reaches only the practice of the profession, so a restraint on business conduct outside that practice — *Benchmark*'s example of acquiring competing practices purely as an investment without managing them — can still operate, and the confidentiality, trade-secret, and property-return obligations survive to the extent they do not bar the practice itself [^benchmark-scope].
 
 > [!NOTE]
 > **Practice note.**
@@ -180,7 +195,7 @@ Because the legislature labeled its restrictive-covenant rules fundamental publi
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alabama. This article synthesizes Alabama primary law and is not legal advice from a Alabama-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alabama. This article synthesizes Alabama primary law and is not legal advice from a Alabama-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Alabama*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/alabama.
 
 [^ala-8-1-190-void]: **Ala. Code § 8-1-190** — "Every contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind otherwise than is provided by this section is to that extent void." *Ala. Code § 8-1-190(a).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
 

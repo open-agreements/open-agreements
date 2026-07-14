@@ -8,7 +8,7 @@ citation: 'Whelan Sec. Co. v. Kennebrew, 379 S.W.3d 835 (Mo. banc 2012).'
 resource: 'https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/'
 timestamp: '2026-06-12'
 document_references:
-  - type: Review Checklist
+  - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/missouri'
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/missouri'
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `mo-whelan-modification`, `whelan-modification`
-- cited_by: [Non-Compete Agreement Review Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/#:~:text=Accordingly%2C%20when%20the%20provisions%20of,the%20contract%20to%20be%20reasonable.>
 
 ### whelan-security-co-v-kennebrew-as-written-the-customer-non-solicitation-f382787f {#whelan-security-co-v-kennebrew-as-written-the-customer-non-solicitation-f382787f}
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `missouri-statutory-gates`, `non-solicitation-431-202`, `restrictive-covenants-each-independently-includable`
 - source_cards: `mo-whelan-customer-cov`, `mo-whelan-customer-defs`, `mo-whelan-customer-gate`, `whelan-customer-overbroad`
-- cited_by: [Non-Compete Agreement Review Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/#:~:text=As%20written%2C%20the%20customer%20non%2Dsolicitation,legitimate%20interest%20in%20customer%20contacts.>
 
 ### whelan-security-co-v-kennebrew-the-employer-has-the-burden-to-380d3186 {#whelan-security-co-v-kennebrew-the-employer-has-the-burden-to-380d3186}
@@ -49,5 +49,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-non-compete-enforceability`, `extended-for-breach`, `missouri-statutory-gates`, `parties-and-cover-term-identification`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`
 - source_cards: `mo-tolling-whelan`, `mo-whelan-burden-cov`, `mo-whelan-burden-cover`, `mo-whelan-burden-gate`, `mo-whelan-time-space`, `tolling-whelan-time`, `whelan-employer-burden`
-- cited_by: [Non-Compete Agreement Review Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/#:~:text=The%20employer%20has%20the%20burden,to%20time%20and%20geographic%20space.>

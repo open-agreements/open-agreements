@@ -2,7 +2,7 @@
 jurisdiction: "California"
 slug: california
 countryCode: US
-snapshotAsOf: "2026-06-30"
+snapshotAsOf: "2026-07-14"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/california
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/california · **Snapshot as of:** 2026-06-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/california · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in California[^about]
 
@@ -105,7 +105,7 @@ AB 1076 layered on a compliance duty: it is unlawful to include the clause at al
 
 "It shall be unlawful to include a noncompete clause in an employment contract, or to require an employee to enter a noncompete agreement, that does not satisfy an exception in this chapter."[^stat-16600-1-unlawful]
 
-There is a further trap for employers who present void terms. Labor Code section 432.5 forbids requiring an employee to agree in writing to any term the employer knows to be prohibited by law — which a void non-compete now plainly is — exposing the employer to representative penalty claims [^stat-432-5]. California's Attorney General has publicly reinforced that noncompetes are generally illegal and that workers can act on these rights [^ag-alert]. For a clause-by-clause exposure screen of a specific agreement against these rules, the [California non-compete review checklist](/checklists/non-compete/us/california) walks the full covenant suite item by item with each requirement's force level.
+There is a further trap for employers who present void terms. Labor Code section 432.5 forbids requiring an employee to agree in writing to any term the employer knows to be prohibited by law — which a void non-compete now plainly is — exposing the employer to representative penalty claims [^stat-432-5]. California's Attorney General has publicly reinforced that noncompetes are generally illegal and that workers can act on these rights [^ag-alert]. For a clause-by-clause exposure screen of a specific agreement against these rules, the [California non-compete reviewer checklist](/checklists/non-compete/us/california) walks the full covenant suite item by item with each requirement's force level.
 
 > [!NOTE]
 > **Practice note.**
@@ -205,7 +205,7 @@ A trade-secret claim also comes with a procedural gate that shapes litigation: b
 >
 > Do not define *confidential information* so broadly that it sweeps in the employee's general skills, knowledge, and industry experience — a confidentiality clause that effectively prevents the worker from practicing their profession is a *de facto* non-compete and void under *Brown v. TGS*. Tie confidentiality to genuine, identifiable trade secrets, and rely on the Trade Secrets Act for enforcement [^brown-de-facto][^stat-cuts-injunction].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not California. This article synthesizes California primary law and is not legal advice from a California-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not California. This article synthesizes California primary law and is not legal advice from a California-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in California*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/california.
 
 [^stat-16600-void]: **Cal. Bus. & Prof. Code § 16600** — "Except as provided in this chapter, every contract by which anyone is restrained from engaging in a lawful profession, trade, or business of any kind is to that extent void." *Cal. Bus. & Prof. Code § 16600(a).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=16600>
 

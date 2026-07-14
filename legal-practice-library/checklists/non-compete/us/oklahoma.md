@@ -1,6 +1,6 @@
 ---
-type: Review Checklist
-title: Non-Compete Agreement Review Checklist — Oklahoma
+type: Reviewer Checklist
+title: Non-Compete Agreement Reviewer Checklist — Oklahoma
 description: >-
   A clause-by-clause reviewer checklist for Oklahoma restrictive covenant
   agreements — screening void non-competes under 15 O.S. § 217, fitting customer
@@ -13,7 +13,7 @@ tags:
   - checklist
 ---
 
-# Non-Compete Agreement Review Checklist — Oklahoma[^about]
+# Non-Compete Agreement Reviewer Checklist — Oklahoma[^about]
 
 A clause-by-clause reviewer checklist for Oklahoma restrictive covenant agreements — screening void non-competes under 15 O.S. § 217, fitting customer non-solicits to § 219A's direct-solicitation shape, and checking the surviving confidentiality and anti-raiding suite.
 
@@ -59,9 +59,11 @@ Review an Oklahoma agreement in two passes: first screen for restraints the stat
 
 ## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
 
-- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should run as long as secrecy does — that is how the federal definition works, and Oklahoma's trade-secret act is the strongest protection left standing once the non-compete is gone. A fixed expiry on trade-secret confidentiality quietly surrenders the one tool the ban never touches. [^dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+- [ ] **Trade-secret duration tied to secrecy status** (Recommended) — Check how the trade-secret obligation's duration is bounded. Tying it to status — for so long as the information remains a trade secret — captures the full protection available, because the federal definition keys the right to continued secrecy, and Oklahoma's trade-secret act is the strongest protection left standing once the non-compete is gone. That status-bounded form is the ceiling the law will back, not a required one: a shorter fixed term is enforceable and simply gives up the tail of the one tool the ban never touches, while a fixed term paired with a while-a-trade-secret tail (whichever is longer) preserves it. [^dtsa-trade-secret-definition] [#tie-trade-secret-duration-to-secrecy-status]
 
-- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. The two-track structure keeps the perpetual obligation tied to genuine trade secrets — and a confidentiality clause that locks up everything forever starts to look like the indirect restraint on working that Oklahoma law refuses to enforce. [#state-confidentiality-duration]
+- [ ] **No unbounded confidentiality obligation** (Prohibited) — Flag a confidentiality obligation that runs indefinitely with no bound of either kind — no fixed term and no tie to the information's continued status as a trade secret or otherwise protected information. Courts read that untethered form, sweeping past genuine trade secrets, as an unbounded restraint operating as a de facto non-compete. An indefinite obligation expressly limited to information that remains protected under applicable law is bounded by that status and is not the disfavored form. [#avoid-untethered-indefinite-confidentiality]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. The two-track structure keeps the status-bounded obligation tied to genuine trade secrets — and a confidentiality clause that locks up everything forever starts to look like the indirect restraint on working that Oklahoma law refuses to enforce. [#state-confidentiality-duration]
 
 ## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
 
@@ -145,7 +147,7 @@ The five items below exist only on this Oklahoma page: they implement the county
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Oklahoma (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this reviewer checklist for Oklahoma (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Compete Agreement Reviewer Checklist — Oklahoma*, OpenAgreements (last updated June 11, 2026), https://openagreements.org/checklists/non-compete/us/oklahoma.
 
 [^ok-219a-established-customers]: **15 O.S. § 219A** — "A person who makes an agreement with an employer, whether in writing or verbally, not to compete with the employer after the employment relationship has been terminated, shall be permitted to engage in the same business as that conducted by the former employer or in a similar business as that conducted by the former employer as long as the former employee does not directly solicit the sale of goods, services or a combination of goods and services from the established customers of the former employer." *Okla. Stat. tit. 15, § 219A(A).* <https://oksenate.gov/sites/default/files/2022-05/os15.pdf>
 
