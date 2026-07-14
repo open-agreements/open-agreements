@@ -1,0 +1,74 @@
+name: Employment Offer Letter (Texas)
+category: employment
+description: State-specific employee offer letter template for employees primarily working in Texas.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-offer-letter-texas
+version: 0.1.0
+stability: experimental
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: Authored by OpenAgreements contributors. Projected from the master employment offer letter for Texas; offer-letter structure benchmarked against the local Cooley GO and Orrick forms and public EDGAR examples recorded in the precedent audit sidecar. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    section: Parties
+  - name: position_title
+    type: string
+    description: Offered role title
+    section: Role
+  - name: employment_type
+    type: enum
+    description: Employment basis
+    options:
+      - full-time
+      - part-time
+    section: Role
+  - name: start_date
+    type: date
+    description: Employment start date
+    section: Timing
+  - name: reporting_manager
+    type: string
+    description: Manager or role this position reports to
+    section: Role
+  - name: base_salary
+    type: string
+    description: Base salary or hourly amount
+    section: Compensation
+  - name: bonus_terms
+    type: string
+    description: Bonus eligibility summary
+    section: Compensation
+  - name: equity_terms
+    type: string
+    description: Equity grant summary, if any
+    section: Compensation
+  - name: work_location
+    type: string
+    description: Primary work location and/or remote status
+    section: Work Model
+  - name: governing_law
+    type: string
+    description: Governing law state for the offer letter
+    section: Legal
+    default: Texas
+  - name: offer_expiration_date
+    type: date
+    description: Date by which the offer must be accepted
+    section: Timing
+priority_fields: []
+omitted_clauses: drop
+distribution: bundled
+artifact_type: template

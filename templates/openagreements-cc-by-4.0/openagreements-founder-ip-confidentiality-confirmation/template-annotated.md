@@ -6,8 +6,6 @@
 
 This Confirmation is delivered by [Full name of the departing founder] (the "Founder") to [Full legal name of the Delaware corporation], a Delaware corporation (the "Company"), in connection with the end of the Founder's service to the Company, effective [Date the founder's service with the Company ended] (the "Separation Date").
 
-*Note: This Confirmation is confirmatory only. The Founder's existing [Reference to the founder's existing Confidential Information and Invention Assignment Agreement (for example, "Confidential Information and Invention Assignment Agreement dated January 1, 2022")] (the "CIIAA") ordinarily already survives the end of service by its own terms; this Confirmation simply memorializes that continuing effect and the return of Company property. It does NOT create any new post-separation restrictive covenant — including any non-compete, expanded non-solicitation, or broader confidentiality obligation — and it does not address the enforceability of any restrictive covenant, which is a separate matter of state employment law. Any genuinely new post-separation restraint should be prepared and reviewed by licensed counsel.*
-
 ## Key Terms
 
 Company
@@ -34,7 +32,7 @@ The Founder confirms that, on or before the Separation Date (or on such later da
 
 ### No New Covenants; No Release of Surviving Obligations
 
-**This Confirmation is confirmatory only.** It creates no new obligation, restraint, or covenant of any kind. In particular, and for the avoidance of doubt, nothing in this Confirmation imposes on the Founder any non-competition, non-solicitation, or confidentiality obligation that does not already exist under the CIIAA or applicable law, and this Confirmation does not address or affect the enforceability of any restrictive covenant under applicable state law. Any genuinely new post-separation restraint must be documented separately and reviewed by licensed counsel.
+This Confirmation creates no new obligation, restraint, or covenant of any kind. Nothing in this Confirmation imposes on the Founder any non-competition, non-solicitation, or confidentiality obligation beyond the obligations already existing under the CIIAA.
 
 Nothing in this Confirmation, and nothing in any release, separation agreement, or settlement the Founder and the Company may enter into, is intended to waive, release, discharge, or otherwise limit the surviving confidentiality and invention-assignment obligations of the CIIAA confirmed above, all of which remain in full force and effect.
 

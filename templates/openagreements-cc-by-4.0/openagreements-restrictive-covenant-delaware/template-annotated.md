@@ -84,7 +84,7 @@ Duration
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than five percent of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means the legitimate economic interests Delaware law recognizes a covenant may protect, namely Employer's goodwill in its customer, vendor, referral-source, and business-partner relationships, Employer's Confidential Information, and Employer's trade secrets as defined by the Delaware Uniform Trade Secrets Act (6 Del. C. § 2001(4)), but not Employer's interest in avoiding ordinary competition.
+[[Protected Interests]] means Employer's goodwill in its customer, vendor, referral-source, and business-partner relationships, Employer's Confidential Information, and Employer's Trade Secrets.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -92,15 +92,15 @@ Duration
 
 [[Solicit]] means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] has the meaning given in the Delaware Uniform Trade Secrets Act, 6 Del. C. § 2001(4).
+[[Trade Secrets]] means Employer's non-public information that derives independent economic value from not being generally known or readily ascertainable and that Employer takes reasonable measures to keep secret.
 
 ### Recitals and Legitimate Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to advance one or more of Employer's Protected Interests and to impose no restraint broader than is reasonable to serve that interest. The legitimate interests recognized here are Employer's goodwill and Employer's Confidential Information, and the parties intend each covenant to be tied to the goodwill or information this Employee actually touched rather than to ordinary competition. Each covenant is intended to be reasonable in geographic scope and temporal duration and no broader than reasonable to protect the Protected Interest it serves. Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement.
+Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to advance one or more of Employer's Protected Interests and to impose no restraint broader than is reasonable to serve that interest. The legitimate interests listed here are Employer's goodwill and Employer's Confidential Information, and the parties intend each covenant to be tied to the goodwill or information this Employee actually touched rather than to ordinary competition. Each covenant is intended to be reasonable in geographic scope and temporal duration and limited to a reasonable scope to protect the Protected Interest it serves. Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement.
 
 ### Timing, Consideration, and Employee Acknowledgements
 
-The parties acknowledge that this agreement is supported by consideration given to Employee at the time of signing, and they record the specific value exchanged rather than reciting bare adequacy. If Employee is an existing at-will employee, the parties agree that, in exchange for Employee's assent to the covenants in this agreement, Employer continues an at-will employment relationship that it could otherwise legally have terminated, which the parties intend as sufficient consideration where signing is a condition of keeping the position; where the parties intend additional value — a payment, raise, promotion, or equity grant — that value is identified in the record of this signing. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration. The parties intend that the consideration for this agreement is fixed at the time this agreement is formed, so that a later forfeiture or change in benefits does not unwind it. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing. Employee acknowledges that adequate consideration establishes only that the covenants are supported, not that they are reasonable, and that each covenant must independently satisfy the reasonableness standards stated in this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
+If Employee signs this agreement after employment begins, Employer provides continued employment and any additional value identified in connection with this signing in exchange for Employee's agreement to these covenants. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -116,23 +116,23 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is no broader than reasonable to protect Employer's workforce stability and goodwill.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is limited to a reasonable scope to protect Employer's workforce stability and goodwill.
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers with whom Employee had material contact and is no broader than reasonable to protect Employer's goodwill in those customer, vendor, referral-source, and business-partner relationships.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers with whom Employee had material contact and is limited to a reasonable scope to protect Employer's goodwill in those customer, vendor, referral-source, and business-partner relationships.
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee. This restriction is sized to the goodwill it protects and reaches only Covered Customers with whom Employee had material contact.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction reaches only Covered Customers with whom Employee had material contact.
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant exists to advance Employer's Protected Interests — its goodwill and its Confidential Information — and not to restrain ordinary competition. The parties intend this covenant to be reasonable in geographic scope and temporal duration, to advance a legitimate economic interest of Employer, and no broader than reasonable to protect Employer's Protected Interests, with its time and territory sized to Employee's actual role and Employer's actual market. If Employer has identified specific competitors in Cover Terms under Specified Competitors, the parties intend this covenant to be understood and enforced as limited to those named competitors. The parties intend this covenant to be enforceable as written, with its enforceable scope drawn into it at the outset rather than left to later judicial revision. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant exists to advance Employer's Protected Interests — its goodwill and its Confidential Information — and not to restrain ordinary competition. The parties intend this covenant to be reasonable in geographic scope and temporal duration, to advance a legitimate economic interest of Employer, and limited to a reasonable scope to protect Employer's Protected Interests, with its time and territory sized to Employee's actual role and Employer's actual market. If Employer has identified specific competitors in Cover Terms under Specified Competitors, this covenant is limited to those named competitors and their businesses. Passive Public Holdings are permitted.
 
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. This covenant is drawn no broader than reasonable to advance Employer's Protected Interests. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This covenant is limited to a reasonable scope to advance Employer's Protected Interests. Passive Public Holdings are permitted.
 
 ### Non-Disparagement
 
@@ -140,11 +140,11 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 
 ### Physician and Health Care Practitioner Covenants
 
-If Employee is a physician, this agreement does not restrict, and shall not be read or enforced to restrict, Employee's right to practice medicine in a particular locale or for a defined period of time after termination of this agreement. Any provision of this agreement that would restrict a physician's right to practice medicine in a particular locale or for a defined period after termination is void under 6 Del. C. § 2707, and is severed and given no effect. All other provisions of this agreement remain enforceable, including provisions requiring the payment of damages in an amount reasonably related to the injury suffered by reason of termination, which may include damages related to competition. Any damages provision applicable to a physician is kept separate from any practice restraint, is void as to any practice restriction, and is tied to actual injury reasonably related to termination.
+If Employee is a physician, this agreement does not restrict Employee's right to practice medicine in a particular locale or for a defined period after termination. Employee remains responsible for any agreed damages reasonably related to injury caused by termination, including damages related to competition.
 
 ### Home Inspector Trainee Carve-Out
 
-If Employee is registered as a home inspector trainee, this agreement does not require, and shall not be read or enforced to require, Employee to execute a covenant not to compete with a supervising licensed home inspector, or to pay any fee, charge, or other thing of value to a supervising licensed home inspector, as a condition of satisfying the home inspector trainee requirements. Any non-competition covenant in this agreement is void and of no effect under 24 Del. C. § 4109(d) as applied to Employee in that trainee capacity with respect to a supervising licensed home inspector. This carve-out does not alter the covenants as applied to any other worker.
+If Employee is registered as a home inspector trainee, this agreement does not require Employee to execute a covenant not to compete with, or pay any fee, charge, or other thing of value to, a supervising licensed home inspector as a condition of satisfying the trainee requirements. This carve-out does not alter the covenants as applied to any other worker.
 
 ### No Conflicting Obligations
 
@@ -160,19 +160,15 @@ If Employee breaches any restrictive covenant in this agreement, the Restricted 
 
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, including relief under the Delaware Uniform Trade Secrets Act (6 Del. C. § 2002) for actual or threatened misappropriation of a trade secret, independent of any covenant.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law.
 
 ### Enforceability and Severability
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable, so that a court's refusal to enforce one covenant does not affect the others, and a sound non-solicit or confidentiality term can survive a failed non-compete.
-
-### Enforceable Scope Drawn at the Outset
-
-The parties do not rely on judicial blue-penciling or on any savings clause to cure overreach. The actual enforceable scope of each restraint — the Protected Interests served, the restricted activities, the customer set, the territory, and the duration — is drawn into this agreement at the outset, and each covenant is intended to be enforceable as written rather than in reliance on judicial revision. Nothing in this section requests a court to reform an overbroad restraint, and the parties intend any restraint broader than reasonable to be treated as already lost rather than saved.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect.
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms and reads on its own definite schedule. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### Assignment and Successors
 
@@ -180,11 +176,11 @@ Employee may not assign this agreement or any rights or obligations under it. Em
 
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. The parties intend that the governing-law and venue choices match where Employee actually lives and works, and do not treat a Delaware choice-of-law selection as a universal workaround for another state's non-compete restrictions.
+This agreement is governed by the law listed in Cover Terms. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. The parties intend that the governing-law and venue choices match where Employee actually lives and works, and nothing in this agreement waives non-waivable restrictions under applicable law.
 
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 
-This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. This agreement may be amended only in writing signed by both parties; because an amendment that re-papers a covenant is a new formation event, the parties intend to record what value moved at each signing. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
+This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. This agreement may be amended only in writing signed by both parties; any amendment carrying forward a restrictive covenant must identify the consideration supporting that amendment. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
 
 ## Signatures
 
@@ -210,10 +206,6 @@ Drafting and enforceability considerations for this template, from the related p
 ### the holistic reasonableness review
 
 Every covenant in a Delaware agreement stands or falls on the Court of Chancery's three-part review — reasonable in geographic scope and temporal duration, advancing a legitimate economic interest, and surviving a balancing of the equities — and the court reviews the restraint holistically, weighing each dimension and how it operates alongside every other restriction in the contract . Because the review reaches every dimension, added duration is measured too: a tolling extension that lengthens a restricted period during a breach is itself more duration the same holistic review weighs, so an open-ended or indefinite extension is exposed like any other overbroad term. Adequate consideration establishes only that a covenant is supported, not that it is reasonable, and even injunctive relief presupposes a covenant that first survives this review — a restraint that fails it is not rescued by a strong consideration recital or an irreparable-harm stipulation .
-
-### blue-pencil reliance
-
-A Delaware covenant drafted on the assumption that a court will narrow it later carries the risk the covenant fails instead: recent Chancery and Supreme Court decisions increasingly refuse to blue-pencil an overbroad restraint and let it fall rather than rewrite it, calling partial enforcement of an overbroad covenant inequitable and warning that rescuing unreasonable covenants creates perverse incentives to overdraft . The scope a covenant can actually hold is the one written into the contract at signing — the protected business, restricted activities, customer set, geography, and duration — because a savings or reformation clause does not move a facially overbroad covenant back into the enforceable column. Severability earns its keep here: a sound non-solicit or confidentiality term drafted to stand on its own can survive a failed non-compete in a jurisdiction whose courts decline to repair the failed clause. A notice to a future employer that asserts a covenant a Delaware court would refuse to enforce or narrow overstates the sender's position and can create its own interference exposure.
 
 ### sale-of-business scope
 

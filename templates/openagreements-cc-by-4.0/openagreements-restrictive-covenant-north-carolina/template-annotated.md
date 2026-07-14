@@ -96,7 +96,7 @@ Duration
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than five percent of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means the legitimate business interests a North Carolina covenant may protect, namely Employer's Confidential Information, Employer's trade secrets as defined by the North Carolina Trade Secrets Protection Act (N.C. Gen. Stat. § 66-152), and Employer's goodwill in its existing customer, vendor, referral-source, and business-partner relationships, but not Employer's interest in avoiding ordinary competition. A restraint can be reasonably necessary to protect these interests only where Employee, as a result of employment, acquired intimate knowledge of the nature and character of the business not otherwise generally available to the public.
+[[Protected Interests]] means Employer's Confidential Information, Trade Secrets, and goodwill in existing customer, vendor, referral-source, and business-partner relationships.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason, and extended only as expressly provided in the Tolling and Extension During Breach section.
 
@@ -104,19 +104,19 @@ Duration
 
 [[Solicit]] means to actively contact, approach, persuade, request, petition, induce, or encourage any person or entity for the purpose of diverting business away from Employer or of causing a Covered Employee to leave Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] has the meaning given in the North Carolina Trade Secrets Protection Act, N.C. Gen. Stat. § 66-152(3).
+[[Trade Secrets]] means information qualifying as a trade secret under applicable law.
 
 ### Recitals and Protected Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to protect one or more of Employer's Protected Interests and to impose no restraint greater than is reasonably necessary for that protection. North Carolina has no general non-compete statute; each covenant is a partial restraint of trade, and the parties intend each to be supported by valuable consideration, reasonable as to time and territory, tied to a legitimate business interest, and not directed at ordinary competition. The parties intend each covenant to guard Employer's Confidential Information, trade secrets, and existing customer goodwill and not to eliminate ordinary competition.
+Employer and Employee acknowledge that each restrictive covenant is supported by valuable consideration and protects Employer's Protected Interests.
 
 ### Timing, Consideration, and Employee Acknowledgements
 
-The parties acknowledge that this agreement is supported by valuable consideration and identify what that consideration is. If this agreement is signed at the outset of employment, the offer and commencement of employment is itself valuable consideration for the covenants and no separate payment is required. If Employee is an existing employee and signs after the employment relationship already exists, the parties agree that continued at-will employment is not sufficient consideration and that the covenants are instead supported by the new consideration stated in Cover Terms under Mid-Employment Consideration — such as a raise in pay, a new job assignment, or a stated payment — which the parties acknowledge actually moves. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that valuable consideration establishes only that the covenants are supported, not that they are reasonable, and that each covenant must independently satisfy North Carolina's reasonableness requirements on time, territory, and scope. This agreement is effective as of the Effective Date listed in Cover Terms.
+The parties acknowledge that this agreement is supported by valuable consideration. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration for the covenants. If Employee signs after employment has begun, the new consideration stated in Cover Terms under Mid-Employment Consideration is exchanged for the covenants. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Signed Writing Requirement
 
-Each restrictive covenant in this agreement limits Employee's right to do business and is therefore unenforceable unless it is in writing and duly signed by Employee, the party who agrees not to compete (N.C. Gen. Stat. § 75-4). The parties intend Employee's signature on the Signature Page to satisfy that statutory requirement for every restraint covenant in this agreement, and acknowledge that there is no oral, implied, or course-of-conduct substitute for it. Any amendment that changes the scope of a covenant must likewise be in a writing signed by Employee.
+Each restrictive covenant and any amendment changing its scope must be in writing and signed by Employee.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -128,7 +128,7 @@ Nothing in this agreement prohibits Employee from: (a) reporting possible violat
 
 ### Return, Deletion, and Certification of Company Property
 
-Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request. The parties intend that these return, deletion, and certification mechanics serve as part of Employer's efforts reasonable under the circumstances to maintain the secrecy of its trade secrets, as contemplated by N.C. Gen. Stat. § 66-152(3).
+Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request.
 
 ### Non-Solicitation of Employees
 
@@ -136,11 +136,11 @@ During the Restricted Period, Employee must not Solicit, recruit, or induce any 
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers with whom Employee had material contact and does not reach prospective clients Employer never obtained. This covenant maps directly onto Employer's goodwill in its existing customer relationships and operates together with the confidentiality and trade-secret protections in this agreement.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer with whom Employee had material contact. This covenant does not reach prospective clients Employer never obtained.
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer with whom Employee had material contact, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee. This covenant is a partial restraint sized at least as tightly as the customer non-solicitation beside it and reaches only existing Covered Customers.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer with whom Employee had material contact, whether Employee or the Covered Customer initiates contact.
 
 ### Non-Competition
 
@@ -148,7 +148,7 @@ During the Restricted Period, Employee must not engage in, be employed by, consu
 
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Because this covenant restrains active roles at and material participation in a Competitive Business, it is a partial restraint drawn no broader than necessary to protect Employer's Protected Interests. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. Passive Public Holdings are permitted.
 
 ### Non-Disparagement
 
@@ -156,7 +156,7 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 
 ### Physician and Health Care Practitioner Covenants
 
-If Employee is a physician, any covenant in this agreement restraining Employee from the practice of medicine uses a narrow radius and a short term, preserves patient access and continuity of care, and is enforced only to the extent applicable North Carolina public-policy limits permit. Nothing in this agreement enlarges such a covenant beyond what those limits allow.
+If Employee is a physician, no covenant prohibits Employee from continuing care for an existing patient or complying with applicable patient-notification and access requirements.
 
 ### No Conflicting Obligations
 
@@ -168,15 +168,15 @@ Employer may disclose the existence and terms of this agreement to any prospecti
 
 ### Tolling and Extension During Breach
 
-If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, so that the full duration of the restriction runs from the date the breach ends. Any such extension is itself a restraint that must remain reasonable and bounded, and the parties do not intend an open-ended or indefinite extension.
+If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, up to the original Restricted Period.
 
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, including relief under the North Carolina Trade Secrets Protection Act, N.C. Gen. Stat. § 66-154, under which actual or threatened misappropriation of a trade secret may be enjoined independent of any covenant.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law.
 
 ### Enforceability and Severability
 
-This agreement does not rely on any reformation or savings clause to cure overbreadth, and none is intended to authorize judicial revision. Each restrictive covenant is drafted as a distinctly severable, reasonable unit — with time, territory, and activity scope separately stated so that each is reasonable standing alone (tiered territories, stepped durations, and separately stated restraints where used) — so that if a court strikes a distinctly separable unreasonable term, the remaining divisible and reasonable portions stay in full force and effect. A court's refusal to enforce one covenant, or its decision to enforce only a distinctly separable reasonable portion, does not affect the others.
+If any distinctly severable provision is unenforceable, it is severed and the remaining provisions remain in effect.
 
 ### Survival and Expiration of Each Covenant
 
@@ -188,11 +188,11 @@ Employee may not assign this agreement or any rights or obligations under it. Em
 
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms. For a covenant entered into in North Carolina, this agreement does not require the prosecution of any action or the arbitration of any dispute arising from the agreement to be instituted or heard in another state, and disputes arising from such a covenant will be resolved in the courts of North Carolina as N.C. Gen. Stat. § 22B-3 requires, subject to non-waivable rights under applicable law. The parties intend that the governing-law and venue choices match where Employee actually lives and works.
+North Carolina law governs this agreement, and the state and federal courts located in North Carolina have exclusive jurisdiction over disputes arising from it, subject to non-waivable applicable law.
 
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 
-This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. This agreement may be amended only in writing signed by both parties, and any amendment changing the scope of a restrictive covenant must be signed by Employee as required by N.C. Gen. Stat. § 75-4. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
+This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. This agreement may be amended only in writing signed by both parties, and any amendment changing the scope of a restrictive covenant must be signed by Employee. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
 
 ## Signatures
 

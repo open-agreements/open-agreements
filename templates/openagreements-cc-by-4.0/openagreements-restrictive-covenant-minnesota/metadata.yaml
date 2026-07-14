@@ -6,8 +6,6 @@ version: 0.1.0
 stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: Authored by OpenAgreements contributors. Minnesota-specific analysis informed by the quote-verified Minnesota practice note. Licensed under CC BY 4.0.
 fields:
   - name: employer_name
@@ -109,7 +107,10 @@ fields:
     display_label: Covered Employee Look-Back
     default: 12 months
     section: Employee Non-Solicitation
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
   - effective_date
+distribution: bundled
+artifact_type: template

@@ -3,8 +3,8 @@ template_id: openagreements-restrictive-covenant-virginia
 name: Employee Restrictive Covenant (Virginia)
 category: non-compete
 description: >-
-  Virginia-specific employee restrictive covenant agreement built for Va. Code
-  § 40.1-28.7:8 and Virginia's strict common-law reasonableness test:
+  Virginia-specific employee restrictive covenant agreement built for Va. Code §
+  40.1-28.7:8 and Virginia's strict common-law reasonableness test:
   confidentiality and trade-secret protection with the statutory nondisclosure
   carve-out preserved, an employee non-solicitation covenant that defaults off
   because it is presumptively unenforceable against a protected worker, a
@@ -23,8 +23,6 @@ source_url: >-
 version: 0.1.0
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: >-
   Authored by OpenAgreements contributors. Virginia-specific analysis informed
   by the quote-verified Virginia practice note. Licensed under CC BY 4.0.
@@ -96,13 +94,14 @@ fields:
   - name: low_wage_threshold
     type: string
     description: >-
-      Average weekly earnings figure below which Virginia bars a non-compete
-      for the applicable year. Reference context only — surfaced as a note
-      beneath Cover Terms, not filled into the agreement body.
+      Average weekly earnings figure below which Virginia bars a non-compete for
+      the applicable year. Reference context only — surfaced as a note beneath
+      Cover Terms, not filled into the agreement body.
     display_label: Low-Wage Threshold (Average Weekly Earnings)
-    default: $1,507.01 per week
+    default: '$1,507.01 per week'
     rationale_source: legislation
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.exclude-non-competes-for-low-wage-employees
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.exclude-non-competes-for-low-wage-employees
     section: Virginia Statutory Gates
     default_value_rationale: >-
       $1,507.01 per week is the 2026 low-wage threshold published by the
@@ -114,8 +113,8 @@ fields:
     description: >-
       Severance benefits or other monetary payment the employer will provide,
       disclosed at execution, if it discharges the employee without cause. For
-      agreements entered into, amended, or renewed on or after July 1, 2026,
-      SB 170 makes a non-compete unenforceable after a without-cause discharge
+      agreements entered into, amended, or renewed on or after July 1, 2026, SB
+      170 makes a non-compete unenforceable after a without-cause discharge
       unless the employee receives severance or other prior-disclosed monetary
       compensation.
     display_label: Without-Cause Severance / Disclosed Compensation
@@ -157,7 +156,8 @@ fields:
     display_label: Employee Non-Solicitation Included
     default: false
     rationale_source: case_law
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.avoid-employee-nonsolicits-for-protected-workers
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.avoid-employee-nonsolicits-for-protected-workers
     section: Employee Non-Solicitation
     default_value_rationale: >-
       Conservative default. For a worker the statute protects, the only Virginia
@@ -173,9 +173,10 @@ fields:
     benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: >-
-      24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed
-      employee agreements; 12 months is the common lighter alternative. Virginia weighs function,
-      geography, and duration together, so the longer market term is defensible only where the other
+      24 months matches the modal employee non-solicit term observed in
+      benchmarked, publicly-filed employee agreements; 12 months is the common
+      lighter alternative. Virginia weighs function, geography, and duration
+      together, so the longer market term is defensible only where the other
       elements are tightly drawn.
   - name: covered_employee_period
     type: string
@@ -190,10 +191,14 @@ fields:
       scope.
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the customer/partner non-solicitation covenant is included
+    description: >-
+      Whether the current-customer non-solicitation covenant is included.
+      Alabama gives this covenant its own category, limited to current
+      customers.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
+    rationale_source: editorial
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer/partner non-solicitation restriction
@@ -203,11 +208,11 @@ fields:
     benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
     default_value_rationale: >-
-      12 months is the lighter side of the near-even 12/24-month split observed in
-      benchmarked, publicly-filed employee agreements and is a common enforceable
-      duration here. Because Virginia assesses function, geography, and duration
-      together, a shorter term reduces the room for a court to find the covenant broader
-      than the employer's legitimate interest requires.
+      12 months is the lighter side of the near-even 12/24-month split observed
+      in benchmarked, publicly-filed employee agreements and is a common
+      enforceable duration here. Because Virginia assesses function, geography,
+      and duration together, a shorter term reduces the room for a court to find
+      the covenant broader than the employer's legitimate interest requires.
   - name: covered_customer_period
     type: string
     description: >-
@@ -234,7 +239,8 @@ fields:
     display_label: Non-Competition Included
     default: false
     rationale_source: legislation
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.exclude-non-competes-for-low-wage-employees
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.exclude-non-competes-for-low-wage-employees
     section: Non-Competition
     default_value_rationale: >-
       Conservative default. Even handing a form non-compete to a covered worker
@@ -268,10 +274,10 @@ fields:
       Employer during the last two years of employment
     section: Non-Competition
     default_value_rationale: >-
-      Tied to where the worker actually operated rather than the employer's
-      full footprint. Because Virginia will not narrow an overbroad covenant
-      (Home Paramount; Motion Control), an overbroad territory is void rather
-      than trimmed, so the default is drawn to the worker's own working area.
+      Tied to where the worker actually operated rather than the employer's full
+      footprint. Because Virginia will not narrow an overbroad covenant (Home
+      Paramount; Motion Control), an overbroad territory is void rather than
+      trimmed, so the default is drawn to the worker's own working area.
   - name: competitive_business_definition
     type: string
     description: >-
@@ -290,26 +296,21 @@ fields:
     display_label: Specified Competitors
     default: ''
     rationale_source: case_law
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.avoid-any-capacity-function-restrictions
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.avoid-any-capacity-function-restrictions
     section: Non-Competition
   - name: nondealing_included
     type: boolean
     description: >-
       Whether the no-business-with-covered-customers covenant is included. A
-      non-dealing clause bars serving a customer even when the customer calls
-      first — the conduct Virginia's protected-worker carve-out preserves for a
-      covered worker — so it defaults off and is presumptively broken for any
-      protected worker.
+      non-dealing covenant has no named Alabama category of its own, so it must
+      be drafted to fit inside the current-customer non-solicit exception or it
+      is exposed to Alabama's void rule for restraints outside the listed
+      categories.
     display_label: No Business with Covered Customers Included
     default: false
-    rationale_source: legislation
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.preserve-customer-initiated-business-for-protected-workers
     section: No Business with Covered Customers
-    default_value_rationale: >-
-      Conservative default. The statutory customer-initiated-business carve-out
-      collides head-on with a non-dealing restraint for a protected worker;
-      include only for a worker outside the protected class and as a deliberate
-      risk decision.
+    rationale_source: editorial
   - name: nondealing_duration
     type: string
     description: Duration of the no-business-with-covered-customers restriction
@@ -328,16 +329,22 @@ fields:
     section: Definitions
     default_value_rationale: >-
       Five percent of any class of publicly traded securities is the modal
-      passive-investment carve-out threshold observed in benchmarked, publicly-filed
-      employee agreements that include the carve-out (lower 1-3 percent thresholds are
-      the common tighter alternatives), and a de minimis floor keeps an ownership
-      restraint from reading as unduly harsh under the Omniplex second prong.
+      passive-investment carve-out threshold observed in benchmarked,
+      publicly-filed employee agreements that include the carve-out (lower 1-3
+      percent thresholds are the common tighter alternatives), and a de minimis
+      floor keeps an ownership restraint from reading as unduly harsh under the
+      Omniplex second prong.
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included.
+    description: >-
+      Whether the non-investment covenant is included. A non-investment covenant
+      has no named Alabama category; one genuine use is restraining a licensed
+      professional's business conduct outside the practice of the profession,
+      which sits outside Alabama's professional exemption.
     display_label: Non-Investment Included
     default: false
     section: Non-Investment
+    rationale_source: editorial
   - name: noninvestment_duration
     type: string
     description: Duration of non-investment restriction
@@ -351,9 +358,12 @@ fields:
     default: 24 months
     section: Non-Disparagement
     default_value_rationale: 24 months is common for employment non-disparagement provisions.
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template
 ---
 # Employee Restrictive Covenant Agreement
 
@@ -411,7 +421,7 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {% field name="passive_public_holdings_threshold" /%} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means Employer's legitimate business interests, including its Trade Secrets and other Confidential Information, its customer and referral relationships, and the goodwill Employee helped develop.
+[[Protected Interests]] means Employer's Protected Interests, including its Trade Secrets and other Confidential Information, its customer and referral relationships, and the goodwill Employee helped develop.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -419,13 +429,13 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Solicit]] means to directly or indirectly initiate contact with, approach, induce, or encourage any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or to inquiries or business initiated by the customer, client, or person and not solicited by Employee.
 
-[[Trade Secrets]] means information that qualifies as a trade secret under the Virginia Uniform Trade Secrets Act, Va. Code § 59.1-336, including information that derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use, and that is the subject of efforts that are reasonable under the circumstances to maintain its secrecy, or that qualifies as a trade secret under the federal Defend Trade Secrets Act, 18 U.S.C. § 1839(3).
+[[Trade Secrets]] means information that derives independent economic value from not being generally known or readily ascertainable by proper means and is subject to reasonable efforts to maintain its secrecy.
 {% /clause %}
 
 {% clause id="recitals-and-protected-interests" %}
 ### Recitals and Protected Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship. Employee will receive access to Employer's Trade Secrets and other Confidential Information and will develop customer relationships and goodwill on Employer's behalf, and each covenant is included to protect those Protected Interests. Employer and Employee agree that each covenant is no greater than necessary to protect a legitimate business interest of Employer, is not unduly harsh or oppressive on Employee's ability to earn a livelihood, and is consistent with sound public policy, and the parties intend each covenant to be enforceable as written.
+Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship. Employee will receive access to Employer's Trade Secrets and other Confidential Information and will develop customer relationships and goodwill on Employer's behalf. Each covenant protects those Protected Interests and is reasonably limited in duration, territory, and scope.
 {% /clause %}
 
 {% clause id="timing-consideration-and-workplace-posting" %}
@@ -435,17 +445,15 @@ This agreement is effective as of the Effective Date listed in Cover Terms. Empl
 {% /clause %}
 
 {% clause id="statutory-worker-protection-gates" %}
-### Virginia Statutory Worker-Protection Gates
+### Virginia Worker Exclusions
 
-No covenant in this agreement is entered into, enforced, or threatened to be enforced against Employee to the extent Va. Code § 40.1-28.7:8 prohibits it. In particular:
+(a) No covenant not to compete applies when the eligibility determination completed for Employee indicates that the applicable compensation or worker-status exclusion applies.
 
-(a) No covenant not to compete in this agreement applies to or is enforceable against Employee if Employee's average weekly earnings, for the applicable year, are less than the average weekly wage of the Commonwealth as determined under that section, or if Employee is an intern, student, apprentice, or trainee, unless Employee's earnings are derived in whole or predominant part from sales commissions, incentives, or bonuses.
-
-(b) No covenant not to compete in this agreement applies to or is enforceable against Employee if Employee is entitled to overtime compensation under 29 U.S.C. § 207 for hours worked over 40 in a workweek, regardless of Employee's average weekly earnings.
+(b) No covenant not to compete applies when Employee is eligible for overtime compensation.
 
 (c) No covenant in this agreement restricts Employee from providing a service to a customer or client of Employer if Employee does not initiate contact with or solicit that customer or client.
 
-If any other provision of this agreement conflicts with this section (Virginia Statutory Worker-Protection Gates), this section controls.
+If any other provision of this agreement conflicts with this Virginia Worker Exclusions section, this section controls.
 {% /clause %}
 
 {% clause id="confidential-information-and-trade-secret-protection" %}
@@ -475,13 +483,13 @@ During the Restricted Period, Employee must not Solicit, recruit, hire, or attem
 {% clause id="non-solicitation-of-customers-vendors-referral-sources-and-business-partners" include-when="customer_nonsolicit_included" %}
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Employee's own initiation of contact with or solicitation of a Covered Customer; it does not restrict Employee from providing a service to a Covered Customer who initiates contact with Employee and whom Employee did not solicit. This covenant is included to protect Employer's Protected Interests and is drawn no broader than reasonably necessary to protect them.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant does not restrict Employee from providing a service to a Covered Customer who initiates contact with Employee and whom Employee did not solicit.
 {% /clause %}
 
 {% clause id="no-business-with-covered-customers" include-when="nondealing_included" %}
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This covenant is included to protect Employer's Protected Interests and is drawn no broader than reasonably necessary to protect them.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of who initiates contact.
 {% /clause %}
 
 {% clause id="non-competition" include-when="noncompete_included" %}
@@ -529,7 +537,7 @@ Employee represents that performing duties for Employer and complying with this 
 {% clause id="notice-to-future-employers-and-other-third-parties" %}
 ### Notice to Future Employers and Other Third Parties
 
-Employer may disclose the existence and terms of this agreement to a prospective employer or business associate of Employee only where a covenant in this agreement is enforceable against Employee, and will not present, assert, or threaten to enforce against Employee any covenant that Va. Code § 40.1-28.7:8 makes unenforceable. Employee consents to a disclosure permitted by this section.
+Employer may disclose the existence and terms of obligations then in effect under this agreement to a prospective employer or business associate of Employee. Employee consents to a disclosure permitted by this section.
 {% /clause %}
 
 {% clause id="tolling-during-breach" %}
@@ -547,13 +555,7 @@ Employee acknowledges that a breach of this agreement may cause Employer irrepar
 {% clause id="enforceability-and-severability" %}
 ### Enforceability and Severability
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable and is drawn in separable tiers so that an unenforceable covenant does not affect the others.
-{% /clause %}
-
-{% clause id="no-reliance-on-reformation" %}
-### No Reliance on Judicial Reformation
-
-The parties intend each covenant in this agreement to be enforceable as written. This agreement does not rely on any savings or reformation clause to cure overbreadth and does not purport to obligate a court to narrow any covenant; if a covenant is found unenforceable, it is severed under the Enforceability and Severability section rather than rewritten.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is independently enforceable.
 {% /clause %}
 
 {% clause id="survival-and-expiration-of-each-covenant" %}
@@ -565,7 +567,7 @@ Each restrictive covenant in this agreement survives the termination of Employee
 {% clause id="assignment-and-successors" %}
 ### Assignment and Successors
 
-Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. Any assignee or successor takes the covenants in this agreement subject to Va. Code § 40.1-28.7:8. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
+Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. Any assignee or successor takes the covenants subject to all existing limitations under this agreement and applicable law. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
 {% /clause %}
 
 {% clause id="governing-law-venue-and-dispute-process" %}

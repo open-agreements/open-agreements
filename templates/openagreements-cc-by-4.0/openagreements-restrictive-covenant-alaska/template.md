@@ -83,7 +83,7 @@ Duration
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {passive_public_holdings_threshold} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means the legitimate business interests a covenant may protect under Alaska's common-law reasonableness rule, namely Employer's Confidential Information, Employer's trade secrets as defined by the Alaska Uniform Trade Secrets Act (AS 45.50.940), and Employer's goodwill in its customer, vendor, referral-source, and business-partner relationships, but not Employer's interest in avoiding ordinary competition.
+[[Protected Interests]] means Employer's Confidential Information, Trade Secrets, and goodwill in its customer, vendor, referral-source, and business-partner relationships.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -95,11 +95,11 @@ Duration
 
 ### Recitals and Protectable Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to protect one or more of Employer's Protected Interests and to impose no restraint broader than is reasonably necessary for that protection. The parties acknowledge that each covenant is meant to guard Employer's Confidential Information, trade secrets, and customer goodwill and not to eliminate ordinary competition, and that each restraint is intended to be no broader than reasonably necessary in duration, geographic scope, and activity to protect the interest at stake.
+Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to protect one or more of Employer's Protected Interests and to impose no restraint broader than is appropriate for that protection. The parties acknowledge that each covenant is meant to guard Employer's Confidential Information, trade secrets, and customer goodwill and not to eliminate ordinary competition, and that each restraint is intended to be no broader than reasonably necessary in duration, geographic scope, and activity to protect the interest at stake.
 
 ### Timing, Consideration, and Employee Acknowledgements
 
-The parties acknowledge that this agreement is supported by adequate consideration. Because this agreement may be signed at the outset of employment or during employment, the parties recite the actual exchange supporting the covenants — which may include initial or continued employment, access to Confidential Information and customer relationships, training, compensation, a raise, or a bonus — as evidence of the consideration given. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests, and understands that adequate consideration establishes only that the covenants are supported, not that they are reasonable, so each covenant remains independently subject to the reasonableness limits stated in this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
+The parties acknowledge that this agreement is supported by the consideration stated in it, which may include initial or continued employment, access to Confidential Information and customer relationships, training, compensation, a raise, or a bonus. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -115,7 +115,7 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is no broader than necessary to protect Employer's workforce stability and goodwill.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is limited to the scope needed to protect Employer's workforce stability and goodwill.
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
@@ -123,19 +123,19 @@ During the Restricted Period, Employee must not Solicit the business of any Cove
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee. The parties intend it to remain limited to the customers and information Employer procured at its own expense and not to expand into a bar prohibiting Employee from practicing his or her specialty; the parties intend this covenant to be narrowed to that limit rather than to fail. It reaches only Covered Customers with whom Employee had material contact and to whom Employee had access to Confidential Information.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This covenant does not prohibit Employee from practicing Employee's specialty. It reaches only Covered Customers with whom Employee had material contact and to whom Employee had access to Confidential Information.
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant exists to protect Employer's Protected Interests — its Confidential Information, trade secrets, and customer goodwill — and not to restrain ordinary competition. The parties intend this covenant to be reasonably necessary to protect Employer's Protected Interests and no broader than needed, with its time and territory sized to Employee's actual role and Employer's actual market. If Employer has identified specific competitors in Cover Terms under Specified Competitors, the parties intend this covenant to be understood and, if necessary, enforced as limited to those named competitors. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. If Employer has identified specific competitors in Cover Terms under Specified Competitors, this covenant is limited to those named competitors and their businesses. Passive Public Holdings are permitted.
 
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors and is drawn no broader than necessary to protect Employer's Protected Interests. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors and is limited to the scope needed to protect Employer's Protected Interests. Passive Public Holdings are permitted.
 
 ### Sale-of-Business Covenants
 
-Where the covenant relationship type in Cover Terms is a sale of a business, any covenant tied to that sale is drafted as a covenant against competition that protects the goodwill the buyer purchased, and not as a ban on practicing a profession in any capacity or as an ordinary employment restraint. The parties intend any such covenant to be reasonably necessary to protect that purchased goodwill and no broader than needed, weighing the buyer's interest in the goodwill against the hardship to the seller and any injury to the public, rather than to rely on a radius-and-duration check alone.
+Where the covenant relationship type in Cover Terms is a sale of a business, Employee must not compete with the purchased business during the Restricted Period within the Restricted Territory in a manner that impairs the goodwill the buyer purchased. This restriction does not prohibit Employee from practicing a profession in any capacity.
 
 ### Non-Disparagement
 
@@ -143,7 +143,7 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 
 ### Physician and Health Care Practitioner Covenants
 
-Any covenant in this agreement restraining Employee from the practice of a health-care profession is intended to use a narrow radius and a short term, to preserve patient access and continuity of care, and to be reasonably necessary and no broader than needed to protect Employer's Protected Interests. Where the restrained work would affect free or low-cost care for a population in need, the parties intend any such covenant to be weighed against the injury to the public's access to that care, not against radius and duration alone.
+Any covenant in this agreement restraining Employee from the practice of a health-care profession is limited to the Restricted Territory and Restricted Period stated in Cover Terms. The covenant does not restrict work where doing so would materially reduce access to free or low-cost care for a population in need.
 
 ### No Conflicting Obligations
 
@@ -155,19 +155,15 @@ Employer may disclose the existence and terms of this agreement to any prospecti
 
 ### Tolling During Breach
 
-If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, so that the full duration of the restriction runs from the date the breach ends. The parties do not intend an open-ended or indefinite extension, and any extension remains subject to the reasonableness limits stated in this agreement.
+If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, subject to any maximum period permitted by applicable law.
 
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, including relief under the Alaska Uniform Trade Secrets Act, under which a court may enjoin actual or threatened misappropriation of a trade secret (AS 45.50.910(a)) independent of any covenant.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law.
 
 ### Enforceability and Severability
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable, so that a court's refusal to enforce one covenant, or a court's decision to enforce a covenant only to a reasonable extent, does not affect the others.
-
-### Reasonable Alteration
-
-Employer requests reasonable alteration only if a restraint in this agreement is found to be overbroad. Each restrictive covenant is drawn as a tiered, severable restraint sized to the Protected Interests from the start and is intended to be enforceable as written rather than in reliance on judicial revision.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect.
 
 ### Survival and Expiration of Each Covenant
 

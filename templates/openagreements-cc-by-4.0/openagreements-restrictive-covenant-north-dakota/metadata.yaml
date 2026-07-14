@@ -6,8 +6,6 @@ version: 0.1.0
 stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: Authored by OpenAgreements contributors. North Dakota-specific analysis informed by the quote-verified North Dakota practice note. Licensed under CC BY 4.0.
 fields:
   - name: employer_name
@@ -95,7 +93,10 @@ fields:
     section: Employee Non-Solicitation
     rationale_source: editorial
     default_value_rationale: 12 months is a conservative look-back period that ties the covered class to recent working relationships instead of sweeping in the employer's entire workforce.
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
   - effective_date
+distribution: bundled
+artifact_type: template

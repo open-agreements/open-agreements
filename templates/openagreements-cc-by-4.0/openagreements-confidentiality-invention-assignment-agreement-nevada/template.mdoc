@@ -1,0 +1,310 @@
+---
+template_id: openagreements-confidentiality-invention-assignment-agreement-nevada
+name: Confidentiality & Invention Assignment Agreement (Nevada)
+category: employment
+description: >-
+  Nevada-specific employee confidentiality and invention assignment agreement
+  aligned with Nevada's employer-ownership default (NRS 600.500): the employer
+  keeps statutory ownership of patentable inventions and trade secrets developed
+  in the course and scope of employment that relate directly to the work, the
+  own-time carve-out reaches only inventions outside that statutory grant, and
+  the form carries no state carve-out notice because Nevada imposes none. The
+  assignment clause keeps present-tense assignment language for a clean federal
+  patent chain of title and carries no post-employment holdover tail. Drafted as
+  a starting point for licensed counsel review.
+source_url: >-
+  https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-confidentiality-invention-assignment-agreement-nevada
+version: "0.1.0"
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: >-
+  Authored by OpenAgreements contributors. Baseline structure inspired by permissive public
+  references including the Balanced Employee IP Agreement (CC0) and Papertrail legal-docs (CC0).
+  Licensed under CC BY 4.0.
+layout_id: cover-standard-signature-v1
+style_id: openagreements-default-v1
+document:
+  title: Confidentiality & Invention Assignment Agreement (Nevada)
+  label: OpenAgreements Confidentiality & Invention Assignment Agreement (Nevada)
+  version: "0.1.0"
+  license: Free to use under CC BY 4.0
+  include_cloud_doc_line: true
+  defined_term_highlight_mode: definition_site_only
+  cover_row_height: 700
+sections:
+  cover_terms:
+    section_label: Cover Terms
+    heading_title: Cover Terms
+  standard_terms:
+    section_label: Standard Terms
+    heading_title: Standard Terms
+  signature:
+    section_label: Signature Page
+    heading_title: Signatures
+fields:
+  - name: company_name
+    type: string
+    description: Legal name of employer
+    section: Parties
+  - name: company_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the company
+    section: Parties
+  - name: company_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the company
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of employee
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    section: Timing
+  - name: prior_inventions_disclosure
+    type: string
+    description: List of prior inventions excluded from assignment, or None
+    section: Inventions
+  - name: excluded_inventions_statement
+    type: string
+    description: Carveout statement for independently developed inventions
+    default: >-
+      Inventions Employee develops entirely on personal time without using company equipment,
+      supplies, facilities, or trade secret information are excluded, except for inventions that
+      either (a) relate to company business or its actual or demonstrably anticipated research or
+      development, or (b) result from work performed for the company. No exclusion covers a
+      patentable invention or trade secret developed during the course and scope of employment
+      that relates directly to the work performed.
+    default_value_rationale: >-
+      Nevada's NRS 600.500 makes the employer the sole owner, absent an express
+      written agreement, of any patentable invention or trade secret developed in
+      the course and scope of employment that relates directly to the work. The
+      final sentence keeps every exclusion outside that statutory grant, so the
+      form never gives away ownership the statute already vests in the employer.
+    section: Inventions
+  - name: return_of_materials_timing
+    type: string
+    description: Timing for return or deletion of company materials
+    section: Confidentiality
+  - name: post_termination_assistance
+    type: string
+    description: Cooperation obligations after termination
+    default: reasonable assistance with filings and signatures related to assigned inventions
+    section: Inventions
+  - name: governing_law
+    type: string
+    description: Governing law state
+    default: Nevada
+    section: Legal
+  - name: venue
+    type: string
+    description: Venue for disputes
+    default: state and federal courts in the governing law state
+    section: Legal
+  - name: cloud_drive_id
+    type: string
+    description: Optional document-system URI or file ID for execution copy traceability
+    section: Document Management
+    ai_only: true
+  - name: cloud_drive_id_footer
+    type: string
+    description: Internal computed footer text for document-system traceability
+    default: ""
+    section: Document Management
+    ai_only: true
+priority_fields: []
+---
+
+
+# Confidentiality & Invention Assignment Agreement (Nevada)
+
+{% agreement-section type="cover_terms" %}
+## Cover Terms
+
+The key business terms of this assignment agreement are as follows.
+
+{% cover-terms %}
+{% cover-term kind="row" label="Company" field="company_name" /%}
+{% cover-term kind="row" label="Employee" field="employee_name" /%}
+{% cover-term kind="row" label="Effective Date" field="effective_date" /%}
+{% cover-term kind="row" label="Prior Inventions Disclosure" field="prior_inventions_disclosure" /%}
+{% cover-term kind="row" label="Excluded Inventions Statement" field="excluded_inventions_statement" /%}
+{% cover-term kind="row" label="Return of Materials Timing" field="return_of_materials_timing" /%}
+{% cover-term kind="row" label="Post-Termination Assistance" field="post_termination_assistance" /%}
+{% cover-term kind="row" label="Governing Law" field="governing_law" /%}
+{% cover-term kind="row" label="Venue" field="venue" /%}
+{% /cover-terms %}
+
+{% /agreement-section %}
+{% agreement-section type="standard_terms" %}
+## Standard Terms
+
+{% clause id="defined-terms" type="definitions" %}
+### Defined Terms
+
+[[Covered Inventions]] means all inventions, software, works of authorship, discoveries, improvements, designs, data models, and other intellectual property that Employee makes, conceives, develops, or reduces to practice, alone or with others, during employment, together with all related intellectual property rights, {% requirement id="continuations-in-part" %}including the right to apply for and claim priority to patents, copyrights, and other registrations and the right to pursue remedies for infringement{% /requirement %}. Covered Inventions do not include the Prior Inventions or the Excluded Inventions described below.
+
+[[Confidential Information]] means non-public information that Employee learns, accesses, or develops during employment, including business strategies, customer and prospect data, trade secrets, source code, algorithms, security credentials, technical and product information, financial information, personnel information. Confidential Information does not include information that (a) was publicly known when Employee learned it, (b) becomes publicly known through no fault of Employee, (c) was lawfully known to Employee before employment without confidentiality restriction, (d) Employee rightfully receives from a third party without confidentiality restriction, or (e) Employee independently develops outside the scope of employment without using Confidential Information or Company equipment, supplies, facilities, or other resources.
+
+{% /clause %}
+{% clause id="assignment-of-inventions" %}
+### Assignment of Inventions
+
+{% requirement id="statutory-ownership-acknowledgment" %}Employee acknowledges that Company is the sole owner of any patentable invention or trade secret that Employee develops during the course and scope of employment and that relates directly to work performed during the course and scope of the employment.{% /requirement %} {% requirement id="present-assignment" %}Employee hereby assigns{% /requirement %}, and {% requirement id="future-assignment" %}agrees to assign, to Company all right, title, and interest in the Covered Inventions, to the extent permitted by law. This assignment covers all inventions Employee makes during employment{% /requirement %}, except for the inventions carved out under Prior and Excluded Inventions below. {% requirement id="moral-rights-waiver" %}To the extent any moral rights or similar artist's rights in the Covered Inventions cannot be assigned, Employee waives and agrees not to enforce those rights against Company or its licensees and customers, to the extent permitted by law.{% /requirement %}
+
+{% /clause %}
+{% clause id="work-made-for-hire-and-further-assurances" %}
+### Work Made for Hire and Further Assurances
+
+To the extent legally permitted, {% requirement id="work-for-hire" %}copyrightable works prepared within the scope of employment are works made for hire for Company{% /requirement %}. If any rights do not automatically vest in Company, Employee hereby assigns those rights and will sign additional documents reasonably requested to confirm ownership and record assignments.
+
+{% /clause %}
+{% clause id="disclosure-and-documentation" %}
+### Disclosure and Documentation
+
+{% requirement id="duty-to-disclose-inventions" %}Employee will promptly disclose Covered Inventions{% /requirement %} and {% requirement id="maintain-records" %}maintain reasonably complete records of their conception, authorship, development, and transfer, consistent with Company's written policies communicated to Employee and Employee's confidentiality obligations{% /requirement %}.
+
+{% /clause %}
+{% clause id="prior-and-excluded-inventions" %}
+### Prior and Excluded Inventions
+
+The assignment above does not apply to, and Covered Inventions do not include, {% requirement id="excluded-employee-ip" %}any invention that Employee develops entirely on Employee's own time without using Company equipment, supplies, facilities, or trade secret information{% /requirement %}, and that neither (a) relates to Company business or to Company's actual or demonstrably anticipated research or development, nor (b) results from work performed by Employee for Company. {% requirement id="prior-inventions-schedule" %}The Prior Inventions and Excluded Inventions identified in Cover Terms are also carved out and remain Employee's property.{% /requirement %} {% requirement id="statutory-grant-boundary" %}No exclusion under this Section applies to a patentable invention or trade secret that Employee develops during the course and scope of employment and that relates directly to work performed during the course and scope of the employment; Company remains the sole owner of each such invention and trade secret.{% /requirement %} Employee represents that the Prior Inventions disclosure in Cover Terms is complete to Employee's knowledge as of the Effective Date.
+
+{% /clause %}
+{% clause id="license-back-of-employee-inventions" %}
+### License to Company for Employee Inventions Used in Company Products
+
+If Employee incorporates, or allows the incorporation of, any Prior Invention, Excluded Invention, or other invention Employee owns into a Company product, process, or service, {% requirement id="license-back-for-employee-ip" %}Employee grants Company a non-exclusive, perpetual, irrevocable, worldwide, royalty-free, fully paid-up, transferable, and sublicensable license to make, use, modify, reproduce, distribute, and otherwise exploit that invention as part of, or in connection with, that Company product, process, or service.{% /requirement %}
+
+{% /clause %}
+{% clause id="confidential-information-and-trade-secrets" %}
+### Confidential Information and Trade Secrets
+
+{% requirement id="confidentiality-definition" %}Employee will use and protect Confidential Information solely for authorized Company purposes, will not misuse or disclose Confidential Information except as permitted by this agreement, Company's written policies communicated to Employee, or law{% /requirement %}, and will follow the Confidential Information definition in this agreement.
+
+{% /clause %}
+{% clause id="use-of-ai-tools" %}
+### Use of AI Tools
+
+{% requirement id="ai-tool-use-restriction" %}Employee will use artificial intelligence or generative tools in connection with Company work or Confidential Information only in accordance with Company's then-current AI-use policies, or as Company otherwise authorizes in writing.{% /requirement %}
+
+{% /clause %}
+{% clause id="protected-disclosures-and-protected-activity" %}
+### Protected Disclosures and Protected Activity
+
+{% requirement id="whistleblower-protected-activity" %}Nothing in this agreement restricts Employee from reporting possible violations of law to a government agency or attorney, making disclosures protected by whistleblower laws, or discussing wages, hours, or working conditions as protected by law. Employee does not need Company's prior approval to make those disclosures or to notify Company that they were made.{% /requirement %} {% requirement id="dtsa-immunity-notice" %}Pursuant to the Defend Trade Secrets Act (18 U.S.C. § 1833(b)), Employee will not be held criminally or civilly liable under federal or state trade secret law for disclosing a trade secret in confidence to a government official or attorney solely to report or investigate a suspected violation of law, or in a court filing made under seal.{% /requirement %} Employee may also disclose a trade secret to Employee's attorney and use it in a retaliation lawsuit if any filing containing the trade secret is made under seal and the trade secret is not otherwise disclosed except by court order.
+
+{% /clause %}
+{% clause id="no-conflicting-obligations" %}
+### No Conflicting Obligations
+
+{% requirement id="no-conflicts-representation" %}Employee represents that performing duties for Company does not knowingly conflict with binding obligations to another person or entity. Employee will not bring third-party Confidential Information into Company systems or use it in Company work without written authorization.{% /requirement %}
+
+{% /clause %}
+{% clause id="duty-of-loyalty" %}
+### Duty of Loyalty During Employment
+
+{% requirement id="duty-of-loyalty-during-employment" %}While performing services for Company, Employee will not, without Company's written consent, engage in any business or activity that competes with Company or that materially conflicts with Employee's duties to Company.{% /requirement %} This section does not restrict (a) passive investments, (b) lawful conduct during off-duty hours away from Company premises, (c) protected or concerted activity under applicable law, or (d) good-faith preparation to take a future job or start a business, so long as Employee does not misuse Company time, resources, or Confidential Information. This section applies only while Employee is employed by Company; it does not restrict Employee after employment ends.
+
+{% /clause %}
+{% clause id="non-solicitation-of-personnel" %}
+### No Solicitation of Company Personnel
+
+{% requirement id="non-solicitation-employees" %}During employment and for twelve (12) months after employment ends, Employee will not actively recruit any employee, consultant, or independent contractor of Company to leave or end their relationship with Company.{% /requirement %} This section does not restrict (a) protected or concerted activity under applicable labor law, (b) giving a personal reference, (c) responding to someone who approaches Employee first without being recruited, or (d) general advertising or hiring that is not targeted at Company personnel. This section applies only to the extent permitted by applicable law and does not apply where the law restricts or voids non-solicitation of personnel.
+
+{% /clause %}
+{% clause id="records-cooperation-and-post-termination-assistance" %}
+### Records, Cooperation, and Post-Termination Assistance
+
+{% requirement id="post-employment-cooperation" %}Employee will provide {% requirement id="post-employment-assistance-duration" value="parameterized" %}the post-termination assistance listed in Cover Terms{% /requirement %}, including reasonable cooperation with filings, declarations, and assignments needed to confirm or protect Company rights in Covered Inventions.{% /requirement %} Company will request that assistance only at reasonable times and on reasonable notice and will reimburse Employee's reasonable out-of-pocket expenses.
+
+{% /clause %}
+{% clause id="appointment-as-attorney-in-fact" %}
+### Appointment as Attorney-in-Fact
+
+{% requirement id="power-of-attorney-fallback" %}If Company is unable, after reasonable effort, to obtain Employee's signature on any document needed to apply for, secure, or confirm Company's rights in a Covered Invention, Employee appoints Company and its authorized officers as Employee's agent and attorney-in-fact to sign, verify, and file that document on Employee's behalf. This appointment is coupled with an interest and is not affected by any later incapacity of Employee.{% /requirement %}
+
+{% /clause %}
+{% clause id="return-and-deletion-of-materials" %}
+### Return and Deletion of Materials
+
+{% requirement id="return-of-materials" %}Employee will return, and where permitted delete, Company materials within the timing listed in Cover Terms, including devices, documents, credentials, and confidential files, except for records Employee is required to retain by law.{% /requirement %}
+
+{% /clause %}
+{% clause id="injunctive-relief" %}
+### Injunctive Relief
+
+{% requirement id="equitable-relief-injunction" %}Employee acknowledges that a breach of the assignment or confidentiality obligations in this agreement may cause Company harm that money alone cannot fully repair. Company may therefore seek injunctive or other equitable relief for a threatened or actual breach, in addition to any other remedy available at law, subject to applicable law.{% /requirement %}
+
+{% /clause %}
+{% clause id="notice-to-future-employers" %}
+### Notice to Future Employers
+
+{% requirement id="notify-new-employer" %}Company may inform any future employer or other party with whom Employee enters a business relationship of Employee's obligations under this agreement, and Employee will inform such a party of these obligations when relevant.{% /requirement %} Any such notice will be limited to what is reasonably necessary.
+
+{% /clause %}
+{% clause id="at-will-employment" %}
+### At-Will Employment
+
+{% requirement id="at-will-acknowledgment" %}This agreement does not create a contract of employment for any fixed period and does not change the at-will nature of Employee's employment. Either Employee or Company may end the employment at any time, with or without cause or notice, subject to applicable law.{% /requirement %}
+
+{% /clause %}
+{% clause id="survival-and-limited-scope" %}
+### Survival and Limited Scope
+
+{% requirement id="confidentiality-duration-tiered" %}Sections addressing assignment, confidentiality, return of materials, and assistance survive termination to the extent needed to enforce rights that arose during employment. {% requirement id="trade-secret-duration-not-indefinite" %}{% requirement id="trade-secret-confidentiality-duration" value="while-trade-secret" %}Confidentiality obligations relating to trade secrets survive for so long as the information remains a trade secret under applicable law.{% /requirement %}{% /requirement %}{% /requirement %} This agreement does not transfer ownership of inventions that applicable law requires to remain with Employee.
+
+{% /clause %}
+{% clause id="severability" %}
+### Severability
+
+{% requirement id="severability" %}If any provision of this agreement is unenforceable, the rest of the agreement remains effective to the fullest extent permitted by law.{% /requirement %}
+
+{% /clause %}
+{% clause id="successors-and-assigns" %}
+### Successors and Assigns
+
+Employee may not assign this agreement. Company may assign it to an affiliate, successor, or acquirer of all or substantially all of Company's business or assets. This agreement binds and benefits the parties and their permitted successors and assigns.
+
+{% /clause %}
+{% clause id="governing-law-and-venue" %}
+### Governing Law and Venue
+
+{% requirement id="governing-law-clause" value="parameterized" %}This agreement is governed by the law listed in Cover Terms, and disputes will be resolved in the venue listed in Cover Terms, subject to non-waivable rights under applicable law.{% /requirement %}
+
+{% /clause %}
+{% clause id="advice-of-counsel-and-construction" %}
+### Advice of Counsel and Construction
+
+{% requirement id="advice-of-counsel-acknowledgment" %}By signing this agreement, Employee acknowledges that Employee has had the opportunity to read this agreement and to seek independent legal advice before signing, and has either done so or chosen not to. Because both parties have had that opportunity, this agreement will not be construed for or against either party as the drafter.{% /requirement %}
+
+{% /clause %}
+{% /agreement-section %}
+{% agreement-section type="signature" %}
+## Signatures
+
+{% signature-block arrangement="entity-plus-individual" %}
+
+In consideration of Employee's employment or continued employment by Company, each party acknowledges and agrees to the assignment and confidentiality obligations above.
+
+{% signer id="company" kind="entity" capacity="through_representative" label="Company" %}
+Company: {% field name="company_name" /%}
+
+Signature: _______________
+Signatory Name: {% field name="company_signatory_name" /%}
+Title: {% field name="company_signatory_title" /%}
+Date: _______________
+
+{% /signer %}
+{% signer id="employee" kind="individual" capacity="personal" label="Employee" %}
+**Employee**
+
+Signature: _______________
+Print Name: {% field name="employee_name" /%}
+Date: _______________
+{% /signer %}
+{% /signature-block %}
+{% /agreement-section %}

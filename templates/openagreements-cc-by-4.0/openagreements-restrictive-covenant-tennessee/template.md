@@ -80,7 +80,7 @@ Duration
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {passive_public_holdings_threshold} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means the special facts, over and above ordinary competition, that a Tennessee covenant may protect, namely Employer's Confidential Information, Employer's trade secrets as protected by the Tennessee Uniform Trade Secrets Act (Tenn. Code Ann. §§ 47-25-1701 to 47-25-1709), Employer's investment in special training provided to Employee, and Employer's customer relationships in which Employee is the face of Employer's business, but not Employer's interest in avoiding ordinary competition.
+[[Protected Interests]] means Employer's Confidential Information, Trade Secrets, investment in special training provided to Employee, and customer relationships developed by Employee on Employer's behalf.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -88,15 +88,15 @@ Duration
 
 [[Solicit]] means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] has the meaning given in the Tennessee Uniform Trade Secrets Act, Tenn. Code Ann. § 47-25-1702.
+[[Trade Secrets]] means information qualifying as a trade secret under applicable law.
 
 ### Recitals and Protectable Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to protect one or more of Employer's Protected Interests and to impose no restraint greater than is required for that protection. The parties acknowledge that a covenant may not be used to restrain ordinary competition and that Employer relies on special facts present over and above ordinary competition — its Confidential Information and trade secrets, its investment in special training, and its customer relationships in which Employee is the face of the business — and would not provide Employee with access to these Protected Interests absent the protections in this agreement. Each covenant is intended to be no greater in time, territory, and scope than is required to protect Employer's business interest.
+Employer and Employee acknowledge that each restrictive covenant in this agreement protects one or more of Employer's Protected Interests, including its Confidential Information and trade secrets, its investment in special training, and its customer relationships in which Employee is the face of the business. Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. Employer and Employee acknowledge that the covenants are reasonable in time, territory, and scope.
 
 ### Timing, Consideration, and Employee Acknowledgements
 
-The parties acknowledge that this agreement is supported by adequate consideration and record the timing of its execution. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration. If Employee is an existing employee signing after hire, the parties agree that Employee's continued employment for an appreciable length of time is consideration for the covenants; where continued employment is brief, the parties intend to identify separate consideration for the covenants. Employer has given Employee the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests, and understands that adequate consideration establishes only that the covenants are supported, not that they are reasonable, so each covenant must independently satisfy Tennessee's reasonableness requirements. This agreement is effective as of the Effective Date listed in Cover Terms.
+If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration. If Employee signs after hire, Employer will provide the consideration stated in Cover Terms. Employer has given Employee the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -108,7 +108,7 @@ Nothing in this agreement prohibits Employee from: (a) reporting possible violat
 
 ### Return, Deletion, and Certification of Company Property
 
-Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request. The parties intend that these return, deletion, and certification mechanics provide contemporaneous evidence of Employer's efforts to protect its Confidential Information and trade secrets.
+Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request.
 
 ### Non-Solicitation of Employees
 
@@ -116,23 +116,23 @@ During the Restricted Period, Employee must not Solicit, recruit, hire, or attem
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers with whom Employee had material contact and maps onto Employer's interest in the customer relationships in which Employee was the face of the business. It does not bar Employee from competing at all.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer.
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee. This covenant is sized to the customer relationships it protects and reaches only Covered Customers with whom Employee had material contact.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact.
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant exists to protect Employer's Protected Interests and not to restrain ordinary competition. The parties intend this covenant to be no greater in time and territory than is required to protect Employer's business interest. For a covenant governed by the 2026 statute — one entered into, renewed, or amended on or after July 1, 2026 — the Restricted Period is intended to stay within the applicable presumption window of Tenn. Code Ann. § 50-1-210. This covenant is also subject to the compensation threshold and worker exclusions stated below. If Employer has identified specific competitors in Cover Terms under Specified Competitors, the parties intend this covenant to be understood and, if necessary, enforced as limited to those named competitors. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is subject to the compensation and worker exclusions stated below. If Cover Terms identify Specified Competitors, this covenant is limited to those named competitors. Passive Public Holdings are permitted.
 
 ### Compensation Threshold and Workers Exempt from the Non-Compete
 
-Notwithstanding any other provision of this agreement, and for a covenant governed by Tenn. Code Ann. § 50-1-211 — one entered into, renewed, or amended on or after July 1, 2026, or enforced in a proceeding occurring on or after that date — the non-compete restriction is not enforceable against, and Employer will not require, request, or enforce it against, Employee if Employee's annualized compensation is less than seventy thousand dollars ($70,000); a non-compete executed in violation of that bar is void and unenforceable as a matter of public policy (Tenn. Code Ann. § 50-1-211(a), (c)). For this purpose, annualized compensation includes wages, salary, commissions, nondiscretionary bonuses, and other remuneration, and for an hourly employee is calculated by multiplying the hourly rate by forty and the product by fifty-two (Tenn. Code Ann. § 50-1-211(b)(2)). In addition, and regardless of Employee's compensation, duration, or territory, the non-compete restriction does not apply to and is void against Employee if Employee is a physician who specializes in the practice of emergency medicine, who falls outside the health-care-provider safe harbor (Tenn. Code Ann. § 63-1-148(d)). The other restrictive covenants in this agreement remain in effect to the extent they are otherwise enforceable.
+Notwithstanding any other provision of this agreement, the non-compete restriction in this agreement does not apply to, and is void against, Employee if Employee's annualized compensation is less than $70,000. For this purpose, annualized compensation includes wages, salary, commissions, nondiscretionary bonuses, and other remuneration, and for an hourly employee is calculated by multiplying the hourly rate by forty and multiplying the product by fifty-two. The non-compete also does not apply to Employee's practice of emergency medicine. The other restrictive covenants remain in effect according to their terms.
 
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive Public Holdings are permitted. Because this covenant restrains active roles at and material participation in a Competitive Business, it functions as a post-employment restraint. To the extent it operates as a non-compete governed by the 2026 statute, it is subject to the same compensation threshold and worker exclusions stated above.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. The same objective exclusions as the Non-Competition section apply to this restriction. Passive Public Holdings are permitted.
 
 ### Non-Disparagement
 
@@ -140,7 +140,7 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 
 ### Physician and Health Care Provider Covenants
 
-If Employee is a health-care provider licensed under chapters 3, 4, 5, 6, 8, 9, or 11 of Title 63 of the Tennessee Code, any covenant in this agreement restricting Employee's right to practice Employee's profession upon termination is intended to stay within the statutory safe harbor of Tenn. Code Ann. § 63-1-148(a): it must be set forth in a written document signed by Employee and Employer, run two years or less in duration, and stay within the greater of a ten-mile radius from Employee's primary practice site while employed or contracted or the county in which that primary practice site is located. This safe harbor does not reach a physician who specializes in the practice of emergency medicine (Tenn. Code Ann. § 63-1-148(d)); against such a physician the non-compete is void as provided in the Compensation Threshold and Workers Exempt from the Non-Compete section above, and the confidentiality and non-solicitation covenants in this agreement are not affected.
+If Employee provides licensed health-care services, any covenant restricting Employee's practice lasts no more than two years and applies only within the greater of a ten-mile radius from Employee's primary practice site or the county where that site is located. No non-compete restricts Employee's practice of emergency medicine.
 
 ### No Conflicting Obligations
 
@@ -148,23 +148,19 @@ Employee represents that performing duties for Employer and complying with this 
 
 ### Notice to Future Employers and Other Third Parties
 
-Employer may disclose the existence and terms of this agreement to any prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach this agreement. Employee consents to this disclosure. Employer will not assert a non-compete through such a notice against an Employee for whom the non-compete is void under the Compensation Threshold and Workers Exempt from the Non-Compete section above.
+Employer may disclose the existence and terms of obligations then in effect under this agreement to any prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach those obligations. Employee consents to this disclosure.
 
 ### Tolling During Breach
 
-If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, so that the full duration of the restriction runs from the date the breach ends. The parties intend this extension to be defined and bounded, not open-ended or indefinite, and to remain reasonable in duration.
+If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, subject to applicable law.
 
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, including remedies under the Tennessee Uniform Trade Secrets Act for misappropriation of a trade secret (Tenn. Code Ann. § 47-25-1704). If this agreement provides for attorney's fees, the parties intend any such provision to be mutual and prevailing-party based; absent such a provision, the American Rule applies and each party bears its own fees.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law. Each party bears its own attorney's fees unless this agreement expressly provides otherwise.
 
 ### Enforceability and Severability
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable, so that a court's refusal to enforce one covenant, or a court's decision to enforce a covenant only to a reasonable extent, does not affect the others.
-
-### Reformation
-
-Employer requests reformation if any restraint in this agreement is found to be overbroad. Accordingly, each restrictive covenant in this agreement is drawn as a reasonable, severable restraint sized to the Protected Interests from the start and is intended to be enforceable as written rather than in reliance on judicial revision.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect.
 
 ### Survival and Expiration of Each Covenant
 
@@ -176,7 +172,7 @@ Employee may not assign this agreement or any rights or obligations under it. Em
 
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. If the law of a state other than Tennessee is selected for an agreement with a Tennessee worker, the parties intend that selection to be executed in good faith and to rest on a genuine connection to the parties. The parties intend that the governing-law and venue choices match where Employee actually lives and works.
+This agreement is governed by the law listed in Cover Terms. Tennessee law governs to the extent required by non-waivable law. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
 
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 

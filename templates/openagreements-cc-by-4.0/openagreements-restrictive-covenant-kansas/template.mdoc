@@ -27,8 +27,6 @@ source_url: >-
 version: 0.1.0
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: >-
   Authored by OpenAgreements contributors. Kansas-specific analysis informed by
   the quote-verified Kansas practice note. Licensed under CC BY 4.0.
@@ -110,10 +108,15 @@ fields:
       than a perpetual lid on ordinary confidential information.
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee non-solicitation covenant is included
-    display_label: Employee Non-Solicitation Included
-    default: true
+    description: >-
+      Whether the employee no-hire / non-solicitation covenant is included.
+      Alabama's only category for restraints touching another party's workers is
+      the no-hire exception for workers in a position uniquely essential to the
+      management, organization, or service of the business.
+    display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
+    rationale_source: editorial
+    default: true
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee non-solicitation restriction
@@ -124,11 +127,12 @@ fields:
     section: Employee Non-Solicitation
     default_value_rationale: >-
       The Kansas statutory safe harbors run to customer solicitation and owner
-      covenants; they do not create a safe harbor for an employer-employee coworker
-      no-recruit covenant, so this clause stands on the statute's general reasonableness
-      baseline. 24 months matches the modal employee non-solicit term observed in
-      benchmarked, publicly-filed employee agreements; 12 months is the common lighter
-      alternative, sized to the employer's actual interest in workforce stability.
+      covenants; they do not create a safe harbor for an employer-employee
+      coworker no-recruit covenant, so this clause stands on the statute's
+      general reasonableness baseline. 24 months matches the modal employee
+      non-solicit term observed in benchmarked, publicly-filed employee
+      agreements; 12 months is the common lighter alternative, sized to the
+      employer's actual interest in workforce stability.
   - name: covered_employee_period
     type: string
     description: >-
@@ -142,25 +146,31 @@ fields:
       scope.
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the customer/partner non-solicitation covenant is included
+    description: >-
+      Whether the current-customer non-solicitation covenant is included.
+      Alabama gives this covenant its own category, limited to current
+      customers.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
+    rationale_source: editorial
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer/partner non-solicitation restriction
     display_label: Customer Non-Solicitation Duration
     default: 24 months
     rationale_source: legislation
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.kansas.fit-customer-nonsolicit-within-the-two-year-material-contact-safe-harbor
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.kansas.fit-customer-nonsolicit-within-the-two-year-material-contact-safe-harbor
     section: Customer Non-Solicitation
     default_value_rationale: >-
       An employee customer non-solicitation covenant limited to material contact
-      customers and running no more than two years after employment ends is conclusively
-      presumed enforceable and not a restraint of trade under the Kansas statute. 24
-      months tracks the outer edge of that statutory safe harbor; counsel should size it
-      down to the actual customer relationships protected, because a term past two years
-      forfeits the presumption and falls back to the general reasonableness baseline.
+      customers and running no more than two years after employment ends is
+      conclusively presumed enforceable and not a restraint of trade under the
+      Kansas statute. 24 months tracks the outer edge of that statutory safe
+      harbor; counsel should size it down to the actual customer relationships
+      protected, because a term past two years forfeits the presumption and
+      falls back to the general reasonableness baseline.
   - name: covered_customer_period
     type: string
     description: >-
@@ -186,7 +196,8 @@ fields:
     default: false
     section: Non-Competition
     rationale_source: case_law
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.kansas.satisfy-the-weber-reasonableness-factors
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.kansas.satisfy-the-weber-reasonableness-factors
     default_value_rationale: >-
       Conservative default. The non-compete is the most heavily scrutinized
       covenant under the four-factor reasonableness test; the employer carries
@@ -206,13 +217,14 @@ fields:
     benchmark_ref: restrictive-covenant/non-compete-duration
     section: Non-Competition
     default_value_rationale: >-
-      Kansas sets no statutory ceiling on a non-compete term; the time factor is weighed
-      against the employer's real protectable interest under the four-factor
-      reasonableness test, so there is no safe-harbor number. 12 months matches the modal
-      non-compete term observed in benchmarked, publicly-filed employee agreements — a
-      conservative default counsel should size to the actual role and market rather than
-      copy from another form; Kansas authority has treated a two-year non-compete term as
-      reasonable on its facts but that is fact-specific, not a ceiling.
+      Kansas sets no statutory ceiling on a non-compete term; the time factor is
+      weighed against the employer's real protectable interest under the
+      four-factor reasonableness test, so there is no safe-harbor number. 12
+      months matches the modal non-compete term observed in benchmarked,
+      publicly-filed employee agreements — a conservative default counsel should
+      size to the actual role and market rather than copy from another form;
+      Kansas authority has treated a two-year non-compete term as reasonable on
+      its facts but that is fact-specific, not a ceiling.
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
@@ -220,13 +232,15 @@ fields:
     default: the geographic area in which Employee provided services
     section: Non-Competition
     rationale_source: case_law
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.kansas.rely-on-equitable-narrowing-not-statutory-reformation
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.kansas.satisfy-the-weber-reasonableness-factors
     default_value_rationale: >-
-      Tied to the employee's actual service area. Kansas imposes no statutory cap
-      on territory; a narrower area genuinely needed to protect the employer's
-      interest is far easier to defend under the four-factor reasonableness test
-      than a statewide ban, and Kansas territorial authority cut an excessive
-      area down to only what was necessary and enforced just that.
+      Tied to the employee's actual service area. Kansas imposes no statutory
+      cap on territory; a narrower area genuinely needed to protect the
+      employer's interest is far easier to defend under the four-factor
+      reasonableness test than a statewide ban, and Kansas territorial authority
+      cut an excessive area down to only what was necessary and enforced just
+      that.
   - name: competitive_business_definition
     type: string
     description: >-
@@ -244,10 +258,16 @@ fields:
     section: Non-Competition
   - name: nondealing_included
     type: boolean
-    description: Whether the no-business-with-covered-customers covenant is included.
+    description: >-
+      Whether the no-business-with-covered-customers covenant is included. A
+      non-dealing covenant has no named Alabama category of its own, so it must
+      be drafted to fit inside the current-customer non-solicit exception or it
+      is exposed to Alabama's void rule for restraints outside the listed
+      categories.
     display_label: No Business with Covered Customers Included
     default: false
     section: No Business with Covered Customers
+    rationale_source: editorial
   - name: nondealing_duration
     type: string
     description: Duration of the no-business-with-covered-customers restriction
@@ -273,15 +293,20 @@ fields:
     section: Definitions
     default_value_rationale: >-
       Five percent of any class of publicly traded securities is the modal
-      passive-investment carve-out threshold observed in benchmarked, publicly-filed
-      employee agreements that include the carve-out (lower 1-3 percent thresholds are
-      the common tighter alternatives).
+      passive-investment carve-out threshold observed in benchmarked,
+      publicly-filed employee agreements that include the carve-out (lower 1-3
+      percent thresholds are the common tighter alternatives).
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included.
+    description: >-
+      Whether the non-investment covenant is included. A non-investment covenant
+      has no named Alabama category; one genuine use is restraining a licensed
+      professional's business conduct outside the practice of the profession,
+      which sits outside Alabama's professional exemption.
     display_label: Non-Investment Included
     default: false
     section: Non-Investment
+    rationale_source: editorial
   - name: noninvestment_duration
     type: string
     description: Duration of non-investment restriction
@@ -295,9 +320,21 @@ fields:
     default: 24 months
     section: Non-Disparagement
     default_value_rationale: 24 months is common for employment non-disparagement provisions.
+  - name: worker_is_physician
+    type: boolean
+    description: >-
+      Whether Employee is a physician. Set this explicitly from Employee's
+      licensed role to include physician-specific terms. For Indiana, the
+      applicable provisions vary by execution date and employer type, and may
+      require a release buyout term or exclude the non-compete entirely.
+    display_label: Employee Is a Physician
+    section: Physician
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template
 ---
 # Employee Restrictive Covenant Agreement
 
@@ -343,19 +380,19 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
-[[Covered Customers]] means customers and prospective customers that Employee solicited, produced, or serviced, directly or indirectly, or about whom Employee had confidential business or proprietary information or trade secrets, in the course of Employee's relationship with the customer during the {% field name="covered_customer_period" /%} before termination of employment, tracking the material contact customer concept of the Kansas Restraint of Trade Act (K.S.A. 50-163(g)(2)).
+[[Covered Customers]] means customers and prospective customers that Employee solicited, produced, or serviced, directly or indirectly, or about whom Employee had confidential business or proprietary information or trade secrets, in the course of Employee's relationship with the customer during the {% field name="covered_customer_period" /%} before termination of employment.
 
 [[Covered Employees]] means employees with whom Employee worked or whom Employee managed during the {% field name="covered_employee_period" /%} before termination of employment.
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {% field name="passive_public_holdings_threshold" /%} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means the legitimate business interests a Kansas covenant may protect under the four-factor common-law reasonableness test, namely Employer's Confidential Information, Employer's trade secrets as defined by the Kansas Uniform Trade Secrets Act (K.S.A. 60-3320(4)), Employer's goodwill in its customer, vendor, and business-partner relationships, and, for a professional practice, Employer's referral sources, but not Employer's interest in avoiding ordinary competition.
+[[Protected Interests]] means Employer's Confidential Information, trade secrets, goodwill in its customer, vendor, and business-partner relationships, and, for a professional practice, referral sources, but not Employer's interest in avoiding ordinary competition.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
 [[Restricted Territory]] means the geographic area described in Cover Terms under Restricted Territory.
 
-[[Solicit]] means to solicit, recruit, induce, persuade, encourage, direct, or otherwise interfere with, directly or indirectly, a person or entity, tracking the statutory verb list of the Kansas Restraint of Trade Act (K.S.A. 50-163(c)(5)), but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
+[[Solicit]] means to solicit, recruit, induce, persuade, encourage, direct, or otherwise interfere with, directly or indirectly, a person or entity, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
 [[Trade Secrets]] has the meaning given in the Kansas Uniform Trade Secrets Act, K.S.A. 60-3320(4).
 {% /clause %}
@@ -363,19 +400,19 @@ The terms below are incorporated into and form part of this agreement.
 {% clause id="recitals-and-legitimate-business-interest" %}
 ### Recitals and Protectable Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to protect one or more of Employer's Protected Interests and to impose no restraint greater than is required for that protection. The parties acknowledge that each covenant is meant to guard Employer's Confidential Information, trade secrets, customer goodwill, and referral sources and not to eliminate ordinary competition, and that Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. Each covenant is intended to be reasonable in time, territory, and scope, to impose no undue hardship on Employee, and to cause no injury to the public welfare.
+Employer and Employee acknowledge that each restrictive covenant in this agreement protects one or more of Employer's Protected Interests and is reasonable in time, territory, and scope. Employer would not provide Employee with access to its Confidential Information, trade secrets, customer goodwill, and referral sources absent the protections in this agreement.
 {% /clause %}
 
 {% clause id="timing-and-employee-acknowledgements" %}
 ### Timing, Consideration, and Employee Acknowledgements
 
-The parties acknowledge that this agreement is supported by adequate consideration. If Employee is an existing at-will employee, the parties agree that Employer's continued employment of Employee is itself sufficient consideration for the covenants in this agreement; no separate payment, raise, or promotion is required. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests, and understands that adequate consideration establishes only that the covenants are supported, not that they are reasonable, so each covenant must independently be reasonable. This agreement is effective as of the Effective Date listed in Cover Terms.
+In consideration of Employee's employment or continued employment, the parties agree to the terms of this agreement. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 {% /clause %}
 
 {% clause id="confidential-information-and-trade-secret-protection" %}
 ### Confidential Information and Trade Secret Protection
 
-Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue in perpetuity, for as long as the information remains a trade secret. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms. This confidentiality obligation is the operative protection for customer lists, pricing, and know-how that falls short of trade-secret status. This confidentiality obligation is intended to operate alongside, and independent of, any restrictive covenant, and does not restrict Employee's use of the general knowledge, skill, and experience Employee acquired during employment.
+Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue in perpetuity, for as long as the information remains a trade secret. Employee's obligations regarding other Confidential Information, including customer lists, pricing, and confidential know-how, continue for the period specified in Cover Terms. This obligation does not restrict Employee's use of the general knowledge, skill, and experience Employee acquired during employment.
 {% /clause %}
 
 {% clause id="permitted-disclosures-and-protected-conduct" %}
@@ -387,37 +424,37 @@ Nothing in this agreement prohibits Employee from: (a) reporting possible violat
 {% clause id="return-deletion-and-certification-of-company-property" %}
 ### Return, Deletion, and Certification of Company Property
 
-Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request. The parties intend that these return, deletion, and certification mechanics serve as part of Employer's reasonable efforts to maintain the secrecy of its trade secrets.
+Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request.
 {% /clause %}
 
 {% clause id="non-solicitation-of-employees" include-when="employee_nonsolicit_included" %}
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. As the lightest restraint in this agreement, this covenant reaches only Covered Employees during the Restricted Period and is no broader than necessary to protect Employer's workforce stability and goodwill.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees.
 {% /clause %}
 
 {% clause id="non-solicitation-of-customers-vendors-referral-sources-and-business-partners" include-when="customer_nonsolicit_included" %}
 ### Non-Solicitation of Customers
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer, including any reduction, termination, acceptance, or transfer of any Covered Customer's business, in whole or in part, for the purpose of providing any product or service that is competitive with those provided by Employer. This covenant is drawn to the K.S.A. 50-163(c)(5) safe harbor: it is limited to Covered Customers, which track the statutory material contact customer definition, and — where its Restricted Period in Cover Terms does not exceed two years following the end of Employee's employment — it is intended to be conclusively presumed enforceable and not a restraint of trade. Even inside the safe harbor, K.S.A. 50-163(c)(7) preserves any defense available to Employee at law or in equity. This covenant maps directly onto Employer's customer-goodwill interest.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer, including any reduction, termination, acceptance, or transfer of any Covered Customer's business, in whole or in part, for the purpose of providing any product or service that is competitive with those provided by Employer.
 {% /clause %}
 
 {% clause id="no-business-with-covered-customers" include-when="nondealing_included" %}
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee. The K.S.A. 50-163(c)(5) safe harbor reaches acceptance and transfer of a customer's business and not merely outreach, so — where limited to Covered Customers and capped in Cover Terms at no more than two years following the end of Employee's employment — this covenant is intended to ride the same conclusive presumption as the customer non-solicitation covenant.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact.
 {% /clause %}
 
 {% clause id="non-competition" include-when="noncompete_included" %}
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant exists to protect Employer's Protected Interests — its Confidential Information, trade secrets, customer goodwill, and referral sources — and not to restrain ordinary competition. The parties intend this covenant to protect a legitimate business interest of Employer, to impose no undue burden on Employee, to cause no injury to the public welfare, and to keep its time and territory reasonable and sized to Employee's actual role and Employer's actual market. If Employer has identified specific competitors in Cover Terms under Specified Competitors, the parties intend this covenant to be understood and, if necessary, enforced as limited to those named competitors. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. If Employer has identified specific competitors in Cover Terms under Specified Competitors, this covenant applies only to those named competitors and their businesses. Passive Public Holdings are permitted.
 {% /clause %}
 
 {% clause id="non-investment" include-when="noninvestment_included" %}
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. This covenant is a post-employment restraint drawn no broader than necessary to protect Employer's Protected Interests. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. Passive Public Holdings are permitted.
 {% /clause %}
 
 {% clause id="non-disparagement" %}
@@ -426,7 +463,7 @@ During the Restricted Period, Employee must not acquire or hold any active owner
 During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law, including rights protected under Section 7 of the National Labor Relations Act.
 {% /clause %}
 
-{% clause id="physician-specific-rights-and-notices" %}
+{% clause id="physician-specific-rights-and-notices" include-when="worker_is_physician" %}
 ### Physician and Health Care Practitioner Covenants
 
 If Employee is a physician or other health care practitioner, any covenant in this agreement restraining Employee from the practice of the profession is intended to use a reasonable radius and a reasonable term and to preserve patient access and continuity of care.
@@ -453,25 +490,19 @@ The Restricted Period for each covenant is a defined, fixed term running from th
 {% clause id="remedies" %}
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, including relief under the Kansas Uniform Trade Secrets Act, under which actual or threatened misappropriation of a trade secret may be enjoined independent of any covenant.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law.
 {% /clause %}
 
 {% clause id="enforceability-and-severability" %}
 ### Enforceability and Severability
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable, so that a court's refusal to enforce one covenant, or a court's decision to enforce a covenant only to a reasonable extent, does not affect the others.
-{% /clause %}
-
-{% clause id="reformation" %}
-### Reformation
-
-Employer requests that a court narrow any restraint in this agreement found to be overbroad and enforce it as narrowed. Each restrictive covenant in this agreement is drawn as a tiered, severable, reasonable restraint sized to the Protected Interests from the start and is intended to be enforceable as written rather than in reliance on judicial revision.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect.
 {% /clause %}
 
 {% clause id="survival-and-expiration-of-each-covenant" %}
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms, so that each covenant's clock is independently checkable against its own reasonableness analysis. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 {% /clause %}
 
 {% clause id="assignment-and-successors" %}
@@ -483,13 +514,13 @@ Employee may not assign this agreement or any rights or obligations under it. Em
 {% clause id="governing-law-venue-and-dispute-process" %}
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law. The parties intend that the governing-law and venue choices match where Employee actually lives and works.
+This agreement is governed by the law listed in Cover Terms. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
 {% /clause %}
 
 {% clause id="entire-agreement-amendment-waiver-and-electronic-signatures" %}
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 
-This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject; the parties intend this merger clause to name which covenant instrument survives, so that a superseded agreement does not remain live alongside its replacement. This agreement may be amended only in writing signed by both parties. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
+This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. This agreement may be amended only in writing signed by both parties. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
 {% /clause %}
 {% /agreement-section %}
 

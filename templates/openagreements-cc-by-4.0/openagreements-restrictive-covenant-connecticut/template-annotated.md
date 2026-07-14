@@ -84,7 +84,7 @@ Duration
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than five percent of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means the legitimate business interests a Connecticut covenant may protect under the five-factor common-law reasonableness test, namely Employer's Confidential Information, Employer's Trade Secrets, Employer's customer lists, and Employer's goodwill in its customer, vendor, referral-source, and business-partner relationships, but not Employer's interest in avoiding ordinary competition.
+[[Protected Interests]] means Employer's Confidential Information, Trade Secrets, customer lists, and goodwill in its customer, vendor, referral-source, and business-partner relationships.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -92,7 +92,7 @@ Duration
 
 [[Solicit]] means to directly or indirectly initiate contact with, approach, induce, or encourage any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] means information that qualifies as a trade secret under the Connecticut Uniform Trade Secrets Act, Conn. Gen. Stat. § 35-51(d) — information that derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use, and that is the subject of efforts that are reasonable under the circumstances to maintain its secrecy — and under the federal Defend Trade Secrets Act, 18 U.S.C. § 1839(3).
+[[Trade Secrets]] means Employer's non-public information that derives independent economic value from not being generally known or readily ascertainable and that Employer takes reasonable measures to keep secret.
 
 ### Recitals and Protectable Interests
 
@@ -100,7 +100,7 @@ Employer and Employee acknowledge that each restrictive covenant in this agreeme
 
 ### Timing, Consideration, and Employee Acknowledgements
 
-This agreement is effective as of the Effective Date listed in Cover Terms. The parties acknowledge that this agreement is supported by adequate consideration. If Employee is an existing employee signing after employment has begun, the parties agree that Employee's signing this agreement is a condition of Employee's continued employment with Employer, that Employer is providing that continued employment in exchange for Employee's assent to the covenants, that Employee is in fact receiving the continued employment this recital describes, and that the parties intend the continued employment to be connected to the covenants. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement.
+This agreement is effective as of the Effective Date listed in Cover Terms. If Employee signs this agreement after employment begins, Employer provides continued employment in exchange for Employee's agreement to these covenants. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -112,27 +112,27 @@ Nothing in this agreement prohibits Employee from: (a) reporting possible violat
 
 ### Return, Deletion, and Certification of Company Property
 
-Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request. These return, deletion, and certification mechanics are part of Employer's efforts to maintain the secrecy of its Trade Secrets.
+Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request.
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction is limited to initiating contact with or actively soliciting Covered Employees; it does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is no broader than necessary to protect Employer's workforce stability and goodwill.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction is limited to initiating contact with or actively soliciting Covered Employees; it does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is limited to the scope needed to protect Employer's workforce stability and goodwill.
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant is limited to customers Employee serviced or solicited for Employer, reaches only Covered Customers, and is no broader than necessary to protect Employer's goodwill in its customer relationships.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant is limited to customers Employee serviced or solicited for Employer, reaches only Covered Customers, and is limited to the scope needed to protect Employer's goodwill in its customer relationships.
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee, and it reaches only Covered Customers with whom Employee had material contact.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction applies only to Covered Customers with whom Employee had material contact.
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant exists to protect Employer's Protected Interests — its Confidential Information, Trade Secrets, customer lists, and customer goodwill — and not to restrain ordinary competition. The parties intend this covenant to be reasonable in time and territory, to afford only fair protection to Employer's Protected Interests, and to impose no greater restraint than necessary, with its time and territory sized to Employee's actual role and Employer's actual market. If Employer has identified specific competitors in Cover Terms under Specified Competitors, the parties intend this covenant to be understood and, if necessary, enforced as limited to those named competitors. Passive Public Holdings are permitted. This covenant is subject to, and does not override, the occupation-specific rules stated below in the Occupation-Specific Limits section.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant exists to protect Employer's Protected Interests — its Confidential Information, Trade Secrets, customer lists, and customer goodwill — and not to restrain ordinary competition. The parties intend this covenant to be reasonable in time and territory, to afford only fair protection to Employer's Protected Interests, and to impose no greater restraint than necessary, with its time and territory sized to Employee's actual role and Employer's actual market. If Employer has identified specific competitors in Cover Terms under Specified Competitors, this covenant is limited to those named competitors and their businesses. Passive Public Holdings are permitted. This covenant is subject to, and does not override, the occupation-specific rules stated below in the Occupation-Specific Limits section.
 
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive Public Holdings are permitted. This covenant is drawn no broader than necessary to protect Employer's Protected Interests.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. Passive Public Holdings are permitted. This covenant is limited to the scope needed to protect Employer's Protected Interests.
 
 ### Non-Disparagement
 
@@ -142,11 +142,11 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 
 Notwithstanding any other provision of this agreement, the following occupation-specific limits apply and control:
 
-- **Physicians.** No non-compete in this agreement restricts a physician's competitive activities for more than one year or in a geographic region of more than fifteen miles from the primary site where the physician practices, and no such covenant is enforceable where the contract was not made in anticipation of or as part of a partnership or ownership agreement and expires without a bona fide offer to renew on the same or similar terms, where Employer terminates the relationship other than for cause, or where the physician did not agree to a proposed material change to the compensation terms before an extension or renewal that then expires unrenewed or is terminated by Employer without cause (Conn. Gen. Stat. § 20-14p(b)).
-- **Physician assistants and advanced practice registered nurses.** No non-compete in this agreement restricts a physician assistant's or an advanced practice registered nurse's competitive activities for more than one year or in a geographic region of more than fifteen miles from the primary site where the worker practices, and each such covenant carries the same non-renewal and termination-without-cause limits as the physician cap above (Conn. Gen. Stat. §§ 20-12k(b)(2), 20-101d(b)(2)).
-- **Security guards.** This agreement does not require Employee, if employed in classification 339032 of the federal standard occupational classification system (security guards), to refrain from engaging in the same or a similar job, at the same location at which Employer employs Employee, for another employer or as a self-employed person, unless Employer proves that Employee obtained trade secrets of Employer as defined in Conn. Gen. Stat. § 35-51(d) (§ 31-50a(a)).
-- **Broadcast employees.** If Employer is a broadcast industry employer and Employee is a broadcast employee, this agreement does not require Employee to refrain from obtaining employment in a specified geographical area for a specified period after termination, to disclose the terms, conditions, or existence of an offer from another broadcast industry employer after the contract term, or to enter into, extend, or renew a contract with Employer on the terms a prospective employer offered (Conn. Gen. Stat. § 31-50b(b)).
-- **Homemaker, companion, and home-health workers.** No covenant not to compete in this agreement applies to a worker covered by Connecticut's homemaker, companion, and home-health services statute, and no no-hire clause between a homemaker-companion agency and a client applies (Conn. Gen. Stat. §§ 20-681, 20-683(b)).
+- **Physicians.** A physician non-compete may not exceed one year or fifteen miles from the physician's primary practice site and does not apply following expiration without a qualifying renewal offer, termination by Employer without cause, or the other termination circumstances specified in Cover Terms.
+- **Physician assistants and advanced practice registered nurses.** A physician-assistant or advanced-practice-registered-nurse non-compete may not exceed one year or fifteen miles from the worker's primary practice site and does not apply after expiration without renewal or termination by Employer without cause.
+- **Security guards.** The non-compete does not apply if Employee works in federal occupational classification 33-9032, except to the extent Employee obtained Employer's Trade Secrets.
+- **Broadcast employees.** If Employee performs broadcast-industry work, this agreement does not restrict Employee's post-employment geographic work, require disclosure of another employment offer, or require Employee to accept Employer's matching terms.
+- **Homemaker, companion, and home-health workers.** No non-compete applies to Employee while Employee provides homemaker, companion, or home-health services, and no no-hire restriction applies between a homemaker-companion agency and its client.
 
 ### No Conflicting Obligations
 
@@ -158,19 +158,15 @@ Employer may disclose the existence and terms of this agreement to a prospective
 
 ### Tolling During Breach
 
-If Employee breaches any restrictive covenant in this agreement, the parties intend the Restricted Period for that covenant to be extended by the period of the breach, so that Employer receives the full duration of the restriction it bargained for. Any such extension is itself a separate, breach-tied restraint that must remain reasonable and bounded; the parties do not intend an open-ended or indefinite extension, and do not assume a court will revive a covenant after its stated period has expired.
+If Employee breaches any restrictive covenant in this agreement, the parties intend the Restricted Period for that covenant to be extended by the period of the breach, subject to applicable law.
 
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, including relief under the Connecticut Uniform Trade Secrets Act, Conn. Gen. Stat. § 35-52(a). Any fee-shifting between the parties is mutual and prevailing-party based; the parties otherwise leave the American Rule in place.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law. Any fee award must be mutual and based on prevailing-party status.
 
 ### Enforceability and Severability
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is intended to be independently enforceable and is drawn in separable tiers — customer-specific alternatives beneath broader restraints, and distinct duration and geography steps — so that a court's refusal to enforce one covenant does not affect the others and a court has cleaner text to enforce or strike.
-
-### No Reliance on Judicial Narrowing
-
-This agreement does not rely on any savings or reformation clause to cure overbreadth and does not purport to obligate a court to supply a new radius, duration, or job-function limit of its own. Each restrictive covenant is instead drawn as a separable, tiered, reasonable restraint sized to the Protected Interests from the start and is intended to be enforceable as written rather than in reliance on discretionary judicial revision.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect.
 
 ### Survival and Expiration of Each Covenant
 
@@ -220,10 +216,6 @@ Connecticut fixes no safe-harbor duration or radius for an ordinary-employee non
 ### the consideration connection for a post-hire covenant
 
 Connecticut's current rule is that continued at-will employment can supply sufficient consideration for a covenant signed after employment has begun, but that rule turns on connection: the covenant must actually be tied to the continued employment, and a worker may still prove there was no connection between signing and continued employment . A recital that signing is a condition of continued employment carries weight only where the worker in fact receives that continued employment, so a bare recital on a covenant the worker gave up existing rights to sign, with continued employment not predicated on it, is where consideration failed before . And adequate consideration establishes only that a covenant is supported, not that it is reasonable, so each covenant still clears the five-factor reasonableness test on its own.
-
-### tiered severable drafting instead of reliance on judicial narrowing
-
-Connecticut gives the drafter no reliable rule that a court will rewrite an overbroad covenant into an enforceable one, and whether a court will narrow an overbroad employee covenant remains unsettled, so a covenant that leans on a savings or reformation clause to supply a new radius, duration, or job-function limit rests on rescue the state does not promise . Internally inconsistent restraint language can be construed against the drafter where no reasonable reconciliation is possible, and the one statutory severance rule in this area is deliberately narrow — when a physician covenant is void in whole or in part, § 20-14p(c) preserves only the contract's remaining non-covenant provisions, not a narrowed restraint. A covenant drawn in separable, tiered restraints — customer-specific alternatives beneath broader ones, distinct duration and geography steps, and an ordinary severability clause — gives a court cleaner text to strike an unenforceable tier and leave a narrower tier standing.
 
 ### the occupation-specific caps and bans that control before common-law balancing
 

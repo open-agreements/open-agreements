@@ -81,7 +81,7 @@ Duration
 
 [[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
 
-[[Confidential Information]] means Trade Secrets and other non-public information that is genuinely competitively sensitive to Employer's business — including customer and pricing information, business processes, technical data, and strategic plans — that Employer takes reasonable measures to keep confidential. Confidential Information does not include ordinary, non-secret business information, information generally known in the trade, or information that becomes public through no fault of Employee. The parties intend this definition to be scoped to protectable information so that this covenant is not construed as an unreasonable restraint of trade.
+[[Confidential Information]] means Trade Secrets and other non-public information that is genuinely competitively sensitive to Employer's business — including customer and pricing information, business processes, technical data, and strategic plans — that Employer takes reasonable measures to keep confidential. Confidential Information does not include ordinary, non-secret business information, information generally known in the trade, or information that becomes public through no fault of Employee.
 
 [[Covered Customers]] means customers, vendors, referral sources, and business partners with whom Employee had material contact or for whom Employee had responsibility during the {covered_customer_period} before termination of employment.
 
@@ -89,7 +89,7 @@ Duration
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {passive_public_holdings_threshold} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means the legitimate business interests that justify a restriction imposed on Employee's activity under Wis. Stat. § 103.465 — Employer's Trade Secrets and genuinely competitively sensitive Confidential Information, its relationships with the specific customers, referral sources, and business partners Employee served, and its stable working relationships with the Covered Employees.
+[[Protected Interests]] means Employer's Trade Secrets and genuinely competitively sensitive Confidential Information, its relationships with Covered Customers, and its stable working relationships with Covered Employees.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason. The Restricted Period for each covenant is a fixed and definite period and is not extended by any period of alleged breach or the pendency of any dispute.
 
@@ -97,19 +97,19 @@ Duration
 
 [[Solicit]] means to directly or indirectly initiate contact with, approach, induce, or encourage any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] has the meaning given in the Wisconsin Uniform Trade Secrets Act, Wis. Stat. § 134.90(1)(c).
+[[Trade Secrets]] means information that qualifies as a trade secret under applicable law.
 
 ### Recitals and Protectable Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is drawn to protect one or more of Employer's Protected Interests and is intended to be reasonably necessary for the protection of the employer within the meaning of Wis. Stat. § 103.465. Each post-employment restraint is drawn to rest on a legitimate protectable interest of Employer, a reasonable time limit, and a reasonable territorial limit, and to be no harsher than that protection requires. Employer would not provide Employee with access to its Protected Interests absent the protections in this agreement. Each covenant in this agreement is a separate covenant supporting a distinct interest, intended to be independently read and enforced.
+Employer and Employee acknowledge that the restrictive covenants protect Employer's Protected Interests and are reasonable in duration, territory, and scope. Employer would not provide Employee with access to its Protected Interests absent the protections in this agreement. Each restrictive covenant is separate and independently enforceable.
 
 ### Timing, Consideration, and Right to Consult Counsel
 
-Employee has had an opportunity to consult with an attorney of Employee's choosing before entering into this agreement. Where Employee signs this agreement at or before the start of employment, the offer of employment and the access to Employer's Protected Interests it entails are the consideration for the restrictive covenants. Where Employee signs this agreement during employment, Employer's forbearance from exercising its right to terminate Employee's at-will employment is consideration for the restrictive covenants; the parties intend that forbearance to be genuine and not a pretext for a sign-then-fire sequence. Employee acknowledges receiving one or more of these benefits in exchange for the restrictive covenants in this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
+Employee has had an opportunity to consult with an attorney of Employee's choosing before entering into this agreement. Where Employee signs this agreement at or before the start of employment, the offer of employment and the access to Employer's Protected Interests it entails are the consideration for the restrictive covenants. Where Employee signs this agreement during employment, Employer's forbearance from exercising its right to terminate Employee's at-will employment is consideration for the restrictive covenants; the parties intend that forbearance to be genuine. Employee acknowledges receiving one or more of these benefits in exchange for the restrictive covenants in this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
-Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding Trade Secrets continue for the Trade Secrets Duration stated in Cover Terms, for as long as the information remains a Trade Secret. Employee's obligations regarding other Confidential Information continue for the Other Confidential Information Duration stated in Cover Terms. The parties intend this covenant to reach only Trade Secrets and genuinely competitively sensitive information, and not ordinary or non-secret business information.
+Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding Trade Secrets continue for the Trade Secrets Duration stated in Cover Terms, for as long as the information remains a Trade Secret. Employee's obligations regarding other Confidential Information continue for the Other Confidential Information Duration stated in Cover Terms.
 
 ### Permitted Disclosures and Protected Conduct
 
@@ -117,7 +117,7 @@ Nothing in this agreement prohibits Employee from: (a) reporting possible violat
 
 ### Return, Deletion, and Certification of Company Property
 
-Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request. These procedures support Employer's efforts to maintain the secrecy of its Trade Secrets.
+Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request.
 
 ### Non-Solicitation of Employees
 
@@ -125,19 +125,19 @@ During the Restricted Period, Employee must not Solicit, recruit, hire, or attem
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant is drawn to protect Employer's relationships with the specific customers, referral sources, and business partners Employee served or learned protected information about, and not Employer's customer base generally.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant is limited to protect Employer's relationships with the specific customers, referral sources, and business partners Employee served or learned protected information about, and not Employer's customer base generally.
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee, and it is therefore confined to the Covered Customers class and to a definite Restricted Period.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of who initiates contact. This restriction applies only to Covered Customers during the Restricted Period.
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is confined to a protectable interest of Employer and to a reasonable time, territory, and scope. Where Employer's competitors are identified in Cover Terms under Specified Competitors, this covenant is narrowed to those named competitors. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is confined to a Protected Interest of Employer and to a reasonable time, territory, and scope. Where Employer's competitors are identified in Cover Terms under Specified Competitors, this covenant is narrowed to those named competitors. Passive Public Holdings are permitted.
 
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive Public Holdings are permitted. Because this covenant restrains active roles at and material participation in a Competitive Business, it operates as a covenant not to compete and is drawn no broader than reasonably necessary to protect Employer's Protected Interests.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. Passive Public Holdings are permitted.
 
 ### Non-Disparagement
 
@@ -145,11 +145,11 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 
 ### No Restriction on a Lawyer's Right to Practice
 
-Notwithstanding any other provision of this agreement, no restrictive covenant in this agreement restricts the right of a licensed lawyer to practice law after the termination of the relationship. If Employee is a lawyer admitted to practice, the restrictive covenants that would otherwise restrict Employee's right to practice law do not apply and are void and unenforceable as to that right under Wisconsin Supreme Court Rule 20:5.6. This exclusion is not cured by any level of compensation or any showing of reasonableness.
+Notwithstanding any other provision of this agreement, no restrictive covenant in this agreement restricts the right of a licensed lawyer to practice law after the termination of the relationship.
 
 ### Covenants Arising from a Sale of Business
 
-This agreement governs restrictive covenants given by Employee in Employee's capacity as an employee, which are evaluated under Wis. Stat. § 103.465. Any covenant not to compete or not to solicit that arises from a genuine sale of a business or equity transaction is given by the seller in the transaction or equity documents, supported by transaction consideration, and separable from any employment relationship, and is not governed by this agreement. Nothing in this agreement is intended to recharacterize a transaction-based covenant as an employee covenant.
+This agreement applies only to covenants Employee gives in Employee's capacity as an employee. It does not govern a covenant given separately in connection with a sale of a business or equity transaction.
 
 ### No Conflicting Obligations
 
@@ -157,23 +157,19 @@ Employee represents that performing duties for Employer and complying with this 
 
 ### Notice to Future Employers and Other Third Parties
 
-Employer may disclose the existence and terms of this agreement to any prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach an enforceable covenant in this agreement. Employee consents to this disclosure. This notice right depends on a covenant that survives the reasonableness test.
+Employer may disclose the existence and terms of this agreement to any prospective employer or business associate of Employee if Employer has a reasonable belief that Employee may breach an enforceable covenant in this agreement. Employee consents to this disclosure.
 
 ### No Extension of the Restricted Period During Breach
 
-The Restricted Period for each covenant is a fixed and definite period. It is not extended, tolled, or lengthened by any period during which Employee is alleged to be in breach or violation of a covenant, or by the pendency of any dispute or litigation. This agreement includes no extension-during-breach or tolling provision, and none is to be implied.
+The Restricted Period for each covenant is a fixed and definite period. It is not extended, tolled, or lengthened by any period during which Employee is alleged to be in breach or violation of a covenant, or by the pendency of any dispute or litigation.
 
 ### Remedies
 
-Employee acknowledges that a breach of an enforceable covenant in this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law; any such relief is available only on a covenant that is enforceable under Wis. Stat. § 103.465.
-
-### Divisibility; No Reliance on Reformation
-
-Each restrictive covenant in this agreement is a separate covenant supporting a distinct interest, is intended to be independently read and enforced, and is drawn to a lawful scope at the outset. Under Wis. Stat. § 103.465, a covenant imposing an unreasonable restraint is illegal, void, and unenforceable even as to any part of the covenant that would be a reasonable restraint, and a court will not narrow or blue-pencil an overbroad covenant. Accordingly, this agreement does not rely on any court-may-modify or savings clause to cure overbreadth, and no such clause has any effect. If any covenant is found unreasonable and void, the remaining covenants, which support different interests and can be independently read and enforced, remain in full force and effect.
+Employee acknowledges that a breach of an enforceable covenant in this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief, in addition to any other remedies available at law, to enforce an enforceable covenant.
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms for that covenant, and each expires on its own definite schedule and is readable on its own. Obligations under the Confidential Information and Trade Secret Protection section survive to the extent, and for as long as, the information remains a Trade Secret. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant survives termination of Employee's employment for its Restricted Period and expires on its own schedule. Obligations under the Confidential Information and Trade Secret Protection section survive to the extent, and for as long as, the information remains a Trade Secret. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### Assignment and Successors
 
@@ -181,11 +177,11 @@ Employee may not assign this agreement or any rights or obligations under it. Em
 
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law of the Governing Law state listed in Cover Terms. For employment performed in Wisconsin, the parties select Wisconsin law, including Wis. Stat. § 103.465, and do not rely on any foreign choice-of-law clause to obtain more covenant-friendly treatment. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
+This agreement is governed by the law of the Governing Law state listed in Cover Terms. For employment performed in Wisconsin, the parties select Wisconsin law. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
 
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 
-This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. This agreement may be amended only in writing signed by both parties; an amendment that re-papers a covenant during employment requires its own consideration, such as genuine forbearance from termination or tangible new value. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
+This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. Any amendment must be in writing, signed by both parties, and supported by any consideration required by applicable law. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
 
 ## Signatures
 

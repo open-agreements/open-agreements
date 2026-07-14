@@ -95,7 +95,7 @@ Passive Public Holdings Threshold
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than five percent of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means Employer's legitimate business interests that Maryland law recognizes as supporting a restrictive covenant — namely Employer's interest in protecting unique services, Trade Secrets, routes or client lists, and against the solicitation of customers. Each covenant in this agreement is drawn no broader or more restrictive than necessary to effectuate those interests.
+[[Protected Interests]] means Employer's interest in protecting unique services, Trade Secrets, routes or client lists, and customer relationships.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -103,23 +103,21 @@ Passive Public Holdings Threshold
 
 [[Solicit]] means to directly or indirectly initiate contact with, approach, induce, or encourage any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] means information that qualifies as a trade secret under the Maryland Uniform Trade Secrets Act and applicable federal law, including information that derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use, and that is the subject of efforts that are reasonable under the circumstances to maintain its secrecy (Md. Code, Com. Law § 11-1201(e); see also the federal Defend Trade Secrets Act, 18 U.S.C. § 1839(3)).
+[[Trade Secrets]] means information that qualifies as a trade secret by the Maryland Uniform Trade Secrets Act and applicable federal law, including information that derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use, and that is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.
 
 ### Recitals and Protected Interest
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship and is supported by adequate consideration, as Maryland law requires for enforcement. Employee will receive access to Employer's Confidential Information, Trade Secrets, and customer and patient relationships in the course of employment, and each covenant in this agreement is included to protect Employer's Protected Interests and is drawn no wider as to area and duration than reasonably necessary to protect those interests, without imposing undue hardship on Employee or disregarding the interests of the public. The parties intend each covenant to be enforceable as written and drawn within the scope Maryland law permits at the outset, rather than in reliance on any judicial narrowing.
+Employer and Employee acknowledge that each restrictive covenant in this agreement is ancillary to a valid employment relationship, is supported by adequate consideration, protects Employer's Protected Interests, and is reasonable in area and duration. Employee will receive access to Employer's Confidential Information, Trade Secrets, and customer and patient relationships in the course of employment.
 
 ### Maryland Statutory Worker-Class Voids
 
-Notwithstanding any other provision of this agreement, no noncompete or conflict-of-interest provision in this agreement that restricts Employee's ability to enter into employment with a new employer or to become self-employed in the same or similar business or trade applies to or is enforceable against Employee if:
+Notwithstanding any other provision of this agreement, no noncompete or conflict-of-interest provision applies to Employee if:
 
-(a) Employee earns equal to or less than 150% of the State minimum wage rate established under Md. Code, Lab. & Empl. § 3-413 (§ 3-716(a)(1)(i)1);
+(a) Employee earns equal to or less than 150% of the Maryland minimum wage rate;
 
-(b) Employee is licensed as a veterinary practitioner or veterinary technician under Title 2, Subtitle 3 of the Agriculture Article, at any compensation level (§ 3-716(a)(1)(i)); or
+(b) Employee is licensed as a veterinary practitioner or veterinary technician, at any compensation level; or
 
-(c) for an agreement executed on or after July 1, 2025, Employee is in a position that requires licensure under the Health Occupations Article, provides direct patient care, and earns equal to or less than $350,000 in total annual compensation (§ 3-716(a)(1)(i)2).
-
-For an agreement executed on or after October 1, 2026, the same bar extends to an employee of a licensed architect whose employer, after employing more than 30 workers based primarily in Maryland, relocates the majority of that workforce out of state or no longer maintains its principal place of business in Maryland. Where any such class applies, the parties do not present or enforce the voided provision, and Employer's protection runs instead through the confidentiality, client-list, and Trade-Secret terms of this agreement, which § 3-716(a)(2) leaves intact.
+(c) Employee holds a health-occupation license, provides direct patient care, and earns equal to or less than $350,000 in total annual compensation.
 
 ### Timing and Consideration
 
@@ -127,7 +125,7 @@ This agreement is effective as of the Effective Date listed in Cover Terms. Empl
 
 ### Confidential Information and Trade Secret Protection
 
-Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding Trade Secrets continue for the period specified in Cover Terms under Trade Secrets Duration, which is intended to last as long as the information remains a trade secret under Md. Code, Com. Law § 11-1201(e). Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms under Other Confidential Information Duration. This section does not prohibit Employee from disclosing information that arises from Employee's general training, knowledge, skill, or experience, whether gained on the job or otherwise, information that is readily ascertainable to the public, or information that Employee otherwise has a right to disclose as legally protected conduct. Where a noncompete in this agreement is void under Md. Code, Lab. & Empl. § 3-716, this section and the client-list terms remain fully effective, because § 3-716(a)(2)'s void rule does not reach provisions with respect to the taking or use of a client or patient list or other proprietary client-related or patient-related information.
+Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding Trade Secrets continue for the period specified in Cover Terms under Trade Secrets Duration. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms under Other Confidential Information Duration. This section does not prohibit Employee from disclosing information that arises from Employee's general training, knowledge, skill, or experience, whether gained on the job or otherwise, information that is readily ascertainable to the public, or information that Employee otherwise has a right to disclose as legally protected conduct.
 
 ### Permitted Disclosures and Protected Conduct
 
@@ -139,19 +137,19 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction is limited to initiating contact with or actively soliciting Covered Employees; it does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant is drawn as a relationship-based restraint no broader than reasonably necessary to protect Employer's Protected Interests.
+During the Restricted Period, Employee must not initiate contact with or actively Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees.
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant is scoped to Covered Customers with whom Employee had material contact during the lookback period stated in Cover Terms and is drawn no broader than reasonably necessary to protect Employer's Protected Interests.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer with whom Employee had material contact during the lookback period stated in Cover Terms.
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. The parties include this covenant only where a genuine client-relationship or Trade-Secret interest supports it, and it is drawn no broader than reasonably necessary to protect Employer's Protected Interests.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact.
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is subject in all respects to the Maryland Statutory Worker-Class Voids section above: if Employee falls within a class for which Md. Code, Lab. & Empl. § 3-716 makes a noncompete null and void, this covenant does not apply to or bind Employee. For an employee who must be licensed under the Health Occupations Article, provides direct patient care, and earns more than $350,000 in total annual compensation under an agreement executed on or after July 1, 2025, this covenant may be in effect for no longer than one year from the last day of employment and may impose no geographical restriction exceeding ten miles from the primary place of employment (§ 3-716(b)(1)–(2)); for such an employee the Restricted Period and Restricted Territory stated in Cover Terms are themselves set at no more than one year and ten miles. Any covenant that survives § 3-716 is also drawn no wider as to area and duration than reasonably necessary to protect Employer's Protected Interests, without undue hardship on Employee or harm to the public. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant does not apply if any condition in the Maryland Statutory Worker-Class Voids section applies to Employee. Passive Public Holdings are permitted.
 
 ### Named-Competitor Narrowing
 
@@ -159,7 +157,7 @@ Where Employer has identified its actual competitors in Cover Terms under Specif
 
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive Public Holdings are permitted. Because this covenant restrains active roles at and material participation in a Competitive Business, it functions as a covenant not to compete and is subject to the Maryland Statutory Worker-Class Voids section and, for a covered high-earner clinician, to the one-year and ten-mile ceilings of § 3-716(b); it is drawn no broader than reasonably necessary to protect Employer's Protected Interests.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This covenant does not apply if any condition in the Maryland Statutory Worker-Class Voids section applies to Employee. Passive Public Holdings are permitted.
 
 ### Non-Disparagement
 
@@ -171,35 +169,31 @@ Nothing in this agreement restricts or delays a departing clinician, or Employer
 
 ### No Conflicting Obligations
 
-Employee represents that performing duties for Employer and complying with this agreement does not conflict with any prior agreement, court order, or legal obligation binding on Employee. Employee must promptly disclose to Employer any potential conflict that arises during employment. The parties acknowledge that a covenant Employee signed for another employer may be void or unenforceable to the extent it falls within a class Md. Code, Lab. & Empl. § 3-716 protects.
+Employee represents that performing duties for Employer and complying with this agreement does not conflict with any prior agreement, court order, or legal obligation binding on Employee. Employee must promptly disclose to Employer any potential conflict that arises during employment.
 
 ### Notice to Future Employers and Other Third Parties
 
-Employer may disclose the existence and terms of this agreement to a prospective employer or business associate of Employee only where a covenant in this agreement is enforceable against Employee and Employer has a reasonable belief that Employee may breach that covenant. Employer will not present or attempt to enforce against a third party a covenant that is void under Md. Code, Lab. & Empl. § 3-716 for Employee's worker class. Employee consents to a disclosure permitted by this section.
+Employer may disclose the existence and terms of this agreement to a prospective employer or business associate of Employee only where a covenant in this agreement is enforceable against Employee and Employer has a reasonable belief that Employee may breach that covenant. Employer will not present or attempt to enforce against a third party a covenant that is void by Md. Code, Lab. & Empl. § 3-716 for Employee's worker class. Employee consents to a disclosure permitted by this section.
 
 ### Tolling During Breach
 
-The Restricted Period for each covenant runs from the date Employee's employment ends and is not extended by any period of breach, except that Employer may seek a separate, bounded restraint tied to the duration of a breach where a court finds it reasonable on the facts.
+The Restricted Period for each covenant runs from the date Employee's employment ends and is not extended by any period of breach.
 
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate, and Employer may seek injunctive or other equitable relief in addition to any other remedies available at law. Independent of any covenant, actual or threatened misappropriation of Employer's Trade Secrets may be enjoined under the Maryland Uniform Trade Secrets Act (Md. Code, Com. Law § 11-1202(a)), and a court may award exemplary damages up to twice the compensatory award for willful and malicious misappropriation (§ 11-1203(d)). A decision not to enforce a covenant or its liquidated-damages terms does not bar Employer from recovering separately for trade-secret misappropriation. Any fee-shifting between the parties is mutual and prevailing-party based.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law. A decision not to enforce a covenant or its liquidated-damages terms does not bar Employer from recovering for trade-secret misappropriation. Any fee-shifting between the parties is mutual and prevailing-party based.
 
 ### Severability and Severable Tiers
 
-If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each restrictive covenant in this agreement is drafted as separate, severable tiers of duration, territory, and covered activity so that a court can strike an excessive tier and enforce the lawful remainder, working no injury to the public and no injustice to the parties.
-
-### No Reliance on Judicial Reformation
-
-This agreement does not rely on any savings or reformation clause that asks a court to redraft an indivisible overbroad covenant into a narrower one, and it does not purport to obligate any court to narrow, blue-pencil, or reform any covenant. Each covenant here is instead drawn within the enforceable scope Maryland law permits at the outset and structured in severable tiers rather than as a single aggressive term paired with a plea for reformation.
+If any provision of this agreement is found to be unenforceable, the remaining provisions remain in full force and effect. Each duration, territory, and covered-activity tier is severable, and each enforceable tier remains in effect independently of any unenforceable tier.
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms, and each survival period is stated per covenant so that every clock is independently checkable — perpetual for Trade Secrets, finite elsewhere. Obligations under the Confidential Information and Trade Secret Protection section survive as long as the relevant information remains a trade secret. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive as long as the relevant information remains a trade secret. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### Assignment and Successors
 
-Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. An assignment of this agreement does not remove Employee from any worker class for which Md. Code, Lab. & Empl. § 3-716 makes a noncompete void or subject to the § 3-716(b) cap, and an assignee takes any covenant subject to the same statutory limits. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
+Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. An assignee acquires no greater right to enforce a covenant than Employer held before the assignment. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, and permitted assigns.
 
 ### Governing Law, Venue, and Dispute Process
 

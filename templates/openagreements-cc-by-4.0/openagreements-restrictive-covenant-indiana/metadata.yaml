@@ -6,8 +6,6 @@ version: 0.1.0
 stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: Authored by OpenAgreements contributors. Indiana-specific analysis informed by the quote-verified Indiana practice note. Licensed under CC BY 4.0.
 fields:
   - name: employer_name
@@ -62,10 +60,11 @@ fields:
     default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. A perpetual lid on non-secret information is the kind of unreasonable reach an Indiana court will not enforce, and because the eraser blue pencil cannot rewrite an overbroad term, the finite other-confidential track is kept severable from the perpetual trade-secret track.
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee non-solicitation covenant is included
-    display_label: Employee Non-Solicitation Included
-    default: true
+    description: Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.
+    display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
+    rationale_source: editorial
+    default: true
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee non-solicitation restriction
@@ -84,10 +83,11 @@ fields:
     default_value_rationale: '12 months is the most common lookback period for employee non-solicitation scope. In Indiana this look-back is load-bearing: Heraeus voided an employee non-solicitation covenant that reached all of the company''s employees, and the eraser rule means a court cannot rewrite an all-employees class into a narrower one.'
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the customer/partner non-solicitation covenant is included
+    description: Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
+    rationale_source: editorial
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer/partner non-solicitation restriction
@@ -140,10 +140,11 @@ fields:
     section: Non-Competition
   - name: nondealing_included
     type: boolean
-    description: Whether the no-business-with-covered-customers covenant is included.
+    description: Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.
     display_label: No Business with Covered Customers Included
     default: false
     section: No Business with Covered Customers
+    rationale_source: editorial
   - name: nondealing_duration
     type: string
     description: Duration of the no-business-with-covered-customers restriction
@@ -161,10 +162,11 @@ fields:
     default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives). A clause that technically forbids holding index funds or ordinary public shares is gratuitous overbreadth an Indiana court will not soften by rewriting.
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included.
+    description: Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.
     display_label: Non-Investment Included
     default: false
     section: Non-Investment
+    rationale_source: editorial
   - name: noninvestment_duration
     type: string
     description: Duration of non-investment restriction
@@ -180,9 +182,8 @@ fields:
     default_value_rationale: 24 months is common for employment non-disparagement provisions.
   - name: worker_is_physician
     type: boolean
-    description: 'Whether Employee is a physician. Indiana''s physician statute stack governs by execution date: House Enrolled Act 1004 (2020) conditions enforceability of a physician noncompete on mandatory contract terms including a reasonable-price buyout; Senate Enrolled Act 7 (2023) bars a primary care physician noncompete outright; and Senate Enrolled Act 475 (2025) voids a physician-hospital noncompete. Set true to surface the physician clause and the buyout term.'
+    description: Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.
     display_label: Employee Is a Physician
-    default: false
     section: Physician
   - name: physician_buyout_price
     type: string
@@ -193,6 +194,9 @@ fields:
     rationale_source: legislation
     requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.indiana.require-hea-1004-provisions-in-physician-noncompetes
     default_value_rationale: Indiana's physician noncompete statute requires the buyout option but does not define a reasonable price, which has become a recurring point of dispute; the price or mechanism is therefore left for counsel to state rather than defaulted to a figure the statute does not supply.
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template

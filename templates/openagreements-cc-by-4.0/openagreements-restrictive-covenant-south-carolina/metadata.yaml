@@ -6,8 +6,6 @@ version: 0.1.0
 stability: experimental
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: Authored by OpenAgreements contributors. South Carolina-specific analysis informed by the quote-verified South Carolina practice note. Licensed under CC BY 4.0.
 fields:
   - name: employer_name
@@ -78,10 +76,11 @@ fields:
     default_value_rationale: 'A finite term is essential in South Carolina: an untimed nondisclosure provision that operates as a covenant not to compete violates public policy. 24 months is a common, conservative term for non-trade-secret confidentiality that keeps the clause from reading as an indefinite functional non-compete.'
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee non-solicitation covenant is included
-    display_label: Employee Non-Solicitation Included
-    default: true
+    description: Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.
+    display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
+    rationale_source: editorial
+    default: true
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee non-solicitation restriction
@@ -100,10 +99,11 @@ fields:
     default_value_rationale: 12 months is a common lookback period for employee non-solicitation scope, tied to the colleagues the departing worker actually worked with.
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the customer/partner non-solicitation covenant is included
+    description: Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
+    rationale_source: editorial
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer/partner non-solicitation restriction
@@ -124,12 +124,12 @@ fields:
     default_value_rationale: '12 months tracks the look-back window a District of South Carolina court upheld: a covenant limited to customers the employee had contact with during his last twelve months of employment withstood an overbreadth challenge.'
   - name: noncompete_included
     type: boolean
-    description: Whether the non-competition covenant is included. South Carolina has no general non-compete statute; a non-compete is a disfavored restraint of trade enforceable only to the extent it satisfies every factor of the conjunctive five-factor reasonableness test and is tied to a protectable interest rather than ordinary competition. Because South Carolina courts neither blue-pencil nor reform, this template sizes the restraint to the employer's actual footprint and provides tiered, self-contained step-down alternatives as real agreed text.
+    description: Whether the non-competition covenant is included. Under Alabama law an employee may agree to a geographically limited non-compete; this template recites the employee-exception basis, ties the covenant to a listed protectable interest, and biases the duration into the two-year presumptively reasonable window.
     display_label: Non-Competition Included
-    default: true
     section: Non-Competition
+    default_value_rationale: Conservative default. Non-competes are the most heavily scrutinized covenant; include only after confirming the restraint fits Alabama's employee exception for a specified geographic area, a competing business, and an existing employment relationship; protects a listed interest; stays within the two-year presumption; will be signed by all parties, including the employer; and does not restrain a member of a recognized profession from practicing that profession. The party seeking enforcement bears the burden of proof on every element.
     rationale_source: editorial
-    default_value_rationale: Included by default because this template is built to permit and paper a reasonable non-compete. The non-compete is the most heavily scrutinized covenant under the five-factor test, and one failed factor sinks it whole with no judicial rescue; include it only after confirming an identified protectable interest (confidential information, trade secrets, or customer goodwill), sizing duration and territory to the actual role and market, and writing in the narrower step-down alternatives.
+    default: true
   - name: noncompete_duration
     type: string
     description: Duration of non-competition restriction
@@ -177,10 +177,11 @@ fields:
     section: Non-Competition
   - name: nondealing_included
     type: boolean
-    description: Whether the no-business-with-covered-customers covenant is included.
+    description: Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.
     display_label: No Business with Covered Customers Included
     default: false
     section: No Business with Covered Customers
+    rationale_source: editorial
   - name: nondealing_duration
     type: string
     description: Duration of the no-business-with-covered-customers restriction
@@ -198,10 +199,11 @@ fields:
     default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives), and it keeps the covenant from restraining ordinary public shareholding — an easy example against the harshness factor.
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included.
+    description: Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.
     display_label: Non-Investment Included
     default: false
     section: Non-Investment
+    rationale_source: editorial
   - name: noninvestment_duration
     type: string
     description: Duration of non-investment restriction
@@ -215,6 +217,9 @@ fields:
     default: 24 months
     section: Non-Disparagement
     default_value_rationale: 24 months is common for employment non-disparagement provisions.
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template

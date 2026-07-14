@@ -85,7 +85,7 @@ Employee represents that performing duties for Company does not knowingly confli
 
 ### Duty of Loyalty During Employment
 
-While performing services for Company, Employee will not, without Company's written consent, engage in any business or activity that competes with Company or that materially conflicts with Employee's duties to Company. This section does not restrict (a) passive investments, (b) lawful conduct during off-duty hours away from Company premises (including conduct protected under laws such as California Labor Code Section 96(k)), (c) protected or concerted activity under applicable law, or (d) good-faith preparation to take a future job or start a business, so long as Employee does not misuse Company time, resources, or Confidential Information. This section applies only while Employee is employed by Company; it does not restrict Employee after employment ends.
+While performing services for Company, Employee will not, without Company's written consent, engage in any business or activity that competes with Company or that materially conflicts with Employee's duties to Company. This section does not restrict (a) passive investments, (b) lawful conduct during off-duty hours away from Company premises, (c) protected or concerted activity under applicable law, or (d) good-faith preparation to take a future job or start a business, so long as Employee does not misuse Company time, resources, or Confidential Information. This section applies only while Employee is employed by Company; it does not restrict Employee after employment ends.
 
 ### No Solicitation of Company Personnel
 

@@ -4,9 +4,7 @@
 
 # Stockholder Consent Ratifying a Defective Corporate Act
 
-The undersigned, being the holders of [The percentage of outstanding voting stock signing this consent, computed excluding the putative shares being ratified (for example, "a majority")] of the outstanding shares of capital stock of [Full legal name of the Delaware corporation], a Delaware corporation (the "Company"), entitled to vote on the ratification described below (computed without regard to the putative shares being ratified, as required by Section 204(d) of the Delaware General Corporation Law (the "DGCL")), pursuant to Section 228 of the DGCL, hereby adopt the following resolutions by written consent:
-
-*Note: Under Section 204(d) of the DGCL, the shares of putative stock being ratified are not entitled to vote and are not counted toward quorum on the ratification, and the required approval percentage is measured under the voting standard applicable to the type of act at the time of ratification. Notice of the ratification must be given to holders of valid and putative stock (including nonvoting holders and holders as of the time of the defective act), and a less-than-unanimous written consent additionally requires prompt notice to non-consenting stockholders under Section 228(e). Always consult with counsel before using this consent.*
+The undersigned, being the holders of [The percentage of outstanding voting stock signing this consent, computed excluding the putative shares being ratified (for example, "a majority")] of the outstanding shares of capital stock of [Full legal name of the Delaware corporation], a Delaware corporation (the "Company"), entitled to vote on the ratification described below (computed without regard to the putative shares being ratified), pursuant to Section 228 of the Delaware General Corporation Law (the "DGCL"), hereby adopt the following resolutions by written consent:
 
 Company
 : [Full legal name of the Delaware corporation]
@@ -47,7 +45,7 @@ Consent date
 
 This Action by Written Consent shall be filed with the minutes of the proceedings of the stockholders of the Company.
 
-The undersigned have executed this Action by Written Consent as of the date set forth under his or her name below. Any copy, facsimile, .PDF or other reliable reproduction of this Action by Written Consent may be substituted or used in lieu of the original writing for any and all purposes for which the original writing could be used, provided that such copy, facsimile, .PDF or other reproduction be a complete reproduction of the entire original writing.
+The undersigned have executed this Action by Written Consent as of the date set forth under his or her name below. Any copy, facsimile,.PDF or other reliable reproduction of this Action by Written Consent may be substituted or used in lieu of the original writing for any and all purposes for which the original writing could be used, provided that such copy, facsimile,.PDF or other reproduction be a complete reproduction of the entire original writing.
 
 Signature: _______________
 

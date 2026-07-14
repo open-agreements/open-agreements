@@ -42,7 +42,7 @@ Duration
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
-[[Trade Secrets]] has the meaning given in the California Uniform Trade Secrets Act, Cal. Civ. Code § 3426 et seq.
+[[Trade Secrets]] means Employer's non-public information that derives independent economic value from not being generally known or readily ascertainable and that Employer takes reasonable measures to keep secret.
 
 ### Timing and Employee Acknowledgements
 
@@ -50,7 +50,7 @@ Employee acknowledges that the confidentiality, company-property, and non-dispar
 
 ### Confidential Information and Trade Secret Protection
 
-Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue in perpetuity. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms. Trade secrets are protected under California law, including the California Uniform Trade Secrets Act, Cal. Civ. Code § 3426.2.
+Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue for the Trade Secrets Duration specified in Cover Terms, to the extent the information remains a trade secret. Employee's obligations regarding other Confidential Information continue for the Other Confidential Information Duration specified in Cover Terms.
 
 ### Permitted Disclosures and Protected Conduct
 
@@ -74,7 +74,7 @@ Employer may disclose the existence and terms of Employee's confidentiality, tra
 
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief to prevent actual or threatened misappropriation of trade secrets under the California Uniform Trade Secrets Act, including Cal. Civ. Code § 3426.2, and to enforce Employee's confidentiality and return-of-property obligations. If a party prevails in an action to enforce a lawful obligation under this agreement, the non-prevailing party must reimburse the prevailing party's reasonable attorney's fees and costs to the extent permitted by applicable law.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief to prevent actual or threatened misappropriation of trade secrets and to enforce Employee's confidentiality and return-of-property obligations. If a party prevails in an action to enforce a lawful obligation under this agreement, the non-prevailing party must reimburse the prevailing party's reasonable attorney's fees and costs to the extent permitted by applicable law.
 
 ### Enforceability and Severability
 
@@ -82,7 +82,7 @@ If any provision of this agreement is found to be unenforceable, the remaining p
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive for the Trade Secrets Duration specified in Cover Terms to the extent they relate to trade secrets, and for the Other Confidential Information Duration specified in Cover Terms for other Confidential Information. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### Assignment and Successors
 
@@ -90,7 +90,7 @@ Employee may not assign this agreement or any rights or obligations under it. Em
 
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms, including Cal. Bus. & Prof. Code §§ 16600, 16600.1, and 16600.5, and Cal. Lab. Code § 925. For an Employee who primarily resides and works in California, this agreement does not require Employee, as a condition of employment, to adjudicate a claim arising in California outside California or to waive the substantive protection of California law, except to the extent Cal. Lab. Code § 925 permits a different provision because Employee was individually represented by counsel in negotiating it.
+This agreement is governed by the law listed in Cover Terms. For an Employee who primarily resides and works in California, this agreement does not require Employee, as a condition of employment, to adjudicate a claim arising in California outside California or to waive the substantive protection of California law, except where Employee was individually represented by counsel in negotiating a different provision.
 
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 

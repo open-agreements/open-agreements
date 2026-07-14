@@ -1,0 +1,62 @@
+name: Confidentiality & Invention Assignment Agreement (Nevada)
+category: employment
+description: 'Nevada-specific employee confidentiality and invention assignment agreement aligned with Nevada''s employer-ownership default (NRS 600.500): the employer keeps statutory ownership of patentable inventions and trade secrets developed in the course and scope of employment that relate directly to the work, the own-time carve-out reaches only inventions outside that statutory grant, and the form carries no state carve-out notice because Nevada imposes none. The assignment clause keeps present-tense assignment language for a clean federal patent chain of title and carries no post-employment holdover tail. Drafted as a starting point for licensed counsel review.'
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-confidentiality-invention-assignment-agreement-nevada
+version: 0.1.0
+stability: experimental
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Baseline structure inspired by permissive public references including the Balanced Employee IP Agreement (CC0) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.
+fields:
+  - name: company_name
+    type: string
+    description: Legal name of employer
+    section: Parties
+  - name: company_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the company
+    section: Parties
+  - name: company_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the company
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of employee
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    section: Timing
+  - name: prior_inventions_disclosure
+    type: string
+    description: List of prior inventions excluded from assignment, or None
+    section: Inventions
+  - name: excluded_inventions_statement
+    type: string
+    description: Carveout statement for independently developed inventions
+    default: Inventions Employee develops entirely on personal time without using company equipment, supplies, facilities, or trade secret information are excluded, except for inventions that either (a) relate to company business or its actual or demonstrably anticipated research or development, or (b) result from work performed for the company. No exclusion covers a patentable invention or trade secret developed during the course and scope of employment that relates directly to the work performed.
+    default_value_rationale: Nevada's NRS 600.500 makes the employer the sole owner, absent an express written agreement, of any patentable invention or trade secret developed in the course and scope of employment that relates directly to the work. The final sentence keeps every exclusion outside that statutory grant, so the form never gives away ownership the statute already vests in the employer.
+    section: Inventions
+  - name: return_of_materials_timing
+    type: string
+    description: Timing for return or deletion of company materials
+    section: Confidentiality
+  - name: post_termination_assistance
+    type: string
+    description: Cooperation obligations after termination
+    default: reasonable assistance with filings and signatures related to assigned inventions
+    section: Inventions
+  - name: governing_law
+    type: string
+    description: Governing law state
+    default: Nevada
+    section: Legal
+  - name: venue
+    type: string
+    description: Venue for disputes
+    default: state and federal courts in the governing law state
+    section: Legal
+priority_fields: []

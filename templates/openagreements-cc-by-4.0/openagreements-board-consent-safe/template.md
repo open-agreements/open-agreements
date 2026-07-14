@@ -4,8 +4,6 @@ The undersigned, constituting all of the members of the Board of Directors (the 
 
 **WHEREAS**, the Board believes it is in the best interests of the Company to enter into one or more Simple Agreements for Future Equity (each, a "SAFE", and together, the "SAFEs"), providing for the sale of rights to future shares of the Company's capital stock for an aggregate purchase amount of up to ${purchase_amount}, in accordance with terms set forth therein.
 
-*Note: The following resolutions do not cover all matters that may need to be addressed in connection with the SAFE financing. For example, if the Company is concurrently amending its certificate of incorporation, converting outstanding convertible notes, or granting pro rata or information rights pursuant to a side letter, additional resolutions will be needed. Always consult with counsel prior to using this consent.*
-
 ## Resolutions
 
 ### Approval of SAFE Financing
@@ -20,7 +18,7 @@ The undersigned, constituting all of the members of the Board of Directors (the 
 
 **RESOLVED FURTHER**, that when shares of the Company's capital stock are issued upon conversion of any SAFE in accordance with its terms, such shares shall be duly and validly issued, fully paid and nonassessable; and
 
-**RESOLVED FURTHER**, that each SAFE shall be offered and sold in reliance on any applicable exemption from registration provided by the Securities Act of 1933, as amended, and any applicable exemption under applicable state blue sky laws, and that the officers of the Company be, and each of them hereby is, authorized and directed, for and on behalf of the Company, to execute and file any forms, certificates, notices or other documents that are necessary or appropriate pursuant to federal or state securities laws.
+**RESOLVED FURTHER**, that each SAFE shall be offered and sold in reliance on any applicable exemption from registration provided by the Securities Act of 1933, as amended, and any applicable exemption by applicable state blue sky laws, and that the officers of the Company be, and each of them hereby is, authorized and directed, for and on behalf of the Company, to execute and file any forms, certificates, notices or other documents that are necessary or appropriate pursuant to federal or state securities laws.
 
 ### General Authorizing Resolution
 
@@ -30,7 +28,7 @@ The undersigned, constituting all of the members of the Board of Directors (the 
 
 This Action by Written Consent shall be filed with the minutes of the proceedings of the Board of Directors of the Company.
 
-The undersigned have executed this Action by Written Consent as of the date set forth under his or her name below. Any copy, facsimile, .PDF or other reliable reproduction of this Action by Written Consent may be substituted or used in lieu of the original writing for any and all purposes for which the original writing could be used, provided that such copy, facsimile, .PDF or other reproduction be a complete reproduction of the entire original writing.
+The undersigned have executed this Action by Written Consent as of the date set forth under his or her name below. Any copy, facsimile,.PDF or other reliable reproduction of this Action by Written Consent may be substituted or used in lieu of the original writing for any and all purposes for which the original writing could be used, provided that such copy, facsimile,.PDF or other reproduction be a complete reproduction of the entire original writing.
 
 Signature: _______________
 

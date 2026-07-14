@@ -28,12 +28,10 @@ source_url: >-
 version: 0.1.0
 license: CC-BY-4.0
 allow_derivatives: true
-distribution: bundled
-artifact_type: template
 attribution_text: >-
   Authored by OpenAgreements contributors. North Carolina-specific analysis
-  informed by the quote-verified North Carolina practice note. Licensed under
-  CC BY 4.0.
+  informed by the quote-verified North Carolina practice note. Licensed under CC
+  BY 4.0.
 layout_id: cover-standard-signature-v1
 style_id: openagreements-default-v1
 document:
@@ -96,15 +94,16 @@ fields:
     type: string
     description: >-
       The new consideration supporting the covenants where the employee signs
-      after employment has already begun — for example a raise in pay, a new
-      job assignment, or a stated one-time payment. Leave blank where the
-      agreement is signed at the outset of employment, in which case the offer
-      of employment is itself the consideration.
+      after employment has already begun — for example a raise in pay, a new job
+      assignment, or a stated one-time payment. Leave blank where the agreement
+      is signed at the outset of employment, in which case the offer of
+      employment is itself the consideration.
     display_label: Mid-Employment Consideration
     default: ''
     section: Timing
     rationale_source: case_law
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.north-carolina.support-mid-employment-covenants-with-new-consideration
+    requirement_id: >-
+      REQ-labor-and-employment-law.restrictive-covenant-agreement.north-carolina.support-mid-employment-covenants-with-new-consideration
     default_value_rationale: >-
       North Carolina's mid-employment consideration rule requires new
       consideration for a covenant signed after the employment relationship
@@ -132,10 +131,15 @@ fields:
       business information reads as overreach.
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee non-solicitation covenant is included
-    display_label: Employee Non-Solicitation Included
-    default: true
+    description: >-
+      Whether the employee no-hire / non-solicitation covenant is included.
+      Alabama's only category for restraints touching another party's workers is
+      the no-hire exception for workers in a position uniquely essential to the
+      management, organization, or service of the business.
+    display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
+    rationale_source: editorial
+    default: true
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee non-solicitation restriction
@@ -145,11 +149,12 @@ fields:
     benchmark_ref: restrictive-covenant/employee-non-solicit-duration
     section: Employee Non-Solicitation
     default_value_rationale: >-
-      North Carolina sets no statutory cap on duration; an employee non-solicit has no statute of
-      its own and stands or falls on ordinary restraint-of-trade reasonableness. 24 months matches
-      the modal employee non-solicit term observed in benchmarked, publicly-filed employee
-      agreements; 12 months is the common lighter alternative, and counsel should size the term to
-      the employer's actual protectable interest.
+      North Carolina sets no statutory cap on duration; an employee non-solicit
+      has no statute of its own and stands or falls on ordinary
+      restraint-of-trade reasonableness. 24 months matches the modal employee
+      non-solicit term observed in benchmarked, publicly-filed employee
+      agreements; 12 months is the common lighter alternative, and counsel
+      should size the term to the employer's actual protectable interest.
   - name: covered_employee_period
     type: string
     description: >-
@@ -163,10 +168,14 @@ fields:
       scope.
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the customer/partner non-solicitation covenant is included
+    description: >-
+      Whether the current-customer non-solicitation covenant is included.
+      Alabama gives this covenant its own category, limited to current
+      customers.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
+    rationale_source: editorial
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer/partner non-solicitation restriction
@@ -176,11 +185,12 @@ fields:
     benchmark_ref: restrictive-covenant/customer-non-solicit-duration
     section: Customer Non-Solicitation
     default_value_rationale: >-
-      North Carolina sets no statutory cap; a customer non-solicit maps directly onto
-      the customer-goodwill interest and is often the sturdiest restraint when held to
-      actual relationships. 12 months is the lighter side of the near-even 12/24-month
-      split observed in benchmarked, publicly-filed employee agreements — a conservative
-      duration counsel should size to the actual customer relationships protected.
+      North Carolina sets no statutory cap; a customer non-solicit maps directly
+      onto the customer-goodwill interest and is often the sturdiest restraint
+      when held to actual relationships. 12 months is the lighter side of the
+      near-even 12/24-month split observed in benchmarked, publicly-filed
+      employee agreements — a conservative duration counsel should size to the
+      actual customer relationships protected.
   - name: covered_customer_period
     type: string
     description: >-
@@ -197,9 +207,9 @@ fields:
     description: >-
       Whether the non-competition covenant is included. North Carolina has no
       general non-compete statute; a non-compete is enforceable only if it
-      satisfies all five elements of the common-law reasonableness test and is tied
-      to a legitimate business interest rather than ordinary competition. This
-      template confines the restraint to the employee's actual duties and
+      satisfies all five elements of the common-law reasonableness test and is
+      tied to a legitimate business interest rather than ordinary competition.
+      This template confines the restraint to the employee's actual duties and
       customer territory and drafts it as a severable unit because North
       Carolina courts strike but never rewrite an overbroad covenant.
     display_label: Non-Competition Included
@@ -209,11 +219,11 @@ fields:
       Conservative default. The non-compete is the most heavily scrutinized
       covenant, one defective element defeats it, and a court will not resize an
       overbroad restraint — it strikes it. A customer non-solicit backstopped by
-      the North Carolina Trade Secrets Protection Act often protects the employer
-      as well. Include only after confirming a legitimate interest (intimate
-      knowledge of the business not generally available to the public) and
-      confining duration, territory, and activity to the employee's actual role
-      and customer footprint.
+      the North Carolina Trade Secrets Protection Act often protects the
+      employer as well. Include only after confirming a legitimate interest
+      (intimate knowledge of the business not generally available to the public)
+      and confining duration, territory, and activity to the employee's actual
+      role and customer footprint.
   - name: noncompete_duration
     type: string
     description: Duration of non-competition restriction
@@ -223,24 +233,27 @@ fields:
     benchmark_ref: restrictive-covenant/non-compete-duration
     section: Non-Competition
     default_value_rationale: >-
-      North Carolina imposes no statutory cap on duration; reasonableness is a question
-      of law weighing time and territory together on a sliding scale, and a court will
-      not shorten an unreasonable term — it declines the covenant. 12 months matches the
-      modal non-compete term observed in benchmarked, publicly-filed employee agreements
-      — a conservative default counsel should size to the actual role and market rather
-      than copy from another form.
+      North Carolina imposes no statutory cap on duration; reasonableness is a
+      question of law weighing time and territory together on a sliding scale,
+      and a court will not shorten an unreasonable term — it declines the
+      covenant. 12 months matches the modal non-compete term observed in
+      benchmarked, publicly-filed employee agreements — a conservative default
+      counsel should size to the actual role and market rather than copy from
+      another form.
   - name: territory
     type: string
     description: Geographic scope of the non-competition restriction
     display_label: Restricted Territory
-    default: the geographic area in which Employee provided services and built customer relationships
+    default: >-
+      the geographic area in which Employee provided services and built customer
+      relationships
     section: Non-Competition
     default_value_rationale: >-
       Tied to where the employee actually worked and built customer
       relationships. A territory is reasonable only to the extent it protects
-      the employer's interest in maintaining its customers, so a
-      footprint-wide or aspirational territory is among the most reliable ways to
-      lose the whole covenant to a strike.
+      the employer's interest in maintaining its customers, so a footprint-wide
+      or aspirational territory is among the most reliable ways to lose the
+      whole covenant to a strike.
   - name: competitive_business_definition
     type: string
     description: >-
@@ -259,10 +272,16 @@ fields:
     section: Non-Competition
   - name: nondealing_included
     type: boolean
-    description: Whether the no-business-with-covered-customers covenant is included.
+    description: >-
+      Whether the no-business-with-covered-customers covenant is included. A
+      non-dealing covenant has no named Alabama category of its own, so it must
+      be drafted to fit inside the current-customer non-solicit exception or it
+      is exposed to Alabama's void rule for restraints outside the listed
+      categories.
     display_label: No Business with Covered Customers Included
     default: false
     section: No Business with Covered Customers
+    rationale_source: editorial
   - name: nondealing_duration
     type: string
     description: Duration of the no-business-with-covered-customers restriction
@@ -281,18 +300,23 @@ fields:
     section: Definitions
     default_value_rationale: >-
       Five percent of any class of publicly traded securities is the modal
-      passive-investment carve-out threshold observed in benchmarked, publicly-filed
-      employee agreements that include the carve-out (lower 1-3 percent thresholds are
-      the common tighter alternatives). Because a North Carolina court strikes rather
-      than narrows an overbroad restraint, a clean passive-holdings carve-out avoids
-      gratuitous overbreadth like a technical ban on index funds and ordinary public
-      shares.
+      passive-investment carve-out threshold observed in benchmarked,
+      publicly-filed employee agreements that include the carve-out (lower 1-3
+      percent thresholds are the common tighter alternatives). Because a North
+      Carolina court strikes rather than narrows an overbroad restraint, a clean
+      passive-holdings carve-out avoids gratuitous overbreadth like a technical
+      ban on index funds and ordinary public shares.
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included.
+    description: >-
+      Whether the non-investment covenant is included. A non-investment covenant
+      has no named Alabama category; one genuine use is restraining a licensed
+      professional's business conduct outside the practice of the profession,
+      which sits outside Alabama's professional exemption.
     display_label: Non-Investment Included
     default: false
     section: Non-Investment
+    rationale_source: editorial
   - name: noninvestment_duration
     type: string
     description: Duration of non-investment restriction
@@ -306,9 +330,21 @@ fields:
     default: 24 months
     section: Non-Disparagement
     default_value_rationale: 24 months is common for employment non-disparagement provisions.
+  - name: worker_is_physician
+    type: boolean
+    description: >-
+      Whether Employee is a physician. Set this explicitly from Employee's
+      licensed role to include physician-specific terms. For Indiana, the
+      applicable provisions vary by execution date and employer type, and may
+      require a release buyout term or exclude the non-compete entirely.
+    display_label: Employee Is a Physician
+    section: Physician
+omitted_clauses: drop
 priority_fields:
   - employer_name
   - employee_name
+distribution: bundled
+artifact_type: template
 ---
 # Employee Restrictive Covenant Agreement
 
@@ -364,7 +400,7 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {% field name="passive_public_holdings_threshold" /%} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means the legitimate business interests a North Carolina covenant may protect, namely Employer's Confidential Information, Employer's trade secrets as defined by the North Carolina Trade Secrets Protection Act (N.C. Gen. Stat. § 66-152), and Employer's goodwill in its existing customer, vendor, referral-source, and business-partner relationships, but not Employer's interest in avoiding ordinary competition. A restraint can be reasonably necessary to protect these interests only where Employee, as a result of employment, acquired intimate knowledge of the nature and character of the business not otherwise generally available to the public.
+[[Protected Interests]] means Employer's Confidential Information, Trade Secrets, and goodwill in existing customer, vendor, referral-source, and business-partner relationships.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason, and extended only as expressly provided in the Tolling and Extension During Breach section.
 
@@ -372,25 +408,25 @@ The terms below are incorporated into and form part of this agreement.
 
 [[Solicit]] means to actively contact, approach, persuade, request, petition, induce, or encourage any person or entity for the purpose of diverting business away from Employer or of causing a Covered Employee to leave Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] has the meaning given in the North Carolina Trade Secrets Protection Act, N.C. Gen. Stat. § 66-152(3).
+[[Trade Secrets]] means information qualifying as a trade secret under applicable law.
 {% /clause %}
 
 {% clause id="recitals-and-legitimate-business-interest" %}
 ### Recitals and Protected Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to protect one or more of Employer's Protected Interests and to impose no restraint greater than is reasonably necessary for that protection. North Carolina has no general non-compete statute; each covenant is a partial restraint of trade, and the parties intend each to be supported by valuable consideration, reasonable as to time and territory, tied to a legitimate business interest, and not directed at ordinary competition. The parties intend each covenant to guard Employer's Confidential Information, trade secrets, and existing customer goodwill and not to eliminate ordinary competition.
+Employer and Employee acknowledge that each restrictive covenant is supported by valuable consideration and protects Employer's Protected Interests.
 {% /clause %}
 
 {% clause id="timing-consideration-and-employee-acknowledgements" %}
 ### Timing, Consideration, and Employee Acknowledgements
 
-The parties acknowledge that this agreement is supported by valuable consideration and identify what that consideration is. If this agreement is signed at the outset of employment, the offer and commencement of employment is itself valuable consideration for the covenants and no separate payment is required. If Employee is an existing employee and signs after the employment relationship already exists, the parties agree that continued at-will employment is not sufficient consideration and that the covenants are instead supported by the new consideration stated in Cover Terms under Mid-Employment Consideration — such as a raise in pay, a new job assignment, or a stated payment — which the parties acknowledge actually moves. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that valuable consideration establishes only that the covenants are supported, not that they are reasonable, and that each covenant must independently satisfy North Carolina's reasonableness requirements on time, territory, and scope. This agreement is effective as of the Effective Date listed in Cover Terms.
+The parties acknowledge that this agreement is supported by valuable consideration. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration for the covenants. If Employee signs after employment has begun, the new consideration stated in Cover Terms under Mid-Employment Consideration is exchanged for the covenants. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
 {% /clause %}
 
 {% clause id="signed-writing-requirement" %}
 ### Signed Writing Requirement
 
-Each restrictive covenant in this agreement limits Employee's right to do business and is therefore unenforceable unless it is in writing and duly signed by Employee, the party who agrees not to compete (N.C. Gen. Stat. § 75-4). The parties intend Employee's signature on the Signature Page to satisfy that statutory requirement for every restraint covenant in this agreement, and acknowledge that there is no oral, implied, or course-of-conduct substitute for it. Any amendment that changes the scope of a covenant must likewise be in a writing signed by Employee.
+Each restrictive covenant and any amendment changing its scope must be in writing and signed by Employee.
 {% /clause %}
 
 {% clause id="confidential-information-and-trade-secret-protection" %}
@@ -408,7 +444,7 @@ Nothing in this agreement prohibits Employee from: (a) reporting possible violat
 {% clause id="return-deletion-and-certification-of-company-property" %}
 ### Return, Deletion, and Certification of Company Property
 
-Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request. The parties intend that these return, deletion, and certification mechanics serve as part of Employer's efforts reasonable under the circumstances to maintain the secrecy of its trade secrets, as contemplated by N.C. Gen. Stat. § 66-152(3).
+Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request.
 {% /clause %}
 
 {% clause id="non-solicitation-of-employees" include-when="employee_nonsolicit_included" %}
@@ -420,13 +456,13 @@ During the Restricted Period, Employee must not Solicit, recruit, or induce any 
 {% clause id="non-solicitation-of-customers-vendors-referral-sources-and-business-partners" include-when="customer_nonsolicit_included" %}
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers with whom Employee had material contact and does not reach prospective clients Employer never obtained. This covenant maps directly onto Employer's goodwill in its existing customer relationships and operates together with the confidentiality and trade-secret protections in this agreement.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer with whom Employee had material contact. This covenant does not reach prospective clients Employer never obtained.
 {% /clause %}
 
 {% clause id="no-business-with-covered-customers" include-when="nondealing_included" %}
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer with whom Employee had material contact, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee. This covenant is a partial restraint sized at least as tightly as the customer non-solicitation beside it and reaches only existing Covered Customers.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer with whom Employee had material contact, whether Employee or the Covered Customer initiates contact.
 {% /clause %}
 
 {% clause id="non-competition" include-when="noncompete_included" %}
@@ -438,7 +474,7 @@ During the Restricted Period, Employee must not engage in, be employed by, consu
 {% clause id="non-investment" include-when="noninvestment_included" %}
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Because this covenant restrains active roles at and material participation in a Competitive Business, it is a partial restraint drawn no broader than necessary to protect Employer's Protected Interests. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. Passive Public Holdings are permitted.
 {% /clause %}
 
 {% clause id="non-disparagement" %}
@@ -447,10 +483,10 @@ During the Restricted Period, Employee must not acquire or hold any active owner
 During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law, including rights protected under Section 7 of the National Labor Relations Act.
 {% /clause %}
 
-{% clause id="physician-specific-rights-and-notices" %}
+{% clause id="physician-specific-rights-and-notices" include-when="worker_is_physician" %}
 ### Physician and Health Care Practitioner Covenants
 
-If Employee is a physician, any covenant in this agreement restraining Employee from the practice of medicine uses a narrow radius and a short term, preserves patient access and continuity of care, and is enforced only to the extent applicable North Carolina public-policy limits permit. Nothing in this agreement enlarges such a covenant beyond what those limits allow.
+If Employee is a physician, no covenant prohibits Employee from continuing care for an existing patient or complying with applicable patient-notification and access requirements.
 {% /clause %}
 
 {% clause id="no-conflicting-obligations" %}
@@ -468,19 +504,19 @@ Employer may disclose the existence and terms of this agreement to any prospecti
 {% clause id="tolling-and-extension-during-breach" %}
 ### Tolling and Extension During Breach
 
-If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, so that the full duration of the restriction runs from the date the breach ends. Any such extension is itself a restraint that must remain reasonable and bounded, and the parties do not intend an open-ended or indefinite extension.
+If Employee breaches any restrictive covenant in this agreement, the Restricted Period for that covenant is extended by one day for each day of the breach, up to the original Restricted Period.
 {% /clause %}
 
 {% clause id="remedies" %}
 ### Remedies
 
-Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law, including relief under the North Carolina Trade Secrets Protection Act, N.C. Gen. Stat. § 66-154, under which actual or threatened misappropriation of a trade secret may be enjoined independent of any covenant.
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate. Employer may seek injunctive or other equitable relief in addition to any other remedies available at law.
 {% /clause %}
 
 {% clause id="enforceability-and-severability" %}
 ### Enforceability and Severability
 
-This agreement does not rely on any reformation or savings clause to cure overbreadth, and none is intended to authorize judicial revision. Each restrictive covenant is drafted as a distinctly severable, reasonable unit — with time, territory, and activity scope separately stated so that each is reasonable standing alone (tiered territories, stepped durations, and separately stated restraints where used) — so that if a court strikes a distinctly separable unreasonable term, the remaining divisible and reasonable portions stay in full force and effect. A court's refusal to enforce one covenant, or its decision to enforce only a distinctly separable reasonable portion, does not affect the others.
+If any distinctly severable provision is unenforceable, it is severed and the remaining provisions remain in effect.
 {% /clause %}
 
 {% clause id="survival-and-expiration-of-each-covenant" %}
@@ -498,13 +534,13 @@ Employee may not assign this agreement or any rights or obligations under it. Em
 {% clause id="governing-law-venue-and-dispute-process" %}
 ### Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms. For a covenant entered into in North Carolina, this agreement does not require the prosecution of any action or the arbitration of any dispute arising from the agreement to be instituted or heard in another state, and disputes arising from such a covenant will be resolved in the courts of North Carolina as N.C. Gen. Stat. § 22B-3 requires, subject to non-waivable rights under applicable law. The parties intend that the governing-law and venue choices match where Employee actually lives and works.
+North Carolina law governs this agreement, and the state and federal courts located in North Carolina have exclusive jurisdiction over disputes arising from it, subject to non-waivable applicable law.
 {% /clause %}
 
 {% clause id="entire-agreement-amendment-waiver-and-electronic-signatures" %}
 ### Entire Agreement, Amendment, Waiver, and Electronic Signatures
 
-This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. This agreement may be amended only in writing signed by both parties, and any amendment changing the scope of a restrictive covenant must be signed by Employee as required by N.C. Gen. Stat. § 75-4. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
+This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. This agreement may be amended only in writing signed by both parties, and any amendment changing the scope of a restrictive covenant must be signed by Employee. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
 {% /clause %}
 {% /agreement-section %}
 
