@@ -48,7 +48,9 @@ export async function runExternalFill(options: ExternalFillOptions): Promise<Ext
     fields: metadata.fields,
     priorityFieldNames: metadata.priority_fields,
     cleanPatch: { cleanConfig, replacements },
-    verify: (p) => verifyOutput(p, values, replacements, cleanConfig),
+    // Forward the cleaned source so formatting anomalies and context-key
+    // placeholders are baselined against it (consistent with runFieldSelector).
+    verify: (p, cleanedSourcePath) => verifyOutput(p, values, replacements, cleanConfig, cleanedSourcePath),
     keepIntermediate,
   });
 

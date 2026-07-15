@@ -240,6 +240,18 @@ function hasQualifiedLeftover(
  * Find leftover source placeholders from the replacement map that survive in the
  * filled output.
  *
+ * Known limitation (deliberate tradeoff): the count baseline treats ANY
+ * reduction of a context key's token as success, so it cannot distinguish an
+ * occurrence a selector deliberately retains (e.g. the two documented `[___]` in
+ * series_designation) from an unexpected extra occurrence of the same token that
+ * failed to fill — the two are textually identical. Fully distinguishing them
+ * would require machine-readable retained-occurrence metadata in the field
+ * contract (fields/<id>.json), which is out of scope here. Two existing
+ * mechanisms cover the realistic paths this check cannot: (a) an unexpected
+ * extra token means the source changed, which the source_sha256 pin / source
+ * drift canary flags before fill; (b) a DECLARED selector occurrence that fails
+ * to resolve surfaces an `unresolved` selector warning.
+ *
  * Two key shapes are handled differently, matching how the patcher targets them:
  *
  *  - Simple keys ("[Company Name]") replace every occurrence, so any surviving
