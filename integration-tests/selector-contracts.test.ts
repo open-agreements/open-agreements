@@ -308,7 +308,15 @@ describeWithCoiSource('CoI `>`-anchor field migration parity', () => {
   //  - `original_incorporation_date` / `effective_date` (#608): pure selector-contract fields with NO
   //    migrated legacy keys and NO `replacements.json` entries. They are date-typed, and prepareFillData
   //    renders ISO input as a display date; keeping them in the legacy value-map would make the runtime
-  //    verifier compare raw ISO input against the formatted output. They are covered end-to-end below.
+  //    verifier's "Context values present" check compare raw ISO input against the formatted output on
+  //    every normal fill (a spurious "Missing" warning). They are covered end-to-end below.
+  //    NOTE on drift coverage: because these two fields have no `replacements.json` search text, the
+  //    verifier's "Leftover source placeholders" check does NOT scan their source blanks, and the
+  //    `no_unresolved_placeholder` postcondition only checks that the `{field_id}` tag was consumed —
+  //    not that the raw source blank survived. Upstream source drift for these slots is instead surfaced
+  //    by (a) the selector's `failure_behavior: warn` (an "unresolved occurrence(s)" console warning) and
+  //    (b) the repo-level `source-drift-canary` gate. This is a deliberate, narrower trade than the
+  //    per-fill "Missing" false positive that legacy value-map coverage would reintroduce.
   const noLegacyParity = new Set(['company_name', 'original_incorporation_date', 'effective_date']);
   for (const manifest of manifests.filter((m) => !noLegacyParity.has(m.field_id))) {
     const field = manifest.field_id;

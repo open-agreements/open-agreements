@@ -10855,7 +10855,7 @@
           "type": "date",
           "required": true,
           "section": null,
-          "description": "Execution/effective date of this amended and restated certificate, filled on the signature block (\"executed ... on <date>\"). Accepts ISO YYYY-MM-DD (rendered as e.g. \"July 15, 2026\") or a display-ready date string.",
+          "description": "Date this amended and restated certificate is EXECUTED, printed on the signature block (\"executed by a duly authorized officer of this corporation on <date>\") — supply the execution/signature date, not a later intended filing date. Under 8 Del. C. Section 103 the charter becomes legally effective on filing with the Delaware Secretary of State (or a specified delayed effective time), which may differ from this execution date. Accepts ISO YYYY-MM-DD (rendered as e.g. \"July 15, 2026\") or a display-ready date string.",
           "default": null,
           "default_value_rationale": null
         },

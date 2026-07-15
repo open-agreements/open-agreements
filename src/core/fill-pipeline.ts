@@ -123,21 +123,31 @@ const MONTH_NAMES = [
  * and `toLocaleDateString` can render the previous calendar day in
  * negative-offset timezones — and never calls any locale/`Intl` API.
  *
- * Any value that is not a strict `YYYY-MM-DD` string with an in-range month
- * (01–12) and day (01–31) is returned UNCHANGED. This preserves backward
- * compatibility for callers/fixtures that already supply a display-ready date
- * string (e.g. "March 20, 2026") and passes through empty-but-non-null
+ * Any value that is not a strict `YYYY-MM-DD` string denoting a REAL calendar
+ * date is returned UNCHANGED. Beyond the coarse month (01–12) / day (01–31)
+ * range, per-month day limits and leap years are enforced, so impossible dates
+ * ("2026-02-31", "2025-02-29") are never dressed up as an authoritative document
+ * date — they fall through exactly like a non-ISO string. This preserves
+ * backward compatibility for callers/fixtures that already supply a display-ready
+ * date string (e.g. "March 20, 2026") and passes through empty-but-non-null
  * placeholders (`''`, the blank placeholder) untouched.
  */
 export function formatDocumentDate(value: string): string {
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
   if (!match) return value;
-  const year = match[1];
+  const yearStr = match[1];
   const month = Number(match[2]);
   const day = Number(match[3]);
-  if (month < 1 || month > 12 || day < 1 || day > 31) return value;
-  // Number(match[3]) drops the leading zero: "05" → 5.
-  return `${MONTH_NAMES[month - 1]} ${day}, ${year}`;
+  if (month < 1 || month > 12 || day < 1) return value;
+  // Reject impossible calendar dates (Feb 30/31, Apr 31, Feb 29 in a non-leap
+  // year, …). Deterministic arithmetic only — no Date/locale.
+  const year = Number(yearStr);
+  const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+  const daysInMonth = [31, isLeapYear ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  if (day > daysInMonth[month - 1]) return value;
+  // Number(match[3]) drops the leading zero: "05" → 5. yearStr keeps any leading
+  // zeros the (unrealistic) 4-digit year might carry.
+  return `${MONTH_NAMES[month - 1]} ${day}, ${yearStr}`;
 }
 
 /**

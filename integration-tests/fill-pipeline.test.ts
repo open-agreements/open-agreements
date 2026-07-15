@@ -510,6 +510,27 @@ describe('formatDocumentDate', () => {
     expect(formatDocumentDate('2026-7-5')).toBe('2026-7-5');
     expect(formatDocumentDate('07/15/2026')).toBe('07/15/2026');
   });
+
+  it('passes through impossible calendar dates unchanged (per-month day limits)', () => {
+    expect(formatDocumentDate('2026-02-31')).toBe('2026-02-31');
+    expect(formatDocumentDate('2026-02-30')).toBe('2026-02-30');
+    expect(formatDocumentDate('2026-04-31')).toBe('2026-04-31');
+    expect(formatDocumentDate('2026-06-31')).toBe('2026-06-31');
+    expect(formatDocumentDate('2026-09-31')).toBe('2026-09-31');
+    expect(formatDocumentDate('2026-11-31')).toBe('2026-11-31');
+  });
+
+  it('enforces leap-year rules for February 29 (deterministic, no Date)', () => {
+    // Non-leap years → Feb 29 is invalid, passed through.
+    expect(formatDocumentDate('2025-02-29')).toBe('2025-02-29');
+    expect(formatDocumentDate('2100-02-29')).toBe('2100-02-29'); // century, not /400
+    // Leap years → Feb 29 is valid, formatted.
+    expect(formatDocumentDate('2024-02-29')).toBe('February 29, 2024');
+    expect(formatDocumentDate('2000-02-29')).toBe('February 29, 2000'); // /400 leap
+    // Last valid day of each 31/30-day month still formats.
+    expect(formatDocumentDate('2026-01-31')).toBe('January 31, 2026');
+    expect(formatDocumentDate('2026-04-30')).toBe('April 30, 2026');
+  });
 });
 
 describe('prepareFillData date-typed field formatting', () => {
