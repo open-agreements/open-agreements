@@ -59,8 +59,11 @@ export interface PipelineOptions {
   // fillDocx options
   fixSmartQuotes?: boolean;             // default: false
 
-  // Verification callback — each path passes its own verifier
-  verify: (outputPath: string) => VerifyResult | Promise<VerifyResult>;
+  // Verification callback — each path passes its own verifier. The second
+  // argument is the cleaned-but-unfilled source (present only when cleanPatch is
+  // configured); verifiers use it to baseline pre-existing source anomalies so
+  // only fill-introduced ones are reported.
+  verify: (outputPath: string, cleanedSourcePath?: string) => VerifyResult | Promise<VerifyResult>;
   postProcess?: (outputPath: string) => void | Promise<void>;
 
   // Debugging
@@ -173,9 +176,13 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
 
     // Step 3: Clean → Patch (if configured)
     let currentPath = sourcePath;
+    // Cleaned-but-unfilled source, threaded to verify() as the formatting-anomaly
+    // baseline so pre-existing source anomalies are not reported as fill defects.
+    let cleanedSourcePath: string | undefined;
     if (cleanPatch) {
       const cleanedPath = join(tempDir, 'cleaned.docx');
       await cleanDocument(sourcePath, cleanedPath, cleanPatch.cleanConfig);
+      cleanedSourcePath = cleanedPath;
 
       // Selector-contract patch (deterministic locators) runs between clean and
       // the legacy patch. It rewrites resolved occurrences to {field_id} tags;
@@ -300,7 +307,7 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
     }
 
     // Step 8: Verify — failures surface to callers via warnings (soft; no throw)
-    const verifyResult = await verify(outputPath);
+    const verifyResult = await verify(outputPath, cleanedSourcePath);
     if (!verifyResult.passed) {
       const failedChecks = verifyResult.checks.filter((c) => !c.passed);
       const failures = failedChecks
