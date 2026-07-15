@@ -10,6 +10,7 @@ import replacements from '../templates/nvca-free-non-redistributable/nvca-stock-
 import coiReplacements from '../templates/nvca-free-non-redistributable/nvca-certificate-of-incorporation/replacements.json' with { type: 'json' };
 import { cleanDocument } from '../src/core/field-selector/cleaner.js';
 import { patchDocument } from '../src/core/field-selector/patcher.js';
+import { runFieldSelector } from '../src/core/field-selector/index.js';
 import {
   loadSelectorContracts,
   applySelectorContracts,
@@ -257,9 +258,12 @@ describe('loadSelectorContracts (CoI)', () => {
     const fieldSelectorDir = resolveFieldSelectorDir(COI);
     const fieldNames = loadFieldSelectorMetadata(fieldSelectorDir).fields.map((f) => f.name);
     const { manifests, templateManifest } = loadSelectorContracts(fieldSelectorDir, fieldNames);
-    // 27 fields migrated (content-only); see header note for the deferrals.
-    expect(manifests).toHaveLength(27);
-    expect(templateManifest?.migrated_keys).toHaveLength(69);
+    // 28 field manifests; see header note for the deferrals. `original_incorporation_date` and
+    // `effective_date` (#608) are pure selector-contracts with NO migrated legacy keys — the 5 recital
+    // `[________ __, 20__]` keys that formerly backed `effective_date` were removed from both
+    // replacements.json and migrated_keys, so the migrated count drops from 69 to 64.
+    expect(manifests).toHaveLength(28);
+    expect(templateManifest?.migrated_keys).toHaveLength(64);
     // every field_id is a real metadata field (loadSelectorContracts already enforces this, but assert
     // the join key explicitly) and every migrated key is a real replacements.json key (no drift/typos).
     const metaFields = new Set(fieldNames);
@@ -294,14 +298,19 @@ describeWithCoiSource('CoI `>`-anchor field migration parity', () => {
     legacyKeysByField.set(field, { ...(legacyKeysByField.get(field) ?? {}), [key]: value });
   }
 
-  // `company_name` is deliberately excluded from the byte-identity gate and covered by its own
-  // dedicated test below (#607). Its caption (`INCORPORATIONOF > [_________]`) and opening-recital
-  // (`[____________], a corporation > [____________]`) legacy `>` keys are dead duplicates — the
-  // legacy `replaceFirstAfterContext` never fires them (the caption context has no space before the
-  // blank; the recital context IS the target blank) — so legacy fills only the two body occurrences.
-  // The selector correctly fills all four, which is exactly the bug #607 fixes, so the two paths are
-  // intentionally NOT byte-identical for this field.
-  for (const manifest of manifests.filter((m) => m.field_id !== 'company_name')) {
+  // Fields with no legacy counterpart are excluded from the byte-identity gate and covered by their
+  // own dedicated tests below:
+  //  - `company_name` (#607): its caption (`INCORPORATIONOF > [_________]`) and opening-recital
+  //    (`[____________], a corporation > [____________]`) legacy `>` keys are dead duplicates — the
+  //    legacy `replaceFirstAfterContext` never fires them (the caption context has no space before the
+  //    blank; the recital context IS the target blank) — so legacy fills only the two body occurrences.
+  //    The selector correctly fills all four, which is exactly the bug #607 fixes.
+  //  - `original_incorporation_date` / `effective_date` (#608): pure selector-contract fields with NO
+  //    migrated legacy keys and NO `replacements.json` entries. They are date-typed, and prepareFillData
+  //    renders ISO input as a display date; keeping them in the legacy value-map would make the runtime
+  //    verifier compare raw ISO input against the formatted output. They are covered end-to-end below.
+  const noLegacyParity = new Set(['company_name', 'original_incorporation_date', 'effective_date']);
+  for (const manifest of manifests.filter((m) => !noLegacyParity.has(m.field_id))) {
     const field = manifest.field_id;
     const expectedSpans = manifest.occurrences.length;
     it(`[${field}] selector patch is byte-identical to legacy patch (${expectedSpans} span(s))`, async () => {
@@ -385,6 +394,84 @@ describeWithCoiSource('CoI company_name covers all four occurrences (#607)', () 
       expect(text.includes('[____________]'), 'recital placeholder still present').toBe(false);
     } finally {
       rmSync(dir, { recursive: true, force: true });
+    }
+  });
+});
+
+// ---------------------------------------------------------------------------
+// CoI original_incorporation_date vs effective_date (#608).
+//
+// The historical recital date ("originally incorporated ... on [________ __, 20__]") and the charter's
+// execution/effective date ("executed by a duly authorized officer of this corporation on ___________")
+// are DISTINCT slots. Pre-#608 the single `effective_date` field targeted the recital and rendered ISO
+// input verbatim. This asserts each field now owns its own span (they never overwrite one another) and
+// that the recital carries the historical incorporation date.
+// ---------------------------------------------------------------------------
+describeWithCoiSource('CoI original_incorporation_date and effective_date target distinct slots (#608)', () => {
+  const fieldSelectorDir = resolveFieldSelectorDir(COI);
+  const fieldNames = loadFieldSelectorMetadata(fieldSelectorDir).fields.map((f) => f.name);
+  const { manifests } = loadSelectorContracts(fieldSelectorDir, fieldNames);
+  const recitalManifest = manifests.find((m) => m.field_id === 'original_incorporation_date')!;
+  const executionManifest = manifests.find((m) => m.field_id === 'effective_date')!;
+
+  it('each date field resolves uniquely against the raw source', async () => {
+    expect(recitalManifest, 'original_incorporation_date manifest not loaded').toBeDefined();
+    expect(executionManifest, 'effective_date manifest not loaded').toBeDefined();
+
+    const raw = await resolveSelectorContracts(cachedSourcePathFor(COI), [recitalManifest, executionManifest]);
+    expect(raw.fields[0].unresolved, 'original_incorporation_date unresolved').toBe(false);
+    expect(raw.fields[0].assertionFailures).toHaveLength(0);
+    expect(raw.fields[1].unresolved, 'effective_date unresolved').toBe(false);
+    expect(raw.fields[1].assertionFailures).toHaveLength(0);
+  });
+
+  it('the two fields patch different spans without overwriting one another', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'coi-dates-608-'));
+    try {
+      const cleaned = join(dir, 'cleaned.docx');
+      await cleanDocument(cachedSourcePathFor(COI), cleaned, loadCleanConfig(fieldSelectorDir));
+
+      const selector = join(dir, 'selector.docx');
+      await applySelectorContracts(cleaned, selector, [recitalManifest, executionManifest]);
+
+      const text = textOf(selector);
+      // Exactly one tag each — no cross-contamination.
+      expect((text.match(/\{original_incorporation_date\}/g) ?? []).length).toBe(1);
+      expect((text.match(/\{effective_date\}/g) ?? []).length).toBe(1);
+      // The recital carries the historical incorporation date tag.
+      expect(text).toMatch(/originally incorporated pursuant to the General Corporation Law on\s*\{original_incorporation_date\}/);
+      // The signature block carries the execution/effective date tag.
+      expect(text).toMatch(/executed by a duly authorized officer of this corporation on\s*\{effective_date\}/);
+      // The raw source date placeholders are gone from their respective slots.
+      expect(text.includes('[________ __, 20__]'), 'recital date placeholder still present').toBe(false);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  it('renders distinct historical and effective dates end-to-end (recital shows the historical date)', async () => {
+    const outputPath = join(mkdtempSync(join(tmpdir(), 'coi-dates-e2e-608-')), 'charter.docx');
+    try {
+      await runFieldSelector({
+        fieldSelectorId: COI,
+        outputPath,
+        values: {
+          company_name: 'Meridian Inc.',
+          original_incorporation_date: '1995-03-20',
+          effective_date: '2026-07-15',
+        },
+      });
+
+      const text = textOf(outputPath);
+      // Recital identifies the HISTORICAL incorporation date, formatted (not ISO, not shifted a day).
+      expect(text).toMatch(/originally incorporated pursuant to the General Corporation Law on\s*March 20, 1995/);
+      // Execution/effective date is the OTHER date — the two never overwrite each other.
+      expect(text).toMatch(/executed by a duly authorized officer of this corporation on\s*July 15, 2026/);
+      // No verbatim ISO leaked into the rendered document.
+      expect(text.includes('1995-03-20'), 'raw ISO original_incorporation_date leaked').toBe(false);
+      expect(text.includes('2026-07-15'), 'raw ISO effective_date leaked').toBe(false);
+    } finally {
+      rmSync(outputPath, { recursive: true, force: true });
     }
   });
 });

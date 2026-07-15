@@ -82,6 +82,12 @@ fields:
   - name: original_incorporation_name
     type: string
     description: Original incorporation name, if different from current company name (leave blank if same)
+  - name: original_incorporation_date
+    type: date
+    description: >-
+      Historical date the corporation was originally incorporated (the recital date), which need not equal the effective
+      date of this amended and restated charter. Accepts ISO YYYY-MM-DD (rendered as e.g. "July 15, 2026") or a
+      display-ready date string.
   - name: redemption_start_date
     type: string
     description: Earliest date on which preferred stock may be redeemed
@@ -120,7 +126,9 @@ fields:
     description: Percentage threshold for specified provisions
   - name: effective_date
     type: date
-    description: Effective date of the certificate of incorporation
+    description: >-
+      Execution/effective date of this amended and restated certificate, filled on the signature block ("executed ... on
+      <date>"). Accepts ISO YYYY-MM-DD (rendered as e.g. "July 15, 2026") or a display-ready date string.
   - name: adjustment_notice_days
     type: string
     description: Days to provide notice of conversion price adjustments

@@ -434,7 +434,9 @@ describe('contract-templates-mcp tools', () => {
     const documentXml = readDocxText(data.inline_base64 as string);
     expect(documentXml).toContain('Acme Corporation');
     expect(documentXml).toContain('Jane Director');
-    expect(documentXml).toContain('2026-04-28');
+    // `effective_date` is a `date` field — ISO input renders as a document date (#608).
+    expect(documentXml).toContain('April 28, 2026');
+    expect(documentXml).not.toContain('2026-04-28');
     expect(documentXml).not.toContain('{company_name}');
     expect(documentXml).not.toContain('{member.name}');
     expect(documentXml).not.toContain('[[');

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "field_id": "original_incorporation_date",
+  "field_label": "Original Incorporation Date",
+  "description": "Historical date the corporation was originally incorporated (recital)",
+  "source_template_version": "10-1-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "originally\\s+incorporated\\s+pursuant\\s+to\\s+the\\s+General\\s+Corporation\\s+Law\\s+on\\s+(\\[________\\s+__,\\s+20__\\])",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder",
+    "no_double_dollar"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": []
+}
