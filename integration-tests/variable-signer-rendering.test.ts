@@ -166,7 +166,8 @@ describe('variable signer rendering', () => {
     expect(paragraphs).toEqual([
       '_______',
       'Alice Johnson',
-      'Date: 2026-04-14',
+      // `signer_1_date` is a `date` field — ISO input renders as a document date (#608).
+      'Date: April 14, 2026',
     ]);
     expect(paragraphs).not.toContain('Date: _______');
   });

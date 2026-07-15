@@ -2,13 +2,13 @@
   "schema_version": 1,
   "field_id": "effective_date",
   "field_label": "Effective Date",
-  "description": "Effective date of the certificate of incorporation",
+  "description": "Execution/effective date of this amended and restated certificate (signature block)",
   "source_template_version": "10-1-2025",
   "occurrences": [
     {
       "primary": {
         "kind": "regex",
-        "pattern": "on\\s+(\\[________\\s+__,\\s+20__\\])",
+        "pattern": "executed\\s+by\\s+a\\s+duly\\s+authorized\\s+officer\\s+of\\s+this\\s+corporation\\s+on\\s+(_{6,})",
         "group": 1
       }
     }

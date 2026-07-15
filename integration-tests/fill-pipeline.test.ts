@@ -14,7 +14,7 @@ function templateDirFor(slug: string): string {
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { detectCurrencyFields, sanitizeCurrencyValuesFromDocx, verifyTemplateFill, BLANK_PLACEHOLDER } from '../src/core/fill-utils.js';
-import { prepareFillData, fillDocx } from '../src/core/fill-pipeline.js';
+import { prepareFillData, fillDocx, formatDocumentDate } from '../src/core/fill-pipeline.js';
 import { runFillPipeline } from '../src/core/unified-pipeline.js';
 import { loadMetadata } from '../src/core/metadata.js';
 import { fillTemplate } from '../src/core/engine.js';
@@ -465,6 +465,130 @@ describe('prepareFillData', () => {
 
     expect(seenByCallback).toEqual({ a_enabled: true, b_enabled: false });
     expect(result.selection_summary).toBe('A selected');
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Section 3b: date-typed field formatting (issue #608)
+// ---------------------------------------------------------------------------
+
+describe('formatDocumentDate', () => {
+  it('renders a strict ISO YYYY-MM-DD string as a document date', () => {
+    expect(formatDocumentDate('2026-07-15')).toBe('July 15, 2026');
+  });
+
+  it('drops the leading zero on the day component', () => {
+    expect(formatDocumentDate('1995-03-05')).toBe('March 5, 1995');
+  });
+
+  it('formats every month deterministically', () => {
+    expect(formatDocumentDate('2026-01-01')).toBe('January 1, 2026');
+    expect(formatDocumentDate('2026-12-31')).toBe('December 31, 2026');
+  });
+
+  it('is timezone-independent — no Date/locale drift near month boundaries', () => {
+    // A UTC-midnight Date parse of "2026-03-01" renders "February 28, 2026" in
+    // negative-offset zones; the component-split formatter must never do that.
+    expect(formatDocumentDate('2026-03-01')).toBe('March 1, 2026');
+    expect(formatDocumentDate('2026-01-01')).toBe('January 1, 2026');
+  });
+
+  it('passes through a display-ready (non-ISO) string unchanged', () => {
+    expect(formatDocumentDate('March 20, 2026')).toBe('March 20, 2026');
+  });
+
+  it('passes through empty and placeholder strings unchanged', () => {
+    expect(formatDocumentDate('')).toBe('');
+    expect(formatDocumentDate(BLANK_PLACEHOLDER)).toBe(BLANK_PLACEHOLDER);
+  });
+
+  it('passes through out-of-range or malformed ISO-shaped input unchanged', () => {
+    expect(formatDocumentDate('2026-13-01')).toBe('2026-13-01');
+    expect(formatDocumentDate('2026-00-10')).toBe('2026-00-10');
+    expect(formatDocumentDate('2026-07-00')).toBe('2026-07-00');
+    expect(formatDocumentDate('2026-07-32')).toBe('2026-07-32');
+    expect(formatDocumentDate('2026-7-5')).toBe('2026-7-5');
+    expect(formatDocumentDate('07/15/2026')).toBe('07/15/2026');
+  });
+
+  it('passes through impossible calendar dates unchanged (per-month day limits)', () => {
+    expect(formatDocumentDate('2026-02-31')).toBe('2026-02-31');
+    expect(formatDocumentDate('2026-02-30')).toBe('2026-02-30');
+    expect(formatDocumentDate('2026-04-31')).toBe('2026-04-31');
+    expect(formatDocumentDate('2026-06-31')).toBe('2026-06-31');
+    expect(formatDocumentDate('2026-09-31')).toBe('2026-09-31');
+    expect(formatDocumentDate('2026-11-31')).toBe('2026-11-31');
+  });
+
+  it('enforces leap-year rules for February 29 (deterministic, no Date)', () => {
+    // Non-leap years → Feb 29 is invalid, passed through.
+    expect(formatDocumentDate('2025-02-29')).toBe('2025-02-29');
+    expect(formatDocumentDate('2100-02-29')).toBe('2100-02-29'); // century, not /400
+    // Leap years → Feb 29 is valid, formatted.
+    expect(formatDocumentDate('2024-02-29')).toBe('February 29, 2024');
+    expect(formatDocumentDate('2000-02-29')).toBe('February 29, 2000'); // /400 leap
+    // Last valid day of each 31/30-day month still formats.
+    expect(formatDocumentDate('2026-01-31')).toBe('January 31, 2026');
+    expect(formatDocumentDate('2026-04-30')).toBe('April 30, 2026');
+  });
+});
+
+describe('prepareFillData date-typed field formatting', () => {
+  const dateFields = [
+    { name: 'effective_date', type: 'date' as const, description: 'Effective date' },
+    { name: 'original_incorporation_date', type: 'date' as const, description: 'Original incorporation date' },
+    { name: 'company', type: 'string' as const, description: 'Company' },
+  ];
+
+  it('formats ISO values on date-typed fields only', () => {
+    const result = prepareFillData({
+      values: {
+        effective_date: '2026-07-15',
+        original_incorporation_date: '1995-03-20',
+        // A string field that happens to look like an ISO date must NOT be reformatted.
+        company: '2026-07-15',
+      },
+      fields: dateFields,
+    });
+    expect(result.effective_date).toBe('July 15, 2026');
+    expect(result.original_incorporation_date).toBe('March 20, 1995');
+    expect(result.company).toBe('2026-07-15');
+  });
+
+  it('lets two date fields carry distinct values without cross-contamination', () => {
+    const result = prepareFillData({
+      values: { effective_date: '2026-07-15', original_incorporation_date: '1995-03-20' },
+      fields: dateFields,
+    });
+    expect(result.effective_date).toBe('July 15, 2026');
+    expect(result.original_incorporation_date).toBe('March 20, 1995');
+    expect(result.effective_date).not.toBe(result.original_incorporation_date);
+  });
+
+  it('passes display-ready date strings through unchanged (fixture backward compat)', () => {
+    const result = prepareFillData({
+      values: { effective_date: 'March 20, 2026' },
+      fields: dateFields,
+    });
+    expect(result.effective_date).toBe('March 20, 2026');
+  });
+
+  it('passes an empty-but-non-null date value through unchanged', () => {
+    const result = prepareFillData({
+      values: { effective_date: '' },
+      fields: dateFields,
+    });
+    expect(result.effective_date).toBe('');
+  });
+
+  it('leaves an unfilled date field at the blank placeholder (not an ISO/format artifact)', () => {
+    const result = prepareFillData({
+      values: {},
+      fields: dateFields,
+      useBlankPlaceholder: true,
+    });
+    expect(result.effective_date).toBe(BLANK_PLACEHOLDER);
+    expect(result.original_incorporation_date).toBe(BLANK_PLACEHOLDER);
   });
 });
 

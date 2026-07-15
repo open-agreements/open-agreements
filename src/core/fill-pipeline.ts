@@ -97,6 +97,59 @@ export interface FillDocxOptions {
 /** Default patterns for paragraphs stripped before filling. */
 const DEFAULT_STRIP_PATTERNS = [/\bDrafting note\b/i];
 
+/** Fixed month-name table for deterministic date formatting (index 0 = January). */
+const MONTH_NAMES = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+
+/**
+ * Format an ISO `YYYY-MM-DD` string as a document date ("2026-07-15" →
+ * "July 15, 2026").
+ *
+ * Deterministic and timezone-independent by construction: the string is split
+ * into year/month/day components and rendered from {@link MONTH_NAMES}. It
+ * NEVER constructs a `Date` — `new Date('2026-07-15')` parses as UTC midnight
+ * and `toLocaleDateString` can render the previous calendar day in
+ * negative-offset timezones — and never calls any locale/`Intl` API.
+ *
+ * Any value that is not a strict `YYYY-MM-DD` string denoting a REAL calendar
+ * date is returned UNCHANGED. Beyond the coarse month (01–12) / day (01–31)
+ * range, per-month day limits and leap years are enforced, so impossible dates
+ * ("2026-02-31", "2025-02-29") are never dressed up as an authoritative document
+ * date — they fall through exactly like a non-ISO string. This preserves
+ * backward compatibility for callers/fixtures that already supply a display-ready
+ * date string (e.g. "March 20, 2026") and passes through empty-but-non-null
+ * placeholders (`''`, the blank placeholder) untouched.
+ */
+export function formatDocumentDate(value: string): string {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+  if (!match) return value;
+  const yearStr = match[1];
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  if (month < 1 || month > 12 || day < 1) return value;
+  // Reject impossible calendar dates (Feb 30/31, Apr 31, Feb 29 in a non-leap
+  // year, …). Deterministic arithmetic only — no Date/locale.
+  const year = Number(yearStr);
+  const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+  const daysInMonth = [31, isLeapYear ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  if (day > daysInMonth[month - 1]) return value;
+  // Number(match[3]) drops the leading zero: "05" → 5. yearStr keeps any leading
+  // zeros the (unrealistic) 4-digit year might carry.
+  return `${MONTH_NAMES[month - 1]} ${day}, ${yearStr}`;
+}
+
 /**
  * Prepare fill data with all normalization steps:
  * 1. Apply defaults for optional fields not provided
@@ -129,6 +182,20 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
       } else {
         data[field.name] = field.default ?? defaultValue;
       }
+    }
+  }
+
+  // Format ISO `YYYY-MM-DD` values on `type: date` fields as document dates
+  // ("2026-07-15" → "July 15, 2026"). Scoped to date fields ONLY — never a
+  // blanket transform of all values. Non-ISO strings (already display-ready) and
+  // empty-but-non-null placeholders pass through unchanged, so fixtures that
+  // supply "March 20, 2026" are unaffected. Deterministic and
+  // timezone-independent — see formatDocumentDate.
+  for (const field of fields) {
+    if (field.type !== 'date') continue;
+    const value = data[field.name];
+    if (typeof value === 'string') {
+      data[field.name] = formatDocumentDate(value);
     }
   }
 
