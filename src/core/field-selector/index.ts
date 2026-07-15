@@ -142,11 +142,13 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
         });
       }
       : undefined,
-    verify: async (p) => {
+    verify: async (p, cleanedSourcePath) => {
       // Verifier receives the FULL replacements key set (incl. migrated keys) so
       // a selector occurrence that failed to fill is still caught as a leftover
       // source placeholder — coverage is preserved after migration.
-      const base = await verifyOutput(p, verificationValues, replacements, cleanConfig);
+      // cleanedSourcePath baselines pre-existing formatting anomalies so only
+      // fill-introduced ones are reported.
+      const base = await verifyOutput(p, verificationValues, replacements, cleanConfig, cleanedSourcePath);
       if (selectorManifests.length === 0) return base;
       const fieldValues: Record<string, string> = {};
       for (const manifest of selectorManifests) {
