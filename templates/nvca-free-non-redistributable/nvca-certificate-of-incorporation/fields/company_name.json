@@ -8,6 +8,20 @@
     {
       "primary": {
         "kind": "regex",
+        "pattern": "INCORPORATION\\s*OF\\s*(\\[_________\\])",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "(\\[____________\\]),\\s+a\\s+corporation",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
         "pattern": "the\\s+name\\s+of\\s+this\\s+corporation\\s+is\\s+(\\[_______________\\])",
         "group": 1
       }

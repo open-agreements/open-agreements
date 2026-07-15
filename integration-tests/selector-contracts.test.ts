@@ -294,7 +294,14 @@ describeWithCoiSource('CoI `>`-anchor field migration parity', () => {
     legacyKeysByField.set(field, { ...(legacyKeysByField.get(field) ?? {}), [key]: value });
   }
 
-  for (const manifest of manifests) {
+  // `company_name` is deliberately excluded from the byte-identity gate and covered by its own
+  // dedicated test below (#607). Its caption (`INCORPORATIONOF > [_________]`) and opening-recital
+  // (`[____________], a corporation > [____________]`) legacy `>` keys are dead duplicates — the
+  // legacy `replaceFirstAfterContext` never fires them (the caption context has no space before the
+  // blank; the recital context IS the target blank) — so legacy fills only the two body occurrences.
+  // The selector correctly fills all four, which is exactly the bug #607 fixes, so the two paths are
+  // intentionally NOT byte-identical for this field.
+  for (const manifest of manifests.filter((m) => m.field_id !== 'company_name')) {
     const field = manifest.field_id;
     const expectedSpans = manifest.occurrences.length;
     it(`[${field}] selector patch is byte-identical to legacy patch (${expectedSpans} span(s))`, async () => {
@@ -328,4 +335,56 @@ describeWithCoiSource('CoI `>`-anchor field migration parity', () => {
       }
     });
   }
+});
+
+// ---------------------------------------------------------------------------
+// CoI `company_name` — all four occurrences (#607).
+//
+// The pre-#607 selector declared only the two body occurrences ("name of this corporation is
+// [_______________]"). The caption ("CERTIFICATE OF INCORPORATIONOF[_________]") and opening recital
+// ("[____________], a corporation ...") were owned by migrated `>` keys that the legacy patcher never
+// fills (dead duplicates — see the note on the parity loop above), so they fell through BOTH paths and
+// rendered as raw `[_________]` / `[____________]` placeholders. This asserts the selector now fills every
+// company-name occurrence represented by the migrated keys: caption + opening recital + both body spans.
+// ---------------------------------------------------------------------------
+describeWithCoiSource('CoI company_name covers all four occurrences (#607)', () => {
+  const fieldSelectorDir = resolveFieldSelectorDir(COI);
+  const fieldNames = loadFieldSelectorMetadata(fieldSelectorDir).fields.map((f) => f.name);
+  const { manifests } = loadSelectorContracts(fieldSelectorDir, fieldNames);
+  const manifest = manifests.find((m) => m.field_id === 'company_name')!;
+
+  it('[company_name] fills the caption, opening recital, and both body occurrences', async () => {
+    expect(manifest, 'company_name manifest not loaded').toBeDefined();
+    expect(manifest.occurrences).toHaveLength(4);
+
+    // Drift surface: all four occurrences resolve uniquely against the raw source.
+    const raw = await resolveSelectorContracts(cachedSourcePathFor(COI), [manifest]);
+    expect(raw.fields[0].unresolved, 'company_name unresolved against raw source').toBe(false);
+    expect(raw.fields[0].assertionFailures, 'company_name assertion failures').toHaveLength(0);
+    expect(raw.fields[0].occurrences.map((o) => o.resolution.unresolved)).toEqual([false, false, false, false]);
+
+    const dir = mkdtempSync(join(tmpdir(), 'coi-company-name-607-'));
+    try {
+      const cleaned = join(dir, 'cleaned.docx');
+      await cleanDocument(cachedSourcePathFor(COI), cleaned, loadCleanConfig(fieldSelectorDir));
+
+      const selector = join(dir, 'selector.docx');
+      await applySelectorContracts(cleaned, selector, [manifest]);
+
+      const text = textOf(selector);
+      // Exactly four company_name tags — caption + recital + two body.
+      expect((text.match(/\{company_name\}/g) ?? []).length).toBe(4);
+      // Caption: "...CERTIFICATE OF INCORPORATIONOF{company_name}" (was [_________]).
+      expect(text).toContain('INCORPORATIONOF{company_name}');
+      // Opening recital: "{company_name}, a corporation" (was [____________]).
+      expect(text).toContain('{company_name}, a corporation');
+      // Both body occurrences still filled.
+      expect((text.match(/name of this corporation is \{company_name\}/g) ?? []).length).toBe(2);
+      // The caption and recital source placeholders are gone.
+      expect(text.includes('[_________]'), 'caption placeholder still present').toBe(false);
+      expect(text.includes('[____________]'), 'recital placeholder still present').toBe(false);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
 });
