@@ -18,7 +18,7 @@ const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
  * Uses the same canonical quote set as verifier's normalizeText().
  * This is a 1-to-1 character mapping so charMap positions remain valid.
  */
-function normalizeQuotes(text: string): string {
+export function normalizeQuotes(text: string): string {
   return text
     .replace(/[\u2018\u2019\u2039\u203A]/g, "'")
     .replace(/[\u201C\u201D\u201A\u201E\u00AB\u00BB]/g, '"');

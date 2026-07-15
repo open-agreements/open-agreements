@@ -1,9 +1,12 @@
 import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
+import type { Element } from '@xmldom/xmldom';
+import { getParagraphText } from '@usejunior/docx-core';
 import type { VerifyResult, VerifyCheck } from './types.js';
 import type { CleanConfig } from '../metadata.js';
 import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
-import { extractSearchText } from './replacement-keys.js';
+import { parseReplacementKey } from './replacement-keys.js';
+import { getTableRowContext, normalizeQuotes } from './patcher.js';
 import type { ReplacementValue } from './replacement-keys.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
@@ -71,10 +74,13 @@ export async function verifyOutput(
     details: unrenderedTags.length > 0 ? `Found: ${unrenderedTags.join(', ')}` : undefined,
   });
 
-  // Check 3: No leftover [bracketed placeholders] from replacement map
-  // Use extractSearchText() to handle qualified keys (context) properly
-  const searchTexts = [...new Set(Object.keys(replacements).map(extractSearchText))];
-  const leftoverBrackets = searchTexts.filter((text) => rawFullText.includes(text));
+  // Check 3: No leftover [bracketed placeholders] from replacement map.
+  // Context-qualified keys ("context > placeholder") are verified at their
+  // qualified location — mirroring the patcher's deterministic anchoring — so an
+  // intentional occurrence of the same bare token in an unrelated context is not
+  // reported as a failed mapped replacement. Simple keys keep whole-document
+  // search (a bare placeholder should not survive anywhere).
+  const leftoverBrackets = findLeftoverPlaceholders(outputPath, replacements, cleanedSourcePath);
   checks.push({
     name: 'Leftover source placeholders',
     passed: leftoverBrackets.length === 0,
@@ -152,6 +158,182 @@ export async function verifyOutput(
     passed: checks.every((c) => c.passed),
     checks,
   };
+}
+
+/** A paragraph's normalized text plus its table-row label context (if any). */
+interface ParagraphInfo {
+  text: string;
+  rowContext: string | null;
+}
+
+/**
+ * Extract each paragraph's normalized text and table-row label context from a
+ * DOCX, using the same normalization (quotes only) the patcher matches on.
+ */
+function extractParagraphInfos(docxPath: string): ParagraphInfo[] {
+  const zip = new AdmZip(docxPath);
+  const parser = new DOMParser();
+  const partNames = getGeneralTextPartNames(enumerateTextParts(zip));
+  const infos: ParagraphInfo[] = [];
+  for (const partName of partNames) {
+    const entry = zip.getEntry(partName);
+    if (!entry) continue;
+    const doc = parser.parseFromString(entry.getData().toString('utf-8'), 'text/xml');
+    const paras = doc.getElementsByTagNameNS(W_NS, 'p');
+    for (let i = 0; i < paras.length; i++) {
+      const para = paras[i] as unknown as Element;
+      const paraText = getParagraphText(para as unknown as globalThis.Element);
+      if (!paraText) continue;
+      const rowContext = getTableRowContext(para);
+      infos.push({
+        text: normalizeQuotes(paraText),
+        rowContext: rowContext !== null ? normalizeQuotes(rowContext) : null,
+      });
+    }
+  }
+  return infos;
+}
+
+/** Count non-overlapping occurrences of `needle` in `haystack`. */
+function countOccurrences(haystack: string, needle: string): number {
+  if (needle.length === 0) return 0;
+  let count = 0;
+  let from = 0;
+  let pos: number;
+  while ((pos = haystack.indexOf(needle, from)) !== -1) {
+    count++;
+    from = pos + needle.length;
+  }
+  return count;
+}
+
+/**
+ * Whether a context key has an unfilled placeholder at its qualified location,
+ * mirroring how the patcher targets them:
+ *  - Table-row context: a `searchText` survives in a paragraph whose row label
+ *    cell contains the context.
+ *  - Paragraph context: a `searchText` appears AFTER the first occurrence of the
+ *    context in the paragraph (the patcher fills the first placeholder after the
+ *    context).
+ *
+ * Used only when no source baseline is available (see findLeftoverPlaceholders).
+ */
+function hasQualifiedLeftover(
+  paragraphs: ParagraphInfo[],
+  context: string,
+  searchText: string,
+): boolean {
+  if (searchText.length === 0) return false;
+  for (const { text, rowContext } of paragraphs) {
+    if (rowContext !== null) {
+      if (rowContext.includes(context) && text.includes(searchText)) return true;
+    } else {
+      const ctxPos = text.indexOf(context);
+      if (ctxPos === -1) continue;
+      if (text.indexOf(searchText, ctxPos + context.length) !== -1) return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * Find leftover source placeholders from the replacement map that survive in the
+ * filled output.
+ *
+ * Known limitation (deliberate tradeoff): the count baseline treats ANY
+ * reduction of a context key's token as success, so it cannot distinguish an
+ * occurrence a selector deliberately retains (e.g. the two documented `[___]` in
+ * series_designation) from an unexpected extra occurrence of the same token that
+ * failed to fill — the two are textually identical. Fully distinguishing them
+ * would require machine-readable retained-occurrence metadata in the field
+ * contract (fields/<id>.json), which is out of scope here. Two existing
+ * mechanisms cover the realistic paths this check cannot: (a) an unexpected
+ * extra token means the source changed, which the source_sha256 pin / source
+ * drift canary flags before fill; (b) a DECLARED selector occurrence that fails
+ * to resolve surfaces an `unresolved` selector warning.
+ *
+ * Two key shapes are handled differently, matching how the patcher targets them:
+ *
+ *  - Simple keys ("[Company Name]") replace every occurrence, so any surviving
+ *    occurrence anywhere in the document is reported.
+ *
+ *  - Context-qualified keys ("context > placeholder") target one placeholder per
+ *    context, so a bare token may legitimately remain elsewhere (an unrelated
+ *    context) or be deliberately retained (a selector field that fills only its
+ *    declared occurrences). These are handled by comparing the placeholder's
+ *    count against the cleaned source:
+ *      - With a source baseline, a context key is reported only when the fill
+ *        reduced NOTHING (output count >= source count) — i.e. the mapping was
+ *        entirely unhandled (a genuine defect, e.g. a caption the patcher/
+ *        selector never touched), as opposed to a partial reduction that leaves
+ *        deliberately-retained or selector-verified occurrences behind. This is
+ *        the same deterministic baseline-against-source technique used for
+ *        formatting anomalies. Counting is done on the flattened text (the same
+ *        text the patcher's replacements ultimately land in) so a context that
+ *        is unmatchable due to intra-paragraph line breaks — the #607 caption —
+ *        is still caught.
+ *      - Without a baseline, the key is reported only if an unfilled placeholder
+ *        survives at its qualified location — so an intentional occurrence of the
+ *        same token in an unrelated context (e.g. "[s]" in "Management Rights
+ *        Letter[s]" while the mapped "Closing > [s]" was filled) is not reported.
+ *
+ * Returns the offending key labels (simple keys as their search text; context
+ * keys as their full "context > placeholder" label).
+ */
+export function findLeftoverPlaceholders(
+  docxPath: string,
+  replacements: Record<string, ReplacementValue>,
+  cleanedSourcePath?: string,
+): string[] {
+  const simpleSearchTexts = new Set<string>();
+  const contextKeys: { context: string; searchText: string; label: string }[] = [];
+  for (const key of Object.keys(replacements)) {
+    const parsed = parseReplacementKey(key, '');
+    if (parsed.type === 'context') {
+      contextKeys.push({
+        // Match the patcher's quote normalization so the checks anchor on
+        // exactly what the patcher would have targeted.
+        context: normalizeQuotes(parsed.context),
+        searchText: normalizeQuotes(parsed.searchText),
+        label: key,
+      });
+    } else {
+      simpleSearchTexts.add(parsed.searchText);
+    }
+  }
+
+  const leftovers = new Set<string>();
+  const outputFullText = normalizeQuotes(extractAllText(docxPath));
+
+  // Simple keys: whole-document search (any surviving occurrence is a leftover).
+  for (const text of simpleSearchTexts) {
+    if (outputFullText.includes(normalizeQuotes(text))) leftovers.add(text);
+  }
+
+  // Context keys: count baseline against the cleaned source, else qualified location.
+  if (contextKeys.length > 0) {
+    if (cleanedSourcePath) {
+      const sourceFullText = normalizeQuotes(extractAllText(cleanedSourcePath));
+      for (const ck of contextKeys) {
+        const srcCount = countOccurrences(sourceFullText, ck.searchText);
+        if (srcCount === 0) continue; // key does not apply to this document
+        const outCount = countOccurrences(outputFullText, ck.searchText);
+        // Nothing filled for this placeholder → the mapping was entirely
+        // unhandled. A partial reduction leaves only intentionally-retained /
+        // selector-verified occurrences behind, which are not reported.
+        if (outCount >= srcCount) leftovers.add(ck.label);
+      }
+    } else {
+      const outputParagraphs = extractParagraphInfos(docxPath);
+      for (const ck of contextKeys) {
+        if (hasQualifiedLeftover(outputParagraphs, ck.context, ck.searchText)) {
+          leftovers.add(ck.label);
+        }
+      }
+    }
+  }
+
+  return [...leftovers];
 }
 
 /**

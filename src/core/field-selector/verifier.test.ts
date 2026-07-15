@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
-import { verifyOutput, normalizeText } from './verifier.js';
+import { verifyOutput, normalizeText, findLeftoverPlaceholders } from './verifier.js';
 import {
   allureJsonAttachment,
   allureParameter,
@@ -33,6 +33,48 @@ function buildDocx(documentXml: string, additionalParts?: Record<string, string>
   const docxPath = join(tempDir, 'test.docx');
   zip.writeZip(docxPath);
   return docxPath;
+}
+
+function escapeXml(text: string): string {
+  return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+/** Build a DOCX whose body is one plain-text paragraph per supplied string. */
+function buildTextDocx(paragraphs: string[]): string {
+  const body = paragraphs
+    .map((t) => `<w:p><w:r><w:t xml:space="preserve">${escapeXml(t)}</w:t></w:r></w:p>`)
+    .join('');
+  return buildDocx(
+    '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>${body}</w:body></w:document>`
+  );
+}
+
+/**
+ * Build a DOCX with `count` formatting anomalies: each is a single-character
+ * underlined run immediately followed by a non-underlined run (the pattern
+ * countFormattingAnomalies() flags).
+ */
+function buildAnomalyDocx(count: number): string {
+  const paras: string[] = [];
+  for (let i = 0; i < count; i++) {
+    paras.push(
+      '<w:p>' +
+        '<w:r><w:rPr><w:u w:val="single"/></w:rPr><w:t>A</w:t></w:r>' +
+        '<w:r><w:t>bc</w:t></w:r>' +
+        '</w:p>'
+    );
+  }
+  return buildDocx(
+    '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>${paras.join('')}</w:body></w:document>`
+  );
+}
+
+function cleanupDocx(...docxPaths: string[]): void {
+  for (const p of docxPaths) {
+    rmSync(p.replace('/test.docx', ''), { recursive: true, force: true });
+  }
 }
 
 async function runVerificationWithTrace(
@@ -233,5 +275,154 @@ describe('verifyOutput', () => {
     });
 
     rmSync(docxPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it('reports zero new formatting anomalies when source and output have the same count', async () => {
+    // Issue #609: runFieldSelector previously verified without the cleaned source,
+    // so pre-existing source anomalies were all reported as fill-introduced.
+    const sourcePath = buildAnomalyDocx(3);
+    const outputPath = buildAnomalyDocx(3);
+
+    await allureParameter('case', 'formatting-anomaly-baseline');
+    const result = await verifyOutput(outputPath, {}, {}, undefined, sourcePath);
+
+    const anomalyCheck = result.checks.find((c) => c.name === 'No formatting anomalies');
+    await allureStep('Assert equal anomaly counts report zero new', () => {
+      expect(anomalyCheck?.passed).toBe(true);
+    });
+
+    cleanupDocx(sourcePath, outputPath);
+  });
+
+  it('still reports anomalies the fill introduced above the source baseline', async () => {
+    const sourcePath = buildAnomalyDocx(1);
+    const outputPath = buildAnomalyDocx(3);
+
+    await allureParameter('case', 'formatting-anomaly-introduced');
+    const result = await verifyOutput(outputPath, {}, {}, undefined, sourcePath);
+
+    const anomalyCheck = result.checks.find((c) => c.name === 'No formatting anomalies');
+    await allureStep('Assert fill-introduced anomalies are still reported', () => {
+      expect(anomalyCheck?.passed).toBe(false);
+      expect(anomalyCheck?.details).toContain('2 new');
+    });
+
+    cleanupDocx(sourcePath, outputPath);
+  });
+});
+
+describe('findLeftoverPlaceholders', () => {
+  it('passes a mapped "Closing > [s]" fill even when an unrelated "Management Rights Letter[s]" remains', async () => {
+    // Issue #609 case 1: the [s] in an unrelated source option must not be read
+    // as a failed "Closing > [s]" replacement.
+    const docxPath = buildTextDocx([
+      'Closings; Delivery.',
+      'Management Rights Letter[s] shall be delivered to each Investor.',
+    ]);
+
+    await allureParameter('case', 'unrelated-token-same-as-mapped');
+    const leftovers = findLeftoverPlaceholders(docxPath, { 'Closing > [s]': '{optional_plural_suffix}' });
+    await allureJsonAttachment('leftovers.json', leftovers);
+
+    await allureStep('Assert no leftover reported', () => {
+      expect(leftovers).toEqual([]);
+    });
+
+    cleanupDocx(docxPath);
+  });
+
+  it('does not fail the mapped-key check for a placeholder in a different paragraph/context', async () => {
+    // Issue #609 case 2: a [___] with no "Series" context of its own is not a
+    // failed "Series > [___]" replacement.
+    const docxPath = buildTextDocx([
+      'Series A Preferred Stock is issued under this Agreement.',
+      'The counsel-expense cap is [___].',
+    ]);
+
+    await allureParameter('case', 'different-context-placeholder');
+    const leftovers = findLeftoverPlaceholders(docxPath, { 'Series > [___]': '{series_designation}' });
+
+    await allureStep('Assert no leftover reported', () => {
+      expect(leftovers).toEqual([]);
+    });
+
+    cleanupDocx(docxPath);
+  });
+
+  it('still reports a genuinely unfilled placeholder at the mapped location', async () => {
+    // Landmine: true-positive detection must survive — a real leftover at the
+    // qualified location is still caught.
+    const docxPath = buildTextDocx(['THIS SERIES [___] PREFERRED STOCK']);
+
+    await allureParameter('case', 'true-positive-at-mapped-location');
+    const leftovers = findLeftoverPlaceholders(docxPath, { 'SERIES > [___]': '{series_designation}' });
+
+    await allureStep('Assert unfilled placeholder is reported', () => {
+      expect(leftovers).toContain('SERIES > [___]');
+    });
+
+    cleanupDocx(docxPath);
+  });
+
+  it('reports a context key the fill never touched (source count == output count)', async () => {
+    // #607-shaped true positive: the caption placeholder is unchanged from the
+    // cleaned source, so the mapping was entirely unhandled. The count baseline
+    // catches it even when the context is unmatchable via paragraph text.
+    const sourcePath = buildTextDocx(['CERTIFICATE OF INCORPORATION OF [_________]']);
+    const outputPath = buildTextDocx(['CERTIFICATE OF INCORPORATION OF [_________]']);
+
+    await allureParameter('case', 'baseline-total-miss');
+    const leftovers = findLeftoverPlaceholders(
+      outputPath,
+      { 'INCORPORATIONOF > [_________]': '{company_name}' },
+      sourcePath
+    );
+
+    await allureStep('Assert unhandled mapping is reported', () => {
+      expect(leftovers).toContain('INCORPORATIONOF > [_________]');
+    });
+
+    cleanupDocx(sourcePath, outputPath);
+  });
+
+  it('does not report deliberately-retained occurrences once some were filled (count dropped)', async () => {
+    // Issue #609: series_designation fills its declared occurrences and retains
+    // two by design. With the source baseline, a partial reduction is treated as
+    // intentional retention, not a failed replacement.
+    const sourcePath = buildTextDocx([
+      'that number of shares of Series [___] Preferred',
+      '(the "Series [___] Preferred Stock")',
+      'designated Series [___] Preferred Stock (retained)',
+    ]);
+    const outputPath = buildTextDocx([
+      'that number of shares of Series A Preferred',
+      '(the "Series A Preferred Stock")',
+      'designated Series [___] Preferred Stock (retained)',
+    ]);
+
+    await allureParameter('case', 'baseline-retained-occurrence');
+    const leftovers = findLeftoverPlaceholders(
+      outputPath,
+      { 'Series > [___]': '{series_designation}' },
+      sourcePath
+    );
+
+    await allureStep('Assert retained occurrence is not reported', () => {
+      expect(leftovers).toEqual([]);
+    });
+
+    cleanupDocx(sourcePath, outputPath);
+  });
+
+  it('reports a simple key that survives anywhere in the document', async () => {
+    const docxPath = buildTextDocx(['Header', 'Leftover [Company Name] remains here.']);
+
+    const leftovers = findLeftoverPlaceholders(docxPath, { '[Company Name]': '{company_name}' });
+
+    await allureStep('Assert simple key leftover is reported', () => {
+      expect(leftovers).toContain('[Company Name]');
+    });
+
+    cleanupDocx(docxPath);
   });
 });
