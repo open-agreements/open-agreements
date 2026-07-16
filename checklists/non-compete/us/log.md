@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-07-15
+* **Update**: fix(sd): correct SD non-compete + privacy quotes after statute re-ingest (#1818) (0f3e7bf)
+
 ## 2026-07-06
 * **Update**: feat(checklists): reader-first restructure — statutory gates first + discoverable section spine (#1586) (#1609) (020cff2)
 * **Update**: Rename review checklists to reviewer checklists (#1631) (d88b1a2)

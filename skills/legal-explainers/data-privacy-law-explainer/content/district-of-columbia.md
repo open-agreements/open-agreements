@@ -2,7 +2,7 @@
 jurisdiction: "District of Columbia"
 slug: district-of-columbia
 countryCode: US
-snapshotAsOf: "2026-07-14"
+snapshotAsOf: "2026-07-16"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/district-of-columbia
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/district-of-columbia · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/district-of-columbia · **Snapshot as of:** 2026-07-16 · License: CC BY 4.0 · © openagreements.org
 
 # District of Columbia Consumer Privacy Law[^about]
 
