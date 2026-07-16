@@ -2,7 +2,7 @@
 jurisdiction: "South Dakota"
 slug: south-dakota
 countryCode: US
-snapshotAsOf: "2026-07-14"
+snapshotAsOf: "2026-07-16"
 lastReviewed: "2026-07-01"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/south-dakota
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/south-dakota · **Snapshot as of:** 2026-07-14 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/south-dakota · **Snapshot as of:** 2026-07-16 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in South Dakota[^about]
 
@@ -204,7 +204,7 @@ For templates, align the duration clause, agreement term, termination language, 
 
 [^sdcl-53-9-11-1-practitioner-list]: **S.D. Codified Laws § 53-9-11.1** — "For purposes of § 53-9-11.2, a practitioner means: (1) A physician licensed in accordance with chapter 36-4; (2) A physician assistant licensed in accordance with chapter 36-4A; (3) A paramedic or emergency medical technician licensed in accordance with chapter 36-4B; (4) A respiratory care practitioner licensed in accordance with chapter 36-4C; (5) A chiropractor licensed in accordance with chapter 36-5;" *S.D. Codified Laws § 53-9-11.1.* <https://sdlegislature.gov/Statutes/53-9-11.1>
 
-[^sdcl-53-9-11-2-practitioner-exceptions]: **S.D. Codified Laws § 53-9-11.2** — "This section does not apply to any contractual provision that: (1) Is effective upon the sale of a practice or interest in a practice; or (2) Restricts a practitioner from soliciting current patients or clients of the former employer, partnership, or other professional relationship, provided the solicitation complies with the geographic and temporal limitations as referenced in § 53-9-11." *S.D. Codified Laws § 53-9-11.2(1)-(2).* <https://sdlegislature.gov/Statutes/53-9-11.2>
+[^sdcl-53-9-11-2-practitioner-exceptions]: **S.D. Codified Laws § 53-9-11.2** — "This section does not apply to any contractual provision that: (1) Is effective upon the sale of a practice or interest in a practice; or (2) Restricts a practitioner or community services provider from soliciting current patients or clients of the former employer, partnership, or other professional relationship, provided the solicitation complies with the geographic and temporal limitations as referenced in § 53-9-11." *S.D. Codified Laws § 53-9-11.2(1)-(2).* <https://sdlegislature.gov/Statutes/53-9-11.2>
 
 [^sdcl-53-9-9-goodwill-exception]: **S.D. Codified Laws § 53-9-9** — "Any person who sells the good will of a business may agree with the buyer to refrain from carrying on a similar business within a specified county, city, or other specified area, as long as the buyer or person deriving title to the good will from the seller carries on a like business within the specified geographical area." *S.D. Codified Laws § 53-9-9.* <https://sdlegislature.gov/Statutes/53-9-9>
 

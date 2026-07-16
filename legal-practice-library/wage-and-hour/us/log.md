@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-07-15
+* **Update**: feat(wage-and-hour): Ohio practice note (#1815) (0048ef1)
+
 ## 2026-07-05
 * **Update**: feat(wage-and-hour): Massachusetts practice note (#1573) (0ce7603)
 * **Update**: feat(wage-and-hour): Illinois practice note (#1571) (8e6d1ef)

@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-07-15
+* **Update**: fix(sd): correct SD non-compete + privacy quotes after statute re-ingest (#1818) (0f3e7bf)
+
 ## 2026-06-26
 * **Update**: Rename content/legal/ -> content/practice-guides/ to match URL taxonomy (#1082) (7fb9b1a)
 
