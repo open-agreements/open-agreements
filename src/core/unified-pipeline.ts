@@ -62,8 +62,17 @@ export interface PipelineOptions {
   // Verification callback — each path passes its own verifier. The second
   // argument is the cleaned-but-unfilled source (present only when cleanPatch is
   // configured); verifiers use it to baseline pre-existing source anomalies so
-  // only fill-introduced ones are reported.
-  verify: (outputPath: string, cleanedSourcePath?: string) => VerifyResult | Promise<VerifyResult>;
+  // only fill-introduced ones are reported. The third argument is the set of
+  // identifiers referenced by fill commands in the FINAL pre-fill document
+  // (post clean/selector/patch/selections); verifiers can use it to skip
+  // value-presence checks for supplied fields whose only fill site was removed
+  // by an unselected alternative (selections.json), so a caller supplying a
+  // value for the inactive branch is not warned "Missing".
+  verify: (
+    outputPath: string,
+    cleanedSourcePath?: string,
+    referencedFields?: Set<string>,
+  ) => VerifyResult | Promise<VerifyResult>;
   postProcess?: (outputPath: string) => void | Promise<void>;
 
   // Debugging
@@ -307,7 +316,7 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
     }
 
     // Step 8: Verify — failures surface to callers via warnings (soft; no throw)
-    const verifyResult = await verify(outputPath, cleanedSourcePath);
+    const verifyResult = await verify(outputPath, cleanedSourcePath, referencedIdentifiers);
     if (!verifyResult.passed) {
       const failedChecks = verifyResult.checks.filter((c) => !c.passed);
       const failures = failedChecks
