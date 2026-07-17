@@ -11634,21 +11634,12 @@
           "default_value_rationale": null
         },
         {
-          "name": "agreement_date_month_day",
-          "type": "string",
+          "name": "agreement_date",
+          "type": "date",
           "required": false,
           "section": null,
-          "description": "Month/day portion of the agreement date in the opening paragraph",
-          "default": "January 15",
-          "default_value_rationale": null
-        },
-        {
-          "name": "agreement_year_two_digits",
-          "type": "string",
-          "required": false,
-          "section": null,
-          "description": "Two-digit year suffix used in opening date format 20[__]",
-          "default": "26",
+          "description": "Agreement date in the opening paragraph (\"is made as of <date>\"). Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string. Replaces the former agreement_date_month_day + agreement_year_two_digits split pair; the selector consumes the whole \"[________], 20[__]\" slot.",
+          "default": null,
           "default_value_rationale": null
         },
         {

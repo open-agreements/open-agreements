@@ -79,20 +79,28 @@ function escapeXml(value: string): string {
 }
 
 describe('NVCA assumptions regression', () => {
-  it('clean step preserves bracket-prefixed headings and alternatives for later selection', async () => {
+  it('clean step preserves bracket-prefixed headings AND the bracketed dispute-resolution alternatives (#619)', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-nvca-assump-clean-'));
     tempDirs.push(dir);
 
     const input = join(dir, 'input.docx');
     const cleaned = join(dir, 'cleaned.docx');
 
+    // Pre-#619, clean.json removed every `[Alternative N: ...]` paragraph — which
+    // deleted the dispute-resolution alternatives BEFORE the patcher could fill
+    // their `[location]` / `[judicial district]` keys, so
+    // `dispute_resolution_mode=arbitration` silently produced no arbitration
+    // clause. Alternatives are now kept through cleaning; the selections.json
+    // `dispute_resolution` radio group keeps exactly one at fill time and
+    // normalize.json unwraps its `[Alternative N: ` label.
     writeFileSync(
       input,
       buildDocx([
         '[Small Business Concern',
         '. The Company together with its affiliates is a [“small business concern”][“smaller business”] within the Small Business Act.]',
-        '[Alternative 1: This drafting option is selected later]',
-        '[Alternative 2: This drafting option is selected later]',
+        '[Alternative 1: This drafting option must survive cleaning]',
+        '[Alternative 2: This drafting option must survive cleaning]',
+        'Note to Drafter: this guidance is still removed.',
       ])
     );
 
@@ -108,6 +116,7 @@ describe('NVCA assumptions regression', () => {
     expect(joined).toContain('small business concern');
     expect(joined).toContain('Alternative 1');
     expect(joined).toContain('Alternative 2');
+    expect(joined).not.toContain('Note to Drafter');
   });
 
   it('declarative normalize strips heading-leading brackets and trims unmatched trailing brackets', async () => {
