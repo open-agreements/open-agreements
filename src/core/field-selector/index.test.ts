@@ -339,4 +339,97 @@ describe('runFieldSelector', () => {
       },
     ]);
   });
+
+  // Issue #620 regression: the verifier must compare `type: date` fields
+  // against the FORMATTED date the fill actually writes (prepareFillData
+  // renders ISO "2026-03-15" as "March 15, 2026"), not the raw ISO input.
+  // Before the fix, every ISO-supplied date field produced a spurious
+  // 'verify: ... Missing: <field>="<iso>"' warning.
+  itFilling('ISO date input verifies against the formatted document date (no spurious Missing warning)', async () => {
+    const fieldSelectorDir = createFieldSelectorFixture();
+    // Mirror the MRL dateline shape: a date-typed field bound to the full
+    // "[______], 20[__]" slot.
+    writeFileSync(
+      join(fieldSelectorDir, 'metadata.yaml'),
+      [
+        'name: Fixture Date FieldSelector',
+        'source_url: https://example.com/source.docx',
+        'source_version: "1.0"',
+        'license_note: Example fieldSelector license',
+        'fields:',
+        '  - name: letter_date',
+        '    type: date',
+        '    description: Date of the letter',
+        'priority_fields:',
+        '  - letter_date',
+        '',
+      ].join('\n'),
+      'utf-8'
+    );
+    writeFileSync(
+      join(fieldSelectorDir, 'replacements.json'),
+      JSON.stringify({ '[______], 20[__]': '{letter_date}' }, null, 2),
+      'utf-8'
+    );
+
+    const { mkdtempSync: mkTemp } = await import('node:fs');
+    const { tmpdir: osTmp } = await import('node:os');
+    const AdmZip = (await import('adm-zip')).default;
+    const workDir = mkTemp(join(osTmp(), 'oa-issue-620-date-'));
+    tempDirs.push(workDir);
+    const inputPath = join(workDir, 'input.docx');
+    const outputPath = join(workDir, 'output.docx');
+    const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
+    const zip = new AdmZip();
+    zip.addFile(
+      'word/document.xml',
+      Buffer.from(
+        '<?xml version="1.0" encoding="UTF-8"?>' +
+          `<w:document xmlns:w="${W_NS}"><w:body>` +
+          '<w:p><w:r><w:t xml:space="preserve">[______], 20[__]</w:t></w:r></w:p>' +
+          '</w:body></w:document>',
+        'utf-8'
+      )
+    );
+    zip.addFile(
+      '[Content_Types].xml',
+      Buffer.from(
+        '<?xml version="1.0" encoding="UTF-8"?>' +
+          '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">' +
+          '<Default Extension="xml" ContentType="application/xml"/>' +
+          '<Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/>' +
+          '</Types>',
+        'utf-8'
+      )
+    );
+    zip.writeZip(inputPath);
+
+    // Earlier tests in this file register module mocks for the fill pipeline
+    // and downloader; this test must run the REAL pipeline end-to-end.
+    vi.doUnmock('../unified-pipeline.js');
+    vi.doUnmock('./downloader.js');
+    vi.doMock('../../utils/paths.js', () => ({
+      resolveFieldSelectorDir: () => fieldSelectorDir,
+    }));
+    const { runFieldSelector } = await import('./index.js');
+
+    const result = await runFieldSelector({
+      fieldSelectorId: 'fixture-date-fieldSelector',
+      inputPath,
+      outputPath,
+      values: { letter_date: '2026-03-15' },
+    });
+
+    await allureJsonAttachment('iso-date-verification-result.json', result);
+
+    const outZip = new AdmZip(result.outputPath);
+    const outXml = outZip.getEntry('word/document.xml')?.getData().toString('utf-8') ?? '';
+    // The formatted date is written, the ISO input is not.
+    expect(outXml).toContain('March 15, 2026');
+    expect(outXml).not.toContain('2026-03-15');
+    // And the verifier no longer reports the field as missing.
+    const missingWarnings = result.warnings.filter((w) => w.includes('Missing') && w.includes('letter_date'));
+    expect(missingWarnings).toEqual([]);
+  });
 });
+
