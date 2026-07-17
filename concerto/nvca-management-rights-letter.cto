@@ -12,6 +12,8 @@ import org.accordproject.contract.Contract from https://models.accordproject.org
 
 asset NvcaManagementRightsLetter extends Contract {
   o String company_name_upper
+  o String letter_date
+  o String purchased_shares
   o String investor_name
   o String investor_name_upper
   o String city

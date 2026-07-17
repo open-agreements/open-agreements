@@ -11316,7 +11316,25 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Company name in uppercase",
+          "description": "Company name in uppercase. Fills both the uppercase signature-block slot ([COMPANY]) and the body's \"Preferred Stock of ______ (the \"Company\")\" blank, so the supplied value appears verbatim in both places — NVCA convention uppercases the signature block, so supply the name in uppercase.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "letter_date",
+          "type": "date",
+          "required": true,
+          "section": null,
+          "description": "Date of the letter (fills the \"______, 20__\" dateline). Accepts ISO YYYY-MM-DD (rendered as e.g. \"July 15, 2026\") or a display-ready date string, which replaces the entire dateline including the pre-printed \"20\" — do not supply a partial date expecting the \"20__\" year stub to remain.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "purchased_shares",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Number of shares of preferred stock purchased by the investor (e.g. 1,000,000)",
           "default": null,
           "default_value_rationale": null
         },
@@ -11451,15 +11469,6 @@
           "required": false,
           "section": null,
           "description": "Additional counsel to CC on notices, or empty string if none",
-          "default": "",
-          "default_value_rationale": null
-        },
-        {
-          "name": "optional_blank_value",
-          "type": "string",
-          "required": false,
-          "section": null,
-          "description": "Empty-value replacement used to clear optional bracketed drafting text and formatting artifacts",
           "default": "",
           "default_value_rationale": null
         },

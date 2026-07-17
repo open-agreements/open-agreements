@@ -17,7 +17,6 @@ asset NvcaRofrCoSaleAgreement extends Contract {
   o String key_holder_name
   o String company_counsel
   o String counsel_cc default=""
-  o String optional_blank_value default=""
   o String amended_restated_upper default=""
   o String amended_restated default=""
   o String judicial_district default="District of Delaware"
