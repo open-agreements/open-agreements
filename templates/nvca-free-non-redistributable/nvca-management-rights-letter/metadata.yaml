@@ -13,7 +13,19 @@ artifact_type: field-selector
 fields:
   - name: company_name_upper
     type: string
-    description: Company name in uppercase
+    description: >-
+      Company name in uppercase. Fills both the uppercase signature-block slot ([COMPANY]) and the body's
+      "Preferred Stock of ______ (the "Company")" blank, so the supplied value appears verbatim in both places —
+      NVCA convention uppercases the signature block, so supply the name in uppercase.
+  - name: letter_date
+    type: date
+    description: >-
+      Date of the letter (fills the "______, 20__" dateline). Accepts ISO YYYY-MM-DD (rendered as e.g.
+      "July 15, 2026") or a display-ready date string, which replaces the entire dateline including the
+      pre-printed "20" — do not supply a partial date expecting the "20__" year stub to remain.
+  - name: purchased_shares
+    type: string
+    description: Number of shares of preferred stock purchased by the investor (e.g. 1,000,000)
   - name: investor_name
     type: string
     description: Full name of the investor
@@ -42,6 +54,8 @@ fields:
     default: Signature Page Follows
 priority_fields:
   - company_name_upper
+  - letter_date
+  - purchased_shares
   - investor_name
   - investor_name_upper
   - city
