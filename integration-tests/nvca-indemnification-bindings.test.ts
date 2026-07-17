@@ -7,6 +7,7 @@ import { itAllure } from './helpers/allure-test.js';
 import { resolveFieldSelectorDir } from '../src/utils/paths.js';
 import { loadFieldSelectorMetadata, loadCleanConfig } from '../src/core/metadata.js';
 import { runFillPipeline } from '../src/core/unified-pipeline.js';
+import { runFieldSelector } from '../src/core/field-selector/index.js';
 
 // Issue #616: nvca-indemnification-agreement published three fields that
 // silently no-oped. These tests pin the fix:
@@ -179,5 +180,35 @@ describe('nvca-indemnification-agreement field bindings (#616)', () => {
     expect(text).toContain('before or after such suspension or termination. The Company and Indemnitee intend');
     expect(text).not.toContain('..');
     expect(text).not.toContain('[, and terminate');
+  });
+
+  it('verifier compares date-typed values against their formatted rendering (no false Missing warning on ISO input)', async () => {
+    // Regression for the src/core/field-selector/index.ts verificationValues
+    // fix: before it, every ISO-dated fill of a date-typed field warned
+    // `verify: Context values present: Missing: agreement_effective_date=...`
+    // because the document contains the formatted date, not the raw ISO input.
+    const tempDir = mkdtempSync(join(tmpdir(), 'nvca-indem-verify-'));
+    tempDirs.push(tempDir);
+    const inputPath = join(tempDir, 'source.docx');
+    const outputPath = join(tempDir, 'output.docx');
+    writeFileSync(
+      inputPath,
+      buildDocx([CLEANED_PARAGRAPHS.opening_clause, CLEANED_PARAGRAPHS.section_1d_appointing_stockholder]),
+    );
+
+    const result = await runFieldSelector({
+      fieldSelectorId: 'nvca-indemnification-agreement',
+      inputPath,
+      outputPath,
+      values: {
+        agreement_effective_date: '2026-03-15',
+        company_name: 'Meridian Sentinel Inc.',
+        indemnitee_name: 'Jordan Sentinel',
+      },
+    });
+
+    const dateWarnings = result.warnings.filter((w) => w.includes('agreement_effective_date'));
+    expect(dateWarnings).toEqual([]);
+    expect(extractText(outputPath)).toContain('as of March 15, 2026 between');
   });
 });
