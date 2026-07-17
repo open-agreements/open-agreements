@@ -140,8 +140,7 @@ const FIELD_ASSERTION_POLICY: Record<string, FieldAssertionPolicy> = {
   company_counsel_name: { mode: 'resilient', reason: 'Name-only variant may evolve in wording' },
   lead_purchaser_name: { mode: 'resilient', reason: 'Name appears in context-sensitive clauses' },
   series_designation: { mode: 'skip', reason: 'Nth-qualified replacement; exercised in real-source integration checks' },
-  agreement_date_month_day: { mode: 'skip', reason: 'Nth-qualified replacement; exercised in real-source integration checks' },
-  agreement_year_two_digits: { mode: 'skip', reason: 'Nth-qualified replacement; exercised in real-source integration checks' },
+  agreement_date: { mode: 'skip', reason: 'Pure selector-contract date field (no replacements.json key); exercised in real-source integration checks (#619)' },
   par_value_per_share: { mode: 'skip', reason: 'Nth-qualified replacement; exercised in real-source integration checks' },
   purchase_price_per_share: { mode: 'skip', reason: 'Nth-qualified replacement; exercised in real-source integration checks' },
   applicable_word: { mode: 'skip', reason: 'Control field for optional closing-word bracket cleanup' },
@@ -485,9 +484,15 @@ describe('NVCA SPA Template', () => {
     const metadataFieldNames = (metadata.fields ?? []).map((field) => field.name).sort();
     const priorityFieldNames = (metadata.priority_fields ?? []).slice().sort();
 
+    // Coverage counts EVERY {tag} embedded in a replacement value (mirroring
+    // src/core/field-selector/index.ts), not only whole-value tags — keys like
+    // "District Court for the District of [judicial district]" carry literal
+    // text around their tag.
     const replacementFieldNames = Object.values(replacements)
-      .map(extractFieldNameFromReplacement)
-      .filter((field): field is string => field !== null)
+      .flatMap((value) => {
+        const str = typeof value === 'string' ? value : value.value;
+        return Array.from(str.matchAll(/\{([a-zA-Z0-9_]+)\}/g)).map((match) => match[1]);
+      })
       .sort();
     const normalizeFieldNames = (normalizeConfig.paragraph_rules ?? [])
       .flatMap((rule) => Object.values(rule.replacements ?? {}))
@@ -822,7 +827,7 @@ describe('NVCA SPA Template', () => {
       const fixture = createSyntheticFieldSelectorFixture([
         '[Insert Company Name]',
         '[state]',
-        '[judicial district]',
+        'District Court for the District of [judicial district]',
         '[location]',
       ]);
       const computedOutPath = join(fixture.tempDir, 'computed-artifact.json');

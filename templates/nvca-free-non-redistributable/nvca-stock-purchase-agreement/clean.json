@@ -4,9 +4,6 @@
     "^The Stock Purchase Agreement sets forth the basic terms of the purchase and sale of the preferred stock",
     "^Note to Drafter:",
     "^Preliminary Note\\b",
-    "^Alternative 1:",
-    "^Alternative 2:",
-    "^\\[Alternative",
     "^Last [Uu]pdated"
   ],
   "removeRanges": [

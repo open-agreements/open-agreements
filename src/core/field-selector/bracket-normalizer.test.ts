@@ -3,7 +3,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
 import { afterEach, describe, expect } from 'vitest';
-import { normalizeBracketArtifacts } from './bracket-normalizer.js';
+import { computeEditHunks, normalizeBracketArtifacts } from './bracket-normalizer.js';
 import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
@@ -370,5 +370,135 @@ describe('normalizeBracketArtifacts', () => {
     const text = readParagraphs(output).join('\n');
     expect(text).toContain('Corporation Name incorporated on January 1, 2026 in Delaware.');
     expect(stats.normalizedParagraphs).toBe(1);
+  });
+
+  // #619 defect 3: edits at BOTH ends of a paragraph (leading ". " strip +
+  // trailing "]" trim) force the minimal CONTIGUOUS range to span the whole
+  // paragraph; when a Word field result sits inside, replaceParagraphTextRange
+  // refuses and the normalizer previously fell back destructively (flattening
+  // runs, emitting the "formatting-destructive fallback" warning). The hunked
+  // application now applies each disjoint edit separately, preserving the field.
+  it('applies disjoint edits around a Word field result without the destructive fallback (#619)', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-bracket-normalizer-field-'));
+    tempDirs.push(dir);
+
+    const input = join(dir, 'input.docx');
+    const output = join(dir, 'output.docx');
+
+    // Mirror the SPA "Opinion of Company Counsel" paragraph: fill target near
+    // the start, REF field result ("Exhibit I") near the end, trailing "]".
+    const fieldParagraphXml =
+      '<w:p>' +
+      '<w:r><w:t xml:space="preserve">. The Purchasers shall have received from [___________], counsel for the Company, an opinion, in substantially the form of </w:t></w:r>' +
+      '<w:r><w:rPr><w:u w:val="single"/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r>' +
+      '<w:r><w:rPr><w:u w:val="single"/></w:rPr><w:instrText xml:space="preserve"> REF _Ref000 \\h </w:instrText></w:r>' +
+      '<w:r><w:rPr><w:u w:val="single"/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r>' +
+      '<w:r><w:rPr><w:u w:val="single"/></w:rPr><w:t xml:space="preserve">Exhibit I</w:t></w:r>' +
+      '<w:r><w:rPr><w:u w:val="single"/></w:rPr><w:fldChar w:fldCharType="end"/></w:r>' +
+      '<w:r><w:t xml:space="preserve"> attached to this Agreement.]</w:t></w:r>' +
+      '</w:p>';
+    const headingXml = '<w:p><w:r><w:t>Qualifications</w:t></w:r></w:p>';
+    const contentTypes =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">' +
+      '<Default Extension="xml" ContentType="application/xml"/>' +
+      '<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>' +
+      '<Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/>' +
+      '</Types>';
+    const rels =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">' +
+      '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/>' +
+      '</Relationships>';
+    const wordRels =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"/>';
+    const documentXml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>${headingXml}${fieldParagraphXml}</w:body></w:document>`;
+    const zip = new AdmZip();
+    zip.addFile('[Content_Types].xml', Buffer.from(contentTypes, 'utf-8'));
+    zip.addFile('_rels/.rels', Buffer.from(rels, 'utf-8'));
+    zip.addFile('word/_rels/document.xml.rels', Buffer.from(wordRels, 'utf-8'));
+    zip.addFile('word/document.xml', Buffer.from(documentXml, 'utf-8'));
+    writeFileSync(input, zip.toBuffer());
+
+    const stats = await normalizeBracketArtifacts(input, output, {
+      rules: [
+        {
+          id: 'opinion-counsel',
+          section_heading: 'Conditions of the Purchasers’ Obligations at Closing',
+          section_heading_any: ['Qualifications'],
+          paragraph_contains: 'The Purchasers shall have received from',
+          paragraph_end_contains: 'counsel for the Company',
+          replacements: {
+            '[___________]': '{company_counsel_name}',
+          },
+          trim_unmatched_trailing_bracket: true,
+          expected_min_matches: 1,
+        },
+      ],
+      fieldValues: {
+        company_counsel_name: 'Cooley LLP',
+      },
+    });
+
+    // No destructive fallback: field machinery and the underlined cached
+    // result run must survive, and every edit must have landed.
+    expect(stats.formattingFallbackCount).toBe(0);
+    expect(stats.declarativeRuleMutationCounts['opinion-counsel']).toBe(1);
+
+    const mutatedPara = readParagraphXml(output).find((p) => p.includes('Purchasers shall have received'));
+    expect(mutatedPara).toBeDefined();
+    expect(mutatedPara).toContain('fldChar');
+    expect(mutatedPara).toContain('instrText');
+    expect(mutatedPara).toContain('<w:u');
+    expect(mutatedPara).toContain('Exhibit I');
+
+    const text = readParagraphs(output).join('\n');
+    expect(text).toContain('The Purchasers shall have received from Cooley LLP, counsel for the Company');
+    expect(text).not.toContain('[___________]');
+    expect(text).not.toContain('Agreement.]');
+    expect(text).not.toMatch(/^\. The Purchasers/m);
+  });
+});
+
+describe('computeEditHunks', () => {
+  it('returns no hunks for identical strings', () => {
+    expect(computeEditHunks('same text here', 'same text here')).toEqual([]);
+  });
+
+  it('splits independent edits at both ends and in the middle into disjoint hunks', () => {
+    const oldText = '. The Purchasers shall have received from [___________], counsel for the Company, an opinion in the form of Exhibit I attached to this Agreement.]';
+    const newText = 'The Purchasers shall have received from Cooley LLP, counsel for the Company, an opinion in the form of Exhibit I attached to this Agreement.';
+    const hunks = computeEditHunks(oldText, newText);
+    expect(hunks.length).toBe(3);
+    // Ascending, disjoint.
+    for (let i = 1; i < hunks.length; i++) {
+      expect(hunks[i].start).toBeGreaterThanOrEqual(hunks[i - 1].end);
+    }
+    // Replaying the hunks right-to-left reproduces newText exactly.
+    let replay = oldText;
+    for (let i = hunks.length - 1; i >= 0; i--) {
+      replay = replay.slice(0, hunks[i].start) + hunks[i].replacement + replay.slice(hunks[i].end);
+    }
+    expect(replay).toBe(newText);
+  });
+
+  it('degrades to the single contiguous range when no adequate common anchor exists', () => {
+    const hunks = computeEditHunks('abcdefgh', 'zyxwvuts');
+    expect(hunks).toEqual([{ start: 0, end: 8, replacement: 'zyxwvuts' }]);
+  });
+
+  it('replays an unwrap of a bracketed alternative (label strip + trailing bracket trim)', () => {
+    const oldText = '[Alternative 1: Except as otherwise provided in this Agreement, disputes shall be resolved by arbitration in Boston, Massachusetts before a single arbitrator.] ';
+    const newText = 'Except as otherwise provided in this Agreement, disputes shall be resolved by arbitration in Boston, Massachusetts before a single arbitrator.';
+    const hunks = computeEditHunks(oldText, newText);
+    expect(hunks.length).toBeGreaterThanOrEqual(2);
+    let replay = oldText;
+    for (let i = hunks.length - 1; i >= 0; i--) {
+      replay = replay.slice(0, hunks[i].start) + hunks[i].replacement + replay.slice(hunks[i].end);
+    }
+    expect(replay).toBe(newText);
   });
 });

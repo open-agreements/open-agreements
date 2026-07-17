@@ -1,6 +1,24 @@
 {
   "paragraph_rules": [
     {
+      "id": "dispute-resolution-unwrap-alternative-1-arbitration",
+      "section_heading": "Dispute Resolution",
+      "paragraph_contains": "shall be resolved by arbitration before a single arbitrator",
+      "replacements": {
+        "[Alternative 1: Except as": "Except as"
+      },
+      "trim_unmatched_trailing_bracket": true
+    },
+    {
+      "id": "dispute-resolution-unwrap-alternative-2-courts",
+      "section_heading": "Dispute Resolution",
+      "paragraph_contains": "irrevocably and unconditionally submit to the jurisdiction of the state courts of",
+      "replacements": {
+        "[Alternative 2: The parties": "The parties"
+      },
+      "trim_unmatched_trailing_bracket": true
+    },
+    {
       "id": "costs-of-enforcement-select-each-party",
       "section_heading": "Costs of Enforcement",
       "paragraph_contains": "Each party will bear its own costs in respect of any disputes arising under this Agreement.",

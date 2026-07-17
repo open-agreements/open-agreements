@@ -97,8 +97,7 @@ describe('loadSelectorContracts', () => {
     const fieldNames = loadFieldSelectorMetadata(fieldSelectorDir).fields.map((f) => f.name);
     const { manifests, templateManifest } = loadSelectorContracts(fieldSelectorDir, fieldNames);
     expect(manifests.map((m) => m.field_id).sort()).toEqual([
-      'agreement_date_month_day',
-      'agreement_year_two_digits',
+      'agreement_date',
       'company_name',
       'investor_counsel',
       'minimum_shares_initial_closing',
@@ -107,14 +106,17 @@ describe('loadSelectorContracts', () => {
       'purchase_price_per_share',
       'series_designation',
     ]);
-    // company_name (3) + the 13 migrated `>` keys = 16
-    expect(templateManifest?.migrated_keys).toHaveLength(16);
+    // company_name (3) + the 11 migrated `>` keys = 14. `agreement_date` (#619) is a
+    // pure selector-contract with NO replacements.json entry / migrated key: it is
+    // date-typed (ISO input renders as a display date), so keeping it in the legacy
+    // value-map would make the runtime verifier compare raw ISO input against the
+    // formatted output — the same trade documented for the CoI date fields (#608).
+    expect(templateManifest?.migrated_keys).toHaveLength(14);
     expect(templateManifest?.migrated_keys).toEqual(
       expect.arrayContaining([
         '[Insert Company Name]',
         'SERIES > [___]',
         'such Series > [__]',
-        'is made as of > [________]',
         'A minimum of > [_______]',
         'expenses of > [_______]',
       ]),
@@ -177,8 +179,6 @@ describeWithSource('selector contracts against the real NVCA source', () => {
 // source (the drift-canary surface), not just the cleaned doc.
 const MIGRATED_SPAN_COUNTS: Record<string, number> = {
   series_designation: 12,
-  agreement_date_month_day: 1,
-  agreement_year_two_digits: 1,
   par_value_per_share: 1,
   purchase_price_per_share: 1,
   optional_plural_suffix: 1,
@@ -233,6 +233,147 @@ describeWithSource('SPA `>`-anchor field migration parity (#476)', () => {
       }
     });
   }
+});
+
+// ---------------------------------------------------------------------------
+// SPA agreement_date + dispute-resolution alternatives (#619).
+//
+// Pre-#619 the agreement date was a two-field split (`agreement_date_month_day`
+// + `agreement_year_two_digits`) with no format guard, so ISO input rendered
+// "made as of 2026-03-15, 202026". A single date-typed `agreement_date` selector
+// now consumes the WHOLE "[________], 20[__]" slot (including the literal
+// ", 20") and prepareFillData renders ISO input as a document date.
+//
+// Also pre-#619, clean.json removed the `[Alternative 1: ...]` / `[Alternative
+// 2: ...]` dispute-resolution paragraphs before patching, so the `[location]` /
+// `[judicial district]` keys always zero-matched and
+// `dispute_resolution_mode=arbitration` silently produced NO arbitration
+// clause. The alternatives now survive cleaning; a markerless radio selection
+// keeps the selected alternative and normalize.json unwraps its label.
+// ---------------------------------------------------------------------------
+describeWithSource('SPA agreement date + dispute-resolution alternatives (#619)', () => {
+  const fieldSelectorDir = resolveFieldSelectorDir('nvca-stock-purchase-agreement');
+  const fieldNames = loadFieldSelectorMetadata(fieldSelectorDir).fields.map((f) => f.name);
+  const { manifests } = loadSelectorContracts(fieldSelectorDir, fieldNames);
+  const dateManifest = manifests.find((m) => m.field_id === 'agreement_date')!;
+
+  it('[agreement_date] one selector consumes the whole split "[________], 20[__]" slot', async () => {
+    expect(dateManifest, 'agreement_date manifest not loaded').toBeDefined();
+
+    // Drift surface: the combined span resolves against the raw source.
+    const raw = await resolveSelectorContracts(cachedSourcePath(), [dateManifest]);
+    expect(raw.fields[0].unresolved, 'agreement_date unresolved against raw source').toBe(false);
+    expect(raw.fields[0].assertionFailures).toHaveLength(0);
+
+    const dir = mkdtempSync(join(tmpdir(), 'spa-agreement-date-619-'));
+    try {
+      const cleaned = join(dir, 'cleaned.docx');
+      await cleanDocument(cachedSourcePath(), cleaned, loadCleanConfig(fieldSelectorDir));
+
+      const selector = join(dir, 'selector.docx');
+      await applySelectorContracts(cleaned, selector, [dateManifest]);
+
+      const text = textOf(selector);
+      expect((text.match(/\{agreement_date\}/g) ?? []).length).toBe(1);
+      // The literal ", 20" between the two former blanks is consumed by the tag.
+      expect(text).toContain('is made as of {agreement_date}, by and among');
+      expect(text.includes('[________], 20[__]'), 'combined date slot still present').toBe(false);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  it('renders an ISO agreement date as a formatted document date end-to-end (no 202026, no ISO leak)', async () => {
+    const outputPath = join(mkdtempSync(join(tmpdir(), 'spa-date-e2e-619-')), 'spa.docx');
+    try {
+      await runFieldSelector({
+        fieldSelectorId: 'nvca-stock-purchase-agreement',
+        inputPath: cachedSourcePath(),
+        outputPath,
+        values: {
+          company_name: 'Meridian Robotics, Inc.',
+          agreement_date: '2026-03-15',
+        },
+      });
+
+      const text = textOf(outputPath);
+      expect(text).toContain('is made as of March 15, 2026, by and among');
+      expect(text.includes('202026'), 'split-year concatenation leaked').toBe(false);
+      expect(text.includes('2026-03-15'), 'raw ISO agreement_date leaked').toBe(false);
+    } finally {
+      rmSync(outputPath, { recursive: true, force: true });
+    }
+  });
+
+  it('dispute_resolution_mode=arbitration keeps Alternative 1 with the supplied location and drops the courts alternative', async () => {
+    const outputPath = join(mkdtempSync(join(tmpdir(), 'spa-arb-e2e-619-')), 'spa.docx');
+    try {
+      const result = await runFieldSelector({
+        fieldSelectorId: 'nvca-stock-purchase-agreement',
+        inputPath: cachedSourcePath(),
+        outputPath,
+        values: {
+          company_name: 'Meridian Robotics, Inc.',
+          dispute_resolution_mode: 'arbitration',
+          arbitration_location: 'Boston, Massachusetts',
+          state_lower: 'massachusetts',
+          judicial_district: 'District of Massachusetts',
+        },
+      });
+
+      const text = textOf(outputPath);
+      // The arbitration clause is present and carries the supplied venue.
+      expect(text).toContain('shall be resolved by arbitration before a single arbitrator');
+      expect(text).toContain('The arbitration shall take place in Boston, Massachusetts');
+      // The courts alternative is gone.
+      expect(text).not.toContain('irrevocably and unconditionally submit to the jurisdiction of the state courts of');
+      // The alternative label wrapper is unwrapped.
+      expect(text).not.toContain('[Alternative 1:');
+      expect(text).not.toContain('[Alternative 2:');
+      // The formerly always-zero-match keys now fill (no leftover placeholders).
+      expect(text).not.toContain('[location]');
+      expect(text).not.toContain('[judicial district]');
+      // Clean full fill: no zero-match/normalization warnings for this path.
+      expect(result.warnings).toEqual([]);
+    } finally {
+      rmSync(outputPath, { recursive: true, force: true });
+    }
+  });
+
+  it('dispute_resolution_mode=courts keeps Alternative 2 with the judicial district and drops the arbitration alternative', async () => {
+    const outputPath = join(mkdtempSync(join(tmpdir(), 'spa-courts-e2e-619-')), 'spa.docx');
+    try {
+      const result = await runFieldSelector({
+        fieldSelectorId: 'nvca-stock-purchase-agreement',
+        inputPath: cachedSourcePath(),
+        outputPath,
+        values: {
+          company_name: 'Meridian Robotics, Inc.',
+          dispute_resolution_mode: 'courts',
+          state_lower: 'california',
+          judicial_district: 'Northern District of California',
+        },
+      });
+
+      const text = textOf(outputPath);
+      // The courts alternative is present and carries the supplied district.
+      expect(text).toContain('irrevocably and unconditionally submit to the jurisdiction of the state courts of california');
+      // The alt-2 key consumes the literal "District of" so a full district name
+      // does not double up ("District of Northern District of ...").
+      expect(text).toContain('United States District Court for the Northern District of California');
+      expect(text).not.toContain('District Court for the District of Northern District');
+      // The arbitration alternative is gone.
+      expect(text).not.toContain('shall be resolved by arbitration before a single arbitrator');
+      // The alternative label wrapper is unwrapped.
+      expect(text).not.toContain('[Alternative 1:');
+      expect(text).not.toContain('[Alternative 2:');
+      expect(text).not.toContain('[location]');
+      expect(text).not.toContain('[judicial district]');
+      expect(result.warnings).toEqual([]);
+    } finally {
+      rmSync(outputPath, { recursive: true, force: true });
+    }
+  });
 });
 
 // ---------------------------------------------------------------------------

@@ -1,6 +1,22 @@
 {
   "groups": [
     {
+      "id": "dispute_resolution",
+      "type": "radio",
+      "markerless": true,
+      "subClauseStopPatterns": ["^Each of the parties", "^Waiver of Jury Trial"],
+      "options": [
+        {
+          "marker": "shall be resolved by arbitration before a single arbitrator",
+          "trigger": { "field": "dispute_resolution_mode", "equals": "arbitration" }
+        },
+        {
+          "marker": "hereby irrevocably and unconditionally submit to the jurisdiction of the state courts of",
+          "trigger": "default"
+        }
+      ]
+    },
+    {
       "id": "additional_closings",
       "type": "checkbox",
       "standalone": true,
