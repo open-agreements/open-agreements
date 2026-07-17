@@ -2,7 +2,7 @@
   "indemnitee_name": "Jordan Lee",
   "indemnitee_address": "2443 Fillmore Street, Suite 380-7165, San Francisco, CA 94115",
   "company_name": "IMIM Technologies, Inc.",
-  "agreement_effective_date": "March 20, 2026",
+  "agreement_effective_date": "2026-03-20",
   "fund_sponsor_name": "IMIM Ventures III, L.P.",
   "indemnitee_role": "director",
   "indemnitee_role_plural": "directors",
@@ -14,6 +14,5 @@
   "certificate_name": "Amended and Restated Certificate of Incorporation",
   "and_appointing_stockholder": "and Appointing Stockholder",
   "appointing_stockholder_ipo_termination_clause": "",
-  "indemnification_section_letter": "E",
   "signature_page_marker": "Signature Page Follows"
 }
