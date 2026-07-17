@@ -352,6 +352,10 @@ describeWithSource('SPA agreement date + dispute-resolution alternatives (#619)'
           dispute_resolution_mode: 'courts',
           state_lower: 'california',
           judicial_district: 'Northern District of California',
+          // Supplied but INACTIVE in courts mode: its only fill site is the
+          // arbitration alternative that selection removes. Verification must
+          // be selection-aware and not warn "Missing: arbitration_location".
+          arbitration_location: 'Boston, Massachusetts',
         },
       });
 
