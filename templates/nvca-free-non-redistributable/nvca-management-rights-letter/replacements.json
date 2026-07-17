@@ -1,5 +1,8 @@
 {
   "[COMPANY]": "{company_name_upper}",
+  "[_____________________]": "{company_name_upper}",
+  "[______], 20[__]": "{letter_date}",
+  "[________]": "{purchased_shares}",
   "[Investor Name]": "{investor_name}",
   "[INVESTOR]": "{investor_name_upper}",
   "[City]": "{city}",
