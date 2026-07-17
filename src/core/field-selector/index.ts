@@ -16,6 +16,7 @@ import {
 } from './computed.js';
 import { normalizeBracketArtifacts } from './bracket-normalizer.js';
 import { runFillPipeline } from '../unified-pipeline.js';
+import { formatDocumentDate } from '../fill-pipeline.js';
 import type { FieldSelectorRunOptions, FieldSelectorRunResult } from './types.js';
 import type { ComputedValueMap } from './computed.js';
 
@@ -106,7 +107,11 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
     }
     const value = effectiveValues[field.name];
     if (typeof value === 'string') {
-      verificationValues[field.name] = value;
+      // Date fields are rendered through prepareFillData's ISO → document-date
+      // formatting ("2026-03-20" → "March 20, 2026"), so verify against the
+      // formatted value that actually lands in the document. Non-ISO strings
+      // pass through formatDocumentDate unchanged.
+      verificationValues[field.name] = field.type === 'date' ? formatDocumentDate(value) : value;
     }
   }
   const computedArtifact = computedEvaluation && computedProfile
