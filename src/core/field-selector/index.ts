@@ -107,10 +107,10 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
     }
     const value = effectiveValues[field.name];
     if (typeof value === 'string') {
-      // Date fields are rendered through prepareFillData's ISO → document-date
-      // formatting ("2026-03-20" → "March 20, 2026"), so verify against the
-      // formatted value that actually lands in the document. Non-ISO strings
-      // pass through formatDocumentDate unchanged.
+      // Mirror prepareFillData's date handling: `type: date` fields render ISO
+      // input as a document date ("2026-07-15" → "July 15, 2026"), so verify
+      // against the formatted value actually written to the output — otherwise
+      // every ISO-supplied date field reports a spurious "Missing" warning.
       verificationValues[field.name] = field.type === 'date' ? formatDocumentDate(value) : value;
     }
   }
