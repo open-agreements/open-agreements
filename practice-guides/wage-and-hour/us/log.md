@@ -1,5 +1,10 @@
 # Us Update Log
 
+## 2026-07-16
+* **Update**: Author Michigan wage-and-hour practice note (#1816) (0f20578)
+* **Update**: content(wage-and-hour): New Jersey practice note (#1817) (45db32f)
+* **Update**: Author North Carolina wage-and-hour practice note (#1819) (587680b)
+
 ## 2026-07-15
 * **Update**: feat(wage-and-hour): Ohio practice note (#1815) (0048ef1)
 
