@@ -14,7 +14,7 @@ description: >-
   a starting point for licensed counsel review.
 source_url: >-
   https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-confidentiality-invention-assignment-agreement-nevada
-version: "0.1.0"
+version: "0.2.0"
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled
@@ -28,7 +28,7 @@ style_id: openagreements-default-v1
 document:
   title: Confidentiality & Invention Assignment Agreement (Nevada)
   label: OpenAgreements Confidentiality & Invention Assignment Agreement (Nevada)
-  version: "0.1.0"
+  version: "0.2.0"
   license: Free to use under CC BY 4.0
   include_cloud_doc_line: true
   defined_term_highlight_mode: definition_site_only
@@ -75,15 +75,15 @@ fields:
       Inventions Employee develops entirely on personal time without using company equipment,
       supplies, facilities, or trade secret information are excluded, except for inventions that
       either (a) relate to company business or its actual or demonstrably anticipated research or
-      development, or (b) result from work performed for the company. No exclusion covers a
-      patentable invention or trade secret developed during the course and scope of employment
-      that relates directly to the work performed.
+      development, or (b) result from work performed for the company. No exclusion covers any
+      Employment-Scope IP.
     default_value_rationale: >-
       Nevada's NRS 600.500 makes the employer the sole owner, absent an express
       written agreement, of any patentable invention or trade secret developed in
       the course and scope of employment that relates directly to the work. The
-      final sentence keeps every exclusion outside that statutory grant, so the
-      form never gives away ownership the statute already vests in the employer.
+      Employment-Scope IP defined term carries that statutory scope, and the final
+      sentence keeps every exclusion outside it, so the form never gives away
+      ownership the statute already vests in the employer.
     section: Inventions
   - name: return_of_materials_timing
     type: string
@@ -145,7 +145,9 @@ The key business terms of this assignment agreement are as follows.
 {% clause id="defined-terms" type="definitions" %}
 ### Defined Terms
 
-[[Covered Inventions]] means all inventions, software, works of authorship, discoveries, improvements, designs, data models, and other intellectual property that Employee makes, conceives, develops, or reduces to practice, alone or with others, during employment, together with all related intellectual property rights, {% requirement id="continuations-in-part" %}including the right to apply for and claim priority to patents, copyrights, and other registrations and the right to pursue remedies for infringement{% /requirement %}. Covered Inventions do not include the Prior Inventions or the Excluded Inventions described below.
+[[Covered Inventions]] means all inventions, software, works of authorship, discoveries, improvements, designs, data models, and other intellectual property that Employee makes, conceives, develops, or reduces to practice, alone or with others, during employment, together with all related intellectual property rights, {% requirement id="continuations-in-part" %}including the right to apply for and claim priority to patents, copyrights, and other registrations and the right to pursue remedies for infringement{% /requirement %}. Covered Inventions do not include the Prior Inventions or the Excluded Inventions described below, except that Employment-Scope IP is not excluded.
+
+[[Employment-Scope IP]] means a patentable invention or trade secret that Employee develops during the course and scope of employment and that relates directly to work performed during the course and scope of the employment.
 
 [[Confidential Information]] means non-public information that Employee learns, accesses, or develops during employment, including business strategies, customer and prospect data, trade secrets, source code, algorithms, security credentials, technical and product information, financial information, personnel information. Confidential Information does not include information that (a) was publicly known when Employee learned it, (b) becomes publicly known through no fault of Employee, (c) was lawfully known to Employee before employment without confidentiality restriction, (d) Employee rightfully receives from a third party without confidentiality restriction, or (e) Employee independently develops outside the scope of employment without using Confidential Information or Company equipment, supplies, facilities, or other resources.
 
@@ -153,7 +155,7 @@ The key business terms of this assignment agreement are as follows.
 {% clause id="assignment-of-inventions" %}
 ### Assignment of Inventions
 
-{% requirement id="statutory-ownership-acknowledgment" %}Employee acknowledges that Company is the sole owner of any patentable invention or trade secret that Employee develops during the course and scope of employment and that relates directly to work performed during the course and scope of the employment.{% /requirement %} {% requirement id="present-assignment" %}Employee hereby assigns{% /requirement %}, and {% requirement id="future-assignment" %}agrees to assign, to Company all right, title, and interest in the Covered Inventions, to the extent permitted by law. This assignment covers all inventions Employee makes during employment{% /requirement %}, except for the inventions carved out under Prior and Excluded Inventions below. {% requirement id="moral-rights-waiver" %}To the extent any moral rights or similar artist's rights in the Covered Inventions cannot be assigned, Employee waives and agrees not to enforce those rights against Company or its licensees and customers, to the extent permitted by law.{% /requirement %}
+{% requirement id="statutory-ownership-acknowledgment" %}Employee acknowledges that Company is the sole owner of any Employment-Scope IP.{% /requirement %} {% requirement id="present-assignment" %}Employee hereby assigns{% /requirement %}, and {% requirement id="future-assignment" %}agrees to assign, to Company all right, title, and interest in the Covered Inventions, to the extent permitted by law. This assignment covers all inventions Employee makes during employment{% /requirement %}, except for the inventions carved out under Prior and Excluded Inventions below. {% requirement id="moral-rights-waiver" %}To the extent any moral rights or similar artist's rights in the Covered Inventions cannot be assigned, Employee waives and agrees not to enforce those rights against Company or its licensees and customers, to the extent permitted by law.{% /requirement %}
 
 {% /clause %}
 {% clause id="work-made-for-hire-and-further-assurances" %}
@@ -171,7 +173,7 @@ To the extent legally permitted, {% requirement id="work-for-hire" %}copyrightab
 {% clause id="prior-and-excluded-inventions" %}
 ### Prior and Excluded Inventions
 
-The assignment above does not apply to, and Covered Inventions do not include, {% requirement id="excluded-employee-ip" %}any invention that Employee develops entirely on Employee's own time without using Company equipment, supplies, facilities, or trade secret information{% /requirement %}, and that neither (a) relates to Company business or to Company's actual or demonstrably anticipated research or development, nor (b) results from work performed by Employee for Company. {% requirement id="prior-inventions-schedule" %}The Prior Inventions and Excluded Inventions identified in Cover Terms are also carved out and remain Employee's property.{% /requirement %} {% requirement id="statutory-grant-boundary" %}No exclusion under this Section applies to a patentable invention or trade secret that Employee develops during the course and scope of employment and that relates directly to work performed during the course and scope of the employment; Company remains the sole owner of each such invention and trade secret.{% /requirement %} Employee represents that the Prior Inventions disclosure in Cover Terms is complete to Employee's knowledge as of the Effective Date.
+The assignment above does not apply to, and Covered Inventions do not include, (a) {% requirement id="excluded-employee-ip" %}any invention that Employee develops entirely on Employee's own time without using Company equipment, supplies, facilities, or trade secret information, and that neither (i) relates to Company business or to Company's actual or demonstrably anticipated research or development, nor (ii) results from work performed by Employee for Company{% /requirement %}; {% requirement id="prior-inventions-schedule" %}(b) the Prior Inventions identified in Cover Terms; or (c) the Excluded Inventions identified in Cover Terms{% /requirement %}. {% requirement id="statutory-grant-boundary" %}No exclusion under the foregoing sentence applies to Employment-Scope IP; Company remains the sole owner of Employment-Scope IP.{% /requirement %} Employee represents that the Prior Inventions disclosure in Cover Terms is complete to Employee's knowledge as of the Effective Date.
 
 {% /clause %}
 {% clause id="license-back-of-employee-inventions" %}
