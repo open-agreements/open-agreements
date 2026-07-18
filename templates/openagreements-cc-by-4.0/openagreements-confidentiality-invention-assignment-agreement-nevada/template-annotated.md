@@ -21,7 +21,7 @@ Prior Inventions Disclosure
 : [List of prior inventions excluded from assignment, or None]
 
 Excluded Inventions Statement
-: Inventions Employee develops entirely on personal time without using company equipment, supplies, facilities, or trade secret information are excluded, except for inventions that either (a) relate to company business or its actual or demonstrably anticipated research or development, or (b) result from work performed for the company. No exclusion covers a patentable invention or trade secret developed during the course and scope of employment that relates directly to the work performed.
+: Inventions Employee develops entirely on personal time without using company equipment, supplies, facilities, or trade secret information are excluded, except for inventions that either (a) relate to company business or its actual or demonstrably anticipated research or development, or (b) result from work performed for the company. No exclusion covers any Employment-Scope IP.
 
 Return of Materials Timing
 : [Timing for return or deletion of company materials]
@@ -39,13 +39,15 @@ Venue
 
 ### Defined Terms
 
-[[Covered Inventions]] means all inventions, software, works of authorship, discoveries, improvements, designs, data models, and other intellectual property that Employee makes, conceives, develops, or reduces to practice, alone or with others, during employment, together with all related intellectual property rights, including the right to apply for and claim priority to patents, copyrights, and other registrations and the right to pursue remedies for infringement. Covered Inventions do not include the Prior Inventions or the Excluded Inventions described below.
+[[Covered Inventions]] means all inventions, software, works of authorship, discoveries, improvements, designs, data models, and other intellectual property that Employee makes, conceives, develops, or reduces to practice, alone or with others, during employment, together with all related intellectual property rights, including the right to apply for and claim priority to patents, copyrights, and other registrations and the right to pursue remedies for infringement. Covered Inventions do not include the Prior Inventions or the Excluded Inventions described below, except that Employment-Scope IP is not excluded.
+
+[[Employment-Scope IP]] means a patentable invention or trade secret that Employee develops during the course and scope of employment and that relates directly to work performed during the course and scope of the employment.
 
 [[Confidential Information]] means non-public information that Employee learns, accesses, or develops during employment, including business strategies, customer and prospect data, trade secrets, source code, algorithms, security credentials, technical and product information, financial information, personnel information. Confidential Information does not include information that (a) was publicly known when Employee learned it, (b) becomes publicly known through no fault of Employee, (c) was lawfully known to Employee before employment without confidentiality restriction, (d) Employee rightfully receives from a third party without confidentiality restriction, or (e) Employee independently develops outside the scope of employment without using Confidential Information or Company equipment, supplies, facilities, or other resources.
 
 ### Assignment of Inventions
 
-Employee acknowledges that Company is the sole owner of any patentable invention or trade secret that Employee develops during the course and scope of employment and that relates directly to work performed during the course and scope of the employment. Employee hereby assigns, and agrees to assign, to Company all right, title, and interest in the Covered Inventions, to the extent permitted by law. This assignment covers all inventions Employee makes during employment, except for the inventions carved out under Prior and Excluded Inventions below. To the extent any moral rights or similar artist's rights in the Covered Inventions cannot be assigned, Employee waives and agrees not to enforce those rights against Company or its licensees and customers, to the extent permitted by law.
+Employee acknowledges that Company is the sole owner of any Employment-Scope IP. Employee hereby assigns, and agrees to assign, to Company all right, title, and interest in the Covered Inventions, to the extent permitted by law. This assignment covers all inventions Employee makes during employment, except for the inventions carved out under Prior and Excluded Inventions below. To the extent any moral rights or similar artist's rights in the Covered Inventions cannot be assigned, Employee waives and agrees not to enforce those rights against Company or its licensees and customers, to the extent permitted by law.
 
 ### Work Made for Hire and Further Assurances
 
@@ -57,7 +59,7 @@ Employee will promptly disclose Covered Inventions and maintain reasonably compl
 
 ### Prior and Excluded Inventions
 
-The assignment above does not apply to, and Covered Inventions do not include, any invention that Employee develops entirely on Employee's own time without using Company equipment, supplies, facilities, or trade secret information, and that neither (a) relates to Company business or to Company's actual or demonstrably anticipated research or development, nor (b) results from work performed by Employee for Company. The Prior Inventions and Excluded Inventions identified in Cover Terms are also carved out and remain Employee's property. No exclusion under this Section applies to a patentable invention or trade secret that Employee develops during the course and scope of employment and that relates directly to work performed during the course and scope of the employment; Company remains the sole owner of each such invention and trade secret. Employee represents that the Prior Inventions disclosure in Cover Terms is complete to Employee's knowledge as of the Effective Date.
+The assignment above does not apply to, and Covered Inventions do not include, (a) any invention that Employee develops entirely on Employee's own time without using Company equipment, supplies, facilities, or trade secret information, and that neither (i) relates to Company business or to Company's actual or demonstrably anticipated research or development, nor (ii) results from work performed by Employee for Company; (b) the Prior Inventions identified in Cover Terms; or (c) the Excluded Inventions identified in Cover Terms. No exclusion under the foregoing sentence applies to Employment-Scope IP; Company remains the sole owner of Employment-Scope IP. Employee represents that the Prior Inventions disclosure in Cover Terms is complete to Employee's knowledge as of the Effective Date.
 
 ### License to Company for Employee Inventions Used in Company Products
 

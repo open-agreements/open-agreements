@@ -57,7 +57,7 @@ Employee will promptly disclose Covered Inventions and maintain reasonably compl
 
 ### Prior and Excluded Inventions
 
-The assignment above does not apply to, and Covered Inventions do not include, any invention that Employee develops entirely on Employee's own time without using Company equipment, supplies, facilities, or trade secret information, and that neither (a) relates to Company business or to Company's actual or demonstrably anticipated research or development, nor (b) results from work performed by Employee for Company. This carve-out applies as a matter of contract whether or not a specific state invention-assignment statute applies. The Prior Inventions and Excluded Inventions identified in Cover Terms are also carved out and remain Employee's property. Employee represents that the Prior Inventions disclosure in Cover Terms is complete to Employee's knowledge as of the Effective Date.
+The assignment above does not apply to, and Covered Inventions do not include, (a) any invention that Employee develops entirely on Employee's own time without using Company equipment, supplies, facilities, or trade secret information, and that neither (i) relates to Company business or to Company's actual or demonstrably anticipated research or development, nor (ii) results from work performed by Employee for Company; (b) the Prior Inventions identified in Cover Terms; or (c) the Excluded Inventions identified in Cover Terms. Employee represents that the Prior Inventions disclosure in Cover Terms is complete to Employee's knowledge as of the Effective Date.
 
 ### License to Company for Employee Inventions Used in Company Products
 

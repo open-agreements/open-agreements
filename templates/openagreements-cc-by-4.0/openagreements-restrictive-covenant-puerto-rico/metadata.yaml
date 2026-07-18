@@ -1,0 +1,189 @@
+name: Employee Restrictive Covenant (Puerto Rico)
+category: non-compete
+description: Puerto Rico-specific employee restrictive covenant agreement with modular covenant structure. Reflects the twelve-month maximum and reasonableness requirements described in Arthur Young & Co. v. Vega, 136 D.P.R. 157 (1994). Drafted as a starting point for review by licensed Puerto Rico counsel.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-master
+version: '2.0'
+stability: experimental
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: Authored by OpenAgreements contributors. Puerto Rico-specific analysis informed by publicly available commentary on Arthur Young & Co. v. Vega, 136 D.P.R. 157 (1994). Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    display_label: Employer
+    section: Parties
+  - name: employer_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the employer
+    display_label: Employer Signatory Name
+    section: Parties
+  - name: employer_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the employer
+    display_label: Employer Signatory Title
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    display_label: Employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    display_label: Employee Title / Position
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    display_label: Effective Date
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    display_label: Governing Law
+    default: Puerto Rico
+    section: Legal
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    display_label: Trade Secrets Duration
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    display_label: Other Confidential Information Duration
+    default: 24 months
+    default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements.
+    section: Confidentiality
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.
+    display_label: Employee No-Hire Included
+    section: Employee Non-Solicitation
+    rationale_source: editorial
+    default: true
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    display_label: Employee Non-Solicitation Duration
+    default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/employee-non-solicit-duration
+    default_value_rationale: 24 months matches the modal employee non-solicit term observed in benchmarked, publicly-filed employee agreements; 12 months is the common lighter alternative. Puerto Rico judges the covenant on common-law reasonableness, so counsel should size the term to the employer's actual protectable interest.
+    section: Employee Non-Solicitation
+  - name: covered_employee_period
+    type: string
+    description: Lookback period for determining which employees are covered by the non-solicitation restriction.
+    display_label: Covered Employee Period
+    default: 12 months
+    default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
+    section: Employee Non-Solicitation
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.
+    display_label: Customer Non-Solicitation Included
+    default: true
+    section: Customer Non-Solicitation
+    rationale_source: editorial
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    display_label: Customer Non-Solicitation Duration
+    default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/customer-non-solicit-duration
+    default_value_rationale: 12 months is the most common customer non-solicit term in benchmarked, publicly-filed employee agreements, edging out 24 months by only a narrow margin — a conservative pick counsel should size to the customer relationships actually protected.
+    section: Customer Non-Solicitation
+  - name: covered_customer_period
+    type: string
+    description: Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.
+    display_label: Covered Customer Period
+    default: 12 months
+    default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
+    section: Customer Non-Solicitation
+  - name: noncompete_included
+    type: boolean
+    description: Whether the non-competition covenant is included. Under Alabama law an employee may agree to a geographically limited non-compete; this template recites the employee-exception basis, ties the covenant to a listed protectable interest, and biases the duration into the two-year presumptively reasonable window.
+    display_label: Non-Competition Included
+    section: Non-Competition
+    default_value_rationale: Conservative default. Non-competes are the most heavily scrutinized covenant; include only after confirming the restraint fits Alabama's employee exception for a specified geographic area, a competing business, and an existing employment relationship; protects a listed interest; stays within the two-year presumption; will be signed by all parties, including the employer; and does not restrain a member of a recognized profession from practicing that profession. The party seeking enforcement bears the burden of proof on every element.
+    rationale_source: editorial
+    default: true
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    display_label: Non-Competition Duration
+    default: 12 months
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/non-compete-duration
+    default_value_rationale: Twelve months is the jurisdiction-specific maximum post-employment term; any additional term is excessive.
+    section: Non-Competition
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    display_label: Restricted Territory
+    default: the geographic area in which Employee provided services
+    default_value_rationale: Tied to the employee's actual service area. Narrower scope improves enforceability under Puerto Rico's strict scrutiny.
+    section: Non-Competition
+  - name: competitive_business_definition
+    type: string
+    description: Description of the business activities that constitute competition with the employer.
+    display_label: Competitive Business
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: Optional named list of specific competitors. Narrowing the restriction to named competitors strengthens enforceability.
+    display_label: Specified Competitors
+    default: ''
+    section: Non-Competition
+  - name: nondealing_included
+    type: boolean
+    description: Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.
+    display_label: No Business with Covered Customers Included
+    default: false
+    section: No Business with Covered Customers
+    rationale_source: editorial
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    display_label: No Business with Covered Customers Duration
+    default: 12 months
+    section: No Business with Covered Customers
+  - name: passive_public_holdings_threshold
+    type: string
+    description: Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.
+    display_label: Passive Public Holdings Threshold
+    default: five percent
+    rationale_source: benchmark
+    benchmark_ref: restrictive-covenant/passive-ownership-carveout
+    default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives).
+    section: Definitions
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.
+    display_label: Non-Investment Included
+    default: false
+    section: Non-Investment
+    rationale_source: editorial
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    display_label: Non-Investment Duration
+    default: 12 months
+    section: Non-Investment
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    display_label: Non-Disparagement Duration
+    default: 24 months
+    default_value_rationale: 24 months is common for employment non-disparagement provisions.
+    section: Non-Disparagement
+omitted_clauses: drop
+priority_fields:
+  - employer_name
+  - employee_name
+distribution: bundled
+artifact_type: template
