@@ -99,11 +99,11 @@ Duration
 
 ### Recitals and Protectable Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to protect one or more of Employer's Protected Interests and to impose no restraint broader than is appropriate for that protection. The parties acknowledge that each covenant is meant to guard Employer's Confidential Information, trade secrets, and customer goodwill and not to eliminate ordinary competition, and that each restraint is intended to be no broader than reasonably necessary in duration, geographic scope, and activity to protect the interest at stake.
+Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to protect one or more of Employer's Protected Interests and to impose no restraint broader than is reasonably necessary for that protection. The parties acknowledge that each covenant is meant to guard Employer's Confidential Information, trade secrets, and customer goodwill and not to eliminate ordinary competition, and that each restraint is intended to be no broader than reasonably necessary in duration, geographic scope, and activity to protect the interest at stake.
 
 ### Timing, Consideration, and Employee Acknowledgements
 
-The parties acknowledge that this agreement is supported by the consideration stated in it, which may include initial or continued employment, access to Confidential Information and customer relationships, training, compensation, a raise, or a bonus. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
+The parties acknowledge that this agreement is supported by the consideration stated in it, which may include initial or continued employment, access to Confidential Information and customer relationships, training, compensation, a raise, or a bonus. If this agreement is signed at the outset of employment, the offer and commencement of employment is the consideration. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -119,7 +119,7 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is limited to the scope needed to protect Employer's workforce stability and goodwill.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is no broader than necessary to protect Employer's workforce stability and goodwill.
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
@@ -135,7 +135,7 @@ During the Restricted Period, Employee must not engage in, be employed by, consu
 
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors and is limited to the scope needed to protect Employer's Protected Interests. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors and is drawn no broader than necessary to protect Employer's Protected Interests. Passive Public Holdings are permitted.
 
 ### Sale-of-Business Covenants
 
@@ -171,7 +171,7 @@ If any provision of this agreement is found to be unenforceable, the remaining p
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive for the Trade Secrets Duration specified in Cover Terms to the extent they relate to trade secrets, and for the Other Confidential Information Duration specified in Cover Terms for other Confidential Information. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### Assignment and Successors
 

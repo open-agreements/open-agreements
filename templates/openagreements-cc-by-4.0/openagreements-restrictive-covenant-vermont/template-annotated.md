@@ -100,7 +100,7 @@ Employer and Employee acknowledge that each restrictive covenant in this agreeme
 
 ### Timing, Consideration, and Employee Acknowledgements
 
-This agreement is supported by Employee's continued employment or, if signed at the outset of employment, Employer's offer of employment. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
+This agreement is supported by Employee's continued employment or, if signed at the outset of employment, Employer's offer of employment. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -116,11 +116,11 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is limited to the scope needed to protect Employer's workforce stability and goodwill.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is no broader than necessary to protect Employer's workforce stability and goodwill.
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers with whom Employee had material contact and is limited to the scope needed to protect Employer's goodwill in its customer relationships.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers with whom Employee had material contact and is no broader than necessary to protect Employer's goodwill in its customer relationships.
 
 ### No Business with Covered Customers
 
@@ -164,7 +164,7 @@ If any provision of this agreement is found to be unenforceable, the remaining p
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment. Each covenant's duration is stated in Cover Terms, and no covenant is intended to revive after its stated term has run.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive for the Trade Secrets Duration specified in Cover Terms to the extent they relate to trade secrets, and for the Other Confidential Information Duration specified in Cover Terms for other Confidential Information. All other provisions survive to the extent necessary to enforce rights that arose during employment. Each covenant's duration is stated in Cover Terms, and no covenant is intended to revive after its stated term has run.
 
 ### Assignment and Successors
 

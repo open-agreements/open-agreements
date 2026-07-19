@@ -125,7 +125,7 @@ During the Restricted Period, Employee must not Solicit, recruit, hire, or attem
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant is limited to protect Employer's relationships with the specific customers, referral sources, and business partners Employee served or learned protected information about, and not Employer's customer base generally.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant is drawn to protect Employer's relationships with the specific customers, referral sources, and business partners Employee served or learned protected information about, and not Employer's customer base generally.
 
 ### No Business with Covered Customers
 

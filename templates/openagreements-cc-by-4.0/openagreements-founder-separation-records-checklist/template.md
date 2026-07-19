@@ -34,7 +34,7 @@ The following executed instruments should be filed in the Company's minute book 
 
 ## Certification
 
-The undersigned officer of the Company hereby certifies that the records listed above have been assembled and filed in the Company's minute book maintained at {minute_book_location}, and that this certificate and checklist may be filed with the minutes of the proceedings of the Board of Directors of the Company. Any copy, facsimile,.PDF, or other complete and reliable reproduction of this certificate may be used in lieu of the original for any purpose for which the original could be used.
+The undersigned officer of the Company hereby certifies that the records listed above have been assembled and filed in the Company's minute book maintained at {minute_book_location}, and that this certificate and checklist may be filed with the minutes of the proceedings of the Board of Directors of the Company. Any copy, facsimile, .PDF, or other complete and reliable reproduction of this certificate may be used in lieu of the original for any purpose for which the original could be used.
 
 Company: {company_legal_name}
 

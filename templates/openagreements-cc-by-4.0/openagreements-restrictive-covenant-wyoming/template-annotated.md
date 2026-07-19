@@ -96,7 +96,7 @@ Duration
 
 ### Timing and Employee Acknowledgements
 
-Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
+Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 

@@ -79,11 +79,11 @@ Duration
 
 [[Covered Customers]] means current customers, vendors, referral sources, and business partners of Employer with whom Employee had material contact or for whom Employee had responsibility during the {covered_customer_period} before termination of employment, and does not include former customers or merely prospective customers.
 
-[[Covered Employees]] means employees of Employer who hold a position uniquely essential to the management, organization, or service of Employer's business as described by Ala. Code § 8-1-190(b)(1), and with whom Employee worked or whom Employee managed during the {covered_employee_period} before termination of employment.
+[[Covered Employees]] means employees of Employer who hold a position uniquely essential to the management, organization, or service of Employer's business within the meaning of Ala. Code § 8-1-190(b)(1), and with whom Employee worked or whom Employee managed during the {covered_employee_period} before termination of employment.
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than {passive_public_holdings_threshold} of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-[[Protected Interests]] means Employer's Protected Interests as described by Ala. Code § 8-1-191(a), namely its trade secrets (as defined in the Alabama Trade Secrets Act, Ala. Code § 8-27-2), its confidential information, its commercial relationships or contacts with specific prospective or existing customers, patients, vendors, or clients, its goodwill, and any specialized and unique training set forth in writing under this agreement as the consideration for a restraint; Employee's job skills, in and of themselves and without more, are not a Protected Interest.
+[[Protected Interests]] means Employer's Protected Interests within the meaning of Ala. Code § 8-1-191(a), namely its trade secrets (as defined in the Alabama Trade Secrets Act, Ala. Code § 8-27-2), its confidential information, its commercial relationships or contacts with specific prospective or existing customers, patients, vendors, or clients, its goodwill, and any specialized and unique training set forth in writing under this agreement as the consideration for a restraint; Employee's job skills, in and of themselves and without more, are not a Protected Interest.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
@@ -99,7 +99,7 @@ Employer and Employee acknowledge that each restrictive covenant in this agreeme
 
 ### Timing, Consideration, and Right to Consult Counsel
 
-This agreement is in writing, signed by all parties, and supported by the consideration stated in it. The parties acknowledge that Employee entered into this agreement on or after the first day of the employer-employee relationship with Employer. Employer has given Employee the opportunity to consult with an attorney before entering into this agreement. Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
+This agreement is in writing, signed by all parties, and supported by the consideration stated in it. The parties acknowledge that Employee entered into this agreement on or after the first day of the employer-employee relationship with Employer. Employer has given Employee the opportunity to consult with an attorney before entering into this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -163,7 +163,7 @@ If any provision of this agreement is found to be unenforceable, the remaining p
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive for the Trade Secrets Duration specified in Cover Terms to the extent they relate to trade secrets, and for the Other Confidential Information Duration specified in Cover Terms for other Confidential Information. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### Assignment and Successors
 

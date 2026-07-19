@@ -104,7 +104,7 @@ Employer represents that it does not provide broadcasting services over a televi
 
 ### Timing, Consideration, and Employee Acknowledgements
 
-This agreement is effective as of the Effective Date listed in Cover Terms. The parties acknowledge that this agreement is supported by adequate consideration: if this agreement is signed at the outset of employment, the offer and commencement of employment; if Employee is an existing at-will employee, Employer's continuation of the at-will employment relationship in exchange for Employee's assent to the covenants in this agreement. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement, and that the restrictions in this agreement are appropriate to protect Employer's Protected Interests.
+This agreement is effective as of the Effective Date listed in Cover Terms. The parties acknowledge that this agreement is supported by adequate consideration: if this agreement is signed at the outset of employment, the offer and commencement of employment; if Employee is an existing at-will employee, Employer's continuation of the at-will employment relationship in exchange for Employee's assent to the covenants in this agreement. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement, and that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests.
 
 ### Confidential Information and Trade Secret Protection
 

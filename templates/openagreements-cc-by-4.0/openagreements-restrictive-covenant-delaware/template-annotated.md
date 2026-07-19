@@ -96,7 +96,7 @@ Duration
 
 ### Recitals and Legitimate Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to advance one or more of Employer's Protected Interests and to impose no restraint broader than is reasonable to serve that interest. The legitimate interests listed here are Employer's goodwill and Employer's Confidential Information, and the parties intend each covenant to be tied to the goodwill or information this Employee actually touched rather than to ordinary competition. Each covenant is intended to be reasonable in geographic scope and temporal duration and limited to a reasonable scope to protect the Protected Interest it serves. Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement.
+Employer and Employee acknowledge that each restrictive covenant in this agreement is intended to advance one or more of Employer's Protected Interests and to impose no restraint broader than is reasonable to serve that interest. The legitimate interests listed here are Employer's goodwill and Employer's Confidential Information, and the parties intend each covenant to be tied to the goodwill or information this Employee actually touched rather than to ordinary competition. Each covenant is intended to be reasonable in geographic scope and temporal duration and no broader than reasonable to protect the Protected Interest it serves. Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement.
 
 ### Timing, Consideration, and Employee Acknowledgements
 
@@ -116,11 +116,11 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is limited to a reasonable scope to protect Employer's workforce stability and goodwill.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is no broader than reasonable to protect Employer's workforce stability and goodwill.
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers with whom Employee had material contact and is limited to a reasonable scope to protect Employer's goodwill in those customer, vendor, referral-source, and business-partner relationships.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant reaches only Covered Customers with whom Employee had material contact and is no broader than reasonable to protect Employer's goodwill in those customer, vendor, referral-source, and business-partner relationships.
 
 ### No Business with Covered Customers
 
@@ -128,11 +128,11 @@ During the Restricted Period, Employee must not accept, service, or do business 
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant exists to advance Employer's Protected Interests — its goodwill and its Confidential Information — and not to restrain ordinary competition. The parties intend this covenant to be reasonable in geographic scope and temporal duration, to advance a legitimate economic interest of Employer, and limited to a reasonable scope to protect Employer's Protected Interests, with its time and territory sized to Employee's actual role and Employer's actual market. If Employer has identified specific competitors in Cover Terms under Specified Competitors, this covenant is limited to those named competitors and their businesses. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant exists to advance Employer's Protected Interests — its goodwill and its Confidential Information — and not to restrain ordinary competition. The parties intend this covenant to be reasonable in geographic scope and temporal duration, to advance a legitimate economic interest of Employer, and no broader than reasonable to protect Employer's Protected Interests, with its time and territory sized to Employee's actual role and Employer's actual market. If Employer has identified specific competitors in Cover Terms under Specified Competitors, this covenant is limited to those named competitors and their businesses. Passive Public Holdings are permitted.
 
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This covenant is limited to a reasonable scope to advance Employer's Protected Interests. Passive Public Holdings are permitted.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This covenant is drawn no broader than reasonable to advance Employer's Protected Interests. Passive Public Holdings are permitted.
 
 ### Non-Disparagement
 
@@ -168,7 +168,7 @@ If any provision of this agreement is found to be unenforceable, the remaining p
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive for the Trade Secrets Duration specified in Cover Terms to the extent they relate to trade secrets, and for the Other Confidential Information Duration specified in Cover Terms for other Confidential Information. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### Assignment and Successors
 

@@ -111,11 +111,11 @@ Duration
 
 ### Recitals and Protected Interest
 
-Employer and Employee acknowledge and agree that the restrictive covenants in this agreement are supported by, and appropriate to protect, one or more of Employer's Protected Interests under Fla. Stat. § 542.335(1)(b), including, as applicable: (a) Employer's trade secrets; (b) Employer's valuable confidential business or professional information that does not otherwise qualify as a trade secret; (c) Employer's substantial relationships with specific prospective or existing customers, patients, or clients; (d) the customer, patient, or client goodwill associated with Employer's ongoing business or professional practice, a specific geographic location, or a specific marketing or trade area; and (e) the extraordinary or specialized training Employer provides to Employee. Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. The restraints in this agreement are appropriate to protect these Protected Interests and are limited to the scope needed to do so.
+Employer and Employee acknowledge and agree that the restrictive covenants in this agreement are supported by, and reasonably necessary to protect, one or more of Employer's Protected Interests under Fla. Stat. § 542.335(1)(b), including, as applicable: (a) Employer's trade secrets; (b) Employer's valuable confidential business or professional information that does not otherwise qualify as a trade secret; (c) Employer's substantial relationships with specific prospective or existing customers, patients, or clients; (d) the customer, patient, or client goodwill associated with Employer's ongoing business or professional practice, a specific geographic location, or a specific marketing or trade area; and (e) the extraordinary or specialized training Employer provides to Employee. Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement. The restraints in this agreement are reasonably necessary to protect these Protected Interests and are no broader than necessary to do so.
 
 ### Timing and Employee Acknowledgements
 
-Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
+Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -191,7 +191,7 @@ If any provision of this agreement is found to be unenforceable, the remaining p
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive for the Trade Secrets Duration specified in Cover Terms to the extent they relate to trade secrets, and for the Other Confidential Information Duration specified in Cover Terms for other Confidential Information. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### Assignment and Successors
 

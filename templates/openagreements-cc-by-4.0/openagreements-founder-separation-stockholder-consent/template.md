@@ -48,7 +48,7 @@ The stockholders approve the action identified as {stockholder_action} pursuant 
 
 This Action by Written Consent shall be filed with the minutes of the proceedings of the Company's stockholders.
 
-The undersigned have executed this Action by Written Consent as of the date set forth under his or her name below. Any copy, facsimile,.PDF or other reliable reproduction of this Action by Written Consent may be substituted or used in lieu of the original writing for any and all purposes for which the original writing could be used, provided that such copy, facsimile,.PDF or other reproduction be a complete reproduction of the entire original writing.
+The undersigned have executed this Action by Written Consent as of the date set forth under his or her name below. Any copy, facsimile, .PDF or other reliable reproduction of this Action by Written Consent may be substituted or used in lieu of the original writing for any and all purposes for which the original writing could be used, provided that such copy, facsimile, .PDF or other reproduction be a complete reproduction of the entire original writing.
 
 Signature: _______________
 

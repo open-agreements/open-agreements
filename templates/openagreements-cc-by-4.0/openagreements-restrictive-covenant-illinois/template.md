@@ -96,7 +96,7 @@ Employer and Employee acknowledge that each restrictive covenant in this agreeme
 
 ### Timing, Consideration, and Right to Consult Counsel
 
-Employer has advised Employee, in writing, to consult with an attorney before entering into this agreement, and has either provided Employee with a copy of this agreement at least 14 calendar days before the commencement of Employee's employment or given Employee at least 14 calendar days to review it before signing. Employee may choose to sign before the 14-day period expires, but Employer has extended the full period. The parties agree that this agreement is supported by adequate consideration — either at least two years of employment after Employee signs this agreement, or {illinois_consideration} — given specifically in exchange for the restrictive covenants in this agreement. Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
+Employer has advised Employee, in writing, to consult with an attorney before entering into this agreement, and has either provided Employee with a copy of this agreement at least 14 calendar days before the commencement of Employee's employment or given Employee at least 14 calendar days to review it before signing. Employee may choose to sign before the 14-day period expires, but Employer has extended the full period. The parties agree that this agreement is supported by adequate consideration — either at least two years of employment after Employee signs this agreement, or {illinois_consideration} — given specifically in exchange for the restrictive covenants in this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -112,15 +112,15 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant does not apply if Employee's actual or expected annualized rate of earnings is $45,000 or less.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant does not apply if Employee's actual or expected annualized rate of earnings is $45,000 or less (820 ILCS 90/10(b)).
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant does not apply if Employee's actual or expected annualized rate of earnings is $45,000 or less.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant does not apply if Employee's actual or expected annualized rate of earnings is $45,000 or less (820 ILCS 90/10(b)).
 
 ### No Business with Covered Customers
 
-During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This covenant does not apply if Employee's actual or expected annualized rate of earnings is $45,000 or less.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This covenant does not apply if Employee's actual or expected annualized rate of earnings is $45,000 or less (820 ILCS 90/10(b)).
 
 ### Non-Competition
 
@@ -162,7 +162,7 @@ If any provision of this agreement is found to be unenforceable, the remaining p
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive for the Trade Secrets Duration specified in Cover Terms to the extent they relate to trade secrets, and for the Other Confidential Information Duration specified in Cover Terms for other Confidential Information. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### Assignment and Successors
 

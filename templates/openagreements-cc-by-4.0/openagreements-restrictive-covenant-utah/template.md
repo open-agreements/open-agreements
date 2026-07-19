@@ -91,7 +91,7 @@ Duration
 
 ### Recitals and Protected Interests
 
-Employer and Employee acknowledge that each restrictive covenant in this agreement is carefully limited to protect one or more of Employer's Protected Interests and not to shield Employer from ordinary competition. To the extent any covenant is a non-compete, the parties intend it to be supported by consideration, negotiated in good faith, limited to the scope needed to protect the goodwill of the business, and reasonable in its restrictions as to time and area.
+Employer and Employee acknowledge that each restrictive covenant in this agreement is carefully limited to protect one or more of Employer's Protected Interests and not to shield Employer from ordinary competition. To the extent any covenant is a non-compete, the parties intend it to be supported by consideration, negotiated in good faith, no broader than necessary to protect the goodwill of the business, and reasonable in its restrictions as to time and area.
 
 ### Timing, Consideration, and Right to Consult Counsel
 
@@ -111,7 +111,7 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant is limited to the scope needed to protect Employer's Protected Interests.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant is drawn no broader than necessary to protect Employer's Protected Interests.
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
@@ -119,7 +119,7 @@ During the Restricted Period, Employee must not Solicit the business of any Cove
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. The Restricted Period for this covenant may not exceed one year from the day on which Employee is no longer employed by Employer. This covenant is limited to the scope needed to protect Employer's Protected Interests. Passive Public Holdings are permitted. This covenant does not apply to a healthcare worker as a healthcare non-compete agreement, and does not apply to a veterinarian unless the veterinarian holds at least a five percent ownership interest in the business.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. The Restricted Period for this covenant may not exceed one year from the day on which Employee is no longer employed by Employer. This covenant is drawn no broader than necessary to protect Employer's Protected Interests. Passive Public Holdings are permitted. This covenant does not apply to a healthcare worker as a healthcare non-compete agreement, and does not apply to a veterinarian unless the veterinarian holds at least a five percent ownership interest in the business.
 
 ### Non-Disparagement
 
@@ -147,7 +147,7 @@ Employee acknowledges that a breach of this agreement may cause Employer irrepar
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms, with each covenant's clock running independently. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. The non-competition covenant expires no later than one year after the day Employee's employment ends. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms, with each covenant's clock running independently. Obligations under the Confidential Information and Trade Secret Protection section survive for the Trade Secrets Duration specified in Cover Terms to the extent they relate to trade secrets, and for the Other Confidential Information Duration specified in Cover Terms for other Confidential Information. The non-competition covenant expires no later than one year after the day Employee's employment ends. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### Assignment and Successors
 

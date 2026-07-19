@@ -72,7 +72,7 @@ Employee may be eligible to participate in benefit and paid-time-off programs ma
 
 ### California-Specific Terms
 
-This section applies to Employee if Employee primarily works in California. Employee will accrue or be provided paid sick leave and will be covered by workers' compensation insurance as California law requires. Employee's wages, hours, meal and rest periods, wage statements, final pay, and other working conditions are governed by the California Labor Code and applicable Industrial Welfare Commission wage orders. Nothing in this offer letter waives any right Employee has by California law.
+This section applies to Employee if Employee primarily works in California. Employee will accrue or be provided paid sick leave and will be covered by workers' compensation insurance as California law requires. Employee's wages, hours, meal and rest periods, wage statements, final pay, and other working conditions are governed by the California Labor Code and applicable Industrial Welfare Commission wage orders. Nothing in this offer letter waives any right Employee has under California law.
 
 ### Work Location and Business Travel
 
