@@ -114,7 +114,7 @@ Employer and Employee acknowledge that each restrictive covenant in this agreeme
 
 ### Timing, Consideration, and Employee Acknowledgements
 
-In consideration of Employee's employment or continued employment and the benefits provided under this agreement, the parties agree to its terms. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
+In consideration of Employee's employment or continued employment and the benefits provided under this agreement, the parties agree to its terms. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -178,7 +178,7 @@ If any provision of this agreement is found to be unenforceable, the remaining p
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive for the Trade Secrets Duration specified in Cover Terms to the extent they relate to trade secrets, and for the Other Confidential Information Duration specified in Cover Terms for other Confidential Information. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### Assignment and Successors
 

@@ -99,7 +99,7 @@ Duration
 
 [[Solicit]] means to directly or indirectly initiate contact with, approach, induce, or encourage any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] means information that qualifies as a trade secret by the Rhode Island Uniform Trade Secrets Act, R.I. Gen. Laws § 6-41-1(4), and by applicable federal law, including information that derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from its disclosure or use, and that is the subject of reasonable efforts to maintain its secrecy.
+[[Trade Secrets]] means information that qualifies as a trade secret under the Rhode Island Uniform Trade Secrets Act, R.I. Gen. Laws § 6-41-1(4), and under applicable federal law, including information that derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from its disclosure or use, and that is the subject of reasonable efforts to maintain its secrecy.
 
 ### Recitals and Legitimate Interest
 
@@ -155,7 +155,7 @@ Employee represents that performing duties for Employer and complying with this 
 
 ### Notice to Future Employers and Other Third Parties
 
-Employer may disclose the existence and terms of this agreement to a prospective employer or business associate of Employee only where a covenant in this agreement is enforceable against Employee under Rhode Island law and Employer has a reasonable belief that Employee may breach that covenant. Employer will not present or attempt to enforce a covenant that is unenforceable against Employee by the Rhode Island Noncompetition Agreement Act or void under §§ 5-37-33 / 5-34-50. Employee consents to a disclosure permitted by this section.
+Employer may disclose the existence and terms of this agreement to a prospective employer or business associate of Employee only where a covenant in this agreement is enforceable against Employee under Rhode Island law and Employer has a reasonable belief that Employee may breach that covenant. Employer will not present or attempt to enforce a covenant that is unenforceable against Employee under the Rhode Island Noncompetition Agreement Act or void under §§ 5-37-33 / 5-34-50. Employee consents to a disclosure permitted by this section.
 
 ### Tolling During Breach
 

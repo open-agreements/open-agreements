@@ -99,7 +99,7 @@ Employer and Employee acknowledge that each restrictive covenant in this agreeme
 
 ### Timing and Formation of the Non-Competition Covenant
 
-If this agreement includes a covenant not to compete, Employee acknowledges either that Employee received a written employment offer stating that the covenant was required at least two weeks before employment began or that Employee enters into the covenant upon a bona fide advancement. Employer has advised Employee that Employee may consult with an attorney before entering into this agreement. Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
+If this agreement includes a covenant not to compete, Employee acknowledges either that Employee received a written employment offer stating that the covenant was required at least two weeks before employment began or that Employee enters into the covenant upon a bona fide advancement. Employer has advised Employee that Employee may consult with an attorney before entering into this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -115,7 +115,7 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This restriction applies only to Covered Employees during the Restricted Period.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This restriction applies only to Covered Employees during the Restricted Period (ORS 653.295(5)(b)).
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
@@ -167,7 +167,7 @@ Employee acknowledges that a breach of this agreement may cause Employer irrepar
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. The non-compete expires no later than 12 months after termination. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. The non-compete expires no later than 12 months after termination. Obligations under the Confidential Information and Trade Secret Protection section survive for the Trade Secrets Duration specified in Cover Terms to the extent they relate to trade secrets, and for the Other Confidential Information Duration specified in Cover Terms for other Confidential Information. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### Assignment and Successors
 

@@ -99,7 +99,7 @@ Passive Public Holdings Threshold
 
 [[Solicit]] means to directly or indirectly initiate contact with, approach, induce, or encourage any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] means information that qualifies as a trade secret by the Maryland Uniform Trade Secrets Act and applicable federal law, including information that derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use, and that is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.
+[[Trade Secrets]] means information that qualifies as a trade secret under the Maryland Uniform Trade Secrets Act and applicable federal law, including information that derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use, and that is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.
 
 ### Recitals and Protected Interest
 
@@ -169,7 +169,7 @@ Employee represents that performing duties for Employer and complying with this 
 
 ### Notice to Future Employers and Other Third Parties
 
-Employer may disclose the existence and terms of this agreement to a prospective employer or business associate of Employee only where a covenant in this agreement is enforceable against Employee and Employer has a reasonable belief that Employee may breach that covenant. Employer will not present or attempt to enforce against a third party a covenant that is void by Md. Code, Lab. & Empl. § 3-716 for Employee's worker class. Employee consents to a disclosure permitted by this section.
+Employer may disclose the existence and terms of this agreement to a prospective employer or business associate of Employee only where a covenant in this agreement is enforceable against Employee and Employer has a reasonable belief that Employee may breach that covenant. Employer will not present or attempt to enforce against a third party a covenant that is void under Md. Code, Lab. & Empl. § 3-716 for Employee's worker class. Employee consents to a disclosure permitted by this section.
 
 ### Tolling During Breach
 

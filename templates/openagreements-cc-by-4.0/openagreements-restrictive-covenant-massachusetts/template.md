@@ -97,11 +97,11 @@ Duration
 
 ### Recitals and Protected Interests
 
-Employer and Employee acknowledge and agree that the restrictive covenants in this agreement are supported by, and limited to the scope needed to protect, Employer's Protected Interests. Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement.
+Employer and Employee acknowledge and agree that the restrictive covenants in this agreement are supported by, and no broader than necessary to protect, Employer's Protected Interests (Mass. Gen. Laws ch. 149, § 24L(b)(iii)). Employer would not provide Employee with access to these Protected Interests absent the protections in this agreement.
 
 ### Timing, Consideration, and Right to Consult Counsel
 
-Employee has the right to consult with counsel prior to signing this agreement. If this agreement is entered into in connection with the commencement of employment, it is provided to Employee by the earlier of a formal offer of employment or 10 business days before the commencement of employment, and is signed by both Employer and Employee. If this agreement is entered into after the commencement of employment but not in connection with separation, it is supported by fair and reasonable consideration independent from the continuation of employment, and notice of the agreement is provided to Employee at least 10 business days before it is to be effective. Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
+Employee has the right to consult with counsel prior to signing this agreement. If this agreement is entered into in connection with the commencement of employment, it is provided to Employee by the earlier of a formal offer of employment or 10 business days before the commencement of employment, and is signed by both Employer and Employee. If this agreement is entered into after the commencement of employment but not in connection with separation, it is supported by fair and reasonable consideration independent from the continuation of employment, and notice of the agreement is provided to Employee at least 10 business days before it is to be effective. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -173,7 +173,7 @@ If any provision of this agreement is found to be unenforceable, the remaining p
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive for the Trade Secrets Duration specified in Cover Terms to the extent they relate to trade secrets, and for the Other Confidential Information Duration specified in Cover Terms for other Confidential Information. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### Assignment and Successors
 

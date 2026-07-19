@@ -176,7 +176,7 @@ If any distinctly severable provision is unenforceable, it is severed and the re
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms, as it may be extended under the Tolling and Extension During Breach section. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment. Each covenant states its own survival so that its duration is independently determinable.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms, as it may be extended under the Tolling and Extension During Breach section. Obligations under the Confidential Information and Trade Secret Protection section survive for the Trade Secrets Duration specified in Cover Terms to the extent they relate to trade secrets, and for the Other Confidential Information Duration specified in Cover Terms for other Confidential Information. All other provisions survive to the extent necessary to enforce rights that arose during employment. Each covenant states its own survival so that its duration is independently determinable.
 
 ### Assignment and Successors
 

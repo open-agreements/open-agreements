@@ -110,7 +110,7 @@ Employer and Employee acknowledge that each restrictive covenant in this agreeme
 
 ### Timing, Consideration, and Right to Consult Counsel
 
-Employer has advised Employee that Employee may consult with an attorney before entering into this agreement, and Employee confirms having entered this agreement knowingly and voluntarily. In consideration of Employee's employment or continued employment and {idaho_added_consideration}, the parties agree to the terms of this agreement. Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
+Employer has advised Employee that Employee may consult with an attorney before entering into this agreement, and Employee confirms having entered this agreement knowingly and voluntarily. In consideration of Employee's employment or continued employment and {idaho_added_consideration}, the parties agree to the terms of this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -146,7 +146,7 @@ During the Restricted Period, Employee must not acquire or hold any active owner
 
 ### Non-Disparagement
 
-During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law, including protected concerted activity by the National Labor Relations Act.
+During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law, including protected concerted activity under the National Labor Relations Act.
 
 ### Healthcare Provider and Patient Access
 

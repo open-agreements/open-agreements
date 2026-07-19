@@ -96,7 +96,7 @@ Employer and Employee acknowledge that Employee will receive access to Employer'
 
 ### Timing, Consideration, and Right to Consult Counsel
 
-The parties agree that this agreement is supported by valuable consideration, namely {nevada_consideration}. Employer has advised Employee that Employee may consult with an attorney of Employee's choosing before entering into this agreement, and Employee acknowledges having had a reasonable opportunity to do so. Employee acknowledges that the restrictions in this agreement are appropriate to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
+The parties agree that this agreement is supported by valuable consideration, namely {nevada_consideration}. Employer has advised Employee that Employee may consult with an attorney of Employee's choosing before entering into this agreement, and Employee acknowledges having had a reasonable opportunity to do so. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### Confidential Information and Trade Secret Protection
 
@@ -112,7 +112,7 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant is limited to the scope needed to protect Employer's workforce stability and does not operate as a bar on any former colleague obtaining employment elsewhere.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant is drawn no broader than necessary to protect Employer's workforce stability and does not operate as a bar on any former colleague obtaining employment elsewhere.
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
@@ -154,7 +154,7 @@ If Employee breaches any restrictive covenant in this agreement, the Restricted 
 
 ### Remedies
 
-Nothing in this agreement waives any non-waivable statutory rights under NRS 613.195(7).
+Employee acknowledges that a breach of this agreement may cause Employer irreparable harm for which money damages would be inadequate, and, subject to NRS 613.195 and other applicable law, Employer may seek temporary and permanent injunctive relief and any other appropriate remedy available at law or in equity. If Employer brings an action to enforce a covenant not to compete in this agreement, or Employee brings an action to challenge one, and the court finds either that the covenant applies to Employee while Employee is paid solely on an hourly wage basis, exclusive of any tips or gratuities, or that Employer has restricted or attempted to restrict Employee from providing service to a former customer or client in the circumstances described in NRS 613.195(2), the court shall award Employee reasonable attorney's fees and costs in accordance with NRS 613.195(7).
 
 ### Enforceability and Severability
 
@@ -162,7 +162,7 @@ If any provision of this agreement is found to be unenforceable, the remaining p
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms, and each covenant's survival is independent of the others. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms, and each covenant's survival is independent of the others. Obligations under the Confidential Information and Trade Secret Protection section survive for the Trade Secrets Duration specified in Cover Terms to the extent they relate to trade secrets, and for the Other Confidential Information Duration specified in Cover Terms for other Confidential Information. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### Assignment and Successors
 

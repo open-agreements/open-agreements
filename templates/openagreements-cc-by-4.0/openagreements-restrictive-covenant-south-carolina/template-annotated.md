@@ -106,7 +106,7 @@ Duration
 
 [[Solicit]] means to directly or indirectly contact, approach, induce, or encourage any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
-[[Trade Secrets]] means information protected as a trade secret by the South Carolina Trade Secrets Act.
+[[Trade Secrets]] means information protected as a trade secret under the South Carolina Trade Secrets Act.
 
 ### Recitals and Protectable Interests
 

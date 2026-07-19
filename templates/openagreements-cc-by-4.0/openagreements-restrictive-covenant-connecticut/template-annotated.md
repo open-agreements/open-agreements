@@ -116,11 +116,11 @@ Upon termination of employment, Employee must promptly return to Employer all do
 
 ### Non-Solicitation of Employees
 
-During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction is limited to initiating contact with or actively soliciting Covered Employees; it does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is limited to the scope needed to protect Employer's workforce stability and goodwill.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction is limited to initiating contact with or actively soliciting Covered Employees; it does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees. This covenant reaches only Covered Employees during the Restricted Period and is no broader than necessary to protect Employer's workforce stability and goodwill.
 
 ### Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant is limited to customers Employee serviced or solicited for Employer, reaches only Covered Customers, and is limited to the scope needed to protect Employer's goodwill in its customer relationships.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant is limited to customers Employee serviced or solicited for Employer, reaches only Covered Customers, and is no broader than necessary to protect Employer's goodwill in its customer relationships.
 
 ### No Business with Covered Customers
 
@@ -132,7 +132,7 @@ During the Restricted Period, Employee must not engage in, be employed by, consu
 
 ### Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. Passive Public Holdings are permitted. This covenant is limited to the scope needed to protect Employer's Protected Interests.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. Passive Public Holdings are permitted. This covenant is drawn no broader than necessary to protect Employer's Protected Interests.
 
 ### Non-Disparagement
 
