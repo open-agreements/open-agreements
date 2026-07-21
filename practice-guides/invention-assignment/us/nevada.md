@@ -8,7 +8,7 @@ description: >-
   for clean federal patent title, and post-employment holdover clauses are
   policed under NRS 613.195.
 resource: 'https://openagreements.org/practice-guides/invention-assignment/us/nevada'
-timestamp: '2026-07-12'
+timestamp: '2026-07-18'
 tags:
   - invention-assignment
   - Nevada
@@ -25,6 +25,8 @@ Nevada's NRS 600.500 makes the employer the default owner of an employee's in-sc
 The statute vests ownership in the employer by operation of law. However the contract is written, the baseline for a patentable invention or trade secret an employee develops in the course and scope of the work is that the employer already owns it [^nv-600-500].
 
 "Except as otherwise provided by express written agreement, an employer is the sole owner of any patentable invention or trade secret developed by his or her employee during the course and scope of the employment that relates directly to work performed during the course and scope of the employment."[^nv-600-500]
+
+The grant turns on two conditions that must both hold: the invention must be developed *in the course and scope of employment* **and** it must *relate directly to the work performed*. An invention an employee develops within the course and scope of employment but that does not relate directly to that work therefore falls outside NRS 600.500 — the employer takes it only if the written agreement reaches it, not by operation of the statute [^nv-600-500].
 
 Because the default runs in the employer's favor, contractual expansion to reach off-scope inventions — an employee's own-time, unrelated work — is a matter of ordinary contract, not a statutory prohibition. Unlike California, where Labor Code §2870 voids an assignment clause that overreaches an own-time invention, Nevada has no IP-specific labor-code ceiling: an overbroad clause is limited only by general contract defenses and, for post-employment reach, by the restrictive-covenant statute discussed below (see Q4).
 
@@ -86,7 +88,7 @@ Two hedges are warranted. First, no published Nevada decision squarely applies N
 > Do not assume NRS 600.500's employer-ownership default does all the work. The statute reaches only patentable inventions and trade secrets developed in the course and scope of employment — not copyright, unpatentable know-how, or off-scope inventions — so a clean federal patent chain of title still needs a present-tense *does hereby assign* clause that traces title from the inventor [^nv-600-500-practice][^stanford-traceback-practice]. And a post-employment holdover tail would most likely be analyzed — and blue-penciled — as a restrictive covenant under NRS 613.195, which cannot reach hourly-wage workers at all, so keep any trailing assignment narrow and do not extend it to employees paid solely on an hourly basis [^nv-613-195][^nv-613-195-hourly].
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nevada. This article synthesizes Nevada primary law and is not legal advice from a Nevada-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Employee Invention Assignment in Nevada*, OpenAgreements (last updated July 12, 2026), https://openagreements.org/practice-guides/invention-assignment/us/nevada.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-07-18. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nevada. This article synthesizes Nevada primary law and is not legal advice from a Nevada-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Employee Invention Assignment in Nevada*, OpenAgreements (last updated July 18, 2026), https://openagreements.org/practice-guides/invention-assignment/us/nevada.
 
 [^nv-600-500]: **Nev. Rev. Stat. § 600.500** — "Except as otherwise provided by express written agreement, an employer is the sole owner of any patentable invention or trade secret developed by his or her employee during the course and scope of the employment that relates directly to work performed during the course and scope of the employment." *Nev. Rev. Stat. § 600.500.* <https://www.leg.state.nv.us/nrs/NRS-600.html>
 

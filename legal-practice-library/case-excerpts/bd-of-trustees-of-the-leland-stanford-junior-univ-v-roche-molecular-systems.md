@@ -9,7 +9,7 @@ citation: >-
   Inc., 563 U.S. 776 (2011).
 resource: >-
   https://www.courtlistener.com/opinion/218133/board-of-trustees-of-the-leland-stanford-junior-university-v-roche/
-timestamp: '2026-07-12'
+timestamp: '2026-07-18'
 document_references:
   - type: Law Topic
     resource: 'https://openagreements.org/practice-guides/invention-assignment/us'
