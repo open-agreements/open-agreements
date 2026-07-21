@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-07-20
+* **Update**: content(ia/nevada): flag NRS 600.500's two cumulative conditions (signing-flow test #1767) (#1837) (96854d2)
+
 ## 2026-07-13
 * **Update**: feat(invention-assignment): employer-favorable Nevada CIIAA variant complying with NRS 600.500 / NRS 613.195 (#1680) (#1782) (a78b7db)
 

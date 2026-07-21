@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-07-20
+* **Update**: Replace IL wage-and-hour guide with pipeline-verified v5 (90 verified quotes, Chicago/Cook local section, IWPCA 10-year SOL) (#1844) (b237c7a)
+
 ## 2026-07-16
 * **Update**: Author Michigan wage-and-hour practice note (#1816) (0f20578)
 * **Update**: content(wage-and-hour): New Jersey practice note (#1817) (45db32f)
