@@ -7,18 +7,23 @@ description: >-
   says "DPA," "data processing agreement," "HIPAA BAA," "business associate
   agreement," or "AI addendum." To understand a U.S. state's consumer privacy
   law (CCPA etc.) rather than draft, see data-privacy-law-explainer.
+  Includes lawyer-reviewed practice guides; see openagreements.org/editors.
 license: Apache-2.0
 compatibility: >-
   Works with any agent. Remote MCP requires no local dependencies.
   Local CLI requires Node.js >=20.
 metadata:
   author: open-agreements
-  version: "0.2.2"
+  version: "0.2.3"
 catalog_group: Agreement Drafting And Filling
 catalog_order: 60
 ---
 
 # data-privacy-agreement
+
+This is the data-privacy-contract-focused spoke of the `open-agreements` hub.
+Use `open-agreements` for mixed agreement work or when the agreement type is not
+yet clear.
 
 Draft and fill data privacy agreement templates to produce signable DOCX files.
 

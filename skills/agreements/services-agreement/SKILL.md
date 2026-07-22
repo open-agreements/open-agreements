@@ -5,19 +5,24 @@ description: >-
   agreement, SOW, statement of work, professional services agreement. Produces
   signable DOCX files from Common Paper and Bonterms standard forms. Use when
   user says "consulting contract," "contractor agreement," "SOW," "statement
-  of work," "services agreement," or "freelancer contract."
+  of work," "services agreement," or "freelancer contract." Includes
+  lawyer-reviewed practice guides; see openagreements.org/editors.
 license: Apache-2.0
 compatibility: >-
   Works with any agent. Remote MCP requires no local dependencies.
   Local CLI requires Node.js >=20.
 metadata:
   author: open-agreements
-  version: "0.2.2"
+  version: "0.2.3"
 catalog_group: Agreement Drafting And Filling
 catalog_order: 40
 ---
 
 # services-agreement
+
+This is the services-contract-focused spoke of the `open-agreements` hub. Use
+`open-agreements` for mixed agreement work or when the agreement type is not yet
+clear.
 
 Draft and fill professional services agreement templates to produce signable DOCX files.
 

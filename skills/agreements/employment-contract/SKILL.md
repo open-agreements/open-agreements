@@ -8,19 +8,24 @@ description: >-
   "employment agreement," "offer letter," "PIIA," "IP assignment," "hire
   someone," "new hire paperwork," or "onboarding paperwork." To explain
   non-compete or restrictive-covenant law rather than draft a document, see the
-  non-compete-contract-explainer skill.
+  non-compete-contract-explainer skill. Includes lawyer-reviewed practice
+  guides; see openagreements.org/editors.
 license: Apache-2.0
 compatibility: >-
   Works with any agent. Remote MCP requires no local dependencies.
   Local CLI requires Node.js >=20.
 metadata:
   author: open-agreements
-  version: "0.3.1"
+  version: "0.3.2"
 catalog_group: Agreement Drafting And Filling
 catalog_order: 50
 ---
 
 # employment-contract
+
+This is the employment-document-focused spoke of the `open-agreements` hub. Use
+`open-agreements` for mixed agreement work or when the agreement type is not yet
+clear.
 
 Draft and fill employment contract templates to produce signable DOCX files.
 

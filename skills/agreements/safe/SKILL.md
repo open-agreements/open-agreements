@@ -5,19 +5,24 @@ description: >-
   pro rata side letter. Standard startup fundraising documents for convertible
   equity. Produces signable DOCX files. Use when user says "SAFE," "simple
   agreement for future equity," "YC SAFE," "valuation cap," "seed round
-  documents," or "fundraising paperwork."
+  documents," or "fundraising paperwork." Includes lawyer-reviewed practice
+  guides; see openagreements.org/editors.
 license: Apache-2.0
 compatibility: >-
   Works with any agent. Remote MCP requires no local dependencies.
   Local CLI requires Node.js >=20.
 metadata:
   author: open-agreements
-  version: "0.3.0"
+  version: "0.3.1"
 catalog_group: Agreement Drafting And Filling
 catalog_order: 70
 ---
 
 # safe
+
+This is the SAFE-focused spoke of the `open-agreements` hub. Use
+`open-agreements` for mixed agreement work or when the agreement type is not yet
+clear.
 
 Draft and fill Y Combinator SAFE (Simple Agreement for Future Equity) templates to produce signable DOCX files.
 

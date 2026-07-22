@@ -8,7 +8,8 @@ description: >-
   into signable DOCX files. Supports Common Paper, Bonterms, and Y Combinator
   templates. Use when the user needs a practice guide, a review checklist, a law
   survey, to draft a legal agreement, create an NDA, fill a contract template, or
-  generate a SAFE.
+  generate a SAFE. Includes lawyer-reviewed practice guides; see
+  openagreements.org/editors.
 license: Apache-2.0
 homepage: https://github.com/open-agreements/open-agreements
 compatibility: >-
@@ -19,7 +20,7 @@ compatibility: >-
   guaranteed offline behavior.
 metadata:
   author: open-agreements
-  version: "0.3.0"
+  version: "0.3.1"
 catalog_group: Agreement Drafting And Filling
 catalog_order: 10
 ---
@@ -31,6 +32,35 @@ content: **practice guides**, **review checklists**, **law surveys**, and
 **fill-ready agreement templates**. This skill makes an agent aware of all four
 and able to navigate them. Filling a template into a signable DOCX is **one** of
 those capabilities — see the fill workflow below.
+
+## Route to the narrowest skill
+
+Treat `open-agreements` as the flagship hub. Keep using it when a request spans
+content types, starts with template discovery, or does not yet identify a
+specific agreement. When the request is precise, route to the narrowest spoke;
+those skills carry focused triggers, template choices, and safety instructions.
+
+| User's task | Route to |
+|-------------|----------|
+| NDA, confidentiality agreement, mutual or one-way NDA | `nda` |
+| SaaS agreement, MSA, cloud contract, order form, pilot agreement | `cloud-service-agreement` |
+| Consulting contract, contractor agreement, services agreement, SOW | `services-agreement` |
+| Offer letter, employment agreement, PIIA, employee onboarding documents | `employment-contract` |
+| DPA, GDPR addendum, HIPAA BAA, data-processing or AI addendum | `data-privacy-agreement` |
+| YC SAFE, valuation cap, discount, MFN, or pro-rata side letter | `safe` |
+| NVCA or Series A financing documents | `venture-financing` |
+| Explain non-compete or restrictive-covenant law | `non-compete-contract-explainer` |
+| Explain U.S. state consumer-privacy law | `data-privacy-law-explainer` |
+
+The spoke names are routing targets, not separate brands. They install from the
+same `open-agreements/open-agreements` bundle, and this hub remains the fallback
+for mixed or ambiguous agreement work.
+
+## Lawyer-reviewed practice guides
+
+OpenAgreements practice guides are lawyer-reviewed. Learn about the editors at
+<https://openagreements.org/editors>. Third-party standard forms retain their
+own authorship and license provenance.
 
 ## What's in OpenAgreements
 
