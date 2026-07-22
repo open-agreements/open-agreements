@@ -96,6 +96,33 @@ describe('skills directory layout', () => {
     }
   });
 
+  it('publishes agreement skills as lawyer-reviewed spokes of the open-agreements hub', () => {
+    const agreementRoot = join(SKILLS_ROOT, 'agreements');
+    const agreementDirs = findSkillDirs(agreementRoot);
+    const spokeNames = agreementDirs
+      .map((dir) => basename(dir))
+      .filter((name) => name !== 'open-agreements');
+    const hub = readFileSync(join(agreementRoot, 'open-agreements', 'SKILL.md'), 'utf-8');
+
+    for (const dir of agreementDirs) {
+      const raw = readFileSync(join(dir, 'SKILL.md'), 'utf-8');
+      const frontmatter = readFrontmatter(dir);
+      expect(frontmatter.description, `${basename(dir)} lawyer-review signal`).toContain(
+        'Lawyer-reviewed OpenAgreements guidance',
+      );
+      expect(frontmatter.description, `${basename(dir)} reviewer URL`).toContain(
+        'openagreements.org/editors/steven-obiajulu',
+      );
+      if (basename(dir) !== 'open-agreements') {
+        expect(raw, `${basename(dir)} hub backlink`).toContain('`open-agreements` hub');
+      }
+    }
+
+    for (const spoke of spokeNames) {
+      expect(hub, `${spoke} missing from hub routing table`).toContain(`\`${spoke}\``);
+    }
+  });
+
   it('hides internal skills from the public catalog and keeps them in internal/', () => {
     const catalogSlugs = loadSkillsCatalog()
       .groups.flatMap((group) => group.skills)

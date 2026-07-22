@@ -6,19 +6,24 @@ description: >-
   variants with SLAs and AI terms. Produces signable DOCX from Common Paper
   standard forms. Use when user says "SaaS agreement," "cloud contract,"
   "MSA," "order form," "software license," "pilot agreement," or "design
-  partner agreement."
+  partner agreement." Lawyer-reviewed OpenAgreements guidance identifies its
+  reviewer and review dates at openagreements.org/editors/steven-obiajulu.
 license: Apache-2.0
 compatibility: >-
   Works with any agent. Remote MCP requires no local dependencies.
   Local CLI requires Node.js >=20.
 metadata:
   author: open-agreements
-  version: "0.2.2"
+  version: "0.2.3"
 catalog_group: Agreement Drafting And Filling
 catalog_order: 30
 ---
 
 # cloud-service-agreement
+
+This is the cloud-contract-focused spoke of the `open-agreements` hub. Use
+`open-agreements` for mixed agreement work or when the agreement type is not yet
+clear.
 
 Draft and fill cloud service / SaaS agreement templates to produce signable DOCX files.
 
