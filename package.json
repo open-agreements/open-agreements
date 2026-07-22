@@ -90,10 +90,11 @@
     "report:allure": "rm -rf ./allure-report && allure awesome ./allure-results --output ./allure-report --group-by epic,feature,story && node scripts/patch_allure_html_sanitizer.mjs --report-dir ./allure-report",
     "report:allure:open": "allure open ./allure-report",
     "allure:deploy": "node scripts/deploy_allure_report.mjs",
-    "check:readme": "npm run generate:readme && git diff --exit-code -- README.md",
+    "check:readme": "npm run generate:readme && git diff --exit-code -- README.md docs/reference/catalog.md",
+    "check:docs": "node scripts/check_docs.mjs",
     "generate:llms": "node scripts/generate_llms_txt.mjs",
     "check:llms": "npm run generate:llms && git diff --exit-code -- llms.txt llms-full.txt",
-    "preflight:ci": "npm run lint && npm run validate && npm run check:template-previews && npm run check:preview-freshness && npm run check:gemini-extension-manifest && npm run check:readme && npm run check:llms && npm run test:run"
+    "preflight:ci": "npm run lint && npm run validate && npm run check:template-previews && npm run check:preview-freshness && npm run check:gemini-extension-manifest && npm run check:readme && npm run check:docs && npm run check:llms && npm run test:run"
   },
   "keywords": [
     "legal",

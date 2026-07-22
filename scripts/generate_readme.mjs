@@ -7,7 +7,6 @@ import { fileURLToPath } from "node:url";
 import { buildCatalog } from "./lib/catalog-data.mjs";
 import { loadSkillsCatalog } from "./lib/skills-data.mjs";
 import { buildLibrary } from "./lib/library-data.mjs";
-import docsNav from "./lib/docs-nav.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
@@ -15,6 +14,8 @@ const rootPackage = readJson(resolve(root, "package.json"));
 
 const README_TEMPLATE_PATH = resolve(root, "README.template.md");
 const README_PATH = resolve(root, "README.md");
+const CATALOG_TEMPLATE_PATH = resolve(root, "scripts/templates/catalog.md");
+const CATALOG_PATH = resolve(root, "docs/reference/catalog.md");
 const REPO_BASE_URL = "https://github.com/open-agreements/open-agreements";
 const README_CONFIG = rootPackage.readmeConfig || {};
 const WEBSITE_URL = normalizeUrl(README_CONFIG.websiteUrl, "websiteUrl");
@@ -65,23 +66,6 @@ function withUtm(url) {
   return `${base}${sep}${README_UTM_PARAMS}${hash}`;
 }
 
-const CONTENTS = [
-  ["Legal Practice Library", "#legal-practice-library"],
-  ["Templates", "#available-templates"],
-  ["Checklists", "#checklists"],
-  ["Law Surveys", "#law-surveys"],
-  ["Available Skills", "#available-skills"],
-  ["Use it with AI agents & the CLI", "#use-it-with-ai-agents--the-cli"],
-  ["Packages", "#packages"],
-  ["Documentation", "#documentation"],
-  ["Privacy", "#privacy"],
-  ["See Also", "#see-also"],
-  ["Roadmap", "#roadmap"],
-  ["Contributing", "#contributing"],
-  ["Built With OpenAgreements", "#built-with-openagreements"],
-  ["License", "#license"],
-];
-
 function githubTreeUrl(repoPath) {
   return `${REPO_BASE_URL}/tree/main/${repoPath}`;
 }
@@ -126,10 +110,6 @@ function formatSourceCell(template) {
   return template.sourceLabel;
 }
 
-function renderContents() {
-  return CONTENTS.map(([label, anchor]) => `- [${label}](${anchor})`).join("\n");
-}
-
 function libraryUrl(path) {
   return `${LEGAL_PRACTICE_LIBRARY_URL}${path}`;
 }
@@ -138,7 +118,7 @@ function renderLegalPracticeLibrary() {
   const library = buildLibrary({ rootDir: root });
   const lines = [];
   lines.push(
-    `Primary-source-backed legal practice guides, projected from openagreements.org as plain markdown under [\`legal-practice-library/\`](${githubTreeUrl("legal-practice-library")}). Each guide cites primary law and links to its canonical page (with machine-readable twins — see [Use it with AI agents \& the CLI](#use-it-with-ai-agents--the-cli)).`,
+    `Primary-source-backed legal practice guides, projected from openagreements.org as plain markdown under [\`legal-practice-library/\`](${githubTreeUrl("legal-practice-library")}). Each guide cites primary law and links to its canonical page. See [Use legal guidance and checklists](../workflows/use-legal-content.md) for the machine-readable formats.`,
   );
   lines.push("");
   lines.push(
@@ -328,20 +308,6 @@ function renderPackages() {
   return renderTable(["Package", "Description"], rows);
 }
 
-function renderDocumentation() {
-  const groups = docsNav();
-  const lines = [];
-  for (const group of groups) {
-    lines.push(`### ${group.section}`);
-    lines.push("");
-    for (const item of group.items) {
-      lines.push(`- [${item.title}](${DOCUMENTATION_BASE_URL}/${item.slug}.md)`);
-    }
-    lines.push("");
-  }
-  return lines.join("\n").trim();
-}
-
 function renderLinks() {
   return `**Links:** [Website](${withUtm(WEBSITE_URL)}) | [Template Catalog](${withUtm(TEMPLATE_CATALOG_URL)}) | [Docs](${DOCUMENTATION_INDEX_URL}) | [Trust](${withUtm(TRUST_URL)}) | [npm](https://www.npmjs.com/package/${rootPackage.name})`;
 }
@@ -366,14 +332,6 @@ function renderTemplate(template, replacements) {
 export function buildReadme() {
   const template = readFileSync(README_TEMPLATE_PATH, "utf-8").trim();
   const rendered = renderTemplate(template, {
-    CONTENTS: renderContents(),
-    LEGAL_PRACTICE_LIBRARY: renderLegalPracticeLibrary(),
-    LAW_SURVEYS: renderLawSurveys(),
-    CHECKLISTS: renderChecklists(),
-    AVAILABLE_SKILLS: renderSkills(),
-    AVAILABLE_TEMPLATES: renderTemplates(),
-    PACKAGES: renderPackages(),
-    DOCUMENTATION: renderDocumentation(),
     LINKS: renderLinks(),
   });
 
@@ -385,9 +343,25 @@ export function buildReadme() {
   ].join("\n");
 }
 
+export function buildCatalogReference() {
+  const template = readFileSync(CATALOG_TEMPLATE_PATH, "utf-8").trim();
+  const rendered = renderTemplate(template, {
+    LEGAL_PRACTICE_LIBRARY: renderLegalPracticeLibrary(),
+    LAW_SURVEYS: renderLawSurveys(),
+    CHECKLISTS: renderChecklists(),
+    AVAILABLE_SKILLS: renderSkills(),
+    AVAILABLE_TEMPLATES: renderTemplates(),
+    PACKAGES: renderPackages(),
+  });
+
+  return `${rendered}\n`;
+}
+
 function main() {
   writeFileSync(README_PATH, buildReadme());
+  writeFileSync(CATALOG_PATH, buildCatalogReference());
   console.log(`Generated ${README_PATH}`);
+  console.log(`Generated ${CATALOG_PATH}`);
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
