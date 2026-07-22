@@ -6,9 +6,8 @@ description: >-
   indemnification, management rights letter. Series A and venture financing
   templates. Produces signable DOCX files. Use when user says "Series A
   documents," "NVCA," "stock purchase agreement," "investors rights agreement,"
-  "voting agreement," or "venture financing docs." Lawyer-reviewed
-  OpenAgreements guidance identifies its reviewer and review dates at
-  openagreements.org/editors/steven-obiajulu.
+  "voting agreement," or "venture financing docs." Includes lawyer-reviewed
+  practice guides; see openagreements.org/editors.
 license: Apache-2.0
 compatibility: >-
   Works with any agent. Remote MCP requires no local dependencies.

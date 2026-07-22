@@ -7,8 +7,7 @@ description: >-
   says "DPA," "data processing agreement," "HIPAA BAA," "business associate
   agreement," or "AI addendum." To understand a U.S. state's consumer privacy
   law (CCPA etc.) rather than draft, see data-privacy-law-explainer.
-  Lawyer-reviewed OpenAgreements guidance identifies its reviewer and review
-  dates at openagreements.org/editors/steven-obiajulu.
+  Includes lawyer-reviewed practice guides; see openagreements.org/editors.
 license: Apache-2.0
 compatibility: >-
   Works with any agent. Remote MCP requires no local dependencies.

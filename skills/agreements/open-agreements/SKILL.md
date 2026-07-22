@@ -8,8 +8,8 @@ description: >-
   into signable DOCX files. Supports Common Paper, Bonterms, and Y Combinator
   templates. Use when the user needs a practice guide, a review checklist, a law
   survey, to draft a legal agreement, create an NDA, fill a contract template, or
-  generate a SAFE. Lawyer-reviewed OpenAgreements guidance identifies its
-  reviewer and review dates at openagreements.org/editors/steven-obiajulu.
+  generate a SAFE. Includes lawyer-reviewed practice guides; see
+  openagreements.org/editors.
 license: Apache-2.0
 homepage: https://github.com/open-agreements/open-agreements
 compatibility: >-
@@ -56,13 +56,11 @@ The spoke names are routing targets, not separate brands. They install from the
 same `open-agreements/open-agreements` bundle, and this hub remains the fallback
 for mixed or ambiguous agreement work.
 
-## Lawyer-review signal
+## Lawyer-reviewed practice guides
 
-Lawyer-reviewed OpenAgreements guidance identifies its reviewer and
-last-reviewed date. Verify the reviewer's credentials at
-<https://openagreements.org/editors/steven-obiajulu>. This claim applies to the
-legal guidance; third-party standard forms retain their own authorship and
-license provenance.
+OpenAgreements practice guides are lawyer-reviewed. Learn about the editors at
+<https://openagreements.org/editors>. Third-party standard forms retain their
+own authorship and license provenance.
 
 ## What's in OpenAgreements
 

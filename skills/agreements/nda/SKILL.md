@@ -4,9 +4,8 @@ description: >-
   Draft and fill NDA templates — mutual NDA, one-way NDA, confidentiality
   agreement. Produces signable DOCX files from Common Paper and Bonterms
   standard forms. Use when user says "NDA," "non-disclosure agreement,"
-  "confidentiality agreement," "mutual NDA," or "one-way NDA." Lawyer-reviewed
-  OpenAgreements guidance identifies its reviewer and review dates at
-  openagreements.org/editors/steven-obiajulu.
+  "confidentiality agreement," "mutual NDA," or "one-way NDA." Includes
+  lawyer-reviewed practice guides; see openagreements.org/editors.
 license: Apache-2.0
 compatibility: >-
   Works with any agent. Remote MCP requires no local dependencies.

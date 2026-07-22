@@ -5,9 +5,8 @@ description: >-
   pro rata side letter. Standard startup fundraising documents for convertible
   equity. Produces signable DOCX files. Use when user says "SAFE," "simple
   agreement for future equity," "YC SAFE," "valuation cap," "seed round
-  documents," or "fundraising paperwork." Lawyer-reviewed OpenAgreements
-  guidance identifies its reviewer and review dates at
-  openagreements.org/editors/steven-obiajulu.
+  documents," or "fundraising paperwork." Includes lawyer-reviewed practice
+  guides; see openagreements.org/editors.
 license: Apache-2.0
 compatibility: >-
   Works with any agent. Remote MCP requires no local dependencies.

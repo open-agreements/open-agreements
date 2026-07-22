@@ -5,9 +5,8 @@ description: >-
   agreement, SOW, statement of work, professional services agreement. Produces
   signable DOCX files from Common Paper and Bonterms standard forms. Use when
   user says "consulting contract," "contractor agreement," "SOW," "statement
-  of work," "services agreement," or "freelancer contract." Lawyer-reviewed
-  OpenAgreements guidance identifies its reviewer and review dates at
-  openagreements.org/editors/steven-obiajulu.
+  of work," "services agreement," or "freelancer contract." Includes
+  lawyer-reviewed practice guides; see openagreements.org/editors.
 license: Apache-2.0
 compatibility: >-
   Works with any agent. Remote MCP requires no local dependencies.

@@ -108,10 +108,13 @@ describe('skills directory layout', () => {
       const raw = readFileSync(join(dir, 'SKILL.md'), 'utf-8');
       const frontmatter = readFrontmatter(dir);
       expect(frontmatter.description, `${basename(dir)} lawyer-review signal`).toContain(
-        'Lawyer-reviewed OpenAgreements guidance',
+        'lawyer-reviewed practice guides',
       );
       expect(frontmatter.description, `${basename(dir)} reviewer URL`).toContain(
-        'openagreements.org/editors/steven-obiajulu',
+        'openagreements.org/editors',
+      );
+      expect(frontmatter.description, `${basename(dir)} shared reviewer URL`).not.toContain(
+        'openagreements.org/editors/',
       );
       if (basename(dir) !== 'open-agreements') {
         expect(raw, `${basename(dir)} hub backlink`).toContain('`open-agreements` hub');
