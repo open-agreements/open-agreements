@@ -147,13 +147,37 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
         });
       }
       : undefined,
-    verify: async (p, cleanedSourcePath) => {
+    verify: async (p, cleanedSourcePath, referencedFields) => {
       // Verifier receives the FULL replacements key set (incl. migrated keys) so
       // a selector occurrence that failed to fill is still caught as a leftover
       // source placeholder — coverage is preserved after migration.
       // cleanedSourcePath baselines pre-existing formatting anomalies so only
       // fill-introduced ones are reported.
-      const base = await verifyOutput(p, verificationValues, replacements, cleanConfig, cleanedSourcePath);
+      //
+      // Selection-aware value verification (#619): a supplied field whose ONLY
+      // fill site lived in an alternative that selections.json removed (e.g.
+      // arbitration_location in courts mode) is not in the final pre-fill
+      // document, so its value legitimately never renders — checking it would
+      // emit a false "Missing" warning. Restrict value-presence checks to
+      // fields the post-selection document actually references, plus fields a
+      // normalize.json rule writes post-fill (their values render without a
+      // {tag} in the pre-fill buffer).
+      const normalizeRuleFields = new Set<string>();
+      for (const rule of normalizeConfig.paragraph_rules) {
+        for (const template of Object.values(rule.replacements ?? {})) {
+          for (const match of template.matchAll(/\{([a-zA-Z0-9_]+)\}/g)) {
+            normalizeRuleFields.add(match[1]);
+          }
+        }
+      }
+      const activeVerificationValues = referencedFields
+        ? Object.fromEntries(
+          Object.entries(verificationValues).filter(
+            ([field]) => referencedFields.has(field) || normalizeRuleFields.has(field),
+          ),
+        )
+        : verificationValues;
+      const base = await verifyOutput(p, activeVerificationValues, replacements, cleanConfig, cleanedSourcePath);
       if (selectorManifests.length === 0) return base;
       const fieldValues: Record<string, string> = {};
       for (const manifest of selectorManifests) {

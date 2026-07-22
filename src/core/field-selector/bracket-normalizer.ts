@@ -162,12 +162,20 @@ export async function normalizeBracketArtifacts(
               range.replacement,
             );
           } catch {
-            // Fallback for paragraphs with field results or other complex
-            // structures that replaceParagraphTextRange cannot handle.
-            // Set text directly on <w:t> elements — less formatting-safe
-            // but better than skipping the replacement entirely.
-            setParagraphTextFallback(para, finalText);
-            stats.formattingFallbackCount += 1;
+            // The minimal CONTIGUOUS range can span nearly the whole paragraph
+            // when independent edits touch both ends (e.g. a leading ". " strip
+            // plus a trailing "]" trim), and such a wide range may intersect a
+            // Word field result that replaceParagraphTextRange refuses to edit.
+            // Before destroying formatting, split the diff into disjoint hunks
+            // (anchored on common substrings) and apply them individually —
+            // each small hunk typically avoids the field result entirely.
+            if (!applyEditHunks(para, original, finalText)) {
+              // Last resort for paragraphs whose individual hunks still cross
+              // complex structures. Set text directly on <w:t> elements —
+              // less formatting-safe but better than skipping the replacement.
+              setParagraphTextFallback(para, finalText);
+              stats.formattingFallbackCount += 1;
+            }
           }
         }
         stats.normalizedParagraphs += 1;
@@ -198,6 +206,123 @@ export async function normalizeBracketArtifacts(
   writeFileSync(outputPath, outZip.toBuffer());
 
   return stats;
+}
+
+/** A single disjoint edit: replace oldText[start, end) with `replacement`. */
+export interface EditHunk {
+  start: number;
+  end: number;
+  replacement: string;
+}
+
+/** Minimum anchor length for hunk splitting — short anchors over-fragment. */
+const MIN_HUNK_ANCHOR_LENGTH = 12;
+/** Recursion cap for hunk splitting (2^6 = 64 hunks is far beyond real use). */
+const MAX_HUNK_DEPTH = 6;
+
+/**
+ * Deterministic longest common substring of `a` and `b` (first occurrence wins
+ * on ties). Classic O(|a|·|b|) dynamic program over a single reused row — only
+ * invoked on the rare fallback path, for one paragraph at a time.
+ */
+function longestCommonSubstring(
+  a: string,
+  b: string,
+): { aIndex: number; bIndex: number; length: number } | null {
+  if (a.length === 0 || b.length === 0) return null;
+  let best = { aIndex: 0, bIndex: 0, length: 0 };
+  const prev = new Int32Array(b.length + 1);
+  const curr = new Int32Array(b.length + 1);
+  for (let i = 1; i <= a.length; i++) {
+    for (let j = 1; j <= b.length; j++) {
+      if (a[i - 1] === b[j - 1]) {
+        curr[j] = prev[j - 1] + 1;
+        if (curr[j] > best.length) {
+          best = { aIndex: i - curr[j], bIndex: j - curr[j], length: curr[j] };
+        }
+      } else {
+        curr[j] = 0;
+      }
+    }
+    prev.set(curr);
+  }
+  return best.length > 0 ? best : null;
+}
+
+/**
+ * Compute DISJOINT edit hunks turning `oldText` into `newText`, in ascending
+ * `start` order. Trims the common prefix/suffix, then recursively splits the
+ * differing middle on its longest common substring (when long enough to be an
+ * unambiguous anchor). Deterministic by construction; degrades to the single
+ * minimal contiguous range when no adequate anchor exists.
+ */
+export function computeEditHunks(
+  oldText: string,
+  newText: string,
+  offset = 0,
+  depth = 0,
+): EditHunk[] {
+  let start = 0;
+  const minLen = Math.min(oldText.length, newText.length);
+  while (start < minLen && oldText[start] === newText[start]) start++;
+  let oldEnd = oldText.length;
+  let newEnd = newText.length;
+  while (oldEnd > start && newEnd > start && oldText[oldEnd - 1] === newText[newEnd - 1]) {
+    oldEnd--;
+    newEnd--;
+  }
+  if (oldEnd === start && newEnd === start) return [];
+
+  const oldMid = oldText.slice(start, oldEnd);
+  const newMid = newText.slice(start, newEnd);
+
+  if (depth < MAX_HUNK_DEPTH) {
+    const anchor = longestCommonSubstring(oldMid, newMid);
+    if (anchor && anchor.length >= MIN_HUNK_ANCHOR_LENGTH) {
+      const left = computeEditHunks(
+        oldMid.slice(0, anchor.aIndex),
+        newMid.slice(0, anchor.bIndex),
+        offset + start,
+        depth + 1,
+      );
+      const right = computeEditHunks(
+        oldMid.slice(anchor.aIndex + anchor.length),
+        newMid.slice(anchor.bIndex + anchor.length),
+        offset + start + anchor.aIndex + anchor.length,
+        depth + 1,
+      );
+      return [...left, ...right];
+    }
+  }
+
+  return [{ start: offset + start, end: offset + oldEnd, replacement: newMid }];
+}
+
+/**
+ * Apply the disjoint hunks turning `original` into `finalText` to a paragraph,
+ * highest-offset-first so earlier offsets stay valid as text length changes.
+ * Returns true when EVERY hunk applied formatting-preservingly; false when any
+ * hunk failed (the caller then falls back destructively — setParagraphTextFallback
+ * overwrites the full text, so a partial application is safely superseded).
+ */
+function applyEditHunks(para: Element, original: string, finalText: string): boolean {
+  const hunks = computeEditHunks(original, finalText);
+  // A single hunk is exactly the contiguous range that already failed.
+  if (hunks.length <= 1) return false;
+  for (let i = hunks.length - 1; i >= 0; i--) {
+    const hunk = hunks[i];
+    try {
+      replaceParagraphTextRange(
+        para as unknown as globalThis.Element,
+        hunk.start,
+        hunk.end,
+        hunk.replacement,
+      );
+    } catch {
+      return false;
+    }
+  }
+  return true;
 }
 
 /**

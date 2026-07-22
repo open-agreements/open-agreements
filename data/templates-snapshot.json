@@ -11027,10 +11027,10 @@
         },
         {
           "name": "agreement_effective_date",
-          "type": "string",
+          "type": "date",
           "required": true,
           "section": null,
-          "description": "Effective date in the opening clause (e.g., March 20, 2026)",
+          "description": "Effective date in the opening clause (ISO YYYY-MM-DD, e.g. 2026-03-20, rendered as March 20, 2026)",
           "default": null,
           "default_value_rationale": null
         },
@@ -11129,17 +11129,8 @@
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Optional clause text that terminates Appointing Stockholder rights at IPO closing",
+          "description": "Optional clause text that terminates Appointing Stockholder rights at IPO closing, inserted before the sentence-ending period after \"representative on the Company's Board\" in Section 1(d). Supply the clause with a leading comma and no trailing period (e.g. \", and terminate on the closing of an initial public offering of the Company's Common Stock; provided, however, ...\"); leave empty to omit.",
           "default": "",
-          "default_value_rationale": null
-        },
-        {
-          "name": "indemnification_section_letter",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Section reference letter for indemnification provisions in the certificate",
-          "default": "E",
           "default_value_rationale": null
         },
         {
@@ -11643,21 +11634,12 @@
           "default_value_rationale": null
         },
         {
-          "name": "agreement_date_month_day",
-          "type": "string",
+          "name": "agreement_date",
+          "type": "date",
           "required": false,
           "section": null,
-          "description": "Month/day portion of the agreement date in the opening paragraph",
-          "default": "January 15",
-          "default_value_rationale": null
-        },
-        {
-          "name": "agreement_year_two_digits",
-          "type": "string",
-          "required": false,
-          "section": null,
-          "description": "Two-digit year suffix used in opening date format 20[__]",
-          "default": "26",
+          "description": "Agreement date in the opening paragraph (\"is made as of <date>\"). Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string. Replaces the former agreement_date_month_day + agreement_year_two_digits split pair; the selector consumes the whole \"[________], 20[__]\" slot.",
+          "default": null,
           "default_value_rationale": null
         },
         {
