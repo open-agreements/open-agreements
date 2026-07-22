@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "field_id": "agreement_date",
+  "field_label": "Agreement Date",
+  "description": "Execution date in the preamble (\"is made as of [________], 20[__]\"). One selector consumes the WHOLE split slot — both blanks plus the literal \", 20\" between them — so a single date value (ISO input is rendered as e.g. \"March 15, 2026\" by the type: date formatting in prepareFillData) replaces the former month-day + two-digit-year field pair. Anchored on \"is made as of\" because the blanks are not globally unique.",
+  "source_template_version": "10-28-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "is made as of\\s(\\[________\\], 20\\[__\\])",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": [
+    {
+      "occurrence": 0,
+      "anchor": "is made as of [________], 20[__]",
+      "note": "preamble date slot; regex captures the combined [________], 20[__] span so the fill renders one formatted date"
+    }
+  ]
+}

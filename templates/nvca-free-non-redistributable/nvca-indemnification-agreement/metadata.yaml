@@ -23,8 +23,8 @@ fields:
     type: string
     description: Name of the corporation providing indemnification
   - name: agreement_effective_date
-    type: string
-    description: Effective date in the opening clause (e.g., March 20, 2026)
+    type: date
+    description: Effective date in the opening clause (ISO YYYY-MM-DD, e.g. 2026-03-20, rendered as March 20, 2026)
   - name: fund_sponsor_name
     type: string
     description: Name of the sponsoring fund or entity appointing the indemnitee
@@ -66,12 +66,12 @@ fields:
     default: ''
   - name: appointing_stockholder_ipo_termination_clause
     type: string
-    description: Optional clause text that terminates Appointing Stockholder rights at IPO closing
+    description: >-
+      Optional clause text that terminates Appointing Stockholder rights at IPO closing, inserted before the
+      sentence-ending period after "representative on the Company's Board" in Section 1(d). Supply the clause with a
+      leading comma and no trailing period (e.g. ", and terminate on the closing of an initial public offering of the
+      Company's Common Stock; provided, however, ..."); leave empty to omit.
     default: ''
-  - name: indemnification_section_letter
-    type: string
-    description: Section reference letter for indemnification provisions in the certificate
-    default: E
   - name: signature_page_marker
     type: string
     description: Signature page marker text
@@ -87,4 +87,3 @@ priority_fields:
   - indemnitee_pronoun_possessive_plural
   - bylaws_name
   - certificate_name
-  - indemnification_section_letter
