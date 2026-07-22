@@ -97,9 +97,9 @@ graduation checklist, not two orthogonal signals. A template is `stable` (i.e. `
    settled. The `0.x` renumber is cosmetic and does **not** reset this counter; prior settled history
    still counts.
 
-`stability` is surfaced on the template-detail page, the CLI (`oa list` — a Stability column in the
-table and a `stability` key in `--json`), and MCP output (`get_template` and `list_templates`). Until
-a template is `stable`/`1.0` it shows `experimental` or `beta`.
+`stability` is surfaced on the template-detail page, the CLI (`open-agreements list` and
+`open-agreements template show`), and MCP output (`get_template` and `list_templates`). Until a
+template is `stable`/`1.0` it shows `experimental` or `beta`.
 
 ### Changelog and archived versions
 
