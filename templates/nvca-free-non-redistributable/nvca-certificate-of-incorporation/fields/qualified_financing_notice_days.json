@@ -14,8 +14,7 @@
     }
   ],
   "postconditions": [
-    "no_unresolved_placeholder",
-    "no_double_dollar"
+    "no_unresolved_placeholder"
   ],
   "failure_behavior": "warn",
   "fixtures": []

@@ -1,6 +1,24 @@
 {
   "groups": [
     {
+      "id": "dispute_resolution",
+      "type": "radio",
+      "markerless": true,
+      "subClauseStopPatterns": ["^Each of the parties", "^Waiver of Jury Trial"],
+      "options": [
+        {
+          "label": "Arbitration",
+          "marker": "shall be resolved by arbitration before a single arbitrator",
+          "trigger": { "field": "dispute_resolution_mode", "equals": "arbitration" }
+        },
+        {
+          "label": "Courts",
+          "marker": "hereby irrevocably and unconditionally submit to the jurisdiction of the state courts of",
+          "trigger": "default"
+        }
+      ]
+    },
+    {
       "id": "additional_closings",
       "type": "checkbox",
       "standalone": true,
@@ -22,7 +40,7 @@
       "inline": true,
       "options": [
         {
-          "marker": ", [Each Purchaser at the Initial Closing shall be obligated to purchase that number of Tranche Closing Shares (as defined below) as is set forth opposite such Purchaser's name on Exhibit A under the heading \"Tranche Closing Shares\" (as to any Purchaser, its \"Tranche Closing Shares\"), as provided in Section [1.2(c)] below.]",
+          "label": "Include tranche closing shares", "marker": ", [Each Purchaser at the Initial Closing shall be obligated to purchase that number of Tranche Closing Shares (as defined below) as is set forth opposite such Purchaser's name on Exhibit A under the heading \"Tranche Closing Shares\" (as to any Purchaser, its \"Tranche Closing Shares\"), as provided in Section [1.2(c)] below.]",
           "trigger": { "field": "include_tranche_closing", "equals": true },
           "replaceWith": ""
         }
@@ -36,7 +54,7 @@
       "inline": true,
       "options": [
         {
-          "marker": "[or, as applicable, a purchase price of $[___] per share with respect to the shares of Series [____] Preferred Stock being issued [in the Initial Closing] pursuant to any cancellation or conversion of Convertible Securities (as defined below) as set forth in Section 1.3 below]",
+          "label": "Include convertible securities", "marker": "[or, as applicable, a purchase price of $[___] per share with respect to the shares of Series [____] Preferred Stock being issued [in the Initial Closing] pursuant to any cancellation or conversion of Convertible Securities (as defined below) as set forth in Section 1.3 below]",
           "trigger": { "field": "include_convertible_securities", "equals": true },
           "replaceWith": ""
         }
@@ -50,7 +68,7 @@
       "inline": true,
       "options": [
         {
-          "marker": "[with respect to such Closing]",
+          "label": "Include closing reference", "marker": "[with respect to such Closing]",
           "trigger": { "field": "include_closing_reference", "equals": true },
           "replaceWith": ""
         }

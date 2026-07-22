@@ -7,15 +7,15 @@
       "subClauseStopPatterns": ["^Liquidation"],
       "options": [
         {
-          "marker": "highest Preferred Stock dividend for the applicable series",
+          "label": "When declared (as-converted)", "marker": "highest Preferred Stock dividend for the applicable series",
           "trigger": "default"
         },
         {
-          "marker": "The holders of then outstanding shares of Preferred Stock shall be entitled to receive, only when, as and if declared",
+          "label": "Fixed rate, non-cumulative", "marker": "The holders of then outstanding shares of Preferred Stock shall be entitled to receive, only when, as and if declared",
           "trigger": { "field": "dividend_type", "equals": "non_cumulative_fixed" }
         },
         {
-          "marker": "From and after the date of the issuance of any shares of Preferred Stock, dividends at the rate per annum",
+          "label": "Cumulative", "marker": "From and after the date of the issuance of any shares of Preferred Stock, dividends at the rate per annum",
           "trigger": { "field": "dividend_type", "equals": "cumulative" }
         }
       ]
@@ -27,7 +27,7 @@
       "subClauseStopPatterns": ["^2\\.1Preferential", "^Payments to Holders of Common Stock", "^2\\.2Distribution", "^Deemed Liquidation Events"],
       "options": [
         {
-          "marker": "such amount per share as would have been payable had all shares",
+          "label": "Standard liquidation preference", "marker": "such amount per share as would have been payable had all shares",
           "trigger": "default"
         },
         {
@@ -59,7 +59,7 @@
       "subClauseStopPatterns": ["^Determination of Consideration"],
       "options": [
         {
-          "marker": "determined in accordance with the following formula",
+          "label": "Broad-based weighted average", "marker": "determined in accordance with the following formula",
           "trigger": "default"
         },
         {

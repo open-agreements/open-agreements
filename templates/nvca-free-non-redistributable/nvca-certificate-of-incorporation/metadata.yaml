@@ -51,7 +51,7 @@ fields:
   - name: series_designation
     type: string
     description: Series designation for preferred stock (e.g., A, B, C)
-    default: A
+    default: ""
   - name: original_issue_price
     type: string
     description: Original purchase price per share of Series A Preferred Stock
