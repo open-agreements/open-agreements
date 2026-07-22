@@ -1,0 +1,20 @@
+{
+  "purpose": "Evaluating a potential logistics relationship",
+  "effective_date": "2026-07-15",
+  "mnda_term": "1 year",
+  "confidentiality_term": "1 year",
+  "confidentiality_term_start": "Effective Date",
+  "governing_law": "Delaware",
+  "jurisdiction": "courts located in New Castle County, Delaware",
+  "changes_to_standard_terms": "None.",
+  "party_1_type": "entity",
+  "party_1_name": "Jane Doe",
+  "party_1_title": "CEO",
+  "party_1_company": "Acme Manufacturing, Inc.",
+  "party_1_email": "jane@example.com",
+  "party_2_type": "entity",
+  "party_2_name": "John Smith",
+  "party_2_title": "General Counsel",
+  "party_2_company": "Northeast Logistics LLC",
+  "party_2_email": "john@example.com"
+}

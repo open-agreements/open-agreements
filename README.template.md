@@ -8,113 +8,98 @@
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![CI](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml)
 [![codecov](https://img.shields.io/codecov/c/github/open-agreements/open-agreements/main)](https://app.codecov.io/gh/open-agreements/open-agreements)
-[![Agent Skill](https://img.shields.io/badge/agent--skill-open--agreements-purple)](https://skills.sh)
 
-Open, primary-source-backed U.S. legal content **and** standard agreement templates — built for legal teams of any size and the agents helping them.
+OpenAgreements helps people and software agents find primary-source-backed U.S.
+legal guidance and produce reviewable DOCX files from standard agreement
+templates.
 
-- **Legal Practice Library** — jurisdiction-by-jurisdiction practice guides (non-compete & restrictive covenants, consumer data privacy, AI employment law), every claim cited to primary law.
-- **Templates** — 40+ fillable forms across NDAs, cloud service agreements, employment docs, SAFEs, and NVCA financing documents.
-- **Checklists** — clause-by-clause reviewer checklists.
-- **Law Surveys** — 50-state and international comparison tables.
+## What OpenAgreements does
 
-This repository mirrors the OpenAgreements public legal content library for GitHub, local AI agents, and contributor pull requests. Everything ships as plain markdown here and as machine-readable twins on [openagreements.org](https://openagreements.org). Accepted content changes are reviewed and synchronized into the publishing workflow for openagreements.org.
+- Publishes jurisdiction-specific practice guides with citations to primary law.
+- Provides standard agreement templates with source and license metadata.
+- Fills templates locally through a CLI or over MCP.
+- Publishes review checklists and comparison surveys in human- and
+  machine-readable formats.
 
-[Propose a Form Source](https://github.com/open-agreements/open-agreements/issues/new?template=form-source-proposal.yml) · [Give Feedback](https://github.com/open-agreements/open-agreements/issues/new?template=practice-guide-feedback.yml) · [Request Coverage](https://github.com/open-agreements/open-agreements/issues/new?template=general-enhancement.yml) · [Report an Issue](https://github.com/open-agreements/open-agreements/issues/new/choose)
+OpenAgreements provides legal information and document mechanics, not legal
+advice. It does not decide whether a form or clause is right for a transaction,
+and generated documents are drafts for human review.
 
-## Who this is for
+The project’s longer-term goal is a citable conformance layer for legal AI:
+primary law becomes inspectable requirements, an AI can check a document against
+them, and a lawyer owns the final call. Read [Why OpenAgreements Exists](https://openagreements.org/manifesto.md)
+for the rationale; this README stays focused on using the project.
 
-The practice guides, surveys, and checklists answer jurisdiction-specific
-questions with citations to primary law; the templates start from standard forms
-teams already recognize — Common Paper, Bonterms, NVCA model documents, and YC
-SAFE templates — keeping source, license, and validation context close to the
-document. It does not provide legal advice; consult an attorney.
+## Fill your first agreement
 
-## Contents
+Install the CLI locally, inspect the available forms, and fill the Common Paper
+Mutual NDA:
 
-{{CONTENTS}}
+```bash
+npm install -g open-agreements
+open-agreements list
+open-agreements fill common-paper-mutual-nda \
+  --set party_1_name="Jane Doe" \
+  --set party_1_company="Acme Manufacturing, Inc." \
+  --set party_2_name="John Smith" \
+  --set party_2_company="Northeast Logistics LLC" \
+  --set effective_date="2026-07-15" \
+  --set purpose="Evaluating a potential logistics relationship" \
+  --output mutual-nda.docx
+```
 
-## Legal Practice Library
+The last command writes `mutual-nda.docx`. Open it in Word or another DOCX
+viewer and review every filled term before signature. Defaults supply the
+standard one-year term, Delaware governing law, and other omitted cover terms;
+the CLI reports any priority fields that still need attention.
 
-{{LEGAL_PRACTICE_LIBRARY}}
+For a complete, copyable example and field-review steps, follow the
+[quick start](https://github.com/open-agreements/open-agreements/blob/main/docs/quickstart.md).
 
-## Available Templates
+## Understand the workflow
 
-Fill standard legal agreement templates and get signable DOCX files — party
-info, dates, and terms in, formatting-preserving Word document out. The Source
-column links to the upstream standard or canonical project page (varies by
-publisher); the License column shows redistribution terms; Repo links point to
-the GitHub content directory for each template or field-selector. To fill one with an
-agent or the CLI, see [Template Filling via MCP](#template-filling-via-mcp).
+```text
+standard form + source and license metadata
+  → supplied field values
+  → validation and local rendering
+  → reviewable DOCX
+  → human legal and business review
+```
 
-{{AVAILABLE_TEMPLATES}}
+The standard form is authoritative until rendering. Your supplied values become
+the transaction-specific inputs. The generated DOCX is an output for review; it
+is never automatically accepted or signed.
 
-## Checklists
+The legal-content path is separate: practice guides cite primary sources,
+surveys compare jurisdictions, and checklists turn requirements into review
+steps. Those materials can inform a decision, but they do not mutate an
+agreement.
 
-{{CHECKLISTS}}
+## Choose your next step
 
-## Law Surveys
-
-{{LAW_SURVEYS}}
-
-## Available Skills
-
-{{AVAILABLE_SKILLS}}
-
-## Use it with AI agents & the CLI
-
-Fill any template from a coding agent over MCP — local stdio or the hosted server at `https://openagreements.org/api/mcp` — or from the `open-agreements` CLI, and read every guide, survey, and checklist as machine-readable JSON/CSV twins.
-
-→ **[Using OpenAgreements with AI agents & the CLI](https://github.com/open-agreements/open-agreements/blob/main/docs/using-with-ai-agents.md)** — setup for Claude Code, Cursor, and Gemini CLI; the CLI reference; and the machine-readable twins table.
-
-## Packages
-
-{{PACKAGES}}
-
-## Documentation
-
-{{DOCUMENTATION}}
+- [Install OpenAgreements](https://github.com/open-agreements/open-agreements/blob/main/docs/installation.md) — choose local CLI, local MCP, or hosted MCP.
+- [Fill a standard agreement](https://github.com/open-agreements/open-agreements/blob/main/docs/quickstart.md) — complete the canonical workflow end to end.
+- [Use legal guidance and checklists](https://github.com/open-agreements/open-agreements/blob/main/docs/workflows/use-legal-content.md) — find the right human- or machine-readable source.
+- [Connect an AI agent](https://github.com/open-agreements/open-agreements/blob/main/docs/using-with-ai-agents.md) — configure Claude Code, Codex CLI, Cursor, or Gemini CLI.
+- [Browse the full catalog](https://github.com/open-agreements/open-agreements/blob/main/docs/reference/catalog.md) — templates, guides, surveys, checklists, skills, and packages.
+- [Understand system boundaries](https://github.com/open-agreements/open-agreements/blob/main/docs/architecture.md) — follow content and documents through the system.
+- [Contribute](https://github.com/open-agreements/open-agreements/blob/main/CONTRIBUTING.md) — change code, documentation, templates, or field-selectors.
 
 {{LINKS}}
 
-## Privacy
+## Privacy and document handling
 
-- **Local mode** (`npx`, global install, stdio MCP): all processing happens on your machine. No document content is sent externally.
-- **Hosted mode** (`https://openagreements.org/api/mcp`): template filling runs server-side. No filled documents are stored after the response is returned.
+- Local CLI and local stdio MCP processing stay on your machine.
+- Hosted MCP template filling runs server-side; filled documents are not stored
+  after the response is returned.
+- Some field-selector workflows download an official source document at runtime.
 
-See the [Privacy Policy](https://usejunior.com/privacy_policy) for details.
-
-Security policy: see [SECURITY.md](https://github.com/open-agreements/open-agreements/blob/main/SECURITY.md).
-
-## See Also
-
-- [safe-docx](https://github.com/UseJunior/safe-docx) — surgical editing of existing Word documents with coding agents
-
-## Roadmap
-
-Planned work is tracked in [open issues](https://github.com/open-agreements/open-agreements/issues).
-
-## Contributing
-
-See [CONTRIBUTING.md](https://github.com/open-agreements/open-agreements/blob/main/CONTRIBUTING.md) for how to add templates, field-selectors, and other improvements. The Legal Practice Library is generated upstream — see its [`index.md`](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/index.md) for where to send content fixes.
-
-## Built With OpenAgreements
-
-- [Safe Clause](https://safeclause.deltaxy.ai) — AI-powered contract platform for startups. [#1 on vibecode.law, March 2026](https://vibecode.law/showcase/safe-clause-317416).
-
-Building on OpenAgreements? Open a PR to add your project.
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=open-agreements/open-agreements&type=Date)](https://star-history.com/#open-agreements/open-agreements&Date)
+Choose an execution mode that matches your document-sensitivity and internal
+policy requirements. See the [trust-boundary status](https://github.com/open-agreements/open-agreements/blob/main/docs/trust-checklist.md)
+and [security policy](https://github.com/open-agreements/open-agreements/blob/main/SECURITY.md).
 
 ## License
 
-Project code is licensed under [Apache License 2.0](LICENSE). The Apache license covers the code only — bundled template content retains its upstream licenses, set by its respective authors:
-
-- CC BY 4.0 for Common Paper, Bonterms, OpenAgreements-authored templates, and the Legal Practice Library
-- CC BY-ND 4.0 for Y Combinator SAFE templates vendored unchanged
-- proprietary or non-redistributable for NVCA source documents handled via field-selector workflows
-
-See each template's `metadata.yaml` for source-specific details.
-
-This tool generates documents from standard templates and provides general legal information. It does not provide legal advice. Consult an attorney for legal guidance.
+Project code is licensed under [Apache License 2.0](LICENSE). Content retains its
+source-specific license. See the [licensing reference](https://github.com/open-agreements/open-agreements/blob/main/docs/licensing.md)
+and each template's `metadata.yaml` before redistribution or modification.
