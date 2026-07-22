@@ -171,21 +171,19 @@ npm run test:run
    Note: `metadata.yaml` is catalog-only (not a render input), so editing it
    does **not** require a preview refresh.
 
-6. **LLM-Based Quality Gate**: same-repo PRs are reviewed by an LLM-powered
-   code-reuse detector in `.github/workflows/llm-based-quality-gate.yml`. The
-   pre-merge gate runs when a PR is opened, marked ready for review, or has the
-   `llm-gate/override` label added or removed; it does not re-run on every
-   iteration push. If a verdict is stale after a fix, maintainers can manually
+6. **LLM-Based Quality Gate**: same-repo PRs are reviewed by the central
+   LLM-powered code-reuse detector through
+   `.github/workflows/llm-gate-dispatch.yml`. The gate runs when a PR is opened,
+   marked ready for review, synchronized, or has the `llm-gate/override` label
+   added or removed. If a verdict is stale after a fix, maintainers can manually
    re-run it from Actions or with
-   `gh workflow run llm-based-quality-gate.yml --field pr_number=<number>`.
-   By default the pre-merge gate is advisory: it posts PASS/WARN findings as a
-   PR comment but does not block merging. Maintainers can enable blocking mode
-   with the `LLM_GATE_BLOCKING=1` repo variable; in that mode any WARN row fails
-   the aggregate check unless the PR has the `llm-gate/override` label, which
-   keeps the findings visible while treating them as non-blocking for that PR.
-   After merge, `.github/workflows/llm-based-quality-gate-post-merge.yml` runs
-   an audit on the diff that landed on `main` and comments on the merged PR; the
-   audit is informational and never blocks `main`.
+   `gh workflow run llm-gate-dispatch.yml --field pr_number=<number>`.
+   By default the gate is advisory: it posts PASS/WARN findings as a PR comment
+   but does not block merging. Maintainers can enable blocking mode with the
+   `LLM_GATE_BLOCKING=1` repo variable in the central gate configuration; in
+   that mode any WARN row fails the aggregate check unless the PR has the
+   `llm-gate/override` label, which keeps the findings visible while treating
+   them as non-blocking for that PR.
 
 ## Project Structure
 
