@@ -16,10 +16,16 @@ This page is the canonical command reference. Run `open-agreements <command>
 open-agreements list
 open-agreements list --json
 open-agreements list --json-strict
+open-agreements template show <template>
+open-agreements template show <template> --json
 ```
 
 `--json` includes field definitions for automation. `--json-strict` also exits
 non-zero if any catalog metadata fails to load.
+
+`template show` narrows the same canonical catalog record to one agreement. Its
+human-readable output highlights stability, provenance, distribution, and
+priority fields; `--json` returns the exact item shape used by `list --json`.
 
 ## Fill a standard form
 

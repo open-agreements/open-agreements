@@ -12,9 +12,18 @@ export interface ListOptions {
   jsonStrict?: boolean;
 }
 
-interface ListItem {
+export interface AgreementListItem {
   name: string;
   [key: string]: unknown;
+}
+
+export interface AgreementCatalog {
+  items: AgreementListItem[];
+  errors: string[];
+}
+
+export function getCliVersion(): string {
+  return pkg.version as string;
 }
 
 export function runList(opts: ListOptions = {}): void {
@@ -26,7 +35,30 @@ export function runList(opts: ListOptions = {}): void {
 }
 
 function runListJson(opts: ListOptions): void {
-  const results: ListItem[] = [];
+  const { items, errors } = loadAgreementCatalog();
+
+  if (opts.jsonStrict && errors.length > 0) {
+    for (const msg of errors) {
+      console.error(`error: ${msg}`);
+    }
+    process.exit(1);
+  }
+
+  const envelope = {
+    schema_version: 1,
+    cli_version: getCliVersion(),
+    items,
+  };
+  console.log(JSON.stringify(envelope, null, 2));
+}
+
+/**
+ * Load the complete agreement catalog once for every detailed discovery
+ * surface. `list --json` and `template show` deliberately share this function
+ * so their field, provenance, stability, and distribution shapes cannot drift.
+ */
+export function loadAgreementCatalog(): AgreementCatalog {
+  const results: AgreementListItem[] = [];
   const errors: string[] = [];
   // Templates
   for (const entry of listTemplateEntries()) {
@@ -92,7 +124,7 @@ function runListJson(opts: ListOptions): void {
       const dir = entry.dir;
       try {
         const meta = loadFieldSelectorMetadata(dir);
-        const item: ListItem = {
+        const item: AgreementListItem = {
           name: id,
           tier: 'field-selector' as const,
           display_name: meta.name,
@@ -118,20 +150,7 @@ function runListJson(opts: ListOptions): void {
     }
 
   results.sort((a, b) => a.name.localeCompare(b.name));
-
-  if (opts.jsonStrict && errors.length > 0) {
-    for (const msg of errors) {
-      console.error(`error: ${msg}`);
-    }
-    process.exit(1);
-  }
-
-  const envelope = {
-    schema_version: 1,
-    cli_version: pkg.version,
-    items: results,
-  };
-  console.log(JSON.stringify(envelope, null, 2));
+  return { items: results, errors };
 }
 
 function listAgreementsWithOptions(_opts: ListOptions): void {

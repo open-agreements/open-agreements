@@ -5,6 +5,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { runFill } from '../commands/fill.js';
 import { runValidate } from '../commands/validate.js';
 import { runList } from '../commands/list.js';
+import { runTemplateShow } from '../commands/template.js';
 import { runFieldSelectorCommand, runFieldSelectorClean, runFieldSelectorPatch } from '../commands/field-selector.js';
 import { runScan } from '../commands/scan.js';
 import {
@@ -102,6 +103,21 @@ export function createProgram(): Command {
     .action((opts: { json?: boolean; jsonStrict?: boolean }) => {
       runList({ json: opts.json, jsonStrict: opts.jsonStrict });
     });
+
+  // --- Template discovery command ---
+
+  const templateCmd = new Command('template');
+  templateCmd.description('Inspect agreement metadata and fillable fields');
+
+  templateCmd
+    .command('show <template>')
+    .description('Show one template, external form, or field-selector')
+    .option('--json', 'Output the canonical machine-readable catalog item')
+    .action((template: string, opts: { json?: boolean }) => {
+      runTemplateShow(template, { json: opts.json });
+    });
+
+  program.addCommand(templateCmd);
 
   // --- Field-selector command ---
 
