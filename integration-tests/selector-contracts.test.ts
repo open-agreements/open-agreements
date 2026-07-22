@@ -97,8 +97,7 @@ describe('loadSelectorContracts', () => {
     const fieldNames = loadFieldSelectorMetadata(fieldSelectorDir).fields.map((f) => f.name);
     const { manifests, templateManifest } = loadSelectorContracts(fieldSelectorDir, fieldNames);
     expect(manifests.map((m) => m.field_id).sort()).toEqual([
-      'agreement_date_month_day',
-      'agreement_year_two_digits',
+      'agreement_date',
       'company_name',
       'investor_counsel',
       'minimum_shares_initial_closing',
@@ -107,14 +106,14 @@ describe('loadSelectorContracts', () => {
       'purchase_price_per_share',
       'series_designation',
     ]);
-    // company_name (3) + the 13 migrated `>` keys = 16
-    expect(templateManifest?.migrated_keys).toHaveLength(16);
+    // company_name (3) + the 11 remaining migrated `>` keys = 14;
+    // agreement_date now consumes its full slot through a selector contract.
+    expect(templateManifest?.migrated_keys).toHaveLength(14);
     expect(templateManifest?.migrated_keys).toEqual(
       expect.arrayContaining([
         '[Insert Company Name]',
         'SERIES > [___]',
         'such Series > [__]',
-        'is made as of > [________]',
         'A minimum of > [_______]',
         'expenses of > [_______]',
       ]),
@@ -177,8 +176,6 @@ describeWithSource('selector contracts against the real NVCA source', () => {
 // source (the drift-canary surface), not just the cleaned doc.
 const MIGRATED_SPAN_COUNTS: Record<string, number> = {
   series_designation: 12,
-  agreement_date_month_day: 1,
-  agreement_year_two_digits: 1,
   par_value_per_share: 1,
   purchase_price_per_share: 1,
   optional_plural_suffix: 1,

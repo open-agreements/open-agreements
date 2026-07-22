@@ -79,7 +79,7 @@ function escapeXml(value: string): string {
 }
 
 describe('NVCA assumptions regression', () => {
-  it('clean step preserves bracket-prefixed headings while removing bracketed alternatives', async () => {
+  it('clean step preserves bracket-prefixed headings and alternatives for later selection', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-nvca-assump-clean-'));
     tempDirs.push(dir);
 
@@ -91,8 +91,8 @@ describe('NVCA assumptions regression', () => {
       buildDocx([
         '[Small Business Concern',
         '. The Company together with its affiliates is a [“small business concern”][“smaller business”] within the Small Business Act.]',
-        '[Alternative 1: This drafting option should be removed]',
-        '[Alternative 2: This drafting option should be removed]',
+        '[Alternative 1: This drafting option is selected later]',
+        '[Alternative 2: This drafting option is selected later]',
       ])
     );
 
@@ -106,8 +106,8 @@ describe('NVCA assumptions regression', () => {
 
     expect(joined).toContain('[Small Business Concern');
     expect(joined).toContain('small business concern');
-    expect(joined).not.toContain('Alternative 1');
-    expect(joined).not.toContain('Alternative 2');
+    expect(joined).toContain('Alternative 1');
+    expect(joined).toContain('Alternative 2');
   });
 
   it('declarative normalize strips heading-leading brackets and trims unmatched trailing brackets', async () => {

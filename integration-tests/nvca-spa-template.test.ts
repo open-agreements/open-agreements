@@ -140,8 +140,7 @@ const FIELD_ASSERTION_POLICY: Record<string, FieldAssertionPolicy> = {
   company_counsel_name: { mode: 'resilient', reason: 'Name-only variant may evolve in wording' },
   lead_purchaser_name: { mode: 'resilient', reason: 'Name appears in context-sensitive clauses' },
   series_designation: { mode: 'skip', reason: 'Nth-qualified replacement; exercised in real-source integration checks' },
-  agreement_date_month_day: { mode: 'skip', reason: 'Nth-qualified replacement; exercised in real-source integration checks' },
-  agreement_year_two_digits: { mode: 'skip', reason: 'Nth-qualified replacement; exercised in real-source integration checks' },
+  agreement_date: { mode: 'skip', reason: 'Selector-contract date slot; exercised in real-source integration checks' },
   par_value_per_share: { mode: 'skip', reason: 'Nth-qualified replacement; exercised in real-source integration checks' },
   purchase_price_per_share: { mode: 'skip', reason: 'Nth-qualified replacement; exercised in real-source integration checks' },
   applicable_word: { mode: 'skip', reason: 'Control field for optional closing-word bracket cleanup' },
@@ -327,8 +326,8 @@ async function applyLawyerReviewContext(
 
 function extractFieldNameFromReplacement(value: string | { value: string; format?: Record<string, unknown> }): string | null {
   const str = typeof value === 'string' ? value : value.value;
-  const match = str.match(/^\{([a-zA-Z0-9_]+)\}$/);
-  return match?.[1] ?? null;
+  const matches = Array.from(str.matchAll(/\{([a-zA-Z0-9_]+)\}/g));
+  return matches.length === 1 ? matches[0][1] : null;
 }
 
 function xmlEscape(value: string): string {
@@ -822,7 +821,7 @@ describe('NVCA SPA Template', () => {
       const fixture = createSyntheticFieldSelectorFixture([
         '[Insert Company Name]',
         '[state]',
-        '[judicial district]',
+        'District Court for the District of [judicial district]',
         '[location]',
       ]);
       const computedOutPath = join(fixture.tempDir, 'computed-artifact.json');
