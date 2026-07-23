@@ -109,6 +109,7 @@ jobs:
         run: npm run check:isolated-runtime
 
       - name: Verify package contents
+        shell: bash
         run: |
           PACK_OUTPUT="$(npm pack --dry-run 2>&1)"
           echo "$PACK_OUTPUT"
@@ -118,6 +119,15 @@ jobs:
               exit 1
             fi
           done
+          npm pack --dry-run --json | node -e '
+            const data = JSON.parse(require("fs").readFileSync(0, "utf8"));
+            const bundled = data[0].bundled || [];
+            if (!bundled.includes("@usejunior/docx-core")) {
+              console.error("FAIL: @usejunior/docx-core not in unscoped bundled list:", bundled);
+              process.exit(1);
+            }
+            console.log("OK: unscoped open-agreements bundles @usejunior/docx-core");
+          '
           (cd packages/contracts-workspace-mcp && npm pack --dry-run)
           (cd packages/contract-templates-mcp && npm pack --dry-run)
           (cd packages/checklist-mcp && npm pack --dry-run)
@@ -128,6 +138,15 @@ jobs:
           trap cleanup_scoped_dir EXIT
           node scripts/prepare_scoped_open_agreements_package.mjs --out-dir "$SCOPED_DIR"
           (cd "$SCOPED_DIR" && npm pack --dry-run)
+          (cd "$SCOPED_DIR" && npm pack --dry-run --json) | node -e '
+            const data = JSON.parse(require("fs").readFileSync(0, "utf8"));
+            const bundled = data[0].bundled || [];
+            if (!bundled.includes("@usejunior/docx-core")) {
+              console.error("FAIL: @usejunior/docx-core not in scoped bundled list:", bundled);
+              process.exit(1);
+            }
+            console.log("OK: scoped @open-agreements/open-agreements bundles @usejunior/docx-core");
+          '
           trap - EXIT
           cleanup_scoped_dir
 
@@ -190,6 +209,7 @@ jobs:
           npm run build:checklist-mcp
 
       - name: Publish to npm (trusted publishing + provenance)
+        shell: bash
         run: |
           TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
           VERSION="${TAG_REF#v}"
@@ -200,6 +220,15 @@ jobs:
           if npm view "open-agreements@$VERSION" version >/dev/null 2>&1; then
             echo "open-agreements@$VERSION already published — skipping."
           else
+            npm pack --dry-run --json | node -e '
+              const data = JSON.parse(require("fs").readFileSync(0, "utf8"));
+              const bundled = data[0].bundled || [];
+              if (!bundled.includes("@usejunior/docx-core")) {
+                console.error("FAIL: @usejunior/docx-core not in unscoped bundled list:", bundled);
+                process.exit(1);
+              }
+              console.log("OK: unscoped open-agreements bundles @usejunior/docx-core");
+            '
             npm publish --provenance --access public
           fi
 
@@ -213,6 +242,15 @@ jobs:
             }
             trap cleanup_scoped_dir EXIT
             node scripts/prepare_scoped_open_agreements_package.mjs --out-dir "$SCOPED_DIR"
+            (cd "$SCOPED_DIR" && npm pack --dry-run --json) | node -e '
+              const data = JSON.parse(require("fs").readFileSync(0, "utf8"));
+              const bundled = data[0].bundled || [];
+              if (!bundled.includes("@usejunior/docx-core")) {
+                console.error("FAIL: @usejunior/docx-core not in scoped bundled list:", bundled);
+                process.exit(1);
+              }
+              console.log("OK: scoped @open-agreements/open-agreements bundles @usejunior/docx-core");
+            '
             echo "Publishing @open-agreements/open-agreements from $SCOPED_DIR"
             (cd "$SCOPED_DIR" && npm publish --provenance --access public)
             trap - EXIT
@@ -414,4 +452,3 @@ jobs:
             echo "### Template snapshot: ${TAG_REF}"
             echo "- Tarball: \`${TARBALL}\` (${SIZE_BYTES} bytes)"
           } >> "$GITHUB_STEP_SUMMARY"
-
