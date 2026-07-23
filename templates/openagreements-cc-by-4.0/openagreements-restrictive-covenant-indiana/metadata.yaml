@@ -60,7 +60,7 @@ fields:
     default_value_rationale: 24 months is common for non-trade-secret confidentiality obligations in employment agreements. A perpetual lid on non-secret information is the kind of unreasonable reach an Indiana court will not enforce, and because the eraser blue pencil cannot rewrite an overbroad term, the finite other-confidential track is kept severable from the perpetual trade-secret track.
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.
+    description: Whether the employee no-hire / non-solicitation covenant is included.
     display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
     rationale_source: editorial
@@ -83,7 +83,7 @@ fields:
     default_value_rationale: '12 months is the most common lookback period for employee non-solicitation scope. In Indiana this look-back is load-bearing: Heraeus voided an employee non-solicitation covenant that reached all of the company''s employees, and the eraser rule means a court cannot rewrite an all-employees class into a narrower one.'
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.
+    description: Whether the current-customer non-solicitation covenant is included.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
@@ -140,7 +140,7 @@ fields:
     section: Non-Competition
   - name: nondealing_included
     type: boolean
-    description: Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.
+    description: Whether the no-business-with-covered-customers covenant is included.
     display_label: No Business with Covered Customers Included
     default: false
     section: No Business with Covered Customers
@@ -162,7 +162,7 @@ fields:
     default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives). A clause that technically forbids holding index funds or ordinary public shares is gratuitous overbreadth an Indiana court will not soften by rewriting.
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.
+    description: Whether the non-investment covenant is included.
     display_label: Non-Investment Included
     default: false
     section: Non-Investment
@@ -182,7 +182,7 @@ fields:
     default_value_rationale: 24 months is common for employment non-disparagement provisions.
   - name: worker_is_physician
     type: boolean
-    description: Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.
+    description: Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.
     display_label: Employee Is a Physician
     section: Physician
   - name: physician_buyout_price

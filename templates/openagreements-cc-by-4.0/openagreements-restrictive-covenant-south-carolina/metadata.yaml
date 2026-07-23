@@ -76,7 +76,7 @@ fields:
     default_value_rationale: 'A finite term is essential in South Carolina: an untimed nondisclosure provision that operates as a covenant not to compete violates public policy. 24 months is a common, conservative term for non-trade-secret confidentiality that keeps the clause from reading as an indefinite functional non-compete.'
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.
+    description: Whether the employee no-hire / non-solicitation covenant is included.
     display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
     rationale_source: editorial
@@ -99,7 +99,7 @@ fields:
     default_value_rationale: 12 months is a common lookback period for employee non-solicitation scope, tied to the colleagues the departing worker actually worked with.
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.
+    description: Whether the current-customer non-solicitation covenant is included.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
@@ -124,10 +124,10 @@ fields:
     default_value_rationale: '12 months tracks the look-back window a District of South Carolina court upheld: a covenant limited to customers the employee had contact with during his last twelve months of employment withstood an overbreadth challenge.'
   - name: noncompete_included
     type: boolean
-    description: Whether the non-competition covenant is included. Under Alabama law an employee may agree to a geographically limited non-compete; this template recites the employee-exception basis, ties the covenant to a listed protectable interest, and biases the duration into the two-year presumptively reasonable window.
+    description: Whether the non-competition covenant is included.
     display_label: Non-Competition Included
     section: Non-Competition
-    default_value_rationale: Conservative default. Non-competes are the most heavily scrutinized covenant; include only after confirming the restraint fits Alabama's employee exception for a specified geographic area, a competing business, and an existing employment relationship; protects a listed interest; stays within the two-year presumption; will be signed by all parties, including the employer; and does not restrain a member of a recognized profession from practicing that profession. The party seeking enforcement bears the burden of proof on every element.
+    default_value_rationale: Conservative default. Non-competes are the most heavily scrutinized covenant; include only after confirming enforceability under the agreement's governing law and tailoring the restraint to a legitimate protectable interest.
     rationale_source: editorial
     default: true
   - name: noncompete_duration
@@ -177,7 +177,7 @@ fields:
     section: Non-Competition
   - name: nondealing_included
     type: boolean
-    description: Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.
+    description: Whether the no-business-with-covered-customers covenant is included.
     display_label: No Business with Covered Customers Included
     default: false
     section: No Business with Covered Customers
@@ -199,7 +199,7 @@ fields:
     default_value_rationale: Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives), and it keeps the covenant from restraining ordinary public shareholding — an easy example against the harshness factor.
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.
+    description: Whether the non-investment covenant is included.
     display_label: Non-Investment Included
     default: false
     section: Non-Investment

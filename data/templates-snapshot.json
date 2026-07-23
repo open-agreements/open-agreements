@@ -14938,7 +14938,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -14968,7 +14968,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -15058,7 +15058,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -15088,7 +15088,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -15236,7 +15236,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -15266,7 +15266,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -15346,7 +15346,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -15376,7 +15376,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -15406,7 +15406,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -15524,7 +15524,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -15554,7 +15554,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -15634,7 +15634,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -15664,7 +15664,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -15694,7 +15694,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -15812,7 +15812,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -15842,7 +15842,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -15922,7 +15922,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -15952,7 +15952,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -15982,7 +15982,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -16248,7 +16248,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -16278,7 +16278,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -16358,7 +16358,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -16388,7 +16388,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -16536,7 +16536,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -16566,7 +16566,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -16646,7 +16646,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -16676,7 +16676,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -16814,7 +16814,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -16844,7 +16844,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -16924,7 +16924,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -16954,7 +16954,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -16984,7 +16984,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -17122,7 +17122,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -17152,7 +17152,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -17380,7 +17380,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -17410,7 +17410,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -17490,7 +17490,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -17520,7 +17520,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -17550,7 +17550,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -17688,7 +17688,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -17718,7 +17718,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -17798,7 +17798,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -17828,7 +17828,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -17858,7 +17858,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -17986,7 +17986,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -18016,7 +18016,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -18086,7 +18086,7 @@
           "type": "string",
           "required": false,
           "section": "Non-Competition",
-          "description": "Optional named list of specific competitors. Alabama rewards specificity: the protectable-interest list speaks in terms of specific customers and concrete relationships, and a covenant drawn to named threats is easier to defend as protecting a listed interest than one leaning on an open-ended competitive-business definition.",
+          "description": "Optional named list of specific competitors.",
           "display_label": "Specified Competitors",
           "default": "",
           "default_value_rationale": null
@@ -18096,7 +18096,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -18126,7 +18126,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -18156,7 +18156,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -18274,7 +18274,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -18304,7 +18304,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -18394,7 +18394,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -18424,7 +18424,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -18572,7 +18572,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -18602,7 +18602,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -18692,7 +18692,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -18722,7 +18722,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -18860,7 +18860,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -18890,7 +18890,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -18970,7 +18970,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -19000,7 +19000,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -19030,7 +19030,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -19158,7 +19158,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -19188,7 +19188,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -19268,7 +19268,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -19298,7 +19298,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -19328,7 +19328,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -19446,7 +19446,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -19476,7 +19476,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -19556,7 +19556,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -19586,7 +19586,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -19616,7 +19616,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -19754,7 +19754,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -19784,7 +19784,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -19864,7 +19864,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -19894,7 +19894,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -19924,7 +19924,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -20042,7 +20042,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -20072,7 +20072,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -20112,10 +20112,10 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Competition",
-          "description": "Whether the non-competition covenant is included. Under Alabama law an employee may agree to a geographically limited non-compete; this template recites the employee-exception basis, ties the covenant to a listed protectable interest, and biases the duration into the two-year presumptively reasonable window.",
+          "description": "Whether the non-competition covenant is included.",
           "display_label": "Non-Competition Included",
           "default": "false",
-          "default_value_rationale": "Conservative default. Non-competes are the most heavily scrutinized covenant; include only after confirming the restraint fits Alabama's employee exception for a specified geographic area, a competing business, and an existing employment relationship; protects a listed interest; stays within the two-year presumption; will be signed by all parties, including the employer; and does not restrain a member of a recognized profession from practicing that profession. The party seeking enforcement bears the burden of proof on every element."
+          "default_value_rationale": "Conservative default. Non-competes are the most heavily scrutinized covenant; include only after confirming enforceability under the agreement's governing law and tailoring the restraint to a legitimate protectable interest."
         },
         {
           "name": "noncompete_duration",
@@ -20152,7 +20152,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -20172,7 +20172,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -20202,7 +20202,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -20390,7 +20390,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -20420,7 +20420,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -20500,7 +20500,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -20530,7 +20530,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -20678,7 +20678,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -20708,7 +20708,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -20788,7 +20788,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -20818,7 +20818,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -20966,7 +20966,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -20996,7 +20996,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -21086,7 +21086,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -21116,7 +21116,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -21146,7 +21146,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -21264,7 +21264,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -21294,7 +21294,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -21384,7 +21384,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -21414,7 +21414,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -21444,7 +21444,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -21730,7 +21730,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -21760,7 +21760,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -21840,7 +21840,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -21870,7 +21870,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -21900,7 +21900,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -22028,7 +22028,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -22058,7 +22058,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -22138,7 +22138,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -22168,7 +22168,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -22198,7 +22198,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -22326,7 +22326,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -22356,7 +22356,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -22436,7 +22436,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -22466,7 +22466,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -22614,7 +22614,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -22644,7 +22644,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -22714,7 +22714,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -22744,7 +22744,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -22774,7 +22774,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -22892,7 +22892,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -22922,7 +22922,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -23012,7 +23012,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -23042,7 +23042,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -23180,7 +23180,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -23210,7 +23210,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -23300,7 +23300,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -23330,7 +23330,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -23468,7 +23468,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -23498,7 +23498,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -23578,7 +23578,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -23608,7 +23608,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -23638,7 +23638,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -23786,7 +23786,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -23816,7 +23816,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -23896,7 +23896,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -23926,7 +23926,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -24074,7 +24074,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -24104,7 +24104,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -24184,7 +24184,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -24214,7 +24214,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -24244,7 +24244,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -24372,7 +24372,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -24402,7 +24402,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -24482,7 +24482,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -24512,7 +24512,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -24542,7 +24542,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -24808,7 +24808,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -24838,7 +24838,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -24918,7 +24918,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -24948,7 +24948,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -24978,7 +24978,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -25264,7 +25264,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -25294,7 +25294,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -25384,7 +25384,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -25414,7 +25414,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -25572,7 +25572,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -25602,7 +25602,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -25682,7 +25682,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -25712,7 +25712,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -25742,7 +25742,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -25860,7 +25860,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -25890,7 +25890,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -25920,10 +25920,10 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Competition",
-          "description": "Whether the non-competition covenant is included. Under Alabama law an employee may agree to a geographically limited non-compete; this template recites the employee-exception basis, ties the covenant to a listed protectable interest, and biases the duration into the two-year presumptively reasonable window.",
+          "description": "Whether the non-competition covenant is included.",
           "display_label": "Non-Competition Included",
           "default": "true",
-          "default_value_rationale": "Conservative default. Non-competes are the most heavily scrutinized covenant; include only after confirming the restraint fits Alabama's employee exception for a specified geographic area, a competing business, and an existing employment relationship; protects a listed interest; stays within the two-year presumption; will be signed by all parties, including the employer; and does not restrain a member of a recognized profession from practicing that profession. The party seeking enforcement bears the burden of proof on every element."
+          "default_value_rationale": "Conservative default. Non-competes are the most heavily scrutinized covenant; include only after confirming enforceability under the agreement's governing law and tailoring the restraint to a legitimate protectable interest."
         },
         {
           "name": "noncompete_duration",
@@ -25970,7 +25970,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -26000,7 +26000,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -26138,7 +26138,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -26168,7 +26168,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -26248,7 +26248,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -26278,7 +26278,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -26446,7 +26446,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -26476,7 +26476,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -26506,10 +26506,10 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Competition",
-          "description": "Whether the non-competition covenant is included. Under Alabama law an employee may agree to a geographically limited non-compete; this template recites the employee-exception basis, ties the covenant to a listed protectable interest, and biases the duration into the two-year presumptively reasonable window.",
+          "description": "Whether the non-competition covenant is included.",
           "display_label": "Non-Competition Included",
           "default": "true",
-          "default_value_rationale": "Conservative default. Non-competes are the most heavily scrutinized covenant; include only after confirming the restraint fits Alabama's employee exception for a specified geographic area, a competing business, and an existing employment relationship; protects a listed interest; stays within the two-year presumption; will be signed by all parties, including the employer; and does not restrain a member of a recognized profession from practicing that profession. The party seeking enforcement bears the burden of proof on every element."
+          "default_value_rationale": "Conservative default. Non-competes are the most heavily scrutinized covenant; include only after confirming enforceability under the agreement's governing law and tailoring the restraint to a legitimate protectable interest."
         },
         {
           "name": "noncompete_duration",
@@ -26576,7 +26576,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -26606,7 +26606,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -26774,7 +26774,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -26864,7 +26864,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -27012,7 +27012,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -27042,7 +27042,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -27122,7 +27122,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -27152,7 +27152,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -27182,7 +27182,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -27300,7 +27300,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -27330,7 +27330,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -27410,7 +27410,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -27440,7 +27440,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -27470,7 +27470,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -27588,7 +27588,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -27618,7 +27618,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -27826,7 +27826,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -27856,7 +27856,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -27936,7 +27936,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -27966,7 +27966,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -27996,7 +27996,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -28164,7 +28164,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -28244,7 +28244,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -28274,7 +28274,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -28412,7 +28412,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -28442,7 +28442,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -28532,7 +28532,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -28562,7 +28562,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -28710,7 +28710,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -28740,7 +28740,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -28820,7 +28820,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -28850,7 +28850,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -28890,7 +28890,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null
@@ -29008,7 +29008,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -29038,7 +29038,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -29118,7 +29118,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -29148,7 +29148,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -29286,7 +29286,7 @@
           "type": "boolean",
           "required": false,
           "section": "Employee Non-Solicitation",
-          "description": "Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.",
+          "description": "Whether the employee no-hire / non-solicitation covenant is included.",
           "display_label": "Employee No-Hire Included",
           "default": "true",
           "default_value_rationale": null
@@ -29316,7 +29316,7 @@
           "type": "boolean",
           "required": false,
           "section": "Customer Non-Solicitation",
-          "description": "Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.",
+          "description": "Whether the current-customer non-solicitation covenant is included.",
           "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
@@ -29396,7 +29396,7 @@
           "type": "boolean",
           "required": false,
           "section": "No Business with Covered Customers",
-          "description": "Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
           "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
@@ -29426,7 +29426,7 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Investment",
-          "description": "Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.",
+          "description": "Whether the non-investment covenant is included.",
           "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
@@ -29456,7 +29456,7 @@
           "type": "boolean",
           "required": false,
           "section": "Physician",
-          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms. For Indiana, the applicable provisions vary by execution date and employer type, and may require a release buyout term or exclude the non-compete entirely.",
+          "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
           "default_value_rationale": null

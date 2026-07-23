@@ -63,7 +63,7 @@ fields:
     rationale_source: editorial
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.
+    description: Whether the employee no-hire / non-solicitation covenant is included.
     display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
     rationale_source: editorial
@@ -86,7 +86,7 @@ fields:
     default_value_rationale: 12 months is the most common lookback period for employee non-solicitation scope.
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.
+    description: Whether the current-customer non-solicitation covenant is included.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation
@@ -155,7 +155,7 @@ fields:
     requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.require-independent-consideration-for-post-hire-covenants
   - name: nondealing_included
     type: boolean
-    description: Whether the no-business-with-covered-customers covenant is included. A non-dealing covenant has no named Alabama category of its own, so it must be drafted to fit inside the current-customer non-solicit exception or it is exposed to Alabama's void rule for restraints outside the listed categories.
+    description: Whether the no-business-with-covered-customers covenant is included.
     display_label: No Business with Covered Customers Included
     default: false
     section: No Business with Covered Customers
@@ -180,7 +180,7 @@ fields:
     benchmark_ref: restrictive-covenant/passive-ownership-carveout
   - name: noninvestment_included
     type: boolean
-    description: Whether the non-investment covenant is included. A non-investment covenant has no named Alabama category; one genuine use is restraining a licensed professional's business conduct outside the practice of the profession, which sits outside Alabama's professional exemption.
+    description: Whether the non-investment covenant is included.
     display_label: Non-Investment Included
     default: false
     section: Non-Investment
