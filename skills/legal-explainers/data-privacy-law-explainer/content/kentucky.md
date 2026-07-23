@@ -2,8 +2,8 @@
 jurisdiction: "Kentucky"
 slug: kentucky
 countryCode: US
-snapshotAsOf: "2026-07-23"
-lastReviewed: "2026-06-06"
+exportedAt: "2026-07-23"
+lawReviewedThrough: "2026-06-06"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/kentucky
 license: CC BY 4.0
 stale: false
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/kentucky · **Snapshot as of:** 2026-07-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/kentucky · **Law reviewed through:** 2026-06-06 · **Exported:** 2026-07-23 · License: CC BY 4.0 · © openagreements.org
 
 # Kentucky Consumer Privacy Law (KCDPA)[^about]
 

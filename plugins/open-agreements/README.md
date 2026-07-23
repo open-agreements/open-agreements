@@ -46,11 +46,15 @@ skills in the repository. Regenerate it after changing a source skill:
 npm run generate:claude-plugin
 ```
 
+The root and curated manifests use the same semantic version. Every marketplace
+release must bump both manifest versions before the release commit is
+submitted; Anthropic may pin an approved release to that commit SHA.
+
 ## Licensing and legal information
 
 The plugin packaging and Open Agreements navigator are Apache-2.0 licensed.
 The bundled legal explainer content is CC BY 4.0 and carries its own license,
-notice, attribution, snapshot date, and canonical source links.
+notice, attribution, law-review and export dates, and canonical source links.
 
 The plugin provides general legal information and practitioner starting points.
 It does not provide legal advice or create an attorney-client relationship.

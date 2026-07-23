@@ -106,6 +106,7 @@ openagreements.org before using `fill_template`.
 | Tool | Purpose |
 |------|---------|
 | `list_templates` | List available templates as a paginated compact catalog (`template_id`, `display_name`, `category`, `description`, `field_count`, `priority_field_count`). Pages with `cursor` + `limit` (default 25, max 100). |
+| `search_templates` | Search the catalog by topic when the desired agreement type is known |
 | `get_template` | Get full field metadata for a specific template |
 | `fill_template` | Fill a template with values and return a downloadable DOCX |
 
@@ -143,7 +144,9 @@ server.
 ### Step 1: Detect runtime
 
 ```bash
-if command -v open-agreements >/dev/null 2>&1; then
+if command -v open-agreements >/dev/null 2>&1 &&
+  test "$(open-agreements --version 2>/dev/null)" = "0.8.0"
+then
   echo "GLOBAL"
 elif command -v node >/dev/null 2>&1; then
   echo "NPX"
@@ -152,7 +155,8 @@ else
 fi
 ```
 
-- **GLOBAL**: Use `open-agreements` directly.
+- **GLOBAL**: Use `open-agreements` directly only after its installed package
+  version has been verified as `0.8.0`.
 - **NPX**: Use `npx -y open-agreements@0.8.0` as prefix. **Always pin the version** — never use `@latest` to avoid pulling unexpected updates.
 - **PREVIEW_ONLY**: No Node.js. Generate markdown preview only.
 
@@ -166,13 +170,35 @@ Parse the `items` array. Each item has `name`, `description`, `license`, `source
 
 ### Step 3: Help user choose, collect values, fill
 
-Same as MCP workflow steps 2-5, but write values to `/tmp/oa-values.json` and run:
+Same as MCP workflow steps 2-5. Keep the collected values in memory until the
+user confirms them. Then create, use, and delete the values file in one shell
+invocation:
 
 ```bash
-open-agreements fill <template-name> -d /tmp/oa-values.json -o <output-name>.docx
+(
+  set -eu
+  VALUES_FILE="$(mktemp "${TMPDIR:-/tmp}/oa-values.XXXXXX")"
+  chmod 600 "$VALUES_FILE"
+  trap 'rm -f "$VALUES_FILE"' EXIT HUP INT TERM
+
+  cat > "$VALUES_FILE" <<'FIELDS'
+{
+  "field_name": "confirmed value"
+}
+FIELDS
+
+  if command -v open-agreements >/dev/null 2>&1 &&
+    test "$(open-agreements --version 2>/dev/null)" = "0.8.0"
+  then
+    open-agreements fill <template-name> -d "$VALUES_FILE" -o <output-name>.docx
+  else
+    npx -y open-agreements@0.8.0 fill <template-name> -d "$VALUES_FILE" -o <output-name>.docx
+  fi
+)
 ```
 
-Clean up: `rm /tmp/oa-values.json`
+The restrictive permissions and cleanup trap keep confidential field values out
+of a predictable shared path and remove them even if filling fails.
 
 ## Source Code and Audit
 

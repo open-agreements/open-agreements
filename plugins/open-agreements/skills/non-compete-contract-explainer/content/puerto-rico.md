@@ -2,8 +2,8 @@
 jurisdiction: "Puerto Rico"
 slug: puerto-rico
 countryCode: US
-snapshotAsOf: "2026-07-22"
-lastReviewed: "2026-06-02"
+exportedAt: "2026-07-23"
+lawReviewedThrough: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/puerto-rico
 license: CC BY 4.0
 stale: false
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/puerto-rico · **Snapshot as of:** 2026-07-22 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/puerto-rico · **Law reviewed through:** 2026-06-02 · **Exported:** 2026-07-23 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Puerto Rico[^about]
 

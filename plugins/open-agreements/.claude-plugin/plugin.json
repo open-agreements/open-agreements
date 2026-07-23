@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "open-agreements",
   "displayName": "Open Agreements",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Use source-cited legal practice guides, state-law explainers, review checklists, surveys, and fill-ready agreement templates.",
   "author": {
     "name": "Open Agreements",

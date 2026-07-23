@@ -11,7 +11,7 @@ compatibility: >-
   canonical URL.
 metadata:
   author: open-agreements
-  version: "0.2.0"
+  version: "0.3.0"
 catalog_group: Legal Explainers
 catalog_order: 20
 ---
@@ -28,11 +28,16 @@ user's own business or program.
 - This skill provides **general legal information only**. It is **not legal
   advice**, does not create an attorney-client relationship, and is not a
   substitute for a licensed attorney in the relevant jurisdiction.
-- Every bundled note is a **snapshot** with a `snapshotAsOf` date. Privacy law
-  moves fast (amendments, regulations, enforcement guidance). Always point the
-  user to the canonical URL to confirm currency.
+- Every bundled note records when it was packaged (`exportedAt`) separately
+  from the date through which its law was substantively reviewed
+  (`lawReviewedThrough`). Privacy law moves fast. Never imply that the export
+  date is a legal-currentness review, and always point the user to the canonical
+  URL to confirm currency.
 - Do **not** render a compliance verdict for the user's specific business (see
   the personal-question rule below).
+- Translate second-person phrasing in bundled guides into neutral statutory
+  thresholds; do not repeat individualized conclusions such as "probably, if
+  you."
 
 ## When to use
 
@@ -53,8 +58,9 @@ Use this skill when the user wants to understand state consumer-privacy law, e.g
    state — and note that coverage is rolling out (see Coverage below).
 2. **Read the one matching file.** Open `content/<slug>.md` — and only that file.
    Do not load other jurisdictions. (References stay one level deep.)
-3. **Lead with the snapshot date.** State the note's `snapshotAsOf` and
-   `lastReviewed`, and surface any baked `> [!WARNING]` staleness block verbatim.
+3. **Lead with the review date.** State the note's `lawReviewedThrough` and
+   `exportedAt`, clearly distinguishing substantive review from packaging, and
+   surface any baked `> [!WARNING]` staleness block verbatim.
 4. **Answer from the note.** Use the **At a glance** table for the bottom line
    (law coverage, applicability, key law, privacy-policy duty, whether consumers
    can sue, the lawsuit detail, privacy-policy rule, sensitive-data consent,
@@ -82,8 +88,8 @@ program/policy is compliant:
 ## Coverage
 
 The bundled states are listed in `manifest.json` at this skill's root (each
-entry has `slug`, `jurisdiction`, `countryCode`, `snapshotAsOf`,
-`lastReviewed`, and a `stale` flag). Coverage is rolling out state by state —
+entry has `slug`, `jurisdiction`, `countryCode`, `lawReviewedThrough`,
+`exportedAt`, and a `stale` flag). Coverage is rolling out state by state —
 read that file to enumerate what's available before answering a "which states
 do you cover?" question.
 

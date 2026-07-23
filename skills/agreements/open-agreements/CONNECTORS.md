@@ -8,12 +8,18 @@ This skill uses `~~category` placeholders for optional integrations. The skill w
 
 | Category | Placeholder | Recommended server | Other options |
 |----------|-------------|-------------------|---------------|
-| Contract templates | `~~contract-templates` | [Open Agreements Remote MCP](https://openagreements.org/api/mcp) (zero-install, recommended) | Local CLI: [`open-agreements` on npm](https://www.npmjs.com/package/open-agreements) |
+| Contract templates | `~~contract-templates` | Local CLI: [`open-agreements@0.8.0` on npm](https://www.npmjs.com/package/open-agreements) | [Open Agreements Remote MCP](https://openagreements.org/api/mcp) (optional hosted service) |
 
-### Setting up the Remote MCP (recommended)
+### Local CLI (default)
 
-The remote MCP handles the full template catalog server-side. No local dependencies needed. See the [Open Agreements product page](https://usejunior.com/developer-tools/open-agreements) for setup instructions.
+For local template listing and filling, use the pinned npm package. Requires
+Node.js 20 or later. See the
+[README](https://github.com/open-agreements/open-agreements#use-with-claude-code)
+for details.
 
-### Alternative: Local CLI
+### Remote MCP (optional)
 
-For fully local execution (no network calls during fills), install [`open-agreements` from npm](https://www.npmjs.com/package/open-agreements). Requires Node.js >= 20. See the [README](https://github.com/open-agreements/open-agreements#use-with-claude-code) for details.
+The hosted MCP is not bundled with the Claude plugin. A user may configure it
+separately, but template contents and field values are then sent to
+openagreements.org for server-side DOCX generation. Disclose that transfer and
+obtain the user's choice before using it.

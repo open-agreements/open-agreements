@@ -1,8 +1,8 @@
 # Anthropic Claude Community Marketplace Submission
 
-Status: Draft for review. Do not submit without explicit approval.
+Status: Approved for submission by the repository owner.
 
-Requirements last checked: 2026-07-22
+Requirements last checked: 2026-07-23
 
 ## Submission route
 
@@ -29,7 +29,8 @@ The separate official marketplace has no application process.
 
 Use source-cited legal practice guides, review checklists, 50-state surveys, and
 fill-ready agreement templates. Includes offline non-compete and U.S.
-privacy-law explainers with snapshot dates and authority citations, plus a local
+privacy-law explainers with separate law-review and export dates, authority
+citations, plus a local
 CLI workflow for standard forms such as NDAs and SAFEs. Provides general legal
 information and practitioner starting points, not legal advice.
 
@@ -45,9 +46,9 @@ The initial package includes three skills:
 
 1. `open-agreements`, for navigating practice guides, checklists, surveys, and
    templates, with local template filling through a pinned CLI.
-2. `non-compete-contract-explainer`, with bundled jurisdiction snapshots and
+2. `non-compete-contract-explainer`, with bundled jurisdiction guides and
    source citations.
-3. `data-privacy-law-explainer`, with bundled U.S. state-law snapshots and
+3. `data-privacy-law-explainer`, with bundled U.S. state-law guides and
    source citations.
 
 The package does not include `skills/internal`, an MCP server, hooks, agents,
@@ -55,8 +56,8 @@ background processes, executable scripts, or authentication.
 
 ## Reviewer notes
 
-- Practice-guide answers state their snapshot date and cite the included legal
-  authorities.
+- Practice-guide answers distinguish the substantive law-review date from the
+  packaging export date and cite the included legal authorities.
 - The explainer skills prohibit individualized legal or compliance verdicts and
   direct users to licensed counsel for advice on their facts.
 - The skills treat bundled and fetched content as reference material, not as
@@ -86,12 +87,13 @@ claude --plugin-dir ./plugins/open-agreements
 
 Suggested smoke prompts:
 
-1. `What does the bundled Texas non-compete guide say, and what is its snapshot date?`
+1. `What does the bundled Texas non-compete guide say, and through what date was its law reviewed?`
 2. `Explain whether the Virginia consumer privacy law provides a private right of action.`
 3. `Find an Open Agreements practice guide about AI hiring and cite its sources.`
 4. `List the information you would need to fill a mutual NDA, but do not create a file yet.`
 
 ## Submission boundary
 
-Preparing and validating this package does not authorize submission. The Console
-form is a public-facing action and requires separate explicit approval.
+The repository owner explicitly authorized submission on July 22, 2026. Record
+the resulting submission confirmation and review status after the Console form
+is completed.

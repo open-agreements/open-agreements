@@ -11,7 +11,7 @@ compatibility: >-
   canonical URL.
 metadata:
   author: open-agreements
-  version: "0.2.0"
+  version: "0.3.0"
 catalog_group: Legal Explainers
 catalog_order: 10
 ---
@@ -28,10 +28,16 @@ contract is enforceable.
 - This skill provides **general legal information only**. It is **not legal
   advice**, does not create an attorney-client relationship, and is not a
   substitute for a licensed attorney in the relevant jurisdiction.
-- Every bundled note is a **snapshot** with a `snapshotAsOf` date. Laws change.
-  Always point the user to the canonical URL to confirm currency.
+- Every bundled note records when it was packaged (`exportedAt`) separately
+  from the date through which its law was substantively reviewed
+  (`lawReviewedThrough`). Laws change. Never imply that the export date is a
+  legal-currentness review, and always point the user to the canonical URL to
+  confirm currency.
 - Do **not** render a verdict on the user's own agreement (see the
   personal-question rule below).
+- Reframe imperative drafting language from bundled guides as statutory factors
+  or general practitioner considerations; do not prescribe terms for a user's
+  agreement.
 
 ## When to use
 
@@ -51,8 +57,9 @@ Use this skill when the user wants to understand restrictive-covenant law, e.g.:
    jurisdiction.
 2. **Read the one matching file.** Open `content/<slug>.md` — and only that file.
    Do not load other jurisdictions. (References stay one level deep.)
-3. **Lead with the snapshot date.** State the note's `snapshotAsOf` and
-   `lastReviewed`, and surface any baked `> [!WARNING]` staleness block verbatim.
+3. **Lead with the review date.** State the note's `lawReviewedThrough` and
+   `exportedAt`, clearly distinguishing substantive review from packaging, and
+   surface any baked `> [!WARNING]` staleness block verbatim.
 4. **Answer from the note.** Use the **At a glance** table for the bottom line,
    then the question sections for detail. **Cite the footnoted sources**
    (statutes, cases, commentary) when you state a rule. Stay neutral.
@@ -78,7 +85,7 @@ they can leave / join a competitor:
 
 The bundled jurisdictions are listed in `manifest.json` at this skill's root
 (each entry has
-`slug`, `jurisdiction`, `countryCode`, `snapshotAsOf`, `lastReviewed`, and a
+`slug`, `jurisdiction`, `countryCode`, `lawReviewedThrough`, `exportedAt`, and a
 `stale` flag). Read that file to enumerate what's available before answering a
 "which states do you cover?" question.
 
@@ -96,7 +103,7 @@ openagreements.org also publishes machine-readable twins you can fetch directly
 - **Reviewer checklist** — `…/checklists/non-compete/us.json`.
 
 The full corpus is also browsable as plain markdown in the open-agreements repo
-under `legal-practice-library/` (`non-compete/`, `surveys/non-compete/`,
+under `practice-guides/` (`non-compete/`, `surveys/non-compete/`,
 `checklists/non-compete/`).
 
 ## See also

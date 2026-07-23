@@ -123,6 +123,25 @@ jobs:
       - name: Validate Gemini extension manifest contract
         run: npm run check:gemini-extension-manifest
 
+  claude-plugin-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies (retry)
+        uses: ./.github/actions/npm-ci-retry
+
+      - name: Validate Claude marketplace package allowlist and drift
+        run: npm run check:claude-plugin
+
+      - name: Test Claude marketplace package security boundary
+        run: npx vitest run scripts/sync_claude_marketplace_plugin.test.mjs
+
   readme-sync:
     runs-on: ubuntu-latest
     steps:

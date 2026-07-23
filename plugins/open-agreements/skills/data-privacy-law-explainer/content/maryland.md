@@ -2,8 +2,8 @@
 jurisdiction: "Maryland"
 slug: maryland
 countryCode: US
-snapshotAsOf: "2026-07-22"
-lastReviewed: "2026-06-06"
+exportedAt: "2026-07-23"
+lawReviewedThrough: "2026-06-06"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/maryland
 license: CC BY 4.0
 stale: false
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/maryland · **Snapshot as of:** 2026-07-22 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/maryland · **Law reviewed through:** 2026-06-06 · **Exported:** 2026-07-23 · License: CC BY 4.0 · © openagreements.org
 
 # Maryland Consumer Privacy Law (MODPA)[^about]
 
