@@ -2,7 +2,7 @@
 jurisdiction: "Utah"
 slug: utah
 countryCode: US
-snapshotAsOf: "2026-07-22"
+snapshotAsOf: "2026-07-23"
 lastReviewed: "2026-06-04"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/utah
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/utah · **Snapshot as of:** 2026-07-22 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/utah · **Snapshot as of:** 2026-07-23 · License: CC BY 4.0 · © openagreements.org
 
 # Utah Consumer Privacy Law (UCPA)[^about]
 
