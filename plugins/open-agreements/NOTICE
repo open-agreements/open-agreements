@@ -1,0 +1,12 @@
+Open Agreements for Claude Code
+Copyright 2026 OM Innovation AI Inc. (UseJunior), a Delaware corporation
+
+The plugin packaging and Open Agreements navigator are licensed under the
+Apache License, Version 2.0.
+
+The bundled non-compete and consumer-privacy practice guides are licensed
+under CC BY 4.0. Each explainer directory contains its own LICENSE, NOTICE,
+attribution, review metadata, and canonical source links.
+
+This curated package does not ship agreement template files, internal
+repository-maintenance skills, or an MCP server.
