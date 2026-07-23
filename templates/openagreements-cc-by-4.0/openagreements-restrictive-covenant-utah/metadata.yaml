@@ -61,7 +61,7 @@ fields:
     default_value_rationale: Utah leaves confidentiality agreements outside the Noncompetition Agreement Act's non-compete definition and one-year cap, but a confidentiality obligation on non-trade-secret information still should be reasonable. A finite term such as 24 months is defensible; a perpetual lid on non-secret information invites recharacterization as a disguised restraint on working.
   - name: employee_nonsolicit_included
     type: boolean
-    description: Whether the employee no-hire / non-solicitation covenant is included. Alabama's only category for restraints touching another party's workers is the no-hire exception for workers in a position uniquely essential to the management, organization, or service of the business.
+    description: Whether the employee no-hire / non-solicitation covenant is included.
     display_label: Employee No-Hire Included
     section: Employee Non-Solicitation
     rationale_source: editorial
@@ -84,7 +84,7 @@ fields:
     default_value_rationale: No Utah statute fixes the lookback for a covered-employee class; 12 months is the most common window and keeps the no-poach class tied to colleagues the departing worker actually worked with, consistent with common-law reasonableness.
   - name: customer_nonsolicit_included
     type: boolean
-    description: Whether the current-customer non-solicitation covenant is included. Alabama gives this covenant its own category, limited to current customers.
+    description: Whether the current-customer non-solicitation covenant is included.
     display_label: Customer Non-Solicitation Included
     default: true
     section: Customer Non-Solicitation

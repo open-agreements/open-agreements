@@ -56,7 +56,7 @@ Competitive Business
 : [Description of the business activities that constitute competition with the employer.]
 
 Specified Competitors
-: [Optional named list of specific competitors. Alabama rewards specificity: the protectable-interest list speaks in terms of specific customers and concrete relationships, and a covenant drawn to named threats is easier to defend as protecting a listed interest than one leaning on an open-ended competitive-business definition.]
+: [Optional named list of specific competitors.]
 
 No Business with Covered Customers
 
