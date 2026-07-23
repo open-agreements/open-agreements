@@ -1,6 +1,10 @@
 # Us Update Log
 
+## 2026-07-22
+* **Update**: content(virginia): correct four subsection cites and reverse the tip-credit answer (f275d85)
+
 ## 2026-07-20
+* **Update**: content(wage-and-hour): add Virginia wage-and-hour guide (pipeline-verified, 34 source-cards) (aa13ef7)
 * **Update**: Replace IL wage-and-hour guide with pipeline-verified v5 (90 verified quotes, Chicago/Cook local section, IWPCA 10-year SOL) (#1844) (b237c7a)
 
 ## 2026-07-16
