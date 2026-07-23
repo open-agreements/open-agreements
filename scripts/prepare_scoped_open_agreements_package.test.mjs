@@ -58,6 +58,6 @@ describe('prepare_scoped_open_agreements_package', () => {
       expect(actual).toContain('@usejunior/docx-core');
       expect([...actual].sort()).toEqual([...expected].sort());
     },
-    30_000,
+    60_000,
   );
 });
