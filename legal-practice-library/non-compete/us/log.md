@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-07-23
+* **Update**: content(non-compete): finalized Rollins consent order + FTC page freshness (closes #1885) (#1897) (e390380)
+
 ## 2026-07-15
 * **Update**: fix(sd): correct SD non-compete + privacy quotes after statute re-ingest (#1818) (0f3e7bf)
 

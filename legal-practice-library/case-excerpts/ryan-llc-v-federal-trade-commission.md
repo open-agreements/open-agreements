@@ -7,7 +7,7 @@ description: >-
 citation: 'Ryan LLC v. Fed. Trade Comm''n, 746 F. Supp. 3d 369 (N.D. Tex. 2024).'
 resource: >-
   https://www.courtlistener.com/opinion/10205745/ryan-llc-v-federal-trade-commission/
-timestamp: '2026-07-01'
+timestamp: '2026-07-22'
 document_references:
   - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/connecticut'
