@@ -2,8 +2,8 @@
 jurisdiction: "Texas"
 slug: texas
 countryCode: US
-exportedAt: "2026-07-23"
-lawReviewedThrough: "2026-06-04"
+snapshotAsOf: "2026-07-23"
+lastReviewed: "2026-06-04"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/texas
 license: CC BY 4.0
 stale: false
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/texas · **Law reviewed through:** 2026-06-04 · **Exported:** 2026-07-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/texas · **Snapshot as of:** 2026-07-23 · License: CC BY 4.0 · © openagreements.org
 
 # Texas Consumer Privacy Law (TDPSA)[^about]
 
@@ -40,7 +40,7 @@ The Texas Data Privacy and Security Act gives Texas consumers rights over their 
 
 ## Does the Texas Data Privacy and Security Act apply to your business? {#does-tdpsa-apply}
 
-**Short answer.** The TDPSA applies to a person that does business in Texas or produces a product or service consumed by Texas residents, processes or sells personal data, and is not a small business as defined by the U.S. Small Business Administration [^stat-002-apply]. Unlike California, Texas sets no revenue or data-volume threshold.
+**Short answer.** Probably, if you handle Texans' personal data and are not a small business. Unlike California, Texas sets no revenue or data-volume threshold. The TDPSA applies to a person that does business in Texas or produces a product or service consumed by Texas residents, that processes or sells personal data, and that is not a small business as defined by the U.S. Small Business Administration [^stat-002-apply].
 
 This makes the small-business test the practical gatekeeper rather than a dollar figure. The SBA size standards are industry-specific (by revenue or headcount), so applicability turns on your NAICS classification, not a single statewide number. Two further limits matter: the statute reaches only a consumer acting in an individual or household context — not employees or business contacts — and it carries entity-level and data-level exemptions (state agencies, GLBA financial institutions, HIPAA-covered entities, nonprofits, higher education, and FCRA, DPPA, and FERPA data). One carve-out has a sting in its tail: even a small business that is otherwise exempt may not sell sensitive personal data without prior consumer consent.
 

@@ -2,8 +2,8 @@
 jurisdiction: "Wyoming"
 slug: wyoming
 countryCode: US
-exportedAt: "2026-07-23"
-lawReviewedThrough: "2026-06-12"
+snapshotAsOf: "2026-07-23"
+lastReviewed: "2026-06-12"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/wyoming
 license: CC BY 4.0
 stale: false
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/wyoming · **Law reviewed through:** 2026-06-12 · **Exported:** 2026-07-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/wyoming · **Snapshot as of:** 2026-07-23 · License: CC BY 4.0 · © openagreements.org
 
 # Wyoming Consumer Privacy Law[^about]
 

@@ -1,6 +1,7 @@
 {
   "topic": "privacy",
-  "exportedAt": "2026-07-23",
+  "snapshotAsOf": "2026-07-23",
+  "sourceCommit": "c08609e31a396335c959955458034ee0c7bbc4c2",
   "canonicalBase": "https://openagreements.org/practice-guides/privacy",
   "license": "CC BY 4.0",
   "jurisdictions": [
@@ -10,7 +11,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/alabama",
       "file": "content/alabama.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -19,7 +21,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/alaska",
       "file": "content/alaska.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -28,7 +31,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/arizona",
       "file": "content/arizona.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -37,7 +41,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/arkansas",
       "file": "content/arkansas.md",
-      "lawReviewedThrough": "2026-06-12",
+      "lastReviewed": "2026-06-12",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -46,7 +51,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/california",
       "file": "content/california.md",
-      "lawReviewedThrough": "2026-06-03",
+      "lastReviewed": "2026-06-03",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -55,7 +61,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/colorado",
       "file": "content/colorado.md",
-      "lawReviewedThrough": "2026-06-04",
+      "lastReviewed": "2026-06-04",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -64,7 +71,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/connecticut",
       "file": "content/connecticut.md",
-      "lawReviewedThrough": "2026-06-04",
+      "lastReviewed": "2026-06-04",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -73,7 +81,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/delaware",
       "file": "content/delaware.md",
-      "lawReviewedThrough": "2026-06-06",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -82,7 +91,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/district-of-columbia",
       "file": "content/district-of-columbia.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -91,7 +101,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/florida",
       "file": "content/florida.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -100,7 +111,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/georgia",
       "file": "content/georgia.md",
-      "lawReviewedThrough": "2026-06-12",
+      "lastReviewed": "2026-06-12",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -109,7 +121,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/hawaii",
       "file": "content/hawaii.md",
-      "lawReviewedThrough": "2026-06-12",
+      "lastReviewed": "2026-06-12",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -118,7 +131,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/idaho",
       "file": "content/idaho.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -127,7 +141,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/illinois",
       "file": "content/illinois.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -136,7 +151,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/indiana",
       "file": "content/indiana.md",
-      "lawReviewedThrough": "2026-06-06",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -145,7 +161,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/iowa",
       "file": "content/iowa.md",
-      "lawReviewedThrough": "2026-06-05",
+      "lastReviewed": "2026-06-05",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -154,7 +171,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/kansas",
       "file": "content/kansas.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -163,7 +181,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/kentucky",
       "file": "content/kentucky.md",
-      "lawReviewedThrough": "2026-06-06",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -172,7 +191,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/louisiana",
       "file": "content/louisiana.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -181,7 +201,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/maine",
       "file": "content/maine.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -190,7 +211,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/maryland",
       "file": "content/maryland.md",
-      "lawReviewedThrough": "2026-06-06",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -199,7 +221,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/massachusetts",
       "file": "content/massachusetts.md",
-      "lawReviewedThrough": "2026-06-12",
+      "lastReviewed": "2026-06-12",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -208,7 +231,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/michigan",
       "file": "content/michigan.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -217,7 +241,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/minnesota",
       "file": "content/minnesota.md",
-      "lawReviewedThrough": "2026-06-06",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -226,7 +251,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/mississippi",
       "file": "content/mississippi.md",
-      "lawReviewedThrough": "2026-06-12",
+      "lastReviewed": "2026-06-12",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -235,7 +261,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/missouri",
       "file": "content/missouri.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -244,7 +271,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/montana",
       "file": "content/montana.md",
-      "lawReviewedThrough": "2026-06-05",
+      "lastReviewed": "2026-06-05",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -253,7 +281,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/nebraska",
       "file": "content/nebraska.md",
-      "lawReviewedThrough": "2026-06-06",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -262,7 +291,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/nevada",
       "file": "content/nevada.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -271,7 +301,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/new-hampshire",
       "file": "content/new-hampshire.md",
-      "lawReviewedThrough": "2026-06-06",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -280,7 +311,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/new-jersey",
       "file": "content/new-jersey.md",
-      "lawReviewedThrough": "2026-06-06",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -289,7 +321,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/new-mexico",
       "file": "content/new-mexico.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -298,7 +331,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/new-york",
       "file": "content/new-york.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -307,7 +341,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/north-carolina",
       "file": "content/north-carolina.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -316,7 +351,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/north-dakota",
       "file": "content/north-dakota.md",
-      "lawReviewedThrough": "2026-06-12",
+      "lastReviewed": "2026-06-12",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -325,7 +361,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/ohio",
       "file": "content/ohio.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -334,7 +371,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/oklahoma",
       "file": "content/oklahoma.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -343,7 +381,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/oregon",
       "file": "content/oregon.md",
-      "lawReviewedThrough": "2026-06-05",
+      "lastReviewed": "2026-06-05",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -352,7 +391,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/pennsylvania",
       "file": "content/pennsylvania.md",
-      "lawReviewedThrough": "2026-06-07",
+      "lastReviewed": "2026-06-07",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -361,7 +401,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/rhode-island",
       "file": "content/rhode-island.md",
-      "lawReviewedThrough": "2026-06-06",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -370,7 +411,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/south-carolina",
       "file": "content/south-carolina.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -379,7 +421,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/south-dakota",
       "file": "content/south-dakota.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -388,7 +431,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/tennessee",
       "file": "content/tennessee.md",
-      "lawReviewedThrough": "2026-06-06",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -397,7 +441,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/texas",
       "file": "content/texas.md",
-      "lawReviewedThrough": "2026-06-04",
+      "lastReviewed": "2026-06-04",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -406,7 +451,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/utah",
       "file": "content/utah.md",
-      "lawReviewedThrough": "2026-06-04",
+      "lastReviewed": "2026-06-04",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -415,7 +461,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/vermont",
       "file": "content/vermont.md",
-      "lawReviewedThrough": "2026-07-23",
+      "lastReviewed": "2026-06-12",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -424,7 +471,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/virginia",
       "file": "content/virginia.md",
-      "lawReviewedThrough": "2026-06-04",
+      "lastReviewed": "2026-06-04",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -433,7 +481,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/washington",
       "file": "content/washington.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -442,7 +491,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/west-virginia",
       "file": "content/west-virginia.md",
-      "lawReviewedThrough": "2026-06-12",
+      "lastReviewed": "2026-06-12",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -451,7 +501,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/wisconsin",
       "file": "content/wisconsin.md",
-      "lawReviewedThrough": "2026-06-11",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     },
     {
@@ -460,7 +511,8 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/privacy/us/wyoming",
       "file": "content/wyoming.md",
-      "lawReviewedThrough": "2026-06-12",
+      "lastReviewed": "2026-06-12",
+      "snapshotAsOf": "2026-07-23",
       "stale": false
     }
   ]
