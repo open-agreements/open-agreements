@@ -266,10 +266,10 @@ function sectionHeader(label, style, nilBorder) {
   });
 }
 
-function sectionFooter(docLabel, version, style) {
+function sectionFooter(docLabel, version, style, fontSizeHalfPoints = 18) {
   const baseRun = {
     font: style.fonts.body,
-    size: 13,
+    size: fontSizeHalfPoints,
     color: style.colors.ink_soft,
   };
 
@@ -292,7 +292,7 @@ function sectionFooter(docLabel, version, style) {
   });
 }
 
-function buildSection(sectionLabel, documentLabel, documentVersion, children, style, nilBorder) {
+function buildSection(sectionLabel, documentLabel, documentVersion, children, style, nilBorder, footerFontSizeHalfPoints) {
   return {
     properties: {
       page: {
@@ -303,7 +303,7 @@ function buildSection(sectionLabel, documentLabel, documentVersion, children, st
       default: sectionHeader(sectionLabel, style, nilBorder),
     },
     footers: {
-      default: sectionFooter(documentLabel, documentVersion, style),
+      default: sectionFooter(documentLabel, documentVersion, style, footerFontSizeHalfPoints),
     },
     children,
   };
@@ -1467,6 +1467,7 @@ export function renderCoverStandardSignatureV1(spec, style) {
         ],
         style,
         nilBorder,
+        document.footer_font_size_half_points,
       ),
       buildSection(
         sections.standard_terms.section_label,
@@ -1477,7 +1478,8 @@ export function renderCoverStandardSignatureV1(spec, style) {
           ...standardClauseParagraphs,
         ],
         style,
-        nilBorder
+        nilBorder,
+        document.footer_font_size_half_points,
       ),
       buildSection(
         sections.signature.section_label,
@@ -1491,7 +1493,8 @@ export function renderCoverStandardSignatureV1(spec, style) {
           ...signatureChildren,
         ],
         style,
-        nilBorder
+        nilBorder,
+        document.footer_font_size_half_points,
       ),
     ],
   });

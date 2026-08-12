@@ -1,4 +1,4 @@
-namespace org.openagreements.custom.openagreementsemployeeipinventionsassignment@1.0.0
+namespace org.openagreements.custom.employeeipinventionsassignment@1.0.0
 
 import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
 
@@ -12,8 +12,10 @@ import org.accordproject.contract.Contract from https://models.accordproject.org
  * License: CC-BY-4.0
  */
 
-asset OpenagreementsEmployeeIpInventionsAssignment extends Contract {
+asset EmployeeIpInventionsAssignment extends Contract {
   o String company_name optional
+  o String company_signatory_name optional
+  o String company_signatory_title optional
   o String employee_name optional
   o String effective_date optional
   o String prior_inventions_disclosure default="None listed"
