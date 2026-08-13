@@ -269,7 +269,7 @@ An out-of-state choice-of-law clause does not escape New York's limits against a
 
 ### tolling
 
-An automatic tolling or extension-on-breach clause does not reliably lengthen a New York non-compete. Because no controlling New York rule blesses judicial tolling and duration drives reasonableness, a narrow, time-limited extension is the one that survives; if S4641A becomes law, an extension that pushes the restriction past one year would conflict with the statutory cap .
+If the parties intend breach to extend the restriction, the agreement should define the triggering breach and limit the extension to the established period of breach.
 
 ### broadcast exclusion mechanics
 
