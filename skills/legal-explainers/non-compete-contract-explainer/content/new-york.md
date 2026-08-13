@@ -126,7 +126,7 @@ Like any contract term, a promise not to compete must be supported by adequate c
 
 ## How does New York treat customer and employee non-solicitation covenants? {#nonsolicitation}
 
-**Short answer.** They are still measured for reasonableness, but employee non-recruitment clauses are treated as less restrictive than a full non-compete and may be enforceable when reasonable; a customer non-solicitation clause must be tied to the clients the employee actually served [^otg-nonrecruitment-less-restrictive][^brown-brown-overbroad-customers].
+**Short answer.** Customer and employee non-solicitation covenants are still measured for reasonableness, but employee non-recruitment clauses are treated as less restrictive than a full non-compete and may be enforceable when reasonable; a customer non-solicitation clause must be tied to the clients the employee actually served [^otg-nonrecruitment-less-restrictive][^brown-brown-overbroad-customers].
 
 In *OTG Management v. Konstantinidis*, the court denied a non-compete injunction but enforced a non-recruitment clause, finding it reasonable in scope and not a meaningful burden on the worker [^otg-nonrecruitment-enforced]. *OTG*, a New York trial court following lower-court and federal authority, treated no-recruit clauses as inherently more reasonable than non-competes because they restrict less [^otg-nonrecruitment-less-restrictive].
 
@@ -178,14 +178,13 @@ New York generally honors a contractual choice of law, but reserves a public-pol
 
 ## Does a New York non-compete's restricted period pause (toll) during a breach or litigation? {#extended-for-breach}
 
-**Short answer.** Treat it as an open question. New York measures a covenant's duration as part of the reasonableness test, and no controlling New York decision establishes that the restricted period automatically tolls — pauses and extends — while a former employee is violating the covenant or while litigation is pending [^tolling-time-reasonableness].
+**Short answer.** Treat it as an open question. New York measures a covenant's duration as part of the reasonableness test. No controlling New York decision establishes that the restricted period automatically tolls — pauses and extends — during a breach or while litigation is pending [^tolling-time-reasonableness].
 
-The uncertainty matters because duration is itself part of what a court must find reasonable. A contractual clause that extends the restricted period during a breach lengthens that very term, so an open-ended or automatic extension can push an otherwise reasonable covenant into unreasonable territory [^tolling-time-reasonableness]. An employer that wants the clock to pause during a breach should therefore say so expressly rather than assume a court will extend the period. Pending legislation points the same direction: S4641A would cap any permissible non-compete at a one-year term, which an extension-on-breach clause could exceed [^s4641a-one-year-cap].
+The uncertainty matters because duration is itself part of what a court must find reasonable. A contractual clause that extends the restricted period during a breach lengthens that term, so an open-ended or automatic extension can affect the reasonableness analysis [^tolling-time-reasonableness].
 
-> [!CAUTION]
-> **Drafting note.**
->
-> An automatic tolling or extension-on-breach clause does not reliably lengthen a New York non-compete. Because no controlling New York rule blesses judicial tolling and duration drives reasonableness, a narrow, time-limited extension is the one that survives; if S4641A becomes law, an extension that pushes the restriction past one year would conflict with the statutory cap [^tolling-time-reasonableness][^s4641a-one-year-cap].
+If the parties intend breach to extend the restriction, the agreement should define the triggering breach and limit the extension to the established period of breach. That language clarifies the intended operation, but it does not establish that a court will find the extended duration reasonable [^tolling-time-reasonableness].
+
+S4641A would cap a permissible non-compete at one year if enacted. It provides context for evaluating an extension, not current legal support [^s4641a-one-year-cap].
 
 ## What special non-compete rule applies to broadcast-industry employees in New York? {#broadcast-industry}
 

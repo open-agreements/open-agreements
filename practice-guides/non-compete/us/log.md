@@ -1,5 +1,13 @@
 # Us Update Log
 
+## 2026-07-30
+* **Update**: content: make New York answer opening standalone (f64b2c5)
+
+## 2026-07-29
+* **Update**: content: classify New York tolling evidence edges (3000b44)
+* **Update**: content: move New York tolling guidance into body analysis (350d060)
+* **Update**: content: pilot structured New York tolling guidance (4d6bb73)
+
 ## 2026-07-23
 * **Update**: content(non-compete): finalized Rollins consent order + FTC page freshness (closes #1885) (#1897) (e390380)
 
