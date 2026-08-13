@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-08-12
+* **Update**: content(wage-and-hour): add Colorado wage-and-hour guide (#2170) (b0e7578)
+
 ## 2026-07-22
 * **Update**: content(virginia): correct four subsection cites and reverse the tip-credit answer (f275d85)
 
