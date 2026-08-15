@@ -121,6 +121,6 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in California](/practice-guides/non-compete/us/california).
 
-### confidentiality scope
+### Confidentiality scope
 
 Do not define _confidential information_ so broadly that it sweeps in the employee's general skills, knowledge, and industry experience — a confidentiality clause that effectively prevents the worker from practicing their profession is a _de facto_ non-compete and void under _Brown v. TGS_. Tie confidentiality to genuine, identifiable trade secrets, and rely on the Trade Secrets Act for enforcement .

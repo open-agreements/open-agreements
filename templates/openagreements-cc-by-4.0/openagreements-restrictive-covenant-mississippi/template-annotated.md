@@ -203,38 +203,38 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Mississippi](/practice-guides/non-compete/us/mississippi).
 
-### the three-interest balance
+### The three-interest balance
 
 Mississippi has no general non-compete statute, so every covenant in the agreement stands or falls on the balance of three interests — the rights of the employer, the rights of the employee, and the rights of the public — and the employer carries the burden of proving the restraint reasonable in time, territory, and restrained activity . A court treats these covenants as restraints on trade and individual freedom, so they are disfavored and any ambiguity is construed strictly against the drafting employer , weighed to maintain a reasonable balance between the employer's protection and the employee's freedom to work . A covenant that cannot be tied to customer goodwill, confidential information, or another protectable interest fails that test — the investment restraint is the hardest of all to justify. Trade-secret protection, in turn, survives only on the reasonable efforts that surround it: the return, deletion, and certification of confidential material form the contemporaneous record an employer would need if protected material later surfaced at a competitor.
 
-### consideration record
+### Consideration record
 
 The consideration question does not disappear in Mississippi merely because continued employment can suffice; the agreement is still construed strictly, and the circumstances of signing are scrutinized, so a documented tie to the employment relationship — paired with fresh consideration where practical — stands on firmer ground . For an existing at-will employee, continued employment is itself the consideration, and no separate payment, raise, or promotion is needed to support the covenant . Adequate consideration, however, only supports the covenants — it does not make them reasonable, and each covenant must still independently satisfy the reasonableness balance on time, territory, and restrained activity.
 
-### territory and market
+### Territory and market
 
 A fixed radius or term copied from another form is measured against a market it was never sized to; a Mississippi court instead weighs the territory against the employer's real market and the employee's actual reach. A remote worker located inside the restricted area is still bound — geography is measured by where the employee operates, not only where the customers sit .
 
-### scope sized to the employee's real influence
+### Scope sized to the employee's real influence
 
 A territory tied to the geographic area in which the employee actually provided services, and sized to the employee's real influence rather than the employer's whole footprint, is the defensible one. A statewide restraint failed where the employee's protectable relationships were limited to one local area , while a 250-mile radius held for a telephonic business whose market would have justified even a nationwide limit . There is no statutory cap on duration or territory; a court weighs time, territory, and restrained activity together, so a restraint measured to where the employee worked and whom they influenced fares best. Naming the specific Specified Competitors in Cover Terms, rather than leaving the restrained activity open-ended, is strong evidence it reaches no further than required.
 
-### no-acceptance language
+### No-acceptance language
 
 A standard non-solicitation clause does not necessarily stop a former employee from serving customers who come to them. Barring the service of former clients regardless of who makes first contact takes explicit non-dealing or no-acceptance language, because Mississippi reads ambiguity against the employer .
 
-### accepting business versus soliciting
+### Accepting business versus soliciting
 
 Each restraint reaches only the conduct it names. A customer non-solicit built on the Solicit definition reaches only the employee's active diversion; stopping a former employee from serving customers who come to them on their own falls to the separate No Business with Covered Customers covenant and its express no-acceptance language. A clause barring conduct that would tend to divert business was held ambiguous precisely because it did not expressly prohibit accepting business from former customers who came over on their own initiative, and the court construed that ambiguity against the employer . An express no-acceptance provision can, in appropriate cases, be reasonable and enforceable . That no-acceptance covenant is the heavier restraint, defensible only where it is genuinely needed and sized at least as tightly to the customer goodwill it protects; a customer non-solicit backed by the confidentiality and trade-secret terms is often a sturdier, more readily enforceable protection than a broad non-compete.
 
-### extension on breach
+### Extension on breach
 
 A Mississippi court will not, on its own, add time to an expired covenant — under _Frierson_ it cannot. Pausing the clock during a breach depends on an explicit extension-on-breach clause tied to the actual period of breach, because that contractual route, not judicial tolling, is what Mississippi courts have enforced . Such a clause holds up where it extends each covenant only by the actual period of breach and caps the extension at that period, because an extension is itself a restraint that must stay reasonable rather than a lever that turns a fixed term into a perpetual one .
 
-### assignment before departure
+### Assignment before departure
 
 An employee covenant transfers only where it is assigned expressly and in writing in the transaction documents, because Mississippi will not supply a transfer the deal papers omit: the buyer of a propane business could not enforce an employee's covenant where the asset-purchase agreement's plain language did not transfer the employment contract, and a later assignment was of no effect because it came after the employee had already resigned . An assignment made before the employee departs, not after, is the one that takes. A covenant given by the seller of a business is the mirror image — it travels with the goodwill conveyed and is given general application unless its own terms make it personal to the original obligee — but a covenant given by an employee of the seller is just another contract that must be deliberately assigned.
 
-### lawyers and minor signers
+### Lawyers and minor signers
 
 A practice restriction on a lawyer is unenforceable whatever the lawyer's pay or seniority: a partnership or employment agreement that restricts a lawyer's right to practice after the relationship ends is prohibited, except an agreement concerning benefits upon retirement . The rule's only other carve-out is a restriction included in the terms of the sale of a law practice under Rule 1.17 — a sale context an ordinary employment agreement does not present . Signer capacity turns on the same kind of threshold: a worker who signed as a minor and disaffirms the agreement cannot be bound by it, so a covenant's force depends on the signer's age and capacity at signing .

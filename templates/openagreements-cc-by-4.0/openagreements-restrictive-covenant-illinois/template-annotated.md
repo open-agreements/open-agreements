@@ -201,6 +201,6 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Illinois](/practice-guides/non-compete/us/illinois).
 
-### consideration tied to the covenant
+### Consideration tied to the covenant
 
 An Illinois covenant supported by a benefit rather than two years of employment stands only where the covenant document itself identifies that benefit — a bonus, equity grant, or other professional or financial benefit — as given in exchange for the restraint. In _Midwest Lending Corp. v. Horton_, a signing bonus mentioned only in an offer letter did not support a later, integrated nonsolicitation agreement that never identified the bonus as consideration for the covenant, so a benefit described elsewhere and left out of the integrated covenant leaves the restraint unsupported and exposed to being held void for want of consideration .

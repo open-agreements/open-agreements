@@ -199,18 +199,18 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Kansas](/practice-guides/non-compete/us/kansas).
 
-### the four-factor test, the employer's burden, and unlimited appellate review
+### The four-factor test, the employer's burden, and unlimited appellate review
 
 Each covenant in the agreement clears the four-factor reasonableness test on its own, and the employer carries the burden of showing that a legitimate interest, no undue burden on the employee, no injury to the public welfare, and reasonable time and territory are all satisfied . Adequate consideration establishes only that a covenant is supported, not that it is reasonable, so a covenant that clears the consideration question can still fail this test. Enforceability is reviewed without deference on appeal, so a covenant that survives the trial court can be retested in full, and a recital of irreparable harm smooths the path to interim relief but does not substitute for a covenant that survives the four factors . A disclosure to a departing employee's next employer built on a covenant a court later narrows or declines to enforce exposes the employer to a claim of its own, so the restraint worth papering is one the employer is prepared to defend on all four factors.
 
-### tolling duration
+### Tolling duration
 
 An open-ended tolling-during-breach-and-litigation clause in a Kansas non-compete is a serious enforcement risk rather than a safety net. _Doan_ refused to enforce one as an unreasonable, potentially indefinite restraint, so the time such a clause purports to add back may simply not be enforced, while a defined and reasonable fixed term stands on the ground _Doan_ approved .
 
-### the material-contact safe harbor and the coworker no-recruit gap
+### The material-contact safe harbor and the coworker no-recruit gap
 
 The statutory safe harbors are covenant-specific. A customer non-solicit limited to material contact customers and capped at two years is conclusively presumed enforceable and not a restraint of trade, and — mapped to the employer's customer-goodwill interest — it is often a more readily enforceable protection than a broad non-compete, which stays on the common-law reasonableness test . A covenant drawn wider than the safe harbor, through an entire-book-of-business scope or a term past two years, forfeits the presumption and falls back to the general reasonableness baseline. The safe harbors do not reach an employer-employee covenant not to recruit coworkers: no conclusive presumption covers that restraint, so a coworker no-recruit clause stands on ordinary reasonableness and holds only where it reaches no further than the employer's interest in workforce stability .
 
-### confidential information
+### Confidential information
 
 The trade-secret statute does not reach ordinary confidential information. _Wolfe Electric_ confirms the Act is the exclusive remedy for trade-secret misappropriation and reaches only information meeting the statutory definition, so information that falls short of trade-secret status is protected only by a separate, reasonable confidentiality covenant, and an agreement that lumps everything under a trade-secret label leaves its non-secret information unprotected .

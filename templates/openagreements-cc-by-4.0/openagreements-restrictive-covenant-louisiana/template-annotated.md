@@ -205,14 +205,14 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Louisiana](/practice-guides/non-compete/us/louisiana).
 
-### restricted territory geography
+### Restricted territory geography
 
 Do not define the restricted territory by a mileage radius or a generic catch-all such as _any parish where the employer does business_. Louisiana requires named parishes or municipalities, and a radius was struck down as overly broad in _AMCOM_ .
 
-### tolling during breach
+### Tolling during breach
 
 Do not assume a Louisiana court will add time back to a non-compete for a period of breach or litigation. The statute fixes a two-year ceiling measured from termination, and courts will not reform a covenant to extend it .
 
-### employee anti-poaching duration
+### Employee anti-poaching duration
 
 Do not leave a Louisiana employee anti-poaching clause open-ended. Even though _Farris_ placed such clauses outside La. R.S. 23:921, it refused to enforce one whose agreement was devoid of any durational limit .

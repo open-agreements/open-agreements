@@ -202,34 +202,34 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Michigan](/practice-guides/non-compete/us/michigan).
 
-### the reasonable-competitive-business-interest requirement
+### The reasonable-competitive-business-interest requirement
 
 A Michigan non-compete is measured against MCL 445.774a, so a covenant that does no more than suppress ordinary competition fails even though the statute permits non-competes: it protects a reasonable competitive business interest only where it guards against the employee gaining an unfair advantage rather than shielding the employer from lawful rivalry . A covenant whose recited purpose is ordinary competition, or one bolted onto a role that touches no confidential information, customer relationship, or trade secret, has no interest to defend and is exposed on that ground before duration or geography is ever reached.
 
-### the general-knowledge-and-skill boundary
+### The general-knowledge-and-skill boundary
 
 A Michigan covenant reaches only as far as the confidential information it reasonably protects and no further, so a restraint that sweeps in the general knowledge, skill, and experience the employee acquired on the job is enforceable only to the extent it guards real confidential information . A confidentiality definition that carves out general skill, and a covenant tied to identified protectable interests rather than to the employee's expertise, keep the restraint on the enforceable side of that line; a covenant that would bar the employee from using ordinary professional ability is unenforceable to that extent.
 
-### scope and duration
+### Scope and duration
 
 Duration, geography, and covered activity are measured against the specific interest the covenant protects, so a long default term copied from another form is tested against a market it was never sized to. An unlimited or open-ended client restriction is vulnerable as unreasonable, and a narrower, interest-matched scope is the one a court is more likely to leave standing .
 
-### consideration
+### Consideration
 
 Continued employment alone is sufficient consideration for a Michigan covenant only where the worker is genuinely at will. Where the worker is a just-cause or contract employee, a covenant supported by nothing more than continued employment is void, because refusing to sign would not have been just cause for termination, so a covenant in that setting stands only on separate, identifiable consideration such as a signing or retention bonus, a raise, a promotion, or new confidential access .
 
-### the rule-of-reason boundary for business-to-business covenants
+### The rule-of-reason boundary for business-to-business covenants
 
 An employee restrictive covenant and a covenant ancillary to the sale of a business or between businesses run on different tracks in Michigan: a genuine commercial covenant is judged under the antitrust rule of reason, not the MCL 445.774a duration-geography-and-line-of-business test . A covenant that mislabels a business-to-business restraint as an employee covenant, or the reverse, is analyzed under the wrong standard, and a restraint sized to satisfy one framework can fail the other; an employee agreement kept clear of transaction-ancillary restraints leaves each covenant measured against the standard it was drafted for.
 
-### the physician-covenant proof hurdle
+### The physician-covenant proof hurdle
 
 Michigan applies no categorical physician rule: a physician covenant runs through the ordinary MCL 445.774a reasonable-competitive-business-interest test and can satisfy it . The distinctive Michigan problem is proof rather than validity — the physician-patient privilege can block discovery of nonparty patient information, so a covenant that reads well can still be hard to enforce where the employer's diversion case depends on patient records it cannot reach . A radius and term sized to the interest protected, and an enforcement theory resting on non-privileged evidence of diversion, are what carry a physician restraint in practice rather than only on paper.
 
-### trade-secret protection as a covenant backstop
+### Trade-secret protection as a covenant backstop
 
 Confidentiality and trade-secret protection run independent of any covenant and outlast it: a trade-secret obligation holds for as long as the information keeps the secrecy that makes it a trade secret, and the Michigan Uniform Trade Secrets Act supplies remedies for misappropriation whether or not a non-compete survives . Return, deletion, and certification mechanics matter here because they are part of the reasonable secrecy efforts a trade secret requires, so a program that fails to reclaim confidential material can forfeit trade-secret status altogether. Fee exposure runs both ways: the non-compete statute carries no fee award, while the trade-secret act lets a court award fees to the prevailing party for a bad-faith misappropriation claim or willful and malicious misappropriation, so an aggressive or unfounded misappropriation theory carries its own downside .
 
-### tolling as a separate reasonable restraint
+### Tolling as a separate reasonable restraint
 
 Whether a Michigan court will extend a covenant past its stated end date for a period of breach is unsettled, and the statutory text cuts against assuming it will: MCL 445.774a authorizes a court to limit an unreasonable covenant, not to expand one, and any extension is itself a restraint that must clear the same reasonableness test . An extension-on-breach clause written as an open-ended toll that lengthens as litigation drags on invites the very unreasonableness the statute targets, while one bounded to the duration of the breach and tied to a legitimate interest stays inside the framework a court would apply as a question of law when the facts are undisputed.

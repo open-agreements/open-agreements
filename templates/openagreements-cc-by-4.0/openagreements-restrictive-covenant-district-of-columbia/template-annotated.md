@@ -200,18 +200,18 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in the District of Columbia](/practice-guides/non-compete/us/district-of-columbia).
 
-### highly compensated employee non-compete validity requirements
+### Highly compensated employee non-compete validity requirements
 
 A high salary alone does not make a District non-compete enforceable. The agreement must spell out the functional scope and geographic limits, stay within the duration cap, and be delivered at least 14 days in advance — miss any element and the covenant is not valid and enforceable under § 32-581.03(a) .
 
-### confidential information scope
+### Confidential information scope
 
 A confidentiality clause stays within the statutory carve-out only where it reaches genuine confidential and proprietary information. The carve-out protects restrictions on disclosing or using employer information; a nondisclosure clause drafted so broadly that it effectively prevents the employee from working for a competitor is exposed to recharacterization as a prohibited non-compete provision .
 
-### the seller-covenant carve-out
+### The seller-covenant carve-out
 
 The sale-of-business exclusion reaches only a covenant contained within, or executed contemporaneously with, an agreement in which the seller of a business agrees not to compete with the buyer . A covenant that papers a departing employee as an employee rather than as a selling owner falls outside the exclusion and back into the § 32-581.02 ban, and even a qualifying seller's covenant is enforceable only to the extent its terms are reasonable under the District's common-law rule of reason . A covenant does not acquire sale-of-business status by riding through an assignment or acquisition.
 
-### the statutory duration caps and tolling
+### The statutory duration caps and tolling
 
 The District's non-compete statute sets no tolling rule, and its duration limits run as hard caps in calendar days measured from the date the employee separates — 365 days for a non-medical highly compensated employee and 730 for a medical specialist . No District decision has endorsed extending a covenant past that ceiling on breach, and the common law the statute preserves as cumulative has not endorsed extension either . A highly compensated employee's covenant written to run past the cap during a period of breach reaches past the statutory ceiling and is exposed on that ground.

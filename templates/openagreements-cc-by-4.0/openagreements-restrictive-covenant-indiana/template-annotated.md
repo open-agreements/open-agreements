@@ -213,18 +213,18 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Indiana](/practice-guides/non-compete/us/indiana).
 
-### protectable interest
+### Protectable interest
 
 An Indiana non-compete built around a general wish to avoid competition fails before reasonableness is ever reached. The employer must first prove a legitimate protectable interest — specific goodwill, a customer relationship, or confidential information — and a restraint that guards nothing more than ordinary competition is void as against public policy, so a court never tests the reasonableness of its time, activity, or geography .
 
-### restricted activity scope
+### Restricted activity scope
 
 A covenant that bars a former employee from a competitor in _any capacity_, or across business lines the employee never touched, is the activity restraint Indiana courts most often strike. The burden sits on the employer, and an all-capacity restraint reaching roles unrelated to any protectable interest is unreasonably broad and unenforceable . An activity restriction confined to the employee's actual role and the protected interest is the one that survives.
 
-### enforcement risk from an overbroad restraint
+### Enforcement risk from an overbroad restraint
 
 An overbroad Indiana restraint carries enforcement risk beyond its own unenforceability. An emphatic irreparable-harm recital does not rescue an unreasonable covenant — the reported pattern is injunctions denied because the employer could not carry the reasonableness burden — and a warning letter or notice to a new employer built on a covenant that later fails the reasonableness analysis can become raw material for a tortious-interference claim . A restraint the employer is prepared to defend on both the legitimate-interest and the reasonableness burdens is the one that supports an injunction and any pre-litigation enforcement step taken on its strength.
 
-### covered employees
+### Covered employees
 
 A no-hire clause reaching _any_ or _all_ of the company's employees is overbroad. Indiana voided exactly such a blanket employee non-solicitation covenant, and because the eraser blue pencil cannot rewrite an all-employees class into a narrower one, the covenant falls whole rather than shrinking . A class confined to workers who hold confidential information or specialized value is the one tied to a protectable interest and left standing.

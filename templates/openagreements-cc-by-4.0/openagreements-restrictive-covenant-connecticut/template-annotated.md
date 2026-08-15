@@ -205,18 +205,18 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Connecticut](/practice-guides/non-compete/us/connecticut).
 
-### tethering the non-compete to a protectable interest
+### Tethering the non-compete to a protectable interest
 
 A Connecticut non-compete protects only a recognized protectable interest — confidential information, trade secrets, customer lists, or customer goodwill — so a restraint aimed at ordinary competition disconnected from one of those interests reaches further than the fair-protection factor of the reasonableness test allows and is exposed on that factor . Trade-secret misuse is separately reachable through a confidentiality covenant and a CUTSA claim independent of any covenant, so a non-compete kept tethered to a specific interest, with trade-secret protection carried by a separate confidentiality and CUTSA strategy, stands on the interest it actually guards rather than on a general aversion to competition.
 
-### non-compete duration and geographic scope
+### Non-compete duration and geographic scope
 
 Connecticut fixes no safe-harbor duration or radius for an ordinary-employee non-compete; the reasonableness test weighs time and geography together against the employer's real market, so a term or radius copied from another form is measured against a footprint it was never sized to, and a covenant that protects the employer where it does not and is unlikely to do business is unreasonable as to area . A larger area weighed against a shorter period, and a longer period against a narrower area, is how the balance runs, and a customer-specific restraint limited to customers the worker serviced or solicited is easier to defend than a broad market ban. Because a successor inherits that same analysis, a restraint sized to the original employer is re-weighed against the acquiring business's actual footprint and does not automatically fit it.
 
-### the consideration connection for a post-hire covenant
+### The consideration connection for a post-hire covenant
 
 Connecticut's current rule is that continued at-will employment can supply sufficient consideration for a covenant signed after employment has begun, but that rule turns on connection: the covenant must actually be tied to the continued employment, and a worker may still prove there was no connection between signing and continued employment . A recital that signing is a condition of continued employment carries weight only where the worker in fact receives that continued employment, so a bare recital on a covenant the worker gave up existing rights to sign, with continued employment not predicated on it, is where consideration failed before . And adequate consideration establishes only that a covenant is supported, not that it is reasonable, so each covenant still clears the five-factor reasonableness test on its own.
 
-### the occupation-specific caps and bans that control before common-law balancing
+### The occupation-specific caps and bans that control before common-law balancing
 
 For a covered worker a Connecticut occupation statute sets the outer bound before any common-law balancing, and the physician and physician-assistant/APRN caps reach covenants entered into, amended, extended, or renewed on or after their trigger dates — July 1, 2016 for physicians and October 1, 2023 for physician assistants and advanced practice registered nurses — so a routine amendment or renewal can pull an older covenant into the one-year and fifteen-mile regime . Two of these rules are absolute rather than balanced: the broadcast-employee statute bars the specified post-employment restrictions outright, and the homemaker-companion and home-health ban voids the covenant as against public policy with no compensation, consideration, or trade-secret cure, voiding an agency's client no-hire clause the same way . The security-guard exclusion is proof-based, not recital-based: a boilerplate acknowledgement that the guard had access to confidential material does not carry the employer's statutory burden of proving the guard obtained trade secrets .

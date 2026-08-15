@@ -224,34 +224,34 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Maryland](/practice-guides/non-compete/us/maryland).
 
-### high-earner clinician one-year and ten-mile cap
+### High-earner clinician one-year and ten-mile cap
 
 A Maryland high-earner clinician covenant that runs beyond one year or reaches more than ten miles from the primary practice site sits outside the ceiling § 3-716(b) sets, so a term or radius carried over from a longer general-purpose covenant is unenforceable to the extent it exceeds the cap. The statutory cap also carries a patient-notice process the covenant depends on .
 
-### the patient-notice duty and patient-communication non-obstruction
+### The patient-notice duty and patient-communication non-obstruction
 
 For a covered high-earner clinician, § 3-716(b) makes patient notice of the departing clinician's new practice location a statutory duty owed on a patient's request, and it runs as a duty of the employer under the statute rather than a term the covenant creates . A covenant drafted to block or delay that notice, or to bar the clinician from telling patients where care continues, collides with the statute; one that leaves the notice and the patient's continuity of care unobstructed keeps clear of it.
 
-### tie the restraint to a protectable interest
+### Tie the restraint to a protectable interest
 
 A Maryland non-compete reaches only a genuine protectable interest — unique services, trade secrets, customer lists, or goodwill — so a restraint aimed at ordinary competition unconnected to any of those protects nothing the law recognizes and fails on the interest requirement. Confidential-information protection carried on separate confidentiality and trade-secret terms survives even where the non-compete does not .
 
-### a no-business covenant reaching past solicitation
+### A no-business covenant reaching past solicitation
 
 A no-business or non-dealing covenant reaches a Covered Customer even when the customer initiates the contact, which pushes past the solicitation and client-relationship interests Maryland recognizes and toward blocking ordinary competition — the reach Maryland will not enforce. A covenant of that breadth holds only where a genuine client-relationship or trade-secret interest actually supports it and it stays no wider than that interest needs .
 
-### named competitors as evidence of tailoring
+### Named competitors as evidence of tailoring
 
 A covenant that binds the employee only as to the employer's actual, named competitors gives a Maryland court the most concrete evidence that the restraint is tailored to what is reasonably necessary rather than a blanket bar on the field, and even a covenant serving a legitimate interest can be no broader than necessary to effectuate it . An open-ended competitive-business definition left unnarrowed carries the overbreadth a named list would have cured.
 
-### non-compete activity-scope overbreadth
+### Non-compete activity-scope overbreadth
 
 A duration or radius carried from another Maryland agreement is measured against the worker's actual role and customer exposure, not against the source it was copied from. A broad activity ban that sweeps in work unrelated to the employee's real job is the facial overbreadth that renders a Maryland covenant unenforceable on its face, before any fact-specific balancing .
 
-### severable tiers over reformation reliance
+### Severable tiers over reformation reliance
 
 A Maryland savings clause that asks a court to invent a narrower radius or duration runs into a court that blue-pencils but does not rewrite. Whether a court applies a strict blue pencil or a more granular severance, an indivisible overbroad term gives it nothing to strike and leaves the whole covenant void, while restrictions written as severable, independent tiers let a court excise an excessive tier and enforce the lawful remainder .
 
-### return and certification of company property
+### Return and certification of company property
 
 Maryland's recent trade-secret litigation turned on customer lists and pricing data leaving with departing employees, so a covenant that omits a return-and-deletion obligation and a signed certification loses the cleanest contemporaneous record of what left and when if that material later surfaces at a competitor . Return and certification terms sit outside the § 3-716 void, so they hold even where a non-compete does not.

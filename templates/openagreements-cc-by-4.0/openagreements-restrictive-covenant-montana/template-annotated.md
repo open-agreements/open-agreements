@@ -218,7 +218,7 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Montana](/practice-guides/non-compete/us/montana).
 
-### the three-part reasonableness test
+### The three-part reasonableness test
 
 A Montana partial restraint stands or falls on the three-part _Dobbins_ test: it must be limited in operation as to time or place, rest on good consideration, and afford reasonable protection to the employer without an unreasonable burden on the employee or the public . Because the first element is phrased as time or place rather than both while the third requires balancing, a covenant with a technical time or territory limit still fails where the employer's protection is disproportionate to the burden, and a recital of reasonableness or of irreparable harm does not supply the legitimate interest the employer must prove. A stand-alone customer or employee non-solicit rides the same analysis with no safe-harbor duration or scope fixed by any Montana decision, so it is measured — like the fee-for-service structure the _Alborn_ appeals enforced — against the served-client relationships and the stated period it actually protects .
 
@@ -226,7 +226,7 @@ A Montana partial restraint stands or falls on the three-part _Dobbins_ test: it
 
 A Montana covenant signed after employment has begun does not draw its consideration from continued at-will employment alone; the simple fact of continued employment may not serve as good consideration for a post-hire non-compete . Because good consideration is also the second element of the reasonableness test, a post-hire covenant resting on nothing new fails twice over — as a matter of contract formation and as a matter of the restraint's reasonableness — while a covenant tied to a new benefit documented at signing, such as a raise, a promotion, or access to trade secrets or confidential information, carries its own exchange . A covenant presented as part of pre-employment negotiations instead rests on the job offer itself, and past raises or the bare fact of prior employment do not count.
 
-### enforcement after an employer-initiated separation
+### Enforcement after an employer-initiated separation
 
 In Montana the manner of separation does outcome-level work: under _Wrigg_, the disfavor of restraints heightens when an employer chooses to end the employment relationship and still seeks to enforce the covenant, so an employer normally lacks a legitimate business interest in enforcement after a layoff, nonrenewal, or termination without cause . The exception is conduct-based and employer-proven — whether the former employee used trade secrets, customer relationships, or proprietary information for an unfair advantage — and an enforcement notice sent after an employer-initiated separation runs into the same rule absent that showing . A termination definition that lumps resignation, dismissal, and expiration together buries the single fact most likely to decide enforceability, so a covenant that records the separation type keeps the posture visible on the face of the agreement.
 
@@ -234,7 +234,7 @@ In Montana the manner of separation does outcome-level work: under _Wrigg_, the 
 
 Montana's partial-restraint cases are not a license for a broad no-work clause. Section 28-2-703 voids any contract restraining a lawful profession, trade, or business except a reasonable partial restraint, and the line the cases draw is functional rather than nominal: a covenant that leaves the worker no realistic way to practice the trade in the actual market is an absolute prohibition and unlawful, even when it carries a facial time or territory limit . A restraint that is not an absolute prohibition draws a factual reasonableness determination instead of automatic invalidation, so the covenant that survives is the one keyed to a limited client set, territory, time, or fee consequence while practice stays open . Montana courts void an overbroad restraint rather than trimming it, so the restraint that holds is the one sized to the worker's real market at signing.
 
-### the statutory sale and partnership exceptions
+### The statutory sale and partnership exceptions
 
 A covenant claiming Montana's statutory exceptions holds only where an actual qualifying transaction supports it and the geography stays inside the statutory menu — the principal-office city or county, an adjacent city or county, or a combination of those . The exception is substance-tested rather than label-driven: a partnership document's recital does not create a goodwill sale, and where no sale of property for pecuniary consideration occurred the exception does not apply . A sale-of-business or dissolution covenant drawn to a statewide or multi-state territory exceeds what §§ 28-2-704 and 28-2-705 authorize, and outside the exceptions the covenant falls back to the § 28-2-703 baseline and its partial-restraint analysis .
 

@@ -201,22 +201,22 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Nevada](/practice-guides/non-compete/us/nevada).
 
-### statutory fit
+### Statutory fit
 
 A Nevada non-compete is void and unenforceable unless it clears every condition of NRS 613.195(1): valuable consideration, no restraint greater than the employer's protection requires, no undue hardship on the employee, and restrictions appropriate in relation to the consideration supporting them . The conditions are conjunctive, so the covenant fails on any one of them — consideration alone does not make a restraint reasonable, and a reasonable duration does not cure an overbroad activity ban. A restraint sized to the actual protected interest and to the value actually given for the covenant is measured against the interest it was drawn for, while scope copied from another form is tested against a business it was never sized to.
 
-### the hourly-wage exclusion
+### The hourly-wage exclusion
 
 NRS 613.195(3) bars a non-compete from applying to an employee paid solely on an hourly wage basis, exclusive of tips or gratuities, and the bar is categorical — no consideration, tailoring, or acknowledgement by the employee cures it . The exposure is asymmetric: where a covenant reaches a subsection 3 employee, NRS 613.195(7) directs the court to award that employee reasonable attorney's fees and costs, a mandatory award rather than a discretionary prevailing-party rule . A covenant that runs against a solely hourly worker is not merely unenforceable as to that worker; the action to enforce it turns the fee statute against the employer that brought it.
 
-### consideration
+### Consideration
 
 _Camco_ holds that continued at-will employment can itself support a post-hire non-compete, but NRS 613.195(1)(d) adds a separate proportionality test — the restrictions must be appropriate in relation to the consideration given — and no Nevada appellate decision squarely decides whether continued employment alone satisfies that test for a severe restraint . For a mid-employment rollout, a covenant resting only on continued employment carries that unresolved-proportionality risk, while a covenant tied to a specific documented benefit — a signing or retention bonus, an equity grant, or a promotion — records the value the scope of the restraint is measured against.
 
-### asset-sale assignment consent
+### Asset-sale assignment consent
 
 _Traffic Control Services_ treats employee covenants not to compete and not to solicit as personal in nature, so they do not pass to an asset purchaser absent the employee's express consent, obtained through arm's-length negotiation and supported by valuable consideration beyond that supporting the underlying covenant . A bare successors-and-assigns clause does not carry the covenant through an asset sale, so an asset buyer relying on general assignment language holds an unenforceable covenant against the transferred employee. A statutory merger is the exception: under _HD Supply_, the nonassignability rule does not apply where the covenants pass to a successor by operation of law .
 
-### confidentiality safe harbor
+### Confidentiality safe harbor
 
 The NRS 613.200(4) exception preserves a post-termination confidentiality agreement only where it is supported by valuable consideration and is otherwise reasonable in scope and duration, and it reaches disclosure of trade secrets, business methods, customer lists, secret formulas or processes, and confidential information . That safe harbor is what keeps the covenant clear of the surrounding rule, because NRS 613.200(1) makes it a gross misdemeanor to willfully interfere with a former worker's ability to obtain other employment in Nevada . A confidentiality clause drafted so broadly that it operates as a restraint on working, rather than on disclosing the listed categories, sits outside the exception and forfeits the protection that made it lawful.
