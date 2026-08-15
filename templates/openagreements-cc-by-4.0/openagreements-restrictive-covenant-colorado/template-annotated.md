@@ -212,26 +212,26 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Colorado](/practice-guides/non-compete/us/colorado).
 
-### the void-by-default rule and the employer's burden
+### The void-by-default rule and the employer's burden
 
 A Colorado covenant not to compete is void by default and survives only where it fits the highly compensated worker exception, so a covenant that does not clear the exception is unenforceable however carefully it is drafted . The employer seeking to enforce the covenant carries the burden of establishing that it falls within the exception, including at the preliminary-injunction stage, and a recital in the agreement stating that the covenant qualifies does not carry that burden .
 
-### separate signed advance notice
+### Separate signed advance notice
 
 A Colorado non-compete buried inside an offer letter or omnibus agreement presented for immediate signature does not satisfy the statutory notice rule. For a current worker, the separate, signed notice must precede the covenant's effective date — or any raise or change that serves as consideration — by at least fourteen days, and a defect in the notice voids the covenant on its own .
 
-### the health-care provider void rule
+### The health-care provider void rule
 
 For an agreement entered into or renewed on or after August 6, 2025, a covenant not to compete or not to solicit customers that binds a health-care provider — a licensed physician, a registered advanced practice registered nurse, a certified midwife, or a licensed dentist — is void regardless of the provider's compensation, so the highly compensated worker threshold no longer rescues it . A clause restricting a departing provider from telling patients about the provider's continuing practice, new professional contact information, or the patient's right to choose a provider is separately void .
 
-### minority-owner sale-of-business duration cap
+### Minority-owner sale-of-business duration cap
 
 A flat multi-year sale-of-business term reused for a minority owner who took equity as compensation for services routinely exceeds the statutory cap. The maximum duration in years equals the total sale consideration divided by the owner's average annual compensation, and any term longer than that ratio is unenforceable to the extent it exceeds the cap .
 
-### the training-repayment carve-out limits
+### The training-repayment carve-out limits
 
 A training-repayment provision reaches only the reasonable cost of training that is distinct from normal on-the-job training and that satisfies the attorney general's transferability rules, with the recoverable amount decreasing over the two years after the training; ordinary onboarding, routine skills training, and a flat amount untethered from documented cost fall outside the carve-out . The exposure for overreaching runs to the attorney general, who may recover three times the amount of any recovery or attempted recovery made in violation of the carve-out .
 
-### confidentiality scope vs. disguised non-compete
+### Confidentiality scope vs. disguised non-compete
 
 A confidentiality clause drafted so broadly that it functions as a non-compete falls outside the statutory carve-out and risks treatment as a void restraint. The carve-out reaches only a reasonable confidentiality provision relevant to the employer's business that preserves the worker's right to use general skills and knowledge and to make legally protected disclosures .

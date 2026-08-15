@@ -202,26 +202,26 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Missouri](/practice-guides/non-compete/us/missouri).
 
-### protectable interest
+### Protectable interest
 
 A Missouri covenant reaches only two protectable interests — specific trade secrets and the customers the employee actually serviced — so a restraint written to block ordinary competition disconnected from either interest guards nothing the law will enforce and does not survive no matter how it is drafted. A covenant tied to identified trade secrets or serviced customers is measured against the interest it protects, and the trade-secret protections available under the Uniform Trade Secrets Act stand independently of the covenant's reach .
 
-### the one-year employee no-hire safe harbor
+### The one-year employee no-hire safe harbor
 
 An employee no-hire or anti-raiding covenant in the agreement is measured against the section 431.202 safe harbor: a covenant resting on no separate protectable interest is conclusively presumed reasonable only where its post-employment duration runs no more than one year, so a term set past one year loses that conclusive presumption and falls back to a facts-and-circumstances reasonableness inquiry . The one-year route does not reach an employee who provided only secretarial or clerical services, so a covenant that binds clerical staff on the strength of duration alone sits outside the safe harbor and stands only on an independent protectable interest .
 
-### the serviced-customer limit on a customer non-solicit
+### The serviced-customer limit on a customer non-solicit
 
 Section 431.202 does not reach a customer non-solicitation covenant, so a customer restriction stands or falls on the common-law reasonableness test rather than the one-year safe harbor. A covenant that reaches customers regardless of the employee's relationship with them — including prospective customers the employee never served — is broader than the employer's legitimate customer-contacts interest and overbroad as written, the defect that left the _Whelan_ clause enforceable only as to its serviced-customer core . A customer non-solicit confined to customers the employee actually serviced or had substantial contact with is measured against the interest it protects, and it pairs with the confidentiality and trade-secret protections that do not depend on the covenant's reach.
 
-### independent consideration
+### Independent consideration
 
 A Missouri non-compete resting on continued at-will employment as its only consideration rests on a promise the employer was already free to withhold — _Baker_ held such a promise illusory, and _Durrell_ applied that reasoning directly to a non-compete — so bare continued-employment consideration is a standing litigation risk rather than a settled footing . A covenant supported by independent consideration — a signing bonus, a raise, specialized training, or another concrete benefit documented at signing — rests on ground _Baker_ and _Durrell_ do not reach, while a covenant staked on the _JumboSack_ continued-employment-plus-access theory alone hangs enforceability on a question Missouri has not resolved.
 
-### the reasonableness ceiling on an extension-on-breach term
+### The reasonableness ceiling on an extension-on-breach term
 
 Missouri law does not clearly require a court to toll or extend a restricted period during a breach or during litigation, so an extension-on-breach term operates as a contractual extension whose added time is itself part of the restraint measured for reasonableness. An extension that pushes an employee non-solicitation covenant past the one-year duration keyed to the section 431.202 conclusive presumption trades a known-good duration for an open reasonableness question . An extension that stretches any covenant beyond its stated time terms is tested against the same time-and-geography reasonableness the covenant must satisfy in the first place, so a tolling clause left open-ended or indefinite exposes the covenant to a reasonableness challenge it would otherwise avoid .
 
-### the reasonableness standard for physician covenants
+### The reasonableness standard for physician covenants
 
 A physician or other health-care covenant in the agreement is tested under the ordinary _Copeland_ reasonableness standard, not a profession-specific cap: Missouri fixes no statutory duration or radius for physician non-competes, so a physician restraint holds only to the extent it is no more restrictive than is necessary to protect the employer's trade secrets or customer contacts — here, patient and referral relationships . A physician covenant carried over from a jurisdiction that does cap duration or radius, or drafted to a broad radius and a long term, is measured against that reasonableness standard alone and against the patient-access and continuity-of-care interests a court weighs. The 365-day, five-mile framework proposed for nonprofit-employer physician covenants in HB 2979 had not been enacted as of this review, so a covenant drafted in anticipation of it rests on law that does not yet govern .

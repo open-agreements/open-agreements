@@ -156,10 +156,10 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Oklahoma](/practice-guides/non-compete/us/oklahoma).
 
-### customer non-solicitation
+### Customer non-solicitation
 
 Limit a customer non-solicitation clause to _direct_ solicitation of _established_ customers, and do not add _indirectly_, _prospective customers_, or _former customers_. Oklahoma courts will void the whole provision rather than blue-pencil the extra words out of it .
 
-### employee solicitation
+### Employee solicitation
 
 Section 219B authorizes restrictions on _soliciting_ employees, not a flat no-hire ban. A clause that purports to stop a former employee from hiring a colleague who applies on their own initiative — without any solicitation — is on far weaker ground, because it reaches beyond the solicitation the statute protects .

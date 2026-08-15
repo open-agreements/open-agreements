@@ -208,30 +208,30 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Wisconsin](/practice-guides/non-compete/us/wisconsin).
 
-### the five-factor reasonableness test
+### The five-factor reasonableness test
 
 Every post-employment restraint in the agreement — non-compete, customer or employee non-solicit, no-business-with-customers, and non-investment alike — stands or falls on the same five prerequisites, because § 103.465 makes a covenant enforceable only if the restrictions imposed are reasonably necessary for the protection of the employer . A restraint must be necessary to a protectable interest, reasonable in time, reasonable in territory, no harsher than that protection requires, and not contrary to public policy; a failure on any single factor is fatal, and because § 103.465 voids an unreasonable restraint in full, a covenant that reaches even slightly too far is struck rather than narrowed .
 
-### employee non-solicitation
+### Employee non-solicitation
 
 An employee non-solicitation clause reaching the whole workforce, rather than the colleagues the departing worker actually worked with or supervised, is exposed on its face. _Manitowoc v. Lanning_ treats employee non-solicitation as a § 103.465 restraint and voided an all-employees clause as overbroad on its face — and because § 103.465 voids in full, the covenant disappears rather than shrinking to a lawful core, taking any fee award built on it along .
 
-### extension during breach
+### Extension during breach
 
 A clause extending a Wisconsin covenant for periods of the employee's breach makes the duration indefinite rather than fixed. _H&R Block v. Swenson_ held that such an extension voids the entire clause under § 103.465, and because Wisconsin courts will not blue-pencil it back to a fixed term, the tolling language destroys the covenant it was meant to protect; a pending-litigation tolling clause, while untested, raises the same definiteness problem .
 
-### confidentiality scope
+### Confidentiality scope
 
 A confidentiality or non-disclosure clause that sweeps in ordinary, non-secret business information rather than actual trade secrets and competitively sensitive information is judged as a restraint of trade. _Diamond Assets_ held an overbroad confidentiality covenant unenforceable under § 103.465 on a motion to dismiss, so a catch-all NDA falls the same way an overbroad non-compete does — regardless of the evidence the employer might later offer .
 
-### sale-of-business covenants
+### Sale-of-business covenants
 
 The legal framework follows the substance of the deal, not the caption on the document. A covenant given as part of a genuine business sale or equity transaction — one separable from the employment relationship and not imposed through the employer's hiring leverage — is judged under the common-law rule of reason, which allows partial enforcement, while an employee covenant is locked into § 103.465's all-or-nothing rule; a sale-related covenant routed through an employment agreement risks recharacterization as an employee covenant and the harsher rule that comes with it .
 
-### the lawyer-practice bar
+### The lawyer-practice bar
 
 A covenant that would restrict a licensed lawyer's right to practice after the relationship ends does not hold in Wisconsin. SCR 20:5.6 bars a lawyer from participating in offering or making an agreement that restricts the right to practice after termination — with exceptions only for retirement-benefit agreements and restrictions settling a client controversy — and reaches the offering firm as well as the signing lawyer; no level of compensation and no showing of reasonableness cures a violation, so a practice restraint against a lawyer is void whatever consideration supports it .
 
-### trade-secret safeguards
+### Trade-secret safeguards
 
 A protection program resting on a non-compete alone is only as durable as the covenant, while trade-secret safeguards — access controls, confidentiality designations, and exit procedures — do not depend on § 103.465. Wis. Stat. § 134.90 protects qualifying secrets regardless of a covenant's survival, but only where the information meets the statutory definition and was kept reasonably secret, so a program that neglects those safeguards leaves the secrets exposed if the covenant is void .

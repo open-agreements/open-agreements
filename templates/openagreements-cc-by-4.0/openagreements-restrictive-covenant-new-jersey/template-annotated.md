@@ -211,50 +211,50 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in New Jersey](/practice-guides/non-compete/us/new-jersey).
 
-### the reasonableness gate
+### The reasonableness gate
 
 New Jersey has no general non-compete statute for the ordinary workforce, so every post-employment covenant in the agreement stands or falls on the common-law three-part reasonableness test: a restraint is given effect only where it protects a legitimate employer interest, imposes no undue hardship on the employee, and is not injurious to the public . The recognized legitimate interests are a narrow set — trade secrets, confidential business information, and customer relationships — so a covenant reaching beyond them to suppress ordinary competition or the employee's general skill and knowledge protects nothing the doctrine recognizes, and a court weighs each covenant's reasonableness prong by prong before enforcing it . Adequate consideration establishes only that a covenant is supported, not that it is reasonable, so each covenant clears the test on its own footing; a restraint confined to identified competitors is stronger evidence that it protects a genuine interest than one drawn against competition at large, and the test travels with the instrument — an assignee enforcing the covenant must still show a legitimate interest, no undue hardship, and no public injury on the facts as they then stand. A covenant tied to the sale of a business is measured more leniently as protection of the goodwill sold, so a restraint borrowed from that setting is measured against a standard it was never sized to .
 
-### reasonableness
+### Reasonableness
 
 New Jersey's employer-friendly consideration rule does not excuse an unreasonable restraint. Continued employment can supply the consideration that supports the covenant, but consideration establishes only that the covenant is supported, not that it is reasonable — the restraint itself still stands or falls on the _Solari/Whitmyer_ test of duration, territory, and scope, so a covenant adequately supported yet overbroad on any of those dimensions fails on reasonableness .
 
-### protectable interests
+### Protectable interests
 
 A New Jersey covenant that blocks competition disconnected from a protectable interest protects nothing the doctrine recognizes. The recognized legitimate interests are a narrow set — trade secrets, confidential information, and customer relationships — so a restraint reaching beyond them to suppress ordinary competition or an employee's general skill and knowledge is exposed on the legitimate-interest prong, while trade-secret protection has its own home in a confidentiality and Trade Secrets Act remedy that runs alongside the covenant rather than inside it .
 
-### duration and territory
+### Duration and territory
 
 A New Jersey court weighs duration and territory as a whole against the employer's real market, with no safe-harbor number, so a fixed term or radius copied from another form is measured against a market it was never sized to. A restraint matched to the employee's actual role and the employer's genuine footprint is far easier to defend, while a long, open-ended, or statewide ban is exposed on the undue-hardship and public-interest prongs .
 
-### customer non-solicitation
+### Customer non-solicitation
 
 A customer non-solicit that reaches every client regardless of the employee's contact with them is overbroad on its face. New Jersey courts blue-pencil overbroad non-solicitation clauses, so a covenant confined to customers the employee actually served or learned about survives as drawn, while a broader one is narrowed by the court to whatever reasonably protects the employer's interest .
 
-### tiered solicitation restraints
+### Tiered solicitation restraints
 
 The solicitation restraints hold when they track relationships the employee actually had. Tiered restrictive covenants built around real customer and coworker relationships have been upheld as furthering legitimate business interests and complying with New Jersey public policy, and an overbroad one is blue-penciled to a reasonable scope rather than discarded . A customer non-solicit reaching only Covered Customers the employee had material contact with maps directly onto the customer-relationship interest and, backstopped by the confidentiality and Trade Secrets Act protections, is often a stronger and more readily enforceable restraint than a broad non-compete. The employee non-solicit is the lightest restraint in the family and holds where it reaches only Covered Employees through the look-back window; a no-business-with-covered-customers covenant presses hardest on the undue-hardship and public-interest prongs because it reaches unsolicited business, so it survives only where it is sized tightly to those same relationships.
 
-### tolling
+### Tolling
 
 A tolling clause that runs only while the former employee is actually violating the covenant, as determined by a court, is the one New Jersey enforces. Tolling tied to a real breach is given effect, but restrictive covenants are not favored and gratuitous extension is disfavored, so an automatic, indefinite extension is exposed to being found unreasonable .
 
-### physician covenant public-interest scrutiny
+### Physician covenant public-interest scrutiny
 
 A covenant restraining a physician from practicing medicine is not measured as an ordinary commercial restraint. Physician covenants are not per se void, but the public-interest prong carries the analysis: the New Jersey Supreme Court applied the three-part test to a physician covenant and reduced its geographic reach so enforcement would not impair the public's access to care, rather than voiding it , and the trial court must find that the covenant protects a legitimate interest, imposes no undue hardship, and is not adverse to the public interest . A physician covenant drawn to a narrow radius and a short term, tied to preserving patient access and continuity of care, is the one that survives that heightened scrutiny; a broader one is exposed to being narrowed or defeated on the public-interest prong regardless of how its duration and territory read in isolation. No enacted New Jersey statute bans health-care non-competes, so this scrutiny, not a categorical prohibition, is what a physician covenant is measured against.
 
-### the attorney practice-restriction bar
+### The attorney practice-restriction bar
 
 A covenant that restrains a lawyer's practice after the relationship ends is void, apart from an agreement concerning retirement benefits. RPC 5.6 bars a lawyer from participating in a partnership or employment agreement that restricts post-termination practice rights , and that bar reaches indirect financial disincentives — such as compensation forfeitures aimed at a departing lawyer who keeps serving firm clients — not just outright bans, so a clause dressed as a forfeiture rather than a prohibition still falls as against public policy . The bar reaches in-house and corporate counsel practicing in New Jersey whether or not admitted in the State, so an employer cannot bind its in-house lawyers with a restraint RPC 5.6 would forbid for outside counsel .
 
-### the psychologist client-access bar
+### The psychologist client-access bar
 
 A covenant that would keep a client from continuing with a chosen psychologist is void to that extent, independent of how its time and territory read. N.J.A.C. 13:42-10.16 forbids a licensed psychologist from entering any business agreement that interferes with or restricts a client's ability to see the therapist of choice , and the uniquely personal patient-psychologist relationship forbids restraints that interrupt an ongoing course of treatment . The rule shifts the focus from the psychologist's rights to the patient's, so a covenant whose duration and territory look reasonable still fails to the extent it cuts a client off from the treating psychologist .
 
-### claim confidentiality
+### Claim confidentiality
 
 A confidentiality or non-disparagement clause that would conceal the details of a discrimination, retaliation, or harassment claim is unenforceable in New Jersey, and a party that tries to enforce it is exposed to the employee's attorney fees and costs. The bar turns on the provision's purpose or effect rather than its label, so a concealment clause dressed as ordinary confidentiality falls the same way .
 
-### the discrimination-claim concealment bar
+### The discrimination-claim concealment bar
 
 A confidentiality or non-disparagement term that would conceal the details of a discrimination, retaliation, or harassment claim is unenforceable against the employee, and the label on the clause does not control . The exposure runs one way: a party that enforces or attempts to enforce a barred concealment provision is liable for the employee's reasonable attorney fees and costs, so any fee-shifting in the agreement is read against that asymmetry . The bar is surgical rather than a threat to the covenant suite — the same statute expressly preserves an agreement not to compete and not to disclose proprietary information, so only the claim-details concealment is excluded and the covenants remain intact .

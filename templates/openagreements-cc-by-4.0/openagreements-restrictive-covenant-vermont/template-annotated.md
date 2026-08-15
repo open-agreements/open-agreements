@@ -199,34 +199,34 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Vermont](/practice-guides/non-compete/us/vermont).
 
-### the reasonableness test each covenant must survive
+### The reasonableness test each covenant must survive
 
 Vermont has no general non-compete statute and no statutory safe harbor, so every covenant in the agreement stands or falls on the common-law reasonableness test, and a covenant that fails it is unenforceable rather than trimmed to fit. A restraint holds only where it protects a genuine interest — Vermont recognizes customer relationships and employee-specific goodwill, not merely trade secrets, but not an interest in avoiding ordinary competition — and the employer carries the burden of proving the covenant's reasonable necessity . Duration and territory are weighed together against the employer's actual market on the facts, with no safe-harbor number: a five-year, single-county restraint tied to a proven market was upheld, while a covenant whose territory the record leaves indeterminate fails for want of a finding as to what place it covered, so a term or radius copied from another form is measured against a market it was never sized to . A covenant's stated term is taken literally, so a restraint does not revive after its stated duration has run, and a disclosure to a departing employee's next employer built on a covenant that later fails this analysis exposes the employer to a claim of its own.
 
-### continued employment
+### Continued employment
 
 Continued employment is enough consideration under _Summits 7_, but the covenant must still satisfy the reasonableness test on its own terms. Adequate consideration does not cure overbreadth in scope, geography, or duration, and the employer still bears the burden of proving reasonable necessity under _Summits 7_ and the _Andrus_ framework .
 
-### tolling the restricted period during a breach
+### Tolling the restricted period during a breach
 
 A restraint whose clock runs out during a breach or the litigation over it is not extended by a Vermont court as a matter of course: the Vermont Supreme Court refused to add time to a covenant after litigation delay exhausted its term, holding that the term is a matter of contract and that a court construes contracts but will not make them for the parties, and it declined to recharacterize the extension as a postponed start date . An extension therefore reaches only as far as the agreement itself provides for it, and an express tolling clause is itself an additional restraint that must independently satisfy the same reasonableness limits as the covenant it extends — an open-ended or indefinite extension is exposed on that ground, while the partial-enforcement dicta elsewhere in Vermont law are case-bound rather than a reliable source of judicially supplied time .
 
-### covenants that transfer with a sale of the business
+### Covenants that transfer with a sale of the business
 
 A covenant ancillary to the sale of a business is measured differently from an employment restraint: Vermont gives it more breathing room on duration and geography when it is supported by dedicated transaction consideration and sized to the acquired goodwill, so a five-year, twenty-five-mile covenant delivered at closing with a sum paid for the covenant alone held reasonable in time and place, and a five-year covenant with dedicated consideration is treated as a bargained-for transaction asset whose breach can be valued by the covenant itself . That leeway is earned by the deal structure, not presumed: a covenant is a distinct, negotiated sale term rather than an automatic incident of the transaction, and leaving material covenant terms open — including whether the deal carries a covenant at all — can defeat contract formation, so a covenant transferred in a sale that is not papered expressly, or consideration that is not tied to the covenant, leaves the restraint on ordinary employment-covenant footing when its scope is later tested .
 
-### covenants restraining a licensed healthcare professional
+### Covenants restraining a licensed healthcare professional
 
 A covenant restraining a licensed healthcare professional from practicing is not categorically void in Vermont as of this review, but it is not exempt either: it runs the same common-law reasonableness test as any other covenant, with the public-interest prong weighing patient access and continuity of care, and the employer carries the burden of proving its reasonable necessity . A healthcare covenant sized to a narrow radius and a short term is the one that survives that scrutiny; a broad one is exposed on the public-interest prong. The footing is unstable: H.583 would categorically void noncompetition, nondisclosure, and nondisparagement agreements for healthcare professionals if enacted, so a covenant drafted under current law stands to be displaced on enactment .
 
-### training covenants at a barbering or cosmetology school
+### Training covenants at a barbering or cosmetology school
 
 A covenant not to compete imposed as a condition of training for licensure at a school of barbering or cosmetology is void outright — the one generally applicable Vermont statute that voids a category of restrictive covenant, and no drafting saves it . The bar turns on the training-for-licensure relationship rather than on a job title, so a restraint the school or an affiliate extracts from a person training for licensure falls outside enforcement whatever the instrument is called.
 
-### restrictions on a lawyer's right to practice
+### Restrictions on a lawyer's right to practice
 
 A partnership, shareholders, operating, or employment agreement that restricts a lawyer's right to practice after the relationship ends is barred by the rules of professional conduct, except as to benefits upon retirement, and a restriction on a lawyer's right to practice may not be made part of the settlement of a client controversy . Because the rule polices the substance of the restriction rather than its label, a non-compete, a practice-area carve-up, or a client-facing restraint that operates as a practice restriction all sit inside the bar, so a covenant applied to an attorney is unenforceable on that ground however it is drafted.
 
-### trade-secret protection and confidentiality duration
+### Trade-secret protection and confidentiality duration
 
 Trade-secret protection and ordinary confidentiality carry different durations: a trade-secret obligation runs for as long as the information remains a trade secret, but a perpetual lid on non-secret information operates as an indirect restraint that inherits the same reasonableness scrutiny as a non-compete, so ordinary confidential information holds up only under a finite term tied to actual confidential information . The Vermont Trade Secrets Act supplies a remedy that stands independent of any covenant, but not an automatic one: a court may enjoin actual or threatened misappropriation of a trade secret and continue the injunction only for a reasonable period to eliminate the resulting commercial advantage, which calls for conduct- or threat-specific proof rather than the bare fact that a former employee has taken a new position .

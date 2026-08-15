@@ -215,42 +215,42 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in North Carolina](/practice-guides/non-compete/us/north-carolina).
 
-### the five-element enforceability test
+### The five-element enforceability test
 
 North Carolina has no general non-compete statute, so every covenant in the agreement is a partial restraint of trade that stands or falls on the five-element common-law test: it must be in writing, part of an employment contract, supported by valuable consideration, reasonable as to time and territory, and designed to protect a legitimate business interest and not against public policy . Because the covenant is read strictly against the drafter, a single defective element defeats the whole restraint and a North Carolina court will not rewrite an overbroad one — a category the state's restraint-of-trade statute already disfavors . The broader covenants in the family are measured the same way: a no-business-with-covered-customers restraint reaches even customer-initiated business and survives only where it is supported by consideration, reasonably necessary to protect the covenantee, and not against public policy, and a non-investment restraint sits under that same reasonableness test rather than outside it . The analysis travels with an assignment — a successor enforcing an assigned covenant faces the same five-element test and the same strike-only severance the original employer faced, so an assignment moves the covenant without strengthening it .
 
-### a notice to a future employer built on a failed covenant
+### A notice to a future employer built on a failed covenant
 
 A notice to a departing employee's prospective employer is only as sound as the covenant it invokes. A covenant that later fails any element of the five-element enforceability test has no force to assert, so a notice letter waving such a covenant at a new employer rests on an unenforceable restraint and can expose the employer to a tortious-interference claim . A notice grounded in a restraint the employer is prepared to defend as reasonable carries the weight the letter otherwise lacks.
 
-### new consideration
+### New consideration
 
 A covenant signed at the outset of employment rests on the offer of employment itself, but a covenant a current employee signs after the relationship already exists needs new consideration, and continued at-will employment is not enough — a mid-employment covenant unsupported by a new benefit is unenforceable for want of consideration . A raise, bonus, promotion, new assignment, or other benefit that actually moves and is recited in the agreement supplies that support; North Carolina courts do not weigh the adequacy of the new consideration, and a payment as small as a few hundred dollars has sufficed . Consideration establishes only that the covenants are supported, not that they are reasonable, so each covenant must still clear the reasonableness test on its own.
 
-### restricted activities
+### Restricted activities
 
 A North Carolina covenant reaches a legitimate interest only where the employee acquired intimate knowledge of the business not generally available to the public, and only for work within the duties the employee actually performed; a covenant that bars any capacity at a competitor, including work the employee never did, reaches past that interest and is unenforceable . Restricted activities defined by the employee's real role, rather than every line of the company's business, stay inside that interest, and a covenant expressly limited to named competitors is stronger evidence still that it reaches no further than reasonably necessary .
 
-### severability
+### Severability
 
 North Carolina follows the strict blue-pencil doctrine, so a court may strike a distinctly separable, unreasonable provision but will not rewrite an overbroad one, even when the contract asks it to, and a reformation or savings clause cannot confer a power the court does not have . A covenant that bundles time, territory, and scope into a single indivisible restraint therefore falls whole once any part reaches too far, while restrictions written as distinct, independently reasonable provisions let a court strike the overbroad one and leave the rest standing. A covenant that leans on a savings clause to be reformed leans on relief North Carolina withholds.
 
-### solicitation
+### Solicitation
 
 The operative verb sets the reach of a non-solicitation covenant. North Carolina courts read _solicit, recruit, or induce_ to require active persuasion, so a covenant confined to those verbs reaches only active persuasion and not a passive hire, and a customer non-solicit that extends to prospective customers or clients the employer never had is an impermissible restraint . A covenant meant to bar hiring as well as solicitation reaches that conduct only through express hiring language, and one confined to actual customers stays within the interest the law protects; a covenant that names only the solicitation verbs leaves a passive hire and a never-served prospect outside its reach.
 
-### express extension-on-breach clauses
+### Express extension-on-breach clauses
 
 A restricted period does not lengthen itself. North Carolina has no appellate decision recognizing equitable tolling of a covenant, so a restraint that runs while the former employee violates it simply expires on schedule unless the agreement provides otherwise. An express extension-on-breach clause fills that gap: federal courts applying North Carolina law have enforced clauses that toll or extend the period for the time spent in breach . Any such extension is itself a restraint, so an open-ended or indefinite one draws the same reasonableness scrutiny as the covenant it lengthens, while a bounded day-for-day extension tracks the breach without overreaching.
 
-### physician public-health scrutiny
+### Physician public-health scrutiny
 
 A physician covenant carries a hurdle no recital removes. North Carolina courts refuse to enforce a covenant restraining the practice of medicine where enforcement would create a substantial question of potential harm to the public health, weighing the shortage of specialists in the restricted area, the risk of a local monopoly and its effect on future fees and emergency availability, and the public interest in patient choice of physician . A physician covenant can fail on that public-policy ground even where its time and territory are otherwise reasonable, so a narrow radius and a short term tied to continuity of patient care are what survive the scrutiny; a broad medical restraint is the one that falls.
 
-### the § 22B-3 forum bar
+### The § 22B-3 forum bar
 
 An out-of-state forum, venue, or arbitration clause dropped into an agreement entered into in North Carolina does not move the dispute out of state: Section 22B-3 makes any such provision void and unenforceable as against public policy, so the action can proceed in a North Carolina court . The bar reaches forum-selection and arbitration-venue terms but does not by itself void an out-of-state choice-of-law clause, so a governing-law selection and a forum selection are measured separately — and a governing-law and venue pairing that tracks where the employee actually lives and works leaves the covenant measured against the law it was drafted for.
 
-### fee-shifting in employment covenants
+### Fee-shifting in employment covenants
 
 A fee-shifting clause in an employment non-compete generally does not deliver a fee award. North Carolina's reciprocal business-contract fee statute expressly excludes employment contracts from its definition of a covered business contract, so a fee provision in this employment covenant usually will not support an award . Attorney-fee recovery instead runs through separate statutory hooks — most often the discretionary award available to a prevailing party on an unfair-or-deceptive-trade-practices claim, and only on findings of willfulness or a frivolous and malicious action — so a one-sided fee clause promises a recovery the governing law does not underwrite .

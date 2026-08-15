@@ -202,22 +202,22 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Alabama](/practice-guides/non-compete/us/alabama).
 
-### the six statutory categories a covenant must fit
+### The six statutory categories a covenant must fit
 
 Alabama voids every restraint by default and enforces only a covenant that fits one of the six exceptions in Ala. Code § 8-1-190(b), so a covenant that fits no listed category, or that reaches only the employee's general job skills rather than a listed interest, is void no matter how carefully it is drafted . The employee non-compete, the current-customer non-solicit, and the uniquely-essential no-hire each have a named category, but a non-dealing or non-investment restraint has none of its own: it holds only where it is confined to fit inside a listed exception, and a version that reaches past that boundary is exposed to the § 8-1-190(a) void rule rather than to mere narrowing .
 
-### the uniquely-essential limit on employee no-hire covenants
+### The uniquely-essential limit on employee no-hire covenants
 
 A covenant restricting the hire or employment of another party's workers fits Ala. Code § 8-1-190(b)(1) only where the worker holds a position uniquely essential to the management, organization, or service of the business — a high bar few rank-and-file or mid-level employees meet . A workforce-wide no-hire or no-poach clause fits no § 8-1-190(b) category, so it is exposed to being voided in its entirety rather than narrowed, and a covenant confined to the uniquely-essential class at the outset is the one that survives.
 
-### specialized training consideration
+### Specialized training consideration
 
 Specialized training supports an Alabama covenant only on a specific drafting condition. Section 8-1-191 makes specialized training a protectable interest only when the training and its anticipated expense are specifically set forth in writing in the agreement as consideration for the restraint, so a covenant resting on a generic or boilerplate training recital protects no listed interest and fails on that element .
 
-### signature timing
+### Signature timing
 
 An Alabama covenant stands only where the company itself signs the exact document that contains the non-compete while the employment relationship is in place. After _Amanda Howard Real Estate v. Lee_, an employer's failure to timely sign the covenant document leaves that covenant void, and a much-later signature, payment, or assent shown by conduct does not cure it; a fresh covenant going forward is enforceable only where it independently satisfies § 8-1-192 .
 
-### covenants that bar a professional from practicing
+### Covenants that bar a professional from practicing
 
 A member of a recognized Alabama profession cannot be barred from practicing that profession, even by a covenant that would otherwise fit a § 8-1-190(b) category: § 8-1-196 preserves the common-law professional exemption, and a professional cannot fall within the statutory exceptions at all, so a covenant restraining professional practice is void on that ground . The exemption reaches only the practice of the profession, so a restraint on business conduct outside that practice — _Benchmark_'s example of acquiring competing practices purely as an investment without managing them — can still operate, and the confidentiality, trade-secret, and property-return obligations survive to the extent they do not bar the practice itself .

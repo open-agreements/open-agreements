@@ -206,14 +206,14 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Alaska](/practice-guides/non-compete/us/alaska).
 
-### the reasonable-necessity gate
+### The reasonable-necessity gate
 
 Every covenant in the agreement stands or falls on Alaska's common-law reasonableness analysis: there is no general non-compete statute, non-competition agreements are strictly construed, and a restraint aimed at eliminating ordinary competition or cutting off the worker's livelihood fails no matter how modestly its time and territory are drawn . Reasonableness is fact-bound and weighed across the _Data Management_ factors — the time-and-space limits, whether the worker was the sole customer contact, whether the worker held confidential information or trade secrets, whether the restraint targets unfair competition or merely ordinary competition, the hardship to the worker, and whether it bars the worker's sole means of support — so no term or territory is safe by rule and each restraint is measured against the interest at stake . Adequate consideration establishes only that a covenant is supported, not that it is reasonable, and an extension of the restricted period for breach is itself a restraint measured under those same fact-bound factors, so the covenant that survives is the one sized to the employer's actual footprint at signing rather than copied from another form .
 
-### customer-list restraints
+### Customer-list restraints
 
 A customer restraint in the agreement earns _Metcalfe_'s lighter treatment only by staying tied to the information and customers the employer procured at its own expense; so scoped, it can survive even without a stated territory or duration because the worker remains free to compete generally . Two limits define the edge: a customer set so broad that the restraint amounts to a bar on practicing the specialty is drafted too wide, and a court requires narrower drafting, while a covenant not to contact former customers is unreasonable where the worker had no access to confidential information about them . A restraint pushed past those limits reads as an open-ended ban on working in the field rather than a customer-list restraint, and loses the narrower analysis _Metcalfe_ allows.
 
-### the sale-of-business and public-injury balance
+### The sale-of-business and public-injury balance
 
 A sale-of-business covenant in the agreement is read as a covenant against competition protecting the goodwill the buyer purchased, not as a ban on practicing the profession in any capacity, and it is weighed as a three-way balance: the buyer's need to protect that goodwill, the hardship to the seller, and the likely injury to the public . That public-injury prong sharpens on health-care facts — where the restrained work serves a population needing important low-cost care, competition is not presumed and must be proven, and even proven competition leaves the court weighing the harm to patient access . A covenant tied to a sale, or one restraining a clinician, that is sized only to a radius and a duration is measured against a balance it was never drafted to survive, so the covenant that holds is drawn to the purchased goodwill and the public interest it affects — and where the covenant later changes hands in the sale, that same balance travels with it.

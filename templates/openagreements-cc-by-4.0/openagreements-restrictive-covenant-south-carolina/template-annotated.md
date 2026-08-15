@@ -215,58 +215,58 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in South Carolina](/practice-guides/non-compete/us/south-carolina).
 
-### the five-factor reasonableness gate
+### The five-factor reasonableness gate
 
 Every covenant in the agreement stands or falls on South Carolina's five-factor test — necessity to protect a legitimate interest, reasonable time and place, no undue harshness on the employee, sound public policy, and valuable consideration. The factors are conjunctive: a covenant that fails any single one is unenforceable whole, and because a non-compete is a disfavored restraint of trade the court construes it strictly against the employer, so ambiguous language — including a defined term like Solicit — is read against the drafter . The same test follows the covenant wherever it goes. A notice to a prospective employer asserting a covenant that cannot clear the test carries interference exposure of its own; an assignee or successor can enforce the covenants only where it actually holds the customer relationships and other protected interests they guard; and a governing-law and venue choice mismatched to where the employee lives and works invites a public-policy challenge to the whole structure.
 
-### trade-secret strategy
+### Trade-secret strategy
 
 Information the _South Carolina Trade Secrets Act_ already covers does not need a non-compete to protect it. A focused confidentiality and trade-secret strategy reaches misappropriation without the strict-construction risk that attaches to a covenant not to compete .
 
-### the statutory trade-secret backstop
+### The statutory trade-secret backstop
 
 The confidentiality drafting does not have to carry the entire trade-secret regime — the _South Carolina Trade Secrets Act_ runs underneath it. Every employee already owes a statutory duty, independent of and in addition to any agreement, to refrain from using or disclosing the employer's trade secret , and that protection endures until the secret is disclosed or discovered by proper means . Trade-secret obligations that run for as long as the information stays a trade secret, rather than expiring on a fixed cap, track that statutory protection, and the return-of-property, deletion, and certification mechanics preserve the secrecy the statute's protection depends on.
 
-### employee non-solicit scoped to inducement
+### Employee non-solicit scoped to inducement
 
 An employee non-solicit scoped to inducing a Covered Employee to breach or terminate the employment relationship — leaving references, general advertisements, and non-interfering hiring open — tracks how South Carolina reads the covenant. The state reads it narrowly: _Oxman v. Sherman_ construed an employee covenant as restraining inducement to breach rather than as a blanket bar on ever hiring or seeking the services of those employees . Kept narrow — reaching only Covered Employees during the Restricted Period — it is the lightest restraint in the covenant family and stays no broader than the employer's interest in workforce stability and goodwill. Widened into an all-employee no-hire, it reaches past the recognized interest.
 
-### customer scope
+### Customer scope
 
 An _any customer on our books_ non-solicitation clause reaches too far. A restriction limited to customers the departing employee actually serviced or contacted within a defined look-back period protects a legitimate interest; a blanket customer ban is treated as an unenforceable restraint on ordinary competition .
 
-### customer covenants bound to covered customers
+### Customer covenants bound to covered customers
 
 A customer non-solicit — and the optional no-business covenant — bound to Covered Customers only, the customers, vendors, referral sources, and business partners the employee had material contact with during the stated look-back period, tracks what the case law rewards: a covenant confined to customers the employee had contact with during his last twelve months of employment withstood an overbreadth challenge , while barring solicitation of customers the employee never serviced protected no legitimate interest , and an employer is not entitled to enforce an agreement preventing ordinary competition . The no-business covenant bites harder — it reaches even customer-initiated dealings — so its Covered Customers limit is what keeps it inside the legitimate-interest and harshness factors; loosened, it forfeits that protection. A tight customer covenant paired with the confidentiality and trade-secret protections is often a stronger, more readily enforceable instrument than a broad non-compete.
 
-### mid-employment consideration
+### Mid-employment consideration
 
 Where the employee signs after employment has already begun, the covenant needs a Separate Consideration cover term — a raise, bonus, promotion, or change in status — because continued employment alone will not support it. South Carolina requires it: a covenant entered into after the inception of employment needs separate consideration beyond continued at-will employment , and an unchanged role supplies none — in _Poole_ the employee's duties, position, and salary were left unchanged . Consideration establishes only one of the five factors: a well-documented raise does nothing for a covenant that fails on legitimate interest, time and place, harshness, or public policy.
 
-### reasonable scope
+### Reasonable scope
 
 A duration or radius copied from another state's form is measured against the wrong market. A South Carolina court will not narrow an overbroad scope to save the covenant, so the territory holds up only where it matches the employee's real customer contacts and the time period stays within what the record can justify .
 
-### duration and territory sized to the role
+### Duration and territory sized to the role
 
 A non-compete's duration, territory, and step-down alternatives hold up only where they fit the employee's actual role and the employer's actual market — a radius or term imported from another state's form is measured against a market it was never sized to. A territorial scope is unreasonable if it covers an area broader than necessary to protect the employer's legitimate interest , and time and place must each be reasonably limited under the conjunctive test . The optional non-investment covenant is judged the same way — a post-employment restraint under the five factors; its passive-public-holdings carveout leaves ordinary public-market investing open, so its real bite is active or material ownership in private competitors. No South Carolina court will shrink an overdrawn map afterward.
 
-### nondisclosure duration
+### Nondisclosure duration
 
 An open-ended NDA that bars an employee from doing similar work indefinitely draws non-compete scrutiny. Where a nondisclosure provision functions as a non-compete, South Carolina courts apply that scrutiny — including a reasonable time limit — and an unlimited duration can void it .
 
-### the non-trade-secret confidentiality term
+### The non-trade-secret confidentiality term
 
 Non-trade-secret Confidential Information given a finite duration, with the employee's general knowledge, skill, and experience carved out of the definition, stays a genuine confidentiality clause. Run open-ended, it can collapse into a functional non-compete: a nondisclosure provision with the effect of a covenant not to compete requires a reasonable time restriction , and untimed provisions operating that way violated South Carolina public policy , whereas a genuine confidentiality clause scoped to protectable information is not a restraint of trade at all . An Other Confidential Information Duration stretched toward forever converts the clause into an untimed functional non-compete.
 
-### sale-of-business covenants in the transaction documents
+### Sale-of-business covenants in the transaction documents
 
 A sale-of-business covenant routed through this employment form loses the relaxed review that helps sale covenants — that review exists only because the covenant is part of a business sale. Covenants executed in conjunction with the sale of a business are scrutinized at a more relaxed level than covenants executed in conjunction with employment contracts , and under that standard the sale-related territorial restriction in _Palmetto Mortuary_ was upheld as reasonable and enforceable . That forgiving framework does not travel to a covenant a worker signs to keep or take a job. A genuine sale covenant belongs in the transaction documents — given by the seller and supported by transaction consideration; run through this employment form, it risks forfeiting the more favorable review.
 
-### fixed end date and open-ended tolling
+### Fixed end date and open-ended tolling
 
 A Restricted Period stated as a fixed, definite term that expires on its stated end date, with no tolling bolted on to extend it, matches where South Carolina points: extending a covenant's time period past its stated expiration would be against public policy, because it would be arbitrary and would let a court disrupt the parties' private right to contract , and no South Carolina decision endorses automatic judicial tolling during a breach. A pause-the-clock term drafted as a separate, reasonable term tied to the actual duration of the breach still has to satisfy the reasonably-limited-in-time factor ; an open-ended or indefinite extension does not.
 
-### physician covenants and pending H.4767
+### Physician covenants and pending H.4767
 
 South Carolina has no enacted physician statute, so a covenant restraining the practice of medicine is reviewed under the ordinary five-factor test, with patient access to care the likely pressure point on the sound-public-policy factor . For a physician hire, a narrow radius and a short term preserve patient access and continuity of care, and the deal prices against H.4767: the pending Physician Noncompete Contract Prohibition Act would declare physician noncompete clauses against the public policy of the State, and as of this review it had passed the House and drawn a favorable Senate committee report without being enacted . A covenant drafted as if the bill had already become law overreaches the current rule, and the bill's status can move before signing.
