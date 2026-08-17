@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-07-30
+* **Update**: content(co): re-quote Colorado statutes to the 2025 C.R.S. edition (#2023) (974063d)
+
 ## 2026-07-20
 * **Update**: content(ia/nevada): flag NRS 600.500's two cumulative conditions (signing-flow test #1767) (#1837) (96854d2)
 

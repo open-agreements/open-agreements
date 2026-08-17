@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-08-15
+* **Update**: fix(colorado): scope and verify legal sources (7e4c894)
+
 ## 2026-08-12
 * **Update**: content(wage-and-hour): add Colorado wage-and-hour guide (#2170) (b0e7578)
 
