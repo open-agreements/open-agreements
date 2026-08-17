@@ -83,6 +83,7 @@ Every practice guide cites primary law; templates start from recognized standard
 
 ### Employment
 
+- [Colorado Restrictive Covenant Notice](https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-cc-by-4.0/openagreements-colorado-restrictive-covenant-notice): OpenAgreements · CC-BY-4.0 — Separate worker notice accompanying the Colorado Employee Restrictive Covenant Agreement under C.R.S. § 8-2-113(4).
 - [Employment Offer Letter](https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-cc-by-4.0/openagreements-employment-offer-letter): OpenAgreements · CC-BY-4.0 — A startup-focused employment offer letter template for full-time or part-time hiring with compensation, equity summary, and at-will framing.
 - [Employment Offer Letter California](https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-cc-by-4.0/openagreements-employment-offer-letter-california): OpenAgreements · CC-BY-4.0 — State-specific employee offer letter template for employees primarily working in California.
 - [Employment Offer Letter Florida](https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-cc-by-4.0/openagreements-employment-offer-letter-florida): OpenAgreements · CC-BY-4.0 — State-specific employee offer letter template for employees primarily working in Florida.

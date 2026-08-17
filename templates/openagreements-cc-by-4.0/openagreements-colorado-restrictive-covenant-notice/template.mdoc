@@ -1,0 +1,143 @@
+---
+template_id: openagreements-colorado-restrictive-covenant-notice
+name: Colorado Notice of Restrictive Covenants
+category: employment
+description: Separate worker notice accompanying the Colorado Employee Restrictive Covenant Agreement under C.R.S. § 8-2-113(4).
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-colorado-restrictive-covenant-notice
+version: "0.1.1"
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: Authored by OpenAgreements contributors. Licensed under CC BY 4.0.
+layout_id: cover-standard-signature-v1
+style_id: openagreements-default-v1
+document:
+  title: Colorado Notice of Restrictive Covenants
+  label: OpenAgreements Colorado Notice of Restrictive Covenants
+  version: "0.1.1"
+  license: Free to use under CC BY 4.0
+  defined_term_highlight_mode: none
+sections:
+  cover_terms:
+    section_label: Notice Information
+    heading_title: Notice Information
+  standard_terms:
+    section_label: Notice
+    heading_title: Important Notice
+  signature:
+    section_label: Worker Acknowledgment
+    heading_title: Worker Acknowledgment
+fields:
+  - name: employer_name
+    type: string
+    description: Full legal name of the employer providing the notice
+    display_label: Employer
+  - name: employee_name
+    type: string
+    description: Full name of the worker receiving the notice
+    display_label: Worker
+  - name: agreement_name
+    type: string
+    description: Exact name of the accompanying agreement containing the covenants
+    display_label: Agreement Name
+    default: Employee Restrictive Covenant Agreement
+  - name: notice_date
+    type: date
+    description: Date the notice and complete agreement copy are delivered
+    display_label: Notice Date
+  - name: worker_status
+    type: enum
+    description: Whether the recipient is a prospective or current worker
+    display_label: Worker Status
+    options:
+      - Prospective worker
+      - Current worker
+  - name: noncompete_included
+    type: boolean
+    description: Whether the accompanying agreement includes Non-Competition
+    display_label: Non-Competition Included
+    default: false
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the accompanying agreement includes Non-Solicitation of Customers
+    display_label: Customer Non-Solicitation Included
+    default: false
+  - name: nondealing_included
+    type: boolean
+    description: Whether the accompanying agreement includes No Business with Covered Customers
+    display_label: No Business with Covered Customers Included
+    default: false
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the accompanying agreement includes Non-Investment
+    display_label: Non-Investment Included
+    default: false
+omitted_clauses: drop
+priority_fields:
+  - employer_name
+  - employee_name
+distribution: bundled
+artifact_type: template
+---
+# Colorado Notice of Restrictive Covenants
+
+{% agreement-section type="cover_terms" %}
+## Notice Information
+
+{% cover-terms %}
+{% cover-term kind="row" label="Employer" field="employer_name" /%}
+{% cover-term kind="row" label="Worker" field="employee_name" /%}
+{% cover-term kind="row" label="Agreement" field="agreement_name" /%}
+{% cover-term kind="row" label="Notice Date" field="notice_date" /%}
+{% cover-term kind="row" label="Worker Status" field="worker_status" /%}
+{% /cover-terms %}
+{% /agreement-section %}
+
+{% agreement-section type="standard_terms" %}
+## Important Notice
+
+{% clause id="statutory-notice" %}
+### This Agreement May Restrict Your Future Employment
+
+The employer identified in the Notice Information above (Employer) is providing this notice about the {% field name="agreement_name" /%}. That agreement contains one or more covenants not to compete that could restrict your options for subsequent employment following your separation from Employer. A complete copy of that agreement accompanies this notice. Review each section identified below before signing.
+{% /clause %}
+
+{% clause id="notice-noncompetition" include-when="noncompete_included" %}
+### Non-Competition
+
+Review the section of the accompanying agreement titled **Non-Competition**.
+{% /clause %}
+
+{% clause id="notice-customer-nonsolicitation" include-when="customer_nonsolicit_included" %}
+### Non-Solicitation of Customers
+
+Review the section of the accompanying agreement titled **Non-Solicitation of Customers**.
+{% /clause %}
+
+{% clause id="notice-no-business" include-when="nondealing_included" %}
+### No Business with Covered Customers
+
+Review the section of the accompanying agreement titled **No Business with Covered Customers**.
+{% /clause %}
+
+{% clause id="notice-noninvestment" include-when="noninvestment_included" %}
+### Non-Investment
+
+Review the section of the accompanying agreement titled **Non-Investment**.
+{% /clause %}
+
+{% /agreement-section %}
+
+{% agreement-section type="signature" %}
+## Worker Acknowledgment
+
+{% signature-block arrangement="entity-plus-individual" %}
+By signing below, you acknowledge receiving this separate notice together with a complete copy of the agreement identified above. Your signature acknowledges receipt and does not waive any right.
+
+{% signer id="employee" kind="individual" capacity="personal" label="Worker" %}
+Worker: {% field name="employee_name" /%}
+
+Signature: _______________
+Date: _______________
+{% /signer %}
+{% /signature-block %}
+{% /agreement-section %}

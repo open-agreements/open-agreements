@@ -76,7 +76,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business that are similar to Employer's business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business that are similar to Employer's business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
@@ -85,8 +85,6 @@ Duration
 [[Covered Employees]] means employees with whom Employee worked or whom Employee managed during the 12 months before termination of employment.
 
 [[Passive Public Holdings]] means ownership of securities of a publicly traded company representing less than five percent of any class of such company's securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
-
-[[Protected Interests]] means Employer's legitimate business interests in its Confidential Information and trade secrets, its relationships with customers and referral sources, its workforce stability, and its goodwill.
 
 [[Restricted Period]] means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason, and in no event exceeding two years from termination of employment for the non-competition covenant or the customer non-solicitation covenant.
 
@@ -130,15 +128,23 @@ During the Restricted Period, Employee must not accept, service, or do business 
 
 ### Non-Competition
 
-During the Restricted Period, Employee must not carry on or engage in a Competitive Business within the Restricted Territory, whether as an employee, consultant, owner, or otherwise. Passive Public Holdings are permitted. This covenant does not restrict Employee from selling automobiles.
+During the Restricted Period, Employee must not carry on or engage in a Competitive Business within the Restricted Territory, whether as an employee, consultant, owner, or otherwise. Passive Public Holdings are permitted.
+
+### Automobile Salesperson Exclusion
+
+The Non-Competition section does not restrict Employee from selling automobiles.
+
+### Intern or Apprentice Exclusion
+
+Nothing in this agreement restricts Employee from pursuing employment, educational, or professional opportunities following completion of Employee's internship or apprenticeship. Employee remains subject to the confidentiality, intellectual property, and data protection obligations in this agreement.
 
 ### Physician Restraint — Statutory Burn-Off Caps
 
-If Employee is a physician, any restriction on practicing medicine expires three years after the Effective Date for a primary care physician and five years after the Effective Date for any other physician.
+Any restriction on Employee's practice of medicine expires three years after the Effective Date for a primary care physician and five years after the Effective Date for any other physician.
 
 ### Real Estate Licensee — Right to Rescind
 
-If Employee is a real estate broker-licensee, Employee has the right to rescind the non-competition covenant in this agreement until midnight of the third business day following the execution of this agreement or the delivery of this agreement to Employee, whichever is later. Employee may exercise the right by written notice to Employer within the rescission window.
+Employee may rescind the non-competition covenant in this agreement until midnight of the third business day following the execution of this agreement or the delivery of this agreement to Employee, whichever is later, by written notice to Employer.
 
 ### Non-Investment
 
@@ -170,7 +176,7 @@ If any provision of this agreement is found to be unenforceable, the remaining p
 
 ### Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the period specified in Cover Terms, and in no event does the non-competition covenant or the customer non-solicitation covenant survive beyond two years from termination of employment. Obligations under the Confidential Information and Trade Secret Protection section survive for the Trade Secrets Duration specified in Cover Terms to the extent they relate to trade secrets, and for the Other Confidential Information Duration specified in Cover Terms as to other Confidential Information. Where Employee is a physician subject to the burn-off caps, the applicable covenant expires as provided in the Physician Restraint section. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the period specified in Cover Terms, and in no event does the non-competition covenant or the customer non-solicitation covenant survive beyond two years from termination of employment. Obligations under the Confidential Information and Trade Secret Protection section survive for the Trade Secrets Duration specified in Cover Terms to the extent they relate to trade secrets, and for the Other Confidential Information Duration specified in Cover Terms as to other Confidential Information. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### Assignment and Successors
 
