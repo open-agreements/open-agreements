@@ -69,7 +69,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business, limited to providing a product, process, or service that is similar to Employer's product, process, or service.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business, limited to providing a product, process, or service that is similar to Employer's product, process, or service.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee and excluding Employee's general skill, knowledge, and experience.
 

@@ -147,12 +147,6 @@ fields:
     description: Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.
     display_label: Employee Is a Physician
     section: Physician
-  - name: worker_is_real_estate_licensee
-    type: boolean
-    description: Whether the employee is a real estate broker-licensee. Under La. R.S. 37:1448.1(A) a broker-licensee non-compete is an absolute nullity unless the licensee may rescind it until midnight of the third business day following execution or delivery, whichever is later.
-    display_label: Employee Is a Real Estate Licensee
-    default: false
-    section: Non-Competition
   - name: nondealing_included
     type: boolean
     description: Whether the no-business-with-covered-customers covenant is included.

@@ -88,7 +88,7 @@ Consideration for Restrictive Covenants
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business, limited so far as possible to the type of employment or line of business Employee actually conducted for Employer.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business, limited so far as possible to the type of employment or line of business Employee actually conducted for Employer.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 

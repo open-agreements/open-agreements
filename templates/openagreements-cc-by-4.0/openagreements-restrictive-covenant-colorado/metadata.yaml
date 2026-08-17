@@ -54,24 +54,6 @@ fields:
     default: Colorado
     rationale_source: legislation
     requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.colorado.keep-colorado-law-and-forum-for-colorado-workers
-  - name: highly_compensated_threshold
-    type: string
-    description: Annualized cash compensation figure that gates the non-compete. The Division of Labor Standards and Statistics resets the highly compensated worker threshold annually through the PAY CALC Order; the controlling figure is the greater of the August 10, 2022 amount or the amount in effect when the covenant is executed. The default is the 2026 figure; replace it with the figure for the execution year.
-    display_label: Highly Compensated Worker Threshold
-    default: $130,014
-    section: Colorado Statutory Gates
-    default_value_rationale: $130,014 is the 2026 highly compensated worker threshold set by the 2026 PAY CALC Order. The Division resets it annually, so counsel should confirm the figure for the covenant's execution year.
-    rationale_source: regulation
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.colorado.gate-non-compete-by-highly-compensated-worker-threshold
-  - name: customer_nonsolicit_threshold
-    type: string
-    description: Annualized cash compensation figure that gates the customer non-solicit, equal to sixty percent of the highly compensated worker threshold. The default is the 2026 derived figure; replace it with sixty percent of the threshold for the execution year.
-    display_label: Customer Non-Solicit Threshold
-    default: $78,008.40
-    section: Colorado Statutory Gates
-    default_value_rationale: $78,008.40 is sixty percent of the 2026 highly compensated worker threshold of $130,014. The PAY CALC Order does not state this figure, so confirm the current-year derived amount before using the covenant.
-    rationale_source: legislation
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.colorado.gate-customer-nonsolicit-by-sixty-percent-earnings-threshold
   - name: confidentiality_trade_secret_duration
     type: string
     description: Duration of confidentiality obligations for trade secrets
@@ -134,13 +116,12 @@ fields:
     default_value_rationale: 12 months is the most common lookback period for customer non-solicitation scope.
   - name: noncompete_included
     type: boolean
-    description: Whether the non-competition covenant is included. Under the Colorado Noncompetition Agreement Act a Colorado covenant not to compete is void by default; it survives only under the highly compensated worker exception, which requires the worker to earn at or above the threshold both when the covenant is entered into and when it is enforced and requires the covenant to protect trade secrets and be no broader than reasonably necessary. This template recites those gates when the covenant is included.
+    description: Whether the non-competition covenant is included.
     display_label: Non-Competition Included
-    default: false
     section: Non-Competition
-    default_value_rationale: Conservative default. A Colorado non-compete is void unless the employer can fit it into the narrow highly compensated worker exception, and merely presenting a void covenant is unlawful, carrying actual damages plus a $5,000-per-worker penalty. Include only after confirming the worker clears the threshold at signing and enforcement, the covenant protects an identified trade-secret interest, the separate signed notice was delivered, and the worker is not a health-care provider barred by the 2025 health-care provider amendments.
-    rationale_source: legislation
-    requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.colorado.gate-non-compete-by-highly-compensated-worker-threshold
+    default_value_rationale: Conservative default. Non-competes are the most heavily scrutinized covenant; include only after confirming enforceability under the agreement's governing law and tailoring the restraint to a legitimate protectable interest.
+    rationale_source: editorial
+    default: false
   - name: noncompete_duration
     type: string
     description: Duration of non-competition restriction

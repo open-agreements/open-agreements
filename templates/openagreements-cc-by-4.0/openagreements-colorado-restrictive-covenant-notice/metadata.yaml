@@ -1,0 +1,60 @@
+name: Colorado Notice of Restrictive Covenants
+category: employment
+description: Separate worker notice accompanying the Colorado Employee Restrictive Covenant Agreement under C.R.S. § 8-2-113(4).
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-colorado-restrictive-covenant-notice
+version: 0.1.1
+stability: experimental
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: Authored by OpenAgreements contributors. Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Full legal name of the employer providing the notice
+    display_label: Employer
+  - name: employee_name
+    type: string
+    description: Full name of the worker receiving the notice
+    display_label: Worker
+  - name: agreement_name
+    type: string
+    description: Exact name of the accompanying agreement containing the covenants
+    display_label: Agreement Name
+    default: Employee Restrictive Covenant Agreement
+  - name: notice_date
+    type: date
+    description: Date the notice and complete agreement copy are delivered
+    display_label: Notice Date
+  - name: worker_status
+    type: enum
+    description: Whether the recipient is a prospective or current worker
+    display_label: Worker Status
+    options:
+      - Prospective worker
+      - Current worker
+  - name: noncompete_included
+    type: boolean
+    description: Whether the accompanying agreement includes Non-Competition
+    display_label: Non-Competition Included
+    default: false
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the accompanying agreement includes Non-Solicitation of Customers
+    display_label: Customer Non-Solicitation Included
+    default: false
+  - name: nondealing_included
+    type: boolean
+    description: Whether the accompanying agreement includes No Business with Covered Customers
+    display_label: No Business with Covered Customers Included
+    default: false
+  - name: noninvestment_included
+    type: boolean
+    description: Whether the accompanying agreement includes Non-Investment
+    display_label: Non-Investment Included
+    default: false
+omitted_clauses: drop
+priority_fields:
+  - employer_name
+  - employee_name
+distribution: bundled
+artifact_type: template
