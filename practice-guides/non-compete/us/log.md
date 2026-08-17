@@ -1,6 +1,15 @@
 # Us Update Log
 
+## 2026-08-15
+* **Update**: fix(colorado): scope and verify legal sources (7e4c894)
+
+## 2026-08-12
+* **Update**: fix(guide): complete Colorado notice guidance (cb75296)
+
 ## 2026-07-30
+* **Update**: content(co): key the health-care exclusion to the practice restricted, not provider status (#2023) (95c003b)
+* **Update**: content(co): re-quote Colorado statutes to the 2025 C.R.S. edition (#2023) (974063d)
+* **Update**: content(co): align the summary frontmatter with the practice-keyed health-care rule (#2023) (e8ca107)
 * **Update**: content: make New York answer opening standalone (f64b2c5)
 
 ## 2026-07-29

@@ -1,5 +1,18 @@
 # Us Update Log
 
+## 2026-08-15
+* **Update**: fix(colorado): align checklist quotes to 2025 statutes (3bd0cb5)
+
+## 2026-08-12
+* **Update**: fix(checklist): complete Colorado notice review (72044d1)
+
+## 2026-07-30
+* **Update**: content(co): key the health-care gate to the practice restricted; finish the edition sweep in the specs (#2023) (1f3da91)
+* **Update**: content(co): re-quote Colorado checklist gates to the 2025 C.R.S. edition (#2023) (bb3bd36)
+
+## 2026-07-29
+* **Update**: fix(colorado): target reliance on reformation, not the clause's presence (8ee5a01)
+
 ## 2026-07-15
 * **Update**: fix(sd): correct SD non-compete + privacy quotes after statute re-ingest (#1818) (0f3e7bf)
 
