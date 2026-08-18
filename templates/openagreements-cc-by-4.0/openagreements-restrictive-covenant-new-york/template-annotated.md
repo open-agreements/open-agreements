@@ -269,7 +269,7 @@ An out-of-state choice-of-law clause does not escape New York's limits against a
 
 ### Tolling
 
-If the parties intend breach to extend the restriction, the agreement should define the triggering breach and limit the extension to the established period of breach.
+If the parties intend breach to extend the restriction, the agreement should expressly provide that a breach extends the restriction, define the triggering violation, and tie the extension to the proven period of breach.
 
 ### Broadcast exclusion mechanics
 
