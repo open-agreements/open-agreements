@@ -66,6 +66,16 @@ const FillTemplateArgsSchema = z.object({
   return_mode: z.enum(['local_path', 'inline_base64']).optional().default('local_path'),
 });
 
+const GetApapTemplateArgsSchema = z.object({
+  template_id: z.string().min(1),
+});
+
+const CreateApapAgreementDocxArgsSchema = z.object({
+  template_id: z.string().min(1),
+  agreement_data: z.record(z.string(), z.unknown()),
+  output_path: z.string().min(1).optional(),
+});
+
 interface TemplateField {
   name: string;
   type: string;
@@ -119,6 +129,16 @@ interface RepoModules {
   categoryFromId: (id: string) => string;
   sourceName: (url: string) => string | null;
   mapFields: (fields: Record<string, unknown>[], required: string[]) => TemplateField[];
+  exportTemplateToApap: (opts: {
+    templateDir: string;
+    concertoModelPath: string;
+    concertoDependencyPaths: string[];
+  }) => Record<string, unknown>;
+  fillApapAgreementToDocx: (opts: {
+    templateDir: string;
+    agreementData: Record<string, unknown>;
+    outputPath: string;
+  }) => Promise<unknown>;
 }
 
 let _modules: RepoModules | null = null;
@@ -136,12 +156,14 @@ async function importRepoModules(): Promise<RepoModules | null> {
       const pathsUrl = pathToFileURL(resolve(root, 'dist', 'utils', 'paths.js')).href;
       const metadataUrl = pathToFileURL(resolve(root, 'dist', 'core', 'metadata.js')).href;
       const engineUrl = pathToFileURL(resolve(root, 'dist', 'core', 'engine.js')).href;
+      const apapUrl = pathToFileURL(resolve(root, 'dist', 'core', 'apap.js')).href;
 
-      const [listing, paths, metadata, engine] = await Promise.all([
+      const [listing, paths, metadata, engine, apap] = await Promise.all([
         import(listingUrl),
         import(pathsUrl),
         import(metadataUrl),
         import(engineUrl),
+        import(apapUrl),
       ]);
 
       _modules = {
@@ -152,6 +174,8 @@ async function importRepoModules(): Promise<RepoModules | null> {
         categoryFromId: listing.categoryFromId,
         sourceName: listing.sourceName,
         mapFields: listing.mapFields,
+        exportTemplateToApap: apap.exportTemplateToApap,
+        fillApapAgreementToDocx: apap.fillApapAgreementToDocx,
       };
       return _modules;
     } catch { /* fall through */ }
@@ -171,6 +195,8 @@ async function importRepoModules(): Promise<RepoModules | null> {
         categoryFromId: mod.categoryFromId ?? ((id: string) => id.includes('employment') ? 'employment' : 'general'),
         sourceName: mod.sourceName ?? (() => null),
         mapFields: mod.mapFields ?? ((f: TemplateField[]) => f),
+        exportTemplateToApap: mod.exportTemplateToApap,
+        fillApapAgreementToDocx: mod.fillApapAgreementToDocx,
       };
       return _modules;
     }
@@ -373,7 +399,110 @@ const tools: ToolDefinition[] = [
       }
     },
   },
+  {
+    name: 'get_apap_template',
+    description:
+      'Export an eligible OpenAgreements-authored template as an APAP Template payload, preserving canonical source, version, license, and attribution.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        template_id: { type: 'string', description: 'Eligible OpenAgreements template ID.' },
+      },
+      required: ['template_id'],
+      additionalProperties: false,
+    },
+    annotations: { readOnlyHint: true, destructiveHint: false },
+    invoke: async (args) => {
+      const input = GetApapTemplateArgsSchema.parse(args ?? {});
+      const mod = await importRepoModules();
+      if (!mod) return toolError('get_apap_template', 'APAP_UNAVAILABLE', 'APAP export requires the in-process OpenAgreements package.');
+      const dir = mod.findTemplateDir(input.template_id);
+      if (!dir) return toolError('get_apap_template', 'TEMPLATE_NOT_FOUND', `Template not found: "${input.template_id}"`);
+      try {
+        return successResult('get_apap_template', {
+          template: mod.exportTemplateToApap(apapExportOptions(input.template_id, dir)),
+        });
+      } catch (error) {
+        return toolError('get_apap_template', 'APAP_TEMPLATE_UNAVAILABLE', extractErrorMessage(error));
+      }
+    },
+  },
+  {
+    name: 'create_apap_agreement_docx',
+    description:
+      'Render APAP Concerto agreement data for an eligible OpenAgreements template as a local DOCX. Returns a path, never inline base64.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        template_id: { type: 'string', description: 'Eligible OpenAgreements template ID.' },
+        agreement_data: {
+          type: 'object',
+          description: 'APAP agreement data carrying the template Concerto $class and field values.',
+          additionalProperties: true,
+        },
+        output_path: { type: 'string', description: 'Optional local DOCX output path.' },
+      },
+      required: ['template_id', 'agreement_data'],
+      additionalProperties: false,
+    },
+    annotations: { readOnlyHint: false, destructiveHint: false },
+    invoke: async (args) => {
+      const input = CreateApapAgreementDocxArgsSchema.parse(args ?? {});
+      const mod = await importRepoModules();
+      if (!mod) return toolError('create_apap_agreement_docx', 'APAP_UNAVAILABLE', 'APAP rendering requires the in-process OpenAgreements package.');
+      const dir = mod.findTemplateDir(input.template_id);
+      if (!dir) return toolError('create_apap_agreement_docx', 'TEMPLATE_NOT_FOUND', `Template not found: "${input.template_id}"`);
+      try {
+        const template = mod.exportTemplateToApap(apapExportOptions(input.template_id, dir));
+        const templateModel = template.templateModel as { typeName?: string } | undefined;
+        if (input.agreement_data.$class !== templateModel?.typeName) {
+          return toolError(
+            'create_apap_agreement_docx',
+            'INVALID_AGREEMENT_DATA',
+            `agreement_data.$class must be "${templateModel?.typeName}"`,
+          );
+        }
+        const workingDir = mkdtempSync(join(tmpdir(), 'oa-apap-mcp-'));
+        const outputPath = input.output_path
+          ? resolve(input.output_path)
+          : resolve(workingDir, `${input.template_id}-${Date.now()}.docx`);
+        await mod.fillApapAgreementToDocx({
+          templateDir: dir,
+          agreementData: input.agreement_data,
+          outputPath,
+        });
+        return successResult('create_apap_agreement_docx', {
+          template_id: input.template_id,
+          apap_template_uri: template.uri,
+          agreement_id: input.agreement_data.$identifier ?? input.agreement_data.contractId ?? null,
+          output_path: outputPath,
+          content_type: DOCX_MIME,
+        });
+      } catch (error) {
+        return toolError('create_apap_agreement_docx', 'DOCX_RENDER_FAILED', extractErrorMessage(error));
+      }
+    },
+  },
 ];
+
+function apapExportOptions(templateId: string, templateDir: string): {
+  templateDir: string;
+  concertoModelPath: string;
+  concertoDependencyPaths: string[];
+} {
+  const modelByTemplate: Record<string, string> = {
+    'openagreements-confidentiality-invention-assignment-agreement':
+      'openagreements-employee-ip-inventions-assignment.cto',
+  };
+  const model = modelByTemplate[templateId];
+  if (!model) throw new Error(`Template is not yet enabled for APAP export: ${templateId}`);
+  const root = resolve(templateDir, '../../..');
+  return {
+    templateDir,
+    concertoModelPath: join(root, 'concerto', model),
+    concertoDependencyPaths: [join(root, 'concerto/deps/@models.accordproject.org.accordproject.contract.cto')],
+  };
+}
 
 // ── Template-only exports (signing feature removed) ──
 

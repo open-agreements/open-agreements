@@ -1,4 +1,5 @@
 import AdmZip from 'adm-zip';
+import { existsSync } from 'node:fs';
 import { afterEach, describe, expect } from 'vitest';
 import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import { callTool, listToolDescriptors, _resetModuleCache, _setModuleOverride } from '../src/core/tools.js';
@@ -67,6 +68,8 @@ function mockModules(overrides: Record<string, unknown> = {}): any {
     categoryFromId: () => 'general',
     sourceName: () => null,
     mapFields: (f: unknown[]) => f,
+    exportTemplateToApap: () => ({}),
+    fillApapAgreementToDocx: async () => ({}),
     ...overrides,
   };
 }
@@ -79,6 +82,8 @@ describe('contract-templates-mcp tools', () => {
       'list_templates',
       'get_template',
       'fill_template',
+      'get_apap_template',
+      'create_apap_agreement_docx',
     ]);
   });
 
@@ -352,6 +357,54 @@ describe('contract-templates-mcp tools', () => {
     expect(data.template).toBe('common-paper-mutual-nda');
     expect(typeof data.inline_base64).toBe('string');
     expect((data.inline_base64 as string).length).toBeGreaterThan(100);
+  });
+
+  it('exports the OpenAgreements CIIAA as an attributed APAP Template', async () => {
+    const result = await callTool('get_apap_template', {
+      template_id: 'openagreements-confidentiality-invention-assignment-agreement',
+    });
+    const payload = getPayload(result);
+    expect(result.isError).toBeUndefined();
+    const data = payload.data as Record<string, unknown>;
+    const template = data.template as Record<string, unknown>;
+    expect(template.$class).toBe('org.accordproject.protocol@1.0.0.Template');
+    expect(template.author).toBe('OpenAgreements contributors');
+    expect(template.license).toBe('CC-BY-4.0');
+  });
+
+  it('renders APAP CIIAA agreement data to a local DOCX without base64', async () => {
+    const exported = await callTool('get_apap_template', {
+      template_id: 'openagreements-confidentiality-invention-assignment-agreement',
+    });
+    const exportPayload = getPayload(exported);
+    const template = ((exportPayload.data as Record<string, unknown>).template) as Record<string, unknown>;
+    const model = template.templateModel as { typeName: string };
+    const result = await callTool('create_apap_agreement_docx', {
+      template_id: 'openagreements-confidentiality-invention-assignment-agreement',
+      agreement_data: {
+        $class: model.typeName,
+        $identifier: 'oa-ciiaa-mcp-001',
+        contractId: 'oa-ciiaa-mcp-001',
+        company_name: 'Example Labs, Inc.',
+        company_signatory_name: 'Alex Smith',
+        company_signatory_title: 'President',
+        employee_name: 'Taylor Jones',
+        effective_date: '2026-08-11',
+        prior_inventions_disclosure: 'None',
+        excluded_inventions_statement: 'Personal projects listed on Schedule A are excluded.',
+        return_of_materials_timing: 'within five business days after termination',
+        post_termination_assistance: 'reasonable assistance on reasonable notice',
+        governing_law: 'New York',
+        venue: 'state and federal courts located in New York County, New York',
+      },
+    });
+    const payload = getPayload(result);
+    expect(result.isError).toBeUndefined();
+    const data = payload.data as Record<string, unknown>;
+    expect(data.content_type).toBe('application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+    expect(typeof data.output_path).toBe('string');
+    expect(data.inline_base64).toBeUndefined();
+    expect(existsSync(data.output_path as string)).toBe(true);
   });
 
   // -----------------------------------------------------------------------

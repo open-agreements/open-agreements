@@ -3,6 +3,20 @@
 // Template engine
 export { fillTemplate, type FillOptions, type FillResult } from './core/engine.js';
 
+// APAP interoperability. OpenAgreements remains canonical for template text,
+// licensing, attribution, and DOCX rendering; APAP supplies a portable
+// agreement-data and lifecycle representation.
+export {
+  canonicalMdocToApapTemplateMark,
+  exportTemplateToApap,
+  toApapAgreementData,
+  fillApapAgreementToDocx,
+  type ApapTemplatePayload,
+  type ExportApapTemplateOptions,
+  type ApapAgreementDataOptions,
+  type FillApapAgreementOptions,
+} from './core/apap.js';
+
 // Humanize transform (bracket-prose with yellow highlights for catalog preview parity)
 export {
   humanizeDocx,
