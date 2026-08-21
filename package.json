@@ -98,7 +98,9 @@
     "check:docs": "node scripts/check_docs.mjs",
     "generate:llms": "node scripts/generate_llms_txt.mjs",
     "check:llms": "npm run generate:llms && git diff --exit-code -- llms.txt llms-full.txt",
-    "preflight:ci": "npm run lint && npm run validate && npm run check:templates-snapshot && npm run check:template-previews && npm run check:preview-freshness && npm run check:gemini-extension-manifest && npm run check:claude-plugin && npm run check:readme && npm run check:docs && npm run check:llms && npm run test:run"
+    "generate:derived": "node scripts/derived_artifacts.mjs --generate",
+    "check:derived": "node scripts/derived_artifacts.mjs --check",
+    "preflight:ci": "npm run lint && npm run validate && npm run check:derived && npm run check:template-previews && npm run check:preview-freshness && npm run check:gemini-extension-manifest && npm run check:docs && npm run test:run"
   },
   "keywords": [
     "legal",

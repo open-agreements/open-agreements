@@ -322,15 +322,25 @@ function checkExplainerManifest(skillRoot, expectedSlugs, problems) {
       "jurisdiction",
       "countryCode",
       "canonicalUrl",
-      "lawReviewedThrough",
+      "lastReviewed",
+      "snapshotAsOf",
       "stale",
     ]) {
+      // Comparing two `undefined`s passes vacuously, which is how this gate
+      // silently stopped checking review dates when the upstream projection
+      // renamed lawReviewedThrough/exportedAt. Require presence on both sides.
+      if (frontMatter[field] === undefined || entry[field] === undefined) {
+        problems.push(`${relativeRoot}/${expectedFile} is missing required field ${field}`);
+        continue;
+      }
       if (frontMatter[field] !== entry[field]) {
         problems.push(`${relativeRoot}/${expectedFile} disagrees with manifest field ${field}`);
       }
     }
-    if (frontMatter.exportedAt !== manifest.exportedAt) {
-      problems.push(`${relativeRoot}/${expectedFile} disagrees with manifest exportedAt`);
+    if (manifest.snapshotAsOf === undefined) {
+      problems.push(`${relativeRoot}/manifest.json is missing required field snapshotAsOf`);
+    } else if (frontMatter.snapshotAsOf !== manifest.snapshotAsOf) {
+      problems.push(`${relativeRoot}/${expectedFile} disagrees with manifest snapshotAsOf`);
     }
   }
 }
