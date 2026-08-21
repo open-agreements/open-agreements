@@ -5,8 +5,19 @@ A mutual non-disclosure agreement based on [Common Paper's](https://commonpaper.
 ## Source
 
 - **URL**: https://github.com/CommonPaper/Mutual-NDA
-- **Version**: 2.0
+- **Standard Terms**: https://commonpaper.com/standards/mutual-nda/1.0
+- **Version**: 1.0
 - **License**: CC BY 4.0
+
+> **Correction, 2026-08-20.** This line previously read `**Version**: 2.0`. There has
+> never been a Common Paper Mutual NDA 2.0 — this was wrong from the day the record was
+> created, not a version that later went stale. `commonpaper.com/standards/mutual-nda/2.0`
+> returns HTTP 404 while `/1.0` returns 200, and `github.com/CommonPaper/Mutual-NDA` has
+> exactly one release: "Common Paper Mutual NDA v1.0", published 2021-12-17. The error
+> entered as a copy-paste from the sibling Cloud Service Agreement README, written in the
+> same OpenAgreements bootstrap commit (546238a6, 2026-02-07), where `2.0` was then the
+> correct Common Paper version. `metadata.yaml` was corrected to `1.0` early (69ac93f1)
+> and every generated artifact has said 1.0 since; only this hand-written line disagreed.
 
 ## Fields
 
