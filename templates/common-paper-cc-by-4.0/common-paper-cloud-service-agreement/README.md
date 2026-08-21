@@ -5,8 +5,22 @@ A cloud service agreement based on [Common Paper's](https://commonpaper.com) sta
 ## Source
 
 - **URL**: https://github.com/CommonPaper/CSA
-- **Version**: 2.0
+- **Standard Terms**: https://commonpaper.com/standards/cloud-service-agreement/2.1
+- **Version**: 2.1
 - **License**: CC BY 4.0
+
+> **Correction, 2026-08-20.** This line previously read `**Version**: 2.0`. Unlike
+> the sibling Mutual NDA correction, 2.0 was genuinely correct once and then went
+> stale — Common Paper did publish a Cloud Service Agreement 2.0, and
+> `commonpaper.com/standards/cloud-service-agreement/2.0` still resolves (HTTP 200,
+> as does `/2.1`; `/2.2` returns 404), so neither URL 404s and nothing broke loudly.
+> What settles it is the record disagreeing with itself: the vendored
+> `template.docx` in this directory prints "Common Paper Cloud Service Standard
+> Terms Version 2.1" and incorporates
+> `https://commonpaper.com/standards/cloud-service-agreement/2.1/` by reference, and
+> `metadata.yaml` has said `version: '2.1'` since 69ac93f1. Common Paper's own
+> unversioned `/standards/cloud-service-agreement` page now serves Version 2.1. Only
+> this hand-written README line still described a 2.0 form nobody here ships.
 
 ## Fields
 

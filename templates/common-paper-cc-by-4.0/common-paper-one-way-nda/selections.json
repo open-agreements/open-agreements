@@ -22,13 +22,13 @@
       "type": "radio",
       "options": [
         {
-          "label": "Fixed term, trade secrets until no longer secret", "marker": "{nda_term} from {confidentiality_term_start}, but in the case of trade secrets, until Confidential Information is no longer considered a trade secret under applicable laws.",
+          "label": "Fixed term, trade secrets until no longer secret", "marker": "{confidentiality_term} from {confidentiality_term_start}, but in the case of trade secrets, until Confidential Information is no longer considered a trade secret under applicable laws.",
           "trigger": "default"
         },
         {
           "marker": "In perpetuity.",
           "trigger": {
-            "field": "confidentiality_term_start",
+            "field": "confidentiality_term",
             "equals": "In perpetuity"
           }
         }
