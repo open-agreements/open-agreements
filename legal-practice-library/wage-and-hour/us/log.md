@@ -1,5 +1,11 @@
 # Us Update Log
 
+## 2026-08-17
+* **Update**: content(wage-and-hour): Arizona wage-and-hour guide (pipeline-verified, 75 source-cards) (#2191) (0760040)
+* **Update**: content(wa): Washington wage-and-hour practice note (Parallel Ultra pipeline) (#2190) (9eabb41)
+* **Update**: content(or): Oregon wage-and-hour practice guide (Parallel Ultra verified-claims pipeline) (#2188) (b18d9a7)
+* **Update**: content(ga): Georgia wage-and-hour practice note (#2196) (ea1dfc3)
+
 ## 2026-08-15
 * **Update**: fix(colorado): scope and verify legal sources (7e4c894)
 
