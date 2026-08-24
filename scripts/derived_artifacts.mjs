@@ -11,9 +11,20 @@
  * Adding a new derived artifact: add one entry here. Do not add a bespoke
  * generate:/check: pair to package.json without also registering it.
  *
- * Deliberately NOT registered: generators that rewrite DOCX binaries or render
- * PNG previews (generate:templates, generate:template-previews). Those need
- * LibreOffice, are slow, and are gated separately by template-preview-gate.
+ * SCOPE: fast, textual, byte-comparable projections only — not every generated
+ * file in the repo. The ~108 tracked template.docx binaries under templates/
+ * are also generated (generate_templates.mjs, generate_checklist_template.mjs,
+ * generate_working_group_template.mjs,
+ * generate_employment_templates_libreoffice.mjs) but deliberately stay out:
+ * they need LibreOffice, are slow, and DOCX is a zip whose bytes are not stable
+ * across runs, so a git-diff freshness gate would false-positive. They are
+ * gated instead by template-preview-gate (check:template-previews,
+ * check:docx-structure) and preview-freshness-gate, which check structure and
+ * preview currency rather than byte-for-byte regeneration.
+ *
+ * Also not registered: generate_json_schemas.mjs and generate_concerto_types.mjs
+ * write untracked build product (packages/contracts-workspace/schemas/,
+ * site/schemas/, concerto/generated/), so there is nothing to drift.
  */
 import { execFileSync } from "node:child_process";
 import { dirname, resolve } from "node:path";
@@ -46,8 +57,6 @@ const artifacts = [
   },
 ];
 
-// generate:schemas and generate:concerto are intentionally absent: their output
-// is untracked build product, not committed files, so there is nothing to drift.
 
 const allPaths = artifacts.flatMap((artifact) => artifact.paths);
 
@@ -82,12 +91,24 @@ function generate({ quiet = false } = {}) {
 }
 
 function check() {
-  // Anything already dirty is pre-existing local work, not drift this run
-  // introduced. Record it so we only report what regeneration actually changed.
-  const before = new Set(gitStatus(allPaths).split("\n").filter(Boolean));
+  // Refuse to run against a dirty registered path. Diffing porcelain before and
+  // after regeneration looks like it would isolate new drift, but it cannot: an
+  // already-modified file that regeneration modifies *further* keeps the exact
+  // same porcelain line (" M path"), so the difference is empty and the check
+  // reports "current" while the file is stale. Requiring a clean start is both
+  // simpler and honest — CI always starts clean, so this only ever fires
+  // locally, where the answer is to stash or commit first.
+  const dirty = gitStatus(allPaths).split("\n").filter(Boolean);
+  if (dirty.length > 0) {
+    console.error("Cannot check: these derived paths have uncommitted changes.\n");
+    for (const line of dirty) console.error(`  ${line}`);
+    console.error("\nCommit or stash them first — a dirty start hides real drift.");
+    process.exitCode = 1;
+    return;
+  }
+
   generate({ quiet: true });
-  const after = gitStatus(allPaths).split("\n").filter(Boolean);
-  const drifted = after.filter((line) => !before.has(line));
+  const drifted = gitStatus(allPaths).split("\n").filter(Boolean);
 
   if (drifted.length === 0) {
     console.log(`Derived artifacts are current (${artifacts.length} projections).`);

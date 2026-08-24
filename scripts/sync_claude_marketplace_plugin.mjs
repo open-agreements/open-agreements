@@ -286,6 +286,11 @@ function checkExplainerManifest(skillRoot, expectedSlugs, problems) {
     return;
   }
 
+  // Manifest-level, so checked once rather than repeated per jurisdiction.
+  if (manifest.snapshotAsOf === undefined) {
+    problems.push(`${relativeRoot}/manifest.json is missing required field snapshotAsOf`);
+  }
+
   const expected = new Set(expectedSlugs);
   const actual = new Set(entries.map((entry) => entry.slug));
   if (entries.length !== expectedSlugs.length || actual.size !== expectedSlugs.length) {
@@ -328,18 +333,23 @@ function checkExplainerManifest(skillRoot, expectedSlugs, problems) {
     ]) {
       // Comparing two `undefined`s passes vacuously, which is how this gate
       // silently stopped checking review dates when the upstream projection
-      // renamed lawReviewedThrough/exportedAt. Require presence on both sides.
-      if (frontMatter[field] === undefined || entry[field] === undefined) {
+      // renamed lawReviewedThrough/exportedAt. Require presence on both sides,
+      // and say which side is missing so the fix is obvious.
+      if (frontMatter[field] === undefined) {
         problems.push(`${relativeRoot}/${expectedFile} is missing required field ${field}`);
+        continue;
+      }
+      if (entry[field] === undefined) {
+        problems.push(
+          `${relativeRoot}/manifest.json entry ${entry.slug} is missing required field ${field}`,
+        );
         continue;
       }
       if (frontMatter[field] !== entry[field]) {
         problems.push(`${relativeRoot}/${expectedFile} disagrees with manifest field ${field}`);
       }
     }
-    if (manifest.snapshotAsOf === undefined) {
-      problems.push(`${relativeRoot}/manifest.json is missing required field snapshotAsOf`);
-    } else if (frontMatter.snapshotAsOf !== manifest.snapshotAsOf) {
+    if (manifest.snapshotAsOf !== undefined && frontMatter.snapshotAsOf !== manifest.snapshotAsOf) {
       problems.push(`${relativeRoot}/${expectedFile} disagrees with manifest snapshotAsOf`);
     }
   }
