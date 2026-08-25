@@ -1,5 +1,8 @@
 # Ai Hiring Update Log
 
+## 2026-08-24
+* **Update**: Colorado: the AI Act is in force on all six topic pages, not five (#2239) (5774652)
+
 ## 2026-08-15
 * **Update**: fix(colorado): scope and verify legal sources (7e4c894)
 

@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-08-24
+* **Update**: content(la): Louisiana is a baseline privacy state until the LDPA takes effect on 2027-01-01 (#2230) (ea02346)
+
 ## 2026-08-15
 * **Update**: fix(colorado): scope and verify legal sources (7e4c894)
 
