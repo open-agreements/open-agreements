@@ -1,0 +1,221 @@
+---
+# Privileged half of the derived-artifact self-heal (see #675).
+#
+# Runs on workflow_run, so the workflow definition always comes from the default
+# branch and cannot be edited by the pull request it acts on. Its one job is to
+# take the patch built by derived-regen-build.yml and push it onto the bot's PR
+# branch, so the derived-artifact gates go green without a human regenerating by
+# hand.
+#
+# The rule that makes this safe: THIS JOB NEVER EXECUTES PULL-REQUEST CODE.
+# No npm install, no repo-local action, no generator, no lifecycle script. It
+# runs git, gh, and two scripts read from a base-branch checkout. That is what
+# the earlier single-workflow attempt got wrong — it minted a write-capable App
+# token in the same job that ran `npm ci` on PR-controlled code, so anyone able
+# to push to the bot's branch could have run arbitrary code with that token.
+name: Regenerate derived artifacts (apply)
+
+"on":
+  workflow_run:
+    workflows: ["Regenerate derived artifacts (build)"]
+    types: [completed]
+
+# GITHUB_TOKEN stays read-only. The write capability arrives only in the final
+# push step, from a separately minted App token.
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  apply-patch:
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.head_repository.full_name == github.repository
+    runs-on: ubuntu-latest
+    # One push at a time per branch; a second run would race the first's commit.
+    concurrency:
+      group: derived-regen-apply-${{ github.event.workflow_run.head_branch }}
+      cancel-in-progress: false
+    steps:
+      - name: Check for the App credentials
+        id: creds
+        env:
+          APP_ID: ${{ secrets.DERIVED_REGEN_APP_ID }}
+        run: |
+          if [ -z "${APP_ID}" ]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::DERIVED_REGEN_APP_ID is not configured; self-heal skipped." \
+              "Bot PRs will keep failing the derived-artifact gates until it is set."
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # The base branch is trusted ground: it supplies the allowlist and the
+      # gatekeeper script. Nothing from the pull request is read here.
+      - name: Check out the base branch (trusted)
+        if: steps.creds.outputs.configured == 'true'
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+          path: base
+
+      # Re-derive every fact from the trusted workflow_run payload plus the API.
+      # The build job's `if:` gate is a convenience; this is the real check.
+      - name: Validate the originating pull request
+        if: steps.creds.outputs.configured == 'true'
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
+          EXPECTED_AUTHOR: "oa-ssot-sync[bot]"
+        run: |
+          set -euo pipefail
+
+          # Ask for PRs whose head is this branch, in this repo.
+          owner="${REPO%%/*}"
+          matches=$(gh api "repos/${REPO}/pulls" \
+            -f state=open -f head="${owner}:${HEAD_BRANCH}" \
+            --jq 'length')
+          if [ "${matches}" != "1" ]; then
+            echo "::notice::Expected exactly one open PR for ${HEAD_BRANCH}, found ${matches}; skipping."
+            echo "proceed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          read -r number author head_sha head_repo < <(gh api "repos/${REPO}/pulls" \
+            -f state=open -f head="${owner}:${HEAD_BRANCH}" \
+            --jq '.[0] | "\(.number) \(.user.login) \(.head.sha) \(.head.repo.full_name)"')
+
+          if [ "${author}" != "${EXPECTED_AUTHOR}" ]; then
+            echo "::notice::PR #${number} is authored by ${author}, not ${EXPECTED_AUTHOR}; skipping."
+            echo "proceed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "${head_repo}" != "${REPO}" ]; then
+            echo "::notice::PR #${number} head is on ${head_repo}, not ${REPO}; skipping."
+            echo "proceed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # The branch must still be exactly where the patch was built. If it
+          # moved, the patch is stale and the next build run will supersede it.
+          if [ "${head_sha}" != "${HEAD_SHA}" ]; then
+            echo "::notice::PR #${number} moved from ${HEAD_SHA} to ${head_sha}; skipping this stale patch."
+            echo "proceed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "PR #${number} validated: ${author} @ ${head_sha} on ${HEAD_BRANCH}."
+          echo "number=${number}" >> "$GITHUB_OUTPUT"
+          echo "proceed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Download the candidate patch
+        if: steps.creds.outputs.configured == 'true' && steps.pr.outputs.proceed == 'true'
+        id: download
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: derived-patch
+          path: incoming
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      # No artifact means the build job found nothing stale. That is the steady
+      # state once a branch has been healed, so it is a success, not a failure.
+      - name: Note when there is nothing to apply
+        if: steps.creds.outputs.configured == 'true' && steps.pr.outputs.proceed == 'true' && steps.download.outcome != 'success'
+        run: echo "::notice::No patch artifact; derived artifacts were already current."
+
+      # THE trust boundary. Runs the gatekeeper from the base checkout, so the
+      # allowlist is the base branch's registry and not one the PR supplied.
+      - name: Validate the patch against the derived-artifact allowlist
+        if: steps.creds.outputs.configured == 'true' && steps.pr.outputs.proceed == 'true' && steps.download.outcome == 'success'
+        run: node base/scripts/validate_derived_patch.mjs "${GITHUB_WORKSPACE}/incoming/derived.patch"
+
+      - name: Check out the pull request head
+        if: steps.creds.outputs.configured == 'true' && steps.pr.outputs.proceed == 'true' && steps.download.outcome == 'success'
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+          persist-credentials: false
+          path: work
+
+      - name: Apply the patch and commit
+        if: steps.creds.outputs.configured == 'true' && steps.pr.outputs.proceed == 'true' && steps.download.outcome == 'success'
+        id: commit
+        working-directory: work
+        env:
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+        run: |
+          set -euo pipefail
+          # git apply only writes files; it does not run repo code.
+          git apply --binary --index "${GITHUB_WORKSPACE}/incoming/derived.patch"
+
+          # Belt and braces: nothing outside the allowlist may be staged, even
+          # if the gatekeeper somehow let it through.
+          allowed=()
+          while IFS= read -r line; do
+            [ -n "${line}" ] && allowed+=("${line}")
+          done < <(node "${GITHUB_WORKSPACE}/base/scripts/derived_artifacts.mjs" --list-paths)
+          if [ "${#allowed[@]}" -eq 0 ]; then
+            echo "::error::The derived-artifact registry listed no paths."
+            exit 1
+          fi
+          staged=$(git diff --cached --name-only)
+          while IFS= read -r file; do
+            [ -z "${file}" ] && continue
+            ok=false
+            for entry in "${allowed[@]}"; do
+              case "${file}" in
+                "${entry}"|"${entry}"/*) ok=true; break ;;
+              esac
+            done
+            if [ "${ok}" != "true" ]; then
+              echo "::error::Staged file outside the derived-artifact allowlist: ${file}"
+              exit 1
+            fi
+          done <<< "${staged}"
+
+          if git diff --cached --quiet; then
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+            echo "Nothing staged after apply; leaving the branch alone."
+            exit 0
+          fi
+
+          # Separate -m flags rather than one embedded newline-bearing string:
+          # git joins them with blank lines, and the YAML block scalar stays flat.
+          git -c user.name="oa-ssot-sync[bot]" \
+              -c user.email="oa-ssot-sync[bot]@users.noreply.github.com" \
+              commit \
+              -m "chore(derived): regenerate derived artifacts" \
+              -m "The sync bot writes sources without running this repo's generators, so the projections registered in scripts/derived_artifacts.mjs drifted. Regenerated by derived-regen-build.yml and applied here; no hand edits." \
+              -m "Refs #${PR_NUMBER}"
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+      # Minted last, and used only by the step below, so no PR-controlled code
+      # has ever run in this job while a write-capable token was present.
+      - name: Generate GitHub App token
+        if: steps.commit.outputs.pushed == 'true'
+        id: app-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.DERIVED_REGEN_APP_ID }}
+          private-key: ${{ secrets.DERIVED_REGEN_PRIVATE_KEY }}
+
+      - name: Push onto the bot's branch
+        if: steps.commit.outputs.pushed == 'true'
+        working-directory: work
+        env:
+          APP_TOKEN: ${{ steps.app-token.outputs.token }}
+          HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
+        run: |
+          set -euo pipefail
+          # A plain (non-force) push. The new commit's parent is the SHA the
+          # patch was built against, so if the branch moved in the meantime the
+          # push is rejected rather than clobbering someone else's work.
+          git push "https://x-access-token:${APP_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+            "HEAD:refs/heads/${HEAD_BRANCH}"
+          echo "Pushed regenerated derived artifacts to ${HEAD_BRANCH}."

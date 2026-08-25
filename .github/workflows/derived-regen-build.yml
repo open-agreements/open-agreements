@@ -1,0 +1,82 @@
+---
+# Unprivileged half of the derived-artifact self-heal (see #675).
+#
+# The sync bot pushes source updates without running this repo's generators, so
+# its pull requests are born red on the derived-artifact gates. This workflow
+# regenerates the projections and emits a patch. It deliberately holds NO
+# secrets and NO write access: it runs pull-request-controlled code (npm
+# lifecycle scripts, a repo-local action, the generators themselves), so
+# anything it produces is treated as untrusted input by the applier.
+#
+# The privileged counterpart is derived-regen-apply.yml, which validates the
+# patch against the registry allowlist before applying it.
+name: Regenerate derived artifacts (build)
+
+"on":
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build-patch:
+    # Cheap pre-filter only. This is not the security boundary — the applier
+    # re-validates every one of these facts from its own trusted event payload,
+    # because this job's output can be influenced by the code it runs.
+    if: >-
+      github.event.pull_request.user.login == 'oa-ssot-sync[bot]' &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # Bind to the exact commit, never the branch name: head.ref can move
+          # under us between this run and the applier's.
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies (retry)
+        uses: ./.github/actions/npm-ci-retry
+
+      - name: Regenerate derived artifacts
+        run: npm run generate:derived
+
+      - name: Build path-scoped patch
+        id: patch
+        run: |
+          set -euo pipefail
+          # Read loop rather than `mapfile`, which needs bash 4+. Keeping this
+          # portable means the same lines can be rehearsed on any shell.
+          paths=()
+          while IFS= read -r line; do
+            [ -n "${line}" ] && paths+=("${line}")
+          done < <(node scripts/derived_artifacts.mjs --list-paths)
+          if [ "${#paths[@]}" -eq 0 ]; then
+            echo "::error::The derived-artifact registry listed no paths."
+            exit 1
+          fi
+          git add --all -- "${paths[@]}"
+          # --binary so the plugin tree's non-text files survive the round trip.
+          git diff --cached --binary -- "${paths[@]}" > "${RUNNER_TEMP}/derived.patch"
+          if [ -s "${RUNNER_TEMP}/derived.patch" ]; then
+            echo "stale=true" >> "$GITHUB_OUTPUT"
+            echo "Derived artifacts are stale; emitting a patch for the applier."
+          else
+            echo "stale=false" >> "$GITHUB_OUTPUT"
+            echo "Derived artifacts already current; nothing to do."
+          fi
+
+      - name: Upload patch
+        if: steps.patch.outputs.stale == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: derived-patch
+          path: ${{ runner.temp }}/derived.patch
+          if-no-files-found: error
+          retention-days: 1

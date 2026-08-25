@@ -122,10 +122,23 @@ function check() {
   process.exitCode = 1;
 }
 
+// Prints one registered path per line and exits. This is the allowlist the
+// privileged half of the self-heal split validates a patch against, so it must
+// stay readable without installing anything: node builtins only, no deps, no
+// build. The privileged workflow runs this from the *base* branch, never from
+// the pull request, so a PR cannot widen its own allowlist by editing the
+// registry.
+function listPaths() {
+  for (const path of allPaths) console.log(path);
+}
+
 const mode = process.argv[2] ?? "--generate";
 if (mode === "--check") check();
 else if (mode === "--generate") generate();
+else if (mode === "--list-paths") listPaths();
 else {
-  console.error(`Unknown argument: ${mode} (expected --generate or --check)`);
+  console.error(
+    `Unknown argument: ${mode} (expected --generate, --check, or --list-paths)`
+  );
   process.exitCode = 2;
 }
