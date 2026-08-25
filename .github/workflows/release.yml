@@ -111,14 +111,33 @@ jobs:
       - name: Verify package contents
         shell: bash
         run: |
-          PACK_OUTPUT="$(npm pack --dry-run 2>&1)"
-          echo "$PACK_OUTPUT"
-          for required_file in gemini-extension.json AGENTS.md server.json; do
-            if ! echo "$PACK_OUTPUT" | grep -q "$required_file"; then
-              echo "FATAL: $required_file is missing from the npm tarball. Add it to the files array in package.json."
-              exit 1
-            fi
-          done
+          # Check the required files against the JSON file list, not against a
+          # grep of npm's human-readable notice output. The previous form was
+          #
+          #   echo "$PACK_OUTPUT" | grep -q "$required_file"
+          #
+          # which fails under this step's `shell: bash` (-eo pipefail) as soon
+          # as the tarball listing grows: `grep -q` exits at the FIRST match,
+          # `echo` takes EPIPE on the ~900 lines it has not written yet and
+          # returns nonzero, and pipefail hands that failure to the `if !`.
+          # A required file that appears EARLY in the listing therefore reports
+          # as missing precisely because it was found. That is what blocked the
+          # v0.9.0 release at 1,771 files, with `npm notice 690B
+          # gemini-extension.json` visible in the very output the guard greps.
+          npm pack --dry-run --json | node -e '
+            const data = JSON.parse(require("fs").readFileSync(0, "utf8"));
+            const files = new Set((data[0].files || []).map((f) => f.path));
+            const required = ["gemini-extension.json", "AGENTS.md", "server.json"];
+            const missing = required.filter((f) => !files.has(f));
+            if (missing.length) {
+              console.error(
+                `FATAL: missing from the npm tarball: ${missing.join(", ")}.\n` +
+                  "Add them to the files array in package.json.",
+              );
+              process.exit(1);
+            }
+            console.log(`OK: all ${required.length} required files present (${files.size} total).`);
+          '
           npm pack --dry-run --json | node -e '
             const data = JSON.parse(require("fs").readFileSync(0, "utf8"));
             const bundled = data[0].bundled || [];
