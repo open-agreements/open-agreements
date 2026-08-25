@@ -157,6 +157,7 @@
 * [DeCristofaro v. Security Nat. Bank](decristofaro-v-security-nat-bank.md) - DeCristofaro v. Sec. Nat'l Bank, 664 P.2d 167, 168-69 (Alaska 1983). — quoted in 3 document(s).
 * [Del Castillo v. Richmond](del-castillo-v-richmond.md) - Del Castillo v. Richmond, G.R. No. L-21127, Feb. 9, 1924. — quoted in 1 document(s).
 * [Delaney v. Dickey, 242 A.3d 257 (N.J. 2020)](delaney-v-dickey-242-a-3d-257-n-j-2020.md) - Delaney v. Dickey, 242 A.3d 257 (N.J. 2020). — quoted in 1 document(s).
+* [Delta Enterprise Corp. v. Cohen](delta-enterprise-corp-v-cohen.md) - Delta Enter. Corp. v. Cohen, 93 A.D.3d 411, 412 (1st Dep't 2012). — quoted in 1 document(s).
 * [DePuy Orthopaedics, Inc. v. Waxman](depuy-orthopaedics-inc-v-waxman.md) - DePuy Orthopaedics, Inc. v. Waxman, 95 So. 3d 928 (Fla. 1st DCA 2012). — quoted in 1 document(s).
 * [Derge v. D&H United Fueling Solutions, Inc.](derge-v-d-h-united-fueling-solutions-inc.md) - Derge v. D&H United Fueling Sols., Inc., C.A. No. 2025-0087-BWD, slip op. at 12 (Del. Ch. Dec. 8, 2025). — quoted in 2 document(s).
 * [DeSantis v. Wackenhut Corp.](desantis-v-wackenhut-corp.md) - DeSantis v. Wackenhut Corp., 793 S.W.2d 670 (Tex. 1990). — quoted in 2 document(s).
@@ -473,6 +474,7 @@
 * [Redd Pest Control Co. v. Foster](redd-pest-control-co-v-foster.md) - Redd Pest Control Co. v. Foster, 761 So. 2d 967 (Miss. Ct. App. 2000). — quoted in 2 document(s).
 * [Redd Pest Control Co. v. Heatherly](redd-pest-control-co-v-heatherly.md) - Redd Pest Control Co. v. Heatherly, 248 Miss. 34, 157 So. 2d 133 (Miss. 1963). — quoted in 3 document(s).
 * [Reddy v. Community Health Foundation of Man](reddy-v-community-health-foundation-of-man.md) - Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982). — quoted in 3 document(s).
+* [*Redhair v. Kinerk, Beal, Schmidt, Dyer & Sethi, P.C.*](redhair-v-kinerk-beal-schmidt-dyer-sethi-p-c.md) - *Redhair v. Kinerk, Beal, Schmidt, Dyer & Sethi, P.C.*, 218 Ariz. 293, 183 P.3d 544 (App. 2008). — quoted in 1 document(s).
 * [Reed, Roberts Associates, Inc. v. Strauman](reed-roberts-associates-inc-v-strauman.md) - Reed, Roberts Assocs., Inc. v. Strauman, 40 N.Y.2d 303 (1976). — quoted in 2 document(s).
 * [Regents of the Univ. of N.M. v. Knight](regents-of-the-univ-of-n-m-v-knight.md) - Regents of the Univ. of N.M. v. Knight, 321 F.3d 1111 (Fed. Cir. 2003). — quoted in 1 document(s).
 * [Reiman Assocs., Inc. v. R/A Advertising, Inc.](reiman-assocs-inc-v-r-a-advertising-inc.md) - Reiman Assocs., Inc. v. R/A Advertising, Inc., 102 Wis. 2d 305 (Ct. App. 1981). — quoted in 2 document(s).
