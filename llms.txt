@@ -41,7 +41,7 @@ Every practice guide cites primary law; templates start from recognized standard
 - [Professional Services](https://github.com/open-agreements/open-agreements/tree/main/templates) (4): PSAs, SOWs, and independent contractor agreements.
 - [Data & Compliance](https://github.com/open-agreements/open-agreements/tree/main/templates) (4): DPAs, BAAs, and AI addendums for regulated workflows.
 - [Deal Process](https://github.com/open-agreements/open-agreements/tree/main/templates) (3): Working group lists, diligence request lists, and closing checklists for transactions.
-- [Other](https://github.com/open-agreements/open-agreements/tree/main/templates) (11): Additional templates that do not map to the primary categories.
+- [Other](https://github.com/open-agreements/open-agreements/tree/main/templates) (12): Additional templates that do not map to the primary categories.
 
 ## Optional
 

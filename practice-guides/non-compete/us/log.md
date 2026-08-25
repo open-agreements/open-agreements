@@ -1,10 +1,19 @@
 # Us Update Log
 
+## 2026-08-17
+* **Update**: fix(ny): make Delta source quote contiguous (3ab044e)
+
 ## 2026-08-15
+* **Update**: content(ny): make Delta quotation verifiable (4a151e0)
+* **Update**: content(ny): apply counsel Delta scope corrections (5fb9b57)
 * **Update**: fix(colorado): scope and verify legal sources (7e4c894)
 
 ## 2026-08-12
+* **Update**: content(ny): apply counsel tolling prose feedback (a22805b)
 * **Update**: fix(guide): complete Colorado notice guidance (cb75296)
+
+## 2026-08-07
+* **Update**: fix(ny): correct contractual tolling analysis (ea86118)
 
 ## 2026-07-30
 * **Update**: content(co): key the health-care exclusion to the practice restricted, not provider status (#2023) (95c003b)
