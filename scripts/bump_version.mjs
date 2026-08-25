@@ -15,11 +15,21 @@
  *   - gemini-extension.json
  *   - .cursor-plugin/plugin.json
  *   - server.json (top-level version AND packages[].version)
+ *   - package-lock.json (root version, via `npm install --package-lock-only`)
+ *   - data/templates-snapshot.json (cli_version, via export-templates-snapshot)
  *
- * --check verifies every file above carries the same version and that
+ * The last two are derived, not manifests: `check:derived` and
+ * `check:templates-snapshot` both fail a release PR if the snapshot's
+ * cli_version still names the previous release, and `npm ci` refuses a
+ * lockfile whose root version disagrees with package.json. Regenerating them
+ * here keeps a bump from landing red. Pass --no-derived to skip.
+ *
+ * --check verifies every manifest above carries the same version and that
  * server.json satisfies MCP registry constraints, without writing anything.
+ * It does NOT check the derived artifacts; their own gates do that.
  */
 
+import { execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -151,6 +161,33 @@ function main() {
   console.log(
     `\nDone. All ${VERSION_FILES.length + 1} manifests set to ${arg}.`,
   );
+
+  if (process.argv.includes("--no-derived")) {
+    console.log(
+      "\nSkipped derived artifacts (--no-derived). Regenerate before opening a PR:\n" +
+        "  npm install --package-lock-only\n" +
+        "  node scripts/export-templates-snapshot.mjs",
+    );
+    return;
+  }
+
+  console.log("\nRegenerating derived artifacts that carry the version:");
+  for (const [label, cmd, args] of [
+    ["package-lock.json", "npm", ["install", "--package-lock-only", "--ignore-scripts"]],
+    ["data/templates-snapshot.json", "node", ["scripts/export-templates-snapshot.mjs"]],
+  ]) {
+    try {
+      execFileSync(cmd, args, { cwd: DEFAULT_ROOT, stdio: "pipe" });
+      console.log(`  ${label}: regenerated`);
+    } catch (error) {
+      const detail = error?.stderr?.toString().trim() || error?.message || "";
+      console.error(
+        `  ${label}: FAILED — regenerate it by hand before opening the PR.` +
+          (detail ? `\n    ${detail.split("\n")[0]}` : ""),
+      );
+      process.exitCode = 1;
+    }
+  }
 }
 
 const invokedPath = process.argv[1] ? resolve(process.argv[1]) : null;
