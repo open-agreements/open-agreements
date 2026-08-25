@@ -160,10 +160,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(2)(c)(II).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(2)(c)(II) supports the rule that the controlling threshold is the greater of the August 10, 2022 amount or the amount in effect when the covenant is executed.",
             "verbatimQuote": "\"Threshold amount for highly compensated workers\" means the greater of the threshold amount for highly compensated workers as determined by the division of labor standards and statistics in the department of labor and employment: (A) As of August 10, 2022; or (B) At the time the covenant not to compete is executed by the parties.",
-            "date": "2024-01-01",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-threshold-execution-year"
           }
         ]
@@ -177,7 +177,7 @@
         "sectionId": "parties-and-cover-term-identification",
         "itemNumber": "1.3",
         "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#identify-employee-title",
-        "requirementGuidance": "Record the role, but do not let it carry the analysis. Colorado retired its old title-based exceptions: what gates a non-compete now is annualized cash compensation against the published threshold, plus a genuine trade-secret interest. Title and duties still matter as evidence of what trade secrets the worker actually touches.",
+        "requirementGuidance": "Record the role, but do not let it carry the analysis. Colorado retired its old title-based exceptions: what gates a non-compete now is annualized cash compensation against the published threshold, plus a genuine trade-secret interest — and for a covenant restricting the practice of medicine, advanced practice registered nursing, or dentistry, no compensation figure opens that gate at all. Title and duties still matter as evidence of what trade secrets the worker actually touches.",
         "variants": [],
         "sources": [
           {
@@ -186,10 +186,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(2)(b).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
-            "proposition": "Section 8-2-113(2)(b) supports the compensation-and-trade-secret gate that replaced Colorado's older title-based exceptions.",
-            "verbatimQuote": "This subsection (2) does not apply to a covenant not to compete governing a person who, at the time the covenant not to compete is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than the threshold amount for highly compensated workers, if the covenant not to compete is for the protection of trade secrets and is no broader than is reasonably necessary to protect the employer's legitimate interest in protecting trade secrets.",
-            "date": "2024-01-01",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
+            "proposition": "Section 8-2-113(2)(b) supports the compensation-and-trade-secret gate that replaced Colorado's older title-based exceptions, and its exclusion of any covenant restricting the practice of medicine, advanced practice registered nursing, or dentistry — the gate turns on what the covenant restricts, not on the worker's status alone.",
+            "verbatimQuote": "Except for a covenant not to compete that restricts the practice of medicine, the practice of advanced practice registered nursing, or the practice of dentistry in this state, this subsection (2) does not apply to a covenant not to compete governing an individual who, at the time the covenant not to compete is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than the threshold amount for highly compensated workers, if the covenant not to compete is for the protection of trade secrets and is no broader than is reasonably necessary to protect the employer's legitimate interest in protecting trade secrets.",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-hcw-exception-cover"
           }
         ]
@@ -212,10 +212,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(6).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(6) supports the rule that Colorado law governs enforceability for a Colorado-based worker notwithstanding a contrary clause.",
             "verbatimQuote": "Notwithstanding any contractual provision to the contrary, Colorado law governs the enforceability of a covenant not to compete for a worker who, at the time of termination of employment, primarily resided and worked in Colorado.",
-            "date": "2024-01-01",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-choice-of-law-cover"
           }
         ]
@@ -238,10 +238,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(3)(b).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(3)(b) supports the limits a Colorado confidentiality definition must respect: general skills, public information, and legally protected disclosures stay outside it.",
-            "verbatimQuote": "A reasonable confidentiality provision relevant to the employer's business that does not prohibit disclosure of information that arises from the worker's general training, knowledge, skill, or experience, whether gained on the job or otherwise, information that is readily ascertainable to the public, or information that a worker otherwise has a right to disclose as legally protected conduct",
-            "date": "2024-01-01",
+            "verbatimQuote": "A reasonable confidentiality provision or trade secret provision relevant to the employer's business that does not prohibit disclosure of information that arises from the worker's general training, knowledge, skill, or experience, whether gained on the job or otherwise, information that is readily ascertainable to the public, or information that a worker otherwise has a right to disclose as legally protected conduct",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-confidentiality-limits"
           }
         ]
@@ -264,10 +264,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(2)(b).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(2)(b) supports the rule that a permitted Colorado non-compete must protect trade secrets and be no broader than reasonably necessary to protect them.",
-            "verbatimQuote": "This subsection (2) does not apply to a covenant not to compete governing a person who, at the time the covenant not to compete is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than the threshold amount for highly compensated workers, if the covenant not to compete is for the protection of trade secrets and is no broader than is reasonably necessary to protect the employer's legitimate interest in protecting trade secrets.",
-            "date": "2024-01-01",
+            "verbatimQuote": "Except for a covenant not to compete that restricts the practice of medicine, the practice of advanced practice registered nursing, or the practice of dentistry in this state, this subsection (2) does not apply to a covenant not to compete governing an individual who, at the time the covenant not to compete is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than the threshold amount for highly compensated workers, if the covenant not to compete is for the protection of trade secrets and is no broader than is reasonably necessary to protect the employer's legitimate interest in protecting trade secrets.",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-trade-secret-tether"
           }
         ]
@@ -290,10 +290,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(2)(b).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(2)(b) supports the point that the worker must meet the compensation threshold at the time the covenant is enforced, not only at signing.",
-            "verbatimQuote": "This subsection (2) does not apply to a covenant not to compete governing a person who, at the time the covenant not to compete is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than the threshold amount for highly compensated workers",
-            "date": "2024-01-01",
+            "verbatimQuote": "Except for a covenant not to compete that restricts the practice of medicine, the practice of advanced practice registered nursing, or the practice of dentistry in this state, this subsection (2) does not apply to a covenant not to compete governing an individual who, at the time the covenant not to compete is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than the threshold amount for highly compensated workers, if the covenant not to compete is for the protection of trade secrets and is no broader than is reasonably necessary to protect the employer's legitimate interest in protecting trade secrets.",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-threshold-at-enforcement"
           }
         ]
@@ -329,10 +329,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(2)(d).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(2)(d) supports the customer non-solicit threshold and its no-broader-than-reasonably-necessary tailoring limit.",
-            "verbatimQuote": "This subsection (2) does not apply to a covenant not to solicit customers governing a person who, at the time the covenant is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than sixty percent of the threshold amount for highly compensated workers if the nonsolicitation covenant is no broader than reasonably necessary to protect the employer's legitimate interest in protecting trade secrets.",
-            "date": "2024-01-01",
+            "verbatimQuote": "Except for a covenant not to compete that restricts the practice of medicine, the practice of advanced practice registered nursing, or the practice of dentistry in this state, this subsection (2) does not apply to a covenant not to solicit customers governing an individual who, at the time the covenant is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than sixty percent of the threshold amount for highly compensated workers, if the nonsolicitation covenant is no broader than reasonably necessary to protect the employer's legitimate interest in protecting trade secrets.",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-sixty-percent-defs"
           }
         ]
@@ -368,10 +368,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(2)(b).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(2)(b) supports the rule that a permitted Colorado non-compete must protect trade secrets and be no broader than reasonably necessary to protect them.",
-            "verbatimQuote": "This subsection (2) does not apply to a covenant not to compete governing a person who, at the time the covenant not to compete is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than the threshold amount for highly compensated workers, if the covenant not to compete is for the protection of trade secrets and is no broader than is reasonably necessary to protect the employer's legitimate interest in protecting trade secrets.",
-            "date": "2024-01-01",
+            "verbatimQuote": "Except for a covenant not to compete that restricts the practice of medicine, the practice of advanced practice registered nursing, or the practice of dentistry in this state, this subsection (2) does not apply to a covenant not to compete governing an individual who, at the time the covenant not to compete is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than the threshold amount for highly compensated workers, if the covenant not to compete is for the protection of trade secrets and is no broader than is reasonably necessary to protect the employer's legitimate interest in protecting trade secrets.",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-trade-secret-tether"
           }
         ]
@@ -486,10 +486,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(4)(a)(II).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(4)(a)(II) supports the fourteen-day clock measured against the covenant's effective date or its consideration's effective date for current workers.",
             "verbatimQuote": "A current worker at least fourteen days before the earlier of: (A) The effective date of the covenant; or (B) The effective date of any additional compensation or change in the terms or conditions of employment that provides consideration for the covenant.",
-            "date": "2024-01-01",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-notice-consideration-clock"
           }
         ]
@@ -641,10 +641,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(3)(b).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(3)(b) supports the statutory floor that confidentiality provisions cannot reach legally protected disclosures.",
-            "verbatimQuote": "A reasonable confidentiality provision relevant to the employer's business that does not prohibit disclosure of information that arises from the worker's general training, knowledge, skill, or experience, whether gained on the job or otherwise, information that is readily ascertainable to the public, or information that a worker otherwise has a right to disclose as legally protected conduct",
-            "date": "2024-01-01",
+            "verbatimQuote": "A reasonable confidentiality provision or trade secret provision relevant to the employer's business that does not prohibit disclosure of information that arises from the worker's general training, knowledge, skill, or experience, whether gained on the job or otherwise, information that is readily ascertainable to the public, or information that a worker otherwise has a right to disclose as legally protected conduct",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-protected-conduct"
           }
         ]
@@ -720,10 +720,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(2)(d).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(2)(d) supports the earnings threshold and trade-secret tailoring requirement for Colorado customer non-solicits.",
-            "verbatimQuote": "This subsection (2) does not apply to a covenant not to solicit customers governing a person who, at the time the covenant is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than sixty percent of the threshold amount for highly compensated workers if the nonsolicitation covenant is no broader than reasonably necessary to protect the employer's legitimate interest in protecting trade secrets.",
-            "date": "2024-01-01",
+            "verbatimQuote": "Except for a covenant not to compete that restricts the practice of medicine, the practice of advanced practice registered nursing, or the practice of dentistry in this state, this subsection (2) does not apply to a covenant not to solicit customers governing an individual who, at the time the covenant is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than sixty percent of the threshold amount for highly compensated workers, if the nonsolicitation covenant is no broader than reasonably necessary to protect the employer's legitimate interest in protecting trade secrets.",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-sixty-percent-covenant"
           }
         ]
@@ -746,10 +746,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(2)(a).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(2)(a) supports Colorado's baseline rule voiding covenants that restrict the right to receive compensation for labor.",
-            "verbatimQuote": "Except as provided in subsections (2)(b) and (3) of this section, any covenant not to compete that restricts the right of any person to receive compensation for performance of labor for any employer is void.",
-            "date": "2024-01-01",
+            "verbatimQuote": "Except as provided in subsections (2)(b), (2)(d), and (3) of this section, a covenant not to compete that restricts the right of an individual to receive compensation for performance of labor is void.",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-void-baseline"
           }
         ]
@@ -772,10 +772,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(2)(a).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(2)(a) supports Colorado's baseline rule voiding covenants that restrict the right to receive compensation for labor.",
-            "verbatimQuote": "Except as provided in subsections (2)(b) and (3) of this section, any covenant not to compete that restricts the right of any person to receive compensation for performance of labor for any employer is void.",
-            "date": "2024-01-01",
+            "verbatimQuote": "Except as provided in subsections (2)(b), (2)(d), and (3) of this section, a covenant not to compete that restricts the right of an individual to receive compensation for performance of labor is void.",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-void-baseline"
           },
           {
@@ -880,7 +880,7 @@
             "url": "https://leg.colorado.gov/bills/sb25-083",
             "proposition": "SB 25-083 supports the rule that the highly compensated worker exception no longer applies to covenants restricting the practice of medicine, advanced practice registered nursing, or dentistry.",
             "verbatimQuote": "EXCEPT FOR A COVENANT NOT TO COMPETE THAT RESTRICTS THE PRACTICE OF MEDICINE, THE PRACTICE OF ADVANCED PRACTICE REGISTERED NURSING, OR THE PRACTICE OF DENTISTRY IN THIS STATE, this subsection (2) does not apply to a covenant not to compete",
-            "date": "2025-05-08",
+            "date": "2025-06-03",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-sb25083-provider-ban"
           },
           {
@@ -892,7 +892,7 @@
             "url": "https://leg.colorado.gov/bills/sb25-083",
             "proposition": "SB 25-083 supports the patient-communication protections that void a covenant restricting a departing provider from disclosing continuing practice, contact information, or patient choice.",
             "verbatimQuote": "(a) THE HEALTH-CARE PROVIDER'S CONTINUING PRACTICE OF MEDICINE; (b) THE HEALTH-CARE PROVIDER'S NEW PROFESSIONAL CONTACT INFORMATION; OR (c) THE PATIENT'S RIGHT TO CHOOSE A HEALTH-CARE PROVIDER.",
-            "date": "2025-05-08",
+            "date": "2025-06-03",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-sb25083-patient-communication"
           }
         ]
@@ -928,10 +928,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(8)(a).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(8)(a) supports the rule that attempting to enforce a void covenant is prohibited conduct.",
             "verbatimQuote": "An employer shall not enter into, present to a worker or prospective worker as a term of employment, or attempt to enforce any covenant that is void under this section.",
-            "date": "2024-01-01",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-no-attempted-enforcement"
           }
         ]
@@ -967,10 +967,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(2)(b).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(2)(b) supports the point that the threshold must be satisfied at the time of enforcement, which cuts against extending an expired covenant.",
-            "verbatimQuote": "This subsection (2) does not apply to a covenant not to compete governing a person who, at the time the covenant not to compete is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than the threshold amount for highly compensated workers",
-            "date": "2024-01-01",
+            "verbatimQuote": "Except for a covenant not to compete that restricts the practice of medicine, the practice of advanced practice registered nursing, or the practice of dentistry in this state, this subsection (2) does not apply to a covenant not to compete governing an individual who, at the time the covenant not to compete is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than the threshold amount for highly compensated workers, if the covenant not to compete is for the protection of trade secrets and is no broader than is reasonably necessary to protect the employer's legitimate interest in protecting trade secrets.",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-threshold-when-enforced"
           }
         ]
@@ -1020,10 +1020,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(8)(b).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(8)(b) supports the actual-damages-plus-penalty exposure for an employer that presents or enforces a void covenant.",
             "verbatimQuote": "An employer that violates subsection (8)(a) of this section is liable for actual damages and a penalty of five thousand dollars per worker or prospective worker harmed by the conduct.",
-            "date": "2024-01-01",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-five-thousand-penalty"
           }
         ]
@@ -1037,7 +1037,7 @@
         "sectionId": "severability-and-reformation",
         "itemNumber": "14.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#draft-within-enforceable-scope-rather-than-rely-on-reformation",
-        "requirementGuidance": "Read the severability clause as a risk signal, not a safety net. Colorado courts may blue-pencil an overbroad covenant but are never required to, a clause cannot contractually obligate them to do it, and merely presenting a void covenant carries its own statutory penalty — so an agreement that drafts broad and banks on judicial trimming is betting the covenant and a fine on a discretionary rescue. Prefer covenants built in separable tiers, sized to the trade-secret interest from the outset.",
+        "requirementGuidance": "Size each covenant to its enforceable scope at the outset rather than drafting broad and counting on a court to trim it back. Asking a court to narrow an overbroad covenant is unobjectionable, and the agreement may include that request — but the request cannot carry an aggressive draft. Colorado courts have discretion to blue-pencil and no obligation to exercise it, parties cannot contractually compel narrowing, and merely presenting a void covenant is independently unlawful and carries a per-worker penalty. An agreement that banks on judicial repair is betting the covenant and a fine on a discretionary rescue. Prefer separable tiers, each sized to the interest it protects.",
         "variants": [],
         "sources": [
           {
@@ -1059,10 +1059,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(8)(a).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(8)(a) supports the drafting risk that presenting a void covenant is itself prohibited, so judicial narrowing cannot be relied on.",
             "verbatimQuote": "An employer shall not enter into, present to a worker or prospective worker as a term of employment, or attempt to enforce any covenant that is void under this section.",
-            "date": "2024-01-01",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-presenting-void-covenant"
           }
         ]
@@ -1111,10 +1111,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(6).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(6) supports the rule that Colorado law governs enforceability for a Colorado-based worker notwithstanding any contrary contractual provision.",
             "verbatimQuote": "Notwithstanding any contractual provision to the contrary, Colorado law governs the enforceability of a covenant not to compete for a worker who, at the time of termination of employment, primarily resided and worked in Colorado.",
-            "date": "2024-01-01",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-colorado-law-governs"
           },
           {
@@ -1123,10 +1123,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(6).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(6) supports the rule that a Colorado-based worker cannot be required to adjudicate enforceability outside Colorado.",
             "verbatimQuote": "A covenant not to compete that applies to a worker who, at the time of termination of employment, primarily resided or worked in Colorado may not require the worker to adjudicate the enforceability of the covenant outside of Colorado.",
-            "date": "2024-01-01",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-colorado-forum"
           }
         ]
@@ -1149,10 +1149,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(4)(a)(II).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(4)(a)(II) supports the rule that new compensation or changed terms serving as consideration for a covenant trigger the fourteen-day advance-notice requirement.",
             "verbatimQuote": "A current worker at least fourteen days before the earlier of: (A) The effective date of the covenant; or (B) The effective date of any additional compensation or change in the terms or conditions of employment that provides consideration for the covenant.",
-            "date": "2024-01-01",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-notice-on-new-consideration"
           }
         ]
@@ -1175,22 +1175,22 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(2)(b).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
-            "proposition": "Section 8-2-113(2)(b) supports the highly compensated worker gate, measured at signing and enforcement, with the trade-secret and tailoring requirements.",
-            "verbatimQuote": "This subsection (2) does not apply to a covenant not to compete governing a person who, at the time the covenant not to compete is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than the threshold amount for highly compensated workers, if the covenant not to compete is for the protection of trade secrets and is no broader than is reasonably necessary to protect the employer's legitimate interest in protecting trade secrets.",
-            "date": "2024-01-01",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
+            "proposition": "Section 8-2-113(2)(b) supports the highly compensated worker gate, measured at signing and enforcement, with the trade-secret and tailoring requirements — and its exclusion of any covenant restricting the practice of medicine, advanced practice registered nursing, or dentistry, which no compensation level satisfies.",
+            "verbatimQuote": "Except for a covenant not to compete that restricts the practice of medicine, the practice of advanced practice registered nursing, or the practice of dentistry in this state, this subsection (2) does not apply to a covenant not to compete governing an individual who, at the time the covenant not to compete is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than the threshold amount for highly compensated workers, if the covenant not to compete is for the protection of trade secrets and is no broader than is reasonably necessary to protect the employer's legitimate interest in protecting trade secrets.",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-hcw-gate"
           },
           {
             "sourceId": "paycalc-2026-threshold",
             "authorityType": "primary-law",
             "tier": "primary-source-backed",
-            "title": "2026 PAY CALC Order, 7 CCR 1103-14",
-            "citation": "2026 PAY CALC Order, 7 CCR 1103-14, Rule 1.2.1(G) (eff. Feb. 1, 2026).",
+            "title": "Temporary 2026 PAY CALC Order, 7 CCR 1103-14",
+            "citation": "Temporary 2026 PAY CALC Order, 7 CCR 1103-14, Rule 1.2.1(G) (effective January 2026).",
             "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=12310&fileName=7+CCR+1103-14",
-            "proposition": "The 2026 PAY CALC Order supports the official 2026 highly compensated employee threshold of $130,014 that gates non-compete enforceability.",
+            "proposition": "The temporary 2026 PAY CALC Order supports the official 2026 highly compensated employee threshold of $130,014 for its January 1–31 effective period.",
             "verbatimQuote": "Highly compensated employees (R. 2.2.11) $130,014 annually, and the EAP salary (row E) weekly",
-            "date": "2026-02-01",
+            "date": "2026-01-01",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-paycalc-2026-threshold"
           }
         ]
@@ -1213,10 +1213,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(2)(d).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
-            "proposition": "Section 8-2-113(2)(d) supports the sixty-percent earnings gate and tailoring requirement for customer non-solicits.",
-            "verbatimQuote": "This subsection (2) does not apply to a covenant not to solicit customers governing a person who, at the time the covenant is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than sixty percent of the threshold amount for highly compensated workers if the nonsolicitation covenant is no broader than reasonably necessary to protect the employer's legitimate interest in protecting trade secrets.",
-            "date": "2024-01-01",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
+            "proposition": "Section 8-2-113(2)(d) supports the sixty-percent earnings gate and tailoring requirement for customer non-solicits, and its exclusion of any covenant restricting the practice of medicine, advanced practice registered nursing, or dentistry, which no compensation level satisfies.",
+            "verbatimQuote": "Except for a covenant not to compete that restricts the practice of medicine, the practice of advanced practice registered nursing, or the practice of dentistry in this state, this subsection (2) does not apply to a covenant not to solicit customers governing an individual who, at the time the covenant is entered into and at the time it is enforced, earns an amount of annualized cash compensation equivalent to or greater than sixty percent of the threshold amount for highly compensated workers, if the nonsolicitation covenant is no broader than reasonably necessary to protect the employer's legitimate interest in protecting trade secrets.",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-sixty-percent-gate"
           },
           {
@@ -1238,11 +1238,11 @@
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.colorado.require-advance-notice-in-separate-signed-document",
         "requirementLevel": "MUST",
         "sourceFootnotes": [],
-        "requirementLabel": "Standalone signed notice on time",
+        "requirementLabel": "Complete separate covenant notice",
         "sectionId": "colorado-statutory-gates",
         "itemNumber": "19.3",
         "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#require-advance-notice-in-separate-signed-document",
-        "requirementGuidance": "Ask for the notice document itself, not just the agreement: a separate, clear and conspicuous writing in the language the employer and worker use about performance, identifying the covenant and signed by the worker — delivered before a candidate accepts the offer, or at least fourteen days before the covenant or its consideration takes effect for a current worker. A covenant that fits an exception still dies on a defective notice, which makes this the single most checkable item on the page.",
+        "requirementGuidance": "Deliver the companion Colorado Notice of Restrictive Covenants with a complete copy of the agreement. Confirm that the notice names the agreement, warns that it contains a covenant not to compete that could restrict the worker's subsequent-employment options, and points to every enabled covenant by its exact section heading. Keep the notice separate from every covenant, use clear and conspicuous terms in the performance-communication language, obtain the worker's signature, and preserve timing and delivery evidence. Do not complete the agreement's delivery acknowledgment until those steps are documented.",
         "variants": [],
         "sources": [
           {
@@ -1251,11 +1251,23 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(4)(b).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(4)(b) supports the requirement of a separate, clear and conspicuous notice document signed by the worker.",
             "verbatimQuote": "An employer shall provide the notice required in subsection (4)(a) of this section in a separate document from any other covenants between the worker and employer and in clear and conspicuous terms in the language in which the worker and employer communicate about the worker's performance. The notice must be signed by the worker.",
-            "date": "2024-01-01",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-notice-separate-document"
+          },
+          {
+            "sourceId": "crs-notice-content",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "C.R.S. § 8-2-113",
+            "citation": "C.R.S. § 8-2-113(4)(d).",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
+            "proposition": "Section 8-2-113(4)(d) supplies the agreement-copy, warning, and exact-section-pointer elements that satisfy the notice requirement.",
+            "verbatimQuote": "An employer satisfies the notice requirement of this subsection (4) when the notice: (I) Is provided with a copy of the agreement containing the covenant not to compete; (II) Identifies the agreement by name and states that the agreement contains a covenant not to compete that could restrict the workers' options for subsequent employment following their separation from the employer; and (III) Directs the worker to the specific sections or paragraphs of the agreement that contain the covenant not to compete.",
+            "date": "2025-09-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-notice-content"
           },
           {
             "sourceId": "crs-notice-fourteen-days",
@@ -1263,10 +1275,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(4)(a)(II).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(4)(a)(II) supports the fourteen-day advance-notice timing for current workers.",
             "verbatimQuote": "A current worker at least fourteen days before the earlier of: (A) The effective date of the covenant; or (B) The effective date of any additional compensation or change in the terms or conditions of employment that provides consideration for the covenant.",
-            "date": "2024-01-01",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-notice-fourteen-days"
           }
         ]
@@ -1280,7 +1292,7 @@
         "sectionId": "colorado-statutory-gates",
         "itemNumber": "19.4",
         "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#exclude-restrictive-covenants-for-health-care-providers",
-        "requirementGuidance": "For agreements entered into or renewed on or after August 6, 2025, the agreement must not impose a non-compete or customer non-solicit on a health-care provider — the earnings exception is closed for covenants restricting the practice of medicine, advanced practice registered nursing, or dentistry, and the protected class covers physicians, advanced practice registered nurses, certified midwives, and dentists. No compensation level buys the covenant back, and clauses muzzling the provider's patient communications are separately void.",
+        "requirementGuidance": "For agreements entered into or renewed on or after August 6, 2025, the agreement must not impose a non-compete or customer non-solicit that restricts the practice of medicine, advanced practice registered nursing, or dentistry. No compensation level buys that covenant back — the earnings exceptions are closed for those three practices. A covenant is also deemed to restrict them if it stops a health-care provider from telling a patient about a continuing practice, new professional contact information, or the patient's right to choose a provider, and the statute defines a health-care provider more broadly than the three practices: a physician, an advanced practice registered nurse, a certified midwife, or a dentist. Mind that asymmetry — certified midwifery is inside the definition but is not one of the three listed practices, so a covenant that restricts only a certified midwife's practice and leaves patient communications alone is not excluded on the face of the statute.",
         "variants": [],
         "sources": [
           {
@@ -1292,7 +1304,7 @@
             "url": "https://leg.colorado.gov/bills/sb25-083",
             "proposition": "SB 25-083 supports the removal of the highly compensated worker exception for covenants restricting the practice of medicine, advanced practice registered nursing, or dentistry.",
             "verbatimQuote": "EXCEPT FOR A COVENANT NOT TO COMPETE THAT RESTRICTS THE PRACTICE OF MEDICINE, THE PRACTICE OF ADVANCED PRACTICE REGISTERED NURSING, OR THE PRACTICE OF DENTISTRY IN THIS STATE, this subsection (2) does not apply to a covenant not to compete",
-            "date": "2025-05-08",
+            "date": "2025-06-03",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-sb25083-hcw-exception-removed"
           },
           {
@@ -1302,9 +1314,9 @@
             "title": "S.B. 25-083 (Limitations on Restrictive Employment Agreements)",
             "citation": "S.B. 25-083, 75th Gen. Assemb., Reg. Sess. (Colo. 2025) (adding C.R.S. § 8-2-113(2)(c)(I.3)).",
             "url": "https://leg.colorado.gov/bills/sb25-083",
-            "proposition": "SB 25-083 supports the definition of the covered health-care providers: physicians, advanced practice registered nurses, certified midwives, and dentists.",
+            "proposition": "SB 25-083 supports the statutory definition of health-care provider — a physician, an advanced practice registered nurse, a certified midwife, or a dentist — which is the class the patient-communication deeming rule protects, and which is broader than the three practices the compensation exceptions are closed for.",
             "verbatimQuote": "\"HEALTH-CARE PROVIDER\" MEANS AN INDIVIDUAL LICENSED TO ENGAGE IN THE PRACTICE OF MEDICINE, REGISTERED TO ENGAGE IN THE PRACTICE OF ADVANCED PRACTICE REGISTERED NURSING, LICENSED TO PRACTICE AS A CERTIFIED MIDWIFE, OR LICENSED TO ENGAGE IN THE PRACTICE OF DENTISTRY.",
-            "date": "2025-05-08",
+            "date": "2025-06-03",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-sb25083-provider-class"
           }
         ]
@@ -1318,7 +1330,7 @@
         "sectionId": "colorado-statutory-gates",
         "itemNumber": "19.5",
         "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#cap-minority-owner-sale-of-business-duration-by-consideration-ratio",
-        "requirementGuidance": "The sale-of-business exception still works, but for a minority owner who received the stake as equity compensation or for services, run the arithmetic: the covenant's maximum duration in years equals the total sale consideration the owner received divided by the owner's average annualized cash compensation over the prior two years or their tenure, whichever is shorter. A flat multi-year term copied from a majority-seller form will routinely blow past the cap — an owner who took $50,000 from the sale against $100,000 average pay can be held for at most six months.",
+        "requirementGuidance": "Subsection (2) does not prohibit a sale-of-business covenant, but it reaches only a covenant that restricts competition by an owner of an interest in the business — so a covenant imposed on a non-owner employee of the sold business gets no help from it. For a minority owner who received the stake as equity compensation or for services, run the arithmetic: the covenant's maximum duration in years equals the total sale consideration the owner received divided by the owner's average annualized cash compensation over the prior two years or their tenure, whichever is shorter. A flat multi-year term copied from a majority-seller form will routinely blow past the cap — an owner who took $50,000 from the sale against $100,000 average pay can be held for at most six months.",
         "variants": [],
         "sources": [
           {
@@ -1327,10 +1339,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(3)(c).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
-            "proposition": "Section 8-2-113(3)(c) supports the sale-of-business exception to the non-compete prohibition.",
-            "verbatimQuote": "A covenant for the purchase and sale of a business or the assets of a business",
-            "date": "2024-01-01",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
+            "proposition": "Section 8-2-113(3)(c) supports the sale-of-business covenant that subsection (2) does not prohibit, which as amended reaches only a covenant restricting competition by an owner of an interest in the business.",
+            "verbatimQuote": "For an individual who owns a minority ownership share of the business and who received their ownership share in the business as equity compensation or otherwise in connection with services rendered, the duration in years of a covenant not to compete described in this subsection (3)(c) must not exceed a number calculated by the total consideration received by the individual from the sale divided by the average annualized cash compensation received by the individual from the business, including income received on account of their ownership interest during the preceding two years or during the period of time that the individual was affiliated with the business, whichever period of time is shorter.",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-sale-of-business-exception"
           },
           {
@@ -1342,7 +1354,7 @@
             "url": "https://leg.colorado.gov/bills/sb25-083",
             "proposition": "SB 25-083 supports the duration cap on a minority owner's sale-of-business non-compete, calculated from total sale consideration divided by average annualized cash compensation.",
             "verbatimQuote": "THE DURATION IN YEARS OF A COVENANT NOT TO COMPETE DESCRIBED IN THIS SUBSECTION (3)(c) MUST NOT EXCEED A NUMBER CALCULATED BY THE TOTAL CONSIDERATION RECEIVED BY THE INDIVIDUAL FROM THE SALE DIVIDED BY THE AVERAGE ANNUALIZED CASH COMPENSATION RECEIVED BY THE INDIVIDUAL FROM THE BUSINESS, INCLUDING INCOME RECEIVED ON ACCOUNT OF THEIR OWNERSHIP INTEREST DURING THE PRECEDING TWO YEARS OR DURING THE PERIOD OF TIME THAT THE INDIVIDUAL WAS AFFILIATED WITH THE BUSINESS, WHICHEVER PERIOD OF TIME IS SHORTER.",
-            "date": "2025-05-08",
+            "date": "2025-06-03",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-sb25083-duration-ratio"
           }
         ]
@@ -1365,10 +1377,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(3)(a).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(3)(a) supports the limits on training-repayment provisions: distinct training, attorney-general transferability rules, reasonable costs, and a two-year decreasing recovery.",
             "verbatimQuote": "A provision providing for an employer's recovery of the expense of educating and training a worker where the training is distinct from normal, on-the-job training and satisfies any other requirements established by the attorney general, by rule, regarding the transferability of the training or credentialing that is available to the employee as a result of the training. The employer's recovery is limited to the reasonable costs of the training and decreases over the course of the two years subsequent to the training",
-            "date": "2024-01-01",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-trap-limits"
           },
           {
@@ -1377,10 +1389,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(8)(b).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(8)(b) supports the attorney general's authority to recover treble damages for an unlawful training-cost recovery.",
             "verbatimQuote": "The attorney general may recover three times the amount of any recovery or attempted recovery by an employer in violation of subsection (3)(a) of this section.",
-            "date": "2024-01-01",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-trap-treble"
           }
         ]
@@ -1403,10 +1415,10 @@
             "tier": "primary-source-backed",
             "title": "C.R.S. § 8-2-113",
             "citation": "C.R.S. § 8-2-113(3)(b).",
-            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf",
+            "url": "https://olls.info/crs/crs2025-title-08.pdf",
             "proposition": "Section 8-2-113(3)(b) supports the built-in limits of the confidentiality carve-out: general skills, public information, and legally protected disclosures stay outside the clause.",
-            "verbatimQuote": "A reasonable confidentiality provision relevant to the employer's business that does not prohibit disclosure of information that arises from the worker's general training, knowledge, skill, or experience, whether gained on the job or otherwise, information that is readily ascertainable to the public, or information that a worker otherwise has a right to disclose as legally protected conduct",
-            "date": "2024-01-01",
+            "verbatimQuote": "A reasonable confidentiality provision or trade secret provision relevant to the employer's business that does not prohibit disclosure of information that arises from the worker's general training, knowledge, skill, or experience, whether gained on the job or otherwise, information that is readily ascertainable to the public, or information that a worker otherwise has a right to disclose as legally protected conduct",
+            "date": "2025-09-16",
             "anchor": "https://openagreements.org/checklists/non-compete/us/colorado#src-crs-confidentiality-carveout-gate"
           }
         ]

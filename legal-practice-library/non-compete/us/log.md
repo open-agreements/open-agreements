@@ -1,5 +1,31 @@
 # Us Update Log
 
+## 2026-08-17
+* **Update**: fix(ny): make Delta source quote contiguous (3ab044e)
+
+## 2026-08-15
+* **Update**: content(ny): make Delta quotation verifiable (4a151e0)
+* **Update**: content(ny): apply counsel Delta scope corrections (5fb9b57)
+* **Update**: fix(colorado): scope and verify legal sources (7e4c894)
+
+## 2026-08-12
+* **Update**: content(ny): apply counsel tolling prose feedback (a22805b)
+* **Update**: fix(guide): complete Colorado notice guidance (cb75296)
+
+## 2026-08-07
+* **Update**: fix(ny): correct contractual tolling analysis (ea86118)
+
+## 2026-07-30
+* **Update**: content(co): key the health-care exclusion to the practice restricted, not provider status (#2023) (95c003b)
+* **Update**: content(co): re-quote Colorado statutes to the 2025 C.R.S. edition (#2023) (974063d)
+* **Update**: content(co): align the summary frontmatter with the practice-keyed health-care rule (#2023) (e8ca107)
+* **Update**: content: make New York answer opening standalone (f64b2c5)
+
+## 2026-07-29
+* **Update**: content: classify New York tolling evidence edges (3000b44)
+* **Update**: content: move New York tolling guidance into body analysis (350d060)
+* **Update**: content: pilot structured New York tolling guidance (4d6bb73)
+
 ## 2026-07-23
 * **Update**: content(non-compete): finalized Rollins consent order + FTC page freshness (closes #1885) (#1897) (e390380)
 

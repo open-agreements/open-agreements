@@ -87,7 +87,7 @@ Duration
 
 [[Affiliates]] means, with respect to Employer, any entity that directly or indirectly controls, is controlled by, or is under common control with Employer, including Employer's direct and indirect parent entities, subsidiaries, and any sister or operating entity under common control (for example, where the named Employer is a dedicated employment entity and the operating business is conducted through a commonly controlled affiliate). For this purpose, "control" means the power to direct the management and policies of an entity, whether through ownership of voting securities, by contract, or otherwise.
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
@@ -226,10 +226,10 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Florida](/practice-guides/non-compete/us/florida).
 
-### legitimate business interest
+### Legitimate business interest
 
 A naked interest in avoiding ordinary competition is not protectable. Plead and prove a specific interest from the statutory categories — or an analogous one supported by evidence — because a restraint not tied to a legitimate business interest is void and unenforceable .
 
-### choice act non-solicits
+### Choice act non-solicits
 
 The CHOICE Act defines _covered noncompete_ and _covered garden leave_ agreements but does not mention non-solicitation clauses. A four-year CHOICE Act non-compete may sit beside a non-solicit that still defaults to section 542.335's two-year presumption, so draft and analyze the two clauses separately rather than assuming the four-year term carries over .

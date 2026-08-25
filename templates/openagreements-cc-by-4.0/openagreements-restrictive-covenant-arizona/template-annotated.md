@@ -74,7 +74,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
@@ -203,54 +203,54 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Arizona](/practice-guides/non-compete/us/arizona).
 
-### third-party notices ride on covenant enforceability
+### Third-party notices ride on covenant enforceability
 
 A clause permitting the employer to notify a prospective employer or business associate of the agreement on a reasonable belief of breach is not free-standing. Arizona treats these restraints as disfavored, and a restriction greater than necessary to protect the employer's legitimate interest — or one that interest cannot outweigh against hardship to the employee and likely injury to the public — will not be enforced . A notice built on a covenant that later fails that analysis can expose the employer to a claim, so a notice provision reaches only as far as the underlying restraint, which stands only where it is no broader than necessary to protect its Protected Interests.
 
-### protectable interest comes first
+### Protectable interest comes first
 
 Each covenant in the family — non-compete, non-solicit, non-dealing, non-investment — depends on the legitimate business interest it protects. Arizona has no general non-compete statute and no statutory safe harbor: each covenant is enforceable only so long as it is no broader than necessary to protect that interest, and the interest inquiry is the threshold, so a covenant fails where the employer has no protectable interest in the relationship restrained . Hardship to the employee is weighed in the same analysis, so no acknowledgment, consideration recital, or irreparable-harm stipulation rescues an unreasonable restraint . Two things carry through the rest of the agreement: real Specified Competitors named in Cover Terms are strong evidence the restraint is no greater than necessary; and an assignee inherits the analysis unchanged — whoever enforces a covenant must show its own protectable interest behind the restraint, because an assignment moves the covenant without strengthening it. A non-investment covenant aimed at active or material participation in private competitors, resting on the passive-public-holdings carve-out, stays tied to the interest rather than to ordinary investing.
 
-### physician covenants under strict construction
+### Physician covenants under strict construction
 
 A physician clause survives here only where the practice restraint is confined to a narrow radius and a short term, drawn to preserve patient access and continuity of care. Physician covenants are not categorically void — Arizona rejects the argument that all physician non-competes are unenforceable as against public policy — but each one is strictly construed for reasonableness in light of the great public policy interest involved, and where the public interest in patients' ability to choose their doctor outweighs the employer's protectable interest, the covenant is not enforced . No enacted Arizona statute bans health-care non-competes, so the reasonableness limit — not any statutory cap — controls the radius and term.
 
-### the broadcast-employee ban
+### The broadcast-employee ban
 
 Any non-competition covenant depends first on whether the employer is a broadcast employer. Where the employer provides broadcasting services over a television or radio station or network, a required non-compete is unlawful: A.R.S. § 23-494 makes it unlawful, as a condition of employment, for a broadcast employer to require a current or prospective employee to agree to a noncompete clause, defined as a clause prohibiting work in a specific geographic area for a specific period after leaving the broadcast employer . This is Arizona's one categorical statutory non-compete ban, and it settles the covenant before any reasonableness analysis reaches the remaining terms.
 
-### consideration supports a covenant but does not make it reasonable
+### Consideration supports a covenant but does not make it reasonable
 
 A covenant an existing at-will employee signs after employment has commenced needs no separate payment, raise, or promotion — continued at-will employment is itself sufficient consideration . Adequate consideration establishes only that the covenants are supported, not that they are reasonable; each covenant must still independently satisfy the reasonableness analysis on time, territory, and scope.
 
-### de facto noncompetes
+### De facto noncompetes
 
 A confidentiality or non-solicitation covenant scoped to actual trade secrets and confidential information, with reasonable limits, stays clear of the line; one that broadly restricts a former employee's use of general skills or knowledge does not. An open-ended confidentiality clause can be struck as a disguised non-compete and is subject to the same strict no-rewrite rule .
 
-### non-solicits and non-dealing face the same test as non-competes
+### Non-solicits and non-dealing face the same test as non-competes
 
 A non-solicit does not escape scrutiny because it is labeled something lighter than a non-compete. Arizona runs anti-piracy covenants through the same no-broader-than-necessary test, so even the employee non-solicit — the lightest restraint in the family — reaches only covered employees during the restricted period, and the customer non-solicit reaches only as far as the employer's protectable interest in the specific customer relationships extends . Arizona also classifies covenants by functional effect rather than label, so the optional non-dealing clause — which bars serving covered customers even when the customer approaches first — draws the full reasonableness analysis and stands only when sized tightly to the goodwill it protects, because it sits closer to a non-compete than to a non-solicit . A tightly drawn customer non-solicit backstopped by the confidentiality and trade-secret protections is often a stronger and more readily enforceable protection than a broad non-compete.
 
-### confidentiality scope under AUTSA
+### Confidentiality scope under AUTSA
 
 A confidentiality clause scoped to defined Confidential Information and Trade Secrets with the durations set in Cover Terms, backed by return, deletion, and certification steps, supplies the reasonable secrecy efforts AUTSA requires — a trade secret earns protection only through independent economic value from secrecy plus efforts reasonable under the circumstances to maintain it — so a dated, retained certification is part of what the protection rests on . A misappropriation action must be brought within three years of when the misappropriation is or reasonably should have been discovered, another reason the dated certification matters . The Act displaces conflicting civil remedies for trade-secret misappropriation but expressly preserves contractual remedies whether or not based on misappropriation, so the covenant claims run alongside any statutory claim and a tightly scoped clause loses nothing the law would otherwise give .
 
-### sale-of-business scope
+### Sale-of-business scope
 
 A sale-of-business covenant stands or falls on whether its geography, duration, and scope of restricted activity track the goodwill actually being transferred. In _Berkadia_ a nationwide covenant binding a seller who had only ever worked in Tucson was struck as unreasonable, and Arizona's no-rewrite rule meant the court would not pare it back .
 
-### tolling duration
+### Tolling duration
 
 A clause extending the restricted period for the time the employee is in breach stands only where the base period and the extension together remain reasonable on their own terms. Under Arizona's strict no-rewrite rule, a court that finds the extended period unreasonable is more likely to void the covenant than to shorten it . A day-for-day extension carries less of that risk than an open-ended or indefinite one: no Arizona appellate decision has decided whether a covenant period tolls during breach or enforcement litigation, and any extension counts toward the covenant's total duration, which is measured for reasonableness .
 
-### forum clause binds only its signatories
+### Forum clause binds only its signatories
 
 A forum-selection clause binds only its parties. The Arizona Supreme Court has declined to let a non-signatory enforce one against a signatory merely because it is closely related to a party , so an affiliate, founder, or related entity cannot invoke the clause without signing; a non-signatory reaches the forum only as a party or through an express provision that addresses it.
 
-### choice of law
+### Choice of law
 
 A sister-state choice-of-law clause does not reliably obtain a more lenient non-compete rule or judicial reformation for an Arizona-centered employment relationship. Where Arizona has the most significant relationship, a court may apply Arizona law — including its strict no-rewrite rule — regardless of the contract's chosen law . A Governing Law set to Arizona, with governing-law and venue choices matched to where the employee actually lives and works, aligns the agreement with that result: a clause selecting another state's more lenient regime is likely unenforceable under Restatement (Second) of Conflict of Laws § 187(2)(b) because Arizona does not approve of broad non-compete provisions .
 
-### two-way statutory fee exposure
+### Two-way statutory fee exposure
 
 A mutual, prevailing-party fee-shifting clause tracks the exposure Arizona already creates: in any contested action arising out of a contract, the court may award the successful party reasonable attorney fees, whether or not the agreement says anything about fees . The award is discretionary and runs both ways — an employer that loses an overreaching enforcement action can be ordered to pay the former employee's fees — so a one-sided employer clause invites scrutiny without displacing the court's discretion.

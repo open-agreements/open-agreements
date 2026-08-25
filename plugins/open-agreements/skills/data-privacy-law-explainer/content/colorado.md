@@ -2,8 +2,8 @@
 jurisdiction: "Colorado"
 slug: colorado
 countryCode: US
-exportedAt: "2026-07-23"
-lawReviewedThrough: "2026-06-04"
+snapshotAsOf: "2026-08-25"
+lastReviewed: "2026-06-04"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/colorado
 license: CC BY 4.0
 stale: false
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/colorado · **Law reviewed through:** 2026-06-04 · **Exported:** 2026-07-23 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/colorado · **Snapshot as of:** 2026-08-25 · License: CC BY 4.0 · © openagreements.org
 
 # Colorado Consumer Privacy Law (CPA)[^about]
 
@@ -27,10 +27,10 @@ The Colorado Privacy Act gives Colorado consumers rights over their personal dat
 | Question | Colorado |
 | --- | --- |
 | **Law coverage** | Comprehensive law |
-| **Summary** | If you do business in Colorado and meet the 100,000-consumer (or 25,000 plus data-sale) threshold — nonprofits included — the CPA requires a privacy notice, a universal opt-out mechanism, processor contracts, and consent to process sensitive data, enforced by the Attorney General with no consumer lawsuits and no cure period. |
+| **Summary** | If you do business in Colorado and meet the 100,000-consumer, 25,000 plus data-sale, or biometric-data threshold — nonprofits included — the CPA requires applicable privacy safeguards, enforced by the Attorney General with no consumer lawsuits and no cure period. |
 | **Main law** | Colo. Rev. Stat. §§ 6-1-1301 et seq. (Colorado Privacy Act) |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with statutorily fixed contents |
-| **Who does it cover?** | Controllers doing business in Colorado (or targeting Coloradans) that control or process the data of 100,000+ consumers a year, or 25,000+ while deriving revenue from selling data — nonprofits included; no revenue floor |
+| **Who does it cover?** | Controllers doing business in Colorado (or targeting Coloradans) that control or process the data of 100,000+ consumers a year, 25,000+ while deriving revenue from selling data, or any amount of biometric identifiers or biometric data — nonprofits included; no revenue floor |
 | **Can consumers sue?** | No |
 | **Privacy policy rule** | Policy contents fixed by law |
 | **Consent for sensitive data?** | Consent required first |
@@ -40,7 +40,7 @@ The Colorado Privacy Act gives Colorado consumers rights over their personal dat
 
 ## Does the Colorado Privacy Act apply to your business? {#does-cpa-apply}
 
-**Short answer.** It depends on volume, not revenue — and unlike most states, nonprofits are not exempt. The CPA applies to a controller that does business in Colorado or targets Colorado residents and meets one of two thresholds: controlling or processing the personal data of 100,000 or more consumers in a year, or 25,000 or more consumers while deriving revenue (or a discount) from selling personal data [^stat-1304-apply].
+**Short answer.** It depends on data volume, not a general revenue floor — and unlike most states, nonprofits are not exempt. The CPA applies to a controller that does business in Colorado or targets Colorado residents and meets one of three thresholds: controlling or processing the personal data of 100,000 or more consumers in a year; controlling or processing 25,000 or more consumers' data while deriving revenue (or a discount) from selling personal data; or controlling or processing any amount of biometric identifiers or biometric data [^stat-1304-apply]. A controller that qualifies only through the biometric trigger must comply only for the biometric identifiers or biometric data it collects and processes.
 
 Two features make Colorado broader than the California or Texas models. First, there is no dollar revenue floor — the trigger is consumer-count plus a Colorado nexus. Second, the CPA reaches nonprofit organizations, which several other state privacy laws carve out entirely. As with the other state regimes, a consumer is a Colorado resident acting in an individual or household context, not an employee or a business contact, and entity- and data-level exemptions (for GLBA, HIPAA, and FCRA-regulated data, among others) still apply.
 
@@ -70,9 +70,9 @@ One Colorado wrinkle raises the stakes: the CPA's right-to-cure provision was re
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-04. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Colorado. This article synthesizes Colorado primary law and is not legal advice from a Colorado-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Colorado Consumer Privacy Law (CPA)*, OpenAgreements (last updated June 4, 2026), https://openagreements.org/practice-guides/privacy/us/colorado.
 
-[^stat-1304-apply]: **Colo. Rev. Stat. § 6-1-1304** — "this part 13 applies to a controller that: (a) Conducts business in Colorado or produces or delivers commercial products or services that are intentionally targeted to residents of Colorado; and (b) Satisfies one or both of the following thresholds:" *Colo. Rev. Stat. § 6-1-1304(1).* <https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-06.pdf>
+[^stat-1304-apply]: **Colo. Rev. Stat. § 6-1-1304** — "This part 13, other than sections 6-1-1305.5, 6-1-1308.5, and 6-1-1309.5, applies to a controller that: (I) (A) Conducts business in Colorado or produces or delivers commercial products or services that are intentionally targeted to residents of Colorado; and (B) Satisfies one or both of the following thresholds: controls or processes the personal data of one hundred thousand consumers or more during a calendar year; or derives revenue or receives a discount on the price of goods or services from the sale of personal data and processes or controls the personal data of twenty-five thousand consumers or more; or (II) Controls or processes any amount of biometric identifiers or biometric data regardless of the amount of biometric identifiers or biometric data controlled or processed annually; except that a controller that meets the qualifications of this subsection (1)(b) but does not meet the qualifications of subsection (1)(a) of this section shall comply with this part 13 only for the purposes of a biometric identifier or biometric data that the controller collects and processes;" *Colo. Rev. Stat. § 6-1-1304(1).* <https://olls.info/crs/crs2025-title-06.pdf>
 
-[^stat-1308-notice]: **Colo. Rev. Stat. § 6-1-1308** — "A controller shall provide consumers with a reasonably accessible, clear, and meaningful privacy notice that includes: (I) The categories of personal data collected or processed by the controller or a processor; (II) The purposes for which the categories of personal data are processed; (III) How and where consumers may exercise the rights pursuant to section 6-1-1306, including the controller's contact information and how a consumer may appeal a controller's action with regard to the consumer's request; (IV) The categories of personal data that the controller shares with third parties, if any; and (V) The categories of third parties, if any, with whom the controller shares personal data." *Colo. Rev. Stat. § 6-1-1308(1)(a).* <https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-06.pdf>
+[^stat-1308-notice]: **Colo. Rev. Stat. § 6-1-1308** — "A controller shall provide consumers with a reasonably accessible, clear, and meaningful privacy notice that includes: (I) The categories of personal data collected or processed by the controller or a processor; (II) The purposes for which the categories of personal data are processed; (III) How and where consumers may exercise the rights pursuant to section 6-1-1306, including the controller's contact information and how a consumer may appeal a controller's action with regard to the consumer's request;" *Colo. Rev. Stat. § 6-1-1308(1)(a).* <https://olls.info/crs/crs2025-title-06.pdf>
 
 [^stat-1308-optout-disclosure]: **Colo. Rev. Stat. § 6-1-1308** — "If a controller sells personal data to third parties or processes personal data for targeted advertising, the controller shall clearly and conspicuously disclose the sale or processing, as well as the manner in which a consumer may exercise the right to opt out of the sale or processing." *Colo. Rev. Stat. § 6-1-1308(1)(b).* <https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-06.pdf>
 

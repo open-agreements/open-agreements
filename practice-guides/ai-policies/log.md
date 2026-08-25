@@ -1,5 +1,8 @@
 # Ai Policies Update Log
 
+## 2026-08-24
+* **Update**: Colorado: the AI Act is in force on all six topic pages, not five (#2239) (5774652)
+
 ## 2026-06-20
 * **Update**: fix(content): firm-only sourcing triage — AI-policy/AUP/monitoring topics (cluster 3/5, refs #950) (#958) (f09e1e9)
 

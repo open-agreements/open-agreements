@@ -74,7 +74,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
@@ -199,30 +199,30 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Ohio](/practice-guides/non-compete/us/ohio).
 
-### reasonableness
+### Reasonableness
 
 Adequate consideration does not cure an overbroad covenant. Continued at-will employment satisfies _Lake Land_, but a restraint that fails _Raimonde_ on time, territory, or scope is unenforceable no matter how cleanly the rest of the agreement reads, because consideration establishes only that a covenant is supported, not that it is reasonable .
 
-### protectable interests
+### Protectable interests
 
 An Ohio non-compete that blocks competition disconnected from a protectable interest reaches nothing the law recognizes and fails on the interest requirement: the restraint holds only where it is tied to identified confidential information, trade secrets, or customer goodwill. A separate confidentiality and trade-secret strategy under R.C. 1333.61 et seq. survives even where the non-compete does not .
 
-### the trade-secret backstop under the Ohio Uniform Trade Secrets Act
+### The trade-secret backstop under the Ohio Uniform Trade Secrets Act
 
 A broad Ohio non-compete draws the heaviest reasonableness scrutiny, while the Ohio Uniform Trade Secrets Act supplies a remedy that does not depend on any covenant: actual or threatened misappropriation of a trade secret may be enjoined under R.C. 1333.62, and the Act protects information that derives independent economic value from secrecy and is the subject of reasonable efforts to keep it secret . A confidentiality and customer-non-solicitation strategy built on that statutory backstop often protects the employer more durably than a non-compete that has to survive the full _Raimonde_ analysis, and it holds even where the non-compete is trimmed or declined .
 
-### duration and territory
+### Duration and territory
 
 A fixed term or radius copied from another form is measured against the employer's actual market, not the source it came from: an Ohio court evaluates the restraint as a whole against the employer's real protectable interest, with no safe-harbor number, so a duration or territory sized to a different role or market is exposed to being trimmed or declined .
 
-### assignment
+### Assignment
 
 _Acordia_ reaches only covenants that pass by statutory merger, so a covenant silent on assignment can raise a live assignability question in an asset deal, where the buyer may be unable to enforce the restraint. Express assignment and successor-and-assigns language carries the covenant to a buyer in a transaction that is not a statutory merger .
 
-### a bounded extension-on-breach term
+### A bounded extension-on-breach term
 
 An Ohio covenant does not necessarily lapse on its stated end date while a dispute is pending: under _Homan_, a covenant may not expire while the enforceability of the agreement is being litigated, so the restricted period can be tolled until the case resolves . That judicial tolling is equitable rather than automatic, and any contractual extension-on-breach term is measured against the same _Raimonde_ reasonableness backdrop, so an open-ended or indefinite extension is exposed to being cut back like any other overbroad restraint, while an extension bounded to the duration of the breach stands with the covenant it protects .
 
-### heightened public-interest scrutiny for physician covenants
+### Heightened public-interest scrutiny for physician covenants
 
 A physician covenant drafted like an ordinary commercial restraint meets heightened public-interest scrutiny in Ohio: a covenant restraining a physician-employee is unreasonable where it imposes undue hardship on the physician and injures the public because the physician's services are vital to the community and the demand for that expertise is critical . A narrow radius and a short term that preserve patient access and continuity of care are what let such a covenant survive that scrutiny, and a covered nonprofit-hospital clinician covenant would face a further statutory ceiling if Senate Bill 301 is enacted .

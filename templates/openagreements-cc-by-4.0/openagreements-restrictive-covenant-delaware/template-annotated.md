@@ -74,7 +74,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
@@ -203,22 +203,22 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Delaware](/practice-guides/non-compete/us/delaware).
 
-### the holistic reasonableness review
+### The holistic reasonableness review
 
 Every covenant in a Delaware agreement stands or falls on the Court of Chancery's three-part review — reasonable in geographic scope and temporal duration, advancing a legitimate economic interest, and surviving a balancing of the equities — and the court reviews the restraint holistically, weighing each dimension and how it operates alongside every other restriction in the contract . Because the review reaches every dimension, added duration is measured too: a tolling extension that lengthens a restricted period during a breach is itself more duration the same holistic review weighs, so an open-ended or indefinite extension is exposed like any other overbroad term. Adequate consideration establishes only that a covenant is supported, not that it is reasonable, and even injunctive relief presupposes a covenant that first survives this review — a restraint that fails it is not rescued by a strong consideration recital or an irreparable-harm stipulation .
 
-### sale-of-business scope
+### Sale-of-business scope
 
 A Delaware M&A covenant reaches only as far as the acquired business and the goodwill actually purchased; buyer-family affiliate language that sweeps in unrelated legacy businesses exceeds the interest bought in the transaction and is exposed to the same refusal to blue-pencil that governs employment covenants . The same goodwill match follows the covenant when it is assigned: a successor whose business does not correspond to the goodwill and confidential information the covenant was written to protect inherits the covenant's posture and may find it harder to enforce in its hands.
 
-### formation-stage consideration
+### Formation-stage consideration
 
 Delaware measures consideration at the moment a covenant is formed, not at enforcement, so a covenant supported when signed is not unwound by a later forfeiture or change in benefits — and a covenant re-papered by amendment is its own formation event, which is why the value that moved at each signing is worth recording . Continued at-will employment can supply that consideration where signing is a condition of keeping the position, but a bare adequacy recital does less work than the specific value named: adequacy is not irrelevant, because the balancing of the equities still lets a court weigh how much the employee actually received against the breadth of the restraint .
 
-### physician damages
+### Physician damages
 
 In a Delaware physician agreement, a covenant that restricts a physician's right to practice medicine by locale or for a defined period after termination is void under Section 2707, which severs the practice restraint while leaving the rest of the agreement enforceable, including a damages provision in an amount reasonably related to the injury from termination . A damages clause bundled into the voided practice restraint, or set at an amount untethered to actual injury, sits outside what the statute preserves; the damages provision that survives is the one kept separate from any practice restriction and tied to reasonably related injury.
 
-### the Delaware choice-of-law anchor
+### The Delaware choice-of-law anchor
 
 Section 2708 gives a written Delaware choice-of-law selection a strong anchor — conclusively presumed to bear a significant, material, and reasonable relationship with Delaware and enforceable whether or not other relationships exist — but it does not reach a contract involving less than $100,000, so a selection resting on it in a smaller-value agreement rests on nothing . The anchor is not a universal workaround either: Delaware's own courts have declined to let its freedom-of-contract interest always trump another state's fundamental policy and have applied that other state's law where it had the materially greater interest, so a Delaware clause used against a worker whose residence and work center on another state invites a choice-of-law fight measured by the default state's policy and interest, not by the clause alone .

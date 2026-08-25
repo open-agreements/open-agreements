@@ -85,7 +85,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee, information that arises from Employee's general training, knowledge, skill, or experience whether gained on the job or otherwise, information that is readily ascertainable to the public, and information Employee otherwise has a right to disclose as legally protected conduct.
 
@@ -210,18 +210,18 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Rhode Island](/practice-guides/non-compete/us/rhode-island).
 
-### the common-law enforcement showing
+### The common-law enforcement showing
 
 Every covenant not banned by statute is a disfavored restraint subject to strict judicial scrutiny, and the party seeking enforcement carries the burden of the full showing: that the covenant is ancillary to a valid relationship, supported by consideration, protective of a legitimate interest, and no broader than apparently necessary . Protection from ordinary competition is not a legitimate interest, so a covenant that names Protected Interests without a real interest behind it — confidential customer relationships, goodwill, or trade secrets — leaves nothing for the restraint to protect when the burden is tested. A covenant with no stated time or geographic limit is not automatically void, but it is enforced only to the extent necessary to protect the promisee's legitimate interests, so an open-ended restraint is measured down to what the record proves rather than to what it says . An assignment moves the covenant without lightening that showing: whoever enforces it carries the same elements the original employer would.
 
-### the consideration record
+### The consideration record
 
 Consideration is one of the enforcement elements the employer must prove, so a covenant signed during employment stands on what the record shows moved in exchange for it. Rhode Island treats continued at-will employment, plus training and licensure support, as part of a lawful exchange that can support a restraint agreed mid-employment, and it enforced such a covenant even after an involuntary termination where the covenant applied on any termination without language tied to the reason for departure . That signal is strong but not final: it came from the affirmance of a preliminary injunction reviewed for abuse of discretion, not a final judgment on validity, so a covenant that rests on a thin or unrecorded exchange is exposed once a fuller record is developed . The restraint that carried was customer-scoped rather than a broad activity ban, which is the shape a mid-employment refresh is measured against .
 
-### the reach of the physician and APRN practice-restriction bans
+### The reach of the physician and APRN practice-restriction bans
 
 The physician and APRN bans void any restriction of the right to practice, and they reach further than a clause labeled non-compete: geographic practice limits and limits on treating, consulting with, or soliciting current patients are all restrictions of the right to practice . A customer non-solicit aimed at a provider's patients therefore sits inside the ban even though it would otherwise fall outside Chapter 28-59, so a restraint that captures a physician's or an advanced practice registered nurse's patients is void as to that restriction while the rest of the agreement survives. Each statute shares one exception — a covenant made in connection with the sale of a practice that lasts no more than five years — and the APRN ban has applied since June 17, 2024, so a covenant against an APRN signed on or after that date is measured against it.
 
-### trade-secret and confidentiality terms as the fallback
+### Trade-secret and confidentiality terms as the fallback
 
 When a worker falls inside a non-compete ban or a broad activity restraint is hard to justify, the confidentiality and trade-secret terms carry the entire protective load, and Rhode Island preserves them for that role: the act expressly permits an agreement not to share employer trade-secret information after employment . That fallback holds only while the confidentiality clause stays a confidentiality clause. An NDA written broadly enough to bar ordinary post-employment work functions as a hidden non-compete and invites reclassification under the very regime the drafter was avoiding, so reserving trade-secret treatment for information that meets the statutory definition, and keeping a written return-and-certification record, are what stand up when protected material later surfaces at a competitor .

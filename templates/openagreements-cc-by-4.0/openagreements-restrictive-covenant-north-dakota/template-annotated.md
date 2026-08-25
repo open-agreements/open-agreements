@@ -140,18 +140,18 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in North Dakota](/practice-guides/non-compete/us/north-dakota).
 
-### judicial narrowing
+### Judicial narrowing
 
 For an employment covenant, an invalid restraint is struck rather than trimmed to the bounds of reason: North Dakota's main employment cases apply no general blue-pencil rescue to ordinary post-employment non-competes or customer restrictions, so a savings clause inviting a court to rewrite the restraint has no rule to invoke and the overbroad covenant simply falls .
 
-### choice-of-law and forum as an exit from the statute
+### Choice-of-law and forum as an exit from the statute
 
 For an employee who primarily lives and works in North Dakota, a foreign choice-of-law or forum-selection clause does not survive where its natural result is enforcing a non-compete against North Dakota work: the North Dakota Supreme Court refused to honor exactly that South Dakota clause because it would route around § 9-08-06 . The foreign-forum statute independently lets a North Dakota court decline an exclusive out-of-state forum whose enforcement would be unfair or unreasonable, so an out-of-state law-and-forum pair copied from a national form is measured against a public policy it cannot contract past .
 
-### the narrow anti-raiding shelter
+### The narrow anti-raiding shelter
 
 An employee non-solicitation covenant clears § 9-08-06 only in the narrow anti-raiding shape the North Dakota Supreme Court left standing: one that penalizes soliciting or influencing an employee to leave, reaches only colleagues the departing worker actually worked with, and leaves the worker free to compete . A version that bars hiring without solicitation, sweeps in the whole workforce, or shades into competing for customers loses that shelter and falls back into the void rule as a restraint of trade. The shelter is also only as strong as the proof: even a lawful anti-raiding clause yields no injunction on a record devoid of competent evidence of actual solicitation .
 
-### protection routed through trade-secret and loyalty tools
+### Protection routed through trade-secret and loyalty tools
 
 In a ban state, a North Dakota employer's post-employment protection runs through trade-secret and misappropriation remedies and during-employment loyalty duties, not a covenant against competition . A confidentiality, return-of-property, or invention-assignment clause holds only while it targets misuse of protected information or disloyal conduct; construed to bar ordinary work for a competitor or ordinary dealing with customers, it inherits the void rule of § 9-08-06 rather than the trade-secret safe ground, and gains nothing the misappropriation remedy did not already supply.

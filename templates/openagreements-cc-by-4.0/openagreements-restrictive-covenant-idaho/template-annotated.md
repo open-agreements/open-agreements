@@ -88,7 +88,7 @@ Consideration for Restrictive Covenants
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business, limited so far as possible to the type of employment or line of business Employee actually conducted for Employer.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business, limited so far as possible to the type of employment or line of business Employee actually conducted for Employer.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
@@ -209,34 +209,34 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Idaho](/practice-guides/non-compete/us/idaho).
 
-### key-worker evidence
+### Key-worker evidence
 
 Salary rank carries a covenant only so far: the highest-paid-five-percent presumption is rebuttable, and outside the top five percent it does not apply at all, so a covenant against a worker who is not demonstrably key holds only where the record shows the inside knowledge, public exposure, customer influence, or similar facts that make the worker key . A covenant resting on pay rank alone stands exposed where the worker rebuts the presumption or falls outside it.
 
-### protected interest
+### Protected interest
 
 A covenant enforces only so far as it protects a legitimate business interest and reaches no further than reasonably necessary, so a generic competition ban untied to a named interest is measured against nothing the employer can point to and is weaker than a covenant tied to the actual customer contacts, referral sources, confidential processes, technologies, or similar interests the worker can turn against the employer . A restraint pitched at ordinary competition rather than a named protectable interest is the one most exposed to the no-greater-restraint-than-necessary limit.
 
-### duration consideration
+### Duration consideration
 
 A direct-competition restraint longer than eighteen months falls outside the duration presumption and, absent consideration beyond employment or continued employment, section 44-2704 leaves the over-eighteen-month term vulnerable at the threshold . A term that runs past eighteen months on continued employment alone is the one section 44-2704(1) reaches first, so a restraint kept inside the window or backed by documented independent consideration is the one that holds.
 
-### geography and work scope
+### Geography and work scope
 
 Idaho's geographic and line-of-business presumptions attach only where the territory tracks the worker's actual service area or influence and the restricted business tracks the worker's actual work for the employer, so statewide or all-industry language unsupported by the facts forfeits those presumptions and leaves the covenant to prove reasonableness from scratch . A radius or industry sweep broader than the worker's real footprint is the part a court measures against the no-greater-restraint limit.
 
-### affirmative solicitation
+### Affirmative solicitation
 
 Under _Horn_, solicitation requires an overt act seeking the customer's business, so a customer restriction built around affirmative solicitation stays inside the settled rule, while one that bars accepting unsolicited work reaches conduct _Horn_ holds is not solicitation and functions as something broader . Idaho has not resolved whether a no-service or non-dealing restraint enforces as written, is analyzed as a direct-competition restraint under chapter 44-27 with the key-worker gate and eighteen-month cap, or fails, so a covenant confined to affirmative solicitation carries the least of that risk.
 
-### forum selection
+### Forum selection
 
 Idaho Code § 29-110 voids a stipulation that keeps an Idaho party from enforcing contract rights in Idaho tribunals, and its arbitration carve-out does not protect out-of-state arbitration, so a foreign-law or out-of-state-forum clause does not reliably move an Idaho resident's restrictive-covenant dispute out of Idaho . Forum, arbitration location, and choice of law each turn on that policy separately, and a clause that ignores § 29-110 is the one an Idaho court sets aside.
 
-### sale-of-business goodwill
+### Sale-of-business goodwill
 
 A sale-of-business covenant draws more deference because it protects purchased goodwill, but that deference does not displace the reasonableness requirement for duration, geography, and scope, so a sale covenant untethered from the goodwill actually bought is still measured for reasonableness like any other restraint . The covenant tied to the sold business and its goodwill is the one the deference actually reaches.
 
-### trade-secret separation
+### Trade-secret separation
 
 Trade-secret protection survives independently of chapter 44-27, so where the real risk is misuse of secret information an Idaho Trade Secrets Act claim, resting on actual or threatened misappropriation, is often better tailored than a broad work ban that must clear the key-worker gate and reasonableness limits . That protection depends on demonstrated secrecy efforts and misappropriation evidence, so confidentiality, trade-secret, and non-compete obligations kept on separate footing each stand or fall on their own terms rather than dragging one another down.

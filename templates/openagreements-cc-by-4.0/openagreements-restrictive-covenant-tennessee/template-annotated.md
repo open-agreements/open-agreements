@@ -74,7 +74,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee and excluding the general knowledge, skill, and experience Employee acquired during employment.
 
@@ -203,30 +203,30 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Tennessee](/practice-guides/non-compete/us/tennessee).
 
-### the special-facts threshold and the reasonableness factors
+### The special-facts threshold and the reasonableness factors
 
 A Tennessee covenant not to compete is a disfavored restraint of trade that a court enforces only when reasonableness is established, so acknowledgments of reasonableness in the agreement do not carry the covenant on their own. The threshold question comes before the balancing: an employer cannot restrain ordinary competition, and only special facts over and above ordinary competition — confidential information or trade secrets, an investment in special training, or customer relationships in which the employee is the face of the business — support the restraint at all . Once a protectable interest exists, the covenant stands or falls on whether its time and territory are greater than required to protect that interest, weighed against the consideration, the threatened danger to the employer, the hardship on the employee, and the public interest — a covenant reaching further than the proven interest is exposed on the element that reaches too far .
 
-### the $70,000 threshold and the events that trigger it
+### The $70,000 threshold and the events that trigger it
 
 From July 1, 2026, a non-compete against an employee whose annualized compensation is under $70,000 is void and unenforceable as a matter of public policy, and the bar reaches asking a below-threshold employee to sign, not only suing on the covenant . The threshold turns on the statutory definition of annualized compensation — wages, salary, commissions, nondiscretionary bonuses, and other remuneration, with an hourly rate annualized at forty hours times fifty-two weeks — so a covenant priced against base salary alone can misjudge who is covered . The trigger is not only a new signing: an agreement renewed or amended on or after that date is pulled into the same regime, so a notice to a future employer that rests on a non-compete has force only where the underlying covenant actually clears the threshold and the reasonableness analysis .
 
-### restricted-period duration presumption windows
+### Restricted-period duration presumption windows
 
 For an employee covenant entered into, renewed, or amended on or after July 1, 2026, a duration at or under two years falls inside the statutory presumption of reasonableness in time, and a longer term is presumptively unreasonable — a court applies the window as a rebuttable presumption, so a term beyond it leaves the party seeking enforcement to rebut the presumption. A within-window term is presumed reasonable in time only; geography and the protectable-interest requirement remain to be tested under the common-law reasonableness analysis, so a covenant sized to the outer bound but untethered to a legitimate interest still fails .
 
-### continued employment as consideration
+### Continued employment as consideration
 
 A covenant an existing Tennessee employee signs after hire is supported when the employee then remains employed for an appreciable length of time; the length of the continued employment is what supplies the consideration, so a covenant paired with only a brief tenure after signing is on weaker ground . Adequate consideration establishes only that a covenant is supported, not that it is reasonable, so a covenant that clears the consideration question still has to satisfy the protectable-interest, time, territory, and scope limits on its own; where continued employment is brief, separate consideration identified in the agreement removes the doubt .
 
-### the health-care-provider safe harbor and its limits
+### The health-care-provider safe harbor and its limits
 
 For a provider licensed under the listed chapters of Title 63, a covenant deemed reasonable is one in writing, running two years or less, and within the greater of a ten-mile radius from the primary practice site or the county in which it sits; a covenant tied to the purchase or sale of the practice carries a rebuttable presumption that its agreed duration and area are reasonable . Meeting the safe harbor deems the covenant reasonable in time and area only — the protectable-interest requirement and the other common-law limits still apply, so a safe-harbor-compliant covenant untethered to a legitimate interest still fails. The safe harbor does not reach a physician who specializes in emergency medicine: no statute then authorizes the covenant, so it remains void, the same result the threshold section reaches for that physician .
 
-### preserved covenants operating as de facto non-competes
+### Preserved covenants operating as de facto non-competes
 
 The 2026 statute preserves a confidentiality or nondisclosure agreement, a customer non-solicitation agreement, and an employee non-solicitation agreement from its non-compete rules, so a covenant tied to genuine confidential information, customers, or employees sits outside the time presumptions and the $70,000 threshold; together with the trade-secret protections, a customer non-solicit is often a more readily enforceable protection than a broad non-compete . That shelter depends on the covenant staying within its category: a non-solicitation or confidentiality clause drawn so broadly that it bars the worker from competing at all reads as a disguised non-compete and draws the same reasonableness scrutiny — and, for a below-threshold employee, the same voidness risk — as an express non-compete. A no-dealing covenant is not on the preserved list at all, so a court may test it under the disfavored-restraint framework rather than the carve-out, and a clock kept independently per covenant makes clear which covenants answer to the statute and which do not .
 
-### a good-faith basis for an out-of-state choice of law
+### A good-faith basis for an out-of-state choice of law
 
 A Tennessee court honors a contractual choice of another state's law only when certain requirements are met, beginning with good-faith execution and a genuine connection between the chosen state and the parties . A clause picking a state with no real connection, or one deployed to escape Tennessee's protections — including the $70,000 bar — is vulnerable, so a covenant with a Tennessee worker that leans on foreign law to survive is exposed if that choice cannot be defended as genuine; governing-law and venue that track where the worker actually lives and works leave the covenant measured against the law it was drafted for .

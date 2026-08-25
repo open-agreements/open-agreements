@@ -7182,6 +7182,15 @@
           "default_value_rationale": null
         },
         {
+          "name": "confidentiality_term",
+          "type": "string",
+          "required": true,
+          "section": "Terms",
+          "description": "How long Confidential Information remains protected (e.g. \"1 year\", \"3 years\")",
+          "default": "1 year(s)",
+          "default_value_rationale": null
+        },
+        {
           "name": "confidentiality_term_start",
           "type": "string",
           "required": true,
@@ -12391,6 +12400,118 @@
       ]
     },
     {
+      "name": "openagreements-colorado-restrictive-covenant-notice",
+      "tier": "internal",
+      "display_name": "Colorado Notice of Restrictive Covenants",
+      "category": "employment",
+      "description": "Separate worker notice accompanying the Colorado Employee Restrictive Covenant Agreement under C.R.S. § 8-2-113(4).",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-colorado-restrictive-covenant-notice",
+      "source": "OpenAgreements",
+      "attribution_text": "Authored by OpenAgreements contributors. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "stability": "experimental",
+      "credits": [],
+      "fields": [
+        {
+          "name": "employer_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Full legal name of the employer providing the notice",
+          "display_label": "Employer",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employee_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Full name of the worker receiving the notice",
+          "display_label": "Worker",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "agreement_name",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Exact name of the accompanying agreement containing the covenants",
+          "display_label": "Agreement Name",
+          "default": "Employee Restrictive Covenant Agreement",
+          "default_value_rationale": null
+        },
+        {
+          "name": "notice_date",
+          "type": "date",
+          "required": false,
+          "section": null,
+          "description": "Date the notice and complete agreement copy are delivered",
+          "display_label": "Notice Date",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "worker_status",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Whether the recipient is a prospective or current worker",
+          "display_label": "Worker Status",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "Prospective worker",
+            "Current worker"
+          ]
+        },
+        {
+          "name": "noncompete_included",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Whether the accompanying agreement includes Non-Competition",
+          "display_label": "Non-Competition Included",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "customer_nonsolicit_included",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Whether the accompanying agreement includes Non-Solicitation of Customers",
+          "display_label": "Customer Non-Solicitation Included",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "nondealing_included",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Whether the accompanying agreement includes No Business with Covered Customers",
+          "display_label": "No Business with Covered Customers Included",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "noninvestment_included",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Whether the accompanying agreement includes Non-Investment",
+          "display_label": "Non-Investment Included",
+          "default": "false",
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
       "name": "openagreements-confidentiality-invention-assignment-agreement",
       "tier": "internal",
       "display_name": "Confidentiality & Invention Assignment Agreement (CIIAA)",
@@ -14828,6 +14949,164 @@
       ]
     },
     {
+      "name": "openagreements-privacy-policy",
+      "tier": "internal",
+      "display_name": "Consumer Privacy Policy",
+      "category": "data-compliance",
+      "description": "Configurable national consumer privacy-policy template that assembles the union of U.S. state privacy-disclosure duties, gated by a business's coverage and data-practice facts.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-privacy-policy",
+      "source": "OpenAgreements",
+      "attribution_text": "Adapted from the OpenAgreements privacy-policy specification. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "stability": "experimental",
+      "credits": [],
+      "fields": [
+        {
+          "name": "business_legal_name",
+          "type": "string",
+          "required": true,
+          "section": "Business",
+          "description": "Legal name of the business (the controller) that this privacy policy describes.",
+          "display_label": "Business Legal Name",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "business_contact_email",
+          "type": "string",
+          "required": false,
+          "section": "Business",
+          "description": "An email address consumers can use to reach the business about this policy or their privacy rights.",
+          "display_label": "Contact Email",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "business_postal_address",
+          "type": "string",
+          "required": false,
+          "section": "Business",
+          "description": "A postal address consumers can use to reach the business about this policy or their privacy rights.",
+          "display_label": "Postal Address",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "privacy_request_url",
+          "type": "string",
+          "required": false,
+          "section": "Requests",
+          "description": "The web address or channel where consumers submit privacy-rights requests.",
+          "display_label": "Privacy Request Link",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "appeal_request_url",
+          "type": "string",
+          "required": false,
+          "section": "Requests",
+          "description": "The web address or channel where consumers appeal a refused privacy-rights request.",
+          "display_label": "Appeal Link",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "rights_response_days",
+          "type": "number",
+          "required": false,
+          "section": "Requests",
+          "description": "The number of days within which the business responds to a privacy-rights request. The common VCDPA-family clock is 45 days (the union-strictest common deadline); set it shorter if a stricter in-scope state's deadline binds the business.",
+          "display_label": "Rights Response Days",
+          "default": "45",
+          "default_value_rationale": "45 days is the common comprehensive-privacy-act response clock; it is the safe national default until a narrower in-scope state deadline applies."
+        },
+        {
+          "name": "appeal_response_days",
+          "type": "number",
+          "required": false,
+          "section": "Requests",
+          "description": "The number of days within which the business responds to an appeal of a refused request. The Florida (FDBR) appeal window is 60 days (the union-strictest common deadline); set it shorter if a stricter in-scope state's deadline binds the business.",
+          "display_label": "Appeal Response Days",
+          "default": "60",
+          "default_value_rationale": "60 days is the FDBR appeal window and the safe national default until a narrower in-scope state deadline applies."
+        },
+        {
+          "name": "policy_effective_date",
+          "type": "string",
+          "required": true,
+          "section": "Dates",
+          "description": "The date this privacy policy takes effect.",
+          "display_label": "Effective Date",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "policy_last_updated",
+          "type": "string",
+          "required": false,
+          "section": "Dates",
+          "description": "The date this privacy policy was last updated.",
+          "display_label": "Last Updated",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "personal_data_categories",
+          "type": "string",
+          "required": true,
+          "section": "Disclosures",
+          "description": "The categories of personal data the business processes, as a comma-separated phrase (e.g. \"identifiers, contact details, device and usage data, purchase history\").",
+          "display_label": "Personal Data Categories",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "sensitive_data_categories",
+          "type": "string",
+          "required": false,
+          "section": "Disclosures",
+          "description": "The sensitive-data categories the business processes, called out separately, as a comma-separated phrase (e.g. \"precise geolocation, health data\"). Leave empty when the business processes no sensitive data; the sensitive-data DISCLOSURE sentence is gated on this field being non-empty. (The sensitive-data CONSENT clause is gated separately on the derived field show_sensitive_consent.)",
+          "display_label": "Sensitive Data Categories",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "processing_purposes",
+          "type": "string",
+          "required": false,
+          "section": "Disclosures",
+          "description": "The purposes for which the business processes personal data, as a comma-separated phrase (e.g. \"providing and improving our services, processing transactions, security and fraud prevention, communicating with you\").",
+          "display_label": "Processing Purposes",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "third_party_categories",
+          "type": "string",
+          "required": false,
+          "section": "Disclosures",
+          "description": "The categories of third parties with whom the business shares personal data, described in enough detail for a consumer to understand what type of entity each is, as a comma-separated phrase (e.g. \"payment processors, cloud-hosting providers, analytics vendors\").",
+          "display_label": "Third-Party Recipient Categories",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "data_sources",
+          "type": "string",
+          "required": false,
+          "section": "Disclosures",
+          "description": "The sources from which the business collects personal data, as a comma-separated phrase (e.g. \"directly from you, automatically from your device, from our service providers\").",
+          "display_label": "Data Sources",
+          "default": null,
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
       "name": "openagreements-restrictive-covenant-alabama",
       "tier": "internal",
       "display_name": "Employee Restrictive Covenant (Alabama)",
@@ -16204,26 +16483,6 @@
           "default_value_rationale": null
         },
         {
-          "name": "highly_compensated_threshold",
-          "type": "string",
-          "required": false,
-          "section": "Colorado Statutory Gates",
-          "description": "Annualized cash compensation figure that gates the non-compete. The Division of Labor Standards and Statistics resets the highly compensated worker threshold annually through the PAY CALC Order; the controlling figure is the greater of the August 10, 2022 amount or the amount in effect when the covenant is executed. The default is the 2026 figure; replace it with the figure for the execution year.",
-          "display_label": "Highly Compensated Worker Threshold",
-          "default": "$130,014",
-          "default_value_rationale": "$130,014 is the 2026 highly compensated worker threshold set by the 2026 PAY CALC Order. The Division resets it annually, so counsel should confirm the figure for the covenant's execution year."
-        },
-        {
-          "name": "customer_nonsolicit_threshold",
-          "type": "string",
-          "required": false,
-          "section": "Colorado Statutory Gates",
-          "description": "Annualized cash compensation figure that gates the customer non-solicit, equal to sixty percent of the highly compensated worker threshold. The default is the 2026 derived figure; replace it with sixty percent of the threshold for the execution year.",
-          "display_label": "Customer Non-Solicit Threshold",
-          "default": "$78,008.40",
-          "default_value_rationale": "$78,008.40 is sixty percent of the 2026 highly compensated worker threshold of $130,014. The PAY CALC Order does not state this figure, so confirm the current-year derived amount before using the covenant."
-        },
-        {
           "name": "confidentiality_trade_secret_duration",
           "type": "string",
           "required": false,
@@ -16308,10 +16567,10 @@
           "type": "boolean",
           "required": false,
           "section": "Non-Competition",
-          "description": "Whether the non-competition covenant is included. Under the Colorado Noncompetition Agreement Act a Colorado covenant not to compete is void by default; it survives only under the highly compensated worker exception, which requires the worker to earn at or above the threshold both when the covenant is entered into and when it is enforced and requires the covenant to protect trade secrets and be no broader than reasonably necessary. This template recites those gates when the covenant is included.",
+          "description": "Whether the non-competition covenant is included.",
           "display_label": "Non-Competition Included",
           "default": "false",
-          "default_value_rationale": "Conservative default. A Colorado non-compete is void unless the employer can fit it into the narrow highly compensated worker exception, and merely presenting a void covenant is unlawful, carrying actual damages plus a $5,000-per-worker penalty. Include only after confirming the worker clears the threshold at signing and enforcement, the covenant protects an identified trade-secret interest, the separate signed notice was delivered, and the worker is not a health-care provider barred by the 2025 health-care provider amendments."
+          "default_value_rationale": "Conservative default. Non-competes are the most heavily scrutinized covenant; include only after confirming enforceability under the agreement's governing law and tailoring the restraint to a legitimate protectable interest."
         },
         {
           "name": "noncompete_duration",
@@ -20155,16 +20414,6 @@
           "description": "Whether Employee is a physician. Set this explicitly from Employee's licensed role to include physician-specific terms.",
           "display_label": "Employee Is a Physician",
           "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "worker_is_real_estate_licensee",
-          "type": "boolean",
-          "required": false,
-          "section": "Non-Competition",
-          "description": "Whether the employee is a real estate broker-licensee. Under La. R.S. 37:1448.1(A) a broker-licensee non-compete is an absolute nullity unless the licensee may rescind it until midnight of the third business day following execution or delivery, whichever is later.",
-          "display_label": "Employee Is a Real Estate Licensee",
-          "default": "false",
           "default_value_rationale": null
         },
         {
@@ -28267,7 +28516,7 @@
           "description": "Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.",
           "display_label": "Passive Public Holdings Threshold",
           "default": "five percent",
-          "default_value_rationale": "Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives), and a de minimis floor keeps an ownership restraint from reading as unduly harsh under the Omniplex second prong."
+          "default_value_rationale": "Five percent of any class of publicly traded securities is the modal passive-investment carve-out threshold observed in benchmarked, publicly-filed employee agreements that include the carve-out (lower 1-3 percent thresholds are the common tighter alternatives), and a de minimis floor avoids treating minor passive stock ownership as a meaningful restraint on the employee's ability to earn a living."
         },
         {
           "name": "noninvestment_included",

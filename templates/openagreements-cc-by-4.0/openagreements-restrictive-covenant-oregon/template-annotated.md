@@ -77,7 +77,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, competitively sensitive confidential business or professional information that would not qualify as a trade secret, product development plans, product launch plans, marketing strategy, sales plans, customer lists, and pricing, but excluding information that becomes public through no fault of Employee.
 
@@ -206,30 +206,30 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Oregon](/practice-guides/non-compete/us/oregon).
 
-### garden-leave payment commitment
+### Garden-leave payment commitment
 
 The garden-leave path in ORS 653.295(7) is available only where the employer's written commitment to pay — the greater of the two statutory amounts, for the time the employee is restricted from working — appears in the agreement itself, so a covenant that leans on garden leave without that written payment promise falls back onto the exempt-status and salary-threshold gates it was meant to bypass .
 
-### non-compete formation timing
+### Non-compete formation timing
 
 A mid-employment non-compete rests on the ORS 653.295(1)(a) formation gateway — a written offer received at least two weeks before the first day of employment, or a subsequent bona fide advancement — and continued employment alone is not a qualifying trigger, so a covenant bolted on during employment without a genuine advancement is void. _Nike v. McCarthy_ tested that timing requirement before the covenant was enforced .
 
-### statutory protectable interest
+### Statutory protectable interest
 
 Oregon's protectable-interest requirement is concrete: it turns on the specific trade secrets or competitively sensitive strategic information the employee can access and exploit at a competitor, not a generic competitive concern, so a covenant resting on an unspecified interest has nothing to satisfy ORS 653.295(1)(c) and (2). _Nike v. McCarthy_ turned on the particular strategic information at risk .
 
-### customer non-solicitation scope
+### Customer non-solicitation scope
 
 The ORS 653.295(5)(b) carve-out reaches a covenant confined to customers with an active or ongoing relationship with the employer, not former or merely incidental patrons; _Oregon Psychiatric Partners v. Henry_ read that customer carve-out narrowly, so a customer definition drawn wider than active relationships falls outside the carve-out and back into the non-compete checklist it cannot satisfy .
 
-### tolling against the 12-month-from-termination cap
+### Tolling against the 12-month-from-termination cap
 
 ORS 653.295(3) measures the 12-month maximum from the date of termination, not from the last day of compliance, and voids any term in excess of 12 months, so a tolling clause that pauses the non-compete during breach or litigation and pushes the effective restraint past 12 months after termination runs into the statutory cap and is void as to the excess. No Oregon statute or decision squarely approves or rejects such a clause, which leaves the fixed-from-termination cap as the controlling constraint on any tolling term .
 
-### reciprocal effect of a one-way fee clause
+### Reciprocal effect of a one-way fee clause
 
 ORS 15.320(3) applies Oregon law to a contract of employment for services rendered primarily in Oregon by an Oregon resident, so an out-of-state choice-of-law clause does not carry a non-compete around ORS 653.295 for that employee. And ORS 20.096(1) gives a one-sided contractual attorney-fee clause reciprocal effect, so a prevailing employee recovers reasonable fees even under a provision the employer wrote to run only in its own favor .
 
-### confidentiality and Workplace Fairness Act
+### Confidentiality and Workplace Fairness Act
 
 ORS 653.295(6) preserves the employer's trade-secret and proprietary-information remedies whatever happens to a non-compete, so confidentiality and trade-secret terms carry the secrecy interest on their own; but ORS 659A.370 makes a nondisclosure or nondisparagement provision an unlawful employment practice to the extent it has the purpose or effect of preventing an employee from disclosing or discussing discrimination, harassment, or sexual assault, so a confidentiality clause drawn wide enough to reach that conduct is unenforceable as to it .

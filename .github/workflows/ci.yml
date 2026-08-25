@@ -142,7 +142,11 @@ jobs:
       - name: Test Claude marketplace package security boundary
         run: npx vitest run scripts/sync_claude_marketplace_plugin.test.mjs
 
-  readme-sync:
+  # Single gate over every committed file that is projected from other files in
+  # the repo (README + catalog, llms.txt, the Claude plugin, the templates
+  # snapshot). The registry lives in scripts/derived_artifacts.mjs so a new
+  # projection cannot ship a generator without also getting a freshness gate.
+  derived-artifacts:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -155,11 +159,8 @@ jobs:
       - name: Install dependencies (retry)
         uses: ./.github/actions/npm-ci-retry
 
-      - name: Validate generated README freshness
-        run: npm run check:readme
-
-      - name: Validate generated llms.txt freshness
-        run: npm run check:llms
+      - name: Validate generated artifacts are current
+        run: npm run check:derived
 
   isolated-runtime-smoke:
     runs-on: ubuntu-latest

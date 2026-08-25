@@ -74,7 +74,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
@@ -199,26 +199,26 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Iowa](/practice-guides/non-compete/us/iowa).
 
-### the three-prong reasonableness gate
+### The three-prong reasonableness gate
 
 Every covenant in the agreement stands or falls on Iowa's three-prong reasonableness test, and there is no general Iowa non-compete statute or statutory safe harbor to fall back on: a restraint holds only where it is reasonably necessary to protect the employer, not unreasonably restrictive of the employee, and not prejudicial to the public interest . The employer seeking enforcement carries the burden of proving reasonableness, so an acknowledgment of reasonableness written into the agreement does not carry it — each covenant clears the test only on its own record of duration, territory, and scope . Adequate consideration establishes only that the covenants are supported at formation, not that they are reasonable, and continued employment sufficient as consideration does not by itself make an unreasonable covenant enforceable. A restraint tied to named competitors and sized to the employer's actual market is the defensible one, and the gate travels with an assignment: reasonable necessity is re-weighed against a successor's own customer relationships and footprint, so a restraint sized to one employer does not automatically fit a buyer.
 
-### independent-contractor covenants
+### Independent-contractor covenants
 
 An independent-contractor covenant runs the same three-prong reasonableness analysis as an employee covenant, with no lighter standard for contractor status. A restraint that requires a contractor to forsake the customers the contractor brought to the relationship is unreasonable and unenforceable , so a covenant reaching a contractor's own book of business is the exposed case.
 
-### notice letters resting on an overbroad covenant
+### Notice letters resting on an overbroad covenant
 
 A notice to a departing employee's prospective employer is only as sound as the covenant it invokes. A covenant an Iowa court would narrow to the activities, territory, and duration the worker actually handled , or one an occupation statute voids outright, gives the notice little to rest on and can expose the employer to a claim for interfering with the new employment. The notice that holds is built on a restraint the employer is prepared to defend on all three reasonableness prongs.
 
-### tolling
+### Tolling
 
 Tolling is an open question in Iowa: no controlling appellate authority decides whether a non-compete period tolls during breach or enforcement litigation, and the closest doctrine is reformation, which reshapes an overbroad covenant to a reasonable scope rather than adding time back . Iowa's leading application set a fixed period measured from the date employment terminated, not an extension for breach or litigation delay . An extension-on-breach clause is itself a longer restraint, so it stands or falls as part of the covenant's duration under the same reasonableness test; an open-ended or indefinite extension, or one that assumes a court will revive an expired covenant, is the exposed case.
 
-### customer restrictions sized to actual relationships
+### Customer restrictions sized to actual relationships
 
 A customer non-solicit maps directly onto the employer's customer-goodwill interest — customer proximity is among the first factors Iowa weighs — and, backstopped by confidentiality and trade-secret protection, is often a stronger and more readily enforceable protection than a broad non-compete. A no-business-with-covered-customers clause reaches even customer-initiated business, so it presses harder on the reasonableness inquiry into whether a restraint sweeps in more activity than protection requires and deprives the customer of its chosen provider. Iowa trims such a restraint to the activities and territory the worker actually served , so a customer restriction survives only where it is sized tightly to the goodwill it protects and confined to customers the worker actually had material contact with; stretched beyond that, it is the exposed case.
 
-### secrecy protection
+### Secrecy protection
 
 A non-compete is not the only route to protecting secrecy, and often not the strongest. Where the real concern is confidential information, targeted NDA, invention-assignment, and trade-secret provisions carry their own protection: chapter 550 supplies an injunction against actual or threatened misappropriation independent of any covenant , damages for actual loss and unjust enrichment , and attorney fees where a claim is made in bad faith, an injunction-termination motion is made or resisted in bad faith, or misappropriation is willful and malicious — each available only where the information meets the statutory definition of a trade secret and reasonable secrecy efforts can be proved . Return, deletion, and certification of employer property are part of those reasonable secrecy efforts. Because chapter 550 does not preempt every tort theory involving trade secrets, a common-law claim can run alongside the statutory one .

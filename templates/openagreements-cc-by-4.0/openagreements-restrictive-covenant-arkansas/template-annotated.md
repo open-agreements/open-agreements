@@ -74,7 +74,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
@@ -203,14 +203,14 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Arkansas](/practice-guides/non-compete/us/arkansas).
 
-### protectable interest
+### Protectable interest
 
 Ordinary competition is not enough. Even before Act 921, Arkansas cases required a real protectable interest rather than a covenant designed only to eliminate competition, and the current statute keeps that interest requirement at the center .
 
-### duration presumption
+### Duration presumption
 
 Two years is not automatic. The presumption is rebuttable and gives way to case-specific facts, so a two-year term measured against a narrow protectable interest or a broad work restriction can still be cut back or fail .
 
-### the Title 17, Subtitle 3 licensee exclusion
+### The Title 17, Subtitle 3 licensee exclusion
 
 A worker who holds a professional license under Arkansas Code Title 17, Subtitle 3 sits outside § 4-75-101 except for the physician voiding rule, so the statutory framework a covered covenant leans on — mandatory reformation, the continued-employment consideration rule, the two-year presumption, and the statutory irreparable-harm rule — does not govern that worker's competition covenants . Those covenants fall back to common-law reasonableness, where an overbroad restraint is not narrowed to a reasonable version but fails as written, so for a licensee the scope has to be defensible at signing rather than salvageable in court. Whether the worker holds such a license is the threshold question the exclusion turns on, and it is a fact about the worker rather than anything the covenant recites.

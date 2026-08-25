@@ -74,7 +74,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
@@ -199,14 +199,14 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Texas](/practice-guides/non-compete/us/texas).
 
-### non-compete scope and reformation exposure
+### Non-compete scope and reformation exposure
 
 A covenant that bars an employee from an entire industry across a wide region does not hold as written on the assumption that its breadth will be enforced. The Act requires the restraint to be no greater than necessary to protect a specific business interest, so an overbroad covenant is exposed to reformation down to the minimum a court finds reasonable, and the version that survives intact is the one keyed to the specific customers, line of business, and territory the employer can actually defend .
 
-### tolling during a breach
+### Tolling during a breach
 
 A tolling clause that adds back time to a Texas non-compete for a period of breach or litigation rests on unsettled ground: no Texas statute or Texas Supreme Court decision squarely authorizes it, and any restraint extended that way still must satisfy § 15.50(a)'s reasonableness limit. The more dependable protection against ongoing violations is injunctive relief, which the Act expressly authorizes and which can run past the covenant's nominal end date without leaning on a tolling provision .
 
-### confidentiality scope vs. disguised non-compete
+### Confidentiality scope vs. disguised non-compete
 
 A Texas confidentiality or non-disclosure clause drafted so broadly that it operates as a covert non-compete does not escape the Act by its label. The trade-secret statute supports an injunction against misappropriation but excludes general knowledge, skill, and experience, so an NDA that effectively prevents the employee from working can be recharacterized as a non-compete and measured against § 15.50's reasonableness test, while a clause confined to genuine secrets carries the protection the statute actually gives .

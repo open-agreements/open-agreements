@@ -77,7 +77,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
@@ -214,38 +214,38 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Hawaii](/practice-guides/non-compete/us/hawaii).
 
-### the legitimate-ancillary-purpose screen
+### The legitimate-ancillary-purpose screen
 
 Every restraint in a Hawaii agreement passes through HRS chapter 480's antitrust screen, not ordinary contract reasonableness alone: HRS 480-4(a) makes every in-state restraint of trade illegal, and 480-4(c) makes a covenant lawful only where it is ancillary to a legitimate purpose not violative of chapter 480 and its effect is not substantially to lessen competition or to tend to create a monopoly . A covenant that satisfies every reasonableness factor is still unenforceable unless it is ancillary to such a purpose, and preventing competition is not one, so a restraint whose real work is blocking ordinary competition fails no matter how tightly its duration and territory are drawn . The purpose has to be a recognized protectable interest — trade secrets, genuinely confidential information, special customer relationships, workforce stability for an employee-solicitation covenant, or specialized training combined with other protectable factors — proven for each covenant on its own record rather than assumed, and no particular form or timing of consideration substitutes for that showing; binding a non-compete to named competitors is one way to show it reaches a specific interest against specific rivals rather than the market at large .
 
-### confidential information scope
+### Confidential information scope
 
 A confidentiality label pinned to ordinary market knowledge does not carry the covenant. In _Gagnon_ the claimed confidential-interest theory failed where similarly situated workers were not restricted, the information was shared more broadly, and no trade-secret violation was shown, so a covenant resting on that kind of record is unenforceable rather than merely narrowed .
 
-### sale covenant scope
+### Sale covenant scope
 
 A Hawaii sale covenant is measured against the goodwill and competitive risk actually transferred. HRS 480-4(c)(1) permits the transferor restraint only within a reasonable area and a reasonable period, and _Traeger_ holds the restraint to no more than the protection needed, so a sale covenant sized beyond the goodwill it protects is exposed as unreasonable .
 
-### technology-business employees
+### Technology-business employees
 
 A broad employment noncompete or employee nonsolicit imposed on a Hawaii technology-business employee is void and of no force and effect, because HRS 480-4(d) preserves only the HRS 480-4(c)(4) trade-secret path for a covered employee. A restraint built around actual trade-secret use is the one that survives; anything reaching further falls with the statutory ban. Because coverage keys to the employer's line of business rather than the worker's title, a successor whose revenue mix makes it a technology business brings the same ban to a covenant it inherits .
 
-### active solicitation
+### Active solicitation
 
 A Hawaii solicitation covenant written as no-contact, no-service, or no-acceptance language reaches conduct that falls outside solicitation: _Gagnon_ frames solicitation around active initiation of contact, so a covenant sweeping in passive dealing is a broader restraint that still must clear the legitimate-ancillary-purpose screen of HRS 480-4 and is exposed where it does not .
 
-### statutory fee and treble-damages exposure
+### Statutory fee and treble-damages exposure
 
 Because the covenants in a Hawaii agreement are themselves analyzed as restraints of trade under chapter 480, a covenant that fails the HRS 480-4 framework is not merely unenforceable but a potential source of chapter 480 liability for the party pressing it. HRS 480-13(a) lets a person injured in business or property by anything the chapter forbids recover the greater of $1,000 or threefold damages plus reasonable attorney fees and costs on a plaintiff's judgment, and fees and costs again on a plaintiff's injunction decree — a plaintiff-focused, one-way regime the parties cannot draft around, and one that applies regardless of any contractual fee provision . HRS 480-2 separately declares unfair methods of competition unlawful and lets any person sue on that theory, so warning a future employer off an employee on the strength of a covenant that fails the restraint-of-trade screen carries its own exposure .
 
-### trade-secret alternatives
+### Trade-secret alternatives
 
 An NDA drafted to do non-compete work does not hold up as one. Hawaii preserves trade-secret and contract remedies, but _Gagnon_ rejected a confidentiality theory where the record showed no real protected information and no trade-secret violation, so a confidentiality covenant that operates as a practical ban on ordinary competition falls back into the HRS 480-4(a) antitrust baseline rather than standing as trade-secret protection .
 
-### tolling
+### Tolling
 
 A tolling or extension-on-breach clause is untested in the staged Hawaii sources, so its enforcement cannot be assumed. Because such a clause extends the effective restricted period, it is measured under the same HRS 480-4 antitrust and reasonableness limits that govern the covenant itself, and an extension pushing the covenant past a reasonable duration is exposed on the same ground the underlying restraint would be .
 
-### narrowing reliance
+### Narrowing reliance
 
 A Hawaii restriction stands on the minimum scope its protected interest supports, not on the expectation that a court will rescue an overbroad one. A court may trim an injunction to the contract and record before it, but _Gagnon_ shows that a covenant lacking a legitimate ancillary purpose fails outright rather than being saved by narrower wording, so scope drawn beyond the interest is exposed rather than reformed .

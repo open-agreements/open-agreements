@@ -74,7 +74,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, confidential customer information, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee, the general knowledge, skill, and experience Employee acquired during employment, and information about the ordinary, internal operations of the business that does not itself qualify as a Trade Secret.
 
@@ -207,74 +207,74 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in New York](/practice-guides/non-compete/us/new-york).
 
-### the reasonableness gate
+### The reasonableness gate
 
 New York has no general non-compete statute, so every covenant in the agreement stands or falls on the common-law three-prong reasonableness test, and a failure of any single prong invalidates the whole covenant . A restraint survives only where it is tied to a Protected Interest, reaches no further than that protection needs, works no undue hardship on the employee, and is reasonable in time and geography — the Attorney General reads the same reasonableness requirement into time period and geographic scope, and New York courts apply the identical standard to closely related restraints such as customer and employee non-solicits . Adequate consideration establishes only that a covenant is supported, not that it is reasonable, so each covenant must clear the test on its own. And where survival is set per covenant rather than bundled under one duration, no unexamined term hides inside a single survival clause.
 
-### physician covenants under the ordinary test
+### Physician covenants under the ordinary test
 
 New York gives physicians no industry-specific statutory shield — its only industry-specific statutory non-compete prohibition covers broadcast employees — so a physician covenant is measured under the same reasonableness framework as any other restraint . A narrow radius, a short term, and preserved patient access are what carry a medical covenant, because the injurious-to-the-public prong is where patient-access and continuity-of-care arguments live and can sink an over-broad medical covenant .
 
-### protectable interests
+### Protectable interests
 
 A New York non-compete drafted to block ordinary competition fails. A restraint holds only where it is tied to a specific protectable interest — identified trade secrets, confidential customer information, employer-built client goodwill, or genuinely unique services — because a covenant unconnected to one of those interests is unenforceable regardless of how reasonable its time and geography look .
 
-### every covenant needs a recognized interest behind it
+### Every covenant needs a recognized interest behind it
 
 Each covenant in the agreement needs a recognized interest behind it. New York recognizes a short list — trade secrets or confidential customer information, unique or extraordinary services, and client goodwill created and maintained at the employer's expense — and nothing else . General knowledge, skill, and experience and the ordinary, internal operations of the business are not protectable in New York absent a trade secret or breach of trust; a broad confidentiality definition that sweeps them in, without an express exclusion, reaches beyond what the law protects . The non-investment covenant is the exposed one — hardship with no protectable interest behind it is how covenants fail, and a covenant protecting no legitimate interest is unenforceable outright . Two consequences travel with this: a contemporaneous return, deletion, and certification record is the evidence that real trade secrets and confidential customer information were at stake, and an assignee inherits a covenant only as far as the original interest genuinely travels with the deal — an assignment moves the covenant but cannot mint a new interest to support it.
 
-### injunctive relief needs more than a recital
+### Injunctive relief needs more than a recital
 
 The remedies clause's irreparable-harm recital does not itself secure an injunction. In New York, absent trade secrets, injunctive enforcement of a restraint typically depends on the employee's services being genuinely special, unique, or extraordinary — a demanding, case-by-case standard no boilerplate paragraph can manufacture . The recital does no harm, but it cannot stand in for a covenant actually anchored to a trade secret or to services demonstrably unique.
 
-### partial enforcement
+### Partial enforcement
 
 A New York court does not reliably save an overbroad covenant. Because partial enforcement is withheld where the employer overreached, a covenant holds best when duration, geography, and activity scope are drawn to the minimum the protectable interest actually requires — an aggressive covenant is more likely to be struck whole than trimmed .
 
-### drafting to scope, not severability
+### Drafting to scope, not severability
 
 The severability clause is not a strategy for salvaging an over-broad covenant. Partial enforcement in New York is discretionary and conditioned on the employer's own conduct: the state rejects a per se rule invalidating every overbroad covenant , but a court rewrites a covenant to a reasonable scope only where the employer shows an absence of overreaching, coercive use of dominant bargaining power, or other anti-competitive misconduct and sought in good faith to protect a legitimate interest — and where a covenant protects no legitimate interest at all, there is nothing to sever . A covenant drawn to a reasonable scope from the start does not depend on the clause; the severability clause is a backstop, not a license to overreach.
 
-### enforcement posture and the good-faith record
+### Enforcement posture and the good-faith record
 
 Two enforcement-posture choices can forfeit the good-faith record on which partial enforcement depends . A third-party notice conditioned on a reasonable belief that the employee may actually breach stays within that record; warning a new employer off a worker on the strength of an overbroad covenant is the kind of aggressive enforcement conduct that undercuts it and can invite a tortious-interference claim. Fee-shifting that is mutual and prevailing-party based reads the same way; a one-way employer fee clause layered onto an aggressive covenant reads as the coercive posture that costs an employer the partial-enforcement safety valve .
 
-### continued-employment consideration mechanics
+### Continued-employment consideration mechanics
 
 A post-hire covenant holds only on real consideration, recorded in the consideration recital. A promise not to compete must be supported by adequate consideration like any other contract term , and forbearance from discharging an at-will worker is a legal detriment that can supply it — but that forbearance is real rather than illusory only where employment in fact continues for a substantial period after the covenant is given . Continued employment alone is the weaker basis; fresh, identifiable consideration such as a raise, promotion, or bonus is safer because it does not depend on after-the-fact tenure. And an amendment that adds or expands a covenant mid-employment re-opens the same question, so a routine refresh can quietly create a covenant with no consideration behind it.
 
-### customer non-solicitation
+### Customer non-solicitation
 
 A customer non-solicit that reaches customers the employee never met, did not know about, and did no work for is overbroad. A restraint tied to customer relationships the employee actually developed or serviced through work for the employer holds, and a preserved request for partial enforcement under _BDO Seidman_ leaves a fallback if it is trimmed .
 
-### employee non-solicit sizing
+### Employee non-solicit sizing
 
 An employee non-solicit sized to Covered Employees rather than drawn at large fits the reasonableness test it still must clear. New York treats employee non-recruitment clauses as inherently more reasonable and less restrictive than non-competes, but they are still analyzed under the same reasonableness test, so the covenant survives on a genuine workforce-stability and goodwill interest held to the Restricted Period .
 
-### the solicitation versus acceptance line
+### The solicitation versus acceptance line
 
 The sale-of-business clause holds on the line New York's implied goodwill covenant draws. A seller of a business and its goodwill is barred from improperly soliciting the former customers , yet remains free to accept the patronage of customers who leave without prompting — and that implied duty, though permanent, is narrower than an express covenant . A clause that bars a seller from accepting unsolicited business under the banner of goodwill protection reaches past that line; the doctrine restricts solicitation, not acceptance. Sale-of-business and goodwill covenants get more favorable treatment than employee covenants, and while the pending S4641A bill would expressly preserve the category for qualifying owners even under a statutory ban, that is pending only, not law .
 
-### non-dealing demands more than the goodwill doctrine asks
+### Non-dealing demands more than the goodwill doctrine asks
 
 The optional no-business-with-covered-customers covenant rests on a strong, documented goodwill interest, and stands on weak ground without one. It bars accepting even unprompted patronage — more than New York's goodwill doctrine asks even of a seller of a business, who may accept customers who choose to leave without prompting while remaining barred from active solicitation . Because it demands more from a mere employee than the implied covenant demands of a seller of goodwill, it presses hardest on the undue-hardship prong of the reasonableness test; a version sized to Covered Customers the employee had material contact with is the defensible one, and its inclusion is a deliberate risk decision rather than a default.
 
-### choice of law
+### Choice of law
 
 A non-New York choice-of-law clause does not reliably rescue an employer-favorable covenant against a New York-based worker. Under _Brown & Brown_, a court can disregard the chosen law and apply New York reasonableness limits where the foreign law is truly obnoxious to New York policy .
 
-### governing-law selection posture
+### Governing-law selection posture
 
 An out-of-state choice-of-law clause does not escape New York's limits against a New York-based worker. Governing law set to New York, with venue pointed at the Governing Law state, matches the choices to where the employee actually lives and works — a chosen law that is truly obnoxious to New York policy is disregarded, so a foreign clause cannot be counted on to displace New York's restrictive-covenant rules . The same public-policy screen cuts the other way: a covenant the employee entered under another state's law may not survive New York's, and a no-conflicting-obligations representation surfaces it before it becomes a dispute. And the pending S4641A bill would go further and void choice-of-law and venue clauses used to avoid the statute for workers who reside or work in New York — pending only, not law .
 
-### tolling
+### Tolling
 
-An automatic tolling or extension-on-breach clause does not reliably lengthen a New York non-compete. Because no controlling New York rule blesses judicial tolling and duration drives reasonableness, a narrow, time-limited extension is the one that survives; if S4641A becomes law, an extension that pushes the restriction past one year would conflict with the statutory cap .
+If the parties intend breach to extend the restriction, the agreement should expressly provide that a breach extends the restriction, define the triggering violation, and tie the extension to the proven period of breach.
 
-### broadcast exclusion mechanics
+### Broadcast exclusion mechanics
 
 For a broadcast employee, a post-employment non-compete is barred outright. A broadcasting-industry employer that requires a post-employment non-compete from a broadcast employee — as to geographic area, time period, or particular employers or industries — is civilly liable for damages, attorneys' fees, and costs . The bar reaches only post-employment restraints; covenants operating during the term of an employment contract are untouched, so it is the restraint aimed at conduct after the job ends that falls outside the statute .
 
-### federal protected-activity carve-outs
+### Federal protected-activity carve-outs
 
 Confidentiality or non-disparagement language tightened by deleting the protected-activity carve-outs loses its safe footing. Under _McLaren Macomb_, merely offering an employee terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement provisions — violates the National Labor Relations Act, and the Board's reasoning turns on the breadth of the waiver, not the label of the document. The [OpenAgreements New York restrictive covenant form](/templates/openagreements-restrictive-covenant-new-york) carves Section 7 activity out of both its confidentiality and non-disparagement sections for this reason; a version that swept in wage discussion or other concerted activity would invite an unfair-labor-practice charge no matter how the covenant fares under New York law .

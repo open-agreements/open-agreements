@@ -79,7 +79,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
@@ -212,6 +212,6 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Massachusetts](/practice-guides/non-compete/us/massachusetts).
 
-### counterparty
+### Counterparty
 
 Fill the Employer name in Cover Terms with the legal entity that actually employs the employee, not a parent, holding company, or affiliate. The Noncompetition Agreement Act governs an agreement between an _employer_ and an _employee_, and a Massachusetts court has declined to let a parent company enforce a non-compete signed only with the parent, reasoning that the statutory term _employer_ has not been read to include a parent corporation . The decision is a trial-level order, persuasive rather than binding, but naming the wrong entity puts the covenant's enforceability in Massachusetts at risk.

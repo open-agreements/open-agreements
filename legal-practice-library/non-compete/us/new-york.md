@@ -107,7 +107,7 @@ Like any contract term, a promise not to compete must be supported by adequate c
 
 ## How does New York treat customer and employee non-solicitation covenants? {#nonsolicitation}
 
-**Short answer.** They are still measured for reasonableness, but employee non-recruitment clauses are treated as less restrictive than a full non-compete and may be enforceable when reasonable; a customer non-solicitation clause must be tied to the clients the employee actually served [^otg-nonrecruitment-less-restrictive][^brown-brown-overbroad-customers].
+**Short answer.** Customer and employee non-solicitation covenants are still measured for reasonableness, but employee non-recruitment clauses are treated as less restrictive than a full non-compete and may be enforceable when reasonable; a customer non-solicitation clause must be tied to the clients the employee actually served [^otg-nonrecruitment-less-restrictive][^brown-brown-overbroad-customers].
 
 In *OTG Management v. Konstantinidis*, the court denied a non-compete injunction but enforced a non-recruitment clause, finding it reasonable in scope and not a meaningful burden on the worker [^otg-nonrecruitment-enforced]. *OTG*, a New York trial court following lower-court and federal authority, treated no-recruit clauses as inherently more reasonable than non-competes because they restrict less [^otg-nonrecruitment-less-restrictive].
 
@@ -159,14 +159,15 @@ New York generally honors a contractual choice of law, but reserves a public-pol
 
 ## Does a New York non-compete's restricted period pause (toll) during a breach or litigation? {#extended-for-breach}
 
-**Short answer.** Treat it as an open question. New York measures a covenant's duration as part of the reasonableness test, and no controlling New York decision establishes that the restricted period automatically tolls — pauses and extends — while a former employee is violating the covenant or while litigation is pending [^tolling-time-reasonableness].
+**Short answer.** An express contractual tolling clause can extend a New York restrictive covenant during a proven period of breach. The covenant, including its extended duration, must still be reasonable in time. [^delta-contractual-tolling][^tolling-time-reasonableness]
 
-The uncertainty matters because duration is itself part of what a court must find reasonable. A contractual clause that extends the restricted period during a breach lengthens that very term, so an open-ended or automatic extension can push an otherwise reasonable covenant into unreasonable territory [^tolling-time-reasonableness]. An employer that wants the clock to pause during a breach should therefore say so expressly rather than assume a court will extend the period. Pending legislation points the same direction: S4641A would cap any permissible non-compete at a one-year term, which an extension-on-breach clause could exceed [^s4641a-one-year-cap].
+In *Delta Enterprise Corp. v. Cohen*, the First Department held at the preliminary-injunction stage that the injunction should follow a confidentiality agreement's language automatically extending its restrictive periods by the time the employee was in violation. The court rejected the argument that the provision was unenforceable as a matter of law or violated public policy. The decision supports express contractual tolling, but its preliminary-injunction posture and the agreement before the court limit what it establishes about non-competes generally [^delta-contractual-tolling].
 
-> [!CAUTION]
-> **Drafting note.**
->
-> An automatic tolling or extension-on-breach clause does not reliably lengthen a New York non-compete. Because no controlling New York rule blesses judicial tolling and duration drives reasonableness, a narrow, time-limited extension is the one that survives; if S4641A becomes law, an extension that pushes the restriction past one year would conflict with the statutory cap [^tolling-time-reasonableness][^s4641a-one-year-cap].
+*Delta* does not establish that a court will pause or extend a restriction during breach or litigation when the agreement contains no tolling language [^delta-contractual-tolling].
+
+If the parties intend breach to extend the restriction, the agreement should expressly provide that a breach extends the restriction, define the triggering violation, and tie the extension to the proven period of breach. Express language clarifies the intended operation, but it does not establish that a court will find the extended duration reasonable [^delta-contractual-tolling][^tolling-time-reasonableness].
+
+S4641A would cap a permissible non-compete at one year if enacted. It provides context for evaluating an extension, not current legal support [^s4641a-one-year-cap].
 
 ## What special non-compete rule applies to broadcast-industry employees in New York? {#broadcast-industry}
 
@@ -259,6 +260,8 @@ This is the one place New York has a statutory non-compete prohibition rather th
 [^brown-brown-choice-of-law]: **Brown & Brown, Inc. v. Johnson** — "On this appeal, we hold that applying Florida law on restrictive covenants related to the non-solicitation of customers by a former employee would violate the public policy of this state." *Brown & Brown, Inc. v. Johnson, 25 N.Y.3d 364 (2015).* <https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/#:~:text=On%20this%20appeal%2C%20we%20hold,public%20policy%20of%20this%20state.>
 
 [^s4641a-choice-of-law-antiavoidance]: **N.Y. Senate Bill 2025-S4641A (pending)** — "NO CHOICE OF LAW PROVISION OR CHOICE OF VENUE PROVISION THAT WOULD HAVE THE EFFECT OF AVOIDING OR LIMITING THE REQUIREMENTS OF THIS SECTION SHALL BE ENFORCEABLE IF THE COVERED INDIVIDUAL IS AND HAS BEEN, FOR AT LEAST THIRTY DAYS IMMEDIATELY PRECEDING THE COVERED INDIVIDUAL'S CESSATION OF EMPLOYMENT, A RESIDENT OF NEW YORK OR EMPLOYED IN NEW YORK" *N.Y. S.B. S4641A, § 191-d(8) (2025-2026 Reg. Sess.) (pending).* <https://www.nysenate.gov/legislation/bills/2025/S4641/amendment/A>
+
+[^delta-contractual-tolling]: **Delta Enterprise Corp. v. Cohen** — "The agreement's tolling provision provides for the tolling of the various restrictive periods ‘during any period in which Employee is in violation’ of the restrictive covenants, and provides that ‘all restrictions shall automatically be extended by the period Employee was in violation of any such restrictions.’ We reject defendant's argument that such a provision is, as a matter of law, unenforceable or violates public policy especially where, as here, there was evidence that defendant consulted with counsel before executing the agreement, that he received $50,000 in consideration thereof, and there are significant and multiple indications of his bad faith (see Chernoff Diamond & Co. v Fitzmaurice, Inc., 234 AD2d 200, 202 [1996]; Maltby v Harlow Meyer Savage, 223 AD2d 516 [1996], lv dismissed 88 NY2d 874 [1996])." *Delta Enter. Corp. v. Cohen, 93 A.D.3d 411, 412 (1st Dep't 2012).* <https://www.nycourts.gov/reporter/3dseries/2012/2012_01558.htm>
 
 [^tolling-time-reasonableness]: **OTG Management, LLC v. Konstantinidis** — "In order to be enforceable, an anticompetitive covenant ancillary to an employment agreement must be reasonable in time and area, necessary to protect the employer’s legitimate interests, not harmful to the public, and not unreasonably burdensome to the employee." *OTG Mgt., LLC v. Konstantinidis, 40 Misc. 3d 617 (Sup. Ct. N.Y. County 2013).* <https://www.courtlistener.com/opinion/6314442/otg-management-llc-v-konstantinidis/#:~:text=In%20order%20to%20be%20enforceable%2C,unreasonably%20burdensome%20to%20the%20employee.>
 

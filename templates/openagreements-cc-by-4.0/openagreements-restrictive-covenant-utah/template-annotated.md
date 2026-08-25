@@ -73,7 +73,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business, limited to providing a product, process, or service that is similar to Employer's product, process, or service.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business, limited to providing a product, process, or service that is similar to Employer's product, process, or service.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee and excluding Employee's general skill, knowledge, and experience.
 
@@ -186,30 +186,30 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Utah](/practice-guides/non-compete/us/utah).
 
-### restricted period
+### Restricted period
 
 A covenant drafted for eighteen months or two years is not trimmed to one year by a Utah court; the statute makes the over-length covenant void, and an attempt to enforce it exposes the employer to the statute's fee-shifting penalty. A covenant sized to one year or less from the outset is the one that survives .
 
-### the four-part reasonableness test
+### The four-part reasonableness test
 
 A Utah non-compete stands or falls on the four-part common-law reasonableness test, not on the one-year cap alone: the Post-Employment Restrictions Act supplements rather than replaces the common law, so a covenant that fits inside the cap is still unenforceable where it lacks consideration, was negotiated in bad faith, protects no goodwill, or reaches further in time or area than the business needs . A covenant confined to the employer's legitimate interests — goodwill, confidential information, or extraordinary training — survives where one that reaches an employee's ordinary skills or ordinary competition does not . Consideration is the loose prong, satisfied by an offer of employment or continued at-will employment, but the good-faith prong is live: a covenant extracted through a quick hire-and-fire used solely to bind a worker to a long restraint is exposed on that ground .
 
-### employer fee exposure on failed enforcement
+### Employer fee exposure on failed enforcement
 
 Utah's fee-shifting runs one direction only: an employer that seeks arbitration or files suit to enforce a non-compete, healthcare non-compete, nondisclosure clause, or nonsolicitation agreement later found unenforceable is liable for the employee's arbitration costs, attorney fees and court costs, and actual damages, whether or not the agreement says anything about fees . A one-way, employer-favoring fee clause cannot contract around that exposure, and escalating from a notice letter to an enforcement action on a covenant that turns out to be invalid is what triggers it; a mutual, prevailing-party fee provision sits alongside the statutory baseline rather than purporting to displace it .
 
-### de facto non-competes
+### De facto non-competes
 
 Label is not protection. A nonsolicitation or confidentiality clause drafted so broadly that it effectively blocks the employee from working in the field invites a court to treat it as a _de facto_ non-compete, reimposing the one-year cap and the fee-shifting exposure .
 
-### the entered-into date and the 2026 bans
+### The entered-into date and the 2026 bans
 
 The Post-Employment Restrictions Act attaches by the date an agreement is entered, so a covenant re-executed through a renewal or amendment falls under the regime in force on the new date, including the healthcare-worker and veterinarian non-compete bans for agreements entered on or after May 6, 2026 . A non-compete with a healthcare worker that was valid when first signed becomes a prohibited healthcare non-compete once it is re-signed on or after that date, and a veterinarian non-compete is void from that date unless the veterinarian holds at least a 5% ownership interest .
 
-### tolling
+### Tolling
 
 A tolling or extension-on-breach clause that keeps a Utah non-compete alive past the one-year mark is a concrete void risk, not a safe equitable backstop. The statute fixes the period at one year from separation and voids longer covenants, so an extension that pushes the non-compete past that point exposes the whole covenant .
 
-### confidentiality scope
+### Confidentiality scope
 
 Confidentiality and trade-secret protections hold only where they are tied to actual secret information and reasonable secrecy efforts. A definition that sweeps in ordinary know-how does not qualify as a trade secret, and a confidentiality clause that functions as a work ban can be recharacterized as a non-compete and pulled back under the one-year cap .

@@ -78,7 +78,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the same business or profession as that of Employer, described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the same business or profession as Employer, as described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
@@ -203,34 +203,34 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in South Dakota](/practice-guides/non-compete/us/south-dakota).
 
-### statutory fit
+### Statutory fit
 
 A covenant that restrains work but fits no exception in SDCL chapter 53-9 is void to that extent under the baseline statute, which starts from voidness rather than a free-floating reasonableness test . The exceptions are construed narrowly to promote the proscription against general restraints on trade, so a covenant drawn past the exception it invokes is not read charitably back into bounds, and a restraint the chapter voids gives the employer no enforceable covenant to assert .
 
-### customer solicitation
+### Customer solicitation
 
 A South Dakota customer non-solicit that reaches beyond affirmative solicitation — no-service, no-sale, or no-acceptance language — falls outside every statutory exception and into the section 53-9-8 void zone, because an agreement not to solicit is not an agreement not to sell and no exception permits barring acceptance of unsolicited business . A covenant confined to affirmative solicitation of existing customers within the specified area holds where a broader no-dealing clause does not.
 
-### third-party no-hire
+### Third-party no-hire
 
 A no-poach or no-hire clause in a customer, vendor, or services agreement does not restrain a South Dakota worker who has signed no valid SDCL 53-9-11 covenant: an employer may not bind its own employee through an agreement with a third party, and a court treats the no-recruit clause as a variation on the covenant not to compete governed by section 53-9-11 and the section 53-9-8 baseline . A third-party clause can supplement a valid employee covenant, but it cannot substitute for one.
 
-### healthcare practitioner restrictions
+### Healthcare practitioner restrictions
 
 For a contract entered into on or after July 1, 2023, section 53-9-11.2 makes a provision restricting a covered practitioner from practicing or providing professional services after the relationship ends voidable — not void — at the practitioner's election, and the statutory class reaches far beyond physicians. Because the provision stands unless the practitioner avoids it, and because the section treats a practice restriction and a compliant current-patient or current-client solicitation restriction differently, a practice restriction bundled with an otherwise-compliant patient non-solicit leaves the compliant piece exposed to the voidable one .
 
-### partial enforcement
+### Partial enforcement
 
 South Dakota recognizes partial enforcement, but a court modifies an overbroad covenant only to conform it to the statutory limits and refuses to read in exceptions the Legislature did not adopt, so a covenant drafted past the chapter 53-9 line is narrowed to the exception at best and void beyond it at worst — never rewritten into the broader restraint the drafter wanted . What survives a failed non-compete is the divisible remainder: section 53-9-8 voids a contract only to the extent it restrains trade, so separable confidentiality and nondisclosure promises can stand even when a covenant falls .
 
-### out-of-state choice of law
+### Out-of-state choice of law
 
 An out-of-state choice-of-law clause does not save a covenant that chapter 53-9 would condemn. South Dakota courts honor a contractual choice of law only until it contravenes South Dakota public policy, and section 53-9-8 is a legislative public-policy expression rather than a private default, so a South Dakota worker, a South Dakota restricted territory, or a South Dakota customer base is measured under chapter 53-9 whatever law the agreement names . A covenant built to satisfy another state's looser rule but not the South Dakota exception stays exposed on the covenant that matters.
 
-### confidentiality scope
+### Confidentiality scope
 
 An NDA drafted as a disguised work ban does not gain South Dakota's protection for confidential information. A confidentiality covenant is strictly construed and enforced only to the extent reasonably necessary to protect the employer's interest in confidential information, so a clause that sweeps past that interest is exposed on the same ground a non-compete would be .
 
-### covenant survival in a fixed-term agreement
+### Covenant survival in a fixed-term agreement
 
 Restrictive covenants in a fixed-term South Dakota agreement that lacks express survival language end when the agreement ends: where the parties performed a fixed-term agreement to its stated end, the Eighth Circuit held the restrictive covenants terminated with it because nothing said they survived . The trap compounds with the statutory clock, which measures the two-year ceiling from the date of termination of the agreement, so the agreement term, the termination language, the per-covenant durations, and the survival clause have to align — a covenant impeccable under section 53-9-11 still fails if the contract ends before the restriction is triggered .

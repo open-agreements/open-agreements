@@ -77,7 +77,7 @@ Consideration for Restrictive Covenants
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer and patient lists, pricing, business methods, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee and excluding Employee's general skill, knowledge, and experience in the industry.
 
@@ -202,38 +202,38 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in New Hampshire](/practice-guides/non-compete/us/new-hampshire).
 
-### pre-acceptance timing
+### Pre-acceptance timing
 
 Consideration and timing are independent in New Hampshire. Continued employment after signing supplies consideration for the covenant, but a noncompete required of a new hire as a condition of employment is unenforceable if it was not delivered before the employee accepted the offer, and consideration does not cure that late delivery .
 
-### the recognized protectable-interest catalog
+### The recognized protectable-interest catalog
 
 A New Hampshire covenant carries only where it protects one of the interests the state recognizes — trade secrets, confidential information beyond trade secrets, an employee's special influence over the employer's customers, contacts developed during the employment, and the employer's goodwill and positive image . The mere cost of recruiting and hiring employees is not among them, so a covenant — including an employee anti-raiding clause — resting on training or replacement cost rather than a named employer asset fails the first prong, and the restraint falls with it . A recital reciting the interests protected is not self-proving; the covenant stands only where a concrete Protected Interest sits behind it and the restraint reaches no further than that interest requires.
 
-### the sphere of customer goodwill
+### The sphere of customer goodwill
 
 Customer, territory, and duration limits are measured against the employee's actual sphere of customer goodwill, not the employer's full customer base or market footprint. A restraint reaching customers beyond the employee's own contacts goes far beyond that sphere and is more restrictive than necessary to protect the employer's legitimate interest , and geography and duration must be narrowly tailored to the goodwill interest and the worker's actual customer or patient contact rather than to a named region or a round number carried forward . A covenant drawn to the customers the employee actually served, in the market where that contact occurred, for no longer than the interest survives, is the one that holds; anything broader invites a court to treat the whole restraint as overbroad.
 
-### offer notice
+### Offer notice
 
 A noncompete that reaches a new hire only during onboarding or later amendment paperwork, rather than with the offer materials, has missed the RSA 275:70 pre-acceptance delivery window. The statutory consequence is unenforceability of the noncompete itself, while the agreement's other provisions may survive .
 
-### low-wage employees
+### Low-wage employees
 
 The RSA 275:70-a exclusion turns on the worker's hourly rate against 200 percent of the federal minimum wage, not on job title, so the wage facts govern whether any New Hampshire noncompete can reach an hourly or lower-paid worker at all. Where the exclusion applies, the noncompete is void and unenforceable, and narrower wording does not save it .
 
-### clinician practice restrictions
+### Clinician practice restrictions
 
 A geographic practice ban directed at a covered New Hampshire clinician is void as to that restriction. Separate statutes reach physicians, nurses, advanced practice registered nurses, and podiatrists — the advanced-practice-registered-nurse statute effective August 23, 2025 — and each voids the geographic restriction while preserving the remaining provisions of the contract; licensure, not job title, is the test, so the covered class is wider than any single worker-category label . Where the real concern is information protection rather than practice location, a separate confidentiality and trade-secret provision reaches that concern, and these statutes leave it intact.
 
-### conveyance of the covenant on an asset sale
+### Conveyance of the covenant on an asset sale
 
 Whether an employee noncompete travels to an asset-purchase buyer turns on the transfer language of the deal, not on a general assumption that covenants follow the business. New Hampshire read a noncompete as conveyed to the buyer under the plain terms of the asset purchase agreement's transfer provision , so an assignment clause that expressly conveys the restrictive covenants leaves the buyer's standing to enforce resting on the contract rather than open to a threshold challenge.
 
-### the irreparable-harm recital
+### The irreparable-harm recital
 
 An acknowledgment that breach causes irreparable harm is a recital, not proof. A court applying New Hampshire law may decline to enjoin a noncompete for want of irreparable injury or a favorable balance of the equities while still granting the narrower nondisclosure injunction the record supports . The equities are established on the evidence at the hearing, so an injunctive-relief clause secures the ability to ask for relief, not the relief itself.
 
-### tolling
+### Tolling
 
 A tolling or extension-during-breach clause is a drafting choice of uncertain enforceability in New Hampshire, where no appellate authority settles whether a restricted period extends during a breach and the court has refused to extend a written covenant's duration absent ambiguity or evidence of intent to extend it . A clause tied to the protected interest and the covenant's overall duration reads within that fair and natural meaning; one that assumes a court will carry the period beyond it rests on a rule New Hampshire has not adopted.

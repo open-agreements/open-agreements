@@ -74,7 +74,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
@@ -199,30 +199,30 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Georgia](/practice-guides/non-compete/us/georgia).
 
-### no-business covenants under the covered-employee gate
+### No-business covenants under the covered-employee gate
 
 A covenant barring an employee from accepting or doing business with a former customer — not merely soliciting one — reaches beyond the customer non-solicit that sits outside the employee-category gate, so a Georgia court may treat it as a restraint on competition in its own right and test it against the O.C.G.A. § 13-8-53(a) covered-employee categories rather than as a routine non-solicit . Against a worker who neither solicits, sells, manages, nor qualifies as a key employee or professional, a no-business restraint read as a competition restraint is as vulnerable as a non-compete, and the categories are policed — an hourly equipment operator did not qualify as a key employee .
 
-### territory reasonableness
+### Territory reasonableness
 
 A Georgia covenant does not fail merely for lack of an express territory, and one that states a territory is not automatically safe. After _Wimmer_, geographic scope is judged for overall reasonableness under O.C.G.A. § 13-8-56, so an unreasonably broad express territory remains vulnerable, and a covenant with no stated territory stands or falls on whether its actual reach is reasonable .
 
-### material-contact customers
+### Material-contact customers
 
 A Georgia customer non-solicitation covenant reaches only material-contact customers, not the employer's entire customer base. O.C.G.A. § 13-8-53(b) confines these covenants to customers the employee actually dealt with and to competitive products or services, so a clause sweeping in the whole customer list is measured against the Act's reasonableness standard and exposed as overbroad .
 
-### employee non-recruitment covenants under the Act
+### Employee non-recruitment covenants under the Act
 
 A Georgia employee non-recruitment or no-hire covenant is analyzed under the Restrictive Covenants Act, not the common law: _Belt Power v. Reed_ placed these covenants within the Act's ambit, and in _Wimmer_ the Supreme Court reviewed a two-year non-recruitment provision under O.C.G.A. § 13-8-53(a) . That places the clause under the same reasonableness standard, the same two-year employee presumption, and the same discretionary, narrowing-only modification as every other covenant — and, after _Wimmer_, without any express-geographic-term requirement — so a no-poach clause reaching beyond the colleagues the departing worker actually worked with or supervised is measured for overbreadth like any other restraint.
 
-### foreign choice-of-law and the Georgia touchstone rule
+### Foreign choice-of-law and the Georgia touchstone rule
 
 A choice-of-law clause selecting a more permissive state does not move a Georgia-based covenant out from under the GRCA. Under _Motorsports of Conyers v. Burbach_, Georgia law remains the touchstone for enforceability in Georgia courts even where the contract selects another state's law, and a covenant unreasonable under the Act cannot be rescued by applying foreign law instead . The sequence is fixed — the Act first, the chosen law only if the covenant survives — so a covenant drawn to satisfy the GRCA on its own terms is the one that holds, while a form leaning on a sister-state selection was never localized for Georgia.
 
-### tolling past contractual expiration
+### Tolling past contractual expiration
 
 A Georgia covenant that banks on time added after its stated end date is on uncertain ground. In _Daneshgari v. Patriot Towing Services_, the Court of Appeals reversed a trial court for extending an injunction past the contractual expiration of a non-compete — even against a party violating the injunction — because Georgia precedent rejects equitable extension of a covenant's period . Whether a self-executing contractual tolling clause fares any better is undecided, so the stated end date functions as the real one, and the protection that holds comes from prompt enforcement inside the term rather than from a clause purporting to stretch the restraint past its expiration.
 
-### confidentiality duration
+### Confidentiality duration
 
 Confidentiality and trade-secret covenants protect information interests even against employees outside the non-compete categories. O.C.G.A. § 13-8-53(e) lets these obligations run for as long as the information stays confidential, without the durational or category limits that apply to non-competes, so an information interest a non-compete cannot reach is still protectable through a confidentiality covenant .

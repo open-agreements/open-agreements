@@ -82,7 +82,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
@@ -207,26 +207,26 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Kentucky](/practice-guides/non-compete/us/kentucky).
 
-### the fair-protection standard
+### The fair-protection standard
 
 Kentucky has no general non-compete statute, so every covenant in the agreement stands or falls on the common-law fair-protection standard: a restraint holds only where, considering the subject, the nature of the business, the situation of the parties, and the circumstances of the case, it affords only fair protection to the employer's interests without interfering with the public interests or imposing undue hardship on the party restricted . Each covenant clears that standard on its own footing — a defensible restraint is not saved by being bundled with a shakier one — and valid consideration establishes only that a covenant is supported, not that it is reasonable. A recital that a restraint is reasonable or that breach causes irreparable harm supports the showing but does not replace it, and a notice or enforcement step built on a covenant a Kentucky court would refuse to enforce, for missing consideration or overbreadth, exposes the employer to a tortious-interference claim.
 
-### mid-employment consideration
+### Mid-employment consideration
 
 A Kentucky covenant an existing employee signs draws no consideration from continued at-will employment alone: since _Creech_, a covenant an incumbent signs for nothing new fails for lack of consideration, because the employer forbears no legal right and the employee gains no new benefit, and a bare recital of consideration did not save the agreement . A covenant tied to identifiable new value documented at signing — a bonus, a raise, a promotion, or specialized training — carries its own exchange, while a covenant added later by amendment lands on a worker already employed and needs new consideration of its own; a routine refresh that gives the employee nothing new does not create an enforceable covenant.
 
-### protectable interest
+### Protectable interest
 
 A Kentucky non-compete that blocks competition disconnected from a protectable interest reaches beyond what the fair-protection standard allows: a restraint must guard specific confidential information, trade secrets, or customer goodwill rather than ordinary competition, and one untethered from a Protected Interest is exposed as an unlawful restraint on trade. Trade-secret protection runs on a separate track under the Kentucky Uniform Trade Secrets Act, so a confidentiality-plus-KUTSA strategy guards the trade-secret interest independent of any covenant, and a customer non-solicit — resting on contact with protected customers rather than the statutory trade-secret threshold — is often easier to enforce than a broad non-compete .
 
-### duration and territory
+### Duration and territory
 
 A Kentucky court weighs duration and territory together against the employer's real market with no statutory cap and no safe-harbor number, so a term or radius copied from another form is measured against a market it was never sized to and is exposed as overbroad . The six-factor framework the Court of Appeals proposed during the _Creech_ litigation is persuasive structure a trial court may consult rather than a checklist that guarantees enforcement, because the Kentucky Supreme Court resolved _Creech_ on consideration alone and never adopted it. A non-compete confined to identified competitors is strong evidence that the restraint affords only fair protection, so a restraint keyed to the employee's actual role and the employer's actual footprint is far easier to defend than a long, open-ended, statewide ban.
 
-### the temporary health-care staffing ban
+### The temporary health-care staffing ban
 
 Kentucky imposes no general ban on physician non-competes; an ordinary physician or clinician is measured by the same fair-protection reasonableness and consideration rules as any other employee. The one categorical statutory ban turns on a different class: where the employer is a health care services agency and the worker is temporary direct care staff contracted with or employed by the agency, KRS 216.724 voids any restriction on the worker's employment opportunities, including contract buy-out and non-compete clauses, and a non-complying contract is an unfair trade practice and void . The ban keys on the agency-and-temporary-staff relationship rather than a license or job title, and a 2023 amendment leaves the placement of permanent direct care staff outside it; no reasonableness analysis rescues a covenant the statute voids.
 
-### anchoring the choice-of-law clause
+### Anchoring the choice-of-law clause
 
 A clause selecting Kentucky law is strongest when it is paired with a genuine connection to Kentucky and a covenant reasonable on its own terms. Federal courts sitting elsewhere have honored a contractual Kentucky choice-of-law clause for a non-compete — one applying Kentucky law under the agreement's choice-of-law and forum-selection clause, another holding that applying Kentucky's blue-penciling rule was not repugnant enough to the forum's public policy to override the parties' choice . Those are federal trial-court rulings rather than binding Kentucky Supreme Court authority and remain subject to the forum's public-policy limit, so a choice-of-law clause paired with a real Kentucky connection carries weight while a bare label on an out-of-state relationship does not settle enforceability.

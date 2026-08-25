@@ -1,0 +1,90 @@
+name: Consumer Privacy Policy
+category: data-compliance
+description: Configurable national consumer privacy-policy template that assembles the union of U.S. state privacy-disclosure duties, gated by a business's coverage and data-practice facts.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-privacy-policy
+version: '0.1'
+stability: experimental
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: Adapted from the OpenAgreements privacy-policy specification. Licensed under CC BY 4.0.
+omitted_clauses: drop
+fields:
+  - name: business_legal_name
+    type: string
+    description: Legal name of the business (the controller) that this privacy policy describes.
+    display_label: Business Legal Name
+    section: Business
+  - name: business_contact_email
+    type: string
+    description: An email address consumers can use to reach the business about this policy or their privacy rights.
+    display_label: Contact Email
+    section: Business
+  - name: business_postal_address
+    type: string
+    description: A postal address consumers can use to reach the business about this policy or their privacy rights.
+    display_label: Postal Address
+    section: Business
+  - name: privacy_request_url
+    type: string
+    description: The web address or channel where consumers submit privacy-rights requests.
+    display_label: Privacy Request Link
+    section: Requests
+  - name: appeal_request_url
+    type: string
+    description: The web address or channel where consumers appeal a refused privacy-rights request.
+    display_label: Appeal Link
+    section: Requests
+  - name: rights_response_days
+    type: number
+    description: The number of days within which the business responds to a privacy-rights request. The common VCDPA-family clock is 45 days (the union-strictest common deadline); set it shorter if a stricter in-scope state's deadline binds the business.
+    display_label: Rights Response Days
+    default: 45
+    default_value_rationale: 45 days is the common comprehensive-privacy-act response clock; it is the safe national default until a narrower in-scope state deadline applies.
+    section: Requests
+  - name: appeal_response_days
+    type: number
+    description: The number of days within which the business responds to an appeal of a refused request. The Florida (FDBR) appeal window is 60 days (the union-strictest common deadline); set it shorter if a stricter in-scope state's deadline binds the business.
+    display_label: Appeal Response Days
+    default: 60
+    default_value_rationale: 60 days is the FDBR appeal window and the safe national default until a narrower in-scope state deadline applies.
+    section: Requests
+  - name: policy_effective_date
+    type: string
+    description: The date this privacy policy takes effect.
+    display_label: Effective Date
+    section: Dates
+  - name: policy_last_updated
+    type: string
+    description: The date this privacy policy was last updated.
+    display_label: Last Updated
+    section: Dates
+  - name: personal_data_categories
+    type: string
+    description: The categories of personal data the business processes, as a comma-separated phrase (e.g. "identifiers, contact details, device and usage data, purchase history").
+    display_label: Personal Data Categories
+    section: Disclosures
+  - name: sensitive_data_categories
+    type: string
+    description: The sensitive-data categories the business processes, called out separately, as a comma-separated phrase (e.g. "precise geolocation, health data"). Leave empty when the business processes no sensitive data; the sensitive-data DISCLOSURE sentence is gated on this field being non-empty. (The sensitive-data CONSENT clause is gated separately on the derived field show_sensitive_consent.)
+    display_label: Sensitive Data Categories
+    default: ''
+    section: Disclosures
+  - name: processing_purposes
+    type: string
+    description: The purposes for which the business processes personal data, as a comma-separated phrase (e.g. "providing and improving our services, processing transactions, security and fraud prevention, communicating with you").
+    display_label: Processing Purposes
+    section: Disclosures
+  - name: third_party_categories
+    type: string
+    description: The categories of third parties with whom the business shares personal data, described in enough detail for a consumer to understand what type of entity each is, as a comma-separated phrase (e.g. "payment processors, cloud-hosting providers, analytics vendors").
+    display_label: Third-Party Recipient Categories
+    section: Disclosures
+  - name: data_sources
+    type: string
+    description: The sources from which the business collects personal data, as a comma-separated phrase (e.g. "directly from you, automatically from your device, from our service providers").
+    display_label: Data Sources
+    section: Disclosures
+priority_fields:
+  - business_legal_name
+  - policy_effective_date
+  - personal_data_categories

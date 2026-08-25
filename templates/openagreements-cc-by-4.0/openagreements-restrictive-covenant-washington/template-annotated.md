@@ -74,7 +74,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
@@ -217,7 +217,7 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Washington](/practice-guides/non-compete/us/washington).
 
-### independent consideration for a post-hire covenant
+### Independent consideration for a post-hire covenant
 
 A restrictive covenant a worker signs after employment has already commenced is validly formed only where it is supported by independent consideration given at the time the covenant is reached; continued at-will employment alone is not consideration, so a post-hire covenant backed only by keeping an existing worker on the payroll is unsupported and unenforceable . Identifiable new value given specifically in exchange for the covenant — a signing or retention bonus, an equity grant, or a promotion — is what carries a post-hire covenant across that line, and a placeholder left unfilled leaves the covenant resting on nothing the statute recognizes.
 

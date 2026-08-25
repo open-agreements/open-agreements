@@ -89,7 +89,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee, information that arises from Employee's general skills, knowledge, training, or experience whether gained on the job or otherwise, information that is readily ascertainable to the public, and information Employee otherwise has a right to disclose as legally protected conduct.
 
@@ -216,22 +216,22 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in New Mexico](/practice-guides/non-compete/us/new-mexico).
 
-### the reasonableness-and-legitimate-interest gate
+### The reasonableness-and-legitimate-interest gate
 
 New Mexico has no general non-compete statute for ordinary employees, so every covenant in the agreement stands or falls on the common-law requirement that it be reasonable in time, geography, and scope and tied to a legitimate protectable interest rather than a naked restraint on work . Reasonableness is decided on the facts of the particular case, with no fixed cap and no safe-harbor number, so a term or radius carried over from another form is measured against a market it was never sized to . General skills and knowledge, and customer information that is not peculiar or special, are not protectable interests, so a covenant resting on them protects nothing the law recognizes . A no-dealing restraint reaching customers who approach the former employee weighs harder against the employee and the public interest in open competition, and survives only where a genuine protectable interest supports it .
 
-### independent consideration
+### Independent consideration
 
 A mid-stream New Mexico covenant that rests on a bare recital of continued at-will employment rests on nothing: continued at-will employment is an illusory promise that cannot be consideration, and where consideration is missing New Mexico treats the agreement as never formed rather than merely unenforceable . New consideration dated to signing — a raise, bonus, promotion, or equity grant separate from the promise to keep employing the worker — is what carries a covenant signed after employment has already begun.
 
-### duration and territory
+### Duration and territory
 
 A New Mexico duration or radius carried over from another form is measured against the facts of this employment, not the case it came from: a term that held in a physician-clinic, dental, or business-sale dispute can fail for a different worker where the employer cannot connect the time and territory to an actual protectable interest . A radius matched to where the worker actually worked, and a duration matched to the life of the interest, are what a court measures as reasonable.
 
-### statutory coverage of renewals and extensions
+### Statutory coverage of renewals and extensions
 
 The health-care practitioner non-compete ban reaches not only the original agreement but any renewal or extension of it, so a covenant renewed or amended after the covered relationship began can fall within the statute even where the original did not . For psychologists, physician assistants, and pharmacists the ban attaches to agreements, renewals, or extensions executed on or after the 2023 amendment's effective date, so the execution date fixes whether those three classes are covered . A non-compete the statute makes unenforceable gains nothing from ordinary reasonableness drafting, and presenting or enforcing it against a prospective employer on the strength of an unenforceable covenant exposes the enforcing party to a tortious-interference claim. A liquidated-damages provision offered in place of a foreclosed restraint holds only in an amount reasonable at signing in light of the anticipated harm; an unreasonably large amount operates as an unenforceable penalty .
 
-### sale of business
+### Sale of business
 
 An employment covenant form dropped onto a New Mexico business sale is measured against the wrong facts. A sale covenant is valid within reasonable limits of time and space and is disturbed less readily than an employment restraint, but the reasonableness that supports it rests on the purchased goodwill, the seller's role and prominence, the buyer's actual market, the purchase price, and the payout structure — the facts that carried the covenant in _Bowen_ .

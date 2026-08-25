@@ -80,7 +80,7 @@ Duration
 
 ### Defined Terms
 
-[[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
+[[Competitive Business]] means a person or entity that engages in the business activities described in Cover Terms under Competitive Business.
 
 [[Confidential Information]] means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee and excluding the general knowledge, skill, and experience Employee acquired during employment.
 
@@ -203,30 +203,30 @@ Date: _______________
 
 Drafting and enforceability considerations for this template, from the related practice guide: [Non-Competes in Nebraska](/practice-guides/non-compete/us/nebraska).
 
-### the three-part reasonableness test
+### The three-part reasonableness test
 
 Every covenant in a Nebraska agreement is measured as written against the three-part reasonableness test — not injurious to the public, no greater than reasonably necessary to protect a legitimate interest, and not unduly harsh and oppressive on the employee — and a covenant that fails any one part is unenforceable . Adequate consideration and an acknowledgment that the restraint is reasonable establish only that a covenant is supported, not that it is reasonable, so each covenant carries the test on its own. Terms that pile onto the employee bear on the harshness inquiry: a one-sided fee-shifting clause running only to the employer, or an injunction sought on a covenant that is not itself enforceable, adds weight to the side the third part already weighs. An amendment that widens a covenant — a larger customer class, a longer period — is measured anew on its widened terms, because the covenant is judged as written with no court trimming it afterward.
 
-### personally served customers
+### Personally served customers
 
 A Nebraska employee customer restriction that reaches prospective customers, or clients the employee never personally served, is exposed even where the employee had some contact: a covenant extending beyond the customers the employee actually did business with can be void in full . The protectable interest is the goodwill in the relationships the employee personally handled, so a covenant — and any notice to a future employer asserting one — confined to that customer class states a position the employer can defend, while one reaching the company's whole customer base or its prospects overstates it .
 
-### ordinary competition versus a protectable interest
+### Ordinary competition versus a protectable interest
 
 A Nebraska covenant framed around a market, territory, or line of business rather than the customers the employee personally served reads as an attempt to prevent ordinary competition, not the improper competition Nebraska law guards against, and a covenant aimed at ordinary competition is unenforceable . A restraint tied to a recognized protectable interest — the customers the employee actually served, confidential information, or trade secrets — and kept no broader than that interest stays on the enforceable side of the line; a radius or activity ban that sweeps in ordinary competition does not, and Nebraska does not narrow it to whatever would have been reasonable.
 
-### franchise reformation
+### Franchise reformation
 
 An ordinary Nebraska employment covenant gets no rescue from the franchise reformation statute: that statute is a separate exception, and an employment covenant that relies on it as a general savings mechanism stands on nothing, because Nebraska courts do not reform an overbroad employment covenant and a nonseverable overbreadth can take the whole clause down with it .
 
-### successor enforcement no stronger than the covenant
+### Successor enforcement no stronger than the covenant
 
 A covenant can move to a successor two ways in Nebraska — by an express assignment and successor clause, and by operation of law when the governing merger statute transfers it, even without a separate assignment . Neither path improves the covenant: a successor's right to enforce is no greater than the original employer's, and the surviving company still must prove each covenant valid under the reasonableness test, which held in the leading case only because the restraint was confined to customers the employee personally dealt with . A covenant reaching beyond the personally served customer class is no more enforceable in a successor's hands than in the original employer's.
 
-### a foreign choice-of-law clause as a risk variable
+### A foreign choice-of-law clause as a risk variable
 
 Where the employee's services, customers, and competition are centered in Nebraska, Nebraska law is likely to govern the covenant's enforceability whatever law the agreement names, because Nebraska courts have applied Nebraska law to an out-of-state employer's covenant on that basis . A foreign-law selection is therefore a risk variable rather than an enforceability strategy: an overbroad postemployment restraint that another state's law might tolerate remains against Nebraska public policy and void, so a covenant drafted to satisfy the more permissive law is exposed where Nebraska is the place of work and enforcement .
 
-### no rescue
+### No rescue
 
 One overbroad term can be fatal to the whole covenant. Because a Nebraska court will not trim the covenant after a dispute starts, the restraint that holds is the one drawn narrowly at the front end — confined to personally served customers, severable, and independently readable — so that a single failed term does not carry the others down with it .
