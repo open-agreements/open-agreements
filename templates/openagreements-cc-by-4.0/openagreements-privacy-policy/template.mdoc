@@ -1,0 +1,616 @@
+---
+template_id: openagreements-privacy-policy
+name: Consumer Privacy Policy
+category: data-compliance
+description: >-
+  Configurable national consumer privacy-policy template that assembles the union of U.S.
+  state privacy-disclosure duties, gated by a business's coverage and data-practice facts.
+source_url: >-
+  https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-privacy-policy
+version: "0.1"
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Adapted from the OpenAgreements privacy-policy specification. Licensed under CC BY 4.0.
+layout_id: cover-standard-signature-v1
+style_id: openagreements-default-v1
+document:
+  title: Privacy Policy
+  label: OpenAgreements Consumer Privacy Policy
+  version: "0.1"
+  license: Free to use under CC BY 4.0
+  include_cloud_doc_line: true
+  defined_term_highlight_mode: definition_site_only
+sections:
+  cover_terms:
+    section_label: Policy Summary
+    heading_title: Policy Summary
+  standard_terms:
+    section_label: Privacy Policy
+    heading_title: Privacy Policy
+  signature:
+    section_label: Contact
+    heading_title: How to Contact Us
+omitted_clauses: drop
+fields:
+  - name: business_legal_name
+    type: string
+    description: Legal name of the business (the controller) that this privacy policy describes.
+    display_label: Business Legal Name
+    section: Business
+  - name: business_contact_email
+    type: string
+    description: An email address consumers can use to reach the business about this policy or their privacy rights.
+    display_label: Contact Email
+    section: Business
+  - name: business_postal_address
+    type: string
+    description: A postal address consumers can use to reach the business about this policy or their privacy rights.
+    display_label: Postal Address
+    section: Business
+  - name: privacy_request_url
+    type: string
+    description: The web address or channel where consumers submit privacy-rights requests.
+    display_label: Privacy Request Link
+    section: Requests
+  - name: appeal_request_url
+    type: string
+    description: The web address or channel where consumers appeal a refused privacy-rights request.
+    display_label: Appeal Link
+    section: Requests
+  - name: rights_response_days
+    type: number
+    description: >-
+      The number of days within which the business responds to a privacy-rights request. The
+      common VCDPA-family clock is 45 days (the union-strictest common deadline); set it shorter
+      if a stricter in-scope state's deadline binds the business.
+    display_label: Rights Response Days
+    default: 45
+    default_value_rationale: >-
+      45 days is the common comprehensive-privacy-act response clock; it is the safe national
+      default until a narrower in-scope state deadline applies.
+    section: Requests
+  - name: appeal_response_days
+    type: number
+    description: >-
+      The number of days within which the business responds to an appeal of a refused request.
+      The Florida (FDBR) appeal window is 60 days (the union-strictest common deadline); set it
+      shorter if a stricter in-scope state's deadline binds the business.
+    display_label: Appeal Response Days
+    default: 60
+    default_value_rationale: >-
+      60 days is the FDBR appeal window and the safe national default until a narrower in-scope
+      state deadline applies.
+    section: Requests
+  - name: policy_effective_date
+    type: string
+    description: The date this privacy policy takes effect.
+    display_label: Effective Date
+    section: Dates
+  - name: policy_last_updated
+    type: string
+    description: The date this privacy policy was last updated.
+    display_label: Last Updated
+    section: Dates
+  - name: personal_data_categories
+    type: string
+    description: >-
+      The categories of personal data the business processes, as a comma-separated phrase
+      (e.g. "identifiers, contact details, device and usage data, purchase history").
+    display_label: Personal Data Categories
+    section: Disclosures
+  - name: sensitive_data_categories
+    type: string
+    description: >-
+      The sensitive-data categories the business processes, called out separately, as a
+      comma-separated phrase (e.g. "precise geolocation, health data"). Leave empty when the
+      business processes no sensitive data; the sensitive-data DISCLOSURE sentence is gated on
+      this field being non-empty. (The sensitive-data CONSENT clause is gated separately on the
+      derived field show_sensitive_consent.)
+    display_label: Sensitive Data Categories
+    default: ""
+    section: Disclosures
+  - name: processing_purposes
+    type: string
+    description: >-
+      The purposes for which the business processes personal data, as a comma-separated phrase
+      (e.g. "providing and improving our services, processing transactions, security and fraud
+      prevention, communicating with you").
+    display_label: Processing Purposes
+    section: Disclosures
+  - name: third_party_categories
+    type: string
+    description: >-
+      The categories of third parties with whom the business shares personal data, described in
+      enough detail for a consumer to understand what type of entity each is, as a comma-separated
+      phrase (e.g. "payment processors, cloud-hosting providers, analytics vendors").
+    display_label: Third-Party Recipient Categories
+    section: Disclosures
+  - name: data_sources
+    type: string
+    description: >-
+      The sources from which the business collects personal data, as a comma-separated phrase
+      (e.g. "directly from you, automatically from your device, from our service providers").
+    display_label: Data Sources
+    section: Disclosures
+  - name: covered_by_comprehensive_privacy_act
+    type: boolean
+    description: >-
+      True when a comprehensive consumer-privacy act covers the business. Feeds the derived gates
+      show_rights_machinery, show_profiling_optout, show_uoom, show_sale_optout, and
+      show_sensitive_consent. Default true (safe maximal); a business covered by no privacy regime
+      switches it off.
+    display_label: Covered by a comprehensive state privacy law
+    help: >-
+      Check this if a comprehensive state consumer-privacy law — such as California's, Virginia's,
+      or Colorado's — applies to your business.
+    default: true
+    default_value_rationale: >-
+      Defaults true so the consumer-rights machinery is included by default under the national
+      assumption; a business covered by no comprehensive act switches it off to avoid gold-plating.
+    section: Coverage
+    ai_only: true
+  - name: covered_by_limited_scope_notice_regime
+    type: boolean
+    description: >-
+      True when a limited-scope notice/sale regime covers the business without a comprehensive act
+      (e.g. a Nevada website operator, a Rhode Island commercial site that sells data, Florida's
+      narrow act). Feeds the derived gates show_sale_optout and show_sensitive_consent. Default
+      true (safe maximal).
+    display_label: Covered by a narrower privacy or data-sale law
+    help: >-
+      Check this if a narrower state privacy or data-sale law applies to your business but a
+      comprehensive one does not — for example, a Nevada website operator or a business that sells
+      data under Florida's or Rhode Island's laws.
+    default: true
+    default_value_rationale: >-
+      Defaults true so limited-scope sale and sensitive-data duties are included by default; a
+      business covered by no regime at all switches it off.
+    section: Coverage
+    ai_only: true
+  - name: honors_universal_opt_out_signal
+    type: boolean
+    description: >-
+      Whether the site actually honors a universal opt-out signal (e.g. Global Privacy
+      Control). An operational fact; feeds the derived gate show_uoom (= covered_by_comprehensive_privacy_act
+      AND honors_universal_opt_out_signal). A false value suppresses the clause rather than
+      asserting honoring the business has not implemented.
+    display_label: Honors universal opt-out signals
+    help: >-
+      Check this if your website honors — actually acts on — universal opt-out signals such as
+      Global Privacy Control, not merely detects them.
+    default: true
+    default_value_rationale: >-
+      Defaults true because honoring a universal opt-out signal is effectively mandatory for a
+      comprehensively-covered national business; set false only as a remediation item, which
+      suppresses the clause to avoid a false assertion.
+    section: Practices
+    ai_only: true
+  - name: processes_sensitive_data
+    type: boolean
+    description: >-
+      True when the business processes sensitive data. Feeds the derived gate show_sensitive_consent
+      (= (covered_by_comprehensive_privacy_act OR covered_by_limited_scope_notice_regime) AND
+      processes_sensitive_data).
+    display_label: Processes sensitive personal data
+    help: >-
+      Check this if your business processes sensitive personal data — such as precise geolocation,
+      health information, or data revealing race, religion, or sexual orientation.
+    default: false
+    default_value_rationale: Conservative false default; set true only when the business affirmatively processes sensitive data.
+    section: Practices
+    ai_only: true
+  - name: sells_personal_data
+    type: boolean
+    description: >-
+      True when the business sells personal data. Feeds the derived gate show_sale_optout
+      (= (covered_by_comprehensive_privacy_act OR covered_by_limited_scope_notice_regime) AND
+      (sells_personal_data OR processes_for_targeted_advertising)).
+    display_label: Sells personal data
+    help: >-
+      Check this if your business sells personal data — that is, shares it with third parties in
+      exchange for money or other valuable consideration.
+    default: false
+    default_value_rationale: Conservative false default; set true only when the business affirmatively sells personal data.
+    section: Practices
+    ai_only: true
+  - name: sells_sensitive_personal_data
+    type: boolean
+    description: >-
+      True when the business sells SENSITIVE personal data specifically. Gates (via include-when)
+      the Texas scripted sale-notice clause, which renders the fixed statutory notice
+      (Tex. Bus. & Com. Code § 541.106). A practice-gated module, independent of the coverage flags.
+    display_label: Sells sensitive personal data
+    help: >-
+      Check this if your business specifically sells sensitive personal data to third parties.
+    default: false
+    default_value_rationale: Conservative false default; set true only when the business affirmatively sells sensitive personal data.
+    section: Practices
+    ai_only: true
+  - name: processes_for_targeted_advertising
+    type: boolean
+    description: >-
+      True when the business processes personal data for targeted advertising. Feeds the derived
+      gate show_sale_optout (= (covered_by_comprehensive_privacy_act OR
+      covered_by_limited_scope_notice_regime) AND (sells_personal_data OR
+      processes_for_targeted_advertising)).
+    display_label: Uses data for targeted advertising
+    help: >-
+      Check this if your business uses personal data to show advertising selected based on activity
+      across other websites or apps.
+    default: false
+    default_value_rationale: Conservative false default; set true only when the business affirmatively processes data for targeted advertising.
+    section: Practices
+    ai_only: true
+  - name: processes_for_profiling
+    type: boolean
+    description: >-
+      True when the business profiles consumers in furtherance of decisions that produce legal or
+      similarly significant effects. Feeds the derived gate show_profiling_optout
+      (= covered_by_comprehensive_privacy_act AND processes_for_profiling).
+    display_label: Profiles consumers for significant decisions
+    help: >-
+      Check this if your business profiles consumers to help make decisions that produce legal or
+      similarly significant effects about them.
+    default: false
+    default_value_rationale: Conservative false default; set true only when the business affirmatively performs significant-effect profiling.
+    section: Practices
+    ai_only: true
+  - name: has_minor_users
+    type: boolean
+    description: >-
+      True when the business directs services to, or has actual knowledge of, minor users. Sole
+      input to the derived gate minors_active (see #1304).
+    display_label: Directs services to, or knows of, minor users
+    help: >-
+      Check this if your business directs its services to minors or has actual knowledge that
+      minors use them.
+    default: false
+    default_value_rationale: Conservative false default; set true only when the business affirmatively directs services to, or knows of, minor users.
+    section: Practices
+    ai_only: true
+  - name: as_of_date
+    type: date
+    description: >-
+      The date this policy is generated or takes effect, reserved for temporal gating of
+      future-effective components. No active gate currently consumes it: the minors_active date
+      condition (SC Act 96, live 2026-02-05) is permanently satisfied and was dropped from the
+      formula (see #1304). When unset, resolves to the generation date at fill time.
+    section: Coverage
+    ai_only: true
+  - name: collects_biometric_identifiers
+    type: boolean
+    description: >-
+      True when the business collects biometric identifiers. Gates (via include-when) the biometric
+      retention-policy and biometric written-release clauses. Independent of the coverage flags.
+    display_label: Collects biometric identifiers
+    help: >-
+      Check this if your business collects biometric identifiers, such as fingerprints or face- or
+      voice-recognition data.
+    default: false
+    default_value_rationale: Conservative false default; set true only when the business affirmatively collects biometric identifiers.
+    section: Practices
+    ai_only: true
+  - name: collects_consumer_health_data
+    type: boolean
+    description: >-
+      True when the business collects consumer health data. Gates (via include-when) the
+      consumer-health-data policy and health-data consent clauses. Independent of the coverage flags.
+    display_label: Collects consumer health data
+    help: >-
+      Check this if your business collects consumer health data that falls outside HIPAA-regulated
+      protected health information.
+    default: false
+    default_value_rationale: Conservative false default; set true only when the business affirmatively collects consumer health data.
+    section: Practices
+    ai_only: true
+  - name: is_website_operator
+    type: boolean
+    description: >-
+      True when the business is a covered website operator (e.g. under the Nevada operator regime).
+      Gates (via include-when) the website-operator notice clause.
+    display_label: Operates a covered website or online service
+    help: >-
+      Check this if your business operates a website or online service covered by a state operator
+      notice law, such as Nevada's.
+    default: false
+    default_value_rationale: Conservative false default; set true only when the business is a covered website operator.
+    section: Practices
+    ai_only: true
+  - name: has_known_child_users
+    type: boolean
+    description: >-
+      True when the business has known child users (under 13). Gates (via include-when) the COPPA
+      routing clause. Federal; independent of the coverage flags.
+    display_label: Has known child users under 13
+    help: >-
+      Check this if your business has actual knowledge that children under 13 use its services.
+    default: false
+    default_value_rationale: Conservative false default; set true only when the business has actual knowledge of child users under 13.
+    section: Practices
+    ai_only: true
+  - name: is_data_broker
+    type: boolean
+    description: >-
+      True when the business knowingly sells or licenses to third parties the personal data of
+      consumers with whom it has no direct relationship. Gates (via include-when) the data-broker
+      opt-out clause.
+    display_label: Is a data broker
+    help: >-
+      Check this if your business knowingly sells or licenses to third parties the personal data of
+      consumers it has no direct relationship with.
+    default: false
+    default_value_rationale: Conservative false default; set true only when the business is a data broker.
+    section: Practices
+    ai_only: true
+  - name: show_rights_machinery
+    type: boolean
+    description: >-
+      Derived gate. Compute as: covered_by_comprehensive_privacy_act. Gates the consumer-rights
+      catalog, rights-request method, response-timeline, and appeal clauses.
+    derived_gate: "covered_by_comprehensive_privacy_act"
+    default: true
+    default_value_rationale: Mirrors covered_by_comprehensive_privacy_act, which defaults true under the national assumption.
+    section: Derived Gates
+    ai_only: true
+  - name: show_profiling_optout
+    type: boolean
+    description: >-
+      Derived gate. Compute as: covered_by_comprehensive_privacy_act AND processes_for_profiling.
+      Gates the profiling opt-out clause.
+    derived_gate: "covered_by_comprehensive_privacy_act AND processes_for_profiling"
+    default: false
+    default_value_rationale: Mirrors the conjunction; processes_for_profiling defaults false, so this defaults false.
+    section: Derived Gates
+    ai_only: true
+  - name: show_uoom
+    type: boolean
+    description: >-
+      Derived gate. Compute as: covered_by_comprehensive_privacy_act AND
+      honors_universal_opt_out_signal. Gates the universal-opt-out-signal clause.
+    derived_gate: "covered_by_comprehensive_privacy_act AND honors_universal_opt_out_signal"
+    default: true
+    default_value_rationale: Mirrors the conjunction; both inputs default true, so this defaults true.
+    section: Derived Gates
+    ai_only: true
+  - name: show_sale_optout
+    type: boolean
+    description: >-
+      Derived gate. Compute as: (covered_by_comprehensive_privacy_act OR
+      covered_by_limited_scope_notice_regime) AND (sells_personal_data OR
+      processes_for_targeted_advertising). Gates the sale/targeted-advertising opt-out clause.
+    derived_gate: "(covered_by_comprehensive_privacy_act OR covered_by_limited_scope_notice_regime) AND (sells_personal_data OR processes_for_targeted_advertising)"
+    default: false
+    default_value_rationale: Mirrors the expression; sells_personal_data and processes_for_targeted_advertising both default false, so this defaults false.
+    section: Derived Gates
+    ai_only: true
+  - name: show_sensitive_consent
+    type: boolean
+    description: >-
+      Derived gate. Compute as: (covered_by_comprehensive_privacy_act OR
+      covered_by_limited_scope_notice_regime) AND processes_sensitive_data. Gates the
+      sensitive-data consent clause.
+    derived_gate: "(covered_by_comprehensive_privacy_act OR covered_by_limited_scope_notice_regime) AND processes_sensitive_data"
+    default: false
+    default_value_rationale: Mirrors the expression; processes_sensitive_data defaults false, so this defaults false.
+    section: Derived Gates
+    ai_only: true
+  - name: minors_active
+    type: boolean
+    description: >-
+      Derived gate. Compute as: has_minor_users. Gates the minor-user disclosures clause. (This gate
+      once also required as_of_date >= 2026-02-05 — the earliest live minors component, SC Act 96 —
+      but that date passed, permanently satisfying the temporal term, so it was dropped from the
+      formula during #1304.)
+    derived_gate: "has_minor_users"
+    default: false
+    default_value_rationale: Mirrors has_minor_users, which defaults false, so this defaults false.
+    section: Derived Gates
+    ai_only: true
+priority_fields:
+  - business_legal_name
+  - policy_effective_date
+  - personal_data_categories
+---
+
+# Privacy Policy
+
+{% agreement-section type="cover_terms" %}
+## Policy Summary
+
+The summary below states the key facts about this Privacy Policy and how to reach us.
+
+{% cover-terms %}
+{% cover-term kind="row" label="Business" field="business_legal_name" /%}
+{% cover-term kind="row" label="Contact Email" field="business_contact_email" include-when="business_contact_email" /%}
+{% cover-term kind="row" label="Postal Address" field="business_postal_address" include-when="business_postal_address" /%}
+{% cover-term kind="row" label="Effective Date" field="policy_effective_date" /%}
+{% cover-term kind="row" label="Last Updated" field="policy_last_updated" include-when="policy_last_updated" /%}
+{% cover-term kind="row" label="Privacy Request Link" field="privacy_request_url" include-when="privacy_request_url" /%}
+{% /cover-terms %}
+{% /agreement-section %}
+
+{% agreement-section type="standard_terms" %}
+## Privacy Policy
+
+{% clause id="who-we-are" %}
+### Who We Are
+
+This Privacy Policy explains how {% field name="business_legal_name" /%} collects, uses, and shares your [[Personal Data]] — information that is linked or reasonably linkable to an identified or identifiable individual. If you have questions about this policy or your privacy rights, contact us at {% field name="business_contact_email" /%} or {% field name="business_postal_address" /%}.
+
+{% /clause %}
+
+{% clause id="effective-date" %}
+### Effective Date
+
+This Privacy Policy is effective as of {% field name="policy_effective_date" /%}.
+
+{% /clause %}
+
+{% clause id="information-we-collect" %}
+### Information We Collect
+
+We collect the following categories of [[Personal Data]]: {% field name="personal_data_categories" /%}. We collect this information from the following sources: {% field name="data_sources" /%}.
+
+{% /clause %}
+
+{% clause id="sensitive-data-disclosure" include-when="sensitive_data_categories" %}
+### Sensitive Information
+
+Some of what we collect is [[Sensitive Data]] — the more protected categories of personal data that we process only with your opt-in consent. We identify those categories here separately: {% field name="sensitive_data_categories" /%}.
+
+{% /clause %}
+
+{% clause id="why-we-collect-it" %}
+### Why We Collect It
+
+We process [[Personal Data]] for the following purposes: {% field name="processing_purposes" /%}.
+
+{% /clause %}
+
+{% clause id="how-we-share-it" %}
+### How We Share It
+
+We may share [[Personal Data]] with the following categories of third parties: {% field name="third_party_categories" /%}.
+
+{% /clause %}
+
+{% clause id="your-privacy-rights" include-when="show_rights_machinery" %}
+### Your Privacy Rights
+
+If you are a [[Consumer]] — an individual who is a resident of a state acting in an individual or household context — in a state with a comprehensive privacy law, you have the right to: confirm whether we process your [[Personal Data]] and access it; correct inaccuracies; delete it; obtain a portable copy; and opt out of [[Targeted Advertising]], the [[Sale]] of your [[Personal Data]], and [[Profiling]] in furtherance of decisions that produce legal or similarly significant effects. You may also opt out of our collection of [[Sensitive Data]] and of the use of voice- or facial-recognition features.
+
+{% /clause %}
+
+{% clause id="how-to-exercise-your-rights" include-when="show_rights_machinery" %}
+### How to Exercise Your Rights
+
+To exercise any of these rights, submit a request at {% field name="privacy_request_url" /%}. We will not deny you goods or services, or otherwise discriminate against you, for exercising them.
+
+{% /clause %}
+
+{% clause id="our-response" include-when="show_rights_machinery" %}
+### Our Response
+
+We will respond to your request without undue delay and within {% field name="rights_response_days" /%} days of receipt. When reasonably necessary we may extend this period once by 15 additional days, and we will tell you of the extension and the reason within the initial period.
+
+{% /clause %}
+
+{% clause id="appeals" include-when="show_rights_machinery" %}
+### Appeals
+
+If we decline to act on your request, you may appeal at {% field name="appeal_request_url" /%}. We will respond in writing, with the reasons for our decision, within {% field name="appeal_response_days" /%} days.
+
+{% /clause %}
+
+{% clause id="sale-and-targeted-advertising" include-when="show_sale_optout" %}
+### Sale of Data and Targeted Advertising
+
+Where we [[Sell]] your [[Personal Data]] — that is, exchange it for monetary or other valuable consideration — or process it for [[Targeted Advertising]] — advertising selected based on personal data obtained from your activity across nonaffiliated sites or applications — you may opt out of those activities at any time at {% field name="privacy_request_url" /%}.
+
+{% /clause %}
+
+{% clause id="texas-sensitive-data-sale-notice" include-when="sells_sensitive_personal_data" %}
+### Notice of Sale of Sensitive Data
+
+NOTICE: We may sell your sensitive personal data.
+
+{% /clause %}
+
+{% clause id="profiling" include-when="show_profiling_optout" %}
+### Profiling
+
+We use [[Profiling]] — automated processing to evaluate, analyze, or predict an individual's characteristics — in furtherance of decisions that produce legal or similarly significant effects concerning you. You may opt out of this profiling at {% field name="privacy_request_url" /%}.
+
+{% /clause %}
+
+{% clause id="universal-opt-out-signals" include-when="show_uoom" %}
+### Universal Opt-Out Signals
+
+We recognize and honor a [[Universal Opt-Out Signal]] — a user-selected browser or device control, such as the Global Privacy Control (GPC) — as a valid request to opt out of [[Targeted Advertising]] and the [[Sale]] of [[Personal Data]] from the browser or device that sends it.
+
+{% /clause %}
+
+{% clause id="sensitive-data-consent" include-when="show_sensitive_consent" %}
+### Sensitive Data
+
+We obtain your opt-in consent before collecting or processing your [[Sensitive Data]] ({% field name="sensitive_data_categories" /%}). You may withdraw that consent at any time at {% field name="privacy_request_url" /%}.
+
+{% /clause %}
+
+{% clause id="children-under-13" include-when="has_known_child_users" %}
+### Children Under 13
+
+We do not knowingly collect [[Personal Data]] from a child under 13 without verifiable parental consent, and we handle any such data in accordance with the Children's Online Privacy Protection Act (COPPA).
+
+{% /clause %}
+
+{% clause id="biometric-data-retention" include-when="collects_biometric_identifiers" %}
+### Biometric Data Retention
+
+We maintain this written, publicly available policy establishing our retention schedule and guidelines for permanently destroying [[Biometric Identifier]]s — retina or iris scans, fingerprints, voiceprints, or scans of hand or face geometry. We destroy a [[Biometric Identifier]] when the initial purpose for collecting it has been satisfied or within three years of your last interaction with us, whichever occurs first.
+
+{% /clause %}
+
+{% clause id="biometric-consent" include-when="collects_biometric_identifiers" %}
+### Biometric Consent
+
+Before we collect a [[Biometric Identifier]], we inform you in writing that we are collecting it, the specific purpose, and the length of time we will store and use it, and we obtain your written release.
+
+{% /clause %}
+
+{% clause id="consumer-health-data" include-when="collects_consumer_health_data" %}
+### Consumer Health Data
+
+We collect the categories of [[Consumer Health Data]] listed in Information We Collect, use that data for the purposes listed in Why We Collect It, and share it with the third parties and affiliates listed in How We Share It. You may exercise your rights over this data at {% field name="privacy_request_url" /%}.
+
+{% /clause %}
+
+{% clause id="consent-for-health-data" include-when="collects_consumer_health_data" %}
+### Consent for Health Data
+
+We do not collect [[Consumer Health Data]] except with your consent for a specified purpose, or to the extent necessary to provide a product or service you have requested from us.
+
+{% /clause %}
+
+{% clause id="website-notice" include-when="is_website_operator" %}
+### Website Notice
+
+Through our website we collect the categories of covered information described above and may share them with the third-party categories described above. You may review and request changes to your information, where that process is available, at {% field name="privacy_request_url" /%}. We notify you of material changes as described in Changes to This Policy. Third parties may collect covered information about your online activities over time and across different websites when you use our website.
+
+{% /clause %}
+
+{% clause id="minors" include-when="minors_active" %}
+### Minors
+
+Where we direct services to, or have actual knowledge of, users who are minors, we provide the additional disclosures required by applicable state law, including our minors' design and safety practices, the privacy protections we apply to minors, and the parental tools we make available.
+
+{% /clause %}
+
+{% clause id="data-broker-opt-out" include-when="is_data_broker" %}
+### Data Broker Opt-Out
+
+As a [[Data Broker]] — a business that knowingly sells or licenses to third parties the personal data of consumers with whom it has no direct relationship — we let you opt out of our collection, sale, or licensing of your [[Personal Data]]. You or your authorized agent may submit an opt-out request at {% field name="privacy_request_url" /%}.
+
+{% /clause %}
+
+{% clause id="keeping-this-policy-current" %}
+### Keeping This Policy Current
+
+We review this Privacy Policy and refresh its disclosures at least once every 12 months. It was last updated on {% field name="policy_last_updated" /%}.
+
+{% /clause %}
+
+{% clause id="changes-to-this-policy" %}
+### Changes to This Policy
+
+When we make a material change to this Privacy Policy, we will revise it, update the Effective Date above, and take reasonable steps to notify you of the change.
+
+{% /clause %}
+{% /agreement-section %}
+
+{% agreement-section type="signature" %}
+## How to Contact Us
+
+If you have questions about this Privacy Policy or wish to exercise your privacy rights, contact {% field name="business_legal_name" /%} at {% field name="business_contact_email" /%} or {% field name="business_postal_address" /%}.
+{% /agreement-section %}
