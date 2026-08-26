@@ -82,7 +82,7 @@ We recognize and honor a [[Universal Opt-Out Signal]] — a user-selected browse
 
 ### Sensitive Data
 
-We obtain your opt-in consent before collecting or processing your [[Sensitive Data]] ({sensitive_data_categories}). You may withdraw that consent at any time at {privacy_request_url}.
+We obtain your opt-in consent before collecting or processing the following categories of [[Sensitive Data]]: {sensitive_data_categories}. You may withdraw that consent at any time at {privacy_request_url}.
 
 ### Children Under 13
 
