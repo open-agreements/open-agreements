@@ -42,7 +42,7 @@ We collect the following categories of [[Personal Data]]: [The categories of per
 
 ### Sensitive Information
 
-Some of what we collect is [[Sensitive Data]] — the more protected categories of personal data that we process only with your opt-in consent. We identify those categories here separately: [The sensitive-data categories the business processes, called out separately, as a comma-separated phrase (e.g. "precise geolocation, health data"). Leave empty when the business processes no sensitive data; the sensitive-data DISCLOSURE sentence is gated on this field being non-empty. (The sensitive-data CONSENT clause is gated separately on the derived field show_sensitive_consent.)].
+Some of what we collect is [[Sensitive Data]] — the more protected categories of personal data that we process only with your opt-in consent. We identify those categories here separately: [The sensitive-data categories the business processes, called out separately, as a comma-separated phrase (e.g. "precise geolocation, health data"). Required when the business processes sensitive data; the sensitive-data DISCLOSURE sentence is gated on this field being non-empty, and the sensitive-data CONSENT clause is gated separately on the derived field show_sensitive_consent.].
 
 ### Why We Collect It
 
@@ -86,7 +86,7 @@ We recognize and honor a [[Universal Opt-Out Signal]] — a user-selected browse
 
 ### Sensitive Data
 
-We obtain your opt-in consent before collecting or processing your [[Sensitive Data]] ([The sensitive-data categories the business processes, called out separately, as a comma-separated phrase (e.g. "precise geolocation, health data"). Leave empty when the business processes no sensitive data; the sensitive-data DISCLOSURE sentence is gated on this field being non-empty. (The sensitive-data CONSENT clause is gated separately on the derived field show_sensitive_consent.)]). You may withdraw that consent at any time at [The web address or channel where consumers submit privacy-rights requests.].
+We obtain your opt-in consent before collecting or processing the following categories of [[Sensitive Data]]: [The sensitive-data categories the business processes, called out separately, as a comma-separated phrase (e.g. "precise geolocation, health data"). Required when the business processes sensitive data; the sensitive-data DISCLOSURE sentence is gated on this field being non-empty, and the sensitive-data CONSENT clause is gated separately on the derived field show_sensitive_consent.]. You may withdraw that consent at any time at [The web address or channel where consumers submit privacy-rights requests.].
 
 ### Children Under 13
 
