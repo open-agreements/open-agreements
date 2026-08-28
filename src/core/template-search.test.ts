@@ -1,5 +1,8 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect } from 'vitest';
 import { searchTemplates } from './template-search.js';
+import { itAllure } from '../../integration-tests/helpers/allure-test.js';
+
+const it = itAllure.epic('Discovery & Metadata');
 
 // ---------------------------------------------------------------------------
 // Fixture: representative subset of real templates

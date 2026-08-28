@@ -25,6 +25,7 @@ tests/test_documents/
 # AI agent config
 GEMINI.local.md
 gemini-extension.local.json
+.peer-review/
 
 # Python virtual env
 .venv/

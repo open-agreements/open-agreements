@@ -101,7 +101,7 @@
     "check:llms": "npm run generate:llms && git diff --exit-code -- llms.txt llms-full.txt",
     "generate:derived": "node scripts/derived_artifacts.mjs --generate",
     "check:derived": "node scripts/derived_artifacts.mjs --check",
-    "preflight:ci": "npm run lint && npm run validate && npm run check:derived && npm run check:template-previews && npm run check:preview-freshness && npm run check:gemini-extension-manifest && npm run check:docs && npm run test:run"
+    "preflight:ci": "npm run lint && npm run validate && npm run check:derived && npm run check:template-previews && npm run check:preview-freshness && npm run check:gemini-extension-manifest && npm run check:docs && npm run check:allure-labels && npm run test:run"
   },
   "keywords": [
     "legal",
