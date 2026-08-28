@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect } from 'vitest';
 import { fillTemplate } from '../src/core/engine.js';
 import { existsSync, unlinkSync } from 'node:fs';
 import { join } from 'node:path';
@@ -6,6 +6,9 @@ import { mkdtempSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { findTemplateDir } from '../src/utils/paths.js';
+import { itAllure } from '../integration-tests/helpers/allure-test.js';
+
+const it = itAllure.epic('Platform & Distribution');
 
 /**
  * Strip Concerto metadata fields from a validated instance

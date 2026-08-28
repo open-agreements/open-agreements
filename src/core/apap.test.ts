@@ -2,7 +2,8 @@ import { mkdtempSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import AdmZip from 'adm-zip';
-import { describe, expect, it } from 'vitest';
+import { describe, expect } from 'vitest';
+import { itAllure } from '../../integration-tests/helpers/allure-test.js';
 import { loadMetadata } from './metadata.js';
 import {
   canonicalMdocToApapTemplateMark,
@@ -16,6 +17,7 @@ const TEMPLATE_ID = 'openagreements-confidentiality-invention-assignment-agreeme
 const TEMPLATE_DIR = join(ROOT, 'templates/openagreements-cc-by-4.0', TEMPLATE_ID);
 const MODEL_PATH = join(ROOT, 'concerto/openagreements-employee-ip-inventions-assignment.cto');
 const CONTRACT_MODEL_PATH = join(ROOT, 'concerto/deps/@models.accordproject.org.accordproject.contract.cto');
+const it = itAllure.epic('Platform & Distribution');
 
 const VALUES = {
   company_name: 'Example Labs, Inc.',
