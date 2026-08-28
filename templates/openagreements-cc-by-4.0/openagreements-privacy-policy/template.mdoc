@@ -103,12 +103,11 @@ fields:
     type: string
     description: >-
       The sensitive-data categories the business processes, called out separately, as a
-      comma-separated phrase (e.g. "precise geolocation, health data"). Leave empty when the
-      business processes no sensitive data; the sensitive-data DISCLOSURE sentence is gated on
-      this field being non-empty. (The sensitive-data CONSENT clause is gated separately on the
-      derived field show_sensitive_consent.)
+      comma-separated phrase (e.g. "precise geolocation, health data"). Required when the
+      business processes sensitive data; the sensitive-data DISCLOSURE sentence is gated on this
+      field being non-empty, and the sensitive-data CONSENT clause is gated separately on the
+      derived field show_sensitive_consent.
     display_label: Sensitive Data Categories
-    default: ""
     section: Disclosures
   - name: processing_purposes
     type: string
@@ -534,7 +533,7 @@ We recognize and honor a [[Universal Opt-Out Signal]] — a user-selected browse
 {% clause id="sensitive-data-consent" include-when="show_sensitive_consent" %}
 ### Sensitive Data
 
-We obtain your opt-in consent before collecting or processing your [[Sensitive Data]] ({% field name="sensitive_data_categories" /%}). You may withdraw that consent at any time at {% field name="privacy_request_url" /%}.
+We obtain your opt-in consent before collecting or processing the following categories of [[Sensitive Data]]: {% field name="sensitive_data_categories" /%}. You may withdraw that consent at any time at {% field name="privacy_request_url" /%}.
 
 {% /clause %}
 
