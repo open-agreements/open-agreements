@@ -84,6 +84,55 @@ function assertMcpStartup(commandName, cwd) {
   }
 }
 
+function assertApapRuntime(cwd) {
+  const script = `
+    import { existsSync, readFileSync } from 'node:fs';
+    import { callTool } from '@open-agreements/contract-templates-mcp';
+
+    const exported = await callTool('get_apap_template', {
+      template_id: 'openagreements-confidentiality-invention-assignment-agreement',
+    });
+    const template = exported.structuredContent?.data?.template;
+    const ctoFiles = template?.templateModel?.model?.ctoFiles;
+    if (exported.isError || !Array.isArray(ctoFiles) || ctoFiles.length < 2) {
+      throw new Error(JSON.stringify(exported));
+    }
+
+    const rendered = await callTool('create_apap_agreement_docx', {
+      template_id: 'openagreements-confidentiality-invention-assignment-agreement',
+      agreement_data: {
+        $class: template.templateModel.typeName,
+        $identifier: 'oa-ciiaa-isolated-smoke',
+        contractId: 'oa-ciiaa-isolated-smoke',
+        company_name: 'Acme Manufacturing, Inc.',
+        company_signatory_name: 'Jane Doe',
+        company_signatory_title: 'CEO',
+        employee_name: 'John Smith',
+        effective_date: '2026-08-28',
+        prior_inventions_disclosure: 'None',
+        excluded_inventions_statement: 'None',
+        return_of_materials_timing: 'within five business days after termination',
+        post_termination_assistance: 'reasonable assistance on reasonable notice',
+        governing_law: 'New York',
+        venue: 'state and federal courts located in New York County, New York',
+      },
+      output_path: './apap-isolated-smoke.docx',
+    });
+    const outputPath = rendered.structuredContent?.data?.output_path;
+    if (rendered.isError || typeof outputPath !== 'string' || !existsSync(outputPath)) {
+      throw new Error(JSON.stringify(rendered));
+    }
+    const bytes = readFileSync(outputPath);
+    if (bytes.length < 4 || bytes[0] !== 0x50 || bytes[1] !== 0x4b) {
+      throw new Error('APAP render did not produce a DOCX/ZIP payload');
+    }
+  `;
+  run('node', ['--input-type=module', '--eval', script], {
+    cwd,
+    timeout: 30000,
+  });
+}
+
 function resolveLocalBin(commandName, cwd) {
   const binPath = resolve(cwd, 'node_modules', '.bin', commandName);
   if (!existsSync(binPath)) {
@@ -140,6 +189,7 @@ function main() {
     assertMcpStartup('open-agreements-workspace-mcp', sandbox);
     assertMcpStartup('open-agreements-contract-templates-mcp', sandbox);
     assertMcpStartup('open-agreements-checklist-mcp', sandbox);
+    assertApapRuntime(sandbox);
 
     console.log('PASS isolated package runtime checks.');
   } finally {

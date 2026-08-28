@@ -5,7 +5,7 @@ import { join } from 'node:path';
 
 const ROOT = process.cwd();
 
-const TEST_PATH_RE = /^(integration-tests|src|packages\/[^/]+\/tests)\/.+\.test\.ts$/;
+const TEST_PATH_RE = /^(concerto|integration-tests|src|packages\/[^/]+\/tests)\/.+\.test\.ts$/;
 
 const helperImportRe = /from\s+['"][^'"]*helpers\/allure-test\.(?:js|ts)['"]/;
 const wrapperReferenceRe = /\b(itAllure|testAllure)\b/;
@@ -32,6 +32,7 @@ function walk(dir, out) {
 
 function discoverTestFiles() {
   const files = [];
+  walk(join(ROOT, 'concerto'), files);
   walk(join(ROOT, 'integration-tests'), files);
   walk(join(ROOT, 'src'), files);
   walk(join(ROOT, 'packages'), files);
@@ -120,4 +121,3 @@ if (failures.length > 0) {
   console.error('\nExpected outcome: Allure-style tests emit Epic/Feature/Story labels via shared wrappers.');
   process.exit(1);
 }
-

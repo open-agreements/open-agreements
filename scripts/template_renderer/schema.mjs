@@ -169,6 +169,7 @@ export const contractSpecSchema = z.object({
     version: textSchema,
     license: textSchema,
     defined_term_highlight_mode: z.enum(['all_instances', 'definition_site_only', 'none']).optional().default('all_instances'),
+    footer_font_size_half_points: z.number().int().positive().optional().default(18),
     cover_row_height: z.number().int().positive().optional(),
     opening_note: textSchema.optional(),
     opening_recital: textSchema.optional(),

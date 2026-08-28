@@ -40,6 +40,7 @@
   "files": [
     "dist/",
     "bin/",
+    "concerto/**/*.cto",
     "templates/",
     "skills/",
     "README.md",

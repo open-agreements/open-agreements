@@ -55,6 +55,12 @@ describe('npm packaging', () => {
     );
   });
 
+  it('includes Concerto models used by the APAP runtime', () => {
+    if (!available) return;
+    expect(files).toContain('concerto/openagreements-employee-ip-inventions-assignment.cto');
+    expect(files).toContain('concerto/deps/@models.accordproject.org.accordproject.contract.cto');
+  });
+
   it('includes a fieldSelector metadata file', () => {
     if (!available) return;
     // S3 layout (#1249): NVCA field-selectors now live under
