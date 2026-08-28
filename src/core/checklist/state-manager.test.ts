@@ -1,7 +1,7 @@
 import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect } from 'vitest';
 import {
   createChecklist,
   listChecklists,
@@ -11,6 +11,9 @@ import {
   appendHistory,
   getHistory,
 } from './state-manager.js';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
+
+const it = itAllure.epic('Compliance & Governance').withLabels({ feature: 'Checklist State Manager' });
 
 const tempDirs: string[] = [];
 

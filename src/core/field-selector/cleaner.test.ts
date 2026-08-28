@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect } from 'vitest';
 import { mkdtempSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
@@ -6,6 +6,9 @@ import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
 import { cleanDocument } from './cleaner.js';
 import type { CleanConfig } from '../metadata.js';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
+
+const it = itAllure.epic('Cleaning & Normalization');
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 

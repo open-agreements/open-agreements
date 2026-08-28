@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import { tmpdir } from 'node:os';
 import { resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect } from 'vitest';
 import { slugDir } from './helpers/template-paths.js';
 
 import {
@@ -18,6 +18,9 @@ import {
   loadPreviewFreshnessManifest,
   parseChangedFiles,
 } from '../scripts/check_preview_freshness.mjs';
+import { itAllure } from './helpers/allure-test.js';
+
+const it = itAllure.epic('Verification & Drift').withLabels({ feature: 'Preview Freshness Gate' });
 
 const REPO_ROOT = resolve(fileURLToPath(import.meta.url), '../..');
 const SCRIPT_PATH = resolve(REPO_ROOT, 'scripts', 'check_preview_freshness.mjs');

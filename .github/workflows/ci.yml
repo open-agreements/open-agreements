@@ -197,6 +197,13 @@ jobs:
       - name: Build
         run: npm run build
 
+      # Guards the Allure results this job uploads: a test file that imports
+      # vitest's bare `it`/`test` still passes, but its cases land in the report
+      # with no Epic/Feature grouping, so the report silently degrades. Cheap
+      # static check, so it runs before the suite and fails fast.
+      - name: Validate Allure test labels
+        run: npm run check:allure-labels
+
       - name: Test
         run: npx vitest run
 
