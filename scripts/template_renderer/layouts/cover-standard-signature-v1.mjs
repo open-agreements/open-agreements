@@ -276,6 +276,7 @@ function sectionFooter(docLabel, version, style, fontSizeHalfPoints = 18) {
   return new Footer({
     children: [
       new Paragraph({
+        style: 'Normal',
         tabStops: [{ type: TabStopType.RIGHT, position: TabStopPosition.MAX }],
         children: [
           new TextRun({

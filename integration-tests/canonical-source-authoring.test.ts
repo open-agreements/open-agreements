@@ -106,6 +106,22 @@ Date: _______________
 }
 
 describe('canonical Markdown authoring', () => {
+  it('assigns the Normal style to visible footer paragraphs for Pages compatibility', async () => {
+    const { Packer } = await import('docx');
+    const AdmZip = (await import('adm-zip')).default;
+    const style = loadStyleProfile(stylePath);
+    const compiled = compileCanonicalSourceString(buildCanonicalSource(), 'inline footer-style source');
+    const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
+    const buffer = await Packer.toBuffer(rendered.document);
+    const archive = new AdmZip(buffer);
+    const footerEntries = archive.getEntries().filter((entry) => /^word\/footer\d+\.xml$/.test(entry.entryName));
+
+    expect(footerEntries.length).toBeGreaterThan(0);
+    for (const entry of footerEntries) {
+      expect(entry.getData().toString('utf-8')).toContain('<w:pStyle w:val="Normal"/>');
+    }
+  });
+
   it('renders directive-anchored sections from body H2 titles', () => {
     const style = loadStyleProfile(stylePath);
     const directiveAnchoredSource = buildCanonicalSource()
