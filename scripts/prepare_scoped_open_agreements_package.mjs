@@ -38,7 +38,7 @@ function copyPublishFiles(files, outDir) {
   }
 }
 
-function getRootBundledPackages() {
+function getRootPackMetadata() {
   const npmCacheDir = fs.mkdtempSync(path.join(os.tmpdir(), "open-agreements-npm-pack-"));
 
   try {
@@ -56,27 +56,13 @@ function getRootBundledPackages() {
         maxBuffer: 50 * 1024 * 1024
       }
     );
-    const packMetadata = JSON.parse(packOutput);
-    const bundledPackages = packMetadata[0]?.bundled;
-    if (!Array.isArray(bundledPackages)) {
-      throw new Error("Root npm pack metadata must contain a bundled array.");
+    const packMetadata = JSON.parse(packOutput)[0];
+    if (!packMetadata || !Array.isArray(packMetadata.files)) {
+      throw new Error("Root npm pack metadata must contain a files array.");
     }
-    return bundledPackages;
+    return packMetadata;
   } finally {
     fs.rmSync(npmCacheDir, { recursive: true, force: true });
-  }
-}
-
-function copyBundledPackages(packageNames, outDir) {
-  for (const packageName of packageNames) {
-    const sourcePath = path.resolve("node_modules", packageName);
-    if (!fs.existsSync(sourcePath)) {
-      throw new Error(`Missing bundled package in root node_modules: ${packageName}`);
-    }
-
-    const destinationPath = path.join(outDir, "node_modules", packageName);
-    fs.mkdirSync(path.dirname(destinationPath), { recursive: true });
-    fs.cpSync(sourcePath, destinationPath, { recursive: true });
   }
 }
 
@@ -102,7 +88,10 @@ if (scopedPackageJson.scripts && typeof scopedPackageJson.scripts === "object") 
 }
 
 fs.mkdirSync(outDir, { recursive: true });
-copyPublishFiles(rootPackageJson.files, outDir);
-copyBundledPackages(getRootBundledPackages(), outDir);
+const rootPackMetadata = getRootPackMetadata();
+copyPublishFiles(
+  rootPackMetadata.files.map(({ path: filePath }) => filePath).filter((filePath) => filePath !== "package.json"),
+  outDir
+);
 fs.writeFileSync(path.join(outDir, "package.json"), `${JSON.stringify(scopedPackageJson, null, 2)}\n`);
 process.stdout.write(`${outDir}\n`);

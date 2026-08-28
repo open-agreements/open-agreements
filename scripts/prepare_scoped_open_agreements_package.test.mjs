@@ -1,5 +1,5 @@
 import { execFileSync } from 'node:child_process';
-import { mkdtempSync, rmSync } from 'node:fs';
+import { existsSync, mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 
@@ -57,6 +57,9 @@ describe('prepare_scoped_open_agreements_package', () => {
       const actual = bundledPackages(outDir);
       expect(actual).toContain('@usejunior/docx-core');
       expect([...actual].sort()).toEqual([...expected].sort());
+      expect(
+        existsSync(join(outDir, 'concerto', 'openagreements-employee-ip-inventions-assignment.cto')),
+      ).toBe(true);
     },
     60_000,
   );
