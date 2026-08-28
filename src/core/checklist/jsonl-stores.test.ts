@@ -1,8 +1,11 @@
 import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect } from 'vitest';
 import { appendJsonl, readJsonl } from './jsonl-stores.js';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
+
+const it = itAllure.epic('Compliance & Governance').withLabels({ feature: 'Checklist JSONL Stores' });
 
 const tempDirs: string[] = [];
 

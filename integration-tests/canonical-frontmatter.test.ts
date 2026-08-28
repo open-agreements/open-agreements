@@ -1,9 +1,12 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect } from 'vitest';
 import {
   assertCanonicalIdentity,
   parseCanonicalFrontmatter,
   tryParseCanonicalFrontmatter,
 } from '../scripts/template_renderer/canonical-frontmatter.mjs';
+import { itAllure } from './helpers/allure-test.js';
+
+const it = itAllure.epic('Discovery & Metadata').withLabels({ feature: 'Canonical Frontmatter' });
 
 describe('parseCanonicalFrontmatter — YAML error contract', () => {
   it('wraps YAML parse failures with file path and preserves the original via cause', () => {

@@ -15069,9 +15069,9 @@
           "type": "string",
           "required": false,
           "section": "Disclosures",
-          "description": "The sensitive-data categories the business processes, called out separately, as a comma-separated phrase (e.g. \"precise geolocation, health data\"). Leave empty when the business processes no sensitive data; the sensitive-data DISCLOSURE sentence is gated on this field being non-empty. (The sensitive-data CONSENT clause is gated separately on the derived field show_sensitive_consent.)",
+          "description": "The sensitive-data categories the business processes, called out separately, as a comma-separated phrase (e.g. \"precise geolocation, health data\"). Required when the business processes sensitive data; the sensitive-data DISCLOSURE sentence is gated on this field being non-empty, and the sensitive-data CONSENT clause is gated separately on the derived field show_sensitive_consent.",
           "display_label": "Sensitive Data Categories",
-          "default": "",
+          "default": null,
           "default_value_rationale": null
         },
         {

@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it as vitestIt } from 'vitest';
+import { afterEach, describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
 import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -85,7 +85,7 @@ function createTemplateFixture(
 }
 
 describe('variable signer rendering', () => {
-  vitestIt('reproduces the current dangling fixed-slot signature-block behavior', async () => {
+  it('reproduces the current dangling fixed-slot signature-block behavior', async () => {
     const templateDir = createTemplateFixture(
       [
         { name: 'signer_1_name', type: 'string', description: 'Signer 1 name' },
