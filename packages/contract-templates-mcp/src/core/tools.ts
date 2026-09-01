@@ -109,10 +109,11 @@ interface TemplateField {
   items?: TemplateField[];
 }
 
-/** Structured contributor provenance entry (open-agreements#533). */
+/** Structured contributor provenance entry (open-agreements#533). Role set
+ * mirrors the closed TemplateCreditRoleEnum in src/core/metadata.ts. */
 interface TemplateCredit {
   name: string;
-  role: string;
+  role: 'drafter' | 'drafting_editor' | 'reviewer' | 'maintainer';
   profile_url?: string;
 }
 
