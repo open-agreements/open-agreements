@@ -10762,10 +10762,10 @@
         },
         {
           "name": "redemption_start_date",
-          "type": "string",
+          "type": "date",
           "required": false,
           "section": null,
-          "description": "Earliest date on which preferred stock may be redeemed",
+          "description": "Earliest date on which preferred stock may be redeemed (\"on or after <date>\"). Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string.",
           "default": null,
           "default_value_rationale": null
         },
@@ -11278,20 +11278,38 @@
         },
         {
           "name": "effective_date",
-          "type": "string",
+          "type": "date",
           "required": true,
           "section": null,
-          "description": "Effective date of the agreement (e.g. January 15, 2025)",
+          "description": "Effective date of the agreement (\"is made as of <date>\"). Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string.",
           "default": null,
           "default_value_rationale": null
         },
         {
           "name": "checklist_delivery_date",
-          "type": "string",
+          "type": "date",
           "required": false,
           "section": null,
-          "description": "Date the compliance checklist is being delivered",
+          "description": "Date the qualified small business stock checklist (Annex 1) is being delivered. Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string.",
           "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "series_designation",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "par_value",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Par value per share of common and preferred stock (number only, e.g. 0.0001 — the document supplies the dollar sign)",
+          "default": "0.001",
           "default_value_rationale": null
         }
       ]
@@ -11408,6 +11426,15 @@
           "section": null,
           "description": "Signature page marker text",
           "default": "Signature Page Follows",
+          "default_value_rationale": null
+        },
+        {
+          "name": "series_designation",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement",
+          "default": "",
           "default_value_rationale": null
         }
       ]
@@ -11528,10 +11555,10 @@
         },
         {
           "name": "effective_date",
-          "type": "string",
+          "type": "date",
           "required": true,
           "section": null,
-          "description": "Effective date of the agreement (e.g. January 15, 2025)",
+          "description": "Effective date of the agreement (\"is made as of <date>\"). Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string.",
           "default": null,
           "default_value_rationale": null
         },
@@ -11560,6 +11587,24 @@
           "section": null,
           "description": "Label for the key holders group (e.g. Key Holders or Founders)",
           "default": "Key Holders",
+          "default_value_rationale": null
+        },
+        {
+          "name": "series_designation",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "par_value",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Par value per share of common and preferred stock (number only, e.g. 0.0001 — the document supplies the dollar sign)",
+          "default": "0.001",
           "default_value_rationale": null
         }
       ]
@@ -11796,11 +11841,20 @@
         },
         {
           "name": "balance_sheet_date",
-          "type": "string",
+          "type": "date",
           "required": true,
           "section": null,
-          "description": "Date of the company's most recent balance sheet",
+          "description": "Date of the company's most recent balance sheet. Fills the \"(the \"Balance Sheet Date\")\" definition slot in the Financial Statements representation and the bracketed defined-term references. Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string.",
           "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "balance_sheet_date_defined_term",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Text rendered at the bracketed \"[Balance Sheet Date]\" / \"[the Balance Sheet Date]\" references. Defaults to the defined term (the definition slot carries the actual date); supply a literal date string only to make the references repeat the date instead.",
+          "default": "Balance Sheet Date",
           "default_value_rationale": null
         },
         {
@@ -11939,10 +11993,10 @@
         },
         {
           "name": "effective_date",
-          "type": "string",
+          "type": "date",
           "required": true,
           "section": null,
-          "description": "Effective date of the agreement (e.g. January 15, 2025)",
+          "description": "Effective date of the agreement (\"is made as of <date>\"). Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string.",
           "default": null,
           "default_value_rationale": null
         },
@@ -12016,6 +12070,24 @@
           "section": null,
           "description": "Signature page marker text",
           "default": "Signature Page Follows",
+          "default_value_rationale": null
+        },
+        {
+          "name": "series_designation",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "par_value",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Par value per share of common and preferred stock (number only, e.g. 0.0001 — the document supplies the dollar sign)",
+          "default": "0.001",
           "default_value_rationale": null
         }
       ]

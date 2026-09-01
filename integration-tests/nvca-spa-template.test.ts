@@ -163,6 +163,7 @@ const FIELD_ASSERTION_POLICY: Record<string, FieldAssertionPolicy> = {
   arbitration_location: { mode: 'strict', reason: 'Alternative 1 arbitration venue placeholder' },
   judicial_district: { mode: 'strict', reason: 'Venue term should remain exact' },
   balance_sheet_date: { mode: 'strict', reason: 'Date anchor should be preserved exactly' },
+  balance_sheet_date_defined_term: { mode: 'strict', reason: 'Defined-term text at balance-sheet references' },
   benefit_plan_name: { mode: 'skip', reason: 'Optional field; covered in targeted scenario tests' },
   signature_page_marker: { mode: 'strict', reason: 'Execution marker anchor' },
   state_lower: { mode: 'strict', reason: 'Jurisdiction anchor', normalize: 'lowercase' },
@@ -726,7 +727,10 @@ describe('NVCA SPA Template', () => {
       investor_name: 'North Star Ventures LLC',
       judicial_district: 'Northern District of California',
       state_lower: 'delaware',
-      balance_sheet_date: '2025-12-31',
+      // Display-ready form: balance_sheet_date is `type: date` (#617), so ISO
+      // input renders formatted ("December 31, 2025") and would no longer match
+      // a raw-ISO verification value in this direct verifyOutput harness.
+      balance_sheet_date: 'December 31, 2025',
       specify_percentage: '12%',
       director_names: 'Jane Founder; Pat Director',
       applicable_purchasers: 'North Star Ventures LLC',

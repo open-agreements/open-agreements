@@ -99,8 +99,18 @@ fields:
     type: string
     description: Federal judicial district for disputes
   - name: balance_sheet_date
+    type: date
+    description: >-
+      Date of the company's most recent balance sheet. Fills the "(the "Balance Sheet Date")" definition slot in the
+      Financial Statements representation and the bracketed defined-term references. Accepts ISO YYYY-MM-DD (rendered as e.g.
+      "March 15, 2026") or a display-ready date string.
+  - name: balance_sheet_date_defined_term
     type: string
-    description: Date of the company's most recent balance sheet
+    description: >-
+      Text rendered at the bracketed "[Balance Sheet Date]" / "[the Balance Sheet Date]" references. Defaults to the
+      defined term (the definition slot carries the actual date); supply a literal date string only to make the
+      references repeat the date instead.
+    default: Balance Sheet Date
   - name: benefit_plan_name
     type: string
     description: Plan year and name of the employee benefit plan
