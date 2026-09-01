@@ -28,7 +28,11 @@ const SERVER_INFO = {
 
 const FALLBACK_PROTOCOL_VERSION = '2024-11-05';
 
-/** MCP spec error code for resources/read of an unknown resource. */
+/**
+ * Resource-not-found error code per the MCP 2024-11-05 through 2025-06-18
+ * specs (the current draft moves to -32602, keeping -32002 for backward
+ * compatibility — revisit if this server adopts a newer protocol version).
+ */
 const RESOURCE_NOT_FOUND_ERROR_CODE = -32002;
 
 export function runStdioServer(): void {

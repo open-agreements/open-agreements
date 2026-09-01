@@ -112,12 +112,34 @@ afterEach(() => {
 
 describe('forms-survey listing parser', () => {
   it('parses only the Forms Surveys section of llms.txt', () => {
-    const surveys = parseFormsSurveysSection(LLMS_TXT_FIXTURE);
+    const { headingFound, surveys } = parseFormsSurveysSection(LLMS_TXT_FIXTURE);
+    expect(headingFound).toBe(true);
     expect(surveys.map((s) => s.topic)).toEqual(['employment-offer-letter', 'restrictive-covenant']);
     expect(surveys[0].title).toBe('Employee offer letters, compared clause by clause');
     expect(surveys[0].uri).toBe(EVIDENCE_URL('employment-offer-letter'));
     // The decoy under "## Something Else" must not leak into the listing.
     expect(surveys.some((s) => s.topic === 'decoy-survey')).toBe(false);
+  });
+
+  it('parses CRLF-terminated llms.txt identically', () => {
+    const { surveys } = parseFormsSurveysSection(LLMS_TXT_FIXTURE.replace(/\n/g, '\r\n'));
+    expect(surveys.map((s) => s.topic)).toEqual(['employment-offer-letter', 'restrictive-covenant']);
+  });
+
+  it('distinguishes a missing heading from an intentionally empty section', () => {
+    const missing = parseFormsSurveysSection('# OpenAgreements\n\n## Templates\n- [T](https://openagreements.org/templates/t)\n');
+    expect(missing.headingFound).toBe(false);
+    expect(missing.surveys).toEqual([]);
+
+    const empty = parseFormsSurveysSection('## Forms Surveys\n\n## Templates\n');
+    expect(empty.headingFound).toBe(true);
+    expect(empty.entryLineCount).toBe(0);
+    expect(empty.surveys).toEqual([]);
+
+    const malformed = parseFormsSurveysSection('## Forms Surveys\n- Employee offer letters (format changed, no links)\n');
+    expect(malformed.headingFound).toBe(true);
+    expect(malformed.entryLineCount).toBe(1);
+    expect(malformed.surveys).toEqual([]);
   });
 
   it('extracts topics only from exact evidence URIs', () => {
@@ -148,6 +170,48 @@ describe('survey resources', () => {
     await listPublishedSurveys();
     await listPublishedSurveys();
     expect(requested.filter((url) => url.endsWith('/llms.txt'))).toHaveLength(1);
+  });
+
+  it('deduplicates concurrent cold listing fetches', async () => {
+    const requested = installMockFetch(standardRoutes());
+    const [a, b, c] = await Promise.all([listPublishedSurveys(), listPublishedSurveys(), listPublishedSurveys()]);
+    expect(requested.filter((url) => url.endsWith('/llms.txt'))).toHaveLength(1);
+    expect(a).toEqual(b);
+    expect(b).toEqual(c);
+  });
+
+  it('does not cache a failed listing fetch — retries are possible', async () => {
+    const routes = standardRoutes();
+    routes['https://openagreements.org/llms.txt'] = { status: 503, body: 'down' };
+    const requested = installMockFetch(routes);
+    await expect(listPublishedSurveys()).rejects.toThrow('503');
+
+    // Restore upstream; the next call must refetch and succeed.
+    routes['https://openagreements.org/llms.txt'] = { status: 200, body: LLMS_TXT_FIXTURE };
+    const surveys = await listPublishedSurveys();
+    expect(surveys).toHaveLength(2);
+    expect(requested.filter((url) => url.endsWith('/llms.txt'))).toHaveLength(2);
+  });
+
+  it('treats a missing Forms Surveys section as an upstream failure, not an empty catalog', async () => {
+    const routes = standardRoutes();
+    routes['https://openagreements.org/llms.txt'] = { status: 200, body: '## Templates\n- [T](https://openagreements.org/templates/t)\n' };
+    installMockFetch(routes);
+    await expect(listPublishedSurveys()).rejects.toThrow('Forms Surveys');
+  });
+
+  it('treats unparseable Forms Surveys entries as an upstream failure', async () => {
+    const routes = standardRoutes();
+    routes['https://openagreements.org/llms.txt'] = { status: 200, body: '## Forms Surveys\n- Employee offer letters (no links anymore)\n' };
+    installMockFetch(routes);
+    await expect(listPublishedSurveys()).rejects.toThrow('no longer parse');
+  });
+
+  it('accepts a present-but-empty Forms Surveys section as a valid empty catalog', async () => {
+    const routes = standardRoutes();
+    routes['https://openagreements.org/llms.txt'] = { status: 200, body: '## Forms Surveys\n\n## Templates\n' };
+    installMockFetch(routes);
+    await expect(listPublishedSurveys()).resolves.toEqual([]);
   });
 
   it('reads a published survey resource and surfaces asOf in _meta', async () => {
@@ -316,6 +380,23 @@ describe('get_forms_survey_evidence tool', () => {
 
     expect(result.isError).toBe(true);
     expect((payload.error as Record<string, unknown>).code).toBe('SURVEY_NOT_FOUND');
+  });
+
+  it('rejects a drifted payload shape with SURVEY_FETCH_FAILED', async () => {
+    const routes = standardRoutes();
+    routes[EVIDENCE_URL('employment-offer-letter')] = {
+      status: 200,
+      // requirements drifted from objects to bare strings
+      body: JSON.stringify({ ...OFFER_LETTER_PAYLOAD, requirements: ['position-and-title'] }),
+    };
+    installMockFetch(routes);
+    const result = await callTool('get_forms_survey_evidence', { topic: 'employment-offer-letter' });
+    const payload = getPayload(result);
+
+    expect(result.isError).toBe(true);
+    const error = payload.error as Record<string, unknown>;
+    expect(error.code).toBe('SURVEY_FETCH_FAILED');
+    expect(error.message).toContain('unexpected shape');
   });
 
   it('surfaces upstream fetch failures as SURVEY_FETCH_FAILED', async () => {

@@ -78,6 +78,18 @@ const GetFormsSurveyEvidenceArgsSchema = z
   })
   .strict();
 
+// Lightweight shape check on the fields this tool consumes, so upstream schema
+// drift surfaces as SURVEY_FETCH_FAILED instead of a misleading tool error or
+// silently empty output. resources/read still returns the raw JSON verbatim.
+const SurveyEvidencePayloadSchema = z.object({
+  asOf: z.string().optional(),
+  sample: z.unknown().optional(),
+  evidenceCellCount: z.number().int().optional(),
+  requirements: z.array(z.object({ id: z.string(), label: z.string(), valueType: z.string().optional() })),
+  forms: z.array(z.object({ id: z.string(), name: z.string(), sourceUrl: z.string() })),
+  cells: z.record(z.string(), z.record(z.string(), z.unknown())).optional(),
+});
+
 const CreateApapAgreementDocxArgsSchema = z.object({
   template_id: z.string().min(1),
   agreement_data: z.record(z.string(), z.unknown()),
@@ -547,26 +559,35 @@ const tools: ToolDefinition[] = [
         );
       }
 
-      const payload = result.payload;
+      const parsedPayload = SurveyEvidencePayloadSchema.safeParse(result.payload);
+      if (!parsedPayload.success) {
+        return toolError(
+          'get_forms_survey_evidence',
+          'SURVEY_FETCH_FAILED',
+          `Survey evidence for "${input.topic}" has an unexpected shape: ${formatZodError(parsedPayload.error)}`,
+        );
+      }
+
+      const payload = parsedPayload.data;
       const base = {
         topic: input.topic,
         as_of: payload.asOf ?? null,
         sample: payload.sample ?? null,
         evidence_cell_count: payload.evidenceCellCount ?? null,
-        forms: payload.forms ?? [],
+        forms: payload.forms,
         resource_uri: surveyEvidenceUrl(input.topic),
       };
 
       if (input.requirement_id === undefined) {
         return successResult('get_forms_survey_evidence', {
           ...base,
-          requirements: payload.requirements ?? [],
+          requirements: payload.requirements,
         });
       }
 
-      const requirement = (payload.requirements ?? []).find((item) => item.id === input.requirement_id);
+      const requirement = payload.requirements.find((item) => item.id === input.requirement_id);
       if (!requirement) {
-        const available = (payload.requirements ?? []).map((item) => item.id);
+        const available = payload.requirements.map((item) => item.id);
         return toolError(
           'get_forms_survey_evidence',
           'REQUIREMENT_NOT_FOUND',

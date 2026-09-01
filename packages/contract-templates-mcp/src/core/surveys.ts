@@ -27,9 +27,11 @@ const EVIDENCE_URI_PATTERN =
 
 const FETCH_TIMEOUT_MS = 15_000;
 
-// Upstream serves llms.txt through a CDN with hour-scale caching; a short
+// Upstream serves llms.txt through Vercel's CDN (observed
+// `cache-control: public, max-age=0, must-revalidate` with CDN HITs); a short
 // in-process cache just avoids refetching it for back-to-back MCP calls in
-// one session while keeping the unlisted-gate window small.
+// one session. A survey newly unlisted upstream can therefore stay visible
+// here for up to this TTL on top of whatever the upstream cache windows allow.
 const LISTING_CACHE_TTL_MS = 60_000;
 
 export const SURVEY_EVIDENCE_MIME_TYPE = 'application/json';
@@ -70,17 +72,20 @@ type FetchLike = (url: string, init: { signal: AbortSignal; headers: Record<stri
 
 let _fetchOverride: FetchLike | null = null;
 let _listingCache: { surveys: SurveyDescriptor[]; expiresAt: number } | null = null;
+let _listingInFlight: Promise<SurveyDescriptor[]> | null = null;
 
 /** Inject a fetch implementation — for testing only. */
 export function _setFetchOverride(fetchLike: FetchLike | null): void {
   _fetchOverride = fetchLike;
   _listingCache = null;
+  _listingInFlight = null;
 }
 
 /** Reset cached listing state — for testing only. */
 export function _resetSurveyState(): void {
   _fetchOverride = null;
   _listingCache = null;
+  _listingInFlight = null;
 }
 
 async function httpGet(url: string): Promise<{ status: number; text: string }> {
@@ -112,25 +117,37 @@ export function topicFromResourceUri(uri: string): string | null {
   return match ? match[1] : null;
 }
 
+export interface FormsSurveysParseResult {
+  /** Whether the "## Forms Surveys" heading was present at all. */
+  headingFound: boolean;
+  /** Number of "- " list lines seen inside the section (parseable or not). */
+  entryLineCount: number;
+  surveys: SurveyDescriptor[];
+}
+
 /**
  * Parse the "## Forms Surveys" section of llms.txt into survey descriptors.
  * Exported for tests.
  */
-export function parseFormsSurveysSection(llmsTxt: string): SurveyDescriptor[] {
+export function parseFormsSurveysSection(llmsTxt: string): FormsSurveysParseResult {
   const lines = llmsTxt.split('\n');
   const surveys: SurveyDescriptor[] = [];
   const seen = new Set<string>();
   let inSection = false;
+  let headingFound = false;
+  let entryLineCount = 0;
 
   for (const rawLine of lines) {
     const line = rawLine.trim();
     if (line.startsWith('## ')) {
       inSection = line === FORMS_SURVEYS_HEADING;
+      headingFound = headingFound || inSection;
       continue;
     }
     if (!inSection || !line.startsWith('- ')) {
       continue;
     }
+    entryLineCount += 1;
 
     const titleMatch = /^- \[([^\]]+)\]/.exec(line);
     const urlMatch = /\((https:\/\/openagreements\.org\/api\/surveys\/[a-z0-9-]+\/forms-evidence)\)/.exec(line);
@@ -145,26 +162,54 @@ export function parseFormsSurveysSection(llmsTxt: string): SurveyDescriptor[] {
     surveys.push({ topic, title: titleMatch[1], uri: urlMatch[1] });
   }
 
-  return surveys;
+  return { headingFound, entryLineCount, surveys };
 }
 
 /**
  * List the currently published forms-provider surveys by reading the live,
- * upstream-gated listing. Cached briefly in-process.
+ * upstream-gated listing. Cached briefly in-process; concurrent cold calls
+ * share a single upstream fetch.
+ *
+ * A missing or unparseable "## Forms Surveys" section is an upstream-contract
+ * failure and throws rather than caching an empty listing — otherwise a
+ * formatting change upstream would silently make every survey "not found".
+ * A heading that is present but intentionally empty is a valid empty listing.
  */
 export async function listPublishedSurveys(): Promise<SurveyDescriptor[]> {
   if (_listingCache && _listingCache.expiresAt > Date.now()) {
     return _listingCache.surveys;
   }
-
-  const { status, text } = await httpGet(LLMS_TXT_URL);
-  if (status !== 200) {
-    throw new SurveyFetchError(`Survey listing unavailable: ${LLMS_TXT_URL} returned HTTP ${status}`, status);
+  if (_listingInFlight) {
+    return _listingInFlight;
   }
 
-  const surveys = parseFormsSurveysSection(text);
-  _listingCache = { surveys, expiresAt: Date.now() + LISTING_CACHE_TTL_MS };
-  return surveys;
+  _listingInFlight = (async () => {
+    const { status, text } = await httpGet(LLMS_TXT_URL);
+    if (status !== 200) {
+      throw new SurveyFetchError(`Survey listing unavailable: ${LLMS_TXT_URL} returned HTTP ${status}`, status);
+    }
+
+    const parsed = parseFormsSurveysSection(text);
+    if (!parsed.headingFound) {
+      throw new SurveyFetchError(
+        `Survey listing format changed: no "${FORMS_SURVEYS_HEADING}" section in ${LLMS_TXT_URL}`,
+      );
+    }
+    if (parsed.entryLineCount > 0 && parsed.surveys.length === 0) {
+      throw new SurveyFetchError(
+        `Survey listing format changed: "${FORMS_SURVEYS_HEADING}" entries in ${LLMS_TXT_URL} no longer parse`,
+      );
+    }
+
+    _listingCache = { surveys: parsed.surveys, expiresAt: Date.now() + LISTING_CACHE_TTL_MS };
+    return parsed.surveys;
+  })();
+
+  try {
+    return await _listingInFlight;
+  } finally {
+    _listingInFlight = null;
+  }
 }
 
 /** MCP resource descriptors for resources/list. */
