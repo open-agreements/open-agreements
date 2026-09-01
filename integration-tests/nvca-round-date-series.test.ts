@@ -207,13 +207,17 @@ describe('SPA balance_sheet_date fills the definition slot and its references (#
     'Since the [Balance Sheet Date], there has not been:',
   ];
 
-  it('fills the Balance Sheet Date definition blank and both bracketed references with the formatted date', async () => {
+  it('fills the definition blank with the formatted date and renders references as the defined term', async () => {
     const text = await fillFixture('nvca-stock-purchase-agreement', spaParagraphs, {
       balance_sheet_date: '2025-12-31',
     });
+    // Definition slot carries the actual date...
     expect(text).toContain('as of December 31, 2025 (the “Balance Sheet Date”)');
-    expect(text).toContain('subsequent to December 31, 2025');
-    expect(text).toContain('Since the December 31, 2025');
+    // ...and the bracketed references use the defined term (defaulted
+    // balance_sheet_date_defined_term), not a repeated literal date.
+    expect(text).toContain('subsequent to the Balance Sheet Date');
+    expect(text).toContain('Since the Balance Sheet Date, there has not been');
+    expect(text).not.toContain('Since the December 31, 2025');
     expect(text).not.toContain('2025-12-31');
     expect(text).not.toContain('[the Balance Sheet Date]');
     expect(text).not.toContain('[Balance Sheet Date]');

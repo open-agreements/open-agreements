@@ -11849,6 +11849,15 @@
           "default_value_rationale": null
         },
         {
+          "name": "balance_sheet_date_defined_term",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Text rendered at the bracketed \"[Balance Sheet Date]\" / \"[the Balance Sheet Date]\" references. Defaults to the defined term (the definition slot carries the actual date); supply a literal date string only to make the references repeat the date instead.",
+          "default": "Balance Sheet Date",
+          "default_value_rationale": null
+        },
+        {
           "name": "benefit_plan_name",
           "type": "string",
           "required": false,

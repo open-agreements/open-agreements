@@ -163,6 +163,7 @@ const FIELD_ASSERTION_POLICY: Record<string, FieldAssertionPolicy> = {
   arbitration_location: { mode: 'strict', reason: 'Alternative 1 arbitration venue placeholder' },
   judicial_district: { mode: 'strict', reason: 'Venue term should remain exact' },
   balance_sheet_date: { mode: 'strict', reason: 'Date anchor should be preserved exactly' },
+  balance_sheet_date_defined_term: { mode: 'strict', reason: 'Defined-term text at balance-sheet references' },
   benefit_plan_name: { mode: 'skip', reason: 'Optional field; covered in targeted scenario tests' },
   signature_page_marker: { mode: 'strict', reason: 'Execution marker anchor' },
   state_lower: { mode: 'strict', reason: 'Jurisdiction anchor', normalize: 'lowercase' },
