@@ -77,3 +77,10 @@ priority_fields:
   - effective_date
   - specify_percentage
   - rofr_response_days
+artifact_kind: agreement
+capabilities:
+  - review
+party_roles: []
+signature_roles: []
+mutation_policy: immutable
+maturity: experimental

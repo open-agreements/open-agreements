@@ -145,3 +145,10 @@ priority_fields:
   - director_names
   - board_size
   - minimum_shares_initial_closing
+artifact_kind: agreement
+capabilities:
+  - review
+party_roles: []
+signature_roles: []
+mutation_policy: immutable
+maturity: experimental

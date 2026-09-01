@@ -65,3 +65,14 @@ priority_fields:
   - rspa_reference
   - shares_repurchased
   - aggregate_price
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - founder
+signature_roles:
+  - founder
+mutation_policy: fields_only
+maturity: experimental

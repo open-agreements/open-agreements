@@ -76,3 +76,16 @@ fields:
     description: Date by which the offer must be accepted
     section: Timing
 priority_fields: []
+artifact_kind: letter
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - employee
+  - employer
+signature_roles:
+  - employer
+  - employee
+mutation_policy: fields_only
+maturity: experimental

@@ -186,3 +186,10 @@ priority_fields:
   - total_authorized_shares
   - common_shares_authorized
   - preferred_shares_authorized
+artifact_kind: agreement
+capabilities:
+  - review
+party_roles: []
+signature_roles: []
+mutation_policy: immutable
+maturity: experimental

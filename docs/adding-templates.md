@@ -56,6 +56,12 @@ fields:
 priority_fields:
   - party_name
   - effective_date
+artifact_kind: agreement       # agreement | consent | notice | letter | checklist | policy | other
+capabilities: [create, review, render]
+party_roles: [company, employee]
+signature_roles: [company, employee]
+mutation_policy: fields_only   # terms | fields_only | immutable
+maturity: experimental         # experimental | beta | stable
 # Optional: structured credits for contributors who materially shaped the template.
 # See CONTRIBUTING.md ("Template credits") for the policy.
 credits:
@@ -65,6 +71,14 @@ credits:
 # Optional: neutral prose identifying the source materials this template was derived from.
 derived_from: Publicly available materials from ...
 ```
+
+The six capability-manifest fields are required in every shipped
+`metadata.yaml`. `capabilities` states which persistent-local-agreement
+operations are supported. `party_roles` and `signature_roles` use stable,
+snake-case semantic role names. `fields_only` limits persisted terms to names
+declared in `fields`; `immutable` is appropriate for review-only upstream
+artifacts. Do not declare `create` or `render` for a network-backed field
+selector or a no-derivatives external form.
 
 #### Field types
 

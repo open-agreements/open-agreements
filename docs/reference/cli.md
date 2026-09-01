@@ -49,6 +49,26 @@ open-agreements fill openagreements-employment-offer-letter \
 Use `open-agreements fill --help` for memo output paths, jurisdiction overrides,
 and baseline comparison options.
 
+## Manage persistent local agreements
+
+```bash
+open-agreements agreements create <template> --data terms.json
+open-agreements agreements list [--json]
+open-agreements agreements show <id> [--json]
+open-agreements agreements update <id> --revision 1 --set field=value
+open-agreements agreements review <id>
+open-agreements agreements render <id> --output agreement.docx
+```
+
+Agreement state stays on the local filesystem under
+`.open-agreements/agreements/<id>/`; add `.open-agreements/` to the consuming
+project's `.gitignore`. Set `OPEN_AGREEMENTS_STATE_ROOT` to override the
+agreements directory. Updates merge declared template fields, advance the
+revision, and can use `--revision` for optimistic concurrency. Review persists
+unfilled-priority, provenance-drift, and rendered-document integrity warnings.
+Render uses the existing local template engine and records the output SHA-256.
+These commands do not log in, send documents, or access the network.
+
 ## Validate templates and field-selectors
 
 ```bash
