@@ -276,6 +276,37 @@ function entryNames(docxPath: string): string[] {
   return new AdmZip(docxPath).getEntries().map((e) => e.entryName);
 }
 
+/** Direct-child local names of the LAST <w:sectPr> in word/document.xml (the body-level one). */
+function sectPrChildSequence(docxPath: string): string[] {
+  const zip = new AdmZip(docxPath);
+  const xml = zip.getEntry('word/document.xml')!.getData().toString('utf-8');
+  const doc = new DOMParser().parseFromString(xml, 'text/xml');
+  const sectPrs = doc.getElementsByTagNameNS(W_NS, 'sectPr');
+  const sectPr = sectPrs[sectPrs.length - 1];
+  const names: string[] = [];
+  for (let node = sectPr.firstChild; node; node = node.nextSibling) {
+    if (node.nodeType === 1) names.push((node as unknown as { localName: string }).localName);
+  }
+  return names;
+}
+
+/** Copy a real DOCX, transforming selected entries' bytes. */
+function copyDocxWith(
+  sourcePath: string,
+  transform: (entryName: string, data: Buffer) => Buffer
+): string {
+  const dir = mkdtempSync(join(tmpdir(), 'cleaner-copy-'));
+  const path = join(dir, 'modified.docx');
+  const source = new AdmZip(sourcePath);
+  const out = new AdmZip();
+  for (const entry of source.getEntries()) {
+    if (entry.isDirectory || entry.entryName.endsWith('/')) continue;
+    out.addFile(entry.entryName, transform(entry.entryName, entry.getData()));
+  }
+  out.writeZip(path);
+  return path;
+}
+
 describe('cleanDocument removeHeaderFooterDrawings', () => {
   it('preserves benign small spacer drawings in a real Common Paper template', async () => {
     const outputDir = mkdtempSync(join(tmpdir(), 'cleaner-out-'));
@@ -317,6 +348,44 @@ describe('cleanDocument removeHeaderFooterDrawings', () => {
     // Body must be untouched (document.xml copied verbatim)
     const inputDocXml = partXml(inputPath, 'word/document.xml');
     expect(partXml(outputPath, 'word/document.xml')).toEqual(inputDocXml);
+
+    // Intentional: the [Content_Types].xml Default extension entry is retained
+    // even when the last media part of that extension is removed — OPC packages
+    // may keep extension defaults with no current part using them.
+    expect(partXml(outputPath, '[Content_Types].xml')).toContain('png');
+
+    rmSync(outputDir, { recursive: true, force: true });
+  });
+
+  it('keeps a media part that another package relationship still targets', async () => {
+    // Real template, media inflated past the threshold AND additionally
+    // referenced from document.xml.rels — the header drawing must go, but the
+    // shared media part must survive the orphan sweep.
+    const inputPath = copyDocxWith(REAL_HEADER_DRAWING_TEMPLATE, (name, data) => {
+      if (name === 'word/media/image1.png') return Buffer.alloc(125 * 1024, 0xab);
+      if (name === 'word/_rels/document.xml.rels') {
+        return Buffer.from(
+          data
+            .toString('utf-8')
+            .replace(
+              '</Relationships>',
+              '<Relationship Id="rIdShared605" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/image1.png"/></Relationships>'
+            ),
+          'utf-8'
+        );
+      }
+      return data;
+    });
+    const outputDir = mkdtempSync(join(tmpdir(), 'cleaner-out-'));
+    const outputPath = join(outputDir, 'output.docx');
+
+    await cleanDocument(inputPath, outputPath, makeConfig({ removeHeaderFooterDrawings: true }));
+
+    expect(partXml(outputPath, 'word/header1.xml')).not.toContain('<w:drawing');
+    expect(partXml(outputPath, 'word/_rels/header1.xml.rels')).not.toContain('media/image1.png');
+    // Still referenced by document.xml.rels — must NOT be deleted
+    expect(entryNames(outputPath)).toContain('word/media/image1.png');
+    expect(partXml(outputPath, 'word/_rels/document.xml.rels')).toContain('rIdShared605');
 
     rmSync(outputDir, { recursive: true, force: true });
   });
@@ -386,6 +455,48 @@ describe('cleanDocument removeEmptyLeadingParagraphs', () => {
     const bodySectPr = xml.slice(xml.lastIndexOf('<w:sectPr'));
     expect(bodySectPr).toContain('rId7');
     expect(bodySectPr).toContain('rId8');
+
+    // CT_SectPr sequence: headerReference* then footerReference* then the rest
+    expect(sectPrChildSequence(outputPath)).toEqual(['headerReference', 'footerReference', 'pgSz']);
+
+    rmSync(outputDir, { recursive: true, force: true });
+  });
+
+  it('re-inserts existing and transplanted references in CT_SectPr schema order', async () => {
+    const bodyXml = [
+      '<w:p><w:pPr><w:sectPr>',
+      '<w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" w:type="default" r:id="rIdH"/>',
+      '<w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" w:type="first" r:id="rIdFF"/>',
+      '</w:sectPr></w:pPr></w:p>',
+      '<w:p><w:r><w:t>Content</w:t></w:r></w:p>',
+      // Destination sectPr: has its own default footer, first child is w:type (not pgSz)
+      '<w:sectPr>',
+      '<w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" w:type="default" r:id="rIdF"/>',
+      '<w:type w:val="continuous"/>',
+      '<w:pgSz w:w="12240" w:h="15840"/>',
+      '</w:sectPr>',
+    ].join('');
+
+    const inputPath = buildTestDocxRaw(bodyXml);
+    const outputDir = mkdtempSync(join(tmpdir(), 'cleaner-out-'));
+    const outputPath = join(outputDir, 'output.docx');
+
+    await cleanDocument(inputPath, outputPath, makeConfig({ removeEmptyLeadingParagraphs: true }));
+
+    // Transplanted: header(default) + footer(first); existing footer(default) kept.
+    // Schema order: all headerReference children, then all footerReference
+    // children, then the remaining section properties.
+    expect(sectPrChildSequence(outputPath)).toEqual([
+      'headerReference',
+      'footerReference',
+      'footerReference',
+      'type',
+      'pgSz',
+    ]);
+    const xml = extractDocXml(outputPath);
+    expect(xml).toContain('rIdH');
+    expect(xml).toContain('rIdFF');
+    expect(xml).toContain('rIdF');
 
     rmSync(outputDir, { recursive: true, force: true });
   });

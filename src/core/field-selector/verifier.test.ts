@@ -472,9 +472,11 @@ describe('verifyOutput first-body-paragraph guard (issue #605)', () => {
     cleanupDocx(docxPath);
   });
 
-  it('does not run the check when the clean config removes no content', async () => {
+  it('does not run the check when the clean config removes no body content', async () => {
     const docxPath = buildLeadingEmptyDocx();
 
+    // removeFootnotes only removes footnote-reference runs and footnote
+    // bodies, not body paragraphs — deliberately excluded from the gate
     const result = await verifyOutput(docxPath, {}, {}, {
       removeFootnotes: true,
       removeParagraphPatterns: [],
@@ -483,6 +485,23 @@ describe('verifyOutput first-body-paragraph guard (issue #605)', () => {
     });
 
     expect(result.checks.find((c) => c.name === 'First body paragraph has content')).toBeUndefined();
+
+    cleanupDocx(docxPath);
+  });
+
+  it('runs the check when removeParagraphPatterns is configured', async () => {
+    const docxPath = buildLeadingEmptyDocx();
+
+    const result = await verifyOutput(docxPath, {}, {}, {
+      removeFootnotes: false,
+      removeParagraphPatterns: ['^Note to Drafter:'],
+      removeRanges: [],
+      clearParts: [],
+    });
+
+    const check = result.checks.find((c) => c.name === 'First body paragraph has content');
+    expect(check).toBeDefined();
+    expect(check?.passed).toBe(false);
 
     cleanupDocx(docxPath);
   });

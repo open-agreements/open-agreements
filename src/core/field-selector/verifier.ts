@@ -3,7 +3,7 @@ import { DOMParser } from '@xmldom/xmldom';
 import type { Element } from '@xmldom/xmldom';
 import { getParagraphText } from '@usejunior/docx-core';
 import type { VerifyResult, VerifyCheck } from './types.js';
-import type { CleanConfig } from '../metadata.js';
+import { cleanConfigRemovesBodyContent, type CleanConfig } from '../metadata.js';
 import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 import { isParagraphContentEmpty } from './cleaner.js';
 import { parseReplacementKey } from './replacement-keys.js';
@@ -156,16 +156,10 @@ export async function verifyOutput(
   });
 
   // Check 9: First body paragraph has content (only when the clean config
-  // removes content — a removed range/cover-page can strand an empty
-  // structural paragraph, e.g. one holding a <w:sectPr>, which renders as a
-  // blank first page; see issue #605 / legal-explainer#1800)
-  const removesContent = Boolean(
-    cleanConfig &&
-      (cleanConfig.removeEmptyLeadingParagraphs ||
-        cleanConfig.removeBeforePattern ||
-        (cleanConfig.removeRanges && cleanConfig.removeRanges.length > 0)),
-  );
-  if (removesContent) {
+  // removes body content — a removed range/pattern/cover-page can strand an
+  // empty structural paragraph, e.g. one holding a <w:sectPr>, which renders
+  // as a blank first page; see issue #605 / legal-explainer#1800)
+  if (cleanConfig && cleanConfigRemovesBodyContent(cleanConfig)) {
     const firstParagraphEmpty = isFirstBodyParagraphEmpty(outputPath);
     checks.push({
       name: 'First body paragraph has content',

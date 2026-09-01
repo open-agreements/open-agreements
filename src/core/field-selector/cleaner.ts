@@ -828,15 +828,30 @@ function removeEmptyLeadingParagraphs(doc: Document): boolean {
     // the body-level sectPr)
     const destSectPr = doc.getElementsByTagNameNS(W_NS, 'sectPr')[0];
     if (destSectPr) {
+      const existingRefs = getHeaderFooterReferences(destSectPr);
       const existingSlots = new Set(
-        getHeaderFooterReferences(destSectPr).map(
-          (ref) => `${ref.localName}:${getReferenceType(ref)}`,
-        ),
+        existingRefs.map((ref) => `${ref.localName}:${getReferenceType(ref)}`),
       );
+      const transplanted: Element[] = [];
       for (const [slot, ref] of effectiveRefs) {
         if (existingSlots.has(slot)) continue;
-        // Header/footer references come first in the CT_SectPr sequence
-        destSectPr.insertBefore(ref.cloneNode(true), destSectPr.firstChild);
+        transplanted.push(ref.cloneNode(true) as Element);
+      }
+      if (transplanted.length > 0) {
+        // CT_SectPr is a sequence: headerReference* then footerReference* then
+        // the remaining section properties. Detach the existing references,
+        // merge with the transplanted ones, and re-insert in schema order
+        // (existing before transplanted within each kind, order preserved).
+        const merged = [...existingRefs, ...transplanted];
+        const headers = merged.filter((ref) => ref.localName === 'headerReference');
+        const footers = merged.filter((ref) => ref.localName === 'footerReference');
+        for (const ref of existingRefs) {
+          destSectPr.removeChild(ref);
+        }
+        const anchor = destSectPr.firstChild; // first non-reference child (or null → append)
+        for (const ref of [...headers, ...footers]) {
+          destSectPr.insertBefore(ref, anchor);
+        }
       }
     }
   }

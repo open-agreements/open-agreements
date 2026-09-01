@@ -485,6 +485,28 @@ export const CleanConfigSchema = z.object({
 });
 export type CleanConfig = z.infer<typeof CleanConfigSchema>;
 
+/**
+ * Whether a clean config performs any operation capable of removing (or
+ * exposing) body content — and can therefore strand a textless first body
+ * paragraph (blank first page/section). Used to gate the verifier's
+ * first-body-paragraph guard so cleaner capabilities and verifier coverage
+ * cannot silently diverge.
+ *
+ * `removeFootnotes` is deliberately excluded: it removes footnote-reference
+ * runs and footnote bodies, not body paragraphs; a first body paragraph whose
+ * only content is a footnote reference marker does not occur in practice.
+ * `clearParts` is excluded because it targets whole header/footer parts, not
+ * the document body.
+ */
+export function cleanConfigRemovesBodyContent(config: CleanConfig): boolean {
+  return Boolean(
+    config.removeEmptyLeadingParagraphs ||
+      config.removeBeforePattern ||
+      (config.removeRanges && config.removeRanges.length > 0) ||
+      (config.removeParagraphPatterns && config.removeParagraphPatterns.length > 0),
+  );
+}
+
 export const DeclarativeParagraphNormalizeRuleSchema = z.object({
   id: z.string(),
   section_heading: z.string(),
