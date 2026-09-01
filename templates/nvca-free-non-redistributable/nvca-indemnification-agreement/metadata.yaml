@@ -48,10 +48,6 @@ fields:
     type: string
     description: Possessive pronoun for the indemnitee entity (e.g. its)
     default: its
-  - name: indemnitee_pronoun_possessive_plural
-    type: string
-    description: Plural possessive pronoun for the indemnitee (e.g. their)
-    default: their
   - name: bylaws_name
     type: string
     description: Name of the company's bylaws document
@@ -84,7 +80,6 @@ priority_fields:
   - indemnitee_role
   - indemnitee_role_plural
   - indemnitee_pronoun_possessive
-  - indemnitee_pronoun_possessive_plural
   - bylaws_name
   - certificate_name
 artifact_kind: agreement

@@ -41,13 +41,13 @@ fields:
     type: string
     description: Federal judicial district for disputes (e.g. District of Delaware)
     default: District of Delaware
-  - name: state_of_incorporation_lower
+  - name: state_of_incorporation
     type: string
-    description: State of incorporation in lowercase (e.g. delaware)
-    default: delaware
+    description: State of incorporation (proper noun, e.g. Delaware); also names the state courts in the dispute-resolution clause
+    default: Delaware
   - name: specify_percentage
     type: string
-    description: Percentage threshold for drag-along and amendment provisions (number only, e.g. 60)
+    description: Percentage threshold for drag-along and amendment provisions — include the percent sign (e.g. 60%); occurrences where the source carries a trailing % absorb it
   - name: amended_restated_upper
     type: string
     description: AMENDED AND RESTATED or empty string
@@ -75,7 +75,7 @@ priority_fields:
   - effective_date
   - company_counsel
   - judicial_district
-  - state_of_incorporation_lower
+  - state_of_incorporation
   - specify_percentage
   - series_designation
   - par_value

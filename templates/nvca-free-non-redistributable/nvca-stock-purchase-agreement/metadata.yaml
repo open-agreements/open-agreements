@@ -118,12 +118,18 @@ fields:
     type: string
     description: Signature page marker text
     default: Signature Page Follows
+  - name: state
+    type: string
+    description: >-
+      State whose courts are named in the dispute-resolution courts alternative (proper noun, e.g. Delaware). Keep
+      consistent with state_lower, which drives the judicial-district defaults.
+    default: Delaware
   - name: state_lower
     type: string
-    description: State name (lowercase)
+    description: State name (lowercase, e.g. delaware) — drives judicial-district defaults and audit rules; not rendered in the document text
   - name: specify_percentage
     type: string
-    description: Specified percentage threshold
+    description: Specified percentage threshold — include the percent sign (e.g. 60%)
   - name: financial_reporting_period
     type: string
     description: Financial reporting period (e.g., monthly, quarterly)
@@ -149,6 +155,7 @@ priority_fields:
   - lead_purchaser_name
   - judicial_district
   - balance_sheet_date
+  - state
   - state_lower
   - specify_percentage
   - financial_reporting_period

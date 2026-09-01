@@ -30,7 +30,6 @@ Create a JSON file with the field values:
   "company_name": "Acme Corp",
   "company_name_upper": "ACME CORP",
   "state_of_incorporation": "Delaware",
-  "state_of_incorporation_lower": "Delaware",
   "investor_1_name": "Sequoia Capital Fund XIV",
   "investor_1_designee": "Michael Moritz",
   "series_name": "Series A",

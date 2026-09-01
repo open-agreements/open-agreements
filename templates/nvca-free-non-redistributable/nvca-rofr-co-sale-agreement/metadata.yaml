@@ -41,10 +41,10 @@ fields:
     type: string
     description: Federal judicial district for dispute resolution (e.g. District of Delaware)
     default: District of Delaware
-  - name: state_lower
+  - name: state_of_incorporation
     type: string
-    description: State of incorporation in lowercase (e.g. delaware)
-    default: delaware
+    description: State of incorporation (proper noun, e.g. Delaware); also names the state courts in the dispute-resolution clause
+    default: Delaware
   - name: business_description
     type: string
     description: Brief description of the company's business
@@ -59,7 +59,7 @@ fields:
       "March 15, 2026") or a display-ready date string.
   - name: specify_percentage
     type: string
-    description: Specified percentage threshold for key holder transfers
+    description: Specified percentage threshold for key holder transfers — include the percent sign (e.g. 60%); occurrences where the source carries a trailing % absorb it
   - name: rofr_response_days
     type: string
     description: Number of days for the company and investors to respond to a ROFR notice (default 45)
@@ -82,7 +82,7 @@ priority_fields:
   - key_holder_name
   - company_counsel
   - judicial_district
-  - state_lower
+  - state_of_incorporation
   - business_description
   - effective_date
   - specify_percentage
