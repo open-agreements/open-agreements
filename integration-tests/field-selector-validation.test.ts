@@ -90,14 +90,12 @@ describe('issue #620 slot coverage', () => {
       expect(replacements['[________]']).toBe('{purchased_shares}');
     });
 
-    await allureStep('Assert the series blank stays unmapped (deferred to issue #618)', () => {
-      // "Series [_]" is deliberately NOT covered here: the ancillary
-      // series/par-value issue (#618) owns that field family. This assertion
-      // documents that the remaining body blank is intentional, not missed.
+    await allureStep('Assert the series blank is now mapped (issue #618)', () => {
+      // The ancillary series/par-value issue (#618) published
+      // series_designation on this template; the body "Series [_]" blank is
+      // anchored (never a bare "[_]" key, which would over-match).
       expect(Object.keys(replacements)).not.toContain('[_]');
-      expect(
-        Object.values(replacements).some((v) => v.includes('series'))
-      ).toBe(false);
+      expect(replacements['Series [_]']).toBe('Series {series_designation}');
     });
 
     await allureStep('Assert letter_date is a date-typed metadata field', () => {

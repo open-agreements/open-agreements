@@ -726,7 +726,10 @@ describe('NVCA SPA Template', () => {
       investor_name: 'North Star Ventures LLC',
       judicial_district: 'Northern District of California',
       state_lower: 'delaware',
-      balance_sheet_date: '2025-12-31',
+      // Display-ready form: balance_sheet_date is `type: date` (#617), so ISO
+      // input renders formatted ("December 31, 2025") and would no longer match
+      // a raw-ISO verification value in this direct verifyOutput harness.
+      balance_sheet_date: 'December 31, 2025',
       specify_percentage: '12%',
       director_names: 'Jane Founder; Pat Director',
       applicable_purchasers: 'North Star Ventures LLC',
