@@ -216,6 +216,19 @@ export {
   type TemplateListField,
 } from './core/template-listing.js';
 
+// Unified content listing (practice guides, checklists, surveys)
+export {
+  listDocContentItems,
+  listDocContentTypesAvailable,
+  findDocContentItem,
+  DOC_CONTENT_DIRS,
+  DOC_CONTENT_TYPES,
+  type ContentType,
+  type DocContentType,
+  type DocContentItem,
+  type DocContentDetail,
+} from './core/content-listing.js';
+
 // Template discovery
 export { listTemplateEntries, findTemplateDir, type ContentEntry } from './utils/paths.js';
 

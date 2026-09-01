@@ -81,6 +81,8 @@ describe('contract-templates-mcp tools', () => {
     expect(names).toEqual([
       'list_templates',
       'get_template',
+      'list_content',
+      'get_content',
       'fill_template',
       'get_apap_template',
       'create_apap_agreement_docx',
