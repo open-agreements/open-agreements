@@ -79,6 +79,41 @@ const GetTemplateArgsSchema = z.object({
   template_id: z.string().min(1),
 });
 
+/**
+ * list_content cursors bind the pagination position to the filter they were
+ * issued under (type/query fingerprint). Replaying a cursor with a different
+ * filter would otherwise silently skip or duplicate records, because the
+ * position is lexical over the *filtered* catalog.
+ */
+function encodeContentCursor(contentId: string, type?: string, query?: string): string {
+  return Buffer.from(
+    JSON.stringify({ after: contentId, type: type ?? null, query: query ?? null }),
+    'utf8',
+  ).toString('base64');
+}
+
+function decodeContentCursor(cursor: string, type?: string, query?: string): string {
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(Buffer.from(cursor, 'base64').toString('utf8'));
+  } catch {
+    throw new InvalidCursorError('Invalid cursor: malformed payload');
+  }
+  if (parsed === null || typeof parsed !== 'object') {
+    throw new InvalidCursorError('Invalid cursor: malformed payload');
+  }
+  const record = parsed as { after?: unknown; type?: unknown; query?: unknown };
+  if (typeof record.after !== 'string' || record.after.length === 0) {
+    throw new InvalidCursorError('Invalid cursor: malformed payload');
+  }
+  if ((record.type ?? null) !== (type ?? null) || (record.query ?? null) !== (query ?? null)) {
+    throw new InvalidCursorError(
+      'Invalid cursor: issued under a different type/query filter. Restart from the first page.',
+    );
+  }
+  return record.after;
+}
+
 // Same strict validation conventions as ListTemplatesArgsSchema.
 const ListContentArgsSchema = z
   .object({
@@ -288,7 +323,10 @@ async function importRepoModules(): Promise<RepoModules | null> {
         mapFields: listing.mapFields,
         exportTemplateToApap: apap.exportTemplateToApap,
         fillApapAgreementToDocx: apap.fillApapAgreementToDocx,
-        ...(content && typeof content.listDocContentItems === 'function'
+        ...(content &&
+        typeof content.listDocContentItems === 'function' &&
+        typeof content.listDocContentTypesAvailable === 'function' &&
+        typeof content.findDocContentItem === 'function'
           ? {
               listDocContentItems: content.listDocContentItems,
               listDocContentTypesAvailable: content.listDocContentTypesAvailable,
@@ -316,7 +354,9 @@ async function importRepoModules(): Promise<RepoModules | null> {
         mapFields: mod.mapFields ?? ((f: TemplateField[]) => f),
         exportTemplateToApap: mod.exportTemplateToApap,
         fillApapAgreementToDocx: mod.fillApapAgreementToDocx,
-        ...(typeof mod.listDocContentItems === 'function'
+        ...(typeof mod.listDocContentItems === 'function' &&
+        typeof mod.listDocContentTypesAvailable === 'function' &&
+        typeof mod.findDocContentItem === 'function'
           ? {
               listDocContentItems: mod.listDocContentItems,
               listDocContentTypesAvailable: mod.listDocContentTypesAvailable,
@@ -503,7 +543,7 @@ const tools: ToolDefinition[] = [
 
       let startIndex = 0;
       if (input.cursor !== undefined) {
-        const afterId = decodeCursor(input.cursor);
+        const afterId = decodeContentCursor(input.cursor, input.type, input.query);
         const found = filtered.findIndex((entry) => entry.content_id.localeCompare(afterId) > 0);
         if (found === -1) {
           throw new InvalidCursorError('Invalid cursor: points beyond catalog tail');
@@ -515,7 +555,7 @@ const tools: ToolDefinition[] = [
       const consumed = startIndex + page.length;
       const nextCursor =
         page.length > 0 && consumed < filtered.length
-          ? encodeCursor(page[page.length - 1].content_id)
+          ? encodeContentCursor(page[page.length - 1].content_id, input.type, input.query)
           : null;
 
       return successResult('list_content', {
@@ -581,7 +621,12 @@ const tools: ToolDefinition[] = [
       }
 
       const mod = await importRepoModules();
-      if (!mod?.findDocContentItem) {
+      if (!mod?.findDocContentItem || !mod.listDocContentTypesAvailable) {
+        return toolError('get_content', 'CONTENT_UNAVAILABLE', DOC_CONTENT_UNAVAILABLE_REASON);
+      }
+      // A type whose local bundle is absent in this runtime is unavailable, not
+      // "not found" — mirrors list_content's unavailable_types reporting.
+      if (!mod.listDocContentTypesAvailable().includes(typeToken as DocContentType)) {
         return toolError('get_content', 'CONTENT_UNAVAILABLE', DOC_CONTENT_UNAVAILABLE_REASON);
       }
       const item = mod.findDocContentItem(input.content_id);

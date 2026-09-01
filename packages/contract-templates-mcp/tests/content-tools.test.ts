@@ -199,16 +199,69 @@ describe('list_content / get_content (open-agreements#635)', () => {
   });
 
   it('rejects malformed and beyond-tail cursors as INVALID_ARGUMENT', async () => {
-    const malformed = await callTool('list_content', { cursor: '!!!not-base64!!!' });
-    expect(malformed.isError).toBe(true);
-    expect(getError(malformed).code).toBe('INVALID_ARGUMENT');
+    const malformedInputs = [
+      '!!!not-base64!!!',
+      Buffer.from('after:template/foo', 'utf8').toString('base64'), // legacy non-JSON shape
+      Buffer.from('{"no_after":true}', 'utf8').toString('base64'),
+      Buffer.from('{"after":""}', 'utf8').toString('base64'),
+    ];
+    for (const cursor of malformedInputs) {
+      const result = await callTool('list_content', { cursor });
+      expect(result.isError).toBe(true);
+      expect(getError(result).code).toBe('INVALID_ARGUMENT');
+    }
 
     const beyondTail = await callTool('list_content', {
-      cursor: Buffer.from('after:zzzzzzzzzzzz', 'utf8').toString('base64'),
+      cursor: Buffer.from(
+        JSON.stringify({ after: 'zzzzzzzzzzzz', type: null, query: null }),
+        'utf8',
+      ).toString('base64'),
     });
     expect(beyondTail.isError).toBe(true);
     expect(getError(beyondTail).code).toBe('INVALID_ARGUMENT');
     expect(getError(beyondTail).message).toContain('beyond catalog tail');
+  });
+
+  it('rejects a cursor replayed under a different type or query filter', async () => {
+    const firstPage = await callTool('list_content', { limit: 5 });
+    const cursor = getData(firstPage).next_cursor as string;
+    expect(typeof cursor).toBe('string');
+
+    // Same (absent) filters: the cursor is valid.
+    const samePage = await callTool('list_content', { cursor, limit: 5 });
+    expect(samePage.isError).toBeUndefined();
+
+    for (const args of [
+      { cursor, type: 'practice_guide' },
+      { cursor, query: 'wage-and-hour' },
+    ]) {
+      const result = await callTool('list_content', args);
+      expect(result.isError).toBe(true);
+      expect(getError(result).code).toBe('INVALID_ARGUMENT');
+      expect(getError(result).message).toContain('different type/query filter');
+    }
+
+    // And the reverse: a filtered cursor replayed unfiltered is rejected too.
+    const filteredPage = await callTool('list_content', { type: 'checklist', limit: 5 });
+    const filteredCursor = getData(filteredPage).next_cursor as string;
+    expect(typeof filteredCursor).toBe('string');
+    const unfilteredReplay = await callTool('list_content', { cursor: filteredCursor });
+    expect(unfilteredReplay.isError).toBe(true);
+    expect(getError(unfilteredReplay).code).toBe('INVALID_ARGUMENT');
+  });
+
+  it('meets per-type catalog floor counts in a full repo checkout', async () => {
+    const floors: Record<string, number> = {
+      template: 50,
+      practice_guide: 100,
+      checklist: 30,
+      survey: 5,
+    };
+    for (const [type, floor] of Object.entries(floors)) {
+      const result = await callTool('list_content', { type, limit: 1 });
+      expect(result.isError).toBeUndefined();
+      expect(getData(result).total_count as number).toBeGreaterThanOrEqual(floor);
+    }
   });
 
   it('rejects invalid type, limit, query, and unknown arguments', async () => {
@@ -352,6 +405,57 @@ describe('list_content / get_content (open-agreements#635)', () => {
       expect(result.isError).toBe(true);
       expect(getError(result).code).toBe('CONTENT_UNAVAILABLE');
       expect((getError(result).message as string)).toContain('openagreements.org');
+    });
+
+    it('distinguishes unavailable types from missing content when partially available', async () => {
+      const guide = {
+        content_id: 'practice_guide/mock-topic/us',
+        type: 'practice_guide',
+        title: 'Mock Guide',
+        description: null,
+        topic: 'mock-topic',
+        jurisdiction: 'us',
+        format: 'markdown',
+        source_url: null,
+        updated_at: null,
+        tags: [],
+        repo_path: 'practice-guides/mock-topic/us.md',
+      };
+      _setModuleOverride(
+        mockModules({
+          listDocContentItems: () => [guide],
+          listDocContentTypesAvailable: () => ['practice_guide'],
+          findDocContentItem: (id: string) =>
+            id === guide.content_id ? { ...guide, markdown: '# Mock Guide' } : undefined,
+        }),
+      );
+
+      // list_content: only the absent bundles are reported unavailable.
+      const listing = await callTool('list_content', {});
+      const data = getData(listing);
+      expect((data.items as ContentEntry[]).map((item) => item.content_id)).toEqual([
+        guide.content_id,
+      ]);
+      expect((data.unavailable_types as Array<{ type: string }>).map((entry) => entry.type)).toEqual(
+        ['checklist', 'survey'],
+      );
+
+      // get_content: absent bundle → CONTENT_UNAVAILABLE, not CONTENT_NOT_FOUND.
+      const unavailable = await callTool('get_content', {
+        content_id: 'checklist/safes/yc-post-money-safe-valuation-cap',
+      });
+      expect(unavailable.isError).toBe(true);
+      expect(getError(unavailable).code).toBe('CONTENT_UNAVAILABLE');
+
+      // get_content: available bundle, unknown doc → CONTENT_NOT_FOUND.
+      const notFound = await callTool('get_content', { content_id: 'practice_guide/mock-topic/nowhere' });
+      expect(notFound.isError).toBe(true);
+      expect(getError(notFound).code).toBe('CONTENT_NOT_FOUND');
+
+      // get_content: available bundle, known doc → full content.
+      const found = await callTool('get_content', { content_id: guide.content_id });
+      expect(found.isError).toBeUndefined();
+      expect((getData(found).content as Record<string, unknown>).markdown).toBe('# Mock Guide');
     });
   });
 });
