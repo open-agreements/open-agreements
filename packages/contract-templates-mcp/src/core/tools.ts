@@ -109,6 +109,13 @@ interface TemplateField {
   items?: TemplateField[];
 }
 
+/** Structured contributor provenance entry (open-agreements#533). */
+interface TemplateCredit {
+  name: string;
+  role: string;
+  profile_url?: string;
+}
+
 interface TemplateRecord {
   name: string;
   display_name?: string;
@@ -120,6 +127,10 @@ interface TemplateRecord {
   attribution_text?: string;
   /** Maturity signal (open-agreements#243); null for templates that don't declare it. */
   stability?: string | null;
+  /** Expository provenance text (open-agreements#533); null/undefined when not declared. */
+  derived_from?: string | null;
+  /** Structured contributor provenance (open-agreements#533); empty when not declared. */
+  credits?: TemplateCredit[];
   fields: TemplateField[];
 }
 
@@ -323,6 +334,8 @@ const tools: ToolDefinition[] = [
             source: mod.sourceName(meta.source_url as string),
             attribution_text: meta.attribution_text as string | undefined,
             stability: (meta.stability as string | undefined) ?? null,
+            derived_from: (meta.derived_from as string | undefined) ?? null,
+            credits: (meta.credits as TemplateCredit[] | undefined) ?? [],
             fields: mod.mapFields(meta.fields as Record<string, unknown>[], meta.priority_fields as string[]),
           };
           return successResult('get_template', { template: normalizeTemplate(template) });
@@ -688,6 +701,10 @@ function normalizeTemplate(template: TemplateRecord): Record<string, unknown> {
     source: template.source,
     attribution_text: template.attribution_text ?? null,
     stability: template.stability ?? null,
+    // Provenance surface (open-agreements#533): expository derived_from text and
+    // structured credits (role/name/profile_url) pass through un-flattened.
+    derived_from: template.derived_from ?? null,
+    credits: template.credits ?? [],
     fields: stripDisplayLabels(template.fields),
   };
 }
@@ -699,6 +716,8 @@ function stripDisplayLabels(fields: TemplateField[]): TemplateField[] {
   });
 }
 
+// Compact list entries deliberately omit provenance (derived_from/credits) —
+// they are full-detail surfaces served by get_template (open-agreements#533).
 function compactTemplate(template: TemplateRecord): Record<string, unknown> {
   const trimmedDisplayName = template.display_name?.trim();
   return {
