@@ -166,6 +166,7 @@ const FIELD_ASSERTION_POLICY: Record<string, FieldAssertionPolicy> = {
   balance_sheet_date_defined_term: { mode: 'strict', reason: 'Defined-term text at balance-sheet references' },
   benefit_plan_name: { mode: 'skip', reason: 'Optional field; covered in targeted scenario tests' },
   signature_page_marker: { mode: 'strict', reason: 'Execution marker anchor' },
+  state: { mode: 'strict', reason: 'Jurisdiction anchor (proper noun) rendered in the courts alternative' },
   state_lower: { mode: 'strict', reason: 'Jurisdiction anchor', normalize: 'lowercase' },
   specify_percentage: { mode: 'strict', reason: 'Key negotiated threshold anchor' },
   financial_reporting_period: { mode: 'strict', reason: 'Reporting cadence anchor' },
@@ -481,6 +482,14 @@ describe('NVCA SPA Template', () => {
         paragraph_rules?: Array<{ replacements?: Record<string, string> }>;
       }
     );
+    const computedConfig = await allureStep('Load computed.json', () =>
+      JSON.parse(readFileSync(join(FIELD_SELECTOR_DIR, 'computed.json'), 'utf-8')) as {
+        rules?: Array<{
+          when_all?: Array<{ field?: string }>;
+          when_any?: Array<{ field?: string }>;
+        }>;
+      }
+    );
 
     const metadataFieldNames = (metadata.fields ?? []).map((field) => field.name).sort();
     const priorityFieldNames = (metadata.priority_fields ?? []).slice().sort();
@@ -502,12 +511,26 @@ describe('NVCA SPA Template', () => {
       )
       .sort();
     const representedFieldNames = Array.from(new Set([...replacementFieldNames, ...normalizeFieldNames])).sort();
+    // Fields consumed as computed-rule inputs (e.g. state_lower, which drives
+    // judicial-district defaults and audit rules without rendering into the
+    // document text since #2391 replaced its `[state]` fill site with the
+    // proper-noun `state` field). A priority field is covered if it renders
+    // (replacements/normalize) OR feeds the computed profile.
+    const computedInputFieldNames = Array.from(
+      new Set(
+        (computedConfig.rules ?? []).flatMap((rule) =>
+          [...(rule.when_all ?? []), ...(rule.when_any ?? [])]
+            .map((condition) => condition.field)
+            .filter((field): field is string => typeof field === 'string')
+        )
+      )
+    ).sort();
 
     const unknownReplacementTargets = representedFieldNames.filter(
       (field) => !metadataFieldNames.includes(field)
     );
     const missingRequiredReplacementTargets = priorityFieldNames.filter(
-      (field) => !representedFieldNames.includes(field)
+      (field) => !representedFieldNames.includes(field) && !computedInputFieldNames.includes(field)
     );
 
     const fieldAlignmentSnapshot = {
@@ -515,6 +538,7 @@ describe('NVCA SPA Template', () => {
       replacementFieldNames,
       normalizeFieldNames,
       representedFieldNames,
+      computedInputFieldNames,
       priorityFieldNames,
       unknownReplacementTargets,
       missingRequiredReplacementTargets,
@@ -830,7 +854,9 @@ describe('NVCA SPA Template', () => {
 
       const fixture = createSyntheticFieldSelectorFixture([
         '[Insert Company Name]',
-        '[state]',
+        // #2391: the bare `[state]` key (lowercase state_lower fill) was replaced by
+        // context-anchored proper-noun keys rendering the `state` field.
+        'state courts of [state]',
         'District Court for the District of [judicial district]',
         '[location]',
       ]);
@@ -845,6 +871,7 @@ describe('NVCA SPA Template', () => {
             values: {
               company_name: 'Helios Labs, Inc.',
               dispute_resolution_mode: 'courts',
+              state: 'California',
               state_lower: 'california',
             },
             computedOutPath,
@@ -896,7 +923,9 @@ describe('NVCA SPA Template', () => {
 
         await allureStep('Assert computed fill values affect rendered output', () => {
           expect(outputText).toContain('Helios Labs, Inc.');
-          expect(outputText).toContain('california');
+          // Proper-noun forum-state rendering (#2391): the courts slot now fills
+          // the `state` field, not the lowercase state_lower audit input.
+          expect(outputText).toContain('state courts of California');
           expect(outputText).toContain('Northern District of California');
         });
       } finally {

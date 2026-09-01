@@ -11098,15 +11098,6 @@
           "default_value_rationale": null
         },
         {
-          "name": "indemnitee_pronoun_possessive_plural",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Plural possessive pronoun for the indemnitee (e.g. their)",
-          "default": "their",
-          "default_value_rationale": null
-        },
-        {
           "name": "bylaws_name",
           "type": "string",
           "required": true,
@@ -11218,17 +11209,8 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "State of incorporation (e.g. Delaware)",
+          "description": "State of incorporation (proper noun, e.g. Delaware); also names the state courts in the dispute-resolution clause",
           "default": "Delaware",
-          "default_value_rationale": null
-        },
-        {
-          "name": "state_lower",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "State of incorporation in lowercase (e.g. delaware)",
-          "default": "delaware",
           "default_value_rationale": null
         },
         {
@@ -11527,12 +11509,12 @@
           "default_value_rationale": null
         },
         {
-          "name": "state_lower",
+          "name": "state_of_incorporation",
           "type": "string",
           "required": true,
           "section": null,
-          "description": "State of incorporation in lowercase (e.g. delaware)",
-          "default": "delaware",
+          "description": "State of incorporation (proper noun, e.g. Delaware); also names the state courts in the dispute-resolution clause",
+          "default": "Delaware",
           "default_value_rationale": null
         },
         {
@@ -11567,7 +11549,7 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Specified percentage threshold for key holder transfers",
+          "description": "Specified percentage threshold for key holder transfers — include the percent sign (e.g. 60%); occurrences where the source carries a trailing % absorb it",
           "default": null,
           "default_value_rationale": null
         },
@@ -11876,11 +11858,20 @@
           "default_value_rationale": null
         },
         {
+          "name": "state",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "State whose courts are named in the dispute-resolution courts alternative (proper noun, e.g. Delaware). Keep consistent with state_lower, which drives the judicial-district defaults.",
+          "default": "Delaware",
+          "default_value_rationale": null
+        },
+        {
           "name": "state_lower",
           "type": "string",
           "required": true,
           "section": null,
-          "description": "State name (lowercase)",
+          "description": "State name (lowercase, e.g. delaware) — drives judicial-district defaults and audit rules; not rendered in the document text",
           "default": null,
           "default_value_rationale": null
         },
@@ -11889,7 +11880,7 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Specified percentage threshold",
+          "description": "Specified percentage threshold — include the percent sign (e.g. 60%)",
           "default": null,
           "default_value_rationale": null
         },
@@ -12028,12 +12019,12 @@
           "default_value_rationale": null
         },
         {
-          "name": "state_of_incorporation_lower",
+          "name": "state_of_incorporation",
           "type": "string",
           "required": true,
           "section": null,
-          "description": "State of incorporation in lowercase (e.g. delaware)",
-          "default": "delaware",
+          "description": "State of incorporation (proper noun, e.g. Delaware); also names the state courts in the dispute-resolution clause",
+          "default": "Delaware",
           "default_value_rationale": null
         },
         {
@@ -12041,7 +12032,7 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Percentage threshold for drag-along and amendment provisions (number only, e.g. 60)",
+          "description": "Percentage threshold for drag-along and amendment provisions — include the percent sign (e.g. 60%); occurrences where the source carries a trailing % absorb it",
           "default": null,
           "default_value_rationale": null
         },

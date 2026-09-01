@@ -350,6 +350,9 @@ describeWithSource('SPA agreement date + dispute-resolution alternatives (#619)'
         values: {
           company_name: 'Meridian Robotics, Inc.',
           dispute_resolution_mode: 'courts',
+          // #2391: the courts alternative renders the proper-noun `state` field;
+          // state_lower stays as the lowercase computed/audit input.
+          state: 'California',
           state_lower: 'california',
           judicial_district: 'Northern District of California',
           // Supplied but INACTIVE in courts mode: its only fill site is the
@@ -361,7 +364,8 @@ describeWithSource('SPA agreement date + dispute-resolution alternatives (#619)'
 
       const text = textOf(outputPath);
       // The courts alternative is present and carries the supplied district.
-      expect(text).toContain('irrevocably and unconditionally submit to the jurisdiction of the state courts of california');
+      // Proper-noun forum state (#2391): "state courts of California", no longer lowercase.
+      expect(text).toContain('irrevocably and unconditionally submit to the jurisdiction of the state courts of California');
       // The alt-2 key consumes the literal "District of" so a full district name
       // does not double up ("District of Northern District of ...").
       expect(text).toContain('United States District Court for the Northern District of California');

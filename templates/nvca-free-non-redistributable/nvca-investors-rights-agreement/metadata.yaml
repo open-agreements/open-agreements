@@ -31,12 +31,8 @@ fields:
     default: ''
   - name: state_of_incorporation
     type: string
-    description: State of incorporation (e.g. Delaware)
+    description: State of incorporation (proper noun, e.g. Delaware); also names the state courts in the dispute-resolution clause
     default: Delaware
-  - name: state_lower
-    type: string
-    description: State of incorporation in lowercase (e.g. delaware)
-    default: delaware
   - name: judicial_district
     type: string
     description: Federal judicial district for dispute resolution (e.g. District of Delaware)
@@ -80,7 +76,6 @@ priority_fields:
   - investor_name
   - company_counsel
   - state_of_incorporation
-  - state_lower
   - judicial_district
   - business_description
   - effective_date

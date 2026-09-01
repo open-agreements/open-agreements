@@ -28,7 +28,9 @@
   "[the Balance Sheet Date]": "the {balance_sheet_date_defined_term}",
   "[insert Plan Year and Name]": "{benefit_plan_name}",
   "[Signature Page Follows]": "{signature_page_marker}",
-  "[state]": "{state_lower}",
+  "state courts of [state]": "state courts of {state}",
+  "state court of [state]": "state court of {state}",
+  "the [state] Code of Civil Procedure": "the {state} Code of Civil Procedure",
   "[specify percentage]": "{specify_percentage}",
   "[monthly]": "{financial_reporting_period}",
   "[list the individual director names]": "{director_names}",
@@ -39,5 +41,6 @@
   "U.S. District Court for the District of [_____]": "U.S. District Court for the {judicial_district}",
   "\u201cSeries > [___]": "{series_designation}",
   "\"Series > [___]": "{series_designation}",
+  "Series [___] Preferred Stock issued to the Purchasers": "Series {series_designation} Preferred Stock issued to the Purchasers",
   "as of [_______ __], 20[_] (the \u201cBalance Sheet Date\u201d)": "as of {balance_sheet_date} (the \u201cBalance Sheet Date\u201d)"
 }
