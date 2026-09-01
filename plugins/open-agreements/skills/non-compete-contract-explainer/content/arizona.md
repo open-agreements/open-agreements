@@ -2,8 +2,10 @@
 jurisdiction: "Arizona"
 slug: arizona
 countryCode: US
-snapshotAsOf: "2026-08-30"
-lastReviewed: "2026-06-03"
+content_packaged_at: "2026-08-30"
+law_checked_through: "2026-06-03"
+human_reviewed_at: null
+next_review_due: null
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/arizona
 license: CC BY 4.0
 stale: false

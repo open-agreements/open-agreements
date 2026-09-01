@@ -286,10 +286,32 @@ function checkExplainerManifest(skillRoot, expectedSlugs, problems) {
     return;
   }
 
-  // Manifest-level, so checked once rather than repeated per jurisdiction.
-  if (manifest.snapshotAsOf === undefined) {
-    problems.push(`${relativeRoot}/manifest.json is missing required field snapshotAsOf`);
+  // Two date shapes are live at once: the legacy pair, and the four fields that
+  // replaced it when `lastReviewed`/`snapshotAsOf` were split into packaging,
+  // law-currency, human-review and next-review dates. The skills are projected
+  // from upstream independently, so one can migrate before the other. Accept
+  // either shape, but require a COMPLETE one — a half-migrated skill is exactly
+  // the drift this gate exists to catch.
+  const LEGACY_DATE_FIELDS = ["lastReviewed", "snapshotAsOf"];
+  const CURRENT_DATE_FIELDS = [
+    "content_packaged_at",
+    "law_checked_through",
+    "human_reviewed_at",
+    "next_review_due",
+  ];
+  const usesCurrent = manifest.content_packaged_at !== undefined;
+  const usesLegacy = manifest.snapshotAsOf !== undefined;
+  if (usesCurrent && usesLegacy) {
+    problems.push(
+      `${relativeRoot}/manifest.json carries both content_packaged_at and snapshotAsOf; pick one shape`,
+    );
+  } else if (!usesCurrent && !usesLegacy) {
+    problems.push(
+      `${relativeRoot}/manifest.json is missing required field content_packaged_at`,
+    );
   }
+  const dateFields = usesCurrent ? CURRENT_DATE_FIELDS : LEGACY_DATE_FIELDS;
+  const packagedAtField = usesCurrent ? "content_packaged_at" : "snapshotAsOf";
 
   const expected = new Set(expectedSlugs);
   const actual = new Set(entries.map((entry) => entry.slug));
@@ -327,14 +349,15 @@ function checkExplainerManifest(skillRoot, expectedSlugs, problems) {
       "jurisdiction",
       "countryCode",
       "canonicalUrl",
-      "lastReviewed",
-      "snapshotAsOf",
+      ...dateFields,
       "stale",
     ]) {
       // Comparing two `undefined`s passes vacuously, which is how this gate
       // silently stopped checking review dates when the upstream projection
       // renamed lawReviewedThrough/exportedAt. Require presence on both sides,
-      // and say which side is missing so the fix is obvious.
+      // and say which side is missing so the fix is obvious. An explicit `null`
+      // is a legitimate "not yet set" for human_reviewed_at / next_review_due
+      // and still counts as present.
       if (frontMatter[field] === undefined) {
         problems.push(`${relativeRoot}/${expectedFile} is missing required field ${field}`);
         continue;
@@ -349,8 +372,11 @@ function checkExplainerManifest(skillRoot, expectedSlugs, problems) {
         problems.push(`${relativeRoot}/${expectedFile} disagrees with manifest field ${field}`);
       }
     }
-    if (manifest.snapshotAsOf !== undefined && frontMatter.snapshotAsOf !== manifest.snapshotAsOf) {
-      problems.push(`${relativeRoot}/${expectedFile} disagrees with manifest snapshotAsOf`);
+    if (
+      manifest[packagedAtField] !== undefined &&
+      frontMatter[packagedAtField] !== manifest[packagedAtField]
+    ) {
+      problems.push(`${relativeRoot}/${expectedFile} disagrees with manifest ${packagedAtField}`);
     }
   }
 }
