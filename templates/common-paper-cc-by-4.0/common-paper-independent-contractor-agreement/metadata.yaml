@@ -108,3 +108,16 @@ priority_fields:
   - timeline
   - governing_law
   - jurisdiction
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - company
+  - contractor
+signature_roles:
+  - company
+  - contractor
+mutation_policy: fields_only
+maturity: experimental

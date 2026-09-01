@@ -37,8 +37,17 @@ describe('validate workflow license-diff logic', () => {
     await allureStep('Assert non-derivative enforcement block', () => {
       expect(VALIDATE_WORKFLOW).toContain('allow_derivatives:');
       expect(VALIDATE_WORKFLOW).toContain('if [ "$allow" = "false" ]; then');
-      expect(VALIDATE_WORKFLOW).toContain('git diff --name-only "$BASE_SHA"');
+      expect(VALIDATE_WORKFLOW).toContain('git diff --name-only "$BASE_SHA" -- "$dir"');
       expect(VALIDATE_WORKFLOW).toContain('exit 1');
+    });
+  });
+
+  it('permits metadata-only changes in no-derivatives template directories', async () => {
+    await allureParameter('workflow', '.github/workflows/validate.yml');
+
+    await allureStep('Assert capability manifest metadata is excluded exactly', () => {
+      expect(VALIDATE_WORKFLOW).toContain('grep -vFx "${dir}metadata.yaml"');
+      expect(VALIDATE_WORKFLOW).toContain('if [ -n "$changed_files" ]; then');
     });
   });
 });

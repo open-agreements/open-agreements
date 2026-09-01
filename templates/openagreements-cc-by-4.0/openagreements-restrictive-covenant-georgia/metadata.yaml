@@ -219,3 +219,16 @@ priority_fields:
   - employee_name
 distribution: bundled
 artifact_type: template
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - employee
+  - employer
+signature_roles:
+  - employer
+  - employee
+mutation_policy: fields_only
+maturity: experimental

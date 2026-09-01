@@ -37,3 +37,12 @@ fields:
         description: Contact email address for the member
 priority_fields:
   - deal_name
+artifact_kind: checklist
+capabilities:
+  - create
+  - review
+  - render
+party_roles: []
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental
