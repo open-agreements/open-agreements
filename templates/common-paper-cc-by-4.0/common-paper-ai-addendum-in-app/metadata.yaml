@@ -110,3 +110,12 @@ fields:
     description: Customer AI-specific Covered Claims apply
     section: AI Liability
 priority_fields: []
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles: []
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental

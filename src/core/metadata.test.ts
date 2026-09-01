@@ -1,4 +1,7 @@
 import { describe, expect } from 'vitest';
+import { readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import yaml from 'js-yaml';
 import {
   allureJsonAttachment,
   allureParameter,
@@ -12,12 +15,66 @@ import {
   FieldDefinitionSchema,
   CleanConfigSchema,
   GuidanceOutputSchema,
+  TemplateCapabilityManifestSchema,
 } from './metadata.js';
 
 type SafeParseSchema = {
   safeParse: (payload: unknown) => { success: boolean };
 };
 const it = itAllure.epic('Discovery & Metadata');
+
+describe('TemplateCapabilityManifestSchema', () => {
+  it('accepts a complete local-agreement capability manifest', async () => {
+    await expectSafeParseOutcome(
+      'TemplateCapabilityManifestSchema',
+      TemplateCapabilityManifestSchema,
+      {
+        artifact_kind: 'agreement',
+        capabilities: ['create', 'review', 'render'],
+        party_roles: ['company', 'employee'],
+        signature_roles: ['company_signatory', 'employee'],
+        mutation_policy: 'terms',
+        maturity: 'experimental',
+      },
+      true
+    );
+  });
+
+  it('requires every shipped metadata file to declare the full manifest explicitly', async () => {
+    const files: string[] = [];
+    const walk = (directory: string): void => {
+      for (const entry of readdirSync(directory, { withFileTypes: true })) {
+        const path = join(directory, entry.name);
+        if (entry.isDirectory()) walk(path);
+        else if (entry.name === 'metadata.yaml') files.push(path);
+      }
+    };
+    walk(join(process.cwd(), 'templates'));
+    const keys = ['artifact_kind', 'capabilities', 'party_roles', 'signature_roles', 'mutation_policy', 'maturity'];
+    for (const file of files) {
+      const parsed = yaml.load(readFileSync(file, 'utf-8')) as Record<string, unknown>;
+      expect(keys.filter((key) => !(key in parsed)), file).toEqual([]);
+      expect(TemplateCapabilityManifestSchema.safeParse(parsed).success, file).toBe(true);
+    }
+    expect(files).toHaveLength(116);
+  });
+
+  it('rejects unknown capabilities and maturity values', async () => {
+    await expectSafeParseOutcome(
+      'TemplateCapabilityManifestSchema',
+      TemplateCapabilityManifestSchema,
+      {
+        artifact_kind: 'agreement',
+        capabilities: ['send'],
+        party_roles: [],
+        signature_roles: [],
+        mutation_policy: 'terms',
+        maturity: 'production',
+      },
+      false
+    );
+  });
+});
 
 async function expectSafeParseOutcome(
   schemaName: string,
@@ -501,7 +558,17 @@ describe('FieldDefinitionSchema', () => {
   });
 });
 
+const BASE_CAPABILITY_MANIFEST = {
+  artifact_kind: 'agreement' as const,
+  capabilities: ['create', 'review', 'render'] as const,
+  party_roles: ['disclosing_party', 'receiving_party'],
+  signature_roles: ['disclosing_party', 'receiving_party'],
+  mutation_policy: 'fields_only' as const,
+  maturity: 'experimental' as const,
+};
+
 const BASE_TEMPLATE_METADATA = {
+  ...BASE_CAPABILITY_MANIFEST,
   name: 'Test NDA',
   source_url: 'https://example.com/nda',
   version: '1.0',
@@ -527,6 +594,7 @@ function buildExternalMetadataPayload(fields: unknown[]) {
 
 function buildFieldSelectorMetadataPayload(fields: unknown[]) {
   return {
+    ...BASE_CAPABILITY_MANIFEST,
     name: 'Fixture FieldSelector',
     source_url: 'https://example.com/source.docx',
     source_version: '1.0',
@@ -541,6 +609,7 @@ describe('TemplateMetadataSchema', () => {
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
       {
+        ...BASE_CAPABILITY_MANIFEST,
         name: 'Test NDA',
         source_url: 'https://example.com/nda',
         version: '1.0',
@@ -756,6 +825,7 @@ describe('TemplateMetadataSchema', () => {
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
       {
+        ...BASE_CAPABILITY_MANIFEST,
         name: 'Test Consent',
         source_url: 'https://example.com/consent',
         version: '1.0',
@@ -779,6 +849,7 @@ describe('TemplateMetadataSchema', () => {
   it('defaults missing credits to empty array', async () => {
     const parsed = await allureStep('Parse template metadata without credits', () =>
       TemplateMetadataSchema.parse({
+        ...BASE_CAPABILITY_MANIFEST,
         name: 'Test NDA',
         source_url: 'https://example.com/nda',
         version: '1.0',
@@ -838,6 +909,7 @@ describe('FieldSelectorMetadataSchema', () => {
       'FieldSelectorMetadataSchema',
       FieldSelectorMetadataSchema,
       {
+        ...BASE_CAPABILITY_MANIFEST,
         name: 'NVCA Voting Agreement',
         source_url: 'https://nvca.org/document.docx',
         source_version: '10-1-2025',
@@ -863,6 +935,7 @@ describe('FieldSelectorMetadataSchema', () => {
   it('defaults optional to false', async () => {
     const parsed = await allureStep('Parse fieldSelector metadata with optional omitted', () =>
       FieldSelectorMetadataSchema.parse({
+        ...BASE_CAPABILITY_MANIFEST,
         name: 'Test',
         source_url: 'https://example.com/doc.docx',
         source_version: '1.0',

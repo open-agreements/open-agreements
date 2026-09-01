@@ -62,3 +62,10 @@ priority_fields:
   - state
   - street_address
   - zip_code
+artifact_kind: letter
+capabilities:
+  - review
+party_roles: []
+signature_roles: []
+mutation_policy: immutable
+maturity: experimental

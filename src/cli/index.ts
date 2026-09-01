@@ -19,6 +19,15 @@ import {
   runChecklistPatchApply,
 } from '../commands/checklist.js';
 import { type MemoFormat } from '../core/employment/memo.js';
+import {
+  loadAgreementTerms,
+  runAgreementCreate,
+  runAgreementList,
+  runAgreementRender,
+  runAgreementReview,
+  runAgreementShow,
+  runAgreementUpdate,
+} from '../commands/agreements.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -82,6 +91,67 @@ export function createProgram(): Command {
     });
 
   program.addCommand(fillCmd);
+
+  // --- Local persistent agreements ---
+
+  const agreementsCmd = new Command('agreements');
+  agreementsCmd.description('Create and manage local persistent agreements');
+
+  agreementsCmd
+    .command('create <template>')
+    .description('Create a local agreement from a template')
+    .option('-d, --data <json-file>', 'JSON file with initial terms')
+    .option('--set <key=value...>', 'Set an initial term (repeatable)')
+    .action(async (template: string, opts: { data?: string; set?: string[] }) => {
+      await runAgreementCreate({ template, terms: loadAgreementTerms(opts.data, opts.set) });
+    });
+
+  agreementsCmd
+    .command('list')
+    .description('List local agreements')
+    .option('--json', 'Output machine-readable JSON')
+    .action(async (opts: { json?: boolean }) => {
+      await runAgreementList(opts);
+    });
+
+  agreementsCmd
+    .command('show <id>')
+    .description('Show a local agreement')
+    .option('--json', 'Output the full agreement record')
+    .action(async (id: string, opts: { json?: boolean }) => {
+      await runAgreementShow({ id, json: opts.json });
+    });
+
+  agreementsCmd
+    .command('update <id>')
+    .description('Merge terms into a local agreement and advance its revision')
+    .option('-d, --data <json-file>', 'JSON file with terms to merge')
+    .option('--set <key=value...>', 'Set a term (repeatable)')
+    .option('--revision <number>', 'Require this current revision before updating', parsePositiveRevision)
+    .action(async (id: string, opts: { data?: string; set?: string[]; revision?: number }) => {
+      await runAgreementUpdate({
+        id,
+        terms: loadAgreementTerms(opts.data, opts.set),
+        revision: opts.revision,
+      });
+    });
+
+  agreementsCmd
+    .command('review <id>')
+    .description('Review local terms and template provenance, persisting warnings')
+    .action(async (id: string) => {
+      await runAgreementReview({ id });
+    });
+
+  agreementsCmd
+    .command('render <id>')
+    .description('Render the current agreement revision to DOCX')
+    .option('-o, --output <path>', 'Output DOCX path')
+    .action(async (id: string, opts: { output?: string }) => {
+      await runAgreementRender({ id, output: opts.output });
+    });
+
+  program.addCommand(agreementsCmd);
 
   // --- Validate command ---
 
@@ -289,6 +359,14 @@ export function createProgram(): Command {
   program.addCommand(checklistCmd);
 
   return program;
+}
+
+function parsePositiveRevision(value: string): number {
+  const revision = Number(value);
+  if (!Number.isInteger(revision) || revision < 1) {
+    throw new Error(`Invalid --revision: "${value}" (expected a positive integer)`);
+  }
+  return revision;
 }
 
 function buildMemoArgs(opts: {

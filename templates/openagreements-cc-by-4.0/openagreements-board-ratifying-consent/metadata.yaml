@@ -55,3 +55,13 @@ priority_fields:
   - defective_acts
   - failure_of_authorization
   - director_signatories
+artifact_kind: consent
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - company
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental

@@ -50,3 +50,10 @@ priority_fields:
   - investor_name_caps
   - name
   - title
+artifact_kind: letter
+capabilities:
+  - review
+party_roles: []
+signature_roles: []
+mutation_policy: immutable
+maturity: experimental

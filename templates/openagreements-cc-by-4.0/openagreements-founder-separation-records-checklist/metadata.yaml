@@ -39,3 +39,13 @@ priority_fields:
   - founder_name
   - separation_date
   - minute_book_location
+artifact_kind: checklist
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - founder
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental

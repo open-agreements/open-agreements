@@ -40,13 +40,30 @@ export {
   LicenseEnum,
   StabilityEnum,
   FieldDefinitionSchema,
+  TemplateCapabilityManifestSchema,
   type TemplateMetadata,
   type FieldSelectorMetadata,
   type CleanConfig,
   type FieldDefinition,
+  type TemplateCapabilityManifest,
   type License,
   type Stability,
 } from './core/metadata.js';
+
+// Local persistent agreements
+export {
+  AgreementRecordSchema,
+  runAgreementCreate,
+  runAgreementList,
+  runAgreementShow,
+  runAgreementUpdate,
+  runAgreementReview,
+  runAgreementRender,
+  type AgreementRecord,
+  type AgreementCreateArgs,
+  type AgreementUpdateArgs,
+  type AgreementRenderArgs,
+} from './commands/agreements.js';
 
 // External template engine
 export {
