@@ -22,6 +22,7 @@ asset EmployeeIpInventionsAssignment extends Contract {
   o String excluded_inventions_statement default="Inventions developed entirely on personal time without use of company equipment, supplies, facilities, confidential information, or trade secrets are excluded to the extent permitted by applicable law."
   o String confidential_information_definition optional
   o String return_of_materials_timing optional
+  o String confidentiality_other_duration optional
   o String post_termination_assistance default="reasonable assistance with filings and signatures related to assigned inventions"
   o String governing_law default="California"
   o String venue default="state and federal courts in the governing law state"
