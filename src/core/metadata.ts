@@ -322,6 +322,9 @@ const TemplateCreditSchema = z.object({
   role: TemplateCreditRoleEnum,
   profile_url: z.string().url().optional(),
 });
+/** Structured credit entry (name/role, optional profile_url) — shared with the
+ * template-listing projection so MCP/API output preserves the structure (#533). */
+export type TemplateCredit = z.infer<typeof TemplateCreditSchema>;
 
 export const TemplateCapabilityManifestSchema = z.object({
   artifact_kind: z.enum(['agreement', 'consent', 'notice', 'letter', 'checklist', 'policy', 'other']).default('other'),
