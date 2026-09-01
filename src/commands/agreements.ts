@@ -1,5 +1,5 @@
 import { createHash, randomUUID } from 'node:crypto';
-import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { mkdir, open, rename, unlink, writeFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { z } from 'zod';
@@ -76,24 +76,48 @@ async function writeRecord(record: AgreementRecord, root?: string): Promise<void
 
 async function withAgreementLock<T>(id: string, root: string | undefined, operation: () => Promise<T>): Promise<T> {
   const dir = agreementDir(id, root);
-  await mkdir(dir, { recursive: true });
+  if (!existsSync(recordPath(id, root))) throw new Error(`Agreement not found: "${id}"`);
   const lockPath = join(dir, '.lock');
   let handle;
-  for (let attempt = 0; attempt < 100; attempt += 1) {
+  for (let attempt = 0; attempt < 200; attempt += 1) {
     try {
       handle = await open(lockPath, 'wx');
+      await handle.writeFile(`${process.pid}\n${Date.now()}\n`, 'utf-8');
       break;
     } catch (error) {
       if ((error as NodeJS.ErrnoException).code !== 'EEXIST') throw error;
-      await new Promise((resolveDelay) => setTimeout(resolveDelay, 10));
+      if (isStaleLock(lockPath)) {
+        await unlink(lockPath).catch(() => undefined);
+        continue;
+      }
+      await new Promise((resolveDelay) => setTimeout(resolveDelay, 25));
     }
   }
-  if (!handle) throw new Error(`Agreement ${id} is busy; try again`);
+  if (!handle) throw new Error(`Agreement ${id} is busy; lock held at ${lockPath}`);
   try {
     return await operation();
   } finally {
     await handle.close();
     await unlink(lockPath).catch(() => undefined);
+  }
+}
+
+function isStaleLock(lockPath: string): boolean {
+  try {
+    const [pidText] = readFileSync(lockPath, 'utf-8').trim().split(/\s+/);
+    const pid = Number(pidText);
+    if (Number.isInteger(pid) && pid > 0) {
+      try {
+        process.kill(pid, 0);
+        return false;
+      } catch (error) {
+        if ((error as NodeJS.ErrnoException).code === 'ESRCH') return true;
+        return false;
+      }
+    }
+    return Date.now() - statSync(lockPath).mtimeMs > 5 * 60 * 1000;
+  } catch {
+    return false;
   }
 }
 

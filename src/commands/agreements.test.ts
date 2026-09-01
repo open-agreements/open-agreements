@@ -142,6 +142,18 @@ maturity: experimental
     expect(results.filter((result) => result.status === 'rejected')).toHaveLength(1);
   });
 
+  it('agreements update reclaims a lock owned by a dead process', async () => {
+    const created = await create();
+    writeFileSync(join(stateRoot, created.id, '.lock'), '2147483647\n0\n');
+    const updated = await runAgreementUpdate({
+      id: created.id,
+      terms: { party_name: 'Recovered' },
+      revision: 1,
+      root: stateRoot,
+    });
+    expect(updated).toMatchObject({ revision: 2, terms: { party_name: 'Recovered' } });
+  });
+
   it('agreements update rejects empty and unknown fields', async () => {
     const created = await create();
     await expect(runAgreementUpdate({ id: created.id, terms: {}, root: stateRoot }))
