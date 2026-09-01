@@ -5,6 +5,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { promisify } from 'node:util';
 import { z } from 'zod';
+import { fetchSurveyEvidence, isValidTopic, surveyEvidenceUrl, SurveyFetchError } from './surveys.js';
 
 type JsonSchema = Record<string, unknown>;
 
@@ -68,6 +69,25 @@ const FillTemplateArgsSchema = z.object({
 
 const GetApapTemplateArgsSchema = z.object({
   template_id: z.string().min(1),
+});
+
+const GetFormsSurveyEvidenceArgsSchema = z
+  .object({
+    topic: z.string().min(1).max(128),
+    requirement_id: z.string().min(1).max(256).optional(),
+  })
+  .strict();
+
+// Lightweight shape check on the fields this tool consumes, so upstream schema
+// drift surfaces as SURVEY_FETCH_FAILED instead of a misleading tool error or
+// silently empty output. resources/read still returns the raw JSON verbatim.
+const SurveyEvidencePayloadSchema = z.object({
+  asOf: z.string().optional(),
+  sample: z.unknown().optional(),
+  evidenceCellCount: z.number().int().optional(),
+  requirements: z.array(z.object({ id: z.string(), label: z.string(), valueType: z.string().optional() })),
+  forms: z.array(z.object({ id: z.string(), name: z.string(), sourceUrl: z.string() })),
+  cells: z.record(z.string(), z.record(z.string(), z.unknown())).optional(),
 });
 
 const CreateApapAgreementDocxArgsSchema = z.object({
@@ -481,6 +501,106 @@ const tools: ToolDefinition[] = [
       } catch (error) {
         return toolError('create_apap_agreement_docx', 'DOCX_RENDER_FAILED', extractErrorMessage(error));
       }
+    },
+  },
+  {
+    name: 'get_forms_survey_evidence',
+    description:
+      'Fetch evidence from a published OpenAgreements forms-provider survey (clause-by-clause market ' +
+      'benchmarks of real-world forms). Without requirement_id, returns a summary: survey metadata ' +
+      '(including as_of freshness), the compared requirements, and the surveyed forms — but no evidence ' +
+      'cells. With requirement_id, additionally returns that one requirement\'s evidence cells across all ' +
+      'surveyed forms (verbatim sentence, operative phrase, section, clause id). The complete dataset for ' +
+      'each survey is also available as an MCP resource (see resources/list); large surveys approach 1 MB, ' +
+      'so prefer this tool when only part of the evidence is needed. Only currently published surveys are ' +
+      'reachable; the live listing is discovered from openagreements.org and never hardcoded.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        topic: {
+          type: 'string',
+          description: 'Survey topic slug, e.g. "employment-offer-letter". Discover slugs via resources/list.',
+        },
+        requirement_id: {
+          type: 'string',
+          description:
+            'Optional requirement id (from the summary\'s requirements list) to return that requirement\'s evidence cells.',
+        },
+      },
+      required: ['topic'],
+      additionalProperties: false,
+    },
+    annotations: { readOnlyHint: true, destructiveHint: false },
+    invoke: async (args) => {
+      const input = GetFormsSurveyEvidenceArgsSchema.parse(args ?? {});
+
+      if (!isValidTopic(input.topic)) {
+        return toolError(
+          'get_forms_survey_evidence',
+          'SURVEY_NOT_FOUND',
+          `Invalid survey topic: "${input.topic}". Topics are lowercase slugs like "employment-offer-letter".`,
+        );
+      }
+
+      let result;
+      try {
+        result = await fetchSurveyEvidence(input.topic);
+      } catch (error) {
+        const message = error instanceof SurveyFetchError ? error.message : extractErrorMessage(error);
+        return toolError('get_forms_survey_evidence', 'SURVEY_FETCH_FAILED', message);
+      }
+
+      if (!result.found || !result.payload) {
+        return toolError(
+          'get_forms_survey_evidence',
+          'SURVEY_NOT_FOUND',
+          `No published forms survey found for topic "${input.topic}". ` +
+            'Use resources/list to discover currently published surveys.',
+        );
+      }
+
+      const parsedPayload = SurveyEvidencePayloadSchema.safeParse(result.payload);
+      if (!parsedPayload.success) {
+        return toolError(
+          'get_forms_survey_evidence',
+          'SURVEY_FETCH_FAILED',
+          `Survey evidence for "${input.topic}" has an unexpected shape: ${formatZodError(parsedPayload.error)}`,
+        );
+      }
+
+      const payload = parsedPayload.data;
+      const base = {
+        topic: input.topic,
+        as_of: payload.asOf ?? null,
+        sample: payload.sample ?? null,
+        evidence_cell_count: payload.evidenceCellCount ?? null,
+        forms: payload.forms,
+        resource_uri: surveyEvidenceUrl(input.topic),
+      };
+
+      if (input.requirement_id === undefined) {
+        return successResult('get_forms_survey_evidence', {
+          ...base,
+          requirements: payload.requirements,
+        });
+      }
+
+      const requirement = payload.requirements.find((item) => item.id === input.requirement_id);
+      if (!requirement) {
+        const available = payload.requirements.map((item) => item.id);
+        return toolError(
+          'get_forms_survey_evidence',
+          'REQUIREMENT_NOT_FOUND',
+          `Requirement "${input.requirement_id}" not found in survey "${input.topic}". ` +
+            `Available requirement ids: ${available.join(', ')}`,
+        );
+      }
+
+      return successResult('get_forms_survey_evidence', {
+        ...base,
+        requirement,
+        cells: payload.cells?.[input.requirement_id] ?? {},
+      });
     },
   },
 ];

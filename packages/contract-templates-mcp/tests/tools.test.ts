@@ -84,6 +84,7 @@ describe('contract-templates-mcp tools', () => {
       'fill_template',
       'get_apap_template',
       'create_apap_agreement_docx',
+      'get_forms_survey_evidence',
     ]);
   });
 
