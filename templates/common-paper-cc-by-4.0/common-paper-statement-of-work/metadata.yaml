@@ -180,3 +180,18 @@ priority_fields:
   - key_terms_effective_date
   - sow_number
   - payment_terms
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - company
+  - provider
+  - customer
+signature_roles:
+  - provider
+  - customer
+  - company
+mutation_policy: fields_only
+maturity: experimental

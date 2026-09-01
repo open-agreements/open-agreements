@@ -60,3 +60,16 @@ fields:
     default: state and federal courts in the governing law state
     section: Legal
 priority_fields: []
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - company
+  - employee
+signature_roles:
+  - company
+  - employee
+mutation_policy: fields_only
+maturity: experimental

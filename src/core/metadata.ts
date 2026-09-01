@@ -323,6 +323,16 @@ const TemplateCreditSchema = z.object({
   profile_url: z.string().url().optional(),
 });
 
+export const TemplateCapabilityManifestSchema = z.object({
+  artifact_kind: z.enum(['agreement', 'consent', 'notice', 'letter', 'checklist', 'policy', 'other']).default('other'),
+  capabilities: z.array(z.enum(['create', 'review', 'render'])).nonempty().default(['review']),
+  party_roles: z.array(z.string().trim().min(1)).default([]),
+  signature_roles: z.array(z.string().trim().min(1)).default([]),
+  mutation_policy: z.enum(['terms', 'fields_only', 'immutable']).default('immutable'),
+  maturity: z.enum(['experimental', 'beta', 'stable']).default('experimental'),
+});
+export type TemplateCapabilityManifest = z.infer<typeof TemplateCapabilityManifestSchema>;
+
 function validatePriorityFields(
   fields: FieldDefinition[],
   priorityFields: string[],
@@ -421,6 +431,7 @@ const TemplateMetadataBaseSchema = z.object({
   priority_fields: z.array(z.string()).default([]),
   credits: z.array(TemplateCreditSchema).default([]),
   derived_from: z.string().optional(),
+  ...TemplateCapabilityManifestSchema.shape,
 });
 
 export const TemplateMetadataSchema = TemplateMetadataBaseSchema.superRefine((meta, ctx) => {
@@ -529,6 +540,7 @@ export const FieldSelectorMetadataSchema = z.object({
   fields: z.array(FieldDefinitionSchema).default([]),
   priority_fields: z.array(z.string()).default([]),
   market_data_citations: z.array(MarketDataCitationSchema).optional(),
+  ...TemplateCapabilityManifestSchema.shape,
 }).superRefine((meta, ctx) => {
   validatePriorityFields(meta.fields, meta.priority_fields, ctx);
   validateDerivedBooleanCollisions(meta.fields, ctx);

@@ -59,3 +59,13 @@ priority_fields:
   - founder_name
   - rspa_reference
   - repurchase_window_days
+artifact_kind: notice
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - founder
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental

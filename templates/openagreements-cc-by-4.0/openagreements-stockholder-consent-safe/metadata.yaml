@@ -35,3 +35,13 @@ priority_fields:
   - effective_date
   - purchase_amount
   - stockholders
+artifact_kind: consent
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - company
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental

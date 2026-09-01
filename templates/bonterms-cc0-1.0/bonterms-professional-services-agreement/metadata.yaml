@@ -46,3 +46,16 @@ priority_fields:
   - effective_date
   - governing_law
   - courts
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - provider
+  - customer
+signature_roles:
+  - provider
+  - customer
+mutation_policy: fields_only
+maturity: experimental

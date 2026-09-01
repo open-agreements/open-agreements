@@ -156,3 +156,18 @@ priority_fields:
   - product_description
   - governing_law
   - jurisdiction
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - company
+  - provider
+  - partner
+signature_roles:
+  - provider
+  - partner
+  - company
+mutation_policy: fields_only
+maturity: experimental
