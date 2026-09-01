@@ -1,10 +1,11 @@
 ---
 name: nda
 description: >-
-  Draft and fill NDA templates — mutual NDA, one-way NDA, confidentiality
+  Draft and fill NDA contract templates — mutual NDA, one-way NDA, confidentiality
   agreement. Produces signable DOCX files from Common Paper and Bonterms
   standard forms. Use when user says "NDA," "non-disclosure agreement,"
-  "confidentiality agreement," "mutual NDA," or "one-way NDA." Includes
+  "confidentiality contract," "confidentiality agreement," "mutual NDA," or
+  "one-way NDA." Includes
   lawyer-reviewed practice guides; see openagreements.org/editors.
 license: Apache-2.0
 compatibility: >-
