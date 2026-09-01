@@ -73,7 +73,7 @@ fields:
   - name: par_value
     type: string
     description: Par value per share of common and preferred stock (number only, e.g. 0.0001 — the document supplies the dollar sign)
-    default: '0.001'
+    default: '0.0001'
 priority_fields:
   - company_name
   - company_name_short

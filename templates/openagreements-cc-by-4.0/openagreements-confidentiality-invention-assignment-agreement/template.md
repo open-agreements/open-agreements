@@ -22,6 +22,9 @@ Excluded Inventions Statement
 Return of Materials Timing
 : {return_of_materials_timing}
 
+Other Confidential Information Duration
+: {confidentiality_other_duration}
+
 Post-Termination Assistance
 : {post_termination_assistance}
 
@@ -37,7 +40,7 @@ Venue
 
 [[Covered Inventions]] means all inventions, software, works of authorship, discoveries, improvements, designs, data models, and other intellectual property that Employee makes, conceives, develops, or reduces to practice, alone or with others, during employment, together with all related intellectual property rights, including the right to apply for and claim priority to patents, copyrights, and other registrations and the right to pursue remedies for infringement. Covered Inventions do not include the Prior Inventions or the Excluded Inventions described below.
 
-[[Confidential Information]] means non-public information that Employee learns, accesses, or develops during employment, including business strategies, customer and prospect data, trade secrets, source code, algorithms, security credentials, technical and product information, financial information, personnel information. Confidential Information does not include information that (a) was publicly known when Employee learned it, (b) becomes publicly known through no fault of Employee, (c) was lawfully known to Employee before employment without confidentiality restriction, (d) Employee rightfully receives from a third party without confidentiality restriction, or (e) Employee independently develops outside the scope of employment without using Confidential Information or Company equipment, supplies, facilities, or other resources.
+[[Confidential Information]] means non-public information of Company that Employee learns, accesses, or develops during employment, including business strategies, customer and prospect data, trade secrets, source code, algorithms, security credentials, technical and product information, financial information, personnel information. Confidential Information also includes non-public information of another person or entity that Employee learns or accesses during employment and that Company has agreed to treat as confidential or that was entrusted to Company in confidence. Confidential Information does not include information that (a) was publicly known when Employee learned it, (b) becomes publicly known through no fault of Employee, (c) was lawfully known to Employee before employment without confidentiality restriction, (d) Employee rightfully receives from a third party without confidentiality restriction, or (e) Employee independently develops outside the scope of employment without using Confidential Information or Company equipment, supplies, facilities, or other resources.
 
 ### Assignment of Inventions
 
@@ -113,7 +116,7 @@ This agreement does not create a contract of employment for any fixed period and
 
 ### Survival and Limited Scope
 
-Sections addressing assignment, confidentiality, return of materials, and assistance survive termination to the extent needed to enforce rights that arose during employment. Confidentiality obligations relating to trade secrets survive for so long as the information remains a trade secret under applicable law. This agreement does not transfer ownership of inventions that applicable law requires to remain with Employee.
+Each obligation in this agreement continues after employment ends for as long as its own stated term provides. Any provision that by its nature should outlast employment survives the end of employment, and rights that arose during employment remain enforceable after it ends. After employment ends, confidentiality obligations relating to Confidential Information other than trade secrets survive for the Other Confidential Information Duration specified in Cover Terms. Confidentiality obligations relating to trade secrets survive for so long as the information remains a trade secret under applicable law. This agreement does not transfer ownership of inventions that applicable law requires to remain with Employee.
 
 ### Severability
 

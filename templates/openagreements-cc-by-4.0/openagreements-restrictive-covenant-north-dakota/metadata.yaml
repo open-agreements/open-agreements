@@ -48,7 +48,6 @@ fields:
     section: Legal
     rationale_source: case_law
     requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.north-dakota.keep-north-dakota-law-and-forum-for-north-dakota-workers
-    default_value_rationale: North Dakota is selected because, for a North Dakota worker, choosing another state's law to enforce a restraint can fail against North Dakota public policy.
   - name: governing_venue
     type: string
     description: County and state whose courts are the agreed forum. For a North Dakota-based employee, a North Dakota forum is the selection most likely to operate as written; a North Dakota court may decline an exclusive foreign forum that is unfair or unreasonable.
@@ -57,7 +56,6 @@ fields:
     section: Legal
     rationale_source: case_law
     requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.north-dakota.keep-north-dakota-law-and-forum-for-north-dakota-workers
-    default_value_rationale: A North Dakota forum keeps disputes involving a North Dakota worker in the forum whose public policy controls whether an alleged restraint operates.
   - name: confidentiality_trade_secret_duration
     type: string
     description: Duration of confidentiality obligations for trade secrets
