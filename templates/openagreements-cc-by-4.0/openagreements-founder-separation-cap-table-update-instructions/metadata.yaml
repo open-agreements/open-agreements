@@ -54,3 +54,12 @@ priority_fields:
   - founder_name
   - certificate_numbers
   - shares_cancelled
+artifact_kind: checklist
+capabilities:
+  - create
+  - review
+  - render
+party_roles: []
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental

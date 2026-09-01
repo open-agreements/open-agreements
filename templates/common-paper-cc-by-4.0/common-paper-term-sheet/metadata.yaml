@@ -77,3 +77,12 @@ priority_fields:
   - company_name
   - topic
   - topic_details
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles: []
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental

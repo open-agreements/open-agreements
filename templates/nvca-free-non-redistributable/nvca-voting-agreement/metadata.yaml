@@ -67,3 +67,12 @@ priority_fields:
   - judicial_district
   - state_of_incorporation_lower
   - specify_percentage
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles: []
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental

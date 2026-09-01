@@ -165,3 +165,12 @@ priority_fields:
   - company_name
   - party_role
   - principal_agreement
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles: []
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental

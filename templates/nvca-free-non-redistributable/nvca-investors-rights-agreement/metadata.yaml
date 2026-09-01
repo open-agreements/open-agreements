@@ -72,3 +72,12 @@ priority_fields:
   - judicial_district
   - business_description
   - effective_date
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles: []
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental

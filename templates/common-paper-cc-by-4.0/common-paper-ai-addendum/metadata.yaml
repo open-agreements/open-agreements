@@ -168,3 +168,12 @@ fields:
 priority_fields:
   - company_name
   - agreement_description
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles: []
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental

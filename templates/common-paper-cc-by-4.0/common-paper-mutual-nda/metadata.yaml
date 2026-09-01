@@ -108,3 +108,12 @@ priority_fields:
   - confidentiality_term_start
   - governing_law
   - jurisdiction
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles: []
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental

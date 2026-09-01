@@ -66,3 +66,12 @@ priority_fields:
   - consent_date
   - founder_name
   - rspa_reference
+artifact_kind: consent
+capabilities:
+  - create
+  - review
+  - render
+party_roles: []
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental

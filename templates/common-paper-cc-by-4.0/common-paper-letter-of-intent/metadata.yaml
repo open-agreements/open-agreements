@@ -91,3 +91,12 @@ priority_fields:
   - product_description
   - launch_date
   - fees_description
+artifact_kind: letter
+capabilities:
+  - create
+  - review
+  - render
+party_roles: []
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental

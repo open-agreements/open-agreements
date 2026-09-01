@@ -459,3 +459,12 @@ priority_fields:
   - payment_terms
   - governing_law
   - jurisdiction
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles: []
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental

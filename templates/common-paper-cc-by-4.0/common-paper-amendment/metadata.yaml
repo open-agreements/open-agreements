@@ -102,3 +102,12 @@ priority_fields:
   - amendment_effective_date
   - amendment_topic
   - amendment_details
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles: []
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental

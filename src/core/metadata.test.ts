@@ -12,12 +12,47 @@ import {
   FieldDefinitionSchema,
   CleanConfigSchema,
   GuidanceOutputSchema,
+  TemplateCapabilityManifestSchema,
 } from './metadata.js';
 
 type SafeParseSchema = {
   safeParse: (payload: unknown) => { success: boolean };
 };
 const it = itAllure.epic('Discovery & Metadata');
+
+describe('TemplateCapabilityManifestSchema', () => {
+  it('accepts a complete local-agreement capability manifest', async () => {
+    await expectSafeParseOutcome(
+      'TemplateCapabilityManifestSchema',
+      TemplateCapabilityManifestSchema,
+      {
+        artifact_kind: 'agreement',
+        capabilities: ['create', 'review', 'render'],
+        party_roles: ['company', 'employee'],
+        signature_roles: ['company_signatory', 'employee'],
+        mutation_policy: 'terms',
+        maturity: 'experimental',
+      },
+      true
+    );
+  });
+
+  it('rejects unknown capabilities and maturity values', async () => {
+    await expectSafeParseOutcome(
+      'TemplateCapabilityManifestSchema',
+      TemplateCapabilityManifestSchema,
+      {
+        artifact_kind: 'agreement',
+        capabilities: ['send'],
+        party_roles: [],
+        signature_roles: [],
+        mutation_policy: 'terms',
+        maturity: 'production',
+      },
+      false
+    );
+  });
+});
 
 async function expectSafeParseOutcome(
   schemaName: string,
@@ -501,7 +536,17 @@ describe('FieldDefinitionSchema', () => {
   });
 });
 
+const BASE_CAPABILITY_MANIFEST = {
+  artifact_kind: 'agreement' as const,
+  capabilities: ['create', 'review', 'render'] as const,
+  party_roles: ['disclosing_party', 'receiving_party'],
+  signature_roles: ['disclosing_party', 'receiving_party'],
+  mutation_policy: 'fields_only' as const,
+  maturity: 'experimental' as const,
+};
+
 const BASE_TEMPLATE_METADATA = {
+  ...BASE_CAPABILITY_MANIFEST,
   name: 'Test NDA',
   source_url: 'https://example.com/nda',
   version: '1.0',
@@ -541,6 +586,7 @@ describe('TemplateMetadataSchema', () => {
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
       {
+        ...BASE_CAPABILITY_MANIFEST,
         name: 'Test NDA',
         source_url: 'https://example.com/nda',
         version: '1.0',
@@ -756,6 +802,7 @@ describe('TemplateMetadataSchema', () => {
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
       {
+        ...BASE_CAPABILITY_MANIFEST,
         name: 'Test Consent',
         source_url: 'https://example.com/consent',
         version: '1.0',
@@ -779,6 +826,7 @@ describe('TemplateMetadataSchema', () => {
   it('defaults missing credits to empty array', async () => {
     const parsed = await allureStep('Parse template metadata without credits', () =>
       TemplateMetadataSchema.parse({
+        ...BASE_CAPABILITY_MANIFEST,
         name: 'Test NDA',
         source_url: 'https://example.com/nda',
         version: '1.0',

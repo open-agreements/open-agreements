@@ -258,3 +258,12 @@ priority_fields:
   - key_terms_effective_date
   - cloud_service
   - subscription_period
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles: []
+signature_roles: []
+mutation_policy: fields_only
+maturity: experimental
