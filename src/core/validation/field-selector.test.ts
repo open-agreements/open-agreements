@@ -265,6 +265,86 @@ describe('validateFieldSelector binding reachability', () => {
     expect(result.errors.some((e) => e.includes('unbound field "gate_field"'))).toBe(true);
   });
 
+  it('passes a field used only via ${field} interpolation into a terminal-bound set_fill target', () => {
+    // The computed evaluator's interpolate() substitutes ${source_field} into
+    // computed_slot's value, and computed_slot is bound via replacements.json —
+    // so source_field genuinely affects the document.
+    const dir = writeFixture({
+      fields: [{ name: 'company_name' }, { name: 'source_field' }],
+      replacements: { '[COMPANY]': '{company_name}', '[SLOT]': '{computed_slot}' },
+      computed: {
+        rules: [
+          {
+            id: 'interpolate',
+            set_fill: { computed_slot: 'Value: ${source_field}' },
+          },
+        ],
+      },
+    });
+    const result = validateFieldSelector(dir, 'fixture');
+    expect(result.errors).toEqual([]);
+    expect(result.valid).toBe(true);
+  });
+
+  it('propagates ${field} interpolation reachability across a multi-hop chain', () => {
+    // source_field → ${} into mid_slot → ${} into bound_slot → replacements.json
+    const dir = writeFixture({
+      fields: [{ name: 'company_name' }, { name: 'source_field' }],
+      replacements: { '[COMPANY]': '{company_name}', '[SLOT]': '{bound_slot}' },
+      computed: {
+        rules: [
+          {
+            id: 'source-to-mid',
+            set_fill: { mid_slot: 'Mid: ${source_field}' },
+          },
+          {
+            id: 'mid-to-bound',
+            set_fill: { bound_slot: 'Bound: ${mid_slot}' },
+          },
+        ],
+      },
+    });
+    const result = validateFieldSelector(dir, 'fixture');
+    expect(result.errors).toEqual([]);
+    expect(result.valid).toBe(true);
+  });
+
+  it('fails a field interpolated only into an unbound set_fill target', () => {
+    const dir = writeFixture({
+      fields: [{ name: 'company_name' }, { name: 'source_field' }],
+      replacements: { '[COMPANY]': '{company_name}' },
+      computed: {
+        rules: [
+          {
+            id: 'interpolate-to-nowhere',
+            set_fill: { orphan_slot: 'Value: ${source_field}' },
+          },
+        ],
+      },
+    });
+    const result = validateFieldSelector(dir, 'fixture');
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.includes('unbound field "source_field"'))).toBe(true);
+  });
+
+  it('fails a field interpolated only into a set_audit value', () => {
+    const dir = writeFixture({
+      fields: [{ name: 'company_name' }, { name: 'source_field' }],
+      replacements: { '[COMPANY]': '{company_name}' },
+      computed: {
+        rules: [
+          {
+            id: 'audit-interpolation',
+            set_audit: { audit_note: 'Observed: ${source_field}' },
+          },
+        ],
+      },
+    });
+    const result = validateFieldSelector(dir, 'fixture');
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.includes('unbound field "source_field"'))).toBe(true);
+  });
+
   it('passes a field bound only via a fields/<name>.json selector recipe', () => {
     const dir = writeFixture({
       fields: [{ name: 'company_name' }, { name: 'agreement_date', type: 'date' }],
@@ -281,6 +361,65 @@ describe('validateFieldSelector binding reachability', () => {
     const result = validateFieldSelector(dir, 'fixture');
     expect(result.scaffold).toBe(true);
     expect(result.errors).toEqual([]);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Parse-failure suppression: a broken reachability input reports its own
+// error and must NOT cascade into secondary "unbound field" errors.
+// ---------------------------------------------------------------------------
+
+describe('validateFieldSelector reachability parse-failure suppression', () => {
+  function expectSuppressed(dir: string, parseErrorFragment: string): void {
+    const result = validateFieldSelector(dir, 'fixture');
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.includes(parseErrorFragment))).toBe(true);
+    expect(result.errors.some((e) => e.includes('unbound field'))).toBe(false);
+  }
+
+  it('suppresses unbound-field errors when computed.json is malformed', () => {
+    const dir = writeFixture({
+      fields: [{ name: 'company_name' }, { name: 'dead_field' }],
+      replacements: { '[COMPANY]': '{company_name}' },
+    });
+    writeFileSync(join(dir, 'computed.json'), '{not valid json');
+    expectSuppressed(dir, 'computed.json');
+  });
+
+  it('suppresses unbound-field errors when normalize.json is malformed', () => {
+    const dir = writeFixture({
+      fields: [{ name: 'company_name' }, { name: 'dead_field' }],
+      replacements: { '[COMPANY]': '{company_name}' },
+    });
+    writeFileSync(join(dir, 'normalize.json'), JSON.stringify({ paragraph_rules: [{ id: 'x' }] }));
+    expectSuppressed(dir, 'normalize.json');
+  });
+
+  it('suppresses unbound-field errors when selections.json is malformed', () => {
+    const dir = writeFixture({
+      fields: [{ name: 'company_name' }, { name: 'dead_field' }],
+      replacements: { '[COMPANY]': '{company_name}' },
+    });
+    writeFileSync(join(dir, 'selections.json'), JSON.stringify({ groups: [] }));
+    expectSuppressed(dir, 'selections.json');
+  });
+
+  it('suppresses unbound-field errors when replacements.json fails to parse', () => {
+    const dir = writeFixture({
+      fields: [{ name: 'company_name' }, { name: 'dead_field' }],
+    });
+    writeFileSync(join(dir, 'replacements.json'), '{invalid json');
+    expectSuppressed(dir, 'replacements.json');
+  });
+
+  it('suppresses unbound-field errors when a selector contract is malformed', () => {
+    const dir = writeFixture({
+      fields: [{ name: 'company_name' }, { name: 'dead_field' }],
+      replacements: { '[COMPANY]': '{company_name}' },
+    });
+    mkdirSync(join(dir, 'fields'), { recursive: true });
+    writeFileSync(join(dir, 'fields', 'company_name.json'), '{broken');
+    expectSuppressed(dir, 'selector contracts');
   });
 });
 

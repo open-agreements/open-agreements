@@ -280,27 +280,49 @@ export function validateFieldSelector(
       }
     }
 
-    // Propagate reachability backwards through computed.json to a fixpoint:
-    // if a rule's set_fill assigns any reachable field, the fields its
-    // predicates read also affect the document. set_audit assignments do not
-    // propagate (audit-only), and defaults have no input fields to propagate to.
+    // Propagate reachability backwards through computed.json to a fixpoint.
+    // A rule with at least one reachable set_fill target makes two kinds of
+    // inputs document-affecting:
+    //   1. the fields its when_all/when_any predicates read (they gate the
+    //      assignment), and
+    //   2. the fields referenced via ${name} interpolation inside a REACHABLE
+    //      target's assigned value (the evaluator's interpolate() substitutes
+    //      them into the value that reaches the document).
+    // set_audit assignments do not propagate (audit-only), interpolation refs
+    // in an UNreachable target's value do not count, and defaults are applied
+    // verbatim (never interpolated), so they have no input fields to propagate to.
     if (computedProfile) {
       let changed = true;
       while (changed) {
         changed = false;
         for (const rule of computedProfile.rules) {
-          const targets = Object.keys(rule.set_fill);
-          if (!targets.some((t) => reachable.has(t))) continue;
+          const reachableAssignments = Object.entries(rule.set_fill)
+            .filter(([target]) => reachable.has(target));
+          if (reachableAssignments.length === 0) continue;
           for (const predicate of [...rule.when_all, ...rule.when_any]) {
             if (!reachable.has(predicate.field)) {
               reachable.add(predicate.field);
               changed = true;
             }
           }
+          for (const [, assigned] of reachableAssignments) {
+            if (typeof assigned !== 'string') continue;
+            for (const match of assigned.matchAll(/\$\{([A-Za-z0-9_]+)\}/g)) {
+              if (!reachable.has(match[1])) {
+                reachable.add(match[1]);
+                changed = true;
+              }
+            }
+          }
         }
       }
     }
 
+    // Only top-level metadata.fields are checked: nested `items` sub-fields
+    // exist for {FOR}-loop collections in ordinary redistributable templates
+    // (validated by validation/template.ts) and are not independently bindable
+    // field-selector inputs — a field-selector binds the collection field's
+    // own {tag}, which this loop covers.
     for (const field of metadata.fields) {
       if (!reachable.has(field.name)) {
         errors.push(
