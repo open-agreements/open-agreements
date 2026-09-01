@@ -1,3 +1,4 @@
+import { listSurveyResources, readSurveyResource, SurveyFetchError } from './surveys.js';
 import { callTool, listToolDescriptors, type ToolCallResult } from './tools.js';
 
 type JsonRpcId = number | string | null;
@@ -27,6 +28,9 @@ const SERVER_INFO = {
 
 const FALLBACK_PROTOCOL_VERSION = '2024-11-05';
 
+/** MCP spec error code for resources/read of an unknown resource. */
+const RESOURCE_NOT_FOUND_ERROR_CODE = -32002;
+
 export function runStdioServer(): void {
   const parser = new StdioMessageParser();
 
@@ -49,73 +53,129 @@ export function runStdioServer(): void {
 }
 
 async function handleMessage(message: unknown): Promise<void> {
+  const response = await dispatchMessage(message);
+  if (response !== null) {
+    sendResponse(response);
+  }
+}
+
+/**
+ * Dispatch one JSON-RPC message and return the response to send, or null when
+ * no response is due (notifications, malformed messages). Exported for tests.
+ */
+export async function dispatchMessage(message: unknown): Promise<JsonRpcResponse | null> {
   if (!isRequestObject(message)) {
-    return;
+    return null;
   }
 
   const request = message as JsonRpcRequest;
   const id = request.id ?? null;
 
   if (request.method === 'notifications/initialized') {
-    return;
+    return null;
   }
 
   if (request.method === 'initialize') {
-    sendResponse({
+    return {
       jsonrpc: '2.0',
       id,
       result: {
         protocolVersion: pickProtocolVersion(request.params),
         capabilities: {
           tools: {},
+          resources: {},
         },
         serverInfo: SERVER_INFO,
       },
-    });
-    return;
+    };
   }
 
   if (request.id === undefined) {
-    return;
+    return null;
   }
 
   if (request.method === 'ping') {
-    sendResponse({
-      jsonrpc: '2.0',
-      id,
-      result: {},
-    });
-    return;
+    return { jsonrpc: '2.0', id, result: {} };
   }
 
   if (request.method === 'tools/list') {
-    sendResponse({
+    return {
       jsonrpc: '2.0',
       id,
       result: {
         tools: listToolDescriptors(),
       },
-    });
-    return;
+    };
   }
 
   if (request.method === 'tools/call') {
     const call = parseToolCall(request.params);
     if (!call) {
-      sendError(id, -32602, 'Invalid params for tools/call. Expected { name: string, arguments?: object }.');
-      return;
+      return errorResponse(id, -32602, 'Invalid params for tools/call. Expected { name: string, arguments?: object }.');
     }
 
     const result = await callTool(call.name, call.argumentsValue);
-    sendResponse({
-      jsonrpc: '2.0',
-      id,
-      result,
-    });
-    return;
+    return { jsonrpc: '2.0', id, result };
   }
 
-  sendError(id, -32601, `Method not found: ${request.method}`);
+  if (request.method === 'resources/list') {
+    try {
+      const resources = await listSurveyResources();
+      return { jsonrpc: '2.0', id, result: { resources } };
+    } catch (error) {
+      return errorResponse(id, -32603, `Failed to list resources: ${describeError(error)}`);
+    }
+  }
+
+  if (request.method === 'resources/templates/list') {
+    return { jsonrpc: '2.0', id, result: { resourceTemplates: [] } };
+  }
+
+  if (request.method === 'resources/read') {
+    const uri = parseResourceReadUri(request.params);
+    if (uri === null) {
+      return errorResponse(id, -32602, 'Invalid params for resources/read. Expected { uri: string }.');
+    }
+
+    try {
+      const contents = await readSurveyResource(uri);
+      if (contents === null) {
+        return errorResponse(id, RESOURCE_NOT_FOUND_ERROR_CODE, `Resource not found: ${uri}`, { uri });
+      }
+      return { jsonrpc: '2.0', id, result: { contents: [contents] } };
+    } catch (error) {
+      return errorResponse(id, -32603, `Failed to read resource: ${describeError(error)}`);
+    }
+  }
+
+  return errorResponse(id, -32601, `Method not found: ${request.method}`);
+}
+
+function describeError(error: unknown): string {
+  if (error instanceof SurveyFetchError) {
+    return error.message;
+  }
+  return error instanceof Error ? error.message : String(error);
+}
+
+function parseResourceReadUri(params: unknown): string | null {
+  if (!params || typeof params !== 'object') {
+    return null;
+  }
+  const uri = (params as Record<string, unknown>).uri;
+  return typeof uri === 'string' && uri.length > 0 ? uri : null;
+}
+
+function errorResponse(id: JsonRpcId, code: number, message: string, data?: unknown): JsonRpcResponse {
+  return {
+    jsonrpc: '2.0',
+    id,
+    error: {
+      code,
+      message,
+      ...(data === undefined ? {} : { data }),
+    },
+  };
 }
 
 function parseToolCall(params: unknown): { name: string; argumentsValue: unknown } | null {
@@ -147,18 +207,6 @@ function pickProtocolVersion(params: unknown): string {
 
 function sendResponse(response: JsonRpcResponse): void {
   process.stdout.write(JSON.stringify(response) + '\n');
-}
-
-function sendError(id: JsonRpcId, code: number, message: string, data?: unknown): void {
-  sendResponse({
-    jsonrpc: '2.0',
-    id,
-    error: {
-      code,
-      message,
-      ...(data === undefined ? {} : { data }),
-    },
-  });
 }
 
 function isRequestObject(value: unknown): value is JsonRpcRequest {
