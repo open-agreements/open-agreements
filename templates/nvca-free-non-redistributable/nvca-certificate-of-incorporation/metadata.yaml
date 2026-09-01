@@ -89,8 +89,10 @@ fields:
       date of this amended and restated charter. Accepts ISO YYYY-MM-DD (rendered as e.g. "July 15, 2026") or a
       display-ready date string.
   - name: redemption_start_date
-    type: string
-    description: Earliest date on which preferred stock may be redeemed
+    type: date
+    description: >-
+      Earliest date on which preferred stock may be redeemed ("on or after <date>"). Accepts ISO YYYY-MM-DD (rendered as e.g.
+      "March 15, 2026") or a display-ready date string.
   - name: qualified_financing_notice_days
     type: string
     description: Days of prior notice required for qualified financing

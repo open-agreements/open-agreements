@@ -26,8 +26,10 @@ fields:
     type: string
     description: Name of the key holder (typically founder/CEO)
   - name: effective_date
-    type: string
-    description: Effective date of the agreement (e.g. January 15, 2025)
+    type: date
+    description: >-
+      Effective date of the agreement ("is made as of <date>"). Accepts ISO YYYY-MM-DD (rendered as e.g.
+      "March 15, 2026") or a display-ready date string.
   - name: company_counsel
     type: string
     description: Company counsel name and address
@@ -58,6 +60,14 @@ fields:
     type: string
     description: Signature page marker text
     default: Signature Page Follows
+  - name: series_designation
+    type: string
+    description: Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement
+    default: ""
+  - name: par_value
+    type: string
+    description: Par value per share of common and preferred stock (number only, e.g. 0.0001 — the document supplies the dollar sign)
+    default: '0.001'
 priority_fields:
   - company_name
   - investor_name
@@ -67,6 +77,8 @@ priority_fields:
   - judicial_district
   - state_of_incorporation_lower
   - specify_percentage
+  - series_designation
+  - par_value
 artifact_kind: agreement
 capabilities:
   - review

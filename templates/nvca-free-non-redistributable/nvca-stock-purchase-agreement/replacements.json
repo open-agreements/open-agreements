@@ -38,5 +38,6 @@
   "expenses of > [_______]": "{investor_counsel}",
   "U.S. District Court for the District of [_____]": "U.S. District Court for the {judicial_district}",
   "\u201cSeries > [___]": "{series_designation}",
-  "\"Series > [___]": "{series_designation}"
+  "\"Series > [___]": "{series_designation}",
+  "as of [_______ __], 20[_] (the \u201cBalance Sheet Date\u201d)": "as of {balance_sheet_date} (the \u201cBalance Sheet Date\u201d)"
 }
