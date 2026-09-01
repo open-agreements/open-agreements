@@ -63,7 +63,9 @@ capabilities:
   - create
   - review
   - render
-party_roles: []
+party_roles:
+  - employee
+  - employer
 signature_roles: []
 mutation_policy: fields_only
 maturity: experimental

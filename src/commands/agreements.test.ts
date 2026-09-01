@@ -1,7 +1,9 @@
+import { createHash } from 'node:crypto';
 import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, vi } from 'vitest';
+import { itAllure } from '../../integration-tests/helpers/allure-test.js';
 import {
   runAgreementCreate,
   runAgreementList,
@@ -10,6 +12,8 @@ import {
   runAgreementShow,
   runAgreementUpdate,
 } from './agreements.js';
+
+const it = itAllure.epic('Filling & Rendering');
 
 describe('local agreement commands', () => {
   let tempRoot: string;
@@ -34,8 +38,22 @@ fields:
   - name: party_name
     type: string
     description: Party name
+  - name: unchanged
+    type: boolean
+    description: Unchanged flag
+  - name: a
+    type: number
+    description: Concurrent value A
+  - name: b
+    type: number
+    description: Concurrent value B
+  - name: defaulted_term
+    type: string
+    description: Defaulted priority term
+    default: present
 priority_fields:
   - party_name
+  - defaulted_term
 artifact_kind: agreement
 capabilities:
   - create
@@ -81,6 +99,14 @@ maturity: experimental
     expect(stored.template.source_sha256).toMatch(/^[a-f0-9]{64}$/);
   });
 
+  it('agreements create hashes template.fill.docx when both artifacts exist', async () => {
+    writeFileSync(join(templateDir, 'template.fill.docx'), 'actual fill source');
+    const record = await create();
+    expect(record.template.source_sha256).toBe(
+      createHash('sha256').update('actual fill source').digest('hex')
+    );
+  });
+
   it('agreements list returns persisted records', async () => {
     const created = await create();
     const records = await runAgreementList({ root: stateRoot });
@@ -102,8 +128,26 @@ maturity: experimental
       root: stateRoot,
     });
     expect(updated).toMatchObject({ revision: 2, terms: { party_name: 'Beta', unchanged: true } });
-    await expect(runAgreementUpdate({ id: created.id, terms: {}, revision: 1, root: stateRoot }))
+    await expect(runAgreementUpdate({ id: created.id, terms: { party_name: 'Gamma' }, revision: 1, root: stateRoot }))
       .rejects.toThrow('Revision conflict');
+  });
+
+  it('agreements update serializes concurrent optimistic updates', async () => {
+    const created = await create();
+    const results = await Promise.allSettled([
+      runAgreementUpdate({ id: created.id, terms: { a: 1 }, revision: 1, root: stateRoot }),
+      runAgreementUpdate({ id: created.id, terms: { b: 1 }, revision: 1, root: stateRoot }),
+    ]);
+    expect(results.filter((result) => result.status === 'fulfilled')).toHaveLength(1);
+    expect(results.filter((result) => result.status === 'rejected')).toHaveLength(1);
+  });
+
+  it('agreements update rejects empty and unknown fields', async () => {
+    const created = await create();
+    await expect(runAgreementUpdate({ id: created.id, terms: {}, root: stateRoot }))
+      .rejects.toThrow('At least one term');
+    await expect(runAgreementUpdate({ id: created.id, terms: { invented: true }, root: stateRoot }))
+      .rejects.toThrow('Unknown term field');
   });
 
   it('agreements review persists missing-priority warnings for the current revision', async () => {
@@ -113,6 +157,16 @@ maturity: experimental
       revision: 1,
       warnings: ['Priority term is unfilled: party_name'],
     });
+  });
+
+  it('agreements list skips corrupt sibling records', async () => {
+    const created = await create();
+    const corruptId = '11111111-1111-4111-8111-111111111111';
+    mkdirSync(join(stateRoot, corruptId), { recursive: true });
+    writeFileSync(join(stateRoot, corruptId, 'agreement.json'), '{broken');
+    const records = await runAgreementList({ root: stateRoot });
+    expect(records.map((record) => record.id)).toEqual([created.id]);
+    expect(console.warn).toHaveBeenCalledWith(expect.stringContaining('skipping unreadable agreement'));
   });
 
   it('agreements render persists the rendered document SHA-256', async () => {
@@ -130,11 +184,15 @@ maturity: experimental
           fieldsUsed: ['party_name'],
           providedFieldsUsed: ['party_name'],
           fillCommandCount: 1,
-          warnings: [],
+          warnings: ['fixture render warning'],
         };
       },
     });
-    expect(rendered.rendered_document).toMatchObject({ revision: 1, path: output });
+    expect(rendered.rendered_document).toMatchObject({
+      revision: 1,
+      path: output,
+      warnings: ['fixture render warning'],
+    });
     expect(rendered.rendered_document?.sha256).toMatch(/^[a-f0-9]{64}$/);
   });
 });

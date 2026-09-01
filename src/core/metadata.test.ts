@@ -1,4 +1,7 @@
 import { describe, expect } from 'vitest';
+import { readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import yaml from 'js-yaml';
 import {
   allureJsonAttachment,
   allureParameter,
@@ -35,6 +38,25 @@ describe('TemplateCapabilityManifestSchema', () => {
       },
       true
     );
+  });
+
+  it('requires every shipped metadata file to declare the full manifest explicitly', async () => {
+    const files: string[] = [];
+    const walk = (directory: string): void => {
+      for (const entry of readdirSync(directory, { withFileTypes: true })) {
+        const path = join(directory, entry.name);
+        if (entry.isDirectory()) walk(path);
+        else if (entry.name === 'metadata.yaml') files.push(path);
+      }
+    };
+    walk(join(process.cwd(), 'templates'));
+    const keys = ['artifact_kind', 'capabilities', 'party_roles', 'signature_roles', 'mutation_policy', 'maturity'];
+    for (const file of files) {
+      const parsed = yaml.load(readFileSync(file, 'utf-8')) as Record<string, unknown>;
+      expect(keys.filter((key) => !(key in parsed)), file).toEqual([]);
+      expect(TemplateCapabilityManifestSchema.safeParse(parsed).success, file).toBe(true);
+    }
+    expect(files).toHaveLength(116);
   });
 
   it('rejects unknown capabilities and maturity values', async () => {

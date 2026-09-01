@@ -113,7 +113,11 @@ capabilities:
   - create
   - review
   - render
-party_roles: []
-signature_roles: []
+party_roles:
+  - party_1
+  - party_2
+signature_roles:
+  - party_1
+  - party_2
 mutation_policy: fields_only
 maturity: experimental

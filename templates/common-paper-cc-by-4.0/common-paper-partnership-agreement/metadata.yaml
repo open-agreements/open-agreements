@@ -373,7 +373,11 @@ capabilities:
   - create
   - review
   - render
-party_roles: []
-signature_roles: []
+party_roles:
+  - company
+  - partner
+signature_roles:
+  - company
+  - partner
 mutation_policy: fields_only
 maturity: experimental

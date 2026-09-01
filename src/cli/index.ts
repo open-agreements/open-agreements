@@ -127,12 +127,12 @@ export function createProgram(): Command {
     .description('Merge terms into a local agreement and advance its revision')
     .option('-d, --data <json-file>', 'JSON file with terms to merge')
     .option('--set <key=value...>', 'Set a term (repeatable)')
-    .option('--revision <number>', 'Require this current revision before updating')
-    .action(async (id: string, opts: { data?: string; set?: string[]; revision?: string }) => {
+    .option('--revision <number>', 'Require this current revision before updating', parsePositiveRevision)
+    .action(async (id: string, opts: { data?: string; set?: string[]; revision?: number }) => {
       await runAgreementUpdate({
         id,
         terms: loadAgreementTerms(opts.data, opts.set),
-        revision: opts.revision === undefined ? undefined : Number(opts.revision),
+        revision: opts.revision,
       });
     });
 
@@ -359,6 +359,14 @@ export function createProgram(): Command {
   program.addCommand(checklistCmd);
 
   return program;
+}
+
+function parsePositiveRevision(value: string): number {
+  const revision = Number(value);
+  if (!Number.isInteger(revision) || revision < 1) {
+    throw new Error(`Invalid --revision: "${value}" (expected a positive integer)`);
+  }
+  return revision;
 }
 
 function buildMemoArgs(opts: {

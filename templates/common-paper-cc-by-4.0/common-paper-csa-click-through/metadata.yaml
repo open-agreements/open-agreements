@@ -79,7 +79,9 @@ capabilities:
   - create
   - review
   - render
-party_roles: []
-signature_roles: []
+party_roles:
+  - provider
+signature_roles:
+  - provider
 mutation_policy: fields_only
 maturity: experimental
