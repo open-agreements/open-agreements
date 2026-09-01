@@ -941,7 +941,31 @@ describe('CleanConfigSchema', () => {
     await allureStep('Assert clean config defaults', () => {
       expect(parsed.removeFootnotes).toBe(false);
       expect(parsed.removeParagraphPatterns).toEqual([]);
+      expect(parsed.removeHeaderFooterDrawings).toBeUndefined();
+      expect(parsed.removeEmptyLeadingParagraphs).toBeUndefined();
     });
+  });
+
+  it('accepts the issue-605 hardening fields', async () => {
+    await expectSafeParseOutcome(
+      'CleanConfigSchema',
+      CleanConfigSchema,
+      {
+        removeHeaderFooterDrawings: true,
+        headerFooterDrawingMinBytes: 51200,
+        removeEmptyLeadingParagraphs: true,
+      },
+      true
+    );
+  });
+
+  it('rejects a non-positive drawing size threshold', async () => {
+    await expectSafeParseOutcome(
+      'CleanConfigSchema',
+      CleanConfigSchema,
+      { headerFooterDrawingMinBytes: 0 },
+      false
+    );
   });
 });
 

@@ -163,6 +163,9 @@ drafting notes, preliminary commentary, multi-paragraph comment blocks, etc.
 | `removeParagraphPatterns` | string[] | Regex patterns — any paragraph matching one is removed |
 | `removeRanges` | `{ start, end }[]` | Remove all paragraphs from the first matching `start` through the first subsequent `end` (inclusive). All occurrences of a range pattern are matched, not just the first. |
 | `clearParts` | string[] | OOXML part paths to clear entirely (e.g., `word/footer1.xml`) |
+| `removeHeaderFooterDrawings` | boolean | Strip `<w:drawing>`/`<w:pict>` runs from header/footer parts whose referenced media exceeds the size threshold, plus the orphaned relationships and media parts. Catches image-only content (e.g. a full-page "how to use this template" screenshot anchored in a header) that text-anchored mechanisms cannot see. Small spacer images stay untouched. |
+| `headerFooterDrawingMinBytes` | number | Size threshold (bytes) for `removeHeaderFooterDrawings`. Defaults to 51200 (50 KB) — well above the ~146-byte spacer PNGs common in Google-Docs exports, well below instructions-page screenshots (~125 KB+). |
+| `removeEmptyLeadingParagraphs` | boolean | Post-clean pass: drop leading body paragraphs with no text and no drawing/object content (e.g. an empty paragraph holding a `<w:sectPr>` stranded by a removed range, which would render as a blank first page). Header/footer references on a removed section break are transplanted to the next section properties so downstream sections keep their inherited headers/footers. |
 
 ### Optional: normalize.json for post-fill clause fixes
 

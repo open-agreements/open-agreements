@@ -426,3 +426,81 @@ describe('findLeftoverPlaceholders', () => {
     cleanupDocx(docxPath);
   });
 });
+
+describe('verifyOutput first-body-paragraph guard (issue #605)', () => {
+  const rangeCleanConfig = {
+    removeFootnotes: false,
+    removeParagraphPatterns: [],
+    removeRanges: [{ start: '^Interpreting help text$', end: '^Send to your counterparty' }],
+    clearParts: [],
+  };
+
+  function buildLeadingEmptyDocx(): string {
+    // An empty structural paragraph (holding a section break) stranded before content
+    return buildDocx(
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+        `<w:document xmlns:w="${W_NS}"><w:body>` +
+        '<w:p><w:pPr><w:sectPr><w:pgSz w:w="12240" w:h="15840"/></w:sectPr></w:pPr></w:p>' +
+        '<w:p><w:r><w:t>Agreement content</w:t></w:r></w:p>' +
+        '</w:body></w:document>'
+    );
+  }
+
+  it('warns when content-removing cleaning leaves a textless first body paragraph', async () => {
+    const docxPath = buildLeadingEmptyDocx();
+
+    const result = await verifyOutput(docxPath, {}, {}, rangeCleanConfig);
+    const check = result.checks.find((c) => c.name === 'First body paragraph has content');
+
+    expect(check).toBeDefined();
+    expect(check?.passed).toBe(false);
+    expect(check?.details).toContain('removeEmptyLeadingParagraphs');
+    expect(result.passed).toBe(false);
+
+    cleanupDocx(docxPath);
+  });
+
+  it('passes when the first body paragraph has text', async () => {
+    const docxPath = buildTextDocx(['Agreement Title', 'Body content']);
+
+    const result = await verifyOutput(docxPath, {}, {}, rangeCleanConfig);
+    const check = result.checks.find((c) => c.name === 'First body paragraph has content');
+
+    expect(check).toBeDefined();
+    expect(check?.passed).toBe(true);
+
+    cleanupDocx(docxPath);
+  });
+
+  it('does not run the check when the clean config removes no content', async () => {
+    const docxPath = buildLeadingEmptyDocx();
+
+    const result = await verifyOutput(docxPath, {}, {}, {
+      removeFootnotes: true,
+      removeParagraphPatterns: [],
+      removeRanges: [],
+      clearParts: [],
+    });
+
+    expect(result.checks.find((c) => c.name === 'First body paragraph has content')).toBeUndefined();
+
+    cleanupDocx(docxPath);
+  });
+
+  it('runs the check when removeEmptyLeadingParagraphs is enabled', async () => {
+    const docxPath = buildTextDocx(['Agreement Title']);
+
+    const result = await verifyOutput(docxPath, {}, {}, {
+      removeFootnotes: false,
+      removeParagraphPatterns: [],
+      removeRanges: [],
+      clearParts: [],
+      removeEmptyLeadingParagraphs: true,
+    });
+
+    const check = result.checks.find((c) => c.name === 'First body paragraph has content');
+    expect(check?.passed).toBe(true);
+
+    cleanupDocx(docxPath);
+  });
+});
