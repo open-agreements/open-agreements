@@ -47,7 +47,6 @@ fields:
     default: Nebraska
     rationale_source: case_law
     requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.nebraska.draft-to-satisfy-nebraska-law-rather-than-rely-on-a-foreign-choice-of-law
-    default_value_rationale: Nebraska is the conservative default for a Nebraska-centered worker because the governing-law choice should match the state whose law is likely to control the covenant's enforceability.
   - name: confidentiality_trade_secret_duration
     type: string
     description: Duration of confidentiality obligations for trade secrets
@@ -194,16 +193,3 @@ priority_fields:
   - employee_name
 distribution: bundled
 artifact_type: template
-artifact_kind: agreement
-capabilities:
-  - create
-  - review
-  - render
-party_roles:
-  - employee
-  - employer
-signature_roles:
-  - employer
-  - employee
-mutation_policy: fields_only
-maturity: experimental

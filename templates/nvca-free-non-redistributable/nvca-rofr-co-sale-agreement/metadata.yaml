@@ -53,10 +53,8 @@ fields:
     description: Signature page marker text
     default: Signature Page Follows
   - name: effective_date
-    type: date
-    description: >-
-      Effective date of the agreement ("is made as of <date>"). Accepts ISO YYYY-MM-DD (rendered as e.g.
-      "March 15, 2026") or a display-ready date string.
+    type: string
+    description: Effective date of the agreement (e.g. January 15, 2025)
   - name: specify_percentage
     type: string
     description: Specified percentage threshold for key holder transfers
@@ -68,14 +66,6 @@ fields:
     type: string
     description: Label for the key holders group (e.g. Key Holders or Founders)
     default: Key Holders
-  - name: series_designation
-    type: string
-    description: Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement
-    default: ""
-  - name: par_value
-    type: string
-    description: Par value per share of common and preferred stock (number only, e.g. 0.0001 — the document supplies the dollar sign)
-    default: '0.001'
 priority_fields:
   - company_name
   - investor_name
@@ -87,12 +77,3 @@ priority_fields:
   - effective_date
   - specify_percentage
   - rofr_response_days
-  - series_designation
-  - par_value
-artifact_kind: agreement
-capabilities:
-  - review
-party_roles: []
-signature_roles: []
-mutation_policy: immutable
-maturity: experimental

@@ -10,6 +10,5 @@
   "[Street Address]": "{street_address}",
   "[Zip]": "{zip_code}",
   "[PORTFOLIO COMPANY LETTERHEAD]": "{company_letterhead}",
-  "[Signature Page Follows]": "{signature_page_marker}",
-  "Series [_]": "Series {series_designation}"
+  "[Signature Page Follows]": "{signature_page_marker}"
 }

@@ -52,10 +52,6 @@ fields:
     type: string
     description: Signature page marker text
     default: Signature Page Follows
-  - name: series_designation
-    type: string
-    description: Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement
-    default: ""
 priority_fields:
   - company_name_upper
   - letter_date
@@ -66,11 +62,3 @@ priority_fields:
   - state
   - street_address
   - zip_code
-  - series_designation
-artifact_kind: letter
-capabilities:
-  - review
-party_roles: []
-signature_roles: []
-mutation_policy: immutable
-maturity: experimental

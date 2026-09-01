@@ -16,12 +16,5 @@
   "[Key Holders]": "{key_holders_label}",
   "[________], 20[__]": "{effective_date}",
   "among [____________], a Delaware": "among {company_name}, a Delaware",
-  "U.S. District Court for the District of [_____]": "U.S. District Court for the {judicial_district}",
-  "Series [_]": "Series {series_designation}",
-  "Series [__]": "Series {series_designation}",
-  "Series\u00a0[__]": "Series\u00a0{series_designation}",
-  "Series [___]": "Series {series_designation}",
-  "par value $__ per share": "par value ${par_value} per share",
-  "par value $___ per share": "par value ${par_value} per share",
-  "[__] par value per share": "${par_value} par value per share"
+  "U.S. District Court for the District of [_____]": "U.S. District Court for the {judicial_district}"
 }

@@ -10762,10 +10762,10 @@
         },
         {
           "name": "redemption_start_date",
-          "type": "date",
+          "type": "string",
           "required": false,
           "section": null,
-          "description": "Earliest date on which preferred stock may be redeemed (\"on or after <date>\"). Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string.",
+          "description": "Earliest date on which preferred stock may be redeemed",
           "default": null,
           "default_value_rationale": null
         },
@@ -11278,38 +11278,20 @@
         },
         {
           "name": "effective_date",
-          "type": "date",
+          "type": "string",
           "required": true,
           "section": null,
-          "description": "Effective date of the agreement (\"is made as of <date>\"). Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string.",
+          "description": "Effective date of the agreement (e.g. January 15, 2025)",
           "default": null,
           "default_value_rationale": null
         },
         {
           "name": "checklist_delivery_date",
-          "type": "date",
+          "type": "string",
           "required": false,
           "section": null,
-          "description": "Date the qualified small business stock checklist (Annex 1) is being delivered. Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string.",
+          "description": "Date the compliance checklist is being delivered",
           "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "series_designation",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement",
-          "default": "",
-          "default_value_rationale": null
-        },
-        {
-          "name": "par_value",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Par value per share of common and preferred stock (number only, e.g. 0.0001 — the document supplies the dollar sign)",
-          "default": "0.001",
           "default_value_rationale": null
         }
       ]
@@ -11426,15 +11408,6 @@
           "section": null,
           "description": "Signature page marker text",
           "default": "Signature Page Follows",
-          "default_value_rationale": null
-        },
-        {
-          "name": "series_designation",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement",
-          "default": "",
           "default_value_rationale": null
         }
       ]
@@ -11555,10 +11528,10 @@
         },
         {
           "name": "effective_date",
-          "type": "date",
+          "type": "string",
           "required": true,
           "section": null,
-          "description": "Effective date of the agreement (\"is made as of <date>\"). Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string.",
+          "description": "Effective date of the agreement (e.g. January 15, 2025)",
           "default": null,
           "default_value_rationale": null
         },
@@ -11587,24 +11560,6 @@
           "section": null,
           "description": "Label for the key holders group (e.g. Key Holders or Founders)",
           "default": "Key Holders",
-          "default_value_rationale": null
-        },
-        {
-          "name": "series_designation",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement",
-          "default": "",
-          "default_value_rationale": null
-        },
-        {
-          "name": "par_value",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Par value per share of common and preferred stock (number only, e.g. 0.0001 — the document supplies the dollar sign)",
-          "default": "0.001",
           "default_value_rationale": null
         }
       ]
@@ -11841,20 +11796,11 @@
         },
         {
           "name": "balance_sheet_date",
-          "type": "date",
+          "type": "string",
           "required": true,
           "section": null,
-          "description": "Date of the company's most recent balance sheet. Fills the \"(the \"Balance Sheet Date\")\" definition slot in the Financial Statements representation and the bracketed defined-term references. Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string.",
+          "description": "Date of the company's most recent balance sheet",
           "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "balance_sheet_date_defined_term",
-          "type": "string",
-          "required": false,
-          "section": null,
-          "description": "Text rendered at the bracketed \"[Balance Sheet Date]\" / \"[the Balance Sheet Date]\" references. Defaults to the defined term (the definition slot carries the actual date); supply a literal date string only to make the references repeat the date instead.",
-          "default": "Balance Sheet Date",
           "default_value_rationale": null
         },
         {
@@ -11993,10 +11939,10 @@
         },
         {
           "name": "effective_date",
-          "type": "date",
+          "type": "string",
           "required": true,
           "section": null,
-          "description": "Effective date of the agreement (\"is made as of <date>\"). Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string.",
+          "description": "Effective date of the agreement (e.g. January 15, 2025)",
           "default": null,
           "default_value_rationale": null
         },
@@ -12070,24 +12016,6 @@
           "section": null,
           "description": "Signature page marker text",
           "default": "Signature Page Follows",
-          "default_value_rationale": null
-        },
-        {
-          "name": "series_designation",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement",
-          "default": "",
-          "default_value_rationale": null
-        },
-        {
-          "name": "par_value",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Par value per share of common and preferred stock (number only, e.g. 0.0001 — the document supplies the dollar sign)",
-          "default": "0.001",
           "default_value_rationale": null
         }
       ]
@@ -21856,7 +21784,7 @@
           "description": "Governing law state. For an employee who primarily resides and works in Minnesota, the Minnesota Noncompetition Agreement Act means Minnesota law is the only selection that operates as written for a controversy under that act.",
           "display_label": "Governing Law",
           "default": "Minnesota",
-          "default_value_rationale": "Minnesota is selected because Minnesota law supplies the required substantive protection for employees who primarily reside and work in Minnesota in covered restrictive-covenant disputes."
+          "default_value_rationale": "An employer may not require an employee who primarily resides and works in Minnesota, as a condition of employment, to accept a clause that would deprive the employee of the substantive protection of Minnesota law for a controversy arising in Minnesota. A violating clause is voidable at the employee's request; if voided, the matter must be adjudicated in Minnesota under Minnesota law."
         },
         {
           "name": "governing_venue",
@@ -21866,7 +21794,7 @@
           "description": "County and state whose courts are the agreed forum. For a Minnesota-based employee, the Minnesota Noncompetition Agreement Act means a Minnesota forum is the only selection that operates as written for a controversy under that act.",
           "display_label": "Venue",
           "default": "the state courts located in Minnesota",
-          "default_value_rationale": "A Minnesota forum is selected because covered employees who primarily reside and work in Minnesota cannot be required to adjudicate covered controversies outside Minnesota as a condition of employment."
+          "default_value_rationale": "An employer may not require an employee who primarily resides and works in Minnesota, as a condition of employment, to adjudicate outside Minnesota a controversy arising in Minnesota. A violating clause is voidable at the employee's request; if voided, the matter must be adjudicated in Minnesota under Minnesota law."
         },
         {
           "name": "confidentiality_trade_secret_duration",
@@ -22908,7 +22836,7 @@
           "description": "Governing law state. For a worker whose services, customers, and competition are centered in Nebraska, plan on Nebraska law controlling whatever law the agreement names. Nebraska courts have applied Nebraska law to an out-of-state employer's covenant on that basis, so a foreign-law selection is a risk variable rather than an enforceability strategy.",
           "display_label": "Governing Law",
           "default": "Nebraska",
-          "default_value_rationale": "Nebraska is the conservative default for a Nebraska-centered worker because the governing-law choice should match the state whose law is likely to control the covenant's enforceability."
+          "default_value_rationale": null
         },
         {
           "name": "confidentiality_trade_secret_duration",
@@ -24954,7 +24882,7 @@
           "description": "Governing law state. For an employee who primarily resides and works in North Dakota, North Dakota law is the selection that operates as written for a controversy over an alleged restraint of trade.",
           "display_label": "Governing Law",
           "default": "North Dakota",
-          "default_value_rationale": "North Dakota is selected because, for a North Dakota worker, choosing another state's law to enforce a restraint can fail against North Dakota public policy."
+          "default_value_rationale": null
         },
         {
           "name": "governing_venue",
@@ -24964,7 +24892,7 @@
           "description": "County and state whose courts are the agreed forum. For a North Dakota-based employee, a North Dakota forum is the selection most likely to operate as written; a North Dakota court may decline an exclusive foreign forum that is unfair or unreasonable.",
           "display_label": "Venue",
           "default": "the state courts located in North Dakota",
-          "default_value_rationale": "A North Dakota forum keeps disputes involving a North Dakota worker in the forum whose public policy controls whether an alleged restraint operates."
+          "default_value_rationale": null
         },
         {
           "name": "confidentiality_trade_secret_duration",
@@ -25390,7 +25318,7 @@
           "description": "Governing law state. For an employee who resides and works in Oklahoma, an Oklahoma forum court will not apply chosen foreign law where doing so violates Oklahoma's public policy against restraints on work, so an Oklahoma selection is the one most likely to operate as written for an Oklahoma employee-restrictive-covenant dispute heard in Oklahoma.",
           "display_label": "Governing Law",
           "default": "Oklahoma",
-          "default_value_rationale": "Oklahoma is the correct default for an Oklahoma employee because the governing-law choice should align with the forum most likely to apply Oklahoma's public-policy limits rather than invite an out-of-state law fight."
+          "default_value_rationale": null
         },
         {
           "name": "governing_venue",
@@ -25400,7 +25328,7 @@
           "description": "County and state whose courts are the agreed forum. A mandatory out-of-state forum clause is the operative enforcement risk in Oklahoma: a court applying another state's law may enforce a covenant Oklahoma would void, so an Oklahoma forum keeps the dispute before a court expected to apply Oklahoma's void rule.",
           "display_label": "Venue",
           "default": "the state courts located in Oklahoma",
-          "default_value_rationale": "Oklahoma state courts are the default venue because the key enforcement risk is transfer to an out-of-state forum that may apply another state's law to covenants Oklahoma would treat as void."
+          "default_value_rationale": null
         },
         {
           "name": "confidentiality_trade_secret_duration",
@@ -29302,7 +29230,7 @@
           "description": "Governing law state",
           "display_label": "Governing Law",
           "default": "Wisconsin",
-          "default_value_rationale": "Wisconsin work should be governed by Wisconsin law because Wisconsin case law can reject a foreign choice-of-law clause selected to obtain more covenant-friendly treatment when Wisconsin public policy controls employee restrictive covenants."
+          "default_value_rationale": null
         },
         {
           "name": "confidentiality_trade_secret_duration",

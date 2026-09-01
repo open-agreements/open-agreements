@@ -15,9 +15,5 @@
   "[state]": "{state_of_incorporation_lower}",
   "[specify percentage]": "{specify_percentage}",
   "[Signature Page Follows]": "{signature_page_marker}",
-  "U.S. District Court for the District of [_____]": "U.S. District Court for the {judicial_district}",
-  "Series [_]": "Series {series_designation}",
-  "Series [___]": "Series {series_designation}",
-  "$[___] par value per share": "${par_value} par value per share",
-  "par value [$0.___] per share": "par value ${par_value} per share"
+  "U.S. District Court for the District of [_____]": "U.S. District Court for the {judicial_district}"
 }

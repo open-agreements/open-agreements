@@ -24,8 +24,8 @@
   "[Initial][applicable] ": "{initial_word_title}",
   "[location]": "{arbitration_location}",
   "District Court for the District of [judicial district]": "District Court for the {judicial_district}",
-  "[Balance Sheet Date]": "{balance_sheet_date_defined_term}",
-  "[the Balance Sheet Date]": "the {balance_sheet_date_defined_term}",
+  "[Balance Sheet Date]": "{balance_sheet_date}",
+  "[the Balance Sheet Date]": "{balance_sheet_date}",
   "[insert Plan Year and Name]": "{benefit_plan_name}",
   "[Signature Page Follows]": "{signature_page_marker}",
   "[state]": "{state_lower}",
@@ -38,6 +38,5 @@
   "expenses of > [_______]": "{investor_counsel}",
   "U.S. District Court for the District of [_____]": "U.S. District Court for the {judicial_district}",
   "\u201cSeries > [___]": "{series_designation}",
-  "\"Series > [___]": "{series_designation}",
-  "as of [_______ __], 20[_] (the \u201cBalance Sheet Date\u201d)": "as of {balance_sheet_date} (the \u201cBalance Sheet Date\u201d)"
+  "\"Series > [___]": "{series_designation}"
 }
