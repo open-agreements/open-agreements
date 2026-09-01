@@ -469,8 +469,54 @@ export const CleanConfigSchema = z.object({
     end: z.string(),
   })).default([]),
   clearParts: z.array(z.string()).default([]),
+  /**
+   * Strip <w:drawing>/<w:pict> runs from header/footer parts whose referenced
+   * media exceeds the size threshold, plus the orphaned relationships and media
+   * parts. Targets image-only content (e.g. a full-page "how to use this
+   * template" screenshot anchored in a header) that text-anchored removeRanges
+   * cannot see. Small spacer drawings (Common Paper exports carry ~146-byte
+   * spacer PNGs) are preserved by the threshold.
+   */
+  removeHeaderFooterDrawings: z.boolean().optional(),
+  /**
+   * Size threshold (bytes) for removeHeaderFooterDrawings. Drawings whose
+   * largest referenced media part exceeds this are stripped. Default 51200
+   * (50 KB): the largest benign media across the bundled corpus is 146 bytes,
+   * while the known-bad artifact class (instructions-page screenshots) starts
+   * around 125 KB.
+   */
+  headerFooterDrawingMinBytes: z.number().int().positive().optional(),
+  /**
+   * Post-clean pass: drop leading body paragraphs that contain no text and no
+   * drawing/object content. Header/footer references on a removed paragraph's
+   * <w:sectPr> are transplanted forward onto the next section properties so
+   * downstream sections keep their inherited headers/footers.
+   */
+  removeEmptyLeadingParagraphs: z.boolean().optional(),
 });
 export type CleanConfig = z.infer<typeof CleanConfigSchema>;
+
+/**
+ * Whether a clean config performs any operation capable of removing (or
+ * exposing) body content — and can therefore strand a textless first body
+ * paragraph (blank first page/section). Used to gate the verifier's
+ * first-body-paragraph guard so cleaner capabilities and verifier coverage
+ * cannot silently diverge.
+ *
+ * `removeFootnotes` is deliberately excluded: it removes footnote-reference
+ * runs and footnote bodies, not body paragraphs; a first body paragraph whose
+ * only content is a footnote reference marker does not occur in practice.
+ * `clearParts` is excluded because it targets whole header/footer parts, not
+ * the document body.
+ */
+export function cleanConfigRemovesBodyContent(config: CleanConfig): boolean {
+  return Boolean(
+    config.removeEmptyLeadingParagraphs ||
+      config.removeBeforePattern ||
+      (config.removeRanges && config.removeRanges.length > 0) ||
+      (config.removeParagraphPatterns && config.removeParagraphPatterns.length > 0),
+  );
+}
 
 export const DeclarativeParagraphNormalizeRuleSchema = z.object({
   id: z.string(),

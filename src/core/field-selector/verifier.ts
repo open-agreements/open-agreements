@@ -3,8 +3,9 @@ import { DOMParser } from '@xmldom/xmldom';
 import type { Element } from '@xmldom/xmldom';
 import { getParagraphText } from '@usejunior/docx-core';
 import type { VerifyResult, VerifyCheck } from './types.js';
-import type { CleanConfig } from '../metadata.js';
+import { cleanConfigRemovesBodyContent, type CleanConfig } from '../metadata.js';
 import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
+import { isParagraphContentEmpty } from './cleaner.js';
 import { parseReplacementKey } from './replacement-keys.js';
 import { getTableRowContext, normalizeQuotes } from './patcher.js';
 import type { ReplacementValue } from './replacement-keys.js';
@@ -154,10 +155,47 @@ export async function verifyOutput(
         : undefined,
   });
 
+  // Check 9: First body paragraph has content (only when the clean config
+  // removes body content — a removed range/pattern/cover-page can strand an
+  // empty structural paragraph, e.g. one holding a <w:sectPr>, which renders
+  // as a blank first page; see issue #605 / legal-explainer#1800)
+  if (cleanConfig && cleanConfigRemovesBodyContent(cleanConfig)) {
+    const firstParagraphEmpty = isFirstBodyParagraphEmpty(outputPath);
+    checks.push({
+      name: 'First body paragraph has content',
+      passed: !firstParagraphEmpty,
+      details: firstParagraphEmpty
+        ? 'First body paragraph is textless — a cleaning artifact may leave a blank first page/section; consider "removeEmptyLeadingParagraphs": true in clean.json'
+        : undefined,
+    });
+  }
+
   return {
     passed: checks.every((c) => c.passed),
     checks,
   };
+}
+
+/**
+ * Whether the first block-level element of <w:body> is a paragraph with no
+ * visible content (no text and no drawing/picture/object).
+ */
+export function isFirstBodyParagraphEmpty(docxPath: string): boolean {
+  const zip = new AdmZip(docxPath);
+  const entry = zip.getEntry('word/document.xml');
+  if (!entry) return false;
+  const doc = new DOMParser().parseFromString(entry.getData().toString('utf-8'), 'text/xml');
+  const body = doc.getElementsByTagNameNS(W_NS, 'body')[0];
+  if (!body) return false;
+  for (let node = body.firstChild; node; node = node.nextSibling) {
+    if (node.nodeType !== 1) continue;
+    const el = node as unknown as Element;
+    if (el.localName === 'p' && el.namespaceURI === W_NS) {
+      return isParagraphContentEmpty(el);
+    }
+    return false; // first block element is a table/sdt/... — has content
+  }
+  return false;
 }
 
 /** A paragraph's normalized text plus its table-row label context (if any). */

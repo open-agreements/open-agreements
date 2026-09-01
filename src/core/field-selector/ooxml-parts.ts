@@ -47,15 +47,20 @@ export function getGeneralTextPartNames(parts: OoxmlTextParts): string[] {
  *
  * OOXML packages are a flat set of parts; directory entries such as `word/`
  * are JSZip/zip container artifacts and can make Word repair the document.
+ *
+ * `getData` may return a replacement Buffer for an entry, or `null` to drop
+ * the entry from the destination entirely (used for orphaned media parts).
  */
 export function copyEntriesSkippingDirs(
   sourceZip: AdmZip,
   destinationZip: AdmZip,
-  getData: (entryName: string, entryData: Buffer) => Buffer = (_entryName, entryData) => entryData,
+  getData: (entryName: string, entryData: Buffer) => Buffer | null = (_entryName, entryData) => entryData,
 ): void {
   for (const entry of sourceZip.getEntries()) {
     if (entry.isDirectory || entry.entryName.endsWith('/')) continue;
-    destinationZip.addFile(entry.entryName, getData(entry.entryName, entry.getData()));
+    const data = getData(entry.entryName, entry.getData());
+    if (data === null) continue;
+    destinationZip.addFile(entry.entryName, data);
   }
 }
 
