@@ -7,7 +7,7 @@ description: >-
   prior-inventions and personal-project carveout language placeholders.
 source_url: >-
   https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-confidentiality-invention-assignment-agreement
-version: "0.4.0"
+version: "0.5.0"
 license: CC-BY-4.0
 allow_derivatives: true
 distribution: bundled
@@ -21,7 +21,7 @@ style_id: openagreements-default-v1
 document:
   title: Confidentiality & Invention Assignment Agreement (CIIAA)
   label: OpenAgreements Confidentiality & Invention Assignment Agreement (CIIAA)
-  version: "0.4.0"
+  version: "0.5.0"
   license: Free to use under CC BY 4.0
   include_cloud_doc_line: true
   defined_term_highlight_mode: definition_site_only
@@ -75,6 +75,21 @@ fields:
     type: string
     description: Timing for return or deletion of company materials
     section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for Confidential Information other than trade secrets after employment ends
+    display_label: Other Confidential Information Duration
+    default: >-
+      For as long as the information remains confidential, and, where applicable law requires a
+      fixed period, two years after employment ends
+    default_value_rationale: >-
+      Filed employee agreements overwhelmingly run ordinary confidentiality open-ended (52%
+      expressly in a 315-instrument EDGAR sample; 93% in the Yale Law Journal study of 446
+      agreements); where they bound it they use a fallback that applies only if law requires one,
+      and the fallback is two years in six of eight cases. Wisconsin voids an unbounded
+      non-trade-secret covenant, so the fallback is not optional. See
+      docs/benchmarks/ciiaa-confidentiality-duration-evidence.md.
+    section: Confidentiality
   - name: post_termination_assistance
     type: string
     description: Cooperation obligations after termination
@@ -101,6 +116,19 @@ fields:
     section: Document Management
     ai_only: true
 priority_fields: []
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - company
+  - employee
+signature_roles:
+  - company
+  - employee
+mutation_policy: fields_only
+maturity: experimental
 ---
 
 
@@ -118,6 +146,7 @@ The key business terms of this assignment agreement are as follows.
 {% cover-term kind="row" label="Prior Inventions Disclosure" field="prior_inventions_disclosure" /%}
 {% cover-term kind="row" label="Excluded Inventions Statement" field="excluded_inventions_statement" /%}
 {% cover-term kind="row" label="Return of Materials Timing" field="return_of_materials_timing" /%}
+{% cover-term kind="row" label="Other Confidential Information Duration" field="confidentiality_other_duration" /%}
 {% cover-term kind="row" label="Post-Termination Assistance" field="post_termination_assistance" /%}
 {% cover-term kind="row" label="Governing Law" field="governing_law" /%}
 {% cover-term kind="row" label="Venue" field="venue" /%}
@@ -132,7 +161,7 @@ The key business terms of this assignment agreement are as follows.
 
 [[Covered Inventions]] means all inventions, software, works of authorship, discoveries, improvements, designs, data models, and other intellectual property that Employee makes, conceives, develops, or reduces to practice, alone or with others, during employment, together with all related intellectual property rights, {% requirement id="continuations-in-part" %}including the right to apply for and claim priority to patents, copyrights, and other registrations and the right to pursue remedies for infringement{% /requirement %}. Covered Inventions do not include the Prior Inventions or the Excluded Inventions described below.
 
-[[Confidential Information]] means non-public information that Employee learns, accesses, or develops during employment, including business strategies, customer and prospect data, trade secrets, source code, algorithms, security credentials, technical and product information, financial information, personnel information. Confidential Information does not include information that (a) was publicly known when Employee learned it, (b) becomes publicly known through no fault of Employee, (c) was lawfully known to Employee before employment without confidentiality restriction, (d) Employee rightfully receives from a third party without confidentiality restriction, or (e) Employee independently develops outside the scope of employment without using Confidential Information or Company equipment, supplies, facilities, or other resources.
+[[Confidential Information]] means non-public information of Company that Employee learns, accesses, or develops during employment, including business strategies, customer and prospect data, trade secrets, source code, algorithms, security credentials, technical and product information, financial information, personnel information. {% requirement id="third-party-confidential-information-scope" %}Confidential Information also includes non-public information of another person or entity that Employee learns or accesses during employment and that Company has agreed to treat as confidential or that was entrusted to Company in confidence.{% /requirement %} Confidential Information does not include information that (a) was publicly known when Employee learned it, (b) becomes publicly known through no fault of Employee, (c) was lawfully known to Employee before employment without confidentiality restriction, (d) Employee rightfully receives from a third party without confidentiality restriction, or (e) Employee independently develops outside the scope of employment without using Confidential Information or Company equipment, supplies, facilities, or other resources.
 
 {% /clause %}
 {% clause id="assignment-of-inventions" %}
@@ -246,7 +275,7 @@ If Employee incorporates, or allows the incorporation of, any Prior Invention, E
 {% clause id="survival-and-limited-scope" %}
 ### Survival and Limited Scope
 
-{% requirement id="confidentiality-duration-tiered" %}Sections addressing assignment, confidentiality, return of materials, and assistance survive termination to the extent needed to enforce rights that arose during employment. {% requirement id="trade-secret-duration-not-indefinite" %}{% requirement id="trade-secret-confidentiality-duration" value="while-trade-secret" %}Confidentiality obligations relating to trade secrets survive for so long as the information remains a trade secret under applicable law.{% /requirement %}{% /requirement %}{% /requirement %} This agreement does not transfer ownership of inventions that applicable law requires to remain with Employee.
+{% requirement id="confidentiality-duration-tiered" %}Each obligation in this agreement continues after employment ends for as long as its own stated term provides. Any provision that by its nature should outlast employment survives the end of employment, and rights that arose during employment remain enforceable after it ends. {% requirement id="confidentiality-duration" value="parameterized" %}After employment ends, confidentiality obligations relating to Confidential Information other than trade secrets survive for the Other Confidential Information Duration specified in Cover Terms.{% /requirement %} {% requirement id="trade-secret-duration-not-indefinite" %}{% requirement id="trade-secret-confidentiality-duration" value="while-trade-secret" %}Confidentiality obligations relating to trade secrets survive for so long as the information remains a trade secret under applicable law.{% /requirement %}{% /requirement %}{% /requirement %} This agreement does not transfer ownership of inventions that applicable law requires to remain with Employee.
 
 {% /clause %}
 {% clause id="severability" %}

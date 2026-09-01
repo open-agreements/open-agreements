@@ -122,7 +122,7 @@ fields:
   - name: par_value
     type: string
     description: Par value per share of common and preferred stock
-    default: '0.001'
+    default: '0.0001'
   - name: specify_percentage
     type: string
     description: Percentage threshold for specified provisions
