@@ -572,6 +572,7 @@ function buildExternalMetadataPayload(fields: unknown[]) {
 
 function buildFieldSelectorMetadataPayload(fields: unknown[]) {
   return {
+    ...BASE_CAPABILITY_MANIFEST,
     name: 'Fixture FieldSelector',
     source_url: 'https://example.com/source.docx',
     source_version: '1.0',
@@ -886,6 +887,7 @@ describe('FieldSelectorMetadataSchema', () => {
       'FieldSelectorMetadataSchema',
       FieldSelectorMetadataSchema,
       {
+        ...BASE_CAPABILITY_MANIFEST,
         name: 'NVCA Voting Agreement',
         source_url: 'https://nvca.org/document.docx',
         source_version: '10-1-2025',
@@ -911,6 +913,7 @@ describe('FieldSelectorMetadataSchema', () => {
   it('defaults optional to false', async () => {
     const parsed = await allureStep('Parse fieldSelector metadata with optional omitted', () =>
       FieldSelectorMetadataSchema.parse({
+        ...BASE_CAPABILITY_MANIFEST,
         name: 'Test',
         source_url: 'https://example.com/doc.docx',
         source_version: '1.0',

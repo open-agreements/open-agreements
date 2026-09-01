@@ -64,10 +64,8 @@ priority_fields:
   - zip_code
 artifact_kind: letter
 capabilities:
-  - create
   - review
-  - render
 party_roles: []
 signature_roles: []
-mutation_policy: fields_only
+mutation_policy: immutable
 maturity: experimental

@@ -324,12 +324,12 @@ const TemplateCreditSchema = z.object({
 });
 
 export const TemplateCapabilityManifestSchema = z.object({
-  artifact_kind: z.enum(['agreement', 'consent', 'notice', 'letter', 'checklist', 'policy', 'other']),
-  capabilities: z.array(z.enum(['create', 'review', 'render'])).nonempty(),
-  party_roles: z.array(z.string().trim().min(1)),
-  signature_roles: z.array(z.string().trim().min(1)),
-  mutation_policy: z.enum(['terms', 'fields_only', 'immutable']),
-  maturity: z.enum(['experimental', 'beta', 'stable']),
+  artifact_kind: z.enum(['agreement', 'consent', 'notice', 'letter', 'checklist', 'policy', 'other']).default('other'),
+  capabilities: z.array(z.enum(['create', 'review', 'render'])).nonempty().default(['review']),
+  party_roles: z.array(z.string().trim().min(1)).default([]),
+  signature_roles: z.array(z.string().trim().min(1)).default([]),
+  mutation_policy: z.enum(['terms', 'fields_only', 'immutable']).default('immutable'),
+  maturity: z.enum(['experimental', 'beta', 'stable']).default('experimental'),
 });
 export type TemplateCapabilityManifest = z.infer<typeof TemplateCapabilityManifestSchema>;
 
@@ -540,6 +540,7 @@ export const FieldSelectorMetadataSchema = z.object({
   fields: z.array(FieldDefinitionSchema).default([]),
   priority_fields: z.array(z.string()).default([]),
   market_data_citations: z.array(MarketDataCitationSchema).optional(),
+  ...TemplateCapabilityManifestSchema.shape,
 }).superRefine((meta, ctx) => {
   validatePriorityFields(meta.fields, meta.priority_fields, ctx);
   validateDerivedBooleanCollisions(meta.fields, ctx);
