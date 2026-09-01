@@ -50,9 +50,11 @@ describe('APAP interoperability — OpenAgreements CIIAA pilot', () => {
       concertoModelPath: MODEL_PATH,
       concertoDependencyPaths: [CONTRACT_MODEL_PATH],
     });
-    expect(template.uri).toBe(`https://openagreements.org/templates/${TEMPLATE_ID}/v0.4.0`);
+    const templateMetadata = loadMetadata(TEMPLATE_DIR);
+    expect(templateMetadata.version).toMatch(/^\d+\.\d+(\.\d+)?$/);
+    expect(template.uri).toBe(`https://openagreements.org/templates/${TEMPLATE_ID}/v${templateMetadata.version}`);
     expect(template.author).toBe('OpenAgreements contributors');
-    expect(template.version).toBe('0.4.0');
+    expect(template.version).toBe(templateMetadata.version);
     expect(template.license).toBe('CC-BY-4.0');
     expect(template.description).toContain('Authored by OpenAgreements contributors');
     expect(template.templateModel.model.ctoFiles).toHaveLength(2);
