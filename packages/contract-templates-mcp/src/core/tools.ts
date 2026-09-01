@@ -18,6 +18,25 @@ const LIST_TEMPLATES_MAX_LIMIT = 100;
 
 const LIST_TEMPLATES_CURSOR_MAX_LENGTH = 512;
 
+/**
+ * Unified content catalog (open-agreements#635). `template` is served from the
+ * template catalog; the markdown types are served from the repository's local
+ * content bundles (practice-guides/, checklists/, surveys/) via
+ * src/core/content-listing.ts.
+ */
+const CONTENT_TYPES = ['template', 'practice_guide', 'checklist', 'survey'] as const;
+type ContentType = (typeof CONTENT_TYPES)[number];
+type DocContentType = Exclude<ContentType, 'template'>;
+const DOC_CONTENT_TYPES: DocContentType[] = ['practice_guide', 'checklist', 'survey'];
+
+const CONTENT_QUERY_MAX_LENGTH = 200;
+const CONTENT_ID_MAX_LENGTH = 512;
+
+const DOC_CONTENT_UNAVAILABLE_REASON =
+  'Practice guides, checklists, and surveys are served from a full open-agreements repository ' +
+  'checkout; they are not shipped in the npm package. Clone ' +
+  'https://github.com/open-agreements/open-agreements or browse https://openagreements.org.';
+
 const ListTemplatesArgsSchema = z
   .object({
     cursor: z.string().min(1).max(LIST_TEMPLATES_CURSOR_MAX_LENGTH).optional(),
@@ -59,6 +78,63 @@ function decodeCursor(cursor: string): string {
 const GetTemplateArgsSchema = z.object({
   template_id: z.string().min(1),
 });
+
+/**
+ * list_content cursors bind the pagination position to the filter they were
+ * issued under (type/query fingerprint). Replaying a cursor with a different
+ * filter would otherwise silently skip or duplicate records, because the
+ * position is lexical over the *filtered* catalog.
+ */
+function encodeContentCursor(contentId: string, type?: string, query?: string): string {
+  return Buffer.from(
+    JSON.stringify({ after: contentId, type: type ?? null, query: query ?? null }),
+    'utf8',
+  ).toString('base64');
+}
+
+function decodeContentCursor(cursor: string, type?: string, query?: string): string {
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(Buffer.from(cursor, 'base64').toString('utf8'));
+  } catch {
+    throw new InvalidCursorError('Invalid cursor: malformed payload');
+  }
+  if (parsed === null || typeof parsed !== 'object') {
+    throw new InvalidCursorError('Invalid cursor: malformed payload');
+  }
+  const record = parsed as { after?: unknown; type?: unknown; query?: unknown };
+  if (typeof record.after !== 'string' || record.after.length === 0) {
+    throw new InvalidCursorError('Invalid cursor: malformed payload');
+  }
+  if ((record.type ?? null) !== (type ?? null) || (record.query ?? null) !== (query ?? null)) {
+    throw new InvalidCursorError(
+      'Invalid cursor: issued under a different type/query filter. Restart from the first page.',
+    );
+  }
+  return record.after;
+}
+
+// Same strict validation conventions as ListTemplatesArgsSchema.
+const ListContentArgsSchema = z
+  .object({
+    type: z.enum(CONTENT_TYPES).optional(),
+    query: z.string().min(1).max(CONTENT_QUERY_MAX_LENGTH).optional(),
+    cursor: z.string().min(1).max(LIST_TEMPLATES_CURSOR_MAX_LENGTH).optional(),
+    limit: z
+      .number()
+      .int()
+      .min(1)
+      .max(LIST_TEMPLATES_MAX_LIMIT)
+      .optional()
+      .default(LIST_TEMPLATES_DEFAULT_LIMIT),
+  })
+  .strict();
+
+const GetContentArgsSchema = z
+  .object({
+    content_id: z.string().min(1).max(CONTENT_ID_MAX_LENGTH),
+  })
+  .strict();
 
 const FillTemplateArgsSchema = z.object({
   template: z.string().min(1),
@@ -135,6 +211,37 @@ interface TemplateRecord {
   fields: TemplateField[];
 }
 
+/** Compact doc-content entry, mirroring DocContentItem in src/core/content-listing.ts. */
+interface DocContentRecord {
+  content_id: string;
+  type: DocContentType;
+  title: string;
+  description: string | null;
+  topic: string;
+  jurisdiction: string | null;
+  format: 'markdown';
+  source_url: string | null;
+  updated_at: string | null;
+  tags: string[];
+  repo_path: string;
+}
+
+interface DocContentDetailRecord extends DocContentRecord {
+  markdown: string;
+}
+
+/** Uniform compact entry returned by list_content across all content types. */
+interface ContentListEntry {
+  content_id: string;
+  type: ContentType;
+  title: string;
+  description: string | null;
+  topic: string;
+  jurisdiction: string | null;
+  format: string;
+  updated_at: string | null;
+}
+
 export interface ToolCallResult {
   content: Array<{ type: 'text'; text: string }>;
   isError?: boolean;
@@ -171,6 +278,11 @@ interface RepoModules {
     agreementData: Record<string, unknown>;
     outputPath: string;
   }) => Promise<unknown>;
+  // Optional — absent when the underlying open-agreements version predates
+  // the unified content catalog (open-agreements#635).
+  listDocContentItems?: () => DocContentRecord[];
+  listDocContentTypesAvailable?: () => DocContentType[];
+  findDocContentItem?: (contentId: string) => DocContentDetailRecord | undefined;
 }
 
 let _modules: RepoModules | null = null;
@@ -189,13 +301,16 @@ async function importRepoModules(): Promise<RepoModules | null> {
       const metadataUrl = pathToFileURL(resolve(root, 'dist', 'core', 'metadata.js')).href;
       const engineUrl = pathToFileURL(resolve(root, 'dist', 'core', 'engine.js')).href;
       const apapUrl = pathToFileURL(resolve(root, 'dist', 'core', 'apap.js')).href;
+      const contentUrl = pathToFileURL(resolve(root, 'dist', 'core', 'content-listing.js')).href;
 
-      const [listing, paths, metadata, engine, apap] = await Promise.all([
+      const [listing, paths, metadata, engine, apap, content] = await Promise.all([
         import(listingUrl),
         import(pathsUrl),
         import(metadataUrl),
         import(engineUrl),
         import(apapUrl),
+        // Tolerate a stale local dist built before content-listing existed.
+        import(contentUrl).catch(() => null),
       ]);
 
       _modules = {
@@ -208,6 +323,16 @@ async function importRepoModules(): Promise<RepoModules | null> {
         mapFields: listing.mapFields,
         exportTemplateToApap: apap.exportTemplateToApap,
         fillApapAgreementToDocx: apap.fillApapAgreementToDocx,
+        ...(content &&
+        typeof content.listDocContentItems === 'function' &&
+        typeof content.listDocContentTypesAvailable === 'function' &&
+        typeof content.findDocContentItem === 'function'
+          ? {
+              listDocContentItems: content.listDocContentItems,
+              listDocContentTypesAvailable: content.listDocContentTypesAvailable,
+              findDocContentItem: content.findDocContentItem,
+            }
+          : {}),
       };
       return _modules;
     } catch { /* fall through */ }
@@ -229,6 +354,15 @@ async function importRepoModules(): Promise<RepoModules | null> {
         mapFields: mod.mapFields ?? ((f: TemplateField[]) => f),
         exportTemplateToApap: mod.exportTemplateToApap,
         fillApapAgreementToDocx: mod.fillApapAgreementToDocx,
+        ...(typeof mod.listDocContentItems === 'function' &&
+        typeof mod.listDocContentTypesAvailable === 'function' &&
+        typeof mod.findDocContentItem === 'function'
+          ? {
+              listDocContentItems: mod.listDocContentItems,
+              listDocContentTypesAvailable: mod.listDocContentTypesAvailable,
+              findDocContentItem: mod.findDocContentItem,
+            }
+          : {}),
       };
       return _modules;
     }
@@ -316,42 +450,205 @@ const tools: ToolDefinition[] = [
     annotations: { readOnlyHint: true, destructiveHint: false },
     invoke: async (args) => {
       const input = GetTemplateArgsSchema.parse(args ?? {});
-      const mod = await importRepoModules();
-
-      if (mod) {
-        // O(1) direct lookup via findTemplateDir + loadMetadata
-        const dir = mod.findTemplateDir(input.template_id);
-        if (!dir) {
-          return toolError('get_template', 'TEMPLATE_NOT_FOUND', `Template not found: "${input.template_id}"`);
-        }
-        try {
-          const meta = mod.loadMetadata(dir);
-          const template: TemplateRecord = {
-            name: input.template_id,
-            category: mod.categoryFromId(input.template_id),
-            description: (meta.description ?? meta.name) as string,
-            license: (meta.license as string) ?? null,
-            source_url: meta.source_url as string,
-            source: mod.sourceName(meta.source_url as string),
-            attribution_text: meta.attribution_text as string | undefined,
-            stability: (meta.stability as string | undefined) ?? null,
-            derived_from: (meta.derived_from as string | undefined) ?? null,
-            credits: (meta.credits as TemplateCredit[] | undefined) ?? [],
-            fields: mod.mapFields(meta.fields as Record<string, unknown>[], meta.priority_fields as string[]),
-          };
-          return successResult('get_template', { template: normalizeTemplate(template) });
-        } catch {
-          return toolError('get_template', 'TEMPLATE_NOT_FOUND', `Template not found: "${input.template_id}"`);
-        }
-      }
-
-      // Child process fallback — load all and filter
-      const items = await loadTemplates();
-      const template = items.find((item) => item.name === input.template_id);
+      const template = await getTemplateRecord(input.template_id);
       if (!template) {
         return toolError('get_template', 'TEMPLATE_NOT_FOUND', `Template not found: "${input.template_id}"`);
       }
       return successResult('get_template', { template: normalizeTemplate(template) });
+    },
+  },
+  {
+    name: 'list_content',
+    description:
+      'List all first-class OpenAgreements content — fillable templates, practice guides, RFC 2119-style ' +
+      'reviewer checklists, and law surveys — as one paginated compact catalog with stable content IDs in ' +
+      'deterministic lexicographic order. Returns lightweight metadata for discovery; call get_content ' +
+      '(or get_template) for the full item. Non-template content is served from a local ' +
+      'open-agreements repository checkout; when it is not available in this runtime, the affected types ' +
+      'are reported under unavailable_types with a reason instead of appearing as silently empty.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        type: {
+          type: 'string',
+          enum: [...CONTENT_TYPES],
+          description:
+            'Optional content-type filter: "template" (fillable DOCX templates), "practice_guide" ' +
+            '(source-cited legal practice guides), "checklist" (clause-by-clause reviewer checklists), ' +
+            'or "survey" (state-by-state / worldwide comparison matrices). Omit for all types.',
+        },
+        query: {
+          type: 'string',
+          maxLength: CONTENT_QUERY_MAX_LENGTH,
+          description:
+            'Optional case-insensitive substring filter matched against content ID, title, description, and topic.',
+        },
+        cursor: {
+          type: 'string',
+          description: 'Opaque pagination cursor returned by a prior call. Omit on the first page.',
+        },
+        limit: {
+          type: 'integer',
+          minimum: 1,
+          maximum: LIST_TEMPLATES_MAX_LIMIT,
+          description: `Page size (default ${LIST_TEMPLATES_DEFAULT_LIMIT}, max ${LIST_TEMPLATES_MAX_LIMIT}).`,
+        },
+      },
+      additionalProperties: false,
+    },
+    annotations: { readOnlyHint: true, destructiveHint: false },
+    invoke: async (args) => {
+      const input = ListContentArgsSchema.parse(args ?? {});
+      const mod = await importRepoModules();
+
+      const docTypesInScope: DocContentType[] =
+        input.type === undefined
+          ? DOC_CONTENT_TYPES
+          : input.type === 'template'
+            ? []
+            : [input.type];
+
+      const entries: ContentListEntry[] = [];
+      if (input.type === undefined || input.type === 'template') {
+        for (const template of await loadTemplates()) {
+          entries.push(templateContentEntry(template));
+        }
+      }
+
+      const unavailable: Array<{ type: DocContentType; reason: string }> = [];
+      if (docTypesInScope.length > 0) {
+        if (mod?.listDocContentItems && mod.listDocContentTypesAvailable) {
+          const available = new Set(mod.listDocContentTypesAvailable());
+          for (const type of docTypesInScope) {
+            if (!available.has(type)) {
+              unavailable.push({ type, reason: DOC_CONTENT_UNAVAILABLE_REASON });
+            }
+          }
+          const inScope = new Set<string>(docTypesInScope);
+          for (const item of mod.listDocContentItems()) {
+            if (inScope.has(item.type)) {
+              entries.push(docContentEntry(item));
+            }
+          }
+        } else {
+          for (const type of docTypesInScope) {
+            unavailable.push({ type, reason: DOC_CONTENT_UNAVAILABLE_REASON });
+          }
+        }
+      }
+
+      const filtered =
+        input.query === undefined ? entries : entries.filter(contentQueryMatcher(input.query));
+      filtered.sort((a, b) => a.content_id.localeCompare(b.content_id));
+
+      let startIndex = 0;
+      if (input.cursor !== undefined) {
+        const afterId = decodeContentCursor(input.cursor, input.type, input.query);
+        const found = filtered.findIndex((entry) => entry.content_id.localeCompare(afterId) > 0);
+        if (found === -1) {
+          throw new InvalidCursorError('Invalid cursor: points beyond catalog tail');
+        }
+        startIndex = found;
+      }
+
+      const page = filtered.slice(startIndex, startIndex + input.limit);
+      const consumed = startIndex + page.length;
+      const nextCursor =
+        page.length > 0 && consumed < filtered.length
+          ? encodeContentCursor(page[page.length - 1].content_id, input.type, input.query)
+          : null;
+
+      return successResult('list_content', {
+        items: page,
+        total_count: filtered.length,
+        next_cursor: nextCursor,
+        ...(unavailable.length > 0 ? { unavailable_types: unavailable } : {}),
+      });
+    },
+  },
+  {
+    name: 'get_content',
+    description:
+      'Fetch one OpenAgreements content item by its stable content_id (from list_content). Markdown ' +
+      'content (practice guides, checklists, surveys) returns the full canonical document plus ' +
+      'source/provenance metadata; template content returns the same full definition as get_template ' +
+      'under a "template" key.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        content_id: {
+          type: 'string',
+          description:
+            'Stable content ID, e.g. "template/common-paper-mutual-nda", ' +
+            '"practice_guide/wage-and-hour/us", "checklist/safes/yc-post-money-safe-valuation-cap", ' +
+            'or "survey/non-compete/us".',
+        },
+      },
+      required: ['content_id'],
+      additionalProperties: false,
+    },
+    annotations: { readOnlyHint: true, destructiveHint: false },
+    invoke: async (args) => {
+      const input = GetContentArgsSchema.parse(args ?? {});
+      const slashIndex = input.content_id.indexOf('/');
+      const typeToken = slashIndex === -1 ? '' : input.content_id.slice(0, slashIndex);
+      const rest = slashIndex === -1 ? '' : input.content_id.slice(slashIndex + 1);
+
+      if (!(CONTENT_TYPES as readonly string[]).includes(typeToken) || rest.length === 0) {
+        return toolError(
+          'get_content',
+          'CONTENT_NOT_FOUND',
+          `Unknown content ID: "${input.content_id}". Content IDs look like "template/<template_id>", ` +
+            '"practice_guide/<topic>/<doc>", "checklist/<topic>/<doc>", or "survey/<topic>/<doc>" — ' +
+            'discover them via list_content.',
+        );
+      }
+
+      if (typeToken === 'template') {
+        const template = await getTemplateRecord(rest);
+        if (!template) {
+          return toolError('get_content', 'CONTENT_NOT_FOUND', `Content not found: "${input.content_id}"`);
+        }
+        const compact = templateContentEntry(template);
+        return successResult('get_content', {
+          content: {
+            ...compact,
+            content_id: input.content_id,
+            source_url: template.source_url ?? null,
+            template: normalizeTemplate(template),
+          },
+        });
+      }
+
+      const mod = await importRepoModules();
+      if (!mod?.findDocContentItem || !mod.listDocContentTypesAvailable) {
+        return toolError('get_content', 'CONTENT_UNAVAILABLE', DOC_CONTENT_UNAVAILABLE_REASON);
+      }
+      // A type whose local bundle is absent in this runtime is unavailable, not
+      // "not found" — mirrors list_content's unavailable_types reporting.
+      if (!mod.listDocContentTypesAvailable().includes(typeToken as DocContentType)) {
+        return toolError('get_content', 'CONTENT_UNAVAILABLE', DOC_CONTENT_UNAVAILABLE_REASON);
+      }
+      const item = mod.findDocContentItem(input.content_id);
+      if (!item) {
+        return toolError('get_content', 'CONTENT_NOT_FOUND', `Content not found: "${input.content_id}"`);
+      }
+      return successResult('get_content', {
+        content: {
+          content_id: item.content_id,
+          type: item.type,
+          title: item.title,
+          description: item.description,
+          topic: item.topic,
+          jurisdiction: item.jurisdiction,
+          format: item.format,
+          updated_at: item.updated_at,
+          source_url: item.source_url,
+          tags: item.tags,
+          repo_path: item.repo_path,
+          markdown: item.markdown,
+        },
+      });
     },
   },
   {
@@ -689,6 +986,84 @@ async function loadTemplates(): Promise<TemplateRecord[]> {
     throw new Error('Invalid list output from open-agreements command.');
   }
   return parsed.items;
+}
+
+/**
+ * Load one template's full record — O(1) direct lookup in-process, full-list
+ * filter in the child-process fallback. Shared by get_template and get_content.
+ */
+async function getTemplateRecord(templateId: string): Promise<TemplateRecord | undefined> {
+  const mod = await importRepoModules();
+
+  if (mod) {
+    // O(1) direct lookup via findTemplateDir + loadMetadata
+    const dir = mod.findTemplateDir(templateId);
+    if (!dir) {
+      return undefined;
+    }
+    try {
+      const meta = mod.loadMetadata(dir);
+      return {
+        name: templateId,
+        display_name: meta.name as string | undefined,
+        category: mod.categoryFromId(templateId),
+        description: (meta.description ?? meta.name) as string,
+        license: (meta.license as string) ?? null,
+        source_url: meta.source_url as string,
+        source: mod.sourceName(meta.source_url as string),
+        attribution_text: meta.attribution_text as string | undefined,
+        stability: (meta.stability as string | undefined) ?? null,
+        derived_from: (meta.derived_from as string | undefined) ?? null,
+        credits: (meta.credits as TemplateCredit[] | undefined) ?? [],
+        fields: mod.mapFields(meta.fields as Record<string, unknown>[], meta.priority_fields as string[]),
+      };
+    } catch {
+      return undefined;
+    }
+  }
+
+  // Child process fallback — load all and filter
+  const items = await loadTemplates();
+  return items.find((item) => item.name === templateId);
+}
+
+/** Map one template record into the uniform compact content-catalog entry. */
+function templateContentEntry(template: TemplateRecord): ContentListEntry {
+  const trimmedDisplayName = template.display_name?.trim();
+  return {
+    content_id: `template/${template.name}`,
+    type: 'template',
+    title: trimmedDisplayName && trimmedDisplayName.length > 0 ? trimmedDisplayName : template.name,
+    description: template.description ?? null,
+    topic: template.category,
+    jurisdiction: null,
+    format: 'docx_template',
+    updated_at: null,
+  };
+}
+
+/** Map one markdown doc item into the uniform compact content-catalog entry. */
+function docContentEntry(item: DocContentRecord): ContentListEntry {
+  return {
+    content_id: item.content_id,
+    type: item.type,
+    title: item.title,
+    description: item.description,
+    topic: item.topic,
+    jurisdiction: item.jurisdiction,
+    format: item.format,
+    updated_at: item.updated_at,
+  };
+}
+
+/** Case-insensitive substring match on the compact discovery fields. */
+function contentQueryMatcher(query: string): (entry: ContentListEntry) => boolean {
+  const needle = query.toLowerCase();
+  return (entry) =>
+    entry.content_id.toLowerCase().includes(needle) ||
+    entry.title.toLowerCase().includes(needle) ||
+    (entry.description ?? '').toLowerCase().includes(needle) ||
+    entry.topic.toLowerCase().includes(needle);
 }
 
 function normalizeTemplate(template: TemplateRecord): Record<string, unknown> {
