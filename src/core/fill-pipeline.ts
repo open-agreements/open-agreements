@@ -204,6 +204,24 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
   }
 
   for (const field of fields) {
+    if (field.type !== 'enum') continue;
+    const value = data[field.name];
+    // Optional enum fields may be omitted. In document fills, omission is
+    // represented by the visible blank placeholder rather than an empty
+    // string; neither sentinel is a user-supplied enum choice.
+    if (value == null || value === '' || value === BLANK_PLACEHOLDER) continue;
+    if (typeof value !== 'string') {
+      throw new Error(`Enum field "${field.name}" must be a string; got ${typeof value}`);
+    }
+    const allowed = new Set(field.options ?? []);
+    if (!allowed.has(value)) {
+      throw new Error(
+        `Enum field "${field.name}" received unknown option "${value}"; allowed: ${[...allowed].join(', ')}`
+      );
+    }
+  }
+
+  for (const field of fields) {
     if (field.type !== 'multiselect') continue;
 
     let raw = data[field.name];

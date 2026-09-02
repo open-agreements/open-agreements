@@ -8,7 +8,7 @@
     {
       "primary": {
         "kind": "regex",
-        "pattern": "to\\s+(\\$_______\\s+\\[insert\\s+original\\s+purchase\\s+price\\s+of\\s+Series\\s+A\\s+Preferred\\s+Stock\\])",
+        "pattern": "to\\s+\\$(_______\\s+\\[insert\\s+original\\s+purchase\\s+price\\s+of\\s+Series\\s+A\\s+Preferred\\s+Stock\\])",
         "group": 1
       }
     }

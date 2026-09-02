@@ -11,6 +11,27 @@ import org.accordproject.contract.Contract from https://models.accordproject.org
  * Source: https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-COI-10-1-2025.docx
  */
 
+enum Qualified_financing_debt_proceeds_treatmentType {
+  o including
+  o excluding
+}
+
+enum Dividend_typeType {
+  o non_cumulative_as_converted
+  o non_cumulative_fixed
+  o cumulative
+}
+
+enum Liquidation_participationType {
+  o non_participating
+  o participating
+}
+
+enum Anti_dilution_typeType {
+  o broad_based_weighted_average
+  o full_ratchet
+}
+
 asset NvcaCertificateOfIncorporation extends Contract {
   o String company_name
   o String registered_agent_address optional
@@ -31,6 +52,7 @@ asset NvcaCertificateOfIncorporation extends Contract {
   o String preferred_director_seats optional
   o String preferred_shares_designated_portion default="all"
   o String original_incorporation_name optional
+  o String original_incorporation_date optional
   o String redemption_start_date optional
   o String qualified_financing_notice_days optional
   o Boolean no_cumulative_voting optional
@@ -46,13 +68,19 @@ asset NvcaCertificateOfIncorporation extends Contract {
   o String adjustment_notice_days default="10"
   o String redemption_interest_rate default="12"
   o String conversion_notice_days default="10"
+  o String qualified_ipo_min_price_per_share optional
+  o String qualified_ipo_min_gross_proceeds optional
+  o String qualified_direct_listing_min_market_cap optional
+  o String full_ratchet_sunset_date optional
+  o String qualified_financing_min_gross_proceeds default="20,000,000"
+  o Qualified_financing_debt_proceeds_treatmentType qualified_financing_debt_proceeds_treatment default="excluding"
   o String dividend_formula_prefix default="the greater of"
   o String dividend_formula_alt default="the sum of"
   o String acquisition_exception_shares optional
   o String strategic_partnership_exception_shares optional
-  o String dividend_type default="non_cumulative_as_converted"
-  o String liquidation_participation default="non_participating"
-  o String anti_dilution_type default="broad_based_weighted_average"
+  o Dividend_typeType dividend_type default="non_cumulative_as_converted"
+  o Liquidation_participationType liquidation_participation default="non_participating"
+  o Anti_dilution_typeType anti_dilution_type default="broad_based_weighted_average"
   o Boolean include_pay_to_play optional
   o Boolean include_redemption optional
 }
