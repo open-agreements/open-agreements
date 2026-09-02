@@ -1,13 +1,24 @@
 /**
  * Selector postconditions, surfaced as fieldSelector `VerifyCheck` entries after fill.
  *
- * Phase 1 supports three:
+ * Phase 1 supports four:
  *  - `no_unresolved_placeholder` — the field's `{field_id}` tag did not survive
  *    to the output (every occurrence filled).
  *  - `all_occurrences_identical` — the field renders one value everywhere: its
  *    value is present and no selector-owned source anchor for the field remains
  *    (a remaining anchor means an occurrence rendered differently → divergence).
- *  - `no_double_dollar` — no `$$` / `$ $` artifact in the output.
+ *  - `no_double_dollar` — no doubled currency sigil in the output.
+ *  - `no_double_percent` — no doubled percent sigil in the output. The
+ *    trailing-sigil twin of `no_double_dollar`: recipes disagree about whether
+ *    the replacement key absorbs the source percent sign, so a sign-carrying
+ *    value that is correct for one template doubles the sign in another
+ *    (issue #719).
+ *
+ * `no_double_percent` is deliberately unwired in this repo: the
+ * `specify_percentage` manifests live under `templates/nvca-*`, which is
+ * replaced wholesale by the daily legal-explainer forward sync (see
+ * `.openagreements-managed-paths.json`), so setting it here would be reverted.
+ * The wiring is an upstream follow-up; the engine support lands first.
  */
 import type { VerifyCheck } from '../field-selector/types.js';
 import type { FieldSelectorManifest } from './manifest-schema.js';
@@ -23,6 +34,7 @@ export interface PostconditionInput {
 }
 
 const DOUBLE_DOLLAR = /\$\s*\$/;
+const DOUBLE_PERCENT = /%\s*%/;
 
 export function evaluatePostconditions(input: PostconditionInput): VerifyCheck[] {
   const { outputText, manifests, fieldValues, migratedAnchorsByField } = input;
@@ -65,6 +77,13 @@ export function evaluatePostconditions(input: PostconditionInput): VerifyCheck[]
           name: `selector:${fieldId}:no_double_dollar`,
           passed: lines.length === 0,
           details: lines.length > 0 ? `Double-dollar artifact on ${lines.length} line(s)` : undefined,
+        });
+      } else if (postcondition === 'no_double_percent') {
+        const lines = outputText.split('\n').filter((l) => DOUBLE_PERCENT.test(l));
+        checks.push({
+          name: `selector:${fieldId}:no_double_percent`,
+          passed: lines.length === 0,
+          details: lines.length > 0 ? `Double-percent artifact on ${lines.length} line(s)` : undefined,
         });
       }
     }

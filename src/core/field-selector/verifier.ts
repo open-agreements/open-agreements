@@ -8,6 +8,7 @@ import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 import { isParagraphContentEmpty } from './cleaner.js';
 import { parseReplacementKey } from './replacement-keys.js';
 import { getTableRowContext, normalizeQuotes } from './patcher.js';
+import { DOUBLE_PERCENT_PATTERN } from '../fill-utils.js';
 import type { ReplacementValue } from './replacement-keys.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
@@ -37,6 +38,8 @@ export function normalizeText(text: string): string {
  * - All context values appear in the document text
  * - No unrendered {template_tags} remain
  * - No leftover [bracketed placeholders] from the replacement map remain
+ * - No doubled currency or percent sigils from a value that already carried the
+ *   sign the source supplies
  * - Footnotes removed (if clean config specified)
  * - Drafting note paragraphs removed (if clean config specified)
  */
@@ -108,6 +111,23 @@ export async function verifyOutput(
     passed: doubleDollarLines.length === 0,
     details: doubleDollarLines.length > 0
       ? `Found ${doubleDollarLines.length} occurrence(s): "${doubleDollarLines[0].trim().slice(0, 80)}"`
+      : undefined,
+  });
+
+  // Check 5b: No double percent signs (%% or % %)
+  // The trailing-sigil twin of Check 5. Recipes disagree about which side of the
+  // seam owns the sign — the ROFR & co-sale replacement key "[specify percentage]%"
+  // absorbs the source %, while the certificate of incorporation and stock
+  // purchase agreement leave it in place — so a sign-carrying value that is
+  // correct for one template doubles the sign in another (issue #719).
+  const doublePercentLines = rawFullText
+    .split('\n')
+    .filter((line) => DOUBLE_PERCENT_PATTERN.test(line));
+  checks.push({
+    name: 'No double percent signs',
+    passed: doublePercentLines.length === 0,
+    details: doublePercentLines.length > 0
+      ? `Found ${doublePercentLines.length} occurrence(s): "${doublePercentLines[0].trim().slice(0, 80)}"`
       : undefined,
   });
 
