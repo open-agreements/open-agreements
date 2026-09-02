@@ -1648,6 +1648,8 @@ function dummyAllValues(templateDir: string): Record<string, unknown> {
       values[field.name] = field.default != null ? String(field.default) === 'true' : false;
     } else if (field.type === 'date') {
       values[field.name] = field.default ?? '2026-03-01';
+    } else if (field.type === 'enum') {
+      values[field.name] = field.default ?? field.options?.[0] ?? '';
     } else {
       values[field.name] = field.default ?? `Test ${field.name}`;
     }

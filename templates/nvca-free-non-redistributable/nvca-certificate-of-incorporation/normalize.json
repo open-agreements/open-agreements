@@ -1,0 +1,45 @@
+{
+  "paragraph_rules": [
+    {
+      "id": "correct-pay-to-play-heading-punctuation",
+      "section_heading": "",
+      "ignore_heading": true,
+      "paragraph_contains": "Special Mandatory Conversion.,",
+      "replacements": {
+        "Special Mandatory Conversion.,": "Special Mandatory Conversion."
+      },
+      "expected_min_matches": 0
+    },
+    {
+      "id": "dedupe-original-incorporation-name-terminator",
+      "section_heading": "",
+      "ignore_heading": true,
+      "paragraph_contains": "originally incorporated pursuant to the General Corporation Law",
+      "replacements": {
+        "..": "."
+      },
+      "expected_min_matches": 0
+    },
+    {
+      "id": "resolve-acquisition-share-cap-alternative",
+      "section_heading": "",
+      "ignore_heading": true,
+      "paragraph_contains": "acquisition of another corporation",
+      "replacements": {
+        "[[do not exceed an aggregate of": "do not exceed an aggregate of",
+        ")];] [or]": ")"
+      },
+      "expected_min_matches": 0
+    },
+    {
+      "id": "remove-percentage-option-comma",
+      "section_heading": "",
+      "ignore_heading": true,
+      "paragraph_contains": "Definition. Each of the following events",
+      "replacements": {
+        "%, of": "% of"
+      },
+      "expected_min_matches": 0
+    }
+  ]
+}

@@ -416,9 +416,11 @@ describe('loadSelectorContracts (CoI)', () => {
     // 28 field manifests; see header note for the deferrals. `original_incorporation_date` and
     // `effective_date` (#608) are pure selector-contracts with NO migrated legacy keys — the 5 recital
     // `[________ __, 20__]` keys that formerly backed `effective_date` were removed from both
-    // replacements.json and migrated_keys, so the migrated count drops from 69 to 64.
-    expect(manifests).toHaveLength(28);
-    expect(templateManifest?.migrated_keys).toHaveLength(64);
+    // replacements.json and migrated_keys.
+    // Percentage rendering remains declarative in replacements.json; it does
+    // not need a selector manifest or migrated keys.
+    expect(manifests).toHaveLength(27);
+    expect(templateManifest?.migrated_keys).toHaveLength(56);
     // every field_id is a real metadata field (loadSelectorContracts already enforces this, but assert
     // the join key explicitly) and every migrated key is a real replacements.json key (no drift/typos).
     const metaFields = new Set(fieldNames);
@@ -472,7 +474,15 @@ describeWithCoiSource('CoI `>`-anchor field migration parity', () => {
   //    by (a) the selector's `failure_behavior: warn` (an "unresolved occurrence(s)" console warning) and
   //    (b) the repo-level `source-drift-canary` gate. This is a deliberate, narrower trade than the
   //    per-fill "Missing" false positive that legacy value-map coverage would reintroduce.
-  const noLegacyParity = new Set(['company_name', 'original_incorporation_date', 'effective_date']);
+  const noLegacyParity = new Set([
+    'company_name',
+    'original_incorporation_date',
+    'effective_date',
+    // The selector deliberately preserves the source dollar sign while
+    // removing the adjacent drafting instruction; the legacy replacement
+    // consumed both and emitted a naked numeric value.
+    'original_issue_price',
+  ]);
   for (const manifest of manifests.filter((m) => !noLegacyParity.has(m.field_id))) {
     const field = manifest.field_id;
     const expectedSpans = manifest.occurrences.length;

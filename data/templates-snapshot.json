@@ -10855,7 +10855,7 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Percentage threshold for specified provisions",
+          "description": "Percentage threshold for specified provisions, as a number only (for example, \"60\"); the selector appends the percent sign",
           "default": null,
           "default_value_rationale": null
         },
@@ -10896,6 +10896,64 @@
           "default_value_rationale": null
         },
         {
+          "name": "qualified_ipo_min_price_per_share",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Minimum per-share public offering price for a Qualified IPO (dollars, without currency symbol)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "qualified_ipo_min_gross_proceeds",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Minimum gross proceeds for a Qualified IPO (dollars, without currency symbol)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "qualified_direct_listing_min_market_cap",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Minimum market capitalization for a Qualified Direct Listing (dollars, without currency symbol)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "full_ratchet_sunset_date",
+          "type": "date",
+          "required": false,
+          "section": null,
+          "description": "Date after which the full-ratchet anti-dilution adjustment no longer applies. Used only when anti_dilution_type is full_ratchet; ISO YYYY-MM-DD input renders as a written-out document date.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "qualified_financing_min_gross_proceeds",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Minimum gross proceeds for a pay-to-play Qualified Financing (dollars, without currency symbol). Used only when include_pay_to_play is true.",
+          "default": "20,000,000",
+          "default_value_rationale": null
+        },
+        {
+          "name": "qualified_financing_debt_proceeds_treatment",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Whether debt proceeds cancelled or converted in a pay-to-play Qualified Financing are included or excluded. Allowed values are \"including\" and \"excluding\"; used only when include_pay_to_play is true.",
+          "default": "excluding",
+          "default_value_rationale": null,
+          "options": [
+            "including",
+            "excluding"
+          ]
+        },
+        {
           "name": "dividend_formula_prefix",
           "type": "string",
           "required": false,
@@ -10933,30 +10991,43 @@
         },
         {
           "name": "dividend_type",
-          "type": "string",
+          "type": "enum",
           "required": false,
           "section": null,
           "description": "Dividend structure: non_cumulative_as_converted (>95%), non_cumulative_fixed, or cumulative",
           "default": "non_cumulative_as_converted",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "non_cumulative_as_converted",
+            "non_cumulative_fixed",
+            "cumulative"
+          ]
         },
         {
           "name": "liquidation_participation",
-          "type": "string",
+          "type": "enum",
           "required": false,
           "section": null,
           "description": "Liquidation participation type: non_participating (94-96%) or participating",
           "default": "non_participating",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "non_participating",
+            "participating"
+          ]
         },
         {
           "name": "anti_dilution_type",
-          "type": "string",
+          "type": "enum",
           "required": false,
           "section": null,
           "description": "Anti-dilution formula: broad_based_weighted_average (>98%) or full_ratchet",
           "default": "broad_based_weighted_average",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "broad_based_weighted_average",
+            "full_ratchet"
+          ]
         },
         {
           "name": "include_pay_to_play",

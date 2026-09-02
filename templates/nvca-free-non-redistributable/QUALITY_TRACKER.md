@@ -7,8 +7,8 @@ Updated by the `field-selector-quality-audit` skill after each audit.
 
 | Field-selector | S | B | F | Total | Tier | Fixture | Last Audit |
 |--------|---|---|---|-------|------|---------|------------|
-| nvca-stock-purchase-agreement | 7/7 | 4/4 | 4/4 | 15/15 | production | spa-*.json | 2026-03-15 |
-| nvca-certificate-of-incorporation | 6/7 | 3/4 | 2/4 | 11/15 | beta | coi-imim-series-c.json | 2026-03-15 |
+| nvca-stock-purchase-agreement | 5/7 | 2/4 | 3/4 | 10/15 | beta | — | 2026-09-02 |
+| nvca-certificate-of-incorporation | 7/7 | 4/4 | 4/4 | 15/15 | production | coi-production-full.json | 2026-09-01 |
 | nvca-investors-rights-agreement | ?/7 | ?/4 | ?/4 | ?/15 | beta | — | — |
 | nvca-voting-agreement | ?/7 | ?/4 | ?/4 | ?/15 | beta | — | — |
 | nvca-rofr-co-sale-agreement | ?/7 | ?/4 | ?/4 | ?/15 | beta | — | — |
@@ -19,8 +19,8 @@ Updated by the `field-selector-quality-audit` skill after each audit.
 
 Based on legal impact in a typical Series A:
 
-1. ~~SPA~~ (done — production)
-2. **COI** — defines share structure, liquidation preferences, anti-dilution
+1. **SPA** — re-audit and restore production after the corrected grader exposed stale coverage and missing fixtures
+2. ~~COI~~ (done — production)
 3. IRA — information rights, registration rights, board observer
 4. VA — drag-along, voting provisions, board composition
 5. ROFR — transfer restrictions, co-sale rights
