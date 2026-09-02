@@ -921,11 +921,11 @@ describe('selections zero-match reporting (#720)', () => {
     expect(result.options[1]).toMatchObject({ optionIndex: 1, selected: true, matchCount: 1 });
 
     const anomalies = classifySelectionMatches(result);
-    expect(anomalies.unselectedZeroMatchInEngagedGroup).toHaveLength(1);
-    expect(anomalies.unselectedZeroMatchInEngagedGroup[0].optionIndex).toBe(0);
-    expect(anomalies.unselectedZeroMatchInInertGroup).toHaveLength(0);
+    expect(anomalies.unremovedInEngagedGroup).toHaveLength(1);
+    expect(anomalies.unremovedInEngagedGroup[0].optionIndex).toBe(0);
+    expect(anomalies.unremovedInInertGroup).toHaveLength(0);
     expect(anomalies.selectedZeroMatch).toHaveLength(0);
-    expect(describeSelectionOption(anomalies.unselectedZeroMatchInEngagedGroup[0]))
+    expect(describeSelectionOption(anomalies.unremovedInEngagedGroup[0]))
       .toContain('dispute_resolution[0]');
   });
 
@@ -943,9 +943,9 @@ describe('selections zero-match reporting (#720)', () => {
     );
 
     const anomalies = classifySelectionMatches(result);
-    expect(anomalies.unselectedZeroMatchInEngagedGroup).toHaveLength(0);
-    expect(anomalies.unselectedZeroMatchInInertGroup).toHaveLength(1);
-    expect(anomalies.unselectedZeroMatchInInertGroup[0].optionIndex).toBe(1);
+    expect(anomalies.unremovedInEngagedGroup).toHaveLength(0);
+    expect(anomalies.unremovedInInertGroup).toHaveLength(1);
+    expect(anomalies.unremovedInInertGroup[0].optionIndex).toBe(1);
     // The SELECTED option also matched nothing — reported separately, because a
     // missing kept-alternative fails visibly rather than silently.
     expect(anomalies.selectedZeroMatch).toHaveLength(1);
@@ -1003,6 +1003,50 @@ describe('selections zero-match reporting (#720)', () => {
 
     const anomalies = classifySelectionMatches(result);
     // No group is both engaged and half-removed, so nothing is the dangerous case.
-    expect(anomalies.unselectedZeroMatchInEngagedGroup).toHaveLength(0);
+    expect(anomalies.unremovedInEngagedGroup).toHaveLength(0);
+  });
+
+  it('[OA-SEL-029] a cell-based group whose options live in DIFFERENT cells is caught even though both markers match', async () => {
+    // Found in peer review of #720. `processGroup()` needs every option of a
+    // cell-based group to appear in ONE table cell. When they are split across
+    // cells it resolves no qualifying cell, returns without touching anything,
+    // and BOTH alternatives survive — while every option still reports a
+    // non-zero match count. Keying the guard on matchCount alone would have
+    // reported nothing here, which is the exact silent-corruption shape #720
+    // exists to eliminate.
+    const body =
+      `<w:tbl xmlns:w="${W_NS}"><w:tr>` +
+      `<w:tc>${para('( ) Alternative A: the parties will arbitrate.')}</w:tc>` +
+      `<w:tc>${para('( ) Alternative B: the parties will litigate.')}</w:tc>` +
+      `</w:tr></w:tbl>`;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+
+    const config: SelectionsConfig = {
+      groups: [{
+        id: 'split_cells',
+        type: 'radio',
+        options: [
+          { marker: 'Alternative A', trigger: { field: 'choice', equals: 'a' } },
+          { marker: 'Alternative B', trigger: 'default' },
+        ],
+      }],
+    };
+
+    const result = await applySelections(inputPath, outputPath, config, {});
+
+    // Nothing was removed: the document really does still carry both.
+    const text = extractText(outputPath);
+    expect(text).toContain('Alternative A');
+    expect(text).toContain('Alternative B');
+
+    // Both options matched, and neither was acted on.
+    expect(result.options[0]).toMatchObject({ optionIndex: 0, selected: false, matchCount: 1, appliedCount: 0 });
+    expect(result.options[1]).toMatchObject({ optionIndex: 1, selected: true, matchCount: 1, appliedCount: 0 });
+
+    const anomalies = classifySelectionMatches(result);
+    expect(anomalies.unremovedInEngagedGroup).toHaveLength(1);
+    expect(anomalies.unremovedInEngagedGroup[0].optionIndex).toBe(0);
+    expect(anomalies.selectedZeroMatch).toHaveLength(0);
   });
 });

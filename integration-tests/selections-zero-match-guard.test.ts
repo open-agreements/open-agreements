@@ -132,12 +132,13 @@ describe('selections zero-match guard (#720)', () => {
       const reported = result.warnings.filter((w) => w.includes('carries BOTH alternatives'));
       expect(reported).toHaveLength(1);
       expect(reported[0]).toContain('dispute_resolution[0]');
+      expect(reported[0]).toContain('[matched 0, removed 0]');
     });
 
     it(`[OA-SEL-028] the same drift rejects the fill outright under the 'error' policy (runs: ${String(runSplit)})`, async () => {
       await expect(
         runFixture(disputeConfig(DRIFTED_ARBITRATION_MARKER), { runSplit, zeroMatchPolicy: 'error' }),
-      ).rejects.toThrow(/unselected option\(s\) matched zero/);
+      ).rejects.toThrow(/unselected option\(s\) were not removed/);
       await expect(
         runFixture(disputeConfig(DRIFTED_ARBITRATION_MARKER), { runSplit, zeroMatchPolicy: 'error' }),
       ).rejects.toThrow(/dispute_resolution\[0\]/);

@@ -294,11 +294,14 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
       const selectionsResult = await applySelections(preSelectPath, postSelectPath, selectionsConfig, data);
       templateBuf = readFileSync(postSelectPath);
 
-      // #720: a selections option that matched zero paragraphs is not a no-op.
-      // For an UNSELECTED option the intent is "delete this alternative", so a
-      // zero match means the alternative was never deleted and the filled
-      // document ships BOTH alternatives — legally wrong, and invisible to
-      // every other check because the result still renders cleanly.
+      // #720: an UNSELECTED selections option that was never actually removed is
+      // not a no-op. The intent is "delete this alternative", so nothing having
+      // been deleted means the filled document ships BOTH alternatives —
+      // legally wrong, and invisible to every other check because the result
+      // still renders cleanly. Two faults produce it: a marker that matched
+      // nothing (source drift), and a group that matched but resolved no
+      // location to act on. `appliedCount` catches both; `matchCount` alone
+      // catches only the first.
       //
       // The `engaged group` qualifier is what separates the dangerous case from
       // the benign one. A group whose OTHER options matched is demonstrably
@@ -323,22 +326,23 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
       // flip once the upstream configs are corrected.
       const anomalies = classifySelectionMatches(selectionsResult);
 
-      if (anomalies.unselectedZeroMatchInEngagedGroup.length > 0) {
-        const detail = anomalies.unselectedZeroMatchInEngagedGroup
-          .map((o) => describeSelectionOption(o))
+      if (anomalies.unremovedInEngagedGroup.length > 0) {
+        const detail = anomalies.unremovedInEngagedGroup
+          .map((o) => `${describeSelectionOption(o)} [matched ${o.matchCount}, removed ${o.appliedCount}]`)
           .join('; ');
         const message =
-          `selections: ${anomalies.unselectedZeroMatchInEngagedGroup.length} unselected option(s) matched zero ` +
-          `paragraphs while a sibling option in the same group did match. The alternative each was meant to remove ` +
-          `is still in the document, so the filled output carries BOTH alternatives. This usually means the ` +
-          `marker text drifted from the source. Offending option(s): ${detail}`;
+          `selections: ${anomalies.unremovedInEngagedGroup.length} unselected option(s) were not removed while a ` +
+          `sibling option in the same group did match. The alternative each was meant to remove is still in the ` +
+          `document, so the filled output carries BOTH alternatives. A zero match count means the marker text ` +
+          `drifted from the source; a non-zero match count with nothing removed means the group resolved no ` +
+          `location to act on (e.g. its options sit in different table cells). Offending option(s): ${detail}`;
         if (selectionsZeroMatchPolicy === 'error') {
           throw new Error(`[selections] ${message}`);
         }
         warnings.push(message);
       }
 
-      for (const o of anomalies.unselectedZeroMatchInInertGroup) {
+      for (const o of anomalies.unremovedInInertGroup) {
         warnings.push(
           `selections: unselected option ${describeSelectionOption(o)} matched zero paragraphs, and no option in ` +
           `that group matched either — the group does not apply to this document.`,
