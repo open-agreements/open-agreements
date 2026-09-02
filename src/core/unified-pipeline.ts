@@ -19,7 +19,7 @@ import { prepareFillData, fillDocx, type ConfirmClauseDescriptor } from './fill-
 import { cleanDocument } from './field-selector/cleaner.js';
 import { patchDocument } from './field-selector/patcher.js';
 import { applySelectorContracts, type FieldSelectorManifest, type FieldResolution } from './selectors/index.js';
-import { applySelections } from './selector.js';
+import { applySelections, classifySelectionMatches, describeSelectionOption } from './selector.js';
 import { enumerateTextParts, getGeneralTextPartNames, rezipWithoutDirEntries } from './field-selector/ooxml-parts.js';
 import type { FieldDefinition, CleanConfig } from './metadata.js';
 import type { SelectionsConfig } from './selector.js';
@@ -50,6 +50,19 @@ export interface PipelineOptions {
 
   // Selections — omit to skip (only templates with selections.json)
   selectionsConfig?: SelectionsConfig;
+  /**
+   * What to do when an UNSELECTED selections option matches zero paragraphs
+   * inside a group whose other options DID match (#720): the alternative that
+   * was meant to be removed is still in the document, so the output carries
+   * both alternatives.
+   *
+   * `'warn'` (default) reports it in `PipelineResult.warnings`; `'error'`
+   * rejects the fill. The default is `'warn'` only because the bundled
+   * `templates/` corpus carries three pre-existing marker mismatches this repo
+   * cannot fix (see the note at the call site) — it is not a judgement that the
+   * condition is acceptable.
+   */
+  selectionsZeroMatchPolicy?: 'error' | 'warn';
 
   // prepareFillData options
   coerceBooleans?: boolean;             // default: false
@@ -158,6 +171,7 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
     selectorManifests,
     onSelectorResolved,
     selectionsConfig,
+    selectionsZeroMatchPolicy = 'warn',
     coerceBooleans = false,
     computeDisplayFields,
     fixSmartQuotes = false,
@@ -269,20 +283,82 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
       confirmClauses: options.confirmClauses,
     });
 
+    const warnings: string[] = [];
+
     // Step 5: Read current buffer; apply selections if configured
     let templateBuf: Buffer = readFileSync(currentPath);
     if (selectionsConfig) {
       const preSelectPath = join(tempDir, 'pre-select.docx');
       const postSelectPath = join(tempDir, 'post-select.docx');
       writeFileSync(preSelectPath, templateBuf);
-      await applySelections(preSelectPath, postSelectPath, selectionsConfig, data);
+      const selectionsResult = await applySelections(preSelectPath, postSelectPath, selectionsConfig, data);
       templateBuf = readFileSync(postSelectPath);
+
+      // #720: an UNSELECTED selections option that was never actually removed is
+      // not a no-op. The intent is "delete this alternative", so nothing having
+      // been deleted means the filled document ships BOTH alternatives —
+      // legally wrong, and invisible to every other check because the result
+      // still renders cleanly. Two faults produce it: a marker that matched
+      // nothing (source drift), and a group that matched but resolved no
+      // location to act on. `appliedCount` catches both; `matchCount` alone
+      // catches only the first.
+      //
+      // The `engaged group` qualifier is what separates the dangerous case from
+      // the benign one. A group whose OTHER options matched is demonstrably
+      // present in this document, so a zero-match sibling means that option's
+      // marker drifted away from source prose that is still there. A group where
+      // NOTHING matched is a config/document mismatch (a partial fixture, a
+      // different source variant); nothing was left half-removed there.
+      //
+      // POLICY. The dangerous case is a warning by DEFAULT, not a hard failure,
+      // and that default is a deliberate concession to the bundled corpus rather
+      // than a judgement that the condition is tolerable. Turning this guard on
+      // surfaced three pre-existing marker/document mismatches in bundled
+      // Common Paper configs (an "Order Form" cover page whose marker says
+      // "Cover Page"; a straight-vs-curly apostrophe in the workers'-compensation
+      // insurance marker; a SOW-term marker naming `{term_duration_value}` where
+      // the patched text carries `{rejection_period_value}`). Those configs live
+      // under `templates/`, which this repo does not own — it is replaced
+      // wholesale by an upstream forward sync — so failing closed today would
+      // refuse to fill half a dozen shipped templates over defects that cannot
+      // be fixed here. Callers that own their configs can opt into failing
+      // closed with `selectionsZeroMatchPolicy: 'error'`, and the default should
+      // flip once the upstream configs are corrected.
+      const anomalies = classifySelectionMatches(selectionsResult);
+
+      if (anomalies.unremovedInEngagedGroup.length > 0) {
+        const detail = anomalies.unremovedInEngagedGroup
+          .map((o) => `${describeSelectionOption(o)} [matched ${o.matchCount}, removed ${o.appliedCount}]`)
+          .join('; ');
+        const message =
+          `selections: ${anomalies.unremovedInEngagedGroup.length} unselected option(s) were not removed while a ` +
+          `sibling option in the same group did match. The alternative each was meant to remove is still in the ` +
+          `document, so the filled output carries BOTH alternatives. A zero match count means the marker text ` +
+          `drifted from the source; a non-zero match count with nothing removed means the group resolved no ` +
+          `location to act on (e.g. its options sit in different table cells). Offending option(s): ${detail}`;
+        if (selectionsZeroMatchPolicy === 'error') {
+          throw new Error(`[selections] ${message}`);
+        }
+        warnings.push(message);
+      }
+
+      for (const o of anomalies.unremovedInInertGroup) {
+        warnings.push(
+          `selections: unselected option ${describeSelectionOption(o)} matched zero paragraphs, and no option in ` +
+          `that group matched either — the group does not apply to this document.`,
+        );
+      }
+      for (const o of anomalies.selectedZeroMatch) {
+        warnings.push(
+          `selections: selected option ${describeSelectionOption(o)} matched zero paragraphs — the alternative ` +
+          `meant to be kept is absent from the document.`,
+        );
+      }
     }
 
     // Step 5.5: Analyze fill commands on the exact buffer handed to fillDocx —
     // after clean → selector-contracts → patch → selections, so patch-injected
     // tokens (e.g. the yc-safe externals) are counted.
-    const warnings: string[] = [];
     const { commandCount, referencedIdentifiers } = await analyzeFillCommands(templateBuf);
     if (commandCount === 0) {
       warnings.push(
