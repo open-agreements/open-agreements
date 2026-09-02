@@ -363,6 +363,12 @@ describeWithSource('SPA agreement date + dispute-resolution alternatives (#619)'
       });
 
       const text = textOf(outputPath);
+      // NOTE (#721): the three assertions below are the higher-fidelity, source-gated
+      // version of these checks and only run when a cached NVCA source is present. The
+      // same clause SHAPES — a shared `District of` literal prefix across two adjacent
+      // alternatives, and a proper noun that must survive substitution — are covered on
+      // every CI job by paraphrased synthetic fixtures in
+      // `integration-tests/synthetic-clause-shape-contracts.test.ts`.
       // The courts alternative is present and carries the supplied district.
       // Proper-noun forum state (#2391): "state courts of California", no longer lowercase.
       expect(text).toContain('irrevocably and unconditionally submit to the jurisdiction of the state courts of California');
