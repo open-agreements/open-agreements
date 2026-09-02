@@ -52,6 +52,11 @@ export async function verifyOutput(
 ): Promise<VerifyResult> {
   const checks: VerifyCheck[] = [];
   const rawFullText = extractAllText(outputPath);
+  // Footnotes are outside extractAllText()'s scope. They feed the sigil-doubling
+  // checks only: those read rather than rewrite, and every other check here
+  // keeps the part scope the patcher and cleaner actually operate on.
+  const footnoteText = extractFootnoteText(outputPath);
+  const sigilText = footnoteText ? `${rawFullText}\n${footnoteText}` : rawFullText;
   const normalizedFullText = normalizeText(rawFullText);
   const xml = extractDocumentXml(outputPath);
 
@@ -105,7 +110,7 @@ export async function verifyOutput(
   // This catches cases where the template already has a $ before a placeholder
   // and the user also included a $ in their value (e.g. "$1,000,000")
   const doubleDollarPattern = /\$[\s\u00A0\t]*\$/;
-  const doubleDollarLines = rawFullText.split('\n').filter((line) => doubleDollarPattern.test(line));
+  const doubleDollarLines = sigilText.split('\n').filter((line) => doubleDollarPattern.test(line));
   checks.push({
     name: 'No double dollar signs',
     passed: doubleDollarLines.length === 0,
@@ -120,7 +125,7 @@ export async function verifyOutput(
   // absorbs the source %, while the certificate of incorporation and stock
   // purchase agreement leave it in place — so a sign-carrying value that is
   // correct for one template doubles the sign in another (issue #719).
-  const doublePercentLines = rawFullText
+  const doublePercentLines = sigilText
     .split('\n')
     .filter((line) => DOUBLE_PERCENT_PATTERN.test(line));
   checks.push({
@@ -450,6 +455,36 @@ export function countFormattingAnomalies(docxPath: string): number {
 /**
  * Extract all text from general OOXML text parts (document, headers, footers, endnotes).
  */
+/**
+ * Extract footnote paragraph text, which `extractAllText()` deliberately omits.
+ *
+ * `getGeneralTextPartNames()` excludes `word/footnotes.xml` because the cleaner
+ * has to special-case its separator paragraphs. That constraint is about
+ * mutation; the sigil-doubling checks only read, and a footnote rendering
+ * `8%%` is a corrupt executed document that must not verify clean.
+ */
+export function extractFootnoteText(docxPath: string): string {
+  const zip = new AdmZip(docxPath);
+  const parts = enumerateTextParts(zip);
+  if (!parts.footnotes) return '';
+  const entry = zip.getEntry(parts.footnotes);
+  if (!entry) return '';
+
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(entry.getData().toString('utf-8'), 'text/xml');
+  const paragraphs: string[] = [];
+  const paras = doc.getElementsByTagNameNS(W_NS, 'p');
+  for (let i = 0; i < paras.length; i++) {
+    const tElements = paras[i].getElementsByTagNameNS(W_NS, 't');
+    const textParts: string[] = [];
+    for (let j = 0; j < tElements.length; j++) {
+      textParts.push(tElements[j].textContent ?? '');
+    }
+    if (textParts.length > 0) paragraphs.push(textParts.join(''));
+  }
+  return paragraphs.join('\n');
+}
+
 export function extractAllText(docxPath: string): string {
   const zip = new AdmZip(docxPath);
   const parser = new DOMParser();

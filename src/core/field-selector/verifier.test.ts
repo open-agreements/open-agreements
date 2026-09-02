@@ -304,6 +304,26 @@ describe('verifyOutput', () => {
     cleanupDocx(docxPath);
   });
 
+  it('flags a %% artifact inside a footnote (issue #719)', async () => {
+    // extractAllText() skips word/footnotes.xml, so the sigil checks read it
+    // separately: a corrupt footnote must not verify clean.
+    const docxPath = buildDocx(
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+        `<w:document xmlns:w="${W_NS}"><w:body><w:p><w:r><w:t>Body is clean.</w:t></w:r></w:p></w:body></w:document>`,
+      {
+        'word/footnotes.xml':
+          '<?xml version="1.0" encoding="UTF-8"?>' +
+          `<w:footnotes xmlns:w="${W_NS}"><w:footnote w:id="1"><w:p><w:r><w:t xml:space="preserve">Rate 8%% per annum</w:t></w:r></w:p></w:footnote></w:footnotes>`,
+      }
+    );
+
+    const result = await verifyOutput(docxPath, {}, {});
+    const check = result.checks.find((c) => c.name === 'No double percent signs');
+    expect(check?.passed).toBe(false);
+    expect(check?.details).toContain('8%%');
+    cleanupDocx(docxPath);
+  });
+
   it('does not flag two separate legitimate percentages', async () => {
     const docxPath = buildTextDocx(['A rate of 8% rising to 10% per annum.']);
     const result = await verifyOutput(docxPath, {}, {});

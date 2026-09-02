@@ -116,6 +116,14 @@ function footerXml(text: string): string {
   );
 }
 
+/** Helper to make footnotes XML with the given text. */
+function footnotesXml(text: string): string {
+  return (
+    '<?xml version="1.0" encoding="UTF-8"?>' +
+    `<w:footnotes xmlns:w="${W_NS}"><w:footnote w:id="1"><w:p><w:r><w:t xml:space="preserve">${text}</w:t></w:r></w:p></w:footnote></w:footnotes>`
+  );
+}
+
 /** Helper to make endnotes XML with the given text. */
 function endnotesXml(text: string): string {
   return (
@@ -262,6 +270,23 @@ describe('detectPercentFields', () => {
     expect(fields.has('endnote_rate')).toBe(true);
   });
 
+  it('scans footnotes, which the general part list excludes', () => {
+    // getGeneralTextPartNames() drops word/footnotes.xml because the cleaner has
+    // to special-case its separator paragraphs. Detection only reads, and a
+    // footnote rendering "8%%" is a corrupt executed document.
+    const buf = buildDocxBuffer(docXml(['Body text']), {
+      'word/footnotes.xml': footnotesXml('Rate {footnote_rate}%'),
+    });
+    expect(detectPercentFields(buf).has('footnote_rate')).toBe(true);
+  });
+
+  it('abstains when the body owns the sign and a footnote occurrence does not', () => {
+    const buf = buildDocxBuffer(docXml(['at least {threshold}% of the shares']), {
+      'word/footnotes.xml': footnotesXml('as measured by {threshold} of the shares'),
+    });
+    expect(detectPercentFields(buf).size).toBe(0);
+  });
+
   it('does not mistake a leading-$ currency field for a percent field', () => {
     const buf = buildDocxBuffer(docXml(['Amount: ${purchase_amount} in cash']));
     expect(detectPercentFields(buf).size).toBe(0);
@@ -393,6 +418,28 @@ describe('verifyTemplateFill', () => {
     const result = verifyTemplateFill(path);
     expect(result.passed).toBe(false);
     const check = result.checks.find((c) => c.name === 'No double percent signs');
+    expect(check?.passed).toBe(false);
+    rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it('catches a double percent sign inside a footnote', () => {
+    const path = buildDocxFile(docXml(['Body is clean']), {
+      'word/footnotes.xml': footnotesXml('Rate 8%% per annum'),
+    });
+    const result = verifyTemplateFill(path);
+    const check = result.checks.find((c) => c.name === 'No double percent signs');
+    expect(check?.passed).toBe(false);
+    expect(check?.details).toContain('8%%');
+    expect(result.passed).toBe(false);
+    rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it('catches a double dollar sign inside a footnote', () => {
+    const path = buildDocxFile(docXml(['Body is clean']), {
+      'word/footnotes.xml': footnotesXml('Amount $$50,000'),
+    });
+    const result = verifyTemplateFill(path);
+    const check = result.checks.find((c) => c.name === 'No double dollar signs');
     expect(check?.passed).toBe(false);
     rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
   });
@@ -1367,6 +1414,29 @@ describe('Integration: template percentage sanitization (issue #719)', () => {
 
     expect(outText).toContain('rate equal to 8%.');
     expect(outText).not.toMatch(/%[\s\u00A0]*%/);
+  });
+
+  it('sanitizes a percentage that lives only in a footnote', async () => {
+    const buf = buildDocxBuffer(docXml(['Body text with no percentage.']), {
+      'word/footnotes.xml': footnotesXml('Rate {rate}%'),
+    });
+
+    const result = await fillDocx({
+      templateBuffer: buf,
+      data: { rate: '8%' },
+      stripParagraphPatterns: [],
+    });
+
+    const footnoteXmlOut = new AdmZip(Buffer.from(result))
+      .getEntry('word/footnotes.xml')!
+      .getData()
+      .toString('utf-8');
+    const footnoteText = (footnoteXmlOut.match(/<w:t[^>]*>([\s\S]*?)<\/w:t>/g) ?? [])
+      .map((t) => t.replace(/<[^>]+>/g, ''))
+      .join('');
+
+    expect(footnoteText).toBe('Rate 8%');
+    expect(footnoteText).not.toContain('%%');
   });
 
   it('leaves the sign alone when the source does not supply it', async () => {

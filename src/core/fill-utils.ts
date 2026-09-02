@@ -4,7 +4,11 @@
 
 import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
-import { enumerateTextParts, getGeneralTextPartNames } from './field-selector/ooxml-parts.js';
+import {
+  enumerateTextParts,
+  getGeneralTextPartNames,
+  getAllTextPartNames,
+} from './field-selector/ooxml-parts.js';
 import type { VerifyResult } from './field-selector/types.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
@@ -131,7 +135,10 @@ export function detectPercentFields(docxBuffer: Buffer): Set<string> {
   const zip = new AdmZip(docxBuffer);
   const parser = new DOMParser();
   const parts = enumerateTextParts(zip);
-  const partNames = getGeneralTextPartNames(parts);
+  // Footnotes included: a percentage placeholder in a footnote owns its sign
+  // exactly as a body one does, and a footnote rendering `8%%` is a corrupt
+  // executed document.
+  const partNames = getAllTextPartNames(parts);
 
   const totalByField = new Map<string, number>();
   const adjacentByField = new Map<string, number>();
@@ -200,23 +207,12 @@ export function sanitizePercentValuesFromDocx(
 }
 
 /**
- * Verify a filled template DOCX output.
- * Runs a subset of checks that are safe for templates:
- * - No double dollar signs (catches currency sanitization failures)
- * - No double percent signs (catches percentage sanitization failures)
- * - No unrendered {template_tags} (catches fill failures)
- *
- * Does NOT check: leftover brackets (templates don't use them),
- * context values present (templates use {IF} conditionals that hide values),
- * drafting notes (stripped by fillDocx), footnotes (may be legitimate).
+ * Concatenate each paragraph's `<w:t>` runs into one string per paragraph,
+ * over the given OOXML part names. Cross-run splits disappear because the
+ * text is joined at the paragraph level.
  */
-export function verifyTemplateFill(outputPath: string): VerifyResult {
-  const zip = new AdmZip(outputPath);
-  const parser = new DOMParser();
-  const parts = enumerateTextParts(zip);
-  const partNames = getGeneralTextPartNames(parts);
-
-  const allParagraphs: string[] = [];
+function paragraphTexts(zip: AdmZip, parser: DOMParser, partNames: string[]): string[] {
+  const out: string[] = [];
   for (const partName of partNames) {
     const entry = zip.getEntry(partName);
     if (!entry) continue;
@@ -230,17 +226,48 @@ export function verifyTemplateFill(outputPath: string): VerifyResult {
         textParts.push(tElements[j].textContent ?? '');
       }
       if (textParts.length > 0) {
-        allParagraphs.push(textParts.join(''));
+        out.push(textParts.join(''));
       }
     }
   }
+  return out;
+}
+
+/**
+ * Verify a filled template DOCX output.
+ * Runs a subset of checks that are safe for templates:
+ * - No double dollar signs (catches currency sanitization failures)
+ * - No double percent signs (catches percentage sanitization failures)
+ * - No unrendered {template_tags} (catches fill failures)
+ *
+ * Does NOT check: leftover brackets (templates don't use them),
+ * context values present (templates use {IF} conditionals that hide values),
+ * drafting notes (stripped by fillDocx). Footnote text is read for the
+ * sigil-doubling checks only — the unrendered-tag check keeps body/header/
+ * footer/endnote scope, where a leftover footnote tag may be legitimate.
+ */
+export function verifyTemplateFill(outputPath: string): VerifyResult {
+  const zip = new AdmZip(outputPath);
+  const parser = new DOMParser();
+  const parts = enumerateTextParts(zip);
+  const partNames = getGeneralTextPartNames(parts);
+
+  const allParagraphs = paragraphTexts(zip, parser, partNames);
   const rawFullText = allParagraphs.join('\n');
+  // Footnotes sit outside the general part list (see `getAllTextPartNames`).
+  // They feed the sigil-doubling checks only: those are read-only and a corrupt
+  // footnote is still a corrupt document, while the unrendered-tag check keeps
+  // its existing scope.
+  const footnoteText = parts.footnotes
+    ? paragraphTexts(zip, parser, [parts.footnotes]).join('\n')
+    : '';
+  const sigilText = footnoteText ? `${rawFullText}\n${footnoteText}` : rawFullText;
 
   const checks: VerifyResult['checks'] = [];
 
   // Check 1: No double dollar signs ($$ or $ $)
   const doubleDollarPattern = /\$[\s\u00A0\t]*\$/;
-  const doubleDollarLines = rawFullText.split('\n').filter((line) => doubleDollarPattern.test(line));
+  const doubleDollarLines = sigilText.split('\n').filter((line) => doubleDollarPattern.test(line));
   checks.push({
     name: 'No double dollar signs',
     passed: doubleDollarLines.length === 0,
@@ -252,7 +279,7 @@ export function verifyTemplateFill(outputPath: string): VerifyResult {
   // Check 2: No double percent signs (%% or % %) — the trailing-sigil twin of
   // Check 1. The template already carries the `%` after some placeholders, so a
   // sign-carrying value doubles it.
-  const doublePercentLines = rawFullText
+  const doublePercentLines = sigilText
     .split('\n')
     .filter((line) => DOUBLE_PERCENT_PATTERN.test(line));
   checks.push({
