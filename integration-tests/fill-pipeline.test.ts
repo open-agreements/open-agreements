@@ -13,7 +13,14 @@ function templateDirFor(slug: string): string {
 }
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
-import { detectCurrencyFields, sanitizeCurrencyValuesFromDocx, verifyTemplateFill, BLANK_PLACEHOLDER } from '../src/core/fill-utils.js';
+import {
+  detectCurrencyFields,
+  sanitizeCurrencyValuesFromDocx,
+  detectPercentFields,
+  sanitizePercentValuesFromDocx,
+  verifyTemplateFill,
+  BLANK_PLACEHOLDER,
+} from '../src/core/fill-utils.js';
 import { prepareFillData, fillDocx, formatDocumentDate } from '../src/core/fill-pipeline.js';
 import { runFillPipeline } from '../src/core/unified-pipeline.js';
 import { loadMetadata } from '../src/core/metadata.js';
@@ -85,6 +92,14 @@ function docXmlSplitRuns(runTexts: string[]): string {
   );
 }
 
+/** Concatenate every <w:t> in a filled DOCX body into one string. */
+function docxBodyText(buf: Buffer): string {
+  const xml = new AdmZip(buf).getEntry('word/document.xml')!.getData().toString('utf-8');
+  return (xml.match(/<w:t[^>]*>([\s\S]*?)<\/w:t>/g) ?? [])
+    .map((t) => t.replace(/<[^>]+>/g, ''))
+    .join('');
+}
+
 /** Helper to make header XML with the given text. */
 function headerXml(text: string): string {
   return (
@@ -98,6 +113,14 @@ function footerXml(text: string): string {
   return (
     '<?xml version="1.0" encoding="UTF-8"?>' +
     `<w:ftr xmlns:w="${W_NS}"><w:p><w:r><w:t>${text}</w:t></w:r></w:p></w:ftr>`
+  );
+}
+
+/** Helper to make footnotes XML with the given text. */
+function footnotesXml(text: string): string {
+  return (
+    '<?xml version="1.0" encoding="UTF-8"?>' +
+    `<w:footnotes xmlns:w="${W_NS}"><w:footnote w:id="1"><w:p><w:r><w:t xml:space="preserve">${text}</w:t></w:r></w:p></w:footnote></w:footnotes>`
   );
 }
 
@@ -197,6 +220,142 @@ describe('sanitizeCurrencyValuesFromDocx', () => {
 });
 
 // ---------------------------------------------------------------------------
+// Section 1b: Percentage Sanitization (issue #719)
+// ---------------------------------------------------------------------------
+
+describe('detectPercentFields', () => {
+  it('detects a field whose tag is immediately followed by %', () => {
+    const buf = buildDocxBuffer(docXml(['A rate of {interest_rate}% per annum']));
+    expect(detectPercentFields(buf).has('interest_rate')).toBe(true);
+  });
+
+  it('detects the field when {tag} and % are split across runs', () => {
+    const buf = buildDocxBuffer(docXmlSplitRuns(['A rate of ', '{interest_rate}', '%']));
+    expect(detectPercentFields(buf).has('interest_rate')).toBe(true);
+  });
+
+  it('tolerates whitespace between the tag and the sign', () => {
+    const spaced = buildDocxBuffer(docXml(['Holders of {threshold} % of the shares']));
+    expect(detectPercentFields(spaced).has('threshold')).toBe(true);
+    const nbsp = buildDocxBuffer(docXml(['Holders of {threshold}\u00A0% of the shares']));
+    expect(detectPercentFields(nbsp).has('threshold')).toBe(true);
+  });
+
+  it('returns an empty set when the source owns no adjacent %', () => {
+    const buf = buildDocxBuffer(docXml(['Holders of {threshold} of the shares']));
+    expect(detectPercentFields(buf).size).toBe(0);
+  });
+
+  it('does not report a field whose occurrences disagree about the sign', () => {
+    // The recipes are split on which side of the seam owns the sign: the ROFR
+    // & co-sale replacement key "[specify percentage]%" absorbs the source %,
+    // the certificate of incorporation leaves it in place. A document that
+    // lands both shapes for one field has no value that renders correctly
+    // everywhere, so we strip nothing and let the verifier flag the artifact.
+    const buf = buildDocxBuffer(
+      docXml(['at least {threshold}% of the shares', 'no less than {threshold} of the shares'])
+    );
+    expect(detectPercentFields(buf).size).toBe(0);
+  });
+
+  it('scans headers, footers and endnotes', () => {
+    const buf = buildDocxBuffer(docXml(['Body text']), {
+      'word/header1.xml': headerXml('Cap: {header_rate}%'),
+      'word/footer1.xml': footerXml('Floor: {footer_rate}%'),
+      'word/endnotes.xml': endnotesXml('Note: {endnote_rate}%'),
+    });
+    const fields = detectPercentFields(buf);
+    expect(fields.has('header_rate')).toBe(true);
+    expect(fields.has('footer_rate')).toBe(true);
+    expect(fields.has('endnote_rate')).toBe(true);
+  });
+
+  it('scans footnotes, which the general part list excludes', () => {
+    // getGeneralTextPartNames() drops word/footnotes.xml because the cleaner has
+    // to special-case its separator paragraphs. Detection only reads, and a
+    // footnote rendering "8%%" is a corrupt executed document.
+    const buf = buildDocxBuffer(docXml(['Body text']), {
+      'word/footnotes.xml': footnotesXml('Rate {footnote_rate}%'),
+    });
+    expect(detectPercentFields(buf).has('footnote_rate')).toBe(true);
+  });
+
+  it('abstains when the body owns the sign and a footnote occurrence does not', () => {
+    const buf = buildDocxBuffer(docXml(['at least {threshold}% of the shares']), {
+      'word/footnotes.xml': footnotesXml('as measured by {threshold} of the shares'),
+    });
+    expect(detectPercentFields(buf).size).toBe(0);
+  });
+
+  it('does not mistake a leading-$ currency field for a percent field', () => {
+    const buf = buildDocxBuffer(docXml(['Amount: ${purchase_amount} in cash']));
+    expect(detectPercentFields(buf).size).toBe(0);
+  });
+});
+
+describe('sanitizePercentValuesFromDocx', () => {
+  it('strips a trailing % for detected percent fields', () => {
+    const buf = buildDocxBuffer(docXml(['A rate of {interest_rate}% per annum']));
+    const result = sanitizePercentValuesFromDocx(
+      { interest_rate: '8%', name: 'Acme' },
+      buf
+    );
+    expect(result.interest_rate).toBe('8');
+    expect(result.name).toBe('Acme');
+  });
+
+  it('absorbs whitespace before the sign, ordinary and non-breaking', () => {
+    const buf = buildDocxBuffer(docXml(['A rate of {interest_rate}% per annum']));
+    expect(sanitizePercentValuesFromDocx({ interest_rate: '8 %' }, buf).interest_rate).toBe('8');
+    expect(
+      sanitizePercentValuesFromDocx({ interest_rate: '8\u00A0%' }, buf).interest_rate
+    ).toBe('8');
+    expect(
+      sanitizePercentValuesFromDocx({ interest_rate: '8\u202F%' }, buf).interest_rate
+    ).toBe('8');
+  });
+
+  it('leaves a value that already omits the sign untouched', () => {
+    const buf = buildDocxBuffer(docXml(['A rate of {interest_rate}% per annum']));
+    expect(sanitizePercentValuesFromDocx({ interest_rate: '8' }, buf).interest_rate).toBe('8');
+  });
+
+  it('does not blank a value that is nothing but a percent sign', () => {
+    const buf = buildDocxBuffer(docXml(['A rate of {interest_rate}% per annum']));
+    expect(sanitizePercentValuesFromDocx({ interest_rate: '%' }, buf).interest_rate).toBe('%');
+  });
+
+  it('only strips a % at the very end of the value', () => {
+    const buf = buildDocxBuffer(docXml(['A rate of {interest_rate}% per annum']));
+    expect(
+      sanitizePercentValuesFromDocx({ interest_rate: '8% to 10' }, buf).interest_rate
+    ).toBe('8% to 10');
+  });
+
+  it('does not strip % from non-percent fields', () => {
+    const buf = buildDocxBuffer(docXml(['A rate of {interest_rate}% per annum']));
+    const result = sanitizePercentValuesFromDocx(
+      { interest_rate: '8%', share: '60%' },
+      buf
+    );
+    expect(result.interest_rate).toBe('8');
+    expect(result.share).toBe('60%'); // the source does not supply the sign here
+  });
+
+  it('does not strip % from non-string values', () => {
+    const buf = buildDocxBuffer(docXml(['A rate of {some_field}% per annum']));
+    const result = sanitizePercentValuesFromDocx({ some_field: true }, buf);
+    expect(result.some_field).toBe(true);
+  });
+
+  it('returns the same object when no percent fields are detected', () => {
+    const buf = buildDocxBuffer(docXml(['Hello {name}']));
+    const values = { name: '60%' };
+    expect(sanitizePercentValuesFromDocx(values, buf)).toBe(values);
+  });
+});
+
+// ---------------------------------------------------------------------------
 // Section 2: Template Verification
 // ---------------------------------------------------------------------------
 
@@ -240,6 +399,55 @@ describe('verifyTemplateFill', () => {
     const path = buildDocxFile(docXml(['Fee: $1,000', 'Cap: $5,000,000']));
     const result = verifyTemplateFill(path);
     const check = result.checks.find((c) => c.name === 'No double dollar signs');
+    expect(check?.passed).toBe(true);
+    rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it('catches double percent signs in output', () => {
+    const path = buildDocxFile(docXml(['Holders of at least 60%% of the shares']));
+    const result = verifyTemplateFill(path);
+    expect(result.passed).toBe(false);
+    const check = result.checks.find((c) => c.name === 'No double percent signs');
+    expect(check?.passed).toBe(false);
+    expect(check?.details).toContain('60%%');
+    rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it('catches % % with whitespace between', () => {
+    const path = buildDocxFile(docXml(['Holders of at least 60% % of the shares']));
+    const result = verifyTemplateFill(path);
+    expect(result.passed).toBe(false);
+    const check = result.checks.find((c) => c.name === 'No double percent signs');
+    expect(check?.passed).toBe(false);
+    rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it('catches a double percent sign inside a footnote', () => {
+    const path = buildDocxFile(docXml(['Body is clean']), {
+      'word/footnotes.xml': footnotesXml('Rate 8%% per annum'),
+    });
+    const result = verifyTemplateFill(path);
+    const check = result.checks.find((c) => c.name === 'No double percent signs');
+    expect(check?.passed).toBe(false);
+    expect(check?.details).toContain('8%%');
+    expect(result.passed).toBe(false);
+    rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it('catches a double dollar sign inside a footnote', () => {
+    const path = buildDocxFile(docXml(['Body is clean']), {
+      'word/footnotes.xml': footnotesXml('Amount $$50,000'),
+    });
+    const result = verifyTemplateFill(path);
+    const check = result.checks.find((c) => c.name === 'No double dollar signs');
+    expect(check?.passed).toBe(false);
+    rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it('does not flag legitimate separate percentages', () => {
+    const path = buildDocxFile(docXml(['A rate of 8% rising to 10% per annum']));
+    const result = verifyTemplateFill(path);
+    const check = result.checks.find((c) => c.name === 'No double percent signs');
     expect(check?.passed).toBe(true);
     rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
   });
@@ -1181,6 +1389,75 @@ describe('Integration: template currency sanitization', () => {
     // Should contain $50,000 not $$50,000
     expect(outXml).toContain('50,000');
     expect(outXml).not.toContain('$$');
+  });
+});
+
+describe('Integration: template percentage sanitization (issue #719)', () => {
+  it('template fill with "8%" produces 8% not 8%%', async () => {
+    // Build a template DOCX whose source owns the sign — {interest_rate}%,
+    // the shape the NVCA certificate of incorporation lands for
+    // redemption_interest_rate ("aggregate per annum rate equal to > [12]%").
+    const xml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>` +
+      '<w:p><w:r><w:t>An aggregate per annum rate equal to {interest_rate}%.</w:t></w:r></w:p>' +
+      '</w:body></w:document>';
+    const buf = buildDocxBuffer(xml);
+
+    const result = await fillDocx({
+      templateBuffer: buf,
+      data: { interest_rate: '8%' },
+      stripParagraphPatterns: [],
+    });
+
+    const outText = docxBodyText(Buffer.from(result));
+
+    expect(outText).toContain('rate equal to 8%.');
+    expect(outText).not.toMatch(/%[\s\u00A0]*%/);
+  });
+
+  it('sanitizes a percentage that lives only in a footnote', async () => {
+    const buf = buildDocxBuffer(docXml(['Body text with no percentage.']), {
+      'word/footnotes.xml': footnotesXml('Rate {rate}%'),
+    });
+
+    const result = await fillDocx({
+      templateBuffer: buf,
+      data: { rate: '8%' },
+      stripParagraphPatterns: [],
+    });
+
+    const footnoteXmlOut = new AdmZip(Buffer.from(result))
+      .getEntry('word/footnotes.xml')!
+      .getData()
+      .toString('utf-8');
+    const footnoteText = (footnoteXmlOut.match(/<w:t[^>]*>([\s\S]*?)<\/w:t>/g) ?? [])
+      .map((t) => t.replace(/<[^>]+>/g, ''))
+      .join('');
+
+    expect(footnoteText).toBe('Rate 8%');
+    expect(footnoteText).not.toContain('%%');
+  });
+
+  it('leaves the sign alone when the source does not supply it', async () => {
+    // The mirror case: the ROFR & co-sale replacement key absorbs the source %,
+    // so the value has to carry it and must survive the fill untouched.
+    const xml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>` +
+      '<w:p><w:r><w:t>Key Holders holding {specify_percentage} of the Transfer Stock.</w:t></w:r></w:p>' +
+      '</w:body></w:document>';
+    const buf = buildDocxBuffer(xml);
+
+    const result = await fillDocx({
+      templateBuffer: buf,
+      data: { specify_percentage: '60%' },
+      stripParagraphPatterns: [],
+    });
+
+    const outText = docxBodyText(Buffer.from(result));
+
+    expect(outText).toContain('holding 60% of the Transfer Stock.');
   });
 });
 

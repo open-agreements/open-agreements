@@ -8,7 +8,11 @@ import AdmZip from 'adm-zip';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document, Element, Node } from '@xmldom/xmldom';
 import { createReport } from 'docx-templates';
-import { sanitizeCurrencyValuesFromDocx, BLANK_PLACEHOLDER } from './fill-utils.js';
+import {
+  sanitizeCurrencyValuesFromDocx,
+  sanitizePercentValuesFromDocx,
+  BLANK_PLACEHOLDER,
+} from './fill-utils.js';
 import {
   copyEntriesSkippingDirs,
   enumerateTextParts,
@@ -768,7 +772,8 @@ function stripBlankPlaceholderOnRuledLines(docxBuffer: Buffer): Buffer {
  * Fill a DOCX template with prepared data:
  * 1. Strip drafting note paragraphs (configurable, on by default)
  * 2. Strip highlighting from runs with filled fields (unfilled keep their highlight)
- * 3. Sanitize currency values by scanning the template buffer for ${field} patterns
+ * 3. Sanitize currency and percentage values by scanning the template buffer for
+ *    ${field} and {field}% patterns
  * 4. Call docx-templates createReport() with standard delimiters
  * 5. Remove structurally empty table rows left by conditional rendering
  * 6. Suppress the blank-fill placeholder on lines that already carry a rule
@@ -799,8 +804,13 @@ export async function fillDocx(options: FillDocxOptions): Promise<Uint8Array> {
   }
   templateBuffer = stripFilledHighlighting(templateBuffer, filledFields);
 
-  // Step 3: Strip leading $ from values where the template has ${ before the tag
-  const sanitizedData = sanitizeCurrencyValuesFromDocx(data, templateBuffer);
+  // Step 3: Strip the redundant sigil from values where the template already
+  // carries it — a leading $ where the template has ${ before the tag, and a
+  // trailing % where the template has a % after the tag.
+  const sanitizedData = sanitizePercentValuesFromDocx(
+    sanitizeCurrencyValuesFromDocx(data, templateBuffer),
+    templateBuffer
+  );
 
   // Step 4: Fill template
   const filled = await createReport({
