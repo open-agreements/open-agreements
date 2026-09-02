@@ -77,7 +77,12 @@ void _locatorTypeCheck;
 
 // ── Field selector manifest ─────────────────────────────────────────────
 
-export const POSTCONDITION_NAMES = ['no_unresolved_placeholder', 'all_occurrences_identical', 'no_double_dollar'] as const;
+export const POSTCONDITION_NAMES = [
+  'no_unresolved_placeholder',
+  'all_occurrences_identical',
+  'no_double_dollar',
+  'no_double_percent',
+] as const;
 export type PostconditionName = (typeof POSTCONDITION_NAMES)[number];
 
 export const FAILURE_BEHAVIORS = ['block_render_and_request_review', 'warn', 'skip'] as const;
