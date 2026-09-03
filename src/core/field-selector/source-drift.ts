@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import AdmZip from 'adm-zip';
 import type { NormalizeConfig, FieldSelectorMetadata } from '../metadata.js';
 import { parseReplacementKey } from './replacement-keys.js';
+import { extractAllText } from './verifier.js';
 import { resolveSelectorContracts, type FieldSelectorManifest } from '../selectors/index.js';
 
 const SHORT_PLACEHOLDER_MAX = 80;
@@ -132,6 +133,10 @@ function uniqueSorted(values: Iterable<string>): string[] {
   return [...new Set(values)].sort();
 }
 
+function normalizeAnchorWhitespace(value: string): string {
+  return value.replaceAll('\u00a0', ' ').replace(/\s+/g, ' ');
+}
+
 export function checkFieldSelectorSourceDrift(input: {
   fieldSelectorId: string;
   sourcePath: string;
@@ -144,6 +149,7 @@ export function checkFieldSelectorSourceDrift(input: {
   const { fieldSelectorId, sourcePath, metadata, replacements, normalizeConfig, selectorDrift } = input;
   const paragraphs = extractDocumentParagraphs(sourcePath);
   const documentText = paragraphs.join('\n');
+  const normalizedDocumentText = normalizeAnchorWhitespace(extractAllText(sourcePath));
   const actualSha = computeSha256Hex(sourcePath);
   const hashMatch = metadata.source_sha256 ? metadata.source_sha256 === actualSha : true;
 
@@ -159,7 +165,9 @@ export function checkFieldSelectorSourceDrift(input: {
   const missingReplacementGroups: string[] = [];
   for (const anchors of replacementGroups.values()) {
     const anchorList = [...anchors].sort((a, b) => a.length - b.length || a.localeCompare(b));
-    const hasAnyAnchor = anchorList.some((anchor) => documentText.includes(anchor));
+    const hasAnyAnchor = anchorList.some((anchor) =>
+      normalizedDocumentText.includes(normalizeAnchorWhitespace(anchor))
+    );
     if (!hasAnyAnchor) {
       missingReplacementGroups.push(anchorList[0]);
     }
