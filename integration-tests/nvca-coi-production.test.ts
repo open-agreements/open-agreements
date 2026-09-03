@@ -89,6 +89,29 @@ describeWithSource('NVCA COI production fill', () => {
     }
   }, 15_000);
 
+  it('uses a non-A series designation consistently in every operative reference', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'coi-production-series-b-'));
+    try {
+      const outputPath = join(dir, 'coi-series-b.docx');
+      const result = await runFieldSelector({
+        fieldSelectorId: FIELD_SELECTOR_ID,
+        outputPath,
+        values: { ...FIXTURE, series_designation: 'B' },
+      });
+      const text = extractAllText(outputPath);
+
+      expectCleanProductionOutput(text, result.warnings);
+      expect(text).toContain('designated as “Series B Preferred Stock”');
+      expect(text).toContain('References to “Preferred Stock” mean the Series B Preferred Stock');
+      expect(text).toContain('with respect to the Series B Preferred Stock, $2.50 per share');
+      expect(text).toContain('$2.50 per share of Series B Preferred Stock');
+      expect(text).toContain('first share of Series B Preferred Stock is issued');
+      expect(text).not.toContain('Series A Preferred Stock');
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  }, 15_000);
+
   it('renders cumulative, participating, full-ratchet, pay-to-play and redemption selections', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'coi-production-alternatives-'));
     try {
