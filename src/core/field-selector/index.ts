@@ -19,6 +19,7 @@ import { runFillPipeline } from '../unified-pipeline.js';
 import { formatDocumentDate } from '../fill-pipeline.js';
 import type { FieldSelectorRunOptions, FieldSelectorRunResult } from './types.js';
 import type { ComputedValueMap } from './computed.js';
+import { applyRepeatableTables, loadRepeatableTablesConfig, validateRepeatableTableFields } from './repeatable-tables.js';
 
 function toComputedValueMap(values: Record<string, unknown>): ComputedValueMap {
   const computedValues: ComputedValueMap = {};
@@ -45,6 +46,8 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
   const metadata = loadFieldSelectorMetadata(fieldSelectorDir);
   const cleanConfig = loadCleanConfig(fieldSelectorDir);
   const normalizeConfig = loadNormalizeConfig(fieldSelectorDir);
+  const repeatableTablesConfig = loadRepeatableTablesConfig(fieldSelectorDir);
+  if (repeatableTablesConfig) validateRepeatableTableFields(repeatableTablesConfig, metadata.fields);
 
   // Load selectionsConfig if selections.json exists (mirrors engine.ts template path)
   const selectionsPath = join(fieldSelectorDir, 'selections.json');
@@ -139,12 +142,17 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
     cleanPatch: { cleanConfig, replacements: patchReplacements },
     selectorManifests,
     selectionsConfig,
-    postProcess: shouldNormalizeBracketArtifacts
+    postProcess: repeatableTablesConfig || shouldNormalizeBracketArtifacts
       ? async (outputDocPath: string) => {
-        await normalizeBracketArtifacts(outputDocPath, outputDocPath, {
-          rules: normalizeConfig.paragraph_rules,
-          fieldValues: effectiveValues,
-        });
+        if (repeatableTablesConfig) {
+          applyRepeatableTables(outputDocPath, outputDocPath, repeatableTablesConfig, effectiveValues);
+        }
+        if (shouldNormalizeBracketArtifacts) {
+          await normalizeBracketArtifacts(outputDocPath, outputDocPath, {
+            rules: normalizeConfig.paragraph_rules,
+            fieldValues: effectiveValues,
+          });
+        }
       }
       : undefined,
     verify: async (p, cleanedSourcePath, referencedFields) => {
@@ -201,8 +209,17 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
   return {
     outputPath: result.outputPath,
     metadata,
-    fieldsUsed: result.fieldsUsed,
-    providedFieldsUsed: result.providedFieldsUsed,
+    fieldsUsed: repeatableTablesConfig
+      ? [...new Set([...result.fieldsUsed, ...repeatableTablesConfig.tables.map((table) => table.rows_field)])]
+      : result.fieldsUsed,
+    providedFieldsUsed: repeatableTablesConfig
+      ? [...new Set([
+        ...result.providedFieldsUsed,
+        ...repeatableTablesConfig.tables
+          .map((table) => table.rows_field)
+          .filter((field) => Object.hasOwn(inputValues, field)),
+      ])]
+      : result.providedFieldsUsed,
     fillCommandCount: result.fillCommandCount,
     warnings: result.warnings,
     stages: result.stages!,
@@ -222,3 +239,5 @@ export { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 export type { OoxmlTextParts } from './ooxml-parts.js';
 export type { FieldSelectorRunOptions, FieldSelectorRunResult, VerifyResult, VerifyCheck } from './types.js';
 export type { ComputedArtifact, ComputedProfile } from './computed.js';
+export { applyRepeatableTables, loadRepeatableTablesConfig, RepeatableTablesConfigSchema, validateRepeatableTableFields } from './repeatable-tables.js';
+export type { RepeatableTablesConfig } from './repeatable-tables.js';
