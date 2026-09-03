@@ -24,6 +24,8 @@ asset NvcaIndemnificationAgreement extends Contract {
   o String agreement_effective_date
   o String fund_sponsor_name optional
   o Indemnitee_role_scopeType indemnitee_role_scope default="directors_or_officers"
+  o String indemnitee_role_scope_plural optional
+  o String indemnitee_role_scope_singular optional
   o String indemnitee_pronoun_possessive default="its"
   o String bylaws_name default="Bylaws"
   o String certificate_name default="Certificate of Incorporation"

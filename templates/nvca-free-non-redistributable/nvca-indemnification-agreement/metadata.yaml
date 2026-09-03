@@ -41,6 +41,12 @@ fields:
       directors_or_officers option renders the NVCA recital as "directors or officers" and the later singular carrier
       as "an officer or director."
     default: directors_or_officers
+  - name: indemnitee_role_scope_plural
+    type: string
+    description: Computed plural role phrase derived from indemnitee_role_scope; do not supply directly
+  - name: indemnitee_role_scope_singular
+    type: string
+    description: Computed singular role phrase derived from indemnitee_role_scope; do not supply directly
   - name: indemnitee_pronoun_possessive
     type: string
     description: Possessive pronoun for the indemnitee entity (e.g. its)

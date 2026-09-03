@@ -11147,6 +11147,24 @@
           ]
         },
         {
+          "name": "indemnitee_role_scope_plural",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed plural role phrase derived from indemnitee_role_scope; do not supply directly",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "indemnitee_role_scope_singular",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed singular role phrase derived from indemnitee_role_scope; do not supply directly",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
           "name": "indemnitee_pronoun_possessive",
           "type": "string",
           "required": true,
