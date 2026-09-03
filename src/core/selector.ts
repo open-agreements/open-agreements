@@ -990,13 +990,7 @@ function processMarkerlessGroup(
               const rawText = extractParagraphText(markerPara);
               const rawIdx = normalizeQuotes(rawText).indexOf(normalizedMarker);
               if (rawIdx !== -1) {
-                const rawEdit = normalizeEmptyInlineRemovalSeam(
-                  rawText,
-                  rawIdx,
-                  rawIdx + normalizedMarker.length,
-                  replacement,
-                );
-                const newText = rawText.slice(0, rawEdit.start) + rawEdit.replacement + rawText.slice(rawEdit.end);
+                const newText = rawText.slice(0, edit.start) + edit.replacement + rawText.slice(edit.end);
                 replaceParagraphText(markerPara, newText);
                 madeChanges = true;
                 paraEdited = true;

@@ -673,6 +673,46 @@ describe('inline selections', () => {
     expect(extractText(outputPath)).toContain('Heading . Exhibit A, at Closing.');
   });
 
+  it('preserves spacing when an inline option is replaced with text', async () => {
+    const body = `${para('Exhibit A [optional], at Closing.')}`;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+    const config: SelectionsConfig = {
+      groups: [{
+        id: 'nonempty_replacement',
+        type: 'checkbox',
+        standalone: true,
+        markerless: true,
+        inline: true,
+        options: [{ marker: '[optional]', trigger: { field: 'keep_optional' }, replaceWith: 'Schedule 1' }],
+      }],
+    };
+
+    await applySelections(inputPath, outputPath, config, {});
+
+    expect(extractText(outputPath)).toContain('Exhibit A Schedule 1, at Closing.');
+  });
+
+  it('preserves ordinary word spacing when no punctuation follows the removal', async () => {
+    const body = `${para('Before [optional] after.')}`;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+    const config: SelectionsConfig = {
+      groups: [{
+        id: 'word_seam',
+        type: 'checkbox',
+        standalone: true,
+        markerless: true,
+        inline: true,
+        options: [{ marker: '[optional]', trigger: { field: 'keep_optional' }, replaceWith: '' }],
+      }],
+    };
+
+    await applySelections(inputPath, outputPath, config, {});
+
+    expect(extractText(outputPath)).toContain('Before  after.');
+  });
+
   it('deletes inline marker text when trigger does not fire', async () => {
     const body = `
       ${para('Purchase at the Closing). , [Each Purchaser shall buy Tranche Shares.] The Company agrees.')}
