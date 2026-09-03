@@ -23,6 +23,32 @@ function normalizeQuotes(text: string): string {
     .replace(/[\u201C\u201D\u201A\u201E\u00AB\u00BB]/g, '"');
 }
 
+/**
+ * Keep punctuation attached when an inline option is removed.
+ *
+ * An option such as `Exhibit A [optional], at Closing` owns neither adjacent
+ * character. Deleting only the bracketed marker otherwise leaves `Exhibit A ,`.
+ * Expand the edit across whitespace on the left only when punctuation is the
+ * first surviving character on the right. This is deliberately seam-local:
+ * pre-existing spacing elsewhere in a licensed source is not rewritten.
+ */
+function normalizeEmptyInlineRemovalSeam(
+  paragraphText: string,
+  start: number,
+  end: number,
+  replacement: string,
+): { start: number; end: number; replacement: string } {
+  if (replacement !== '' || !/[,.;:!?]/.test(paragraphText[end] ?? '')) {
+    return { start, end, replacement };
+  }
+
+  let normalizedStart = start;
+  while (normalizedStart > 0 && /[ \t\u00a0]/.test(paragraphText[normalizedStart - 1])) {
+    normalizedStart--;
+  }
+  return { start: normalizedStart, end, replacement };
+}
+
 // ---------------------------------------------------------------------------
 // Schema
 // ---------------------------------------------------------------------------
@@ -948,8 +974,14 @@ function processMarkerlessGroup(
         while (safety++ < 50) {
           const idx = text.indexOf(normalizedMarker);
           if (idx === -1) break;
+          const edit = normalizeEmptyInlineRemovalSeam(
+            text,
+            idx,
+            idx + normalizedMarker.length,
+            replacement,
+          );
           try {
-            replaceParagraphTextRange(globalPara, idx, idx + normalizedMarker.length, replacement);
+            replaceParagraphTextRange(globalPara, edit.start, edit.end, edit.replacement);
             madeChanges = true;
             paraEdited = true;
           } catch (e) {
@@ -958,7 +990,13 @@ function processMarkerlessGroup(
               const rawText = extractParagraphText(markerPara);
               const rawIdx = normalizeQuotes(rawText).indexOf(normalizedMarker);
               if (rawIdx !== -1) {
-                const newText = rawText.slice(0, rawIdx) + replacement + rawText.slice(rawIdx + normalizedMarker.length);
+                const rawEdit = normalizeEmptyInlineRemovalSeam(
+                  rawText,
+                  rawIdx,
+                  rawIdx + normalizedMarker.length,
+                  replacement,
+                );
+                const newText = rawText.slice(0, rawEdit.start) + rawEdit.replacement + rawText.slice(rawEdit.end);
                 replaceParagraphText(markerPara, newText);
                 madeChanges = true;
                 paraEdited = true;

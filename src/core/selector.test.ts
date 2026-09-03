@@ -598,6 +598,81 @@ describe('markerless selections', () => {
 // ---------------------------------------------------------------------------
 
 describe('inline selections', () => {
+  it('removes whitespace before punctuation at an empty inline-removal seam', async () => {
+    const body = `
+      ${para('Exhibit A [with respect to such Closing], at a purchase price per share [or other price], subject to adjustment.')}
+    `;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+
+    const config: SelectionsConfig = {
+      groups: [{
+        id: 'closing_inline',
+        type: 'checkbox',
+        standalone: true,
+        markerless: true,
+        inline: true,
+        options: [
+          { marker: '[with respect to such Closing]', trigger: { field: 'keep_closing' }, replaceWith: '' },
+          { marker: '[or other price]', trigger: { field: 'keep_other_price' }, replaceWith: '' },
+        ],
+      }],
+    };
+
+    await applySelections(inputPath, outputPath, config, {});
+
+    const text = extractText(outputPath);
+    expect(text).toContain('Exhibit A, at a purchase price per share, subject to adjustment.');
+    expect(text).not.toMatch(/\s[,.;:!?]/);
+  });
+
+  it('normalizes an empty inline-removal seam split across Word runs', async () => {
+    const body = `
+      <w:p xmlns:w="${W_NS}">
+        <w:r><w:t xml:space="preserve">Exhibit A </w:t></w:r>
+        <w:r><w:t>[optional]</w:t></w:r>
+        <w:r><w:t xml:space="preserve">, at Closing.</w:t></w:r>
+      </w:p>
+    `;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+
+    const config: SelectionsConfig = {
+      groups: [{
+        id: 'split_run_inline',
+        type: 'checkbox',
+        standalone: true,
+        markerless: true,
+        inline: true,
+        options: [{ marker: '[optional]', trigger: { field: 'keep_optional' }, replaceWith: '' }],
+      }],
+    };
+
+    await applySelections(inputPath, outputPath, config, {});
+
+    expect(extractText(outputPath)).toContain('Exhibit A, at Closing.');
+  });
+
+  it('does not rewrite unrelated source spacing away from the removal seam', async () => {
+    const body = `${para('Heading . Exhibit A [optional], at Closing.')}`;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+    const config: SelectionsConfig = {
+      groups: [{
+        id: 'seam_only',
+        type: 'checkbox',
+        standalone: true,
+        markerless: true,
+        inline: true,
+        options: [{ marker: '[optional]', trigger: { field: 'keep_optional' }, replaceWith: '' }],
+      }],
+    };
+
+    await applySelections(inputPath, outputPath, config, {});
+
+    expect(extractText(outputPath)).toContain('Heading . Exhibit A, at Closing.');
+  });
+
   it('deletes inline marker text when trigger does not fire', async () => {
     const body = `
       ${para('Purchase at the Closing). , [Each Purchaser shall buy Tranche Shares.] The Company agrees.')}
