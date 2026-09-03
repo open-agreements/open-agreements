@@ -2,6 +2,11 @@ namespace org.openagreements.nvca.nvcarofrcosaleagreement@1.0.0
 
 import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
 
+enum Competitor_exclusion_modeType {
+  o none
+  o named
+}
+
 /**
  * NVCA Model Right of First Refusal and Co-Sale Agreement
  *
@@ -29,4 +34,14 @@ asset NvcaRofrCoSaleAgreement extends Contract {
   o String key_holders_label default="Key Holders"
   o String series_designation default=""
   o String par_value default="0.0001"
+  o Competitor_exclusion_modeType competitor_exclusion_mode default="none"
+  o String excluded_competitor_name default=""
+  o String investor_minimum_shares optional
+  o String permitted_transfer_percentage optional
+  o String key_holder_consent_threshold_percentage optional
+  o String permitted_transferee_minimum_shares optional
+  o String investor_minimum_shares_display default=""
+  o String permitted_transfer_percentage_display default=""
+  o String key_holder_consent_threshold_percentage_display default=""
+  o String permitted_transferee_minimum_shares_display default=""
 }

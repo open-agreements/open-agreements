@@ -11330,6 +11330,77 @@
           "default_value_rationale": null
         },
         {
+          "name": "competitor_exclusion_mode",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Whether to identify a person whose group is expressly excluded from the Competitor definition",
+          "default": "none",
+          "default_value_rationale": null,
+          "options": [
+            "none",
+            "named"
+          ]
+        },
+        {
+          "name": "excluded_competitor_name",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Name expressly excluded from the Competitor definition when competitor_exclusion_mode is named",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "major_investor_threshold_shares",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Minimum number of Registrable Securities required to qualify as a Major Investor",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "board_observer_investor_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Investor entitled to designate the nonvoting board observer",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "board_observer_threshold_shares",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Minimum Preferred Stock holdings required to retain the board observer right",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "transferee_eligibility_standard",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Standard a non-Affiliate transferee must satisfy to receive registration rights under Section 6.1",
+          "default": "major_investor",
+          "default_value_rationale": null,
+          "options": [
+            "minimum_shares",
+            "major_investor"
+          ]
+        },
+        {
+          "name": "transferee_minimum_shares",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Minimum Registrable Securities a transferee must hold when the Section 6.1 minimum-shares standard applies",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
           "name": "signature_page_marker",
           "type": "string",
           "required": false,
@@ -11667,6 +11738,100 @@
           "section": null,
           "description": "Par value per share of common and preferred stock (number only, e.g. 0.0001 — the document supplies the dollar sign)",
           "default": "0.0001",
+          "default_value_rationale": null
+        },
+        {
+          "name": "competitor_exclusion_mode",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Whether to identify a person whose group is expressly excluded from the Competitor definition",
+          "default": "none",
+          "default_value_rationale": null,
+          "options": [
+            "none",
+            "named"
+          ]
+        },
+        {
+          "name": "excluded_competitor_name",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Name expressly excluded from the Competitor definition when competitor_exclusion_mode is named",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_minimum_shares",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Minimum shares an Investor and its affiliates must collectively hold to retain Investor status under the agreement",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "permitted_transfer_percentage",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Percentage of Transfer Stock that a Key Holder may sell under the optional permitted-transfer exception, as a number only",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "key_holder_consent_threshold_percentage",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Capital Stock ownership percentage below which Key Holder consent is not required, as a number only",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "permitted_transferee_minimum_shares",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Minimum shares an assignee or transferee must hold after transfer to receive assignment rights, including digit grouping",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_minimum_shares_display",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed Investor minimum-share threshold or a visible insertion marker; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "permitted_transfer_percentage_display",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed permitted-transfer percentage or a visible insertion marker; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "key_holder_consent_threshold_percentage_display",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed Key Holder consent threshold percentage or a visible insertion marker; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "permitted_transferee_minimum_shares_display",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed permitted-transferee minimum-share threshold or a visible insertion marker; do not supply directly",
+          "default": "",
           "default_value_rationale": null
         }
       ]
@@ -12221,6 +12386,91 @@
           "required": true,
           "section": null,
           "description": "Name of the key holder (typically founder/CEO)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "preferred_director_eligibility_basis",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Select whether the preferred-director designation right continues based on a minimum share count or a minimum as-converted ownership percentage",
+          "default": "minimum_shares",
+          "default_value_rationale": null,
+          "options": [
+            "minimum_shares",
+            "minimum_percentage"
+          ]
+        },
+        {
+          "name": "preferred_director_minimum_shares",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Minimum Preferred Stock shares required when preferred_director_eligibility_basis is minimum_shares (number only); otherwise leave empty",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "preferred_director_minimum_percentage",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Minimum as-converted ownership percentage required when preferred_director_eligibility_basis is minimum_percentage (number only, for example, 5); otherwise leave empty",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "preferred_director_minimum_shares_display",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed active share-count threshold or a visible insertion marker; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "preferred_director_minimum_percentage_display",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed active number-only percentage threshold or a visible insertion marker; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "preferred_director_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Initial preferred director named in the selected board-composition provision",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "common_director_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Initial common director, used in both the Qualified Key Holder designation and named-director alternatives",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "ceo_director_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Chief Executive Officer serving as the initial CEO Director",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "mutual_director_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Initial independent mutual director designated by the other seated directors",
           "default": null,
           "default_value_rationale": null
         },

@@ -1,0 +1,70 @@
+{
+  "version": "1.0",
+  "max_passes": 1,
+  "rules": [
+    {
+      "id": "investor-minimum-shares-present",
+      "when_all": [{ "field": "investor_minimum_shares", "op": "truthy" }],
+      "set_fill": { "investor_minimum_shares_display": "${investor_minimum_shares}" }
+    },
+    {
+      "id": "investor-minimum-shares-missing",
+      "when_all": [{ "field": "investor_minimum_shares", "op": "falsy" }],
+      "set_fill": { "investor_minimum_shares_display": "[INSERT INVESTOR MINIMUM SHARES]" }
+    },
+    {
+      "id": "permitted-transfer-percentage-present",
+      "when_all": [{ "field": "permitted_transfer_percentage", "op": "truthy" }],
+      "set_fill": { "permitted_transfer_percentage_display": "${permitted_transfer_percentage}" }
+    },
+    {
+      "id": "permitted-transfer-percentage-missing",
+      "when_all": [{ "field": "permitted_transfer_percentage", "op": "falsy" }],
+      "set_fill": { "permitted_transfer_percentage_display": "[INSERT PERMITTED TRANSFER PERCENTAGE]" }
+    },
+    {
+      "id": "key-holder-consent-threshold-present",
+      "when_all": [{ "field": "key_holder_consent_threshold_percentage", "op": "truthy" }],
+      "set_fill": { "key_holder_consent_threshold_percentage_display": "${key_holder_consent_threshold_percentage}" }
+    },
+    {
+      "id": "key-holder-consent-threshold-missing",
+      "when_all": [{ "field": "key_holder_consent_threshold_percentage", "op": "falsy" }],
+      "set_fill": { "key_holder_consent_threshold_percentage_display": "[INSERT KEY HOLDER CONSENT THRESHOLD PERCENTAGE]" }
+    },
+    {
+      "id": "permitted-transferee-minimum-shares-present",
+      "when_all": [{ "field": "permitted_transferee_minimum_shares", "op": "truthy" }],
+      "set_fill": { "permitted_transferee_minimum_shares_display": "${permitted_transferee_minimum_shares}" }
+    },
+    {
+      "id": "permitted-transferee-minimum-shares-missing",
+      "when_all": [{ "field": "permitted_transferee_minimum_shares", "op": "falsy" }],
+      "set_fill": { "permitted_transferee_minimum_shares_display": "[INSERT PERMITTED TRANSFEREE MINIMUM SHARES]" }
+    },
+    {
+      "id": "competitor-exclusion-omitted",
+      "description": "Omit the optional named-person exclusion from the Competitor definition",
+      "when_all": [{ "field": "competitor_exclusion_mode", "op": "neq", "value": "named" }],
+      "set_fill": { "competitor_exclusion_clause": "" }
+    },
+    {
+      "id": "competitor-exclusion-named-empty",
+      "description": "Safely omit the optional exclusion when named mode has no person name",
+      "when_all": [
+        { "field": "competitor_exclusion_mode", "op": "eq", "value": "named" },
+        { "field": "excluded_competitor_name", "op": "falsy" }
+      ],
+      "set_fill": { "competitor_exclusion_clause": "" }
+    },
+    {
+      "id": "competitor-exclusion-named",
+      "description": "Render the negotiated named-person exclusion from the Competitor definition",
+      "when_all": [
+        { "field": "competitor_exclusion_mode", "op": "eq", "value": "named" },
+        { "field": "excluded_competitor_name", "op": "truthy" }
+      ],
+      "set_fill": { "competitor_exclusion_clause": "Additionally, in no event shall ${excluded_competitor_name} or its Affiliates be a Competitor hereunder." }
+    }
+  ]
+}

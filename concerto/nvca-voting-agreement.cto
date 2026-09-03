@@ -10,11 +10,25 @@ import org.accordproject.contract.Contract from https://models.accordproject.org
  * Source: https://nvca.org/wp-content/uploads/2024/10/NVCA-Model-VA-10-1-2025.docx
  */
 
+enum Preferred_director_eligibility_basisType {
+  o minimum_shares
+  o minimum_percentage
+}
+
 asset NvcaVotingAgreement extends Contract {
   o String company_name
   o String investor_name
   o String investor_2_name optional
   o String key_holder_name
+  o Preferred_director_eligibility_basisType preferred_director_eligibility_basis default="minimum_shares"
+  o String preferred_director_minimum_shares default=""
+  o String preferred_director_minimum_percentage default=""
+  o String preferred_director_minimum_shares_display default=""
+  o String preferred_director_minimum_percentage_display default=""
+  o String preferred_director_name
+  o String common_director_name
+  o String ceo_director_name
+  o String mutual_director_name
   o String effective_date
   o String company_counsel
   o String counsel_cc default=""
