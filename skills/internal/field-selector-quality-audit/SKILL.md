@@ -114,6 +114,11 @@ When running the audit:
 - Use `validateFieldSelectorMetadata()` from `src/core/metadata.ts` for S2
 - Use `ensureSourceDocx()` from `src/core/field-selector/downloader.ts` for B1-B4
 - Use `runFieldSelector()` from `src/core/field-selector/index.ts` for F1-F4
-- Bracket pattern detection uses `\[[_A-Z]` prefix to avoid counting citations and legal references
+- Bracket pattern detection uses a two-or-more-character `\[[_A-Z][_A-Z\s]+\]` shape for re-audited NVCA selectors to avoid counting citations, legal references, and single-letter exhibit references
 - Zero-match keys come from `PatchResult.zeroMatchKeys` returned by the patcher
 - Cross-reference zero-match keys with `cleanConfig.removeRanges` and `cleanConfig.removeParagraphPatterns` to suppress expected zero-matches
+
+> **Corrected 2026-09-02.** The first placeholder-only pattern admitted one-letter
+> exhibit references such as `[E]`, depressing coverage even though they are not
+> fill sites. Re-audited NVCA selectors now require at least two characters inside
+> the bracket; underscore blanks such as `[__]` remain in scope.
