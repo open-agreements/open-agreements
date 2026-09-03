@@ -8,20 +8,36 @@ import type { FieldDefinition } from '../metadata.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
-const ColumnSchema = z.object({
+const ValueSchema = z.object({
   field: z.string().min(1),
   format: z.enum(['text', 'integer', 'decimal', 'currency']).default('text'),
 }).strict();
 
-const TableSchema = z.object({
+const ColumnSchema = z.union([
+  ValueSchema,
+  z.object({ paragraphs: z.array(ValueSchema).min(1) }).strict(),
+]);
+
+const TableBaseSchema = z.object({
   id: z.string().min(1),
   rows_field: z.string().min(1),
-  header_cells: z.array(z.string()).min(1),
   columns: z.array(ColumnSchema).min(1),
+});
+
+const HeaderTableSchema = TableBaseSchema.extend({
+  header_cells: z.array(z.string()).min(1),
   prototype_row_index: z.number().int().positive().optional(),
 }).strict().refine((table) => table.header_cells.length === table.columns.length, {
   message: 'header_cells and columns must have the same length',
 });
+
+const PrototypeTableSchema = TableBaseSchema.extend({
+  prototype_cells: z.array(z.string()).min(1),
+}).strict().refine((table) => table.prototype_cells.length === table.columns.length, {
+  message: 'prototype_cells and columns must have the same length',
+});
+
+const TableSchema = z.union([HeaderTableSchema, PrototypeTableSchema]);
 
 export const RepeatableTablesConfigSchema = z.object({
   schema_version: z.literal(1),
@@ -45,8 +61,11 @@ export function validateRepeatableTableFields(config: RepeatableTablesConfig, fi
     }
     const itemNames = new Set(rowsField.items.map((item) => item.name));
     for (const column of table.columns) {
-      if (!itemNames.has(column.field)) {
-        throw new Error(`repeatable table "${table.id}" column field "${column.field}" is not declared in ${table.rows_field}.items`);
+      const values = 'paragraphs' in column ? column.paragraphs : [column];
+      for (const value of values) {
+        if (!itemNames.has(value.field)) {
+          throw new Error(`repeatable table "${table.id}" column field "${value.field}" is not declared in ${table.rows_field}.items`);
+        }
       }
     }
   }
@@ -66,7 +85,7 @@ function textOf(element: XmlElement): string {
     .trim();
 }
 
-function formatValue(value: unknown, format: z.infer<typeof ColumnSchema>['format']): string {
+function formatValue(value: unknown, format: z.infer<typeof ValueSchema>['format']): string {
   if (value === null || value === undefined || value === '') return '';
   if (format === 'text') return String(value);
   const number = typeof value === 'number' ? value : Number(String(value).replace(/[$,]/g, ''));
@@ -74,6 +93,20 @@ function formatValue(value: unknown, format: z.infer<typeof ColumnSchema>['forma
   if (format === 'integer') return new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 }).format(number);
   if (format === 'currency') return new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(number);
   return new Intl.NumberFormat('en-US', { maximumFractionDigits: 8 }).format(number);
+}
+
+function setParagraphText(doc: XmlDocument, paragraph: XmlElement, value: string): void {
+  const runs = directChildren(paragraph, 'r');
+  const run = runs[0] ?? doc.createElementNS(W_NS, 'w:r');
+  if (run.parentNode === null) paragraph.appendChild(run);
+  for (const child of Array.from(run.childNodes)) {
+    if (child.nodeType === 1 && (child as XmlElement).localName !== 'rPr') run.removeChild(child);
+  }
+  const text = doc.createElementNS(W_NS, 'w:t');
+  if (/^\s|\s$/.test(value)) text.setAttribute('xml:space', 'preserve');
+  text.appendChild(doc.createTextNode(value));
+  run.appendChild(text);
+  for (const extra of runs.slice(1)) paragraph.removeChild(extra);
 }
 
 function setCellText(doc: XmlDocument, cell: XmlElement, value: string): void {
@@ -97,6 +130,23 @@ function setCellText(doc: XmlDocument, cell: XmlElement, value: string): void {
     paragraph.appendChild(run);
   });
   for (const extra of paragraphs.slice(1)) cell.removeChild(extra);
+}
+
+function setCellParagraphs(
+  doc: XmlDocument,
+  cell: XmlElement,
+  mappings: Array<z.infer<typeof ValueSchema>>,
+  row: Record<string, unknown>,
+  tableId: string,
+): void {
+  const paragraphs = directChildren(cell, 'p');
+  if (paragraphs.length < mappings.length) {
+    throw new Error(`repeatable table "${tableId}" prototype cell has ${paragraphs.length} paragraphs; expected at least ${mappings.length}`);
+  }
+  mappings.forEach((mapping, index) => {
+    setParagraphText(doc, paragraphs[index], formatValue(row[mapping.field], mapping.format));
+  });
+  for (const extra of paragraphs.slice(mappings.length)) cell.removeChild(extra);
 }
 
 function isBlankRow(row: XmlElement): boolean {
@@ -126,27 +176,38 @@ export function applyRepeatableTables(
 
   for (const binding of config.tables) {
     const candidates = tables.filter((table) => {
-      const header = directChildren(table, 'tr')[0];
-      if (!header) return false;
-      return directChildren(header, 'tc').map(textOf).every((text, index) => text === binding.header_cells[index])
-        && directChildren(header, 'tc').length === binding.header_cells.length;
+      const firstRow = directChildren(table, 'tr')[0];
+      if (!firstRow) return false;
+      const expected = 'header_cells' in binding ? binding.header_cells : binding.prototype_cells;
+      const cells = directChildren(firstRow, 'tc').map(textOf);
+      return cells.length === expected.length && cells.every((text, index) => text === expected[index]);
     });
     if (candidates.length !== 1) {
       throw new Error(`repeatable table "${binding.id}" matched ${candidates.length} tables; expected exactly one`);
     }
     const table = candidates[0];
     const rows = directChildren(table, 'tr');
-    if (binding.prototype_row_index === undefined) {
+    const isHeaderTable = 'header_cells' in binding;
+    if (isHeaderTable && binding.prototype_row_index === undefined) {
       const nonblank = rows.slice(1).find((row) => !isBlankRow(row));
       if (nonblank) {
         throw new Error(`repeatable table "${binding.id}" has a nonblank post-header row; use an explicit prototype_row_index or remove stale data`);
       }
     }
-    const prototype = binding.prototype_row_index === undefined
+    if (!isHeaderTable) {
+      const inconsistent = rows.find((row) => {
+        const cells = directChildren(row, 'tc').map(textOf);
+        return cells.length !== binding.prototype_cells.length
+          || cells.some((text, index) => text !== binding.prototype_cells[index]);
+      });
+      if (inconsistent) throw new Error(`repeatable table "${binding.id}" has a row that does not match prototype_cells`);
+    }
+    const explicitPrototypeIndex = isHeaderTable ? binding.prototype_row_index : undefined;
+    const prototype = isHeaderTable && explicitPrototypeIndex === undefined
       ? rows[0].cloneNode(true) as XmlElement
-      : rows[binding.prototype_row_index];
-    if (!prototype) throw new Error(`repeatable table "${binding.id}" has no prototype row at index ${binding.prototype_row_index}`);
-    if (binding.prototype_row_index === undefined) stripHeaderSemantics(prototype);
+      : rows[explicitPrototypeIndex ?? 0];
+    if (!prototype) throw new Error(`repeatable table "${binding.id}" has no prototype row at index ${explicitPrototypeIndex ?? 0}`);
+    if (isHeaderTable && explicitPrototypeIndex === undefined) stripHeaderSemantics(prototype);
     const prototypeCells = directChildren(prototype, 'tc');
     if (prototypeCells.length !== binding.columns.length) {
       throw new Error(`repeatable table "${binding.id}" prototype has ${prototypeCells.length} cells; expected ${binding.columns.length}`);
@@ -161,14 +222,17 @@ export function applyRepeatableTables(
       const cells = directChildren(row, 'tc');
       for (let columnIndex = 0; columnIndex < binding.columns.length; columnIndex++) {
         const column = binding.columns[columnIndex];
-        setCellText(doc, cells[columnIndex], formatValue((rawRow as Record<string, unknown>)[column.field], column.format));
+        if ('paragraphs' in column) {
+          setCellParagraphs(doc, cells[columnIndex], column.paragraphs, rawRow as Record<string, unknown>, binding.id);
+        } else {
+          setCellText(doc, cells[columnIndex], formatValue((rawRow as Record<string, unknown>)[column.field], column.format));
+        }
       }
       table.appendChild(row);
     }
-    for (const row of rows.slice(1)) {
-      if (binding.prototype_row_index === undefined ? isBlankRow(row) : row === prototype) {
-        table.removeChild(row);
-      }
+    const sourceRows = isHeaderTable ? rows.slice(1) : rows;
+    for (const row of sourceRows) {
+      if (!isHeaderTable || explicitPrototypeIndex === undefined ? (!isHeaderTable || isBlankRow(row)) : row === prototype) table.removeChild(row);
     }
   }
 
