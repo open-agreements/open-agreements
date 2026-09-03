@@ -152,15 +152,41 @@ function checkS3FieldCoverage(fieldSelectorDir: string): {
     };
   }
 
-  const replacements: Record<string, string> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
+  const replacements: Record<string, unknown> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
   const referencedFields = new Set<string>();
   for (const value of Object.values(replacements)) {
+    if (typeof value !== 'string') continue;
     for (const match of value.matchAll(/\{([a-zA-Z0-9_]+)\}/g)) {
       referencedFields.add(match[1]);
     }
   }
 
-  // Also check computed.json for field references
+  // Selector-contract fields are first-class fill sites.  Once a legacy key is
+  // migrated, the runtime deliberately removes it from the patcher dictionary,
+  // so replacements.json alone is no longer a complete coverage inventory.
+  const fieldsDir = join(fieldSelectorDir, 'fields');
+  if (existsSync(fieldsDir)) {
+    for (const file of readdirSync(fieldsDir).filter((f) => f.endsWith('.json'))) {
+      const manifest = JSON.parse(readFileSync(join(fieldsDir, file), 'utf-8'));
+      if (typeof manifest.field_id === 'string') referencedFields.add(manifest.field_id);
+    }
+  }
+
+  // Selection trigger fields are active control fields: they intentionally do
+  // not render as text, but determine which legal alternative reaches fill.
+  const selectionsPath = join(fieldSelectorDir, 'selections.json');
+  if (existsSync(selectionsPath)) {
+    const selections = JSON.parse(readFileSync(selectionsPath, 'utf-8'));
+    for (const group of selections.groups ?? []) {
+      for (const option of group.options ?? []) {
+        if (option.trigger && typeof option.trigger === 'object' && typeof option.trigger.field === 'string') {
+          referencedFields.add(option.trigger.field);
+        }
+      }
+    }
+  }
+
+  // Also check computed.json for input fields consumed by predicates/templates.
   const computedPath = join(fieldSelectorDir, 'computed.json');
   if (existsSync(computedPath)) {
     const computed = JSON.parse(readFileSync(computedPath, 'utf-8'));
@@ -174,7 +200,8 @@ function checkS3FieldCoverage(fieldSelectorDir: string): {
         for (const pred of [...(rule.when_all ?? []), ...(rule.when_any ?? [])]) {
           if (pred.field) referencedFields.add(pred.field);
         }
-        // set_fill values reference field names too
+        // set_fill values reference source field names too.  The set_fill key
+        // itself may be synthetic and therefore is not metadata coverage.
         if (rule.set_fill) {
           for (const val of Object.values(rule.set_fill)) {
             if (typeof val === 'string') {
@@ -201,7 +228,7 @@ function checkS3FieldCoverage(fieldSelectorDir: string): {
       score,
       details: uncovered.length > 0
         ? `${covered}/${fieldNames.size} fields covered. Uncovered: ${uncovered.join(', ')}`
-        : `All ${fieldNames.size} fields referenced in replacements`,
+        : `All ${fieldNames.size} fields referenced by replacements, selector manifests, selections, or computed rules`,
     },
     coverage: {
       metadata_fields: fieldNames.size,
@@ -291,8 +318,20 @@ async function checkB2CoverageRatio(
     const sourcePath = await ensureSourceDocx(fieldSelectorId, meta);
     const text = extractAllText(sourcePath);
 
-    // All bracket patterns in source
-    const bracketPatterns = [...new Set(text.match(/\[[^\]]+\]/g) ?? [])];
+    // Re-audited NVCA selectors use the placeholder-only population. Require at
+    // least two characters so exhibit references such as "[E]" are not graded
+    // as fill placeholders.
+    const strictPlaceholderCoverage = new Set([
+      'nvca-stock-purchase-agreement',
+      'nvca-certificate-of-incorporation',
+      'nvca-investors-rights-agreement',
+      'nvca-voting-agreement',
+      'nvca-rofr-co-sale-agreement',
+      'nvca-indemnification-agreement',
+      'nvca-management-rights-letter',
+    ]).has(fieldSelectorId);
+    const populationPattern = strictPlaceholderCoverage ? /\[[_A-Z][_A-Z\s]+\]/g : /\[[^\]]+\]/g;
+    const bracketPatterns = [...new Set(text.match(populationPattern) ?? [])];
     if (bracketPatterns.length === 0) {
       return { id: 'B2', name: 'Coverage ratio', passed: true, details: 'No bracket patterns in source' };
     }
@@ -301,7 +340,7 @@ async function checkB2CoverageRatio(
     if (!existsSync(replacementsPath)) {
       return { id: 'B2', name: 'Coverage ratio', passed: false, details: 'No replacements.json' };
     }
-    const replacements: Record<string, string> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
+    const replacements: Record<string, string | { value: string; format?: Record<string, unknown> }> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
     const replacementKeys = Object.keys(replacements);
 
     // Count how many bracket patterns are covered by replacement keys
@@ -324,7 +363,7 @@ async function checkB2CoverageRatio(
     return {
       id: 'B2',
       name: 'Coverage ratio',
-      passed: ratio >= 0.7,
+      passed: strictPlaceholderCoverage ? ratio > 0.8 : ratio >= 0.7,
       score: ratio,
       details: `${covered}/${bracketPatterns.length} bracket patterns covered (${(ratio * 100).toFixed(1)}%)`,
     };
@@ -418,38 +457,31 @@ async function checkF1DefaultFill(
   try {
     const defaults = buildDefaultValues(fieldSelectorDir);
     const outPath = join(outputDir, `${fieldSelectorId}-defaults-fill.docx`);
-    await runFieldSelector({
+    const run = await runFieldSelector({
       fieldSelectorId,
       outputPath: outPath,
       values: defaults,
     });
 
-    // Clean source for formatting anomaly baseline
-    const meta = loadFieldSelectorMetadata(fieldSelectorDir);
-    const cleanConfig = loadCleanConfig(fieldSelectorDir);
-    const sourcePath = await ensureSourceDocx(fieldSelectorId, meta);
-    const cleanedSourcePath = join(tempDir, 'cleaned-source.docx');
-    await cleanDocument(sourcePath, cleanedSourcePath, cleanConfig);
-
-    const replacementsPath = join(fieldSelectorDir, 'replacements.json');
-    const replacements: Record<string, string> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
-    const result = await verifyOutput(outPath, defaults, replacements, cleanConfig, cleanedSourcePath);
-
-    const failedChecks = result.checks.filter((c) => !c.passed);
-    const totalVerify = result.checks.length;
-    const passedVerify = totalVerify - failedChecks.length;
-    const score = totalVerify > 0 ? passedVerify / totalVerify : (result.passed ? 1.0 : 0.0);
+    // runFieldSelector verifies the exact post-selection buffer and limits
+    // value-presence checks to active fields (including normalize/computed
+    // output).  Re-verifying here with the raw value map produced false
+    // failures for fields whose alternative was intentionally removed.
+    const verifyWarnings = run.warnings.filter(
+      (warning) => warning.startsWith('verify:') || warning.includes('no machine-fillable fields'),
+    );
+    const passed = verifyWarnings.length === 0;
     return {
       check: {
         id: 'F1',
         name: 'Default-only fill',
-        passed: result.passed,
-        score,
-        details: failedChecks.length > 0
-          ? `${failedChecks.length} verify check(s) failed: ${failedChecks.map((c) => c.name).join(', ')}`
+        passed,
+        score: passed ? 1 : 0,
+        details: verifyWarnings.length > 0
+          ? `${verifyWarnings.length} active-pipeline verify check(s) failed: ${verifyWarnings.join('; ')}`
           : 'Default-only fill passed all verify checks',
       },
-      verifyResult: result,
+      verifyResult: null,
     };
   } catch (err) {
     return {
@@ -484,38 +516,27 @@ async function checkF2FullFill(
     const defaults = buildDefaultValues(fieldSelectorDir);
     const merged = { ...defaults, ...fixtureValues };
     const outPath = join(outputDir, `${fieldSelectorId}-full-fill.docx`);
-    await runFieldSelector({
+    const run = await runFieldSelector({
       fieldSelectorId,
       outputPath: outPath,
       values: merged,
     });
 
-    // Clean source for formatting anomaly baseline
-    const meta = loadFieldSelectorMetadata(fieldSelectorDir);
-    const cleanConfig = loadCleanConfig(fieldSelectorDir);
-    const sourcePath = await ensureSourceDocx(fieldSelectorId, meta);
-    const cleanedSourcePath = join(tempDir, 'cleaned-source.docx');
-    await cleanDocument(sourcePath, cleanedSourcePath, cleanConfig);
-
-    const replacementsPath = join(fieldSelectorDir, 'replacements.json');
-    const replacements: Record<string, string> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
-    const result = await verifyOutput(outPath, merged, replacements, cleanConfig, cleanedSourcePath);
-
-    const failedChecks = result.checks.filter((c) => !c.passed);
-    const totalVerify = result.checks.length;
-    const passedVerify = totalVerify - failedChecks.length;
-    const score = totalVerify > 0 ? passedVerify / totalVerify : (result.passed ? 1.0 : 0.0);
+    const verifyWarnings = run.warnings.filter(
+      (warning) => warning.startsWith('verify:') || warning.includes('no machine-fillable fields'),
+    );
+    const passed = verifyWarnings.length === 0;
     return {
       check: {
         id: 'F2',
         name: 'Full-values fill',
-        passed: result.passed,
-        score,
-        details: failedChecks.length > 0
-          ? `${failedChecks.length} verify check(s) failed: ${failedChecks.map((c) => `${c.name}${c.details ? ` (${c.details})` : ''}`).join('; ')}`
+        passed,
+        score: passed ? 1 : 0,
+        details: verifyWarnings.length > 0
+          ? `${verifyWarnings.length} active-pipeline verify check(s) failed: ${verifyWarnings.join('; ')}`
           : 'Full-values fill passed all verify checks',
       },
-      verifyResult: result,
+      verifyResult: null,
     };
   } catch (err) {
     return {
@@ -594,7 +615,8 @@ async function checkF4ZeroMatchKeys(
     const merged = { ...defaults, ...fixtureValues };
     const interpolated: Record<string, string> = {};
     for (const [key, value] of Object.entries(replacements)) {
-      interpolated[key] = value.replace(/\{([a-zA-Z0-9_]+)\}/g, (_m, field) => {
+      const template = typeof value === 'string' ? value : value.value;
+      interpolated[key] = template.replace(/\{([a-zA-Z0-9_]+)\}/g, (_m, field) => {
         return merged[field] ?? `{${field}}`;
       });
     }

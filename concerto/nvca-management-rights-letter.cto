@@ -20,6 +20,7 @@ asset NvcaManagementRightsLetter extends Contract {
   o String state
   o String street_address
   o String zip_code
-  o String company_letterhead default=""
+  o String company_letterhead default="PORTFOLIO COMPANY LETTERHEAD"
   o String signature_page_marker default="Signature Page Follows"
+  o String series_designation default=""
 }

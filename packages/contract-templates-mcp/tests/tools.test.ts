@@ -81,9 +81,12 @@ describe('contract-templates-mcp tools', () => {
     expect(names).toEqual([
       'list_templates',
       'get_template',
+      'list_content',
+      'get_content',
       'fill_template',
       'get_apap_template',
       'create_apap_agreement_docx',
+      'get_forms_survey_evidence',
     ]);
   });
 
@@ -136,6 +139,9 @@ describe('contract-templates-mcp tools', () => {
       expect(t.fields).toBeUndefined();
       expect(t.license).toBeUndefined();
       expect(t.name).toBeUndefined();
+      // Provenance stays out of the compact list — full-detail via get_template (#533).
+      expect(t.derived_from).toBeUndefined();
+      expect(t.credits).toBeUndefined();
     }
   });
 
@@ -282,6 +288,17 @@ describe('contract-templates-mcp tools', () => {
     );
     const tpTemplate = (thirdParty.data as Record<string, unknown>).template as Record<string, unknown>;
     expect(tpTemplate.stability).toBeNull();
+  });
+
+  it('get_template returns null derived_from and empty credits when metadata declares neither (#533)', async () => {
+    // Vendored third-party template with no provenance metadata declared:
+    // the keys are present in the contract but null/empty, not errors.
+    const result = await callTool('get_template', { template_id: 'common-paper-mutual-nda' });
+    const payload = getPayload(result);
+    expect(result.isError).toBeUndefined();
+    const template = (payload.data as Record<string, unknown>).template as Record<string, unknown>;
+    expect(template.derived_from).toBeNull();
+    expect(template.credits).toEqual([]);
   });
 
   it('get_template returns options for enum fields matching source metadata', async () => {
@@ -536,6 +553,33 @@ describe('contract-templates-mcp tools', () => {
   describe('with module override', () => {
     afterEach(() => {
       _resetModuleCache();
+    });
+
+    it('get_template surfaces declared derived_from and structured credits (#533)', async () => {
+      _setModuleOverride(mockModules({
+        loadMetadata: () => ({
+          name: 'Provenance Template',
+          source_url: 'https://example.com/provenance-template.docx',
+          fields: [],
+          priority_fields: [],
+          derived_from: 'Adapted from the ExampleCo form agreement (2024 edition).',
+          credits: [
+            { name: 'Jane Drafter', role: 'drafter', profile_url: 'https://example.com/jane' },
+            { name: 'Sam Reviewer', role: 'reviewer' },
+          ],
+        }),
+      }));
+
+      const result = await callTool('get_template', { template_id: 'provenance-template' });
+      const payload = getPayload(result);
+      expect(result.isError).toBeUndefined();
+      const template = (payload.data as Record<string, unknown>).template as Record<string, unknown>;
+      expect(template.derived_from).toBe('Adapted from the ExampleCo form agreement (2024 edition).');
+      // Structured role/name data passes through as-is — not flattened to prose.
+      expect(template.credits).toEqual([
+        { name: 'Jane Drafter', role: 'drafter', profile_url: 'https://example.com/jane' },
+        { name: 'Sam Reviewer', role: 'reviewer' },
+      ]);
     });
 
     it('get_template catches loadMetadata error', async () => {

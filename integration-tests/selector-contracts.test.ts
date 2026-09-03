@@ -350,6 +350,9 @@ describeWithSource('SPA agreement date + dispute-resolution alternatives (#619)'
         values: {
           company_name: 'Meridian Robotics, Inc.',
           dispute_resolution_mode: 'courts',
+          // #2391: the courts alternative renders the proper-noun `state` field;
+          // state_lower stays as the lowercase computed/audit input.
+          state: 'California',
           state_lower: 'california',
           judicial_district: 'Northern District of California',
           // Supplied but INACTIVE in courts mode: its only fill site is the
@@ -360,8 +363,15 @@ describeWithSource('SPA agreement date + dispute-resolution alternatives (#619)'
       });
 
       const text = textOf(outputPath);
+      // NOTE (#721): the three assertions below are the higher-fidelity, source-gated
+      // version of these checks and only run when a cached NVCA source is present. The
+      // same clause SHAPES — a shared `District of` literal prefix across two adjacent
+      // alternatives, and a proper noun that must survive substitution — are covered on
+      // every CI job by paraphrased synthetic fixtures in
+      // `integration-tests/synthetic-clause-shape-contracts.test.ts`.
       // The courts alternative is present and carries the supplied district.
-      expect(text).toContain('irrevocably and unconditionally submit to the jurisdiction of the state courts of california');
+      // Proper-noun forum state (#2391): "state courts of California", no longer lowercase.
+      expect(text).toContain('irrevocably and unconditionally submit to the jurisdiction of the state courts of California');
       // The alt-2 key consumes the literal "District of" so a full district name
       // does not double up ("District of Northern District of ...").
       expect(text).toContain('United States District Court for the Northern District of California');
@@ -406,9 +416,11 @@ describe('loadSelectorContracts (CoI)', () => {
     // 28 field manifests; see header note for the deferrals. `original_incorporation_date` and
     // `effective_date` (#608) are pure selector-contracts with NO migrated legacy keys — the 5 recital
     // `[________ __, 20__]` keys that formerly backed `effective_date` were removed from both
-    // replacements.json and migrated_keys, so the migrated count drops from 69 to 64.
-    expect(manifests).toHaveLength(28);
-    expect(templateManifest?.migrated_keys).toHaveLength(64);
+    // replacements.json and migrated_keys.
+    // Percentage rendering remains declarative in replacements.json; it does
+    // not need a selector manifest or migrated keys.
+    expect(manifests).toHaveLength(27);
+    expect(templateManifest?.migrated_keys).toHaveLength(56);
     // every field_id is a real metadata field (loadSelectorContracts already enforces this, but assert
     // the join key explicitly) and every migrated key is a real replacements.json key (no drift/typos).
     const metaFields = new Set(fieldNames);
@@ -462,7 +474,15 @@ describeWithCoiSource('CoI `>`-anchor field migration parity', () => {
   //    by (a) the selector's `failure_behavior: warn` (an "unresolved occurrence(s)" console warning) and
   //    (b) the repo-level `source-drift-canary` gate. This is a deliberate, narrower trade than the
   //    per-fill "Missing" false positive that legacy value-map coverage would reintroduce.
-  const noLegacyParity = new Set(['company_name', 'original_incorporation_date', 'effective_date']);
+  const noLegacyParity = new Set([
+    'company_name',
+    'original_incorporation_date',
+    'effective_date',
+    // The selector deliberately preserves the source dollar sign while
+    // removing the adjacent drafting instruction; the legacy replacement
+    // consumed both and emitted a naked numeric value.
+    'original_issue_price',
+  ]);
   for (const manifest of manifests.filter((m) => !noLegacyParity.has(m.field_id))) {
     const field = manifest.field_id;
     const expectedSpans = manifest.occurrences.length;

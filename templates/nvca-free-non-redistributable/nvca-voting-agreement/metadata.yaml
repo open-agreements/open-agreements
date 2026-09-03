@@ -25,9 +25,44 @@ fields:
   - name: key_holder_name
     type: string
     description: Name of the key holder (typically founder/CEO)
-  - name: effective_date
+  - name: preferred_director_eligibility_basis
+    type: enum
+    options: [minimum_shares, minimum_percentage]
+    description: Select whether the preferred-director designation right continues based on a minimum share count or a minimum as-converted ownership percentage
+    default: minimum_shares
+  - name: preferred_director_minimum_shares
     type: string
-    description: Effective date of the agreement (e.g. January 15, 2025)
+    description: Minimum Preferred Stock shares required when preferred_director_eligibility_basis is minimum_shares (number only); otherwise leave empty
+    default: ''
+  - name: preferred_director_minimum_percentage
+    type: string
+    description: Minimum as-converted ownership percentage required when preferred_director_eligibility_basis is minimum_percentage (number only, for example, 5); otherwise leave empty
+    default: ''
+  - name: preferred_director_minimum_shares_display
+    type: string
+    description: Computed active share-count threshold or a visible insertion marker; do not supply directly
+    default: ''
+  - name: preferred_director_minimum_percentage_display
+    type: string
+    description: Computed active number-only percentage threshold or a visible insertion marker; do not supply directly
+    default: ''
+  - name: preferred_director_name
+    type: string
+    description: Initial preferred director named in the selected board-composition provision
+  - name: common_director_name
+    type: string
+    description: Initial common director, used in both the Qualified Key Holder designation and named-director alternatives
+  - name: ceo_director_name
+    type: string
+    description: Chief Executive Officer serving as the initial CEO Director
+  - name: mutual_director_name
+    type: string
+    description: Initial independent mutual director designated by the other seated directors
+  - name: effective_date
+    type: date
+    description: >-
+      Effective date of the agreement ("is made as of <date>"). Accepts ISO YYYY-MM-DD (rendered as e.g.
+      "March 15, 2026") or a display-ready date string.
   - name: company_counsel
     type: string
     description: Company counsel name and address
@@ -39,13 +74,13 @@ fields:
     type: string
     description: Federal judicial district for disputes (e.g. District of Delaware)
     default: District of Delaware
-  - name: state_of_incorporation_lower
+  - name: state_of_incorporation
     type: string
-    description: State of incorporation in lowercase (e.g. delaware)
-    default: delaware
+    description: State of incorporation (proper noun, e.g. Delaware); also names the state courts in the dispute-resolution clause
+    default: Delaware
   - name: specify_percentage
     type: string
-    description: Percentage threshold for drag-along and amendment provisions (number only, e.g. 60)
+    description: Percentage threshold for drag-along and amendment provisions — include the percent sign (e.g. 60%); occurrences where the source carries a trailing % absorb it
   - name: amended_restated_upper
     type: string
     description: AMENDED AND RESTATED or empty string
@@ -58,15 +93,30 @@ fields:
     type: string
     description: Signature page marker text
     default: Signature Page Follows
+  - name: series_designation
+    type: string
+    description: Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement
+    default: ""
+  - name: par_value
+    type: string
+    description: Par value per share of common and preferred stock (number only, e.g. 0.0001 — the document supplies the dollar sign)
+    default: '0.0001'
 priority_fields:
   - company_name
   - investor_name
   - key_holder_name
+  - preferred_director_eligibility_basis
+  - preferred_director_name
+  - common_director_name
+  - ceo_director_name
+  - mutual_director_name
   - effective_date
   - company_counsel
   - judicial_district
-  - state_of_incorporation_lower
+  - state_of_incorporation
   - specify_percentage
+  - series_designation
+  - par_value
 artifact_kind: agreement
 capabilities:
   - review

@@ -277,6 +277,60 @@ describe('verifyOutput', () => {
     rmSync(docxPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
+  it('flags a %% artifact left by a sign-carrying percentage value (issue #719)', async () => {
+    // The trailing-sigil twin of the double-dollar check: the certificate of
+    // incorporation leaves the source % in place after {specify_percentage},
+    // so a value of "60%" doubles the sign.
+    const docxPath = buildTextDocx(['Holders of at least 60%% of the outstanding shares.']);
+
+    await allureParameter('case', 'double-percent');
+    const result = await verifyOutput(docxPath, {}, {});
+
+    const check = result.checks.find((c) => c.name === 'No double percent signs');
+    await allureStep('Assert the double-percent artifact is reported', () => {
+      expect(check?.passed).toBe(false);
+      expect(check?.details).toContain('60%%');
+      expect(result.passed).toBe(false);
+    });
+
+    cleanupDocx(docxPath);
+  });
+
+  it('flags a whitespace-separated % % artifact', async () => {
+    const docxPath = buildTextDocx(['Holders of at least 60% % of the outstanding shares.']);
+    const result = await verifyOutput(docxPath, {}, {});
+    const check = result.checks.find((c) => c.name === 'No double percent signs');
+    expect(check?.passed).toBe(false);
+    cleanupDocx(docxPath);
+  });
+
+  it('flags a %% artifact inside a footnote (issue #719)', async () => {
+    // extractAllText() skips word/footnotes.xml, so the sigil checks read it
+    // separately: a corrupt footnote must not verify clean.
+    const docxPath = buildDocx(
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+        `<w:document xmlns:w="${W_NS}"><w:body><w:p><w:r><w:t>Body is clean.</w:t></w:r></w:p></w:body></w:document>`,
+      {
+        'word/footnotes.xml':
+          '<?xml version="1.0" encoding="UTF-8"?>' +
+          `<w:footnotes xmlns:w="${W_NS}"><w:footnote w:id="1"><w:p><w:r><w:t xml:space="preserve">Rate 8%% per annum</w:t></w:r></w:p></w:footnote></w:footnotes>`,
+      }
+    );
+
+    const result = await verifyOutput(docxPath, {}, {});
+    const check = result.checks.find((c) => c.name === 'No double percent signs');
+    expect(check?.passed).toBe(false);
+    expect(check?.details).toContain('8%%');
+    cleanupDocx(docxPath);
+  });
+
+  it('does not flag two separate legitimate percentages', async () => {
+    const docxPath = buildTextDocx(['A rate of 8% rising to 10% per annum.']);
+    const result = await verifyOutput(docxPath, {}, {});
+    const check = result.checks.find((c) => c.name === 'No double percent signs');
+    expect(check?.passed).toBe(true);
+    cleanupDocx(docxPath);
+  });
   it('reports zero new formatting anomalies when source and output have the same count', async () => {
     // Issue #609: runFieldSelector previously verified without the cleaned source,
     // so pre-existing source anomalies were all reported as fill-introduced.
@@ -422,6 +476,103 @@ describe('findLeftoverPlaceholders', () => {
     await allureStep('Assert simple key leftover is reported', () => {
       expect(leftovers).toContain('[Company Name]');
     });
+
+    cleanupDocx(docxPath);
+  });
+});
+
+describe('verifyOutput first-body-paragraph guard (issue #605)', () => {
+  const rangeCleanConfig = {
+    removeFootnotes: false,
+    removeParagraphPatterns: [],
+    removeRanges: [{ start: '^Interpreting help text$', end: '^Send to your counterparty' }],
+    clearParts: [],
+  };
+
+  function buildLeadingEmptyDocx(): string {
+    // An empty structural paragraph (holding a section break) stranded before content
+    return buildDocx(
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+        `<w:document xmlns:w="${W_NS}"><w:body>` +
+        '<w:p><w:pPr><w:sectPr><w:pgSz w:w="12240" w:h="15840"/></w:sectPr></w:pPr></w:p>' +
+        '<w:p><w:r><w:t>Agreement content</w:t></w:r></w:p>' +
+        '</w:body></w:document>'
+    );
+  }
+
+  it('warns when content-removing cleaning leaves a textless first body paragraph', async () => {
+    const docxPath = buildLeadingEmptyDocx();
+
+    const result = await verifyOutput(docxPath, {}, {}, rangeCleanConfig);
+    const check = result.checks.find((c) => c.name === 'First body paragraph has content');
+
+    expect(check).toBeDefined();
+    expect(check?.passed).toBe(false);
+    expect(check?.details).toContain('removeEmptyLeadingParagraphs');
+    expect(result.passed).toBe(false);
+
+    cleanupDocx(docxPath);
+  });
+
+  it('passes when the first body paragraph has text', async () => {
+    const docxPath = buildTextDocx(['Agreement Title', 'Body content']);
+
+    const result = await verifyOutput(docxPath, {}, {}, rangeCleanConfig);
+    const check = result.checks.find((c) => c.name === 'First body paragraph has content');
+
+    expect(check).toBeDefined();
+    expect(check?.passed).toBe(true);
+
+    cleanupDocx(docxPath);
+  });
+
+  it('does not run the check when the clean config removes no body content', async () => {
+    const docxPath = buildLeadingEmptyDocx();
+
+    // removeFootnotes only removes footnote-reference runs and footnote
+    // bodies, not body paragraphs — deliberately excluded from the gate
+    const result = await verifyOutput(docxPath, {}, {}, {
+      removeFootnotes: true,
+      removeParagraphPatterns: [],
+      removeRanges: [],
+      clearParts: [],
+    });
+
+    expect(result.checks.find((c) => c.name === 'First body paragraph has content')).toBeUndefined();
+
+    cleanupDocx(docxPath);
+  });
+
+  it('runs the check when removeParagraphPatterns is configured', async () => {
+    const docxPath = buildLeadingEmptyDocx();
+
+    const result = await verifyOutput(docxPath, {}, {}, {
+      removeFootnotes: false,
+      removeParagraphPatterns: ['^Note to Drafter:'],
+      removeRanges: [],
+      clearParts: [],
+    });
+
+    const check = result.checks.find((c) => c.name === 'First body paragraph has content');
+    expect(check).toBeDefined();
+    expect(check?.passed).toBe(false);
+
+    cleanupDocx(docxPath);
+  });
+
+  it('runs the check when removeEmptyLeadingParagraphs is enabled', async () => {
+    const docxPath = buildTextDocx(['Agreement Title']);
+
+    const result = await verifyOutput(docxPath, {}, {}, {
+      removeFootnotes: false,
+      removeParagraphPatterns: [],
+      removeRanges: [],
+      clearParts: [],
+      removeEmptyLeadingParagraphs: true,
+    });
+
+    const check = result.checks.find((c) => c.name === 'First body paragraph has content');
+    expect(check?.passed).toBe(true);
 
     cleanupDocx(docxPath);
   });

@@ -89,8 +89,10 @@ fields:
       date of this amended and restated charter. Accepts ISO YYYY-MM-DD (rendered as e.g. "July 15, 2026") or a
       display-ready date string.
   - name: redemption_start_date
-    type: string
-    description: Earliest date on which preferred stock may be redeemed
+    type: date
+    description: >-
+      Earliest date on which preferred stock may be redeemed ("on or after <date>"). Accepts ISO YYYY-MM-DD (rendered as e.g.
+      "March 15, 2026") or a display-ready date string.
   - name: qualified_financing_notice_days
     type: string
     description: Days of prior notice required for qualified financing
@@ -120,10 +122,10 @@ fields:
   - name: par_value
     type: string
     description: Par value per share of common and preferred stock
-    default: '0.001'
+    default: '0.0001'
   - name: specify_percentage
     type: string
-    description: Percentage threshold for specified provisions
+    description: Percentage threshold for specified provisions, as a number only (for example, "60"); the selector appends the percent sign
   - name: effective_date
     type: date
     description: >-
@@ -144,6 +146,35 @@ fields:
     type: string
     description: Days prior to record date for mandatory conversion notice
     default: '10'
+  - name: qualified_ipo_min_price_per_share
+    type: string
+    description: Minimum per-share public offering price for a Qualified IPO (dollars, without currency symbol)
+  - name: qualified_ipo_min_gross_proceeds
+    type: string
+    description: Minimum gross proceeds for a Qualified IPO (dollars, without currency symbol)
+  - name: qualified_direct_listing_min_market_cap
+    type: string
+    description: Minimum market capitalization for a Qualified Direct Listing (dollars, without currency symbol)
+  - name: full_ratchet_sunset_date
+    type: date
+    description: >-
+      Date after which the full-ratchet anti-dilution adjustment no longer applies. Used only when anti_dilution_type is
+      full_ratchet; ISO YYYY-MM-DD input renders as a written-out document date.
+  - name: qualified_financing_min_gross_proceeds
+    type: string
+    description: >-
+      Minimum gross proceeds for a pay-to-play Qualified Financing (dollars, without currency symbol). Used only when
+      include_pay_to_play is true.
+    default: '20,000,000'
+  - name: qualified_financing_debt_proceeds_treatment
+    type: enum
+    description: >-
+      Whether debt proceeds cancelled or converted in a pay-to-play Qualified Financing are included or excluded.
+      Allowed values are "including" and "excluding"; used only when include_pay_to_play is true.
+    default: excluding
+    options:
+      - including
+      - excluding
   - name: dividend_formula_prefix
     type: string
     description: Non-cumulative dividend formula prefix phrase
@@ -159,15 +190,18 @@ fields:
     type: string
     description: Max shares issuable for strategic partnerships without triggering anti-dilution
   - name: dividend_type
-    type: string
+    type: enum
+    options: [non_cumulative_as_converted, non_cumulative_fixed, cumulative]
     description: 'Dividend structure: non_cumulative_as_converted (>95%), non_cumulative_fixed, or cumulative'
     default: non_cumulative_as_converted
   - name: liquidation_participation
-    type: string
+    type: enum
+    options: [non_participating, participating]
     description: 'Liquidation participation type: non_participating (94-96%) or participating'
     default: non_participating
   - name: anti_dilution_type
-    type: string
+    type: enum
+    options: [broad_based_weighted_average, full_ratchet]
     description: 'Anti-dilution formula: broad_based_weighted_average (>98%) or full_ratchet'
     default: broad_based_weighted_average
   - name: include_pay_to_play

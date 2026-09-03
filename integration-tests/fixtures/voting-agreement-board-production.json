@@ -1,0 +1,23 @@
+{
+  "company_name": "Northstar Robotics, Inc.",
+  "investor_name": "Atlas Peak Ventures, L.P.",
+  "investor_2_name": "Harbor Seed Fund II, L.P.",
+  "key_holder_name": "Maya Imani",
+  "preferred_director_eligibility_basis": "minimum_shares",
+  "preferred_director_minimum_shares": "1,250,000",
+  "preferred_director_name": "Elena Torres",
+  "common_director_name": "Priya Shah",
+  "ceo_director_name": "Maya Imani",
+  "mutual_director_name": "Jordan Lee",
+  "effective_date": "2026-09-15",
+  "company_counsel": "Example Legal LLP, 100 Market Street, Wilmington, DE 19801",
+  "counsel_cc": "Transactions Team, Example Legal LLP",
+  "judicial_district": "District of Delaware",
+  "state_of_incorporation": "Delaware",
+  "specify_percentage": "60%",
+  "amended_restated_upper": "AMENDED AND RESTATED",
+  "amended_restated": "Amended and Restated",
+  "signature_page_marker": "Signature Page Follows",
+  "series_designation": "A",
+  "par_value": "0.0001"
+}

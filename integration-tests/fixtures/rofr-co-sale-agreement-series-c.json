@@ -7,11 +7,13 @@
   "amended_restated_upper": "AMENDED AND RESTATED",
   "amended_restated": "Amended and Restated",
   "judicial_district": "Northern District of California",
-  "state_lower": "delaware",
+  "state_of_incorporation": "Delaware",
   "business_description": "AI-native contract lifecycle automation and governance software for enterprise legal teams",
   "signature_page_marker": "Signature Page Follows",
   "effective_date": "March 20, 2026",
-  "specify_percentage": "60",
+  "specify_percentage": "60%",
   "rofr_response_days": "45",
-  "key_holders_label": "Key Holders"
+  "key_holders_label": "Key Holders",
+  "series_designation": "C",
+  "par_value": "0.0001"
 }

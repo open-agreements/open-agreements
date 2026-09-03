@@ -41,10 +41,10 @@ fields:
     type: string
     description: Federal judicial district for dispute resolution (e.g. District of Delaware)
     default: District of Delaware
-  - name: state_lower
+  - name: state_of_incorporation
     type: string
-    description: State of incorporation in lowercase (e.g. delaware)
-    default: delaware
+    description: State of incorporation (proper noun, e.g. Delaware); also names the state courts in the dispute-resolution clause
+    default: Delaware
   - name: business_description
     type: string
     description: Brief description of the company's business
@@ -53,11 +53,13 @@ fields:
     description: Signature page marker text
     default: Signature Page Follows
   - name: effective_date
-    type: string
-    description: Effective date of the agreement (e.g. January 15, 2025)
+    type: date
+    description: >-
+      Effective date of the agreement ("is made as of <date>"). Accepts ISO YYYY-MM-DD (rendered as e.g.
+      "March 15, 2026") or a display-ready date string.
   - name: specify_percentage
     type: string
-    description: Specified percentage threshold for key holder transfers
+    description: Specified percentage threshold for key holder transfers — include the percent sign (e.g. 60%); occurrences where the source carries a trailing % absorb it
   - name: rofr_response_days
     type: string
     description: Number of days for the company and investors to respond to a ROFR notice (default 45)
@@ -66,17 +68,71 @@ fields:
     type: string
     description: Label for the key holders group (e.g. Key Holders or Founders)
     default: Key Holders
+  - name: series_designation
+    type: string
+    description: Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement
+    default: ""
+  - name: par_value
+    type: string
+    description: Par value per share of common and preferred stock (number only, e.g. 0.0001 — the document supplies the dollar sign)
+    default: '0.0001'
+  - name: competitor_exclusion_mode
+    type: enum
+    description: Whether to identify a person whose group is expressly excluded from the Competitor definition
+    default: none
+    options:
+      - none
+      - named
+  - name: excluded_competitor_name
+    type: string
+    description: Name expressly excluded from the Competitor definition when competitor_exclusion_mode is named
+    default: ''
+  - name: investor_minimum_shares
+    type: string
+    description: >-
+      Minimum shares an Investor and its affiliates must collectively hold to retain Investor status under the agreement
+  - name: permitted_transfer_percentage
+    type: string
+    description: >-
+      Percentage of Transfer Stock that a Key Holder may sell under the optional permitted-transfer exception, as a number only
+  - name: key_holder_consent_threshold_percentage
+    type: string
+    description: >-
+      Capital Stock ownership percentage below which Key Holder consent is not required, as a number only
+  - name: permitted_transferee_minimum_shares
+    type: string
+    description: >-
+      Minimum shares an assignee or transferee must hold after transfer to receive assignment rights, including digit grouping
+  - name: investor_minimum_shares_display
+    type: string
+    description: Computed Investor minimum-share threshold or a visible insertion marker; do not supply directly
+    default: ''
+  - name: permitted_transfer_percentage_display
+    type: string
+    description: Computed permitted-transfer percentage or a visible insertion marker; do not supply directly
+    default: ''
+  - name: key_holder_consent_threshold_percentage_display
+    type: string
+    description: Computed Key Holder consent threshold percentage or a visible insertion marker; do not supply directly
+    default: ''
+  - name: permitted_transferee_minimum_shares_display
+    type: string
+    description: Computed permitted-transferee minimum-share threshold or a visible insertion marker; do not supply directly
+    default: ''
 priority_fields:
   - company_name
   - investor_name
   - key_holder_name
   - company_counsel
   - judicial_district
-  - state_lower
+  - state_of_incorporation
   - business_description
   - effective_date
   - specify_percentage
   - rofr_response_days
+  - series_designation
+  - par_value
+  - competitor_exclusion_mode
 artifact_kind: agreement
 capabilities:
   - review

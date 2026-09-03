@@ -75,9 +75,19 @@ describe('validateFieldSelector negative scenarios', () => {
     tempDirs.push(fieldSelectorDir);
 
     writeMetadata(fieldSelectorDir);
+    // company_name stays bound via its own key so the published-field
+    // reachability rule (issue #621) does not fail this fixture — the point
+    // here is the unknown-target warning, not an unbound published field.
     writeFileSync(
       join(fieldSelectorDir, 'replacements.json'),
-      JSON.stringify({ '[Company Name]': '{company_name_missing}' }, null, 2),
+      JSON.stringify(
+        {
+          '[Company Name]': '{company_name}',
+          '[Missing Target]': '{company_name_missing}',
+        },
+        null,
+        2
+      ),
       'utf-8'
     );
 

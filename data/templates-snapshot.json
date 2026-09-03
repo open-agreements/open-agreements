@@ -10762,10 +10762,10 @@
         },
         {
           "name": "redemption_start_date",
-          "type": "string",
+          "type": "date",
           "required": false,
           "section": null,
-          "description": "Earliest date on which preferred stock may be redeemed",
+          "description": "Earliest date on which preferred stock may be redeemed (\"on or after <date>\"). Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string.",
           "default": null,
           "default_value_rationale": null
         },
@@ -10847,7 +10847,7 @@
           "required": true,
           "section": null,
           "description": "Par value per share of common and preferred stock",
-          "default": "0.001",
+          "default": "0.0001",
           "default_value_rationale": null
         },
         {
@@ -10855,7 +10855,7 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Percentage threshold for specified provisions",
+          "description": "Percentage threshold for specified provisions, as a number only (for example, \"60\"); the selector appends the percent sign",
           "default": null,
           "default_value_rationale": null
         },
@@ -10896,6 +10896,64 @@
           "default_value_rationale": null
         },
         {
+          "name": "qualified_ipo_min_price_per_share",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Minimum per-share public offering price for a Qualified IPO (dollars, without currency symbol)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "qualified_ipo_min_gross_proceeds",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Minimum gross proceeds for a Qualified IPO (dollars, without currency symbol)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "qualified_direct_listing_min_market_cap",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Minimum market capitalization for a Qualified Direct Listing (dollars, without currency symbol)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "full_ratchet_sunset_date",
+          "type": "date",
+          "required": false,
+          "section": null,
+          "description": "Date after which the full-ratchet anti-dilution adjustment no longer applies. Used only when anti_dilution_type is full_ratchet; ISO YYYY-MM-DD input renders as a written-out document date.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "qualified_financing_min_gross_proceeds",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Minimum gross proceeds for a pay-to-play Qualified Financing (dollars, without currency symbol). Used only when include_pay_to_play is true.",
+          "default": "20,000,000",
+          "default_value_rationale": null
+        },
+        {
+          "name": "qualified_financing_debt_proceeds_treatment",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Whether debt proceeds cancelled or converted in a pay-to-play Qualified Financing are included or excluded. Allowed values are \"including\" and \"excluding\"; used only when include_pay_to_play is true.",
+          "default": "excluding",
+          "default_value_rationale": null,
+          "options": [
+            "including",
+            "excluding"
+          ]
+        },
+        {
           "name": "dividend_formula_prefix",
           "type": "string",
           "required": false,
@@ -10933,30 +10991,43 @@
         },
         {
           "name": "dividend_type",
-          "type": "string",
+          "type": "enum",
           "required": false,
           "section": null,
           "description": "Dividend structure: non_cumulative_as_converted (>95%), non_cumulative_fixed, or cumulative",
           "default": "non_cumulative_as_converted",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "non_cumulative_as_converted",
+            "non_cumulative_fixed",
+            "cumulative"
+          ]
         },
         {
           "name": "liquidation_participation",
-          "type": "string",
+          "type": "enum",
           "required": false,
           "section": null,
           "description": "Liquidation participation type: non_participating (94-96%) or participating",
           "default": "non_participating",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "non_participating",
+            "participating"
+          ]
         },
         {
           "name": "anti_dilution_type",
-          "type": "string",
+          "type": "enum",
           "required": false,
           "section": null,
           "description": "Anti-dilution formula: broad_based_weighted_average (>98%) or full_ratchet",
           "default": "broad_based_weighted_average",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "broad_based_weighted_average",
+            "full_ratchet"
+          ]
         },
         {
           "name": "include_pay_to_play",
@@ -11021,7 +11092,16 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Address of the indemnitee",
+          "description": "Address of the Delaware service-of-process agent named in the optional jurisdiction clause. Retained under its original field name for compatibility; this is not an indemnitee mailing-address slot in the NVCA source.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "service_of_process_agent_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Name of the Delaware service-of-process agent in the optional jurisdiction clause",
           "default": null,
           "default_value_rationale": null
         },
@@ -11053,39 +11133,35 @@
           "default_value_rationale": null
         },
         {
-          "name": "indemnitee_role",
-          "type": "string",
+          "name": "indemnitee_role_scope",
+          "type": "enum",
           "required": true,
           "section": null,
-          "description": "Primary role being indemnified (e.g. director)",
-          "default": "director",
-          "default_value_rationale": null
+          "description": "Corporate roles covered by the agreement: directors, officers, or directors and officers. The directors_or_officers option renders the NVCA recital as \"directors or officers\" and the later singular carrier as \"an officer or director.\"",
+          "default": "directors_or_officers",
+          "default_value_rationale": null,
+          "options": [
+            "directors",
+            "officers",
+            "directors_or_officers"
+          ]
         },
         {
-          "name": "indemnitee_role_plural",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Plural form of the primary role (e.g. directors)",
-          "default": "directors",
-          "default_value_rationale": null
-        },
-        {
-          "name": "indemnitee_role_secondary",
+          "name": "indemnitee_role_scope_plural",
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Secondary role being indemnified (e.g. officer)",
-          "default": "officer",
+          "description": "Computed plural role phrase derived from indemnitee_role_scope; do not supply directly",
+          "default": null,
           "default_value_rationale": null
         },
         {
-          "name": "indemnitee_role_secondary_plural",
+          "name": "indemnitee_role_scope_singular",
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Plural form of the secondary role (e.g. officers)",
-          "default": "officers",
+          "description": "Computed singular role phrase derived from indemnitee_role_scope; do not supply directly",
+          "default": null,
           "default_value_rationale": null
         },
         {
@@ -11095,15 +11171,6 @@
           "section": null,
           "description": "Possessive pronoun for the indemnitee entity (e.g. its)",
           "default": "its",
-          "default_value_rationale": null
-        },
-        {
-          "name": "indemnitee_pronoun_possessive_plural",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Plural possessive pronoun for the indemnitee (e.g. their)",
-          "default": "their",
           "default_value_rationale": null
         },
         {
@@ -11178,15 +11245,6 @@
           "default_value_rationale": null
         },
         {
-          "name": "company_name_short",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Short name of the company used in running text (e.g. Acme or the Company)",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
           "name": "investor_name",
           "type": "string",
           "required": true,
@@ -11194,6 +11252,19 @@
           "description": "Full legal name of the lead investor",
           "default": null,
           "default_value_rationale": null
+        },
+        {
+          "name": "underwriter_selection",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Party authorized to select the underwriters in Section 2.3",
+          "default": "company",
+          "default_value_rationale": null,
+          "options": [
+            "company",
+            "board_of_directors"
+          ]
         },
         {
           "name": "company_counsel",
@@ -11218,17 +11289,8 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "State of incorporation (e.g. Delaware)",
+          "description": "State of incorporation (proper noun, e.g. Delaware); also names the state courts in the dispute-resolution clause",
           "default": "Delaware",
-          "default_value_rationale": null
-        },
-        {
-          "name": "state_lower",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "State of incorporation in lowercase (e.g. delaware)",
-          "default": "delaware",
           "default_value_rationale": null
         },
         {
@@ -11268,6 +11330,77 @@
           "default_value_rationale": null
         },
         {
+          "name": "competitor_exclusion_mode",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Whether to identify a person whose group is expressly excluded from the Competitor definition",
+          "default": "none",
+          "default_value_rationale": null,
+          "options": [
+            "none",
+            "named"
+          ]
+        },
+        {
+          "name": "excluded_competitor_name",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Name expressly excluded from the Competitor definition when competitor_exclusion_mode is named",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "major_investor_threshold_shares",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Minimum number of Registrable Securities required to qualify as a Major Investor",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "board_observer_investor_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Investor entitled to designate the nonvoting board observer",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "board_observer_threshold_shares",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Minimum Preferred Stock holdings required to retain the board observer right",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "transferee_eligibility_standard",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Standard a non-Affiliate transferee must satisfy to receive registration rights under Section 6.1",
+          "default": "major_investor",
+          "default_value_rationale": null,
+          "options": [
+            "minimum_shares",
+            "major_investor"
+          ]
+        },
+        {
+          "name": "transferee_minimum_shares",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Minimum Registrable Securities a transferee must hold when the Section 6.1 minimum-shares standard applies",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
           "name": "signature_page_marker",
           "type": "string",
           "required": false,
@@ -11278,20 +11411,38 @@
         },
         {
           "name": "effective_date",
-          "type": "string",
+          "type": "date",
           "required": true,
           "section": null,
-          "description": "Effective date of the agreement (e.g. January 15, 2025)",
+          "description": "Effective date of the agreement (\"is made as of <date>\"). Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string.",
           "default": null,
           "default_value_rationale": null
         },
         {
           "name": "checklist_delivery_date",
-          "type": "string",
+          "type": "date",
           "required": false,
           "section": null,
-          "description": "Date the compliance checklist is being delivered",
+          "description": "Date the qualified small business stock checklist (Annex 1) is being delivered. Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string.",
           "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "series_designation",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "par_value",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Par value per share of common and preferred stock (number only, e.g. 0.0001 — the document supplies the dollar sign)",
+          "default": "0.0001",
           "default_value_rationale": null
         }
       ]
@@ -11397,8 +11548,8 @@
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Portfolio company letterhead text",
-          "default": "",
+          "description": "Portfolio company letterhead text. Defaults to a conspicuous drafting marker so an omitted optional letterhead does not collapse the first operative paragraph into a blank leading page.",
+          "default": "PORTFOLIO COMPANY LETTERHEAD",
           "default_value_rationale": null
         },
         {
@@ -11408,6 +11559,15 @@
           "section": null,
           "description": "Signature page marker text",
           "default": "Signature Page Follows",
+          "default_value_rationale": null
+        },
+        {
+          "name": "series_designation",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement",
+          "default": "",
           "default_value_rationale": null
         }
       ]
@@ -11500,12 +11660,12 @@
           "default_value_rationale": null
         },
         {
-          "name": "state_lower",
+          "name": "state_of_incorporation",
           "type": "string",
           "required": true,
           "section": null,
-          "description": "State of incorporation in lowercase (e.g. delaware)",
-          "default": "delaware",
+          "description": "State of incorporation (proper noun, e.g. Delaware); also names the state courts in the dispute-resolution clause",
+          "default": "Delaware",
           "default_value_rationale": null
         },
         {
@@ -11528,10 +11688,10 @@
         },
         {
           "name": "effective_date",
-          "type": "string",
+          "type": "date",
           "required": true,
           "section": null,
-          "description": "Effective date of the agreement (e.g. January 15, 2025)",
+          "description": "Effective date of the agreement (\"is made as of <date>\"). Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string.",
           "default": null,
           "default_value_rationale": null
         },
@@ -11540,7 +11700,7 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Specified percentage threshold for key holder transfers",
+          "description": "Specified percentage threshold for key holder transfers — include the percent sign (e.g. 60%); occurrences where the source carries a trailing % absorb it",
           "default": null,
           "default_value_rationale": null
         },
@@ -11560,6 +11720,118 @@
           "section": null,
           "description": "Label for the key holders group (e.g. Key Holders or Founders)",
           "default": "Key Holders",
+          "default_value_rationale": null
+        },
+        {
+          "name": "series_designation",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "par_value",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Par value per share of common and preferred stock (number only, e.g. 0.0001 — the document supplies the dollar sign)",
+          "default": "0.0001",
+          "default_value_rationale": null
+        },
+        {
+          "name": "competitor_exclusion_mode",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Whether to identify a person whose group is expressly excluded from the Competitor definition",
+          "default": "none",
+          "default_value_rationale": null,
+          "options": [
+            "none",
+            "named"
+          ]
+        },
+        {
+          "name": "excluded_competitor_name",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Name expressly excluded from the Competitor definition when competitor_exclusion_mode is named",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_minimum_shares",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Minimum shares an Investor and its affiliates must collectively hold to retain Investor status under the agreement",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "permitted_transfer_percentage",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Percentage of Transfer Stock that a Key Holder may sell under the optional permitted-transfer exception, as a number only",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "key_holder_consent_threshold_percentage",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Capital Stock ownership percentage below which Key Holder consent is not required, as a number only",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "permitted_transferee_minimum_shares",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Minimum shares an assignee or transferee must hold after transfer to receive assignment rights, including digit grouping",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_minimum_shares_display",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed Investor minimum-share threshold or a visible insertion marker; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "permitted_transfer_percentage_display",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed permitted-transfer percentage or a visible insertion marker; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "key_holder_consent_threshold_percentage_display",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed Key Holder consent threshold percentage or a visible insertion marker; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "permitted_transferee_minimum_shares_display",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed permitted-transferee minimum-share threshold or a visible insertion marker; do not supply directly",
+          "default": "",
           "default_value_rationale": null
         }
       ]
@@ -11667,6 +11939,33 @@
           "section": null,
           "description": "Purchase price per share inserted in the opening purchase clause",
           "default": "1.00",
+          "default_value_rationale": null
+        },
+        {
+          "name": "convertible_purchase_price_per_share",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Per-share price for Preferred Stock issued on conversion of Convertible Securities",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "convertible_series_designation",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Series designation for Preferred Stock issued on conversion of Convertible Securities",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "convertible_security_shares",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Aggregate shares issued on conversion of Convertible Securities at Closing",
+          "default": null,
           "default_value_rationale": null
         },
         {
@@ -11796,11 +12095,20 @@
         },
         {
           "name": "balance_sheet_date",
-          "type": "string",
+          "type": "date",
           "required": true,
           "section": null,
-          "description": "Date of the company's most recent balance sheet",
+          "description": "Date of the company's most recent balance sheet. Fills the \"(the \"Balance Sheet Date\")\" definition slot in the Financial Statements representation and the bracketed defined-term references. Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string.",
           "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "balance_sheet_date_defined_term",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Text rendered at the bracketed \"[Balance Sheet Date]\" / \"[the Balance Sheet Date]\" references. Defaults to the defined term (the definition slot carries the actual date); supply a literal date string only to make the references repeat the date instead.",
+          "default": "Balance Sheet Date",
           "default_value_rationale": null
         },
         {
@@ -11813,6 +12121,141 @@
           "default_value_rationale": null
         },
         {
+          "name": "common_authorized_shares",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Authorized shares of Common Stock in the capitalization representation",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "common_par_value_per_share",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Par value per share of Common Stock",
+          "default": "0.0001",
+          "default_value_rationale": null
+        },
+        {
+          "name": "common_outstanding_shares",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Issued and outstanding shares of Common Stock",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "preferred_authorized_shares",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Authorized shares of Preferred Stock",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "preferred_par_value_per_share",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Par value per share of Preferred Stock",
+          "default": "0.0001",
+          "default_value_rationale": null
+        },
+        {
+          "name": "series_authorized_shares",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Shares of Preferred Stock designated as the financing series",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "stock_plan_reserved_shares",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Common Stock reserved under the Stock Plan",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "restricted_stock_outstanding_shares",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Restricted stock shares issued and outstanding under the Stock Plan",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "option_shares_outstanding",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Shares subject to outstanding options under the Stock Plan",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "stock_plan_available_shares",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Shares remaining available under the Stock Plan",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "material_contract_threshold",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Dollar threshold for contracts required to be disclosed",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "indebtedness_individual_threshold",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Individual indebtedness or liability threshold since the Balance Sheet Date",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "indebtedness_aggregate_threshold",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Aggregate indebtedness or liability threshold since the Balance Sheet Date",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_counsel_expense_cap",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Maximum aggregate Company-paid fees and expenses of investor counsel",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "healthcare_compliance_standard",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Optional bracketed healthcare compliance law name, such as HIPAA; leave blank if inapplicable",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
           "name": "signature_page_marker",
           "type": "string",
           "required": false,
@@ -11822,11 +12265,20 @@
           "default_value_rationale": null
         },
         {
+          "name": "state",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "State whose courts are named in the dispute-resolution courts alternative (proper noun, e.g. Delaware). Keep consistent with state_lower, which drives the judicial-district defaults.",
+          "default": "Delaware",
+          "default_value_rationale": null
+        },
+        {
           "name": "state_lower",
           "type": "string",
           "required": true,
           "section": null,
-          "description": "State name (lowercase)",
+          "description": "State name (lowercase, e.g. delaware) — drives judicial-district defaults and audit rules; not rendered in the document text",
           "default": null,
           "default_value_rationale": null
         },
@@ -11835,7 +12287,7 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Specified percentage threshold",
+          "description": "Specified percentage threshold — include the percent sign (e.g. 60%)",
           "default": null,
           "default_value_rationale": null
         },
@@ -11938,11 +12390,96 @@
           "default_value_rationale": null
         },
         {
-          "name": "effective_date",
+          "name": "preferred_director_eligibility_basis",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Select whether the preferred-director designation right continues based on a minimum share count or a minimum as-converted ownership percentage",
+          "default": "minimum_shares",
+          "default_value_rationale": null,
+          "options": [
+            "minimum_shares",
+            "minimum_percentage"
+          ]
+        },
+        {
+          "name": "preferred_director_minimum_shares",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Minimum Preferred Stock shares required when preferred_director_eligibility_basis is minimum_shares (number only); otherwise leave empty",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "preferred_director_minimum_percentage",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Minimum as-converted ownership percentage required when preferred_director_eligibility_basis is minimum_percentage (number only, for example, 5); otherwise leave empty",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "preferred_director_minimum_shares_display",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed active share-count threshold or a visible insertion marker; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "preferred_director_minimum_percentage_display",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed active number-only percentage threshold or a visible insertion marker; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "preferred_director_name",
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Effective date of the agreement (e.g. January 15, 2025)",
+          "description": "Initial preferred director named in the selected board-composition provision",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "common_director_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Initial common director, used in both the Qualified Key Holder designation and named-director alternatives",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "ceo_director_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Chief Executive Officer serving as the initial CEO Director",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "mutual_director_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Initial independent mutual director designated by the other seated directors",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "effective_date",
+          "type": "date",
+          "required": true,
+          "section": null,
+          "description": "Effective date of the agreement (\"is made as of <date>\"). Accepts ISO YYYY-MM-DD (rendered as e.g. \"March 15, 2026\") or a display-ready date string.",
           "default": null,
           "default_value_rationale": null
         },
@@ -11974,12 +12511,12 @@
           "default_value_rationale": null
         },
         {
-          "name": "state_of_incorporation_lower",
+          "name": "state_of_incorporation",
           "type": "string",
           "required": true,
           "section": null,
-          "description": "State of incorporation in lowercase (e.g. delaware)",
-          "default": "delaware",
+          "description": "State of incorporation (proper noun, e.g. Delaware); also names the state courts in the dispute-resolution clause",
+          "default": "Delaware",
           "default_value_rationale": null
         },
         {
@@ -11987,7 +12524,7 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Percentage threshold for drag-along and amendment provisions (number only, e.g. 60)",
+          "description": "Percentage threshold for drag-along and amendment provisions — include the percent sign (e.g. 60%); occurrences where the source carries a trailing % absorb it",
           "default": null,
           "default_value_rationale": null
         },
@@ -12016,6 +12553,24 @@
           "section": null,
           "description": "Signature page marker text",
           "default": "Signature Page Follows",
+          "default_value_rationale": null
+        },
+        {
+          "name": "series_designation",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "par_value",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Par value per share of common and preferred stock (number only, e.g. 0.0001 — the document supplies the dollar sign)",
+          "default": "0.0001",
           "default_value_rationale": null
         }
       ]
@@ -12598,6 +13153,16 @@
           "description": "Timing for return or deletion of company materials",
           "default": null,
           "default_value_rationale": null
+        },
+        {
+          "name": "confidentiality_other_duration",
+          "type": "string",
+          "required": false,
+          "section": "Confidentiality",
+          "description": "Duration of confidentiality obligations for Confidential Information other than trade secrets after employment ends",
+          "display_label": "Other Confidential Information Duration",
+          "default": "For as long as the information remains confidential, and, where applicable law requires a fixed period, two years after employment ends",
+          "default_value_rationale": "Filed employee agreements overwhelmingly run ordinary confidentiality open-ended (52% expressly in a 315-instrument EDGAR sample; 93% in the Yale Law Journal study of 446 agreements); where they bound it they use a fallback that applies only if law requires one, and the fallback is two years in six of eight cases. Wisconsin voids an unbounded non-trade-secret covenant, so the fallback is not optional. See docs/benchmarks/ciiaa-confidentiality-duration-evidence.md."
         },
         {
           "name": "post_termination_assistance",
@@ -21784,7 +22349,7 @@
           "description": "Governing law state. For an employee who primarily resides and works in Minnesota, the Minnesota Noncompetition Agreement Act means Minnesota law is the only selection that operates as written for a controversy under that act.",
           "display_label": "Governing Law",
           "default": "Minnesota",
-          "default_value_rationale": "Minnesota is selected because Minnesota law supplies the required substantive protection for employees who primarily reside and work in Minnesota in covered restrictive-covenant disputes."
+          "default_value_rationale": "An employer may not require an employee who primarily resides and works in Minnesota, as a condition of employment, to accept a clause that would deprive the employee of the substantive protection of Minnesota law for a controversy arising in Minnesota. A violating clause is voidable at the employee's request; if voided, the matter must be adjudicated in Minnesota under Minnesota law."
         },
         {
           "name": "governing_venue",
@@ -21794,7 +22359,7 @@
           "description": "County and state whose courts are the agreed forum. For a Minnesota-based employee, the Minnesota Noncompetition Agreement Act means a Minnesota forum is the only selection that operates as written for a controversy under that act.",
           "display_label": "Venue",
           "default": "the state courts located in Minnesota",
-          "default_value_rationale": "A Minnesota forum is selected because covered employees who primarily reside and work in Minnesota cannot be required to adjudicate covered controversies outside Minnesota as a condition of employment."
+          "default_value_rationale": "An employer may not require an employee who primarily resides and works in Minnesota, as a condition of employment, to adjudicate outside Minnesota a controversy arising in Minnesota. A violating clause is voidable at the employee's request; if voided, the matter must be adjudicated in Minnesota under Minnesota law."
         },
         {
           "name": "confidentiality_trade_secret_duration",
@@ -22836,7 +23401,7 @@
           "description": "Governing law state. For a worker whose services, customers, and competition are centered in Nebraska, plan on Nebraska law controlling whatever law the agreement names. Nebraska courts have applied Nebraska law to an out-of-state employer's covenant on that basis, so a foreign-law selection is a risk variable rather than an enforceability strategy.",
           "display_label": "Governing Law",
           "default": "Nebraska",
-          "default_value_rationale": "Nebraska is the conservative default for a Nebraska-centered worker because the governing-law choice should match the state whose law is likely to control the covenant's enforceability."
+          "default_value_rationale": null
         },
         {
           "name": "confidentiality_trade_secret_duration",
@@ -24882,7 +25447,7 @@
           "description": "Governing law state. For an employee who primarily resides and works in North Dakota, North Dakota law is the selection that operates as written for a controversy over an alleged restraint of trade.",
           "display_label": "Governing Law",
           "default": "North Dakota",
-          "default_value_rationale": "North Dakota is selected because, for a North Dakota worker, choosing another state's law to enforce a restraint can fail against North Dakota public policy."
+          "default_value_rationale": null
         },
         {
           "name": "governing_venue",
@@ -24892,7 +25457,7 @@
           "description": "County and state whose courts are the agreed forum. For a North Dakota-based employee, a North Dakota forum is the selection most likely to operate as written; a North Dakota court may decline an exclusive foreign forum that is unfair or unreasonable.",
           "display_label": "Venue",
           "default": "the state courts located in North Dakota",
-          "default_value_rationale": "A North Dakota forum keeps disputes involving a North Dakota worker in the forum whose public policy controls whether an alleged restraint operates."
+          "default_value_rationale": null
         },
         {
           "name": "confidentiality_trade_secret_duration",
@@ -25318,7 +25883,7 @@
           "description": "Governing law state. For an employee who resides and works in Oklahoma, an Oklahoma forum court will not apply chosen foreign law where doing so violates Oklahoma's public policy against restraints on work, so an Oklahoma selection is the one most likely to operate as written for an Oklahoma employee-restrictive-covenant dispute heard in Oklahoma.",
           "display_label": "Governing Law",
           "default": "Oklahoma",
-          "default_value_rationale": "Oklahoma is the correct default for an Oklahoma employee because the governing-law choice should align with the forum most likely to apply Oklahoma's public-policy limits rather than invite an out-of-state law fight."
+          "default_value_rationale": null
         },
         {
           "name": "governing_venue",
@@ -25328,7 +25893,7 @@
           "description": "County and state whose courts are the agreed forum. A mandatory out-of-state forum clause is the operative enforcement risk in Oklahoma: a court applying another state's law may enforce a covenant Oklahoma would void, so an Oklahoma forum keeps the dispute before a court expected to apply Oklahoma's void rule.",
           "display_label": "Venue",
           "default": "the state courts located in Oklahoma",
-          "default_value_rationale": "Oklahoma state courts are the default venue because the key enforcement risk is transfer to an out-of-state forum that may apply another state's law to covenants Oklahoma would treat as void."
+          "default_value_rationale": null
         },
         {
           "name": "confidentiality_trade_secret_duration",
@@ -29230,7 +29795,7 @@
           "description": "Governing law state",
           "display_label": "Governing Law",
           "default": "Wisconsin",
-          "default_value_rationale": "Wisconsin work should be governed by Wisconsin law because Wisconsin case law can reject a foreign choice-of-law clause selected to obtain more covenant-friendly treatment when Wisconsin public policy controls employee restrictive covenants."
+          "default_value_rationale": null
         },
         {
           "name": "confidentiality_trade_secret_duration",

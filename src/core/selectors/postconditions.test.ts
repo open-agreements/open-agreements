@@ -71,4 +71,36 @@ describe('evaluatePostconditions', () => {
     });
     expect(checks[0].passed).toBe(false);
   });
+
+  it('no_double_percent flags a %% artifact', () => {
+    const checks = evaluatePostconditions({
+      outputText: 'holders of at least 60%% of the shares',
+      manifests: [manifest(['no_double_percent'])],
+      fieldValues: {},
+      migratedAnchorsByField: {},
+    });
+    expect(checks).toHaveLength(1);
+    expect(checks[0].passed).toBe(false);
+    expect(checks[0].name).toBe('selector:company_name:no_double_percent');
+  });
+
+  it('no_double_percent flags whitespace-separated % % (locks the \\s* span)', () => {
+    const checks = evaluatePostconditions({
+      outputText: 'holders of at least 60% % of the shares',
+      manifests: [manifest(['no_double_percent'])],
+      fieldValues: {},
+      migratedAnchorsByField: {},
+    });
+    expect(checks[0].passed).toBe(false);
+  });
+
+  it('no_double_percent passes on two separate legitimate percentages', () => {
+    const checks = evaluatePostconditions({
+      outputText: 'a rate of 8% rising to 10% per annum',
+      manifests: [manifest(['no_double_percent'])],
+      fieldValues: {},
+      migratedAnchorsByField: {},
+    });
+    expect(checks[0].passed).toBe(true);
+  });
 });

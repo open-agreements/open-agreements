@@ -67,8 +67,10 @@ priority_fields:
   - title
 artifact_kind: agreement
 capabilities:
+  - create
   - review
+  - render
 party_roles: []
 signature_roles: []
-mutation_policy: immutable
+mutation_policy: fields_only
 maturity: experimental

@@ -290,6 +290,172 @@ function triggerFires(trigger: Trigger, data: Record<string, unknown>): boolean 
 }
 
 // ---------------------------------------------------------------------------
+// Match reporting (#720)
+// ---------------------------------------------------------------------------
+
+/**
+ * How many paragraphs one option's marker matched, and whether the option was
+ * selected. Counts are summed across every text part of the document
+ * (document.xml plus headers/footers), because an option legitimately lives in
+ * exactly one of them.
+ */
+export interface SelectionOptionReport {
+  groupId: string;
+  optionIndex: number;
+  marker: string;
+  /** True when the option's trigger fired (or it is the default fallback). */
+  selected: boolean;
+  /** Paragraphs whose text contained the option marker, summed across parts. */
+  matchCount: number;
+  /**
+   * Paragraphs this option's own removal / replacement / marking logic actually
+   * ACTED ON, summed across parts.
+   *
+   * This is not the same as `matchCount`, and the gap is where the silent
+   * failures live. An option can match paragraphs and still be acted on zero
+   * times: a cell-based group whose options turn out to live in DIFFERENT table
+   * cells resolves no qualifying cell, returns without touching anything, and
+   * leaves every alternative in place — with a non-zero match count for each.
+   * The inline markerless path can likewise match a paragraph and then fail to
+   * splice it. Both leave a document carrying both alternatives, so the
+   * classification below keys the dangerous case on this field, not on
+   * `matchCount`.
+   *
+   * A SELECTED option is normally acted on zero times in the markerless paths
+   * (it is kept as-is), so a zero here is only meaningful for an UNSELECTED
+   * option.
+   */
+  appliedCount: number;
+}
+
+export interface SelectionsResult {
+  outputPath: string;
+  /** One entry per (group, option), in config order. */
+  options: SelectionOptionReport[];
+}
+
+/**
+ * Classification of zero-match options.
+ *
+ * A group is "engaged" when at least one of its options matched at least one
+ * paragraph: the document demonstrably contains this group's alternatives.
+ * That distinction is what makes the dangerous case separable from the benign
+ * one — see `unselectedZeroMatchInEngagedGroup` below.
+ */
+export interface SelectionAnomalies {
+  /**
+   * The dangerous case (#720). The option was NOT selected — the intent was
+   * "remove this alternative" — yet nothing was removed for it, while a sibling
+   * option in the same group DID match. The group is demonstrably present in
+   * the document, so its alternative is still there and the filled document
+   * keeps BOTH alternatives.
+   *
+   * Two distinct faults land here: a marker that drifted away from source prose
+   * that is still present (zero matches), and a group that matched but resolved
+   * no location to act on (matches, zero applied — e.g. a cell-based group
+   * whose options sit in different table cells).
+   */
+  unremovedInEngagedGroup: SelectionOptionReport[];
+  /**
+   * Nothing in the whole group matched. Either the group does not apply to this
+   * document (partial fixtures, variant sources) or the entire clause moved.
+   * Nothing was left half-removed, so this is advisory.
+   */
+  unremovedInInertGroup: SelectionOptionReport[];
+  /**
+   * The option WAS selected but matched nothing, so the alternative meant to be
+   * kept is absent. Suspicious, but it fails visibly (a missing clause) rather
+   * than silently, so it is reported as a warning.
+   */
+  selectedZeroMatch: SelectionOptionReport[];
+}
+
+/** Human-readable identifier for one option in a diagnostic message. */
+export function describeSelectionOption(o: SelectionOptionReport): string {
+  return `${o.groupId}[${o.optionIndex}] "${o.marker}"`;
+}
+
+/** Split a selections run's per-option counts into the three anomaly classes. */
+export function classifySelectionMatches(result: SelectionsResult): SelectionAnomalies {
+  const engagedGroups = new Set<string>();
+  for (const o of result.options) {
+    if (o.matchCount > 0) engagedGroups.add(o.groupId);
+  }
+
+  const anomalies: SelectionAnomalies = {
+    unremovedInEngagedGroup: [],
+    unremovedInInertGroup: [],
+    selectedZeroMatch: [],
+  };
+
+  for (const o of result.options) {
+    if (o.selected) {
+      // A selected option is supposed to survive, so `appliedCount` says nothing
+      // about it in the markerless paths. Only its absence matters.
+      if (o.matchCount === 0) anomalies.selectedZeroMatch.push(o);
+      continue;
+    }
+    // An unselected option is supposed to DISAPPEAR. The question is therefore
+    // "was anything actually done about it", not "did its marker match".
+    if (o.appliedCount > 0) continue;
+    if (engagedGroups.has(o.groupId)) {
+      anomalies.unremovedInEngagedGroup.push(o);
+    } else {
+      anomalies.unremovedInInertGroup.push(o);
+    }
+  }
+
+  return anomalies;
+}
+
+/**
+ * Accumulator threaded through the per-group processors so match counts survive
+ * every early return. Keyed by `${groupId}::${optionIndex}`.
+ */
+type OptionStats = Map<string, SelectionOptionReport>;
+
+function recordOptionMatches(
+  stats: OptionStats,
+  group: z.infer<typeof GroupSchema>,
+  selectedIndices: Set<number>,
+  counts: number[],
+): void {
+  for (let oi = 0; oi < group.options.length; oi++) {
+    const key = `${group.id}::${oi}`;
+    const existing = stats.get(key);
+    if (existing) {
+      existing.matchCount += counts[oi] ?? 0;
+      continue;
+    }
+    stats.set(key, {
+      groupId: group.id,
+      optionIndex: oi,
+      marker: group.options[oi].marker,
+      selected: selectedIndices.has(oi),
+      matchCount: counts[oi] ?? 0,
+      appliedCount: 0,
+    });
+  }
+}
+
+/**
+ * Add to the "paragraphs actually acted on" tally. Split from
+ * `recordOptionMatches` because a processor learns its match counts up front —
+ * before the early returns that must not lose them — but only learns what it
+ * acted on at the end.
+ */
+function recordOptionApplied(
+  stats: OptionStats,
+  group: z.infer<typeof GroupSchema>,
+  applied: number[],
+): void {
+  for (let oi = 0; oi < group.options.length; oi++) {
+    const existing = stats.get(`${group.id}::${oi}`);
+    if (existing) existing.appliedCount += applied[oi] ?? 0;
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Core algorithm
 // ---------------------------------------------------------------------------
 
@@ -309,13 +475,14 @@ export async function applySelections(
   outputPath: string,
   config: SelectionsConfig,
   data: Record<string, unknown>,
-): Promise<void> {
+): Promise<SelectionsResult> {
   const inputBuf = readFileSync(inputPath);
   const zip = new AdmZip(inputBuf);
   const parser = new DOMParser();
   const serializer = new XMLSerializer();
   const parts = enumerateTextParts(zip);
   const partNames = getGeneralTextPartNames(parts);
+  const stats: OptionStats = new Map();
 
   for (const partName of partNames) {
     const entry = zip.getEntry(partName);
@@ -326,7 +493,7 @@ export async function applySelections(
 
     let partModified = false;
     for (const group of config.groups) {
-      const result = processGroup(doc, group, data);
+      const result = processGroup(doc, group, data, stats);
       if (result) partModified = true;
     }
 
@@ -341,6 +508,17 @@ export async function applySelections(
   copyEntriesSkippingDirs(zip, outZip);
   const outBuf = outZip.toBuffer();
   writeFileSync(outputPath, outBuf);
+
+  // Report in config order so diagnostics read like the config file.
+  const options: SelectionOptionReport[] = [];
+  for (const group of config.groups) {
+    for (let oi = 0; oi < group.options.length; oi++) {
+      const entry = stats.get(`${group.id}::${oi}`);
+      if (entry) options.push(entry);
+    }
+  }
+
+  return { outputPath, options };
 }
 
 interface OptionMatch {
@@ -356,13 +534,14 @@ function processGroup(
   doc: Document,
   group: z.infer<typeof GroupSchema>,
   data: Record<string, unknown>,
+  stats: OptionStats,
 ): boolean {
   if (group.markerless) {
-    return processMarkerlessGroup(doc, group, data);
+    return processMarkerlessGroup(doc, group, data, stats);
   }
 
   if (group.standalone) {
-    return processStandaloneGroup(doc, group, data);
+    return processStandaloneGroup(doc, group, data, stats);
   }
 
   // Step 1: Find ALL candidate paragraphs for each option's marker
@@ -379,6 +558,18 @@ function processGroup(
       }
     }
   }
+
+  // Record match counts before any early return or throw below (#720), so a
+  // group that finds no qualifying cell still reports which options matched.
+  // `appliedCount` stays 0 on those paths, which is the point: a group that
+  // resolves no qualifying cell removes NOTHING while every option still
+  // reports a non-zero match count, and the document keeps both alternatives.
+  recordOptionMatches(
+    stats,
+    group,
+    evaluateTriggers(group, data),
+    candidatesPerOption.map((c) => c.length),
+  );
 
   // Step 2: Find a cell where ALL options have at least one candidate
   // Group candidates by their parent cell
@@ -477,6 +668,7 @@ function processGroup(
   // Step 5 & 6: Remove unselected options + sub-clauses, mark selected as checked
   let madeChanges = false;
   const parasToRemove = new Set<Element>();
+  const appliedCounts: number[] = group.options.map(() => 0);
 
   for (const item of classified) {
     if (item.ownerOptionIndex === -1) continue; // header — always keep
@@ -485,16 +677,19 @@ function processGroup(
       // Selected: mark the option paragraph as checked
       if (item.isOption) {
         setChecked(item.para, group.type);
+        appliedCounts[item.ownerOptionIndex]++;
         madeChanges = true;
       }
     } else {
       // Unselected: collect for bookmark-aware removal
       parasToRemove.add(item.para);
+      appliedCounts[item.ownerOptionIndex]++;
       madeChanges = true;
     }
   }
 
   removeWithBookmarkCleanup(doc, parasToRemove);
+  recordOptionApplied(stats, group, appliedCounts);
 
   // Ensure at least one <w:p> remains in the cell (OOXML requirement)
   const remainingParas = cell.getElementsByTagNameNS(W_NS, 'p');
@@ -560,22 +755,26 @@ function processStandaloneGroup(
   doc: Document,
   group: z.infer<typeof GroupSchema>,
   data: Record<string, unknown>,
+  stats: OptionStats,
 ): boolean {
   const allParagraphs = doc.getElementsByTagNameNS(W_NS, 'p');
   const selectedIndices = evaluateTriggers(group, data);
+  const matchCounts: number[] = group.options.map(() => 0);
+  const appliedCounts: number[] = group.options.map(() => 0);
   let madeChanges = false;
 
   for (let oi = 0; oi < group.options.length; oi++) {
     const option = group.options[oi];
 
-    // Find the marker paragraph
+    // Find the marker paragraph. Every match is counted (#720) even though only
+    // the first is acted on, so a drifted marker reports 0 rather than nothing.
     let markerPara: Element | null = null;
     for (let pi = 0; pi < allParagraphs.length; pi++) {
       const para = allParagraphs[pi];
       const text = extractParagraphText(para);
       if (text && hasOptionPrefix(text) && text.includes(option.marker)) {
-        markerPara = para;
-        break;
+        matchCounts[oi]++;
+        if (!markerPara) markerPara = para;
       }
     }
     if (!markerPara) continue;
@@ -616,8 +815,14 @@ function processStandaloneGroup(
       }
       madeChanges = true;
     }
+    // One paragraph is acted on per option here: the first match is marked or
+    // removed. `matchCount > appliedCount` therefore means duplicate marker
+    // matches survived untouched, which the caller can see.
+    appliedCounts[oi]++;
   }
 
+  recordOptionMatches(stats, group, selectedIndices, matchCounts);
+  recordOptionApplied(stats, group, appliedCounts);
   return madeChanges;
 }
 
@@ -692,8 +897,11 @@ function processMarkerlessGroup(
   doc: Document,
   group: z.infer<typeof GroupSchema>,
   data: Record<string, unknown>,
+  stats: OptionStats,
 ): boolean {
   const selectedIndices = evaluateTriggers(group, data);
+  const matchCounts: number[] = group.options.map(() => 0);
+  const appliedCounts: number[] = group.options.map(() => 0);
   let madeChanges = false;
   const parasToRemove = new Set<Element>();
 
@@ -712,6 +920,12 @@ function processMarkerlessGroup(
       }
     }
 
+    matchCounts[oi] += matchedParas.length;
+
+    // #720: a zero-match UNSELECTED option is not a benign no-op — the
+    // alternative it was meant to delete survives into the filled document.
+    // The count recorded above is what lets the caller reject that outcome
+    // instead of shipping a document carrying both alternatives.
     if (matchedParas.length === 0) continue;
 
     if (selectedIndices.has(oi)) {
@@ -727,12 +941,17 @@ function processMarkerlessGroup(
         const globalPara = markerPara as unknown as globalThis.Element;
         let text = normalizeQuotes(getParagraphText(globalPara));
         let safety = 0;
+        // Tracked separately from `madeChanges` so a paragraph that matched but
+        // could not be spliced (both the range edit and the fallback failed)
+        // is reported as unremoved rather than silently kept (#720).
+        let paraEdited = false;
         while (safety++ < 50) {
           const idx = text.indexOf(normalizedMarker);
           if (idx === -1) break;
           try {
             replaceParagraphTextRange(globalPara, idx, idx + normalizedMarker.length, replacement);
             madeChanges = true;
+            paraEdited = true;
           } catch (e) {
             if (e instanceof SafeDocxError) {
               // Fallback: formatting-destructive text splice via xmldom w:t elements
@@ -742,12 +961,14 @@ function processMarkerlessGroup(
                 const newText = rawText.slice(0, rawIdx) + replacement + rawText.slice(rawIdx + normalizedMarker.length);
                 replaceParagraphText(markerPara, newText);
                 madeChanges = true;
+                paraEdited = true;
               }
             }
             break;
           }
           text = normalizeQuotes(getParagraphText(globalPara));
         }
+        if (paraEdited) appliedCounts[oi]++;
       }
       continue;
     }
@@ -808,6 +1029,7 @@ function processMarkerlessGroup(
       for (const p of subClauses) {
         parasToRemove.add(p);
       }
+      appliedCounts[oi]++;
       madeChanges = true;
     }
   }
@@ -815,6 +1037,13 @@ function processMarkerlessGroup(
   // Deferred removal with bookmark cleanup
   removeWithBookmarkCleanup(doc, parasToRemove);
 
+  // NOTE on ordering: options are matched against the document as it stands
+  // when their turn comes, so an earlier option's replacement can change a
+  // later option's `matchCount`. That is deliberate — the counts describe what
+  // the processor actually saw, so `matchCount` and `appliedCount` stay
+  // consistent and cannot manufacture a phantom "matched but never removed".
+  recordOptionMatches(stats, group, selectedIndices, matchCounts);
+  recordOptionApplied(stats, group, appliedCounts);
   return madeChanges;
 }
 

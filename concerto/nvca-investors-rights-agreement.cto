@@ -11,19 +11,42 @@ import org.accordproject.contract.Contract from https://models.accordproject.org
  * Source: https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-IRA-10-1-2025-2-1.docx
  */
 
+enum Underwriter_selectionType {
+  o company
+  o board_of_directors
+}
+
+enum Competitor_exclusion_modeType {
+  o none
+  o named
+}
+
+enum Transferee_eligibility_standardType {
+  o minimum_shares
+  o major_investor
+}
+
 asset NvcaInvestorsRightsAgreement extends Contract {
   o String company_name
-  o String company_name_short
   o String investor_name
+  o Underwriter_selectionType underwriter_selection default="company"
   o String company_counsel
   o String counsel_cc default=""
   o String state_of_incorporation default="Delaware"
-  o String state_lower default="delaware"
   o String judicial_district default="District of Delaware"
   o String amended_restated_upper default=""
   o String amended_restated default=""
   o String business_description
+  o Competitor_exclusion_modeType competitor_exclusion_mode default="none"
+  o String excluded_competitor_name default=""
+  o String major_investor_threshold_shares
+  o String board_observer_investor_name
+  o String board_observer_threshold_shares
+  o Transferee_eligibility_standardType transferee_eligibility_standard default="major_investor"
+  o String transferee_minimum_shares default=""
   o String signature_page_marker default="Signature Page Follows"
   o String effective_date
-  o String checklist_delivery_date optional
+  o String checklist_delivery_date
+  o String series_designation default=""
+  o String par_value default="0.0001"
 }

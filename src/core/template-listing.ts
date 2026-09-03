@@ -7,7 +7,9 @@
  * - MCP `tools.ts` (via dynamic import or npm dependency)
  */
 
-import { loadMetadata, type FieldDefinition } from './metadata.js';
+import { loadMetadata, type FieldDefinition, type TemplateCredit } from './metadata.js';
+
+export type { TemplateCredit } from './metadata.js';
 import { listTemplateEntries } from '../utils/paths.js';
 
 // ---------------------------------------------------------------------------
@@ -39,6 +41,10 @@ export interface TemplateListItem {
   allow_derivatives: boolean;
   /** Maturity signal (open-agreements#243); undefined for templates that don't declare it. */
   stability?: string;
+  /** Expository provenance text (open-agreements#533); undefined for templates that don't declare it. */
+  derived_from?: string;
+  /** Structured contributor provenance (open-agreements#533); empty for templates that don't declare it. */
+  credits: TemplateCredit[];
   fields: TemplateListField[];
 }
 
@@ -146,6 +152,8 @@ export function listTemplateItems(): TemplateListItem[] {
         attribution_text: meta.attribution_text,
         allow_derivatives: meta.allow_derivatives,
         ...(meta.stability !== undefined ? { stability: meta.stability } : {}),
+        ...(meta.derived_from !== undefined ? { derived_from: meta.derived_from } : {}),
+        credits: meta.credits ?? [],
         fields: mapFields(meta.fields, meta.priority_fields),
       });
     } catch {

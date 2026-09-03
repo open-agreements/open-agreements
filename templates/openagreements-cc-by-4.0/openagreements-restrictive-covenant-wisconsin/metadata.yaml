@@ -47,7 +47,6 @@ fields:
     default: Wisconsin
     rationale_source: case_law
     requirement_id: REQ-labor-and-employment-law.restrictive-covenant-agreement.wisconsin.select-wisconsin-law-rather-than-rely-on-foreign-choice-of-law
-    default_value_rationale: Wisconsin work should be governed by Wisconsin law because Wisconsin case law can reject a foreign choice-of-law clause selected to obtain more covenant-friendly treatment when Wisconsin public policy controls employee restrictive covenants.
   - name: confidentiality_trade_secret_duration
     type: string
     description: Duration of confidentiality obligations for trade secrets

@@ -49,6 +49,15 @@ fields:
     type: string
     description: Purchase price per share inserted in the opening purchase clause
     default: "1.00"
+  - name: convertible_purchase_price_per_share
+    type: string
+    description: Per-share price for Preferred Stock issued on conversion of Convertible Securities
+  - name: convertible_series_designation
+    type: string
+    description: Series designation for Preferred Stock issued on conversion of Convertible Securities
+  - name: convertible_security_shares
+    type: string
+    description: Aggregate shares issued on conversion of Convertible Securities at Closing
   - name: applicable_word
     type: string
     description: Optional word inserted before Closing in bracketed templates
@@ -99,21 +108,85 @@ fields:
     type: string
     description: Federal judicial district for disputes
   - name: balance_sheet_date
+    type: date
+    description: >-
+      Date of the company's most recent balance sheet. Fills the "(the "Balance Sheet Date")" definition slot in the
+      Financial Statements representation and the bracketed defined-term references. Accepts ISO YYYY-MM-DD (rendered as e.g.
+      "March 15, 2026") or a display-ready date string.
+  - name: balance_sheet_date_defined_term
     type: string
-    description: Date of the company's most recent balance sheet
+    description: >-
+      Text rendered at the bracketed "[Balance Sheet Date]" / "[the Balance Sheet Date]" references. Defaults to the
+      defined term (the definition slot carries the actual date); supply a literal date string only to make the
+      references repeat the date instead.
+    default: Balance Sheet Date
   - name: benefit_plan_name
     type: string
     description: Plan year and name of the employee benefit plan
+  - name: common_authorized_shares
+    type: string
+    description: Authorized shares of Common Stock in the capitalization representation
+  - name: common_par_value_per_share
+    type: string
+    description: Par value per share of Common Stock
+    default: "0.0001"
+  - name: common_outstanding_shares
+    type: string
+    description: Issued and outstanding shares of Common Stock
+  - name: preferred_authorized_shares
+    type: string
+    description: Authorized shares of Preferred Stock
+  - name: preferred_par_value_per_share
+    type: string
+    description: Par value per share of Preferred Stock
+    default: "0.0001"
+  - name: series_authorized_shares
+    type: string
+    description: Shares of Preferred Stock designated as the financing series
+  - name: stock_plan_reserved_shares
+    type: string
+    description: Common Stock reserved under the Stock Plan
+  - name: restricted_stock_outstanding_shares
+    type: string
+    description: Restricted stock shares issued and outstanding under the Stock Plan
+  - name: option_shares_outstanding
+    type: string
+    description: Shares subject to outstanding options under the Stock Plan
+  - name: stock_plan_available_shares
+    type: string
+    description: Shares remaining available under the Stock Plan
+  - name: material_contract_threshold
+    type: string
+    description: Dollar threshold for contracts required to be disclosed
+  - name: indebtedness_individual_threshold
+    type: string
+    description: Individual indebtedness or liability threshold since the Balance Sheet Date
+  - name: indebtedness_aggregate_threshold
+    type: string
+    description: Aggregate indebtedness or liability threshold since the Balance Sheet Date
+  - name: investor_counsel_expense_cap
+    type: string
+    description: Maximum aggregate Company-paid fees and expenses of investor counsel
+  - name: healthcare_compliance_standard
+    type: string
+    description: Optional bracketed healthcare compliance law name, such as HIPAA; leave blank if inapplicable
+    default: ""
   - name: signature_page_marker
     type: string
     description: Signature page marker text
     default: Signature Page Follows
+  - name: state
+    type: string
+    description: >-
+      State whose courts are named in the dispute-resolution courts alternative (proper noun, e.g. Delaware). Keep
+      consistent with state_lower, which drives the judicial-district defaults.
+    default: Delaware
   - name: state_lower
     type: string
-    description: State name (lowercase)
+    description: State name (lowercase, e.g. delaware) — drives judicial-district defaults and audit rules; not rendered in the document text
   - name: specify_percentage
     type: string
-    description: Specified percentage threshold
+    description: Specified percentage threshold — include the percent sign (e.g. 60%)
   - name: financial_reporting_period
     type: string
     description: Financial reporting period (e.g., monthly, quarterly)
@@ -139,12 +212,22 @@ priority_fields:
   - lead_purchaser_name
   - judicial_district
   - balance_sheet_date
+  - state
   - state_lower
   - specify_percentage
   - financial_reporting_period
   - director_names
   - board_size
   - minimum_shares_initial_closing
+  - common_authorized_shares
+  - common_outstanding_shares
+  - preferred_authorized_shares
+  - series_authorized_shares
+  - stock_plan_reserved_shares
+  - stock_plan_available_shares
+  - material_contract_threshold
+  - indebtedness_individual_threshold
+  - indebtedness_aggregate_threshold
 artifact_kind: agreement
 capabilities:
   - review

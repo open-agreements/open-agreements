@@ -43,19 +43,42 @@ export function getGeneralTextPartNames(parts: OoxmlTextParts): string[] {
 }
 
 /**
+ * Return every text part, footnotes included.
+ *
+ * `getGeneralTextPartNames()` excludes `word/footnotes.xml` because the
+ * *cleaner* has to special-case its separator / continuationSeparator
+ * paragraphs. That exclusion is about mutation. Read-only passes — detecting
+ * which fields the source owns a sigil for, and scanning rendered output for
+ * doubling artifacts — have no such constraint, and a document whose footnote
+ * renders `8%%` while the verifier reports success is worse than one that
+ * fails loudly. Use this list for inspection; use the general list for
+ * anything that rewrites parts.
+ */
+export function getAllTextPartNames(parts: OoxmlTextParts): string[] {
+  const names = getGeneralTextPartNames(parts);
+  if (parts.footnotes) names.push(parts.footnotes);
+  return names;
+}
+
+/**
  * Copy OPC parts from one zip to another, excluding directory entries.
  *
  * OOXML packages are a flat set of parts; directory entries such as `word/`
  * are JSZip/zip container artifacts and can make Word repair the document.
+ *
+ * `getData` may return a replacement Buffer for an entry, or `null` to drop
+ * the entry from the destination entirely (used for orphaned media parts).
  */
 export function copyEntriesSkippingDirs(
   sourceZip: AdmZip,
   destinationZip: AdmZip,
-  getData: (entryName: string, entryData: Buffer) => Buffer = (_entryName, entryData) => entryData,
+  getData: (entryName: string, entryData: Buffer) => Buffer | null = (_entryName, entryData) => entryData,
 ): void {
   for (const entry of sourceZip.getEntries()) {
     if (entry.isDirectory || entry.entryName.endsWith('/')) continue;
-    destinationZip.addFile(entry.entryName, getData(entry.entryName, entry.getData()));
+    const data = getData(entry.entryName, entry.getData());
+    if (data === null) continue;
+    destinationZip.addFile(entry.entryName, data);
   }
 }
 

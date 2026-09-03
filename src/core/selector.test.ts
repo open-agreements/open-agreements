@@ -7,7 +7,12 @@ import { join } from 'node:path';
 import { afterEach, describe, expect } from 'vitest';
 import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
-import { applySelections, SelectionsConfigSchema } from './selector.js';
+import {
+  applySelections,
+  classifySelectionMatches,
+  describeSelectionOption,
+  SelectionsConfigSchema,
+} from './selector.js';
 import type { SelectionsConfig } from './selector.js';
 import { itAllure } from '../../integration-tests/helpers/allure-test.js';
 
@@ -811,5 +816,237 @@ describe('replaceWith strips orphaned field constructs', () => {
     // Placeholder is not silently dropped despite there being no <w:t> left after stripping.
     expect(text).toContain('[Reserved]');
     expect(text).not.toContain('Exhibit A');
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Zero-match reporting (#720)
+//
+// `processMarkerlessGroup()` used to `continue` when an option's marker matched
+// nothing. For an UNSELECTED option that inverts the intent: "remove this
+// alternative" silently becomes "keep it", and the filled document ships BOTH
+// alternatives — a legally wrong document that renders cleanly and passes every
+// other check. `applySelections()` now returns per-option match counts so the
+// caller can reject that outcome.
+// ---------------------------------------------------------------------------
+
+describe('selections zero-match reporting (#720)', () => {
+  /**
+   * Two mutually-exclusive dispute-resolution alternatives in one document.
+   * `driftedArbitrationMarker` reproduces upstream source drift: the config's
+   * marker for the arbitration alternative is one word away from the prose that
+   * is actually in the document.
+   */
+  function twoAlternativeDoc(): string {
+    return `
+      ${para('Governing Law. This Agreement is governed by the laws of the State of Delaware.')}
+      ${para('Any dispute arising under this Agreement shall be resolved by binding arbitration before a single arbitrator.')}
+      ${para('Each party irrevocably submits to the jurisdiction of the state courts of Delaware for any dispute arising under this Agreement.')}
+    `;
+  }
+
+  function disputeConfig(arbitrationMarker: string): SelectionsConfig {
+    return {
+      groups: [{
+        id: 'dispute_resolution',
+        type: 'radio',
+        markerless: true,
+        options: [
+          {
+            marker: arbitrationMarker,
+            trigger: { field: 'dispute_resolution_mode', equals: 'arbitration' },
+          },
+          {
+            marker: 'irrevocably submits to the jurisdiction of the state courts of',
+            trigger: 'default',
+          },
+        ],
+      }],
+    };
+  }
+
+  const ACCURATE_ARBITRATION_MARKER = 'shall be resolved by binding arbitration before a single arbitrator';
+  // One word drifted ("binding" dropped) — exactly how an NVCA reissue breaks a marker.
+  const DRIFTED_ARBITRATION_MARKER = 'shall be resolved by arbitration before a single arbitrator';
+
+  it('[OA-SEL-020] reports a per-option match count and selected flag for every option', async () => {
+    const inputPath = buildTestDocx(twoAlternativeDoc());
+    const outputPath = join(makeTempDir(), 'out.docx');
+
+    const result = await applySelections(
+      inputPath,
+      outputPath,
+      disputeConfig(ACCURATE_ARBITRATION_MARKER),
+      {},
+    );
+
+    expect(result.outputPath).toBe(outputPath);
+    expect(result.options).toHaveLength(2);
+    expect(result.options[0]).toMatchObject({
+      groupId: 'dispute_resolution',
+      optionIndex: 0,
+      selected: false,
+      matchCount: 1,
+    });
+    expect(result.options[1]).toMatchObject({
+      groupId: 'dispute_resolution',
+      optionIndex: 1,
+      selected: true,
+      matchCount: 1,
+    });
+    // Sanity: with an accurate marker the unselected alternative really is removed.
+    expect(extractText(outputPath)).not.toContain('binding arbitration');
+  });
+
+  it('[OA-SEL-021] a drifted marker on an UNSELECTED option reports zero matches and leaves BOTH alternatives in the document', async () => {
+    const inputPath = buildTestDocx(twoAlternativeDoc());
+    const outputPath = join(makeTempDir(), 'out.docx');
+
+    const result = await applySelections(
+      inputPath,
+      outputPath,
+      disputeConfig(DRIFTED_ARBITRATION_MARKER),
+      {},
+    );
+
+    // This is the silent failure the guard exists to catch: the arbitration
+    // alternative was meant to be deleted and is still there, alongside the
+    // courts alternative that was selected.
+    const text = extractText(outputPath);
+    expect(text).toContain('binding arbitration before a single arbitrator');
+    expect(text).toContain('state courts of Delaware');
+
+    // …and it is now visible in the returned result rather than silent.
+    expect(result.options[0]).toMatchObject({ optionIndex: 0, selected: false, matchCount: 0 });
+    expect(result.options[1]).toMatchObject({ optionIndex: 1, selected: true, matchCount: 1 });
+
+    const anomalies = classifySelectionMatches(result);
+    expect(anomalies.unremovedInEngagedGroup).toHaveLength(1);
+    expect(anomalies.unremovedInEngagedGroup[0].optionIndex).toBe(0);
+    expect(anomalies.unremovedInInertGroup).toHaveLength(0);
+    expect(anomalies.selectedZeroMatch).toHaveLength(0);
+    expect(describeSelectionOption(anomalies.unremovedInEngagedGroup[0]))
+      .toContain('dispute_resolution[0]');
+  });
+
+  it('[OA-SEL-022] a group where NO option matches is classified as inert, not as the dangerous case', async () => {
+    // A document that carries neither alternative — a partial fixture or a
+    // different source variant. Nothing was left half-removed.
+    const inputPath = buildTestDocx(`${para('Governing Law. This Agreement is governed by the laws of the State of Delaware.')}`);
+    const outputPath = join(makeTempDir(), 'out.docx');
+
+    const result = await applySelections(
+      inputPath,
+      outputPath,
+      disputeConfig(ACCURATE_ARBITRATION_MARKER),
+      { dispute_resolution_mode: 'arbitration' },
+    );
+
+    const anomalies = classifySelectionMatches(result);
+    expect(anomalies.unremovedInEngagedGroup).toHaveLength(0);
+    expect(anomalies.unremovedInInertGroup).toHaveLength(1);
+    expect(anomalies.unremovedInInertGroup[0].optionIndex).toBe(1);
+    // The SELECTED option also matched nothing — reported separately, because a
+    // missing kept-alternative fails visibly rather than silently.
+    expect(anomalies.selectedZeroMatch).toHaveLength(1);
+    expect(anomalies.selectedZeroMatch[0].optionIndex).toBe(0);
+  });
+
+  it('[OA-SEL-023] reports match counts for standalone and cell-based groups too', async () => {
+    const body = `
+      ${para('Additional Closings. The Company may sell additional shares after the Initial Closing.')}
+    `;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+
+    const config: SelectionsConfig = {
+      groups: [
+        {
+          id: 'additional_closings',
+          type: 'checkbox',
+          markerless: true,
+          options: [{ marker: 'Additional Closings', trigger: { field: 'closing_type', equals: 'additional' } }],
+        },
+        {
+          // A cell-based group whose markers are nowhere in this document.
+          id: 'cell_based_group',
+          type: 'radio',
+          cellContext: 'Interest Rate',
+          options: [
+            { marker: 'Fixed rate', trigger: { field: 'rate_mode', equals: 'fixed' } },
+            { marker: 'Floating rate', trigger: 'default' },
+          ],
+        },
+        {
+          id: 'standalone_group',
+          type: 'checkbox',
+          standalone: true,
+          options: [{ marker: 'Optional covenant', trigger: { field: 'include_covenant', equals: true } }],
+        },
+      ],
+    };
+
+    const result = await applySelections(inputPath, outputPath, config, {});
+
+    // Every (group, option) pair is reported, in config order, even for groups
+    // that returned early without touching the document.
+    expect(result.options.map((o) => `${o.groupId}[${o.optionIndex}]`)).toEqual([
+      'additional_closings[0]',
+      'cell_based_group[0]',
+      'cell_based_group[1]',
+      'standalone_group[0]',
+    ]);
+    expect(result.options[0].matchCount).toBe(1);
+    expect(result.options[1].matchCount).toBe(0);
+    expect(result.options[2].matchCount).toBe(0);
+    expect(result.options[3].matchCount).toBe(0);
+
+    const anomalies = classifySelectionMatches(result);
+    // No group is both engaged and half-removed, so nothing is the dangerous case.
+    expect(anomalies.unremovedInEngagedGroup).toHaveLength(0);
+  });
+
+  it('[OA-SEL-029] a cell-based group whose options live in DIFFERENT cells is caught even though both markers match', async () => {
+    // Found in peer review of #720. `processGroup()` needs every option of a
+    // cell-based group to appear in ONE table cell. When they are split across
+    // cells it resolves no qualifying cell, returns without touching anything,
+    // and BOTH alternatives survive — while every option still reports a
+    // non-zero match count. Keying the guard on matchCount alone would have
+    // reported nothing here, which is the exact silent-corruption shape #720
+    // exists to eliminate.
+    const body =
+      `<w:tbl xmlns:w="${W_NS}"><w:tr>` +
+      `<w:tc>${para('( ) Alternative A: the parties will arbitrate.')}</w:tc>` +
+      `<w:tc>${para('( ) Alternative B: the parties will litigate.')}</w:tc>` +
+      `</w:tr></w:tbl>`;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+
+    const config: SelectionsConfig = {
+      groups: [{
+        id: 'split_cells',
+        type: 'radio',
+        options: [
+          { marker: 'Alternative A', trigger: { field: 'choice', equals: 'a' } },
+          { marker: 'Alternative B', trigger: 'default' },
+        ],
+      }],
+    };
+
+    const result = await applySelections(inputPath, outputPath, config, {});
+
+    // Nothing was removed: the document really does still carry both.
+    const text = extractText(outputPath);
+    expect(text).toContain('Alternative A');
+    expect(text).toContain('Alternative B');
+
+    // Both options matched, and neither was acted on.
+    expect(result.options[0]).toMatchObject({ optionIndex: 0, selected: false, matchCount: 1, appliedCount: 0 });
+    expect(result.options[1]).toMatchObject({ optionIndex: 1, selected: true, matchCount: 1, appliedCount: 0 });
+
+    const anomalies = classifySelectionMatches(result);
+    expect(anomalies.unremovedInEngagedGroup).toHaveLength(1);
+    expect(anomalies.unremovedInEngagedGroup[0].optionIndex).toBe(0);
+    expect(anomalies.selectedZeroMatch).toHaveLength(0);
   });
 });

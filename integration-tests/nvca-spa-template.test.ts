@@ -143,6 +143,9 @@ const FIELD_ASSERTION_POLICY: Record<string, FieldAssertionPolicy> = {
   agreement_date: { mode: 'skip', reason: 'Pure selector-contract date field (no replacements.json key); exercised in real-source integration checks (#619)' },
   par_value_per_share: { mode: 'skip', reason: 'Nth-qualified replacement; exercised in real-source integration checks' },
   purchase_price_per_share: { mode: 'skip', reason: 'Nth-qualified replacement; exercised in real-source integration checks' },
+  convertible_purchase_price_per_share: { mode: 'skip', reason: 'Optional convertible-security clause; exercised in the real-source production E2E' },
+  convertible_series_designation: { mode: 'skip', reason: 'Optional convertible-security clause; exercised in the real-source production E2E' },
+  convertible_security_shares: { mode: 'skip', reason: 'Optional convertible-security clause; exercised in the real-source production E2E' },
   applicable_word: { mode: 'skip', reason: 'Control field for optional closing-word bracket cleanup' },
   include_convertible_securities: { mode: 'skip', reason: 'Boolean trigger for inline selection — convertible securities clause' },
   include_closing_reference: { mode: 'skip', reason: 'Boolean trigger for inline selection — closing reference bracket' },
@@ -163,8 +166,25 @@ const FIELD_ASSERTION_POLICY: Record<string, FieldAssertionPolicy> = {
   arbitration_location: { mode: 'strict', reason: 'Alternative 1 arbitration venue placeholder' },
   judicial_district: { mode: 'strict', reason: 'Venue term should remain exact' },
   balance_sheet_date: { mode: 'strict', reason: 'Date anchor should be preserved exactly' },
+  balance_sheet_date_defined_term: { mode: 'strict', reason: 'Defined-term text at balance-sheet references' },
   benefit_plan_name: { mode: 'skip', reason: 'Optional field; covered in targeted scenario tests' },
+  common_authorized_shares: { mode: 'strict', reason: 'Capitalization representation input' },
+  common_par_value_per_share: { mode: 'strict', reason: 'Capitalization representation input' },
+  common_outstanding_shares: { mode: 'strict', reason: 'Capitalization representation input' },
+  preferred_authorized_shares: { mode: 'strict', reason: 'Capitalization representation input' },
+  preferred_par_value_per_share: { mode: 'strict', reason: 'Capitalization representation input' },
+  series_authorized_shares: { mode: 'strict', reason: 'Capitalization representation input' },
+  stock_plan_reserved_shares: { mode: 'strict', reason: 'Stock-plan capitalization input' },
+  restricted_stock_outstanding_shares: { mode: 'strict', reason: 'Stock-plan capitalization input' },
+  option_shares_outstanding: { mode: 'strict', reason: 'Stock-plan capitalization input' },
+  stock_plan_available_shares: { mode: 'strict', reason: 'Stock-plan capitalization input' },
+  material_contract_threshold: { mode: 'strict', reason: 'Negotiated material-contract threshold' },
+  indebtedness_individual_threshold: { mode: 'strict', reason: 'Negotiated indebtedness threshold' },
+  indebtedness_aggregate_threshold: { mode: 'strict', reason: 'Negotiated aggregate indebtedness threshold' },
+  investor_counsel_expense_cap: { mode: 'strict', reason: 'Company-paid investor-counsel cap' },
+  healthcare_compliance_standard: { mode: 'skip', reason: 'Optional healthcare drafting alternative; blank is valid when inapplicable' },
   signature_page_marker: { mode: 'strict', reason: 'Execution marker anchor' },
+  state: { mode: 'strict', reason: 'Jurisdiction anchor (proper noun) rendered in the courts alternative' },
   state_lower: { mode: 'strict', reason: 'Jurisdiction anchor', normalize: 'lowercase' },
   specify_percentage: { mode: 'strict', reason: 'Key negotiated threshold anchor' },
   financial_reporting_period: { mode: 'strict', reason: 'Reporting cadence anchor' },
@@ -480,6 +500,14 @@ describe('NVCA SPA Template', () => {
         paragraph_rules?: Array<{ replacements?: Record<string, string> }>;
       }
     );
+    const computedConfig = await allureStep('Load computed.json', () =>
+      JSON.parse(readFileSync(join(FIELD_SELECTOR_DIR, 'computed.json'), 'utf-8')) as {
+        rules?: Array<{
+          when_all?: Array<{ field?: string }>;
+          when_any?: Array<{ field?: string }>;
+        }>;
+      }
+    );
 
     const metadataFieldNames = (metadata.fields ?? []).map((field) => field.name).sort();
     const priorityFieldNames = (metadata.priority_fields ?? []).slice().sort();
@@ -501,12 +529,26 @@ describe('NVCA SPA Template', () => {
       )
       .sort();
     const representedFieldNames = Array.from(new Set([...replacementFieldNames, ...normalizeFieldNames])).sort();
+    // Fields consumed as computed-rule inputs (e.g. state_lower, which drives
+    // judicial-district defaults and audit rules without rendering into the
+    // document text since #2391 replaced its `[state]` fill site with the
+    // proper-noun `state` field). A priority field is covered if it renders
+    // (replacements/normalize) OR feeds the computed profile.
+    const computedInputFieldNames = Array.from(
+      new Set(
+        (computedConfig.rules ?? []).flatMap((rule) =>
+          [...(rule.when_all ?? []), ...(rule.when_any ?? [])]
+            .map((condition) => condition.field)
+            .filter((field): field is string => typeof field === 'string')
+        )
+      )
+    ).sort();
 
     const unknownReplacementTargets = representedFieldNames.filter(
       (field) => !metadataFieldNames.includes(field)
     );
     const missingRequiredReplacementTargets = priorityFieldNames.filter(
-      (field) => !representedFieldNames.includes(field)
+      (field) => !representedFieldNames.includes(field) && !computedInputFieldNames.includes(field)
     );
 
     const fieldAlignmentSnapshot = {
@@ -514,6 +556,7 @@ describe('NVCA SPA Template', () => {
       replacementFieldNames,
       normalizeFieldNames,
       representedFieldNames,
+      computedInputFieldNames,
       priorityFieldNames,
       unknownReplacementTargets,
       missingRequiredReplacementTargets,
@@ -726,7 +769,10 @@ describe('NVCA SPA Template', () => {
       investor_name: 'North Star Ventures LLC',
       judicial_district: 'Northern District of California',
       state_lower: 'delaware',
-      balance_sheet_date: '2025-12-31',
+      // Display-ready form: balance_sheet_date is `type: date` (#617), so ISO
+      // input renders formatted ("December 31, 2025") and would no longer match
+      // a raw-ISO verification value in this direct verifyOutput harness.
+      balance_sheet_date: 'December 31, 2025',
       specify_percentage: '12%',
       director_names: 'Jane Founder; Pat Director',
       applicable_purchasers: 'North Star Ventures LLC',
@@ -826,7 +872,9 @@ describe('NVCA SPA Template', () => {
 
       const fixture = createSyntheticFieldSelectorFixture([
         '[Insert Company Name]',
-        '[state]',
+        // #2391: the bare `[state]` key (lowercase state_lower fill) was replaced by
+        // context-anchored proper-noun keys rendering the `state` field.
+        'state courts of [state]',
         'District Court for the District of [judicial district]',
         '[location]',
       ]);
@@ -841,6 +889,7 @@ describe('NVCA SPA Template', () => {
             values: {
               company_name: 'Helios Labs, Inc.',
               dispute_resolution_mode: 'courts',
+              state: 'California',
               state_lower: 'california',
             },
             computedOutPath,
@@ -892,7 +941,9 @@ describe('NVCA SPA Template', () => {
 
         await allureStep('Assert computed fill values affect rendered output', () => {
           expect(outputText).toContain('Helios Labs, Inc.');
-          expect(outputText).toContain('california');
+          // Proper-noun forum-state rendering (#2391): the courts slot now fills
+          // the `state` field, not the lowercase state_lower audit input.
+          expect(outputText).toContain('state courts of California');
           expect(outputText).toContain('Northern District of California');
         });
       } finally {

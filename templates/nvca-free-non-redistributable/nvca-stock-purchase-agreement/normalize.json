@@ -67,6 +67,9 @@
       ],
       "paragraph_contains": "Except as otherwise disclosed in writing to the Company, the Purchaser is not a “person of a country of concern”",
       "paragraph_end_contains": "Outbound Investment Security Program.]",
+      "replacements": {
+        "Except as otherwise disclosed in writing": ". Except as otherwise disclosed in writing"
+      },
       "trim_unmatched_trailing_bracket": true,
       "expected_min_matches": 1
     },
@@ -78,6 +81,9 @@
       ],
       "paragraph_contains": "The Purchaser is not a “covered person” as that term is defined in the DSP",
       "paragraph_end_contains": "term is defined in the DSP.]",
+      "replacements": {
+        "The Purchaser is not a “covered person”": ". The Purchaser is not a “covered person”"
+      },
       "trim_unmatched_trailing_bracket": true,
       "expected_min_matches": 1
     }

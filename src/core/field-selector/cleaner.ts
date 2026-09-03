@@ -1,11 +1,29 @@
 import AdmZip from 'adm-zip';
 import { writeFileSync } from 'node:fs';
+import { posix } from 'node:path';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document, Element, Node } from '@xmldom/xmldom';
 import type { CleanConfig, GuidanceEntry, GuidanceOutput } from '../metadata.js';
 import { copyEntriesSkippingDirs, enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
+const R_NS = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships';
+const PKG_REL_NS = 'http://schemas.openxmlformats.org/package/2006/relationships';
+
+/**
+ * Default size threshold for removeHeaderFooterDrawings, in bytes.
+ *
+ * Empirically calibrated against the bundled corpus (2026-08): the largest
+ * benign header/footer media across all 187 bundled DOCX files is a 146-byte
+ * spacer PNG (40 occurrences across 21 Common Paper templates), while the
+ * known-bad artifact class — full-page "how to use this template" screenshots
+ * from Google-Docs exports (legal-explainer#1800) — starts around 125 KB.
+ * 50 KB sits comfortably between the two and matches legal-explainer's
+ * source-side vendored-docx audit threshold.
+ */
+export const DEFAULT_HEADER_FOOTER_DRAWING_MIN_BYTES = 50 * 1024;
+
+const HEADER_FOOTER_PART_PATTERN = /^word\/(?:header|footer)\d+\.xml$/;
 
 export interface CleanResult {
   outputPath: string;
@@ -52,6 +70,10 @@ export async function cleanDocument(
 
   // Track which parts we modify so we can rebuild the zip cleanly
   const modifiedParts = new Map<string, Buffer>();
+  // Entries dropped entirely (orphaned media parts)
+  const removedEntries = new Set<string>();
+  // Media part names dereferenced by removed drawings (orphan candidates)
+  const orphanMediaCandidates = new Set<string>();
 
   // Clear specified parts (replace content with minimal valid XML)
   if (config.clearParts && config.clearParts.length > 0) {
@@ -138,6 +160,27 @@ export async function cleanDocument(
       modified = true;
     }
 
+    // Strip oversized drawings from header/footer parts (image-only content
+    // invisible to text-anchored mechanisms — see legal-explainer#1800)
+    if (config.removeHeaderFooterDrawings && HEADER_FOOTER_PART_PATTERN.test(partName)) {
+      const minBytes = config.headerFooterDrawingMinBytes ?? DEFAULT_HEADER_FOOTER_DRAWING_MIN_BYTES;
+      const result = removeOversizedDrawings(doc, zip, partName, minBytes, parser, serializer, modifiedParts);
+      if (result.removedDrawings > 0) {
+        modified = true;
+        for (const media of result.orphanMediaCandidates) {
+          orphanMediaCandidates.add(media);
+        }
+      }
+    }
+
+    // Post-clean pass: drop empty leading body paragraphs, transplanting any
+    // section-break header/footer references forward (document.xml only)
+    if (config.removeEmptyLeadingParagraphs && partName === 'word/document.xml') {
+      if (removeEmptyLeadingParagraphs(doc)) {
+        modified = true;
+      }
+    }
+
     if (modified) {
       modifiedParts.set(partName, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
     }
@@ -163,9 +206,20 @@ export async function cleanDocument(
     }
   }
 
+  // Drop media parts orphaned by drawing removal (only when no relationship
+  // in the final package state still targets them)
+  if (orphanMediaCandidates.size > 0) {
+    for (const media of orphanMediaCandidates) {
+      if (!isMediaReferenced(zip, media, modifiedParts)) {
+        removedEntries.add(media);
+      }
+    }
+  }
+
   // Rebuild the zip from scratch to avoid adm-zip data descriptor issues
   const outZip = new AdmZip();
   copyEntriesSkippingDirs(zip, outZip, (entryName, entryData) => {
+    if (removedEntries.has(entryName)) return null;
     const data = modifiedParts.get(entryName) ?? entryData;
     return data;
   });
@@ -477,6 +531,332 @@ function extractAndRemoveParagraphsBeforePattern(doc: Document, pattern: string)
   }
 
   return extracted;
+}
+
+// ---------------------------------------------------------------------------
+// Header/footer drawing removal (removeHeaderFooterDrawings)
+// ---------------------------------------------------------------------------
+
+interface DrawingRemovalOutcome {
+  removedDrawings: number;
+  /** Resolved media part names dereferenced by removed drawings. */
+  orphanMediaCandidates: string[];
+}
+
+/**
+ * Resolve an OPC relationship Target against the directory of the part that
+ * owns the .rels file (e.g. "media/image1.png" in word/_rels/header1.xml.rels
+ * resolves to "word/media/image1.png").
+ */
+function resolveRelTarget(baseDir: string, target: string): string {
+  if (target.startsWith('/')) return target.slice(1);
+  return posix.normalize(posix.join(baseDir, target));
+}
+
+/** Collect the values of all attributes in the relationships namespace (r:embed, r:id, r:link, ...). */
+function collectRelationshipIdAttrs(element: Element, ids: Set<string>): void {
+  const attrs = element.attributes;
+  if (attrs) {
+    for (let i = 0; i < attrs.length; i++) {
+      const attr = attrs.item(i);
+      if (attr && attr.namespaceURI === R_NS && attr.value) {
+        ids.add(attr.value);
+      }
+    }
+  }
+  for (let child: Node | null = element.firstChild; child; child = child.nextSibling) {
+    if (child.nodeType === 1) collectRelationshipIdAttrs(child as Element, ids);
+  }
+}
+
+/** Find the nearest ancestor <w:r> run of an element, if any. */
+function findAncestorRun(element: Element): Element | null {
+  let node: Node | null = element;
+  while (node) {
+    if (node.nodeType === 1) {
+      const el = node as Element;
+      if (el.localName === 'r' && el.namespaceURI === W_NS) return el;
+    }
+    node = node.parentNode;
+  }
+  return null;
+}
+
+/**
+ * Remove <w:drawing>/<w:pict> elements (with their containing <w:r> run) from a
+ * header/footer part when the largest media part they reference exceeds
+ * `minBytes`. Also removes relationships that become orphaned in the part's
+ * .rels file, writing the updated rels into `modifiedParts`.
+ *
+ * Drawings whose referenced media is at or below the threshold — or that
+ * reference no media at all (vector shapes, external links) — are preserved.
+ */
+function removeOversizedDrawings(
+  doc: Document,
+  zip: AdmZip,
+  partName: string,
+  minBytes: number,
+  parser: DOMParser,
+  serializer: XMLSerializer,
+  modifiedParts: Map<string, Buffer>,
+): DrawingRemovalOutcome {
+  const partFile = partName.split('/').pop() ?? '';
+  const relsName = `word/_rels/${partFile}.rels`;
+
+  // Build relId → { target, size } from the part's rels (respecting any
+  // earlier in-process modification of the rels part)
+  const relsBuffer = modifiedParts.get(relsName) ?? zip.getEntry(relsName)?.getData();
+  const relTargets = new Map<string, string>(); // relId → resolved internal target
+  const relSizes = new Map<string, number>();
+  let relsDoc: Document | null = null;
+  if (relsBuffer) {
+    relsDoc = parser.parseFromString(relsBuffer.toString('utf-8'), 'text/xml');
+    const rels = relsDoc.getElementsByTagNameNS(PKG_REL_NS, 'Relationship');
+    for (let i = 0; i < rels.length; i++) {
+      const rel = rels[i];
+      const id = rel.getAttribute('Id');
+      const target = rel.getAttribute('Target');
+      if (!id || !target) continue;
+      if ((rel.getAttribute('TargetMode') ?? 'Internal') === 'External') continue;
+      const resolved = resolveRelTarget('word', target);
+      relTargets.set(id, resolved);
+      const entry = zip.getEntry(resolved);
+      relSizes.set(id, entry ? entry.getData().length : 0);
+    }
+  }
+
+  // Collect drawing/pict elements up front (snapshot before mutation)
+  const drawingEls: Element[] = [];
+  for (const localName of ['drawing', 'pict']) {
+    const found = doc.getElementsByTagNameNS(W_NS, localName);
+    for (let i = 0; i < found.length; i++) drawingEls.push(found[i]);
+  }
+
+  let removedDrawings = 0;
+  const removedRelIds = new Set<string>();
+  for (const el of drawingEls) {
+    const ids = new Set<string>();
+    collectRelationshipIdAttrs(el, ids);
+    let maxSize = 0;
+    for (const id of ids) {
+      maxSize = Math.max(maxSize, relSizes.get(id) ?? 0);
+    }
+    if (maxSize <= minBytes) continue; // benign spacer / vector shape — keep
+
+    const container = findAncestorRun(el) ?? el;
+    container.parentNode?.removeChild(container);
+    removedDrawings++;
+    for (const id of ids) removedRelIds.add(id);
+  }
+
+  if (removedDrawings === 0) return { removedDrawings: 0, orphanMediaCandidates: [] };
+
+  // A removed rel id may still be referenced by a surviving element in this part
+  const remainingIds = new Set<string>();
+  if (doc.documentElement) collectRelationshipIdAttrs(doc.documentElement, remainingIds);
+
+  const orphanMediaCandidates: string[] = [];
+  if (relsDoc) {
+    let relsModified = false;
+    const rels = relsDoc.getElementsByTagNameNS(PKG_REL_NS, 'Relationship');
+    const toRemove: Element[] = [];
+    for (let i = 0; i < rels.length; i++) {
+      const id = rels[i].getAttribute('Id');
+      if (id && removedRelIds.has(id) && !remainingIds.has(id)) {
+        toRemove.push(rels[i]);
+        const target = relTargets.get(id);
+        if (target) orphanMediaCandidates.push(target);
+      }
+    }
+    for (const rel of toRemove) {
+      rel.parentNode?.removeChild(rel);
+      relsModified = true;
+    }
+    if (relsModified) {
+      modifiedParts.set(relsName, Buffer.from(serializer.serializeToString(relsDoc), 'utf-8'));
+    }
+  }
+
+  return { removedDrawings, orphanMediaCandidates };
+}
+
+/**
+ * Whether any relationship in the package (respecting in-process modifications)
+ * still targets the given media part.
+ */
+function isMediaReferenced(
+  zip: AdmZip,
+  mediaPartName: string,
+  modifiedParts: Map<string, Buffer>,
+): boolean {
+  const parser = new DOMParser();
+  for (const entry of zip.getEntries()) {
+    if (!entry.entryName.endsWith('.rels')) continue;
+    // Base dir of the part that owns this rels file: "<dir>/_rels/<file>.rels" → "<dir>"
+    const relsDir = posix.dirname(entry.entryName); // "<dir>/_rels" or "_rels"
+    const baseDir = posix.dirname(relsDir) === '.' ? '' : posix.dirname(relsDir);
+    const buffer = modifiedParts.get(entry.entryName) ?? entry.getData();
+    const relsDoc = parser.parseFromString(buffer.toString('utf-8'), 'text/xml');
+    const rels = relsDoc.getElementsByTagNameNS(PKG_REL_NS, 'Relationship');
+    for (let i = 0; i < rels.length; i++) {
+      const target = rels[i].getAttribute('Target');
+      if (!target) continue;
+      if ((rels[i].getAttribute('TargetMode') ?? 'Internal') === 'External') continue;
+      if (resolveRelTarget(baseDir, target) === mediaPartName) return true;
+    }
+  }
+  return false;
+}
+
+// ---------------------------------------------------------------------------
+// Empty leading paragraph removal (removeEmptyLeadingParagraphs)
+// ---------------------------------------------------------------------------
+
+/**
+ * Whether a paragraph carries no visible content: no non-whitespace text and no
+ * drawing/picture/embedded-object. A paragraph holding only formatting, a
+ * section break (<w:sectPr>), or a page break counts as empty; a logo or other
+ * image-bearing paragraph does not.
+ */
+export function isParagraphContentEmpty(para: Element): boolean {
+  if (!para.getElementsByTagNameNS) return true;
+  if (extractParagraphText(para) !== '') return false;
+  for (const localName of ['drawing', 'pict', 'object']) {
+    if (para.getElementsByTagNameNS(W_NS, localName).length > 0) return false;
+  }
+  return true;
+}
+
+/** The <w:sectPr> directly under a paragraph's <w:pPr>, if present. */
+function getDirectSectPr(para: Element): Element | null {
+  for (let child: Node | null = para.firstChild; child; child = child.nextSibling) {
+    if (child.nodeType !== 1) continue;
+    const el = child as Element;
+    if (el.localName !== 'pPr' || el.namespaceURI !== W_NS) continue;
+    for (let sub: Node | null = el.firstChild; sub; sub = sub.nextSibling) {
+      if (sub.nodeType !== 1) continue;
+      const subEl = sub as Element;
+      if (subEl.localName === 'sectPr' && subEl.namespaceURI === W_NS) return subEl;
+    }
+  }
+  return null;
+}
+
+/** Direct-child header/footer references of a sectPr. */
+function getHeaderFooterReferences(sectPr: Element): Element[] {
+  const refs: Element[] = [];
+  for (let child: Node | null = sectPr.firstChild; child; child = child.nextSibling) {
+    if (child.nodeType !== 1) continue;
+    const el = child as Element;
+    if (
+      el.namespaceURI === W_NS &&
+      (el.localName === 'headerReference' || el.localName === 'footerReference')
+    ) {
+      refs.push(el);
+    }
+  }
+  return refs;
+}
+
+/** The w:type of a header/footer reference (default | first | even), defaulting to "default". */
+function getReferenceType(ref: Element): string {
+  return ref.getAttributeNS(W_NS, 'type') ?? ref.getAttribute('w:type') ?? 'default';
+}
+
+/**
+ * Remove leading empty paragraphs from <w:body> (post-clean pass).
+ *
+ * Stops at the first paragraph with visible content or the first non-paragraph
+ * block element (table, sdt, ...). When a removed paragraph carries a
+ * <w:sectPr> section break, the effective header/footer references of the
+ * removed sections (accumulated in document order, mirroring OOXML section
+ * inheritance) are transplanted onto the next surviving <w:sectPr> for each
+ * reference slot (kind + w:type) it does not define itself — so downstream
+ * sections that relied on inheriting the removed section's headers/footers
+ * keep them.
+ *
+ * Returns true when at least one paragraph was removed.
+ */
+function removeEmptyLeadingParagraphs(doc: Document): boolean {
+  const body = doc.getElementsByTagNameNS(W_NS, 'body')[0];
+  if (!body) return false;
+
+  const toRemove: Element[] = [];
+  for (let node: Node | null = body.firstChild; node; node = node.nextSibling) {
+    if (node.nodeType !== 1) continue; // skip whitespace/comment nodes
+    const el = node as Element;
+    if (el.localName === 'p' && el.namespaceURI === W_NS && isParagraphContentEmpty(el)) {
+      toRemove.push(el);
+      continue;
+    }
+    break; // first content-bearing paragraph or non-paragraph block element
+  }
+  if (toRemove.length === 0) return false;
+
+  // Never empty the body entirely: keep the last empty paragraph if removal
+  // would leave no block content (only the body-level sectPr)
+  let remainingBlocks = 0;
+  for (let node: Node | null = body.firstChild; node; node = node.nextSibling) {
+    if (node.nodeType !== 1) continue;
+    const el = node as Element;
+    if (el.localName === 'sectPr' && el.namespaceURI === W_NS) continue;
+    remainingBlocks++;
+  }
+  while (toRemove.length > 0 && remainingBlocks - toRemove.length < 1) {
+    toRemove.pop();
+  }
+  if (toRemove.length === 0) return false;
+
+  // Accumulate effective header/footer references across removed section
+  // breaks, in document order (later sections inherit from earlier ones, and a
+  // later explicit reference overrides the inherited one for its slot)
+  const effectiveRefs = new Map<string, Element>(); // "<kind>:<type>" → reference element
+  for (const para of toRemove) {
+    const sectPr = getDirectSectPr(para);
+    if (!sectPr) continue;
+    for (const ref of getHeaderFooterReferences(sectPr)) {
+      effectiveRefs.set(`${ref.localName}:${getReferenceType(ref)}`, ref);
+    }
+  }
+
+  for (const para of toRemove) {
+    para.parentNode?.removeChild(para);
+  }
+
+  if (effectiveRefs.size > 0) {
+    // The next section boundary in document order (a paragraph-level sectPr or
+    // the body-level sectPr)
+    const destSectPr = doc.getElementsByTagNameNS(W_NS, 'sectPr')[0];
+    if (destSectPr) {
+      const existingRefs = getHeaderFooterReferences(destSectPr);
+      const existingSlots = new Set(
+        existingRefs.map((ref) => `${ref.localName}:${getReferenceType(ref)}`),
+      );
+      const transplanted: Element[] = [];
+      for (const [slot, ref] of effectiveRefs) {
+        if (existingSlots.has(slot)) continue;
+        transplanted.push(ref.cloneNode(true) as Element);
+      }
+      if (transplanted.length > 0) {
+        // CT_SectPr is a sequence: headerReference* then footerReference* then
+        // the remaining section properties. Detach the existing references,
+        // merge with the transplanted ones, and re-insert in schema order
+        // (existing before transplanted within each kind, order preserved).
+        const merged = [...existingRefs, ...transplanted];
+        const headers = merged.filter((ref) => ref.localName === 'headerReference');
+        const footers = merged.filter((ref) => ref.localName === 'footerReference');
+        for (const ref of existingRefs) {
+          destSectPr.removeChild(ref);
+        }
+        const anchor = destSectPr.firstChild; // first non-reference child (or null → append)
+        for (const ref of [...headers, ...footers]) {
+          destSectPr.insertBefore(ref, anchor);
+        }
+      }
+    }
+  }
+
+  return true;
 }
 
 /** Extract all text from an element (used for footnotes which contain multiple paragraphs). */
