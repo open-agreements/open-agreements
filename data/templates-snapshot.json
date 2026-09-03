@@ -11133,40 +11133,18 @@
           "default_value_rationale": null
         },
         {
-          "name": "indemnitee_role",
-          "type": "string",
+          "name": "indemnitee_role_scope",
+          "type": "enum",
           "required": true,
           "section": null,
-          "description": "Primary role being indemnified (e.g. director)",
-          "default": "director",
-          "default_value_rationale": null
-        },
-        {
-          "name": "indemnitee_role_plural",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Plural form of the primary role (e.g. directors)",
-          "default": "directors",
-          "default_value_rationale": null
-        },
-        {
-          "name": "indemnitee_role_secondary",
-          "type": "string",
-          "required": false,
-          "section": null,
-          "description": "Secondary role being indemnified (e.g. officer)",
-          "default": "officer",
-          "default_value_rationale": null
-        },
-        {
-          "name": "indemnitee_role_secondary_plural",
-          "type": "string",
-          "required": false,
-          "section": null,
-          "description": "Plural form of the secondary role (e.g. officers)",
-          "default": "officers",
-          "default_value_rationale": null
+          "description": "Corporate roles covered by the agreement: directors, officers, or directors and officers. The directors_or_officers option renders the NVCA recital as \"directors or officers\" and the later singular carrier as \"an officer or director.\"",
+          "default": "directors_or_officers",
+          "default_value_rationale": null,
+          "options": [
+            "directors",
+            "officers",
+            "directors_or_officers"
+          ]
         },
         {
           "name": "indemnitee_pronoun_possessive",

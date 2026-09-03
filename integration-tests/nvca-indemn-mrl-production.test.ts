@@ -71,6 +71,37 @@ describeWithSources('NVCA Indemnification Agreement and Management Rights Letter
       expect(text).not.toContain('[address]');
       expect(text).toContain('provided by Summit Ventures Fund IV, L.P.');
       expect(text).toContain('terminate on the closing of an initial public offering');
+      expect(text).toContain('serve corporations as directors or officers or in other capacities');
+      expect(text).toContain('agreement to serve as an officer or director from and after the date hereof');
+      expect(text).not.toContain('directors officers');
+      expect(text).not.toContain('an officer director');
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  }, 15_000);
+
+  it.each([
+    ['directors', 'serve corporations as directors or in other capacities', 'agreement to serve as a director from and after'],
+    ['officers', 'serve corporations as officers or in other capacities', 'agreement to serve as an officer from and after'],
+    [
+      'directors_or_officers',
+      'serve corporations as directors or officers or in other capacities',
+      'agreement to serve as an officer or director from and after',
+    ],
+  ])('renders the %s role scope grammatically', async (roleScope, pluralPhrase, singularPhrase) => {
+    const dir = mkdtempSync(join(tmpdir(), 'nvca-indemn-role-scope-'));
+    try {
+      const outputPath = join(dir, `${roleScope}.docx`);
+      await runFieldSelector({
+        fieldSelectorId: CASES.indemnification.id,
+        outputPath,
+        values: { ...loadFixture(CASES.indemnification.fixture), indemnitee_role_scope: roleScope },
+      });
+      const text = extractAllText(outputPath);
+      expect(text).toContain(pluralPhrase);
+      expect(text).toContain(singularPhrase);
+      expect(text).not.toContain('[directors] [officers]');
+      expect(text).not.toContain('an [officer] [director]');
     } finally {
       rmSync(dir, { recursive: true, force: true });
     }
