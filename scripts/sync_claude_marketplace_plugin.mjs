@@ -140,7 +140,7 @@ const nonCompeteSlugs = [
   "wyoming",
 ];
 
-const skillSpecs = [
+export const skillSpecs = [
   {
     source: "skills/agreements/open-agreements",
     target: "open-agreements",
@@ -154,6 +154,7 @@ const skillSpecs = [
       "NOTICE",
       "SKILL.md",
       "manifest.json",
+      "quality-card.json",
       ...nonCompeteSlugs.map((slug) => `content/${slug}.md`),
     ],
   },
@@ -169,6 +170,14 @@ const skillSpecs = [
     ],
   },
 ];
+
+// Artifacts a skill source may or may not carry, but that MUST reach the plugin
+// wherever they exist. `files` is a deliberate publish allowlist, so a newly
+// added artifact stays invisible to the bundle until someone lists it — which
+// is exactly how `quality-card.json` reached the npm tarball (via the broad
+// `skills/` entry) while silently missing from the marketplace plugin. Fail
+// loudly rather than shipping a partial skill.
+const requiredWhenPresent = ["quality-card.json"];
 
 const staticPluginFiles = [
   ".claude-plugin/plugin.json",
@@ -381,6 +390,18 @@ function checkExplainerManifest(skillRoot, expectedSlugs, problems) {
   }
 }
 
+function checkProjectedArtifacts(problems) {
+  for (const spec of skillSpecs) {
+    for (const file of requiredWhenPresent) {
+      if (!existsSync(join(repoRoot, spec.source, file))) continue;
+      if (spec.files.includes(file)) continue;
+      problems.push(
+        `${spec.source}/${file} exists but is missing from the plugin allowlist for ${spec.target}`,
+      );
+    }
+  }
+}
+
 export function checkPlugin(pluginRoot = defaultPluginRoot) {
   const expected = expectedPluginFiles();
   const actual = listFiles(pluginRoot).map((file) => portable(relative(pluginRoot, file)));
@@ -406,6 +427,7 @@ export function checkPlugin(pluginRoot = defaultPluginRoot) {
 
   if (pluginRoot === defaultPluginRoot) {
     checkVersions(problems);
+    checkProjectedArtifacts(problems);
     checkExplainerManifest(
       join(repoRoot, "skills", "legal-explainers", "data-privacy-law-explainer"),
       privacySlugs,

@@ -4,8 +4,9 @@
   "title": "OpenAgreements skill quality card",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "skill", "content_packaged_at", "law_checked_through", "human_reviewed_at", "next_review_due", "coverage", "review", "freshness"],
+  "required": ["$schema", "schema_version", "skill", "content_packaged_at", "law_checked_through", "human_reviewed_at", "next_review_due", "coverage", "review", "freshness"],
   "properties": {
+    "$schema": {"const": "https://openagreements.org/schemas/skill-quality-card.schema.json"},
     "schema_version": {"const": "2026-08-31"},
     "skill": {"type": "string", "minLength": 1},
     "content_packaged_at": {"$ref": "#/$defs/date"},
