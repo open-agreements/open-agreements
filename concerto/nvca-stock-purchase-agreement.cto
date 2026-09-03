@@ -28,10 +28,12 @@ asset NvcaStockPurchaseAgreement extends Contract {
   o String company_counsel_name
   o String lead_purchaser_name
   o String series_designation default=""
-  o String agreement_date_month_day default="January 15"
-  o String agreement_year_two_digits default="26"
+  o String agreement_date
   o String par_value_per_share default="0.0001"
   o String purchase_price_per_share default="1.00"
+  o String convertible_purchase_price_per_share optional
+  o String convertible_series_designation optional
+  o String convertible_security_shares optional
   o String applicable_word default=""
   o Boolean include_convertible_securities default=false
   o Boolean include_closing_reference default=false
@@ -46,8 +48,25 @@ asset NvcaStockPurchaseAgreement extends Contract {
   o String arbitration_location optional
   o String judicial_district
   o String balance_sheet_date
+  o String balance_sheet_date_defined_term default="Balance Sheet Date"
   o String benefit_plan_name optional
+  o String common_authorized_shares optional
+  o String common_par_value_per_share default="0.0001"
+  o String common_outstanding_shares optional
+  o String preferred_authorized_shares optional
+  o String preferred_par_value_per_share default="0.0001"
+  o String series_authorized_shares optional
+  o String stock_plan_reserved_shares optional
+  o String restricted_stock_outstanding_shares optional
+  o String option_shares_outstanding optional
+  o String stock_plan_available_shares optional
+  o String material_contract_threshold optional
+  o String indebtedness_individual_threshold optional
+  o String indebtedness_aggregate_threshold optional
+  o String investor_counsel_expense_cap optional
+  o String healthcare_compliance_standard default=""
   o String signature_page_marker default="Signature Page Follows"
+  o String state default="Delaware"
   o String state_lower
   o String specify_percentage
   o String financial_reporting_period default="monthly"

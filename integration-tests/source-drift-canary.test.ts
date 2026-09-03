@@ -19,7 +19,7 @@ afterEach(() => {
   }
 });
 
-function buildDocx(paragraphs: string[]): Buffer {
+function buildDocx(paragraphs: string[], headerParagraphs: string[] = []): Buffer {
   const contentTypes =
     '<?xml version="1.0" encoding="UTF-8"?>' +
     '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">' +
@@ -50,6 +50,15 @@ function buildDocx(paragraphs: string[]): Buffer {
   zip.addFile('_rels/.rels', Buffer.from(rels, 'utf-8'));
   zip.addFile('word/_rels/document.xml.rels', Buffer.from(wordRels, 'utf-8'));
   zip.addFile('word/document.xml', Buffer.from(documentXml, 'utf-8'));
+  if (headerParagraphs.length > 0) {
+    const headerBody = headerParagraphs
+      .map((text) => `<w:p><w:r><w:t>${escapeXml(text)}</w:t></w:r></w:p>`)
+      .join('');
+    zip.addFile(
+      'word/header1.xml',
+      Buffer.from(`<?xml version="1.0" encoding="UTF-8"?><w:hdr xmlns:w="${W_NS}">${headerBody}</w:hdr>`, 'utf-8'),
+    );
+  }
   return zip.toBuffer();
 }
 
@@ -145,6 +154,30 @@ describe('source drift canary', () => {
 
     expect(result.hash_match).toBe(false);
     expect(result.ok).toBe(false);
+  });
+
+  it('treats nonbreaking and ordinary spaces as equivalent in replacement anchors', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-source-drift-nbsp-'));
+    tempDirs.push(dir);
+    const sourcePath = join(dir, 'source.docx');
+    writeFileSync(sourcePath, buildDocx(
+      ['Body without the replacement anchor.'],
+      ['Signature Page to Series\u00a0[___] Preferred Stock Purchase Agreement'],
+    ));
+
+    const metadata = makeMetadata(sha256Hex(sourcePath));
+    const result = checkFieldSelectorSourceDrift({
+      fieldSelectorId: 'synthetic',
+      sourcePath,
+      metadata,
+      replacements: {
+        'Signature Page to Series [___] Preferred Stock Purchase Agreement':
+          'Signature Page to Series {company_name} Preferred Stock Purchase Agreement',
+      },
+    });
+
+    expect(result.diff.missing_replacement_anchor_groups).toEqual([]);
+    expect(result.ok).toBe(true);
   });
 
   it('reports structural anchor drift for missing replacement and normalize anchors', () => {

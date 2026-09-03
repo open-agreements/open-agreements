@@ -54,12 +54,12 @@
       "inline": true,
       "options": [
         {
-          "label": "Include convertible securities", "marker": "[or, as applicable, a purchase price of $[___] per share with respect to the shares of Series [____] Preferred Stock being issued [in the Initial Closing] pursuant to any cancellation or conversion of Convertible Securities (as defined below) as set forth in Section 1.3 below]",
+          "label": "Include convertible securities", "marker": "[or, as applicable, a purchase price of ${convertible_purchase_price_per_share} per share with respect to the shares of Series {convertible_series_designation} Preferred Stock being issued [in the Initial Closing] pursuant to any cancellation or conversion of Convertible Securities (as defined below) as set forth in Section 1.3 below]",
           "trigger": { "field": "include_convertible_securities", "equals": true },
           "replaceWith": ""
         },
         {
-          "label": "Include convertible securities capitalization rep", "marker": "[The Company has issued Convertible Securities that will convert into an aggregate of [___] shares of Series [___] Preferred Stock as of the {initial_word_title}Closing as set forth under the column heading \"Convertible Security Shares\" on Exhibit A and Exhibit A-1.] ",
+          "label": "Include convertible securities capitalization rep", "marker": "[The Company has issued Convertible Securities that will convert into an aggregate of {convertible_security_shares} shares of Series {convertible_series_designation} Preferred Stock as of the {initial_word_title}Closing as set forth under the column heading \"Convertible Security Shares\" on Exhibit A and Exhibit A-1.]",
           "trigger": { "field": "include_convertible_securities", "equals": true },
           "replaceWith": ""
         }

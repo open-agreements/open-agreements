@@ -11092,7 +11092,16 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Address of the indemnitee",
+          "description": "Address of the Delaware service-of-process agent named in the optional jurisdiction clause. Retained under its original field name for compatibility; this is not an indemnitee mailing-address slot in the NVCA source.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "service_of_process_agent_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Name of the Delaware service-of-process agent in the optional jurisdiction clause",
           "default": null,
           "default_value_rationale": null
         },
@@ -11124,39 +11133,35 @@
           "default_value_rationale": null
         },
         {
-          "name": "indemnitee_role",
-          "type": "string",
+          "name": "indemnitee_role_scope",
+          "type": "enum",
           "required": true,
           "section": null,
-          "description": "Primary role being indemnified (e.g. director)",
-          "default": "director",
-          "default_value_rationale": null
+          "description": "Corporate roles covered by the agreement: directors, officers, or directors and officers. The directors_or_officers option renders the NVCA recital as \"directors or officers\" and the later singular carrier as \"an officer or director.\"",
+          "default": "directors_or_officers",
+          "default_value_rationale": null,
+          "options": [
+            "directors",
+            "officers",
+            "directors_or_officers"
+          ]
         },
         {
-          "name": "indemnitee_role_plural",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Plural form of the primary role (e.g. directors)",
-          "default": "directors",
-          "default_value_rationale": null
-        },
-        {
-          "name": "indemnitee_role_secondary",
+          "name": "indemnitee_role_scope_plural",
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Secondary role being indemnified (e.g. officer)",
-          "default": "officer",
+          "description": "Computed plural role phrase derived from indemnitee_role_scope; do not supply directly",
+          "default": null,
           "default_value_rationale": null
         },
         {
-          "name": "indemnitee_role_secondary_plural",
+          "name": "indemnitee_role_scope_singular",
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Plural form of the secondary role (e.g. officers)",
-          "default": "officers",
+          "description": "Computed singular role phrase derived from indemnitee_role_scope; do not supply directly",
+          "default": null,
           "default_value_rationale": null
         },
         {
@@ -11240,15 +11245,6 @@
           "default_value_rationale": null
         },
         {
-          "name": "company_name_short",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Short name of the company used in running text (e.g. Acme or the Company)",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
           "name": "investor_name",
           "type": "string",
           "required": true,
@@ -11256,6 +11252,19 @@
           "description": "Full legal name of the lead investor",
           "default": null,
           "default_value_rationale": null
+        },
+        {
+          "name": "underwriter_selection",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Party authorized to select the underwriters in Section 2.3",
+          "default": "company",
+          "default_value_rationale": null,
+          "options": [
+            "company",
+            "board_of_directors"
+          ]
         },
         {
           "name": "company_counsel",
@@ -11468,8 +11477,8 @@
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Portfolio company letterhead text",
-          "default": "",
+          "description": "Portfolio company letterhead text. Defaults to a conspicuous drafting marker so an omitted optional letterhead does not collapse the first operative paragraph into a blank leading page.",
+          "default": "PORTFOLIO COMPANY LETTERHEAD",
           "default_value_rationale": null
         },
         {
@@ -11768,6 +11777,33 @@
           "default_value_rationale": null
         },
         {
+          "name": "convertible_purchase_price_per_share",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Per-share price for Preferred Stock issued on conversion of Convertible Securities",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "convertible_series_designation",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Series designation for Preferred Stock issued on conversion of Convertible Securities",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "convertible_security_shares",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Aggregate shares issued on conversion of Convertible Securities at Closing",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
           "name": "applicable_word",
           "type": "string",
           "required": false,
@@ -11917,6 +11953,141 @@
           "section": null,
           "description": "Plan year and name of the employee benefit plan",
           "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "common_authorized_shares",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Authorized shares of Common Stock in the capitalization representation",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "common_par_value_per_share",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Par value per share of Common Stock",
+          "default": "0.0001",
+          "default_value_rationale": null
+        },
+        {
+          "name": "common_outstanding_shares",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Issued and outstanding shares of Common Stock",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "preferred_authorized_shares",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Authorized shares of Preferred Stock",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "preferred_par_value_per_share",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Par value per share of Preferred Stock",
+          "default": "0.0001",
+          "default_value_rationale": null
+        },
+        {
+          "name": "series_authorized_shares",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Shares of Preferred Stock designated as the financing series",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "stock_plan_reserved_shares",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Common Stock reserved under the Stock Plan",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "restricted_stock_outstanding_shares",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Restricted stock shares issued and outstanding under the Stock Plan",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "option_shares_outstanding",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Shares subject to outstanding options under the Stock Plan",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "stock_plan_available_shares",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Shares remaining available under the Stock Plan",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "material_contract_threshold",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Dollar threshold for contracts required to be disclosed",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "indebtedness_individual_threshold",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Individual indebtedness or liability threshold since the Balance Sheet Date",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "indebtedness_aggregate_threshold",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Aggregate indebtedness or liability threshold since the Balance Sheet Date",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_counsel_expense_cap",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Maximum aggregate Company-paid fees and expenses of investor counsel",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "healthcare_compliance_standard",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Optional bracketed healthcare compliance law name, such as HIPAA; leave blank if inapplicable",
+          "default": "",
           "default_value_rationale": null
         },
         {

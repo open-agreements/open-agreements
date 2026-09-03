@@ -95,6 +95,10 @@
   "Redemption. > [Other than as set forth in Section 2.3.2(b), the Preferred Stock is not redeemable at the option of the holder or the Corporation.],": "{no_redemption_clause}",
   "Preferred Stock”), > [all]": "{preferred_shares_designated_portion}",
   "designated as “Series > A Preferred Stock": "{series_designation} Preferred Stock",
+  "References to “Preferred Stock” mean the > Series A Preferred Stock": "Series {series_designation} Preferred Stock",
+  "The “Original Issue Price” shall mean, with respect to the > Series A Preferred Stock": "Series {series_designation} Preferred Stock",
+  "per share of > Series A Preferred Stock": "Series {series_designation} Preferred Stock",
+  "first share of > Series A Preferred Stock": "Series {series_designation} Preferred Stock",
   "Original Issue Date > [Date]": "{full_ratchet_sunset_date}",
   "Qualified Financing” shall mean > [that would result in at least $_______ in gross proceeds to the Corporation, [including/excluding] proceeds previously received by Corporation for debt that is being cancelled or converted in connection with such issuance]": "that would result in at least ${qualified_financing_min_gross_proceeds} in gross proceeds to the Corporation, {qualified_financing_debt_proceeds_treatment} proceeds previously received by Corporation for debt that is being cancelled or converted in connection with such issuance"
 }

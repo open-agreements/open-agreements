@@ -16,12 +16,16 @@ fields:
   - name: company_name
     type: string
     description: Full legal name of the company (e.g. Acme Corp, Inc.)
-  - name: company_name_short
-    type: string
-    description: Short name of the company used in running text (e.g. Acme or the Company)
   - name: investor_name
     type: string
     description: Full legal name of the lead investor
+  - name: underwriter_selection
+    type: enum
+    description: Party authorized to select the underwriters in Section 2.3
+    default: company
+    options:
+      - company
+      - board_of_directors
   - name: company_counsel
     type: string
     description: Name and address of company's legal counsel
@@ -72,8 +76,8 @@ fields:
     default: '0.0001'
 priority_fields:
   - company_name
-  - company_name_short
   - investor_name
+  - underwriter_selection
   - company_counsel
   - state_of_incorporation
   - judicial_district

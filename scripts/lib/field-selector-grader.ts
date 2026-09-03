@@ -318,12 +318,19 @@ async function checkB2CoverageRatio(
     const sourcePath = await ensureSourceDocx(fieldSelectorId, meta);
     const text = extractAllText(sourcePath);
 
-    // COI opts into the corrected placeholder-only population. Preserve the
-    // legacy all-brackets population and threshold for other selectors until
-    // each one is re-audited; changing a shared rubric must not silently
-    // invalidate an existing production scorecard.
-    const strictPlaceholderCoverage = fieldSelectorId === 'nvca-certificate-of-incorporation';
-    const populationPattern = strictPlaceholderCoverage ? /\[[_A-Z][_A-Z\s]*\]/g : /\[[^\]]+\]/g;
+    // Re-audited NVCA selectors use the placeholder-only population. Require at
+    // least two characters so exhibit references such as "[E]" are not graded
+    // as fill placeholders.
+    const strictPlaceholderCoverage = new Set([
+      'nvca-stock-purchase-agreement',
+      'nvca-certificate-of-incorporation',
+      'nvca-investors-rights-agreement',
+      'nvca-voting-agreement',
+      'nvca-rofr-co-sale-agreement',
+      'nvca-indemnification-agreement',
+      'nvca-management-rights-letter',
+    ]).has(fieldSelectorId);
+    const populationPattern = strictPlaceholderCoverage ? /\[[_A-Z][_A-Z\s]+\]/g : /\[[^\]]+\]/g;
     const bracketPatterns = [...new Set(text.match(populationPattern) ?? [])];
     if (bracketPatterns.length === 0) {
       return { id: 'B2', name: 'Coverage ratio', passed: true, details: 'No bracket patterns in source' };

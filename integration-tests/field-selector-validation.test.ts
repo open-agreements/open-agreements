@@ -98,6 +98,13 @@ describe('issue #620 slot coverage', () => {
       expect(replacements['Series [_]']).toBe('Series {series_designation}');
     });
 
+    await allureStep('Assert the address line is replaced as one qualified shape', () => {
+      expect(replacements['[City], [State] [Zip]']).toBe('{city}, {state} {zip_code}');
+      expect(replacements).not.toHaveProperty('[City]');
+      expect(replacements).not.toHaveProperty('[State]');
+      expect(replacements).not.toHaveProperty('[Zip]');
+    });
+
     await allureStep('Assert letter_date is a date-typed metadata field', () => {
       const metadata = readFileSync(join(dir, 'metadata.yaml'), 'utf-8');
       expect(metadata).toMatch(/- name: letter_date\n\s+type: date/);

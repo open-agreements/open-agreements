@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "max_passes": 1,
+  "rules": [
+    {
+      "id": "underwriter-selected-by-company",
+      "description": "Select the Company alternative for appointment of underwriters",
+      "when_all": [{ "field": "underwriter_selection", "op": "eq", "value": "company" }],
+      "set_fill": { "underwriter_selector_text": "Company" }
+    },
+    {
+      "id": "underwriter-selected-by-board",
+      "description": "Select the Board of Directors alternative for appointment of underwriters",
+      "when_all": [{ "field": "underwriter_selection", "op": "eq", "value": "board_of_directors" }],
+      "set_fill": { "underwriter_selector_text": "Board of Directors" }
+    }
+  ]
+}
