@@ -52,6 +52,37 @@ fields:
   - name: business_description
     type: string
     description: Brief description of the company's business
+  - name: competitor_exclusion_mode
+    type: enum
+    description: Whether to identify a person whose group is expressly excluded from the Competitor definition
+    default: none
+    options:
+      - none
+      - named
+  - name: excluded_competitor_name
+    type: string
+    description: Name expressly excluded from the Competitor definition when competitor_exclusion_mode is named
+    default: ''
+  - name: major_investor_threshold_shares
+    type: string
+    description: Minimum number of Registrable Securities required to qualify as a Major Investor
+  - name: board_observer_investor_name
+    type: string
+    description: Investor entitled to designate the nonvoting board observer
+  - name: board_observer_threshold_shares
+    type: string
+    description: Minimum Preferred Stock holdings required to retain the board observer right
+  - name: transferee_eligibility_standard
+    type: enum
+    description: Standard a non-Affiliate transferee must satisfy to receive registration rights under Section 6.1
+    default: major_investor
+    options:
+      - minimum_shares
+      - major_investor
+  - name: transferee_minimum_shares
+    type: string
+    description: Minimum Registrable Securities a transferee must hold when the Section 6.1 minimum-shares standard applies
+    default: ''
   - name: signature_page_marker
     type: string
     description: Signature page marker text
@@ -82,6 +113,11 @@ priority_fields:
   - state_of_incorporation
   - judicial_district
   - business_description
+  - competitor_exclusion_mode
+  - major_investor_threshold_shares
+  - board_observer_investor_name
+  - board_observer_threshold_shares
+  - transferee_eligibility_standard
   - effective_date
   - series_designation
   - par_value

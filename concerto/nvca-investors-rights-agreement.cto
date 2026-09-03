@@ -16,6 +16,16 @@ enum Underwriter_selectionType {
   o board_of_directors
 }
 
+enum Competitor_exclusion_modeType {
+  o none
+  o named
+}
+
+enum Transferee_eligibility_standardType {
+  o minimum_shares
+  o major_investor
+}
+
 asset NvcaInvestorsRightsAgreement extends Contract {
   o String company_name
   o String investor_name
@@ -27,6 +37,13 @@ asset NvcaInvestorsRightsAgreement extends Contract {
   o String amended_restated_upper default=""
   o String amended_restated default=""
   o String business_description
+  o Competitor_exclusion_modeType competitor_exclusion_mode default="none"
+  o String excluded_competitor_name default=""
+  o String major_investor_threshold_shares
+  o String board_observer_investor_name
+  o String board_observer_threshold_shares
+  o Transferee_eligibility_standardType transferee_eligibility_standard default="major_investor"
+  o String transferee_minimum_shares default=""
   o String signature_page_marker default="Signature Page Follows"
   o String effective_date
   o String checklist_delivery_date
