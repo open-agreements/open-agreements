@@ -59,7 +59,7 @@ Audit all NVCA field-selectors and update the quality tracker
 | # | Check | How |
 |---|-------|-----|
 | B1 | Source download + scan | Count placeholder-shaped matches using the exact regex `\[[_A-Z][_A-Z\s]*\]` (underscore-fill or all-capital placeholders) |
-| B2 | Replacement coverage ratio | For re-audited selectors that explicitly use strict placeholder coverage (currently COI), covered unique matches / total unique matches from the exact B1 regex, target >80%. Until each legacy selector is re-audited, preserve its all-brackets population and >=70% threshold so a shared grader change cannot silently invalidate an existing production score. |
+| B2 | Replacement coverage ratio | For the re-audited NVCA selectors, covered unique matches / total unique matches from the exact B1 regex, target >80%. The legacy all-brackets population and >=70% threshold remains only for selectors outside that audited set. |
 | B3 | Unmatched underscore patterns | `[___+]` patterns in source not in replacements.json |
 | B4 | Clean effectiveness | After clean, no footnotes, no "Note to Drafter", no preamble |
 

@@ -322,7 +322,15 @@ async function checkB2CoverageRatio(
     // legacy all-brackets population and threshold for other selectors until
     // each one is re-audited; changing a shared rubric must not silently
     // invalidate an existing production scorecard.
-    const strictPlaceholderCoverage = fieldSelectorId === 'nvca-certificate-of-incorporation';
+    const strictPlaceholderCoverage = new Set([
+      'nvca-stock-purchase-agreement',
+      'nvca-certificate-of-incorporation',
+      'nvca-investors-rights-agreement',
+      'nvca-voting-agreement',
+      'nvca-rofr-co-sale-agreement',
+      'nvca-indemnification-agreement',
+      'nvca-management-rights-letter',
+    ]).has(fieldSelectorId);
     const populationPattern = strictPlaceholderCoverage ? /\[[_A-Z][_A-Z\s]*\]/g : /\[[^\]]+\]/g;
     const bracketPatterns = [...new Set(text.match(populationPattern) ?? [])];
     if (bracketPatterns.length === 0) {

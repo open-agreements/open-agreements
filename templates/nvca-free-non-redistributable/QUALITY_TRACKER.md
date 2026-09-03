@@ -7,7 +7,7 @@ Updated by the `field-selector-quality-audit` skill after each audit.
 
 | Field-selector | S | B | F | Total | Tier | Fixture | Last Audit |
 |--------|---|---|---|-------|------|---------|------------|
-| nvca-stock-purchase-agreement | 5/7 | 2/4 | 3/4 | 10/15 | beta | — | 2026-09-02 |
+| nvca-stock-purchase-agreement | 7/7 | 4/4 | 4/4 | 15/15 | beta | spa-production-full.json | 2026-09-02 |
 | nvca-certificate-of-incorporation | 7/7 | 4/4 | 4/4 | 15/15 | production | coi-production-full.json | 2026-09-01 |
 | nvca-investors-rights-agreement | ?/7 | ?/4 | ?/4 | ?/15 | beta | — | — |
 | nvca-voting-agreement | ?/7 | ?/4 | ?/4 | ?/15 | beta | — | — |
