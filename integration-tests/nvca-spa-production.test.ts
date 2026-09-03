@@ -91,6 +91,9 @@ describeWithSource('NVCA SPA production fill', () => {
       expect(text).toMatch(/400,000 shares of Series\s+B Preferred Stock/);
       expect(text).toMatch(/Signature Page to Series B Preferred Stock Purchase Agreement/i);
       expect(text).toContain('purchase price of $2.50 per share with respect to the shares of Series B Preferred Stock');
+      expect(text).toContain('to fix the conversion price (as defined therein) at $2.50 per share');
+      expect(text).toContain('Not a Person of a Country of Concern\n. Except as otherwise disclosed in writing');
+      expect(text).toContain('Data Security Program\n. The Purchaser is not a “covered person”');
       expect(text).toContain('shall be resolved by arbitration before a single arbitrator');
       expect(text).toContain('Wilmington, Delaware');
     } finally {

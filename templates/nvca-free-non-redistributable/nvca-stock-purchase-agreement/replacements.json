@@ -15,6 +15,7 @@
   "Stock, $ > [__]": "{par_value_per_share}",
   "purchase price of $ > [__]": "{purchase_price_per_share}",
   "convert into an aggregate of [___] shares of Series [___] Preferred Stock": "convert into an aggregate of {convertible_security_shares} shares of Series {convertible_series_designation} Preferred Stock",
+  "to fix the conversion price (as defined therein) at $[___] per share": "to fix the conversion price (as defined therein) at ${convertible_purchase_price_per_share} per share",
   "purchase price of $ > [___]": "{convertible_purchase_price_per_share}",
   "shares of Series > [____]": "{convertible_series_designation}",
   "such Series > [__]": "{series_designation}",
