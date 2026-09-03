@@ -20,11 +20,13 @@ asset NvcaRofrCoSaleAgreement extends Contract {
   o String amended_restated_upper default=""
   o String amended_restated default=""
   o String judicial_district default="District of Delaware"
-  o String state_lower default="delaware"
+  o String state_of_incorporation default="Delaware"
   o String business_description
   o String signature_page_marker default="Signature Page Follows"
   o String effective_date
   o String specify_percentage
   o String rofr_response_days default="45"
   o String key_holders_label default="Key Holders"
+  o String series_designation default=""
+  o String par_value default="0.0001"
 }

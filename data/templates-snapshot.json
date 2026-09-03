@@ -11240,15 +11240,6 @@
           "default_value_rationale": null
         },
         {
-          "name": "company_name_short",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Short name of the company used in running text (e.g. Acme or the Company)",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
           "name": "investor_name",
           "type": "string",
           "required": true,
@@ -11256,6 +11247,19 @@
           "description": "Full legal name of the lead investor",
           "default": null,
           "default_value_rationale": null
+        },
+        {
+          "name": "underwriter_selection",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Party authorized to select the underwriters in Section 2.3",
+          "default": "company",
+          "default_value_rationale": null,
+          "options": [
+            "company",
+            "board_of_directors"
+          ]
         },
         {
           "name": "company_counsel",

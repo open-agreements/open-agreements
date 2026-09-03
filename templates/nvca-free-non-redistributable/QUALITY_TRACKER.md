@@ -9,9 +9,9 @@ Updated by the `field-selector-quality-audit` skill after each audit.
 |--------|---|---|---|-------|------|---------|------------|
 | nvca-stock-purchase-agreement | 7/7 | 4/4 | 4/4 | 15/15 | beta | spa-production-full.json | 2026-09-02 |
 | nvca-certificate-of-incorporation | 7/7 | 4/4 | 4/4 | 15/15 | production | coi-production-full.json | 2026-09-01 |
-| nvca-investors-rights-agreement | ?/7 | ?/4 | ?/4 | ?/15 | beta | — | — |
-| nvca-voting-agreement | ?/7 | ?/4 | ?/4 | ?/15 | beta | — | — |
-| nvca-rofr-co-sale-agreement | ?/7 | ?/4 | ?/4 | ?/15 | beta | — | — |
+| nvca-investors-rights-agreement | 7/7 | 2/4 | 4/4 | 13/15 | beta | ira-production-full.json | 2026-09-02 |
+| nvca-voting-agreement | 7/7 | 2/4 | 4/4 | 13/15 | beta | voting-agreement-production-full.json | 2026-09-02 |
+| nvca-rofr-co-sale-agreement | 7/7 | 2/4 | 4/4 | 13/15 | beta | rofr-co-sale-agreement-series-c.json | 2026-09-02 |
 | nvca-indemnification-agreement | ?/7 | ?/4 | ?/4 | ?/15 | beta | — | — |
 | nvca-management-rights-letter | ?/7 | ?/4 | ?/4 | ?/15 | beta | — | — |
 
