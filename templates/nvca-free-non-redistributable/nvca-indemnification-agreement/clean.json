@@ -1,5 +1,9 @@
 {
   "removeFootnotes": false,
+  "removeEmptyLeadingParagraphs": true,
+  "clearParts": [
+    "header3.xml"
+  ],
   "removeParagraphPatterns": [
     "^Comment:",
     "^NOTE:"

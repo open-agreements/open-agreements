@@ -136,10 +136,23 @@ describe('nvca-indemnification-agreement field bindings (#616)', () => {
     );
     expect(boundFields.has('agreement_effective_date')).toBe(true);
     expect(boundFields.has('appointing_stockholder_ipo_termination_clause')).toBe(true);
+    expect(boundFields.has('service_of_process_agent_name')).toBe(true);
     // Every replacement tag targets a published field.
     for (const field of boundFields) {
       expect(fieldNames).toContain(field);
     }
+  });
+
+  it('uses distinct contextual bindings for the indemnitee and Delaware service agent', () => {
+    const replacements = JSON.parse(
+      readFileSync(join(TEMPLATE_DIR, 'replacements.json'), 'utf-8'),
+    ) as Record<string, string>;
+
+    expect(replacements['Company”), and > [name]']).toBe('{indemnitee_name}');
+    expect(replacements['Delaware, irrevocably > [name]']).toBe('{service_of_process_agent_name}');
+    expect(replacements['Delaware, irrevocably [name] > [address]']).toBe('{indemnitee_address}');
+    expect(replacements).not.toHaveProperty('[name]');
+    expect(replacements).not.toHaveProperty('[address]');
   });
 
   it('agreement_effective_date is typed date and ISO input fills the opening-clause blank as a document date', async () => {

@@ -18,7 +18,12 @@ fields:
     description: Full legal name of the indemnitee (director or officer)
   - name: indemnitee_address
     type: string
-    description: Address of the indemnitee
+    description: >-
+      Address of the Delaware service-of-process agent named in the optional jurisdiction clause. Retained under its
+      original field name for compatibility; this is not an indemnitee mailing-address slot in the NVCA source.
+  - name: service_of_process_agent_name
+    type: string
+    description: Name of the Delaware service-of-process agent in the optional jurisdiction clause
   - name: company_name
     type: string
     description: Name of the corporation providing indemnification
@@ -75,6 +80,7 @@ fields:
 priority_fields:
   - indemnitee_name
   - indemnitee_address
+  - service_of_process_agent_name
   - company_name
   - agreement_effective_date
   - indemnitee_role

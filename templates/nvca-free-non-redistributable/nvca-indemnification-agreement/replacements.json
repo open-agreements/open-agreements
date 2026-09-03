@@ -1,6 +1,7 @@
 {
-  "[name]": "{indemnitee_name}",
-  "[address]": "{indemnitee_address}",
+  "Delaware, irrevocably [name] > [address]": "{indemnitee_address}",
+  "Delaware, irrevocably > [name]": "{service_of_process_agent_name}",
+  "Company”), and > [name]": "{indemnitee_name}",
   "[corporation]": "{company_name}",
   "[name of fund/sponsor]": "{fund_sponsor_name}",
   "provided by [Name of Fund/Sponsor] and": "provided by {fund_sponsor_name} and",

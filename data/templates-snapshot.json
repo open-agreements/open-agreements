@@ -11092,7 +11092,16 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Address of the indemnitee",
+          "description": "Address of the Delaware service-of-process agent named in the optional jurisdiction clause. Retained under its original field name for compatibility; this is not an indemnitee mailing-address slot in the NVCA source.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "service_of_process_agent_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Name of the Delaware service-of-process agent in the optional jurisdiction clause",
           "default": null,
           "default_value_rationale": null
         },
@@ -11472,8 +11481,8 @@
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Portfolio company letterhead text",
-          "default": "",
+          "description": "Portfolio company letterhead text. Defaults to a conspicuous drafting marker so an omitted optional letterhead does not collapse the first operative paragraph into a blank leading page.",
+          "default": "PORTFOLIO COMPANY LETTERHEAD",
           "default_value_rationale": null
         },
         {
