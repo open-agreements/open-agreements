@@ -387,6 +387,7 @@ describe('contract-templates-mcp tools', () => {
     expect(template.$class).toBe('org.accordproject.protocol@1.0.0.Template');
     expect(template.author).toBe('OpenAgreements contributors');
     expect(template.license).toBe('CC-BY-4.0');
+    expect(data.template_relationship).toBe(`resource:${template.$class}#${template.uri}`);
   });
 
   it('renders APAP CIIAA agreement data to a local DOCX without base64', async () => {
