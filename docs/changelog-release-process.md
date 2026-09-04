@@ -50,7 +50,12 @@ Allowed types include:
    - publish the npm package suite with trusted OIDC provenance, including both `open-agreements` and `@open-agreements/open-agreements`,
    - publish `server.json` to the official MCP registry (`io.github.open-agreements/open-agreements`) so the registry's `isLatest` tracks npm,
    - create a GitHub Release with auto-generated notes (if one does not exist),
-   - deploy production to Vercel.
+   - attach the versioned template snapshot tarball.
+
+> **Corrected 2026-09-04.** This page previously said the tag workflow deployed
+> production to Vercel. The current `release.yml` does not deploy Vercel. A
+> separate main-push workflow dispatches OpenAgreements updates to
+> `UseJunior/dev-website`.
 4. GitHub Releases is the public changelog surface for published notes:
    - `https://github.com/open-agreements/open-agreements/releases`
 
@@ -96,9 +101,19 @@ Before pushing a release tag, run a local Gemini extension install smoke test:
 1. Copy or symlink this repo checkout into `~/.gemini/extensions/open-agreements`.
 2. Verify `gemini-extension.json` is valid and includes:
    - `name`, `version`, `description`, `contextFileName`, `entrypoint`, `mcpServers`
-   - two local servers (`contracts-workspace-mcp`, `contract-templates-mcp`)
+   - the local servers declared by the manifest (currently
+     `contracts-workspace-mcp`, `contract-templates-mcp`, and `checklist-mcp`)
    - no `cwd` overrides
-3. Start Gemini and confirm both MCP servers initialize and respond.
+3. Run `gemini mcp list` and confirm every declared MCP server connects. Start
+   Gemini and confirm the servers respond to read-only calls. If Gemini's model
+   authentication is unavailable but `gemini mcp list` connects, directly
+   initialize and ping each locally built stdio server and record both results
+   in the release PR.
+
+> **Corrected 2026-09-04.** This gate previously hard-coded two servers even
+> after `checklist-mcp` was added, and it offered no auth-independent protocol
+> check. The manifest is now the source of truth; the fallback distinguishes an
+> MCP failure from a Gemini account-tier failure.
 
 Tagging is blocked until this gate passes.
 

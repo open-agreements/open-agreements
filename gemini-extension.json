@@ -1,6 +1,6 @@
 {
   "name": "open-agreements",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Local MCP extension for OpenAgreements workspace organization and contract template drafting.",
   "contextFileName": "AGENTS.md",
   "entrypoint": "AGENTS.md",

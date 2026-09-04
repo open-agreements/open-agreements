@@ -1,6 +1,6 @@
 {
   "name": "open-agreements",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "workspaces": [
     "packages/allure-test-factory",
     "packages/contract-templates-mcp",
