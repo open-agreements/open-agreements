@@ -1,0 +1,250 @@
+name: Business Development Milestone Engagement
+category: services
+description: >-
+  A contractor-first business development engagement that turns relationship
+  claims into dated, measurable deliverables: warm introductions, held
+  meetings, and a first closed opportunity. It includes optional draw,
+  milestone-bonus, revenue-percentage, exclusivity, draw-recovery, and short
+  customer/vendor non-solicitation terms. Drafting notes: a LinkedIn connection
+  alone is not a warm introduction; specify counts and dates rather than relying
+  on handshake promises; and do not treat a draw without milestones as a
+  substitute for a properly classified payroll relationship. Independent-
+  contractor status depends on the facts and applicable law, not this label.
+  Draw recovery, offsets, deductions, commissions, and restrictive covenants
+  vary materially by state; obtain state-specific counsel before use. General
+  information only, not legal advice.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-cc-by-4.0/openagreements-bd-milestone-engagement
+version: 0.1.0
+stability: experimental
+license: CC-BY-4.0
+allow_derivatives: true
+distribution: bundled
+artifact_type: template
+attribution_text: Authored by OpenAgreements contributors. Licensed under CC BY 4.0.
+previewSampleValues:
+  company_name: FleetBridge Mobility, Inc.
+  company_address: 1200 Market Street, Philadelphia, PA 19107
+  company_signatory_name: Avery Morgan
+  company_signatory_title: Chief Executive Officer
+  contractor_name: Jordan Lee
+  contractor_address: 44 Hudson Avenue, Jersey City, NJ 07302
+  effective_date: "2026-09-15"
+  end_date: "2026-11-14"
+  territory: Pennsylvania, New Jersey, and Delaware
+  vertical: Commercial vehicle dealers and fleet upfitters
+  target_accounts: Independent and regional commercial vehicle dealer groups
+  services_description: Dealer outreach, warm introductions, meeting coordination, and opportunity qualification
+  qualified_opportunity_definition: A dealer with an identified decision-maker, documented fleet demand, and a scheduled commercial evaluation
+  day_30_intro_count: 8
+  day_45_meeting_count: 5
+  day_60_close_deliverable: One signed dealer pilot agreement or purchase order
+  reporting_cadence: weekly
+  draw_included: true
+  draw_amount: "$4,000"
+  draw_frequency: monthly
+  draw_recoverable: true
+  milestone_bonus_included: true
+  day_30_bonus: "$1,000"
+  day_45_bonus: "$1,500"
+  day_60_bonus: "$3,000"
+  revenue_share_included: true
+  revenue_share_percentage: 5%
+  revenue_share_period: 6 months after the applicable customer contract is signed
+  miss_consequence: pause future draw pending written reset
+  convenience_notice_days: 7
+  exclusivity_included: false
+  nonsolicit_included: false
+  nonsolicit_duration: 6 months
+  governing_law: Pennsylvania
+fields:
+  - name: company_name
+    type: string
+    description: Full legal name of the company engaging the contractor
+    section: Parties
+  - name: company_address
+    type: string
+    description: Company's notice address
+    section: Parties
+  - name: company_signatory_name
+    type: string
+    description: Full name of the authorized company signatory
+    section: Parties
+  - name: company_signatory_title
+    type: string
+    description: Title of the authorized company signatory
+    section: Parties
+  - name: contractor_name
+    type: string
+    description: Full legal name of the independent contractor
+    section: Parties
+  - name: contractor_address
+    type: string
+    description: Contractor's notice address
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Date the engagement begins
+    section: Term
+  - name: end_date
+    type: date
+    description: Date the engagement ends unless terminated earlier
+    section: Term
+  - name: territory
+    type: string
+    description: Geographic territory for the business development services
+    section: Scope
+  - name: vertical
+    type: string
+    description: Industry, channel, or customer vertical covered by the engagement
+    section: Scope
+  - name: target_accounts
+    type: string
+    description: Named or objectively described target accounts, vendors, or channels
+    section: Scope
+  - name: services_description
+    type: string
+    description: Specific outreach, introduction, meeting, and opportunity-development services
+    section: Scope
+  - name: qualified_opportunity_definition
+    type: string
+    description: Objective criteria an opportunity must satisfy to count as qualified
+    section: Scope
+  - name: day_30_intro_count
+    type: number
+    description: Minimum number of qualifying warm introductions due by Day 30
+    section: Milestones
+  - name: day_45_meeting_count
+    type: number
+    description: Minimum number of meetings actually held by Day 45
+    section: Milestones
+  - name: day_60_close_deliverable
+    type: string
+    description: Closing milestone due by Day 60, such as a first signed vendor agreement or purchase order
+    section: Milestones
+  - name: reporting_cadence
+    type: string
+    description: Written pipeline-report timing and contents
+    default: weekly
+    section: Milestones
+  - name: draw_included
+    type: boolean
+    description: Whether the Company pays an optional draw or retainer
+    default: false
+    section: Compensation
+  - name: draw_amount
+    type: string
+    description: Amount of each draw or retainer payment
+    default: "$0"
+    section: Compensation
+  - name: draw_frequency
+    type: string
+    description: Frequency of draw or retainer payments
+    default: monthly
+    section: Compensation
+  - name: draw_recoverable
+    type: boolean
+    description: >-
+      Whether paid draw is recoverable solely against future commissions, with
+      no automatic wage deduction, debit, or personal repayment. Confirm
+      applicable state law before enabling.
+    default: false
+    section: Compensation
+  - name: milestone_bonus_included
+    type: boolean
+    description: Whether milestone bonuses are payable
+    default: false
+    section: Compensation
+  - name: day_30_bonus
+    type: string
+    description: Bonus earned upon timely acceptance of the Day 30 milestone
+    default: "$0"
+    section: Compensation
+  - name: day_45_bonus
+    type: string
+    description: Bonus earned upon timely acceptance of the Day 45 milestone
+    default: "$0"
+    section: Compensation
+  - name: day_60_bonus
+    type: string
+    description: Bonus earned upon timely acceptance of the Day 60 milestone
+    default: "$0"
+    section: Compensation
+  - name: revenue_share_included
+    type: boolean
+    description: Whether the contractor earns a percentage of collected revenue from attributable opportunities
+    default: false
+    section: Compensation
+  - name: revenue_share_percentage
+    type: string
+    description: Percentage of qualifying collected revenue payable to the contractor
+    default: 0%
+    section: Compensation
+  - name: revenue_share_period
+    type: string
+    description: Period during which qualifying collected revenue generates percentage compensation
+    default: 6 months after the applicable customer contract is signed
+    section: Compensation
+  - name: miss_consequence
+    type: enum
+    description: Consequence if a milestone is missed after the review process
+    options:
+      - pause future draw pending written reset
+      - convert future compensation to commission-only by signed amendment
+      - terminate on the notice period
+    default: terminate on the notice period
+    section: Milestones
+  - name: convenience_notice_days
+    type: number
+    description: Days' written notice either party must give to terminate for convenience
+    default: 7
+    section: Term
+  - name: exclusivity_included
+    type: boolean
+    description: Whether the contractor is exclusive within the defined territory and vertical
+    default: false
+    section: Exclusivity
+  - name: nonsolicit_included
+    type: boolean
+    description: >-
+      Whether to include the short, relationship-limited customer/vendor
+      non-solicitation covenant. Review the OpenAgreements restrictive-covenant
+      practice notes for the applicable state before enabling.
+    default: false
+    section: Restrictive Covenants
+  - name: nonsolicit_duration
+    type: string
+    description: >-
+      Short post-termination period for the relationship-limited non-solicit;
+      confirm state-law enforceability and narrow further where appropriate.
+    default: 6 months
+    rationale_source: editorial
+    default_value_rationale: >-
+      Six months is a deliberately short drafting default, not an EDGAR-derived
+      market mode or an enforceability conclusion. State-specific review is required.
+    section: Restrictive Covenants
+  - name: governing_law
+    type: string
+    description: Governing-law state, selected only after checking non-waivable local law
+    section: Legal
+priority_fields:
+  - company_name
+  - contractor_name
+  - effective_date
+  - territory
+  - vertical
+  - day_30_intro_count
+  - day_45_meeting_count
+  - day_60_close_deliverable
+artifact_kind: agreement
+capabilities:
+  - create
+  - review
+  - render
+party_roles:
+  - company
+  - contractor
+signature_roles:
+  - company
+  - contractor
+mutation_policy: fields_only
+maturity: experimental

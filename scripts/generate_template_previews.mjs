@@ -20,10 +20,10 @@ import AdmZip from "adm-zip";
 import {
   PREVIEWS_DIR,
   REPO_ROOT as ROOT,
-  TEMPLATES_DIR,
   isOpenAgreementsOwned,
   listTemplateIds,
   loadTemplateMetadata,
+  resolveTemplateSlugDir,
 } from "./lib/template-utils.mjs";
 
 const FILL_PIPELINE_PATH = resolve(ROOT, "dist", "core", "fill-pipeline.js");
@@ -249,8 +249,11 @@ function renderWithQuickLook(docxPath, outputDir, { allowSinglePage = true } = {
 }
 
 async function renderPreviewPagesWithFallback(templateId, dpi) {
-  const sourceDocxPath = resolve(TEMPLATES_DIR, templateId, "template.docx");
-  const templateDir = resolve(TEMPLATES_DIR, templateId);
+  const templateDir = resolveTemplateSlugDir(templateId);
+  if (!templateDir) {
+    throw new Error(`Template directory not found for ${templateId}`);
+  }
+  const sourceDocxPath = resolve(templateDir, "template.docx");
   const outputDir = resolve(PREVIEWS_DIR, templateId);
 
   const metadata = loadTemplateMetadata(templateId);

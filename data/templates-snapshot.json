@@ -12576,6 +12576,335 @@
       ]
     },
     {
+      "name": "openagreements-bd-milestone-engagement",
+      "tier": "internal",
+      "display_name": "Business Development Milestone Engagement",
+      "category": "services",
+      "description": "A contractor-first business development engagement that turns relationship claims into dated, measurable deliverables: warm introductions, held meetings, and a first closed opportunity. It includes optional draw, milestone-bonus, revenue-percentage, exclusivity, draw-recovery, and short customer/vendor non-solicitation terms. Drafting notes: a LinkedIn connection alone is not a warm introduction; specify counts and dates rather than relying on handshake promises; and do not treat a draw without milestones as a substitute for a properly classified payroll relationship. Independent- contractor status depends on the facts and applicable law, not this label. Draw recovery, offsets, deductions, commissions, and restrictive covenants vary materially by state; obtain state-specific counsel before use. General information only, not legal advice.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-cc-by-4.0/openagreements-bd-milestone-engagement",
+      "source": "OpenAgreements",
+      "attribution_text": "Authored by OpenAgreements contributors. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "stability": "experimental",
+      "credits": [],
+      "fields": [
+        {
+          "name": "company_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Full legal name of the company engaging the contractor",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_address",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Company's notice address",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signatory_name",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Full name of the authorized company signatory",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signatory_title",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Title of the authorized company signatory",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "contractor_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Full legal name of the independent contractor",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "contractor_address",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Contractor's notice address",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "effective_date",
+          "type": "date",
+          "required": true,
+          "section": "Term",
+          "description": "Date the engagement begins",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "end_date",
+          "type": "date",
+          "required": false,
+          "section": "Term",
+          "description": "Date the engagement ends unless terminated earlier",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "territory",
+          "type": "string",
+          "required": true,
+          "section": "Scope",
+          "description": "Geographic territory for the business development services",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "vertical",
+          "type": "string",
+          "required": true,
+          "section": "Scope",
+          "description": "Industry, channel, or customer vertical covered by the engagement",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "target_accounts",
+          "type": "string",
+          "required": false,
+          "section": "Scope",
+          "description": "Named or objectively described target accounts, vendors, or channels",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "services_description",
+          "type": "string",
+          "required": false,
+          "section": "Scope",
+          "description": "Specific outreach, introduction, meeting, and opportunity-development services",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "qualified_opportunity_definition",
+          "type": "string",
+          "required": false,
+          "section": "Scope",
+          "description": "Objective criteria an opportunity must satisfy to count as qualified",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "day_30_intro_count",
+          "type": "number",
+          "required": true,
+          "section": "Milestones",
+          "description": "Minimum number of qualifying warm introductions due by Day 30",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "day_45_meeting_count",
+          "type": "number",
+          "required": true,
+          "section": "Milestones",
+          "description": "Minimum number of meetings actually held by Day 45",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "day_60_close_deliverable",
+          "type": "string",
+          "required": true,
+          "section": "Milestones",
+          "description": "Closing milestone due by Day 60, such as a first signed vendor agreement or purchase order",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "reporting_cadence",
+          "type": "string",
+          "required": false,
+          "section": "Milestones",
+          "description": "Written pipeline-report timing and contents",
+          "default": "weekly",
+          "default_value_rationale": null
+        },
+        {
+          "name": "draw_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Compensation",
+          "description": "Whether the Company pays an optional draw or retainer",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "draw_amount",
+          "type": "string",
+          "required": false,
+          "section": "Compensation",
+          "description": "Amount of each draw or retainer payment",
+          "default": "$0",
+          "default_value_rationale": null
+        },
+        {
+          "name": "draw_frequency",
+          "type": "string",
+          "required": false,
+          "section": "Compensation",
+          "description": "Frequency of draw or retainer payments",
+          "default": "monthly",
+          "default_value_rationale": null
+        },
+        {
+          "name": "draw_recoverable",
+          "type": "boolean",
+          "required": false,
+          "section": "Compensation",
+          "description": "Whether paid draw is recoverable solely against future commissions, with no automatic wage deduction, debit, or personal repayment. Confirm applicable state law before enabling.",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "milestone_bonus_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Compensation",
+          "description": "Whether milestone bonuses are payable",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "day_30_bonus",
+          "type": "string",
+          "required": false,
+          "section": "Compensation",
+          "description": "Bonus earned upon timely acceptance of the Day 30 milestone",
+          "default": "$0",
+          "default_value_rationale": null
+        },
+        {
+          "name": "day_45_bonus",
+          "type": "string",
+          "required": false,
+          "section": "Compensation",
+          "description": "Bonus earned upon timely acceptance of the Day 45 milestone",
+          "default": "$0",
+          "default_value_rationale": null
+        },
+        {
+          "name": "day_60_bonus",
+          "type": "string",
+          "required": false,
+          "section": "Compensation",
+          "description": "Bonus earned upon timely acceptance of the Day 60 milestone",
+          "default": "$0",
+          "default_value_rationale": null
+        },
+        {
+          "name": "revenue_share_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Compensation",
+          "description": "Whether the contractor earns a percentage of collected revenue from attributable opportunities",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "revenue_share_percentage",
+          "type": "string",
+          "required": false,
+          "section": "Compensation",
+          "description": "Percentage of qualifying collected revenue payable to the contractor",
+          "default": "0%",
+          "default_value_rationale": null
+        },
+        {
+          "name": "revenue_share_period",
+          "type": "string",
+          "required": false,
+          "section": "Compensation",
+          "description": "Period during which qualifying collected revenue generates percentage compensation",
+          "default": "6 months after the applicable customer contract is signed",
+          "default_value_rationale": null
+        },
+        {
+          "name": "miss_consequence",
+          "type": "enum",
+          "required": false,
+          "section": "Milestones",
+          "description": "Consequence if a milestone is missed after the review process",
+          "default": "terminate on the notice period",
+          "default_value_rationale": null,
+          "options": [
+            "pause future draw pending written reset",
+            "convert future compensation to commission-only by signed amendment",
+            "terminate on the notice period"
+          ]
+        },
+        {
+          "name": "convenience_notice_days",
+          "type": "number",
+          "required": false,
+          "section": "Term",
+          "description": "Days' written notice either party must give to terminate for convenience",
+          "default": "7",
+          "default_value_rationale": null
+        },
+        {
+          "name": "exclusivity_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Exclusivity",
+          "description": "Whether the contractor is exclusive within the defined territory and vertical",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "nonsolicit_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Restrictive Covenants",
+          "description": "Whether to include the short, relationship-limited customer/vendor non-solicitation covenant. Review the OpenAgreements restrictive-covenant practice notes for the applicable state before enabling.",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "nonsolicit_duration",
+          "type": "string",
+          "required": false,
+          "section": "Restrictive Covenants",
+          "description": "Short post-termination period for the relationship-limited non-solicit; confirm state-law enforceability and narrow further where appropriate.",
+          "default": "6 months",
+          "default_value_rationale": "Six months is a deliberately short drafting default, not an EDGAR-derived market mode or an enforceability conclusion. State-specific review is required."
+        },
+        {
+          "name": "governing_law",
+          "type": "string",
+          "required": false,
+          "section": "Legal",
+          "description": "Governing-law state, selected only after checking non-waivable local law",
+          "default": null,
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
       "name": "openagreements-board-consent-safe",
       "tier": "internal",
       "display_name": "Board Consent for SAFE Financing",

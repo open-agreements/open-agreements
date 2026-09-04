@@ -56,7 +56,7 @@ describe('TemplateCapabilityManifestSchema', () => {
       expect(keys.filter((key) => !(key in parsed)), file).toEqual([]);
       expect(TemplateCapabilityManifestSchema.safeParse(parsed).success, file).toBe(true);
     }
-    expect(files).toHaveLength(116);
+    expect(files).toHaveLength(117);
   });
 
   it('rejects unknown capabilities and maturity values', async () => {

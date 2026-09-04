@@ -1,0 +1,383 @@
+{
+  "template_id": "openagreements-bd-milestone-engagement",
+  "layout_id": "cover-standard-signature-v1",
+  "style_id": "openagreements-default-v1",
+  "output_docx_path": "templates/openagreements-cc-by-4.0/openagreements-bd-milestone-engagement/template.docx",
+  "document": {
+    "title": "Business Development Milestone Engagement",
+    "label": "OpenAgreements Business Development Milestone Engagement",
+    "version": "0.1.0",
+    "license": "Free to use under CC BY 4.0",
+    "defined_term_highlight_mode": "definition_site_only",
+    "footer_font_size_half_points": 18,
+    "cover_row_height": 420,
+    "opening_note": "General information only; not legal advice. This form is for a bona fide independent-contractor relationship and does not determine worker classification."
+  },
+  "sections": {
+    "cover_terms": {
+      "section_label": "Cover Terms",
+      "heading_title": "Cover Terms",
+      "subtitle": "These Cover Terms are incorporated into and form part of this engagement.",
+      "rows": [
+        {
+          "kind": "group",
+          "label": "Parties and Term",
+          "value": "",
+          "sub": false
+        },
+        {
+          "kind": "subrow",
+          "label": "Company",
+          "value": "{company_name}",
+          "sub": true
+        },
+        {
+          "kind": "subrow",
+          "label": "Company Notice Address",
+          "value": "{company_address}",
+          "sub": true
+        },
+        {
+          "kind": "subrow",
+          "label": "Contractor",
+          "value": "{contractor_name}",
+          "sub": true
+        },
+        {
+          "kind": "subrow",
+          "label": "Effective Date",
+          "value": "{effective_date}",
+          "sub": true
+        },
+        {
+          "kind": "subrow",
+          "label": "End Date",
+          "value": "{end_date}",
+          "sub": true
+        },
+        {
+          "kind": "group",
+          "label": "Market Scope",
+          "value": "",
+          "sub": false
+        },
+        {
+          "kind": "subrow",
+          "label": "Territory",
+          "value": "{territory}",
+          "sub": true
+        },
+        {
+          "kind": "subrow",
+          "label": "Vertical",
+          "value": "{vertical}",
+          "sub": true
+        },
+        {
+          "kind": "subrow",
+          "label": "Target Accounts",
+          "value": "{target_accounts}",
+          "sub": true
+        },
+        {
+          "kind": "subrow",
+          "label": "Services",
+          "value": "{services_description}",
+          "sub": true
+        },
+        {
+          "kind": "subrow",
+          "label": "Qualified Opportunity",
+          "value": "{qualified_opportunity_definition}",
+          "sub": true
+        },
+        {
+          "kind": "group",
+          "label": "Milestones",
+          "value": "",
+          "sub": false
+        },
+        {
+          "kind": "subrow",
+          "label": "Day 30 — Warm Introductions",
+          "value": "{day_30_intro_count}",
+          "sub": true
+        },
+        {
+          "kind": "subrow",
+          "label": "Day 45 — Meetings Held",
+          "value": "{day_45_meeting_count}",
+          "sub": true
+        },
+        {
+          "kind": "subrow",
+          "label": "Day 60 — Closing Deliverable",
+          "value": "{day_60_close_deliverable}",
+          "sub": true
+        },
+        {
+          "kind": "subrow",
+          "label": "Pipeline Reporting",
+          "value": "{reporting_cadence}",
+          "sub": true
+        },
+        {
+          "kind": "subrow",
+          "label": "Miss Consequence",
+          "value": "{miss_consequence}",
+          "sub": true
+        },
+        {
+          "kind": "group",
+          "label": "Compensation",
+          "value": "",
+          "sub": false
+        },
+        {
+          "kind": "subrow",
+          "label": "Draw / Retainer",
+          "value": "{draw_amount} {draw_frequency}",
+          "condition": "draw_included",
+          "sub": true
+        },
+        {
+          "kind": "subrow",
+          "label": "Day 30 Bonus",
+          "value": "{day_30_bonus}",
+          "condition": "milestone_bonus_included",
+          "sub": true
+        },
+        {
+          "kind": "subrow",
+          "label": "Day 45 Bonus",
+          "value": "{day_45_bonus}",
+          "condition": "milestone_bonus_included",
+          "sub": true
+        },
+        {
+          "kind": "subrow",
+          "label": "Day 60 Bonus",
+          "value": "{day_60_bonus}",
+          "condition": "milestone_bonus_included",
+          "sub": true
+        },
+        {
+          "kind": "subrow",
+          "label": "Revenue Percentage",
+          "value": "{revenue_share_percentage}",
+          "condition": "revenue_share_included",
+          "sub": true
+        },
+        {
+          "kind": "subrow",
+          "label": "Revenue Percentage Period",
+          "value": "{revenue_share_period}",
+          "condition": "revenue_share_included",
+          "sub": true
+        },
+        {
+          "kind": "group",
+          "label": "Other Terms",
+          "value": "",
+          "sub": false
+        },
+        {
+          "kind": "subrow",
+          "label": "Convenience Notice",
+          "value": "{convenience_notice_days} days",
+          "sub": true
+        },
+        {
+          "kind": "subrow",
+          "label": "Governing Law",
+          "value": "{governing_law}",
+          "sub": true
+        },
+        {
+          "kind": "subrow",
+          "label": "Non-Solicit Duration",
+          "value": "{nonsolicit_duration}",
+          "condition": "nonsolicit_included",
+          "sub": true
+        }
+      ]
+    },
+    "standard_terms": {
+      "section_label": "Standard Terms",
+      "heading_title": "Standard Terms",
+      "clauses": [
+        {
+          "id": "defined-terms",
+          "type": "definitions",
+          "heading": "Defined Terms",
+          "terms": [
+            {
+              "term": "Warm Introduction",
+              "definition": "means a personalized email, call, or live handoff by Contractor to a named decision-maker or materially relevant contact at a Target Account, in which Contractor identifies Company, states a credible business reason for the connection, and invites a substantive conversation. A social-media connection, contact-list entry, mass message, or unaccepted referral alone is not a Warm Introduction."
+            },
+            {
+              "term": "Qualified Opportunity",
+              "definition": "means a prospective transaction that satisfies the objective criteria stated in Cover Terms under Qualified Opportunity."
+            },
+            {
+              "term": "Attributable Opportunity",
+              "definition": "means a Qualified Opportunity first documented in Contractor's written pipeline report and resulting directly from Contractor's Warm Introduction or material business-development work, excluding an account already active in Company's documented pipeline unless Company agrees otherwise in writing."
+            },
+            {
+              "term": "Confidential Information",
+              "definition": "means non-public information concerning Company or its actual or prospective customers, vendors, referral sources, and partners, including account and contact lists, introduction paths, relationship histories, pricing, pipeline data, proposals, product plans, and business strategy. It excludes information Contractor can document was lawfully known without restriction, becomes public through no breach, is received lawfully from a third party without a duty of confidence, or is independently developed without using Company's information."
+            }
+          ]
+        },
+        {
+          "id": "services-and-standard",
+          "heading": "Services and Performance Standard",
+          "body": "Contractor will perform the services described in Cover Terms, pursue the identified Territory, Vertical, and Target Accounts, and use commercially reasonable, lawful, and professional efforts to develop Qualified Opportunities. Contractor controls the manner and means of performing the services, subject to the measurable deliverables, deadlines, compliance requirements, and acceptance process in this agreement. Contractor has no authority to bind Company, quote final commercial terms, make warranties, or accept orders unless Company separately authorizes it in writing."
+        },
+        {
+          "id": "milestones-and-acceptance",
+          "heading": "Milestones, Evidence, and Acceptance",
+          "body": "By Day 30 after the Effective Date, Contractor will deliver at least {day_30_intro_count} Warm Introductions. By Day 45, at least {day_45_meeting_count} meetings arising from those introductions must have actually occurred with a relevant contact and a Company representative. By Day 60, Contractor will deliver the closing result stated in Cover Terms. Contractor will provide {reporting_cadence} written pipeline reports identifying contacts, dates, status, next actions, and the evidence supporting each claimed milestone. Company will accept or reasonably reject a milestone in writing within five business days after receiving complete evidence; silence does not constitute acceptance, but Company may not unreasonably withhold, condition, or delay acceptance."
+        },
+        {
+          "id": "compensation",
+          "heading": "Compensation and Expenses",
+          "body": "Company will pay only the compensation selected in Cover Terms. An enabled draw or retainer is paid in the amount and at the frequency shown there. Enabled milestone bonuses are earned only when Company accepts the corresponding timely milestone. An enabled revenue percentage is earned on cash Company actually collects during the stated Revenue Percentage Period from an Attributable Opportunity, net only of refunds, credits, chargebacks, and separately stated taxes. Company will provide a reasonable supporting statement with each percentage payment. Contractor bears its own expenses unless Company approves an expense in writing before it is incurred."
+        },
+        {
+          "id": "draw-recovery",
+          "heading": "Limited Draw Recovery",
+          "body": "The parties intend the draw to be an advance solely against future revenue-percentage compensation earned under this agreement. Company may offset an outstanding draw balance only against later commissions to the extent a written, lawful calculation permits. Contractor has no personal repayment obligation, and Company may not deduct from wages, fees already earned, milestone bonuses already earned, expense reimbursements, or any other protected payment. If applicable law restricts or prohibits an offset, that law controls and the prohibited offset will not be made. The parties should obtain state-specific advice before using this provision.",
+          "condition": "draw_recoverable"
+        },
+        {
+          "id": "missed-milestone",
+          "heading": "Missed Milestone and Course Correction",
+          "body": "If Contractor misses a milestone, Company will give written notice describing the shortfall and allow three business days for Contractor to provide missing evidence or propose a written reset. If the parties do not sign a reset, the Miss Consequence selected in Cover Terms applies prospectively. A conversion to commission-only compensation is effective only through a written amendment signed by both parties and does not reduce compensation already earned. Company may also terminate for material breach if an uncured shortfall is material. No missed-milestone consequence authorizes a wage deduction, forfeiture of earned compensation, or retroactive reclassification of payments."
+        },
+        {
+          "id": "independent-contractor",
+          "heading": "Independent Contractor",
+          "body": "Contractor is engaged as an independent contractor and not as an employee, partner, joint venturer, franchisee, or agent. Contractor is responsible for taxes, insurance, permits, equipment, and benefits associated with Contractor's business, except to the extent applicable law provides otherwise. Contractor may serve other clients and controls the manner and means of work, subject to this agreement's results, deadlines, confidentiality duties, and legal-compliance requirements. The parties acknowledge that this recital does not override the actual relationship or any applicable classification test. If the facts do not support independent-contractor status, the parties should not use this form and should obtain employment-law advice."
+        },
+        {
+          "id": "exclusivity",
+          "heading": "Limited Exclusivity",
+          "body": "During the Term, Contractor will not provide substantially similar business-development services to another business for the same Vertical within the same Territory. This limited exclusivity does not prevent Contractor from serving noncompetitive clients, operating an independent business, or accepting work outside that combined scope. The parties intend the restriction to be no broader than reasonably necessary for channel-conflict management and subject to non-waivable applicable law.",
+          "condition": "exclusivity_included"
+        },
+        {
+          "id": "confidentiality",
+          "heading": "Confidentiality and Relationship Records",
+          "body": "Contractor will use Confidential Information only to perform this engagement, protect it with reasonable care, and disclose it only to persons authorized by Company who need it for the engagement. Contractor will promptly record Warm Introductions, account notes, and relationship status in Company's designated system. Those records and Company's account lists are Company Confidential Information. Contractor does not acquire ownership of Company relationships or an exclusive right to contact, represent, or monetize any customer, vendor, prospect, or referral source because Contractor made or facilitated an introduction."
+        },
+        {
+          "id": "work-product-and-ip",
+          "heading": "Work Product and Intellectual Property",
+          "body": "To the extent Contractor creates engagement-specific reports, contact maps, pitch materials, playbooks, or other deliverables for Company, Contractor hereby assigns to Company all right, title, and interest in that work product upon creation, excluding Contractor's pre-existing tools, general know-how, and materials identified to Company in writing before use. Contractor grants Company a perpetual, worldwide, royalty-free license to any embedded pre-existing material necessary to use the assigned work product. Nothing transfers ownership of a third party's contact information or other rights that Contractor does not own."
+        },
+        {
+          "id": "protected-disclosures",
+          "heading": "Protected Disclosures",
+          "body": "Nothing in this agreement prohibits either party from reporting possible legal violations to a government agency, making disclosures protected by whistleblower law, participating in an investigation, testifying truthfully, or consulting counsel. Under 18 U.S.C. § 1833(b), an individual is not criminally or civilly liable under federal or state trade-secret law for a confidential disclosure of a trade secret to a government official or attorney solely to report or investigate a suspected legal violation, or for a disclosure made in a sealed court filing."
+        },
+        {
+          "id": "relationship-nonsolicit",
+          "heading": "Short Relationship Non-Solicit",
+          "body": "For {nonsolicit_duration} after this agreement ends, Contractor will not knowingly solicit, for a competing offering, a customer or vendor with whom Contractor had material direct contact through this engagement during its final six months, where the purpose is to divert that relationship from Company. General advertising not targeted at the relationship and responses to unsolicited inquiries are excluded. This is not a non-compete or a no-business covenant. Restrictive-covenant law varies sharply by state; before enabling this clause, review the applicable OpenAgreements state practice note at https://openagreements.org/practice-guides/non-compete/ and narrow or omit the clause as required.",
+          "condition": "nonsolicit_included"
+        },
+        {
+          "id": "term-and-termination",
+          "heading": "Term and Termination",
+          "body": "This agreement begins on the Effective Date and ends on the End Date unless terminated earlier. Either party may terminate for convenience on {convenience_notice_days} days' written notice. Either party may terminate immediately for an uncured material breach after three business days' written notice, except that no cure period is required for fraud, unlawful conduct, or a material confidentiality breach not reasonably capable of cure. Termination does not affect compensation earned through the termination date. The confidentiality, IP, payment-accounting, limited non-solicit if enabled, dispute, and miscellaneous provisions survive to the extent their terms require."
+        },
+        {
+          "id": "compliance",
+          "heading": "Legal and Commercial Compliance",
+          "body": "Contractor will comply with applicable anti-bribery, anti-kickback, privacy, marketing, and communications laws and with written, lawful Company policies provided in advance. Contractor will not offer anything of value to obtain improper influence, misuse personal information, misrepresent affiliation, or make an unauthorized product or pricing claim."
+        },
+        {
+          "id": "records-and-audit",
+          "heading": "Records and Payment Review",
+          "body": "Each party will maintain records reasonably sufficient to verify milestone completion and compensation for at least two years after the relevant payment. On reasonable written notice, Contractor may review Company's records limited to calculation of Contractor's revenue-percentage compensation, no more than once per year and subject to confidentiality safeguards."
+        },
+        {
+          "id": "general",
+          "heading": "Governing Law and General Terms",
+          "body": "This agreement is governed by the law stated in Cover Terms, without displacing non-waivable worker-classification, payment, wage, commission, or restrictive-covenant law. Notices must be in writing and delivered to the addresses stated above, or to an updated address given in writing. Neither party may assign this agreement without the other's consent, except Company may assign it with a merger, reorganization, or sale of substantially all relevant assets. This agreement is the entire agreement on its subject matter and may be amended only in a writing signed by both parties. If a provision is unenforceable, it will be limited only to the minimum extent permitted and the rest remains effective. Waiver of one breach is not waiver of another. Counterparts and electronic signatures are effective."
+        }
+      ]
+    },
+    "signature": {
+      "mode": "signers",
+      "arrangement": "entity-plus-individual",
+      "section_label": "Signature Page",
+      "heading_title": "Signatures",
+      "preamble": "The parties agree to this Business Development Milestone Engagement as of the Effective Date.",
+      "signers": [
+        {
+          "id": "company",
+          "label": "Company",
+          "kind": "entity",
+          "capacity": "through_representative",
+          "rows": [
+            {
+              "id": "company",
+              "label": "Company",
+              "value": "{company_name}"
+            },
+            {
+              "id": "by",
+              "label": "By",
+              "value": ""
+            },
+            {
+              "id": "name",
+              "label": "Name",
+              "value": "{company_signatory_name}"
+            },
+            {
+              "id": "title",
+              "label": "Title",
+              "value": "{company_signatory_title}"
+            },
+            {
+              "id": "date",
+              "label": "Date",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "id": "contractor",
+          "label": "Contractor",
+          "kind": "individual",
+          "capacity": "personal",
+          "rows": [
+            {
+              "id": "signature",
+              "label": "Signature",
+              "value": ""
+            },
+            {
+              "id": "name",
+              "label": "Name",
+              "value": "{contractor_name}"
+            },
+            {
+              "id": "address",
+              "label": "Address",
+              "value": "{contractor_address}"
+            },
+            {
+              "id": "date",
+              "label": "Date",
+              "value": ""
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
