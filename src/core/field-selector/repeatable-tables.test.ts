@@ -28,6 +28,20 @@ function fixtureDocx(duplicate = false, postHeader: 'none' | 'blank' | 'nonblank
   return zip.toBuffer();
 }
 
+function prototypeOnlyFixture(rowCount = 3, inconsistent = false, duplicate = false): Buffer {
+  const zip = new AdmZip();
+  const row = (index: number) => `<w:tr><w:trPr><w:cantSplit/></w:trPr><w:tc><w:tcPr><w:tcW w:w="6000"/><w:tcBorders><w:bottom w:val="single"/></w:tcBorders></w:tcPr>` +
+    `<w:p><w:pPr><w:jc w:val="left"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>${inconsistent && index === 1 ? 'Unexpected Name' : 'Investor Name'}</w:t></w:r></w:p>` +
+    `<w:p><w:r><w:t>Address</w:t></w:r></w:p><w:p><w:r><w:t>Phone Number</w:t></w:r></w:p>` +
+    `<w:p><w:r><w:t>Email</w:t></w:r></w:p><w:p><w:r><w:t>[Counsel cc, if any]</w:t></w:r></w:p><w:p/></w:tc></w:tr>`;
+  const table = `<w:tbl>${Array.from({ length: rowCount }, (_, index) => row(index)).join('')}</w:tbl>`;
+  zip.addFile('word/document.xml', Buffer.from(
+    `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>` +
+    `<w:document xmlns:w="${W}"><w:body>${table}${duplicate ? table : ''}</w:body></w:document>`,
+  ));
+  return zip.toBuffer();
+}
+
 const config = RepeatableTablesConfigSchema.parse({
   schema_version: 1,
   tables: [{
@@ -138,5 +152,93 @@ describe('repeatable DOCX table bindings', () => {
       description: 'Purchaser rows',
       items: [{ name: 'name', type: 'string', description: 'Name' }],
     }])).toThrow(/column field "shares" is not declared/);
+  });
+
+  it.each([0, 1, 2, 4])('fills %i rows in a prototype-only signature table and removes unused rows', (count) => {
+    const root = mkdtempSync(join(tmpdir(), 'repeatable-prototype-'));
+    roots.push(root);
+    const input = join(root, 'in.docx');
+    const output = join(root, 'out.docx');
+    new AdmZip(prototypeOnlyFixture()).writeZip(input);
+    const binding = RepeatableTablesConfigSchema.parse({
+      schema_version: 1,
+      tables: [{
+        id: 'investor-signatures',
+        rows_field: 'investors',
+        prototype_cells: ['Investor NameAddressPhone NumberEmail[Counsel cc, if any]'],
+        columns: [{ paragraphs: [
+          { field: 'name' }, { field: 'address' }, { field: 'phone' }, { field: 'email' }, { field: 'counsel_cc' },
+        ] }],
+      }],
+    });
+    const investors = Array.from({ length: count }, (_, index) => ({
+      name: `Investor ${index + 1}`,
+      address: `${index + 1} Main Street`,
+      phone: `555-000${index}`,
+      email: `investor${index + 1}@example.com`,
+      counsel_cc: index === 0 ? 'Counsel One' : '',
+    }));
+    applyRepeatableTables(input, output, binding, { investors });
+    const xml = new AdmZip(readFileSync(output)).readAsText('word/document.xml');
+    expect((xml.match(/<w:tr[ >]/g) ?? [])).toHaveLength(count);
+    expect(xml).not.toContain('Investor Name');
+    expect(xml).not.toContain('[Counsel cc, if any]');
+    if (count > 0) {
+      expect(xml).toContain('Investor 1');
+      expect(xml).toContain('1 Main Street');
+      expect(xml).toContain('<w:cantSplit/>');
+      expect(xml).toContain('w:w="6000"');
+      expect(xml).toContain('<w:b/>');
+      expect(xml).toContain('<w:bottom w:val="single"/>');
+    }
+  });
+
+  it('fails closed when a prototype-only source table contains a divergent row', () => {
+    const root = mkdtempSync(join(tmpdir(), 'repeatable-prototype-'));
+    roots.push(root);
+    const input = join(root, 'in.docx');
+    new AdmZip(prototypeOnlyFixture(3, true)).writeZip(input);
+    const binding = RepeatableTablesConfigSchema.parse({
+      schema_version: 1,
+      tables: [{
+        id: 'investor-signatures', rows_field: 'investors',
+        prototype_cells: ['Investor NameAddressPhone NumberEmail[Counsel cc, if any]'],
+        columns: [{ paragraphs: [{ field: 'name' }] }],
+      }],
+    });
+    expect(() => applyRepeatableTables(input, join(root, 'out.docx'), binding, { investors: [] }))
+      .toThrow(/does not match prototype_cells/);
+  });
+
+  it('fails closed when a prototype-only selector is ambiguous', () => {
+    const root = mkdtempSync(join(tmpdir(), 'repeatable-prototype-'));
+    roots.push(root);
+    const input = join(root, 'in.docx');
+    new AdmZip(prototypeOnlyFixture(3, false, true)).writeZip(input);
+    const binding = RepeatableTablesConfigSchema.parse({
+      schema_version: 1,
+      tables: [{
+        id: 'investor-signatures', rows_field: 'investors',
+        prototype_cells: ['Investor NameAddressPhone NumberEmail[Counsel cc, if any]'],
+        columns: [{ paragraphs: [{ field: 'name' }] }],
+      }],
+    });
+    expect(() => applyRepeatableTables(input, join(root, 'out.docx'), binding, { investors: [] }))
+      .toThrow(/matched 2 tables/);
+  });
+
+  it('validates every paragraph mapping against array item metadata', () => {
+    const binding = RepeatableTablesConfigSchema.parse({
+      schema_version: 1,
+      tables: [{
+        id: 'investor-signatures', rows_field: 'investors',
+        prototype_cells: ['Investor NameAddress'],
+        columns: [{ paragraphs: [{ field: 'name' }, { field: 'address' }] }],
+      }],
+    });
+    expect(() => validateRepeatableTableFields(binding, [{
+      name: 'investors', type: 'array', description: 'Investor rows',
+      items: [{ name: 'name', type: 'string', description: 'Investor name' }],
+    }])).toThrow(/column field "address" is not declared/);
   });
 });

@@ -142,11 +142,13 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
     cleanPatch: { cleanConfig, replacements: patchReplacements },
     selectorManifests,
     selectionsConfig,
-    postProcess: repeatableTablesConfig || shouldNormalizeBracketArtifacts
+    prePatchProcess: repeatableTablesConfig
+      ? async (inputDocPath: string, outputDocPath: string) => {
+        applyRepeatableTables(inputDocPath, outputDocPath, repeatableTablesConfig, effectiveValues);
+      }
+      : undefined,
+    postProcess: shouldNormalizeBracketArtifacts
       ? async (outputDocPath: string) => {
-        if (repeatableTablesConfig) {
-          applyRepeatableTables(outputDocPath, outputDocPath, repeatableTablesConfig, effectiveValues);
-        }
         if (shouldNormalizeBracketArtifacts) {
           await normalizeBracketArtifacts(outputDocPath, outputDocPath, {
             rules: normalizeConfig.paragraph_rules,
