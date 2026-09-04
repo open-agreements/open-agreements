@@ -1,0 +1,75 @@
+name: APAP interoperability
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/apap-interoperability.yml'
+      - 'concerto/**'
+      - 'integration-tests/apap-server-roundtrip.test.ts'
+      - 'src/core/apap.ts'
+      - 'src/core/apap.test.ts'
+      - 'templates/openagreements-cc-by-4.0/openagreements-confidentiality-invention-assignment-agreement/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  current-reference-server:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:18
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - name: Check out OpenAgreements
+        uses: actions/checkout@v4
+
+      - name: Check out pinned APAP reference implementation
+        uses: actions/checkout@v4
+        with:
+          repository: accordproject/apap
+          ref: 6f0942cdd5aa05043df325c5fa26284085a09e0b
+          path: apap
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install OpenAgreements
+        run: npm ci
+
+      - name: Install and initialize APAP server
+        working-directory: apap/server
+        env:
+          POSTGRES_URL: postgresql://postgres:postgres@localhost:5432/postgres
+        run: |
+          npm ci
+          npx drizzle-kit push --force
+
+      - name: Start APAP server
+        working-directory: apap/server
+        env:
+          POSTGRES_URL: postgresql://postgres:postgres@localhost:5432/postgres
+        run: |
+          npm start > /tmp/apap-server.log 2>&1 &
+          for attempt in {1..60}; do
+            curl --fail --silent http://localhost:9000/templates && exit 0
+            sleep 1
+          done
+          cat /tmp/apap-server.log
+          exit 1
+
+      - name: Run APAP round-trip test
+        env:
+          APAP_BASE_URL: http://localhost:9000
+        run: npx vitest run integration-tests/apap-server-roundtrip.test.ts --reporter=verbose

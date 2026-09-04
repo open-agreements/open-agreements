@@ -9,6 +9,7 @@ export { fillTemplate, type FillOptions, type FillResult } from './core/engine.j
 export {
   canonicalMdocToApapTemplateMark,
   exportTemplateToApap,
+  toApapTemplateRelationship,
   toApapAgreementData,
   fillApapAgreementToDocx,
   type ApapTemplatePayload,

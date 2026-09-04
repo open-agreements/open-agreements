@@ -9,6 +9,7 @@ import {
   canonicalMdocToApapTemplateMark,
   exportTemplateToApap,
   fillApapAgreementToDocx,
+  toApapTemplateRelationship,
   toApapAgreementData,
 } from './apap.js';
 
@@ -52,16 +53,26 @@ describe('APAP interoperability — OpenAgreements CIIAA pilot', () => {
     });
     const templateMetadata = loadMetadata(TEMPLATE_DIR);
     expect(templateMetadata.version).toMatch(/^\d+\.\d+(\.\d+)?$/);
-    expect(template.uri).toBe(`https://openagreements.org/templates/${TEMPLATE_ID}/v${templateMetadata.version}`);
+    expect(template.uri).toBe(
+      `openagreements://templates/${TEMPLATE_ID}-v${templateMetadata.version.replaceAll('.', '-')}`,
+    );
     expect(template.author).toBe('OpenAgreements contributors');
     expect(template.version).toBe(templateMetadata.version);
     expect(template.license).toBe('CC-BY-4.0');
+    expect(template.metadata.cicero).toBe('^2.0.0');
     expect(template.description).toContain('Authored by OpenAgreements contributors');
     expect(template.templateModel.model.ctoFiles).toHaveLength(2);
     const model = template.templateModel.model.ctoFiles[0].contents;
     expect(model).toContain('@template');
+    expect(model).toContain('import org.accordproject.contract@0.2.0.Contract');
     expect(model).not.toContain('company_name optional');
     expect(model).not.toContain('company_signatory_name optional');
+    expect(template.templateModel.model.ctoFiles[1].contents).toContain(
+      'namespace org.accordproject.contract@0.2.0',
+    );
+    expect(toApapTemplateRelationship(template)).toBe(
+      `resource:org.accordproject.protocol@1.0.0.Template#${template.uri}`,
+    );
   });
 
   it('round-trips APAP Concerto data into a filled DOCX', async () => {
