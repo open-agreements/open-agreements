@@ -79,6 +79,10 @@ fields:
     type: date
     description: Date of the predecessor ROFR and Co-Sale Agreement; used only when has_prior_agreement is true
     default: ''
+  - name: prior_agreement_indirect_amendment_reference
+    type: string
+    description: Computed predecessor-reference parenthetical in the exempt-transfer provision; do not supply directly
+    default: ''
   - name: has_additional_preferred_series
     type: boolean
     description: Whether Preferred Stock includes another expressly identified preferred-stock series

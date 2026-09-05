@@ -170,7 +170,10 @@ fields:
     default: '0.0001'
   - name: specify_percentage
     type: string
-    description: Percentage threshold for specified provisions
+    description: Percentage threshold for specified provisions; enter the number only (for example, 60), without the percent sign
+  - name: specify_percentage_clause
+    type: string
+    description: Complete percentage carrier set by computed.json from the number-only percentage input
   - name: effective_date
     type: date
     description: >-
