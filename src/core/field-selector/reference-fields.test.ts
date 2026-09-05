@@ -2,11 +2,13 @@ import AdmZip from 'adm-zip';
 import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect } from 'vitest';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import { applyReferenceFieldActions, ReferenceFieldsConfigSchema } from './reference-fields.js';
 
 const W = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const dirs: string[] = [];
+const it = itAllure.epic('FieldSelectors');
 
 function fixture(body: string): string {
   const dir = mkdtempSync(join(tmpdir(), 'oa-reference-fields-'));
