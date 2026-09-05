@@ -56,6 +56,12 @@ const OptionSchema = z.object({
       anchor: z.string().min(1),
       match: z.enum(['exact', 'contains']).default('exact'),
       expectedMatches: z.literal(1),
+      within: z.object({
+        startAnchor: z.string().min(1),
+        endAnchor: z.string().min(1),
+        match: z.enum(['exact', 'contains']).default('exact'),
+        expectedMatches: z.literal(1),
+      }).strict().optional(),
       removeAdjacentBlankParagraphs: z.boolean().optional(),
     }).strict(),
   ]).optional(),
@@ -211,15 +217,62 @@ function normalizedParagraphText(text: string): string {
   return normalizeQuotes(text).replace(/\s+/g, ' ').trim();
 }
 
-function paragraphMatches(doc: Document, anchor: string, match: 'exact' | 'contains'): Element[] {
+function matchingParagraphs(paragraphs: Iterable<Element>, anchor: string, match: 'exact' | 'contains'): Element[] {
   const expected = normalizedParagraphText(anchor);
   const matches: Element[] = [];
-  const paragraphs = doc.getElementsByTagNameNS(W_NS, 'p');
-  for (let i = 0; i < paragraphs.length; i++) {
-    const actual = normalizedParagraphText(extractParagraphText(paragraphs[i]));
-    if (match === 'exact' ? actual === expected : actual.includes(expected)) matches.push(paragraphs[i]);
+  for (const paragraph of paragraphs) {
+    const actual = normalizedParagraphText(extractParagraphText(paragraph));
+    if (match === 'exact' ? actual === expected : actual.includes(expected)) matches.push(paragraph);
   }
   return matches;
+}
+
+function allParagraphs(doc: Document): Element[] {
+  return Array.from(doc.getElementsByTagNameNS(W_NS, 'p'));
+}
+
+function paragraphMatches(doc: Document, anchor: string, match: 'exact' | 'contains'): Element[] {
+  return matchingParagraphs(allParagraphs(doc), anchor, match);
+}
+
+/**
+ * Resolve the body blocks strictly between an unambiguous pair of paragraph
+ * boundaries. The boundaries themselves are deliberately excluded so callers
+ * can mutate only content inside the declared region.
+ */
+function paragraphsWithinScope(
+  doc: Document,
+  groupId: string,
+  scope: NonNullable<Extract<BoundedRemoval, { kind: 'paragraph' }>['within']>,
+): Element[] {
+  const starts = paragraphMatches(doc, scope.startAnchor, scope.match);
+  const ends = paragraphMatches(doc, scope.endAnchor, scope.match);
+  if (starts.length !== scope.expectedMatches || ends.length !== scope.expectedMatches) {
+    throw new Error(
+      `[selector] Group "${groupId}": paragraph scope boundaries matched start=${starts.length} (expected 1), ` +
+      `end=${ends.length} (expected 1).`,
+    );
+  }
+
+  const start = starts[0];
+  const end = ends[0];
+  if (start.parentNode !== end.parentNode || !start.parentNode) {
+    throw new Error(`[selector] Group "${groupId}": paragraph scope boundaries must be sibling blocks.`);
+  }
+  const siblings = elementChildren(start.parentNode);
+  const startIndex = siblings.indexOf(start);
+  const endIndex = siblings.indexOf(end);
+  if (startIndex < 0 || endIndex <= startIndex) {
+    throw new Error(`[selector] Group "${groupId}": paragraph scope end boundary must follow its start boundary.`);
+  }
+
+  const paragraphs: Element[] = [];
+  for (const block of siblings.slice(startIndex + 1, endIndex)) {
+    if (isWordElement(block, 'p')) paragraphs.push(block);
+    const descendants = block.getElementsByTagNameNS(W_NS, 'p');
+    for (let i = 0; i < descendants.length; i++) paragraphs.push(descendants[i]);
+  }
+  return paragraphs;
 }
 
 function assertBalancedComplexFields(groupId: string, paragraph: Element): void {
@@ -262,9 +315,11 @@ type BoundedRemoval = NonNullable<z.infer<typeof OptionSchema>['removal']>;
  */
 function applyBoundedRemoval(doc: Document, groupId: string, removal: BoundedRemoval, remove: boolean): number {
   if (removal.kind === 'paragraph') {
-    const matches = paragraphMatches(doc, removal.anchor, removal.match);
+    const candidates = removal.within ? paragraphsWithinScope(doc, groupId, removal.within) : allParagraphs(doc);
+    const matches = matchingParagraphs(candidates, removal.anchor, removal.match);
     if (matches.length !== removal.expectedMatches) {
-      throw new Error(`[selector] Group "${groupId}": paragraph anchor "${removal.anchor}" matched ${matches.length} paragraphs (expected 1).`);
+      const scopeLabel = removal.within ? ' within scope' : '';
+      throw new Error(`[selector] Group "${groupId}": paragraph anchor "${removal.anchor}"${scopeLabel} matched ${matches.length} paragraphs (expected 1).`);
     }
     const paragraph = matches[0];
     if (remove) assertBalancedComplexFields(groupId, paragraph);
