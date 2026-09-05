@@ -1,7 +1,27 @@
 {
   "version": "1.0",
   "max_passes": 2,
+  "defaults": {
+    "full_ratchet_sunset_carrier": ""
+  },
   "rules": [
+    {
+      "id": "full-ratchet-sunset-present",
+      "description": "Include the complete optional sunset carrier only for full-ratchet anti-dilution when a date is supplied",
+      "when_all": [
+        { "field": "anti_dilution_type", "op": "eq", "value": "full_ratchet" },
+        { "field": "full_ratchet_sunset_date", "op": "defined" }
+      ],
+      "set_fill": { "full_ratchet_sunset_carrier": " and prior to ${full_ratchet_sunset_date}" }
+    },
+    {
+      "id": "full-ratchet-sunset-weighted-average-guard",
+      "description": "Never carry a full-ratchet sunset into the weighted-average branch",
+      "when_all": [
+        { "field": "anti_dilution_type", "op": "neq", "value": "full_ratchet" }
+      ],
+      "set_fill": { "full_ratchet_sunset_carrier": "" }
+    },
     {
       "id": "specified-percentage-carrier",
       "description": "Render number-only percentage inputs with exactly one percent sign",

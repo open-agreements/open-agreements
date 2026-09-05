@@ -224,6 +224,15 @@ fields:
     description: 'Anti-dilution formula: broad_based_weighted_average (>98%) or full_ratchet'
     options: [broad_based_weighted_average, full_ratchet]
     default: broad_based_weighted_average
+  - name: full_ratchet_sunset_date
+    type: date
+    description: >-
+      Optional last date on which the full-ratchet adjustment applies. Used only when anti_dilution_type is full_ratchet;
+      omit this field to leave the full-ratchet protection without a sunset. Accepts ISO YYYY-MM-DD (rendered as e.g.
+      "December 31, 2029") or a display-ready date string.
+  - name: full_ratchet_sunset_carrier
+    type: string
+    description: Computed whole carrier for the optional full-ratchet sunset date
   - name: include_pay_to_play
     type: boolean
     description: Include Section 5A pay-to-play conversion provisions (<5% of deals)

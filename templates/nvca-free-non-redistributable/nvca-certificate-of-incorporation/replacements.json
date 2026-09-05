@@ -36,6 +36,7 @@
   "[$0.001]": "{par_value}",
   "[specify percentage]": "{specify_percentage_clause}",
   "not later than > [10]": "{adjustment_notice_days}",
+  " [and prior to [Date]]": "{full_ratchet_sunset_carrier}",
   "at least > [10]": "{conversion_notice_days}",
   "aggregate per annum rate equal to > [12]%": "{redemption_interest_rate}%",
   "$_______ [insert original purchase price of Series A Preferred Stock]": "{original_issue_price}",
