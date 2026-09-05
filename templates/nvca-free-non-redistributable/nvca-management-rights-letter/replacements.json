@@ -5,8 +5,10 @@
   "[________]": "{purchased_shares}",
   "[Investor Name]": "{investor_name}",
   "[INVESTOR]": "{investor_name_upper}",
-  "[City], [State] [Zip]": "{city}, {state} {zip_code}",
+  "[City]": "{city}",
+  "[State]": "{state}",
   "[Street Address]": "{street_address}",
+  "[Zip]": "{zip_code}",
   "[PORTFOLIO COMPANY LETTERHEAD]": "{company_letterhead}",
   "[Signature Page Follows]": "{signature_page_marker}",
   "Series [_]": "Series {series_designation}"
