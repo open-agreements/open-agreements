@@ -3,7 +3,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
 import { afterEach, describe, expect } from 'vitest';
-import { computeEditHunks, normalizeBracketArtifacts } from './bracket-normalizer.js';
+import { computeDeletionHunks, computeEditHunks, normalizeBracketArtifacts } from './bracket-normalizer.js';
 import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
@@ -463,6 +463,54 @@ describe('normalizeBracketArtifacts', () => {
     // and its continuation paragraph; normalization must not erase it.
     expect(text).toMatch(/^\. The Purchasers/m);
   });
+
+  it('unwraps a carrier with several short deletions around a REF field without flattening runs', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-bracket-normalizer-ref-carrier-'));
+    tempDirs.push(dir);
+
+    const input = join(dir, 'input.docx');
+    const output = join(dir, 'output.docx');
+    const fieldParagraphXml =
+      '<w:p>' +
+      '<w:r><w:rPr><w:b/></w:rPr><w:t xml:space="preserve">. The covenants set forth in Sections 3.1, 3.2 and 3.3 shall terminate [or (iv) upon the closing of a Deemed Liquidation Event comparable to those set forth in Section </w:t></w:r>' +
+      '<w:r><w:fldChar w:fldCharType="begin"/></w:r>' +
+      '<w:r><w:instrText xml:space="preserve"> REF _Ref301 \\h </w:instrText></w:r>' +
+      '<w:r><w:fldChar w:fldCharType="separate"/></w:r>' +
+      '<w:r><w:rPr><w:u w:val="single"/></w:rPr><w:t>3.1</w:t></w:r>' +
+      '<w:r><w:fldChar w:fldCharType="end"/></w:r>' +
+      '<w:r><w:rPr><w:i/></w:rPr><w:t>].</w:t></w:r>' +
+      '</w:p>';
+    const documentXml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>${fieldParagraphXml}</w:body></w:document>`;
+    const zip = new AdmZip(buildDocx([]));
+    zip.updateFile('word/document.xml', Buffer.from(documentXml, 'utf-8'));
+    writeFileSync(input, zip.toBuffer());
+
+    const stats = await normalizeBracketArtifacts(input, output, {
+      rules: [{
+        id: 'unwrap-carrier',
+        section_heading: '',
+        ignore_heading: true,
+        paragraph_contains: 'upon the closing of a Deemed Liquidation Event',
+        replacements: { '[or (iv)': 'or (iv)', ']': '' },
+        expected_min_matches: 1,
+      }],
+    });
+
+    expect(stats.formattingFallbackCount).toBe(0);
+    expect(stats.declarativeRuleMatchCounts['unwrap-carrier']).toBe(1);
+    expect(stats.declarativeRuleMutationCounts['unwrap-carrier']).toBe(1);
+    const paragraphXml = readParagraphXml(output)[0];
+    expect(paragraphXml).toContain('fldChar');
+    expect(paragraphXml).toContain('instrText');
+    expect(paragraphXml).toContain('<w:b');
+    expect(paragraphXml).toContain('<w:u');
+    expect(paragraphXml).toContain('<w:i');
+    expect(readParagraphs(output)[0]).toBe(
+      '. The covenants set forth in Sections 3.1, 3.2 and 3.3 shall terminate or (iv) upon the closing of a Deemed Liquidation Event comparable to those set forth in Section 3.1.'
+    );
+  });
 });
 
 describe('computeEditHunks', () => {
@@ -502,5 +550,22 @@ describe('computeEditHunks', () => {
       replay = replay.slice(0, hunks[i].start) + hunks[i].replacement + replay.slice(hunks[i].end);
     }
     expect(replay).toBe(newText);
+  });
+
+  it('returns exact ordered deletions for repeated short punctuation', () => {
+    const oldText = '3.1[,][and] 3.2 [and 3.3] [or (iv) REF].';
+    const newText = '3.1[,[and 3.2 [and 3.3 or (iv) REF.';
+    const hunks = computeDeletionHunks(oldText, newText);
+    expect(hunks).not.toBeNull();
+    let replay = oldText;
+    for (let i = hunks!.length - 1; i >= 0; i--) {
+      replay = replay.slice(0, hunks![i].start) + replay.slice(hunks![i].end);
+    }
+    expect(replay).toBe(newText);
+  });
+
+  it('fails closed when the requested output is not deletion-only', () => {
+    expect(computeDeletionHunks('abc', 'axc')).toBeNull();
+    expect(computeDeletionHunks('abc', 'abcd')).toBeNull();
   });
 });
