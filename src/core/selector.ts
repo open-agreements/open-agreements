@@ -50,6 +50,13 @@ const OptionSchema = z.object({
       endAnchor: z.string().min(1),
       removeAdjacentBlankParagraphs: z.boolean().optional(),
     }).strict(),
+    z.object({
+      kind: z.literal('paragraph'),
+      anchor: z.string().min(1),
+      match: z.enum(['exact', 'contains']).default('exact'),
+      expectedMatches: z.literal(1),
+      removeAdjacentBlankParagraphs: z.boolean().optional(),
+    }).strict(),
   ]).optional(),
 });
 
@@ -190,13 +197,42 @@ function elementChildren(parent: Node): Element[] {
 }
 
 function exactParagraphMatches(doc: Document, anchor: string): Element[] {
-  const expected = normalizeQuotes(anchor).trim();
+  const expected = normalizedParagraphText(anchor);
   const matches: Element[] = [];
   const paragraphs = doc.getElementsByTagNameNS(W_NS, 'p');
   for (let i = 0; i < paragraphs.length; i++) {
-    if (normalizeQuotes(extractParagraphText(paragraphs[i])).trim() === expected) matches.push(paragraphs[i]);
+    if (normalizedParagraphText(extractParagraphText(paragraphs[i])) === expected) matches.push(paragraphs[i]);
   }
   return matches;
+}
+
+function normalizedParagraphText(text: string): string {
+  return normalizeQuotes(text).replace(/\s+/g, ' ').trim();
+}
+
+function paragraphMatches(doc: Document, anchor: string, match: 'exact' | 'contains'): Element[] {
+  const expected = normalizedParagraphText(anchor);
+  const matches: Element[] = [];
+  const paragraphs = doc.getElementsByTagNameNS(W_NS, 'p');
+  for (let i = 0; i < paragraphs.length; i++) {
+    const actual = normalizedParagraphText(extractParagraphText(paragraphs[i]));
+    if (match === 'exact' ? actual === expected : actual.includes(expected)) matches.push(paragraphs[i]);
+  }
+  return matches;
+}
+
+function assertBalancedComplexFields(groupId: string, paragraph: Element): void {
+  const chars = paragraph.getElementsByTagNameNS(W_NS, 'fldChar');
+  let depth = 0;
+  for (let i = 0; i < chars.length; i++) {
+    const type = chars[i].getAttribute('w:fldCharType') ?? chars[i].getAttribute('fldCharType');
+    if (type === 'begin') depth++;
+    if (type === 'end') depth--;
+    if (depth < 0) break;
+  }
+  if (depth !== 0) {
+    throw new Error(`[selector] Group "${groupId}": paragraph removal would split a complex Word field.`);
+  }
 }
 
 function isBlankParagraph(node: Element): boolean {
@@ -224,6 +260,25 @@ type BoundedRemoval = NonNullable<z.infer<typeof OptionSchema>['removal']>;
  * missing/drifted boundary from consuming the rest of the agreement.
  */
 function applyBoundedRemoval(doc: Document, groupId: string, removal: BoundedRemoval, remove: boolean): number {
+  if (removal.kind === 'paragraph') {
+    const matches = paragraphMatches(doc, removal.anchor, removal.match);
+    if (matches.length !== removal.expectedMatches) {
+      throw new Error(`[selector] Group "${groupId}": paragraph anchor "${removal.anchor}" matched ${matches.length} paragraphs (expected 1).`);
+    }
+    const paragraph = matches[0];
+    if (remove) assertBalancedComplexFields(groupId, paragraph);
+    const parent = paragraph.parentNode;
+    if (!parent) throw new Error(`[selector] Group "${groupId}": matched paragraph has no parent.`);
+    const siblings = elementChildren(parent);
+    const index = siblings.indexOf(paragraph);
+    const blocks = new Set<Element>([paragraph]);
+    if (removal.removeAdjacentBlankParagraphs !== false) {
+      for (let i = index - 1; i >= 0 && isBlankParagraph(siblings[i]); i--) blocks.add(siblings[i]);
+      for (let i = index + 1; i < siblings.length && isBlankParagraph(siblings[i]); i++) blocks.add(siblings[i]);
+    }
+    if (remove) removeBlockNodes(doc, blocks);
+    return matches.length;
+  }
   if (removal.kind === 'table') {
     const anchors = exactParagraphMatches(doc, removal.anchor);
     if (anchors.length !== 1) {
