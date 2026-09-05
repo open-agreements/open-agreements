@@ -63,6 +63,33 @@ function extractText(docxPath: string): string {
 }
 
 describe('patchDocument', () => {
+  it('keeps xml:space namespaced and singular when rewriting a preserved text run', async () => {
+    const xml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>` +
+      '<w:p><w:r><w:t xml:space="preserve"> [Company Name] </w:t></w:r></w:p>' +
+      '</w:body></w:document>';
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+
+    await patchDocument(inputPath, outputPath, { '[Company Name]': '{company_name}' });
+
+    const outputXml = new AdmZip(outputPath).readAsText('word/document.xml');
+    const textTags = outputXml.match(/<w:t\b[^>]*>/g) ?? [];
+    expect(textTags.length).toBeGreaterThan(0);
+    expect(textTags.every((tag) => (tag.match(/xml:space=/g) ?? []).length <= 1)).toBe(true);
+    const parseErrors: string[] = [];
+    new DOMParser({
+      onError: (level, message) => {
+        if (level !== 'warning') parseErrors.push(message);
+      },
+    }).parseFromString(outputXml, 'text/xml');
+    expect(parseErrors).toEqual([]);
+    expect(extractText(outputPath)).toBe(' {company_name} ');
+
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
   it('replaces a placeholder within a single run', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +

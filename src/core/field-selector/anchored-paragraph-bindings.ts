@@ -3,7 +3,7 @@ import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document, Element, Node } from '@xmldom/xmldom';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { z } from 'zod';
-import { copyEntriesSkippingDirs } from './ooxml-parts.js';
+import { copyEntriesSkippingDirs, preserveXmlSpace } from './ooxml-parts.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -125,7 +125,7 @@ export function bindAnchoredParagraphFields(
       throw new Error(`anchored paragraph bindings '${insertion.groupId}': label is not directly inside a run`);
     }
     const tag = doc.createElementNS(W_NS, 'w:t');
-    tag.setAttribute('xml:space', 'preserve');
+    preserveXmlSpace(tag);
     tag.textContent = `{${insertion.field}}`;
     run.insertBefore(tag, insertion.textNode.nextSibling);
   }

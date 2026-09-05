@@ -7,7 +7,7 @@ import {
   getParagraphText,
   SafeDocxError,
 } from '@usejunior/docx-core';
-import { copyEntriesSkippingDirs, enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
+import { copyEntriesSkippingDirs, enumerateTextParts, getGeneralTextPartNames, preserveXmlSpace } from './ooxml-parts.js';
 import { parseReplacementKey, resolveReplacementValue } from './replacement-keys.js';
 import type { ParsedKey, ReplacementValue } from './replacement-keys.js';
 
@@ -311,7 +311,7 @@ function setRunText(run: Element, text: string): void {
   if (tElements.length === 0) {
     const doc = run.ownerDocument as Document;
     const t = doc.createElementNS(W_NS, 'w:t');
-    t.setAttribute('xml:space', 'preserve');
+    preserveXmlSpace(t);
     t.textContent = text;
     run.appendChild(t);
     return;
@@ -319,7 +319,7 @@ function setRunText(run: Element, text: string): void {
 
   tElements[0].textContent = text;
   if (text.startsWith(' ') || text.endsWith(' ')) {
-    tElements[0].setAttribute('xml:space', 'preserve');
+    preserveXmlSpace(tElements[0]);
   }
   for (let i = 1; i < tElements.length; i++) {
     tElements[i].textContent = '';
@@ -520,7 +520,7 @@ function replaceExpandedAtomicRange(
     const sourceRPr = runs[firstEntry.runIndex].getElementsByTagNameNS(W_NS, 'rPr')[0];
     if (sourceRPr) replacementRun.appendChild(sourceRPr.cloneNode(true));
     const text = doc.createElementNS(W_NS, 'w:t');
-    text.setAttribute('xml:space', 'preserve');
+    preserveXmlSpace(text);
     text.textContent = replacementText;
     replacementRun.appendChild(text);
     if (replacementColor) setRunColor(replacementRun, replacementColor);

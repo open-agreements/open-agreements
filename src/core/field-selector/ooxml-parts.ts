@@ -1,4 +1,19 @@
 import AdmZip from 'adm-zip';
+import type { Element } from '@xmldom/xmldom';
+
+const XML_NAMESPACE = 'http://www.w3.org/XML/1998/namespace';
+
+/** Set xml:space without duplicating a parsed namespaced attribute. */
+export function preserveXmlSpace(element: Element): void {
+  for (let index = element.attributes.length - 1; index >= 0; index--) {
+    const attribute = element.attributes.item(index);
+    if (attribute && (attribute.name === 'xml:space' ||
+      (attribute.namespaceURI === XML_NAMESPACE && attribute.localName === 'space'))) {
+      element.removeAttributeNode(attribute);
+    }
+  }
+  element.setAttributeNS(XML_NAMESPACE, 'xml:space', 'preserve');
+}
 
 export interface OoxmlTextParts {
   document: string | null;
