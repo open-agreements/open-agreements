@@ -710,28 +710,27 @@ describe('formatDocumentDate', () => {
     expect(formatDocumentDate(BLANK_PLACEHOLDER)).toBe(BLANK_PLACEHOLDER);
   });
 
-  it('passes through out-of-range or malformed ISO-shaped input unchanged', () => {
-    expect(formatDocumentDate('2026-13-01')).toBe('2026-13-01');
-    expect(formatDocumentDate('2026-00-10')).toBe('2026-00-10');
-    expect(formatDocumentDate('2026-07-00')).toBe('2026-07-00');
-    expect(formatDocumentDate('2026-07-32')).toBe('2026-07-32');
+  it('rejects out-of-range strict ISO-shaped input', () => {
+    for (const value of ['2026-13-01', '2026-00-10', '2026-07-00', '2026-07-32']) {
+      expect(() => formatDocumentDate(value)).toThrow(`Invalid ISO date "${value}"`);
+    }
+  });
+
+  it('passes through non-ISO input unchanged', () => {
     expect(formatDocumentDate('2026-7-5')).toBe('2026-7-5');
     expect(formatDocumentDate('07/15/2026')).toBe('07/15/2026');
   });
 
-  it('passes through impossible calendar dates unchanged (per-month day limits)', () => {
-    expect(formatDocumentDate('2026-02-31')).toBe('2026-02-31');
-    expect(formatDocumentDate('2026-02-30')).toBe('2026-02-30');
-    expect(formatDocumentDate('2026-04-31')).toBe('2026-04-31');
-    expect(formatDocumentDate('2026-06-31')).toBe('2026-06-31');
-    expect(formatDocumentDate('2026-09-31')).toBe('2026-09-31');
-    expect(formatDocumentDate('2026-11-31')).toBe('2026-11-31');
+  it('rejects impossible calendar dates (per-month day limits)', () => {
+    for (const value of ['2026-02-31', '2026-02-30', '2026-04-31', '2026-06-31', '2026-09-31', '2026-11-31']) {
+      expect(() => formatDocumentDate(value)).toThrow(`Invalid ISO date "${value}"`);
+    }
   });
 
   it('enforces leap-year rules for February 29 (deterministic, no Date)', () => {
-    // Non-leap years → Feb 29 is invalid, passed through.
-    expect(formatDocumentDate('2025-02-29')).toBe('2025-02-29');
-    expect(formatDocumentDate('2100-02-29')).toBe('2100-02-29'); // century, not /400
+    // Non-leap years → Feb 29 is invalid.
+    expect(() => formatDocumentDate('2025-02-29')).toThrow('Invalid ISO date "2025-02-29"');
+    expect(() => formatDocumentDate('2100-02-29')).toThrow('Invalid ISO date "2100-02-29"'); // century, not /400
     // Leap years → Feb 29 is valid, formatted.
     expect(formatDocumentDate('2024-02-29')).toBe('February 29, 2024');
     expect(formatDocumentDate('2000-02-29')).toBe('February 29, 2000'); // /400 leap
@@ -797,6 +796,32 @@ describe('prepareFillData date-typed field formatting', () => {
     });
     expect(result.effective_date).toBe(BLANK_PLACEHOLDER);
     expect(result.original_incorporation_date).toBe(BLANK_PLACEHOLDER);
+  });
+
+  it('rejects an impossible direct value and metadata default with the field name', () => {
+    expect(() => prepareFillData({
+      values: { effective_date: '2029-02-29' },
+      fields: dateFields,
+    })).toThrow('Invalid ISO date for field "effective_date": "2029-02-29"');
+
+    expect(() => prepareFillData({
+      values: {},
+      fields: [{ ...dateFields[0], default: '2026-04-31' }],
+    })).toThrow('Invalid ISO date for field "effective_date": "2026-04-31"');
+  });
+
+  it('formats and validates date fields nested in array rows', () => {
+    const fields = [{
+      name: 'signers', type: 'array' as const, description: 'Signers',
+      items: [{ name: 'signed_on', type: 'date' as const, description: 'Signature date' }],
+    }];
+    expect(prepareFillData({
+      values: { signers: [{ signed_on: '2024-02-29' }, { signed_on: 'March 1, 2024' }] },
+      fields,
+    }).signers).toEqual([{ signed_on: 'February 29, 2024' }, { signed_on: 'March 1, 2024' }]);
+    expect(() => prepareFillData({
+      values: { signers: [{ signed_on: '2029-02-29' }] }, fields,
+    })).toThrow('Invalid ISO date for field "signers[0].signed_on": "2029-02-29"');
   });
 });
 

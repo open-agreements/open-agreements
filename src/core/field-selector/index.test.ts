@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, vi } from 'vitest';
-import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import {
@@ -346,6 +346,41 @@ describe('runFieldSelector', () => {
       reference_code: '2025-05-21',
     });
     expect(calls[1].values).toEqual({ company_name: 'Acme', reference_code: '2025-05-21' });
+  });
+
+  itFilling('rejects an impossible computed date before writing any artifact or document', async () => {
+    const fieldSelectorDir = createFieldSelectorFixture({
+      fields: [
+        '  - name: company_name',
+        '    type: string',
+        '    description: Company name',
+        '  - name: sunset_date',
+        '    type: date',
+        '    description: Sunset date',
+      ],
+      replacements: { '[Company Name]': '{company_name}', '[Sunset Date]': '{sunset_date}' },
+      computedProfile: {
+        rules: [{ id: 'derive-sunset', set_fill: { sunset_date: '2029-02-29' } }],
+      },
+    });
+    const outputPath = join(fieldSelectorDir, 'output.docx');
+    const computedOutPath = join(fieldSelectorDir, 'computed-output.json');
+    const runFillPipelineMock = vi.fn();
+    vi.doMock('../../utils/paths.js', () => ({ resolveFieldSelectorDir: () => fieldSelectorDir }));
+    vi.doMock('../unified-pipeline.js', () => ({ runFillPipeline: runFillPipelineMock }));
+    const { runFieldSelector } = await import('./index.js');
+
+    await expect(runFieldSelector({
+      fieldSelectorId: 'fixture-fieldSelector',
+      inputPath: '/tmp/input.docx',
+      outputPath,
+      computedOutPath,
+      values: { company_name: 'Acme Corp' },
+    })).rejects.toThrow('Invalid ISO date for field "sunset_date": "2029-02-29"');
+
+    expect(runFillPipelineMock).not.toHaveBeenCalled();
+    expect(existsSync(outputPath)).toBe(false);
+    expect(existsSync(computedOutPath)).toBe(false);
   });
 
   itFilling('uses downloader path when inputPath is omitted', async () => {
