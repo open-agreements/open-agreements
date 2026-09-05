@@ -227,6 +227,34 @@ export function isFirstBodyParagraphEmpty(docxPath: string): boolean {
 interface ParagraphInfo {
   text: string;
   rowContext: string | null;
+  fieldResultText: string;
+}
+
+/** Visible cached text carried by complex Word fields in a paragraph. */
+function getComplexFieldResultText(para: Element): string {
+  const states: Array<'instruction' | 'result'> = [];
+  let result = '';
+
+  const visit = (node: Node): void => {
+    if (node.nodeType === 1) {
+      const el = node as unknown as Element;
+      if (el.namespaceURI === W_NS && el.localName === 'fldChar') {
+        const type = el.getAttributeNS(W_NS, 'fldCharType') || el.getAttribute('w:fldCharType');
+        if (type === 'begin') states.push('instruction');
+        else if (type === 'separate' && states.length > 0) states[states.length - 1] = 'result';
+        else if (type === 'end' && states.length > 0) states.pop();
+        return;
+      }
+      if (el.namespaceURI === W_NS && el.localName === 't' && states.includes('result')) {
+        result += el.textContent ?? '';
+        return;
+      }
+    }
+    for (let child = node.firstChild; child; child = child.nextSibling) visit(child);
+  };
+
+  visit(para as unknown as Node);
+  return normalizeQuotes(result);
 }
 
 /**
@@ -251,6 +279,7 @@ function extractParagraphInfos(docxPath: string): ParagraphInfo[] {
       infos.push({
         text: normalizeQuotes(paraText),
         rowContext: rowContext !== null ? normalizeQuotes(rowContext) : null,
+        fieldResultText: getComplexFieldResultText(para),
       });
     }
   }
@@ -297,6 +326,18 @@ function hasQualifiedLeftover(
     }
   }
   return false;
+}
+
+/** Whether the qualified token is still the cached result of a live Word field. */
+function hasQualifiedFieldResult(
+  paragraphs: ParagraphInfo[],
+  context: string,
+  searchText: string,
+): boolean {
+  return paragraphs.some(({ text, rowContext, fieldResultText }) => {
+    if (!fieldResultText.includes(searchText)) return false;
+    return rowContext !== null ? rowContext.includes(context) : text.includes(context);
+  });
 }
 
 /**
@@ -377,6 +418,8 @@ export function findLeftoverPlaceholders(
   if (contextKeys.length > 0) {
     if (cleanedSourcePath) {
       const sourceFullText = normalizeQuotes(extractAllText(cleanedSourcePath));
+      const sourceParagraphs = extractParagraphInfos(cleanedSourcePath);
+      const outputParagraphs = extractParagraphInfos(docxPath);
       for (const ck of contextKeys) {
         const srcCount = countOccurrences(sourceFullText, ck.searchText);
         if (srcCount === 0) continue; // key does not apply to this document
@@ -384,7 +427,18 @@ export function findLeftoverPlaceholders(
         // Nothing filled for this placeholder → the mapping was entirely
         // unhandled. A partial reduction leaves only intentionally-retained /
         // selector-verified occurrences behind, which are not reported.
-        if (outCount >= srcCount) leftovers.add(ck.label);
+        if (outCount >= srcCount) {
+          // A context-qualified replacement may intentionally render the same
+          // visible text as the source (for example, staticizing an atomic REF
+          // field from "Section 6.1" to "Section {section}" and then filling
+          // the tag with "6.1"). Text counts cannot prove that replacement.
+          // In that narrow case, the structural transition from a cached field
+          // result to ordinary text does: do not report the full qualified key
+          // as a leftover once the field at that qualified location is gone.
+          const sourceWasField = hasQualifiedFieldResult(sourceParagraphs, ck.context, ck.searchText);
+          const outputIsField = hasQualifiedFieldResult(outputParagraphs, ck.context, ck.searchText);
+          if (!sourceWasField || outputIsField) leftovers.add(ck.label);
+        }
       }
     } else {
       const outputParagraphs = extractParagraphInfos(docxPath);

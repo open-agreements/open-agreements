@@ -4,6 +4,7 @@ import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { verifyOutput, normalizeText, findLeftoverPlaceholders } from './verifier.js';
+import { patchDocument } from './patcher.js';
 import {
   allureJsonAttachment,
   allureParameter,
@@ -463,6 +464,70 @@ describe('findLeftoverPlaceholders', () => {
 
     await allureStep('Assert retained occurrence is not reported', () => {
       expect(leftovers).toEqual([]);
+    });
+
+    cleanupDocx(sourcePath, outputPath);
+  });
+
+  it('accepts a context-qualified atomic REF replacement whose filled text equals its source result', async () => {
+    const prefix = 'rights under this Agreement are not assigned pursuant to ';
+    const sourcePath = buildDocx(
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+        `<w:document xmlns:w="${W_NS}"><w:body><w:p>` +
+        `<w:r><w:t xml:space="preserve">${prefix}</w:t></w:r>` +
+        '<w:r><w:fldChar w:fldCharType="begin"/></w:r>' +
+        '<w:r><w:instrText xml:space="preserve"> REF _RefSuccessors \\h </w:instrText></w:r>' +
+        '<w:r><w:fldChar w:fldCharType="separate"/></w:r>' +
+        '<w:r><w:t>Section 6.1</w:t></w:r>' +
+        '<w:r><w:fldChar w:fldCharType="end"/></w:r>' +
+        '</w:p></w:body></w:document>'
+    );
+    const outputPath = sourcePath.replace('test.docx', 'output.docx');
+    const key = `${prefix.trim()} > Section 6.1`;
+
+    await patchDocument(sourcePath, outputPath, { [key]: 'Section 6.1' });
+
+    await allureParameter('case', 'qualified-ref-same-visible-result');
+    const leftovers = findLeftoverPlaceholders(
+      outputPath,
+      { [key]: 'Section {successors_assigns_section}' },
+      sourcePath
+    );
+
+    await allureStep('Assert the staticized REF is not a false leftover', () => {
+      expect(leftovers).toEqual([]);
+      const xml = new AdmZip(outputPath).readAsText('word/document.xml');
+      expect(xml).not.toContain('fldChar');
+    });
+
+    cleanupDocx(sourcePath, outputPath);
+  });
+
+  it('still reports a context-qualified REF when the live source field survives unchanged', async () => {
+    const prefix = 'rights under this Agreement are not assigned pursuant to ';
+    const fieldDocx = () => buildDocx(
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+        `<w:document xmlns:w="${W_NS}"><w:body><w:p>` +
+        `<w:r><w:t xml:space="preserve">${prefix}</w:t></w:r>` +
+        '<w:r><w:fldChar w:fldCharType="begin"/></w:r>' +
+        '<w:r><w:instrText xml:space="preserve"> REF _RefSuccessors \\h </w:instrText></w:r>' +
+        '<w:r><w:fldChar w:fldCharType="separate"/></w:r>' +
+        '<w:r><w:t>Section 6.1</w:t></w:r>' +
+        '<w:r><w:fldChar w:fldCharType="end"/></w:r>' +
+        '</w:p></w:body></w:document>'
+    );
+    const sourcePath = fieldDocx();
+    const outputPath = fieldDocx();
+    const key = `${prefix.trim()} > Section 6.1`;
+
+    const leftovers = findLeftoverPlaceholders(
+      outputPath,
+      { [key]: 'Section {successors_assigns_section}' },
+      sourcePath
+    );
+
+    await allureStep('Assert the unmodified live REF remains a true positive', () => {
+      expect(leftovers).toContain(key);
     });
 
     cleanupDocx(sourcePath, outputPath);
