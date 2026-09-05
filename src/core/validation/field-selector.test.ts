@@ -133,6 +133,21 @@ function writeFixture(spec: FixtureSpec): string {
 // Binding reachability (issue #621)
 // ---------------------------------------------------------------------------
 
+describe('validateFieldSelector replacement values', () => {
+  it('accepts literal and empty cleanup replacements alongside field tags', () => {
+    const dir = writeFixture({
+      fields: [{ name: 'company_name' }],
+      replacements: {
+        '[COMPANY]': '{company_name}',
+        '[and]': 'and',
+        '[DELETE THIS NOTE]': '',
+      },
+    });
+    const result = validateFieldSelector(dir, 'fixture');
+    expect(result.errors).toEqual([]);
+  });
+});
+
 describe('validateFieldSelector binding reachability', () => {
   it('fails a metadata field bound by nothing, naming the field', () => {
     const dir = writeFixture({
