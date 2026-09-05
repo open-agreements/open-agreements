@@ -15,6 +15,7 @@ import {
   writeComputedArtifact,
 } from './computed.js';
 import { normalizeBracketArtifacts } from './bracket-normalizer.js';
+import { normalizeDetachedHeadingPunctuation } from './heading-punctuation-normalizer.js';
 import { runFillPipeline } from '../unified-pipeline.js';
 import { formatDocumentDate, formatDocumentDateFields } from '../fill-pipeline.js';
 import type { FieldSelectorRunOptions, FieldSelectorRunResult } from './types.js';
@@ -174,6 +175,7 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
             fieldValues: effectiveValues,
           });
         }
+        normalizeDetachedHeadingPunctuation(outputDocPath, outputDocPath);
       }
       : undefined,
     verify: async (p, cleanedSourcePath, referencedFields) => {
@@ -265,4 +267,5 @@ export type { RepeatableTablesConfig } from './repeatable-tables.js';
 export { normalizeNumberedHeadingSections } from './numbering-normalizer.js';
 export type { NumberingNormalizationStats } from './numbering-normalizer.js';
 export { bindAnchoredParagraphFields, loadAnchoredParagraphBindingsConfig, AnchoredParagraphBindingsConfigSchema } from './anchored-paragraph-bindings.js';
+export { normalizeDetachedHeadingPunctuation } from './heading-punctuation-normalizer.js';
 export type { AnchoredParagraphBindingsConfig } from './anchored-paragraph-bindings.js';
