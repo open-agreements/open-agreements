@@ -104,7 +104,7 @@ function readText(path: string): string {
 async function fillFixture(
   fieldSelectorId: string,
   paragraphs: string[],
-  values: Record<string, string>,
+  values: Record<string, unknown>,
 ): Promise<string> {
   const tempDir = mkdtempSync(join(tmpdir(), 'nvca-round-'));
   tempDirs.push(tempDir);
@@ -123,10 +123,44 @@ async function fillFixture(
     recursive: true,
     filter: (source) => !source.endsWith('/reference-fields.json'),
   });
+  // The canonical recipes now declare fail-closed, whole-document structural
+  // operations (story cleaning, repeatable tables, and bounded selections).
+  // A deliberately tiny scalar-binding fixture cannot truthfully reproduce
+  // those structures. Keep this harness scoped to the published replacement
+  // bindings it exists to exercise instead of fabricating source tables,
+  // headers, bookmarks, and selection boundaries.
+  for (const fullSourceOnlyConfig of [
+    'anchored-paragraph-bindings.json',
+    'clean.json',
+    'repeatable-tables.json',
+    'selections.json',
+  ]) {
+    rmSync(join(fixtureRecipe, fullSourceOnlyConfig), { force: true });
+  }
   const previousRoots = process.env.OPEN_AGREEMENTS_CONTENT_ROOTS;
   process.env.OPEN_AGREEMENTS_CONTENT_ROOTS = fixtureRoot;
+  const requiredCollectionValues: Record<string, unknown> =
+    fieldSelectorId === 'nvca-stock-purchase-agreement'
+      ? { purchasers: [{ name_and_address: 'Synthetic Purchaser' }] }
+      : fieldSelectorId === 'nvca-investors-rights-agreement'
+        ? {
+            investors: [{ name: 'Synthetic Investor' }],
+            key_holders: [{ name: 'Synthetic Key Holder' }],
+            annex_2_policies: [{ policy: 'Synthetic Policy', deadline: 'At closing' }],
+          }
+        : fieldSelectorId === 'nvca-rofr-co-sale-agreement' || fieldSelectorId === 'nvca-voting-agreement'
+          ? {
+              investors: [{ name: 'Synthetic Investor' }],
+              key_holders: [{ name: 'Synthetic Key Holder' }],
+            }
+          : {};
   try {
-    await runFieldSelector({ fieldSelectorId, inputPath, outputPath, values });
+    await runFieldSelector({
+      fieldSelectorId,
+      inputPath,
+      outputPath,
+      values: { ...requiredCollectionValues, ...values },
+    });
   } finally {
     if (previousRoots === undefined) delete process.env.OPEN_AGREEMENTS_CONTENT_ROOTS;
     else process.env.OPEN_AGREEMENTS_CONTENT_ROOTS = previousRoots;
@@ -217,11 +251,11 @@ describe('NVCA calendar-date fields render ISO input as document dates (#617)', 
 });
 
 describe('SPA balance_sheet_date fills the definition slot and its references (#617)', () => {
-  const FISCAL_YEAR_SLOT = 'fiscal year ended [_______ __], 20[_]';
+  const FISCAL_YEAR_RENDERING = 'fiscal year ended _______';
   const spaParagraphs = [
-    // Definition sentence: the audited fiscal-year-end slot is a DIFFERENT fact
-    // (intentionally left for counsel); the second slot defines the term.
-    `financial statements as of and for the ${FISCAL_YEAR_SLOT} and its unaudited financial statements as of [_______ __], 20[_] (the “Balance Sheet Date”) and for the period ended on the Balance Sheet Date.`,
+    // Current source shape: the interim statement language is one bracketed
+    // carrier, distinct from the audited fiscal-year-end slot.
+    'financial statements as of and for the fiscal year ended [_______ __], 20[_] [and its unaudited financial statements (including balance sheet, income statement and statement of cash flows) as of [_______ __], 20[_] (the “Balance Sheet Date”) and for the [_____]-month period ended on the Balance Sheet Date].',
     'liabilities incurred in the ordinary course of business subsequent to [the Balance Sheet Date]; and other obligations.',
     'Since the [Balance Sheet Date], there has not been:',
   ];
@@ -229,6 +263,9 @@ describe('SPA balance_sheet_date fills the definition slot and its references (#
   it('fills the definition blank with the formatted date and renders references as the defined term', async () => {
     const text = await fillFixture('nvca-stock-purchase-agreement', spaParagraphs, {
       balance_sheet_date: '2025-12-31',
+      interim_financial_statement_months: '11',
+      interim_current_period_end: 'November 30, 2025',
+      interim_comparative_period_end: 'November 30, 2024',
     });
     // Definition slot carries the actual date...
     expect(text).toContain('as of December 31, 2025 (the “Balance Sheet Date”)');
@@ -245,8 +282,11 @@ describe('SPA balance_sheet_date fills the definition slot and its references (#
   it('leaves the audited fiscal-year-end blank for counsel (documented non-fill)', async () => {
     const text = await fillFixture('nvca-stock-purchase-agreement', spaParagraphs, {
       balance_sheet_date: '2025-12-31',
+      interim_financial_statement_months: '11',
+      interim_current_period_end: 'November 30, 2025',
+      interim_comparative_period_end: 'November 30, 2024',
     });
-    expect(text).toContain(FISCAL_YEAR_SLOT);
+    expect(text).toContain(FISCAL_YEAR_RENDERING);
   });
 });
 
@@ -261,7 +301,7 @@ const ROUND_VALUES = { series_designation: 'A', par_value: '0.0001' };
 const SERIES_PAR_FIXTURES: Array<{
   template: string;
   paragraphs: string[];
-  values: Record<string, string>;
+  values: Record<string, unknown>;
   expected: string[];
 }> = [
   {
@@ -289,7 +329,7 @@ const SERIES_PAR_FIXTURES: Array<{
       'collectively, all shares of Series A Preferred Stock [and Series [_] Preferred Stock].',
       '“Common Stock” means shares of Common Stock of the Company, [__] par value per share.',
     ],
-    values: ROUND_VALUES,
+    values: { ...ROUND_VALUES, additional_series_designation: 'A' },
     expected: [
       `shares of Series${NBSP}A Preferred Stock of the Company, par value $0.0001 per share`,
       'par value $0.0001 per share (“Series A Preferred Stock”), pursuant to that certain Series A Preferred Stock Purchase Agreement',
@@ -309,7 +349,7 @@ const SERIES_PAR_FIXTURES: Array<{
     expected: [
       '[Series A] Preferred Stock',
       'Series A Preferred Stock Purchase Agreement',
-      '[Series A] Preferred Stock, $0.0001 par value per share, of the Company',
+      'Series A Preferred Stock, $0.0001 par value per share, of the Company',
       'common stock, $0.0001 par value per share, of the Company',
       'Series A Preferred Stock, par value $0.0001 per share.',
     ],
