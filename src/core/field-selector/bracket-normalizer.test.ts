@@ -372,8 +372,8 @@ describe('normalizeBracketArtifacts', () => {
     expect(stats.normalizedParagraphs).toBe(1);
   });
 
-  // #619 defect 3: edits at BOTH ends of a paragraph (leading ". " strip +
-  // trailing "]" trim) force the minimal CONTIGUOUS range to span the whole
+  // #619 defect 3: edits at separated positions in a paragraph can force the
+  // minimal CONTIGUOUS range to span nearly the whole
   // paragraph; when a Word field result sits inside, replaceParagraphTextRange
   // refuses and the normalizer previously fell back destructively (flattening
   // runs, emitting the "formatting-destructive fallback" warning). The hunked
@@ -459,7 +459,9 @@ describe('normalizeBracketArtifacts', () => {
     expect(text).toContain('The Purchasers shall have received from Cooley LLP, counsel for the Company');
     expect(text).not.toContain('[___________]');
     expect(text).not.toContain('Agreement.]');
-    expect(text).not.toMatch(/^\. The Purchasers/m);
+    // The leading period is the separator between the preceding split heading
+    // and its continuation paragraph; normalization must not erase it.
+    expect(text).toMatch(/^\. The Purchasers/m);
   });
 });
 

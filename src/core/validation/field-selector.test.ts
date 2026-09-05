@@ -24,6 +24,8 @@ interface FixtureSpec {
   computed?: Record<string, unknown>;
   normalize?: Record<string, unknown>;
   selections?: Record<string, unknown>;
+  anchoredBindings?: Record<string, unknown>;
+  repeatableTables?: Record<string, unknown>;
   /** field ids to write minimal fields/<id>.json selector recipes for */
   recipes?: string[];
   templateManifest?: Record<string, unknown>;
@@ -79,6 +81,12 @@ function writeFixture(spec: FixtureSpec): string {
   }
   if (spec.selections) {
     writeFileSync(join(dir, 'selections.json'), JSON.stringify(spec.selections, null, 2));
+  }
+  if (spec.anchoredBindings) {
+    writeFileSync(join(dir, 'anchored-paragraph-bindings.json'), JSON.stringify(spec.anchoredBindings, null, 2));
+  }
+  if (spec.repeatableTables) {
+    writeFileSync(join(dir, 'repeatable-tables.json'), JSON.stringify(spec.repeatableTables, null, 2));
   }
   if (spec.recipes || spec.templateManifest) {
     mkdirSync(join(dir, 'fields'), { recursive: true });
@@ -170,6 +178,30 @@ describe('validateFieldSelector binding reachability', () => {
             options: [{ marker: '[ ]', trigger: { field: 'include_arbitration', equals: true } }],
           },
         ],
+      },
+    });
+    const result = validateFieldSelector(dir, 'fixture');
+    expect(result.errors).toEqual([]);
+    expect(result.valid).toBe(true);
+  });
+
+  it('passes fields bound through anchored labels and repeatable table rows', () => {
+    const dir = writeFixture({
+      fields: [{ name: 'company_name' }, { name: 'signatory_name' }, { name: 'investors', type: 'array' }],
+      replacements: { '[COMPANY]': '{company_name}' },
+      anchoredBindings: {
+        groups: [{
+          id: 'signature', start_anchor: 'COMPANY:', end_anchor: 'INVESTORS:', expected_group_matches: 1,
+          bindings: [{ label: 'Name:', field: 'signatory_name', expected_matches: 1, insert_after_label: true, preserve_following_tabs: true }],
+        }],
+      },
+      repeatableTables: {
+        schema_version: 1,
+        tables: [{
+          id: 'investors', rows_field: 'investors',
+          prototype_cells: ['[Investor Name]'],
+          columns: [{ field: 'name' }],
+        }],
       },
     });
     const result = validateFieldSelector(dir, 'fixture');

@@ -2,6 +2,7 @@ import AdmZip from 'adm-zip';
 import { writeFileSync } from 'node:fs';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Element as XmlElement } from '@xmldom/xmldom';
+import { createParagraphNumberingResolver } from './paragraph-numbering.js';
 
 const W = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -30,17 +31,7 @@ export function normalizeNumberedHeadingSections(inputPath: string, outputPath: 
   const styles = parser.parseFromString(stylesEntry.getData().toString('utf8'), 'text/xml');
   const numbering = parser.parseFromString(numberingEntry.getData().toString('utf8'), 'text/xml');
 
-  const styleLevels = new Map<string, { numId: string; ilvl: number }>();
-  for (const style of Array.from(styles.getElementsByTagNameNS(W, 'style'))) {
-    if (attr(style, 'type') !== 'paragraph') continue;
-    const styleId = attr(style, 'styleId');
-    const pPr = direct(style, 'pPr');
-    const numPr = pPr && direct(pPr, 'numPr');
-    const numId = numPr && direct(numPr, 'numId');
-    if (!styleId || !numId) continue;
-    const ilvl = numPr && direct(numPr, 'ilvl');
-    styleLevels.set(styleId, { numId: attr(numId, 'val')!, ilvl: Number(ilvl ? attr(ilvl, 'val') : 0) });
-  }
+  const resolveNumbering = createParagraphNumberingResolver(styles);
   const numToAbstract = new Map<string, string>();
   const hierarchicalAbstracts = new Set<string>();
   const abstractElements = new Map<string, XmlElement>();
@@ -62,9 +53,10 @@ export function normalizeNumberedHeadingSections(inputPath: string, outputPath: 
   const paragraphs = Array.from(document.getElementsByTagNameNS(W, 'p'));
   const candidates = paragraphs.map((paragraph) => {
     const pPr = direct(paragraph, 'pPr');
-    const pStyle = pPr && direct(pPr, 'pStyle');
-    const style = pStyle && styleLevels.get(attr(pStyle, 'val') ?? '');
-    return style ? { paragraph, pPr: pPr!, ...style } : null;
+    const resolved = resolveNumbering(paragraph);
+    return pPr && resolved && resolved.outlineLvl !== undefined
+      ? { paragraph, pPr, ...resolved }
+      : null;
   });
   const roots = candidates.filter((item) => item?.ilvl === 0 && hierarchicalAbstracts.has(numToAbstract.get(item.numId) ?? ''));
   if (roots.length < 2) return { sections: 0, paragraphs: 0 };
@@ -81,14 +73,12 @@ export function normalizeNumberedHeadingSections(inputPath: string, outputPath: 
   if (!sourceAbstract) throw new Error(`numbering normalization: missing abstractNum ${abstractNumId}`);
 
   let section = 0;
-  let subsection = 0;
   let rewritten = 0;
   let activeNumId: string | null = null;
   for (const item of candidates) {
     if (!item || item.numId !== sourceNumId) continue;
-    if (item.ilvl === 0 || item.ilvl === 1) {
-      if (item.ilvl === 0) { section += 1; subsection = 0; }
-      else { subsection += 1; }
+    if (item.ilvl === 0) {
+      section += 1;
       activeNumId = String(++maxNumId);
       const sectionAbstract = sourceAbstract.cloneNode(true) as XmlElement;
       const sectionAbstractId = String(++maxAbstractNumId);
@@ -97,12 +87,6 @@ export function normalizeNumberedHeadingSections(inputPath: string, outputPath: 
       const levelStart = levelZero && direct(levelZero, 'start');
       if (!levelStart) throw new Error('numbering normalization: level zero has no start value');
       levelStart.setAttributeNS(W, 'w:val', String(section));
-      if (item.ilvl === 1) {
-        const levelOne = Array.from(sectionAbstract.getElementsByTagNameNS(W, 'lvl')).find((level) => attr(level, 'ilvl') === '1');
-        const levelOneStart = levelOne && direct(levelOne, 'start');
-        if (!levelOneStart) throw new Error('numbering normalization: level one has no start value');
-        levelOneStart.setAttributeNS(W, 'w:val', String(subsection));
-      }
       if (!numbering.documentElement) throw new Error('numbering normalization: missing numbering root');
       numbering.documentElement.appendChild(sectionAbstract);
       const num = numbering.createElementNS(W, 'w:num');

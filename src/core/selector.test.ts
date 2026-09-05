@@ -38,7 +38,7 @@ function makeTempDir(): string {
  * Create a minimal DOCX with a single document.xml containing the given
  * <w:body> inner XML. Returns the path to the .docx file.
  */
-function buildTestDocx(bodyInnerXml: string): string {
+function buildTestDocx(bodyInnerXml: string, stylesXml?: string): string {
   const dir = makeTempDir();
   const docxPath = join(dir, 'test.docx');
 
@@ -64,6 +64,7 @@ function buildTestDocx(bodyInnerXml: string): string {
   zip.addFile('[Content_Types].xml', Buffer.from(contentTypes));
   zip.addFile('_rels/.rels', Buffer.from(rels));
   zip.addFile('word/document.xml', Buffer.from(documentXml));
+  if (stylesXml) zip.addFile('word/styles.xml', Buffer.from(stylesXml));
   zip.writeZip(docxPath);
   return docxPath;
 }
@@ -481,6 +482,43 @@ describe('cross-cell disambiguation', () => {
 // ---------------------------------------------------------------------------
 
 describe('markerless selections', () => {
+  it('stops before a numbered heading whose list metadata is inherited from its style', async () => {
+    const target =
+      '<w:p><w:pPr><w:pStyle w:val="Heading1"/></w:pPr>' +
+      '<w:bookmarkStart w:id="7" w:name="_RefNextArticle"/>' +
+      '<w:r><w:t>Additional Covenants</w:t></w:r>' +
+      '<w:bookmarkEnd w:id="7"/></w:p>';
+    const reference = paraWithComplexField('See ', '5')
+      .replaceAll('_Ref137575642', '_RefNextArticle');
+    const styles =
+      `<w:styles xmlns:w="${W_NS}">` +
+      '<w:style w:type="paragraph" w:styleId="Heading1"><w:pPr><w:numPr><w:numId w:val="2"/></w:numPr></w:pPr></w:style>' +
+      '</w:styles>';
+    const inputPath = buildTestDocx(
+      para('Optional Governance Program') + para('Optional program details.') + target + reference,
+      styles,
+    );
+    const outputPath = join(makeTempDir(), 'out.docx');
+    const config: SelectionsConfig = {
+      groups: [{
+        id: 'governance-program',
+        type: 'checkbox',
+        standalone: true,
+        markerless: true,
+        options: [{ marker: 'Optional Governance Program', trigger: { field: 'include_program' } }],
+      }],
+    };
+
+    await applySelections(inputPath, outputPath, config, {});
+
+    const xml = readDocumentXml(outputPath);
+    expect(xml).not.toContain('Optional Governance Program');
+    expect(xml).not.toContain('Optional program details.');
+    expect(xml).toContain('Additional Covenants');
+    expect(xml).toContain('w:name="_RefNextArticle"');
+    expect(xml).toContain('REF _RefNextArticle');
+  });
+
   it('removes paragraph when trigger does not fire', async () => {
     const body = `
       ${para('Section 1.2(a) Initial Closing.')}

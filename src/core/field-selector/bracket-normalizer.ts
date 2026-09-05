@@ -385,7 +385,7 @@ function applyDeclarativeRulesToParagraph(params: {
     mutated = mutated
       .replace(/\s{2,}/g, ' ')
       .replace(/\s+\./g, '.')
-      .replace(/^\.\s*/, '')
+      .replace(/^\.\s*\.\s*/, '. ')
       .trim();
 
     break;

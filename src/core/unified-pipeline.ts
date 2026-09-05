@@ -409,7 +409,7 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
     }
 
     // Collapse double spaces left by empty field substitutions (e.g. {initial_word_lower} → "")
-    await collapseDoubleSpacesInDocx(filledPath);
+    await normalizeEmptyFillWhitespaceInDocx(filledPath);
 
     // Step 7: Copy to output
     copyFileSync(filledPath, outputPath);
@@ -417,6 +417,10 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
     // Optional post-processing for field-selector-specific normalization.
     if (postProcess) {
       await postProcess(outputPath);
+      // Declarative post-processing can itself remove an optional carrier and
+      // expose the same empty-value whitespace seam, so normalize once more on
+      // the final artifact.
+      await normalizeEmptyFillWhitespaceInDocx(outputPath);
     }
 
     // Step 8: Verify — failures surface to callers via warnings (soft; no throw)
@@ -468,16 +472,15 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
 }
 
 /**
- * Collapse runs of 2+ spaces into a single space within all text paragraphs.
- * Fixes double spaces left when empty field substitutions (e.g. {initial_word_lower} → "")
- * leave adjacent spaces in the DOCX.
+ * Close whitespace seams left by empty substitutions within text paragraphs:
+ * collapse doubled spaces and remove whitespace immediately before punctuation.
  *
  * Paragraphs containing Word field characters (w:fldChar) are skipped because
  * getParagraphText treats field-code runs as empty, so "Page " + PAGE field +
  * " of " looks like "Page  of " and the replacement would delete the field run
  * that sits between the two space-bearing runs.
  */
-async function collapseDoubleSpacesInDocx(docxPath: string): Promise<void> {
+export async function normalizeEmptyFillWhitespaceInDocx(docxPath: string): Promise<void> {
   const zip = new AdmZip(docxPath);
   const parser = new DOMParser();
   const serializer = new XMLSerializer();
@@ -502,6 +505,15 @@ async function collapseDoubleSpacesInDocx(docxPath: string): Promise<void> {
       while ((match = / {2,}/.exec(text)) !== null) {
         try {
           replaceParagraphTextRange(para, match.index, match.index + match[0].length, ' ');
+          partModified = true;
+        } catch {
+          break;
+        }
+        text = getParagraphText(para);
+      }
+      while ((match = /[ \t\u00a0]+(?=[,.;:!?])/.exec(text)) !== null) {
+        try {
+          replaceParagraphTextRange(para, match.index, match.index + match[0].length, '');
           partModified = true;
         } catch {
           break;
