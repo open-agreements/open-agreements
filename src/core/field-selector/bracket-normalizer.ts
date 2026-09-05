@@ -3,7 +3,7 @@ import { writeFileSync } from 'node:fs';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document, Element } from '@xmldom/xmldom';
 import { replaceParagraphTextRange } from '@usejunior/docx-core';
-import { copyEntriesSkippingDirs, enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
+import { copyEntriesSkippingDirs, enumerateTextParts, getGeneralTextPartNames, preserveXmlSpace } from './ooxml-parts.js';
 import { BLANK_PLACEHOLDER } from '../fill-utils.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
@@ -467,7 +467,7 @@ function setParagraphTextFallback(para: Element, text: string): void {
   if (tElements.length === 0) return;
   tElements[0].textContent = text;
   if (text.startsWith(' ') || text.endsWith(' ')) {
-    tElements[0].setAttribute('xml:space', 'preserve');
+    preserveXmlSpace(tElements[0]);
   }
   for (let i = 1; i < tElements.length; i++) {
     tElements[i].textContent = '';

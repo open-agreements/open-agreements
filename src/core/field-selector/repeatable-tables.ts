@@ -5,6 +5,7 @@ import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document as XmlDocument, Element as XmlElement } from '@xmldom/xmldom';
 import { z } from 'zod';
 import type { FieldDefinition } from '../metadata.js';
+import { preserveXmlSpace } from './ooxml-parts.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -111,7 +112,7 @@ function setParagraphText(doc: XmlDocument, paragraph: XmlElement, value: string
     if (child.nodeType === 1 && (child as XmlElement).localName !== 'rPr') run.removeChild(child);
   }
   const text = doc.createElementNS(W_NS, 'w:t');
-  if (/^\s|\s$/.test(value)) text.setAttribute('xml:space', 'preserve');
+  if (/^\s|\s$/.test(value)) preserveXmlSpace(text);
   text.appendChild(doc.createTextNode(value));
   run.appendChild(text);
   for (const extra of runs.slice(1)) paragraph.removeChild(extra);
@@ -132,7 +133,7 @@ function setCellText(doc: XmlDocument, cell: XmlElement, value: string): void {
     }
     const run = doc.createElementNS(W_NS, 'w:r');
     const text = doc.createElementNS(W_NS, 'w:t');
-    if (/^\s|\s$/.test(line)) text.setAttribute('xml:space', 'preserve');
+    if (/^\s|\s$/.test(line)) preserveXmlSpace(text);
     text.appendChild(doc.createTextNode(line));
     run.appendChild(text);
     paragraph.appendChild(run);
