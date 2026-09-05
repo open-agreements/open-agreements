@@ -26,6 +26,7 @@ interface FixtureSpec {
   selections?: Record<string, unknown>;
   anchoredBindings?: Record<string, unknown>;
   repeatableTables?: Record<string, unknown>;
+  referenceFields?: Record<string, unknown>;
   /** field ids to write minimal fields/<id>.json selector recipes for */
   recipes?: string[];
   templateManifest?: Record<string, unknown>;
@@ -88,6 +89,9 @@ function writeFixture(spec: FixtureSpec): string {
   if (spec.repeatableTables) {
     writeFileSync(join(dir, 'repeatable-tables.json'), JSON.stringify(spec.repeatableTables, null, 2));
   }
+  if (spec.referenceFields) {
+    writeFileSync(join(dir, 'reference-fields.json'), JSON.stringify(spec.referenceFields, null, 2));
+  }
   if (spec.recipes || spec.templateManifest) {
     mkdirSync(join(dir, 'fields'), { recursive: true });
   }
@@ -145,6 +149,28 @@ describe('validateFieldSelector replacement values', () => {
     });
     const result = validateFieldSelector(dir, 'fixture');
     expect(result.errors).toEqual([]);
+  });
+
+  it('validates the reference-fields.json fail-closed declaration', () => {
+    const valid = writeFixture({
+      fields: [{ name: 'company_name' }],
+      replacements: { '[COMPANY]': '{company_name}' },
+      referenceFields: {
+        version: 1,
+        actions: [{
+          target: '_DV_M84', strategy: 'literalize', literal: '2.1',
+          expected_cached_result: '2.1', expected_matches: 1, expected_target_count: 0,
+        }],
+      },
+    });
+    expect(validateFieldSelector(valid, 'valid').errors).toEqual([]);
+
+    const invalid = writeFixture({
+      fields: [{ name: 'company_name' }],
+      replacements: { '[COMPANY]': '{company_name}' },
+      referenceFields: { version: 1, actions: [{ target: '_DV_M84' }] },
+    });
+    expect(validateFieldSelector(invalid, 'invalid').errors.some((e) => e.startsWith('reference-fields.json:'))).toBe(true);
   });
 });
 

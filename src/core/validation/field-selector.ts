@@ -10,6 +10,7 @@ import { SelectionsConfigSchema, type SelectionsConfig } from '../selector.js';
 import { loadSelectorContracts } from '../selectors/loader.js';
 import { AnchoredParagraphBindingsConfigSchema, type AnchoredParagraphBindingsConfig } from '../field-selector/anchored-paragraph-bindings.js';
 import { RepeatableTablesConfigSchema, type RepeatableTablesConfig } from '../field-selector/repeatable-tables.js';
+import { ReferenceFieldsConfigSchema } from '../field-selector/reference-fields.js';
 
 export interface FieldSelectorValidationResult {
   fieldSelectorId: string;
@@ -186,6 +187,16 @@ export function validateFieldSelector(
   } catch (err) {
     errors.push(`replacements.json: ${(err as Error).message}`);
     reachabilityInputsOk = false;
+  }
+
+  // Validate clean.json if present
+  const referenceFieldsPath = join(fieldSelectorDir, 'reference-fields.json');
+  if (existsSync(referenceFieldsPath)) {
+    try {
+      ReferenceFieldsConfigSchema.parse(JSON.parse(readFileSync(referenceFieldsPath, 'utf-8')));
+    } catch (err) {
+      errors.push(`reference-fields.json: ${err instanceof Error ? err.message : 'invalid format'}`);
+    }
   }
 
   // Validate clean.json if present

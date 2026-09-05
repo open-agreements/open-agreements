@@ -24,6 +24,7 @@ import { enumerateTextParts, getGeneralTextPartNames, rezipWithoutDirEntries } f
 import type { FieldDefinition, CleanConfig } from './metadata.js';
 import type { SelectionsConfig } from './selector.js';
 import type { VerifyResult } from './field-selector/types.js';
+import { applyReferenceFieldActions, type ReferenceFieldsConfig } from './field-selector/reference-fields.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -92,6 +93,8 @@ export interface PipelineOptions {
    * commands because command analysis and filling happen later.
    */
   prePatchProcess?: (inputPath: string, outputPath: string) => void | Promise<void>;
+  /** Target-driven, assertion-guarded REF-field structural actions. */
+  referenceFieldsConfig?: ReferenceFieldsConfig;
   postProcess?: (outputPath: string) => void | Promise<void>;
 
   // Debugging
@@ -183,6 +186,7 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
     fixSmartQuotes = false,
     verify,
     prePatchProcess,
+    referenceFieldsConfig,
     postProcess,
     keepIntermediate = false,
   } = options;
@@ -219,6 +223,12 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
         const structurallyProcessedPath = join(tempDir, 'structural.docx');
         await prePatchProcess(cleanedPath, structurallyProcessedPath);
         structuralInputPath = structurallyProcessedPath;
+      }
+
+      if (referenceFieldsConfig) {
+        const referenceFieldsPath = join(tempDir, 'reference-fields.docx');
+        applyReferenceFieldActions(structuralInputPath, referenceFieldsPath, referenceFieldsConfig);
+        structuralInputPath = referenceFieldsPath;
       }
 
       // Selector-contract patch (deterministic locators) runs between clean and

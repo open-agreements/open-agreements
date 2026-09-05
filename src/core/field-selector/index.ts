@@ -23,6 +23,7 @@ import type { ComputedValueMap } from './computed.js';
 import { applyRepeatableTables, loadRepeatableTablesConfig, validateRepeatableTableFields } from './repeatable-tables.js';
 import { bindAnchoredParagraphFields, loadAnchoredParagraphBindingsConfig } from './anchored-paragraph-bindings.js';
 import { normalizeNumberedHeadingSections } from './numbering-normalizer.js';
+import { loadReferenceFieldsConfig } from './reference-fields.js';
 
 function toComputedValueMap(values: Record<string, unknown>): ComputedValueMap {
   const computedValues: ComputedValueMap = {};
@@ -55,6 +56,7 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
   const anchoredParagraphBindingsConfig = existsSync(anchoredBindingsPath)
     ? loadAnchoredParagraphBindingsConfig(anchoredBindingsPath)
     : undefined;
+  const referenceFieldsConfig = loadReferenceFieldsConfig(join(fieldSelectorDir, 'reference-fields.json'));
 
   // Load selectionsConfig if selections.json exists (mirrors engine.ts template path)
   const selectionsPath = join(fieldSelectorDir, 'selections.json');
@@ -166,6 +168,7 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
         }
       }
       : undefined,
+    referenceFieldsConfig,
     postProcess: shouldNormalizeBracketArtifacts
       ? async (outputDocPath: string) => {
         normalizeNumberedHeadingSections(outputDocPath, outputDocPath);
@@ -269,3 +272,5 @@ export type { NumberingNormalizationStats } from './numbering-normalizer.js';
 export { bindAnchoredParagraphFields, loadAnchoredParagraphBindingsConfig, AnchoredParagraphBindingsConfigSchema } from './anchored-paragraph-bindings.js';
 export { normalizeDetachedHeadingPunctuation } from './heading-punctuation-normalizer.js';
 export type { AnchoredParagraphBindingsConfig } from './anchored-paragraph-bindings.js';
+export { applyReferenceFieldActions, loadReferenceFieldsConfig, ReferenceFieldsConfigSchema } from './reference-fields.js';
+export type { ReferenceFieldsConfig } from './reference-fields.js';
