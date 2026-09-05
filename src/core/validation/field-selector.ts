@@ -31,7 +31,8 @@ const SAFE_TAG_RE = /^\{[a-z_][a-z0-9_]*\}$/;
  * - No .docx files (copyrighted content must not be committed)
  * - metadata.yaml validates against schema
  * - For non-scaffold fieldSelectors: replacements.json present and valid
- * - Replacement values must be valid {identifier} tags
+ * - Replacement values may be literal text, empty cleanup replacements, or
+ *   valid {identifier} tags
  * - In strict mode: scaffolds are errors, all files required
  */
 export function validateFieldSelector(
@@ -145,14 +146,6 @@ export function validateFieldSelector(
         } else {
           errors.push(`replacements.json: value for "${key}" must be a string or { value: string, format?: object }`);
           continue;
-        }
-
-        // Value must contain at least one {identifier} tag
-        const tags = value.match(TAG_RE);
-        if (!tags || tags.length === 0) {
-          errors.push(
-            `replacements.json: value for "${key}" must contain at least one {identifier} tag, got "${value}"`
-          );
         }
 
         // All curly-brace tokens in value must be safe identifiers (no control tags)
@@ -392,7 +385,9 @@ export function validateFieldSelector(
           : undefined);
       if (value === undefined) continue; // malformed value already reported above
       const tagFields = (value.match(TAG_RE) ?? []).map((tag) => tag.slice(1, -1));
-      if (tagFields.length === 0) continue; // tagless value already reported above
+      // Literal and empty replacements are handled by the legacy patcher and
+      // therefore have no selector field whose ownership can be checked.
+      if (tagFields.length === 0) continue;
       const missingRecipes = tagFields.filter((f) => !selectorRecipeFields.has(f));
       for (const fieldName of missingRecipes) {
         errors.push(

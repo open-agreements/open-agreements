@@ -125,7 +125,7 @@ describe('validateFieldSelector negative scenarios', () => {
     expect(result.errors.join(' ')).toContain('replacements.json must be a JSON object');
   });
 
-  it('rejects replacement value shape and infinite loop patterns', () => {
+  it('rejects invalid replacement shapes and loops while allowing literals', () => {
     const fieldSelectorDir = mkdtempSync(join(tmpdir(), 'oa-field-selector-replacement-shape-'));
     tempDirs.push(fieldSelectorDir);
 
@@ -149,7 +149,7 @@ describe('validateFieldSelector negative scenarios', () => {
 
     expect(result.valid).toBe(false);
     expect(result.errors.join(' ')).toContain('value for "[Not String]" must be a string');
-    expect(result.errors.join(' ')).toContain('must contain at least one {identifier} tag');
+    expect(result.errors.join(' ')).not.toContain('value for "[No Tags]"');
     expect(result.errors.join(' ')).toContain('contains the key itself');
     expect(result.errors.join(' ')).toContain('contains the search text');
   });
