@@ -5,6 +5,7 @@ import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
 import { cleanDocument } from './cleaner.js';
+import { scanDocxBrackets } from '../../commands/scan.js';
 import type { CleanConfig } from '../metadata.js';
 import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 
@@ -65,6 +66,49 @@ function extractDocXml(docxPath: string): string {
   const entry = zip.getEntry('word/document.xml');
   return entry ? entry.getData().toString('utf-8') : '';
 }
+
+describe('cleanDocument removeFootnotes inline references', () => {
+  it('removes footnote and endnote reference-only runs and leaves scan/render views consistent', async () => {
+    const inputPath = buildTestDocxRaw([
+      '<w:p><w:r><w:t>Before</w:t></w:r>',
+      '<w:r><w:rPr><w:rStyle w:val="FootnoteReference"/></w:rPr><w:footnoteReference w:id="1"/></w:r>',
+      '<w:r><w:t> and after</w:t></w:r>',
+      '<w:r><w:rPr><w:rStyle w:val="EndnoteReference"/></w:rPr><w:endnoteReference w:id="2"/></w:r></w:p>',
+    ].join(''));
+    const outputPath = inputPath.replace('input.docx', 'output.docx');
+
+    await cleanDocument(inputPath, outputPath, makeConfig({ removeFootnotes: true }));
+
+    const xml = extractDocXml(outputPath);
+    expect(xml).not.toContain('footnoteReference');
+    expect(xml).not.toContain('endnoteReference');
+    expect(xml).not.toContain('FootnoteReference');
+    expect(xml).not.toContain('EndnoteReference');
+    expect(extractParaTexts(outputPath)).toEqual(['Before and after']);
+    expect(scanDocxBrackets(outputPath).footnoteCount).toBe(0);
+
+    rmSync(inputPath.replace('/input.docx', ''), { recursive: true, force: true });
+  });
+
+  it('preserves text, formatting, and non-reference content in mixed-content runs', async () => {
+    const inputPath = buildTestDocxRaw([
+      '<w:p><w:r><w:rPr><w:b/></w:rPr><w:t>Kept</w:t>',
+      '<w:footnoteReference w:id="1"/><w:tab/><w:endnoteReference w:id="2"/>',
+      '<w:t> text</w:t></w:r></w:p>',
+    ].join(''));
+    const outputPath = inputPath.replace('input.docx', 'output.docx');
+
+    await cleanDocument(inputPath, outputPath, makeConfig({ removeFootnotes: true }));
+
+    const xml = extractDocXml(outputPath);
+    expect(xml).not.toMatch(/(?:footnote|endnote)Reference/);
+    expect(xml).toContain('<w:b/>');
+    expect(xml).toContain('<w:tab/>');
+    expect(extractParaTexts(outputPath)).toEqual(['Kept text']);
+
+    rmSync(inputPath.replace('/input.docx', ''), { recursive: true, force: true });
+  });
+});
 
 describe('cleanDocument removeBeforePattern', () => {
   it('removes paragraphs before the anchor pattern', async () => {

@@ -98,11 +98,11 @@ export async function verifyOutput(
 
   // Check 4: No footnote references (if removeFootnotes was set)
   if (cleanConfig?.removeFootnotes) {
-    const footnoteRefs = (xml.match(/footnoteReference/g) ?? []).length;
+    const footnoteRefs = (xml.match(/(?:footnote|endnote)Reference/g) ?? []).length;
     checks.push({
       name: 'Footnotes removed',
       passed: footnoteRefs === 0,
-      details: footnoteRefs > 0 ? `${footnoteRefs} footnote reference(s) remain` : undefined,
+      details: footnoteRefs > 0 ? `${footnoteRefs} note reference(s) remain` : undefined,
     });
   }
 

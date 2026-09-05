@@ -129,7 +129,7 @@ export async function cleanDocument(
     }
 
     if (config.removeFootnotes) {
-      removeFootnoteReferences(doc);
+      removeNoteReferences(doc);
       modified = true;
     }
 
@@ -256,26 +256,51 @@ function clearPartContent(doc: Document): void {
   root.appendChild(p);
 }
 
-function removeFootnoteReferences(doc: Document): void {
-  const refs = doc.getElementsByTagNameNS(W_NS, 'footnoteReference');
-  const runsToRemove: Element[] = [];
+/**
+ * Remove inline note markers without discarding other content that happens to
+ * share their run. Word commonly gives a reference its own styled run, but
+ * producers are allowed to place text and a reference in the same run.
+ */
+function removeNoteReferences(doc: Document): void {
+  const refs: Element[] = [];
+  for (const localName of ['footnoteReference', 'endnoteReference']) {
+    const matches = doc.getElementsByTagNameNS(W_NS, localName);
+    for (let i = 0; i < matches.length; i++) refs.push(matches[i]);
+  }
 
-  for (let i = 0; i < refs.length; i++) {
-    let node: Node | null = refs[i];
+  const affectedRuns = new Set<Element>();
+  for (const ref of refs) {
+    let node: Node | null = ref.parentNode;
     while (node) {
       if (node.nodeType === 1) {
         const element = node as Element;
         if (element.localName === 'r' && element.namespaceURI === W_NS) {
-          runsToRemove.push(element);
+          affectedRuns.add(element);
           break;
         }
       }
       node = node.parentNode;
     }
+    ref.parentNode?.removeChild(ref);
   }
 
-  for (const run of runsToRemove) {
-    run.parentNode?.removeChild(run);
+  // A reference-only run now contains, at most, its run properties. Drop that
+  // structural shell; preserve runs with text, tabs, drawings, or other OOXML.
+  for (const run of affectedRuns) {
+    let hasContent = false;
+    for (let child = run.firstChild; child; child = child.nextSibling) {
+      if (child.nodeType === 1) {
+        const element = child as Element;
+        if (!(element.namespaceURI === W_NS && element.localName === 'rPr')) {
+          hasContent = true;
+          break;
+        }
+      } else if (child.nodeType === 3 && (child.nodeValue ?? '').trim() !== '') {
+        hasContent = true;
+        break;
+      }
+    }
+    if (!hasContent) run.parentNode?.removeChild(run);
   }
 }
 
