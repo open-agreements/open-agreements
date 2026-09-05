@@ -127,8 +127,10 @@ export async function patchDocument(
   // Track which parts we modify so we can rebuild the zip cleanly
   const modifiedParts = new Map<string, Buffer>();
 
-  // Collect all pre-patch paragraph text for zero-match detection
-  const preMatchTexts: string[] = [];
+  // A key counts as matched only when its actual replacement operation runs.
+  // Bare search text elsewhere in the document is not evidence that a
+  // context-qualified key satisfied its directional anchor.
+  const matchedKeyLabels = new Set<string>();
 
   for (const partName of partNames) {
     const entry = zip.getEntry(partName);
@@ -138,13 +140,6 @@ export async function patchDocument(
     const doc: Document = parser.parseFromString(xml, 'text/xml');
 
     const allParagraphs = doc.getElementsByTagNameNS(W_NS, 'p');
-
-    // Collect paragraph text before any replacements for zero-match detection
-    for (let i = 0; i < allParagraphs.length; i++) {
-      const text = getParagraphText(allParagraphs[i] as unknown as globalThis.Element);
-      if (!text) continue;
-      preMatchTexts.push(normalizeQuotes(text));
-    }
 
     // Phase 1: Context keys
     for (const ck of contextKeys) {
@@ -160,10 +155,20 @@ export async function patchDocument(
         if (rowContext !== null) {
           const normalizedRowContext = normalizeQuotes(rowContext);
           if (!normalizedRowContext.includes(ck.context)) continue;
-          replaceInParagraph(para, { [ck.searchText]: ck.value }, [ck.searchText], options?.replacementColor);
+          const matched = replaceInParagraph(
+            para,
+            { [ck.searchText]: ck.value },
+            [ck.searchText],
+            options?.replacementColor,
+          );
+          if (matched.has(ck.searchText)) {
+            matchedKeyLabels.add(`${ck.context} > ${ck.searchText}`);
+          }
         } else {
           if (!normalizedText.includes(ck.context)) continue;
-          replaceFirstAfterContext(para, ck.searchText, ck.context, ck.value, options?.replacementColor);
+          if (replaceFirstAfterContext(para, ck.searchText, ck.context, ck.value, options?.replacementColor)) {
+            matchedKeyLabels.add(`${ck.context} > ${ck.searchText}`);
+          }
         }
       }
     }
@@ -178,7 +183,14 @@ export async function patchDocument(
       }
 
       for (let i = 0; i < allParagraphs.length; i++) {
-        replaceInParagraph(allParagraphs[i], simpleReplacements, simpleSortedKeys, options?.replacementColor);
+        for (const key of replaceInParagraph(
+          allParagraphs[i],
+          simpleReplacements,
+          simpleSortedKeys,
+          options?.replacementColor,
+        )) {
+          matchedKeyLabels.add(key);
+        }
       }
 
     }
@@ -186,12 +198,10 @@ export async function patchDocument(
     modifiedParts.set(partName, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
   }
 
-  // Compute zero-match keys by checking pre-patch paragraph text
-  const preMatchFullText = preMatchTexts.join('\n');
   const zeroMatchKeys: string[] = [];
   for (const pk of deduplicatedKeys) {
     const keyLabel = pk.type === 'context' ? `${pk.context} > ${pk.searchText}` : pk.searchText;
-    if (!preMatchFullText.includes(pk.searchText)) {
+    if (!matchedKeyLabels.has(keyLabel)) {
       zeroMatchKeys.push(keyLabel);
     }
   }
@@ -549,13 +559,13 @@ function replaceFirstAfterContext(
   contextText: string,
   value: string,
   replacementColor?: string,
-): void {
+): boolean {
   const fullText = getParagraphText(para as unknown as globalThis.Element);
   const normalizedFull = normalizeQuotes(fullText);
   const ctxPos = normalizedFull.indexOf(contextText);
-  if (ctxPos === -1) return;
+  if (ctxPos === -1) return false;
   const matchStart = normalizedFull.indexOf(searchText, ctxPos + contextText.length);
-  if (matchStart === -1) return;
+  if (matchStart === -1) return false;
 
   try {
     replaceParagraphTextRange(
@@ -572,14 +582,15 @@ function replaceFirstAfterContext(
       const { fullText: legacyText, charMap } = buildCharMap(runs);
       const normalizedLegacy = normalizeQuotes(legacyText);
       const legacyCtxPos = normalizedLegacy.indexOf(contextText);
-      if (legacyCtxPos === -1) return;
+      if (legacyCtxPos === -1) return false;
       const legacyPos = normalizedLegacy.indexOf(searchText, legacyCtxPos + contextText.length);
-      if (legacyPos === -1) return;
+      if (legacyPos === -1) return false;
       replaceAtPositionLegacy(runs, charMap, legacyPos, searchText.length, value, replacementColor);
     } else {
       throw e;
     }
   }
+  return true;
 }
 
 function replaceInParagraph(
@@ -587,12 +598,13 @@ function replaceInParagraph(
   replacements: Record<string, string>,
   sortedKeys: string[],
   replacementColor?: string,
-): void {
+): Set<string> {
+  const matchedKeys = new Set<string>();
   // Quick check: skip if no keys match
   const initialText = getParagraphText(para as unknown as globalThis.Element);
-  if (!initialText) return;
+  if (!initialText) return matchedKeys;
   const normalizedInitial = normalizeQuotes(initialText);
-  if (!sortedKeys.some((key) => normalizedInitial.includes(key))) return;
+  if (!sortedKeys.some((key) => normalizedInitial.includes(key))) return matchedKeys;
 
   for (const key of sortedKeys) {
     let iterations = 0;
@@ -633,6 +645,7 @@ function replaceInParagraph(
           throw e;
         }
       }
+      matchedKeys.add(key);
 
       // Re-read paragraph text after DOM modification
       paraText = getParagraphText(para as unknown as globalThis.Element);
@@ -653,4 +666,5 @@ function replaceInParagraph(
       finalRuns[i].parentNode?.removeChild(finalRuns[i]);
     }
   }
+  return matchedKeys;
 }
