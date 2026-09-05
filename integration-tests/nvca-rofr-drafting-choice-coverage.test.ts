@@ -46,7 +46,12 @@ describeWithSource('NVCA ROFR/Co-Sale drafting-choice and company-specific blank
     const dir = mkdtempSync(join(tmpdir(), 'nvca-rofr-choice-coverage-'));
     try {
       const outputPath = join(dir, 'rofr-co-sale-agreement.docx');
-      const values = JSON.parse(readFileSync(FIXTURE_PATH, 'utf8')) as Record<string, unknown>;
+      const values = {
+        ...(JSON.parse(readFileSync(FIXTURE_PATH, 'utf8')) as Record<string, unknown>),
+        include_investor_status_minimum: true,
+        include_ten_percent_sale_exempt_transfer: true,
+        include_key_holder_consent_minimum: true,
+      };
       const result = await runFieldSelector({ fieldSelectorId: SELECTOR_ID, outputPath, values });
       const text = extractAllText(outputPath);
 
@@ -140,6 +145,9 @@ describeWithSource('NVCA ROFR/Co-Sale drafting-choice and company-specific blank
         'key_holder_consent_threshold_percentage',
         'permitted_transferee_minimum_shares',
       ]) delete fixture[fieldName];
+      fixture.include_investor_status_minimum = true;
+      fixture.include_ten_percent_sale_exempt_transfer = true;
+      fixture.include_key_holder_consent_minimum = true;
 
       await runFieldSelector({ fieldSelectorId: SELECTOR_ID, outputPath, values: fixture });
       const text = extractAllText(outputPath);
