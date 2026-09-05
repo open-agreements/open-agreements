@@ -13,6 +13,7 @@ import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document, Element, Node } from '@xmldom/xmldom';
 import { getParagraphText, replaceParagraphTextRange, SafeDocxError } from '@usejunior/docx-core';
 import { copyEntriesSkippingDirs, enumerateTextParts, getGeneralTextPartNames } from './field-selector/ooxml-parts.js';
+import { createParagraphNumberingResolver, type ParagraphNumbering } from './field-selector/paragraph-numbering.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -655,6 +656,11 @@ export async function applySelections(
   const parts = enumerateTextParts(zip);
   const partNames = getGeneralTextPartNames(parts);
   const stats: OptionStats = new Map();
+  const stylesEntry = zip.getEntry('word/styles.xml');
+  const styles = stylesEntry
+    ? parser.parseFromString(stylesEntry.getData().toString('utf-8'), 'text/xml')
+    : undefined;
+  const resolveNumbering = createParagraphNumberingResolver(styles);
 
   for (const partName of partNames) {
     const entry = zip.getEntry(partName);
@@ -665,7 +671,7 @@ export async function applySelections(
 
     let partModified = false;
     for (const group of config.groups) {
-      const result = processGroup(doc, group, data, stats, partName === 'word/document.xml');
+      const result = processGroup(doc, group, data, stats, partName === 'word/document.xml', resolveNumbering);
       if (result) partModified = true;
     }
 
@@ -708,9 +714,10 @@ function processGroup(
   data: Record<string, unknown>,
   stats: OptionStats,
   isMainDocument: boolean,
+  resolveNumbering: (paragraph: Element) => ParagraphNumbering | null,
 ): boolean {
   if (group.markerless) {
-    return processMarkerlessGroup(doc, group, data, stats, isMainDocument);
+    return processMarkerlessGroup(doc, group, data, stats, isMainDocument, resolveNumbering);
   }
 
   if (group.standalone) {
@@ -1072,6 +1079,7 @@ function processMarkerlessGroup(
   data: Record<string, unknown>,
   stats: OptionStats,
   isMainDocument: boolean,
+  resolveNumbering: (paragraph: Element) => ParagraphNumbering | null,
 ): boolean {
   const selectedIndices = evaluateTriggers(group, data);
   const matchCounts: number[] = group.options.map(() => 0);
@@ -1188,13 +1196,13 @@ function processMarkerlessGroup(
         : null;
 
       // Get marker paragraph's numbering level for level-aware stop
-      const markerIlvl = getNumberingLevel(markerPara);
+      const markerIlvl = getNumberingLevel(markerPara, resolveNumbering);
 
       for (let si = markerIdx + 1; si < siblings.length; si++) {
         const p = siblings[si];
 
         // Stop at auto-numbered paragraphs at same or higher level
-        if (hasAutoNumbering(p, markerIlvl !== -1 ? markerIlvl : undefined)) break;
+        if (hasAutoNumbering(p, resolveNumbering, markerIlvl !== -1 ? markerIlvl : undefined)) break;
 
         const text = extractParagraphText(p);
         // Stop at next section heading or another option's marker
@@ -1237,36 +1245,21 @@ function processMarkerlessGroup(
 }
 
 /** Check if a paragraph has Word auto-numbering at or above the given level. */
-function hasAutoNumbering(para: Element, maxIlvl?: number): boolean {
-  for (let i = 0; i < para.childNodes.length; i++) {
-    const child = para.childNodes[i] as Element;
-    if (child.nodeType !== 1) continue;
-    if (child.localName === 'pPr' && child.namespaceURI === W_NS) {
-      const numPrs = child.getElementsByTagNameNS(W_NS, 'numPr');
-      if (numPrs.length === 0) return false;
-      if (maxIlvl === undefined) return true;
-      const ilvlEl = numPrs[0].getElementsByTagNameNS(W_NS, 'ilvl');
-      if (ilvlEl.length === 0) return true; // no level = top-level
-      const level = parseInt(ilvlEl[0].getAttribute('w:val') ?? '0', 10);
-      return level <= maxIlvl;
-    }
-  }
-  return false;
+function hasAutoNumbering(
+  para: Element,
+  resolveNumbering: (paragraph: Element) => ParagraphNumbering | null,
+  maxIlvl?: number,
+): boolean {
+  const numbering = resolveNumbering(para);
+  return numbering !== null && (maxIlvl === undefined || numbering.ilvl <= maxIlvl);
 }
 
 /** Get the numbering level (ilvl) of a paragraph, or -1 if not numbered. */
-function getNumberingLevel(para: Element): number {
-  for (let i = 0; i < para.childNodes.length; i++) {
-    const child = para.childNodes[i] as Element;
-    if (child.nodeType !== 1) continue;
-    if (child.localName === 'pPr' && child.namespaceURI === W_NS) {
-      const numPrs = child.getElementsByTagNameNS(W_NS, 'numPr');
-      if (numPrs.length === 0) return -1;
-      const ilvlEl = numPrs[0].getElementsByTagNameNS(W_NS, 'ilvl');
-      return parseInt(ilvlEl[0]?.getAttribute('w:val') ?? '0', 10);
-    }
-  }
-  return -1;
+function getNumberingLevel(
+  para: Element,
+  resolveNumbering: (paragraph: Element) => ParagraphNumbering | null,
+): number {
+  return resolveNumbering(para)?.ilvl ?? -1;
 }
 
 /** Walk up the DOM to find an ancestor with the given local name. */

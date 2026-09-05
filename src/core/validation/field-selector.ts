@@ -8,6 +8,8 @@ import { ComputedProfileSchema, type ComputedProfile } from '../field-selector/c
 import type { NormalizeConfig } from '../metadata.js';
 import { SelectionsConfigSchema, type SelectionsConfig } from '../selector.js';
 import { loadSelectorContracts } from '../selectors/loader.js';
+import { AnchoredParagraphBindingsConfigSchema, type AnchoredParagraphBindingsConfig } from '../field-selector/anchored-paragraph-bindings.js';
+import { RepeatableTablesConfigSchema, type RepeatableTablesConfig } from '../field-selector/repeatable-tables.js';
 
 export interface FieldSelectorValidationResult {
   fieldSelectorId: string;
@@ -69,6 +71,8 @@ export function validateFieldSelector(
   let computedProfile: ComputedProfile | undefined;
   let normalizeConfig: NormalizeConfig | undefined;
   let selectionsConfig: SelectionsConfig | undefined;
+  let anchoredBindingsConfig: AnchoredParagraphBindingsConfig | undefined;
+  let repeatableTablesConfig: RepeatableTablesConfig | undefined;
   let replacementsRecord: Record<string, unknown> | undefined;
   /** Field names referenced by at least one {tag} in a replacements.json value. */
   const replacementBoundFields = new Set<string>();
@@ -227,6 +231,30 @@ export function validateFieldSelector(
     }
   }
 
+  const anchoredBindingsPath = join(fieldSelectorDir, 'anchored-paragraph-bindings.json');
+  if (existsSync(anchoredBindingsPath)) {
+    try {
+      anchoredBindingsConfig = AnchoredParagraphBindingsConfigSchema.parse(
+        JSON.parse(readFileSync(anchoredBindingsPath, 'utf-8')),
+      );
+    } catch {
+      errors.push('anchored-paragraph-bindings.json: invalid format');
+      reachabilityInputsOk = false;
+    }
+  }
+
+  const repeatableTablesPath = join(fieldSelectorDir, 'repeatable-tables.json');
+  if (existsSync(repeatableTablesPath)) {
+    try {
+      repeatableTablesConfig = RepeatableTablesConfigSchema.parse(
+        JSON.parse(readFileSync(repeatableTablesPath, 'utf-8')),
+      );
+    } catch {
+      errors.push('repeatable-tables.json: invalid format');
+      reachabilityInputsOk = false;
+    }
+  }
+
   // Load selector contracts (fields/*.json + template-manifest.json). The
   // loader schema already enforces that every recipe declares at least one
   // occurrence locator, so a loaded recipe is a nonempty selector manifest.
@@ -278,6 +306,12 @@ export function validateFieldSelector(
           }
         }
       }
+    }
+    for (const group of anchoredBindingsConfig?.groups ?? []) {
+      for (const binding of group.bindings) reachable.add(binding.field);
+    }
+    for (const table of repeatableTablesConfig?.tables ?? []) {
+      reachable.add(table.rows_field);
     }
 
     // Propagate reachability backwards through computed.json to a fixpoint.

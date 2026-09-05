@@ -126,7 +126,11 @@ export function bindAnchoredParagraphFields(
     }
     const tag = doc.createElementNS(W_NS, 'w:t');
     preserveXmlSpace(tag);
-    tag.textContent = `{${insertion.field}}`;
+    // Labels such as "Name:" and "Title:" are authored without a trailing
+    // space in many signature blocks. The inserted value is a new semantic
+    // token, so keep a visible separator without disturbing the following tab
+    // and underline layout carriers.
+    tag.textContent = ` {${insertion.field}}`;
     run.insertBefore(tag, insertion.textNode.nextSibling);
   }
 

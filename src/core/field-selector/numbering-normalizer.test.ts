@@ -17,7 +17,7 @@ function fixture(ambiguous = false) {
   const zip = new AdmZip();
   const ref = '<w:p><w:bookmarkStart w:id="7" w:name="_RefTarget"/><w:r><w:t>Target</w:t></w:r><w:bookmarkEnd w:id="7"/></w:p><w:p><w:r><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:instrText> REF _RefTarget </w:instrText></w:r><w:r><w:fldChar w:fldCharType="separate"/></w:r><w:r><w:t>2.1</w:t></w:r><w:r><w:fldChar w:fldCharType="end"/></w:r></w:p>';
   zip.addFile('word/document.xml', Buffer.from(`<w:document xmlns:w="${W}"><w:body>${p('H1','One')}${p('H2','One A')}${p('H1','Two')}${p('H2','Two A')}${p('H2','Two B')}${ref}${ambiguous ? p('Other','Other One') + p('Other','Other Two') : ''}</w:body></w:document>`));
-  zip.addFile('word/styles.xml', Buffer.from(`<w:styles xmlns:w="${W}"><w:style w:type="paragraph" w:styleId="H1"><w:pPr><w:numPr><w:numId w:val="1"/></w:numPr></w:pPr></w:style><w:style w:type="paragraph" w:styleId="H2"><w:pPr><w:numPr><w:ilvl w:val="1"/><w:numId w:val="1"/></w:numPr></w:pPr></w:style>${ambiguous ? '<w:style w:type="paragraph" w:styleId="Other"><w:pPr><w:numPr><w:numId w:val="2"/></w:numPr></w:pPr></w:style>' : ''}</w:styles>`));
+  zip.addFile('word/styles.xml', Buffer.from(`<w:styles xmlns:w="${W}"><w:style w:type="paragraph" w:styleId="H1"><w:pPr><w:numPr><w:numId w:val="1"/></w:numPr><w:outlineLvl w:val="0"/></w:pPr></w:style><w:style w:type="paragraph" w:styleId="H2"><w:basedOn w:val="H1"/><w:pPr><w:numPr><w:ilvl w:val="1"/></w:numPr><w:outlineLvl w:val="1"/></w:pPr></w:style>${ambiguous ? '<w:style w:type="paragraph" w:styleId="Other"><w:pPr><w:numPr><w:numId w:val="2"/></w:numPr><w:outlineLvl w:val="0"/></w:pPr></w:style>' : ''}</w:styles>`));
   const abstract = (id: number) => `<w:abstractNum w:abstractNumId="${id}"><w:lvl w:ilvl="0"><w:start w:val="1"/><w:numFmt w:val="decimal"/><w:lvlText w:val="%1."/></w:lvl><w:lvl w:ilvl="1"><w:start w:val="1"/><w:numFmt w:val="decimal"/><w:lvlText w:val="%1.%2"/></w:lvl></w:abstractNum><w:num w:numId="${id + 1}"><w:abstractNumId w:val="${id}"/></w:num>`;
   zip.addFile('word/numbering.xml', Buffer.from(`<w:numbering xmlns:w="${W}">${abstract(0)}${ambiguous ? abstract(1) : ''}</w:numbering>`));
   zip.addFile('[Content_Types].xml', Buffer.from('<Types/>'));
@@ -39,6 +39,11 @@ describe('post-selection numbered heading normalization', () => {
     expect((documentXml.match(/<w:fldChar/g) ?? [])).toHaveLength(3);
     expect(numberingXml).toContain('w:val="2"');
     expect((documentXml.match(/<w:numId/g) ?? [])).toHaveLength(5);
+    const paragraphNumIds = [...documentXml.matchAll(/<w:numId w:val="(\d+)"/g)].map((match) => match[1]);
+    expect(paragraphNumIds[0]).toBe(paragraphNumIds[1]);
+    expect(paragraphNumIds[2]).toBe(paragraphNumIds[3]);
+    expect(paragraphNumIds[3]).toBe(paragraphNumIds[4]);
+    expect(paragraphNumIds[0]).not.toBe(paragraphNumIds[2]);
     rmSync(f.dir, { recursive: true, force: true });
   });
 

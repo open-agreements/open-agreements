@@ -77,7 +77,8 @@ describe('anchor-scoped paragraph field binding', () => {
     for (const field of [
       'company_signatory_name', 'company_signatory_title', 'company_notice_address',
       'company_notice_email', 'investor_signatory_name', 'investor_signatory_title',
-    ]) expect(xml).toContain(`{${field}}`);
+    ]) expect(xml).toContain(` {${field}}`);
+    expect(xml).toContain('Name:</w:t><w:t xml:space="preserve"> {company_signatory_name}</w:t>');
     expect(xml).not.toContain('{outside');
     expect(xml).not.toContain('{By');
     expect((xml.match(/<w:tab/g) ?? []).length).toBe((before.match(/<w:tab/g) ?? []).length);
