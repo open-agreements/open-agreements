@@ -42,4 +42,6 @@ export interface VerifyCheck {
   name: string;
   passed: boolean;
   details?: string;
+  /** A failed check that makes the artifact unsafe to deliver. */
+  fatal?: boolean;
 }
