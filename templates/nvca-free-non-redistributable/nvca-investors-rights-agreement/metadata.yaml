@@ -508,6 +508,9 @@ fields:
   - name: include_information_termination_deemed_liquidation
     type: boolean
     description: Include the qualifying Deemed Liquidation Event information-and-observer-right termination condition
+  - name: information_termination_deemed_liquidation_clause
+    type: string
+    description: Computed complete qualifying Deemed Liquidation Event information-and-observer-right termination condition, or empty
   - name: include_rofo_sanctions_limitation
     type: boolean
     description: Prohibit offering or selling New Securities to a Sanctioned Party under the ROFO
