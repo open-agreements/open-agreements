@@ -3,7 +3,7 @@ import { existsSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { homedir, tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect } from 'vitest';
-import { extractAllText, runFieldSelector } from '../src/core/field-selector/index.js';
+import { cleanDocument, extractAllText, runFieldSelector } from '../src/core/field-selector/index.js';
 import { itAllure } from './helpers/allure-test.js';
 
 const it = itAllure.epic('NVCA Forms').withLabels({ feature: 'Ancillary Agreements' });
@@ -13,11 +13,13 @@ const CASES = {
     id: 'nvca-indemnification-agreement',
     sha256: 'f9b61b4d99e245573de41d9469925b4332f871ec0e6ac6593055cdfe17825300',
     fixture: 'indemnification-agreement-production-full.json',
+    disclaimerPart: 'header3.xml',
   },
   managementRights: {
     id: 'nvca-management-rights-letter',
     sha256: '9661d2a68ca20ee77cf553f1ec5804f08147e7e4c35f5a03938e76a778083e8b',
     fixture: 'management-rights-letter-production-full.json',
+    disclaimerPart: 'header1.xml',
   },
 } as const;
 
@@ -46,6 +48,33 @@ describeWithSources('NVCA Indemnification Agreement and Management Rights Letter
     for (const { id, sha256 } of Object.values(CASES)) {
       const actual = createHash('sha256').update(readFileSync(sourcePath(id))).digest('hex');
       expect(actual).toBe(sha256);
+    }
+  });
+
+  it('removes the source disclaimer from the exact declared header stories', async () => {
+    const disclaimer = 'This sample document is the work product of a national coalition of attorneys';
+    for (const { id, disclaimerPart } of Object.values(CASES)) {
+      const dir = mkdtempSync(join(tmpdir(), 'nvca-story-cleanup-'));
+      try {
+        const source = sourcePath(id);
+        const outputPath = join(dir, `${id}.docx`);
+        expect(extractAllText(source)).toContain(disclaimer);
+        await cleanDocument(source, outputPath, {
+          removeFootnotes: false,
+          removeParagraphPatterns: [],
+          removeRanges: [],
+          clearParts: [],
+          removeStoryParagraphs: [{
+            id: 'remove-source-disclaimer',
+            part: disclaimerPart,
+            pattern: `^${disclaimer}`,
+            expected_matches: 1,
+          }],
+        });
+        expect(extractAllText(outputPath)).not.toContain(disclaimer);
+      } finally {
+        rmSync(dir, { recursive: true, force: true });
+      }
     }
   });
 

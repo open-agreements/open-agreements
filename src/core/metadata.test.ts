@@ -1014,9 +1014,39 @@ describe('CleanConfigSchema', () => {
     await allureStep('Assert clean config defaults', () => {
       expect(parsed.removeFootnotes).toBe(false);
       expect(parsed.removeParagraphPatterns).toEqual([]);
+      expect(parsed.removeStoryParagraphs).toBeUndefined();
       expect(parsed.removeHeaderFooterDrawings).toBeUndefined();
       expect(parsed.removeEmptyLeadingParagraphs).toBeUndefined();
     });
+  });
+
+  it('accepts fail-closed header/footer paragraph rules and rejects body parts', async () => {
+    await expectSafeParseOutcome(
+      'CleanConfigSchema',
+      CleanConfigSchema,
+      {
+        removeStoryParagraphs: [{
+          id: 'source-guidance',
+          part: 'word/header3.xml',
+          pattern: '^Source guidance$',
+          expected_matches: 1,
+        }],
+      },
+      true,
+    );
+    await expectSafeParseOutcome(
+      'CleanConfigSchema',
+      CleanConfigSchema,
+      {
+        removeStoryParagraphs: [{
+          id: 'unsafe-body-cleanup',
+          part: 'word/document.xml',
+          pattern: '.*',
+          expected_matches: 1,
+        }],
+      },
+      false,
+    );
   });
 
   it('accepts the issue-605 hardening fields', async () => {

@@ -473,6 +473,21 @@ export const CleanConfigSchema = z.object({
   })).default([]),
   clearParts: z.array(z.string()).default([]),
   /**
+   * Remove narrowly identified paragraphs from a header/footer story.
+   *
+   * Story cleanup is opt-in because headers and footers may contain operative
+   * letterhead, dates, or signature-facing text. Each rule names one OOXML
+   * story part, supplies a paragraph regex, and declares the exact number of
+   * expected matches. Source drift therefore fails closed instead of clearing
+   * an entire story part or silently leaving source guidance behind.
+   */
+  removeStoryParagraphs: z.array(z.object({
+    id: z.string().min(1),
+    part: z.string().regex(/^(?:word\/)?(?:header|footer)\d+\.xml$/),
+    pattern: z.string().min(1),
+    expected_matches: z.number().int().positive(),
+  })).optional(),
+  /**
    * Strip <w:drawing>/<w:pict> runs from header/footer parts whose referenced
    * media exceeds the size threshold, plus the orphaned relationships and media
    * parts. Targets image-only content (e.g. a full-page "how to use this
