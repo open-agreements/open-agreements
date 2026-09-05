@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "actions": [
+    {
+      "target": "_Ref42252559",
+      "strategy": "literalize",
+      "literal": "5.7",
+      "expected_cached_result": "5.7",
+      "expected_matches": 3,
+      "expected_target_count": 1
+    }
+  ]
+}
