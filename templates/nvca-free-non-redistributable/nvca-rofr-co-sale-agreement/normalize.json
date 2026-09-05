@@ -1,6 +1,28 @@
 {
   "paragraph_rules": [
     {
+      "id": "render-selected-prior-agreement-recital",
+      "section_heading": "Recitals.",
+      "ignore_heading": true,
+      "paragraph_contains": "previously entered into",
+      "replacements": {
+        "[WHEREAS,": "WHEREAS,",
+        "[a][an]": "a",
+        "dated [_____ __, 20___]": "dated {prior_agreement_date}",
+        "; and]": "; and"
+      }
+    },
+    {
+      "id": "render-selected-additional-preferred-series",
+      "section_heading": "Definitions.",
+      "ignore_heading": true,
+      "paragraph_contains": "“Preferred Stock” means",
+      "replacements": {
+        "[and Series": "and Series",
+        "Preferred Stock]": "Preferred Stock"
+      }
+    },
+    {
       "id": "unwrap-full-time-key-holder",
       "section_heading": "Definitions.",
       "ignore_heading": true,
@@ -127,7 +149,9 @@
       "ignore_heading": true,
       "paragraph_contains": "Sanctioned Party. .",
       "replacements": { ". Notwithstanding": ".. Notwithstanding", "Sanctioned Party. .": "Sanctioned Party." },
-      "expected_min_matches": 1
+      "expected_min_matches": 1,
+      "expected_max_matches": 1,
+      "source_drift": { "stage": "post_transform", "prerequisites": ["clean"] }
     },
     {
       "id": "unwrap-key-holder-consent-minimum",

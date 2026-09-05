@@ -263,7 +263,9 @@
       "ignore_heading": true,
       "paragraph_contains": "without the written consent of Comstock Fuels Corporation",
       "replacements": {"[the provisions":"the provisions", "Section 1.2(a);]":"Section 1.2(a);"},
-      "expected_min_matches": 1
+      "expected_min_matches": 1,
+      "expected_max_matches": 1,
+      "source_drift": { "stage": "post_transform", "prerequisites": ["fill"] }
     },
     {
       "id": "open-drag-section",
@@ -311,7 +313,9 @@
       "ignore_heading": true,
       "paragraph_contains": "written consent of Comstock Fuels Corporation",
       "replacements": {"[the provisions":"the provisions", "Section 1.2(a);]":"Section 1.2(a);"},
-      "expected_min_matches": 1
+      "expected_min_matches": 1,
+      "expected_max_matches": 1,
+      "source_drift": { "stage": "post_transform", "prerequisites": ["fill"] }
     },
     {
       "id": "close-common-director-majority-consent",

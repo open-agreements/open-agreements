@@ -336,8 +336,10 @@ fields:
     type: string
     description: Base number of days a registration statement must remain effective
   - name: information_right_holder_class
-    type: string
-    description: Investor class entitled to the selected information rights
+    type: enum
+    description: Modifier inserted before the source text "Investor" for the selected information-right holder class; omit for all Investors
+    options:
+      - Major
   - name: general_amendment_approval_group
     type: string
     description: Defined holder group whose consent is required under the general amendment rule
@@ -357,8 +359,10 @@ fields:
     type: string
     description: Observer-right section added to the information-right termination list
   - name: observer_rights_title_text
-    type: string
-    description: Observer text included in the information-right article title
+    type: enum
+    description: Complete optional connector and modifier inserted before the source text "Rights" in information-right headings; omit when observer rights are excluded
+    options:
+      - and Observer
   - name: quarterly_equity_statement_clause
     type: string
     description: Stockholders-equity statement text included in quarterly reporting
@@ -387,8 +391,10 @@ fields:
     type: string
     description: Complete clause cross-reference for dividend/replacement Registrable Securities
   - name: underwriter_type
-    type: string
+    type: enum
     description: Modifier inserted before the source text "underwriter(s)" (normally managing; do not repeat underwriter)
+    options:
+      - managing
   - name: form_s1_deferral_frequency_word
     type: string
     description: Word stating how often the Form S-1 deferral may be invoked in 12 months
@@ -402,8 +408,10 @@ fields:
     type: string
     description: FOIA Party exclusion in ROFO mechanics, or empty
   - name: later_offering_form_clause
-    type: string
-    description: Later registered-offering form included in market stand-off mechanics
+    type: enum
+    description: Complete optional connector and later registered-offering form inserted after source text "Form S-1"; omit when Form S-3 is excluded
+    options:
+      - or Form S-3
   - name: schedule_b_notice_clause
     type: string
     description: Schedule B reference in the notices clause when Key Holders participate
@@ -414,8 +422,11 @@ fields:
     type: string
     description: Purchase Agreement limitation on additional Investor joinders
   - name: accounting_firm_recognition_scope
-    type: string
+    type: enum
     description: Modifier inserted before the source text "recognized standing" (normally nationally; do not repeat recognized)
+    options:
+      - nationally
+      - regionally
   - name: annual_statement_delivery_days
     type: string
     description: Days after fiscal year end for delivery of annual financial statements
