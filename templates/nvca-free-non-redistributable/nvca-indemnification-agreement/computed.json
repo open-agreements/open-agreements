@@ -6,6 +6,36 @@
   },
   "rules": [
     {
+      "id": "role-scope-directors",
+      "when_all": [
+        {"field": "indemnitee_role_scope", "op": "eq", "value": "directors"}
+      ],
+      "set_fill": {
+        "indemnitee_role_scope_plural": "directors",
+        "indemnitee_role_scope_singular": "a director"
+      }
+    },
+    {
+      "id": "role-scope-officers",
+      "when_all": [
+        {"field": "indemnitee_role_scope", "op": "eq", "value": "officers"}
+      ],
+      "set_fill": {
+        "indemnitee_role_scope_plural": "officers",
+        "indemnitee_role_scope_singular": "an officer"
+      }
+    },
+    {
+      "id": "role-scope-directors-or-officers",
+      "when_all": [
+        {"field": "indemnitee_role_scope", "op": "eq", "value": "directors_or_officers"}
+      ],
+      "set_fill": {
+        "indemnitee_role_scope_plural": "directors or officers",
+        "indemnitee_role_scope_singular": "an officer or director"
+      }
+    },
+    {
       "id": "include-appointing-stockholder-ipo-termination",
       "when_all": [
         {"field": "include_appointing_stockholder_ipo_termination", "op": "eq", "value": true}

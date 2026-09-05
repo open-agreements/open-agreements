@@ -66,7 +66,7 @@
   "state courts of [state]": "state courts of {state}",
   "state court of [state]": "state court of {state}",
   "the [state] Code of Civil Procedure": "the {state} Code of Civil Procedure",
-  "[specify percentage]": "{specify_percentage}",
+  "[specify percentage]": "{specify_percentage}%",
   "[monthly]": "{financial_reporting_period}",
   "[Financial Statements": "Financial Statements",
   ";] Liabilities": "; Liabilities",

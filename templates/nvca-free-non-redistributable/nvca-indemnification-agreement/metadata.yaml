@@ -31,22 +31,19 @@ fields:
   - name: appointing_stockholder_name
     type: string
     description: Full legal name of the venture fund or entity defined as the Appointing Stockholder in Section 1(d)
-  - name: indemnitee_role
+  - name: indemnitee_role_scope
+    type: enum
+    options: [directors, officers, directors_or_officers]
+    description: >-
+      Corporate roles covered by the agreement. The directors_or_officers option renders the source recital as
+      "directors or officers" and the operative undertaking as "an officer or director."
+    default: directors_or_officers
+  - name: indemnitee_role_scope_plural
     type: string
-    description: Primary role being indemnified (e.g. director)
-    default: director
-  - name: indemnitee_role_plural
+    description: Computed plural role phrase derived from indemnitee_role_scope; do not supply directly
+  - name: indemnitee_role_scope_singular
     type: string
-    description: Plural form of the primary role (e.g. directors)
-    default: directors
-  - name: indemnitee_role_secondary
-    type: string
-    description: Secondary role being indemnified (e.g. officer)
-    default: officer
-  - name: indemnitee_role_secondary_plural
-    type: string
-    description: Plural form of the secondary role (e.g. officers)
-    default: officers
+    description: Computed singular role phrase derived from indemnitee_role_scope; do not supply directly
   - name: indemnitee_pronoun_possessive
     type: string
     description: Possessive pronoun for the indemnitee entity (e.g. its)
@@ -104,8 +101,7 @@ priority_fields:
   - agreement_effective_date
   - appointing_stockholder_name
   - include_appointing_stockholder_ipo_termination
-  - indemnitee_role
-  - indemnitee_role_plural
+  - indemnitee_role_scope
   - indemnitee_pronoun_possessive
   - indemnitee_pronoun_subject
   - indemnitee_pronoun_object

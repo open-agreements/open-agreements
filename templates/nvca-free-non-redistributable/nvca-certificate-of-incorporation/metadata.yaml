@@ -220,8 +220,9 @@ fields:
     description: 'Liquidation participation type: non_participating (94-96%) or participating'
     default: non_participating
   - name: anti_dilution_type
-    type: string
+    type: enum
     description: 'Anti-dilution formula: broad_based_weighted_average (>98%) or full_ratchet'
+    options: [broad_based_weighted_average, full_ratchet]
     default: broad_based_weighted_average
   - name: include_pay_to_play
     type: boolean

@@ -1,0 +1,14 @@
+{
+  "paragraph_rules": [
+    {
+      "id": "dedupe-original-incorporation-name-terminator",
+      "section_heading": "",
+      "ignore_heading": true,
+      "paragraph_contains": "originally incorporated pursuant to the General Corporation Law",
+      "replacements": {
+        "..": "."
+      },
+      "expected_min_matches": 1
+    }
+  ]
+}
