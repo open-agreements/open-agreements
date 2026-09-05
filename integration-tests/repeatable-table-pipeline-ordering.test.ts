@@ -2,12 +2,14 @@ import {mkdtempSync, readFileSync, rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import AdmZip from 'adm-zip';
-import {afterEach, describe, expect, it} from 'vitest';
+import {afterEach, describe, expect} from 'vitest';
+import {itAllure} from './helpers/allure-test.js';
 import {applyRepeatableTables, RepeatableTablesConfigSchema} from '../src/core/field-selector/repeatable-tables.js';
 import {runFillPipeline} from '../src/core/unified-pipeline.js';
 
 const W = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const roots: string[] = [];
+const it = itAllure.epic('Filling & Rendering');
 
 function sourceDocx(): Buffer {
   const zip = new AdmZip();

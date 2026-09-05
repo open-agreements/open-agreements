@@ -3,11 +3,13 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect } from 'vitest';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import { applyRepeatableTables, RepeatableTablesConfigSchema, validateRepeatableTableFields } from './repeatable-tables.js';
 
 const W = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const roots: string[] = [];
+const it = itAllure.epic('Filling & Rendering');
 
 function fixtureDocx(duplicate = false, postHeader: 'none' | 'blank' | 'nonblank' = 'none'): Buffer {
   const zip = new AdmZip();
