@@ -16,7 +16,7 @@
  * already appear in each template's replacements.json — the NVCA source
  * documents are not redistributable and are never embedded here.
  */
-import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
@@ -111,7 +111,26 @@ async function fillFixture(
   const inputPath = join(tempDir, 'source.docx');
   const outputPath = join(tempDir, 'filled.docx');
   writeFileSync(inputPath, buildDocx(paragraphs));
-  await runFieldSelector({ fieldSelectorId, inputPath, outputPath, values });
+  // These deliberately tiny anchor fixtures test scalar date/round filling,
+  // not whole-source structural contracts. Give them a purpose-built recipe
+  // copy without full-source-only REF actions; faking all of the pinned NVCA
+  // bookmark targets here would make this test assert on invented structure.
+  const sourceRecipe = resolveFieldSelectorDir(fieldSelectorId);
+  const fixtureRoot = join(tempDir, 'fixture-content');
+  const fixtureRecipe = join(fixtureRoot, 'templates', 'test-fixtures', fieldSelectorId);
+  mkdirSync(fixtureRecipe, { recursive: true });
+  cpSync(sourceRecipe, fixtureRecipe, {
+    recursive: true,
+    filter: (source) => !source.endsWith('/reference-fields.json'),
+  });
+  const previousRoots = process.env.OPEN_AGREEMENTS_CONTENT_ROOTS;
+  process.env.OPEN_AGREEMENTS_CONTENT_ROOTS = fixtureRoot;
+  try {
+    await runFieldSelector({ fieldSelectorId, inputPath, outputPath, values });
+  } finally {
+    if (previousRoots === undefined) delete process.env.OPEN_AGREEMENTS_CONTENT_ROOTS;
+    else process.env.OPEN_AGREEMENTS_CONTENT_ROOTS = previousRoots;
+  }
   return readText(outputPath);
 }
 

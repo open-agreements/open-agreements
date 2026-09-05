@@ -421,20 +421,23 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
     // Collapse double spaces left by empty field substitutions (e.g. {initial_word_lower} → "")
     await normalizeEmptyFillWhitespaceInDocx(filledPath);
 
-    // Step 7: Copy to output
-    copyFileSync(filledPath, outputPath);
+    // Step 7: Stage a delivery candidate. Fatal structural verification runs
+    // against this temporary file before the caller's output path is touched.
+    const deliveryCandidatePath = join(tempDir, 'delivery-candidate.docx');
+    copyFileSync(filledPath, deliveryCandidatePath);
 
     // Optional post-processing for field-selector-specific normalization.
     if (postProcess) {
-      await postProcess(outputPath);
+      await postProcess(deliveryCandidatePath);
       // Declarative post-processing can itself remove an optional carrier and
       // expose the same empty-value whitespace seam, so normalize once more on
       // the final artifact.
-      await normalizeEmptyFillWhitespaceInDocx(outputPath);
+      await normalizeEmptyFillWhitespaceInDocx(deliveryCandidatePath);
     }
 
-    // Step 8: Verify — failures surface to callers via warnings (soft; no throw)
-    const verifyResult = await verify(outputPath, cleanedSourcePath, referencedIdentifiers);
+    // Step 8: Verify. Fatal structural failures refuse delivery; established
+    // advisory checks continue to surface as warnings for compatibility.
+    const verifyResult = await verify(deliveryCandidatePath, cleanedSourcePath, referencedIdentifiers);
     if (!verifyResult.passed) {
       const failedChecks = verifyResult.checks.filter((c) => !c.passed);
       const failures = failedChecks
@@ -444,7 +447,17 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
       for (const check of failedChecks) {
         warnings.push(`verify: ${check.name}: ${check.details ?? 'failed'}`);
       }
+      const fatalChecks = failedChecks.filter((check) => check.fatal);
+      if (fatalChecks.length > 0) {
+        throw new Error(
+          `Delivery blocked by fatal verification: ${fatalChecks
+            .map((check) => `${check.name}: ${check.details ?? 'failed'}`)
+            .join('; ')}`,
+        );
+      }
     }
+
+    copyFileSync(deliveryCandidatePath, outputPath);
 
     if (keepIntermediate) {
       console.log(`Intermediate files preserved at: ${tempDir}`);

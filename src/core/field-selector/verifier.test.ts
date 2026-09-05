@@ -3,7 +3,13 @@ import { join } from 'node:path';
 import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
-import { verifyOutput, normalizeText, findLeftoverPlaceholders, findRenderedTextArtifacts } from './verifier.js';
+import {
+  verifyOutput,
+  normalizeText,
+  findLeftoverPlaceholders,
+  findRenderedTextArtifacts,
+  validateWordFields,
+} from './verifier.js';
 import { patchDocument } from './patcher.js';
 import {
   allureJsonAttachment,
@@ -147,6 +153,93 @@ describe('verifyOutput note-reference cleanup', () => {
 });
 
 describe('verifyOutput', () => {
+  it('fails a REF whose target bookmark is absent with an actionable diagnostic', async () => {
+    const docxPath = buildDocx(
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body><w:p>` +
+      '<w:r><w:fldChar w:fldCharType="begin"/></w:r>' +
+      '<w:r><w:instrText xml:space="preserve"> REF MissingSection \\h </w:instrText></w:r>' +
+      '<w:r><w:fldChar w:fldCharType="separate"/></w:r>' +
+      '<w:r><w:t>Section 6.1</w:t></w:r>' +
+      '<w:r><w:fldChar w:fldCharType="end"/></w:r>' +
+      '</w:p></w:body></w:document>',
+    );
+
+    const result = await verifyOutput(docxPath, {}, {});
+    const check = result.checks.find((c) => c.name === 'Word REF fields resolve');
+    expect(check).toMatchObject({ passed: false, fatal: true });
+    expect(check?.details).toContain('word/document.xml');
+    expect(check?.details).toContain('MissingSection');
+    expect(check?.details).toContain('REF MissingSection');
+    cleanupDocx(docxPath);
+  });
+
+  it('accepts a valid REF and its cached visible result', async () => {
+    const docxPath = buildDocx(
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>` +
+      '<w:p><w:bookmarkStart w:id="0" w:name="Section_6_1"/><w:r><w:t>6.1</w:t></w:r><w:bookmarkEnd w:id="0"/></w:p>' +
+      '<w:p><w:r><w:fldChar w:fldCharType="begin"/></w:r>' +
+      '<w:r><w:instrText xml:space="preserve"> REF Section_6_1 \\h </w:instrText></w:r>' +
+      '<w:r><w:fldChar w:fldCharType="separate"/></w:r>' +
+      '<w:r><w:t>Section 6.1 (cached)</w:t></w:r>' +
+      '<w:r><w:fldChar w:fldCharType="end"/></w:r></w:p>' +
+      '</w:body></w:document>',
+    );
+
+    expect(validateWordFields(docxPath)).toEqual([]);
+    const result = await verifyOutput(docxPath, {}, {});
+    expect(result.checks.find((c) => c.name === 'Word REF fields resolve')?.passed).toBe(true);
+    cleanupDocx(docxPath);
+  });
+
+  it('recognizes a REF instruction split across runs', async () => {
+    const docxPath = buildDocx(
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>` +
+      '<w:p><w:bookmarkStart w:id="0" w:name="SplitTarget"/><w:r><w:t>Target</w:t></w:r><w:bookmarkEnd w:id="0"/></w:p>' +
+      '<w:p><w:r><w:fldChar w:fldCharType="begin"/></w:r>' +
+      '<w:r><w:instrText> RE</w:instrText></w:r><w:r><w:instrText>F Split</w:instrText></w:r>' +
+      '<w:r><w:instrText>Target \\h </w:instrText></w:r>' +
+      '<w:r><w:fldChar w:fldCharType="separate"/></w:r><w:r><w:t>Target</w:t></w:r>' +
+      '<w:r><w:fldChar w:fldCharType="end"/></w:r></w:p>' +
+      '</w:body></w:document>',
+    );
+
+    expect(validateWordFields(docxPath)).toEqual([]);
+    cleanupDocx(docxPath);
+  });
+
+  it('reports an invalid REF field triplet', async () => {
+    const docxPath = buildDocx(
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body><w:p>` +
+      '<w:bookmarkStart w:id="0" w:name="PresentTarget"/><w:bookmarkEnd w:id="0"/>' +
+      '<w:r><w:fldChar w:fldCharType="begin"/></w:r>' +
+      '<w:r><w:instrText> REF PresentTarget </w:instrText></w:r>' +
+      '<w:r><w:fldChar w:fldCharType="end"/></w:r>' +
+      '</w:p></w:body></w:document>',
+    );
+
+    const diagnostics = validateWordFields(docxPath);
+    expect(diagnostics).toHaveLength(1);
+    expect(diagnostics[0]).toContain('PresentTarget');
+    expect(diagnostics[0]).toContain('missing separate marker');
+    cleanupDocx(docxPath);
+  });
+
+  it('validates atomic fldSimple REF fields', async () => {
+    const validPath = buildDocx(
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body><w:p>` +
+      '<w:bookmarkStart w:id="0" w:name="AtomicTarget"/><w:bookmarkEnd w:id="0"/>' +
+      '<w:fldSimple w:instr=" REF AtomicTarget \\h "><w:r><w:t>cached</w:t></w:r></w:fldSimple>' +
+      '</w:p></w:body></w:document>',
+    );
+    expect(validateWordFields(validPath)).toEqual([]);
+    cleanupDocx(validPath);
+  });
+
   it('skips empty string values', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +

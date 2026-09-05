@@ -1,6 +1,6 @@
 import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
-import type { Element } from '@xmldom/xmldom';
+import type { Document as XmlDocument, Element } from '@xmldom/xmldom';
 import { getParagraphText } from '@usejunior/docx-core';
 import type { VerifyResult, VerifyCheck } from './types.js';
 import { cleanConfigRemovesBodyContent, type CleanConfig } from '../metadata.js';
@@ -59,6 +59,20 @@ export async function verifyOutput(
   const sigilText = footnoteText ? `${rawFullText}\n${footnoteText}` : rawFullText;
   const normalizedFullText = normalizeText(rawFullText);
   const xml = extractDocumentXml(outputPath);
+
+  // Check 0: Word cross-reference fields are structurally complete and point
+  // at bookmarks that actually exist. Cached field-result text can make a
+  // broken REF look correct until Word or LibreOffice refreshes fields, at
+  // which point it becomes "Error: Reference source not found." Validate the
+  // underlying OOXML instead of relying on renderer logs or cached display
+  // text. This check is fatal because the artifact is not safe to deliver.
+  const refDiagnostics = validateWordFields(outputPath);
+  checks.push({
+    name: 'Word REF fields resolve',
+    passed: refDiagnostics.length === 0,
+    details: refDiagnostics.length > 0 ? refDiagnostics.join('; ') : undefined,
+    fatal: true,
+  });
 
   // Check 1: All context values present (with normalization)
   const missingValues: string[] = [];
@@ -212,6 +226,113 @@ export async function verifyOutput(
     passed: checks.every((c) => c.passed),
     checks,
   };
+}
+
+interface ComplexFieldFrame {
+  instruction: string[];
+  hasSeparate: boolean;
+  partName: string;
+}
+
+function fieldInstruction(el: Element): string {
+  return el.getAttributeNS(W_NS, 'instr') || el.getAttribute('w:instr') || el.getAttribute('instr') || '';
+}
+
+function refTarget(instruction: string): string | undefined {
+  const match = instruction.match(/^\s*REF\s+(?:"([^"]+)"|([^\s\\]+))/i);
+  return match?.[1] ?? match?.[2];
+}
+
+function describeInstruction(instruction: string): string {
+  const compact = instruction.replace(/\s+/g, ' ').trim();
+  return compact || '(empty instruction)';
+}
+
+/**
+ * Return actionable diagnostics for malformed complex Word fields and REF
+ * instructions whose bookmark target is absent. Both atomic `w:fldSimple`
+ * fields and complex begin/instrText/separate/end fields are supported; field
+ * instructions may be split across any number of runs.
+ */
+export function validateWordFields(docxPath: string): string[] {
+  const zip = new AdmZip(docxPath);
+  const parser = new DOMParser();
+  const partNames = getGeneralTextPartNames(enumerateTextParts(zip));
+  const bookmarks = new Set<string>();
+  const docs: Array<{ partName: string; root: XmlDocument }> = [];
+
+  for (const partName of partNames) {
+    const entry = zip.getEntry(partName);
+    if (!entry) continue;
+    const root = parser.parseFromString(entry.getData().toString('utf-8'), 'text/xml');
+    docs.push({ partName, root });
+    const starts = root.getElementsByTagNameNS(W_NS, 'bookmarkStart');
+    for (let i = 0; i < starts.length; i++) {
+      const name = starts[i].getAttributeNS(W_NS, 'name') || starts[i].getAttribute('w:name');
+      if (name) bookmarks.add(name);
+    }
+  }
+
+  const diagnostics: string[] = [];
+  const inspectRef = (partName: string, instruction: string, malformed?: string): void => {
+    const target = refTarget(instruction);
+    if (!target) return;
+    const suffix = malformed ? `; invalid field triplet: ${malformed}` : '';
+    if (malformed || !bookmarks.has(target)) {
+      diagnostics.push(
+        `${partName}: REF target "${target}" ${malformed ? 'has an invalid field structure' : 'has no matching bookmark'} ` +
+        `(instruction: "${describeInstruction(instruction)}"${suffix})`,
+      );
+    }
+  };
+
+  for (const { partName, root } of docs) {
+    const simpleFields = root.getElementsByTagNameNS(W_NS, 'fldSimple');
+    for (let i = 0; i < simpleFields.length; i++) {
+      inspectRef(partName, fieldInstruction(simpleFields[i] as unknown as Element));
+    }
+
+    const stack: ComplexFieldFrame[] = [];
+    const visit = (node: Node): void => {
+      if (node.nodeType === 1) {
+        const el = node as unknown as Element;
+        if (el.namespaceURI === W_NS && el.localName === 'fldChar') {
+          const type = el.getAttributeNS(W_NS, 'fldCharType') || el.getAttribute('w:fldCharType');
+          if (type === 'begin') {
+            stack.push({ instruction: [], hasSeparate: false, partName });
+          } else if (type === 'separate') {
+            const frame = stack[stack.length - 1];
+            if (!frame) diagnostics.push(`${partName}: invalid field triplet: orphan separate marker`);
+            else if (frame.hasSeparate) diagnostics.push(`${partName}: invalid field triplet: duplicate separate marker`);
+            else frame.hasSeparate = true;
+          } else if (type === 'end') {
+            const frame = stack.pop();
+            if (!frame) {
+              diagnostics.push(`${partName}: invalid field triplet: orphan end marker`);
+            } else {
+              inspectRef(partName, frame.instruction.join(''), frame.hasSeparate ? undefined : 'missing separate marker');
+            }
+          }
+          return;
+        }
+        if (el.namespaceURI === W_NS && el.localName === 'instrText' && stack.length > 0) {
+          const frame = stack[stack.length - 1];
+          if (!frame.hasSeparate) frame.instruction.push(el.textContent ?? '');
+          return;
+        }
+      }
+      for (let child = node.firstChild; child; child = child.nextSibling) visit(child);
+    };
+    visit(root as unknown as Node);
+    for (const frame of stack) {
+      const instruction = frame.instruction.join('');
+      const target = refTarget(instruction);
+      if (target) inspectRef(partName, instruction, 'missing end marker');
+      else diagnostics.push(`${partName}: invalid field triplet: missing end marker (instruction: "${describeInstruction(instruction)}")`);
+    }
+  }
+
+  return [...new Set(diagnostics)];
 }
 
 /**

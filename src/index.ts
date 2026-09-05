@@ -86,6 +86,7 @@ export { validateTemplate, type TemplateValidationResult } from './core/validati
 export { validateLicense, type LicenseValidationResult } from './core/validation/license.js';
 export { validateOutput, type OutputValidationResult } from './core/validation/output.js';
 export { validateFieldSelector, type FieldSelectorValidationResult } from './core/validation/field-selector.js';
+export { validateWordFields } from './core/field-selector/verifier.js';
 export { validateExternal, type ExternalValidationResult } from './core/validation/external.js';
 export {
   assessScanMetadataCoverage,

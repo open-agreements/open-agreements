@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "actions": [
+    {
+      "target": "_Ref264021278",
+      "strategy": "literalize",
+      "literal": "5A.1",
+      "expected_cached_result": "5A.1",
+      "expected_matches": 4,
+      "expected_target_count": 1
+    },
+    {
+      "target": "_DV_M274",
+      "strategy": "literalize",
+      "literal": "6.1",
+      "expected_cached_result": "6.1",
+      "expected_matches": 3,
+      "expected_target_count": 1
+    },
+    {
+      "target": "_DV_M84",
+      "strategy": "literalize",
+      "literal": "2.1",
+      "expected_cached_result": "2.1",
+      "expected_matches": 7,
+      "expected_target_count": 1
+    },
+    {
+      "target": "_Ref264019869",
+      "strategy": "literalize",
+      "literal": "2.1",
+      "expected_cached_result": "2.1",
+      "expected_matches": 5,
+      "expected_target_count": 1
+    },
+    {
+      "target": "_DV_M92",
+      "strategy": "literalize",
+      "literal": "2.2",
+      "expected_cached_result": "2.2",
+      "expected_matches": 4,
+      "expected_target_count": 1
+    },
+    {
+      "target": "_Ref45879228",
+      "strategy": "literalize",
+      "literal": "4.4.4",
+      "expected_cached_result": "4.4.4",
+      "expected_matches": 4,
+      "expected_target_count": 1
+    },
+    {
+      "target": "_Ref137784392",
+      "strategy": "literalize",
+      "expected_matches": 3,
+      "expected_target_count": 1,
+      "groups": [
+        {
+          "expected_cached_result": "2.3.2(b)",
+          "literal": "2.3.2(b)",
+          "expected_matches": 1
+        },
+        {
+          "expected_cached_result": "(b)",
+          "literal": "(b)",
+          "expected_matches": 2
+        }
+      ]
+    }
+  ]
+}
