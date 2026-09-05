@@ -3,6 +3,7 @@ import { homedir, tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect } from 'vitest';
 import { extractAllText, runFieldSelector } from '../src/core/field-selector/index.js';
+import { findLeftoverPlaceholders } from '../src/core/field-selector/verifier.js';
 import { itAllure } from './helpers/allure-test.js';
 
 const it = itAllure.epic('NVCA Forms').withLabels({ feature: 'Investor and Governance Agreements' });
@@ -31,6 +32,19 @@ async function fill(values: Record<string, unknown>, allowVerifyWarnings = false
 }
 
 describeWithSource('NVCA IRA drafting-choice coverage', () => {
+  it('does not classify the pinned source\'s operative Section 2.8 prose as a placeholder', () => {
+    const text = extractAllText(SOURCE);
+    expect(text.match(/this Section 2\.8/g)?.length).toBeGreaterThan(1);
+
+    const leftovers = findLeftoverPlaceholders(
+      SOURCE,
+      { 'this Section 2.8': 'this Section {indemnification_section}' },
+      SOURCE,
+    );
+
+    expect(leftovers).toEqual([]);
+  });
+
   it('fills the Major Investor and board-observer thresholds with contextual bindings', async () => {
     const text = await fill(FIXTURE);
 
