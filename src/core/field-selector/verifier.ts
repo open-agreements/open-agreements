@@ -227,13 +227,14 @@ export function isFirstBodyParagraphEmpty(docxPath: string): boolean {
 interface ParagraphInfo {
   text: string;
   rowContext: string | null;
-  fieldResultText: string;
+  fieldResultRanges: Array<{ start: number; end: number }>;
 }
 
-/** Visible cached text carried by complex Word fields in a paragraph. */
-function getComplexFieldResultText(para: Element): string {
+/** Character ranges in paragraph text carried by complex Word-field results. */
+function getComplexFieldResultRanges(para: Element): Array<{ start: number; end: number }> {
   const states: Array<'instruction' | 'result'> = [];
-  let result = '';
+  const ranges: Array<{ start: number; end: number }> = [];
+  let visibleOffset = 0;
 
   const visit = (node: Node): void => {
     if (node.nodeType === 1) {
@@ -245,8 +246,12 @@ function getComplexFieldResultText(para: Element): string {
         else if (type === 'end' && states.length > 0) states.pop();
         return;
       }
-      if (el.namespaceURI === W_NS && el.localName === 't' && states.includes('result')) {
-        result += el.textContent ?? '';
+      if (el.namespaceURI === W_NS && el.localName === 't') {
+        const text = el.textContent ?? '';
+        if (states.includes('result') && text.length > 0) {
+          ranges.push({ start: visibleOffset, end: visibleOffset + text.length });
+        }
+        visibleOffset += text.length;
         return;
       }
     }
@@ -254,7 +259,7 @@ function getComplexFieldResultText(para: Element): string {
   };
 
   visit(para as unknown as Node);
-  return normalizeQuotes(result);
+  return ranges;
 }
 
 /**
@@ -279,7 +284,7 @@ function extractParagraphInfos(docxPath: string): ParagraphInfo[] {
       infos.push({
         text: normalizeQuotes(paraText),
         rowContext: rowContext !== null ? normalizeQuotes(rowContext) : null,
-        fieldResultText: getComplexFieldResultText(para),
+        fieldResultRanges: getComplexFieldResultRanges(para),
       });
     }
   }
@@ -329,14 +334,18 @@ function hasQualifiedLeftover(
 }
 
 /** Whether the qualified token is still the cached result of a live Word field. */
-function hasQualifiedFieldResult(
+function hasQualifiedFieldBackedOccurrence(
   paragraphs: ParagraphInfo[],
   context: string,
   searchText: string,
 ): boolean {
-  return paragraphs.some(({ text, rowContext, fieldResultText }) => {
-    if (!fieldResultText.includes(searchText)) return false;
-    return rowContext !== null ? rowContext.includes(context) : text.includes(context);
+  return paragraphs.some(({ text, rowContext, fieldResultRanges }) => {
+    const contextPos = rowContext !== null ? (rowContext.includes(context) ? 0 : -1) : text.indexOf(context);
+    if (contextPos === -1) return false;
+    const searchPos = text.indexOf(searchText, rowContext !== null ? 0 : contextPos + context.length);
+    if (searchPos === -1) return false;
+    const searchEnd = searchPos + searchText.length;
+    return fieldResultRanges.some(({ start, end }) => start < searchEnd && end > searchPos);
   });
 }
 
@@ -435,8 +444,8 @@ export function findLeftoverPlaceholders(
           // In that narrow case, the structural transition from a cached field
           // result to ordinary text does: do not report the full qualified key
           // as a leftover once the field at that qualified location is gone.
-          const sourceWasField = hasQualifiedFieldResult(sourceParagraphs, ck.context, ck.searchText);
-          const outputIsField = hasQualifiedFieldResult(outputParagraphs, ck.context, ck.searchText);
+          const sourceWasField = hasQualifiedFieldBackedOccurrence(sourceParagraphs, ck.context, ck.searchText);
+          const outputIsField = hasQualifiedFieldBackedOccurrence(outputParagraphs, ck.context, ck.searchText);
           if (!sourceWasField || outputIsField) leftovers.add(ck.label);
         }
       }
