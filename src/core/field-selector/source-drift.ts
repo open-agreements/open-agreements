@@ -175,6 +175,7 @@ export function checkFieldSelectorSourceDrift(input: {
 
   const missingNormalizeHeadingAnchors = uniqueSorted(
     (normalizeConfig?.paragraph_rules ?? [])
+      .filter((rule) => rule.source_drift?.stage !== 'post_transform')
       .filter((rule) => !rule.ignore_heading)
       .filter((rule) => {
         const headingAnchors = [rule.section_heading, ...(rule.section_heading_any ?? [])];
@@ -185,12 +186,14 @@ export function checkFieldSelectorSourceDrift(input: {
 
   const missingNormalizeParagraphAnchors = uniqueSorted(
     (normalizeConfig?.paragraph_rules ?? [])
+      .filter((rule) => rule.source_drift?.stage !== 'post_transform')
       .map((rule) => rule.paragraph_contains)
       .filter((anchor) => !documentText.includes(anchor))
   );
 
   const missingNormalizeParagraphEndAnchors = uniqueSorted(
     (normalizeConfig?.paragraph_rules ?? [])
+      .filter((rule) => rule.source_drift?.stage !== 'post_transform')
       .map((rule) => rule.paragraph_end_contains)
       .filter((anchor): anchor is string => typeof anchor === 'string' && anchor.length > 0)
       .filter((anchor) => !documentText.includes(anchor))

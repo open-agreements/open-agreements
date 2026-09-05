@@ -5,6 +5,7 @@ import { join } from 'node:path';
 import AdmZip from 'adm-zip';
 import { afterEach, describe, expect } from 'vitest';
 import type { NormalizeConfig, FieldSelectorMetadata } from '../src/core/metadata.js';
+import { NormalizeConfigSchema } from '../src/core/metadata.js';
 import { checkFieldSelectorSourceDrift, checkSelectorDrift, computeSourceStructureSignature } from '../src/core/field-selector/source-drift.js';
 import type { FieldSelectorManifest } from '../src/core/selectors/index.js';
 import { itAllure } from './helpers/allure-test.js';
@@ -102,6 +103,43 @@ const NORMALIZE_CONFIG: NormalizeConfig = {
 };
 
 describe('source drift canary', () => {
+  it.each([
+    ['IRA selected paragraph', 'obligations to indemnify its officers and directors', 'selection'],
+    ['ROFR optional-block seam', 'Sanctioned Party. .', 'clean'],
+    ['Voting filled company consent', 'Comstock Fuels Corporation stockholder consent', 'fill'],
+    ['Voting filled company voting', 'Comstock Fuels Corporation voting agreement', 'fill'],
+  ])('checks raw rules against raw source but defers %s anchors to their declared stage', (_label, postAnchor, prerequisite) => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-source-drift-stage-'));
+    tempDirs.push(dir);
+    const sourcePath = join(dir, 'source.docx');
+    writeFileSync(sourcePath, buildDocx(['Raw Source Heading', 'Raw source anchor.']));
+
+    const normalizeConfig = NormalizeConfigSchema.parse({ paragraph_rules: [
+      {
+        id: 'raw-rule', section_heading: 'Raw Source Heading', paragraph_contains: 'Raw source anchor.',
+      },
+      {
+        id: 'post-rule', section_heading: '', ignore_heading: true, paragraph_contains: postAnchor,
+        expected_min_matches: 1, expected_max_matches: 1,
+        source_drift: { stage: 'post_transform', prerequisites: [prerequisite] },
+      },
+    ] });
+    const passing = checkFieldSelectorSourceDrift({
+      fieldSelectorId: 'synthetic', sourcePath, metadata: makeMetadata(sha256Hex(sourcePath)),
+      replacements: {}, normalizeConfig,
+    });
+    expect(passing.diff.missing_normalize_paragraph_anchors).toEqual([]);
+    expect(passing.ok).toBe(true);
+
+    normalizeConfig.paragraph_rules[0].paragraph_contains = 'Actually drifted raw anchor';
+    const drifted = checkFieldSelectorSourceDrift({
+      fieldSelectorId: 'synthetic', sourcePath, metadata: makeMetadata(sha256Hex(sourcePath)),
+      replacements: {}, normalizeConfig,
+    });
+    expect(drifted.diff.missing_normalize_paragraph_anchors).toEqual(['Actually drifted raw anchor']);
+    expect(drifted.ok).toBe(false);
+  });
+
   it('passes when hash and structural anchors match fieldSelector configuration', () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-source-drift-pass-'));
     tempDirs.push(dir);

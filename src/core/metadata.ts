@@ -536,6 +536,14 @@ export function cleanConfigRemovesBodyContent(config: CleanConfig): boolean {
   );
 }
 
+const NormalizeSourceDriftSchema = z.discriminatedUnion('stage', [
+  z.object({ stage: z.literal('raw_source') }).strict(),
+  z.object({
+    stage: z.literal('post_transform'),
+    prerequisites: z.array(z.string().min(1)).min(1),
+  }).strict(),
+]);
+
 export const DeclarativeParagraphNormalizeRuleSchema = z.object({
   id: z.string(),
   section_heading: z.string(),
@@ -546,11 +554,79 @@ export const DeclarativeParagraphNormalizeRuleSchema = z.object({
   replacements: z.record(z.string(), z.string()).optional(),
   trim_unmatched_trailing_bracket: z.boolean().optional(),
   expected_min_matches: z.number().int().nonnegative().optional(),
-});
+  expected_max_matches: z.number().int().nonnegative().optional(),
+  source_drift: NormalizeSourceDriftSchema.optional(),
+}).strict();
 export type DeclarativeParagraphNormalizeRule = z.infer<typeof DeclarativeParagraphNormalizeRuleSchema>;
+
+const BUILTIN_NORMALIZE_PREREQUISITES = new Set(['clean', 'selection', 'fill']);
 
 export const NormalizeConfigSchema = z.object({
   paragraph_rules: z.array(DeclarativeParagraphNormalizeRuleSchema).default([]),
+}).strict().superRefine((config, ctx) => {
+  const idIndexes = new Map<string, number[]>();
+  config.paragraph_rules.forEach((rule, index) => {
+    const indexes = idIndexes.get(rule.id) ?? [];
+    indexes.push(index);
+    idIndexes.set(rule.id, indexes);
+  });
+
+  for (const [id, indexes] of idIndexes) {
+    if (indexes.length > 1) {
+      for (const index of indexes) {
+        ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['paragraph_rules', index, 'id'], message: `duplicate normalize rule id creates ambiguous prerequisite: ${id}` });
+      }
+    }
+  }
+
+  const dependencies = new Map<string, string[]>();
+  config.paragraph_rules.forEach((rule, index) => {
+    const declaration = rule.source_drift;
+    if (declaration?.stage !== 'post_transform') return;
+    if (rule.expected_min_matches === undefined || rule.expected_max_matches === undefined) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['paragraph_rules', index, 'source_drift'], message: 'post_transform rules require expected_min_matches and expected_max_matches' });
+    } else if (rule.expected_max_matches < rule.expected_min_matches) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['paragraph_rules', index, 'expected_max_matches'], message: 'expected_max_matches must be greater than or equal to expected_min_matches' });
+    }
+
+    const ruleDependencies: string[] = [];
+    for (const prerequisite of declaration.prerequisites) {
+      if (BUILTIN_NORMALIZE_PREREQUISITES.has(prerequisite)) continue;
+      if (!prerequisite.startsWith('rule:')) {
+        ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['paragraph_rules', index, 'source_drift', 'prerequisites'], message: `unknown post-transform prerequisite: ${prerequisite}` });
+        continue;
+      }
+      const prerequisiteId = prerequisite.slice('rule:'.length);
+      const prerequisiteIndexes = idIndexes.get(prerequisiteId);
+      if (!prerequisiteIndexes || prerequisiteIndexes.length !== 1) {
+        ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['paragraph_rules', index, 'source_drift', 'prerequisites'], message: `unknown or ambiguous normalize rule prerequisite: ${prerequisite}` });
+        continue;
+      }
+      ruleDependencies.push(prerequisiteId);
+      if (prerequisiteIndexes[0] >= index) {
+        ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['paragraph_rules', index, 'source_drift', 'prerequisites'], message: `normalize rule prerequisite must precede dependent rule: ${prerequisite}` });
+      }
+    }
+    dependencies.set(rule.id, ruleDependencies);
+  });
+
+  const visiting = new Set<string>();
+  const visited = new Set<string>();
+  const visit = (id: string): boolean => {
+    if (visiting.has(id)) return true;
+    if (visited.has(id)) return false;
+    visiting.add(id);
+    for (const dependency of dependencies.get(id) ?? []) if (visit(dependency)) return true;
+    visiting.delete(id);
+    visited.add(id);
+    return false;
+  };
+  for (const [id, indexes] of idIndexes) {
+    if (indexes.length === 1 && visit(id)) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['paragraph_rules', indexes[0], 'source_drift', 'prerequisites'], message: `normalize rule prerequisite cycle includes: ${id}` });
+      break;
+    }
+  }
 });
 export type NormalizeConfig = z.infer<typeof NormalizeConfigSchema>;
 
