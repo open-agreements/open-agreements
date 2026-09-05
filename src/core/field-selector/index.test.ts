@@ -97,6 +97,7 @@ describe('runFieldSelector', () => {
       inputPath: '/tmp/input.docx',
       outputPath: '/tmp/output.docx',
       values: { company_name: 'Acme Corp' },
+      selectionsZeroMatchPolicy: 'error',
     });
 
     await allureJsonAttachment('runFieldSelector-forwarding.json', {
@@ -110,6 +111,7 @@ describe('runFieldSelector', () => {
       outputPath: '/tmp/output.docx',
       priorityFieldNames: ['company_name'],
       values: { company_name: 'Acme Corp' },
+      selectionsZeroMatchPolicy: 'error',
     });
     expect(result.fieldsUsed).toEqual(['company_name']);
   });
@@ -432,4 +434,3 @@ describe('runFieldSelector', () => {
     expect(missingWarnings).toEqual([]);
   });
 });
-

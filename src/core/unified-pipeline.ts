@@ -360,6 +360,16 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
         warnings.push(message);
       }
 
+      if (selectionsZeroMatchPolicy === 'error' && anomalies.selectedZeroMatch.length > 0) {
+        const detail = anomalies.selectedZeroMatch
+          .map((o) => `${describeSelectionOption(o)} [matched ${o.matchCount}]`)
+          .join('; ');
+        throw new Error(
+          `[selections] selected option(s) are absent from the document; refusing to emit a document that did ` +
+          `not implement the requested choice: ${detail}`,
+        );
+      }
+
       for (const o of anomalies.unremovedInInertGroup) {
         warnings.push(
           `selections: unselected option ${describeSelectionOption(o)} matched zero paragraphs, and no option in ` +

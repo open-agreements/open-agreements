@@ -170,4 +170,13 @@ describe('selections zero-match guard (#720)', () => {
 
     expect(result.warnings.some((w) => w.includes('dispute_resolution[0]') && w.includes('meant to be kept is absent'))).toBe(true);
   });
+
+  it('[OA-SEL-029] strict policy rejects a selected option that matches nothing', async () => {
+    await expect(runFixture(disputeConfig(ACCURATE_ARBITRATION_MARKER), {
+      paragraphs: [HEADING_PARAGRAPH, COURTS_PARAGRAPH],
+      values: { dispute_resolution_mode: 'arbitration' },
+      zeroMatchPolicy: 'error',
+    })).rejects.toThrow(/selected option\(s\) are absent.*dispute_resolution\[0\]/s);
+  });
+
 });

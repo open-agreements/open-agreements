@@ -142,6 +142,7 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
     cleanPatch: { cleanConfig, replacements: patchReplacements },
     selectorManifests,
     selectionsConfig,
+    selectionsZeroMatchPolicy: options.selectionsZeroMatchPolicy,
     prePatchProcess: repeatableTablesConfig
       ? async (inputDocPath: string, outputDocPath: string) => {
         applyRepeatableTables(inputDocPath, outputDocPath, repeatableTablesConfig, effectiveValues);
