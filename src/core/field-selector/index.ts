@@ -16,7 +16,7 @@ import {
 } from './computed.js';
 import { normalizeBracketArtifacts } from './bracket-normalizer.js';
 import { runFillPipeline } from '../unified-pipeline.js';
-import { formatDocumentDate } from '../fill-pipeline.js';
+import { formatDocumentDate, formatDocumentDateFields } from '../fill-pipeline.js';
 import type { FieldSelectorRunOptions, FieldSelectorRunResult } from './types.js';
 import type { ComputedValueMap } from './computed.js';
 import { applyRepeatableTables, loadRepeatableTablesConfig, validateRepeatableTableFields } from './repeatable-tables.js';
@@ -94,7 +94,10 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
     (migratedAnchorsByField[fieldId] ??= []).push(extractSearchText(key));
   }
 
-  const inputValues = { ...values };
+  // Computed prose may interpolate source date fields. Normalize declared date
+  // values before computed evaluation so both direct tags and derived prose see
+  // the same display-ready value (and chained computed fields inherit it).
+  const inputValues = formatDocumentDateFields(values, metadata.fields);
   const computedInputValues = toComputedValueMap(inputValues);
   const computedProfile = loadComputedProfile(fieldSelectorDir);
   const computedEvaluation = computedProfile
