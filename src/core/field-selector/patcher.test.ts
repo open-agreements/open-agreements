@@ -63,6 +63,40 @@ function extractText(docxPath: string): string {
 }
 
 describe('patchDocument', () => {
+  it('reports a qualified key as zero-match when its context follows the search text', async () => {
+    const xml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>` +
+      '<w:p><w:r><w:t>Sections 3.1 shall terminate and be of no further force or effect.</w:t></w:r></w:p>' +
+      '</w:body></w:document>';
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+    const key = 'shall terminate and be of no further force or effect > Sections 3.1';
+
+    const result = await patchDocument(inputPath, outputPath, { [key]: 'Sections {section}' });
+
+    expect(result.zeroMatchKeys).toContain(key);
+    expect(extractText(outputPath)).toContain('Sections 3.1 shall terminate');
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it('does not report a qualified key when its directional context match succeeds', async () => {
+    const xml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>` +
+      '<w:p><w:r><w:t>shall terminate under Sections 3.1.</w:t></w:r></w:p>' +
+      '</w:body></w:document>';
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+    const key = 'shall terminate under > Sections 3.1';
+
+    const result = await patchDocument(inputPath, outputPath, { [key]: 'Sections {section}' });
+
+    expect(result.zeroMatchKeys).not.toContain(key);
+    expect(extractText(outputPath)).toContain('Sections {section}');
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
   it('keeps xml:space namespaced and singular when rewriting a preserved text run', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
