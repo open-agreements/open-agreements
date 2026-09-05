@@ -1,86 +1,32 @@
-import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
-import { tmpdir } from 'node:os';
+import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import AdmZip from 'adm-zip';
 import { load } from 'js-yaml';
 import { describe, expect } from 'vitest';
-import { BLANK_PLACEHOLDER } from '../src/core/fill-utils.js';
-import { runFieldSelector } from '../src/core/field-selector/index.js';
-import { extractAllText, verifyOutput } from '../src/core/field-selector/verifier.js';
-import { runFillPipeline } from '../src/core/unified-pipeline.js';
-import { validateFieldSelector } from '../src/core/validation/field-selector.js';
 import { validateFieldSelectorMetadata } from '../src/core/metadata.js';
-import { applySelections, loadSelectionsConfig } from '../src/core/selector.js';
+import { validateFieldSelector } from '../src/core/validation/field-selector.js';
 import { resolveFieldSelectorDir } from '../src/utils/paths.js';
-import {
-  allureDescriptionHtml,
-  allureParameter,
-  allureSeverity,
-  allureStep,
-  itAllure,
-  type AllureSeverityLevel,
-} from './helpers/allure-test.js';
+import { allureDescriptionHtml, allureParameter, allureSeverity, itAllure } from './helpers/allure-test.js';
 
-interface MetadataField {
-  name: string;
-  type: 'string' | 'date' | 'number' | 'boolean' | 'enum';
-  description: string;
-  default?: string;
-  options?: string[];
-}
-
-interface FieldSelectorMetadataDocument {
+interface MetadataDocument {
   source_url?: string;
   source_sha256?: string;
   optional?: boolean;
-  fields?: MetadataField[];
-  priority_fields?: string[];
+  fields?: Array<{ name: string }>;
 }
-
-type ReplacementMap = Record<string, import('../src/core/field-selector/replacement-keys.js').ReplacementValue>;
-
-interface CleanConfig {
-  removeFootnotes?: boolean;
-  removeParagraphPatterns?: string[];
-  removeRanges?: Array<{ start: string; end: string }>;
-  clearParts?: string[];
-}
-
-interface FillRenderScenario {
+interface ComputedCondition { field?: string }
+interface ComputedRule {
   id: string;
-  sourcePlaceholders: string[];
-  overrides?: Record<string, string>;
-  omitFields?: string[];
-  expectedFragments: string[];
-  minimumOccurrences?: Array<{ text: string; count: number }>;
-  absentFragments?: string[];
+  when_all?: ComputedCondition[];
+  when_any?: ComputedCondition[];
+  set_fill?: Record<string, unknown>;
+  set_audit?: Record<string, unknown>;
 }
-
-type FieldAssertionMode = 'strict' | 'resilient' | 'skip';
-
-interface FieldAssertionPolicy {
-  mode: FieldAssertionMode;
-  reason?: string;
-  normalize?: 'none' | 'lowercase';
-}
+interface ComputedConfig { defaults?: Record<string, unknown>; rules?: ComputedRule[] }
+interface CleanConfig { removeFootnotes?: boolean; removeParagraphPatterns?: string[] }
+type ReplacementValue = string | { value: string };
 
 const FIELD_SELECTOR_ID = 'nvca-stock-purchase-agreement';
 const FIELD_SELECTOR_DIR = resolveFieldSelectorDir(FIELD_SELECTOR_ID);
-
-/**
- * Context-qualified (`>`-anchor) replacement keys that have been migrated to selector contracts
- * (`template-manifest.json.migrated_keys`). These resolve against the real document's prose context,
- * so the flat `Marker N: <key>` synthetic fixture below cannot exercise them — they are covered by the
- * whole-document parity tests in selector-contracts.test.ts against the real cached source. Literal
- * migrated keys (e.g. company_name's `[Insert Company Name]`) are NOT excluded: their selectors match
- * verbatim and still render in the synthetic harness.
- */
-function loadMigratedContextKeys(): Set<string> {
-  const manifest = JSON.parse(readFileSync(join(FIELD_SELECTOR_DIR, 'template-manifest.json'), 'utf-8')) as {
-    migrated_keys?: string[];
-  };
-  return new Set((manifest.migrated_keys ?? []).filter((key) => key.includes('>')));
-}
 const it = itAllure.withLabels({
   epic: 'NVCA SPA Template',
   feature: 'NVCA SPA Legal QA',
@@ -88,1031 +34,105 @@ const it = itAllure.withLabels({
 });
 const itDiscovery = it.withLabels({ subSuite: 'Discovery & Metadata' });
 const itGovernance = it.withLabels({ subSuite: 'Compliance & Governance' });
-const itFilling = it.withLabels({ subSuite: 'Filling & Rendering' });
-const itVerification = it.withLabels({ subSuite: 'Verification & Drift' });
-const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
-const CONTENT_TYPES_XML =
-  '<?xml version="1.0" encoding="UTF-8"?>' +
-  '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">' +
-  '<Default Extension="xml" ContentType="application/xml"/>' +
-  '<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>' +
-  '<Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/>' +
-  '</Types>';
-
-const ROOT_RELS_XML =
-  '<?xml version="1.0" encoding="UTF-8"?>' +
-  '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">' +
-  '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/>' +
-  '</Relationships>';
-
-const WORD_RELS_XML =
-  '<?xml version="1.0" encoding="UTF-8"?>' +
-  '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"/>';
-
-const DECLARATIVE_FILL_SCENARIOS: FillRenderScenario[] = [
-  {
-    id: 'defaults-and-blank-placeholder',
-    sourcePlaceholders: [
-      '[Signature Page Follows]',
-      '[monthly]',
-      '[insert Plan Year and Name]',
-    ],
-    omitFields: ['signature_page_marker', 'financial_reporting_period', 'benefit_plan_name'],
-    expectedFragments: ['Signature Page Follows', 'monthly', BLANK_PLACEHOLDER],
-  },
-  {
-    id: 'company-name-consistency-across-variants',
-    sourcePlaceholders: ['[Insert Company Name]', '[Company name]'],
-    overrides: {
-      company_name: 'Helios Labs, Inc.',
-    },
-    expectedFragments: ['Helios Labs, Inc.'],
-    minimumOccurrences: [{ text: 'Helios Labs, Inc.', count: 2 }],
-  },
-];
-
-const FIELD_ASSERTION_POLICY: Record<string, FieldAssertionPolicy> = {
-  company_name: { mode: 'strict', reason: 'Primary party identity across variants' },
-  investor_name: { mode: 'strict', reason: 'Counterparty identity' },
-  company_counsel: { mode: 'resilient', reason: 'Long freeform counsel block' },
-  investor_counsel: { mode: 'resilient', reason: 'Long freeform counsel block' },
-  company_counsel_name: { mode: 'resilient', reason: 'Name-only variant may evolve in wording' },
-  lead_purchaser_name: { mode: 'resilient', reason: 'Name appears in context-sensitive clauses' },
-  series_designation: { mode: 'skip', reason: 'Nth-qualified replacement; exercised in real-source integration checks' },
-  agreement_date: { mode: 'skip', reason: 'Pure selector-contract date field (no replacements.json key); exercised in real-source integration checks (#619)' },
-  par_value_per_share: { mode: 'skip', reason: 'Nth-qualified replacement; exercised in real-source integration checks' },
-  purchase_price_per_share: { mode: 'skip', reason: 'Nth-qualified replacement; exercised in real-source integration checks' },
-  convertible_purchase_price_per_share: { mode: 'skip', reason: 'Optional convertible-security clause; exercised in the real-source production E2E' },
-  convertible_series_designation: { mode: 'skip', reason: 'Optional convertible-security clause; exercised in the real-source production E2E' },
-  convertible_security_shares: { mode: 'skip', reason: 'Optional convertible-security clause; exercised in the real-source production E2E' },
-  applicable_word: { mode: 'skip', reason: 'Control field for optional closing-word bracket cleanup' },
-  include_convertible_securities: { mode: 'skip', reason: 'Boolean trigger for inline selection — convertible securities clause' },
-  include_closing_reference: { mode: 'skip', reason: 'Boolean trigger for inline selection — closing reference bracket' },
-  bind_all_convertible_holders_to_convert: { mode: 'skip', reason: 'Computed control input; drives purchaser_scope token' },
-  purchaser_scope: { mode: 'strict', reason: 'Consent scope word derived from bind_all_convertible_holders_to_convert' },
-  optional_plural_suffix: { mode: 'skip', reason: 'Control field for optional pluralized headings' },
-  closing_heading: { mode: 'strict', reason: 'Single-closing heading should render explicitly' },
-  initial_word_lower: { mode: 'strict', reason: 'Single-closing lowercase token should render explicitly' },
-  initial_word_title: { mode: 'strict', reason: 'Single-closing titlecase token should render explicitly' },
-  closing_type: {
-    mode: 'skip',
-    reason: 'Control input for markerless selection toggle; downstream effect tested in dedicated closing_type behavioral test',
-  },
-  dispute_resolution_mode: {
-    mode: 'skip',
-    reason: 'Computed control input; not rendered directly in template text',
-  },
-  arbitration_location: { mode: 'strict', reason: 'Alternative 1 arbitration venue placeholder' },
-  judicial_district: { mode: 'strict', reason: 'Venue term should remain exact' },
-  balance_sheet_date: { mode: 'strict', reason: 'Date anchor should be preserved exactly' },
-  balance_sheet_date_defined_term: { mode: 'strict', reason: 'Defined-term text at balance-sheet references' },
-  benefit_plan_name: { mode: 'skip', reason: 'Optional field; covered in targeted scenario tests' },
-  common_authorized_shares: { mode: 'strict', reason: 'Capitalization representation input' },
-  common_par_value_per_share: { mode: 'strict', reason: 'Capitalization representation input' },
-  common_outstanding_shares: { mode: 'strict', reason: 'Capitalization representation input' },
-  preferred_authorized_shares: { mode: 'strict', reason: 'Capitalization representation input' },
-  preferred_par_value_per_share: { mode: 'strict', reason: 'Capitalization representation input' },
-  series_authorized_shares: { mode: 'strict', reason: 'Capitalization representation input' },
-  stock_plan_reserved_shares: { mode: 'strict', reason: 'Stock-plan capitalization input' },
-  restricted_stock_outstanding_shares: { mode: 'strict', reason: 'Stock-plan capitalization input' },
-  option_shares_outstanding: { mode: 'strict', reason: 'Stock-plan capitalization input' },
-  stock_plan_available_shares: { mode: 'strict', reason: 'Stock-plan capitalization input' },
-  material_contract_threshold: { mode: 'strict', reason: 'Negotiated material-contract threshold' },
-  indebtedness_individual_threshold: { mode: 'strict', reason: 'Negotiated indebtedness threshold' },
-  indebtedness_aggregate_threshold: { mode: 'strict', reason: 'Negotiated aggregate indebtedness threshold' },
-  investor_counsel_expense_cap: { mode: 'strict', reason: 'Company-paid investor-counsel cap' },
-  signature_page_marker: { mode: 'strict', reason: 'Execution marker anchor' },
-  state: { mode: 'strict', reason: 'Jurisdiction anchor (proper noun) rendered in the courts alternative' },
-  state_lower: { mode: 'strict', reason: 'Jurisdiction anchor', normalize: 'lowercase' },
-  specify_percentage: { mode: 'strict', reason: 'Key negotiated threshold anchor' },
-  financial_reporting_period: { mode: 'strict', reason: 'Reporting cadence anchor' },
-  director_names: { mode: 'resilient', reason: 'List formatting can vary while still valid' },
-  board_size: {
-    mode: 'skip',
-    reason: 'Rendered through normalize.json post-process clauses, not replacements.json synthetic fixture',
-  },
-  minimum_shares_initial_closing: {
-    mode: 'skip',
-    reason: 'Rendered through normalize.json post-process clauses, not replacements.json synthetic fixture',
-  },
-  applicable_purchasers: { mode: 'resilient', reason: 'List formatting can vary while still valid' },
-};
-
-type LawyerRiskTier = 'High' | 'Medium' | 'Low';
-
-interface LawyerReviewContext {
-  legalQuestion: string;
-  riskTier: LawyerRiskTier;
-  whyItMatters: string;
-  expectedOutcome: string;
+function readJson<T>(name: string): T {
+  return JSON.parse(readFileSync(join(FIELD_SELECTOR_DIR, name), 'utf-8')) as T;
 }
 
-const RISK_TIER_TO_SEVERITY: Record<LawyerRiskTier, AllureSeverityLevel> = {
-  High: 'critical',
-  Medium: 'normal',
-  Low: 'minor',
-};
-const MAX_INLINE_EVIDENCE_CHARS = 12_000;
-
-function riskTierFromMode(mode: FieldAssertionMode): LawyerRiskTier {
-  if (mode === 'strict') return 'High';
-  if (mode === 'resilient') return 'Medium';
-  return 'Low';
-}
-
-function htmlEscape(value: string): string {
-  return value
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#39;')
-    .replaceAll('\n', '<br/>');
-}
-
-function firstLineForMarker(outputText: string, markerNumber: number): string {
-  const prefix = `Marker ${markerNumber}:`;
-  const line = outputText
-    .split('\n')
-    .map((entry) => entry.trim())
-    .find((entry) => entry.startsWith(prefix));
-  return line ?? '(line not found)';
-}
-
-function renderCounselSummaryHtml(context: LawyerReviewContext): string {
-  return [
-    '<h3>Counsel Summary</h3>',
-    '<ul>',
-    `<li><strong>Legal question:</strong> ${htmlEscape(context.legalQuestion)}</li>`,
-    `<li><strong>Risk tier:</strong> ${htmlEscape(context.riskTier)}</li>`,
-    `<li><strong>Why it matters:</strong> ${htmlEscape(context.whyItMatters)}</li>`,
-    `<li><strong>Expected outcome:</strong> ${htmlEscape(context.expectedOutcome)}</li>`,
-    '</ul>',
-  ].join('');
-}
-
-function truncateInlineEvidence(content: string, maxChars = MAX_INLINE_EVIDENCE_CHARS): string {
-  if (content.length <= maxChars) return content;
-  return `${content.slice(0, maxChars)}\n\n... [truncated ${content.length - maxChars} characters for readability]`;
-}
-
-function renderInlineEvidenceHtml(title: string, content: string): string {
-  return [
-    `<h4>${htmlEscape(title)}</h4>`,
-    `<pre>${htmlEscape(truncateInlineEvidence(content))}</pre>`,
-  ].join('');
-}
-
-function renderJsonEvidenceHtml(title: string, payload: unknown): string {
-  return renderInlineEvidenceHtml(title, JSON.stringify(payload, null, 2));
-}
-
-function renderTextEvidenceHtml(title: string, content: string): string {
-  return renderInlineEvidenceHtml(title, content);
-}
-
-function renderClauseEvidenceMatrixHtml(
-  sourcePlaceholders: string[],
-  replacements: ReplacementMap,
-  values: Record<string, string>,
-  outputText: string,
-  policies?: Record<string, FieldAssertionPolicy>
-): string {
-  const rows: string[] = [];
-
-  sourcePlaceholders.forEach((placeholder, index) => {
-    const replacement = replacements[placeholder];
-    const fieldName = replacement ? extractFieldNameFromReplacement(replacement) : null;
-    if (!fieldName) return;
-
-    const policy = policies?.[fieldName] ?? { mode: 'resilient' as const };
-    const riskTier = riskTierFromMode(policy.mode);
-    const expectedValue = values[fieldName] ?? '(blank)';
-    const outputLine = firstLineForMarker(outputText, index + 1);
-    const normalizedExpected = expectedValue === '(blank)'
-      ? expectedValue
-      : normalizeByPolicy(expectedValue, policy);
-    const normalizedOutputLine = normalizeByPolicy(outputLine, policy);
-    const matched = expectedValue === '(blank)'
-      ? policy.mode === 'skip'
-        ? 'Skip'
-        : 'N/A'
-      : normalizedOutputLine.includes(normalizedExpected)
-        ? 'Yes'
-        : 'No';
-
-    rows.push(
-      [
-        '<tr>',
-        `<td>${index + 1}</td>`,
-        `<td>${htmlEscape(fieldName)}</td>`,
-        `<td>${htmlEscape(policy.mode)}</td>`,
-        `<td>${htmlEscape(riskTier)}</td>`,
-        `<td>${htmlEscape(placeholder)}</td>`,
-        `<td>${htmlEscape(expectedValue)}</td>`,
-        `<td>${htmlEscape(outputLine)}</td>`,
-        `<td>${htmlEscape(matched)}</td>`,
-        '</tr>',
-      ].join('')
-    );
-  });
-
-  return [
-    '<h3>Clause Evidence Matrix</h3>',
-    '<table border="1" cellspacing="0" cellpadding="4">',
-    '<thead><tr><th>#</th><th>Field</th><th>Mode</th><th>Risk Tier</th><th>Source Placeholder</th><th>Expected Value</th><th>Rendered Output Excerpt</th><th>Match</th></tr></thead>',
-    '<tbody>',
-    ...rows,
-    '</tbody>',
-    '</table>',
-  ].join('');
-}
-
-async function applyLawyerReviewContext(
-  context: LawyerReviewContext,
-  ...additionalSections: string[]
-): Promise<void> {
+async function setReviewContext(question: string, whyItMatters: string): Promise<void> {
+  await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
   await allureParameter('audience', 'lawyer');
-  await allureParameter('legal_question', context.legalQuestion);
-  await allureParameter('risk_tier', context.riskTier);
-  await allureSeverity(RISK_TIER_TO_SEVERITY[context.riskTier]);
-
-  const sections = [renderCounselSummaryHtml(context), ...additionalSections];
-
-  await allureDescriptionHtml(sections.join(''));
+  await allureSeverity('critical');
+  await allureDescriptionHtml(
+    `<h3>Counsel Summary</h3><ul><li><strong>Legal question:</strong> ${question}</li>` +
+      `<li><strong>Why it matters:</strong> ${whyItMatters}</li></ul>`
+  );
 }
 
-function extractFieldNameFromReplacement(value: string | { value: string; format?: Record<string, unknown> }): string | null {
-  const str = typeof value === 'string' ? value : value.value;
-  const matches = Array.from(str.matchAll(/\{([a-zA-Z0-9_]+)\}/g));
-  return matches.length === 1 ? matches[0][1] : null;
-}
-
-function xmlEscape(value: string): string {
-  return value
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;');
-}
-
-function createSyntheticFieldSelectorFixture(sourcePlaceholders: string[]): {
-  tempDir: string;
-  inputPath: string;
-  outputPath: string;
-} {
-  const tempDir = mkdtempSync(join(tmpdir(), 'nvca-spa-fill-'));
-  const inputPath = join(tempDir, 'source.docx');
-  const outputPath = join(tempDir, 'filled.docx');
-
-  const paragraphXml = sourcePlaceholders
-    .map((placeholder, index) => `<w:p><w:r><w:t>Marker ${index + 1}: ${xmlEscape(placeholder)}</w:t></w:r></w:p>`)
-    .join('');
-
-  const documentXml =
-    '<?xml version="1.0" encoding="UTF-8"?>' +
-    `<w:document xmlns:w="${W_NS}"><w:body>${paragraphXml}</w:body></w:document>`;
-
-  const zip = new AdmZip();
-  zip.addFile('[Content_Types].xml', Buffer.from(CONTENT_TYPES_XML, 'utf-8'));
-  zip.addFile('_rels/.rels', Buffer.from(ROOT_RELS_XML, 'utf-8'));
-  zip.addFile('word/_rels/document.xml.rels', Buffer.from(WORD_RELS_XML, 'utf-8'));
-  zip.addFile('word/document.xml', Buffer.from(documentXml, 'utf-8'));
-
-  writeFileSync(inputPath, zip.toBuffer());
-
-  return { tempDir, inputPath, outputPath };
-}
-
-function loadNvcaFieldSelectorArtifacts(): {
-  metadata: FieldSelectorMetadataDocument;
-  replacements: ReplacementMap;
-  cleanConfig: CleanConfig;
-} {
-  const metadata = load(readFileSync(join(FIELD_SELECTOR_DIR, 'metadata.yaml'), 'utf-8')) as FieldSelectorMetadataDocument;
-  const replacements = JSON.parse(readFileSync(join(FIELD_SELECTOR_DIR, 'replacements.json'), 'utf-8')) as ReplacementMap;
-  const cleanConfig = JSON.parse(readFileSync(join(FIELD_SELECTOR_DIR, 'clean.json'), 'utf-8')) as CleanConfig;
-  return { metadata, replacements, cleanConfig };
-}
-
-function buildScenarioValues(
-  fields: MetadataField[],
-  overrides: Record<string, string> = {},
-  omitFields: string[] = []
-): Record<string, string> {
-  const omitted = new Set(omitFields);
-  const values: Record<string, string> = {};
-
-  for (const field of fields) {
-    if (omitted.has(field.name)) continue;
-    if (field.name in overrides) {
-      values[field.name] = overrides[field.name];
-      continue;
-    }
-    if (field.default !== undefined) {
-      values[field.name] = field.default;
-      continue;
-    }
-    values[field.name] = `value_for_${field.name}`;
-  }
-
-  for (const [name, value] of Object.entries(overrides)) {
-    if (!omitted.has(name)) {
-      values[name] = value;
-    }
-  }
-
-  return values;
-}
-
-function buildVerificationValues(
-  values: Record<string, string>,
-  sourcePlaceholders: string[],
-  replacements: ReplacementMap
-): Record<string, string> {
-  const fieldNames = new Set<string>();
-  for (const placeholder of sourcePlaceholders) {
-    const replacement = replacements[placeholder];
-    if (!replacement) continue;
-    const fieldName = extractFieldNameFromReplacement(replacement);
-    if (fieldName && values[fieldName] !== undefined) {
-      fieldNames.add(fieldName);
-    }
-  }
-
-  const verificationValues: Record<string, string> = {};
-  for (const fieldName of fieldNames) {
-    verificationValues[fieldName] = values[fieldName];
-  }
-  return verificationValues;
-}
-
-function countOccurrences(haystack: string, needle: string): number {
-  if (!needle) return 0;
-  return haystack.split(needle).length - 1;
-}
-
-function buildPlaceholdersByField(replacements: ReplacementMap): Map<string, string[]> {
-  const placeholdersByField = new Map<string, string[]>();
-
-  for (const [placeholder, replacementValue] of Object.entries(replacements)) {
-    const fieldName = extractFieldNameFromReplacement(replacementValue);
-    if (!fieldName) continue;
-    const existing = placeholdersByField.get(fieldName) ?? [];
-    existing.push(placeholder);
-    placeholdersByField.set(fieldName, existing);
-  }
-
-  return placeholdersByField;
-}
-
-function isNthReplacementKey(key: string): boolean {
-  return /#\d+$/.test(key);
-}
-
-function normalizeByPolicy(value: string, policy: FieldAssertionPolicy): string {
-  if (policy.normalize === 'lowercase') {
-    return value.toLowerCase();
-  }
-  return value;
+function fieldsInTemplateValue(value: ReplacementValue | string): string[] {
+  const text = typeof value === 'string' ? value : value.value;
+  return Array.from(text.matchAll(/\{([a-zA-Z0-9_]+)\}/g), (match) => match[1]);
 }
 
 describe('NVCA SPA Template', () => {
-  itDiscovery('Can counsel confirm replacement rules cover required NVCA SPA fields?', async () => {
-    await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
-    const fieldAlignmentContext: LawyerReviewContext = {
-      legalQuestion: 'Do replacement rules cover each required NVCA SPA field?',
-      riskTier: 'High',
-      whyItMatters: 'Missing replacement coverage can leave blanks in executed financing documents.',
-      expectedOutcome: 'Every required field is mapped and no unknown targets are present.',
-    };
-    await applyLawyerReviewContext(fieldAlignmentContext);
-
-    const metadata = await allureStep('Load metadata.yaml', () =>
-      load(readFileSync(join(FIELD_SELECTOR_DIR, 'metadata.yaml'), 'utf-8')) as FieldSelectorMetadataDocument
+  itDiscovery('declares every replacement and normalization target', async () => {
+    await setReviewContext(
+      'Do the SPA replacement rules target declared or computed fields?',
+      'An undeclared target can silently leave a material deal term unfilled.'
     );
-    const replacements = await allureStep('Load replacements.json', () =>
-      JSON.parse(readFileSync(join(FIELD_SELECTOR_DIR, 'replacements.json'), 'utf-8')) as ReplacementMap
+    const metadata = load(readFileSync(join(FIELD_SELECTOR_DIR, 'metadata.yaml'), 'utf-8')) as MetadataDocument;
+    const replacements = readJson<Record<string, ReplacementValue>>('replacements.json');
+    const normalize = readJson<{ paragraph_rules?: Array<{ replacements?: Record<string, string> }> }>('normalize.json');
+    const computed = readJson<ComputedConfig>('computed.json');
+    const declared = new Set((metadata.fields ?? []).map((field) => field.name));
+    const computedOutputs = new Set([
+      ...Object.keys(computed.defaults ?? {}),
+      ...(computed.rules ?? []).flatMap((rule) => Object.keys(rule.set_fill ?? {})),
+    ]);
+    const renderedTargets = new Set([
+      ...Object.values(replacements).flatMap(fieldsInTemplateValue),
+      ...(normalize.paragraph_rules ?? []).flatMap((rule) =>
+        Object.values(rule.replacements ?? {}).flatMap(fieldsInTemplateValue)
+      ),
+    ]);
+    const unknownTargets = [...renderedTargets].filter(
+      (field) => !declared.has(field) && !computedOutputs.has(field)
     );
-    const normalizeConfig = await allureStep('Load normalize.json', () =>
-      JSON.parse(readFileSync(join(FIELD_SELECTOR_DIR, 'normalize.json'), 'utf-8')) as {
-        paragraph_rules?: Array<{ replacements?: Record<string, string> }>;
-      }
-    );
-    const computedConfig = await allureStep('Load computed.json', () =>
-      JSON.parse(readFileSync(join(FIELD_SELECTOR_DIR, 'computed.json'), 'utf-8')) as {
-        rules?: Array<{
-          when_all?: Array<{ field?: string }>;
-          when_any?: Array<{ field?: string }>;
-          set_fill?: Record<string, unknown>;
-        }>;
-        defaults?: Record<string, unknown>;
-      }
-    );
-
-    const metadataFieldNames = (metadata.fields ?? []).map((field) => field.name).sort();
-    const priorityFieldNames = (metadata.priority_fields ?? []).slice().sort();
-
-    // Coverage counts EVERY {tag} embedded in a replacement value (mirroring
-    // src/core/field-selector/index.ts), not only whole-value tags — keys like
-    // "District Court for the District of [judicial district]" carry literal
-    // text around their tag.
-    const replacementFieldNames = Object.values(replacements)
-      .flatMap((value) => {
-        const str = typeof value === 'string' ? value : value.value;
-        return Array.from(str.matchAll(/\{([a-zA-Z0-9_]+)\}/g)).map((match) => match[1]);
-      })
-      .sort();
-    const normalizeFieldNames = (normalizeConfig.paragraph_rules ?? [])
-      .flatMap((rule) => Object.values(rule.replacements ?? {}))
-      .flatMap((value) =>
-        Array.from(value.matchAll(/\{([a-zA-Z0-9_]+)\}/g)).map((match) => match[1])
-      )
-      .sort();
-    const representedFieldNames = Array.from(new Set([...replacementFieldNames, ...normalizeFieldNames])).sort();
-    // Fields consumed as computed-rule inputs (e.g. state_lower, which drives
-    // judicial-district defaults and audit rules without rendering into the
-    // document text since #2391 replaced its `[state]` fill site with the
-    // proper-noun `state` field). A priority field is covered if it renders
-    // (replacements/normalize) OR feeds the computed profile.
-    const computedInputFieldNames = Array.from(
-      new Set(
-        (computedConfig.rules ?? []).flatMap((rule) =>
-          [...(rule.when_all ?? []), ...(rule.when_any ?? [])]
-            .map((condition) => condition.field)
-            .filter((field): field is string => typeof field === 'string')
-        )
-      )
-    ).sort();
-    const computedOutputFieldNames = Array.from(
-      new Set([
-        ...Object.keys(computedConfig.defaults ?? {}),
-        ...(computedConfig.rules ?? []).flatMap((rule) => Object.keys(rule.set_fill ?? {})),
-      ])
-    ).sort();
-
-    const unknownReplacementTargets = representedFieldNames.filter(
-      (field) => !metadataFieldNames.includes(field) && !computedOutputFieldNames.includes(field)
-    );
-    const fieldAlignmentSnapshot = {
-      metadataFieldNames,
-      replacementFieldNames,
-      normalizeFieldNames,
-      representedFieldNames,
-      computedInputFieldNames,
-      computedOutputFieldNames,
-      priorityFieldNames,
-      unknownReplacementTargets,
-    };
-    await applyLawyerReviewContext(
-      fieldAlignmentContext,
-      renderJsonEvidenceHtml('Field Alignment Snapshot', fieldAlignmentSnapshot)
-    );
-
-    await allureStep('Assert replacement targets are declared by metadata', () => {
-      expect(unknownReplacementTargets).toEqual([]);
-    });
+    expect(unknownTargets).toEqual([]);
   });
 
-  itDiscovery('Can counsel verify the NVCA SPA fieldSelector is structurally valid before use?', async () => {
-    await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
-    const structuralValidationContext: LawyerReviewContext = {
-      legalQuestion: 'Is the NVCA SPA fieldSelector structurally valid before any fill operation?',
-      riskTier: 'Medium',
-      whyItMatters: 'Invalid metadata or fieldSelector structure can produce unreliable contract output.',
-      expectedOutcome: 'FieldSelector metadata and fieldSelector validation both pass without errors.',
-    };
-    await applyLawyerReviewContext(structuralValidationContext);
-
-    const metadataResult = await allureStep('Run validateFieldSelectorMetadata', () =>
-      validateFieldSelectorMetadata(FIELD_SELECTOR_DIR)
+  itDiscovery('passes structural metadata and selector validation', async () => {
+    await setReviewContext(
+      'Is the SPA field selector structurally valid before use?',
+      'Invalid metadata or selector configuration can make contract output unreliable.'
     );
-    const fieldSelectorResult = await allureStep('Run validateFieldSelector', () =>
-      validateFieldSelector(FIELD_SELECTOR_DIR, FIELD_SELECTOR_ID)
-    );
-
-    await applyLawyerReviewContext(
-      structuralValidationContext,
-      renderJsonEvidenceHtml('Metadata Validation Result', metadataResult),
-      renderJsonEvidenceHtml('FieldSelector Validation Result', fieldSelectorResult)
-    );
-
-    await allureStep('Assert metadata validation passes', () => {
-      expect(metadataResult.valid).toBe(true);
-      expect(metadataResult.errors).toEqual([]);
-    });
-    await allureStep('Assert fieldSelector validation passes', () => {
-      expect(fieldSelectorResult.valid).toBe(true);
-      expect(fieldSelectorResult.errors).toEqual([]);
-    });
+    expect(validateFieldSelectorMetadata(FIELD_SELECTOR_DIR)).toMatchObject({ valid: true, errors: [] });
+    expect(validateFieldSelector(FIELD_SELECTOR_DIR, FIELD_SELECTOR_ID)).toMatchObject({ valid: true, errors: [] });
   });
 
-  itGovernance('Can counsel verify provenance and cleaning policy are documented?', async () => {
-    await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
-    const governanceContext: LawyerReviewContext = {
-      legalQuestion: 'Is provenance and cleaning governance explicitly documented?',
-      riskTier: 'High',
-      whyItMatters: 'Counsel must trace source integrity and drafting-note removal policy.',
-      expectedOutcome: 'Source URL/checksum are present and governance cleaning rules are active.',
-    };
-    await applyLawyerReviewContext(governanceContext);
-
-    const metadata = load(readFileSync(join(FIELD_SELECTOR_DIR, 'metadata.yaml'), 'utf-8')) as FieldSelectorMetadataDocument;
-    const cleanConfig = JSON.parse(
-      readFileSync(join(FIELD_SELECTOR_DIR, 'clean.json'), 'utf-8')
-    ) as CleanConfig;
-
-    await applyLawyerReviewContext(
-      governanceContext,
-      renderJsonEvidenceHtml('Cleaning Policy (clean.json)', cleanConfig),
-      renderTextEvidenceHtml('Source URL', metadata.source_url ?? 'missing'),
-      renderTextEvidenceHtml('Source SHA256', metadata.source_sha256 ?? 'missing')
+  itGovernance('documents source provenance and cleaning policy', async () => {
+    await setReviewContext(
+      'Are the SPA source and drafting-note removal policy traceable?',
+      'Counsel must be able to verify source integrity and the cleaning applied to it.'
     );
-
-    await allureStep('Assert source URL points to NVCA document', () => {
-      expect(metadata.source_url).toMatch(/^https:\/\/nvca\.org\//);
-    });
-    await allureStep('Assert source checksum uses 64-char SHA256', () => {
-      expect(metadata.source_sha256).toMatch(/^[a-f0-9]{64}$/);
-    });
-    await allureStep('Assert fieldSelector is not optional', () => {
-      expect(metadata.optional).toBe(false);
-    });
-    await allureStep('Assert cleaning removes drafting guidance markers', () => {
-      const patterns = cleanConfig.removeParagraphPatterns ?? [];
-      expect(cleanConfig.removeFootnotes).toBe(true);
-      expect(patterns).toContain('^Note to Drafter:');
-      expect(patterns).toContain('^Preliminary Note\\b');
-    });
+    const metadata = load(readFileSync(join(FIELD_SELECTOR_DIR, 'metadata.yaml'), 'utf-8')) as MetadataDocument;
+    const clean = readJson<CleanConfig>('clean.json');
+    expect(metadata.source_url).toMatch(/^https:\/\/nvca\.org\//);
+    expect(metadata.source_sha256).toMatch(/^[a-f0-9]{64}$/);
+    expect(metadata.optional).toBe(false);
+    expect(clean.removeFootnotes).toBe(true);
+    expect(clean.removeParagraphPatterns).toContain('^Note to Drafter:');
+    expect(clean.removeParagraphPatterns).toContain('^Preliminary Note\\b');
   });
 
-  itFilling('Can counsel confirm full-corpus synthetic rendering replaces mapped placeholders?', async () => {
-    await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
-    const fullCorpusContext: LawyerReviewContext = {
-      legalQuestion: 'Does full-corpus synthetic rendering replace all mapped placeholders?',
-      riskTier: 'High',
-      whyItMatters: 'Placeholder leakage into a signing draft is a material execution risk.',
-      expectedOutcome: 'Verifier passes and representative key values are rendered in the output.',
-    };
-    await applyLawyerReviewContext(fullCorpusContext);
-
-    const { metadata, replacements, cleanConfig } = await allureStep('Load NVCA fieldSelector artifacts', () =>
-      loadNvcaFieldSelectorArtifacts()
+  itDiscovery('keeps the computed drafting policy internally connected', async () => {
+    await setReviewContext(
+      'Are computed SPA drafting choices uniquely named and connected to declared inputs?',
+      'Broken policy dependencies can select the wrong forum, closing structure, or negotiated term.'
     );
-    const migratedContextKeys = loadMigratedContextKeys();
-    const legacyReplacements = Object.fromEntries(
-      Object.entries(replacements).filter(([key]) => !migratedContextKeys.has(key))
+    const metadata = load(readFileSync(join(FIELD_SELECTOR_DIR, 'metadata.yaml'), 'utf-8')) as MetadataDocument;
+    const computed = readJson<ComputedConfig>('computed.json');
+    const rules = computed.rules ?? [];
+    const declared = new Set((metadata.fields ?? []).map((field) => field.name));
+    const produced = new Set([
+      ...Object.keys(computed.defaults ?? {}),
+      ...rules.flatMap((rule) => [...Object.keys(rule.set_fill ?? {}), ...Object.keys(rule.set_audit ?? {})]),
+    ]);
+    const conditionFields = rules.flatMap((rule) =>
+      [...(rule.when_all ?? []), ...(rule.when_any ?? [])]
+        .map((condition) => condition.field)
+        .filter((field): field is string => field !== undefined)
     );
-    const sourcePlaceholders = Object.keys(legacyReplacements).filter((key) => !isNthReplacementKey(key));
-    const values = buildScenarioValues(metadata.fields ?? [], {
-      company_name: 'Acme Robotics, Inc.',
-      investor_name: 'North Star Ventures LLC',
-      judicial_district: 'Northern District of California',
-      director_names: 'Jane Founder; Pat Director',
-      applicable_purchasers: 'North Star Ventures LLC',
-    });
-    const verificationValues = buildVerificationValues(values, sourcePlaceholders, legacyReplacements);
-
-    const fixture = createSyntheticFieldSelectorFixture(sourcePlaceholders);
-    await applyLawyerReviewContext(
-      fullCorpusContext,
-      renderJsonEvidenceHtml('Full-Corpus Input Values', values),
-      renderJsonEvidenceHtml('Full-Corpus Verification Values', verificationValues),
-      renderJsonEvidenceHtml('Full-Corpus Source Placeholders', sourcePlaceholders)
-    );
-
-    try {
-      await allureStep('Run runFieldSelector using synthetic source DOCX', async () => {
-        await runFieldSelector({
-          fieldSelectorId: FIELD_SELECTOR_ID,
-          inputPath: fixture.inputPath,
-          outputPath: fixture.outputPath,
-          values,
-        });
-      });
-
-      const outputText = await allureStep('Extract output text', () => extractAllText(fixture.outputPath));
-      const verifyResult = await allureStep('Run fieldSelector verifier against output', () =>
-        verifyOutput(fixture.outputPath, verificationValues, legacyReplacements, cleanConfig)
-      );
-
-      const fullCorpusMatrixHtml = renderClauseEvidenceMatrixHtml(
-        sourcePlaceholders,
-        replacements,
-        values,
-        outputText
-      );
-      await applyLawyerReviewContext(
-        fullCorpusContext,
-        fullCorpusMatrixHtml,
-        renderTextEvidenceHtml('Full-Corpus Rendered Output', outputText),
-        renderJsonEvidenceHtml('Full-Corpus Verification Result', verifyResult)
-      );
-
-      await allureStep('Assert full synthetic corpus verifies cleanly', () => {
-        expect(verifyResult.passed).toBe(true);
-      });
-      await allureStep('Assert representative values render into output text', () => {
-        expect(outputText).toContain('Acme Robotics, Inc.');
-        expect(outputText).toContain('North Star Ventures LLC');
-        expect(outputText).toContain('Northern District of California');
-      });
-      await allureStep('Assert source placeholder phrases are removed', () => {
-        expect(outputText).not.toContain('[Insert Company Name]');
-        expect(outputText).not.toContain('[Insert Investor Name]');
-      });
-    } finally {
-      rmSync(fixture.tempDir, { recursive: true, force: true });
-    }
+    const danglingInputs = conditionFields.filter((field) => !declared.has(field) && !produced.has(field));
+    const ruleIds = rules.map((rule) => rule.id);
+    expect(new Set(ruleIds).size).toBe(ruleIds.length);
+    expect(danglingInputs).toEqual([]);
+    expect(ruleIds).toEqual(expect.arrayContaining([
+      'derive-dispute-resolution-track-arbitration',
+      'derive-dispute-resolution-track-courts',
+      'derive-governing-law-baseline',
+      'derive-forum-governing-mismatch',
+    ]));
+    expect(computed.defaults).toMatchObject({ closing_heading: 'Closing.', purchaser_scope: 'all' });
   });
-
-  itVerification('Can counsel rely on stricter checks for high-risk NVCA fields?', async () => {
-    await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
-    const policyContext: LawyerReviewContext = {
-      legalQuestion: 'Are high-risk legal anchors checked more strictly than low-risk fields?',
-      riskTier: 'High',
-      whyItMatters: 'Entity names, venue, dates, and thresholds require stronger assurance.',
-      expectedOutcome: 'Policy coverage is complete and strict checks enforce anchor rendering quality.',
-    };
-    await applyLawyerReviewContext(policyContext);
-
-    const { metadata, replacements, cleanConfig } = await allureStep('Load NVCA fieldSelector artifacts', () =>
-      loadNvcaFieldSelectorArtifacts()
-    );
-    const fields = metadata.fields ?? [];
-    const metadataFieldNames = fields.map((field) => field.name).sort();
-    const policyFieldNames = Object.keys(FIELD_ASSERTION_POLICY).sort();
-    const policyWithoutField = policyFieldNames.filter((fieldName) => !metadataFieldNames.includes(fieldName));
-    const migratedContextKeys = loadMigratedContextKeys();
-    const legacyReplacements = Object.fromEntries(
-      Object.entries(replacements).filter(([key]) => !migratedContextKeys.has(key))
-    );
-    const sourcePlaceholders = Object.keys(legacyReplacements).filter((key) => !isNthReplacementKey(key));
-    const sourcePlaceholderSet = new Set(sourcePlaceholders);
-    const placeholdersByField = buildPlaceholdersByField(legacyReplacements);
-
-    await applyLawyerReviewContext(
-      policyContext,
-      renderJsonEvidenceHtml('Field Assertion Policy Map', FIELD_ASSERTION_POLICY),
-      renderJsonEvidenceHtml('Policy Entries Without Metadata Field', policyWithoutField)
-    );
-
-    await allureStep('Assert the explicit policy has no stale field entries', () => {
-      expect(policyWithoutField).toEqual([]);
-    });
-
-    const values = buildScenarioValues(fields, {
-      company_name: 'Acme Robotics, Inc.',
-      investor_name: 'North Star Ventures LLC',
-      judicial_district: 'Northern District of California',
-      state_lower: 'delaware',
-      // Display-ready form: balance_sheet_date is `type: date` (#617), so ISO
-      // input renders formatted ("December 31, 2025") and would no longer match
-      // a raw-ISO verification value in this direct verifyOutput harness.
-      balance_sheet_date: 'December 31, 2025',
-      specify_percentage: '12%',
-      director_names: 'Jane Founder; Pat Director',
-      applicable_purchasers: 'North Star Ventures LLC',
-    });
-    const verificationValues = buildVerificationValues(values, sourcePlaceholders, legacyReplacements);
-    const fixture = createSyntheticFieldSelectorFixture(sourcePlaceholders);
-    await applyLawyerReviewContext(
-      policyContext,
-      renderJsonEvidenceHtml('Policy Scenario Input Values', values),
-      renderJsonEvidenceHtml('Policy Scenario Verification Values', verificationValues)
-    );
-
-    try {
-      await allureStep('Run runFieldSelector against synthetic full-corpus source', async () => {
-        await runFieldSelector({
-          fieldSelectorId: FIELD_SELECTOR_ID,
-          inputPath: fixture.inputPath,
-          outputPath: fixture.outputPath,
-          values,
-        });
-      });
-
-      const outputText = await allureStep('Extract rendered text', () => extractAllText(fixture.outputPath));
-      const verifyResult = await allureStep('Verify output consistency', () =>
-        verifyOutput(fixture.outputPath, verificationValues, legacyReplacements, cleanConfig)
-      );
-
-      const policyMatrixHtml = renderClauseEvidenceMatrixHtml(
-        sourcePlaceholders,
-        replacements,
-        values,
-        outputText,
-        FIELD_ASSERTION_POLICY
-      );
-      await applyLawyerReviewContext(
-        policyContext,
-        policyMatrixHtml,
-        renderTextEvidenceHtml('Policy Scenario Rendered Output', outputText),
-        renderJsonEvidenceHtml('Policy Scenario Verification Result', verifyResult)
-      );
-
-      await allureStep('Assert verifier passes before policy checks', () => {
-        expect(verifyResult.passed).toBe(true);
-      });
-
-      for (const field of fields) {
-        const policy = FIELD_ASSERTION_POLICY[field.name];
-        const value = values[field.name];
-        const placeholders = (placeholdersByField.get(field.name) ?? []).filter((placeholder) =>
-          sourcePlaceholderSet.has(placeholder)
-        );
-        const normalizedExpected = value ? normalizeByPolicy(value, policy) : '';
-        const normalizedOutput = normalizeByPolicy(outputText, policy);
-
-        await allureStep(`Policy check for field "${field.name}" (${policy.mode})`, () => {
-          if (policy.mode === 'skip') {
-            expect(policy.reason).toBeDefined();
-            return;
-          }
-
-          expect(value).toBeDefined();
-          expect(normalizedOutput).toContain(normalizedExpected);
-
-          if (policy.mode === 'resilient') {
-            expect(countOccurrences(normalizedOutput, normalizedExpected)).toBeGreaterThanOrEqual(1);
-            return;
-          }
-
-          if (placeholders.length === 0) {
-            expect(countOccurrences(normalizedOutput, normalizedExpected)).toBeGreaterThanOrEqual(1);
-            return;
-          }
-          expect(countOccurrences(normalizedOutput, normalizedExpected)).toBeGreaterThanOrEqual(
-            placeholders.length
-          );
-          for (const placeholder of placeholders) {
-            expect(outputText).not.toContain(placeholder);
-          }
-        });
-      }
-    } finally {
-      rmSync(fixture.tempDir, { recursive: true, force: true });
-    }
-  });
-
-  itVerification(
-    'computes dispute-resolution forum defaults and governing-law alignment in exported artifact',
-    async () => {
-      await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
-      const computedContext: LawyerReviewContext = {
-        legalQuestion: 'Do dispute-resolution mode and forum state deterministically derive district defaults and alignment against governing law?',
-        riskTier: 'High',
-        whyItMatters: 'Interacting legal parameters must produce auditable, deterministic derived state.',
-        expectedOutcome: 'Computed artifact records courts/arbitration branch selection, district defaults, and forum/governing-law alignment.',
-      };
-      await applyLawyerReviewContext(computedContext);
-
-      const fixture = createSyntheticFieldSelectorFixture([
-        '[Insert Company Name]',
-        // #2391: the bare `[state]` key (lowercase state_lower fill) was replaced by
-        // context-anchored proper-noun keys rendering the `state` field.
-        'state courts of [state]',
-        'District Court for the District of [judicial district]',
-        '[location]',
-      ]);
-      const computedOutPath = join(fixture.tempDir, 'computed-artifact.json');
-
-      try {
-        const runResult = await allureStep('Run fieldSelector with computed artifact output', () =>
-          runFieldSelector({
-            fieldSelectorId: FIELD_SELECTOR_ID,
-            inputPath: fixture.inputPath,
-            outputPath: fixture.outputPath,
-            values: {
-              company_name: 'Helios Labs, Inc.',
-              dispute_resolution_mode: 'courts',
-              state: 'California',
-              state_lower: 'california',
-            },
-            computedOutPath,
-          })
-        );
-
-        const outputText = await allureStep('Extract rendered output text', () =>
-          extractAllText(fixture.outputPath)
-        );
-        const computedArtifact = await allureStep('Read computed artifact JSON', () =>
-          JSON.parse(readFileSync(computedOutPath, 'utf-8')) as Record<string, unknown>
-        );
-        const passTrace = (computedArtifact.passes as Array<Record<string, unknown>>) ?? [];
-        const matchedRuleIds = passTrace
-          .flatMap((pass) => (pass.rules as Array<Record<string, unknown>>) ?? [])
-          .filter((rule) => rule.matched === true)
-          .map((rule) => String(rule.rule_id));
-
-        await applyLawyerReviewContext(
-          computedContext,
-          renderTextEvidenceHtml('Computed Pipeline Output Excerpt', outputText),
-          renderJsonEvidenceHtml('Computed Artifact', computedArtifact),
-          renderJsonEvidenceHtml('Matched Rule IDs', matchedRuleIds)
-        );
-
-        await allureStep('Assert fieldSelector emits computed artifact in run result', () => {
-          expect(runResult.computedOutPath).toBe(computedOutPath);
-          expect(runResult.computedArtifact?.profile_present).toBe(true);
-        });
-
-        await allureStep('Assert dispute-resolution and governing-law derived outputs', () => {
-          expect(computedArtifact.profile_present).toBe(true);
-          expect(computedArtifact.derived_audit_values).toMatchObject({
-            dispute_resolution_track: 'courts',
-            governing_law_state: 'delaware',
-            forum_governing_law_alignment: 'mismatch',
-          });
-          expect(computedArtifact.derived_fill_values).toMatchObject({
-            judicial_district: 'Northern District of California',
-          });
-        });
-
-        await allureStep('Assert dependency chain is reflected in matched rules', () => {
-          expect(matchedRuleIds).toContain('derive-dispute-resolution-track-courts');
-          expect(matchedRuleIds).toContain('derive-judicial-district-default-california');
-          expect(matchedRuleIds).toContain('derive-governing-law-baseline');
-          expect(matchedRuleIds).toContain('derive-forum-governing-mismatch');
-        });
-
-        await allureStep('Assert computed fill values affect rendered output', () => {
-          expect(outputText).toContain('Helios Labs, Inc.');
-          // Proper-noun forum-state rendering (#2391): the courts slot now fills
-          // the `state` field, not the lowercase state_lower audit input.
-          expect(outputText).toContain('state courts of California');
-          expect(outputText).toContain('Northern District of California');
-        });
-      } finally {
-        rmSync(fixture.tempDir, { recursive: true, force: true });
-      }
-    }
-  );
-
-  itFilling(
-    'closing_type "single" replaces Additional Closings with [Reserved]',
-    async () => {
-      await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
-      const closingContext: LawyerReviewContext = {
-        legalQuestion: 'Does closing_type="single" remove the Additional Closings section and replace the heading with [Reserved]?',
-        riskTier: 'High',
-        whyItMatters: 'Single-closing deals must not contain additional-closing language. Section numbering must be preserved via [Reserved].',
-        expectedOutcome: 'Additional Closings heading replaced with [Reserved], sub-clauses removed, surrounding sections undisturbed.',
-      };
-      await applyLawyerReviewContext(closingContext);
-
-      const selectionsConfig = await allureStep('Load SPA selections.json', () =>
-        loadSelectionsConfig(join(FIELD_SELECTOR_DIR, 'selections.json'))
-      );
-
-      // Build a fixture with paragraph text that mirrors the real SPA structure
-      const tempDir = mkdtempSync(join(tmpdir(), 'nvca-spa-closing-'));
-      const inputPath = join(tempDir, 'source.docx');
-      const outputPath = join(tempDir, 'filled.docx');
-
-      const documentXml =
-        '<?xml version="1.0" encoding="UTF-8"?>' +
-        `<w:document xmlns:w="${W_NS}"><w:body>` +
-        '<w:p><w:r><w:t>1.2(a) Initial Closing.</w:t></w:r></w:p>' +
-        '<w:p><w:r><w:t>The initial closing of the purchase shall occur on the date hereof.</w:t></w:r></w:p>' +
-        '<w:p><w:r><w:t>Additional Closings. At any time following the Initial Closing, the Company may sell additional shares.</w:t></w:r></w:p>' +
-        '<w:p><w:r><w:t>Such additional sales shall be on the same terms and conditions.</w:t></w:r></w:p>' +
-        '<w:p><w:r><w:t>1.2(c) Tranche Closing.</w:t></w:r></w:p>' +
-        '</w:body></w:document>';
-
-      const zip = new AdmZip();
-      zip.addFile('[Content_Types].xml', Buffer.from(CONTENT_TYPES_XML, 'utf-8'));
-      zip.addFile('_rels/.rels', Buffer.from(ROOT_RELS_XML, 'utf-8'));
-      zip.addFile('word/_rels/document.xml.rels', Buffer.from(WORD_RELS_XML, 'utf-8'));
-      zip.addFile('word/document.xml', Buffer.from(documentXml, 'utf-8'));
-      writeFileSync(inputPath, zip.toBuffer());
-
-      try {
-        await allureStep('Apply selections with closing_type=single', async () => {
-          await applySelections(inputPath, outputPath, selectionsConfig, { closing_type: 'single' });
-        });
-
-        const outputText = await allureStep('Extract output text', () => extractAllText(outputPath));
-        await applyLawyerReviewContext(
-          closingContext,
-          renderTextEvidenceHtml('Rendered Output Text', outputText)
-        );
-
-        await allureStep('Assert Additional Closings text absent from single-closing output', () => {
-          expect(outputText).not.toContain('Additional Closing');
-        });
-        await allureStep('Assert surrounding sections preserved', () => {
-          expect(outputText).toContain('Initial Closing');
-          expect(outputText).toContain('Tranche Closing');
-        });
-      } finally {
-        rmSync(tempDir, { recursive: true, force: true });
-      }
-    }
-  );
-
-  for (const scenario of DECLARATIVE_FILL_SCENARIOS) {
-    itFilling(`Can counsel review declarative scenario: ${scenario.id}`, async () => {
-      await allureParameter('field_selector_id', FIELD_SELECTOR_ID);
-      await allureParameter('scenario_id', scenario.id);
-      const scenarioContext: LawyerReviewContext = {
-        legalQuestion: `Does declarative scenario "${scenario.id}" render as expected?`,
-        riskTier: 'Medium',
-        whyItMatters: 'Scenario-level checks make expected legal output behavior explicit to reviewers.',
-        expectedOutcome: 'Scenario expectations and verifier checks pass with inline evidence visible in Allure.',
-      };
-      await applyLawyerReviewContext(scenarioContext);
-
-      const { metadata, replacements, cleanConfig } = await allureStep('Load NVCA fieldSelector artifacts', () =>
-        loadNvcaFieldSelectorArtifacts()
-      );
-      const missingPlaceholders = scenario.sourcePlaceholders.filter(
-        (placeholder) => !(placeholder in replacements)
-      );
-      await applyLawyerReviewContext(
-        scenarioContext,
-        renderJsonEvidenceHtml('Scenario Definition', scenario),
-        renderJsonEvidenceHtml('Scenario Missing Placeholders', missingPlaceholders)
-      );
-
-      await allureStep('Assert declarative placeholder list maps to replacements.json', () => {
-        expect(missingPlaceholders).toEqual([]);
-      });
-
-      const values = buildScenarioValues(
-        metadata.fields ?? [],
-        scenario.overrides ?? {},
-        scenario.omitFields ?? []
-      );
-      const verificationValues = buildVerificationValues(values, scenario.sourcePlaceholders, replacements);
-      const fixture = createSyntheticFieldSelectorFixture(scenario.sourcePlaceholders);
-      await applyLawyerReviewContext(
-        scenarioContext,
-        renderJsonEvidenceHtml('Scenario Fill Values', values),
-        renderJsonEvidenceHtml('Scenario Verification Values', verificationValues)
-      );
-
-      try {
-        await allureStep('Run runFillPipeline with NVCA clean/patch configuration', async () => {
-          await runFillPipeline({
-            inputPath: fixture.inputPath,
-            outputPath: fixture.outputPath,
-            values,
-            fields: metadata.fields ?? [],
-            cleanPatch: { cleanConfig, replacements },
-            verify: () => ({
-              passed: true,
-              checks: [{ name: 'Synthetic fixture post-check', passed: true }],
-            }),
-          });
-        });
-
-        const outputText = await allureStep('Extract output text', () => extractAllText(fixture.outputPath));
-        const verifyResult = await allureStep('Run verifier on scenario-relevant values', () =>
-          verifyOutput(fixture.outputPath, verificationValues, replacements, cleanConfig)
-        );
-
-        const scenarioMatrixHtml = renderClauseEvidenceMatrixHtml(
-          scenario.sourcePlaceholders,
-          replacements,
-          values,
-          outputText,
-          FIELD_ASSERTION_POLICY
-        );
-        await applyLawyerReviewContext(
-          scenarioContext,
-          scenarioMatrixHtml,
-          renderTextEvidenceHtml('Scenario Rendered Output', outputText),
-          renderJsonEvidenceHtml('Scenario Verification Result', verifyResult)
-        );
-
-        await allureStep('Assert scenario output passes verifier checks', () => {
-          expect(verifyResult.passed).toBe(true);
-          const leftoverCheck = verifyResult.checks.find(
-            (check) => check.name === 'Leftover source placeholders'
-          );
-          expect(leftoverCheck?.passed).toBe(true);
-        });
-
-        await allureStep('Assert expected scenario fragments render into output', () => {
-          for (const expectedFragment of scenario.expectedFragments) {
-            expect(outputText).toContain(expectedFragment);
-          }
-          for (const absentFragment of scenario.absentFragments ?? []) {
-            expect(outputText).not.toContain(absentFragment);
-          }
-        });
-
-        await allureStep('Assert minimum occurrence constraints (if any)', () => {
-          for (const occurrenceCheck of scenario.minimumOccurrences ?? []) {
-            expect(countOccurrences(outputText, occurrenceCheck.text)).toBeGreaterThanOrEqual(
-              occurrenceCheck.count
-            );
-          }
-        });
-      } finally {
-        rmSync(fixture.tempDir, { recursive: true, force: true });
-      }
-    });
-  }
 });
