@@ -570,6 +570,32 @@ describe('findLeftoverPlaceholders', () => {
 
     cleanupDocx(docxPath);
   });
+
+  it('distinguishes ordinary section prose from a genuine unresolved source placeholder', async () => {
+    // Issue #772 red/green control: both keys survive, but only the bracketed
+    // drafting placeholder is signer-facing residue. The ordinary cross-reference
+    // may render to the same visible text after parameterization.
+    const sourcePath = buildTextDocx([
+      'A claim under this Section 2.8 survives termination.',
+      'Company: [Company Name]',
+    ]);
+    const outputPath = buildTextDocx([
+      'A claim under this Section 2.8 survives termination.',
+      'Company: [Company Name]',
+    ]);
+
+    const leftovers = findLeftoverPlaceholders(
+      outputPath,
+      {
+        'this Section 2.8': 'this Section {indemnification_section}',
+        '[Company Name]': '{company_name}',
+      },
+      sourcePath,
+    );
+
+    expect(leftovers).toEqual(['[Company Name]']);
+    cleanupDocx(sourcePath, outputPath);
+  });
 });
 
 describe('verifyOutput first-body-paragraph guard (issue #605)', () => {

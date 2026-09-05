@@ -433,6 +433,26 @@ function countOccurrences(haystack: string, needle: string): number {
 }
 
 /**
+ * Whether replacement search text is itself a signer-facing source artifact.
+ *
+ * A replacement map can also carry ordinary prose in order to parameterize a
+ * value that may render back to the same visible text (for example, the IRA's
+ * repeated `this Section 2.8` cross-references).  Treating every replacement
+ * key as a placeholder makes that valid source-carried prose a false positive.
+ * Keep this check deliberately syntactic: brackets, blank lines, and explicit
+ * merge-token delimiters are artifacts; ordinary legal prose is not.
+ */
+function isSourcePlaceholderText(text: string): boolean {
+  return (
+    /\[[^\]]*\]/.test(text) ||
+    /_{2,}/.test(text) ||
+    /\{[a-z_][a-z0-9_]*\}/i.test(text) ||
+    /<<[^<>]+>>/.test(text) ||
+    /«[^»]+»/.test(text)
+  );
+}
+
+/**
  * Whether a context key has an unfilled placeholder at its qualified location,
  * mirroring how the patcher targets them:
  *  - Table-row context: a `searchText` survives in a paragraph whose row label
@@ -546,9 +566,11 @@ export function findLeftoverPlaceholders(
   const leftovers = new Set<string>();
   const outputFullText = normalizeQuotes(extractAllText(docxPath));
 
-  // Simple keys: whole-document search (any surviving occurrence is a leftover).
+  // Simple keys: whole-document search for actual placeholder-shaped source
+  // artifacts. Ordinary prose replacement keys are not placeholders and can
+  // legitimately render back to the same visible text.
   for (const text of simpleSearchTexts) {
-    if (outputFullText.includes(normalizeQuotes(text))) leftovers.add(text);
+    if (isSourcePlaceholderText(text) && outputFullText.includes(normalizeQuotes(text))) leftovers.add(text);
   }
 
   // Context keys: count baseline against the cleaned source, else qualified location.
@@ -558,6 +580,13 @@ export function findLeftoverPlaceholders(
       const sourceParagraphs = extractParagraphInfos(cleanedSourcePath);
       const outputParagraphs = extractParagraphInfos(docxPath);
       for (const ck of contextKeys) {
+        // An ordinary cross-reference can be a legitimate source-carried value.
+        // Preserve structural checking for Word REF results, which really must
+        // transition to ordinary text when declared for replacement.
+        if (!isSourcePlaceholderText(ck.searchText) &&
+            !hasQualifiedFieldBackedOccurrence(sourceParagraphs, ck.context, ck.searchText)) {
+          continue;
+        }
         const srcCount = countOccurrences(sourceFullText, ck.searchText);
         if (srcCount === 0) continue; // key does not apply to this document
         const outCount = countOccurrences(outputFullText, ck.searchText);
@@ -580,7 +609,8 @@ export function findLeftoverPlaceholders(
     } else {
       const outputParagraphs = extractParagraphInfos(docxPath);
       for (const ck of contextKeys) {
-        if (hasQualifiedLeftover(outputParagraphs, ck.context, ck.searchText)) {
+        if (isSourcePlaceholderText(ck.searchText) &&
+            hasQualifiedLeftover(outputParagraphs, ck.context, ck.searchText)) {
           leftovers.add(ck.label);
         }
       }
