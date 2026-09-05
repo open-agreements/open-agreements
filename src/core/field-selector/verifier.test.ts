@@ -122,6 +122,30 @@ describe('normalizeText', () => {
   });
 });
 
+describe('verifyOutput note-reference cleanup', () => {
+  it('fails removeFootnotes verification for either inline reference type', async () => {
+    const config = {
+      removeFootnotes: true,
+      removeParagraphPatterns: [],
+      removeRanges: [],
+      clearParts: [],
+    };
+
+    for (const reference of ['footnoteReference', 'endnoteReference']) {
+      const docxPath = buildDocx(
+        '<?xml version="1.0" encoding="UTF-8"?>' +
+          `<w:document xmlns:w="${W_NS}"><w:body><w:p><w:r>` +
+          `<w:${reference} w:id="1"/>` +
+          '</w:r></w:p></w:body></w:document>'
+      );
+      const result = await verifyOutput(docxPath, {}, {}, config);
+      const check = result.checks.find((item) => item.name === 'Footnotes removed');
+      expect(check?.passed, reference).toBe(false);
+      cleanupDocx(docxPath);
+    }
+  });
+});
+
 describe('verifyOutput', () => {
   it('skips empty string values', async () => {
     const xml =
