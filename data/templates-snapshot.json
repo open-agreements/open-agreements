@@ -12423,15 +12423,6 @@
           "default_value_rationale": null
         },
         {
-          "name": "registration_effectiveness_days",
-          "type": "string",
-          "required": false,
-          "section": null,
-          "description": "Base number of days a registration statement must remain effective",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
           "name": "information_right_holder_class",
           "type": "enum",
           "required": false,

@@ -332,9 +332,6 @@ fields:
   - name: form_s3_blackout_after_days
     type: string
     description: Days after a Company-initiated registration during which Form S-3 demands are unavailable
-  - name: registration_effectiveness_days
-    type: string
-    description: Base number of days a registration statement must remain effective
   - name: information_right_holder_class
     type: enum
     description: Modifier inserted before the source text "Investor" for the selected information-right holder class; omit for all Investors
