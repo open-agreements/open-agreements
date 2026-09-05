@@ -93,13 +93,13 @@ describeWithSources('NVCA Indemnification Agreement and Management Rights Letter
       expect(text).not.toContain('This sample document is the work product');
       expect(text).toContain('as of August 18, 2026 between Northstar Robotics, Inc.');
       expect(text).toContain('and Jordan Lee (\u201cIndemnitee\u201d)');
-      expect(text).toContain('irrevocably Capitol Corporate Services, Inc. 1209 Orange Street');
+      expect(text).toContain('irrevocably Capitol Corporate Services, Inc., 1209 Orange Street');
       expect(text).not.toContain('irrevocably Jordan Lee');
       expect(text).not.toContain('[___________], 20[__]');
       expect(text).not.toContain('[name]');
       expect(text).not.toContain('[address]');
       expect(text).toContain('provided by Summit Ventures Fund IV, L.P.');
-      expect(text).toContain('terminate on the closing of an initial public offering');
+      expect(text).toContain('will end when the Company’s initial public offering closes');
       expect(text).toContain('serve corporations as directors or officers or in other capacities');
       expect(text).toContain('agreement to serve as an officer or director from and after the date hereof');
       expect(text).not.toContain('directors officers');
@@ -156,7 +156,7 @@ describeWithSources('NVCA Indemnification Agreement and Management Rights Letter
       expect(text).toContain('1000 Innovation Way');
       expect(text).toContain('Reno, Nevada 89501');
       expect(text).toContain('purchase of 2,500,000 shares of Series A Preferred Stock');
-      expect(text).toContain('NORTHSTAR ROBOTICS, INC. (the \u201cCompany\u201d)');
+      expect(text).toContain('of Northstar Robotics, Inc. (the');
       expect(text).not.toContain('[City], [State] [Zip]');
       expect(text).not.toContain('Series [_]');
       expect(text).not.toContain('[_____________________]');

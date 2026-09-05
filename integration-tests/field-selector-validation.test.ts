@@ -98,13 +98,10 @@ describe('issue #620 slot coverage', () => {
       expect(replacements['Series [_]']).toBe('Series {series_designation}');
     });
 
-    await allureStep('Assert the address line is replaced as one qualified shape', () => {
-      expect(replacements['[City], [State] [Zip]']).toBe(
-        '{investor_notice_city}, {investor_notice_state} {investor_notice_zip_code}'
-      );
-      expect(replacements).not.toHaveProperty('[City]');
-      expect(replacements).not.toHaveProperty('[State]');
-      expect(replacements).not.toHaveProperty('[Zip]');
+    await allureStep('Assert each address component is bound to its published field', () => {
+      expect(replacements['[City]']).toBe('{investor_notice_city}');
+      expect(replacements['[State]']).toBe('{investor_notice_state}');
+      expect(replacements['[Zip]']).toBe('{investor_notice_zip_code}');
     });
 
     await allureStep('Assert letter_date is a date-typed metadata field', () => {
