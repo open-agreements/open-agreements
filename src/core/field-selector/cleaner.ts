@@ -9,6 +9,7 @@ import { copyEntriesSkippingDirs, enumerateTextParts, getGeneralTextPartNames } 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const R_NS = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships';
 const PKG_REL_NS = 'http://schemas.openxmlformats.org/package/2006/relationships';
+const EMPTY_NOTE_IDS: ReadonlySet<string> = new Set();
 
 /**
  * Default size threshold for removeHeaderFooterDrawings, in bytes.
@@ -63,6 +64,9 @@ export async function cleanDocument(
 
   const parts = enumerateTextParts(zip);
   const generalParts = getGeneralTextPartNames(parts);
+  const normalNoteIds = config.removeFootnotes
+    ? collectNormalNoteIds(zip, parser, [parts.footnotes, parts.endnotes])
+    : new Set<string>();
 
   const extract = options?.extractGuidance ?? false;
   const entries: GuidanceEntry[] = [];
@@ -129,7 +133,10 @@ export async function cleanDocument(
     }
 
     if (config.removeFootnotes) {
-      removeNoteReferences(doc);
+      removeNoteReferences(
+        doc,
+        partName === 'word/document.xml' ? normalNoteIds : EMPTY_NOTE_IDS,
+      );
       modified = true;
     }
 
@@ -261,7 +268,7 @@ function clearPartContent(doc: Document): void {
  * share their run. Word commonly gives a reference its own styled run, but
  * producers are allowed to place text and a reference in the same run.
  */
-function removeNoteReferences(doc: Document): void {
+function removeNoteReferences(doc: Document, normalNoteIds: ReadonlySet<string>): void {
   const refs: Element[] = [];
   for (const localName of ['footnoteReference', 'endnoteReference']) {
     const matches = doc.getElementsByTagNameNS(W_NS, localName);
@@ -302,6 +309,73 @@ function removeNoteReferences(doc: Document): void {
     }
     if (!hasContent) run.parentNode?.removeChild(run);
   }
+
+  removeLegacyRenderedNoteReferences(doc, normalNoteIds);
+}
+
+/**
+ * Some DOCX producers materialize a note marker as superscript text wrapped by
+ * a `_Ref…` bookmark instead of emitting w:footnoteReference. Treat that as a
+ * note reference only when all three independent signals agree: the run is
+ * numeric-only superscript text, its number identifies a real footnote/endnote
+ * part entry, and a reference bookmark starts immediately before the run.
+ * This deliberately leaves ordinary superscript numbers and mixed-content runs
+ * untouched.
+ */
+function removeLegacyRenderedNoteReferences(
+  doc: Document,
+  normalNoteIds: ReadonlySet<string>,
+): void {
+  if (normalNoteIds.size === 0) return;
+  const runs = doc.getElementsByTagNameNS(W_NS, 'r');
+  const candidates: Element[] = [];
+  for (let i = 0; i < runs.length; i++) {
+    const run = runs[i];
+    const texts = run.getElementsByTagNameNS(W_NS, 't');
+    if (texts.length !== 1) continue;
+    const marker = (texts[0].textContent ?? '').trim();
+    if (!/^\d+$/.test(marker) || !normalNoteIds.has(marker)) continue;
+    const verticalAlign = run.getElementsByTagNameNS(W_NS, 'vertAlign');
+    if (verticalAlign.length !== 1) continue;
+    const align = verticalAlign[0].getAttributeNS(W_NS, 'val') || verticalAlign[0].getAttribute('w:val');
+    if (align !== 'superscript') continue;
+    if (run.getElementsByTagNameNS(W_NS, 'fldChar').length > 0 ||
+        run.getElementsByTagNameNS(W_NS, 'instrText').length > 0) continue;
+
+    let previous = run.previousSibling;
+    while (previous?.nodeType === 3 && (previous.nodeValue ?? '').trim() === '') {
+      previous = previous.previousSibling;
+    }
+    if (!previous || previous.nodeType !== 1) continue;
+    const bookmark = previous as Element;
+    if (bookmark.namespaceURI !== W_NS || bookmark.localName !== 'bookmarkStart') continue;
+    const name = bookmark.getAttributeNS(W_NS, 'name') || bookmark.getAttribute('w:name') || '';
+    if (!name.startsWith('_Ref')) continue;
+    candidates.push(run);
+  }
+  for (const run of candidates) run.parentNode?.removeChild(run);
+}
+
+function collectNormalNoteIds(
+  zip: AdmZip,
+  parser: DOMParser,
+  partNames: Array<string | null | undefined>,
+): Set<string> {
+  const ids = new Set<string>();
+  for (const partName of partNames) {
+    if (!partName) continue;
+    const entry = zip.getEntry(partName);
+    if (!entry) continue;
+    const doc = parser.parseFromString(entry.getData().toString('utf-8'), 'text/xml');
+    for (const localName of ['footnote', 'endnote']) {
+      const notes = doc.getElementsByTagNameNS(W_NS, localName);
+      for (let i = 0; i < notes.length; i++) {
+        const id = notes[i].getAttributeNS(W_NS, 'id') || notes[i].getAttribute('w:id');
+        if (id && !id.startsWith('-')) ids.add(id);
+      }
+    }
+  }
+  return ids;
 }
 
 function removeNormalFootnotes(doc: Document): void {

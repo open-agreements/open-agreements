@@ -5,6 +5,7 @@ import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
 import { cleanDocument } from './cleaner.js';
+import { normalizeBracketArtifacts } from './bracket-normalizer.js';
 import { scanDocxBrackets } from '../../commands/scan.js';
 import type { CleanConfig } from '../metadata.js';
 import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
@@ -67,6 +68,17 @@ function extractDocXml(docxPath: string): string {
   return entry ? entry.getData().toString('utf-8') : '';
 }
 
+function addNotesPart(docxPath: string, kind: 'footnote' | 'endnote', ids: number[]): void {
+  const zip = new AdmZip(docxPath);
+  const plural = `${kind}s`;
+  const xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:${plural} xmlns:w="${W_NS}">${ids.map((id) =>
+    `<w:${kind} w:id="${id}"><w:p><w:r><w:t>Note ${id}</w:t></w:r></w:p></w:${kind}>`,
+  ).join('')}</w:${plural}>`;
+  zip.addFile(`word/${plural}.xml`, Buffer.from(xml, 'utf-8'));
+  zip.writeZip(docxPath);
+}
+
 describe('cleanDocument removeFootnotes inline references', () => {
   it('removes footnote and endnote reference-only runs and leaves scan/render views consistent', async () => {
     const inputPath = buildTestDocxRaw([
@@ -106,6 +118,85 @@ describe('cleanDocument removeFootnotes inline references', () => {
     expect(xml).toContain('<w:tab/>');
     expect(extractParaTexts(outputPath)).toEqual(['Kept text']);
 
+    rmSync(inputPath.replace('/input.docx', ''), { recursive: true, force: true });
+  });
+
+  it('removes a legacy bookmark-backed superscript note marker before paragraph normalization (#765)', async () => {
+    const inputPath = buildTestDocxRaw([
+      '<w:p><w:pPr><w:jc w:val="both"/></w:pPr>',
+      '<w:r><w:rPr><w:b/></w:rPr><w:t>[such time after consummation of an IPO as Rule 144 permits sale without registration;]</w:t></w:r>',
+      '<w:r><w:t xml:space="preserve"> [and]</w:t></w:r>',
+      '<w:bookmarkStart w:id="246" w:name="_Ref42252623"/>',
+      '<w:r><w:rPr><w:vertAlign w:val="superscript"/></w:rPr><w:t>36</w:t></w:r>',
+      '<w:bookmarkEnd w:id="246"/></w:p>',
+    ].join(''));
+    addNotesPart(inputPath, 'footnote', [36]);
+    const outputPath = inputPath.replace('input.docx', 'output.docx');
+    const normalizedPath = inputPath.replace('input.docx', 'normalized.docx');
+
+    await cleanDocument(inputPath, outputPath, makeConfig({ removeFootnotes: true }));
+    await normalizeBracketArtifacts(outputPath, normalizedPath, {
+      rules: [{
+        id: 'unwrap-registration-termination-rule-144',
+        section_heading: '',
+        ignore_heading: true,
+        paragraph_contains: 'such time after consummation of an IPO',
+        replacements: { '[': '', ']': '' },
+        expected_min_matches: 1,
+      }],
+    });
+
+    const xml = extractDocXml(normalizedPath);
+    expect(xml).not.toMatch(/<w:t[^>]*>36<\/w:t>/);
+    expect(xml).toContain('<w:jc w:val="both"/>');
+    expect(xml).toContain('<w:b/>');
+    expect(extractParaTexts(normalizedPath)).toEqual([
+      'such time after consummation of an IPO as Rule 144 permits sale without registration; and',
+    ]);
+    rmSync(inputPath.replace('/input.docx', ''), { recursive: true, force: true });
+  });
+
+  it('preserves superscript numbers without a matching note identity or reference bookmark', async () => {
+    const inputPath = buildTestDocxRaw([
+      '<w:p><w:bookmarkStart w:id="8" w:name="_RefExponent"/>',
+      '<w:r><w:rPr><w:vertAlign w:val="superscript"/></w:rPr><w:t>2</w:t></w:r>',
+      '<w:bookmarkEnd w:id="8"/>',
+      '<w:r><w:t xml:space="preserve"> plus </w:t></w:r>',
+      '<w:r><w:rPr><w:vertAlign w:val="superscript"/></w:rPr><w:t>36</w:t></w:r></w:p>',
+    ].join(''));
+    addNotesPart(inputPath, 'footnote', [36]);
+    const outputPath = inputPath.replace('input.docx', 'output.docx');
+
+    await cleanDocument(inputPath, outputPath, makeConfig({ removeFootnotes: true }));
+
+    expect(extractParaTexts(outputPath)).toEqual(['2 plus 36']);
+    rmSync(inputPath.replace('/input.docx', ''), { recursive: true, force: true });
+  });
+
+  it('preserves mixed-content superscript runs and field results', async () => {
+    const inputPath = buildTestDocxRaw([
+      '<w:p><w:bookmarkStart w:id="9" w:name="_RefMixed"/>',
+      '<w:r><w:rPr><w:i/><w:vertAlign w:val="superscript"/></w:rPr><w:t>note 36</w:t></w:r>',
+      '<w:bookmarkEnd w:id="9"/>',
+      '<w:bookmarkStart w:id="10" w:name="_RefField"/>',
+      '<w:r><w:rPr><w:vertAlign w:val="superscript"/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r>',
+      '<w:r><w:instrText> REF _Ref36 </w:instrText></w:r>',
+      '<w:r><w:fldChar w:fldCharType="separate"/></w:r>',
+      '<w:r><w:rPr><w:vertAlign w:val="superscript"/></w:rPr><w:t>36</w:t></w:r>',
+      '<w:r><w:fldChar w:fldCharType="end"/></w:r>',
+      '<w:bookmarkEnd w:id="10"/></w:p>',
+    ].join(''));
+    addNotesPart(inputPath, 'endnote', [36]);
+    const outputPath = inputPath.replace('input.docx', 'output.docx');
+
+    await cleanDocument(inputPath, outputPath, makeConfig({ removeFootnotes: true }));
+
+    const xml = extractDocXml(outputPath);
+    expect(xml).toContain('<w:i/>');
+    expect(xml).toContain('note 36');
+    expect(xml).toContain('fldChar');
+    expect(xml).toContain('instrText');
+    expect(xml).toMatch(/<w:t>36<\/w:t>/);
     rmSync(inputPath.replace('/input.docx', ''), { recursive: true, force: true });
   });
 });
