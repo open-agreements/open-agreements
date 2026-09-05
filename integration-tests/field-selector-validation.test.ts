@@ -99,7 +99,9 @@ describe('issue #620 slot coverage', () => {
     });
 
     await allureStep('Assert the address line is replaced as one qualified shape', () => {
-      expect(replacements['[City], [State] [Zip]']).toBe('{city}, {state} {zip_code}');
+      expect(replacements['[City], [State] [Zip]']).toBe(
+        '{investor_notice_city}, {investor_notice_state} {investor_notice_zip_code}'
+      );
       expect(replacements).not.toHaveProperty('[City]');
       expect(replacements).not.toHaveProperty('[State]');
       expect(replacements).not.toHaveProperty('[Zip]');
