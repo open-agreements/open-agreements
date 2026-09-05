@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "tables": [
+    {
+      "id": "investor-signatures",
+      "rows_field": "investors",
+      "prototype_cells": ["Investor NameAddressPhone NumberEmail[Counsel cc, if any]"],
+      "columns": [
+        {
+          "paragraphs": [
+            { "field": "name" },
+            { "field": "address" },
+            { "field": "phone" },
+            { "field": "email" },
+            { "field": "counsel_cc" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "key-holder-signatures",
+      "rows_field": "key_holders",
+      "prototype_cells": ["[Key Holder NamePersonal AddressPersonal Email]"],
+      "columns": [
+        {
+          "paragraphs": [
+            { "field": "name" },
+            { "field": "address" },
+            { "field": "email" }
+          ]
+        }
+      ]
+    }
+  ]
+}

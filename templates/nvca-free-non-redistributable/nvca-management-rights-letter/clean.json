@@ -1,8 +1,13 @@
 {
   "removeFootnotes": true,
   "removeEmptyLeadingParagraphs": true,
-  "clearParts": [
-    "header1.xml"
+  "removeStoryParagraphs": [
+    {
+      "id": "remove-source-disclaimer",
+      "part": "header1.xml",
+      "pattern": "^This sample document is the work product of a national coalition of attorneys",
+      "expected_matches": 1
+    }
   ],
   "removeParagraphPatterns": [
     "^Note to Drafter:",

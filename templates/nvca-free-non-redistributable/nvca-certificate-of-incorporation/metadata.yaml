@@ -75,10 +75,29 @@ fields:
   - name: preferred_director_seats
     type: string
     description: Number of Preferred Director board seats
+  - name: preferred_director_election_clause
+    type: string
+    description: Computed whole grammatical carrier for the Preferred Director board-seat count
+  - name: common_director_seats
+    type: string
+    description: Number of directors elected exclusively by the Common Stock
+  - name: at_large_director_seats
+    type: string
+    description: Number of directors elected by Common and Preferred Stock voting together
+  - name: escrow_consideration_treatment
+    type: enum
+    description: Treatment of escrow or holdback amounts in a Deemed Liquidation Event
+    options: [initial_consideration, additional_consideration]
+    default: initial_consideration
   - name: preferred_shares_designated_portion
     type: string
-    description: Portion of preferred shares designated as the named series
+    description: Number of authorized Preferred Stock shares designated as the named series
     default: all
+  - name: preferred_vote_threshold
+    type: enum
+    description: Approval threshold used where the form offers all holders or a majority of holders/directors
+    options: [all, majority]
+    default: majority
   - name: original_incorporation_name
     type: string
     description: Original incorporation name, if different from current company name (leave blank if same)
@@ -93,9 +112,35 @@ fields:
     description: >-
       Earliest date on which preferred stock may be redeemed ("on or after <date>"). Accepts ISO YYYY-MM-DD (rendered as e.g.
       "March 15, 2026") or a display-ready date string.
+  - name: no_redemption_clause
+    type: string
+    description: Computed whole carrier for the no-redemption statement when Article Sixth is not elected
   - name: qualified_financing_notice_days
     type: string
     description: Days of prior notice required for qualified financing
+  - name: qualified_ipo_minimum_price
+    type: string
+    description: Minimum public offering price per share for a Qualified IPO, excluding the dollar sign
+  - name: qualified_ipo_gross_proceeds
+    type: string
+    description: Minimum offering proceeds required for a Qualified IPO, excluding the dollar sign
+  - name: qualified_ipo_proceeds_basis
+    type: enum
+    description: Whether the Qualified IPO proceeds threshold is measured on a gross or net basis
+    options: [gross, net]
+    default: gross
+  - name: qualified_direct_listing_market_cap
+    type: string
+    description: Minimum expected market capitalization for a Qualified Direct Listing, excluding the dollar sign
+  - name: qualified_ipo_price_clause
+    type: string
+    description: Computed whole grammatical carrier for the Qualified IPO minimum price
+  - name: qualified_ipo_proceeds_clause
+    type: string
+    description: Computed whole grammatical carrier for the Qualified IPO proceeds threshold and gross/net election
+  - name: qualified_direct_listing_market_cap_clause
+    type: string
+    description: Computed whole grammatical carrier for the Qualified Direct Listing market-capitalization threshold
   - name: no_cumulative_voting
     type: boolean
     description: Include 'no cumulative voting' clause
@@ -125,7 +170,10 @@ fields:
     default: '0.0001'
   - name: specify_percentage
     type: string
-    description: Percentage threshold for specified provisions, as a number only (for example, "60"); the selector appends the percent sign
+    description: Percentage threshold for specified provisions; enter the number only (for example, 60), without the percent sign
+  - name: specify_percentage_clause
+    type: string
+    description: Complete percentage carrier set by computed.json from the number-only percentage input
   - name: effective_date
     type: date
     description: >-
@@ -141,40 +189,14 @@ fields:
   - name: redemption_interest_rate
     type: string
     description: Annual interest rate on unredeemed shares (percentage)
-    default: '12'
+  - name: redemption_compounding_frequency
+    type: enum
+    description: Frequency at which interest on unredeemed shares is compounded
+    options: [annually, quarterly, monthly]
   - name: conversion_notice_days
     type: string
     description: Days prior to record date for mandatory conversion notice
     default: '10'
-  - name: qualified_ipo_min_price_per_share
-    type: string
-    description: Minimum per-share public offering price for a Qualified IPO (dollars, without currency symbol)
-  - name: qualified_ipo_min_gross_proceeds
-    type: string
-    description: Minimum gross proceeds for a Qualified IPO (dollars, without currency symbol)
-  - name: qualified_direct_listing_min_market_cap
-    type: string
-    description: Minimum market capitalization for a Qualified Direct Listing (dollars, without currency symbol)
-  - name: full_ratchet_sunset_date
-    type: date
-    description: >-
-      Date after which the full-ratchet anti-dilution adjustment no longer applies. Used only when anti_dilution_type is
-      full_ratchet; ISO YYYY-MM-DD input renders as a written-out document date.
-  - name: qualified_financing_min_gross_proceeds
-    type: string
-    description: >-
-      Minimum gross proceeds for a pay-to-play Qualified Financing (dollars, without currency symbol). Used only when
-      include_pay_to_play is true.
-    default: '20,000,000'
-  - name: qualified_financing_debt_proceeds_treatment
-    type: enum
-    description: >-
-      Whether debt proceeds cancelled or converted in a pay-to-play Qualified Financing are included or excluded.
-      Allowed values are "including" and "excluding"; used only when include_pay_to_play is true.
-    default: excluding
-    options:
-      - including
-      - excluding
   - name: dividend_formula_prefix
     type: string
     description: Non-cumulative dividend formula prefix phrase
@@ -190,19 +212,17 @@ fields:
     type: string
     description: Max shares issuable for strategic partnerships without triggering anti-dilution
   - name: dividend_type
-    type: enum
-    options: [non_cumulative_as_converted, non_cumulative_fixed, cumulative]
+    type: string
     description: 'Dividend structure: non_cumulative_as_converted (>95%), non_cumulative_fixed, or cumulative'
     default: non_cumulative_as_converted
   - name: liquidation_participation
-    type: enum
-    options: [non_participating, participating]
+    type: string
     description: 'Liquidation participation type: non_participating (94-96%) or participating'
     default: non_participating
   - name: anti_dilution_type
     type: enum
-    options: [broad_based_weighted_average, full_ratchet]
     description: 'Anti-dilution formula: broad_based_weighted_average (>98%) or full_ratchet'
+    options: [broad_based_weighted_average, full_ratchet]
     default: broad_based_weighted_average
   - name: include_pay_to_play
     type: boolean
@@ -210,10 +230,46 @@ fields:
   - name: include_redemption
     type: boolean
     description: Include Article Sixth full redemption provisions (2-5% of deals)
+  - name: include_direct_listing
+    type: boolean
+    description: Include a Qualified Direct Listing as a mandatory-conversion trigger
+  - name: include_dle_financing_exclusion
+    type: boolean
+    description: Exclude a bona fide preferred-stock financing from the Deemed Liquidation Event definition
+  - name: include_dle_redemption_mechanics
+    type: boolean
+    description: Include the Section 2.3.2(b) post-Deemed-Liquidation-Event redemption mechanics
+  - name: include_nonstandard_protective_provisions
+    type: boolean
+    description: Include the optional Requisite Directors operational-veto provisions
+  - name: include_lender_exemption
+    type: boolean
+    description: Include the lender and equipment-lessor Exempted Securities paragraph
+  - name: include_supplier_exemption
+    type: boolean
+    description: Include the supplier and service-provider Exempted Securities paragraph
+  - name: include_acquisition_exemption
+    type: boolean
+    description: Include the acquisition-consideration Exempted Securities paragraph
+  - name: include_strategic_partnership_exemption
+    type: boolean
+    description: Include the strategic-partnership Exempted Securities paragraph
+  - name: include_exclusive_forum
+    type: boolean
+    description: Include the Delaware exclusive-forum provision
+  - name: include_california_repurchases
+    type: boolean
+    description: Include the California Corporations Code Section 500 repurchase provision
+  - name: include_officer_exculpation
+    type: boolean
+    description: Extend the Article Ninth exculpation provision to officers
 priority_fields:
   - company_name
   - original_issue_price
   - initial_purchase_price
+  - qualified_ipo_minimum_price
+  - qualified_ipo_gross_proceeds
+  - qualified_direct_listing_market_cap
   - par_value
   - specify_percentage
   - effective_date

@@ -3,6 +3,117 @@
   "max_passes": 2,
   "rules": [
     {
+      "id": "specified-percentage-carrier",
+      "description": "Render number-only percentage inputs with exactly one percent sign",
+      "when_all": [{ "field": "specify_percentage", "op": "defined" }],
+      "set_fill": { "specify_percentage_clause": "${specify_percentage}%" }
+    },
+    {
+      "id": "qualified-ipo-price-carrier",
+      "description": "Render the Qualified IPO price election as one grammatical carrier",
+      "when_all": [{ "field": "qualified_ipo_minimum_price", "op": "defined" }],
+      "set_fill": { "qualified_ipo_price_clause": "at a price of at least $${qualified_ipo_minimum_price} per share (subject to appropriate adjustment in the event of any stock dividend, stock split, combination or other similar recapitalization with respect to the Common Stock)" }
+    },
+    {
+      "id": "qualified-ipo-gross-proceeds-carrier",
+      "description": "Render the gross Qualified IPO proceeds election as one grammatical carrier",
+      "when_all": [{ "field": "qualified_ipo_proceeds_basis", "op": "neq", "value": "net" }],
+      "set_fill": { "qualified_ipo_proceeds_clause": "$${qualified_ipo_gross_proceeds} of gross proceeds" }
+    },
+    {
+      "id": "qualified-ipo-net-proceeds-carrier",
+      "description": "Render the net Qualified IPO proceeds election as one grammatical carrier",
+      "when_all": [{ "field": "qualified_ipo_proceeds_basis", "op": "eq", "value": "net" }],
+      "set_fill": { "qualified_ipo_proceeds_clause": "$${qualified_ipo_gross_proceeds} of proceeds, net of the underwriting discount and commissions," }
+    },
+    {
+      "id": "qualified-direct-listing-market-cap-carrier",
+      "description": "Render the Qualified Direct Listing market-cap election as one grammatical carrier",
+      "when_all": [{ "field": "qualified_direct_listing_market_cap", "op": "defined" }],
+      "set_fill": { "qualified_direct_listing_market_cap_clause": ", for which the Board of Directors, in its sole discretion, determines that the Corporation is expected to have a market capitalization equal to or greater than $${qualified_direct_listing_market_cap} at any time on the first day of trading" }
+    },
+    {
+      "id": "escrow-consideration-initial",
+      "description": "Treat escrow and holdback amounts as Initial Consideration (default)",
+      "when_all": [{ "field": "escrow_consideration_treatment", "op": "neq", "value": "additional_consideration" }],
+      "set_fill": { "escrow_consideration_term": "Initial Consideration" }
+    },
+    {
+      "id": "escrow-consideration-additional",
+      "description": "Treat escrow and holdback amounts as Additional Consideration when expressly selected",
+      "when_all": [{ "field": "escrow_consideration_treatment", "op": "eq", "value": "additional_consideration" }],
+      "set_fill": { "escrow_consideration_term": "Additional Consideration" }
+    },
+    {
+      "id": "preferred-director-grammar-one-word",
+      "description": "Use singular Preferred Director grammar when the negotiated seat count is one",
+      "when_all": [{ "field": "preferred_director_seats", "op": "eq", "value": "one" }],
+      "set_fill": {
+        "preferred_director_noun": "director",
+        "preferred_director_election_clause": "one director",
+        "preferred_director_term": "Preferred Director",
+        "initial_preferred_director_appointment_clause": "Notwithstanding the foregoing, for administrative convenience, the initial Preferred Director may also be appointed by the Board of Directors in connection with the approval of the initial issuance of Preferred Stock without a separate action by the holders of Preferred Stock."
+      }
+    },
+    {
+      "id": "preferred-director-grammar-one-numeric",
+      "description": "Use singular Preferred Director grammar when the negotiated seat count is 1",
+      "when_all": [{ "field": "preferred_director_seats", "op": "eq", "value": "1" }],
+      "set_fill": {
+        "preferred_director_noun": "director",
+        "preferred_director_election_clause": "1 director",
+        "preferred_director_term": "Preferred Director",
+        "initial_preferred_director_appointment_clause": "Notwithstanding the foregoing, for administrative convenience, the initial Preferred Director may also be appointed by the Board of Directors in connection with the approval of the initial issuance of Preferred Stock without a separate action by the holders of Preferred Stock."
+      }
+    },
+    {
+      "id": "preferred-director-grammar-plural",
+      "description": "Use plural Preferred Directors grammar for every seat count other than one",
+      "when_all": [
+        { "field": "preferred_director_seats", "op": "neq", "value": "one" },
+        { "field": "preferred_director_seats", "op": "neq", "value": "1" }
+      ],
+      "set_fill": {
+        "preferred_director_noun": "directors",
+        "preferred_director_election_clause": "${preferred_director_seats} directors",
+        "preferred_director_term": "Preferred Directors",
+        "initial_preferred_director_appointment_clause": "Notwithstanding the foregoing, for administrative convenience, the initial Preferred Directors may also be appointed by the Board of Directors in connection with the approval of the initial issuance of Preferred Stock without a separate action by the holders of Preferred Stock."
+      }
+    },
+    {
+      "id": "common-director-grammar-one-word",
+      "description": "Use singular Common Director grammar when the negotiated seat count is one",
+      "when_all": [{ "field": "common_director_seats", "op": "eq", "value": "one" }],
+      "set_fill": { "common_director_noun": "director" }
+    },
+    {
+      "id": "common-director-grammar-one-numeric",
+      "description": "Use singular Common Director grammar when the negotiated seat count is 1",
+      "when_all": [{ "field": "common_director_seats", "op": "eq", "value": "1" }],
+      "set_fill": { "common_director_noun": "director" }
+    },
+    {
+      "id": "common-director-grammar-plural",
+      "description": "Use plural Common Director grammar for every seat count other than one",
+      "when_all": [
+        { "field": "common_director_seats", "op": "neq", "value": "one" },
+        { "field": "common_director_seats", "op": "neq", "value": "1" }
+      ],
+      "set_fill": { "common_director_noun": "directors" }
+    },
+    {
+      "id": "preferred-vote-threshold-all",
+      "description": "Use an all-holders/directors approval threshold when expressly elected",
+      "when_all": [{ "field": "preferred_vote_threshold", "op": "eq", "value": "all" }],
+      "set_fill": { "preferred_vote_threshold_clause": "all" }
+    },
+    {
+      "id": "preferred-vote-threshold-majority",
+      "description": "Use a majority approval threshold by default and for the express majority election",
+      "when_all": [{ "field": "preferred_vote_threshold", "op": "neq", "value": "all" }],
+      "set_fill": { "preferred_vote_threshold_clause": "a majority of the" }
+    },
+    {
       "id": "under-the-name-present",
       "description": "Include 'under the name' clause when original name provided",
       "when_all": [{ "field": "original_incorporation_name", "op": "defined" }],
@@ -63,10 +174,30 @@
       "set_fill": { "or_officer_clause": "" }
     },
     {
+      "id": "officer-exculpation-include",
+      "description": "Extend Article Ninth exculpation to officers when expressly elected",
+      "when_all": [{ "field": "include_officer_exculpation", "op": "eq", "value": true }],
+      "set_fill": {
+        "exculpated_fiduciary_roles": "director or officer",
+        "exculpated_fiduciary_subject": "director or officer",
+        "exculpated_fiduciary_roles_plural": "directors or officers"
+      }
+    },
+    {
+      "id": "officer-exculpation-exclude",
+      "description": "Limit Article Ninth exculpation to directors when officer exculpation is not elected",
+      "when_all": [{ "field": "include_officer_exculpation", "op": "neq", "value": true }],
+      "set_fill": {
+        "exculpated_fiduciary_roles": "director",
+        "exculpated_fiduciary_subject": "director",
+        "exculpated_fiduciary_roles_plural": "directors"
+      }
+    },
+    {
       "id": "redemption-cross-ref-include",
       "description": "Include redemption Section 6.1 cross-reference",
       "when_all": [{ "field": "include_redemption_cross_ref", "op": "eq", "value": true }],
-      "set_fill": { "redemption_cross_ref_clause": " and Section 6.1" }
+      "set_fill": { "redemption_cross_ref_clause": " or Section 6.1" }
     },
     {
       "id": "redemption-cross-ref-exclude",

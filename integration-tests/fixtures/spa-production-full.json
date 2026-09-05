@@ -41,10 +41,19 @@
   "signature_page_marker": "Signature Page Follows",
   "state": "Delaware",
   "state_lower": "delaware",
-  "specify_percentage": "60%",
+  "specify_percentage": "60",
   "financial_reporting_period": "monthly",
   "director_names": "Alex Rivera, Jordan Lee and Casey Morgan",
   "board_size": "three (3)",
   "minimum_shares_initial_closing": "8,000,000",
-  "applicable_purchasers": "Summit Ventures Fund I, L.P."
+  "applicable_purchasers": "Summit Ventures Fund I, L.P.",
+  "purchasers": [{
+    "name_and_address": "Summit Ventures Fund I, L.P.\n100 Market Street, Wilmington, DE 19801",
+    "convertible_investment": 0,
+    "convertible_shares": 0,
+    "cash_purchase_price": 10000000,
+    "cash_purchase_economics": "$10,000,000 aggregate at $1.00 per share",
+    "cash_shares": 10000000,
+    "total_shares": 10000000
+  }]
 }

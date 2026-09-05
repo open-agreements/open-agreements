@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "field_id": "qualified_direct_listing_market_cap_clause",
+  "field_label": "Qualified Direct Listing Market Capitalization Clause",
+  "description": "Whole grammatical carrier for the Qualified Direct Listing market-capitalization election",
+  "source_template_version": "10-1-2025",
+  "occurrences": [{ "primary": { "kind": "regex", "pattern": "(\\[,\\s+for\\s+which\\s+the\\s+Board\\s+of\\s+Directors,.*?market\\s+capitalization\\s+equal\\s+to\\s+or\\s+greater\\s+than\\s+\\$\\[__________\\].*?first\\s+day\\s+of\\s+trading\\])", "group": 1 } }],
+  "postconditions": ["no_unresolved_placeholder", "no_double_dollar"],
+  "failure_behavior": "warn",
+  "fixtures": []
+}

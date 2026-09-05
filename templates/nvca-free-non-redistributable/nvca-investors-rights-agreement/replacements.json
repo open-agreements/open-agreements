@@ -3,27 +3,140 @@
   "[Company Name]": "{company_name}",
   "[Company][Board of Directors]": "{underwriter_selector_text}",
   "[Insert Investor Name]": "{investor_name}",
+  "[Insert Key Holder Name]": "{key_holder_name}",
   "[Company counsel name and address]": "{company_counsel}",
-  "[Counsel cc, if any]": "{counsel_cc}",
   "[State of Delaware]": "State of {state_of_incorporation}",
   "a [State] corporation": "a {state_of_incorporation} corporation",
   "state courts of [state]": "state courts of {state_of_incorporation}",
   "state court of [state]": "state court of {state_of_incorporation}",
   "District Court for the District of [judicial district]": "District Court for the {judicial_district}",
   "[AMENDED AND RESTATED]": "{amended_restated_upper}",
+  "[Signature Page to [Amended and Restated] Investors’ Rights Agreement]": "{signature_page_caption}",
   "[Amended and Restated]": "{amended_restated}",
+  "[WHEREAS, certain of the Investors (the \u201cExisting Investors\u201d) hold shares of [Series [_]] Preferred Stock and/or shares of Common Stock issued upon conversion thereof and possess registration rights, information rights, rights of first offer, and other rights pursuant to that certain Investors\u2019 Rights Agreement dated as of [_________ __, 20__], by and among the Company and such Existing Investors (the \u201cPrior Agreement\u201d);": "{prior_agreement_recitals_opening}",
+  "WHEREAS, the undersigned Existing Investors are holders of a sufficient number of the securities of the Company as are required to amend the Prior Agreement, and desire to amend and restate the Prior Agreement in its entirety and to accept the rights created pursuant to this Agreement in lieu of the rights granted to them under the Prior Agreement; and]": "{prior_agreement_recitals_closing}",
+  "[Upon the effectiveness of this Agreement, the Prior Agreement shall be deemed amended and restated and superseded and replaced in its entirety by this Agreement, and shall be of no further force or effect.]": "{prior_agreement_supersession}",
   "[description of business]": "{business_description}",
+  "[in which the consideration received by the Investors in such Deemed Liquidation Event is in the form of cash and/or publicly traded securities, or if the Investors receive participation rights from the acquiring company or other successor to the Company reasonably comparable to those set forth in this Section 4]": "{rofo_termination_liquidation_clause}",
+  "[; provided, that, with respect to clause (ii), the covenants set forth in Section 5 shall only terminate if the consideration received by the Investors in such Deemed Liquidation Event is in the form of cash and/or publicly traded securities or if the acquiring company or other successor to the Company agrees to covenants comparable to those set forth in Section 5]": "{covenant_termination_liquidation_clause}",
+  "[, except for the fees and disbursements of the Selling Holder Counsel borne and paid by the Company as provided in Section 2.6]": "{selling_holder_counsel_expense_exception_clause}",
   "[Additionally, in no event shall [____] or its Affiliates be a Competitor hereunder.]": "{competitor_exclusion_clause}",
   "holds at least [______] shares of Registrable Securities": "holds at least {major_investor_threshold_shares} shares of Registrable Securities",
   "As long as [_____] owns not less than [____] shares of Preferred Stock": "As long as {board_observer_investor_name} owns not less than {board_observer_threshold_shares} shares of Preferred Stock",
   "[holds at least [_____] shares of Registrable Securities (subject to appropriate adjustment for stock splits, stock dividends, combinations, and other recapitalizations)][together with its Affiliates, would be a Major Investor]": "{transferee_eligibility_text}",
   "[Signature Page Follows]": "{signature_page_marker}",
-  "[_________ __, 20__]": "{effective_date}",
+  "[a majority/at least [___]%]": "{requisite_holders_threshold}",
+  "[the earlier of (i) [insert date] [three to five years after the date of this Agreement] or (ii)] ": "{demand_eligibility_date_clause}",
+  "[20,000,000]": "{form_s1_aggregate_offering_threshold}",
+  "[one to two]": "{form_s1_demand_limit_words}",
+  "within the later of [90-120] days of the date that the Offer Notice is given": "within the later of {rofo_closing_period_days} days of the date that the Offer Notice is given",
+  "during the [90-120] day period following the expiration of the periods provided in Section 4.1(b)": "during the {rofo_outside_sale_period_days} day period following the expiration of the periods provided in Section 4.1(b)",
+  "registration[s] pursuant to Section 2.1(a)": "registration{form_s1_demand_limit_suffix} pursuant to Section 2.1(a)",
+  "[, not to exceed $[50,000] [per registration],]": "{selling_holder_counsel_cap_clause}",
+  "[\u201cDirect Listing\u201d means the initial listing of the Common Stock (or other equity securities of the Company) on the Nasdaq Stock Market, the New York Stock Exchange or another exchange or marketplace approved by the Board of Directors by means of an effective registration statement filed by the Company with the SEC, without a related underwritten offering of such Common Stock (or other equity securities).]": "{direct_listing_definition}",
+  "[ or Direct Listing, as applicable]": "{direct_listing_or_applicable_spaced}",
+  "[or Direct Listing, as applicable]": "{direct_listing_or_applicable}",
+  "[or in connection with a Direct Listing, as applicable]": "{direct_listing_or_connection}",
+  "[or following the IPO [or Direct Listing, as applicable], the transfer is made pursuant to SEC Rule 144]": "{direct_listing_rule_144_clause}",
+  "[or Direct Listing, whichever is earlier]": "{direct_listing_whichever_earlier}",
+  ". The Company [shall obtain, within 90 days of the date hereof, from financially sound and reputable insurers, Directors and Officers liability insurance [and term \u201ckey person\u201d insurance on [_____], each] in an amount [not less than $______] and on terms and conditions approved by the Board of Directors and] will use commercially reasonable efforts to cause such insurance policies to be maintained until such time as the Board of Directors determines that such insurance should be discontinued. [The key person policy shall name the Company as loss payee]. No such policy shall be cancelable by the Company without prior approval by the Board of Directors. [Notwithstanding any other provision of this Section 5.1 to the contrary, during such time(s) as one or more directors elected by holders of one or more series of Preferred Stock is serving on the Board of Directors, the Company  shall upon request from any such holder deliver to each such holder a certification that such a Directors and Officers liability insurance policy remains in effect.]": ". {insurance_clause}",
+  "within 20 business days after any Investor\u2019s written request therefor": "{checklist_delivery_timing}",
+  "[KEY HOLDERS: ": "{key_holders_heading}",
+  "Signature: > ]": "{key_holder_signature_tail}",
+  "[Annex 2": "{annex_2_heading}",
+  "Agreement dated > [___]": "{effective_date}",
   "[Date checklist is being delivered]": "{checklist_delivery_date}",
+  "[SCHEDULE B": "{schedule_b_heading}",
   "[________], 20[__]": "{effective_date}",
   "among [____________], a Delaware": "among {company_name}, a Delaware",
   "U.S. District Court for the District of [_____]": "U.S. District Court for the {judicial_district}",
   "Series [_]": "Series {series_designation}",
   "Series [___]": "Series {series_designation}",
   "par value $[0.___] per share": "par value ${par_value} per share"
+  ,"rights under this Agreement are not assigned pursuant to > Section 6.1": "Section {successors_assigns_section}"
+  ,"excluding for purposes of > Section 2": "Section {registration_rights_article}"
+  ,"forfeit their right to one demand registration statement pursuant to > Section 2.6": "Section {expenses_registration_section}"
+  ,"withdrawn registration shall be borne by the Company in accordance with > Section 2.6": "Section {expenses_registration_section}"
+  ,"capital stock pursuant to > Section 2.2": "Section {company_registration_section}"
+  ,"registrations, filings, or qualifications pursuant to > Section 2": "Section {registration_rights_article}"
+  ,"interpretation or implementation of this > Section 2": "Section {delay_registration_section}"
+  ,"this Section 2.8": "this Section {indemnification_section}"
+  ,"registration under this > Section 2": "Section {registration_rights_article}"
+  ,"additional Investor that becomes a party to this Agreement in accordance with > Section 6.9": "Section {additional_investors_section}"
+  ,"this Section 2.11": "this Section {market_standoff_section}"
+  ,"this Section 2.12": "this Section {restrictions_transfer_section}"
+  ,"agrees to comply in all respects with the provisions of this > Section 2": "Section {restrictions_transfer_section}"
+  ,"with respect to clause (iv), the covenants set forth in > Section 3.1": "Section {financial_statements_section}"
+  ,"covenants set forth in > Section 4": "Section {rofo_article}"
+  ,"Sections 3.1": "Sections {financial_statements_section}"
+  ,"covenants set forth in Sections 3.1 > 3.2": "{inspection_section}"
+  ,"rights as a Major Investor under > Sections 3.1": "Sections {financial_statements_section}"
+  ,"rights as a Major Investor under > 3.2": "{inspection_section}"
+  ,"rights as a Major Investor under > 4.1": "{rofo_section}"
+  ,"Sections 3.1, > 3.2": "{inspection_section}"
+  ,"execution of additional agreements pursuant to > Section 2.11": "Section {market_standoff_section}"
+  ,"including the provisions of > Section 2.11": "Section {market_standoff_section}"
+  ,"together with the Company as provided in > Section 2.4(e)": "Section {registration_rights_article}.4(e)"
+  ,"waive compliance with > Section 2.12(c)": "Section {restrictions_transfer_section}(c)"
+  ,"allegedly in violation of > Section 2.12(c)": "Section {restrictions_transfer_section}(c)"
+  ,"including this > Section 6.6(b)(ii)": "Section {amendments_waivers_section}(b)(ii)"
+  ,"in accordance with this > Section 6.6": "Section {amendments_waivers_section}"
+  ,"except for > Section[s] 5.5": "Sections {successor_indemnification_section}"
+  ,"add information regarding any additional Investor who becomes a party to this Agreement in accordance with > Section 6.9": "Section {additional_investors_section}"
+  ,"[(i)]": "{registrable_clause_i_marker}"
+  ,"[(iv)]": "{registrable_clause_iv_marker}"
+  ,"[,]": "{optional_comma}"
+  ,"[, 5.6(a), and 5.7]": "{surviving_covenant_sections}"
+  ,"[, European Union, or United Kingdom]": "{additional_sanctions_jurisdictions}"
+  ,"[, and]": "{optional_comma_and}"
+  ,"[, at least 30 days before the end of each fiscal year,]": "{annual_budget_delivery_clause}"
+  ,"[, or (z) if such Investor or its representative is a Competitor]": "{observer_competitor_exclusion_clause}"
+  ,"[, provided that such Major Investor is not a Competitor]": "{major_investor_competitor_limitation}"
+  ,"[.]": "{optional_period}"
+  ,"[1-3]": "{standoff_stockholder_threshold_percent}"
+  ,"[20-30]": "{company_registration_holder_floor_percent}"
+  ,"[30]": "{form_s3_blackout_before_days}"
+  ,"[30-60]": "{registration_participation_response_days}"
+  ,"[5.3]": "{qsbs_section_reference}"
+  ,"[90]": "{form_s3_blackout_after_days}"
+  ,"[Major]": "{information_right_holder_class}"
+  ,"[Requisite Holders]": "{general_amendment_approval_group}"
+  ,"[and audited and certified by independent public accountants of [nationally][regionally] recognized standing selected by the Company]": "and audited and certified by independent public accountants of {accounting_firm_recognition_scope} recognized standing selected by the Company"
+  ,"within 180 days after the end of each fiscal year of the Company": "within {annual_statement_delivery_days} days after the end of each fiscal year of the Company"
+  ,"[a majority]": "{major_investor_amendment_threshold}"
+  ,"[an Excluded Registration]": "{deferral_registration_exception}"
+  ,"[and]": "{optional_and}"
+  ,"[and ]": "{sanctions_list_conjunction}"
+  ,"[and 3.3]": "{observer_rights_section_reference}"
+  ,"[and Observer]": "{observer_rights_title_text}"
+  ,"[and a statement of stockholders’ equity]": "{quarterly_equity_statement_clause}"
+  ,"[and statement of stockholders’ equity]": "{monthly_equity_statement_clause}"
+  ,"[and the Key Holders (as defined below)]": "{key_holders_preamble_clause}"
+  ,"[and, as to each Major Investor, in accordance with Section 4.1(e)]": "{rofo_investor_termination_clause}"
+  ,"[certain of]": "{investor_party_qualifier}"
+  ,"[earlier of the ]": "{section_220_termination_intro}"
+  ,"[existing or prospective]": "{affiliate_disclosure_scope}"
+  ,"[for a period of not more than [30-120] days after the request of the Initiating Holders is given]": "{form_s1_deferral_period_clause}"
+  ,"[in clause[s] (i) [and (ii)]]": "{registrable_cross_reference_text}"
+  ,"[managing]": "{underwriter_type}"
+  ,"[once]": "{form_s1_deferral_frequency_word}"
+  ,"[or]": "{optional_or}"
+  ,"[or 90 days in the case of any registration other than the IPO]": "{later_offering_standoff_clause}"
+  ,"[or FOIA Party]": "{foia_party_rofo_clause}"
+  ,"[or Form S-3]": "{later_offering_form_clause}"
+  ,"[or Schedule B (as applicable)]": "{schedule_b_notice_clause}"
+  ,"[originally issued by the Company to the Investors]": "{qsbs_original_issuance_clause}"
+  ,"[pursuant to the Purchase Agreement,]": "{additional_investor_purchase_agreement_clause}"
+  ,"[s]": "{optional_plural_s}"
+  ,"[shall apply only to the IPO,]": "{ipo_only_standoff_scope}"
+  ,"[the earliest to occur of]": "{registration_termination_intro}"
+  ,"[third to fifth]": "{registration_termination_anniversary_ordinal}"
+  ,"[two]": "{form_s3_demand_limit_words}"
+  ,"$[150,000]": "${transaction_assistance_counsel_fee_cap}"
+  ,
+  "prepare and file with the SEC a registration statement with respect to such Registrable Securities and use its commercially reasonable efforts to cause such registration statement to become effective and, upon the request of the Holders of a majority of the Registrable Securities registered thereunder, keep such registration statement effective for a period of up to 120 days or, if earlier, until the distribution contemplated in the registration statement has been completed; provided, however, that (i) such 120-day period shall be extended for a period of time equal to the period the Holder refrains, at the request of an underwriter of Common Stock (or other securities) of the Company, from selling any securities included in such registration, and (ii) in the case of any registration of Registrable Securities on Form S-3 that are intended to be offered on a continuous or delayed basis, subject to compliance with applicable SEC rules, such 120-day period shall be extended for up to an additional 90 days, if necessary, to keep the registration statement effective until all such Registrable Securities are sold;": "{registration_effectiveness_clause}"
+  ,"[provide to such holder or prospective holder the right to include securities in any registration on other than either a pro rata basis with respect to the Registrable Securities or on a subordinate basis after all Holders have had the opportunity to include in the registration and offering all shares of Registrable Securities that they wish to so include]/[allow such holder or prospective holder to include such securities in any registration unless, under the terms of such agreement, such holder or prospective holder may include such securities in any such registration only to the extent that the inclusion of such securities will not reduce the number of the Registrable Securities of the Holders that are included]": "{subsequent_registration_priority_clause}"
+  ,"[except to the extent such information has been corrected in a subsequent writing [at least one business day] prior to the sale of Registrable Securities to the Person asserting the claim]": "{indemnification_company_correction_safe_harbor_clause}"
+  ,"[and that has not been corrected in a subsequent writing [at least one business day] prior to the sale of Registrable Securities to the Person asserting the claim]": "{indemnification_holder_correction_safe_harbor_clause}"
+  ,"[the closing of a Deemed Liquidation Event [in which (x) the consideration received by the Investors in such Deemed Liquidation Event is in the form of cash and/or publicly traded securities, or (y) if the Investors receive registration rights from the acquiring company or other successor to the Company reasonably comparable to those set forth in this Section 2]; [and]]": "{registration_termination_deemed_liquidation_clause}"
 }

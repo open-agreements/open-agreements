@@ -1,0 +1,155 @@
+{
+  "paragraph_rules": [
+    {
+      "id": "unwrap-full-time-key-holder",
+      "section_heading": "Definitions.",
+      "ignore_heading": true,
+      "paragraph_contains": "“Qualified Key Holder” means",
+      "replacements": { "[full-time]": "full-time" },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-united-states-sanctions-list-conjunction",
+      "section_heading": "Definitions.",
+      "ignore_heading": true,
+      "paragraph_contains": "Sectoral Sanctions Identification List",
+      "replacements": {
+        "[and ]": "and ",
+        "one or more Designated Party": "one or more Designated Parties",
+        "dealings with such Person is are prohibited": "dealings with such Person are prohibited"
+      },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-retained-rofr-carriers",
+      "section_heading": "Miscellaneous.",
+      "ignore_heading": true,
+      "paragraph_contains": "Each party will bear its own costs",
+      "replacements": {
+        "[Each party": ". Each party",
+        "Agreement.]": "Agreement."
+      },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-qualified-direct-listing-definition",
+      "section_heading": "Definitions.",
+      "ignore_heading": true,
+      "paragraph_contains": "“Qualified Direct Listing” has",
+      "replacements": { "[“Qualified": "“Qualified", "Certificate.]": "Certificate." },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "repair-capital-stock-removal-seam",
+      "section_heading": "Definitions.",
+      "ignore_heading": true,
+      "paragraph_contains": "Capital Stock” means",
+      "replacements": { "Preferred Stock )": "Preferred Stock)" },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "repair-preferred-stock-removal-seam",
+      "section_heading": "Definitions.",
+      "ignore_heading": true,
+      "paragraph_contains": "“Preferred Stock” means",
+      "replacements": { "Preferred Stock .": "Preferred Stock." },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-delaware-courts",
+      "section_heading": "Miscellaneous.",
+      "ignore_heading": true,
+      "paragraph_contains": "irrevocably and unconditionally submit",
+      "replacements": { "[The parties": "The parties", "such court.]": "such court." },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-qualified-direct-listing-termination",
+      "section_heading": "Miscellaneous.",
+      "ignore_heading": true,
+      "paragraph_contains": "automatically terminate upon the earlier",
+      "replacements": { ". This Agreement": ".. This Agreement", "[or Qualified": "or Qualified", "as applicable]": "as applicable", "[in which": "in which", "similar rights]": "similar rights" },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-forfeiture-election",
+      "section_heading": "Right of First Refusal.",
+      "ignore_heading": true,
+      "paragraph_contains": "Forfeiture of Rights",
+      "replacements": { "[Forfeiture": "Forfeiture", "herein.]": "herein." },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-cosale-calculation",
+      "section_heading": "Right of Co-Sale.",
+      "ignore_heading": true,
+      "paragraph_contains": "Shares Includable",
+      "replacements": {
+        "[(including any shares": "(including any shares",
+        "Secondary Refusal Right)]": "Secondary Refusal Right)",
+        "[selling Key Holder]Key Holders": "selling Key Holder",
+        "[To the extent": "To the extent",
+        "correspondingly reduced.]": "correspondingly reduced."
+      },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-entity-transfer-election",
+      "section_heading": "Agreement Among the Company, the Investors and the Key Holders.",
+      "ignore_heading": true,
+      "paragraph_contains": "Entity Transfers. No Key Holder",
+      "replacements": { "[Entity Transfers": "Entity Transfers", "Key Holder.]": "Key Holder." },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-exempt-transfer-elections",
+      "section_heading": "Exempt Transfers.",
+      "ignore_heading": true,
+      "paragraph_contains": "bona fide estate planning purposes",
+      "replacements": {
+        ". Notwithstanding": ".. Notwithstanding",
+        "[or]": "or",
+        "members[; (d)": "members; (d)",
+        "such pledge;]": "such pledge;",
+        "[or (e)": "or (e)",
+        "restatement)]": "restatement)",
+        "Agreement ]; provided": "Agreement; provided",
+        "members ; provided": "members; provided",
+        "; ; provided": "; provided",
+        "clause[(s)]": "clauses",
+        "(a)[, (c), (d) or (e)]": "(a), (c), (d) or (e)"
+      },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "repair-prohibited-transferee-removal-seam",
+      "section_heading": "Exempt Transfers.",
+      "ignore_heading": true,
+      "paragraph_contains": "Sanctioned Party. .",
+      "replacements": { ". Notwithstanding": ".. Notwithstanding", "Sanctioned Party. .": "Sanctioned Party." },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-key-holder-consent-minimum",
+      "section_heading": "Miscellaneous.",
+      "ignore_heading": true,
+      "paragraph_contains": "such consent shall not be required",
+      "replacements": { "[provided that": "provided that", "Company]": "Company" },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-same-fashion-safeguard",
+      "section_heading": "Amendment; Waiver and Termination.",
+      "ignore_heading": true,
+      "paragraph_contains": "applies to all Investors and Key Holders",
+      "replacements": {
+        "[Notwithstanding": "Notwithstanding",
+        "fashion [(it being agreed": "fashion (it being agreed",
+        "transaction; [provided": "transaction; provided",
+        "Participating Investors)]]": "Participating Investors))",
+        "other parties hereto.]": "other parties hereto."
+      },
+      "expected_min_matches": 1
+    }
+  ]
+}

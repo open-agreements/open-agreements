@@ -96,7 +96,6 @@ describeWithSource('NVCA Voting Agreement board fields', () => {
 
     expect(warnings).toEqual([]);
     expect(text).toContain('which individual as of the date of this Agreement is Priya Shah');
-    expect(text).toContain('[Example 2: Priya Shah, for so long as such director');
     expect(text).toContain('CEO Director”), who as of the date of this Agreement is Maya Imani');
     expect(text).toContain('Mutual Director”), which individual as of the date of this Agreement is Jordan Lee');
     expect(text).not.toContain('[name of a Common Director]');

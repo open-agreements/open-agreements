@@ -1,22 +1,253 @@
 {
   "groups": [
     {
-      "id": "preferred_director_eligibility_basis",
+      "id": "preferred_director_eligibility",
       "type": "radio",
       "standalone": true,
       "markerless": true,
       "inline": true,
       "options": [
         {
-          "label": "Minimum shares",
-          "marker": "[As a Preferred Director, [Example 1: one person designated from time to time by {investor_name}, for so long as {investor_name} and its Affiliates (i) continue to beneficially own an aggregate of at least {preferred_director_minimum_shares_display} shares of Preferred Stock, which number is subject to appropriate adjustment for any stock splits, stock dividends, combinations, recapitalizations and the like and (ii) are not Sanctioned Parties, which individual as of the date of this Agreement is {preferred_director_name};]",
-          "trigger": "default"
+          "label": "Minimum share count",
+          "marker": "[Example 1: one person designated from time to time by {investor_name}, for so long as {investor_name} and its Affiliates (i) continue to beneficially own an aggregate of at least {preferred_director_minimum_shares_display} shares of Preferred Stock, which number is subject to appropriate adjustment for any stock splits, stock dividends, combinations, recapitalizations and the like and (ii) are not Sanctioned Parties, which individual as of the date of this Agreement is {preferred_director_name};]",
+          "trigger": { "field": "preferred_director_eligibility_basis", "equals": "minimum_shares" }
         },
         {
-          "label": "Minimum percentage",
+          "label": "Minimum as-converted percentage",
           "marker": "[[Example 2: As a Preferred Director, one person designated from time to time by {investor_name}, for so long as {investor_name} and its Affiliates (i) continue to beneficially own an aggregate of at least {preferred_director_minimum_percentage_display}% of the outstanding capital stock of the Company on an as-converted basis, and (ii) are not Sanctioned Parties, which individual as of the date of this Agreement is {preferred_director_name};]",
           "trigger": { "field": "preferred_director_eligibility_basis", "equals": "minimum_percentage" }
         }
+      ]
+    },
+    {
+      "id": "common_director_designation",
+      "type": "radio",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        {
+          "label": "Qualified Key Holders designate",
+          "marker": "[Example 1: one individual who is designated by Qualified Key Holders holding a majority of the shares of Common Stock held by Qualified Key Holders, for so long as any Qualified Key Holder holds any shares of Common Stock, which individual as of the date of this Agreement is {common_director_name};]",
+          "trigger": { "field": "common_director_designation", "equals": "qualified_key_holders" }
+        },
+        {
+          "label": "Named service-contingent director",
+          "marker": "[Example 2: {common_director_name}, for so long as such director [remains a [full-time] employee{qualified_key_holder_service_suffix} of the Company][, except that if such director resigns or is unable to serve, then one individual who is designated by Qualified Key Holders holding a majority of the shares of Common Stock held by Qualified Key Holders for so long as any Qualified Key Holder holds any shares of Common Stock];]",
+          "trigger": { "field": "common_director_designation", "equals": "named_service_contingent" }
+        }
+      ]
+    },
+    {
+      "id": "qualified_direct_listing_termination",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [{
+        "label": "Qualified Direct Listing",
+        "marker": "[, or Qualified Direct Listing (as defined in the Restated Certificate)]",
+        "trigger": { "field": "include_qualified_direct_listing_termination", "equals": true },
+        "replaceWith": ""
+      }]
+    },
+    {
+      "id": "sale_section_3_survival",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [{
+        "label": "Sale survival",
+        "marker": "[, provided that the provisions of Section 3 hereof will continue after the closing of any Sale of the Company to the extent necessary to enforce the provisions of Section 3 with respect to such Sale of the Company]",
+        "trigger": { "field": "sale_section_3_survives", "equals": true },
+        "replaceWith": ""
+      }]
+    },
+    {
+      "id": "fixed_termination_date",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [{
+        "label": "Fixed termination date",
+        "marker": "[; and (d) {fixed_termination_date}]",
+        "trigger": { "field": "termination_date_mode", "equals": "fixed_date" },
+        "replaceWith": ""
+      }]
+    },
+    {
+      "id": "prior_agreement_first_recital",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        {
+          "label": "Include predecessor agreement recital",
+          "marker": "[WHEREAS, certain of the Investors (the “Existing Investors”) hold shares of [Series {series_designation}] Preferred Stock and/or shares of Common Stock issued upon conversion thereof, and certain holders of Common Stock and/or options to purchase Common Stock (the “Existing Key Holders”) previously agreed to certain voting arrangements pursuant to that certain {amended_restated} Voting Agreement dated as of {prior_agreement_date}, by and among the Company, the Existing Key Holders, and the Existing Investors (the “Prior Agreement”);",
+          "trigger": { "field": "has_prior_agreement", "equals": true },
+          "replaceWith": ""
+        }
+      ]
+    },
+    {
+      "id": "prior_agreement_second_recital",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        {
+          "label": "Include predecessor amendment recital",
+          "marker": "WHEREAS, the undersigned Existing Investors and Existing Key Holders are holders of a sufficient number of the securities of the Company as are required to amend the Prior Agreement, and desire to amend and restate the Prior Agreement in its entirety and to accept the rights and obligations created pursuant to this Agreement in lieu of the rights and obligations applicable to them under the Prior Agreement;]",
+          "trigger": { "field": "has_prior_agreement", "equals": true },
+          "replaceWith": ""
+        }
+      ]
+    },
+    {
+      "id": "prior_agreement_supersession_clause",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        {
+          "label": "Include predecessor supersession clause",
+          "marker": "[Upon the effectiveness of this Agreement, the Prior Agreement shall be deemed amended and restated and superseded and replaced in its entirety by this Agreement, and shall be of no further force or effect.] ",
+          "trigger": { "field": "has_prior_agreement", "equals": true },
+          "replaceWith": ""
+        }
+      ]
+    },
+    {
+      "id": "drag-key-holder-approval",
+      "type": "checkbox", "standalone": true, "markerless": true, "inline": true,
+      "options": [{
+        "label": "Key Holder approval",
+        "marker": "[[and] (ii) the holders of [a majority] of the then outstanding shares of Common Stock [(other than those issued or issuable upon conversion of the shares of Preferred Stock)]] held by Qualified Key Holders voting as a separate class;",
+        "trigger": {"field":"drag_requires_key_holder_approval","equals":true},
+        "replaceWith": ""
+      }]
+    },
+    {
+      "id": "drag-board-approval",
+      "type": "checkbox", "standalone": true, "markerless": true, "inline": true,
+      "options": [{
+        "label": "Board approval",
+        "marker": "[and [(iii)] the Board;]",
+        "trigger": {"field":"drag_requires_board_approval","equals":true},
+        "replaceWith": ""
+      }]
+    },
+    {
+      "id": "drag-converted-common-numerator",
+      "type": "checkbox", "standalone": true, "markerless": true, "inline": true,
+      "options": [{
+        "label": "Converted Common numerator",
+        "marker": "[the shares of Common Stock then issued or issuable upon conversion of]",
+        "trigger": {"field":"drag_selling_investor_basis","equals":"converted_common"},
+        "replaceWith": ""
+      }]
+    },
+    {
+      "id": "drag-certificate-amendment",
+      "type": "checkbox", "standalone": true, "markerless": true, "inline": true,
+      "options": [{
+        "label": "Certificate amendment",
+        "marker": "[(together with any related amendment or restatement to the Restated Certificate required to implement such Sale of the Company)]",
+        "trigger": {"field":"drag_include_certificate_amendment","equals":true},
+        "replaceWith": ""
+      }]
+    },
+    {
+      "id": "drag-definitive-agreements",
+      "type": "checkbox", "standalone": true, "markerless": true, "inline": true,
+      "options": [{
+        "label": "Definitive agreements",
+        "marker": "[and the related definitive agreement(s) pursuant to which the Sale of the Company is to be consummated]",
+        "trigger": {"field":"drag_include_definitive_agreements","equals":true},
+        "replaceWith": ""
+      }]
+    },
+    {
+      "id": "drag-delay-qualifier",
+      "type": "checkbox", "standalone": true, "markerless": true, "inline": true,
+      "options": [{
+        "label": "Reasonably expected",
+        "marker": "[reasonably be expected to]",
+        "trigger": {"field":"drag_delay_uses_reasonable_expectation","equals":true},
+        "replaceWith": ""
+      }]
+    },
+    {
+      "id": "drag-gross-negligence",
+      "type": "checkbox", "standalone": true, "markerless": true, "inline": true,
+      "options": [{
+        "label": "Gross negligence",
+        "marker": "[gross negligence]",
+        "trigger": {"field":"drag_include_gross_negligence_exception","equals":true},
+        "replaceWith": ""
+      }]
+    },
+    {
+      "id": "drag-company-escrow",
+      "type": "checkbox", "standalone": true, "markerless": true, "inline": true,
+      "options": [{
+        "label": "Company escrow",
+        "marker": "[(except to the extent that funds may be paid out of an escrow established to cover breach of representations, warranties and covenants of the Company as well as breach by any stockholder of any of identical representations, warranties and covenants provided by all stockholders)]",
+        "trigger": {"field":"drag_include_company_representation_escrow","equals":true},
+        "replaceWith": ""
+      }]
+    },
+    {
+      "id": "drag-same-form-consideration",
+      "type": "checkbox", "standalone": true, "markerless": true, "inline": true,
+      "options": [{
+        "label": "Same-form consideration",
+        "marker": "[subject to Section 3.2(f) above, requiring the same form of consideration to be available to the holders of any single class or series of capital stock, if any holders of any capital stock of the Company are given an option as to the form and amount of consideration to be received as a result of the Proposed Sale, all holders of such capital stock will be given the same option; provided, however, that nothing in this Section 3.2(g) shall entitle any holder to receive any form of consideration that such holder would be ineligible to receive as a result of such holder’s failure to satisfy any condition, requirement or limitation that is generally applicable to the Company’s stockholders.]",
+        "trigger": {"field":"drag_include_same_form_consideration","equals":true},
+        "replaceWith": ""
+      }]
+    },
+    {
+      "id": "director-removal-other-than-cause",
+      "type": "checkbox", "standalone": true, "markerless": true, "inline": true,
+      "options": [{
+        "label": "Other than for cause",
+        "marker": "[other than for cause]",
+        "trigger": {"field":"director_removal_other_than_for_cause","equals":true},
+        "replaceWith": ""
+      }]
+    },
+    {
+      "id": "joinder-options-warrants",
+      "type": "checkbox", "standalone": true, "markerless": true, "inline": true,
+      "options": [{
+        "label": "Options and warrants",
+        "marker": "[or options or warrants to purchase shares of capital stock]",
+        "trigger": {"field":"joinder_security_scope","equals":"shares_options_and_warrants"},
+        "replaceWith": ""
+      }]
+    },
+    {
+      "id": "joinder-one-percent",
+      "type": "checkbox", "standalone": true, "markerless": true, "inline": true,
+      "options": [{
+        "label": "One-percent threshold",
+        "marker": "[following which such Person shall hold Shares constituting 1% or more of the then outstanding capital stock of the Company (treating for this purpose all shares of Common Stock issuable upon exercise or conversion of outstanding options, warrants or convertible securities, as if exercised and/or converted or exchanged)]",
+        "trigger": {"field":"joinder_minimum_ownership_percentage"},
+        "replaceWith": ""
+      }]
+    },
+    {
+      "id": "enforcement-costs",
+      "type": "radio", "standalone": true, "markerless": true, "inline": true,
+      "options": [
+        {"label":"Own costs","marker":"[Each party will bear its own costs in respect of any disputes arising under this Agreement.]","trigger":{"field":"enforcement_costs_mode","equals":"own_costs"}},
+        {"label":"Prevailing-party costs","marker":"[The prevailing party shall be entitled to reasonable attorney’s fees, costs, and necessary disbursements in addition to any other relief to which such party may be entitled.]","trigger":{"field":"enforcement_costs_mode","equals":"prevailing_party"}}
       ]
     }
   ]

@@ -1,12 +1,20 @@
 {
   "removeFootnotes": false,
   "removeEmptyLeadingParagraphs": true,
-  "clearParts": [
-    "header3.xml"
+  "removeStoryParagraphs": [
+    {
+      "id": "remove-source-disclaimer",
+      "part": "header3.xml",
+      "pattern": "^This sample document is the work product of a national coalition of attorneys",
+      "expected_matches": 1
+    }
   ],
   "removeParagraphPatterns": [
     "^Comment:",
-    "^NOTE:"
+    "^NOTE:",
+    "^The following additional exception can be added",
+    "^\\[NOTE: as the Delaware-incorporated Company",
+    "^_+Attention:_+$"
   ],
   "removeRanges": [
     {

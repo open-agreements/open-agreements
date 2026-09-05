@@ -87,7 +87,227 @@
       "options": [
         {
           "marker": "General. Unless prohibited by Delaware law",
-          "trigger": { "field": "include_redemption" }
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "General. Unless prohibited by Delaware law",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
+        },
+        {
+          "label": "Redemption notice",
+          "marker": "Redemption Notice. The Corporation shall send written notice",
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "Redemption Notice. The Corporation shall send written notice",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
+        },
+        {
+          "label": "Shares subject to redemption",
+          "marker": "the number of shares of Preferred Stock held by the holder that the Corporation shall redeem on the Redemption Date",
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "the number of shares of Preferred Stock held by the holder that the Corporation shall redeem on the Redemption Date",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
+        },
+        {
+          "marker": "the Redemption Date and the Redemption Price",
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "the Redemption Date and the Redemption Price",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
+        },
+        {
+          "label": "Conversion-right termination date",
+          "marker": "the date upon which the holder’s right to convert such shares terminates",
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "the date upon which the holder’s right to convert such shares terminates",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
+        },
+        {
+          "label": "Certificate-surrender instructions",
+          "marker": "for holders of shares in certificated form, that the holder is to surrender",
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "for holders of shares in certificated form, that the holder is to surrender",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
+        },
+        {
+          "label": "Redemption-allocation adjustment",
+          "marker": "If the Corporation receives, on or prior to the 20th day after the date of delivery of the Redemption Notice",
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "If the Corporation receives, on or prior to the 20th day after the date of delivery of the Redemption Notice",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
+        },
+        {
+          "label": "Certificate surrender and payment",
+          "marker": "Surrender of Certificates; Payment. On or before the applicable Redemption Date",
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "Surrender of Certificates; Payment. On or before the applicable Redemption Date",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
+        },
+        {
+          "label": "Interest on delayed redemption",
+          "marker": "Interest. If any shares of Preferred Stock are not redeemed for any reason on any Redemption Date",
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "Interest. If any shares of Preferred Stock are not redeemed for any reason on any Redemption Date",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
+        },
+        {
+          "label": "Rights after redemption notice",
+          "marker": "Rights Subsequent to Redemption. If the Redemption Notice shall have been duly given",
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "Rights Subsequent to Redemption. If the Redemption Notice shall have been duly given",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
+        }
+      ]
+    },
+    {
+      "id": "dle_financing_exclusion",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": [".+"],
+      "options": [
+        {
+          "label": "Exclude preferred financing from Deemed Liquidation Events",
+          "marker": "Notwithstanding anything in Section 2.3.1 to the contrary, in no event shall the sale and issuance",
+          "trigger": { "field": "include_dle_financing_exclusion", "equals": true }
+        }
+      ]
+    },
+    {
+      "id": "dle_redemption_mechanics",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": [".+"],
+      "options": [
+        {
+          "label": "Post-DLE redemption mechanics",
+          "marker": "In the event of a Deemed Liquidation Event referred to in Section 2.3.1(a)(ii)",
+          "trigger": { "field": "include_dle_redemption_mechanics", "equals": true }
+        }
+      ]
+    },
+    {
+      "id": "nonstandard_protective_provisions",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": ["^Optional Conversion"],
+      "options": [
+        {
+          "label": "Optional operational vetoes",
+          "marker": "unless otherwise approved by the Requisite Directors:",
+          "trigger": { "field": "include_nonstandard_protective_provisions", "equals": true }
+        }
+      ]
+    },
+    {
+      "id": "exempted_securities_optional_paragraphs",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": [".+"],
+      "options": [
+        {
+          "label": "Lender and lessor exemption",
+          "marker": "shares of Common Stock, Options or Convertible Securities issued to banks, equipment lessors",
+          "trigger": { "field": "include_lender_exemption", "equals": true }
+        },
+        {
+          "label": "Supplier and service-provider exemption",
+          "marker": "shares of Common Stock, Options or Convertible Securities issued to suppliers or third party service providers",
+          "trigger": { "field": "include_supplier_exemption", "equals": true }
+        },
+        {
+          "label": "Acquisition consideration exemption",
+          "marker": "shares of Common Stock, Options or Convertible Securities issued as acquisition consideration",
+          "trigger": { "field": "include_acquisition_exemption", "equals": true }
+        },
+        {
+          "label": "Strategic partnership exemption",
+          "marker": "shares of Common Stock, Options or Convertible Securities issued in connection with sponsored research",
+          "trigger": { "field": "include_strategic_partnership_exemption", "equals": true }
+        }
+      ]
+    },
+    {
+      "id": "direct_listing",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": [".+"],
+      "options": [
+        {
+          "label": "Qualified Direct Listing trigger",
+          "marker": "immediately prior to the effectiveness of the registration statement in connection with the initial listing",
+          "trigger": { "field": "include_direct_listing", "equals": true }
+        }
+      ]
+    },
+    {
+      "id": "exclusive_forum",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": [".+"],
+      "options": [
+        {
+          "label": "Delaware exclusive forum",
+          "marker": "Unless the Corporation consents in writing to the selection of an alternative forum",
+          "trigger": { "field": "include_exclusive_forum", "equals": true }
+        }
+      ]
+    },
+    {
+      "id": "california_repurchases",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": [".+"],
+      "options": [
+        {
+          "label": "California Section 500 repurchases",
+          "marker": "For purposes of Section 500 of the California Corporations Code",
+          "trigger": { "field": "include_california_repurchases", "equals": true }
         }
       ]
     }

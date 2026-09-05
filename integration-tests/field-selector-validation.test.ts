@@ -79,9 +79,9 @@ describe('issue #620 slot coverage', () => {
     ) as Record<string, string>;
 
     await allureStep('Assert body slots are bound to fields', () => {
-      // Body company slot (21 underscores) fills from the same field as the
-      // uppercase signature-block slot.
-      expect(replacements['[_____________________]']).toBe('{company_name_upper}');
+      // Body company slot (21 underscores) uses the ordinary-case company
+      // field; the signature-block slot separately applies uppercase styling.
+      expect(replacements['[_____________________]']).toBe('{company_name}');
       // Dateline: the full "______, 20__" shape (including the pre-printed
       // "20") is replaced by a single formatted date (type: date → ISO input
       // renders as e.g. "July 15, 2026").
@@ -98,11 +98,10 @@ describe('issue #620 slot coverage', () => {
       expect(replacements['Series [_]']).toBe('Series {series_designation}');
     });
 
-    await allureStep('Assert the address line is replaced as one qualified shape', () => {
-      expect(replacements['[City], [State] [Zip]']).toBe('{city}, {state} {zip_code}');
-      expect(replacements).not.toHaveProperty('[City]');
-      expect(replacements).not.toHaveProperty('[State]');
-      expect(replacements).not.toHaveProperty('[Zip]');
+    await allureStep('Assert each address component is bound to its published field', () => {
+      expect(replacements['[City]']).toBe('{investor_notice_city}');
+      expect(replacements['[State]']).toBe('{investor_notice_state}');
+      expect(replacements['[Zip]']).toBe('{investor_notice_zip_code}');
     });
 
     await allureStep('Assert letter_date is a date-typed metadata field', () => {

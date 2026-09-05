@@ -11,12 +11,14 @@ optional: false
 distribution: linked
 artifact_type: field-selector
 fields:
+  - name: company_name
+    type: string
+    description: Full legal name of the Company in normal title case for the operative body text
   - name: company_name_upper
     type: string
     description: >-
-      Company name in uppercase. Fills both the uppercase signature-block slot ([COMPANY]) and the body's
-      "Preferred Stock of ______ (the "Company")" blank, so the supplied value appears verbatim in both places —
-      NVCA convention uppercases the signature block, so supply the name in uppercase.
+      Company name in uppercase for the left "Very truly yours" signature column. The pinned source's bracket labels are
+      reversed relative to the operative roles, so the recipe binds by column function rather than the literal bracket word.
   - name: letter_date
     type: date
     description: >-
@@ -31,25 +33,27 @@ fields:
     description: Full name of the investor
   - name: investor_name_upper
     type: string
-    description: Investor name in uppercase
-  - name: city
+    description: Investor name in uppercase for the right "Agreed and Accepted" signature column
+  - name: investor_notice_city
     type: string
-    description: City for the company address
-  - name: state
+    description: City in the Investor's notice address printed in the letter header
+  - name: investor_notice_state
     type: string
-    description: State for the company address
-  - name: street_address
+    description: State in the Investor's notice address printed in the letter header
+  - name: investor_notice_street_address
     type: string
-    description: Street address for the company
-  - name: zip_code
+    description: Street address for the Investor printed in the letter header
+  - name: investor_notice_zip_code
     type: string
-    description: ZIP code for the company address
+    description: ZIP code in the Investor's notice address printed in the letter header
   - name: company_letterhead
     type: string
-    description: >-
-      Portfolio company letterhead text. Defaults to a conspicuous drafting marker so an omitted optional letterhead
-      does not collapse the first operative paragraph into a blank leading page.
-    default: PORTFOLIO COMPANY LETTERHEAD
+    description: Company name or other company-identifying text for the Company letterhead block
+    default: ''
+  - name: company_address
+    type: string
+    description: Full Company address printed in the Company letterhead block; do not use the Investor notice address here
+    default: ''
   - name: signature_page_marker
     type: string
     description: Signature page marker text
@@ -58,17 +62,59 @@ fields:
     type: string
     description: Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement
     default: ""
+  - name: include_management_consultation_rights
+    type: boolean
+    description: Include consultation and management-advice rights while the Investor lacks Board representation
+    default: true
+  - name: include_inspection_rights
+    type: boolean
+    description: Include the books, records, facilities, and information inspection right
+    default: true
+  - name: include_board_materials_rights
+    type: boolean
+    description: Include concurrent Board-material delivery and the right to address the Board while the Investor lacks Board representation
+    default: true
+  - name: include_foreign_person_restrictions
+    type: boolean
+    description: Include the Defense Production Act and CFIUS foreign-person restrictions paragraph
+    default: false
+  - name: include_independent_business_reasons_merger_condition
+    type: boolean
+    description: Require the merger to satisfy the independent-business-reasons and reorganization conditions in clause (x)
+    default: false
+  - name: include_successor_or_liquid_consideration_merger_condition
+    type: boolean
+    description: Require the successor to provide reasonably comparable rights or pay solely cash or national-exchange-listed securities
+    default: true
+  - name: investor_signatory_name
+    type: string
+    description: Printed name of the Investor signatory; the handwritten By line remains blank
+  - name: investor_signatory_title
+    type: string
+    description: Title of the Investor signatory
+  - name: company_signatory_name
+    type: string
+    description: Printed name of the Company signatory; the handwritten By line remains blank
+  - name: company_signatory_title
+    type: string
+    description: Title of the Company signatory
 priority_fields:
+  - company_name
   - company_name_upper
   - letter_date
   - purchased_shares
   - investor_name
   - investor_name_upper
-  - city
-  - state
-  - street_address
-  - zip_code
+  - investor_notice_city
+  - investor_notice_state
+  - investor_notice_street_address
+  - investor_notice_zip_code
+  - company_address
   - series_designation
+  - investor_signatory_name
+  - investor_signatory_title
+  - company_signatory_name
+  - company_signatory_title
 artifact_kind: letter
 capabilities:
   - review

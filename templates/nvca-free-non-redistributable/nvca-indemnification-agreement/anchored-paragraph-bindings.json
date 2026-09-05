@@ -1,0 +1,23 @@
+{
+  "groups": [
+    {
+      "id": "company-execution-block",
+      "start_anchor": "COMPANY",
+      "end_anchor": "INDEMNITEE",
+      "expected_group_matches": 1,
+      "bindings": [
+        {"label":"Name:","field":"company_signatory_name","expected_matches":1,"insert_after_label":true,"preserve_following_tabs":true},
+        {"label":"Title:","field":"company_signatory_title","expected_matches":1,"insert_after_label":true,"preserve_following_tabs":true}
+      ]
+    },
+    {
+      "id": "indemnitee-execution-block",
+      "start_anchor": "INDEMNITEE",
+      "end_anchor": "Address:",
+      "expected_group_matches": 1,
+      "bindings": [
+        {"label":"Name:","field":"indemnitee_name","expected_matches":1,"insert_after_label":true,"preserve_following_tabs":true}
+      ]
+    }
+  ]
+}

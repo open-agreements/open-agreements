@@ -1,11 +1,11 @@
 import { afterEach, describe, expect } from 'vitest';
-import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
 import { itAllure } from './helpers/allure-test.js';
 import { resolveFieldSelectorDir } from '../src/utils/paths.js';
-import { loadFieldSelectorMetadata, loadCleanConfig } from '../src/core/metadata.js';
+import { loadFieldSelectorMetadata } from '../src/core/metadata.js';
 import { runFillPipeline } from '../src/core/unified-pipeline.js';
 import { runFieldSelector } from '../src/core/field-selector/index.js';
 
@@ -32,14 +32,6 @@ const TEMPLATE_DIR = resolveFieldSelectorDir('nvca-indemnification-agreement');
 const CLEANED_PARAGRAPHS = JSON.parse(
   readFileSync(join(__dirname, 'fixtures', 'nvca-indemnification-cleaned-paragraphs.json'), 'utf-8'),
 ) as { opening_clause: string; section_1d_appointing_stockholder: string };
-
-const IPO_TERMINATION_CLAUSE =
-  ", and terminate on the closing of an initial public offering of the Company's Common Stock; " +
-  'provided, however, that in the event of any such suspension or termination, the Appointing ' +
-  "Stockholder's rights to indemnification and advancement of expenses will not be suspended or " +
-  'terminated with respect to any Proceeding based in whole or in part on facts and circumstances ' +
-  'occurring at any time prior to such suspension or termination regardless of whether the ' +
-  'Proceeding arises before or after such suspension or termination';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -112,7 +104,14 @@ async function fillClausesDoc(values: Record<string, string>): Promise<string> {
     values,
     fields: metadata.fields,
     priorityFieldNames: [],
-    cleanPatch: { cleanConfig: loadCleanConfig(TEMPLATE_DIR), replacements },
+    // These paragraphs are already the post-clean source fixture. The
+    // canonical clean story declarations intentionally fail closed when their
+    // source headers are absent, so they do not belong in this scalar-binding
+    // harness.
+    cleanPatch: {
+      cleanConfig: { removeFootnotes: false, removeParagraphPatterns: [], removeRanges: [] },
+      replacements,
+    },
     verify: async () => ({ passed: true, checks: [] }),
   });
   return extractText(outputPath);
@@ -135,24 +134,20 @@ describe('nvca-indemnification-agreement field bindings (#616)', () => {
       Object.values(replacements).flatMap((v) => [...v.matchAll(/\{([a-z_][a-z0-9_]*)\}/g)].map((m) => m[1])),
     );
     expect(boundFields.has('agreement_effective_date')).toBe(true);
-    expect(boundFields.has('appointing_stockholder_ipo_termination_clause')).toBe(true);
-    expect(boundFields.has('service_of_process_agent_name')).toBe(true);
+    expect(boundFields.has('appointing_stockholder_ipo_termination_carrier')).toBe(true);
     // Every replacement tag targets a published field.
     for (const field of boundFields) {
       expect(fieldNames).toContain(field);
     }
   });
 
-  it('uses distinct contextual bindings for the indemnitee and Delaware service agent', () => {
+  it('uses the canonical generic-name binding for the indemnitee', () => {
     const replacements = JSON.parse(
       readFileSync(join(TEMPLATE_DIR, 'replacements.json'), 'utf-8'),
     ) as Record<string, string>;
 
-    expect(replacements['Company”), and > [name]']).toBe('{indemnitee_name}');
-    expect(replacements['Delaware, irrevocably > [name]']).toBe('{service_of_process_agent_name}');
-    expect(replacements['Delaware, irrevocably [name] > [address]']).toBe('{indemnitee_address}');
-    expect(replacements).not.toHaveProperty('[name]');
-    expect(replacements).not.toHaveProperty('[address]');
+    expect(replacements['[name]']).toBe('{indemnitee_name}');
+    expect(replacements['Address:']).toBe('{indemnitee_address}');
   });
 
   it('agreement_effective_date is typed date and ISO input fills the opening-clause blank as a document date', async () => {
@@ -170,27 +165,29 @@ describe('nvca-indemnification-agreement field bindings (#616)', () => {
     expect(text).not.toContain('20[__]');
   });
 
-  it('empty appointing_stockholder_ipo_termination_clause removes the bracketed clause and preserves the sentence period', async () => {
+  it('the default IPO-termination choice removes the bracketed clause and preserves the sentence period', async () => {
     const text = await fillClausesDoc({
       agreement_effective_date: '2026-03-15',
       company_name: 'Meridian Sentinel Inc.',
       indemnitee_name: 'Jordan Sentinel',
+      appointing_stockholder_ipo_termination_carrier: '.',
     });
     expect(text).toContain('representative on the Company’s Board. The Company and Indemnitee intend');
     expect(text).not.toContain('terminate on the closing of an initial public offering');
   });
 
-  it('supplied appointing_stockholder_ipo_termination_clause is inserted before the sentence period', async () => {
+  it('the enabled IPO-termination choice inserts the canonical carrier before the next sentence', async () => {
     const text = await fillClausesDoc({
       agreement_effective_date: '2026-03-15',
       company_name: 'Meridian Sentinel Inc.',
       indemnitee_name: 'Jordan Sentinel',
-      appointing_stockholder_ipo_termination_clause: IPO_TERMINATION_CLAUSE,
+      appointing_stockholder_ipo_termination_carrier:
+        ', but will end when the Company’s initial public offering closes; however, expiration will not affect the Appointing Stockholder’s indemnification or expense-advancement rights for any Proceeding arising from facts or circumstances predating that expiration.',
     });
     expect(text).toContain(
-      "Board, and terminate on the closing of an initial public offering of the Company's Common Stock",
+      'Board, but will end when the Company’s initial public offering closes',
     );
-    expect(text).toContain('before or after such suspension or termination. The Company and Indemnitee intend');
+    expect(text).toContain('predating that expiration. The Company and Indemnitee intend');
     expect(text).not.toContain('..');
     expect(text).not.toContain('[, and terminate');
   });
@@ -209,16 +206,38 @@ describe('nvca-indemnification-agreement field bindings (#616)', () => {
       buildDocx([CLEANED_PARAGRAPHS.opening_clause, CLEANED_PARAGRAPHS.section_1d_appointing_stockholder]),
     );
 
-    const result = await runFieldSelector({
-      fieldSelectorId: 'nvca-indemnification-agreement',
-      inputPath,
-      outputPath,
-      values: {
-        agreement_effective_date: '2026-03-15',
-        company_name: 'Meridian Sentinel Inc.',
-        indemnitee_name: 'Jordan Sentinel',
-      },
-    });
+    // Use the canonical published fields and replacements, but omit the
+    // whole-source cleaning contract from this already-clean synthetic DOCX.
+    const fixtureRoot = join(tempDir, 'fixture-content');
+    const fixtureRecipe = join(
+      fixtureRoot,
+      'templates',
+      'test-fixtures',
+      'nvca-indemnification-agreement',
+    );
+    mkdirSync(fixtureRecipe, { recursive: true });
+    cpSync(TEMPLATE_DIR, fixtureRecipe, { recursive: true });
+    rmSync(join(fixtureRecipe, 'clean.json'), { force: true });
+    rmSync(join(fixtureRecipe, 'anchored-paragraph-bindings.json'), { force: true });
+    const previousRoots = process.env.OPEN_AGREEMENTS_CONTENT_ROOTS;
+    process.env.OPEN_AGREEMENTS_CONTENT_ROOTS = fixtureRoot;
+
+    let result;
+    try {
+      result = await runFieldSelector({
+        fieldSelectorId: 'nvca-indemnification-agreement',
+        inputPath,
+        outputPath,
+        values: {
+          agreement_effective_date: '2026-03-15',
+          company_name: 'Meridian Sentinel Inc.',
+          indemnitee_name: 'Jordan Sentinel',
+        },
+      });
+    } finally {
+      if (previousRoots === undefined) delete process.env.OPEN_AGREEMENTS_CONTENT_ROOTS;
+      else process.env.OPEN_AGREEMENTS_CONTENT_ROOTS = previousRoots;
+    }
 
     const dateWarnings = result.warnings.filter((w) => w.includes('agreement_effective_date'));
     expect(dateWarnings).toEqual([]);
