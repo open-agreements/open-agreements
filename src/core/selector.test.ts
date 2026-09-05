@@ -594,6 +594,59 @@ describe('markerless selections', () => {
 });
 
 describe('bounded markerless removals', () => {
+  it('removes one uniquely contained paragraph without spilling into sibling paragraphs', async () => {
+    const inputPath = buildTestDocx(
+      para('Before.') +
+      '<w:p><w:bookmarkStart w:id="7" w:name="optional"/><w:r><w:t>Optional telecommunications text names the Federal Communications Commission.</w:t></w:r><w:bookmarkEnd w:id="7"/></w:p>' +
+      para('Outbound Investment Security Program remains.') +
+      para('DSP policies remain.'),
+    );
+    const outputPath = join(makeTempDir(), 'out.docx');
+    const config: SelectionsConfig = { groups: [{
+      id: 'telecom', type: 'checkbox', standalone: true, markerless: true,
+      options: [{
+        marker: 'Federal Communications Commission', trigger: { field: 'include_telecom', equals: true },
+        removal: { kind: 'paragraph', anchor: 'Federal Communications Commission', match: 'contains', expectedMatches: 1 },
+      }],
+    }] };
+
+    await applySelections(inputPath, outputPath, config, { include_telecom: false });
+    const xml = readDocumentXml(outputPath);
+    expect(extractText(outputPath)).toBe('Before.Outbound Investment Security Program remains.DSP policies remain.');
+    expect(xml).not.toContain('bookmarkStart');
+    expect(xml).not.toContain('bookmarkEnd');
+  });
+
+  it.each([
+    ['zero', para('No matching carrier.')],
+    ['ambiguous', para('Optional FCC carrier.') + para('Another FCC carrier.')],
+  ])('fails closed when a contains paragraph anchor is %s-match', async (_name, body) => {
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+    const config: SelectionsConfig = { groups: [{
+      id: 'fcc', type: 'checkbox', standalone: true, markerless: true,
+      options: [{ marker: 'FCC', trigger: { field: 'keep', equals: true }, removal: {
+        kind: 'paragraph', anchor: 'FCC', match: 'contains', expectedMatches: 1,
+      } }],
+    }] };
+    await expect(applySelections(inputPath, outputPath, config, {})).rejects.toThrow(/matched [02] paragraphs \(expected 1\)/);
+  });
+
+  it('fails closed rather than splitting a complex Word field across paragraphs', async () => {
+    const inputPath = buildTestDocx(
+      '<w:p><w:r><w:fldChar w:fldCharType="begin"/><w:t>REMOVE ME</w:t></w:r></w:p>' +
+      '<w:p><w:r><w:fldChar w:fldCharType="end"/><w:t>Keep field end.</w:t></w:r></w:p>',
+    );
+    const outputPath = join(makeTempDir(), 'out.docx');
+    const config: SelectionsConfig = { groups: [{
+      id: 'field_guard', type: 'checkbox', standalone: true, markerless: true,
+      options: [{ marker: 'REMOVE ME', trigger: { field: 'keep', equals: true }, removal: {
+        kind: 'paragraph', anchor: 'REMOVE ME', match: 'exact', expectedMatches: 1,
+      } }],
+    }] };
+    await expect(applySelections(inputPath, outputPath, config, {})).rejects.toThrow(/split a complex Word field/);
+  });
+
   it('removes the exact alternate table and adjacent blank carriers as whole OOXML blocks', async () => {
     const body = `
       ${para('Purchase price is $1.00 per share.')}
