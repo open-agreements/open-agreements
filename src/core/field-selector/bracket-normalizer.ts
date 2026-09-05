@@ -36,6 +36,7 @@ export interface DeclarativeParagraphNormalizeRule {
   replacements?: Record<string, string>;
   trim_unmatched_trailing_bracket?: boolean;
   expected_min_matches?: number;
+  expected_max_matches?: number;
 }
 
 export interface DeclarativeNormalizeConfig {
@@ -186,11 +187,15 @@ export async function normalizeBracketArtifacts(
   }
 
   for (const rule of rules) {
-    if (rule.expected_min_matches === undefined) continue;
     const actualMatches = stats.declarativeRuleMatchCounts[rule.id] ?? 0;
-    if (actualMatches < rule.expected_min_matches) {
+    if (rule.expected_min_matches !== undefined && actualMatches < rule.expected_min_matches) {
       stats.declarativeRuleExpectationFailures.push(
         `${rule.id}: expected at least ${rule.expected_min_matches} match(es), found ${actualMatches}`
+      );
+    }
+    if (rule.expected_max_matches !== undefined && actualMatches > rule.expected_max_matches) {
+      stats.declarativeRuleExpectationFailures.push(
+        `${rule.id}: expected at most ${rule.expected_max_matches} match(es), found ${actualMatches}`
       );
     }
   }

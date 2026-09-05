@@ -280,6 +280,27 @@ describe('normalizeBracketArtifacts', () => {
     );
   });
 
+  it('tracks expectation failures when a rule exceeds its maximum match bound', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-bracket-normalizer-max-expectations-'));
+    tempDirs.push(dir);
+    const input = join(dir, 'input.docx');
+    const output = join(dir, 'output.docx');
+    writeFileSync(input, buildDocx(['Target seam.', 'Target seam.']));
+
+    const stats = await normalizeBracketArtifacts(input, output, {
+      rules: [{
+        id: 'duplicate-target', section_heading: '', ignore_heading: true,
+        paragraph_contains: 'Target seam.', replacements: { 'seam.': 'seam!' },
+        expected_min_matches: 1, expected_max_matches: 1,
+      }],
+    });
+
+    expect(stats.declarativeRuleMatchCounts['duplicate-target']).toBe(2);
+    expect(stats.declarativeRuleExpectationFailures).toContain(
+      'duplicate-target: expected at most 1 match(es), found 2'
+    );
+  });
+
   it('declarative rule preserves bold formatting on adjacent runs', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-bracket-normalizer-bold-'));
     tempDirs.push(dir);
