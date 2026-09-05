@@ -1,0 +1,50 @@
+{
+  "paragraph_rules": [
+    {
+      "id": "unwrap-management-consultation-rights",
+      "section_heading": "",
+      "ignore_heading": true,
+      "paragraph_contains": "Investor shall be entitled to consult with and advise management",
+      "replacements": { "[If Investor": "If Investor" },
+      "trim_unmatched_trailing_bracket": true,
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-inspection-rights",
+      "section_heading": "",
+      "ignore_heading": true,
+      "paragraph_contains": "Investor may examine the books and records of the Company",
+      "replacements": { "[Investor may": "Investor may" },
+      "trim_unmatched_trailing_bracket": true,
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-board-materials-rights",
+      "section_heading": "",
+      "ignore_heading": true,
+      "paragraph_contains": "concurrently with delivery to the Board of Directors",
+      "replacements": { "[If Investor": "If Investor" },
+      "trim_unmatched_trailing_bracket": true,
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-foreign-person-restrictions",
+      "section_heading": "",
+      "ignore_heading": true,
+      "paragraph_contains": "solely by reason of becoming party to this letter agreement",
+      "replacements": { "[Notwithstanding": "Notwithstanding" },
+      "trim_unmatched_trailing_bracket": true
+    },
+    {
+      "id": "unwrap-successor-merger-condition",
+      "section_heading": "",
+      "ignore_heading": true,
+      "paragraph_contains": "successor entity provides reasonably comparable rights",
+      "replacements": {
+        "[(y) in which": "in which",
+        "national exchange]": "national exchange"
+      },
+      "expected_min_matches": 1
+    }
+  ]
+}

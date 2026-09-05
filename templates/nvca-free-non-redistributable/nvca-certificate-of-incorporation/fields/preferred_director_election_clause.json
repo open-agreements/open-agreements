@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "field_id": "preferred_director_election_clause",
+  "field_label": "Preferred Director Election Clause",
+  "description": "Whole grammatical carrier for the Preferred Director board-seat count",
+  "source_template_version": "10-1-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "basis,\\s+shall\\s+be\\s+entitled\\s+to\\s+elect\\s+(\\[__\\]\\s+director\\[s\\])",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": []
+}

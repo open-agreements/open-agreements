@@ -1,13 +1,21 @@
 {
-  "[COMPANY]": "{company_name_upper}",
-  "[_____________________]": "{company_name_upper}",
+  "[COMPANY]": "{investor_name_upper}",
+  "[_____________________]": "{company_name}",
   "[______], 20[__]": "{letter_date}",
   "[________]": "{purchased_shares}",
   "[Investor Name]": "{investor_name}",
-  "[INVESTOR]": "{investor_name_upper}",
-  "[City], [State] [Zip]": "{city}, {state} {zip_code}",
-  "[Street Address]": "{street_address}",
+  "[INVESTOR]": "{company_name_upper}",
+  "[City]": "{investor_notice_city}",
+  "[State]": "{investor_notice_state}",
+  "[Street Address]": "{investor_notice_street_address}",
+  "[Zip]": "{investor_notice_zip_code}",
   "[PORTFOLIO COMPANY LETTERHEAD]": "{company_letterhead}",
   "[Signature Page Follows]": "{signature_page_marker}",
-  "Series [_]": "Series {series_designation}"
+  "Last Updated July 2020": "",
+  "Last updated July 2020": "",
+  "Series [_]": "Series {series_designation}",
+  "Name: > Name:": "Printed name: {investor_signatory_name}",
+  " > Name:": "Printed name: {company_signatory_name}",
+  "Title: > Title:": "Position: {investor_signatory_title}",
+  " > Title:": "Position: {company_signatory_title}"
 }

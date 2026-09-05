@@ -25,6 +25,24 @@ fields:
   - name: company_counsel
     type: string
     description: Name and address of company's legal counsel
+  - name: company_signatory_name
+    type: string
+    description: Printed name of the Company signatory
+  - name: company_signatory_title
+    type: string
+    description: Title of the Company signatory
+  - name: company_notice_address
+    type: string
+    description: Company notice address printed on the signature page
+  - name: company_notice_email
+    type: string
+    description: Company notice email printed on the signature page
+  - name: investor_signatory_name
+    type: string
+    description: Printed name of the Investor signatory
+  - name: investor_signatory_title
+    type: string
+    description: Title of the Investor signatory
   - name: counsel_cc
     type: string
     description: Additional counsel to CC on notices, or empty string if none
@@ -57,6 +75,81 @@ fields:
     description: >-
       Effective date of the agreement ("is made as of <date>"). Accepts ISO YYYY-MM-DD (rendered as e.g.
       "March 15, 2026") or a display-ready date string.
+  - name: has_prior_agreement
+    type: boolean
+    description: Whether this agreement amends and restates an expressly identified predecessor ROFR and Co-Sale Agreement
+    default: false
+  - name: prior_agreement_date
+    type: date
+    description: Date of the predecessor ROFR and Co-Sale Agreement; used only when has_prior_agreement is true
+    default: ''
+  - name: has_additional_preferred_series
+    type: boolean
+    description: Whether Preferred Stock includes another expressly identified preferred-stock series
+    default: false
+  - name: include_special_mandatory_conversion
+    type: boolean
+    description: Include the Capital Stock exclusion for a Special Mandatory Conversion
+  - name: include_foreign_person_provisions
+    type: boolean
+    description: Include DPA, DPA Triggering Rights, Foreign Person, and related transfer restrictions
+  - name: sanctions_scope
+    type: enum
+    description: Sanctions jurisdictions included in the definitions
+    options: [united_states_only, united_states_eu_uk]
+  - name: qualified_key_holder_service
+    type: enum
+    description: Service relationships that qualify an individual Key Holder
+    options: [employee_only, employee_or_consultant]
+  - name: include_qualified_direct_listing
+    type: boolean
+    description: Include Qualified Direct Listing definitions and termination treatment
+  - name: include_dle_termination_condition
+    type: boolean
+    description: Condition Deemed Liquidation Event termination on cash, public securities, or comparable rights
+  - name: dispute_resolution
+    type: enum
+    description: Selected dispute-resolution alternative
+    options: [delaware_courts, arbitration]
+  - name: costs_rule
+    type: enum
+    description: Selected dispute-cost allocation
+    options: [each_party_own_costs, prevailing_party]
+  - name: include_proportional_waiver_protection
+    type: boolean
+    description: Preserve proportional participation when a waiving Investor participates in the transaction
+  - name: preexisting_rofr_priority
+    type: enum
+    description: Rule governing a conflict with another preexisting right of first refusal
+    options: [agreement_controls, bylaws_control]
+  - name: include_undersubscription_forfeiture
+    type: boolean
+    description: Include the all-or-none resale rule when ROFR rights are undersubscribed
+  - name: include_secondary_purchases_in_cosale_denominator
+    type: boolean
+    description: Count Secondary Refusal purchases in the co-sale fraction and reduce selling shares accordingly
+  - name: include_entity_transfer_restriction
+    type: boolean
+    description: Apply the transfer restrictions mutatis mutandis to entity-level transfers
+  - name: include_pledge_exempt_transfer
+    type: boolean
+    description: Include the secured-pledge exempt-transfer exception
+  - name: include_ten_percent_sale_exempt_transfer
+    type: boolean
+    description: Include the ten-percent sale exempt-transfer exception
+  - name: include_full_same_fashion_amendment_safeguard
+    type: boolean
+    description: Include the same-fashion amendment and Key Holder consent carveouts
+  - name: include_investor_status_minimum
+    type: boolean
+    description: Retain the minimum-share condition for Investor status
+  - name: include_key_holder_consent_minimum
+    type: boolean
+    description: Retain the minimum-ownership condition for Key Holder amendment consent
+  - name: additional_series_designation
+    type: string
+    description: Additional preferred-stock series designation; used only when has_additional_preferred_series is true
+    default: ''
   - name: specify_percentage
     type: string
     description: Specified percentage threshold for key holder transfers — include the percent sign (e.g. 60%); occurrences where the source carries a trailing % absorb it
@@ -119,11 +212,49 @@ fields:
     type: string
     description: Computed permitted-transferee minimum-share threshold or a visible insertion marker; do not supply directly
     default: ''
+  - name: investors
+    type: array
+    description: Investor notice and signature schedule rows
+    items:
+      - name: name
+        type: string
+        description: Investor legal name
+      - name: address
+        type: string
+        description: Investor notice address
+      - name: phone
+        type: string
+        description: Investor notice phone number
+      - name: email
+        type: string
+        description: Investor notice email address
+      - name: counsel_cc
+        type: string
+        description: Investor counsel copied on notices, or empty string if none
+  - name: key_holders
+    type: array
+    description: Key Holder personal notice and signature schedule rows
+    items:
+      - name: name
+        type: string
+        description: Key Holder legal name
+      - name: address
+        type: string
+        description: Key Holder personal notice address
+      - name: email
+        type: string
+        description: Key Holder personal email address
 priority_fields:
   - company_name
   - investor_name
   - key_holder_name
   - company_counsel
+  - company_signatory_name
+  - company_signatory_title
+  - company_notice_address
+  - company_notice_email
+  - investor_signatory_name
+  - investor_signatory_title
   - judicial_district
   - state_of_incorporation
   - business_description
@@ -133,6 +264,26 @@ priority_fields:
   - series_designation
   - par_value
   - competitor_exclusion_mode
+  - include_special_mandatory_conversion
+  - include_foreign_person_provisions
+  - sanctions_scope
+  - qualified_key_holder_service
+  - include_qualified_direct_listing
+  - include_dle_termination_condition
+  - dispute_resolution
+  - costs_rule
+  - include_proportional_waiver_protection
+  - preexisting_rofr_priority
+  - include_undersubscription_forfeiture
+  - include_secondary_purchases_in_cosale_denominator
+  - include_entity_transfer_restriction
+  - include_pledge_exempt_transfer
+  - include_ten_percent_sale_exempt_transfer
+  - include_full_same_fashion_amendment_safeguard
+  - include_investor_status_minimum
+  - include_key_holder_consent_minimum
+  - investors
+  - key_holders
 artifact_kind: agreement
 capabilities:
   - review

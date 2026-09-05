@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "tables": [
+    {
+      "id": "purchasers",
+      "rows_field": "purchasers",
+      "header_cells": [
+        "Name and Address of Purchaser",
+        "Invested in Convertible Securities ($)",
+        "Convertible Security Shares",
+        "Total Cash Purchase Price ($)",
+        "Shares Purchased by Cash",
+        "Total Shares"
+      ],
+      "columns": [
+        { "field": "name_and_address" },
+        { "field": "convertible_investment", "format": "currency" },
+        { "field": "convertible_shares", "format": "integer" },
+        { "field": "cash_purchase_economics" },
+        { "field": "cash_shares", "format": "integer" },
+        { "field": "total_shares", "format": "integer" }
+      ]
+    },
+    {
+      "id": "non_signing_convertible_holders",
+      "rows_field": "non_signing_convertible_holders",
+      "header_cells": [
+        "Name and Address of Convertible Security Holder",
+        "Invested in Convertible Securities ($)",
+        "Convertible Security Shares"
+      ],
+      "columns": [
+        { "field": "name_and_address" },
+        { "field": "convertible_investment", "format": "currency" },
+        { "field": "convertible_shares", "format": "integer" }
+      ]
+    }
+  ]
+}

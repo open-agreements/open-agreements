@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "field_id": "qualified_ipo_price_clause",
+  "field_label": "Qualified IPO Price Clause",
+  "description": "Whole grammatical carrier for the Qualified IPO minimum price",
+  "source_template_version": "10-1-2025",
+  "occurrences": [{ "primary": { "kind": "regex", "pattern": "(\\[at\\s+a\\s+price\\s+of\\s+at\\s+least\\s+\\$\\[_____\\]\\s+per\\s+share\\s+\\(subject\\s+to\\s+appropriate\\s+adjustment.*?Common\\s+Stock\\)\\])", "group": 1 } }],
+  "postconditions": ["no_unresolved_placeholder", "no_double_dollar"],
+  "failure_behavior": "warn",
+  "fixtures": []
+}

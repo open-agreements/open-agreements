@@ -6,9 +6,51 @@
     "initial_word_title": "",
     "closing_heading": "Closing.",
     "optional_plural_suffix": "",
-    "purchaser_scope": "all"
+    "purchaser_scope": "all",
+    "closing_article": "the",
+    "multiple_closing_sentence": ""
   },
   "rules": [
+    {
+      "id": "management-rights-letter-singular",
+      "when_all": [{ "field": "management_rights_letter_count", "op": "neq", "value": "multiple" }],
+      "set_fill": { "management_rights_instrument_name": "Management Rights Letter" }
+    },
+    {
+      "id": "management-rights-letter-plural",
+      "when_all": [{ "field": "management_rights_letter_count", "op": "eq", "value": "multiple" }],
+      "set_fill": { "management_rights_instrument_name": "Management Rights Letters" }
+    },
+    {
+      "id": "financial-statements-audited",
+      "when_all": [{ "field": "financial_statement_audit_status", "op": "eq", "value": "audited" }],
+      "set_fill": { "financial_statement_audit_label": "audited", "unaudited_footnote_qualification": "" }
+    },
+    {
+      "id": "financial-statements-unaudited",
+      "when_all": [{ "field": "financial_statement_audit_status", "op": "neq", "value": "audited" }],
+      "set_fill": { "financial_statement_audit_label": "unaudited", "unaudited_footnote_qualification": ", except that the unaudited Financial Statements may not contain all footnotes required by GAAP" }
+    },
+    {
+      "id": "closing-condition-waiver-majority",
+      "when_all": [{ "field": "closing_condition_waiver_standard", "op": "neq", "value": "percentage" }],
+      "set_fill": { "closing_condition_waiver_threshold": "a majority" }
+    },
+    {
+      "id": "closing-condition-waiver-percentage",
+      "when_all": [{ "field": "closing_condition_waiver_standard", "op": "eq", "value": "percentage" }],
+      "set_fill": { "closing_condition_waiver_threshold": "at least ${specify_percentage}" }
+    },
+    {
+      "id": "withdrawn-offering-representation-omit",
+      "when_all": [{ "field": "include_withdrawn_public_offering_representation", "op": "neq", "value": true }],
+      "set_fill": { "withdrawn_public_offering_representation": "" }
+    },
+    {
+      "id": "withdrawn-offering-representation-include",
+      "when_all": [{ "field": "include_withdrawn_public_offering_representation", "op": "eq", "value": true }],
+      "set_fill": { "withdrawn_public_offering_representation": "The Purchaser acknowledges that the Company filed a registration statement for a public offering of its Common Stock, which was withdrawn effective ${withdrawn_public_offering_date}. The Purchaser understands that this offering is not intended to be part of the public offering, and that the Purchaser will not be able to rely on the protection of Section 11 of the Securities Act." }
+    },
     {
       "id": "derive-dispute-resolution-track-arbitration",
       "description": "Alternative 1 in the SPA uses arbitration.",
@@ -97,7 +139,9 @@
         "initial_word_lower": "initial ",
         "initial_word_title": "Initial ",
         "closing_heading": "Initial Closing.",
-        "optional_plural_suffix": "s"
+        "optional_plural_suffix": "s",
+        "closing_article": "each",
+        "multiple_closing_sentence": "In the event there is more than one closing, the term \u201cClosing\u201d shall apply to each such closing unless otherwise specified."
       }
     },
     {

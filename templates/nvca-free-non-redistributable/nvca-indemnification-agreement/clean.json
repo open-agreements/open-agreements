@@ -1,12 +1,12 @@
 {
   "removeFootnotes": false,
   "removeEmptyLeadingParagraphs": true,
-  "clearParts": [
-    "header3.xml"
-  ],
   "removeParagraphPatterns": [
     "^Comment:",
-    "^NOTE:"
+    "^NOTE:",
+    "^The following additional exception can be added",
+    "^\\[NOTE: as the Delaware-incorporated Company",
+    "^_+Attention:_+$"
   ],
   "removeRanges": [
     {

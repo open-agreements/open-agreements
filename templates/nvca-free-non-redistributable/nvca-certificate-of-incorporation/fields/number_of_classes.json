@@ -11,13 +11,6 @@
         "pattern": "has\\s+(\\[two\\])",
         "group": 1
       }
-    },
-    {
-      "primary": {
-        "kind": "regex",
-        "pattern": "class,\\s+shall\\s+be\\s+entitled\\s+to\\s+elect\\s+(\\[__\\])",
-        "group": 1
-      }
     }
   ],
   "postconditions": [

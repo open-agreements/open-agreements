@@ -18,6 +18,13 @@
         "pattern": "Stock,\\s+\\$(\\[______\\])",
         "group": 1
       }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "of\\s+(\\[\\$0\\.001\\])",
+        "group": 1
+      }
     }
   ],
   "postconditions": [

@@ -1,7 +1,182 @@
 {
   "version": "1.0",
   "max_passes": 1,
+  "defaults": {
+    "signature_page_caption": "Signature Page to Investors’ Rights Agreement",
+    "key_holders_heading": "KEY HOLDERS: ",
+    "key_holder_signature_tail": "",
+    "annex_2_heading": "Annex 2",
+    "schedule_b_heading": "SCHEDULE B",
+    "company_notice_address_block": "",
+    "successors_assigns_section": "6.1",
+    "registration_rights_article": "2",
+    "expenses_registration_section": "2.6",
+    "company_registration_section": "2.2",
+    "delay_registration_section": "2.7",
+    "indemnification_section": "2.8",
+    "additional_investors_section": "6.9",
+    "market_standoff_section": "2.11",
+    "restrictions_transfer_section": "2.12",
+    "financial_statements_section": "3.1",
+    "inspection_section": "3.2",
+    "rofo_article": "4",
+    "rofo_section": "4.1",
+    "successor_indemnification_section": "5.5",
+    "indemnification_late_notice_clause": "The failure to give notice to the indemnifying party within a reasonable time of the commencement of any such action shall relieve such indemnifying party of any liability to the indemnified party under this Section 2.8, only to the extent that such failure materially prejudices the indemnifying party’s ability to defend such action. The failure to give notice to the indemnifying party will not relieve it of any liability that it may have to any indemnified party otherwise than under this Section 2.8.",
+    "rofo_termination_liquidation_clause": "",
+    "covenant_termination_liquidation_clause": ""
+    ,"selling_holder_counsel_expense_exception_clause": ""
+  },
   "rules": [
+    {
+      "id": "liquidation-termination-conditions-included",
+      "when_all": [{ "field": "include_covenant_termination_deemed_liquidation_condition", "op": "eq", "value": true }],
+      "set_fill": {
+        "rofo_termination_liquidation_clause": "in which the consideration received by the Investors in such Deemed Liquidation Event is in the form of cash and/or publicly traded securities, or if the Investors receive participation rights from the acquiring company or other successor to the Company reasonably comparable to those set forth in this Section 4",
+        "covenant_termination_liquidation_clause": "; provided, that, with respect to clause (ii), the covenants set forth in Section 5 shall only terminate if the consideration received by the Investors in such Deemed Liquidation Event is in the form of cash and/or publicly traded securities or if the acquiring company or other successor to the Company agrees to covenants comparable to those set forth in Section 5"
+      }
+    },
+    {
+      "id": "selling-holder-counsel-expense-exception-included",
+      "when_all": [{ "field": "include_selling_holder_counsel_expense_exception", "op": "eq", "value": true }],
+      "set_fill": {
+        "selling_holder_counsel_expense_exception_clause": ", except for the fees and disbursements of the Selling Holder Counsel borne and paid by the Company as provided in Section 2.6"
+      }
+    },
+    {
+      "id": "company-notice-attention",
+      "description": "Keep the supplied Attention recipient with the Company notice address even though the pinned signature page has no separate Attention label.",
+      "when_all": [{ "field": "company_notice_attention", "op": "truthy" }],
+      "set_fill": {
+        "company_notice_address_block": "${company_notice_address}; Attention: ${company_notice_attention}"
+      }
+    },
+    {
+      "id": "company-notice-without-attention",
+      "description": "Use the supplied Company notice address alone when no Attention recipient is supplied.",
+      "when_all": [{ "field": "company_notice_attention", "op": "falsy" }],
+      "set_fill": {
+        "company_notice_address_block": "${company_notice_address}"
+      }
+    },
+    {
+      "id": "requisite-holders-majority",
+      "when_all": [{ "field": "requisite_holders_standard", "op": "neq", "value": "percentage" }],
+      "set_fill": { "requisite_holders_threshold": "a majority" }
+    },
+    {
+      "id": "requisite-holders-percentage",
+      "when_all": [{ "field": "requisite_holders_standard", "op": "eq", "value": "percentage" }],
+      "set_fill": { "requisite_holders_threshold": "at least ${requisite_holders_percentage}%" }
+    },
+    {
+      "id": "demand-date-omitted",
+      "when_all": [{ "field": "include_demand_eligibility_date", "op": "neq", "value": true }],
+      "set_fill": { "demand_eligibility_date_clause": "" }
+    },
+    {
+      "id": "demand-date-included",
+      "when_all": [{ "field": "include_demand_eligibility_date", "op": "eq", "value": true }],
+      "set_fill": { "demand_eligibility_date_clause": "the earlier of (i) ${demand_eligibility_date} or (ii) " }
+    },
+    {
+      "id": "form-s1-demand-limit-one",
+      "when_all": [{ "field": "form_s1_demand_limit", "op": "eq", "value": "one" }],
+      "set_fill": {
+        "form_s1_demand_limit_words": "one",
+        "form_s1_demand_limit_suffix": ""
+      }
+    },
+    {
+      "id": "form-s1-demand-limit-two",
+      "when_all": [{ "field": "form_s1_demand_limit", "op": "eq", "value": "two" }],
+      "set_fill": {
+        "form_s1_demand_limit_words": "two",
+        "form_s1_demand_limit_suffix": "s"
+      }
+    },
+    {
+      "id": "selling-holder-counsel-cap-aggregate",
+      "when_all": [{ "field": "selling_holder_counsel_cap_basis", "op": "eq", "value": "aggregate" }],
+      "set_fill": {
+        "selling_holder_counsel_cap_clause": ", not to exceed $${selling_holder_counsel_fee_cap} in the aggregate,"
+      }
+    },
+    {
+      "id": "selling-holder-counsel-cap-per-registration",
+      "when_all": [{ "field": "selling_holder_counsel_cap_basis", "op": "eq", "value": "per_registration" }],
+      "set_fill": {
+        "selling_holder_counsel_cap_clause": ", not to exceed $${selling_holder_counsel_fee_cap} per registration,"
+      }
+    },
+    {
+      "id": "direct-listing-included",
+      "when_all": [{ "field": "direct_listing_election", "op": "eq", "value": "include" }],
+      "set_fill": {
+        "direct_listing_definition": "\u201cDirect Listing\u201d means the initial listing of the Common Stock (or other equity securities of the Company) on the Nasdaq Stock Market, the New York Stock Exchange or another exchange or marketplace approved by the Board of Directors by means of an effective registration statement filed by the Company with the SEC, without a related underwritten offering of such Common Stock (or other equity securities).",
+        "direct_listing_or_applicable_spaced": " or Direct Listing, as applicable",
+        "direct_listing_or_applicable": "or Direct Listing, as applicable",
+        "direct_listing_or_connection": " or in connection with a Direct Listing, as applicable",
+        "direct_listing_rule_144_clause": "or following the IPO or Direct Listing, as applicable, the transfer is made pursuant to SEC Rule 144",
+        "direct_listing_whichever_earlier": " or Direct Listing, whichever is earlier"
+      }
+    },
+    {
+      "id": "direct-listing-omitted",
+      "when_all": [{ "field": "direct_listing_election", "op": "eq", "value": "omit" }],
+      "set_fill": {
+        "direct_listing_definition": "",
+        "direct_listing_or_applicable_spaced": "",
+        "direct_listing_or_applicable": "",
+        "direct_listing_or_connection": "",
+        "direct_listing_rule_144_clause": "",
+        "direct_listing_whichever_earlier": ""
+      }
+    },
+    {
+      "id": "fresh-financing",
+      "description": "Remove the complete predecessor-agreement recital and supersession carriers for a new financing",
+      "when_all": [{ "field": "financing_history", "op": "eq", "value": "new_financing" }],
+      "set_fill": {
+        "prior_agreement_recitals_opening": "",
+        "prior_agreement_recitals_closing": "",
+        "prior_agreement_supersession": ""
+      }
+    },
+    {
+      "id": "amended-and-restated-financing",
+      "description": "Retain the predecessor-agreement provisions only when the transaction actually amends a prior IRA",
+      "when_all": [{ "field": "financing_history", "op": "eq", "value": "amended_and_restated" }],
+      "set_fill": {
+        "prior_agreement_recitals_opening": "WHEREAS, certain of the Investors (the \u201cExisting Investors\u201d) hold shares of Series ${series_designation} Preferred Stock and/or shares of Common Stock issued upon conversion thereof and possess registration rights, information rights, rights of first offer, and other rights pursuant to that certain Investors\u2019 Rights Agreement dated as of ${prior_agreement_date}, by and among the Company and such Existing Investors (the \u201cPrior Agreement\u201d);",
+        "prior_agreement_recitals_closing": "WHEREAS, the undersigned Existing Investors are holders of a sufficient number of the securities of the Company as are required to amend the Prior Agreement, and desire to amend and restate the Prior Agreement in its entirety and to accept the rights created pursuant to this Agreement in lieu of the rights granted to them under the Prior Agreement; and",
+        "prior_agreement_supersession": "Upon the effectiveness of this Agreement, the Prior Agreement shall be deemed amended and restated and superseded and replaced in its entirety by this Agreement, and shall be of no further force or effect."
+      }
+    },
+    {
+      "id": "checklist-delivered-on-date",
+      "when_all": [{ "field": "checklist_delivery_election", "op": "eq", "value": "delivered_on_date" }],
+      "set_fill": { "checklist_delivery_timing": "on ${checklist_delivery_date}" }
+    },
+    {
+      "id": "checklist-delivered-on-request",
+      "when_all": [{ "field": "checklist_delivery_election", "op": "eq", "value": "on_request" }],
+      "set_fill": { "checklist_delivery_timing": "within ${checklist_delivery_business_days} business days after any Investor\u2019s written request therefor" }
+    },
+    {
+      "id": "key-person-insurance-none",
+      "when_all": [{ "field": "key_person_insurance_election", "op": "eq", "value": "none" }],
+      "set_fill": {
+        "insurance_clause": "The Company shall obtain, within 90 days of the date hereof, from financially sound and reputable insurers, Directors and Officers liability insurance in an amount not less than $${d_and_o_coverage_amount} and on terms and conditions approved by the Board of Directors and will use commercially reasonable efforts to cause such insurance policy to be maintained until such time as the Board of Directors determines that such insurance should be discontinued. No such policy shall be cancelable by the Company without prior approval by the Board of Directors."
+      }
+    },
+    {
+      "id": "key-person-insurance-named",
+      "when_all": [{ "field": "key_person_insurance_election", "op": "eq", "value": "named" }],
+      "set_fill": {
+        "insurance_clause": "The Company shall obtain, within 90 days of the date hereof, from financially sound and reputable insurers, Directors and Officers liability insurance in an amount not less than $${d_and_o_coverage_amount} and term key person insurance on ${key_person_insured_name} in an amount not less than $${key_person_insurance_coverage_amount}, in each case on terms and conditions approved by the Board of Directors, and will use commercially reasonable efforts to cause such insurance policies to be maintained until such time as the Board of Directors determines that such insurance should be discontinued. The key person policy shall name the Company as loss payee. No such policy shall be cancelable by the Company without prior approval by the Board of Directors."
+      }
+    },
     {
       "id": "underwriter-selected-by-company",
       "description": "Select the Company alternative for appointment of underwriters",
@@ -11,7 +186,13 @@
     {
       "id": "underwriter-selected-by-board",
       "description": "Select the Board of Directors alternative for appointment of underwriters",
-      "when_all": [{ "field": "underwriter_selection", "op": "eq", "value": "board_of_directors" }],
+      "when_all": [
+        {
+          "field": "underwriter_selection",
+          "op": "eq",
+          "value": "board_of_directors"
+        }
+      ],
       "set_fill": { "underwriter_selector_text": "Board of Directors" }
     },
     {
@@ -36,31 +217,83 @@
         { "field": "competitor_exclusion_mode", "op": "eq", "value": "named" },
         { "field": "excluded_competitor_name", "op": "truthy" }
       ],
-      "set_fill": { "competitor_exclusion_clause": "Additionally, in no event shall ${excluded_competitor_name} or its Affiliates be a Competitor hereunder." }
+      "set_fill": {
+        "competitor_exclusion_clause": "Additionally, in no event shall ${excluded_competitor_name} or its Affiliates be a Competitor hereunder."
+      }
     },
     {
       "id": "transferee-eligibility-minimum-shares",
       "description": "Use a negotiated minimum-share threshold for assignment of registration rights",
       "when_all": [
-        { "field": "transferee_eligibility_standard", "op": "eq", "value": "minimum_shares" },
+        {
+          "field": "transferee_eligibility_standard",
+          "op": "eq",
+          "value": "minimum_shares"
+        },
         { "field": "transferee_minimum_shares", "op": "truthy" }
       ],
-      "set_fill": { "transferee_eligibility_text": "holds at least ${transferee_minimum_shares} shares of Registrable Securities (subject to appropriate adjustment for stock splits, stock dividends, combinations, and other recapitalizations)" }
+      "set_fill": {
+        "transferee_eligibility_text": "holds at least ${transferee_minimum_shares} shares of Registrable Securities (subject to appropriate adjustment for stock splits, stock dividends, combinations, and other recapitalizations)"
+      }
     },
     {
       "id": "transferee-eligibility-minimum-shares-missing",
       "description": "Keep a conspicuous drafting placeholder when the selected minimum-share threshold is missing",
       "when_all": [
-        { "field": "transferee_eligibility_standard", "op": "eq", "value": "minimum_shares" },
+        {
+          "field": "transferee_eligibility_standard",
+          "op": "eq",
+          "value": "minimum_shares"
+        },
         { "field": "transferee_minimum_shares", "op": "falsy" }
       ],
-      "set_fill": { "transferee_eligibility_text": "holds at least [INSERT TRANSFEREE MINIMUM SHARES] shares of Registrable Securities (subject to appropriate adjustment for stock splits, stock dividends, combinations, and other recapitalizations)" }
+      "set_fill": {
+        "transferee_eligibility_text": "holds at least [INSERT TRANSFEREE MINIMUM SHARES] shares of Registrable Securities (subject to appropriate adjustment for stock splits, stock dividends, combinations, and other recapitalizations)"
+      }
     },
     {
       "id": "transferee-eligibility-major-investor",
       "description": "Require a transferee and its Affiliates to qualify as a Major Investor",
-      "when_all": [{ "field": "transferee_eligibility_standard", "op": "neq", "value": "minimum_shares" }],
-      "set_fill": { "transferee_eligibility_text": "together with its Affiliates, would be a Major Investor" }
+      "when_all": [
+        {
+          "field": "transferee_eligibility_standard",
+          "op": "neq",
+          "value": "minimum_shares"
+        }
+      ],
+      "set_fill": {
+        "transferee_eligibility_text": "together with its Affiliates, would be a Major Investor"
+      }
+    },
+    {
+      "id": "registration-effectiveness-model-extensions",
+      "description": "Preserve the pinned model's underwriter-request and Form S-3 extensions.",
+      "when_all": [
+        { "field": "registration_effectiveness_extension", "op": "eq", "value": "underwriter_and_form_s3" }
+      ],
+      "set_fill": {
+        "registration_effectiveness_clause": "prepare and file with the SEC a registration statement with respect to such Registrable Securities and use its commercially reasonable efforts to cause such registration statement to become effective and, upon the request of the Holders of a majority of the Registrable Securities registered thereunder, keep such registration statement effective for a period of up to ${registration_effectiveness_days} days or, if earlier, until the distribution contemplated in the registration statement has been completed; provided, however, that (i) such ${registration_effectiveness_days}-day period shall be extended for a period of time equal to the period the Holder refrains, at the request of an underwriter of Common Stock (or other securities) of the Company, from selling any securities included in such registration, and (ii) in the case of any registration of Registrable Securities on Form S-3 that are intended to be offered on a continuous or delayed basis, subject to compliance with applicable SEC rules, such ${registration_effectiveness_days}-day period shall be extended for up to an additional 90 days, if necessary, to keep the registration statement effective until all such Registrable Securities are sold;"
+      }
+    },
+    {
+      "id": "registration-effectiveness-company-suspensions",
+      "description": "Toll only for stop orders, blackout notices, and other Company-directed suspensions that prevent sales.",
+      "when_all": [
+        { "field": "registration_effectiveness_extension", "op": "eq", "value": "company_suspensions" }
+      ],
+      "set_fill": {
+        "registration_effectiveness_clause": "prepare and file with the SEC a registration statement with respect to such Registrable Securities and use its commercially reasonable efforts to cause such registration statement to become effective and, upon the request of the Holders of a majority of the Registrable Securities registered thereunder, keep such registration statement effective for a period of up to ${registration_effectiveness_days} days or, if earlier, until the distribution contemplated in the registration statement has been completed; provided, however, that such ${registration_effectiveness_days}-day period shall be extended by the number of days during which sales under the registration statement are prevented by any stop order, blackout notice, or other Company-directed suspension;"
+      }
+    },
+    {
+      "id": "registration-effectiveness-no-extension",
+      "description": "Use only the base effectiveness period, without tolling or an additional extension.",
+      "when_all": [
+        { "field": "registration_effectiveness_extension", "op": "eq", "value": "none" }
+      ],
+      "set_fill": {
+        "registration_effectiveness_clause": "prepare and file with the SEC a registration statement with respect to such Registrable Securities and use its commercially reasonable efforts to cause such registration statement to become effective and, upon the request of the Holders of a majority of the Registrable Securities registered thereunder, keep such registration statement effective for a period of up to ${registration_effectiveness_days} days or, if earlier, until the distribution contemplated in the registration statement has been completed;"
+      }
     }
   ]
 }
