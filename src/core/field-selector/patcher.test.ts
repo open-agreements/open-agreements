@@ -576,6 +576,94 @@ describe('patchDocument — formatting preservation (docx-core)', () => {
   });
 });
 
+describe('patchDocument — atomic complex-field range deletion', () => {
+  function field(bookmark: string, result: string): string {
+    return (
+      '<w:r><w:fldChar w:fldCharType="begin"/></w:r>' +
+      `<w:r><w:instrText xml:space="preserve"> REF ${bookmark} \\h </w:instrText></w:r>` +
+      '<w:r><w:fldChar w:fldCharType="separate"/></w:r>' +
+      `<w:r><w:t>${result}</w:t></w:r>` +
+      '<w:r><w:fldChar w:fldCharType="end"/></w:r>'
+    );
+  }
+
+  function outputXml(path: string): string {
+    return new AdmZip(path).getEntry('word/document.xml')!.getData().toString('utf-8');
+  }
+
+  it('removes every node of multiple REF fields intersected by a cross-run deletion', async () => {
+    const xml =
+      `<?xml version="1.0" encoding="UTF-8"?><w:document xmlns:w="${W_NS}"><w:body>` +
+      '<w:p><w:r><w:t xml:space="preserve">Base sentence. [Optional sentence refers to Section </w:t></w:r>' +
+      field('kept_target', '2.1') +
+      '<w:r><w:t xml:space="preserve"> and Section </w:t></w:r>' +
+      field('removed_target', '3.2') +
+      '<w:r><w:t xml:space="preserve">.] Tail sentence.</w:t></w:r></w:p>' +
+      '</w:body></w:document>';
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+
+    await patchDocument(inputPath, outputPath, {
+      '[Optional sentence refers to Section 2.1 and Section 3.2.]': '',
+    });
+
+    const out = outputXml(outputPath);
+    expect(extractText(outputPath)).toBe('Base sentence.  Tail sentence.');
+    expect(out).not.toContain('fldChar');
+    expect(out).not.toContain('instrText');
+    expect(out).not.toContain('kept_target');
+    expect(out).not.toContain('removed_target');
+    expect(new DOMParser().parseFromString(out, 'text/xml').getElementsByTagName('parsererror').length).toBe(0);
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it('expands through nested fields but preserves a wholly outside REF field', async () => {
+    const nested =
+      '<w:r><w:fldChar w:fldCharType="begin"/></w:r>' +
+      '<w:r><w:instrText> IF </w:instrText></w:r>' +
+      '<w:r><w:fldChar w:fldCharType="separate"/></w:r>' +
+      field('nested_target', '4.1') +
+      '<w:r><w:fldChar w:fldCharType="end"/></w:r>';
+    const xml =
+      `<?xml version="1.0" encoding="UTF-8"?><w:document xmlns:w="${W_NS}"><w:body>` +
+      '<w:p>' + field('outside_target', '1.1') +
+      '<w:r><w:t xml:space="preserve"> Keep. [Drop </w:t></w:r>' + nested +
+      '<w:r><w:t xml:space="preserve"> now.] Tail.</w:t></w:r></w:p>' +
+      '</w:body></w:document>';
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+
+    await patchDocument(inputPath, outputPath, { '[Drop 4.1 now.]': '' });
+
+    const out = outputXml(outputPath);
+    expect(extractText(outputPath)).toBe('1.1 Keep.  Tail.');
+    expect(out).toContain('outside_target');
+    expect(out).not.toContain('nested_target');
+    expect((out.match(/fldCharType="begin"/g) ?? [])).toHaveLength(1);
+    expect((out.match(/fldCharType="end"/g) ?? [])).toHaveLength(1);
+    expect((out.match(/instrText/g) ?? [])).toHaveLength(2); // opening + closing XML tag
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it('atomically removes a field when the matched text is only its cached result', async () => {
+    const xml =
+      `<?xml version="1.0" encoding="UTF-8"?><w:document xmlns:w="${W_NS}"><w:body><w:p>` +
+      '<w:r><w:t>Before </w:t></w:r>' + field('deleted_bookmark', 'BROKEN') +
+      '<w:r><w:t> after.</w:t></w:r></w:p></w:body></w:document>';
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+
+    await patchDocument(inputPath, outputPath, { BROKEN: '' });
+
+    const out = outputXml(outputPath);
+    expect(extractText(outputPath)).toBe('Before  after.');
+    expect(out).not.toContain('fldChar');
+    expect(out).not.toContain('instrText');
+    expect(out).not.toContain('deleted_bookmark');
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+});
+
 describe('isRunSafeToRemove', () => {
   const parser = new DOMParser();
 
