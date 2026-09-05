@@ -18,7 +18,12 @@ afterEach(() => {
   vi.resetModules();
 });
 
-function createFieldSelectorFixture(options?: { computedProfile?: unknown; normalizeConfig?: unknown }) {
+function createFieldSelectorFixture(options?: {
+  computedProfile?: unknown;
+  normalizeConfig?: unknown;
+  fields?: string[];
+  replacements?: Record<string, string>;
+}) {
   const root = mkdtempSync(join(tmpdir(), 'oa-field-selector-index-'));
   tempDirs.push(root);
 
@@ -30,9 +35,11 @@ function createFieldSelectorFixture(options?: { computedProfile?: unknown; norma
       'source_version: "1.0"',
       'license_note: Example fieldSelector license',
       'fields:',
-      '  - name: company_name',
-      '    type: string',
-      '    description: Company name',
+      ...(options?.fields ?? [
+        '  - name: company_name',
+        '    type: string',
+        '    description: Company name',
+      ]),
       'priority_fields:',
       '  - company_name',
       '',
@@ -42,7 +49,7 @@ function createFieldSelectorFixture(options?: { computedProfile?: unknown; norma
 
   writeFileSync(
     join(root, 'replacements.json'),
-    JSON.stringify({ '[Company Name]': '{company_name}' }, null, 2),
+    JSON.stringify(options?.replacements ?? { '[Company Name]': '{company_name}' }, null, 2),
     'utf-8'
   );
 
@@ -97,6 +104,7 @@ describe('runFieldSelector', () => {
       inputPath: '/tmp/input.docx',
       outputPath: '/tmp/output.docx',
       values: { company_name: 'Acme Corp' },
+      selectionsZeroMatchPolicy: 'error',
     });
 
     await allureJsonAttachment('runFieldSelector-forwarding.json', {
@@ -110,6 +118,7 @@ describe('runFieldSelector', () => {
       outputPath: '/tmp/output.docx',
       priorityFieldNames: ['company_name'],
       values: { company_name: 'Acme Corp' },
+      selectionsZeroMatchPolicy: 'error',
     });
     expect(result.fieldsUsed).toEqual(['company_name']);
   });
@@ -212,6 +221,131 @@ describe('runFieldSelector', () => {
     });
     expect(Array.isArray(artifact.passes)).toBe(true);
     expect(result.computedOutPath).toBe(computedOutPath);
+  });
+
+  itFilling('formats declared dates before direct and chained computed interpolation', async () => {
+    const fieldSelectorDir = createFieldSelectorFixture({
+      fields: [
+        '  - name: company_name',
+        '    type: string',
+        '    description: Company name',
+        '  - name: checklist_delivery_date',
+        '    type: date',
+        '    description: Checklist delivery date',
+        '  - name: signer_text',
+        '    type: string',
+        '    description: Computed signer text',
+        '  - name: chained_text',
+        '    type: string',
+        '    description: Chained computed text',
+      ],
+      replacements: {
+        '[Company Name]': '{company_name}',
+        '[Delivery Date]': '{checklist_delivery_date}',
+        '[Signer Text]': '{signer_text}',
+        '[Chained Text]': '{chained_text}',
+      },
+      computedProfile: {
+        version: '1.0',
+        max_passes: 4,
+        rules: [
+          {
+            id: 'derive-signer-text',
+            when_all: [{ field: 'checklist_delivery_date', op: 'defined' }],
+            set_fill: { signer_text: 'delivered on ${checklist_delivery_date}' },
+          },
+          {
+            id: 'derive-chained-text',
+            when_all: [{ field: 'signer_text', op: 'defined' }],
+            set_fill: { chained_text: 'Signer materials were ${signer_text}.' },
+          },
+        ],
+      },
+    });
+    const runFillPipelineMock = vi.fn(async ({ outputPath }: { outputPath: string }) => ({
+      outputPath,
+      fieldsUsed: [],
+      providedFieldsUsed: [],
+      fillCommandCount: 1,
+      warnings: [],
+      stages: { cleaned: '/tmp/cleaned.docx', patched: '/tmp/patched.docx', filled: '/tmp/filled.docx' },
+    }));
+    vi.doMock('../../utils/paths.js', () => ({ resolveFieldSelectorDir: () => fieldSelectorDir }));
+    vi.doMock('../unified-pipeline.js', () => ({ runFillPipeline: runFillPipelineMock }));
+    const { runFieldSelector } = await import('./index.js');
+
+    await runFieldSelector({
+      fieldSelectorId: 'fixture-fieldSelector',
+      inputPath: '/tmp/input.docx',
+      outputPath: '/tmp/output.docx',
+      values: {
+        company_name: 'Acme Corp',
+        checklist_delivery_date: '2025-05-21',
+      },
+    });
+
+    const pipelineValues = runFillPipelineMock.mock.calls[0][0].values;
+    expect(pipelineValues).toMatchObject({
+      checklist_delivery_date: 'May 21, 2025',
+      signer_text: 'delivered on May 21, 2025',
+      chained_text: 'Signer materials were delivered on May 21, 2025.',
+    });
+    expect(JSON.stringify(pipelineValues)).not.toContain('2025-05-21');
+  });
+
+  itFilling('preserves display-ready dates and does not invent absent optional dates', async () => {
+    const fieldSelectorDir = createFieldSelectorFixture({
+      fields: [
+        '  - name: company_name',
+        '    type: string',
+        '    description: Company name',
+        '  - name: checklist_delivery_date',
+        '    type: date',
+        '    description: Optional checklist delivery date',
+        '  - name: reference_code',
+        '    type: string',
+        '    description: Non-date ISO-looking string',
+      ],
+      replacements: {
+        '[Company Name]': '{company_name}',
+        '[Delivery Date]': '{checklist_delivery_date}',
+        '[Reference]': '{reference_code}',
+      },
+      computedProfile: {
+        rules: [{
+          id: 'audit-only-to-enable-profile',
+          when_all: [{ field: 'checklist_delivery_date', op: 'defined' }],
+          set_audit: { has_delivery_date: true },
+        }],
+      },
+    });
+    const calls: Record<string, unknown>[] = [];
+    const runFillPipelineMock = vi.fn(async (args: Record<string, unknown>) => {
+      calls.push(args);
+      return {
+        outputPath: args.outputPath as string,
+        fieldsUsed: [], providedFieldsUsed: [], fillCommandCount: 1, warnings: [],
+        stages: { cleaned: '/tmp/cleaned.docx', patched: '/tmp/patched.docx', filled: '/tmp/filled.docx' },
+      };
+    });
+    vi.doMock('../../utils/paths.js', () => ({ resolveFieldSelectorDir: () => fieldSelectorDir }));
+    vi.doMock('../unified-pipeline.js', () => ({ runFillPipeline: runFillPipelineMock }));
+    const { runFieldSelector } = await import('./index.js');
+
+    await runFieldSelector({
+      fieldSelectorId: 'fixture-fieldSelector', inputPath: '/tmp/input.docx', outputPath: '/tmp/one.docx',
+      values: { company_name: 'Acme', checklist_delivery_date: 'May 21, 2025', reference_code: '2025-05-21' },
+    });
+    await runFieldSelector({
+      fieldSelectorId: 'fixture-fieldSelector', inputPath: '/tmp/input.docx', outputPath: '/tmp/two.docx',
+      values: { company_name: 'Acme', reference_code: '2025-05-21' },
+    });
+
+    expect((calls[0].values as Record<string, unknown>)).toMatchObject({
+      checklist_delivery_date: 'May 21, 2025',
+      reference_code: '2025-05-21',
+    });
+    expect(calls[1].values).toEqual({ company_name: 'Acme', reference_code: '2025-05-21' });
   });
 
   itFilling('uses downloader path when inputPath is omitted', async () => {
@@ -432,4 +566,3 @@ describe('runFieldSelector', () => {
     expect(missingWarnings).toEqual([]);
   });
 });
-

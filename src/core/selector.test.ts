@@ -593,6 +593,98 @@ describe('markerless selections', () => {
   });
 });
 
+describe('bounded markerless removals', () => {
+  it('removes the exact alternate table and adjacent blank carriers as whole OOXML blocks', async () => {
+    const body = `
+      ${para('Purchase price is $1.00 per share.')}
+      ${para('')}
+      ${table(tableRow(tableCell(para('MANDATORY TRANCHE ALTERNATE TABLE'))))}
+      ${para('')}
+      ${para('The aggregate purchase price is $10,000,000.')}
+    `;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+    const config: SelectionsConfig = { groups: [{
+      id: 'mandatory_tranche_table', type: 'checkbox', standalone: true, markerless: true,
+      options: [{
+        marker: 'MANDATORY TRANCHE ALTERNATE TABLE',
+        trigger: { field: 'use_mandatory_tranche', equals: true },
+        removal: { kind: 'table', anchor: 'MANDATORY TRANCHE ALTERNATE TABLE' },
+      }],
+    }] };
+
+    await applySelections(inputPath, outputPath, config, { use_mandatory_tranche: false });
+
+    const xml = readDocumentXml(outputPath);
+    const parsed = new DOMParser().parseFromString(xml, 'text/xml');
+    expect(extractText(outputPath)).toBe('Purchase price is $1.00 per share.The aggregate purchase price is $10,000,000.');
+    expect(parsed.getElementsByTagName('parsererror').length).toBe(0);
+    expect(parsed.getElementsByTagNameNS(W_NS, 'tbl').length).toBe(0);
+  });
+
+  it('removes only the declared section range and preserves following body text and punctuation', async () => {
+    const body = `
+      ${para('Representations follow:')}
+      ${para('SBIC Rights.')}
+      ${para('Optional SBIC representation.')}
+      ${table(tableRow(tableCell(para('Optional SBIC schedule.'))))}
+      ${para('Healthcare Matters.')}
+      ${para('The Company has complied with healthcare laws.')}
+      ${para('General Matters.')}
+      ${para('The Company is duly organized, validly existing, and in good standing.')}
+    `;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+    const config: SelectionsConfig = { groups: [{
+      id: 'sbic_section', type: 'checkbox', standalone: true, markerless: true,
+      options: [{
+        marker: 'SBIC Rights.', trigger: { field: 'include_sbic', equals: true },
+        removal: { kind: 'section', startAnchor: 'SBIC Rights.', endAnchor: 'Healthcare Matters.' },
+      }],
+    }] };
+
+    await applySelections(inputPath, outputPath, config, {});
+
+    const text = extractText(outputPath);
+    expect(text).not.toContain('SBIC');
+    expect(text).not.toContain('Optional SBIC schedule');
+    expect(text).toContain('Healthcare Matters.The Company has complied with healthcare laws.');
+    expect(text).toContain('duly organized, validly existing, and in good standing.');
+  });
+
+  it.each([
+    ['missing end', para('SBIC Rights.')],
+    ['duplicate end', `${para('SBIC Rights.')}${para('Healthcare Matters.')}${para('Healthcare Matters.')}`],
+    ['end before start', `${para('Healthcare Matters.')}${para('SBIC Rights.')}`],
+  ])('fails closed for %s section boundaries', async (_name, body) => {
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+    const config: SelectionsConfig = { groups: [{
+      id: 'bounded_section', type: 'checkbox', standalone: true, markerless: true,
+      options: [{
+        marker: 'SBIC Rights.', trigger: { field: 'include_sbic', equals: true },
+        removal: { kind: 'section', startAnchor: 'SBIC Rights.', endAnchor: 'Healthcare Matters.' },
+      }],
+    }] };
+    await expect(applySelections(inputPath, outputPath, config, {})).rejects.toThrow(/section (boundaries|end boundary)/i);
+  });
+
+  it('fails closed when a table anchor is duplicated', async () => {
+    const inputPath = buildTestDocx(
+      `${table(tableRow(tableCell(para('ALTERNATE TABLE'))))}${table(tableRow(tableCell(para('ALTERNATE TABLE'))))}`,
+    );
+    const outputPath = join(makeTempDir(), 'out.docx');
+    const config: SelectionsConfig = { groups: [{
+      id: 'bounded_table', type: 'checkbox', standalone: true, markerless: true,
+      options: [{
+        marker: 'ALTERNATE TABLE', trigger: { field: 'keep', equals: true },
+        removal: { kind: 'table', anchor: 'ALTERNATE TABLE' },
+      }],
+    }] };
+    await expect(applySelections(inputPath, outputPath, config, {})).rejects.toThrow(/matched 2 paragraphs \(expected 1\)/);
+  });
+});
+
 // ---------------------------------------------------------------------------
 // Inline selections
 // ---------------------------------------------------------------------------

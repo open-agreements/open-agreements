@@ -212,6 +212,37 @@ point through the first subsequent `end` match (inclusive) are removed. Matching
 resumes from the next paragraph, so the same range pattern can match multiple occurrences
 in a single document.
 
+### Optional: replace prepopulated table rows
+
+Use `repeatable-tables.json` when an array field must replace rows in a source DOCX table.
+For a header table that already contains distinct model data, set
+`existing_data_row_count` to the exact number of post-header rows. The pipeline matches the
+table before scalar replacement, preserves its header, removes all asserted source data
+rows, and inserts one row per array item. `prototype_row_index` uses the table's zero-based
+row index (the header is row `0`, so the first data row is `1`) and selects the source row
+whose formatting is cloned;
+it defaults to the first data row in this mode.
+
+```json
+{
+  "schema_version": 1,
+  "tables": [{
+    "id": "existing-holders",
+    "rows_field": "holders",
+    "header_cells": ["Holder", "Shares"],
+    "existing_data_row_count": 7,
+    "prototype_row_index": 1,
+    "columns": [
+      { "field": "name" },
+      { "field": "shares", "format": "integer" }
+    ]
+  }]
+}
+```
+
+The asserted count is a source-drift guard: a different number of source rows fails closed.
+Omitting `existing_data_row_count` retains the prior header-only/prototype-row behavior.
+
 ## Step 6: Define fields in metadata.yaml
 
 Fields in `metadata.yaml` control default values for unfilled placeholders:

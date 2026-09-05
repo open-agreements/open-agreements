@@ -38,6 +38,19 @@ const OptionSchema = z.object({
   marker: z.string(),
   trigger: TriggerSchema,
   replaceWith: z.string().optional(),
+  removal: z.discriminatedUnion('kind', [
+    z.object({
+      kind: z.literal('table'),
+      anchor: z.string().min(1),
+      removeAdjacentBlankParagraphs: z.boolean().optional(),
+    }).strict(),
+    z.object({
+      kind: z.literal('section'),
+      startAnchor: z.string().min(1),
+      endAnchor: z.string().min(1),
+      removeAdjacentBlankParagraphs: z.boolean().optional(),
+    }).strict(),
+  ]).optional(),
 });
 
 const GroupSchema = z
@@ -68,6 +81,10 @@ const GroupSchema = z
   .refine(
     (g) => !g.inline || g.markerless === true,
     { message: 'inline: true requires markerless: true' },
+  )
+  .refine(
+    (g) => g.options.every((o) => !o.removal || (g.markerless === true && !g.inline && o.replaceWith === undefined)),
+    { message: 'bounded removal requires markerless:true, inline:false, and no replaceWith' },
   );
 
 export const SelectionsConfigSchema = z.object({
@@ -155,6 +172,106 @@ function findAncestorElement(node: Node, localName: string): Element | null {
     current = current.parentNode;
   }
   return null;
+}
+
+function isWordElement(node: Node | null, localName?: string): node is Element {
+  if (!node || node.nodeType !== 1) return false;
+  const el = node as Element;
+  return el.namespaceURI === W_NS && (localName === undefined || el.localName === localName);
+}
+
+function elementChildren(parent: Node): Element[] {
+  const result: Element[] = [];
+  for (let i = 0; i < parent.childNodes.length; i++) {
+    const node = parent.childNodes[i];
+    if (node.nodeType === 1) result.push(node as Element);
+  }
+  return result;
+}
+
+function exactParagraphMatches(doc: Document, anchor: string): Element[] {
+  const expected = normalizeQuotes(anchor).trim();
+  const matches: Element[] = [];
+  const paragraphs = doc.getElementsByTagNameNS(W_NS, 'p');
+  for (let i = 0; i < paragraphs.length; i++) {
+    if (normalizeQuotes(extractParagraphText(paragraphs[i])).trim() === expected) matches.push(paragraphs[i]);
+  }
+  return matches;
+}
+
+function isBlankParagraph(node: Element): boolean {
+  return isWordElement(node, 'p') && extractParagraphText(node) === '';
+}
+
+/** Remove complete body blocks while also deleting bookmark counterparts outside them. */
+function removeBlockNodes(doc: Document, blocks: Set<Element>): void {
+  const doomedParas = new Set<Element>();
+  for (const block of blocks) {
+    if (isWordElement(block, 'p')) doomedParas.add(block);
+    const paras = block.getElementsByTagNameNS(W_NS, 'p');
+    for (let i = 0; i < paras.length; i++) doomedParas.add(paras[i]);
+  }
+
+  removeWithBookmarkCleanup(doc, doomedParas);
+  for (const block of blocks) block.parentNode?.removeChild(block);
+}
+
+type BoundedRemoval = NonNullable<z.infer<typeof OptionSchema>['removal']>;
+
+/**
+ * Execute an explicit, fail-closed block removal. Section end anchors are
+ * preserved and must be later siblings of the start anchor, preventing a
+ * missing/drifted boundary from consuming the rest of the agreement.
+ */
+function applyBoundedRemoval(doc: Document, groupId: string, removal: BoundedRemoval, remove: boolean): number {
+  if (removal.kind === 'table') {
+    const anchors = exactParagraphMatches(doc, removal.anchor);
+    if (anchors.length !== 1) {
+      throw new Error(`[selector] Group "${groupId}": table anchor "${removal.anchor}" matched ${anchors.length} paragraphs (expected 1).`);
+    }
+    const tables = new Set(anchors.map((p) => findAncestorElement(p, 'tbl')).filter((t): t is Element => t !== null));
+    if (tables.size !== 1) {
+      throw new Error(`[selector] Group "${groupId}": table anchor must resolve to exactly one table (resolved ${tables.size}).`);
+    }
+    const table = [...tables][0];
+    const parent = table.parentNode;
+    if (!parent) throw new Error(`[selector] Group "${groupId}": matched table has no parent.`);
+    const siblings = elementChildren(parent);
+    const index = siblings.indexOf(table);
+    const blocks = new Set<Element>([table]);
+    if (removal.removeAdjacentBlankParagraphs !== false) {
+      for (let i = index - 1; i >= 0 && isBlankParagraph(siblings[i]); i--) blocks.add(siblings[i]);
+      for (let i = index + 1; i < siblings.length && isBlankParagraph(siblings[i]); i++) blocks.add(siblings[i]);
+    }
+    if (remove) removeBlockNodes(doc, blocks);
+    return anchors.length;
+  }
+
+  const starts = exactParagraphMatches(doc, removal.startAnchor);
+  const ends = exactParagraphMatches(doc, removal.endAnchor);
+  if (starts.length !== 1 || ends.length !== 1) {
+    throw new Error(
+      `[selector] Group "${groupId}": section boundaries matched start=${starts.length} (expected 1), ` +
+      `end=${ends.length} (expected 1).`,
+    );
+  }
+  const start = starts[0];
+  const end = ends[0];
+  if (start.parentNode !== end.parentNode || !start.parentNode) {
+    throw new Error(`[selector] Group "${groupId}": section boundaries must be sibling body blocks.`);
+  }
+  const siblings = elementChildren(start.parentNode);
+  const startIndex = siblings.indexOf(start);
+  const endIndex = siblings.indexOf(end);
+  if (startIndex < 0 || endIndex <= startIndex) {
+    throw new Error(`[selector] Group "${groupId}": section end boundary must follow its start boundary.`);
+  }
+  const blocks = new Set<Element>(siblings.slice(startIndex, endIndex));
+  if (removal.removeAdjacentBlankParagraphs !== false) {
+    for (let i = startIndex - 1; i >= 0 && isBlankParagraph(siblings[i]); i--) blocks.add(siblings[i]);
+  }
+  if (remove) removeBlockNodes(doc, blocks);
+  return starts.length;
 }
 
 // ---------------------------------------------------------------------------
@@ -493,7 +610,7 @@ export async function applySelections(
 
     let partModified = false;
     for (const group of config.groups) {
-      const result = processGroup(doc, group, data, stats);
+      const result = processGroup(doc, group, data, stats, partName === 'word/document.xml');
       if (result) partModified = true;
     }
 
@@ -535,9 +652,10 @@ function processGroup(
   group: z.infer<typeof GroupSchema>,
   data: Record<string, unknown>,
   stats: OptionStats,
+  isMainDocument: boolean,
 ): boolean {
   if (group.markerless) {
-    return processMarkerlessGroup(doc, group, data, stats);
+    return processMarkerlessGroup(doc, group, data, stats, isMainDocument);
   }
 
   if (group.standalone) {
@@ -898,6 +1016,7 @@ function processMarkerlessGroup(
   group: z.infer<typeof GroupSchema>,
   data: Record<string, unknown>,
   stats: OptionStats,
+  isMainDocument: boolean,
 ): boolean {
   const selectedIndices = evaluateTriggers(group, data);
   const matchCounts: number[] = group.options.map(() => 0);
@@ -907,6 +1026,21 @@ function processMarkerlessGroup(
 
   for (let oi = 0; oi < group.options.length; oi++) {
     const option = group.options[oi];
+
+    if (option.removal) {
+      // Whole tables and sections are body-block concepts. Ignoring headers and
+      // footers also makes the exact-one assertion global for the only part in
+      // which bounded removal is valid.
+      if (!isMainDocument) continue;
+      const selected = selectedIndices.has(oi);
+      const count = applyBoundedRemoval(doc, group.id, option.removal, !selected);
+      matchCounts[oi] += count;
+      if (!selected) {
+        appliedCounts[oi]++;
+        madeChanges = true;
+      }
+      continue;
+    }
 
     // Snapshot all paragraphs before mutating to avoid live NodeList issues
     const allParagraphs = doc.getElementsByTagNameNS(W_NS, 'p');

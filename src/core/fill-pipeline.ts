@@ -155,6 +155,27 @@ export function formatDocumentDate(value: string): string {
 }
 
 /**
+ * Return a shallow copy with metadata-declared date fields normalized for
+ * document display. This is intentionally safe to call at more than one
+ * pipeline boundary: {@link formatDocumentDate} leaves display-ready and
+ * non-date strings unchanged.
+ */
+export function formatDocumentDateFields(
+  values: Record<string, unknown>,
+  fields: FieldDefinition[]
+): Record<string, unknown> {
+  const formatted = { ...values };
+  for (const field of fields) {
+    if (field.type !== 'date') continue;
+    const value = formatted[field.name];
+    if (typeof value === 'string') {
+      formatted[field.name] = formatDocumentDate(value);
+    }
+  }
+  return formatted;
+}
+
+/**
  * Prepare fill data with all normalization steps:
  * 1. Apply defaults for optional fields not provided
  * 2. Normalize multiselect fields and derive booleans (optional)
@@ -175,7 +196,7 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
 
   // Apply defaults for fields not provided
   const defaultValue = useBlankPlaceholder ? BLANK_PLACEHOLDER : '';
-  const data: Record<string, unknown> = { ...values };
+  let data: Record<string, unknown> = { ...values };
 
   for (const field of fields) {
     if (!(field.name in data)) {
@@ -195,13 +216,7 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
   // empty-but-non-null placeholders pass through unchanged, so fixtures that
   // supply "March 20, 2026" are unaffected. Deterministic and
   // timezone-independent — see formatDocumentDate.
-  for (const field of fields) {
-    if (field.type !== 'date') continue;
-    const value = data[field.name];
-    if (typeof value === 'string') {
-      data[field.name] = formatDocumentDate(value);
-    }
-  }
+  data = formatDocumentDateFields(data, fields);
 
   for (const field of fields) {
     if (field.type !== 'enum') continue;

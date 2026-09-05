@@ -393,6 +393,46 @@ function replaceAtPositionLegacy(
   const firstEntry = charMap[matchStart];
   const lastEntry = charMap[end - 1];
 
+  // A complex Word field is an atomic OOXML construct. Its instruction runs
+  // have no visible characters, while its cached-result runs do, so a
+  // character-range edit can otherwise clear only the result and leave
+  // begin/instr/separate/end behind. Word or LibreOffice will then regenerate
+  // the deleted result on refresh (or display a broken-reference error).
+  //
+  // Expand an intersecting edit to every enclosing field boundary. The loop is
+  // deliberate: expanding across one field can intersect an outer/nested field.
+  let expandedStart = firstEntry.runIndex;
+  let expandedEnd = lastEntry.runIndex;
+  const fieldRanges = getComplexFieldRunRanges(runs);
+  let expanded: boolean;
+  do {
+    expanded = false;
+    for (const field of fieldRanges) {
+      if (field.end < expandedStart || field.start > expandedEnd) continue;
+      const nextStart = Math.min(expandedStart, field.start);
+      const nextEnd = Math.max(expandedEnd, field.end);
+      if (nextStart !== expandedStart || nextEnd !== expandedEnd) {
+        expandedStart = nextStart;
+        expandedEnd = nextEnd;
+        expanded = true;
+      }
+    }
+  } while (expanded);
+
+  if (expandedStart !== firstEntry.runIndex || expandedEnd !== lastEntry.runIndex ||
+      fieldRanges.some(field => field.start <= expandedEnd && field.end >= expandedStart)) {
+    replaceExpandedAtomicRange(
+      runs,
+      firstEntry,
+      lastEntry,
+      expandedStart,
+      expandedEnd,
+      value,
+      replacementColor,
+    );
+    return;
+  }
+
   if (firstEntry.runIndex === lastEntry.runIndex) {
     const runText = getRunText(runs[firstEntry.runIndex]);
     setRunText(
@@ -418,6 +458,77 @@ function replaceAtPositionLegacy(
     if (getRunText(runs[i]) === '' && isRunSafeToRemove(runs[i])) {
       runs[i].parentNode?.removeChild(runs[i]);
     }
+  }
+}
+
+interface ComplexFieldRunRange {
+  start: number;
+  end: number;
+}
+
+/** Pair complex-field begin/end markers in run order, retaining nested pairs. */
+function getComplexFieldRunRanges(runs: Element[]): ComplexFieldRunRange[] {
+  const stack: number[] = [];
+  const ranges: ComplexFieldRunRange[] = [];
+  for (let i = 0; i < runs.length; i++) {
+    const chars = runs[i].getElementsByTagNameNS(W_NS, 'fldChar');
+    for (let j = 0; j < chars.length; j++) {
+      const type = chars[j].getAttributeNS(W_NS, 'fldCharType') || chars[j].getAttribute('w:fldCharType');
+      if (type === 'begin') {
+        stack.push(i);
+      } else if (type === 'end') {
+        const start = stack.pop();
+        if (start !== undefined) ranges.push({ start, end: i });
+      }
+    }
+  }
+  return ranges;
+}
+
+/**
+ * Replace an edit expanded across one or more complete field complexes.
+ * Boundary text outside the requested character span is retained, while every
+ * run in the expanded field-aware range is removed. A fresh ordinary text run
+ * is inserted at the original range location, so no instruction/result
+ * fragments can survive application field refresh.
+ */
+function replaceExpandedAtomicRange(
+  runs: Element[],
+  firstEntry: CharMapEntry,
+  lastEntry: CharMapEntry,
+  expandedStart: number,
+  expandedEnd: number,
+  value: string,
+  replacementColor?: string,
+): void {
+  const firstText = getRunText(runs[firstEntry.runIndex]);
+  const lastText = getRunText(runs[lastEntry.runIndex]);
+  const prefix = expandedStart === firstEntry.runIndex
+    ? firstText.slice(0, firstEntry.charOffset)
+    : '';
+  const suffix = expandedEnd === lastEntry.runIndex
+    ? lastText.slice(lastEntry.charOffset + 1)
+    : '';
+  const replacementText = prefix + value + suffix;
+
+  const anchor = runs[expandedStart];
+  const parent = anchor.parentNode;
+  if (!parent) return;
+  const doc = anchor.ownerDocument as Document;
+  if (replacementText !== '') {
+    const replacementRun = doc.createElementNS(W_NS, 'w:r');
+    const sourceRPr = runs[firstEntry.runIndex].getElementsByTagNameNS(W_NS, 'rPr')[0];
+    if (sourceRPr) replacementRun.appendChild(sourceRPr.cloneNode(true));
+    const text = doc.createElementNS(W_NS, 'w:t');
+    text.setAttribute('xml:space', 'preserve');
+    text.textContent = replacementText;
+    replacementRun.appendChild(text);
+    if (replacementColor) setRunColor(replacementRun, replacementColor);
+    parent.insertBefore(replacementRun, anchor);
+  }
+
+  for (let i = expandedEnd; i >= expandedStart; i--) {
+    runs[i].parentNode?.removeChild(runs[i]);
   }
 }
 

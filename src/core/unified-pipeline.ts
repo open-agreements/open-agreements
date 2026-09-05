@@ -86,6 +86,12 @@ export interface PipelineOptions {
     cleanedSourcePath?: string,
     referencedFields?: Set<string>,
   ) => VerifyResult | Promise<VerifyResult>;
+  /**
+   * Structural source transformation that must run after cleaning but before
+   * selector/legacy scalar patching. Generated content must contain no fill
+   * commands because command analysis and filling happen later.
+   */
+  prePatchProcess?: (inputPath: string, outputPath: string) => void | Promise<void>;
   postProcess?: (outputPath: string) => void | Promise<void>;
 
   // Debugging
@@ -176,6 +182,7 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
     computeDisplayFields,
     fixSmartQuotes = false,
     verify,
+    prePatchProcess,
     postProcess,
     keepIntermediate = false,
   } = options;
@@ -207,14 +214,21 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
       await cleanDocument(sourcePath, cleanedPath, cleanPatch.cleanConfig);
       cleanedSourcePath = cleanedPath;
 
+      let structuralInputPath = cleanedPath;
+      if (prePatchProcess) {
+        const structurallyProcessedPath = join(tempDir, 'structural.docx');
+        await prePatchProcess(cleanedPath, structurallyProcessedPath);
+        structuralInputPath = structurallyProcessedPath;
+      }
+
       // Selector-contract patch (deterministic locators) runs between clean and
       // the legacy patch. It rewrites resolved occurrences to {field_id} tags;
       // those fields' keys have already been removed from cleanPatch.replacements
       // (the declarative migrated_keys cutover) so each field is patched once.
-      let patchInputPath = cleanedPath;
+      let patchInputPath = structuralInputPath;
       if (selectorManifests && selectorManifests.length > 0) {
         const selectedPath = join(tempDir, 'selected.docx');
-        const selectorResult = await applySelectorContracts(cleanedPath, selectedPath, selectorManifests);
+        const selectorResult = await applySelectorContracts(structuralInputPath, selectedPath, selectorManifests);
         onSelectorResolved?.(selectorResult.fields);
         for (const warning of selectorResult.warnings) {
           console.warn(`Selector warning: ${warning}`);
@@ -249,6 +263,10 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
 
       currentPath = patchedPath;
       stages = { clean: cleanedPath, patch: patchedPath, fill: '' };
+    } else if (prePatchProcess) {
+      const structurallyProcessedPath = join(tempDir, 'structural.docx');
+      await prePatchProcess(sourcePath, structurallyProcessedPath);
+      currentPath = structurallyProcessedPath;
     }
 
     // Step 4: Prepare fill data.
@@ -340,6 +358,16 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
           throw new Error(`[selections] ${message}`);
         }
         warnings.push(message);
+      }
+
+      if (selectionsZeroMatchPolicy === 'error' && anomalies.selectedZeroMatch.length > 0) {
+        const detail = anomalies.selectedZeroMatch
+          .map((o) => `${describeSelectionOption(o)} [matched ${o.matchCount}]`)
+          .join('; ');
+        throw new Error(
+          `[selections] selected option(s) are absent from the document; refusing to emit a document that did ` +
+          `not implement the requested choice: ${detail}`,
+        );
       }
 
       for (const o of anomalies.unremovedInInertGroup) {

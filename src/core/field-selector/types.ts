@@ -9,6 +9,8 @@ export interface FieldSelectorRunOptions {
   keepIntermediate?: boolean;
   computedOutPath?: string;
   normalizeBracketArtifacts?: boolean;
+  /** Fail closed when a configured selected/unselected alternative cannot be resolved. */
+  selectionsZeroMatchPolicy?: 'error' | 'warn';
 }
 
 export interface FieldSelectorRunResult {
