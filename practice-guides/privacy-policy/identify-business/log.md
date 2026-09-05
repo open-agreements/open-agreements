@@ -1,5 +1,8 @@
 # Identify Business Update Log
 
+## 2026-09-04
+* **Update**: Revise privacy policy defined-term guidance (78a4b48)
+
 ## 2026-07-06
 * **Update**: refactor(lib): domain subfolders for 58 flat lib files + import-boundary lint (closes #1411) (#1611) (acbbab1)
 * **Update**: Rename review checklists to reviewer checklists (#1631) (d88b1a2)

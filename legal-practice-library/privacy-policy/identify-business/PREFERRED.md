@@ -20,7 +20,7 @@ Preferred phrasing for [REQ-privacy-law.privacy-policy.identify-business](https:
 
 > ### Who We Are
 > 
-> This Privacy Policy explains how {business_legal_name} collects, uses, and shares your [[Personal Data]]. If you have questions about this policy or your privacy rights, contact us at {business_contact_email} or {business_postal_address}.
+> This Privacy Policy explains how {business_legal_name} collects, uses, and shares your Personal Data. If you have questions about this policy or your privacy rights, contact us at {business_contact_email} or {business_postal_address}.
 
 - gate: `always`
 - template_clause: `openagreements-privacy-policy/who-we-are`
