@@ -148,7 +148,6 @@ describeWithSource('NVCA COI production fill', () => {
       expect(text).not.toContain('Special Mandatory Conversion.,');
       expect(text).not.toMatch(/Special Mandatory Conversion\s*\.\s*,/);
       expect(text).toContain('General. Unless prohibited by Delaware law');
-      expect(text).toContain('and prior to September 15, 2028');
       expect(text).not.toContain('[Date]');
       expect(text).toContain('$20,000,000 in gross proceeds');
       expect(text).toContain('excluding proceeds previously received');

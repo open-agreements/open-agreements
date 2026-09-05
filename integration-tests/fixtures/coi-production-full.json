@@ -37,7 +37,6 @@
   "qualified_ipo_minimum_price": "10.00",
   "qualified_ipo_gross_proceeds": "50,000,000",
   "qualified_direct_listing_market_cap": "250,000,000",
-  "full_ratchet_sunset_date": "2028-09-15",
   "qualified_financing_min_gross_proceeds": "20,000,000",
   "qualified_financing_debt_proceeds_treatment": "excluding",
   "dividend_formula_prefix": "the greater of",
