@@ -84,9 +84,6 @@ fields:
   - name: at_large_director_seats
     type: string
     description: Number of directors elected by Common and Preferred Stock voting together
-  - name: board_size
-    type: string
-    description: Total negotiated size of the Board of Directors (used to verify that the allocated seats and at-large balance reconcile)
   - name: escrow_consideration_treatment
     type: enum
     description: Treatment of escrow or holdback amounts in a Deemed Liquidation Event
@@ -232,33 +229,6 @@ fields:
   - name: include_dle_redemption_mechanics
     type: boolean
     description: Include the Section 2.3.2(b) post-Deemed-Liquidation-Event redemption mechanics
-  - name: require_preferred_director_dle_approval
-    type: boolean
-    description: Require approval of at least one Preferred Director for valuation of non-cash Deemed Liquidation Event consideration
-  - name: include_initial_preferred_director_appointment
-    type: boolean
-    description: Permit the Board to appoint the initial Preferred Director for administrative convenience
-  - name: require_preferred_director_board_approval
-    type: boolean
-    description: Include a majority of seated Preferred Directors in the Requisite Directors approval standard
-  - name: include_protective_provision_recap_adjustment
-    type: boolean
-    description: Adjust the protective-provision outstanding-share threshold for stock splits and similar recapitalizations
-  - name: include_void_ab_initio_remedy
-    type: boolean
-    description: Provide that an unapproved protected action is void ab initio
-  - name: limit_amendment_protection_to_adverse_effects
-    type: boolean
-    description: Limit the charter and bylaws amendment protective provision to amendments adversely affecting Preferred Stock
-  - name: allow_pari_passu_stock
-    type: boolean
-    description: Permit creation of stock ranking pari passu with Preferred Stock without the protective vote
-  - name: protect_authorized_share_decreases
-    type: boolean
-    description: Apply the authorized-share protective provision to decreases as well as increases
-  - name: protect_board_size
-    type: boolean
-    description: Include the standard protective provision covering changes to Board size or director voting power
   - name: include_nonstandard_protective_provisions
     type: boolean
     description: Include the optional Requisite Directors operational-veto provisions
@@ -274,16 +244,6 @@ fields:
   - name: include_strategic_partnership_exemption
     type: boolean
     description: Include the strategic-partnership Exempted Securities paragraph
-  - name: require_requisite_directors_for_plan_exemption
-    type: boolean
-    description: Require Requisite Directors approval for equity-plan issuances treated as Exempted Securities
-  - name: no_adjustment_consent
-    type: enum
-    description: Holder constituency permitted to waive an anti-dilution adjustment
-    options: [requisite_holders, affected_series_majority]
-  - name: limit_multiple_closing_period
-    type: boolean
-    description: Apply the optional 180-day limit to related issuances treated as one transaction
   - name: include_exclusive_forum
     type: boolean
     description: Include the Delaware exclusive-forum provision
