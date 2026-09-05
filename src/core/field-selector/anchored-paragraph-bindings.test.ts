@@ -1,4 +1,5 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect } from 'vitest';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import AdmZip from 'adm-zip';
 import { existsSync, mkdtempSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
@@ -9,6 +10,7 @@ import {
 } from './anchored-paragraph-bindings.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
+const it = itAllure.epic('Filling & Rendering');
 
 function p(inner: string): string { return `<w:p>${inner}</w:p>`; }
 function text(value: string): string { return `<w:r><w:t xml:space="preserve">${value}</w:t></w:r>`; }
