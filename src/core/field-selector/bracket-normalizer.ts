@@ -1,7 +1,7 @@
 import AdmZip from 'adm-zip';
 import { writeFileSync } from 'node:fs';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
-import type { Document, Element } from '@xmldom/xmldom';
+import type { Document, Element, Node } from '@xmldom/xmldom';
 import { replaceParagraphTextRange } from '@usejunior/docx-core';
 import { copyEntriesSkippingDirs, enumerateTextParts, getGeneralTextPartNames, preserveXmlSpace } from './ooxml-parts.js';
 import { BLANK_PLACEHOLDER } from '../fill-utils.js';
@@ -215,6 +215,43 @@ export interface EditHunk {
   replacement: string;
 }
 
+/**
+ * Return exact deletion hunks when `newText` is a subsequence of `oldText`.
+ * The leftmost embedding is deterministic and, unlike a wide replacement,
+ * never crosses text that survives the transformation (including REF field
+ * results). The caller still verifies the reconstructed text before mutation.
+ */
+export function computeDeletionHunks(
+  oldText: string,
+  newText: string,
+  offset = 0,
+): EditHunk[] | null {
+  if (newText.length >= oldText.length) return null;
+
+  const left: number[] = [];
+  let oldIndex = 0;
+  for (let i = 0; i < newText.length; i++) {
+    const char = newText[i];
+    const found = oldText.indexOf(char, oldIndex);
+    if (found < 0) return null;
+    left.push(found);
+    oldIndex = found + 1;
+  }
+
+  const retained = new Set(left);
+  const hunks: EditHunk[] = [];
+  let start = -1;
+  for (let i = 0; i <= oldText.length; i++) {
+    if (i < oldText.length && !retained.has(i)) {
+      if (start < 0) start = i;
+    } else if (start >= 0) {
+      hunks.push({ start: offset + start, end: offset + i, replacement: '' });
+      start = -1;
+    }
+  }
+  return hunks;
+}
+
 /** Minimum anchor length for hunk splitting — short anchors over-fragment. */
 const MIN_HUNK_ANCHOR_LENGTH = 12;
 /** Recursion cap for hunk splitting (2^6 = 64 hunks is far beyond real use). */
@@ -262,6 +299,9 @@ export function computeEditHunks(
   offset = 0,
   depth = 0,
 ): EditHunk[] {
+  const deletionHunks = computeDeletionHunks(oldText, newText, offset);
+  if (deletionHunks) return deletionHunks;
+
   let start = 0;
   const minLen = Math.min(oldText.length, newText.length);
   while (start < minLen && oldText[start] === newText[start]) start++;
@@ -319,8 +359,59 @@ function applyEditHunks(para: Element, original: string, finalText: string): boo
         hunk.replacement,
       );
     } catch {
-      return false;
+      if (!replaceRangeInSingleSafeTextNode(para, hunk)) return false;
     }
+  }
+  return true;
+}
+
+/**
+ * Safe narrow fallback for a range wholly contained in one ordinary w:t node.
+ * Safe-docx intentionally rejects a boundary that it maps to the preceding
+ * field-result run; direct mutation is nevertheless safe when the requested
+ * characters are demonstrably in the following non-field text node. This
+ * preserves the run, its rPr, and all REF field machinery.
+ */
+function replaceRangeInSingleSafeTextNode(para: Element, hunk: EditHunk): boolean {
+  if (hunk.end <= hunk.start) return false;
+  const textNodes: Array<{ node: Element; start: number; end: number; isFieldResult: boolean }> = [];
+  let visibleOffset = 0;
+  const fieldPhases: Array<'instruction' | 'result'> = [];
+
+  const visit = (node: Node): void => {
+    if (node.nodeType !== 1) return;
+    const element = node as unknown as Element;
+    if (element.namespaceURI === W_NS && element.localName === 'fldChar') {
+      const type = element.getAttributeNS(W_NS, 'fldCharType') || element.getAttribute('w:fldCharType');
+      if (type === 'begin') fieldPhases.push('instruction');
+      else if (type === 'separate' && fieldPhases.length > 0) fieldPhases[fieldPhases.length - 1] = 'result';
+      else if (type === 'end') fieldPhases.pop();
+      return;
+    }
+    if (element.namespaceURI === W_NS && element.localName === 't') {
+      if (fieldPhases.at(-1) === 'instruction') return;
+      const text = element.textContent ?? '';
+      textNodes.push({
+        node: element,
+        start: visibleOffset,
+        end: visibleOffset + text.length,
+        isFieldResult: fieldPhases.at(-1) === 'result',
+      });
+      visibleOffset += text.length;
+      return;
+    }
+    for (let child = element.firstChild; child; child = child.nextSibling) visit(child);
+  };
+  visit(para as unknown as Node);
+
+  const target = textNodes.find(({ start, end }) => hunk.start >= start && hunk.end <= end);
+  if (!target || target.isFieldResult) return false;
+  const text = target.node.textContent ?? '';
+  const localStart = hunk.start - target.start;
+  const localEnd = hunk.end - target.start;
+  target.node.textContent = text.slice(0, localStart) + hunk.replacement + text.slice(localEnd);
+  if ((target.node.textContent ?? '').startsWith(' ') || (target.node.textContent ?? '').endsWith(' ')) {
+    preserveXmlSpace(target.node);
   }
   return true;
 }
