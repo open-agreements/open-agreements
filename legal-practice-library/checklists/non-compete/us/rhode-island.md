@@ -127,7 +127,7 @@ Review every item below the way a Rhode Island court would: the Noncompetition A
 
 ## Survival {#survival}
 
-- [ ] **Survival after the agreement ends** (Recommended) — Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite elsewhere. In Rhode Island the structure also mirrors the law: the statutes treat a banned restriction, the surviving contract, and the preserved trade-secret agreement as separable pieces, and a survival clause should not fuse what the law splits. [#address-survival-per-covenant]
+- [ ] **Survival after the agreement ends** (Recommended) — Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite elsewhere. In Rhode Island the structure also mirrors the law: the statutes treat a banned restriction, the surviving contract, and the preserved trade-secret agreement as separable pieces, and one undifferentiated duration covering all of them would merge what the law splits. [#address-survival-per-covenant]
 
 ## Assignment and successors {#assignment-and-successors}
 

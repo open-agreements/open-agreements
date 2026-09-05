@@ -1,5 +1,8 @@
 # Startup Financing Update Log
 
+## 2026-08-31
+* **Update**: fix(topics): cite Carta directly for SAFE term split (#2346) (ae0e3a6)
+
 ## 2026-06-29
 * **Update**: Rename public "practice notes" → "practice guides" (#1245) (#1260) (99f3946)
 

@@ -127,7 +127,7 @@ Review every item below the way a Wisconsin court would: Wis. Stat. § 103.465 e
 
 ## Survival {#survival}
 
-- [ ] **Survival after the agreement ends** (Recommended) — Per-covenant survival is the divisibility principle carried into the boilerplate: each restraint should expire on its own definite schedule and be readable on its own. A bundled survival clause that entangles the covenants undercuts the very separateness that lets a valid clause outlive an invalid neighbor. [^wi-star-divisible-surv] [#address-survival-per-covenant]
+- [ ] **Survival after the agreement ends** (Recommended) — Per-covenant survival is the divisibility principle carried into the boilerplate: each restraint should expire on its own definite schedule. A survival clause assigning one undifferentiated duration to every restraint entangles them, and undercuts the very separateness that lets a valid clause outlive an invalid neighbor. [^wi-star-divisible-surv] [#address-survival-per-covenant]
 
 ## Assignment and successors {#assignment-and-successors}
 

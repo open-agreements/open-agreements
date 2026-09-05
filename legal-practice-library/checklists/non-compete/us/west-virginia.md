@@ -128,7 +128,7 @@ Review every item below the way a West Virginia court would: the employer must f
 
 ## Survival {#survival}
 
-- [ ] **Survival after the agreement ends** (Recommended) — Each covenant should expire on its own definite schedule and read on its own. Self-contained survival language is what lets a sound non-piracy clause or confidentiality term outlive a failed non-compete — and in a state where a facially unreasonable covenant gets no judicial repair, that separateness is the difference between losing one covenant and losing them all. [#address-survival-per-covenant]
+- [ ] **Survival after the agreement ends** (Recommended) — Each covenant should expire on its own definite schedule. A covenant carrying its own stated term is what lets a sound non-piracy clause or confidentiality term outlive a failed non-compete — and in a state where a facially unreasonable covenant gets no judicial repair, that independence is the difference between losing one covenant and losing them all. [#address-survival-per-covenant]
 
 ## Assignment and successors {#assignment-and-successors}
 

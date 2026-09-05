@@ -1104,7 +1104,7 @@
         "sectionId": "survival",
         "itemNumber": "15.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/massachusetts#address-survival-per-covenant",
-        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — and Massachusetts forces the clocks apart by design: the non-compete is capped at 12 months, while non-solicits and confidentiality obligations sit outside the act and can lawfully run longer. Bundled survival language is how a capped covenant quietly inherits an uncapped term, so unbundle and verify each one.",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — and Massachusetts forces the clocks apart by design: the non-compete is capped at 12 months, while non-solicits and confidentiality obligations sit outside the act and can lawfully run longer. A single undifferentiated survival term is how a capped covenant quietly inherits an uncapped one, so verify that each covenant carries its own.",
         "variants": [],
         "sources": []
       },

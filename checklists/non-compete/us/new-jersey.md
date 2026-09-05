@@ -127,7 +127,7 @@ Review every item below the way a New Jersey court would: there is no general no
 
 ## Survival {#survival}
 
-- [ ] **Survival after the agreement ends** (Recommended) — Separate survival language per covenant keeps the perpetual trade-secret track and the finite covenant tracks visibly distinct. Duration is a live prong of the reasonableness weighing, not boilerplate, and a single bundled survival clause obscures exactly the per-covenant timing a reviewing court will ask about. [#address-survival-per-covenant]
+- [ ] **Survival after the agreement ends** (Recommended) — A separately stated duration per covenant keeps the perpetual trade-secret track and the finite covenant tracks visibly distinct. Duration is a live prong of the reasonableness weighing, not boilerplate, and a single undifferentiated survival term obscures exactly the per-covenant timing a reviewing court will ask about. [#address-survival-per-covenant]
 
 ## Assignment and successors {#assignment-and-successors}
 

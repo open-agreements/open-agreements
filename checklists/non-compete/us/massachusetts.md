@@ -127,7 +127,7 @@ Every item below reads the agreement the way a Massachusetts court would — aga
 
 ## Survival {#survival}
 
-- [ ] **Survival after the agreement ends** (Recommended) — Per-covenant survival keeps each clock independently checkable — and Massachusetts forces the clocks apart by design: the non-compete is capped at 12 months, while non-solicits and confidentiality obligations sit outside the act and can lawfully run longer. Bundled survival language is how a capped covenant quietly inherits an uncapped term, so unbundle and verify each one. [#address-survival-per-covenant]
+- [ ] **Survival after the agreement ends** (Recommended) — Per-covenant survival keeps each clock independently checkable — and Massachusetts forces the clocks apart by design: the non-compete is capped at 12 months, while non-solicits and confidentiality obligations sit outside the act and can lawfully run longer. A single undifferentiated survival term is how a capped covenant quietly inherits an uncapped one, so verify that each covenant carries its own. [#address-survival-per-covenant]
 
 ## Assignment and successors {#assignment-and-successors}
 

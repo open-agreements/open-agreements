@@ -151,7 +151,7 @@
         "sectionId": "parties-and-cover-term-identification",
         "itemNumber": "1.2",
         "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#identify-effective-date",
-        "requirementGuidance": "The execution date does sorting work in Maryland: the health care expansion of the statute reaches only agreements executed on or after July 1, 2025, the architect category begins with agreements executed on or after October 1, 2026, and the veterinary ban reaches backward to existing agreements. An undated covenant leaves the reviewer unable to tell which regime applies.",
+        "requirementGuidance": "The execution date does sorting work in Maryland: the health care expansion of the statute reaches only agreements executed on or after July 1, 2025, the architect category begins with agreements executed on or after October 1, 2026 and protects the licensed architect rather than an architect's staff, and the veterinary ban reaches backward to existing agreements. An undated covenant leaves the reviewer unable to tell which regime applies.",
         "variants": [],
         "sources": [
           {
@@ -1363,11 +1363,11 @@
         "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.maryland.void-non-compete-for-relocated-architect-employees",
         "requirementLevel": "MUST NOT",
         "sourceFootnotes": [],
-        "requirementLabel": "Architect employees after an out-of-state move",
+        "requirementLabel": "Licensed architects whose employer is no longer Maryland-based",
         "sectionId": "maryland-statutory-gates",
         "itemNumber": "19.7",
         "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#void-non-compete-for-relocated-architect-employees",
-        "requirementGuidance": "Enacted but not yet begun: for agreements executed on or after October 1, 2026, the void rule extends to employees of a licensed architect whose employer, after employing more than 30 workers based mainly in Maryland, moves the majority of that workforce out of state or gives up its Maryland principal place of business. The provision is narrow and prospective only — but the same act renumbers the statute's subsections, so check which version of the section any covenant cites.",
+        "requirementGuidance": "Enacted but not yet begun: for agreements executed on or after October 1, 2026, the void rule extends to a licensed architect who is employed by an employer that, on the first day of that architect's employment, employed more than 30 people a majority of whom reported to a Maryland work site or worked remotely from within Maryland, and that, on the enforcement date, no longer has that Maryland majority or no longer has its Maryland principal place of business. Two traps. The protected worker is the architect, not an architect's staff — the enrolled chapter strikes the words employees of and substitutes licensed architects employed by. And nothing has to relocate: the chapter strikes relocates, reorganizes, or otherwise ceases to and substitutes a status test taken on the enforcement date, which it defines as the earliest date the employer sues, starts arbitration, or demands written compliance. The same act also inserts a definitions paragraph at (a)(1), pushing the applies-to paragraph to (a)(2), so the architect category sits at (a)(2)(i)3 and veterinary moves to (a)(2)(i)4 — check which numbering any covenant cites.",
         "variants": [],
         "sources": [
           {
@@ -1377,10 +1377,22 @@
             "title": "2026 Md. Laws ch. 301 (H.B. 1016)",
             "citation": "2026 Md. Laws ch. 301, § 2 (H.B. 1016).",
             "url": "https://mgaleg.maryland.gov/2026rs/Chapters_noln/CH_301_hb1016e.pdf",
-            "proposition": "House Bill 1016 (Chapter 301) adds a new § 3-716 category, effective October 1, 2026, for employees of a licensed architect whose employer relocates a formerly Maryland-based workforce out of state, and applies only to agreements executed on or after the Act's effective date.",
+            "proposition": "Chapter 301's execution-date section applies the new architect category only to agreements executed on or after October 1, 2026. It names § 3-716(a)(1)(i)3, a paragraph Section 1 of the Act does not enact — the architect category is at (a)(2)(i)3 — so the cross-reference is unresolved on the face of the chapter.",
             "verbatimQuote": "That § 3–716(a)(1)(i)3 of the Labor and Employment Article, as enacted by Section 1 of this Act, shall be construed to apply only to employment contracts or similar documents or agreements for employment executed on or after the effective date of this Act.",
             "date": "2026-04-28",
             "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-hb1016-architect-gate"
+          },
+          {
+            "sourceId": "md-hb1016-enforcement-date",
+            "authorityType": "primary-law",
+            "tier": "primary-source-backed",
+            "title": "2026 Md. Laws ch. 301 (H.B. 1016) — new § 3-716(a)(1)(ii)",
+            "citation": "2026 Md. Laws ch. 301, § 1 (H.B. 1016) (enacting Md. Code Ann., Lab. & Empl. § 3–716(a)(1)(ii)).",
+            "url": "https://mgaleg.maryland.gov/2026rs/Chapters_noln/CH_301_hb1016e.pdf",
+            "proposition": "Chapter 301 adds a definition of enforcement date to § 3-716, fixing it as the earliest date the employer files suit, initiates arbitration, or demands written compliance — the date on which the architect category's out-of-state test is measured.",
+            "verbatimQuote": "“ENFORCEMENT DATE” MEANS THE EARLIEST DATE ON WHICH AN EMPLOYER SEEKING TO ENFORCE A NONCOMPETE OR CONFLICT OF INTEREST PROVISION IN AN EMPLOYMENT CONTRACT OR A SIMILAR DOCUMENT OR AGREEMENT CONCERNING AN EMPLOYEE: 1. FILES AN ACTION OR OTHERWISE SEEKS JUDICIAL ENFORCEMENT OF THE PROVISION; 2. INITIATES ARBITRATION OR ANOTHER FORM OF FORMAL DISPUTE RESOLUTION TO ENFORCE THE PROVISION; OR 3. DEMANDS IN WRITING THAT THE EMPLOYEE COMPLY WITH THE PROVISION.",
+            "date": "2026-04-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/maryland#src-md-hb1016-enforcement-date"
           }
         ]
       }

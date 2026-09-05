@@ -128,7 +128,7 @@ Review every item below the way a Nebraska court would: a restraint of trade sur
 
 ## Survival {#survival}
 
-- [ ] **Survival after the agreement ends** (Recommended) — Each covenant should expire on its own definite schedule and read on its own. Nebraska treats nonseverable integrated restraints as standing or falling together, so self-contained survival language is the difference between losing one overreaching clause and losing the whole covenant suite with it. [^ne-waadah-entire-surv] [#address-survival-per-covenant]
+- [ ] **Survival after the agreement ends** (Recommended) — Each covenant should expire on its own definite schedule. Nebraska treats nonseverable integrated restraints as standing or falling together, so a covenant carrying its own stated term is the difference between losing one overreaching clause and losing the whole covenant suite with it. One undifferentiated duration covering all of them is what integrates them. [^ne-waadah-entire-surv] [#address-survival-per-covenant]
 
 ## Assignment and successors {#assignment-and-successors}
 

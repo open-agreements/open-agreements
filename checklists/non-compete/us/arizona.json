@@ -1156,7 +1156,7 @@
         "sectionId": "survival",
         "itemNumber": "15.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#address-survival-per-covenant",
-        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite elsewhere. In Arizona the discipline doubles as severability insurance: covenants that survive on their own terms, in their own clauses, are exactly the grammatically separable units a court can preserve when it strikes a defective neighbor.",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite elsewhere. In Arizona the discipline doubles as severability insurance: covenants that carry their own stated durations are exactly the grammatically separable units a court can preserve when it strikes a defective neighbor. That separability comes from each covenant stating its own term, not from where the survival language sits.",
         "variants": [],
         "sources": []
       },

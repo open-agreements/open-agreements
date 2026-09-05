@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-09-03
+* **Update**: fix: sharpen SEO metadata and sitemap indexing (#2425) (c10aed5)
+
 ## 2026-07-30
 * **Update**: content(co): re-quote Colorado statutes to the 2025 C.R.S. edition (#2023) (974063d)
 
