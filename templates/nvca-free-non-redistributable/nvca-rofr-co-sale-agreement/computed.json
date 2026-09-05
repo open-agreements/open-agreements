@@ -3,6 +3,16 @@
   "max_passes": 1,
   "rules": [
     {
+      "id": "qualified-key-holder-employee-only",
+      "when_all": [{ "field": "qualified_key_holder_service", "op": "neq", "value": "employee_or_consultant" }],
+      "set_fill": { "qualified_key_holder_service_suffix": "" }
+    },
+    {
+      "id": "qualified-key-holder-employee-or-consultant",
+      "when_all": [{ "field": "qualified_key_holder_service", "op": "eq", "value": "employee_or_consultant" }],
+      "set_fill": { "qualified_key_holder_service_suffix": " or consultant (excluding service solely as a member of the Board)" }
+    },
+    {
       "id": "investor-minimum-shares-present",
       "when_all": [{ "field": "investor_minimum_shares", "op": "truthy" }],
       "set_fill": { "investor_minimum_shares_display": "${investor_minimum_shares}" }

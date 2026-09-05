@@ -48,7 +48,11 @@ fields:
     description: ZIP code in the Investor's notice address printed in the letter header
   - name: company_letterhead
     type: string
-    description: Portfolio company letterhead text
+    description: Company name or other company-identifying text for the Company letterhead block
+    default: ''
+  - name: company_address
+    type: string
+    description: Full Company address printed in the Company letterhead block; do not use the Investor notice address here
     default: ''
   - name: signature_page_marker
     type: string
@@ -105,6 +109,7 @@ priority_fields:
   - investor_notice_state
   - investor_notice_street_address
   - investor_notice_zip_code
+  - company_address
   - series_designation
   - investor_signatory_name
   - investor_signatory_title

@@ -40,7 +40,6 @@
   "[___] months": "{consultant_vesting_months} months",
   "fiscal year ended > [_______ __], 20[_]": "{fiscal_year_end}",
   "[unaudited] [audited]": "{financial_statement_audit_label}",
-  "[_____]-month": "{interim_financial_statement_months}-month",
   "[, except that the unaudited Financial Statements may not contain all footnotes required by GAAP]": "{unaudited_footnote_qualification}",
   "[list any other agreements, instruments or documents entered into in connection with this Agreement, such as the Indemnification Agreement and new side letters]": "{additional_transaction_agreements}",
   "[list the individual director names]": "{indemnification_agreement_indemnitees}",
@@ -86,6 +85,5 @@
   "U.S. District Court for the District of [_____]": "U.S. District Court for the {judicial_district}",
   "\u201cSeries > [___]": "{series_designation}",
   "\"Series > [___]": "{series_designation}",
-  "Series [___] Preferred Stock issued to the Purchasers": "Series {series_designation} Preferred Stock issued to the Purchasers",
-  "as of [_______ __], 20[_] (the \u201cBalance Sheet Date\u201d)": "as of {balance_sheet_date} (the \u201cBalance Sheet Date\u201d)"
+  "Series [___] Preferred Stock issued to the Purchasers": "Series {series_designation} Preferred Stock issued to the Purchasers"
 }

@@ -43,10 +43,6 @@ fields:
   - name: investor_signatory_title
     type: string
     description: Title of the Investor signatory
-  - name: counsel_cc
-    type: string
-    description: Additional counsel to CC on notices, or empty string if none
-    default: ''
   - name: amended_restated_upper
     type: string
     description: Uppercase prefix if amending a prior agreement (e.g. AMENDED AND RESTATED) or empty string
@@ -101,6 +97,10 @@ fields:
     type: enum
     description: Service relationships that qualify an individual Key Holder
     options: [employee_only, employee_or_consultant]
+  - name: qualified_key_holder_service_suffix
+    type: string
+    description: Computed consultant-service alternative for the Qualified Key Holder definition; do not supply directly
+    default: ''
   - name: include_qualified_direct_listing
     type: boolean
     description: Include Qualified Direct Listing definitions and termination treatment
@@ -152,7 +152,7 @@ fields:
     default: ''
   - name: specify_percentage
     type: string
-    description: Specified percentage threshold for key holder transfers — include the percent sign (e.g. 60%); occurrences where the source carries a trailing % absorb it
+    description: Specified percentage threshold for key holder transfers, as a number only (for example, 60)
   - name: rofr_response_days
     type: string
     description: Number of days for the company and investors to respond to a ROFR notice (default 45)

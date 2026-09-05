@@ -3,6 +3,26 @@
   "max_passes": 1,
   "rules": [
     {
+      "id": "qualified-key-holder-employee-only",
+      "when_all": [{ "field": "qualified_key_holder_service_basis", "op": "neq", "value": "employee_or_consultant" }],
+      "set_fill": { "qualified_key_holder_service_suffix": "" }
+    },
+    {
+      "id": "qualified-key-holder-employee-or-consultant",
+      "when_all": [{ "field": "qualified_key_holder_service_basis", "op": "eq", "value": "employee_or_consultant" }],
+      "set_fill": { "qualified_key_holder_service_suffix": " or consultant (excluding service solely as a member of the Board)" }
+    },
+    {
+      "id": "common-director-consent-qualified-key-holders",
+      "when_all": [{ "field": "common_director_amendment_consent_basis", "op": "neq", "value": "common_stock_percentage" }],
+      "set_fill": { "common_director_amendment_consent_text": "the Qualified Key Holders" }
+    },
+    {
+      "id": "common-director-consent-common-stock-percentage",
+      "when_all": [{ "field": "common_director_amendment_consent_basis", "op": "eq", "value": "common_stock_percentage" }],
+      "set_fill": { "common_director_amendment_consent_text": "the holders of ${key_holder_consent_percentage}% of shares of Common Stock" }
+    },
+    {
       "id": "sanctions-us-only",
       "description": "Omit EU and UK authorities and lists.",
       "when_all": [{"field":"sanctions_scope","op":"eq","value":"united_states_only"}],

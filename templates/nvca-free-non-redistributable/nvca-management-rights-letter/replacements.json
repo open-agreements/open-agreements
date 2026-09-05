@@ -9,7 +9,7 @@
   "[State]": "{investor_notice_state}",
   "[Street Address]": "{investor_notice_street_address}",
   "[Zip]": "{investor_notice_zip_code}",
-  "[PORTFOLIO COMPANY LETTERHEAD]": "{company_letterhead}",
+  "[PORTFOLIO COMPANY LETTERHEAD]": "{company_letterhead_block}",
   "[Signature Page Follows]": "{signature_page_marker}",
   "Last Updated July 2020": "",
   "Last updated July 2020": "",

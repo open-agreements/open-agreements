@@ -87,7 +87,121 @@
       "options": [
         {
           "marker": "General. Unless prohibited by Delaware law",
-          "trigger": { "field": "include_redemption" }
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "General. Unless prohibited by Delaware law",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
+        },
+        {
+          "label": "Redemption notice",
+          "marker": "Redemption Notice. The Corporation shall send written notice",
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "Redemption Notice. The Corporation shall send written notice",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
+        },
+        {
+          "label": "Shares subject to redemption",
+          "marker": "the number of shares of Preferred Stock held by the holder that the Corporation shall redeem on the Redemption Date",
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "the number of shares of Preferred Stock held by the holder that the Corporation shall redeem on the Redemption Date",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
+        },
+        {
+          "marker": "the Redemption Date and the Redemption Price",
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "the Redemption Date and the Redemption Price",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
+        },
+        {
+          "label": "Conversion-right termination date",
+          "marker": "the date upon which the holder’s right to convert such shares terminates",
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "the date upon which the holder’s right to convert such shares terminates",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
+        },
+        {
+          "label": "Certificate-surrender instructions",
+          "marker": "for holders of shares in certificated form, that the holder is to surrender",
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "for holders of shares in certificated form, that the holder is to surrender",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
+        },
+        {
+          "label": "Redemption-allocation adjustment",
+          "marker": "If the Corporation receives, on or prior to the 20th day after the date of delivery of the Redemption Notice",
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "If the Corporation receives, on or prior to the 20th day after the date of delivery of the Redemption Notice",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
+        },
+        {
+          "label": "Certificate surrender and payment",
+          "marker": "Surrender of Certificates; Payment. On or before the applicable Redemption Date",
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "Surrender of Certificates; Payment. On or before the applicable Redemption Date",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
+        },
+        {
+          "label": "Interest on delayed redemption",
+          "marker": "Interest. If any shares of Preferred Stock are not redeemed for any reason on any Redemption Date",
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "Interest. If any shares of Preferred Stock are not redeemed for any reason on any Redemption Date",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
+        },
+        {
+          "label": "Rights after redemption notice",
+          "marker": "Rights Subsequent to Redemption. If the Redemption Notice shall have been duly given",
+          "trigger": { "field": "include_redemption" },
+          "removal": {
+            "kind": "paragraph",
+            "anchor": "Rights Subsequent to Redemption. If the Redemption Notice shall have been duly given",
+            "match": "contains",
+            "expectedMatches": 1,
+            "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
+          }
         }
       ]
     },
