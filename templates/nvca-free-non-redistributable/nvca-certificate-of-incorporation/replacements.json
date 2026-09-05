@@ -97,6 +97,7 @@
   "[increase or decrease the authorized number of directors constituting the Board of Directors, or change the number of votes entitled to be cast by any director or directors on any matter[; or][.]": "increase or decrease the authorized number of directors constituting the Board of Directors, or change the number of votes entitled to be cast by any director or directors on any matter.",
   "Section 2.3.2(b) [or Section 6.1]": "Section 2.3.2(b){redemption_cross_ref_clause}",
   "[Notwithstanding the foregoing and notwithstanding Section 4.3.1, the optional right to convert shares of Preferred Stock into shares of Common Stock pursuant to the first sentence of this Section 4.1.1 shall be suspended, and no optional conversion may be effective, from and after the date the Corporation delivers (pursuant to Section 5A.1 below) notice of a Qualified Financing (as defined below) until immediately after the earlier of (x) consummation of the Qualified Financing and the associated Special Mandatory Conversion or (y) termination of the Qualified Financing; provided, however, that the foregoing limitation on the right to optionally convert shares into Common Stock pursuant to this Section 4.1.1 shall not affect the calculation of the number of shares deemed issuable upon conversion of such shares for purposes of (A) voting rights under this Certificate of Incorporation, or (B) determining amounts payable in respect of shares of Preferred Stock in connection with a dissolution, liquidation, or winding up of the Corporation or pursuant to a Deemed Liquidation Event.]": "",
+  "Special Mandatory Conversion.,": "Special Mandatory Conversion.",
   "[Unless a later time and date is otherwise specified by the holder,]": "",
   "[In the event of a Deemed Liquidation Event referred to in Section 2.3.1(a)(ii) or 2.3.1(b)": "In the event of a Deemed Liquidation Event referred to in Section 2.3.1(a)(ii) or 2.3.1(b)",
   "certificates therefor.]": "certificates therefor.",
@@ -114,6 +115,6 @@
   "a director [or officer] of the Corporation": "a {exculpated_fiduciary_subject} of the Corporation",
   "liability of directors [or officers]": "liability of {exculpated_fiduciary_roles_plural}",
   "Redemption. [Other than as set forth in Section 2.3.2(b), the Preferred Stock is not redeemable at the option of the holder or the Corporation.],": "Redemption. {no_redemption_clause}",
-  "Preferred Stock”), > [all]": "{preferred_shares_designated_portion}",
-  "designated as “Series > A Preferred Stock": "{series_designation} Preferred Stock"
+  "Series A Preferred Stock": "Series {series_designation} Preferred Stock",
+  "Preferred Stock”), > [all]": "{preferred_shares_designated_portion}"
 }

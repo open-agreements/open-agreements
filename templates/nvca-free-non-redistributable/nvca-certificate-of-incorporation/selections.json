@@ -75,7 +75,7 @@
       "subClauseStopPatterns": ["^Redemption"],
       "options": [
         {
-          "marker": "Special Mandatory Conversion.,",
+          "marker": "Special Mandatory Conversion.",
           "trigger": { "field": "include_pay_to_play" }
         }
       ]
