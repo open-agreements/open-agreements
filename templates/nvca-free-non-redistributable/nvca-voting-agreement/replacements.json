@@ -26,7 +26,7 @@
   "Shares representing at least > [specify percentage]%": "{key_holder_ownership_floor_percentage}%",
   "[specify percentage]%": "{specify_percentage}%",
   "[specify percentage]": "{specify_percentage}",
-  "[or consultant (excluding service solely as member of the Board)]": "{qualified_key_holder_service_suffix}",
+  " [or consultant (excluding service solely as member of the Board)]": "{qualified_key_holder_service_suffix}",
   "[Signature Page Follows]": "{signature_page_marker}",
   "U.S. District Court for the District of [_____]": "U.S. District Court for the {judicial_district}",
   "Series [_]": "Series {series_designation}",

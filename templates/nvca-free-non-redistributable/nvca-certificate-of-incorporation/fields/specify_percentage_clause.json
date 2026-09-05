@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "field_id": "specify_percentage",
-  "field_label": "Specify Percentage",
-  "description": "Percentage threshold for specified provisions",
+  "field_id": "specify_percentage_clause",
+  "field_label": "Specified Percentage Clause",
+  "description": "Complete percentage carrier computed from the number-only percentage input",
   "source_template_version": "10-1-2025",
   "occurrences": [
     {

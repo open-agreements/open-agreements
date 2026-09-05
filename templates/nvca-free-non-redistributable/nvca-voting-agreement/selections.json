@@ -33,7 +33,7 @@
         },
         {
           "label": "Named service-contingent director",
-          "marker": "[Example 2: {common_director_name}, for so long as such director [remains a [full-time] employee [or consultant (excluding service solely as member of the Board)] of the Company][, except that if such director resigns or is unable to serve, then one individual who is designated by Qualified Key Holders holding a majority of the shares of Common Stock held by Qualified Key Holders for so long as any Qualified Key Holder holds any shares of Common Stock];]",
+          "marker": "[Example 2: {common_director_name}, for so long as such director [remains a [full-time] employee{qualified_key_holder_service_suffix} of the Company][, except that if such director resigns or is unable to serve, then one individual who is designated by Qualified Key Holders holding a majority of the shares of Common Stock held by Qualified Key Holders for so long as any Qualified Key Holder holds any shares of Common Stock];]",
           "trigger": { "field": "common_director_designation", "equals": "named_service_contingent" }
         }
       ]

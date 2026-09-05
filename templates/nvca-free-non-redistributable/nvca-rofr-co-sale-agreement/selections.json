@@ -74,21 +74,6 @@
       ]
     },
     {
-      "id": "prior_agreement_indirect_amendment_reference",
-      "type": "checkbox",
-      "standalone": true,
-      "markerless": true,
-      "inline": true,
-      "options": [
-        {
-          "label": "Prior-agreement indirect-amendment reference",
-          "marker": "(including any agreement of which this Agreement is a direct or indirect amendment or restatement)",
-          "trigger": { "field": "has_prior_agreement", "equals": true },
-          "replaceWith": ""
-        }
-      ]
-    },
-    {
       "id": "additional_preferred_series",
       "type": "checkbox",
       "standalone": true,
@@ -249,7 +234,7 @@
       "inline": true,
       "options": [
         { "label": "Secured pledge exception", "marker": "[; (d) to a pledge of Transfer Stock that creates a mere security interest in the pledged Transfer Stock, provided that the pledgee thereof agrees in writing in advance to be bound by and comply with all applicable provisions of this Agreement to the same extent as if it were the Key Holder making such pledge;]", "trigger": { "field": "include_pledge_exempt_transfer", "equals": true }, "replaceWith": "" },
-        { "label": "Ten-percent sale exception", "marker": "[or (e) to the sale by the Key Holder of up to {permitted_transfer_percentage_display}% of the Transfer Stock held by such Key Holder as of the date that such Key Holder first became party to this Agreement (including any agreement of which this Agreement is a direct or indirect amendment or restatement)]", "trigger": { "field": "include_ten_percent_sale_exempt_transfer", "equals": true }, "replaceWith": "" }
+        { "label": "Ten-percent sale exception", "marker": "[or (e) to the sale by the Key Holder of up to {permitted_transfer_percentage_display}% of the Transfer Stock held by such Key Holder as of the date that such Key Holder first became party to this Agreement {prior_agreement_indirect_amendment_reference}]", "trigger": { "field": "include_ten_percent_sale_exempt_transfer", "equals": true }, "replaceWith": "" }
       ]
     },
     {

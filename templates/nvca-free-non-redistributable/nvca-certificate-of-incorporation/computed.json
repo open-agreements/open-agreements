@@ -3,6 +3,12 @@
   "max_passes": 2,
   "rules": [
     {
+      "id": "specified-percentage-carrier",
+      "description": "Render number-only percentage inputs with exactly one percent sign",
+      "when_all": [{ "field": "specify_percentage", "op": "defined" }],
+      "set_fill": { "specify_percentage_clause": "${specify_percentage}%" }
+    },
+    {
       "id": "qualified-ipo-price-carrier",
       "description": "Render the Qualified IPO price election as one grammatical carrier",
       "when_all": [{ "field": "qualified_ipo_minimum_price", "op": "defined" }],
@@ -191,7 +197,7 @@
       "id": "redemption-cross-ref-include",
       "description": "Include redemption Section 6.1 cross-reference",
       "when_all": [{ "field": "include_redemption_cross_ref", "op": "eq", "value": true }],
-      "set_fill": { "redemption_cross_ref_clause": " and Section 6.1" }
+      "set_fill": { "redemption_cross_ref_clause": " or Section 6.1" }
     },
     {
       "id": "redemption-cross-ref-exclude",

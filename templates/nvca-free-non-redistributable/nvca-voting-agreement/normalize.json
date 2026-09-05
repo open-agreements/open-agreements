@@ -36,8 +36,13 @@
       "paragraph_contains": "As a Common Director",
       "replacements": {
         "[As a Common Director, [Example 1:": "As a Common Director,",
+        "[As a Common Director, [Example 2:": "As a Common Director,",
+        "[remains a [full-time] employee": "remains a full-time employee",
+        "of the Company][, except": "of the Company, except",
         ";] ]": ";",
-        ";]]": ";"
+        ";]]": ";",
+        ";]": ";",
+        "];": ";"
       },
       "trim_unmatched_trailing_bracket": true,
       "expected_min_matches": 1
