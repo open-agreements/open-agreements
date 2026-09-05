@@ -10675,7 +10675,7 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Original purchase price per share of Series A Preferred Stock",
+          "description": "Original purchase price per share of the designated series of Preferred Stock; accepts a value with or without a leading dollar sign and renders exactly one dollar sign",
           "default": null,
           "default_value_rationale": null
         },
@@ -10684,7 +10684,7 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Initial Series A purchase price per share",
+          "description": "Initial purchase price per share of the designated series of Preferred Stock",
           "default": null,
           "default_value_rationale": null
         },
@@ -10734,13 +10734,66 @@
           "default_value_rationale": null
         },
         {
+          "name": "preferred_director_election_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed whole grammatical carrier for the Preferred Director board-seat count",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "common_director_seats",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Number of directors elected exclusively by the Common Stock",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "at_large_director_seats",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Number of directors elected by Common and Preferred Stock voting together",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "escrow_consideration_treatment",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Treatment of escrow or holdback amounts in a Deemed Liquidation Event",
+          "default": "initial_consideration",
+          "default_value_rationale": null,
+          "options": [
+            "initial_consideration",
+            "additional_consideration"
+          ]
+        },
+        {
           "name": "preferred_shares_designated_portion",
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Portion of preferred shares designated as the named series",
+          "description": "Number of authorized Preferred Stock shares designated as the named series",
           "default": "all",
           "default_value_rationale": null
+        },
+        {
+          "name": "preferred_vote_threshold",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Approval threshold used where the form offers all holders or a majority of holders/directors",
+          "default": "majority",
+          "default_value_rationale": null,
+          "options": [
+            "all",
+            "majority"
+          ]
         },
         {
           "name": "original_incorporation_name",
@@ -10770,11 +10823,118 @@
           "default_value_rationale": null
         },
         {
+          "name": "no_redemption_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed whole carrier for the no-redemption statement when Article Sixth is not elected",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
           "name": "qualified_financing_notice_days",
           "type": "string",
           "required": false,
           "section": null,
           "description": "Days of prior notice required for qualified financing",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "qualified_financing_min_gross_proceeds",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Optional minimum gross-proceeds threshold for a pay-to-play Qualified Financing; enter the number only, without a leading dollar sign",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "qualified_financing_debt_proceeds_treatment",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Whether proceeds previously received for debt cancelled or converted in the Qualified Financing count toward the optional gross-proceeds threshold",
+          "default": "excluding",
+          "default_value_rationale": null,
+          "options": [
+            "including",
+            "excluding"
+          ]
+        },
+        {
+          "name": "qualified_financing_proceeds_threshold_carrier",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed complete optional carrier for the pay-to-play Qualified Financing proceeds threshold and debt-proceeds treatment",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "qualified_ipo_minimum_price",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Minimum public offering price per share for a Qualified IPO, excluding the dollar sign",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "qualified_ipo_gross_proceeds",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Minimum offering proceeds required for a Qualified IPO, excluding the dollar sign",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "qualified_ipo_proceeds_basis",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Whether the Qualified IPO proceeds threshold is measured on a gross or net basis",
+          "default": "gross",
+          "default_value_rationale": null,
+          "options": [
+            "gross",
+            "net"
+          ]
+        },
+        {
+          "name": "qualified_direct_listing_market_cap",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Minimum expected market capitalization for a Qualified Direct Listing, excluding the dollar sign",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "qualified_ipo_price_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed whole grammatical carrier for the Qualified IPO minimum price",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "qualified_ipo_proceeds_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed whole grammatical carrier for the Qualified IPO proceeds threshold and gross/net election",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "qualified_direct_listing_market_cap_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed whole grammatical carrier for the Qualified Direct Listing market-capitalization threshold",
           "default": null,
           "default_value_rationale": null
         },
@@ -10855,7 +11015,16 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Percentage threshold for specified provisions, as a number only (for example, \"60\"); the selector appends the percent sign",
+          "description": "Percentage threshold for specified provisions; enter the number only (for example, 60), without the percent sign",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "specify_percentage_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Complete percentage carrier set by computed.json from the number-only percentage input",
           "default": null,
           "default_value_rationale": null
         },
@@ -10883,8 +11052,22 @@
           "required": false,
           "section": null,
           "description": "Annual interest rate on unredeemed shares (percentage)",
-          "default": "12",
+          "default": null,
           "default_value_rationale": null
+        },
+        {
+          "name": "redemption_compounding_frequency",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Frequency at which interest on unredeemed shares is compounded",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "annually",
+            "quarterly",
+            "monthly"
+          ]
         },
         {
           "name": "conversion_notice_days",
@@ -10894,64 +11077,6 @@
           "description": "Days prior to record date for mandatory conversion notice",
           "default": "10",
           "default_value_rationale": null
-        },
-        {
-          "name": "qualified_ipo_min_price_per_share",
-          "type": "string",
-          "required": false,
-          "section": null,
-          "description": "Minimum per-share public offering price for a Qualified IPO (dollars, without currency symbol)",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "qualified_ipo_min_gross_proceeds",
-          "type": "string",
-          "required": false,
-          "section": null,
-          "description": "Minimum gross proceeds for a Qualified IPO (dollars, without currency symbol)",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "qualified_direct_listing_min_market_cap",
-          "type": "string",
-          "required": false,
-          "section": null,
-          "description": "Minimum market capitalization for a Qualified Direct Listing (dollars, without currency symbol)",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "full_ratchet_sunset_date",
-          "type": "date",
-          "required": false,
-          "section": null,
-          "description": "Date after which the full-ratchet anti-dilution adjustment no longer applies. Used only when anti_dilution_type is full_ratchet; ISO YYYY-MM-DD input renders as a written-out document date.",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "qualified_financing_min_gross_proceeds",
-          "type": "string",
-          "required": false,
-          "section": null,
-          "description": "Minimum gross proceeds for a pay-to-play Qualified Financing (dollars, without currency symbol). Used only when include_pay_to_play is true.",
-          "default": "20,000,000",
-          "default_value_rationale": null
-        },
-        {
-          "name": "qualified_financing_debt_proceeds_treatment",
-          "type": "enum",
-          "required": false,
-          "section": null,
-          "description": "Whether debt proceeds cancelled or converted in a pay-to-play Qualified Financing are included or excluded. Allowed values are \"including\" and \"excluding\"; used only when include_pay_to_play is true.",
-          "default": "excluding",
-          "default_value_rationale": null,
-          "options": [
-            "including",
-            "excluding"
-          ]
         },
         {
           "name": "dividend_formula_prefix",
@@ -10991,30 +11116,21 @@
         },
         {
           "name": "dividend_type",
-          "type": "enum",
+          "type": "string",
           "required": false,
           "section": null,
           "description": "Dividend structure: non_cumulative_as_converted (>95%), non_cumulative_fixed, or cumulative",
           "default": "non_cumulative_as_converted",
-          "default_value_rationale": null,
-          "options": [
-            "non_cumulative_as_converted",
-            "non_cumulative_fixed",
-            "cumulative"
-          ]
+          "default_value_rationale": null
         },
         {
           "name": "liquidation_participation",
-          "type": "enum",
+          "type": "string",
           "required": false,
           "section": null,
           "description": "Liquidation participation type: non_participating (94-96%) or participating",
           "default": "non_participating",
-          "default_value_rationale": null,
-          "options": [
-            "non_participating",
-            "participating"
-          ]
+          "default_value_rationale": null
         },
         {
           "name": "anti_dilution_type",
@@ -11028,6 +11144,24 @@
             "broad_based_weighted_average",
             "full_ratchet"
           ]
+        },
+        {
+          "name": "full_ratchet_sunset_date",
+          "type": "date",
+          "required": false,
+          "section": null,
+          "description": "Optional last date on which the full-ratchet adjustment applies. Used only when anti_dilution_type is full_ratchet; omit this field to leave the full-ratchet protection without a sunset. Accepts ISO YYYY-MM-DD (rendered as e.g. \"December 31, 2029\") or a display-ready date string.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "full_ratchet_sunset_carrier",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed whole carrier for the optional full-ratchet sunset date",
+          "default": null,
+          "default_value_rationale": null
         },
         {
           "name": "include_pay_to_play",
@@ -11044,6 +11178,105 @@
           "required": false,
           "section": null,
           "description": "Include Article Sixth full redemption provisions (2-5% of deals)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_direct_listing",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include a Qualified Direct Listing as a mandatory-conversion trigger",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_dle_financing_exclusion",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Exclude a bona fide preferred-stock financing from the Deemed Liquidation Event definition",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_dle_redemption_mechanics",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the Section 2.3.2(b) post-Deemed-Liquidation-Event redemption mechanics",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_nonstandard_protective_provisions",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the optional Requisite Directors operational-veto provisions",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_lender_exemption",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the lender and equipment-lessor Exempted Securities paragraph",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_supplier_exemption",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the supplier and service-provider Exempted Securities paragraph",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_acquisition_exemption",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the acquisition-consideration Exempted Securities paragraph",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_strategic_partnership_exemption",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the strategic-partnership Exempted Securities paragraph",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_exclusive_forum",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the Delaware exclusive-forum provision",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_california_repurchases",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the California Corporations Code Section 500 repurchase provision",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_officer_exculpation",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Extend the Article Ninth exculpation provision to officers",
           "default": null,
           "default_value_rationale": null
         }
@@ -11092,16 +11325,7 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Address of the Delaware service-of-process agent named in the optional jurisdiction clause. Retained under its original field name for compatibility; this is not an indemnitee mailing-address slot in the NVCA source.",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "service_of_process_agent_name",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Name of the Delaware service-of-process agent in the optional jurisdiction clause",
+          "description": "Address of the indemnitee",
           "default": null,
           "default_value_rationale": null
         },
@@ -11133,11 +11357,20 @@
           "default_value_rationale": null
         },
         {
+          "name": "appointing_stockholder_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Full legal name of the venture fund or entity defined as the Appointing Stockholder in Section 1(d)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
           "name": "indemnitee_role_scope",
           "type": "enum",
           "required": true,
           "section": null,
-          "description": "Corporate roles covered by the agreement: directors, officers, or directors and officers. The directors_or_officers option renders the NVCA recital as \"directors or officers\" and the later singular carrier as \"an officer or director.\"",
+          "description": "Corporate roles covered by the agreement. The directors_or_officers option renders the source recital as \"directors or officers\" and the operative undertaking as \"an officer or director.\"",
           "default": "directors_or_officers",
           "default_value_rationale": null,
           "options": [
@@ -11174,6 +11407,78 @@
           "default_value_rationale": null
         },
         {
+          "name": "indemnitee_pronoun_subject",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Subject pronoun for the indemnitee (for this fixture, they)",
+          "default": "they",
+          "default_value_rationale": null
+        },
+        {
+          "name": "indemnitee_pronoun_object",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Object pronoun for the indemnitee (for this fixture, them)",
+          "default": "them",
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signatory_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Printed name of the Company's authorized signatory",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signatory_title",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Title of the Company's authorized signatory",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_notice_address",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Company's notice address",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_notice_attention",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Person and title receiving Company notices",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "process_agent_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Delaware process agent named for the Indemnitee",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "process_agent_address",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Delaware address of the process agent",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
           "name": "bylaws_name",
           "type": "string",
           "required": true,
@@ -11192,21 +11497,21 @@
           "default_value_rationale": null
         },
         {
-          "name": "and_appointing_stockholder",
-          "type": "string",
-          "required": false,
+          "name": "include_appointing_stockholder_ipo_termination",
+          "type": "boolean",
+          "required": true,
           "section": null,
-          "description": "Optional additional party text or empty string",
-          "default": "",
+          "description": "Whether the Appointing Stockholder's Section 1(d) rights terminate at the closing of the Company's initial public offering, subject to the source form's protection for proceedings based on pre-termination facts",
+          "default": null,
           "default_value_rationale": null
         },
         {
-          "name": "appointing_stockholder_ipo_termination_clause",
+          "name": "appointing_stockholder_ipo_termination_carrier",
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Optional clause text that terminates Appointing Stockholder rights at IPO closing, inserted before the sentence-ending period after \"representative on the Company's Board\" in Section 1(d). Supply the clause with a leading comma and no trailing period (e.g. \", and terminate on the closing of an initial public offering of the Company's Common Stock; provided, however, ...\"); leave empty to omit.",
-          "default": "",
+          "description": "Complete punctuation-bearing Section 1(d) carrier set by computed.json from the IPO-termination election",
+          "default": null,
           "default_value_rationale": null
         },
         {
@@ -11254,6 +11559,71 @@
           "default_value_rationale": null
         },
         {
+          "name": "investors",
+          "type": "array",
+          "required": true,
+          "section": null,
+          "description": "Complete Schedule A investor notice list; replaces all model rows",
+          "default": null,
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "name",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Full legal name of the Investor",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "address",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Complete notice address",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "phone",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Notice telephone number",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "email",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Notice email address",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "counsel_cc",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Counsel copy recipient, or empty when none",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
+        },
+        {
+          "name": "key_holder_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Full legal name of the expressly identified Key Holder. Fills the Key Holder signature and Schedule B name carriers consistently. Multiple distinct Key Holders require repeatable-row runtime support.",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
           "name": "underwriter_selection",
           "type": "enum",
           "required": true,
@@ -11267,21 +11637,431 @@
           ]
         },
         {
+          "name": "registration_effectiveness_days",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Base number of days the registration statement must remain effective",
+          "default": "120",
+          "default_value_rationale": null
+        },
+        {
+          "name": "registration_effectiveness_extension",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Events that toll the base registration-statement effectiveness period. The model-form branch preserves its underwriter-request and Form S-3 extensions; company_suspensions instead tolls only for stop orders, blackout notices, and other Company-directed suspensions that prevent sales.",
+          "default": "underwriter_and_form_s3",
+          "default_value_rationale": null,
+          "options": [
+            "underwriter_and_form_s3",
+            "company_suspensions",
+            "none"
+          ]
+        },
+        {
+          "name": "registration_effectiveness_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed complete Section 2.5 registration-effectiveness covenant",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "underwriter_selector_text",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed party authorized to select underwriters",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "prior_agreement_recitals_opening",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed predecessor-agreement opening recital",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "prior_agreement_recitals_closing",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed predecessor-agreement closing recital",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "prior_agreement_supersession",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed predecessor-agreement supersession clause",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "competitor_exclusion_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed named-person Competitor exclusion",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "transferee_eligibility_text",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed transferee eligibility formulation",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "requisite_holders_threshold",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed Requisite Holders threshold text",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "demand_eligibility_date_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed demand-registration eligibility date clause",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "form_s1_demand_limit_words",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed written Form S-1 demand limit",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "form_s1_demand_limit_suffix",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed grammatical suffix for the Form S-1 demand limit",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "selling_holder_counsel_cap_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed Selling Holder Counsel fee-cap clause",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "direct_listing_definition",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed Direct Listing definition",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "direct_listing_or_applicable_spaced",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed spaced Direct Listing alternative",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "direct_listing_or_applicable",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed Direct Listing alternative",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "direct_listing_or_connection",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed Direct Listing connection clause",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "direct_listing_rule_144_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed Direct Listing Rule 144 clause",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "direct_listing_whichever_earlier",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed Direct Listing termination alternative",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "insurance_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed insurance covenant",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "checklist_delivery_timing",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed Annex 1 checklist delivery timing",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "signature_page_caption",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed clean signature-page caption",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "key_holders_heading",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed clean Key Holders signature heading",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "key_holder_signature_tail",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed removal value for the model's optional signature tail",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "annex_2_heading",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed clean Annex 2 heading",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "schedule_b_heading",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed clean Schedule B heading",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "successors_assigns_section",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Pinned-source section number for Successors and Assigns",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "registration_rights_article",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Pinned-source article number for Registration Rights",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "expenses_registration_section",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Pinned-source section number for Expenses of Registration",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_registration_section",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Pinned-source section number for Company Registration",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "delay_registration_section",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Pinned-source section number for Delay of Registration",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "indemnification_section",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Pinned-source section number for registration indemnification",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "additional_investors_section",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Pinned-source section number for Additional Investors",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "market_standoff_section",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Pinned-source section number for the Market Stand-off",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "restrictions_transfer_section",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Pinned-source section number for Restrictions on Transfer",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "amendments_waivers_section",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Pinned-source section number for Amendments and Waivers",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "financial_statements_section",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Pinned-source section number for Delivery of Financial Statements",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "inspection_section",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Pinned-source section number for Inspection",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "rofo_article",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Pinned-source article number for Rights to Future Stock Issuances",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "rofo_section",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Pinned-source operative section number for Right of First Offer",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "successor_indemnification_section",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Pinned-source section number for Successor Indemnification",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "indemnification_late_notice_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed complete late-notice material-prejudice limitation",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "rofo_termination_liquidation_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Complete retained liquidation qualification for ROFO termination",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "covenant_termination_liquidation_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Complete retained liquidation qualification for covenant termination",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "selling_holder_counsel_expense_exception_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Complete retained Selling Holder counsel expense exception",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
           "name": "company_counsel",
           "type": "string",
           "required": true,
           "section": null,
           "description": "Name and address of company's legal counsel",
           "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "counsel_cc",
-          "type": "string",
-          "required": false,
-          "section": null,
-          "description": "Additional counsel to CC on notices, or empty string if none",
-          "default": "",
           "default_value_rationale": null
         },
         {
@@ -11317,6 +12097,28 @@
           "required": false,
           "section": null,
           "description": "Title-case prefix if amending a prior agreement (e.g. Amended and Restated) or empty string",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "financing_history",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Whether this IRA is for a new financing or amends and restates an existing investors' rights agreement",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "new_financing",
+            "amended_and_restated"
+          ]
+        },
+        {
+          "name": "prior_agreement_date",
+          "type": "date",
+          "required": false,
+          "section": null,
+          "description": "Display-ready date of the predecessor IRA; required only for amended_and_restated financing_history",
           "default": "",
           "default_value_rationale": null
         },
@@ -11358,6 +12160,1210 @@
           "section": null,
           "description": "Minimum number of Registrable Securities required to qualify as a Major Investor",
           "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "requisite_holders_standard",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Voting threshold used in the Requisite Holders definition",
+          "default": "majority",
+          "default_value_rationale": null,
+          "options": [
+            "majority",
+            "percentage"
+          ]
+        },
+        {
+          "name": "requisite_holders_percentage",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Bare percentage number for Requisite Holders (for example, 60; do not include the percent sign), consistent with open-agreements issue",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_demand_eligibility_date",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Add a negotiated calendar-date eligibility trigger before the IPO-based Form S-1 demand trigger",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "demand_eligibility_date",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Display-ready earliest calendar date for a Form S-1 demand when the additional date trigger is selected (for example, May 21, 2028)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "form_s1_aggregate_offering_threshold",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Form S-1 demand-registration anticipated aggregate offering-price threshold, number only",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "form_s1_demand_limit",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Maximum number of Form S-1 demand registrations the Company must effect",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "one",
+            "two"
+          ]
+        },
+        {
+          "name": "rofo_closing_period_days",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Days after the Offer Notice within which a Section 4.1(b) Major Investor purchase must close",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "rofo_outside_sale_period_days",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Outside-sale period following expiration of the Section 4.1(b) election periods",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "selling_holder_counsel_fee_cap",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Company-paid Selling Holder Counsel fee cap under Section 2.6, number only",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "selling_holder_counsel_cap_basis",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Whether the Selling Holder Counsel fee cap applies in the aggregate or per registration",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "aggregate",
+            "per_registration"
+          ]
+        },
+        {
+          "name": "direct_listing_election",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Whether direct-listing provisions are omitted, use the model-form Direct Listing term, or use the Qualified Direct Listing term consistently throughout registration, lock-up, transfer, and termination provisions",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "qualified",
+            "include",
+            "omit"
+          ]
+        },
+        {
+          "name": "registrable_clause_i_marker",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Clause marker for Preferred-conversion Registrable Securities, normally (i)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "registrable_clause_iv_marker",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Clause marker for dividend and replacement Registrable Securities, normally (iv)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "optional_comma",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Comma retained where the selected clause sequence requires it; empty when omitted",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "surviving_covenant_sections",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Additional Section 5 covenants that survive the general termination rule",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "additional_sanctions_jurisdictions",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Additional sanctions jurisdictions beyond the United States, or empty",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "optional_comma_and",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Comma-and connector retained by the selected alternative, or empty",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "annual_budget_delivery_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Complete timing phrase for annual budget delivery, including punctuation",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "observer_competitor_exclusion_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Observer exclusion for a Competitor investor or representative, or empty",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "major_investor_competitor_limitation",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Competitor limitation on Major Investor information and inspection rights, or empty",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "optional_period",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Period selected for the employee-agreement covenant alternative, or empty",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "standoff_stockholder_threshold_percent",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Percentage threshold inserted before the source percent sign for stockholders subject to the market stand-off (for example, 1)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_registration_holder_floor_percent",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Percentage floor inserted before the source percent sign for Holder participation in a Company registration other than the IPO (for example, 25)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "form_s3_blackout_before_days",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Days before a Company-initiated registration during which Form S-3 demands are unavailable",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "registration_participation_response_days",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Days allowed to respond to an underwritten-registration participation notice",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "qsbs_section_reference",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Final unbracketed IRA section number containing the QSBS covenant",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "form_s3_blackout_after_days",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Days after a Company-initiated registration during which Form S-3 demands are unavailable",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "registration_effectiveness_days",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Base number of days a registration statement must remain effective",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "information_right_holder_class",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Investor class entitled to the selected information rights",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "general_amendment_approval_group",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Defined holder group whose consent is required under the general amendment rule",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "major_investor_amendment_threshold",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Voting threshold for amendment of Major Investor provisions, including article",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "deferral_registration_exception",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Registration category permitted during a Form S-1 deferral",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "optional_and",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "And connector retained by selected coordinated alternatives, or empty",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "sanctions_list_conjunction",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Conjunction before the final retained United States sanctions list",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "observer_rights_section_reference",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Observer-right section added to the information-right termination list",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "observer_rights_title_text",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Observer text included in the information-right article title",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "quarterly_equity_statement_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Stockholders-equity statement text included in quarterly reporting",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "monthly_equity_statement_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Stockholders-equity statement text included in monthly reporting",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "key_holders_preamble_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Preamble joinder text for Key Holders, or empty",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "rofo_investor_termination_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Major-Investor-specific ROFO termination clause, or empty",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_party_qualifier",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Qualifier before Investors in the Purchase Agreement recital, or empty",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "section_220_termination_intro",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Connector determining whether the Section 220 waiver ends on the earlier of IPO and Direct Listing",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "affiliate_disclosure_scope",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Existing/prospective scope for confidentiality-permitted Affiliate disclosures",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "form_s1_deferral_period_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Complete maximum Form S-1 deferral period phrase",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "registrable_cross_reference_text",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Complete clause cross-reference for dividend/replacement Registrable Securities",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "underwriter_type",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Modifier inserted before the source text \"underwriter(s)\" (normally managing; do not repeat underwriter)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "form_s1_deferral_frequency_word",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Word stating how often the Form S-1 deferral may be invoked in 12 months",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "optional_or",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Or connector retained by the selected alternative, or empty",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "later_offering_standoff_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Market stand-off period for a registered offering after the IPO",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "foia_party_rofo_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "FOIA Party exclusion in ROFO mechanics, or empty",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "later_offering_form_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Later registered-offering form included in market stand-off mechanics",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "schedule_b_notice_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Schedule B reference in the notices clause when Key Holders participate",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "qsbs_original_issuance_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Original-issuance qualifier for Preferred Stock covered by the QSBS covenant",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "additional_investor_purchase_agreement_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Purchase Agreement limitation on additional Investor joinders",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "accounting_firm_recognition_scope",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Modifier inserted before the source text \"recognized standing\" (normally nationally; do not repeat recognized)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "annual_statement_delivery_days",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Days after fiscal year end for delivery of annual financial statements",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "optional_plural_s",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Plural suffix required by the selected numeric count",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "ipo_only_standoff_scope",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "IPO-only scope limitation for market stand-off obligations, or empty",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "registration_termination_intro",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Introductory phrase for the selected registration-right termination triggers",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "registration_termination_anniversary_ordinal",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Ordinal anniversary on which registration rights terminate",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "form_s3_demand_limit_words",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Word-form maximum Form S-3 demand count",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_foia_party_provisions",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the FOIA Party definition and expressly selected FOIA limitations",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_dpa_foreign_person_provisions",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include DPA, DPA Triggering Rights, Foreign Person, CFIUS, and related limitations as a coherent package",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_key_holder_registrable_securities",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include Key Holder and Key Holder Registrable Securities definitions and related rights",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_board_attendance_expenses",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include reimbursement of Board attendance expenses",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_successor_indemnification",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the successor indemnification covenant",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_transaction_assistance",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include investor-counsel and transaction-assistance covenants",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_indemnification_matters",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include investor-director indemnification priority provisions",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_corporate_governance_program",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the selected corporate-governance program and Annex 2",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_fair_practices_covenant",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the FCPA compliance covenant",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_cybersecurity_covenant",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the cybersecurity covenant",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_real_property_reporting",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include real-property-holding-corporation status reporting",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_subsidiary_governance",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include subsidiary governance restrictions",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_outbound_investment_covenant",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include outbound-investment-rule covenants",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_post_issuance_rofo",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Permit post-issuance notice in lieu of prospective ROFO compliance",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "dispute_costs_election",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Allocation of enforcement costs",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "each_party",
+            "prevailing_party"
+          ]
+        },
+        {
+          "name": "include_registration_termination_deemed_liquidation",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the qualifying Deemed Liquidation Event registration-right termination condition",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "registration_termination_deemed_liquidation_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed whole-carrier Deemed Liquidation Event registration-right termination trigger",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_registration_termination_rule_144",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the post-listing ownership and Rule 144 registration-right termination condition",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_registration_deferral_anniversary_extension",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Extend anniversary termination until any then-continuing registration deferral expires",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_annual_financial_comparisons",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include prior-year and budget comparisons, variance explanations, and sources and uses in annual reporting",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_monthly_financial_statements",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Require the optional monthly financial-information package",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_inspection_competitor_gate",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Condition inspection rights on the Board not reasonably determining the Major Investor is a Competitor",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "observer_material_delivery_timing",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Whether Board observer materials are delivered concurrently with or promptly after delivery to directors",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "concurrent",
+            "promptly_following"
+          ]
+        },
+        {
+          "name": "include_information_termination_deemed_liquidation",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the qualifying Deemed Liquidation Event information-and-observer-right termination condition",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "information_termination_deemed_liquidation_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed complete qualifying Deemed Liquidation Event information-and-observer-right termination condition, or empty",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_rofo_sanctions_limitation",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Prohibit offering or selling New Securities to a Sanctioned Party under the ROFO",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_rofo_purchase_agreement_issuance_exemption",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Exempt Purchase Agreement Preferred Stock issuances from the ROFO",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_rofo_loss_penalty",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Terminate a Major Investor's ROFO rights after it declines its full allocation",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_employee_noncompetition_nonsolicitation",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Require employee noncompetition and nonsolicitation agreements to the extent legally permissible",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_employee_severance_restriction",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the optional employee severance-payment restriction",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_transaction_ipo_advance_notice",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Require advance notice to Investor Counsel of IPO information deadlines",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_fcpa_written_policies",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Require written policies as part of the FCPA compliance system",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_special_mandatory_conversion_exclusion",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Exclude shares issued in a Special Mandatory Conversion from Registrable Securities",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_investor_common_stock_registrable_securities",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include other Investor-held Common Stock and Common-equivalent securities as Registrable Securities",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_eu_uk_sanctions_lists",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include European Union and United Kingdom sanctioned-party lists",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_deferral_tolling",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Toll registration filing and effectiveness periods during a permitted deferral",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_deferral_company_registration_restriction",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Restrict Company and other-stockholder registrations during a Form S-1 deferral",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_holder_underwriting_limitations",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Limit Holder underwriting representations, warranties, indemnities, and liability",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_key_holder_cutback_priority",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Exclude Key Holder Registrable Securities before further reducing other Holders",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_holder_own_counsel_expense_exception",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Require each Holder to bear non-Selling-Holder counsel expense",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_indemnification_correction_safe_harbors",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the correction-in-writing safe harbors in Holder registration indemnification",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "indemnification_company_correction_safe_harbor_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed whole-carrier Company written-correction safe harbor",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "indemnification_holder_correction_safe_harbor_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed whole-carrier Holder written-correction safe harbor",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_indemnification_late_notice_prejudice_limitation",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Limit the effect of late indemnification notice to material prejudice",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "subsequent_registration_priority_election",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Priority restriction applicable to later-granted registration rights. pro_rata_and_subordinate independently requires pro rata allocation of permitted participation and subordinates later-granted rights to the Holders.",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "pro_rata_and_subordinate",
+            "pro_rata_or_subordinate",
+            "no_reduction"
+          ]
+        },
+        {
+          "name": "subsequent_registration_priority_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed whole-carrier restriction for later-granted registration rights",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_standoff_research_extension",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Permit an open-ended market-stand-off extension for research restrictions",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_standoff_rule_10b5_1_exception",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Exempt qualifying Rule 10b5-1 plans from the market stand-off",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_standoff_family_trust_exception",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Exempt qualifying no-value family-trust transfers from the market stand-off",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_standoff_pro_rata_release",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Apply discretionary stand-off releases pro rata",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_standoff_discretionary_minimum_release",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Permit a discretionary de minimis stand-off release basket",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_covenant_termination_deemed_liquidation_condition",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Condition covenant termination at a Deemed Liquidation Event on specified consideration or successor rights",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_amendment_proportional_participation",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Protect proportional Major Investor participation when a ROFO waiver is used by a participating investor",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_amendment_sanctions_waiver",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Permit Company waiver necessary to avoid violation of applicable Sanctions",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_key_holder_disproportionate_amendment_protection",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Require Key Holder majority approval for disproportionately adverse amendments",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "transaction_assistance_counsel_fee_cap",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Aggregate Company-paid Investor Counsel cap for each reimbursed IPO or Sale transaction, number only",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_selling_holder_counsel_expense_exception",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Exclude Company-paid Selling Holder Counsel fees from Holder-borne Selling Expenses",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signatory_name",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Printed name of the Company's authorized signatory",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signatory_title",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Title of the Company's authorized signatory",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_notice_address",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Complete Company notice address",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_notice_attention",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Person and title to whose attention Company notices must be directed, or empty if none",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_notice_address_block",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed Company notice address including any supplied Attention recipient",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_notice_email",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Company notice email",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_signatory_name",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Printed name of the Investor's authorized signatory",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_signatory_title",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Title of the Investor's authorized signatory",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "key_person_insured_name",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Person covered by key-person insurance, if required",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "d_and_o_coverage_amount",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Minimum D&O liability insurance coverage, number only (for example, 5,000,000)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "key_person_insurance_election",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Whether the Company must carry named key-person insurance in addition to D&O coverage",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "none",
+            "named"
+          ]
+        },
+        {
+          "name": "key_person_insurance_coverage_amount",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Minimum named key-person insurance coverage, number only; required when key_person_insurance_election is named",
+          "default": "",
           "default_value_rationale": null
         },
         {
@@ -11428,6 +13434,95 @@
           "default_value_rationale": null
         },
         {
+          "name": "key_holders",
+          "type": "array",
+          "required": true,
+          "section": null,
+          "description": "Complete Schedule B Key Holder list; replaces all model rows and must not duplicate scalar signature carriers",
+          "default": null,
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "name",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Full legal name of the Key Holder",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "address",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Complete personal notice address",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "email",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Personal notice email",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
+        },
+        {
+          "name": "checklist_delivery_election",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Whether the QSBS checklist is delivered on the specified date or later following an Investor request",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "delivered_on_date",
+            "on_request"
+          ]
+        },
+        {
+          "name": "checklist_delivery_business_days",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Response period for an Investor-requested QSBS checklist; required for on_request",
+          "default": "20",
+          "default_value_rationale": null
+        },
+        {
+          "name": "annex_2_policies",
+          "type": "array",
+          "required": true,
+          "section": null,
+          "description": "Complete selected set of required governance policies and their display-ready adoption deadlines. An empty array is an explicit election to omit Annex 2; the downstream runtime must replace all model rows rather than leave defaults.",
+          "default": null,
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "policy",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Required governance policy name",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "deadline",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Display-ready adoption deadline (for example, 60 days post-Closing)",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
+        },
+        {
           "name": "series_designation",
           "type": "string",
           "required": true,
@@ -11463,11 +13558,20 @@
       "artifact_type": "field-selector",
       "fields": [
         {
+          "name": "company_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Full legal name of the Company in normal title case for the operative body text",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
           "name": "company_name_upper",
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Company name in uppercase. Fills both the uppercase signature-block slot ([COMPANY]) and the body's \"Preferred Stock of ______ (the \"Company\")\" blank, so the supplied value appears verbatim in both places — NVCA convention uppercases the signature block, so supply the name in uppercase.",
+          "description": "Company name in uppercase for the left \"Very truly yours\" signature column. The pinned source's bracket labels are reversed relative to the operative roles, so the recipe binds by column function rather than the literal bracket word.",
           "default": null,
           "default_value_rationale": null
         },
@@ -11503,43 +13607,43 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Investor name in uppercase",
+          "description": "Investor name in uppercase for the right \"Agreed and Accepted\" signature column",
           "default": null,
           "default_value_rationale": null
         },
         {
-          "name": "city",
+          "name": "investor_notice_city",
           "type": "string",
           "required": true,
           "section": null,
-          "description": "City for the company address",
+          "description": "City in the Investor's notice address printed in the letter header",
           "default": null,
           "default_value_rationale": null
         },
         {
-          "name": "state",
+          "name": "investor_notice_state",
           "type": "string",
           "required": true,
           "section": null,
-          "description": "State for the company address",
+          "description": "State in the Investor's notice address printed in the letter header",
           "default": null,
           "default_value_rationale": null
         },
         {
-          "name": "street_address",
+          "name": "investor_notice_street_address",
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Street address for the company",
+          "description": "Street address for the Investor printed in the letter header",
           "default": null,
           "default_value_rationale": null
         },
         {
-          "name": "zip_code",
+          "name": "investor_notice_zip_code",
           "type": "string",
           "required": true,
           "section": null,
-          "description": "ZIP code for the company address",
+          "description": "ZIP code in the Investor's notice address printed in the letter header",
           "default": null,
           "default_value_rationale": null
         },
@@ -11548,8 +13652,17 @@
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Portfolio company letterhead text. Defaults to a conspicuous drafting marker so an omitted optional letterhead does not collapse the first operative paragraph into a blank leading page.",
-          "default": "PORTFOLIO COMPANY LETTERHEAD",
+          "description": "Company name or other company-identifying text for the Company letterhead block",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_address",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Full Company address printed in the Company letterhead block; do not use the Investor notice address here",
+          "default": "",
           "default_value_rationale": null
         },
         {
@@ -11568,6 +13681,96 @@
           "section": null,
           "description": "Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement",
           "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_management_consultation_rights",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include consultation and management-advice rights while the Investor lacks Board representation",
+          "default": "true",
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_inspection_rights",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the books, records, facilities, and information inspection right",
+          "default": "true",
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_board_materials_rights",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include concurrent Board-material delivery and the right to address the Board while the Investor lacks Board representation",
+          "default": "true",
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_foreign_person_restrictions",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the Defense Production Act and CFIUS foreign-person restrictions paragraph",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_independent_business_reasons_merger_condition",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Require the merger to satisfy the independent-business-reasons and reorganization conditions in clause (x)",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_successor_or_liquid_consideration_merger_condition",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Require the successor to provide reasonably comparable rights or pay solely cash or national-exchange-listed securities",
+          "default": "true",
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_signatory_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Printed name of the Investor signatory; the handwritten By line remains blank",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_signatory_title",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Title of the Investor signatory",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signatory_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Printed name of the Company signatory; the handwritten By line remains blank",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signatory_title",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Title of the Company signatory",
+          "default": null,
           "default_value_rationale": null
         }
       ]
@@ -11624,12 +13827,57 @@
           "default_value_rationale": null
         },
         {
-          "name": "counsel_cc",
+          "name": "company_signatory_name",
           "type": "string",
-          "required": false,
+          "required": true,
           "section": null,
-          "description": "Additional counsel to CC on notices, or empty string if none",
-          "default": "",
+          "description": "Printed name of the Company signatory",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signatory_title",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Title of the Company signatory",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_notice_address",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Company notice address printed on the signature page",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_notice_email",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Company notice email printed on the signature page",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_signatory_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Printed name of the Investor signatory",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_signatory_title",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Title of the Investor signatory",
+          "default": null,
           "default_value_rationale": null
         },
         {
@@ -11696,11 +13944,247 @@
           "default_value_rationale": null
         },
         {
+          "name": "has_prior_agreement",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Whether this agreement amends and restates an expressly identified predecessor ROFR and Co-Sale Agreement",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "prior_agreement_date",
+          "type": "date",
+          "required": false,
+          "section": null,
+          "description": "Date of the predecessor ROFR and Co-Sale Agreement; used only when has_prior_agreement is true",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "prior_agreement_indirect_amendment_reference",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed predecessor-reference parenthetical in the exempt-transfer provision; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "has_additional_preferred_series",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Whether Preferred Stock includes another expressly identified preferred-stock series",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_special_mandatory_conversion",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Include the Capital Stock exclusion for a Special Mandatory Conversion",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_foreign_person_provisions",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Include DPA, DPA Triggering Rights, Foreign Person, and related transfer restrictions",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "sanctions_scope",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Sanctions jurisdictions included in the definitions",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "united_states_only",
+            "united_states_eu_uk"
+          ]
+        },
+        {
+          "name": "qualified_key_holder_service",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Service relationships that qualify an individual Key Holder",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "employee_only",
+            "employee_or_consultant"
+          ]
+        },
+        {
+          "name": "qualified_key_holder_service_suffix",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed consultant-service alternative for the Qualified Key Holder definition; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_qualified_direct_listing",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Include Qualified Direct Listing definitions and termination treatment",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_dle_termination_condition",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Condition Deemed Liquidation Event termination on cash, public securities, or comparable rights",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "dispute_resolution",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Selected dispute-resolution alternative",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "delaware_courts",
+            "arbitration"
+          ]
+        },
+        {
+          "name": "costs_rule",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Selected dispute-cost allocation",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "each_party_own_costs",
+            "prevailing_party"
+          ]
+        },
+        {
+          "name": "include_proportional_waiver_protection",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Preserve proportional participation when a waiving Investor participates in the transaction",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "preexisting_rofr_priority",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Rule governing a conflict with another preexisting right of first refusal",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "agreement_controls",
+            "bylaws_control"
+          ]
+        },
+        {
+          "name": "include_undersubscription_forfeiture",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Include the all-or-none resale rule when ROFR rights are undersubscribed",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_secondary_purchases_in_cosale_denominator",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Count Secondary Refusal purchases in the co-sale fraction and reduce selling shares accordingly",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_entity_transfer_restriction",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Apply the transfer restrictions mutatis mutandis to entity-level transfers",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_pledge_exempt_transfer",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Include the secured-pledge exempt-transfer exception",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_ten_percent_sale_exempt_transfer",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Include the ten-percent sale exempt-transfer exception",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_full_same_fashion_amendment_safeguard",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Include the same-fashion amendment and Key Holder consent carveouts",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_investor_status_minimum",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Retain the minimum-share condition for Investor status",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_key_holder_consent_minimum",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Retain the minimum-ownership condition for Key Holder amendment consent",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "additional_series_designation",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Additional preferred-stock series designation; used only when has_additional_preferred_series is true",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
           "name": "specify_percentage",
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Specified percentage threshold for key holder transfers — include the percent sign (e.g. 60%); occurrences where the source carries a trailing % absorb it",
+          "description": "Specified percentage threshold for key holder transfers, as a number only (for example, 60)",
           "default": null,
           "default_value_rationale": null
         },
@@ -11833,6 +14317,100 @@
           "description": "Computed permitted-transferee minimum-share threshold or a visible insertion marker; do not supply directly",
           "default": "",
           "default_value_rationale": null
+        },
+        {
+          "name": "investors",
+          "type": "array",
+          "required": true,
+          "section": null,
+          "description": "Investor notice and signature schedule rows",
+          "default": null,
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "name",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Investor legal name",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "address",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Investor notice address",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "phone",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Investor notice phone number",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "email",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Investor notice email address",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "counsel_cc",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Investor counsel copied on notices, or empty string if none",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
+        },
+        {
+          "name": "key_holders",
+          "type": "array",
+          "required": true,
+          "section": null,
+          "description": "Key Holder personal notice and signature schedule rows",
+          "default": null,
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "name",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Key Holder legal name",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "address",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Key Holder personal notice address",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "email",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Key Holder personal email address",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
         }
       ]
     },
@@ -11866,6 +14444,60 @@
           "required": true,
           "section": null,
           "description": "Full name of the investor",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signatory_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Name of the individual signing the SPA for the Company",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signatory_title",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Title of the individual signing the SPA for the Company",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_notice_address",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Company's notice address printed on its signature page",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_notice_email",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Company's notice email printed on its signature page",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_signatory_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Name of the individual signing the SPA for the Purchaser",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_signatory_title",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Title of the individual signing the SPA for the Purchaser",
           "default": null,
           "default_value_rationale": null
         },
@@ -11980,10 +14612,19 @@
         {
           "name": "include_convertible_securities",
           "type": "boolean",
-          "required": false,
+          "required": true,
           "section": null,
           "description": "Include convertible securities conversion clause in Section 1.1(b)",
-          "default": "false",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_tranche_closing",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Whether the financing includes a mandatory tranche closing and its related definitions and schedule",
+          "default": null,
           "default_value_rationale": null
         },
         {
@@ -12052,10 +14693,10 @@
         {
           "name": "closing_type",
           "type": "enum",
-          "required": false,
+          "required": true,
           "section": null,
           "description": "Single closing or additional closings",
-          "default": "single",
+          "default": null,
           "default_value_rationale": null,
           "options": [
             "single",
@@ -12065,10 +14706,10 @@
         {
           "name": "dispute_resolution_mode",
           "type": "enum",
-          "required": false,
+          "required": true,
           "section": null,
           "description": "Dispute resolution alternative in SPA (Alternative 1 arbitration or Alternative 2 courts)",
-          "default": "courts",
+          "default": null,
           "default_value_rationale": null,
           "options": [
             "arbitration",
@@ -12112,11 +14753,149 @@
           "default_value_rationale": null
         },
         {
+          "name": "knowledge_party_patent_persons",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Persons whose knowledge is attributed to the Company solely for the patent representation in Section 2.8",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "university_license_disclosure_sections",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Selected Disclosure Schedule section references for university licenses, for example 2.8(f) and 2.8(j)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "consultant_vesting_months",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Number of months in the customary consultant vesting schedule",
+          "default": "48",
+          "default_value_rationale": null
+        },
+        {
+          "name": "financial_statement_audit_status",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Whether the delivered annual financial statements are audited or unaudited",
+          "default": "unaudited",
+          "default_value_rationale": null,
+          "options": [
+            "audited",
+            "unaudited"
+          ]
+        },
+        {
+          "name": "fiscal_year_end",
+          "type": "date",
+          "required": true,
+          "section": null,
+          "description": "Fiscal year end date for the annual financial statements",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "interim_financial_statement_months",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Number of months covered by the interim financial statements ending on the Balance Sheet Date",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "interim_current_period_end",
+          "type": "date",
+          "required": true,
+          "section": null,
+          "description": "End date of the current interim comparative period",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "interim_comparative_period_end",
+          "type": "date",
+          "required": true,
+          "section": null,
+          "description": "End date of the prior-year interim comparative period",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "additional_transaction_agreements",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Only agreements additional to the SPA, Investors' Rights Agreement, Management Rights Letter, ROFR/Co-Sale Agreement, and Voting Agreement already enumerated in the form (for this scenario, the Indemnification Agreement)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "indemnification_agreement_indemnitees",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Exact individual indemnitee or indemnitees party to the attached Indemnification Agreement",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "management_rights_letter_count",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Whether the financing uses one or multiple Management Rights Letters",
+          "default": "one",
+          "default_value_rationale": null,
+          "options": [
+            "one",
+            "multiple"
+          ]
+        },
+        {
+          "name": "include_withdrawn_public_offering_representation",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include the purchaser representation concerning a withdrawn public offering",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "withdrawn_public_offering_date",
+          "type": "date",
+          "required": false,
+          "section": null,
+          "description": "Effective withdrawal date of the public offering, required when its representation is included",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "closing_condition_waiver_standard",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Purchaser approval standard for waiving closing conditions",
+          "default": "majority",
+          "default_value_rationale": null,
+          "options": [
+            "majority",
+            "percentage"
+          ]
+        },
+        {
           "name": "benefit_plan_name",
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Plan year and name of the employee benefit plan",
+          "description": "Complete plan year and name, including the word Plan (for example, 2025 Equity Incentive Plan)",
           "default": null,
           "default_value_rationale": null
         },
@@ -12247,12 +15026,83 @@
           "default_value_rationale": null
         },
         {
-          "name": "healthcare_compliance_standard",
-          "type": "string",
+          "name": "include_healthcare_representations",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Whether the Company is a healthcare business for which the HIPAA and Healthcare Laws representations apply",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_telecom_representation",
+          "type": "boolean",
           "required": false,
           "section": null,
-          "description": "Optional bracketed healthcare compliance law name, such as HIPAA; leave blank if inapplicable",
-          "default": "",
+          "description": "Whether the Company is subject to the optional telecommunications and FCC representation",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_other_ira_stockholders",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include other stockholders as parties in the Investors' Rights Agreement references",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_subsidiary_carve_ins",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include subsidiary-specific representation cross-references when the Company has subsidiaries",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "requisite_purchaser_standard",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Approval standard used in the Requisite Purchasers definition",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "majority",
+            "percentage"
+          ]
+        },
+        {
+          "name": "authorization_actions_timing",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Whether required authorization actions are complete or will occur before Closing",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "already_taken",
+            "prior_to_closing"
+          ]
+        },
+        {
+          "name": "include_patent_trademark_knowledge_qualifier",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Include patent-and-trademark knowledge qualifiers",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "include_sbic_representation",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Whether at least one Purchaser is an SBIC and the Small Business Concern representation applies",
+          "default": null,
           "default_value_rationale": null
         },
         {
@@ -12287,7 +15137,7 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Specified percentage threshold — include the percent sign (e.g. 60%)",
+          "description": "Specified percentage threshold, as a number only (for example, 60)",
           "default": null,
           "default_value_rationale": null
         },
@@ -12335,6 +15185,118 @@
           "description": "Names of the applicable purchasers",
           "default": null,
           "default_value_rationale": null
+        },
+        {
+          "name": "purchasers",
+          "type": "array",
+          "required": true,
+          "section": null,
+          "description": "Purchaser economics rows for the six-column Schedule of Purchasers. Each row identifies a purchaser and separately states its convertible investment, conversion shares, cash purchase price, cash shares, and total shares.",
+          "default": null,
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "name_and_address",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Purchaser legal name and notice address, separated by line breaks",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "convertible_investment",
+              "type": "number",
+              "required": false,
+              "section": null,
+              "description": "Dollar amount invested by the purchaser through Convertible Securities",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "convertible_shares",
+              "type": "number",
+              "required": false,
+              "section": null,
+              "description": "Shares issued to the purchaser upon conversion of Convertible Securities",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "cash_purchase_price",
+              "type": "number",
+              "required": false,
+              "section": null,
+              "description": "Total cash purchase price paid by the purchaser",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "cash_purchase_economics",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Exact aggregate cash price and per-share price, for example \"$10,000,000 aggregate at $1.00 per share\"",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "cash_shares",
+              "type": "number",
+              "required": false,
+              "section": null,
+              "description": "Shares purchased for cash by the purchaser",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "total_shares",
+              "type": "number",
+              "required": false,
+              "section": null,
+              "description": "Total shares purchased by the purchaser, including conversion and cash shares",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
+        },
+        {
+          "name": "non_signing_convertible_holders",
+          "type": "array",
+          "required": false,
+          "section": null,
+          "description": "Rows for the three-column Schedule of Non-Signing Holders of Convertible Securities. Leave empty when every converting holder signs the agreement.",
+          "default": null,
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "name_and_address",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Non-signing holder legal name and notice address, separated by line breaks",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "convertible_investment",
+              "type": "number",
+              "required": false,
+              "section": null,
+              "description": "Dollar amount invested by the non-signing holder through Convertible Securities",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "convertible_shares",
+              "type": "number",
+              "required": false,
+              "section": null,
+              "description": "Shares issued to the non-signing holder upon conversion of Convertible Securities",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
         }
       ]
     },
@@ -12368,15 +15330,6 @@
           "required": true,
           "section": null,
           "description": "Full name of the lead investor",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "investor_2_name",
-          "type": "string",
-          "required": false,
-          "section": null,
-          "description": "Full name of the second investor (if applicable)",
           "default": null,
           "default_value_rationale": null
         },
@@ -12439,6 +15392,68 @@
           "default_value_rationale": null
         },
         {
+          "name": "requisite_holders_standard",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Select whether Requisite Holders is an exact percentage threshold or a simple majority",
+          "default": "percentage",
+          "default_value_rationale": null,
+          "options": [
+            "percentage",
+            "majority"
+          ]
+        },
+        {
+          "name": "requisite_holders_percentage",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Bare percentage number used when requisite_holders_standard is percentage (for example, 60; do not include the percent sign)",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "requisite_holders_text",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed selected Requisite Holders threshold text; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "board_size",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Authorized number of Board seats under the agreed post-closing board structure (number only)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "vacant_board_seats_at_closing",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Number of authorized Board seats intentionally vacant at the Closing (number only)",
+          "default": "0",
+          "default_value_rationale": null
+        },
+        {
+          "name": "common_director_designation",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Select whether the Common Director is designated by the Qualified Key Holders or is a named director whose service is employment-contingent",
+          "default": "qualified_key_holders",
+          "default_value_rationale": null,
+          "options": [
+            "qualified_key_holders",
+            "named_service_contingent"
+          ]
+        },
+        {
           "name": "preferred_director_name",
           "type": "string",
           "required": true,
@@ -12475,6 +15490,46 @@
           "default_value_rationale": null
         },
         {
+          "name": "include_qualified_direct_listing_termination",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Whether a Qualified Direct Listing terminates the agreement alongside an underwritten public offering",
+          "default": "true",
+          "default_value_rationale": null
+        },
+        {
+          "name": "sale_section_3_survives",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Whether Section 3 survives a Sale of the Company to the extent needed to enforce that sale",
+          "default": "true",
+          "default_value_rationale": null
+        },
+        {
+          "name": "termination_date_mode",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Select whether the agreement has an additional fixed calendar termination date",
+          "default": "no_fixed_date",
+          "default_value_rationale": null,
+          "options": [
+            "no_fixed_date",
+            "fixed_date"
+          ]
+        },
+        {
+          "name": "fixed_termination_date",
+          "type": "date",
+          "required": false,
+          "section": null,
+          "description": "Additional calendar termination date; required only when termination_date_mode is fixed_date",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
           "name": "effective_date",
           "type": "date",
           "required": true,
@@ -12484,21 +15539,30 @@
           "default_value_rationale": null
         },
         {
+          "name": "has_prior_agreement",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Whether this agreement amends and restates an expressly identified predecessor Voting Agreement",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "prior_agreement_date",
+          "type": "date",
+          "required": false,
+          "section": null,
+          "description": "Date of the predecessor Voting Agreement; used only when has_prior_agreement is true",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
           "name": "company_counsel",
           "type": "string",
           "required": true,
           "section": null,
           "description": "Company counsel name and address",
           "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "counsel_cc",
-          "type": "string",
-          "required": false,
-          "section": null,
-          "description": "Additional counsel to CC on notices, or empty string if none",
-          "default": "",
           "default_value_rationale": null
         },
         {
@@ -12524,7 +15588,7 @@
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Percentage threshold for drag-along and amendment provisions — include the percent sign (e.g. 60%); occurrences where the source carries a trailing % absorb it",
+          "description": "Percentage threshold for drag-along and amendment provisions, as a number only (for example, 60)",
           "default": null,
           "default_value_rationale": null
         },
@@ -12572,6 +15636,400 @@
           "description": "Par value per share of common and preferred stock (number only, e.g. 0.0001 — the document supplies the dollar sign)",
           "default": "0.0001",
           "default_value_rationale": null
+        },
+        {
+          "name": "qualified_key_holder_service_basis",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Service qualification used in the Qualified Key Holder definition",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "employee_only",
+            "employee_or_consultant"
+          ]
+        },
+        {
+          "name": "qualified_key_holder_service_suffix",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed consultant-service alternative for the Qualified Key Holder definition; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "common_director_amendment_consent_basis",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Select whether the Common Director amendment protection is approved by Qualified Key Holders or a specified percentage of Common Stock holders",
+          "default": "qualified_key_holders",
+          "default_value_rationale": null,
+          "options": [
+            "qualified_key_holders",
+            "common_stock_percentage"
+          ]
+        },
+        {
+          "name": "common_director_amendment_consent_text",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed complete approval class for the Common Director amendment protection; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "drag_approval_mode",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Approvals required in addition to the Selling Investors for a drag-along",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "selling_investors_only",
+            "plus_key_holders",
+            "plus_board",
+            "plus_key_holders_and_board"
+          ]
+        },
+        {
+          "name": "drag_selling_investor_basis",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Securities used for the Selling Investor approval numerator",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "preferred_stock",
+            "converted_common"
+          ]
+        },
+        {
+          "name": "drag_requires_key_holder_approval",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Computed selector input for the separate Qualified Key Holder vote",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "drag_requires_board_approval",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Computed selector input for Board approval",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "drag_include_certificate_amendment",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Include related Restated Certificate amendments or restatements in the compelled vote",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "drag_include_definitive_agreements",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Include related definitive transaction agreements in the compelled vote",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "drag_delay_uses_reasonable_expectation",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Qualify competing proposals by whether they reasonably could be expected to delay or impair the Sale",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "drag_include_gross_negligence_exception",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Include gross negligence in the Stockholder Representative liability exception",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "drag_include_company_representation_escrow",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Permit Company-representation claims to be paid from the common escrow",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "drag_include_same_form_consideration",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Include Section 3.2(g)'s same-form-of-consideration protection",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "stock_sale_notice_days",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Advance notice period for a different allocation in a Stock Sale, number only",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "director_removal_other_than_for_cause",
+          "type": "boolean",
+          "required": true,
+          "section": null,
+          "description": "Permit removal other than for cause when the selected contractual triggers apply",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "joinder_security_scope",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Securities whose later issuance triggers a Voting Agreement joinder",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "shares_only",
+            "shares_options_and_warrants"
+          ]
+        },
+        {
+          "name": "joinder_minimum_ownership_percentage",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Minimum post-issuance ownership triggering joinder, number only",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "key_holder_consent_percentage",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Qualified Key Holder amendment-consent threshold, number only",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "key_holder_ownership_floor_percentage",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Outstanding-capital ownership floor below which Key Holder consent is not required, number only",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "sanctions_scope",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Sanctions authorities and lists included in the Voting Agreement",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "united_states_only",
+            "united_states_eu_uk"
+          ]
+        },
+        {
+          "name": "sanctions_authorities_suffix",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed additional sanctions authorities; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "sanctions_lists_suffix",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed additional sanctions lists; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "enforcement_costs_mode",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Allocation of enforcement costs",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "own_costs",
+            "prevailing_party"
+          ]
+        },
+        {
+          "name": "company_signatory_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Printed name of the Company's authorized signatory",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signatory_title",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Title of the Company's authorized signatory",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_notice_address",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Company's notice address on its signature page",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_notice_email",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Company's notice email on its signature page",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_signatory_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Printed name of the lead Investor's authorized signatory",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_signatory_title",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Title of the lead Investor's authorized signatory",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investors",
+          "type": "array",
+          "required": true,
+          "section": null,
+          "description": "Investor notice and signature schedule rows",
+          "default": null,
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "name",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Investor legal name",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "address",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Investor notice address",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "phone",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Investor notice phone number",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "email",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Investor notice email address",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "counsel_cc",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Investor counsel copied on notices, or empty string if none",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
+        },
+        {
+          "name": "key_holders",
+          "type": "array",
+          "required": true,
+          "section": null,
+          "description": "Key Holder personal notice and signature schedule rows",
+          "default": null,
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "name",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Key Holder legal name",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "address",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Key Holder personal notice address",
+              "default": null,
+              "default_value_rationale": null
+            },
+            {
+              "name": "email",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Key Holder personal email address",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
         }
       ]
     },
@@ -12958,7 +16416,7 @@
       "name": "openagreements-colorado-restrictive-covenant-notice",
       "tier": "internal",
       "display_name": "Colorado Notice of Restrictive Covenants",
-      "category": "employment",
+      "category": "non-compete",
       "description": "Separate worker notice accompanying the Colorado Employee Restrictive Covenant Agreement under C.R.S. § 8-2-113(4).",
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-colorado-restrictive-covenant-notice",
@@ -13070,7 +16528,7 @@
       "name": "openagreements-confidentiality-invention-assignment-agreement",
       "tier": "internal",
       "display_name": "Confidentiality & Invention Assignment Agreement (CIIAA)",
-      "category": "employment",
+      "category": "invention-assignment",
       "description": "Employee proprietary information and inventions assignment agreement with explicit prior-inventions and personal-project carveout language placeholders.",
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-confidentiality-invention-assignment-agreement",
@@ -13162,7 +16620,7 @@
           "description": "Duration of confidentiality obligations for Confidential Information other than trade secrets after employment ends",
           "display_label": "Other Confidential Information Duration",
           "default": "For as long as the information remains confidential, and, where applicable law requires a fixed period, two years after employment ends",
-          "default_value_rationale": "Filed employee agreements overwhelmingly run ordinary confidentiality open-ended (52% expressly in a 315-instrument EDGAR sample; 93% in the Yale Law Journal study of 446 agreements); where they bound it they use a fallback that applies only if law requires one, and the fallback is two years in six of eight cases. Wisconsin voids an unbounded non-trade-secret covenant, so the fallback is not optional. See docs/benchmarks/ciiaa-confidentiality-duration-evidence.md."
+          "default_value_rationale": "Filed employee agreements overwhelmingly run ordinary confidentiality open-ended (52% expressly in a 315-instrument EDGAR sample; 93% in the Yale Law Journal study of 446 agreements disclosed in federal trade-secret litigation); where they bound it they use a fallback that applies only if law requires one, and among the eight EDGAR filings in that sample that state a fallback, six set it at two years. Wisconsin voids an unbounded non-trade-secret covenant, so the fallback is not optional. See docs/benchmarks/ciiaa-confidentiality-duration-evidence.md."
         },
         {
           "name": "post_termination_assistance",
@@ -13197,7 +16655,7 @@
       "name": "openagreements-confidentiality-invention-assignment-agreement-nevada",
       "tier": "internal",
       "display_name": "Confidentiality & Invention Assignment Agreement (Nevada)",
-      "category": "employment",
+      "category": "invention-assignment",
       "description": "Nevada-specific employee confidentiality and invention assignment agreement aligned with Nevada's employer-ownership default (NRS 600.500): the employer keeps statutory ownership of patentable inventions and trade secrets developed in the course and scope of employment that relate directly to the work, the own-time carve-out reaches only inventions outside that statutory grant, and the form carries no state carve-out notice because Nevada imposes none. The assignment clause keeps present-tense assignment language for a clean federal patent chain of title and carries no post-employment holdover tail. Drafted as a starting point for licensed counsel review.",
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-confidentiality-invention-assignment-agreement-nevada",
@@ -28008,7 +31466,7 @@
       "tier": "internal",
       "display_name": "Employee Restrictive Covenant (Texas)",
       "category": "non-compete",
-      "description": "Texas-specific employee restrictive covenant agreement built for the Texas Covenants Not to Compete Act (Tex. Bus. & Com. Code sections 15.50-15.52): confidentiality and trade-secret protection, an ancillary-to-an-otherwise-enforceable-agreement consideration recital, customer non-solicitation and an optional non-compete drafted to reasonable time, area, and scope, mandatory judicial reformation, physician and health-care-practitioner buyout terms, and Texas choice-of-law and forum language. Drafted as a starting point for licensed counsel review.",
+      "description": "Texas-specific employee restrictive covenant agreement built for the Texas Covenants Not to Compete Act (Tex. Bus. & Com. Code sections 15.50-15.52): confidentiality and trade-secret protection, an ancillary-to-an-otherwise-enforceable-agreement consideration recital, customer non-solicitation and an optional non-compete drafted to reasonable time, area, and scope, physician and health-care-practitioner buyout terms, and Texas choice-of-law and forum language. Drafted as a starting point for licensed counsel review.",
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-texas",
       "source": "OpenAgreements",
