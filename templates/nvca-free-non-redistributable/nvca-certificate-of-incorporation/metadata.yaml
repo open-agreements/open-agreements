@@ -54,7 +54,7 @@ fields:
     default: ""
   - name: original_issue_price
     type: string
-    description: Original purchase price per share of Series A Preferred Stock
+    description: Original purchase price per share of Series A Preferred Stock; accepts a value with or without a leading dollar sign and renders exactly one dollar sign
   - name: initial_purchase_price
     type: string
     description: Initial Series A purchase price per share
