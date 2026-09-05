@@ -118,6 +118,20 @@ fields:
   - name: qualified_financing_notice_days
     type: string
     description: Days of prior notice required for qualified financing
+  - name: qualified_financing_min_gross_proceeds
+    type: string
+    required: false
+    description: Optional minimum gross-proceeds threshold for a pay-to-play Qualified Financing; enter the number only, without a leading dollar sign
+  - name: qualified_financing_debt_proceeds_treatment
+    type: enum
+    required: false
+    description: Whether proceeds previously received for debt cancelled or converted in the Qualified Financing count toward the optional gross-proceeds threshold
+    options: [including, excluding]
+    default: excluding
+  - name: qualified_financing_proceeds_threshold_carrier
+    type: string
+    required: false
+    description: Computed complete optional carrier for the pay-to-play Qualified Financing proceeds threshold and debt-proceeds treatment
   - name: qualified_ipo_minimum_price
     type: string
     description: Minimum public offering price per share for a Qualified IPO, excluding the dollar sign

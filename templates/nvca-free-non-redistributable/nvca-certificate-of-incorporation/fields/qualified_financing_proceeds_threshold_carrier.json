@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "field_id": "qualified_financing_proceeds_threshold_carrier",
+  "field_label": "Qualified Financing Proceeds Threshold Clause",
+  "description": "Complete optional carrier for the pay-to-play Qualified Financing gross-proceeds threshold and converted-debt proceeds election",
+  "source_template_version": "10-1-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "(\\s+\\[that would result in at least \\$_______ in gross proceeds to the Corporation, \\[including/excluding\\] proceeds previously received by Corporation for debt that is being cancelled or converted in connection with such issuance\\])",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": ["no_unresolved_placeholder", "no_double_dollar"],
+  "failure_behavior": "warn",
+  "fixtures": [
+    {
+      "occurrence": 0,
+      "anchor": " [that would result in at least $_______ in gross proceeds to the Corporation, [including/excluding] proceeds previously received by Corporation for debt that is being cancelled or converted in connection with such issuance]",
+      "note": "The leading space is part of the optional carrier so omission cannot leave a doubled-space seam."
+    }
+  ]
+}

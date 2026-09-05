@@ -26,6 +26,7 @@
   "shall be entitled to elect > [__] directors of the Corporation": "{common_director_seats} {common_director_noun} of the Corporation",
   "when at least > [__]": "{preferred_shares_outstanding_threshold}",
   "at least > [__] days prior": "{qualified_financing_notice_days} days prior",
+  " [that would result in at least $_______ in gross proceeds to the Corporation, [including/excluding] proceeds previously received by Corporation for debt that is being cancelled or converted in connection with such issuance]": "{qualified_financing_proceeds_threshold_carrier}",
   "at a price of at least $ > [_____]": "{qualified_ipo_price_clause}",
   "resulting in at least $ > [______]": "{qualified_ipo_proceeds_clause}",
   "market capitalization equal to or greater than $ > [__________]": "{qualified_direct_listing_market_cap_clause}",

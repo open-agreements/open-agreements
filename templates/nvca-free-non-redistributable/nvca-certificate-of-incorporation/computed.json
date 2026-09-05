@@ -2,7 +2,8 @@
   "version": "1.0",
   "max_passes": 2,
   "defaults": {
-    "full_ratchet_sunset_carrier": ""
+    "full_ratchet_sunset_carrier": "",
+    "qualified_financing_proceeds_threshold_carrier": ""
   },
   "rules": [
     {
@@ -21,6 +22,26 @@
         { "field": "anti_dilution_type", "op": "neq", "value": "full_ratchet" }
       ],
       "set_fill": { "full_ratchet_sunset_carrier": "" }
+    },
+    {
+      "id": "qualified-financing-threshold-including-debt-proceeds",
+      "description": "Include the complete optional Qualified Financing threshold carrier and count converted debt proceeds",
+      "when_all": [
+        { "field": "include_pay_to_play", "op": "eq", "value": true },
+        { "field": "qualified_financing_min_gross_proceeds", "op": "defined" },
+        { "field": "qualified_financing_debt_proceeds_treatment", "op": "eq", "value": "including" }
+      ],
+      "set_fill": { "qualified_financing_proceeds_threshold_carrier": " that would result in at least $${qualified_financing_min_gross_proceeds} in gross proceeds to the Corporation, including proceeds previously received by Corporation for debt that is being cancelled or converted in connection with such issuance" }
+    },
+    {
+      "id": "qualified-financing-threshold-excluding-debt-proceeds",
+      "description": "Include the complete optional Qualified Financing threshold carrier and exclude converted debt proceeds",
+      "when_all": [
+        { "field": "include_pay_to_play", "op": "eq", "value": true },
+        { "field": "qualified_financing_min_gross_proceeds", "op": "defined" },
+        { "field": "qualified_financing_debt_proceeds_treatment", "op": "neq", "value": "including" }
+      ],
+      "set_fill": { "qualified_financing_proceeds_threshold_carrier": " that would result in at least $${qualified_financing_min_gross_proceeds} in gross proceeds to the Corporation, excluding proceeds previously received by Corporation for debt that is being cancelled or converted in connection with such issuance" }
     },
     {
       "id": "specified-percentage-carrier",
