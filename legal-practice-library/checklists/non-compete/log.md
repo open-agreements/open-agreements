@@ -1,5 +1,8 @@
 # Non Compete Update Log
 
+## 2026-09-01
+* **Update**: content(ciiaa): survive restrictive covenants; scope Confidential Information to Company (#2308) (7d848af)
+
 ## 2026-07-06
 * **Update**: feat(templates): graduate the restrictive-covenant master to a public jurisdiction-selector page (#1625) (6b9fc15)
 * **Update**: Rename review checklists to reviewer checklists (#1631) (d88b1a2)

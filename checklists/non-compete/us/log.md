@@ -1,5 +1,11 @@
 # Us Update Log
 
+## 2026-09-01
+* **Update**: content(ciiaa): survive restrictive covenants; scope Confidential Information to Company (#2308) (7d848af)
+
+## 2026-08-31
+* **Update**: content(md): describe ch. 301's architect category from the enacted text, not the struck text (#2248) (e297f54)
+
 ## 2026-08-15
 * **Update**: fix(colorado): align checklist quotes to 2025 statutes (3bd0cb5)
 

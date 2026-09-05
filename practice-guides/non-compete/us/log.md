@@ -1,5 +1,11 @@
 # Us Update Log
 
+## 2026-09-03
+* **Update**: fix: sharpen SEO metadata and sitemap indexing (#2425) (c10aed5)
+
+## 2026-08-31
+* **Update**: content(md): describe ch. 301's architect category from the enacted text, not the struck text (#2248) (e297f54)
+
 ## 2026-08-17
 * **Update**: fix(ny): make Delta source quote contiguous (3ab044e)
 

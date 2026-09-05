@@ -127,7 +127,7 @@ Review every item below the way a Nevada court would: the statute voids any cove
 
 ## Survival {#survival}
 
-- [ ] **Survival after the agreement ends** (Recommended) — Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite for everything else. In Nevada the discipline has a second payoff: if a court must revise one covenant's duration, separately stated survival terms keep the revision contained instead of inviting the judge into every clause at once. [#address-survival-per-covenant]
+- [ ] **Survival after the agreement ends** (Recommended) — Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite for everything else. In Nevada the discipline has a second payoff: if a court must revise one covenant's duration, separately stated durations keep the revision contained instead of inviting the judge into every clause at once. [#address-survival-per-covenant]
 
 ## Assignment and successors {#assignment-and-successors}
 

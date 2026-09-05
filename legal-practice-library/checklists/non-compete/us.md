@@ -136,7 +136,7 @@ A clause-by-clause reviewer checklist for employee restrictive covenant agreemen
 
 ## Survival {#survival}
 
-- [ ] **Survival after the agreement ends** (Recommended) — Each covenant should state its own survival and expiration rather than relying on one bundled survival clause. The covenants run on different clocks — perpetual for trade secrets, fixed terms elsewhere — and per-covenant treatment keeps each duration independently auditable. [#address-survival-per-covenant]
+- [ ] **Survival after the agreement ends** (Recommended) — Each covenant should carry its own duration, so that every post-separation clock is independently auditable. The covenants can run on different clocks — while trade secrets remain secret for one obligation, a fixed term for another — and what to scan for is a survival clause that assigns one undifferentiated duration to all of them. A covenant that states its own term, backed by survival language covering whatever by its nature should survive, is fine. [#address-survival-per-covenant]
 
 ## Assignment and successors {#assignment-and-successors}
 

@@ -128,7 +128,7 @@ Review every item below the way the Court of Chancery would: a covenant must be 
 
 ## Survival {#survival}
 
-- [ ] **Survival after the agreement ends** (Recommended) — Each covenant should expire on its own definite schedule and read on its own. Self-contained survival language is what lets a sound non-solicit outlive a failed non-compete — and in a state whose courts increasingly decline to repair the failed clause, that separateness is the difference between losing one covenant and losing the package. [#address-survival-per-covenant]
+- [ ] **Survival after the agreement ends** (Recommended) — Each covenant should expire on its own definite schedule. A covenant carrying its own stated term is what lets a sound non-solicit outlive a failed non-compete — and in a state whose courts increasingly decline to repair the failed clause, that independence is the difference between losing one covenant and losing the package. Scan for one undifferentiated duration applied to all of them, not for a survival clause that leaves each covenant to its own term. [#address-survival-per-covenant]
 
 ## Assignment and successors {#assignment-and-successors}
 

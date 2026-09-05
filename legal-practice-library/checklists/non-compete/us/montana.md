@@ -127,7 +127,7 @@ Review every item below the way a Montana court would: the restraint-of-trade st
 
 ## Survival {#survival}
 
-- [ ] **Survival after the agreement ends** (Recommended) — Per-covenant survival is the distinct-objects principle carried into the boilerplate: each promise should expire on its own schedule and read on its own. In Montana that separateness is what the partial-void rule preserves — a bundled survival clause that entangles the covenants makes it harder for the lawful promises to stand when a restraint falls. [#address-survival-per-covenant]
+- [ ] **Survival after the agreement ends** (Recommended) — Per-covenant survival is the distinct-objects principle carried into the boilerplate: each promise should expire on its own schedule. In Montana that separateness is what the partial-void rule preserves — a survival clause assigning one undifferentiated duration to every promise entangles them, and makes it harder for the lawful ones to stand when a restraint falls. [#address-survival-per-covenant]
 
 ## Assignment and successors {#assignment-and-successors}
 

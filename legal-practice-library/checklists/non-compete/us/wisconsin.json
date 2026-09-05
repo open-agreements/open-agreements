@@ -1137,7 +1137,7 @@
         "sectionId": "survival",
         "itemNumber": "15.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/wisconsin#address-survival-per-covenant",
-        "requirementGuidance": "Per-covenant survival is the divisibility principle carried into the boilerplate: each restraint should expire on its own definite schedule and be readable on its own. A bundled survival clause that entangles the covenants undercuts the very separateness that lets a valid clause outlive an invalid neighbor.",
+        "requirementGuidance": "Per-covenant survival is the divisibility principle carried into the boilerplate: each restraint should expire on its own definite schedule. A survival clause assigning one undifferentiated duration to every restraint entangles them, and undercuts the very separateness that lets a valid clause outlive an invalid neighbor.",
         "variants": [],
         "sources": [
           {

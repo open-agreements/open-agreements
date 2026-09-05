@@ -1515,7 +1515,7 @@
         "sectionId": "survival",
         "itemNumber": "16.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#address-survival-per-covenant",
-        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable: trade-secret obligations can run while secrecy lasts, and every other restraint needs its own stated end date. In Virginia the discipline matters because the covenants are tested one by one: a customer clause drafted to the statutory line can survive while a broad non-compete fails, but only if their durations and triggers are not fused into a single bundled survival sentence.",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable: trade-secret obligations can run while secrecy lasts, and every other restraint needs its own stated end date. In Virginia the discipline matters because the covenants are tested one by one: a customer clause drafted to the statutory line can survive while a broad non-compete fails, but only if their durations and triggers are stated separately rather than merged into one undifferentiated term.",
         "variants": [],
         "sources": []
       },

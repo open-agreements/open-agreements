@@ -1107,7 +1107,7 @@
         "sectionId": "survival",
         "itemNumber": "15.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/nebraska#address-survival-per-covenant",
-        "requirementGuidance": "Each covenant should expire on its own definite schedule and read on its own. Nebraska treats nonseverable integrated restraints as standing or falling together, so self-contained survival language is the difference between losing one overreaching clause and losing the whole covenant suite with it.",
+        "requirementGuidance": "Each covenant should expire on its own definite schedule. Nebraska treats nonseverable integrated restraints as standing or falling together, so a covenant carrying its own stated term is the difference between losing one overreaching clause and losing the whole covenant suite with it. One undifferentiated duration covering all of them is what integrates them.",
         "variants": [],
         "sources": [
           {

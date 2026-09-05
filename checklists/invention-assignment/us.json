@@ -48,7 +48,7 @@
         "steven-obiajulu"
       ]
     },
-    "requirementCount": 27,
+    "requirementCount": 28,
     "sections": [
       {
         "sectionId": "assignment-mechanics",
@@ -292,13 +292,26 @@
         "sources": []
       },
       {
+        "requirementId": "third-party-confidential-information-scope",
+        "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.third-party-confidential-information-scope",
+        "requirementLevel": "SHOULD",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality definition reaches third-party information",
+        "sectionId": "confidentiality",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/invention-assignment/us#third-party-confidential-information-scope",
+        "requirementGuidance": "Check what the defined term actually covers. An employer holds plenty of information it does not own, and a definition tethered only to the employer's own information leaves every inbound confidentiality obligation without a flow-down to the people handling the information. Look for both market grounds: information a third party entrusted to the employer in confidence, and information the employer has agreed to treat as confidential. Neither covers the other — entrustment reaches an implied duty with nothing signed, agreement reaches information promised protection but not yet received. A separate third-party-information covenant does not substitute: it governs the employee's conduct, it does not pull the information inside the defined term the rest of the agreement runs on.",
+        "variants": [],
+        "sources": []
+      },
+      {
         "requirementId": "residuals-clause",
         "specRequirementId": "REQ-labor-and-employment-law.confidentiality-invention-assignment-agreement.residuals-clause",
         "requirementLevel": "MAY",
         "sourceFootnotes": [],
         "requirementLabel": "General skill and experience not treated as confidential information",
         "sectionId": "confidentiality",
-        "itemNumber": "3.1",
+        "itemNumber": "3.2",
         "anchor": "https://openagreements.org/checklists/invention-assignment/us#residuals-clause",
         "requirementGuidance": "If the agreement includes a residuals or general-knowledge carve-out, confirm it preserves the employee's ordinary skill, experience, and unaided memory while still protecting true confidential information and trade secrets. This keeps confidentiality from functioning as a disguised post-employment restraint.",
         "variants": [],
@@ -311,7 +324,7 @@
         "sourceFootnotes": [],
         "requirementLabel": "Confidentiality duration tiered by information type",
         "sectionId": "confidentiality",
-        "itemNumber": "3.2",
+        "itemNumber": "3.3",
         "anchor": "https://openagreements.org/checklists/invention-assignment/us#confidentiality-duration-tiered",
         "requirementGuidance": "Check whether the confidentiality term distinguishes trade secrets from ordinary confidential information. A tiered structure can keep trade secrets protected while giving non-trade-secret confidential information a more practical finite duration.",
         "variants": [],
@@ -324,7 +337,7 @@
         "sourceFootnotes": [],
         "requirementLabel": "Trade-secret duration tied to trade-secret status",
         "sectionId": "confidentiality",
-        "itemNumber": "3.3",
+        "itemNumber": "3.4",
         "anchor": "https://openagreements.org/checklists/invention-assignment/us#trade-secret-confidentiality-duration",
         "requirementGuidance": "Where trade secrets are covered, check whether the duty lasts only while the information remains a trade secret. That formulation tracks the legal reason for protection and avoids an untethered indefinite obligation for information that no longer qualifies.",
         "variants": [],

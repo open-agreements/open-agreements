@@ -990,7 +990,7 @@
         "sectionId": "survival",
         "itemNumber": "15.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/new-jersey#address-survival-per-covenant",
-        "requirementGuidance": "Separate survival language per covenant keeps the perpetual trade-secret track and the finite covenant tracks visibly distinct. Duration is a live prong of the reasonableness weighing, not boilerplate, and a single bundled survival clause obscures exactly the per-covenant timing a reviewing court will ask about.",
+        "requirementGuidance": "A separately stated duration per covenant keeps the perpetual trade-secret track and the finite covenant tracks visibly distinct. Duration is a live prong of the reasonableness weighing, not boilerplate, and a single undifferentiated survival term obscures exactly the per-covenant timing a reviewing court will ask about.",
         "variants": [],
         "sources": []
       },

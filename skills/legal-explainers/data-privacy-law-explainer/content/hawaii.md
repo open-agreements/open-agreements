@@ -2,8 +2,10 @@
 jurisdiction: "Hawaii"
 slug: hawaii
 countryCode: US
-snapshotAsOf: "2026-08-30"
-lastReviewed: "2026-06-12"
+content_packaged_at: "2026-09-04"
+law_checked_through: "2026-06-12"
+human_reviewed_at: null
+next_review_due: "2026-12-09"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/hawaii
 license: CC BY 4.0
 stale: false
@@ -15,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/hawaii · **Snapshot as of:** 2026-08-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/hawaii · **Snapshot as of:** 2026-09-04 · License: CC BY 4.0 · © openagreements.org
 
 # Hawaii Consumer Privacy Law[^about]
 

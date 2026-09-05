@@ -1367,7 +1367,7 @@
         "sectionId": "survival",
         "itemNumber": "15.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us#address-survival-per-covenant",
-        "requirementGuidance": "Each covenant should state its own survival and expiration rather than relying on one bundled survival clause. The covenants run on different clocks — perpetual for trade secrets, fixed terms elsewhere — and per-covenant treatment keeps each duration independently auditable.",
+        "requirementGuidance": "Each covenant should carry its own duration, so that every post-separation clock is independently auditable. The covenants can run on different clocks — while trade secrets remain secret for one obligation, a fixed term for another — and what to scan for is a survival clause that assigns one undifferentiated duration to all of them. A covenant that states its own term, backed by survival language covering whatever by its nature should survive, is fine.",
         "variants": [],
         "sources": []
       },

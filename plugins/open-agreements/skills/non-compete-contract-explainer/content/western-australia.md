@@ -2,10 +2,10 @@
 jurisdiction: "Western Australia, Australia"
 slug: western-australia
 countryCode: AU
-content_packaged_at: "2026-08-30"
+content_packaged_at: "2026-09-04"
 law_checked_through: "2026-06-10"
 human_reviewed_at: null
-next_review_due: null
+next_review_due: "2026-12-07"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/au/western-australia
 license: CC BY 4.0
 stale: false
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/western-australia · **Snapshot as of:** 2026-08-30 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/western-australia · **Snapshot as of:** 2026-09-04 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Compete Enforceability in Western Australia[^about]
 

@@ -1115,7 +1115,7 @@
         "sectionId": "survival",
         "itemNumber": "15.1",
         "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#address-survival-per-covenant",
-        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite elsewhere. In Rhode Island the structure also mirrors the law: the statutes treat a banned restriction, the surviving contract, and the preserved trade-secret agreement as separable pieces, and a survival clause should not fuse what the law splits.",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite elsewhere. In Rhode Island the structure also mirrors the law: the statutes treat a banned restriction, the surviving contract, and the preserved trade-secret agreement as separable pieces, and one undifferentiated duration covering all of them would merge what the law splits.",
         "variants": [],
         "sources": []
       },

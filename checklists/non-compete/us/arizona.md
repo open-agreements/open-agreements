@@ -128,7 +128,7 @@ Review every item below the way an Arizona court would: restrictive covenants ar
 
 ## Survival {#survival}
 
-- [ ] **Survival after the agreement ends** (Recommended) — Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite elsewhere. In Arizona the discipline doubles as severability insurance: covenants that survive on their own terms, in their own clauses, are exactly the grammatically separable units a court can preserve when it strikes a defective neighbor. [#address-survival-per-covenant]
+- [ ] **Survival after the agreement ends** (Recommended) — Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite elsewhere. In Arizona the discipline doubles as severability insurance: covenants that carry their own stated durations are exactly the grammatically separable units a court can preserve when it strikes a defective neighbor. That separability comes from each covenant stating its own term, not from where the survival language sits. [#address-survival-per-covenant]
 
 ## Assignment and successors {#assignment-and-successors}
 

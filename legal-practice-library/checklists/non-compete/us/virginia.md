@@ -148,7 +148,7 @@ Review every item below the way a Virginia court would: first ask whether Va. Co
 
 ## Survival {#survival}
 
-- [ ] **Survival after the agreement ends** (Recommended) — Per-covenant survival keeps each clock independently checkable: trade-secret obligations can run while secrecy lasts, and every other restraint needs its own stated end date. In Virginia the discipline matters because the covenants are tested one by one: a customer clause drafted to the statutory line can survive while a broad non-compete fails, but only if their durations and triggers are not fused into a single bundled survival sentence. [#address-survival-per-covenant]
+- [ ] **Survival after the agreement ends** (Recommended) — Per-covenant survival keeps each clock independently checkable: trade-secret obligations can run while secrecy lasts, and every other restraint needs its own stated end date. In Virginia the discipline matters because the covenants are tested one by one: a customer clause drafted to the statutory line can survive while a broad non-compete fails, but only if their durations and triggers are stated separately rather than merged into one undifferentiated term. [#address-survival-per-covenant]
 
 ## Assignment and successors {#assignment-and-successors}
 
