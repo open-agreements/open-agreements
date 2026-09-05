@@ -168,6 +168,9 @@ fields:
   - name: restrictions_transfer_section
     type: string
     description: Pinned-source section number for Restrictions on Transfer
+  - name: amendments_waivers_section
+    type: string
+    description: Pinned-source section number for Amendments and Waivers
   - name: financial_statements_section
     type: string
     description: Pinned-source section number for Delivery of Financial Statements
@@ -277,8 +280,10 @@ fields:
     options: [aggregate, per_registration]
   - name: direct_listing_election
     type: enum
-    description: Whether Direct Listing provisions apply consistently throughout the agreement
-    options: [include, omit]
+    description: >-
+      Whether direct-listing provisions are omitted, use the model-form Direct Listing term, or use the
+      Qualified Direct Listing term consistently throughout registration, lock-up, transfer, and termination provisions
+    options: [qualified, include, omit]
   - name: registrable_clause_i_marker
     type: string
     description: Clause marker for Preferred-conversion Registrable Securities, normally (i)
@@ -309,12 +314,12 @@ fields:
   - name: optional_period
     type: string
     description: Period selected for the employee-agreement covenant alternative, or empty
-  - name: underwriter_cutback_priority_count
+  - name: standoff_stockholder_threshold_percent
     type: string
-    description: Number of priority tiers applied before Holder securities are cut back
-  - name: holder_registration_notice_days
+    description: Percentage threshold inserted before the source percent sign for stockholders subject to the market stand-off (for example, 1)
+  - name: company_registration_holder_floor_percent
     type: string
-    description: Days allowed for a Holder to request participation in a Company registration
+    description: Percentage floor inserted before the source percent sign for Holder participation in a Company registration other than the IPO (for example, 25)
   - name: form_s3_blackout_before_days
     type: string
     description: Days before a Company-initiated registration during which Form S-3 demands are unavailable
@@ -383,7 +388,7 @@ fields:
     description: Complete clause cross-reference for dividend/replacement Registrable Securities
   - name: underwriter_type
     type: string
-    description: Underwriter formulation used for allocation and cutback mechanics
+    description: Modifier inserted before the source text "underwriter(s)" (normally managing; do not repeat underwriter)
   - name: form_s1_deferral_frequency_word
     type: string
     description: Word stating how often the Form S-1 deferral may be invoked in 12 months
@@ -410,7 +415,7 @@ fields:
     description: Purchase Agreement limitation on additional Investor joinders
   - name: accounting_firm_recognition_scope
     type: string
-    description: Recognition scope for the independent public accounting firm
+    description: Modifier inserted before the source text "recognized standing" (normally nationally; do not repeat recognized)
   - name: annual_statement_delivery_days
     type: string
     description: Days after fiscal year end for delivery of annual financial statements
@@ -478,6 +483,9 @@ fields:
   - name: include_registration_termination_deemed_liquidation
     type: boolean
     description: Include the qualifying Deemed Liquidation Event registration-right termination condition
+  - name: registration_termination_deemed_liquidation_clause
+    type: string
+    description: Computed whole-carrier Deemed Liquidation Event registration-right termination trigger
   - name: include_registration_termination_rule_144
     type: boolean
     description: Include the post-listing ownership and Rule 144 registration-right termination condition
@@ -548,13 +556,24 @@ fields:
   - name: include_indemnification_correction_safe_harbors
     type: boolean
     description: Include the correction-in-writing safe harbors in Holder registration indemnification
+  - name: indemnification_company_correction_safe_harbor_clause
+    type: string
+    description: Computed whole-carrier Company written-correction safe harbor
+  - name: indemnification_holder_correction_safe_harbor_clause
+    type: string
+    description: Computed whole-carrier Holder written-correction safe harbor
   - name: include_indemnification_late_notice_prejudice_limitation
     type: boolean
     description: Limit the effect of late indemnification notice to material prejudice
   - name: subsequent_registration_priority_election
     type: enum
-    description: Priority restriction applicable to later-granted registration rights
-    options: [pro_rata_or_subordinate, no_reduction]
+    description: >-
+      Priority restriction applicable to later-granted registration rights. pro_rata_and_subordinate independently
+      requires pro rata allocation of permitted participation and subordinates later-granted rights to the Holders.
+    options: [pro_rata_and_subordinate, pro_rata_or_subordinate, no_reduction]
+  - name: subsequent_registration_priority_clause
+    type: string
+    description: Computed whole-carrier restriction for later-granted registration rights
   - name: include_standoff_research_extension
     type: boolean
     description: Permit an open-ended market-stand-off extension for research restrictions

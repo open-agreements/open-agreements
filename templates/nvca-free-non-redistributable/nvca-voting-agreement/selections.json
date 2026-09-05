@@ -123,16 +123,6 @@
       ]
     },
     {
-      "id": "qualified_key_holder_consultant",
-      "type": "checkbox", "standalone": true, "markerless": true, "inline": true,
-      "options": [{
-        "label": "Consultant service",
-        "marker": "[or consultant (excluding service solely as member of the Board)]",
-        "trigger": {"field":"qualified_key_holder_service_basis","equals":"employee_or_consultant"},
-        "replaceWith": ""
-      }]
-    },
-    {
       "id": "drag-key-holder-approval",
       "type": "checkbox", "standalone": true, "markerless": true, "inline": true,
       "options": [{

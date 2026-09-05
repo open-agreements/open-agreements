@@ -313,7 +313,7 @@
       "section_heading": "Consent Required to Amend, Modify, Terminate or Waive",
       "ignore_heading": true,
       "paragraph_contains": "Section 7.8(b)(iv)",
-      "replacements": {"[the provisions":"the provisions", "[the [Qualified] Key Holders][the holders of 60% of shares of Common Stock]":"the holders of a majority of shares of Common Stock", ";]":";"},
+      "replacements": {"[the provisions":"the provisions", "[the [Qualified] Key Holders][the holders of 60% of shares of Common Stock]":"{common_director_amendment_consent_text}", ";]":";"},
       "expected_min_matches": 1
     },
     {

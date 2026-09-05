@@ -165,10 +165,6 @@ fields:
   - name: interim_comparative_period_end
     type: date
     description: End date of the prior-year interim comparative period
-  - name: financial_statements_representation
-    type: enum
-    description: Whether the Company has financial statements and uses the Financial Statements form of the liabilities representation
-    options: [financial_statements, no_financial_statements]
   - name: additional_transaction_agreements
     type: string
     description: >-
@@ -241,10 +237,6 @@ fields:
   - name: investor_counsel_expense_cap
     type: string
     description: Maximum aggregate Company-paid fees and expenses of investor counsel
-  - name: healthcare_compliance_standard
-    type: string
-    description: Optional bracketed healthcare compliance law name, such as HIPAA; leave blank if inapplicable
-    default: ""
   - name: include_healthcare_representations
     type: boolean
     description: Whether the Company is a healthcare business for which the HIPAA and Healthcare Laws representations apply
@@ -261,47 +253,16 @@ fields:
     type: enum
     options: [majority, percentage]
     description: Approval standard used in the Requisite Purchasers definition
-  - name: include_post_closing_capitalization
-    type: boolean
-    description: Include the post-closing capitalization representation
   - name: authorization_actions_timing
     type: enum
     options: [already_taken, prior_to_closing]
     description: Whether required authorization actions are complete or will occur before Closing
-  - name: include_restated_certificate_filing_exception
-    type: boolean
-    description: Include the Restated Certificate filing exception
   - name: include_patent_trademark_knowledge_qualifier
     type: boolean
     description: Include patent-and-trademark knowledge qualifiers
-  - name: include_standard_inbound_incorporation_carveout
-    type: boolean
-    description: Include the standard inbound SaaS incorporation carveout
-  - name: include_generative_ai_representation
-    type: boolean
-    description: Include the Generative AI representation
-  - name: include_labor_representation
-    type: boolean
-    description: Include the labor and nonunion representation
-  - name: include_bad_actor_representation
-    type: boolean
-    description: Include the officer and director bad-actor representation
-  - name: sanctions_lookback_date
-    type: date
-    description: Beginning date for the sanctions compliance lookback
-  - name: include_outbound_investment_board_representation
-    type: boolean
-    description: Include the optional covered-foreign-person board and equity representation
-  - name: include_dsp_compliance_policies
-    type: boolean
-    description: Include the DSP compliance policies sentence
   - name: include_sbic_representation
     type: boolean
     description: Whether at least one Purchaser is an SBIC and the Small Business Concern representation applies
-  - name: sbic_business_standard
-    type: enum
-    description: Applicable SBA size standard when the SBIC representation is included
-    options: [small_business_concern, smaller_business]
   - name: signature_page_marker
     type: string
     description: Signature page marker text
@@ -406,7 +367,6 @@ priority_fields:
   - include_tranche_closing
   - closing_type
   - dispute_resolution_mode
-  - financial_statements_representation
   - interim_current_period_end
   - interim_comparative_period_end
   - indemnification_agreement_indemnitees

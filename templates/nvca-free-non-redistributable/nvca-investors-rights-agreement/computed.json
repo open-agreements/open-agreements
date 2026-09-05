@@ -17,6 +17,7 @@
     "additional_investors_section": "6.9",
     "market_standoff_section": "2.11",
     "restrictions_transfer_section": "2.12",
+    "amendments_waivers_section": "6.6",
     "financial_statements_section": "3.1",
     "inspection_section": "3.2",
     "rofo_article": "4",
@@ -107,6 +108,18 @@
       "when_all": [{ "field": "selling_holder_counsel_cap_basis", "op": "eq", "value": "per_registration" }],
       "set_fill": {
         "selling_holder_counsel_cap_clause": ", not to exceed $${selling_holder_counsel_fee_cap} per registration,"
+      }
+    },
+    {
+      "id": "qualified-direct-listing-included",
+      "when_all": [{ "field": "direct_listing_election", "op": "eq", "value": "qualified" }],
+      "set_fill": {
+        "direct_listing_definition": "“Qualified Direct Listing” means the initial listing of the Common Stock (or other equity securities of the Company) on the Nasdaq Stock Market, the New York Stock Exchange or another exchange or marketplace approved by the Board of Directors by means of an effective registration statement filed by the Company with the SEC, without a related underwritten offering of such Common Stock (or other equity securities).",
+        "direct_listing_or_applicable_spaced": " or Qualified Direct Listing, as applicable",
+        "direct_listing_or_applicable": "or Qualified Direct Listing, as applicable",
+        "direct_listing_or_connection": " or in connection with a Qualified Direct Listing, as applicable",
+        "direct_listing_rule_144_clause": "or following the IPO or Qualified Direct Listing, as applicable, the transfer is made pursuant to SEC Rule 144",
+        "direct_listing_whichever_earlier": " or Qualified Direct Listing, whichever is earlier"
       }
     },
     {
@@ -263,6 +276,53 @@
       ],
       "set_fill": {
         "transferee_eligibility_text": "together with its Affiliates, would be a Major Investor"
+      }
+    },
+    {
+      "id": "registration-termination-deemed-liquidation-included",
+      "when_all": [{ "field": "include_registration_termination_deemed_liquidation", "op": "eq", "value": true }],
+      "set_fill": { "registration_termination_deemed_liquidation_clause": "the closing of a Deemed Liquidation Event in which (x) the consideration received by the Investors in such Deemed Liquidation Event is in the form of cash and/or publicly traded securities, or (y) the Investors receive registration rights from the acquiring company or other successor to the Company reasonably comparable to those set forth in this Section 2; and" }
+    },
+    {
+      "id": "registration-termination-deemed-liquidation-omitted",
+      "when_all": [{ "field": "include_registration_termination_deemed_liquidation", "op": "neq", "value": true }],
+      "set_fill": { "registration_termination_deemed_liquidation_clause": "" }
+    },
+    {
+      "id": "indemnification-correction-safe-harbors-included",
+      "when_all": [{ "field": "include_indemnification_correction_safe_harbors", "op": "eq", "value": true }],
+      "set_fill": {
+        "indemnification_company_correction_safe_harbor_clause": "except to the extent such information has been corrected in a subsequent writing at least one business day prior to the sale of Registrable Securities to the Person asserting the claim",
+        "indemnification_holder_correction_safe_harbor_clause": "and that has not been corrected in a subsequent writing at least one business day prior to the sale of Registrable Securities to the Person asserting the claim"
+      }
+    },
+    {
+      "id": "indemnification-correction-safe-harbors-omitted",
+      "when_all": [{ "field": "include_indemnification_correction_safe_harbors", "op": "neq", "value": true }],
+      "set_fill": {
+        "indemnification_company_correction_safe_harbor_clause": "",
+        "indemnification_holder_correction_safe_harbor_clause": ""
+      }
+    },
+    {
+      "id": "subsequent-registration-pro-rata-and-subordinate",
+      "when_all": [{ "field": "subsequent_registration_priority_election", "op": "eq", "value": "pro_rata_and_subordinate" }],
+      "set_fill": {
+        "subsequent_registration_priority_clause": "provide to such holder or prospective holder the right to include securities in any registration except on a pro rata basis with respect to the Registrable Securities and on a basis subordinate to the Holders’ rights after all Holders have had the opportunity to include in the registration and offering all shares of Registrable Securities that they wish to include"
+      }
+    },
+    {
+      "id": "subsequent-registration-pro-rata-or-subordinate",
+      "when_all": [{ "field": "subsequent_registration_priority_election", "op": "eq", "value": "pro_rata_or_subordinate" }],
+      "set_fill": {
+        "subsequent_registration_priority_clause": "provide to such holder or prospective holder the right to include securities in any registration on other than either a pro rata basis with respect to the Registrable Securities or on a subordinate basis after all Holders have had the opportunity to include in the registration and offering all shares of Registrable Securities that they wish to so include"
+      }
+    },
+    {
+      "id": "subsequent-registration-no-reduction",
+      "when_all": [{ "field": "subsequent_registration_priority_election", "op": "eq", "value": "no_reduction" }],
+      "set_fill": {
+        "subsequent_registration_priority_clause": "allow such holder or prospective holder to include such securities in any registration unless, under the terms of such agreement, such holder or prospective holder may include such securities in any such registration only to the extent that the inclusion of such securities will not reduce the number of the Registrable Securities of the Holders that are included"
       }
     },
     {

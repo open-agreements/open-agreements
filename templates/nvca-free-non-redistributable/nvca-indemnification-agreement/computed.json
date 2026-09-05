@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "max_passes": 2,
+  "defaults": {
+    "appointing_stockholder_ipo_termination_carrier": "."
+  },
+  "rules": [
+    {
+      "id": "include-appointing-stockholder-ipo-termination",
+      "when_all": [
+        {"field": "include_appointing_stockholder_ipo_termination", "op": "eq", "value": true}
+      ],
+      "set_fill": {
+        "appointing_stockholder_ipo_termination_carrier": ", but will end when the Company’s initial public offering closes; however, expiration will not affect the Appointing Stockholder’s indemnification or expense-advancement rights for any Proceeding arising from facts or circumstances predating that expiration."
+      }
+    }
+  ]
+}

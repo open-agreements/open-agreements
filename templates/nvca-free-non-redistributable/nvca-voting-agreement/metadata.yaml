@@ -113,10 +113,6 @@ fields:
   - name: company_counsel
     type: string
     description: Company counsel name and address
-  - name: counsel_cc
-    type: string
-    description: Additional counsel to CC on notices, or empty string if none
-    default: ''
   - name: judicial_district
     type: string
     description: Federal judicial district for disputes (e.g. District of Delaware)
@@ -127,7 +123,7 @@ fields:
     default: Delaware
   - name: specify_percentage
     type: string
-    description: Percentage threshold for drag-along and amendment provisions — include the percent sign (e.g. 60%); occurrences where the source carries a trailing % absorb it
+    description: Percentage threshold for drag-along and amendment provisions, as a number only (for example, 60)
   - name: amended_restated_upper
     type: string
     description: AMENDED AND RESTATED or empty string
@@ -152,13 +148,23 @@ fields:
     type: enum
     description: Service qualification used in the Qualified Key Holder definition
     options: [employee_only, employee_or_consultant]
+  - name: qualified_key_holder_service_suffix
+    type: string
+    description: Computed consultant-service alternative for the Qualified Key Holder definition; do not supply directly
+    default: ''
+  - name: common_director_amendment_consent_basis
+    type: enum
+    description: Select whether the Common Director amendment protection is approved by Qualified Key Holders or a specified percentage of Common Stock holders
+    options: [qualified_key_holders, common_stock_percentage]
+    default: qualified_key_holders
+  - name: common_director_amendment_consent_text
+    type: string
+    description: Computed complete approval class for the Common Director amendment protection; do not supply directly
+    default: ''
   - name: drag_approval_mode
     type: enum
     description: Approvals required in addition to the Selling Investors for a drag-along
     options: [selling_investors_only, plus_key_holders, plus_board, plus_key_holders_and_board]
-  - name: include_drag_along
-    type: boolean
-    description: Include the model drag-along right and related Sale mechanics
   - name: drag_selling_investor_basis
     type: enum
     description: Securities used for the Selling Investor approval numerator
@@ -166,11 +172,9 @@ fields:
   - name: drag_requires_key_holder_approval
     type: boolean
     description: Computed selector input for the separate Qualified Key Holder vote
-    default: false
   - name: drag_requires_board_approval
     type: boolean
     description: Computed selector input for Board approval
-    default: false
   - name: drag_include_certificate_amendment
     type: boolean
     description: Include related Restated Certificate amendments or restatements in the compelled vote
@@ -192,20 +196,9 @@ fields:
   - name: stock_sale_notice_days
     type: string
     description: Advance notice period for a different allocation in a Stock Sale, number only
-  - name: director_removal_triggers
-    type: multiselect
-    description: Events that permit or require removal of a designated director
-    options: [designator_request, voting_stockholder_request, mutual_director_vote, loss_of_eligibility, sanctions]
   - name: director_removal_other_than_for_cause
     type: boolean
     description: Permit removal other than for cause when the selected contractual triggers apply
-  - name: proxyholder_officers
-    type: enum
-    description: Company officers appointed as Proxyholders
-    options: [president_and_board_chair]
-  - name: proxy_includes_sale_actions
-    type: boolean
-    description: Extend proxy and power-of-attorney authority to Section 3 Sale actions
   - name: joinder_security_scope
     type: enum
     description: Securities whose later issuance triggers a Voting Agreement joinder
@@ -213,20 +206,12 @@ fields:
   - name: joinder_minimum_ownership_percentage
     type: string
     description: Minimum post-issuance ownership triggering joinder, number only
-  - name: key_holder_status_approval
-    type: enum
-    description: Authority approving Key Holder status for later Stockholders
-    options: [company_sole_discretion]
   - name: key_holder_consent_percentage
     type: string
     description: Qualified Key Holder amendment-consent threshold, number only
   - name: key_holder_ownership_floor_percentage
     type: string
     description: Outstanding-capital ownership floor below which Key Holder consent is not required, number only
-  - name: common_director_amendment_approval
-    type: enum
-    description: Consent required to amend the Common Director provision
-    options: [qualified_key_holders, majority_common]
   - name: sanctions_scope
     type: enum
     description: Sanctions authorities and lists included in the Voting Agreement
@@ -239,10 +224,6 @@ fields:
     type: string
     description: Computed additional sanctions lists; do not supply directly
     default: ''
-  - name: dispute_resolution_mode
-    type: enum
-    description: Dispute-resolution alternative
-    options: [arbitration, courts]
   - name: enforcement_costs_mode
     type: enum
     description: Allocation of enforcement costs
@@ -323,7 +304,6 @@ priority_fields:
   - par_value
   - qualified_key_holder_service_basis
   - drag_approval_mode
-  - include_drag_along
   - drag_selling_investor_basis
   - drag_include_certificate_amendment
   - drag_include_definitive_agreements
@@ -332,18 +312,12 @@ priority_fields:
   - drag_include_company_representation_escrow
   - drag_include_same_form_consideration
   - stock_sale_notice_days
-  - director_removal_triggers
   - director_removal_other_than_for_cause
-  - proxyholder_officers
-  - proxy_includes_sale_actions
   - joinder_security_scope
   - joinder_minimum_ownership_percentage
-  - key_holder_status_approval
   - key_holder_consent_percentage
   - key_holder_ownership_floor_percentage
-  - common_director_amendment_approval
   - sanctions_scope
-  - dispute_resolution_mode
   - enforcement_costs_mode
   - company_signatory_name
   - company_signatory_title

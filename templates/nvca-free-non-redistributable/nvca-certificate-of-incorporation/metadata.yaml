@@ -112,6 +112,9 @@ fields:
     description: >-
       Earliest date on which preferred stock may be redeemed ("on or after <date>"). Accepts ISO YYYY-MM-DD (rendered as e.g.
       "March 15, 2026") or a display-ready date string.
+  - name: no_redemption_clause
+    type: string
+    description: Computed whole carrier for the no-redemption statement when Article Sixth is not elected
   - name: qualified_financing_notice_days
     type: string
     description: Days of prior notice required for qualified financing
@@ -183,7 +186,10 @@ fields:
   - name: redemption_interest_rate
     type: string
     description: Annual interest rate on unredeemed shares (percentage)
-    default: '12'
+  - name: redemption_compounding_frequency
+    type: enum
+    description: Frequency at which interest on unredeemed shares is compounded
+    options: [annually, quarterly, monthly]
   - name: conversion_notice_days
     type: string
     description: Days prior to record date for mandatory conversion notice

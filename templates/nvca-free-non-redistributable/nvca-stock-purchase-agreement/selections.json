@@ -75,6 +75,24 @@
       ]
     },
     {
+      "id": "tranche_closing_section",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "options": [
+        {
+          "label": "Include tranche, elective, shortfall, and mandatory-conversion provisions",
+          "marker": "Tranche Closing",
+          "trigger": { "field": "include_tranche_closing", "equals": true },
+          "removal": {
+            "kind": "section",
+            "startAnchor": "[Tranche Closing.",
+            "endAnchor": "Closing Deliverables.  At {closing_article} Closing, the Company shall deliver to each Purchaser a certificate representing the Shares being purchased by such Purchaser at such Closing against payment of the purchase price therefor by check payable to the Company, by wire transfer to a bank account designated by the Company, by cancellation or conversion of indebtedness or other convertible securities of the Company to Purchaser[, including interest], or by any combination of such methods."
+          }
+        }
+      ]
+    },
+    {
       "id": "small_business_concern_representation",
       "type": "checkbox",
       "standalone": true,
@@ -85,7 +103,35 @@
           "label": "Include SBIC small-business representation",
           "marker": "Small Business Concern",
           "trigger": { "field": "include_sbic_representation", "equals": true },
-          "removal": { "kind": "paragraph", "anchor": "small business concern", "match": "contains", "expectedMatches": 1 }
+          "removal": { "kind": "section", "startAnchor": "[Small Business Concern", "endAnchor": "[Foreign Corrupt Practices Act" }
+        }
+      ]
+    },
+    {
+      "id": "sba_matters_heading",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "options": [
+        {
+          "label": "Include SBA Matters closing-condition heading",
+          "marker": "SBA Matters",
+          "trigger": { "field": "include_sbic_representation", "equals": true },
+          "removal": { "kind": "paragraph", "anchor": "[SBA Matters", "match": "exact", "expectedMatches": 1 }
+        }
+      ]
+    },
+    {
+      "id": "sba_matters_condition",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "options": [
+        {
+          "label": "Include SBA Matters closing condition",
+          "marker": "SBIC Purchaser",
+          "trigger": { "field": "include_sbic_representation", "equals": true },
+          "removal": { "kind": "paragraph", "anchor": ". The Company shall have executed and delivered to each SBIC Purchaser a Size Status Declaration on SBA Form 480 and an Assurance of Compliance on SBA Form 652, and shall have provided to each such Purchaser information necessary for the preparation of a Portfolio Financing Report on SBA Form 1031.]", "match": "exact", "expectedMatches": 1 }
         }
       ]
     },
@@ -100,7 +146,7 @@
           "label": "Include Healthcare Laws representation",
           "marker": "Healthcare Laws",
           "trigger": { "field": "include_healthcare_representations", "equals": true },
-          "removal": { "kind": "paragraph", "anchor": "The Company is and has been in material compliance with all applicable Healthcare Laws", "match": "contains", "expectedMatches": 1 }
+          "removal": { "kind": "section", "startAnchor": "[Healthcare Laws", "endAnchor": "CFIUS Representations" }
         }
       ]
     },
@@ -199,11 +245,6 @@
       ]
     },
     {
-      "id": "healthcare_heading",
-      "type": "checkbox", "standalone": true, "markerless": true,
-      "options": [{"label":"Healthcare Laws heading","marker":"[Healthcare Laws","trigger":{"field":"include_healthcare_representations","equals":true},"removal":{"kind":"paragraph","anchor":"[Healthcare Laws","match":"exact","expectedMatches":1}}]
-    },
-    {
       "id": "hipaa_representation",
       "type": "checkbox", "standalone": true, "markerless": true,
       "options": [{"label":"HIPAA representation","marker":"protected health information, as defined under 45 C.F.R. § 160.103","trigger":{"field":"include_healthcare_representations","equals":true},"removal":{"kind":"paragraph","anchor":"protected health information, as defined under 45 C.F.R. § 160.103","match":"contains","expectedMatches":1}}]
@@ -219,19 +260,31 @@
       "options": [{"marker":"FDA Application Integrity Policy","trigger":{"field":"include_healthcare_representations","equals":true},"removal":{"kind":"paragraph","anchor":"FDA Application Integrity Policy","match":"contains","expectedMatches":1}}]
     },
     {
+      "id": "fda_heading",
+      "type": "checkbox", "standalone": true, "markerless": true,
+      "options": [{"marker":"FDA Approvals","trigger":{"field":"include_healthcare_representations","equals":true},"removal":{"kind":"paragraph","anchor":"[FDA Approvals","match":"exact","expectedMatches":1}}]
+    },
+    {
       "id": "telecom_representation",
       "type": "checkbox", "standalone": true, "markerless": true,
       "options": [{"marker":"Federal Communications Commission","trigger":{"field":"include_telecom_representation","equals":true},"removal":{"kind":"paragraph","anchor":"Federal Communications Commission","match":"contains","expectedMatches":1}}]
     },
+    {
+      "id": "telecom_heading",
+      "type": "checkbox", "standalone": true, "markerless": true,
+      "options": [{"marker":"FCC Regulation and Compliance","trigger":{"field":"include_telecom_representation","equals":true},"removal":{"kind":"paragraph","anchor":"[FCC Regulation and Compliance","match":"exact","expectedMatches":1}}]
+    },
     {"id":"ira_other_stockholders_definition","type":"checkbox","standalone":true,"markerless":true,"inline":true,"options":[{"label":"Other IRA stockholders definition","marker":"[and certain other stockholders of the Company]","trigger":{"field":"include_other_ira_stockholders","equals":true},"replaceWith":""}]},
     {"id":"requisite_purchasers_majority","type":"checkbox","standalone":true,"markerless":true,"inline":true,"options":[{"label":"Requisite Purchasers majority threshold","marker":"[a majority]","trigger":{"field":"requisite_purchaser_standard","equals":"majority"},"replaceWith":""}]},
-    {"id":"subsidiary_section_refs","type":"checkbox","standalone":true,"markerless":true,"inline":true,"options":[{"label":"Subsidiary representation references","marker":"[, 2.21, 2.22, 2.23, 2.24]","trigger":{"field":"include_subsidiary_carve_ins","equals":true},"replaceWith":", 2.21, 2.22, 2.23, 2.24"},{"label":"Subsidiary disclosure reference","marker":"[and the second to last sentence of Section 2.25]","trigger":{"field":"include_subsidiary_carve_ins","equals":true},"replaceWith":"and the second to last sentence of Section 2.25"}]},
+    {"id":"subsidiary_section_refs","type":"checkbox","standalone":true,"markerless":true,"inline":true,"options":[{"label":"Subsidiary representation references","marker":"[, 2.21, 2.22, 2.23, 2.24]","trigger":{"field":"include_subsidiary_carve_ins","equals":true},"replaceWith":""},{"label":"Subsidiary disclosure reference","marker":" [and the second to last sentence of Section 2.25]","trigger":{"field":"include_subsidiary_carve_ins","equals":true},"replaceWith":""}]},
     {"id":"authorization_timing","type":"checkbox","standalone":true,"markerless":true,"inline":true,"options":[{"label":"Pre-closing authorization timing","marker":"[ or will be taken prior to the {applicable_word} Closing]","trigger":{"field":"authorization_actions_timing","equals":"prior_to_closing"},"replaceWith":""}]},
     {"id":"patent_knowledge","type":"checkbox","standalone":true,"markerless":true,"inline":true,"options":[{"label":"Patent and trademark knowledge qualifier","marker":"[with respect to patents and trademarks]","trigger":{"field":"include_patent_trademark_knowledge_qualifier","equals":true},"replaceWith":""}]},
-    {"id":"subsequent_closing_condition","type":"checkbox","standalone":true,"markerless":true,"inline":true,"options":[{"label":"Subsequent Closing condition","marker":"[or any subsequent Closing]","trigger":{"field":"closing_type","equals":"additional"},"replaceWith":"or any subsequent Closing"}]},
-    {"id":"subsequent_closing_rep","type":"checkbox","standalone":true,"markerless":true,"inline":true,"options":[{"label":"Subsequent Closing representation","marker":"[and, as to any subsequent Closing, in all material respects as of such subsequent Closing]","trigger":{"field":"closing_type","equals":"additional"},"replaceWith":"and, as to any subsequent Closing, in all material respects as of such subsequent Closing"}]},
-    {"id":"subsequent_closing_covenant","type":"checkbox","standalone":true,"markerless":true,"inline":true,"options":[{"label":"Subsequent Closing covenant","marker":"[and, as to any subsequent Closing, in all material respects on or before such subsequent Closing]","trigger":{"field":"closing_type","equals":"additional"},"replaceWith":"and, as to any subsequent Closing, in all material respects on or before such subsequent Closing"}]},
-    {"id":"subsequent_closing_termination","type":"checkbox","standalone":true,"markerless":true,"inline":true,"options":[{"label":"Subsequent Closing termination","marker":"[or any subsequent Closing, as the case may be,]","trigger":{"field":"closing_type","equals":"additional"},"replaceWith":"or any subsequent Closing, as the case may be,"}]},
-    {"id":"ira_other_stockholders_condition","type":"checkbox","standalone":true,"markerless":true,"inline":true,"options":[{"label":"Other IRA stockholders closing condition","marker":"[and the other stockholders of the Company named as parties thereto]","trigger":{"field":"include_other_ira_stockholders","equals":true},"replaceWith":""}]}
+    {"id":"subsequent_closing_condition","type":"checkbox","standalone":true,"markerless":true,"inline":true,"options":[{"label":"Subsequent Closing purchaser condition","marker":"[or any subsequent Closing]","trigger":{"field":"closing_type","equals":"additional"},"replaceWith":""},{"label":"Subsequent Closing company condition","marker":" or any subsequent Closing","trigger":{"field":"closing_type","equals":"additional"},"replaceWith":""}]},
+    {"id":"subsequent_closing_rep","type":"checkbox","standalone":true,"markerless":true,"inline":true,"options":[{"label":"Subsequent Closing representation","marker":"[and, as to any subsequent Closing, in all material respects as of such subsequent Closing]","trigger":{"field":"closing_type","equals":"additional"},"replaceWith":""}]},
+    {"id":"subsequent_closing_covenant","type":"checkbox","standalone":true,"markerless":true,"inline":true,"options":[{"label":"Subsequent Closing covenant","marker":"[and, as to any subsequent Closing, in all material respects on or before such subsequent Closing]","trigger":{"field":"closing_type","equals":"additional"},"replaceWith":""}]},
+    {"id":"subsequent_closing_termination","type":"checkbox","standalone":true,"markerless":true,"inline":true,"options":[{"label":"Subsequent Closing termination","marker":"[or any subsequent Closing, as the case may be,]","trigger":{"field":"closing_type","equals":"additional"},"replaceWith":""}]},
+    {"id":"tranche_transfer_restriction","type":"checkbox","standalone":true,"markerless":true,"inline":true,"options":[{"label":"Tranche transfer restriction","marker":" Notwithstanding anything herein to the contrary, no Shares may be transferred prior to the consummation or termination of the obligation to consummate the Tranche Closing unless all rights and obligations hereunder (including without limitation the obligations to consummate the Tranche Closing) are assigned to and assumed by the transferee.","trigger":{"field":"include_tranche_closing","equals":true},"replaceWith":""}]},
+    {"id":"ira_other_stockholders_condition","type":"checkbox","standalone":true,"markerless":true,"inline":true,"options":[{"label":"Other IRA stockholders closing condition","marker":"[and the other stockholders of the Company named as parties thereto]","trigger":{"field":"include_other_ira_stockholders","equals":true},"replaceWith":""}]},
+    {"id":"single_closing_cross_references","type":"checkbox","standalone":true,"markerless":true,"inline":true,"options":[{"label":"Retain Initial Closing cross-references for multiple closings","marker":"Initial Closing","trigger":{"field":"closing_type","equals":"additional"},"replaceWith":"Closing"}]}
   ]
 }

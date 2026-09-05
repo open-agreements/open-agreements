@@ -102,6 +102,28 @@
       "replacements": { "[a majority]": "a majority" }
     },
     {
+      "id": "unwrap-subsidiary-section-refs",
+      "ignore_heading": true,
+      "section_heading": "Representations and Warranties of the Company",
+      "paragraph_contains": "For purposes of these representations and warranties",
+      "replacements": {
+        "[, 2.21, 2.22, 2.23, 2.24]": ", 2.21, 2.22, 2.23, 2.24",
+        "[and the second to last sentence of Section 2.25]": "and the second to last sentence of Section 2.25"
+      }
+    },
+    {
+      "id": "unwrap-subsequent-closing-carriers",
+      "ignore_heading": true,
+      "section_heading": "Conditions",
+      "paragraph_contains": "subsequent Closing",
+      "replacements": {
+        "[or any subsequent Closing]": "or any subsequent Closing",
+        "[and, as to any subsequent Closing, in all material respects as of such subsequent Closing]": "and, as to any subsequent Closing, in all material respects as of such subsequent Closing",
+        "[and, as to any subsequent Closing, in all material respects on or before such subsequent Closing]": "and, as to any subsequent Closing, in all material respects on or before such subsequent Closing",
+        "[or any subsequent Closing, as the case may be,]": "or any subsequent Closing, as the case may be,"
+      }
+    },
+    {
       "id": "unwrap-post-closing-capitalization",
       "ignore_heading": true,
       "section_heading": "Capitalization",

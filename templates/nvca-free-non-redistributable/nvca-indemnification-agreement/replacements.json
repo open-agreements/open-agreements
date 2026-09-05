@@ -5,6 +5,7 @@
   "[corporation]": "{company_name}",
   "[name of fund/sponsor]": "{fund_sponsor_name}",
   "provided by [Name of Fund/Sponsor] and": "provided by {fund_sponsor_name} and",
+  "one (1) or more venture capital funds that has invested in the Company (an “Appointing Stockholder”)": "{appointing_stockholder_name} (the “Appointing Stockholder”)",
   "as [directors] [officers]": "as {indemnitee_role_plural}",
   "serve as an [officer] [director]": "serve as a {indemnitee_role}",
   "[director]": "{indemnitee_role}",
@@ -24,8 +25,8 @@
   "Address:": "{indemnitee_address}",
   "[Bylaws]": "{bylaws_name}",
   "[Certificate of Incorporation]": "{certificate_name}",
-  "[and Appointing Stockholder]": "{and_appointing_stockholder}",
+  "[and Appointing Stockholder]": "and Appointing Stockholder",
   "[Signature Page Follows]": "{signature_page_marker}",
   "[___________], 20[__]": "{agreement_effective_date}",
-  "[, and terminate on the closing of an initial public offering of the Company’s Common Stock; provided, however, that in the event of any such suspension or termination, the Appointing Stockholder’s rights to indemnification and advancement of expenses will not be suspended or terminated with respect to any Proceeding based in whole or in part on facts and circumstances occurring at any time prior to such suspension or termination regardless of whether the Proceeding arises before or after such suspension or termination.]": "{appointing_stockholder_ipo_termination_clause}."
+  "[, and terminate on the closing of an initial public offering of the Company’s Common Stock; provided, however, that in the event of any such suspension or termination, the Appointing Stockholder’s rights to indemnification and advancement of expenses will not be suspended or terminated with respect to any Proceeding based in whole or in part on facts and circumstances occurring at any time prior to such suspension or termination regardless of whether the Proceeding arises before or after such suspension or termination.]": "{appointing_stockholder_ipo_termination_carrier}"
 }
