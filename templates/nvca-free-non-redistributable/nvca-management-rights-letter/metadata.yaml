@@ -46,10 +46,8 @@ fields:
     description: ZIP code for the company address
   - name: company_letterhead
     type: string
-    description: >-
-      Portfolio company letterhead text. Defaults to a conspicuous drafting marker so an omitted optional letterhead
-      does not collapse the first operative paragraph into a blank leading page.
-    default: PORTFOLIO COMPANY LETTERHEAD
+    description: Portfolio company letterhead text
+    default: ''
   - name: signature_page_marker
     type: string
     description: Signature page marker text

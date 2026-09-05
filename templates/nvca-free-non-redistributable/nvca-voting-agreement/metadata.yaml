@@ -25,39 +25,6 @@ fields:
   - name: key_holder_name
     type: string
     description: Name of the key holder (typically founder/CEO)
-  - name: preferred_director_eligibility_basis
-    type: enum
-    options: [minimum_shares, minimum_percentage]
-    description: Select whether the preferred-director designation right continues based on a minimum share count or a minimum as-converted ownership percentage
-    default: minimum_shares
-  - name: preferred_director_minimum_shares
-    type: string
-    description: Minimum Preferred Stock shares required when preferred_director_eligibility_basis is minimum_shares (number only); otherwise leave empty
-    default: ''
-  - name: preferred_director_minimum_percentage
-    type: string
-    description: Minimum as-converted ownership percentage required when preferred_director_eligibility_basis is minimum_percentage (number only, for example, 5); otherwise leave empty
-    default: ''
-  - name: preferred_director_minimum_shares_display
-    type: string
-    description: Computed active share-count threshold or a visible insertion marker; do not supply directly
-    default: ''
-  - name: preferred_director_minimum_percentage_display
-    type: string
-    description: Computed active number-only percentage threshold or a visible insertion marker; do not supply directly
-    default: ''
-  - name: preferred_director_name
-    type: string
-    description: Initial preferred director named in the selected board-composition provision
-  - name: common_director_name
-    type: string
-    description: Initial common director, used in both the Qualified Key Holder designation and named-director alternatives
-  - name: ceo_director_name
-    type: string
-    description: Chief Executive Officer serving as the initial CEO Director
-  - name: mutual_director_name
-    type: string
-    description: Initial independent mutual director designated by the other seated directors
   - name: effective_date
     type: date
     description: >-
@@ -105,11 +72,6 @@ priority_fields:
   - company_name
   - investor_name
   - key_holder_name
-  - preferred_director_eligibility_basis
-  - preferred_director_name
-  - common_director_name
-  - ceo_director_name
-  - mutual_director_name
   - effective_date
   - company_counsel
   - judicial_district

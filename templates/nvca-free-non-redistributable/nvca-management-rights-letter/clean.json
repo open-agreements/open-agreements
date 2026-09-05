@@ -1,17 +1,7 @@
 {
   "removeFootnotes": true,
-  "removeEmptyLeadingParagraphs": true,
-  "clearParts": [
-    "header1.xml"
-  ],
   "removeParagraphPatterns": [
     "^Note to Drafter:",
     "^Preliminary Note\\b"
-  ],
-  "removeRanges": [
-    {
-      "start": "^MANAGEMENT RIGHTS LETTER$",
-      "end": "An example of such a letter follows\\.$"
-    }
   ]
 }

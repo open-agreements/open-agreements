@@ -9,13 +9,13 @@
   "District Court for the District of [judicial district]": "District Court for the {judicial_district}",
   "state courts of [state]": "state courts of {state_of_incorporation}",
   "state court of [state]": "state court of {state_of_incorporation}",
+  "the [state] Code of Civil Procedure": "the {state_of_incorporation} Code of Civil Procedure",
   "[description of business]": "{business_description}",
   "[Signature Page Follows]": "{signature_page_marker}",
   "[_____ __, 20___]": "{effective_date}",
   "[specify percentage]%": "{specify_percentage}",
   "[specify percentage]": "{specify_percentage}",
-  "not later than [45] days": "not later than {rofr_response_days} days",
-  "(ii) [45] days after delivery": "(ii) {rofr_response_days} days after delivery",
+  "[45]": "{rofr_response_days}",
   "[Key Holders]": "{key_holders_label}",
   "[________], 20[__]": "{effective_date}",
   "among [____________], a Delaware": "among {company_name}, a Delaware",
@@ -26,10 +26,5 @@
   "Series [___]": "Series {series_designation}",
   "par value $__ per share": "par value ${par_value} per share",
   "par value $___ per share": "par value ${par_value} per share",
-  "[__] par value per share": "${par_value} par value per share",
-  "[Additionally, in no event shall [____] or its Affiliates be a Competitor hereunder.]": "{competitor_exclusion_clause}",
-  "collectively hold fewer than [____________] shares of Capital Stock": "collectively hold fewer than {investor_minimum_shares_display} shares of Capital Stock",
-  "sale by the Key Holder of up to [__]% of the Transfer Stock": "sale by the Key Holder of up to {permitted_transfer_percentage_display}% of the Transfer Stock",
-  "representing at least [__]% of the outstanding Capital Stock": "representing at least {key_holder_consent_threshold_percentage_display}% of the outstanding Capital Stock",
-  "holds at least [__________] shares of Capital Stock": "holds at least {permitted_transferee_minimum_shares_display} shares of Capital Stock"
+  "[__] par value per share": "${par_value} par value per share"
 }
