@@ -278,7 +278,7 @@ fields:
     description: State name (lowercase, e.g. delaware) — drives judicial-district defaults and audit rules; not rendered in the document text
   - name: specify_percentage
     type: string
-    description: Specified percentage threshold — include the percent sign (e.g. 60%)
+    description: Specified percentage threshold, as a number only (for example, 60)
   - name: financial_reporting_period
     type: string
     description: Financial reporting period (e.g., monthly, quarterly)

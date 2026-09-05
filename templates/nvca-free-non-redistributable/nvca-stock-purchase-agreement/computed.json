@@ -39,7 +39,7 @@
     {
       "id": "closing-condition-waiver-percentage",
       "when_all": [{ "field": "closing_condition_waiver_standard", "op": "eq", "value": "percentage" }],
-      "set_fill": { "closing_condition_waiver_threshold": "at least ${specify_percentage}" }
+      "set_fill": { "closing_condition_waiver_threshold": "at least ${specify_percentage}%" }
     },
     {
       "id": "withdrawn-offering-representation-omit",
