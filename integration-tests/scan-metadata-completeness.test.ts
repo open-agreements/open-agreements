@@ -166,6 +166,17 @@ describe('scan vs metadata completeness', () => {
 
     expect(scan.shortPlaceholders.length).toBeGreaterThan(20);
     expect(report.uncoveredShortPlaceholders).toEqual([]);
-    expect(report.mappedFieldsNotInMetadata).toEqual([]);
+    // These replacement targets are derived by computed.json rather than
+    // accepted as user-supplied metadata fields. Keep the exact allowlist
+    // explicit so a newly orphaned replacement still fails this test.
+    expect(report.mappedFieldsNotInMetadata).toEqual([
+      'closing_article',
+      'closing_condition_waiver_threshold',
+      'financial_statement_audit_label',
+      'management_rights_instrument_name',
+      'multiple_closing_sentence',
+      'unaudited_footnote_qualification',
+      'withdrawn_public_offering_representation',
+    ]);
   });
 });

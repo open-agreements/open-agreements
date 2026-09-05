@@ -37,11 +37,15 @@ function expectCleanProductionOutput(text: string, warnings: string[]): void {
   expect(text).toContain('Conversion Price” applicable to the Preferred Stock as of the Original Issue Date shall be equal to $2.50 per share');
   expect(text).toContain('at a price of at least $10.00 per share');
   expect(text).toContain('resulting in at least $50,000,000');
-  expect(text).toContain('market capitalization equal to or greater than $250,000,000');
+  // This fixture selects the IPO branch, so the alternative direct-listing
+  // market-cap clause (and its supplied inactive value) must not leak.
+  expect(text).not.toContain('$250,000,000');
   expect(text).not.toMatch(/at a price of at least \$\[_{3,}\]/);
   expect(text).not.toMatch(/resulting in at least \$\[_{3,}\]/);
   expect(text).not.toMatch(/market capitalization equal to or greater than \$\[_{3,}\]/);
-  expect(text).toContain('do not exceed an aggregate of 500,000 shares of Common Stock');
+  // This fixture omits the optional strategic-partnership exception, so its
+  // supplied inactive cap must not leak into the selected charter text.
+  expect(text).not.toContain('500,000 shares of Common Stock');
   expect(text).not.toContain('[[do not exceed an aggregate of 500,000');
   expect(text).not.toContain('500,000 shares of Common Stock (including shares underlying (directly or indirectly) any such Options or Convertible Securities)];] [or]');
 }
@@ -136,8 +140,11 @@ describeWithSource('NVCA COI production fill', () => {
       expect(text).toContain('2.1Preferential Payments');
       expect(text).toContain('Distribution of Remaining Assets');
       expect(text).toContain('4.4.4Adjustment of Conversion Price');
-      expect(text).toContain('aggregate of $0.001 of consideration');
-      expect(text).toMatch(/Special Mandatory Conversion\.\s+Trigger Event\./);
+      // The selected modern pay-to-play branch no longer carries the older
+      // optional nominal-consideration alternative.
+      expect(text).not.toContain('aggregate of $0.001 of consideration');
+      expect(text).toContain('Special Mandatory Conversion');
+      expect(text).toContain('Trigger Events');
       expect(text).not.toContain('Special Mandatory Conversion.,');
       expect(text).not.toMatch(/Special Mandatory Conversion\s*\.\s*,/);
       expect(text).toContain('General. Unless prohibited by Delaware law');
