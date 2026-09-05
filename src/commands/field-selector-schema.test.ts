@@ -1,9 +1,12 @@
 import { mkdtempSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
-import { describe, expect, it, vi } from 'vitest';
+import { describe, expect, vi } from 'vitest';
+import { itAllure } from '../../integration-tests/helpers/allure-test.js';
 import { canonicalSha256, type FieldSelectorSchemaManifest } from '../core/field-selector/input-schema.js';
 import { runFieldSelectorSchema } from './field-selector-schema.js';
+
+const it = itAllure.epic('Discovery & Metadata');
 
 describe('field-selector schema command', () => {
   it('writes a complete deterministic bundle and reports its canonical hash', () => {

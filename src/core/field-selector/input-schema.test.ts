@@ -3,7 +3,8 @@ import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import Ajv2020 from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
-import { describe, expect, it } from 'vitest';
+import { describe, expect } from 'vitest';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import {
   buildFieldSelectorInputSchema,
   canonicalSha256,
@@ -24,6 +25,7 @@ const NVCA_GOLDEN_HASHES: Record<string, string> = {
   'nvca-stock-purchase-agreement': '1fd6470a5f1b2280633f804de230ee6ecb6e936aa4e9dec25674fa0f7d97efe9',
   'nvca-voting-agreement': '6959d714c6c0a444d8ea80e3558af516fa9bcf3ffdf95caccfa650ab9204fa63',
 };
+const it = itAllure.epic('Discovery & Metadata');
 
 function validator(schema: JsonSchema) {
   const ajv = new Ajv2020({ allErrors: true, strict: true });
