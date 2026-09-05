@@ -97,7 +97,6 @@
       {
         "fieldKey": "closing_type",
         "fieldType": "enum",
-        "default": "single",
         "enumValues": [
           "single",
           "additional"
@@ -107,7 +106,6 @@
       {
         "fieldKey": "dispute_resolution_mode",
         "fieldType": "enum",
-        "default": "courts",
         "enumValues": [
           "arbitration",
           "courts"

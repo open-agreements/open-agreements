@@ -2,7 +2,7 @@
 jurisdiction: "South Dakota"
 slug: south-dakota
 countryCode: US
-content_packaged_at: "2026-09-04"
+content_packaged_at: "2026-09-05"
 law_checked_through: "2026-06-11"
 human_reviewed_at: null
 next_review_due: "2026-12-08"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/south-dakota · **Snapshot as of:** 2026-09-04 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/south-dakota · **Snapshot as of:** 2026-09-05 · License: CC BY 4.0 · © openagreements.org
 
 # South Dakota Consumer Privacy Law[^about]
 
