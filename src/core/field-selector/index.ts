@@ -20,6 +20,7 @@ import { formatDocumentDate, formatDocumentDateFields } from '../fill-pipeline.j
 import type { FieldSelectorRunOptions, FieldSelectorRunResult } from './types.js';
 import type { ComputedValueMap } from './computed.js';
 import { applyRepeatableTables, loadRepeatableTablesConfig, validateRepeatableTableFields } from './repeatable-tables.js';
+import { bindAnchoredParagraphFields, loadAnchoredParagraphBindingsConfig } from './anchored-paragraph-bindings.js';
 
 function toComputedValueMap(values: Record<string, unknown>): ComputedValueMap {
   const computedValues: ComputedValueMap = {};
@@ -48,6 +49,10 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
   const normalizeConfig = loadNormalizeConfig(fieldSelectorDir);
   const repeatableTablesConfig = loadRepeatableTablesConfig(fieldSelectorDir);
   if (repeatableTablesConfig) validateRepeatableTableFields(repeatableTablesConfig, metadata.fields);
+  const anchoredBindingsPath = join(fieldSelectorDir, 'anchored-paragraph-bindings.json');
+  const anchoredParagraphBindingsConfig = existsSync(anchoredBindingsPath)
+    ? loadAnchoredParagraphBindingsConfig(anchoredBindingsPath)
+    : undefined;
 
   // Load selectionsConfig if selections.json exists (mirrors engine.ts template path)
   const selectionsPath = join(fieldSelectorDir, 'selections.json');
@@ -146,9 +151,17 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
     selectorManifests,
     selectionsConfig,
     selectionsZeroMatchPolicy: options.selectionsZeroMatchPolicy,
-    prePatchProcess: repeatableTablesConfig
+    prePatchProcess: repeatableTablesConfig || anchoredParagraphBindingsConfig
       ? async (inputDocPath: string, outputDocPath: string) => {
-        applyRepeatableTables(inputDocPath, outputDocPath, repeatableTablesConfig, effectiveValues);
+        if (repeatableTablesConfig && anchoredParagraphBindingsConfig) {
+          const repeatablePath = `${outputDocPath}.repeatable.docx`;
+          applyRepeatableTables(inputDocPath, repeatablePath, repeatableTablesConfig, effectiveValues);
+          bindAnchoredParagraphFields(repeatablePath, outputDocPath, anchoredParagraphBindingsConfig);
+        } else if (repeatableTablesConfig) {
+          applyRepeatableTables(inputDocPath, outputDocPath, repeatableTablesConfig, effectiveValues);
+        } else if (anchoredParagraphBindingsConfig) {
+          bindAnchoredParagraphFields(inputDocPath, outputDocPath, anchoredParagraphBindingsConfig);
+        }
       }
       : undefined,
     postProcess: shouldNormalizeBracketArtifacts
@@ -247,3 +260,5 @@ export type { FieldSelectorRunOptions, FieldSelectorRunResult, VerifyResult, Ver
 export type { ComputedArtifact, ComputedProfile } from './computed.js';
 export { applyRepeatableTables, loadRepeatableTablesConfig, RepeatableTablesConfigSchema, validateRepeatableTableFields } from './repeatable-tables.js';
 export type { RepeatableTablesConfig } from './repeatable-tables.js';
+export { bindAnchoredParagraphFields, loadAnchoredParagraphBindingsConfig, AnchoredParagraphBindingsConfigSchema } from './anchored-paragraph-bindings.js';
+export type { AnchoredParagraphBindingsConfig } from './anchored-paragraph-bindings.js';
