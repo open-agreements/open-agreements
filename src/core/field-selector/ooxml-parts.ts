@@ -21,6 +21,7 @@ export interface OoxmlTextParts {
   footers: string[];       // word/footer1.xml, word/footer2.xml, etc.
   endnotes: string | null; // word/endnotes.xml
   footnotes: string | null; // word/footnotes.xml — special handling in cleaner
+  comments: string[];       // word/comments.xml and threaded-comment variants
 }
 
 /**
@@ -38,6 +39,7 @@ export function enumerateTextParts(zip: AdmZip): OoxmlTextParts {
     footers: entries.filter((e) => footerPattern.test(e)).sort(),
     endnotes: entries.includes('word/endnotes.xml') ? 'word/endnotes.xml' : null,
     footnotes: entries.includes('word/footnotes.xml') ? 'word/footnotes.xml' : null,
+    comments: entries.filter((e) => /^word\/comments(?:Extended|Extensible)?\.xml$/.test(e)).sort(),
   };
 }
 
@@ -72,6 +74,7 @@ export function getGeneralTextPartNames(parts: OoxmlTextParts): string[] {
 export function getAllTextPartNames(parts: OoxmlTextParts): string[] {
   const names = getGeneralTextPartNames(parts);
   if (parts.footnotes) names.push(parts.footnotes);
+  names.push(...parts.comments);
   return names;
 }
 
