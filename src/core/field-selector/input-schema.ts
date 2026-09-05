@@ -7,6 +7,7 @@ import {
   type FieldSelectorMetadata,
 } from '../metadata.js';
 import { loadComputedProfile, type ComputedProfile } from './computed.js';
+import { resolveFieldSelectorDir } from '../../utils/paths.js';
 
 export const FIELD_SELECTOR_INPUT_SCHEMA_VERSION = 1 as const;
 export const FIELD_SELECTOR_SCHEMA_GENERATOR = 'open-agreements field-selector schema' as const;
@@ -120,7 +121,10 @@ export function buildFieldSelectorInputSchema(
   };
 }
 
-export function getFieldSelectorInputSchema(fieldSelectorId: string, fieldSelectorDir: string): JsonSchema {
+export function getFieldSelectorInputSchema(
+  fieldSelectorId: string,
+  fieldSelectorDir = resolveFieldSelectorDir(fieldSelectorId),
+): JsonSchema {
   if (!existsSync(fieldSelectorDir)) throw new Error(`Unknown field-selector "${fieldSelectorId}"`);
   const metadata = loadFieldSelectorMetadata(fieldSelectorDir);
   return buildFieldSelectorInputSchema(fieldSelectorId, metadata, loadComputedProfile(fieldSelectorDir));
