@@ -13,5 +13,8 @@
   "effective_date": "2026-09-15",
   "checklist_delivery_date": "2026-09-15",
   "series_designation": "A",
-  "par_value": "0.0001"
+  "par_value": "0.0001",
+  "investors": [{"name":"Atlas Peak Ventures, L.P.","address":"100 Market Street, Wilmington, DE 19801","phone":"302-555-0100","email":"notices@example.com","counsel_cc":"Transactions Team, Example Legal LLP"}],
+  "key_holders": [{"name":"Maya Imani","address":"200 Founder Avenue, Wilmington, DE 19801","email":"maya@example.com"}],
+  "annex_2_policies": [{"policy":"Code of Conduct","deadline":"60 days post-Closing"}]
 }
