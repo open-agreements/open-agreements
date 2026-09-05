@@ -1,5 +1,8 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect } from 'vitest';
+import { itAllure } from '../../integration-tests/helpers/allure-test.js';
 import { NormalizeConfigSchema } from './metadata.js';
+
+const it = itAllure.epic('Verification & Drift');
 
 const rule = (id: string, overrides: Record<string, unknown> = {}) => ({
   id,
