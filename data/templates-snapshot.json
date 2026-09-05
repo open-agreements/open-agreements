@@ -12433,12 +12433,15 @@
         },
         {
           "name": "information_right_holder_class",
-          "type": "string",
+          "type": "enum",
           "required": false,
           "section": null,
-          "description": "Investor class entitled to the selected information rights",
+          "description": "Modifier inserted before the source text \"Investor\" for the selected information-right holder class; omit for all Investors",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "Major"
+          ]
         },
         {
           "name": "general_amendment_approval_group",
@@ -12496,12 +12499,15 @@
         },
         {
           "name": "observer_rights_title_text",
-          "type": "string",
+          "type": "enum",
           "required": false,
           "section": null,
-          "description": "Observer text included in the information-right article title",
+          "description": "Complete optional connector and modifier inserted before the source text \"Rights\" in information-right headings; omit when observer rights are excluded",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "and Observer"
+          ]
         },
         {
           "name": "quarterly_equity_statement_clause",
@@ -12586,12 +12592,15 @@
         },
         {
           "name": "underwriter_type",
-          "type": "string",
+          "type": "enum",
           "required": false,
           "section": null,
           "description": "Modifier inserted before the source text \"underwriter(s)\" (normally managing; do not repeat underwriter)",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "managing"
+          ]
         },
         {
           "name": "form_s1_deferral_frequency_word",
@@ -12631,12 +12640,15 @@
         },
         {
           "name": "later_offering_form_clause",
-          "type": "string",
+          "type": "enum",
           "required": false,
           "section": null,
-          "description": "Later registered-offering form included in market stand-off mechanics",
+          "description": "Complete optional connector and later registered-offering form inserted after source text \"Form S-1\"; omit when Form S-3 is excluded",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "or Form S-3"
+          ]
         },
         {
           "name": "schedule_b_notice_clause",
@@ -12667,12 +12679,16 @@
         },
         {
           "name": "accounting_firm_recognition_scope",
-          "type": "string",
+          "type": "enum",
           "required": false,
           "section": null,
           "description": "Modifier inserted before the source text \"recognized standing\" (normally nationally; do not repeat recognized)",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "nationally",
+            "regionally"
+          ]
         },
         {
           "name": "annual_statement_delivery_days",
