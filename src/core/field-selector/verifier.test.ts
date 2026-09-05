@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
-import { verifyOutput, normalizeText, findLeftoverPlaceholders } from './verifier.js';
+import { verifyOutput, normalizeText, findLeftoverPlaceholders, findRenderedTextArtifacts } from './verifier.js';
 import { patchDocument } from './patcher.js';
 import {
   allureJsonAttachment,
@@ -585,7 +585,7 @@ describe('verifyOutput first-body-paragraph guard (issue #605)', () => {
     return buildDocx(
       '<?xml version="1.0" encoding="UTF-8"?>' +
         `<w:document xmlns:w="${W_NS}"><w:body>` +
-        '<w:p><w:pPr><w:sectPr><w:pgSz w:w="12240" w:h="15840"/></w:sectPr></w:pPr></w:p>' +
+        '<w:p><w:pPr><w:sectPr><w:type w:val="nextPage"/><w:pgSz w:w="12240" w:h="15840"/></w:sectPr></w:pPr></w:p>' +
         '<w:p><w:r><w:t>Agreement content</w:t></w:r></w:p>' +
         '</w:body></w:document>'
     );
@@ -614,6 +614,19 @@ describe('verifyOutput first-body-paragraph guard (issue #605)', () => {
     expect(check).toBeDefined();
     expect(check?.passed).toBe(true);
 
+    cleanupDocx(docxPath);
+  });
+
+  it('accepts a textless leading structural paragraph without page-advancing evidence', async () => {
+    const docxPath = buildDocx(
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>` +
+      '<w:p><w:pPr><w:sectPr><w:pgSz w:w="12240" w:h="15840"/></w:sectPr></w:pPr></w:p>' +
+      '<w:p><w:r><w:t>INDEMNIFICATION AGREEMENT</w:t></w:r></w:p>' +
+      '</w:body></w:document>'
+    );
+    const result = await verifyOutput(docxPath, {}, {}, rangeCleanConfig);
+    expect(result.checks.find((c) => c.name === 'First body paragraph has content')?.passed).toBe(true);
     cleanupDocx(docxPath);
   });
 
@@ -665,6 +678,61 @@ describe('verifyOutput first-body-paragraph guard (issue #605)', () => {
     const check = result.checks.find((c) => c.name === 'First body paragraph has content');
     expect(check?.passed).toBe(true);
 
+    cleanupDocx(docxPath);
+  });
+});
+
+describe('rendered text artifact verification (issue #759)', () => {
+  it.each([
+    ['orphan bracket and slash carrier', 'Election remains ]/; after fill.', 'orphan closing bracket'],
+    ['duplicate heading', 'Form S-1 Form S-1', 'duplicated phrase'],
+    ['duplicate word', 'the Company Company shall deliver', 'duplicated word'],
+    ['spaced punctuation', 'the Company , shall deliver', 'whitespace before punctuation'],
+    ['duplicated punctuation', 'the Company, , shall deliver', 'duplicated punctuation'],
+    ['missing reference target', 'subject to Section .', 'reference without a target'],
+    ['missing percent sign', 'holders of at least 60 of the shares', 'percentage threshold without percent sign'],
+  ])('rejects %s with a localized diagnostic', (_label, paragraph, expected) => {
+    const docxPath = buildTextDocx([paragraph]);
+    const findings = findRenderedTextArtifacts(docxPath);
+    expect(findings.some((finding) => finding.includes('word/document.xml:paragraph 1') && finding.includes(expected))).toBe(true);
+    cleanupDocx(docxPath);
+  });
+
+  it('inspects comments and footnotes as read-only stories', () => {
+    const docxPath = buildDocx(
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body><w:p><w:r><w:t>Clean body.</w:t></w:r></w:p></w:body></w:document>`,
+      {
+        'word/comments.xml': `<w:comments xmlns:w="${W_NS}"><w:comment><w:p><w:r><w:t>Company , Inc.</w:t></w:r></w:p></w:comment></w:comments>`,
+        'word/footnotes.xml': `<w:footnotes xmlns:w="${W_NS}"><w:footnote w:id="1"><w:p><w:r><w:t>See Section .</w:t></w:r></w:p></w:footnote></w:footnotes>`,
+      }
+    );
+    const findings = findRenderedTextArtifacts(docxPath);
+    expect(findings.some((finding) => finding.includes('word/comments.xml'))).toBe(true);
+    expect(findings.some((finding) => finding.includes('word/footnotes.xml'))).toBe(true);
+    cleanupDocx(docxPath);
+  });
+
+  it('baselines pre-existing source artifacts but rejects a newly introduced one', async () => {
+    const sourcePath = buildTextDocx(['Legacy Company Company wording.']);
+    const unchangedPath = buildTextDocx(['Legacy Company Company wording.']);
+    const changedPath = buildTextDocx(['Legacy Company Company wording.', 'Form S-1 Form S-1']);
+    const unchanged = await verifyOutput(unchangedPath, {}, {}, undefined, sourcePath);
+    const changed = await verifyOutput(changedPath, {}, {}, undefined, sourcePath);
+    expect(unchanged.checks.find((c) => c.name === 'No rendered text artifacts')?.passed).toBe(true);
+    expect(changed.checks.find((c) => c.name === 'No rendered text artifacts')?.passed).toBe(false);
+    cleanupDocx(sourcePath, unchangedPath, changedPath);
+  });
+
+  it.each([
+    'that that result was intended',
+    'a rate of 60% of outstanding shares',
+    'See Sections 2.1 and 2.2.',
+    'the options [A]/[B] remain intentionally bracketed',
+    'Smith, Jones & Company, L.P.',
+  ])('accepts intentional construct: %s', (paragraph) => {
+    const docxPath = buildTextDocx([paragraph]);
+    expect(findRenderedTextArtifacts(docxPath)).toEqual([]);
     cleanupDocx(docxPath);
   });
 });

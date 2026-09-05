@@ -4,7 +4,7 @@ import type { Element } from '@xmldom/xmldom';
 import { getParagraphText } from '@usejunior/docx-core';
 import type { VerifyResult, VerifyCheck } from './types.js';
 import { cleanConfigRemovesBodyContent, type CleanConfig } from '../metadata.js';
-import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
+import { enumerateTextParts, getAllTextPartNames, getGeneralTextPartNames } from './ooxml-parts.js';
 import { isParagraphContentEmpty } from './cleaner.js';
 import { parseReplacementKey } from './replacement-keys.js';
 import { getTableRowContext, normalizeQuotes } from './patcher.js';
@@ -73,6 +73,19 @@ export async function verifyOutput(
     name: 'Context values present',
     passed: missingValues.length === 0,
     details: missingValues.length > 0 ? `Missing: ${missingValues.join(', ')}` : undefined,
+  });
+
+  // Check 3b: Generic signer-facing corruption that is not tied to a recipe's
+  // replacement map.  Keep the patterns deliberately narrow; every diagnostic
+  // includes the OOXML story and paragraph so a failure is reproducible.
+  const outputArtifactFindings = findRenderedTextArtifacts(outputPath);
+  const artifactFindings = cleanedSourcePath
+    ? subtractBaselinedArtifacts(outputArtifactFindings, findRenderedTextArtifacts(cleanedSourcePath))
+    : outputArtifactFindings;
+  checks.push({
+    name: 'No rendered text artifacts',
+    passed: artifactFindings.length === 0,
+    details: artifactFindings.length > 0 ? `Found: ${artifactFindings.slice(0, 8).join('; ')}` : undefined,
   });
 
   // Check 2: No unrendered {template_tags}
@@ -185,7 +198,7 @@ export async function verifyOutput(
   // empty structural paragraph, e.g. one holding a <w:sectPr>, which renders
   // as a blank first page; see issue #605 / legal-explainer#1800)
   if (cleanConfig && cleanConfigRemovesBodyContent(cleanConfig)) {
-    const firstParagraphEmpty = isFirstBodyParagraphEmpty(outputPath);
+    const firstParagraphEmpty = hasLeadingBlankPageRisk(outputPath);
     checks.push({
       name: 'First body paragraph has content',
       passed: !firstParagraphEmpty,
@@ -221,6 +234,121 @@ export function isFirstBodyParagraphEmpty(docxPath: string): boolean {
     return false; // first block element is a table/sdt/... — has content
   }
   return false;
+}
+
+/**
+ * A textless leading paragraph is common Word scaffolding and is not itself a
+ * blank page. Warn only when it also carries explicit page-advancing structure.
+ */
+export function hasLeadingBlankPageRisk(docxPath: string): boolean {
+  const zip = new AdmZip(docxPath);
+  const entry = zip.getEntry('word/document.xml');
+  if (!entry) return false;
+  const doc = new DOMParser().parseFromString(entry.getData().toString('utf-8'), 'text/xml');
+  const body = doc.getElementsByTagNameNS(W_NS, 'body')[0];
+  if (!body) return false;
+  for (let node = body.firstChild; node; node = node.nextSibling) {
+    if (node.nodeType !== 1) continue;
+    const para = node as unknown as Element;
+    if (para.localName !== 'p' || para.namespaceURI !== W_NS || !isParagraphContentEmpty(para)) return false;
+    if (para.getElementsByTagNameNS(W_NS, 'pageBreakBefore').length > 0) return true;
+    const breaks = para.getElementsByTagNameNS(W_NS, 'br');
+    for (let i = 0; i < breaks.length; i++) {
+      const type = breaks[i].getAttributeNS(W_NS, 'type') || breaks[i].getAttribute('w:type');
+      if (type === 'page') return true;
+    }
+    const sectPr = para.getElementsByTagNameNS(W_NS, 'sectPr')[0];
+    if (!sectPr) return false;
+    const type = sectPr.getElementsByTagNameNS(W_NS, 'type')[0];
+    const value = type && (type.getAttributeNS(W_NS, 'val') || type.getAttribute('w:val'));
+    return value === 'nextPage' || value === 'evenPage' || value === 'oddPage';
+  }
+  return false;
+}
+
+export function findRenderedTextArtifacts(docxPath: string): string[] {
+  const zip = new AdmZip(docxPath);
+  const parser = new DOMParser();
+  const findings: string[] = [];
+  for (const partName of getAllTextPartNames(enumerateTextParts(zip))) {
+    const entry = zip.getEntry(partName);
+    if (!entry) continue;
+    const doc = parser.parseFromString(entry.getData().toString('utf-8'), 'text/xml');
+    const paras = doc.getElementsByTagNameNS(W_NS, 'p');
+    for (let i = 0; i < paras.length; i++) {
+      const text = getParagraphText(paras[i] as unknown as globalThis.Element);
+      if (!text.trim()) continue;
+      const prefix = `${partName}:paragraph ${i + 1}`;
+      const report = (kind: string, match: string): void => {
+        findings.push(`${prefix} ${kind} ${JSON.stringify(match.slice(0, 60))}`);
+      };
+
+      // Unbalanced closing brackets include the observed `]`, `]/`, and `];`
+      // corruption while accepting ordinary balanced citations/placeholders.
+      let depth = 0;
+      for (const char of text) {
+        if (char === '[') depth++;
+        else if (char === ']' && depth > 0) depth--;
+        else if (char === ']') { report('has orphan closing bracket', ']'); break; }
+      }
+
+      const spacedPunctuation = text.match(/[ \t\u00a0]+[,;:](?=\s|$)/);
+      if (spacedPunctuation) report('has whitespace before punctuation', spacedPunctuation[0]);
+      const doubledPunctuation = text.match(/([,;:])\s*\1/);
+      if (doubledPunctuation) report('has duplicated punctuation', doubledPunctuation[0]);
+
+      const words = [...text.matchAll(/\b[\p{L}\p{N}][\p{L}\p{N}.-]*\b/gu)];
+      const allowedSingleRepeats = new Set(['had', 'that', 'very']);
+      for (let w = 1; w < words.length; w++) {
+        if (words[w][0].toLocaleLowerCase() === words[w - 1][0].toLocaleLowerCase() &&
+            text.slice((words[w - 1].index ?? 0) + words[w - 1][0].length, words[w].index).trim() === '' &&
+            !allowedSingleRepeats.has(words[w][0].toLocaleLowerCase())) {
+          report('has duplicated word', `${words[w - 1][0]} ${words[w][0]}`);
+          break;
+        }
+      }
+      // Repeated two-or-more-token phrases catch duplicated headings such as
+      // "Form S-1 Form S-1" without treating a recurring single legal term as noise.
+      for (let size = 2; size <= 5 && size * 2 <= words.length; size++) {
+        let found = false;
+        for (let w = 0; w + size * 2 <= words.length; w++) {
+          const a = words.slice(w, w + size).map((m) => m[0].toLocaleLowerCase()).join(' ');
+          const b = words.slice(w + size, w + size * 2).map((m) => m[0].toLocaleLowerCase()).join(' ');
+          const boundary = text.slice(
+            (words[w + size - 1].index ?? 0) + words[w + size - 1][0].length,
+            words[w + size].index,
+          );
+          if (a === b && boundary.trim() === '' && a !== 'time to time') {
+            report('has duplicated phrase', words.slice(w, w + size * 2).map((m) => m[0]).join(' ')); found = true; break;
+          }
+        }
+        if (found) break;
+      }
+
+      const malformedReference = text.match(/\b(?:under|pursuant to|in accordance with|set forth in|specified in|subject to|see)\s+(?:Sections?|Articles?|Exhibits?|Schedules?)\s+(?=[,.;:)\]]|$|(?:and|or|of|to)\b)/i);
+      if (malformedReference) report('has reference without a target', malformedReference[0]);
+      const missingPercent = text.match(/\b(?:at least|more than|less than|not less than|not more than)\s+\d+(?:\.\d+)?\s+of\b/i);
+      if (missingPercent) report('has percentage threshold without percent sign', missingPercent[0]);
+    }
+  }
+  return findings;
+}
+
+/** Remove source-carried findings as a multiset while retaining output locations. */
+function subtractBaselinedArtifacts(output: string[], source: string[]): string[] {
+  const signature = (finding: string): string => finding.replace(/^.*?:paragraph \d+ /, '');
+  const sourceCounts = new Map<string, number>();
+  for (const finding of source) {
+    const key = signature(finding);
+    sourceCounts.set(key, (sourceCounts.get(key) ?? 0) + 1);
+  }
+  return output.filter((finding) => {
+    const key = signature(finding);
+    const remaining = sourceCounts.get(key) ?? 0;
+    if (remaining === 0) return true;
+    sourceCounts.set(key, remaining - 1);
+    return false;
+  });
 }
 
 /** A paragraph's normalized text plus its table-row label context (if any). */

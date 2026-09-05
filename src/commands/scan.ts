@@ -1,6 +1,7 @@
 import { existsSync, writeFileSync } from 'node:fs';
 import AdmZip from 'adm-zip';
 import { enumerateTextParts, getGeneralTextPartNames } from '../core/field-selector/ooxml-parts.js';
+import { findRenderedTextArtifacts } from '../core/field-selector/verifier.js';
 
 export interface ScanDocxResult {
   partNames: string[];
@@ -10,6 +11,7 @@ export interface ScanDocxResult {
   longClauses: string[];
   footnoteCount: number;
   underscoreBlankCount: number;
+  artifactFindings: string[];
 }
 
 /**
@@ -62,6 +64,7 @@ export function scanDocxBrackets(inputPath: string): ScanDocxResult {
     longClauses,
     footnoteCount: countFootnotes(zip),
     underscoreBlankCount,
+    artifactFindings: findRenderedTextArtifacts(inputPath),
   };
 }
 
@@ -86,6 +89,7 @@ export function runScan(args: { input: string; outputReplacements?: string }): v
     longClauses,
     footnoteCount,
     underscoreBlankCount,
+    artifactFindings,
   } = scan;
 
   console.log(`\n=== Scan of ${args.input} ===`);
@@ -119,6 +123,8 @@ export function runScan(args: { input: string; outputReplacements?: string }): v
   console.log(`\nFootnotes: ${footnoteCount} explanatory footnote(s)`);
 
   console.log(`Underscore blanks: ${underscoreBlankCount} occurrence(s)`);
+  console.log(`Rendered text artifacts: ${artifactFindings.length} finding(s)`);
+  for (const finding of artifactFindings) console.log(`  ${finding}`);
 
   // Output draft replacements.json
   if (args.outputReplacements) {
