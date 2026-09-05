@@ -279,6 +279,16 @@
       }
     },
     {
+      "id": "information-termination-deemed-liquidation-included",
+      "when_all": [{ "field": "include_information_termination_deemed_liquidation", "op": "eq", "value": true }],
+      "set_fill": { "information_termination_deemed_liquidation_clause": "or (iv) upon the closing of a Deemed Liquidation Event, whichever event occurs first; provided, that, with respect to clause (iv), the covenants set forth in Section 3.1 shall only terminate if the consideration received by the Investors in such Deemed Liquidation Event is in the form of cash and/or publicly traded securities or if the Investors receive financial information from the acquiring company or other successor to the Company comparable to those set forth in Section 3.1" }
+    },
+    {
+      "id": "information-termination-deemed-liquidation-omitted",
+      "when_all": [{ "field": "include_information_termination_deemed_liquidation", "op": "neq", "value": true }],
+      "set_fill": { "information_termination_deemed_liquidation_clause": "" }
+    },
+    {
       "id": "registration-termination-deemed-liquidation-included",
       "when_all": [{ "field": "include_registration_termination_deemed_liquidation", "op": "eq", "value": true }],
       "set_fill": { "registration_termination_deemed_liquidation_clause": "the closing of a Deemed Liquidation Event in which (x) the consideration received by the Investors in such Deemed Liquidation Event is in the form of cash and/or publicly traded securities, or (y) the Investors receive registration rights from the acquiring company or other successor to the Company reasonably comparable to those set forth in this Section 2; and" }

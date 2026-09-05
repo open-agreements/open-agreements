@@ -114,7 +114,6 @@
   "a director [or officer] of the Corporation": "a {exculpated_fiduciary_subject} of the Corporation",
   "liability of directors [or officers]": "liability of {exculpated_fiduciary_roles_plural}",
   "Redemption. [Other than as set forth in Section 2.3.2(b), the Preferred Stock is not redeemable at the option of the holder or the Corporation.],": "Redemption. {no_redemption_clause}",
-  "Termination of Conversion Rights. > (b)": "(b)",
   "Preferred Stock”), > [all]": "{preferred_shares_designated_portion}",
   "designated as “Series > A Preferred Stock": "{series_designation} Preferred Stock"
 }
