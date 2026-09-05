@@ -2,6 +2,14 @@
   "version": 1,
   "actions": [
     {
+      "target": "_Ref178335923",
+      "strategy": "literalize",
+      "literal": "5A",
+      "expected_cached_result": "5A",
+      "expected_matches": 3,
+      "expected_target_count": 1
+    },
+    {
       "target": "_Ref264021278",
       "strategy": "literalize",
       "literal": "5A.1",
