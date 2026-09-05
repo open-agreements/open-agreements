@@ -79,9 +79,9 @@ describe('issue #620 slot coverage', () => {
     ) as Record<string, string>;
 
     await allureStep('Assert body slots are bound to fields', () => {
-      // Body company slot (21 underscores) fills from the same field as the
-      // uppercase signature-block slot.
-      expect(replacements['[_____________________]']).toBe('{company_name_upper}');
+      // Body company slot (21 underscores) uses the ordinary-case company
+      // field; the signature-block slot separately applies uppercase styling.
+      expect(replacements['[_____________________]']).toBe('{company_name}');
       // Dateline: the full "______, 20__" shape (including the pre-printed
       // "20") is replaced by a single formatted date (type: date → ISO input
       // renders as e.g. "July 15, 2026").
