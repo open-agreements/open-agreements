@@ -1,0 +1,26 @@
+{
+  "groups": [
+    {
+      "id": "company_signature_and_notice",
+      "start_anchor": "COMPANY: [Insert Company Name]",
+      "end_anchor": "PURCHASER: [Insert Investor Name]",
+      "expected_group_matches": 1,
+      "bindings": [
+        { "label": "Name:", "field": "company_signatory_name", "expected_matches": 1, "insert_after_label": true, "preserve_following_tabs": true },
+        { "label": "Title:", "field": "company_signatory_title", "expected_matches": 1, "insert_after_label": true, "preserve_following_tabs": true },
+        { "label": "Address:", "field": "company_notice_address", "expected_matches": 1, "insert_after_label": true, "preserve_following_tabs": true },
+        { "label": "Email:", "field": "company_notice_email", "expected_matches": 1, "insert_after_label": true, "preserve_following_tabs": true }
+      ]
+    },
+    {
+      "id": "purchaser_signature",
+      "start_anchor": "PURCHASER: [Insert Investor Name]",
+      "end_anchor": "SCHEDULE OF PURCHASERS",
+      "expected_group_matches": 1,
+      "bindings": [
+        { "label": "Name:", "field": "investor_signatory_name", "expected_matches": 1, "insert_after_label": true, "preserve_following_tabs": true },
+        { "label": "Title:", "field": "investor_signatory_title", "expected_matches": 1, "insert_after_label": true, "preserve_following_tabs": true }
+      ]
+    }
+  ]
+}

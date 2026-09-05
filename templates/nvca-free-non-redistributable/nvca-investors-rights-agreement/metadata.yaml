@@ -19,6 +19,30 @@ fields:
   - name: investor_name
     type: string
     description: Full legal name of the lead investor
+  - name: investors
+    type: array
+    description: Complete Schedule A investor notice list; replaces all model rows
+    items:
+      - name: name
+        type: string
+        description: Full legal name of the Investor
+      - name: address
+        type: string
+        description: Complete notice address
+      - name: phone
+        type: string
+        description: Notice telephone number
+      - name: email
+        type: string
+        description: Notice email address
+      - name: counsel_cc
+        type: string
+        description: Counsel copy recipient, or empty when none
+  - name: key_holder_name
+    type: string
+    description: >-
+      Full legal name of the expressly identified Key Holder. Fills the Key Holder signature and Schedule B name
+      carriers consistently. Multiple distinct Key Holders require repeatable-row runtime support.
   - name: underwriter_selection
     type: enum
     description: Party authorized to select the underwriters in Section 2.3
@@ -26,13 +50,154 @@ fields:
     options:
       - company
       - board_of_directors
+  - name: registration_effectiveness_days
+    type: string
+    description: Base number of days the registration statement must remain effective
+    default: '120'
+  - name: registration_effectiveness_extension
+    type: enum
+    description: >-
+      Events that toll the base registration-statement effectiveness period. The model-form branch preserves its
+      underwriter-request and Form S-3 extensions; company_suspensions instead tolls only for stop orders, blackout
+      notices, and other Company-directed suspensions that prevent sales.
+    default: underwriter_and_form_s3
+    options:
+      - underwriter_and_form_s3
+      - company_suspensions
+      - none
+  - name: registration_effectiveness_clause
+    type: string
+    required: false
+    description: Computed complete Section 2.5 registration-effectiveness covenant
+  - name: underwriter_selector_text
+    type: string
+    description: Computed party authorized to select underwriters
+  - name: prior_agreement_recitals_opening
+    type: string
+    description: Computed predecessor-agreement opening recital
+  - name: prior_agreement_recitals_closing
+    type: string
+    description: Computed predecessor-agreement closing recital
+  - name: prior_agreement_supersession
+    type: string
+    description: Computed predecessor-agreement supersession clause
+  - name: competitor_exclusion_clause
+    type: string
+    description: Computed named-person Competitor exclusion
+  - name: transferee_eligibility_text
+    type: string
+    description: Computed transferee eligibility formulation
+  - name: requisite_holders_threshold
+    type: string
+    description: Computed Requisite Holders threshold text
+  - name: demand_eligibility_date_clause
+    type: string
+    description: Computed demand-registration eligibility date clause
+  - name: form_s1_demand_limit_words
+    type: string
+    description: Computed written Form S-1 demand limit
+  - name: form_s1_demand_limit_suffix
+    type: string
+    description: Computed grammatical suffix for the Form S-1 demand limit
+  - name: selling_holder_counsel_cap_clause
+    type: string
+    description: Computed Selling Holder Counsel fee-cap clause
+  - name: direct_listing_definition
+    type: string
+    description: Computed Direct Listing definition
+  - name: direct_listing_or_applicable_spaced
+    type: string
+    description: Computed spaced Direct Listing alternative
+  - name: direct_listing_or_applicable
+    type: string
+    description: Computed Direct Listing alternative
+  - name: direct_listing_or_connection
+    type: string
+    description: Computed Direct Listing connection clause
+  - name: direct_listing_rule_144_clause
+    type: string
+    description: Computed Direct Listing Rule 144 clause
+  - name: direct_listing_whichever_earlier
+    type: string
+    description: Computed Direct Listing termination alternative
+  - name: insurance_clause
+    type: string
+    description: Computed insurance covenant
+  - name: checklist_delivery_timing
+    type: string
+    description: Computed Annex 1 checklist delivery timing
+  - name: signature_page_caption
+    type: string
+    description: Computed clean signature-page caption
+  - name: key_holders_heading
+    type: string
+    description: Computed clean Key Holders signature heading
+  - name: key_holder_signature_tail
+    type: string
+    description: Computed removal value for the model's optional signature tail
+  - name: annex_2_heading
+    type: string
+    description: Computed clean Annex 2 heading
+  - name: schedule_b_heading
+    type: string
+    description: Computed clean Schedule B heading
+  - name: successors_assigns_section
+    type: string
+    description: Pinned-source section number for Successors and Assigns
+  - name: registration_rights_article
+    type: string
+    description: Pinned-source article number for Registration Rights
+  - name: expenses_registration_section
+    type: string
+    description: Pinned-source section number for Expenses of Registration
+  - name: company_registration_section
+    type: string
+    description: Pinned-source section number for Company Registration
+  - name: delay_registration_section
+    type: string
+    description: Pinned-source section number for Delay of Registration
+  - name: indemnification_section
+    type: string
+    description: Pinned-source section number for registration indemnification
+  - name: additional_investors_section
+    type: string
+    description: Pinned-source section number for Additional Investors
+  - name: market_standoff_section
+    type: string
+    description: Pinned-source section number for the Market Stand-off
+  - name: restrictions_transfer_section
+    type: string
+    description: Pinned-source section number for Restrictions on Transfer
+  - name: financial_statements_section
+    type: string
+    description: Pinned-source section number for Delivery of Financial Statements
+  - name: inspection_section
+    type: string
+    description: Pinned-source section number for Inspection
+  - name: rofo_article
+    type: string
+    description: Pinned-source article number for Rights to Future Stock Issuances
+  - name: rofo_section
+    type: string
+    description: Pinned-source operative section number for Right of First Offer
+  - name: successor_indemnification_section
+    type: string
+    description: Pinned-source section number for Successor Indemnification
+  - name: indemnification_late_notice_clause
+    type: string
+    description: Computed complete late-notice material-prejudice limitation
+  - name: rofo_termination_liquidation_clause
+    type: string
+    description: Complete retained liquidation qualification for ROFO termination
+  - name: covenant_termination_liquidation_clause
+    type: string
+    description: Complete retained liquidation qualification for covenant termination
+  - name: selling_holder_counsel_expense_exception_clause
+    type: string
+    description: Complete retained Selling Holder counsel expense exception
   - name: company_counsel
     type: string
     description: Name and address of company's legal counsel
-  - name: counsel_cc
-    type: string
-    description: Additional counsel to CC on notices, or empty string if none
-    default: ''
   - name: state_of_incorporation
     type: string
     description: State of incorporation (proper noun, e.g. Delaware); also names the state courts in the dispute-resolution clause
@@ -48,6 +213,14 @@ fields:
   - name: amended_restated
     type: string
     description: Title-case prefix if amending a prior agreement (e.g. Amended and Restated) or empty string
+    default: ''
+  - name: financing_history
+    type: enum
+    description: Whether this IRA is for a new financing or amends and restates an existing investors' rights agreement
+    options: [new_financing, amended_and_restated]
+  - name: prior_agreement_date
+    type: date
+    description: Display-ready date of the predecessor IRA; required only for amended_and_restated financing_history
     default: ''
   - name: business_description
     type: string
@@ -66,6 +239,394 @@ fields:
   - name: major_investor_threshold_shares
     type: string
     description: Minimum number of Registrable Securities required to qualify as a Major Investor
+  - name: requisite_holders_standard
+    type: enum
+    description: Voting threshold used in the Requisite Holders definition
+    options: [majority, percentage]
+    default: majority
+  - name: requisite_holders_percentage
+    type: string
+    description: Bare percentage number for Requisite Holders (for example, 60; do not include the percent sign), consistent with open-agreements issue #722
+    default: ''
+  - name: include_demand_eligibility_date
+    type: boolean
+    description: Add a negotiated calendar-date eligibility trigger before the IPO-based Form S-1 demand trigger
+    default: "false"
+  - name: demand_eligibility_date
+    type: string
+    description: Display-ready earliest calendar date for a Form S-1 demand when the additional date trigger is selected (for example, May 21, 2028)
+  - name: form_s1_aggregate_offering_threshold
+    type: string
+    description: Form S-1 demand-registration anticipated aggregate offering-price threshold, number only
+  - name: form_s1_demand_limit
+    type: enum
+    description: Maximum number of Form S-1 demand registrations the Company must effect
+    options: [one, two]
+  - name: rofo_closing_period_days
+    type: string
+    description: Days after the Offer Notice within which a Section 4.1(b) Major Investor purchase must close
+  - name: rofo_outside_sale_period_days
+    type: string
+    description: Outside-sale period following expiration of the Section 4.1(b) election periods
+  - name: selling_holder_counsel_fee_cap
+    type: string
+    description: Company-paid Selling Holder Counsel fee cap under Section 2.6, number only
+  - name: selling_holder_counsel_cap_basis
+    type: enum
+    description: Whether the Selling Holder Counsel fee cap applies in the aggregate or per registration
+    options: [aggregate, per_registration]
+  - name: direct_listing_election
+    type: enum
+    description: Whether Direct Listing provisions apply consistently throughout the agreement
+    options: [include, omit]
+  - name: registrable_clause_i_marker
+    type: string
+    description: Clause marker for Preferred-conversion Registrable Securities, normally (i)
+  - name: registrable_clause_iv_marker
+    type: string
+    description: Clause marker for dividend and replacement Registrable Securities, normally (iv)
+  - name: optional_comma
+    type: string
+    description: Comma retained where the selected clause sequence requires it; empty when omitted
+  - name: surviving_covenant_sections
+    type: string
+    description: Additional Section 5 covenants that survive the general termination rule
+  - name: additional_sanctions_jurisdictions
+    type: string
+    description: Additional sanctions jurisdictions beyond the United States, or empty
+  - name: optional_comma_and
+    type: string
+    description: Comma-and connector retained by the selected alternative, or empty
+  - name: annual_budget_delivery_clause
+    type: string
+    description: Complete timing phrase for annual budget delivery, including punctuation
+  - name: observer_competitor_exclusion_clause
+    type: string
+    description: Observer exclusion for a Competitor investor or representative, or empty
+  - name: major_investor_competitor_limitation
+    type: string
+    description: Competitor limitation on Major Investor information and inspection rights, or empty
+  - name: optional_period
+    type: string
+    description: Period selected for the employee-agreement covenant alternative, or empty
+  - name: underwriter_cutback_priority_count
+    type: string
+    description: Number of priority tiers applied before Holder securities are cut back
+  - name: holder_registration_notice_days
+    type: string
+    description: Days allowed for a Holder to request participation in a Company registration
+  - name: form_s3_blackout_before_days
+    type: string
+    description: Days before a Company-initiated registration during which Form S-3 demands are unavailable
+  - name: registration_participation_response_days
+    type: string
+    description: Days allowed to respond to an underwritten-registration participation notice
+  - name: qsbs_section_reference
+    type: string
+    description: Final unbracketed IRA section number containing the QSBS covenant
+  - name: form_s3_blackout_after_days
+    type: string
+    description: Days after a Company-initiated registration during which Form S-3 demands are unavailable
+  - name: registration_effectiveness_days
+    type: string
+    description: Base number of days a registration statement must remain effective
+  - name: information_right_holder_class
+    type: string
+    description: Investor class entitled to the selected information rights
+  - name: general_amendment_approval_group
+    type: string
+    description: Defined holder group whose consent is required under the general amendment rule
+  - name: major_investor_amendment_threshold
+    type: string
+    description: Voting threshold for amendment of Major Investor provisions, including article
+  - name: deferral_registration_exception
+    type: string
+    description: Registration category permitted during a Form S-1 deferral
+  - name: optional_and
+    type: string
+    description: And connector retained by selected coordinated alternatives, or empty
+  - name: sanctions_list_conjunction
+    type: string
+    description: Conjunction before the final retained United States sanctions list
+  - name: observer_rights_section_reference
+    type: string
+    description: Observer-right section added to the information-right termination list
+  - name: observer_rights_title_text
+    type: string
+    description: Observer text included in the information-right article title
+  - name: quarterly_equity_statement_clause
+    type: string
+    description: Stockholders-equity statement text included in quarterly reporting
+  - name: monthly_equity_statement_clause
+    type: string
+    description: Stockholders-equity statement text included in monthly reporting
+  - name: key_holders_preamble_clause
+    type: string
+    description: Preamble joinder text for Key Holders, or empty
+  - name: rofo_investor_termination_clause
+    type: string
+    description: Major-Investor-specific ROFO termination clause, or empty
+  - name: investor_party_qualifier
+    type: string
+    description: Qualifier before Investors in the Purchase Agreement recital, or empty
+  - name: section_220_termination_intro
+    type: string
+    description: Connector determining whether the Section 220 waiver ends on the earlier of IPO and Direct Listing
+  - name: affiliate_disclosure_scope
+    type: string
+    description: Existing/prospective scope for confidentiality-permitted Affiliate disclosures
+  - name: form_s1_deferral_period_clause
+    type: string
+    description: Complete maximum Form S-1 deferral period phrase
+  - name: registrable_cross_reference_text
+    type: string
+    description: Complete clause cross-reference for dividend/replacement Registrable Securities
+  - name: underwriter_type
+    type: string
+    description: Underwriter formulation used for allocation and cutback mechanics
+  - name: form_s1_deferral_frequency_word
+    type: string
+    description: Word stating how often the Form S-1 deferral may be invoked in 12 months
+  - name: optional_or
+    type: string
+    description: Or connector retained by the selected alternative, or empty
+  - name: later_offering_standoff_clause
+    type: string
+    description: Market stand-off period for a registered offering after the IPO
+  - name: foia_party_rofo_clause
+    type: string
+    description: FOIA Party exclusion in ROFO mechanics, or empty
+  - name: later_offering_form_clause
+    type: string
+    description: Later registered-offering form included in market stand-off mechanics
+  - name: schedule_b_notice_clause
+    type: string
+    description: Schedule B reference in the notices clause when Key Holders participate
+  - name: qsbs_original_issuance_clause
+    type: string
+    description: Original-issuance qualifier for Preferred Stock covered by the QSBS covenant
+  - name: additional_investor_purchase_agreement_clause
+    type: string
+    description: Purchase Agreement limitation on additional Investor joinders
+  - name: accounting_firm_recognition_scope
+    type: string
+    description: Recognition scope for the independent public accounting firm
+  - name: annual_statement_delivery_days
+    type: string
+    description: Days after fiscal year end for delivery of annual financial statements
+  - name: optional_plural_s
+    type: string
+    description: Plural suffix required by the selected numeric count
+  - name: ipo_only_standoff_scope
+    type: string
+    description: IPO-only scope limitation for market stand-off obligations, or empty
+  - name: registration_termination_intro
+    type: string
+    description: Introductory phrase for the selected registration-right termination triggers
+  - name: registration_termination_anniversary_ordinal
+    type: string
+    description: Ordinal anniversary on which registration rights terminate
+  - name: form_s3_demand_limit_words
+    type: string
+    description: Word-form maximum Form S-3 demand count
+  - name: include_foia_party_provisions
+    type: boolean
+    description: Include the FOIA Party definition and expressly selected FOIA limitations
+  - name: include_dpa_foreign_person_provisions
+    type: boolean
+    description: Include DPA, DPA Triggering Rights, Foreign Person, CFIUS, and related limitations as a coherent package
+  - name: include_key_holder_registrable_securities
+    type: boolean
+    description: Include Key Holder and Key Holder Registrable Securities definitions and related rights
+  - name: include_board_attendance_expenses
+    type: boolean
+    description: Include reimbursement of Board attendance expenses
+  - name: include_successor_indemnification
+    type: boolean
+    description: Include the successor indemnification covenant
+  - name: include_transaction_assistance
+    type: boolean
+    description: Include investor-counsel and transaction-assistance covenants
+  - name: include_indemnification_matters
+    type: boolean
+    description: Include investor-director indemnification priority provisions
+  - name: include_corporate_governance_program
+    type: boolean
+    description: Include the selected corporate-governance program and Annex 2
+  - name: include_fair_practices_covenant
+    type: boolean
+    description: Include the FCPA compliance covenant
+  - name: include_cybersecurity_covenant
+    type: boolean
+    description: Include the cybersecurity covenant
+  - name: include_real_property_reporting
+    type: boolean
+    description: Include real-property-holding-corporation status reporting
+  - name: include_subsidiary_governance
+    type: boolean
+    description: Include subsidiary governance restrictions
+  - name: include_outbound_investment_covenant
+    type: boolean
+    description: Include outbound-investment-rule covenants
+  - name: include_post_issuance_rofo
+    type: boolean
+    description: Permit post-issuance notice in lieu of prospective ROFO compliance
+  - name: dispute_costs_election
+    type: enum
+    description: Allocation of enforcement costs
+    options: [each_party, prevailing_party]
+  - name: include_registration_termination_deemed_liquidation
+    type: boolean
+    description: Include the qualifying Deemed Liquidation Event registration-right termination condition
+  - name: include_registration_termination_rule_144
+    type: boolean
+    description: Include the post-listing ownership and Rule 144 registration-right termination condition
+  - name: include_registration_deferral_anniversary_extension
+    type: boolean
+    description: Extend anniversary termination until any then-continuing registration deferral expires
+  - name: include_annual_financial_comparisons
+    type: boolean
+    description: Include prior-year and budget comparisons, variance explanations, and sources and uses in annual reporting
+  - name: include_monthly_financial_statements
+    type: boolean
+    description: Require the optional monthly financial-information package
+  - name: include_inspection_competitor_gate
+    type: boolean
+    description: Condition inspection rights on the Board not reasonably determining the Major Investor is a Competitor
+  - name: observer_material_delivery_timing
+    type: enum
+    description: Whether Board observer materials are delivered concurrently with or promptly after delivery to directors
+    options: [concurrent, promptly_following]
+  - name: include_information_termination_deemed_liquidation
+    type: boolean
+    description: Include the qualifying Deemed Liquidation Event information-and-observer-right termination condition
+  - name: include_rofo_sanctions_limitation
+    type: boolean
+    description: Prohibit offering or selling New Securities to a Sanctioned Party under the ROFO
+  - name: include_rofo_purchase_agreement_issuance_exemption
+    type: boolean
+    description: Exempt Purchase Agreement Preferred Stock issuances from the ROFO
+  - name: include_rofo_loss_penalty
+    type: boolean
+    description: Terminate a Major Investor's ROFO rights after it declines its full allocation
+  - name: include_employee_noncompetition_nonsolicitation
+    type: boolean
+    description: Require employee noncompetition and nonsolicitation agreements to the extent legally permissible
+  - name: include_employee_severance_restriction
+    type: boolean
+    description: Include the optional employee severance-payment restriction
+  - name: include_transaction_ipo_advance_notice
+    type: boolean
+    description: Require advance notice to Investor Counsel of IPO information deadlines
+  - name: include_fcpa_written_policies
+    type: boolean
+    description: Require written policies as part of the FCPA compliance system
+  - name: include_special_mandatory_conversion_exclusion
+    type: boolean
+    description: Exclude shares issued in a Special Mandatory Conversion from Registrable Securities
+  - name: include_investor_common_stock_registrable_securities
+    type: boolean
+    description: Include other Investor-held Common Stock and Common-equivalent securities as Registrable Securities
+  - name: include_eu_uk_sanctions_lists
+    type: boolean
+    description: Include European Union and United Kingdom sanctioned-party lists
+  - name: include_deferral_tolling
+    type: boolean
+    description: Toll registration filing and effectiveness periods during a permitted deferral
+  - name: include_deferral_company_registration_restriction
+    type: boolean
+    description: Restrict Company and other-stockholder registrations during a Form S-1 deferral
+  - name: include_holder_underwriting_limitations
+    type: boolean
+    description: Limit Holder underwriting representations, warranties, indemnities, and liability
+  - name: include_key_holder_cutback_priority
+    type: boolean
+    description: Exclude Key Holder Registrable Securities before further reducing other Holders
+  - name: include_holder_own_counsel_expense_exception
+    type: boolean
+    description: Require each Holder to bear non-Selling-Holder counsel expense
+  - name: include_indemnification_correction_safe_harbors
+    type: boolean
+    description: Include the correction-in-writing safe harbors in Holder registration indemnification
+  - name: include_indemnification_late_notice_prejudice_limitation
+    type: boolean
+    description: Limit the effect of late indemnification notice to material prejudice
+  - name: subsequent_registration_priority_election
+    type: enum
+    description: Priority restriction applicable to later-granted registration rights
+    options: [pro_rata_or_subordinate, no_reduction]
+  - name: include_standoff_research_extension
+    type: boolean
+    description: Permit an open-ended market-stand-off extension for research restrictions
+  - name: include_standoff_rule_10b5_1_exception
+    type: boolean
+    description: Exempt qualifying Rule 10b5-1 plans from the market stand-off
+  - name: include_standoff_family_trust_exception
+    type: boolean
+    description: Exempt qualifying no-value family-trust transfers from the market stand-off
+  - name: include_standoff_pro_rata_release
+    type: boolean
+    description: Apply discretionary stand-off releases pro rata
+  - name: include_standoff_discretionary_minimum_release
+    type: boolean
+    description: Permit a discretionary de minimis stand-off release basket
+  - name: include_covenant_termination_deemed_liquidation_condition
+    type: boolean
+    description: Condition covenant termination at a Deemed Liquidation Event on specified consideration or successor rights
+  - name: include_amendment_proportional_participation
+    type: boolean
+    description: Protect proportional Major Investor participation when a ROFO waiver is used by a participating investor
+  - name: include_amendment_sanctions_waiver
+    type: boolean
+    description: Permit Company waiver necessary to avoid violation of applicable Sanctions
+  - name: include_key_holder_disproportionate_amendment_protection
+    type: boolean
+    description: Require Key Holder majority approval for disproportionately adverse amendments
+  - name: transaction_assistance_counsel_fee_cap
+    type: string
+    description: Aggregate Company-paid Investor Counsel cap for each reimbursed IPO or Sale transaction, number only
+  - name: include_selling_holder_counsel_expense_exception
+    type: boolean
+    description: Exclude Company-paid Selling Holder Counsel fees from Holder-borne Selling Expenses
+  - name: company_signatory_name
+    type: string
+    description: Printed name of the Company's authorized signatory
+  - name: company_signatory_title
+    type: string
+    description: Title of the Company's authorized signatory
+  - name: company_notice_address
+    type: string
+    description: Complete Company notice address
+  - name: company_notice_attention
+    type: string
+    description: Person and title to whose attention Company notices must be directed, or empty if none
+    default: ''
+  - name: company_notice_address_block
+    type: string
+    description: Computed Company notice address including any supplied Attention recipient
+  - name: company_notice_email
+    type: string
+    description: Company notice email
+  - name: investor_signatory_name
+    type: string
+    description: Printed name of the Investor's authorized signatory
+  - name: investor_signatory_title
+    type: string
+    description: Title of the Investor's authorized signatory
+  - name: key_person_insured_name
+    type: string
+    description: Person covered by key-person insurance, if required
+  - name: d_and_o_coverage_amount
+    type: string
+    description: Minimum D&O liability insurance coverage, number only (for example, 5,000,000)
+  - name: key_person_insurance_election
+    type: enum
+    description: Whether the Company must carry named key-person insurance in addition to D&O coverage
+    options: [none, named]
+  - name: key_person_insurance_coverage_amount
+    type: string
+    description: Minimum named key-person insurance coverage, number only; required when key_person_insurance_election is named
+    default: ''
   - name: board_observer_investor_name
     type: string
     description: Investor entitled to designate the nonvoting board observer
@@ -97,6 +658,39 @@ fields:
     description: >-
       Date the qualified small business stock checklist (Annex 1) is being delivered. Accepts ISO YYYY-MM-DD (rendered as e.g.
       "March 15, 2026") or a display-ready date string.
+  - name: key_holders
+    type: array
+    description: Complete Schedule B Key Holder list; replaces all model rows and must not duplicate scalar signature carriers
+    items:
+      - name: name
+        type: string
+        description: Full legal name of the Key Holder
+      - name: address
+        type: string
+        description: Complete personal notice address
+      - name: email
+        type: string
+        description: Personal notice email
+  - name: checklist_delivery_election
+    type: enum
+    description: Whether the QSBS checklist is delivered on the specified date or later following an Investor request
+    options: [delivered_on_date, on_request]
+  - name: checklist_delivery_business_days
+    type: string
+    description: Response period for an Investor-requested QSBS checklist; required for on_request
+    default: '20'
+  - name: annex_2_policies
+    type: array
+    description: >-
+      Complete selected set of required governance policies and their display-ready adoption deadlines. An empty array is
+      an explicit election to omit Annex 2; the downstream runtime must replace all model rows rather than leave defaults.
+    items:
+      - name: policy
+        type: string
+        description: Required governance policy name
+      - name: deadline
+        type: string
+        description: Display-ready adoption deadline (for example, 60 days post-Closing)
   - name: series_designation
     type: string
     description: Series designation for preferred stock (e.g., A, B, C), matching the charter and stock purchase agreement
@@ -108,17 +702,34 @@ fields:
 priority_fields:
   - company_name
   - investor_name
+  - investors
+  - key_holder_name
   - underwriter_selection
   - company_counsel
   - state_of_incorporation
   - judicial_district
   - business_description
   - competitor_exclusion_mode
+  - financing_history
   - major_investor_threshold_shares
+  - requisite_holders_percentage
+  - demand_eligibility_date
+  - form_s1_aggregate_offering_threshold
+  - form_s1_demand_limit
+  - rofo_closing_period_days
+  - rofo_outside_sale_period_days
+  - selling_holder_counsel_fee_cap
+  - selling_holder_counsel_cap_basis
+  - direct_listing_election
+  - d_and_o_coverage_amount
+  - key_person_insurance_election
   - board_observer_investor_name
   - board_observer_threshold_shares
   - transferee_eligibility_standard
   - effective_date
+  - checklist_delivery_election
+  - key_holders
+  - annex_2_policies
   - series_designation
   - par_value
 artifact_kind: agreement

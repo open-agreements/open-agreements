@@ -1,0 +1,26 @@
+{
+  "groups": [
+    {
+      "id": "company-execution-block",
+      "start_anchor": "COMPANY: [Insert Company Name]",
+      "end_anchor": "INVESTORS: [Insert Investor Name]",
+      "expected_group_matches": 1,
+      "bindings": [
+        {"label":"Name:","field":"company_signatory_name","expected_matches":1,"insert_after_label":true,"preserve_following_tabs":true},
+        {"label":"Title:","field":"company_signatory_title","expected_matches":1,"insert_after_label":true,"preserve_following_tabs":true},
+        {"label":"Address:","field":"company_notice_address","expected_matches":1,"insert_after_label":true,"preserve_following_tabs":true},
+        {"label":"Email:","field":"company_notice_email","expected_matches":1,"insert_after_label":true,"preserve_following_tabs":true}
+      ]
+    },
+    {
+      "id": "investor-execution-block",
+      "start_anchor": "INVESTORS: [Insert Investor Name]",
+      "end_anchor": "KEY HOLDERS: [Insert Key Holder Name]",
+      "expected_group_matches": 1,
+      "bindings": [
+        {"label":"Name:","field":"investor_signatory_name","expected_matches":1,"insert_after_label":true,"preserve_following_tabs":true},
+        {"label":"Title:","field":"investor_signatory_title","expected_matches":1,"insert_after_label":true,"preserve_following_tabs":true}
+      ]
+    }
+  ]
+}

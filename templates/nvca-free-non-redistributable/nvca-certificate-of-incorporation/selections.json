@@ -90,6 +90,112 @@
           "trigger": { "field": "include_redemption" }
         }
       ]
+    },
+    {
+      "id": "dle_financing_exclusion",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": [".+"],
+      "options": [
+        {
+          "label": "Exclude preferred financing from Deemed Liquidation Events",
+          "marker": "Notwithstanding anything in Section 2.3.1 to the contrary, in no event shall the sale and issuance",
+          "trigger": { "field": "include_dle_financing_exclusion", "equals": true }
+        }
+      ]
+    },
+    {
+      "id": "dle_redemption_mechanics",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": [".+"],
+      "options": [
+        {
+          "label": "Post-DLE redemption mechanics",
+          "marker": "In the event of a Deemed Liquidation Event referred to in Section 2.3.1(a)(ii)",
+          "trigger": { "field": "include_dle_redemption_mechanics", "equals": true }
+        }
+      ]
+    },
+    {
+      "id": "nonstandard_protective_provisions",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": ["^Optional Conversion"],
+      "options": [
+        {
+          "label": "Optional operational vetoes",
+          "marker": "unless otherwise approved by the Requisite Directors:",
+          "trigger": { "field": "include_nonstandard_protective_provisions", "equals": true }
+        }
+      ]
+    },
+    {
+      "id": "exempted_securities_optional_paragraphs",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": [".+"],
+      "options": [
+        {
+          "label": "Lender and lessor exemption",
+          "marker": "shares of Common Stock, Options or Convertible Securities issued to banks, equipment lessors",
+          "trigger": { "field": "include_lender_exemption", "equals": true }
+        },
+        {
+          "label": "Supplier and service-provider exemption",
+          "marker": "shares of Common Stock, Options or Convertible Securities issued to suppliers or third party service providers",
+          "trigger": { "field": "include_supplier_exemption", "equals": true }
+        },
+        {
+          "label": "Acquisition consideration exemption",
+          "marker": "shares of Common Stock, Options or Convertible Securities issued as acquisition consideration",
+          "trigger": { "field": "include_acquisition_exemption", "equals": true }
+        },
+        {
+          "label": "Strategic partnership exemption",
+          "marker": "shares of Common Stock, Options or Convertible Securities issued in connection with sponsored research",
+          "trigger": { "field": "include_strategic_partnership_exemption", "equals": true }
+        }
+      ]
+    },
+    {
+      "id": "direct_listing",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": [".+"],
+      "options": [
+        {
+          "label": "Qualified Direct Listing trigger",
+          "marker": "immediately prior to the effectiveness of the registration statement in connection with the initial listing",
+          "trigger": { "field": "include_direct_listing", "equals": true }
+        }
+      ]
+    },
+    {
+      "id": "exclusive_forum",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": [".+"],
+      "options": [
+        {
+          "label": "Delaware exclusive forum",
+          "marker": "Unless the Corporation consents in writing to the selection of an alternative forum",
+          "trigger": { "field": "include_exclusive_forum", "equals": true }
+        }
+      ]
+    },
+    {
+      "id": "california_repurchases",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": [".+"],
+      "options": [
+        {
+          "label": "California Section 500 repurchases",
+          "marker": "For purposes of Section 500 of the California Corporations Code",
+          "trigger": { "field": "include_california_repurchases", "equals": true }
+        }
+      ]
     }
   ]
 }

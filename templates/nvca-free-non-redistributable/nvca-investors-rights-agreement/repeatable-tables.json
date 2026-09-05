@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "tables": [
+    {
+      "id": "required-governance-policies",
+      "rows_field": "annex_2_policies",
+      "header_cells": ["Required Governance Policy", "Deadline"],
+      "existing_data_row_count": 7,
+      "prototype_row_index": 1,
+      "columns": [
+        { "field": "policy" },
+        { "field": "deadline" }
+      ]
+    },
+    {
+      "id": "investor-schedule",
+      "rows_field": "investors",
+      "prototype_cells": ["Investor NameAddressPhone NumberEmail[Counsel cc, if any]"],
+      "columns": [
+        {
+          "paragraphs": [
+            { "field": "name" },
+            { "field": "address" },
+            { "field": "phone" },
+            { "field": "email" },
+            { "field": "counsel_cc" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "key-holder-schedule",
+      "rows_field": "key_holders",
+      "prototype_cells": ["[Key Holder NamePersonal AddressPersonal Email]"],
+      "columns": [
+        {
+          "paragraphs": [
+            { "field": "name" },
+            { "field": "address" },
+            { "field": "email" }
+          ]
+        }
+      ]
+    }
+  ]
+}

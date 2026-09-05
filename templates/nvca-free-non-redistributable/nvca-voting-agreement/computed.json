@@ -3,6 +3,65 @@
   "max_passes": 1,
   "rules": [
     {
+      "id": "sanctions-us-only",
+      "description": "Omit EU and UK authorities and lists.",
+      "when_all": [{"field":"sanctions_scope","op":"eq","value":"united_states_only"}],
+      "set_fill": {"sanctions_authorities_suffix":"","sanctions_lists_suffix":""}
+    },
+    {
+      "id": "sanctions-us-eu-uk",
+      "description": "Include EU and UK authorities and lists.",
+      "when_all": [{"field":"sanctions_scope","op":"eq","value":"united_states_eu_uk"}],
+      "set_fill": {
+        "sanctions_authorities_suffix":", European Union, or United Kingdom",
+        "sanctions_lists_suffix":", the Consolidated List of Persons, Groups, and Entities Subject to EU Financial Sanctions, and the UK’s Consolidated Sanctions List"
+      }
+    },
+    {
+      "id": "drag-key-holder-and-board-approvals",
+      "description": "Select both additional approval classes.",
+      "when_all": [{"field":"drag_approval_mode","op":"eq","value":"plus_key_holders_and_board"}],
+      "set_fill": {"drag_requires_key_holder_approval":true,"drag_requires_board_approval":true}
+    },
+    {
+      "id": "drag-key-holder-approval-only",
+      "description": "Select only the Qualified Key Holder approval class.",
+      "when_all": [{"field":"drag_approval_mode","op":"eq","value":"plus_key_holders"}],
+      "set_fill": {"drag_requires_key_holder_approval":true}
+    },
+    {
+      "id": "drag-board-approval-only",
+      "description": "Select only Board approval in addition to Selling Investors.",
+      "when_all": [{"field":"drag_approval_mode","op":"eq","value":"plus_board"}],
+      "set_fill": {"drag_requires_board_approval":true}
+    },
+    {
+      "id": "requisite-holders-percentage",
+      "description": "Render the selected exact Requisite Holders percentage.",
+      "when_all": [
+        { "field": "requisite_holders_standard", "op": "eq", "value": "percentage" },
+        { "field": "requisite_holders_percentage", "op": "truthy" }
+      ],
+      "set_fill": { "requisite_holders_text": "at least ${requisite_holders_percentage}%" }
+    },
+    {
+      "id": "requisite-holders-percentage-missing",
+      "description": "Keep an unmistakable drafting marker when the selected percentage is missing.",
+      "when_all": [
+        { "field": "requisite_holders_standard", "op": "eq", "value": "percentage" },
+        { "field": "requisite_holders_percentage", "op": "falsy" }
+      ],
+      "set_fill": { "requisite_holders_text": "[INSERT REQUISITE HOLDERS PERCENTAGE]" }
+    },
+    {
+      "id": "requisite-holders-majority",
+      "description": "Render the selected simple-majority Requisite Holders standard.",
+      "when_all": [
+        { "field": "requisite_holders_standard", "op": "eq", "value": "majority" }
+      ],
+      "set_fill": { "requisite_holders_text": "a majority" }
+    },
+    {
       "id": "preferred-director-share-threshold",
       "description": "Render the supplied share-count threshold in the minimum-shares branch.",
       "when_all": [

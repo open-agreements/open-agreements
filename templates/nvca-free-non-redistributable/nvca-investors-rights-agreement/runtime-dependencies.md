@@ -1,0 +1,3 @@
+# Runtime dependencies
+
+Annex 2's Required Governance Policies are repeatable structured rows: each policy has its own inclusion decision and adoption deadline. The canonical input contract records the whole-document election in `annex_2_election` and the complete selected row set in `annex_2_policies`; it must not flatten the table into a single string or silently retain the model rows. The `repeatable-tables.json` binding intentionally opts into replacing exactly seven prepopulated source rows. It requires an OpenAgreements runtime that supports `existing_data_row_count`; an older runtime must reject the binding rather than leave model rows in an execution document.

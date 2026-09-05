@@ -1,0 +1,336 @@
+{
+  "paragraph_rules": [
+    {
+      "id": "resolve-requisite-holders-percentage",
+      "section_heading": "Definitions",
+      "ignore_heading": true,
+      "paragraph_contains": "“Requisite Holders” means the holders of",
+      "replacements": {
+        "[at least [___]%/a majority]": "{requisite_holders_text}"
+      },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "state-five-seat-board-and-closing-vacancy",
+      "section_heading": "Board Composition",
+      "paragraph_contains": "the following persons shall be elected to the Board:",
+      "replacements": {
+        "the following persons shall be elected to the Board:": "the following persons shall be elected to the Board, which shall initially have {board_size} authorized seats, {vacant_board_seats_at_closing} of which shall remain vacant at the Closing:"
+      },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-preferred-director-share-count-election",
+      "section_heading": "Board Composition",
+      "paragraph_contains": "As a Preferred Director",
+      "replacements": {
+        "[As a Preferred Director, [Example 1:": "As a Preferred Director,",
+        ";]]": ";"
+      },
+      "trim_unmatched_trailing_bracket": true,
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-common-director-qualified-key-holder-election",
+      "section_heading": "Board Composition",
+      "paragraph_contains": "As a Common Director",
+      "replacements": {
+        "[As a Common Director, [Example 1:": "As a Common Director,",
+        ";] ]": ";",
+        ";]]": ";"
+      },
+      "trim_unmatched_trailing_bracket": true,
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-ceo-director-election",
+      "section_heading": "Board Composition",
+      "paragraph_contains": "CEO Director",
+      "replacements": {
+        "[As the [other] Common Director,": "As the other Common Director,",
+        "; and]": "; and"
+      },
+      "trim_unmatched_trailing_bracket": true,
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-mutual-director-election",
+      "section_heading": "Board Composition",
+      "paragraph_contains": "Mutual Director",
+      "replacements": {
+        "[As [each/the] Mutual Director, [one individual": "As the Mutual Director, one individual",
+        "].": "."
+      },
+      "trim_unmatched_trailing_bracket": true,
+      "expected_min_matches": 1
+    },
+    {
+      "id": "resolve-board-clause-range",
+      "section_heading": "Board Composition",
+      "paragraph_contains": "any of foregoing clauses (a) through [(d)] above",
+      "replacements": {
+        "[(d)]": "(d)"
+      },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-term-elections",
+      "section_heading": "Term",
+      "ignore_heading": true,
+      "paragraph_contains": "This Agreement shall be effective as of the date hereof",
+      "replacements": {
+        "[, or Qualified Direct Listing (as defined in the Restated Certificate)]": ", or Qualified Direct Listing (as defined in the Restated Certificate)",
+        "[, provided that the provisions of Section 3 hereof will continue after the closing of any Sale of the Company to the extent necessary to enforce the provisions of Section 3 with respect to such Sale of the Company]": ", provided that the provisions of Section 3 hereof will continue after the closing of any Sale of the Company to the extent necessary to enforce the provisions of Section 3 with respect to such Sale of the Company",
+        "[and]": "and",
+        "below[; and (d) ": "below; and (d) ",
+        "].": "."
+      },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-charter-board-recital",
+      "section_heading": "VOTING AGREEMENT",
+      "ignore_heading": true,
+      "paragraph_contains": "Restated Certificate”) provides that",
+      "replacements": {"[(i)":"(i)", "directors of the Company];":"directors of the Company;"},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-qualified-key-holder-service",
+      "section_heading": "Definitions",
+      "ignore_heading": true,
+      "paragraph_contains": "A “Qualified Key Holder” is",
+      "replacements": {"[full-time]":"full-time", "[or consultant (excluding service solely as member of the Board)]":"or consultant (excluding service solely as a member of the Board)"},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "repair-us-sanctions-list-grammar",
+      "section_heading": "Definitions",
+      "ignore_heading": true,
+      "paragraph_contains": "“Sanctioned Party” means",
+      "replacements": {"[and ]":"and ", "one or more Designated Party":"one or more Designated Parties", "dealings with such Person is are prohibited":"dealings with such Person are prohibited"},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-director-removal-triggers",
+      "section_heading": "Removal of Board Members",
+      "ignore_heading": true,
+      "paragraph_contains": "shall be promptly removed from office",
+      "replacements": {"[(i)":"(i)", "Sanctioned Party];":"Sanctioned Party;"},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-removal-cause-election",
+      "section_heading": "Removal of Board Members",
+      "ignore_heading": true,
+      "paragraph_contains": "may be removed from office",
+      "replacements": {"[other than for cause]":"other than for cause"},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-drag-approval-stack",
+      "section_heading": "Actions to be Taken",
+      "ignore_heading": true,
+      "paragraph_contains": "the holders of at least",
+      "replacements": {
+        "[(i)]":"(i)",
+        "[[and] (ii)":"and (ii)",
+        "[a majority]":"a majority",
+        "[(other than those issued or issuable upon conversion of the shares of Preferred Stock)]]":"(other than those issued or issuable upon conversion of the shares of Preferred Stock)",
+        "[and [(iii)] the Board;]":"and (iii) the Board;",
+        "[and the holders described in clause (ii)]":"and the holders described in clause (ii)"
+      },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-drag-vote-actions",
+      "section_heading": "Actions to be Taken",
+      "ignore_heading": true,
+      "paragraph_contains": "if such transaction requires stockholder approval",
+      "replacements": {
+        "[(together with any related amendment or restatement to the Restated Certificate required to implement such Sale of the Company)]":"(together with any related amendment or restatement to the Restated Certificate required to implement such Sale of the Company)",
+        "[and the related definitive agreement(s) pursuant to which the Sale of the Company is to be consummated]":"and the related definitive agreement(s) pursuant to which the Sale of the Company is to be consummated",
+        "[reasonably be expected to]":"reasonably be expected to"
+        ,")and the related": ") and the related"
+      },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-stockholder-representative-exception",
+      "section_heading": "Actions to be Taken",
+      "ignore_heading": true,
+      "paragraph_contains": "appoint a stockholder representative",
+      "replacements": {"[gross negligence]":"gross negligence"},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-company-representation-escrow",
+      "section_heading": "Conditions",
+      "ignore_heading": true,
+      "paragraph_contains": "not liable for the breach of any representation",
+      "replacements": {"[(except to the extent that":"(except to the extent that", "provided by all stockholders)]":"provided by all stockholders)"},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-drag-list-conjunction",
+      "section_heading": "Conditions",
+      "ignore_heading": true,
+      "paragraph_contains": "liability shall be limited",
+      "replacements": {"[and]":"and"},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-drag-consideration-ending",
+      "section_heading": "Conditions",
+      "ignore_heading": true,
+      "paragraph_contains": "upon the consummation of the Proposed Sale",
+      "replacements": {"[; and][.]":"; and"},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-same-form-consideration",
+      "section_heading": "Conditions",
+      "ignore_heading": true,
+      "paragraph_contains": "subject to Section 3.2(f) above",
+      "replacements": {"[subject to":"subject to", "stockholders.]":"stockholders."},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-company-sale-covenant",
+      "section_heading": "Covenants of the Company",
+      "ignore_heading": true,
+      "paragraph_contains": "call a special meeting of stockholders",
+      "replacements": {"[(a)]":"(a)", "[, and (b)":", and (b)", "Section 3.1]":"Section 3.1"},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-sale-proxy-scope",
+      "section_heading": "Irrevocable Proxy and Power of Attorney",
+      "ignore_heading": true,
+      "paragraph_contains": "constitutes and appoints as the proxies",
+      "replacements": {
+        "[President of the Company and the Chairperson of the Board]":"President of the Company and the Chairperson of the Board",
+        "[and ]":"and ",
+        "[and votes, waivers, and other actions required to be taken pursuant to Section 3 of this Agreement in connection with a Sale of the Company, ]":"and votes, waivers, and other actions required to be taken pursuant to Section 3 of this Agreement in connection with a Sale of the Company, ",
+        "[and take such other actions]":"and take such other actions",
+        "[or take actions]":"or take actions",
+        "[or approval of any Sale of the Company ]":"or approval of any Sale of the Company "
+      },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-later-joinder-elections",
+      "section_heading": "Additional Parties",
+      "ignore_heading": true,
+      "paragraph_contains": "after the date of this Agreement",
+      "replacements": {
+        "[or options or warrants to purchase shares of capital stock]":"or options or warrants to purchase shares of capital stock",
+        "[following which such Person shall hold":"following which such Person shall hold",
+        "exchanged)]":"exchanged)",
+        "[, options, or warrants]":", options, or warrants",
+        "[the Company in its sole discretion]":"the Company in its sole discretion"
+      },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-successor-section-reference",
+      "section_heading": "Successors and Assigns",
+      "ignore_heading": true,
+      "paragraph_contains": "rights to designate members of the Board",
+      "replacements": {"Section[s] [1.2(a)-(b)]":"Sections 1.2(a)-(b)"},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-qualified-key-holder-amendment",
+      "section_heading": "Consent Required to Amend, Modify, Terminate or Waive",
+      "ignore_heading": true,
+      "paragraph_contains": "only by a written instrument executed by",
+      "replacements": {
+        "[Qualified] Key Holders":"Qualified Key Holders",
+        "[provided that such consent":"provided that such consent",
+        "capital stock of the Company]":"capital stock of the Company"
+      },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-lead-investor-consent",
+      "section_heading": "Consent Required to Amend, Modify, Terminate or Waive",
+      "ignore_heading": true,
+      "paragraph_contains": "without the written consent of Comstock Fuels Corporation",
+      "replacements": {"[the provisions":"the provisions", "Section 1.2(a);]":"Section 1.2(a);"},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "open-drag-section",
+      "section_heading": "Drag-Along Right",
+      "ignore_heading": true,
+      "paragraph_contains": "Drag-Along Right",
+      "replacements": {"[Drag-Along Right.":"Drag-Along Right."},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-drag-section-ending",
+      "section_heading": "Effect of Sanctioned Party Status",
+      "ignore_heading": true,
+      "paragraph_contains": "calculating any voting threshold",
+      "replacements": {"Agreement.]":"Agreement."},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-sale-recital",
+      "section_heading": "RECITALS",
+      "ignore_heading": true,
+      "paragraph_contains": "voted on, or tendered",
+      "replacements": {"[, voted on, or tendered, in connection with an acquisition of the Company]":", voted on, or tendered, in connection with an acquisition of the Company"},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "remove-certain-investors-qualifier",
+      "section_heading": "RECITALS",
+      "ignore_heading": true,
+      "paragraph_contains": "the Company and [certain of] the Investors",
+      "replacements": {"[certain of] ":""},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-series-references",
+      "section_heading": "RECITALS",
+      "ignore_heading": true,
+      "paragraph_contains": "holders of record of the shares",
+      "replacements": {"[Series A]":"Series A"},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-comstock-specific-consent",
+      "section_heading": "Consent Required to Amend, Modify, Terminate or Waive",
+      "ignore_heading": true,
+      "paragraph_contains": "written consent of Comstock Fuels Corporation",
+      "replacements": {"[the provisions":"the provisions", "Section 1.2(a);]":"Section 1.2(a);"},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "close-common-director-majority-consent",
+      "section_heading": "Consent Required to Amend, Modify, Terminate or Waive",
+      "ignore_heading": true,
+      "paragraph_contains": "Section 7.8(b)(iv)",
+      "replacements": {"[the provisions":"the provisions", "[the [Qualified] Key Holders][the holders of 60% of shares of Common Stock]":"the holders of a majority of shares of Common Stock", ";]":";"},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-courts-alternative",
+      "section_heading": "Miscellaneous",
+      "ignore_heading": true,
+      "paragraph_contains": "hereby irrevocably and unconditionally submit",
+      "replacements": {"such court.]":"such court."},
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-own-costs-election",
+      "section_heading": "Costs of Enforcement",
+      "ignore_heading": true,
+      "paragraph_contains": "Each party will bear its own costs",
+      "replacements": {"[Each party":"Each party", "Agreement.]":"Agreement."},
+      "expected_min_matches": 1
+    }
+  ]
+}

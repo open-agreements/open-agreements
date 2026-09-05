@@ -19,6 +19,24 @@ fields:
   - name: investor_name
     type: string
     description: Full name of the investor
+  - name: company_signatory_name
+    type: string
+    description: Name of the individual signing the SPA for the Company
+  - name: company_signatory_title
+    type: string
+    description: Title of the individual signing the SPA for the Company
+  - name: company_notice_address
+    type: string
+    description: Company's notice address printed on its signature page
+  - name: company_notice_email
+    type: string
+    description: Company's notice email printed on its signature page
+  - name: investor_signatory_name
+    type: string
+    description: Name of the individual signing the SPA for the Purchaser
+  - name: investor_signatory_title
+    type: string
+    description: Title of the individual signing the SPA for the Purchaser
   - name: company_counsel
     type: string
     description: Company counsel name and address
@@ -65,7 +83,9 @@ fields:
   - name: include_convertible_securities
     type: boolean
     description: Include convertible securities conversion clause in Section 1.1(b)
-    default: "false"
+  - name: include_tranche_closing
+    type: boolean
+    description: Whether the financing includes a mandatory tranche closing and its related definitions and schedule
   - name: include_closing_reference
     type: boolean
     description: Include "with respect to such Closing" bracket in purchase clause
@@ -93,14 +113,12 @@ fields:
     type: enum
     description: Single closing or additional closings
     options: [single, additional]
-    default: single
   - name: dispute_resolution_mode
     type: enum
     description: Dispute resolution alternative in SPA (Alternative 1 arbitration or Alternative 2 courts)
     options:
       - arbitration
       - courts
-    default: courts
   - name: arbitration_location
     type: string
     description: Arbitration venue for Dispute Resolution Alternative 1
@@ -120,9 +138,65 @@ fields:
       defined term (the definition slot carries the actual date); supply a literal date string only to make the
       references repeat the date instead.
     default: Balance Sheet Date
+  - name: knowledge_party_patent_persons
+    type: string
+    description: Persons whose knowledge is attributed to the Company solely for the patent representation in Section 2.8
+  - name: university_license_disclosure_sections
+    type: string
+    description: Selected Disclosure Schedule section references for university licenses, for example 2.8(f) and 2.8(j)
+  - name: consultant_vesting_months
+    type: string
+    description: Number of months in the customary consultant vesting schedule
+    default: "48"
+  - name: financial_statement_audit_status
+    type: enum
+    description: Whether the delivered annual financial statements are audited or unaudited
+    options: [audited, unaudited]
+    default: unaudited
+  - name: fiscal_year_end
+    type: date
+    description: Fiscal year end date for the annual financial statements
+  - name: interim_financial_statement_months
+    type: string
+    description: Number of months covered by the interim financial statements ending on the Balance Sheet Date
+  - name: interim_current_period_end
+    type: date
+    description: End date of the current interim comparative period
+  - name: interim_comparative_period_end
+    type: date
+    description: End date of the prior-year interim comparative period
+  - name: financial_statements_representation
+    type: enum
+    description: Whether the Company has financial statements and uses the Financial Statements form of the liabilities representation
+    options: [financial_statements, no_financial_statements]
+  - name: additional_transaction_agreements
+    type: string
+    description: >-
+      Only agreements additional to the SPA, Investors' Rights Agreement, Management Rights Letter, ROFR/Co-Sale Agreement,
+      and Voting Agreement already enumerated in the form (for this scenario, the Indemnification Agreement)
+  - name: indemnification_agreement_indemnitees
+    type: string
+    description: Exact individual indemnitee or indemnitees party to the attached Indemnification Agreement
+  - name: management_rights_letter_count
+    type: enum
+    description: Whether the financing uses one or multiple Management Rights Letters
+    options: [one, multiple]
+    default: one
+  - name: include_withdrawn_public_offering_representation
+    type: boolean
+    description: Include the purchaser representation concerning a withdrawn public offering
+    default: "false"
+  - name: withdrawn_public_offering_date
+    type: date
+    description: Effective withdrawal date of the public offering, required when its representation is included
+  - name: closing_condition_waiver_standard
+    type: enum
+    description: Purchaser approval standard for waiving closing conditions
+    options: [majority, percentage]
+    default: majority
   - name: benefit_plan_name
     type: string
-    description: Plan year and name of the employee benefit plan
+    description: Complete plan year and name, including the word Plan (for example, 2025 Equity Incentive Plan)
   - name: common_authorized_shares
     type: string
     description: Authorized shares of Common Stock in the capitalization representation
@@ -171,6 +245,63 @@ fields:
     type: string
     description: Optional bracketed healthcare compliance law name, such as HIPAA; leave blank if inapplicable
     default: ""
+  - name: include_healthcare_representations
+    type: boolean
+    description: Whether the Company is a healthcare business for which the HIPAA and Healthcare Laws representations apply
+  - name: include_telecom_representation
+    type: boolean
+    description: Whether the Company is subject to the optional telecommunications and FCC representation
+  - name: include_other_ira_stockholders
+    type: boolean
+    description: Include other stockholders as parties in the Investors' Rights Agreement references
+  - name: include_subsidiary_carve_ins
+    type: boolean
+    description: Include subsidiary-specific representation cross-references when the Company has subsidiaries
+  - name: requisite_purchaser_standard
+    type: enum
+    options: [majority, percentage]
+    description: Approval standard used in the Requisite Purchasers definition
+  - name: include_post_closing_capitalization
+    type: boolean
+    description: Include the post-closing capitalization representation
+  - name: authorization_actions_timing
+    type: enum
+    options: [already_taken, prior_to_closing]
+    description: Whether required authorization actions are complete or will occur before Closing
+  - name: include_restated_certificate_filing_exception
+    type: boolean
+    description: Include the Restated Certificate filing exception
+  - name: include_patent_trademark_knowledge_qualifier
+    type: boolean
+    description: Include patent-and-trademark knowledge qualifiers
+  - name: include_standard_inbound_incorporation_carveout
+    type: boolean
+    description: Include the standard inbound SaaS incorporation carveout
+  - name: include_generative_ai_representation
+    type: boolean
+    description: Include the Generative AI representation
+  - name: include_labor_representation
+    type: boolean
+    description: Include the labor and nonunion representation
+  - name: include_bad_actor_representation
+    type: boolean
+    description: Include the officer and director bad-actor representation
+  - name: sanctions_lookback_date
+    type: date
+    description: Beginning date for the sanctions compliance lookback
+  - name: include_outbound_investment_board_representation
+    type: boolean
+    description: Include the optional covered-foreign-person board and equity representation
+  - name: include_dsp_compliance_policies
+    type: boolean
+    description: Include the DSP compliance policies sentence
+  - name: include_sbic_representation
+    type: boolean
+    description: Whether at least one Purchaser is an SBIC and the Small Business Concern representation applies
+  - name: sbic_business_standard
+    type: enum
+    description: Applicable SBA size standard when the SBIC representation is included
+    options: [small_business_concern, smaller_business]
   - name: signature_page_marker
     type: string
     description: Signature page marker text
@@ -203,15 +334,67 @@ fields:
   - name: applicable_purchasers
     type: string
     description: Names of the applicable purchasers
+  - name: purchasers
+    type: array
+    description: >-
+      Purchaser economics rows for the six-column Schedule of Purchasers. Each row identifies a purchaser and separately
+      states its convertible investment, conversion shares, cash purchase price, cash shares, and total shares.
+    items:
+      - name: name_and_address
+        type: string
+        description: Purchaser legal name and notice address, separated by line breaks
+      - name: convertible_investment
+        type: number
+        description: Dollar amount invested by the purchaser through Convertible Securities
+      - name: convertible_shares
+        type: number
+        description: Shares issued to the purchaser upon conversion of Convertible Securities
+      - name: cash_purchase_price
+        type: number
+        description: Total cash purchase price paid by the purchaser
+      - name: cash_purchase_economics
+        type: string
+        description: Exact aggregate cash price and per-share price, for example "$10,000,000 aggregate at $1.00 per share"
+      - name: cash_shares
+        type: number
+        description: Shares purchased for cash by the purchaser
+      - name: total_shares
+        type: number
+        description: Total shares purchased by the purchaser, including conversion and cash shares
+  - name: non_signing_convertible_holders
+    type: array
+    description: >-
+      Rows for the three-column Schedule of Non-Signing Holders of Convertible Securities. Leave empty when every
+      converting holder signs the agreement.
+    items:
+      - name: name_and_address
+        type: string
+        description: Non-signing holder legal name and notice address, separated by line breaks
+      - name: convertible_investment
+        type: number
+        description: Dollar amount invested by the non-signing holder through Convertible Securities
+      - name: convertible_shares
+        type: number
+        description: Shares issued to the non-signing holder upon conversion of Convertible Securities
 priority_fields:
   - company_name
   - investor_name
+  - company_signatory_name
+  - company_signatory_title
+  - company_notice_address
+  - company_notice_email
+  - investor_signatory_name
+  - investor_signatory_title
   - company_counsel
   - investor_counsel
   - company_counsel_name
   - lead_purchaser_name
   - judicial_district
   - balance_sheet_date
+  - knowledge_party_patent_persons
+  - fiscal_year_end
+  - interim_financial_statement_months
+  - additional_transaction_agreements
   - state
   - state_lower
   - specify_percentage
@@ -219,6 +402,17 @@ priority_fields:
   - director_names
   - board_size
   - minimum_shares_initial_closing
+  - include_convertible_securities
+  - include_tranche_closing
+  - closing_type
+  - dispute_resolution_mode
+  - financial_statements_representation
+  - interim_current_period_end
+  - interim_comparative_period_end
+  - indemnification_agreement_indemnitees
+  - include_healthcare_representations
+  - include_sbic_representation
+  - purchasers
   - common_authorized_shares
   - common_outstanding_shares
   - preferred_authorized_shares
