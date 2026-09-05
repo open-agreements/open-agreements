@@ -7,14 +7,46 @@ import { enumerateTextParts, getAllTextPartNames, preserveXmlSpace, rezipWithout
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const REF_INSTRUCTION_RE = /^\s*REF\s+(?:"([^"]+)"|'([^']+)'|([^\s\\]+))(?:\s|\\|$)/i;
 
-export const ReferenceFieldActionSchema = z.object({
+const ReferenceFieldActionBaseSchema = z.object({
   target: z.string().min(1),
   strategy: z.literal('literalize'),
-  literal: z.string(),
-  expected_cached_result: z.string(),
   expected_matches: z.number().int().nonnegative(),
   expected_target_count: z.number().int().nonnegative(),
+});
+
+const SimpleReferenceFieldActionSchema = ReferenceFieldActionBaseSchema.extend({
+  literal: z.string(),
+  expected_cached_result: z.string(),
 }).strict();
+
+const GroupedReferenceFieldActionSchema = ReferenceFieldActionBaseSchema.extend({
+  groups: z.array(z.object({
+    expected_cached_result: z.string(),
+    literal: z.string(),
+    expected_matches: z.number().int().positive(),
+  }).strict()).min(1),
+}).strict().superRefine((action, ctx) => {
+  const seen = new Set<string>();
+  let sum = 0;
+  for (const group of action.groups) {
+    if (seen.has(group.expected_cached_result)) {
+      ctx.addIssue({ code: 'custom', message: `duplicate cached-result group "${group.expected_cached_result}"` });
+    }
+    seen.add(group.expected_cached_result);
+    sum += group.expected_matches;
+  }
+  if (sum !== action.expected_matches) {
+    ctx.addIssue({
+      code: 'custom',
+      message: `group expected_matches sum ${sum} does not equal action expected_matches ${action.expected_matches}`,
+    });
+  }
+});
+
+export const ReferenceFieldActionSchema = z.union([
+  SimpleReferenceFieldActionSchema,
+  GroupedReferenceFieldActionSchema,
+]);
 
 export const ReferenceFieldsConfigSchema = z.object({
   version: z.literal(1),
@@ -174,7 +206,7 @@ export function applyReferenceFieldActions(
     }
   }
 
-  const selected: Array<{ action: ReferenceFieldsConfig['actions'][number]; fields: FieldMatch[] }> = [];
+  const selected: Array<{ literal: string; field: FieldMatch }> = [];
   for (const action of config.actions) {
     const actionFields = fields.filter((field) => field.target === action.target);
     const actualTargetCount = targetCounts.get(action.target) ?? 0;
@@ -188,20 +220,44 @@ export function applyReferenceFieldActions(
         `reference-fields.json: target "${action.target}" expected ${action.expected_matches} REF field match(es), found ${actionFields.length}`,
       );
     }
-    for (const field of actionFields) {
-      if (field.cachedResult !== action.expected_cached_result) {
-        throw new Error(
-          `reference-fields.json: ${field.partName} REF "${action.target}" expected cached result ` +
-          `"${action.expected_cached_result}", found "${field.cachedResult}"`,
-        );
+    if ('groups' in action) {
+      const groupsByCache = new Map(action.groups.map((group) => [group.expected_cached_result, group]));
+      const actualByCache = new Map<string, FieldMatch[]>();
+      for (const field of actionFields) {
+        const group = groupsByCache.get(field.cachedResult);
+        if (!group) {
+          throw new Error(
+            `reference-fields.json: ${field.partName} REF "${action.target}" has undeclared cached result "${field.cachedResult}"`,
+          );
+        }
+        const groupFields = actualByCache.get(field.cachedResult) ?? [];
+        groupFields.push(field);
+        actualByCache.set(field.cachedResult, groupFields);
+      }
+      for (const group of action.groups) {
+        const groupFields = actualByCache.get(group.expected_cached_result) ?? [];
+        if (groupFields.length !== group.expected_matches) {
+          throw new Error(
+            `reference-fields.json: target "${action.target}" cached-result group ` +
+            `"${group.expected_cached_result}" expected ${group.expected_matches} REF field match(es), found ${groupFields.length}`,
+          );
+        }
+        for (const field of groupFields) selected.push({ field, literal: group.literal });
+      }
+    } else {
+      for (const field of actionFields) {
+        if (field.cachedResult !== action.expected_cached_result) {
+          throw new Error(
+            `reference-fields.json: ${field.partName} REF "${action.target}" expected cached result ` +
+            `"${action.expected_cached_result}", found "${field.cachedResult}"`,
+          );
+        }
+        selected.push({ field, literal: action.literal });
       }
     }
-    selected.push({ action, fields: actionFields });
   }
 
-  for (const { action, fields: actionFields } of selected) {
-    for (const field of actionFields) field.replace(action.literal);
-  }
+  for (const { field, literal } of selected) field.replace(literal);
 
   const output = rezipWithoutDirEntries(source);
   for (const [partName, doc] of docs) {
