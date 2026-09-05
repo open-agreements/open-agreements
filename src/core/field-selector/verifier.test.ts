@@ -475,10 +475,11 @@ describe('findLeftoverPlaceholders', () => {
       '<?xml version="1.0" encoding="UTF-8"?>' +
         `<w:document xmlns:w="${W_NS}"><w:body><w:p>` +
         `<w:r><w:t xml:space="preserve">${prefix}</w:t></w:r>` +
+        '<w:r><w:t xml:space="preserve">Section </w:t></w:r>' +
         '<w:r><w:fldChar w:fldCharType="begin"/></w:r>' +
         '<w:r><w:instrText xml:space="preserve"> REF _RefSuccessors \\h </w:instrText></w:r>' +
         '<w:r><w:fldChar w:fldCharType="separate"/></w:r>' +
-        '<w:r><w:t>Section 6.1</w:t></w:r>' +
+        '<w:r><w:t>6.1</w:t></w:r>' +
         '<w:r><w:fldChar w:fldCharType="end"/></w:r>' +
         '</w:p></w:body></w:document>'
     );
@@ -509,10 +510,11 @@ describe('findLeftoverPlaceholders', () => {
       '<?xml version="1.0" encoding="UTF-8"?>' +
         `<w:document xmlns:w="${W_NS}"><w:body><w:p>` +
         `<w:r><w:t xml:space="preserve">${prefix}</w:t></w:r>` +
+        '<w:r><w:t xml:space="preserve">Section </w:t></w:r>' +
         '<w:r><w:fldChar w:fldCharType="begin"/></w:r>' +
         '<w:r><w:instrText xml:space="preserve"> REF _RefSuccessors \\h </w:instrText></w:r>' +
         '<w:r><w:fldChar w:fldCharType="separate"/></w:r>' +
-        '<w:r><w:t>Section 6.1</w:t></w:r>' +
+        '<w:r><w:t>6.1</w:t></w:r>' +
         '<w:r><w:fldChar w:fldCharType="end"/></w:r>' +
         '</w:p></w:body></w:document>'
     );
