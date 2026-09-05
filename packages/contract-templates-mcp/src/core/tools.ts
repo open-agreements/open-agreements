@@ -273,6 +273,7 @@ interface RepoModules {
     concertoModelPath: string;
     concertoDependencyPaths: string[];
   }) => Record<string, unknown>;
+  toApapTemplateRelationship: (template: { $class: string; uri: string }) => string;
   fillApapAgreementToDocx: (opts: {
     templateDir: string;
     agreementData: Record<string, unknown>;
@@ -322,6 +323,7 @@ async function importRepoModules(): Promise<RepoModules | null> {
         sourceName: listing.sourceName,
         mapFields: listing.mapFields,
         exportTemplateToApap: apap.exportTemplateToApap,
+        toApapTemplateRelationship: apap.toApapTemplateRelationship,
         fillApapAgreementToDocx: apap.fillApapAgreementToDocx,
         ...(content &&
         typeof content.listDocContentItems === 'function' &&
@@ -353,6 +355,7 @@ async function importRepoModules(): Promise<RepoModules | null> {
         sourceName: mod.sourceName ?? (() => null),
         mapFields: mod.mapFields ?? ((f: TemplateField[]) => f),
         exportTemplateToApap: mod.exportTemplateToApap,
+        toApapTemplateRelationship: mod.toApapTemplateRelationship,
         fillApapAgreementToDocx: mod.fillApapAgreementToDocx,
         ...(typeof mod.listDocContentItems === 'function' &&
         typeof mod.listDocContentTypesAvailable === 'function' &&
@@ -733,7 +736,7 @@ const tools: ToolDefinition[] = [
   {
     name: 'get_apap_template',
     description:
-      'Export an eligible OpenAgreements-authored template as an APAP Template payload, preserving canonical source, version, license, and attribution.',
+      'Export an eligible OpenAgreements-authored template as an APAP Template payload and its ready-to-use Agreement.template relationship, preserving canonical source, version, license, and attribution.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -750,8 +753,12 @@ const tools: ToolDefinition[] = [
       const dir = mod.findTemplateDir(input.template_id);
       if (!dir) return toolError('get_apap_template', 'TEMPLATE_NOT_FOUND', `Template not found: "${input.template_id}"`);
       try {
+        const template = mod.exportTemplateToApap(apapExportOptions(input.template_id, dir));
         return successResult('get_apap_template', {
-          template: mod.exportTemplateToApap(apapExportOptions(input.template_id, dir)),
+          template,
+          template_relationship: mod.toApapTemplateRelationship(
+            template as { $class: string; uri: string },
+          ),
         });
       } catch (error) {
         return toolError('get_apap_template', 'APAP_TEMPLATE_UNAVAILABLE', extractErrorMessage(error));

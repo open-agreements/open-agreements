@@ -4,6 +4,7 @@ import { fillTemplate, type FillResult } from './engine.js';
 import { loadMetadata, type FieldDefinition, type TemplateMetadata } from './metadata.js';
 
 const APAP_NS = 'org.accordproject.protocol@1.0.0';
+const APAP_CICERO_RANGE = '^2.0.0';
 
 export interface ApapCtoFile {
   $class: `${typeof APAP_NS}.CtoFile`;
@@ -56,6 +57,15 @@ export interface FillApapAgreementOptions {
   templateDir: string;
   agreementData: Record<string, unknown>;
   outputPath: string;
+}
+
+/**
+ * Serialize an APAP Template as the Concerto relationship value required by
+ * Agreement.template. The template's URI is the relationship identifier; a
+ * bare URI is not a valid relationship value for the APAP protocol model.
+ */
+export function toApapTemplateRelationship(template: Pick<ApapTemplatePayload, '$class' | 'uri'>): string {
+  return `resource:${template.$class}#${template.uri}`;
 }
 
 function extractNamespaceAndType(cto: string): { namespace: string; typeName: string } {
@@ -178,7 +188,7 @@ function assertModelCoversCanonicalFields(cto: string, fields: FieldDefinition[]
 }
 
 function apapRequiredModel(cto: string, fields: FieldDefinition[]): string {
-  let result = cto;
+  let result = apapCompatibleCto(cto);
   if (!/^@template\s*$/m.test(result)) {
     result = result.replace(/^(asset\s+[^\n]+\s+extends\s+Contract\s*\{)/m, '@template\n$1');
   }
@@ -188,11 +198,30 @@ function apapRequiredModel(cto: string, fields: FieldDefinition[]): string {
   return result;
 }
 
+/**
+ * Normalize the legacy Accord contract model bundled by OpenAgreements to the
+ * versioned namespace required by current Concerto. Keep this transformation
+ * at the APAP export boundary: the source models are also consumed by the
+ * repository's Concerto 3 generation workflow and are not APAP projections.
+ */
+function apapCompatibleCto(cto: string): string {
+  return cto
+    .replace(
+      /\bimport org\.accordproject\.contract\.Contract from https:\/\/models\.accordproject\.org\/accordproject\/contract\.cto\b/,
+      'import org.accordproject.contract@0.2.0.Contract from https://models.accordproject.org/accordproject/contract@0.2.0.cto',
+    )
+    .replace(/^namespace org\.accordproject\.contract$/m, 'namespace org.accordproject.contract@0.2.0');
+}
+
 function apapSemver(version: string): string {
   if (/^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?(?:\+[0-9A-Za-z.-]+)?$/.test(version)) return version;
   if (/^\d+\.\d+$/.test(version)) return `${version}.0`;
   if (/^\d+$/.test(version)) return `${version}.0.0`;
   throw new Error(`OpenAgreements version cannot be normalized to APAP semver: ${version}`);
+}
+
+function apapIdentifierVersion(version: string): string {
+  return apapSemver(version).toLowerCase().replace(/[^a-z0-9_-]+/g, '-');
 }
 
 export function exportTemplateToApap(options: ExportApapTemplateOptions): ApapTemplatePayload {
@@ -212,12 +241,12 @@ export function exportTemplateToApap(options: ExportApapTemplateOptions): ApapTe
   }, ...(options.concertoDependencyPaths ?? []).map((path) => ({
     $class: `${APAP_NS}.CtoFile` as const,
     filename: basename(path),
-    contents: readFileSync(path, 'utf8'),
+    contents: apapCompatibleCto(readFileSync(path, 'utf8')),
   }))];
 
   return {
     $class: `${APAP_NS}.Template`,
-    uri: options.templateUri ?? `https://openagreements.org/templates/${templateId}/v${metadata.version}`,
+    uri: options.templateUri ?? `openagreements://templates/${templateId}-v${apapIdentifierVersion(metadata.version)}`,
     author: 'OpenAgreements contributors',
     displayName: metadata.name,
     version: apapSemver(metadata.version),
@@ -231,7 +260,7 @@ export function exportTemplateToApap(options: ExportApapTemplateOptions): ApapTe
       $class: `${APAP_NS}.TemplateMetadata`,
       runtime: 'typescript',
       template: 'contract',
-      cicero: '0.25.x',
+      cicero: APAP_CICERO_RANGE,
     },
     templateModel: {
       $class: `${APAP_NS}.TemplateModel`,
