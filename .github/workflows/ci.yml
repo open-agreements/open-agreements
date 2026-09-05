@@ -139,6 +139,9 @@ jobs:
       - name: Validate Claude marketplace package allowlist and drift
         run: npm run check:claude-plugin
 
+      - name: Validate skill quality cards and their published schema
+        run: npm run check:quality-cards
+
       - name: Test Claude marketplace package security boundary
         run: npx vitest run scripts/sync_claude_marketplace_plugin.test.mjs
 

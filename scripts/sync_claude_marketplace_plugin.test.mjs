@@ -7,7 +7,8 @@ import {
 import { join } from "node:path";
 import { tmpdir } from "node:os";
 import { afterEach, describe, expect, it } from "vitest";
-import { checkPlugin } from "./sync_claude_marketplace_plugin.mjs";
+import { existsSync } from "node:fs";
+import { checkPlugin, skillSpecs } from "./sync_claude_marketplace_plugin.mjs";
 
 const temporaryDirectories = [];
 
@@ -25,5 +26,15 @@ describe("Claude marketplace plugin allowlist", () => {
     writeFileSync(join(fixtureRoot, ".mcp.json"), "{}\n");
 
     expect(() => checkPlugin(fixtureRoot)).toThrow(/forbidden MCP configuration \.mcp\.json/);
+  });
+
+  it("allowlists the quality card of every skill that carries one", () => {
+    // The allowlist is opt-in, so an artifact added to a skill source is
+    // published to npm (via the broad `skills/` entry) while silently missing
+    // from the plugin until someone lists it here.
+    for (const spec of skillSpecs) {
+      if (!existsSync(join(spec.source, "quality-card.json"))) continue;
+      expect(spec.files).toContain("quality-card.json");
+    }
   });
 });

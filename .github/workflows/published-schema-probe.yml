@@ -1,0 +1,44 @@
+name: published-schema-probe
+
+# Every quality card in `skills/` carries a `$schema` URL on openagreements.org
+# that strangers resolve. Nothing in the pull-request pipeline can prove that
+# URL answers — the site is a different repository, and its own post-deploy
+# check cannot re-run when a schema later lands here. So probe it from the side
+# that publishes the reference: after the merge, and weekly thereafter in case
+# the route goes dark long after anyone touched it.
+#
+# This is deliberately not part of `preflight:ci`. A pull request must not go
+# red because a third party is having an outage.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/**/quality-card.json'
+      - 'schemas/**'
+      - 'scripts/probe_published_schemas.mjs'
+      - '.github/workflows/published-schema-probe.yml'
+  schedule:
+    - cron: '17 9 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: published-schema-probe-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 20
+
+      - name: Probe every published $schema reference
+        run: npm run probe:published-schemas

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openagreements.org/schemas/skill-quality-card.schema.json",
+  "title": "OpenAgreements skill quality card",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "schema_version", "skill", "content_packaged_at", "law_checked_through", "human_reviewed_at", "next_review_due", "coverage", "review", "freshness"],
+  "properties": {
+    "$schema": {"const": "https://openagreements.org/schemas/skill-quality-card.schema.json"},
+    "schema_version": {"const": "2026-08-31"},
+    "skill": {"type": "string", "minLength": 1},
+    "content_packaged_at": {"$ref": "#/$defs/date"},
+    "law_checked_through": {"anyOf": [{"$ref": "#/$defs/date"}, {"type": "null"}]},
+    "human_reviewed_at": {"anyOf": [{"$ref": "#/$defs/date"}, {"type": "null"}]},
+    "next_review_due": {"anyOf": [{"$ref": "#/$defs/date"}, {"type": "null"}]},
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["jurisdictions", "manifest"],
+      "properties": {"jurisdictions": {"type": "integer", "minimum": 0}, "manifest": {"type": "string"}}
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim", "reviewer_registry", "verification"],
+      "properties": {"claim": {"const": "lawyer-reviewed"}, "reviewer_registry": {"type": "string", "format": "uri-reference"}, "verification": {"type": "string", "format": "uri-reference"}}
+    },
+    "freshness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["policy_days", "check_script", "stale_issue_label"],
+      "properties": {"policy_days": {"type": "integer", "minimum": 1}, "check_script": {"type": "string"}, "stale_issue_label": {"type": "string"}}
+    }
+  },
+  "$defs": {"date": {"type": "string", "format": "date"}}
+}

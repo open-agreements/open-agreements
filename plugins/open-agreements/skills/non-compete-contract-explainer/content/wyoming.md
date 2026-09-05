@@ -2,8 +2,10 @@
 jurisdiction: "Wyoming"
 slug: wyoming
 countryCode: US
-snapshotAsOf: "2026-08-30"
-lastReviewed: "2026-04-14"
+content_packaged_at: "2026-08-30"
+law_checked_through: "2026-04-14"
+human_reviewed_at: null
+next_review_due: null
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/wyoming
 license: CC BY 4.0
 stale: false

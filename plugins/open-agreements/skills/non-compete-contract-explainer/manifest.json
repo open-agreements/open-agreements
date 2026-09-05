@@ -1,6 +1,5 @@
 {
   "topic": "non-compete",
-  "snapshotAsOf": "2026-08-30",
   "sourceCommit": "733ae1bd0fbf367cb2b9690627abeec8d6ed4b81",
   "canonicalBase": "https://openagreements.org/practice-guides/non-compete",
   "license": "CC BY 4.0",
@@ -11,9 +10,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/alabama",
       "file": "content/alabama.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Alaska",
@@ -21,9 +22,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/alaska",
       "file": "content/alaska.md",
-      "lastReviewed": "2026-06-01",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-01",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "American Samoa",
@@ -31,9 +34,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/american-samoa",
       "file": "content/american-samoa.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Arizona",
@@ -41,9 +46,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/arizona",
       "file": "content/arizona.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Arkansas",
@@ -51,9 +58,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/arkansas",
       "file": "content/arkansas.md",
-      "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-02",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Australia",
@@ -61,9 +70,11 @@
       "countryCode": "AU",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/au",
       "file": "content/au.md",
-      "lastReviewed": "2026-06-16",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-16",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Australian Capital Territory, Australia",
@@ -71,9 +82,11 @@
       "countryCode": "AU",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/au/australian-capital-territory",
       "file": "content/australian-capital-territory.md",
-      "lastReviewed": "2026-06-10",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-10",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "California",
@@ -81,9 +94,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/california",
       "file": "content/california.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Northern Mariana Islands",
@@ -91,9 +106,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/cnmi",
       "file": "content/cnmi.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Colorado",
@@ -101,9 +118,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/colorado",
       "file": "content/colorado.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Connecticut",
@@ -111,9 +130,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/connecticut",
       "file": "content/connecticut.md",
-      "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-02",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Delaware",
@@ -121,9 +142,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/delaware",
       "file": "content/delaware.md",
-      "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-02",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "District of Columbia",
@@ -131,9 +154,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/district-of-columbia",
       "file": "content/district-of-columbia.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Florida",
@@ -141,9 +166,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/florida",
       "file": "content/florida.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Georgia",
@@ -151,9 +178,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/georgia",
       "file": "content/georgia.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Guam",
@@ -161,9 +190,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/guam",
       "file": "content/guam.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Hawaii",
@@ -171,9 +202,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/hawaii",
       "file": "content/hawaii.md",
-      "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-02",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Idaho",
@@ -181,9 +214,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/idaho",
       "file": "content/idaho.md",
-      "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-02",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Illinois",
@@ -191,9 +226,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/illinois",
       "file": "content/illinois.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "India",
@@ -201,9 +238,11 @@
       "countryCode": "IN",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/in",
       "file": "content/in.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Indiana",
@@ -211,9 +250,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/indiana",
       "file": "content/indiana.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Iowa",
@@ -221,9 +262,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/iowa",
       "file": "content/iowa.md",
-      "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-02",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Kansas",
@@ -231,9 +274,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/kansas",
       "file": "content/kansas.md",
-      "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-02",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Kentucky",
@@ -241,9 +286,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/kentucky",
       "file": "content/kentucky.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Louisiana",
@@ -251,9 +298,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/louisiana",
       "file": "content/louisiana.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Maine",
@@ -261,9 +310,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/maine",
       "file": "content/maine.md",
-      "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-02",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Maryland",
@@ -271,9 +322,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/maryland",
       "file": "content/maryland.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Massachusetts",
@@ -281,9 +334,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/massachusetts",
       "file": "content/massachusetts.md",
-      "lastReviewed": "2026-07-11",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-07-11",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Michigan",
@@ -291,9 +346,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/michigan",
       "file": "content/michigan.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Minnesota",
@@ -301,9 +358,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/minnesota",
       "file": "content/minnesota.md",
-      "lastReviewed": "2026-05-27",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-05-27",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Mississippi",
@@ -311,9 +370,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/mississippi",
       "file": "content/mississippi.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Missouri",
@@ -321,9 +382,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/missouri",
       "file": "content/missouri.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Montana",
@@ -331,9 +394,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/montana",
       "file": "content/montana.md",
-      "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-02",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Nebraska",
@@ -341,9 +406,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/nebraska",
       "file": "content/nebraska.md",
-      "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-02",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Nevada",
@@ -351,9 +418,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/nevada",
       "file": "content/nevada.md",
-      "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-02",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "New Hampshire",
@@ -361,9 +430,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/new-hampshire",
       "file": "content/new-hampshire.md",
-      "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-02",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "New Jersey",
@@ -371,9 +442,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/new-jersey",
       "file": "content/new-jersey.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "New Mexico",
@@ -381,9 +454,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/new-mexico",
       "file": "content/new-mexico.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "New South Wales, Australia",
@@ -391,9 +466,11 @@
       "countryCode": "AU",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/au/new-south-wales",
       "file": "content/new-south-wales.md",
-      "lastReviewed": "2026-06-10",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-10",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "New York",
@@ -401,9 +478,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/new-york",
       "file": "content/new-york.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "North Carolina",
@@ -411,9 +490,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/north-carolina",
       "file": "content/north-carolina.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "North Dakota",
@@ -421,9 +502,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/north-dakota",
       "file": "content/north-dakota.md",
-      "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-02",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Northern Territory, Australia",
@@ -431,9 +514,11 @@
       "countryCode": "AU",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/au/northern-territory",
       "file": "content/northern-territory.md",
-      "lastReviewed": "2026-06-10",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-10",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Ohio",
@@ -441,9 +526,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/ohio",
       "file": "content/ohio.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Oklahoma",
@@ -451,9 +538,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/oklahoma",
       "file": "content/oklahoma.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Oregon",
@@ -461,9 +550,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/oregon",
       "file": "content/oregon.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Pennsylvania",
@@ -471,9 +562,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/pennsylvania",
       "file": "content/pennsylvania.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Philippines",
@@ -481,9 +574,11 @@
       "countryCode": "PH",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/ph",
       "file": "content/ph.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Puerto Rico",
@@ -491,9 +586,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/puerto-rico",
       "file": "content/puerto-rico.md",
-      "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-02",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Queensland, Australia",
@@ -501,9 +598,11 @@
       "countryCode": "AU",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/au/queensland",
       "file": "content/queensland.md",
-      "lastReviewed": "2026-06-10",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-10",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Rhode Island",
@@ -511,9 +610,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/rhode-island",
       "file": "content/rhode-island.md",
-      "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-02",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Singapore",
@@ -521,9 +622,11 @@
       "countryCode": "SG",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/sg",
       "file": "content/sg.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "South Australia, Australia",
@@ -531,9 +634,11 @@
       "countryCode": "AU",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/au/south-australia",
       "file": "content/south-australia.md",
-      "lastReviewed": "2026-06-10",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-10",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "South Carolina",
@@ -541,9 +646,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/south-carolina",
       "file": "content/south-carolina.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "South Dakota",
@@ -551,9 +658,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/south-dakota",
       "file": "content/south-dakota.md",
-      "lastReviewed": "2026-07-01",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-07-01",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Tasmania, Australia",
@@ -561,9 +670,11 @@
       "countryCode": "AU",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/au/tasmania",
       "file": "content/tasmania.md",
-      "lastReviewed": "2026-06-10",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-10",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Tennessee",
@@ -571,9 +682,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/tennessee",
       "file": "content/tennessee.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Texas",
@@ -581,9 +694,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/texas",
       "file": "content/texas.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Utah",
@@ -591,9 +706,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/utah",
       "file": "content/utah.md",
-      "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-02",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Vermont",
@@ -601,9 +718,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/vermont",
       "file": "content/vermont.md",
-      "lastReviewed": "2026-06-01",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-01",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Victoria, Australia",
@@ -611,9 +730,11 @@
       "countryCode": "AU",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/au/victoria",
       "file": "content/victoria.md",
-      "lastReviewed": "2026-06-10",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-10",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "U.S. Virgin Islands",
@@ -621,9 +742,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/virgin-islands",
       "file": "content/virgin-islands.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Virginia",
@@ -631,9 +754,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/virginia",
       "file": "content/virginia.md",
-      "lastReviewed": "2026-07-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-07-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Washington",
@@ -641,9 +766,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/washington",
       "file": "content/washington.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "West Virginia",
@@ -651,9 +778,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/west-virginia",
       "file": "content/west-virginia.md",
-      "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-02",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Western Australia, Australia",
@@ -661,9 +790,11 @@
       "countryCode": "AU",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/au/western-australia",
       "file": "content/western-australia.md",
-      "lastReviewed": "2026-06-10",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-10",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Wisconsin",
@@ -671,9 +802,11 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/wisconsin",
       "file": "content/wisconsin.md",
-      "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-06-03",
+      "human_reviewed_at": null,
+      "next_review_due": null
     },
     {
       "jurisdiction": "Wyoming",
@@ -681,9 +814,12 @@
       "countryCode": "US",
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/wyoming",
       "file": "content/wyoming.md",
-      "lastReviewed": "2026-04-14",
-      "snapshotAsOf": "2026-08-30",
-      "stale": false
+      "stale": false,
+      "content_packaged_at": "2026-08-30",
+      "law_checked_through": "2026-04-14",
+      "human_reviewed_at": null,
+      "next_review_due": null
     }
-  ]
+  ],
+  "content_packaged_at": "2026-08-30"
 }
