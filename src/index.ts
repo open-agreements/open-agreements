@@ -106,6 +106,10 @@ export {
   type FieldSelectorRunResult,
   type VerifyResult,
   type VerifyCheck,
+  applyReferenceFieldActions,
+  loadReferenceFieldsConfig,
+  ReferenceFieldsConfigSchema,
+  type ReferenceFieldsConfig,
 } from './core/field-selector/index.js';
 
 // Closing checklist

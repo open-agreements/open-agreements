@@ -200,6 +200,33 @@ Rule behavior:
 
 This keeps cleanup declarative and versionable, instead of relying on brittle ad hoc parsing scripts.
 
+### Optional: reference-fields.json for atomic REF conversion
+
+Use `reference-fields.json` when cleaning an optional branch removes a bookmark
+target but a retained clause must show a fixed reference. The runtime converts
+the complete Word REF field (complex or `fldSimple`) to ordinary text before
+scalar patching and before missing-target verification.
+
+```json
+{
+  "version": 1,
+  "actions": [{
+    "target": "_DV_M84",
+    "strategy": "literalize",
+    "literal": "2.1",
+    "expected_cached_result": "2.1",
+    "expected_matches": 1,
+    "expected_target_count": 0
+  }]
+}
+```
+
+Every assertion is exact and is checked before any field is changed.
+`expected_target_count` describes bookmark targets in the post-clean document;
+`expected_matches` describes REF fields with that target. A stale cached result,
+zero or ambiguous field match, or unexpected bookmark count rejects the fill.
+Unrelated fields and bookmarks remain live.
+
 ### Range deletion
 
 `removeRanges` is useful for multi-paragraph blocks where individual patterns would be
