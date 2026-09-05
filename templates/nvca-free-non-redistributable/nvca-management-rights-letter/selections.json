@@ -1,0 +1,76 @@
+{
+  "groups": [
+    {
+      "id": "management-consultation-rights",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "options": [{
+        "label": "Management consultation rights",
+        "marker": "Investor shall be entitled to consult with and advise management",
+        "trigger": { "field": "include_management_consultation_rights", "equals": true },
+        "removal": { "kind": "paragraph", "anchor": "Investor shall be entitled to consult with and advise management", "match": "contains", "expectedMatches": 1 }
+      }]
+    },
+    {
+      "id": "inspection-rights",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "options": [{
+        "label": "Inspection and information rights",
+        "marker": "Investor may examine the books and records of the Company",
+        "trigger": { "field": "include_inspection_rights", "equals": true },
+        "removal": { "kind": "paragraph", "anchor": "Investor may examine the books and records of the Company", "match": "contains", "expectedMatches": 1 }
+      }]
+    },
+    {
+      "id": "board-materials-rights",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "options": [{
+        "label": "Board materials and address rights",
+        "marker": "concurrently with delivery to the Board of Directors",
+        "trigger": { "field": "include_board_materials_rights", "equals": true },
+        "removal": { "kind": "paragraph", "anchor": "concurrently with delivery to the Board of Directors", "match": "contains", "expectedMatches": 1 }
+      }]
+    },
+    {
+      "id": "foreign-person-restrictions",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "options": [{
+        "label": "Foreign-person restrictions",
+        "marker": "solely by reason of becoming party to this letter agreement",
+        "trigger": { "field": "include_foreign_person_restrictions", "equals": true },
+        "removal": { "kind": "paragraph", "anchor": "solely by reason of becoming party to this letter agreement", "match": "contains", "expectedMatches": 1 }
+      }]
+    },
+    {
+      "id": "independent-business-reasons-merger-condition",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [{
+        "label": "Independent-business-reasons merger condition",
+        "marker": "[(x)] that is effected (i)\u00a0for independent business reasons unrelated to extinguishing such rights; and (ii)\u00a0for purposes other than (A)\u00a0the reincorporation of the Company in a different state; or (B)\u00a0the formation of a holding company that will be owned exclusively by the Company’s stockholders and will hold all of the outstanding shares of capital stock of the Company’s successor and ",
+        "trigger": { "field": "include_independent_business_reasons_merger_condition", "equals": true }
+      }]
+    },
+    {
+      "id": "successor-or-liquid-consideration-merger-condition",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [{
+        "label": "Comparable-rights or liquid-consideration merger condition",
+        "marker": "[(y) in which the successor entity provides reasonably comparable rights to the Investor or the consideration payable to the Investor in such transaction consists solely of cash or securities of a class listed on a national exchange]",
+        "trigger": { "field": "include_successor_or_liquid_consideration_merger_condition", "equals": true }
+      }]
+    }
+  ]
+}

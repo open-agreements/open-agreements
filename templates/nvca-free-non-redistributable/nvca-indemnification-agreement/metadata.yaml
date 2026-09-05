@@ -18,12 +18,7 @@ fields:
     description: Full legal name of the indemnitee (director or officer)
   - name: indemnitee_address
     type: string
-    description: >-
-      Address of the Delaware service-of-process agent named in the optional jurisdiction clause. Retained under its
-      original field name for compatibility; this is not an indemnitee mailing-address slot in the NVCA source.
-  - name: service_of_process_agent_name
-    type: string
-    description: Name of the Delaware service-of-process agent in the optional jurisdiction clause
+    description: Address of the indemnitee
   - name: company_name
     type: string
     description: Name of the corporation providing indemnification
@@ -33,13 +28,15 @@ fields:
   - name: fund_sponsor_name
     type: string
     description: Name of the sponsoring fund or entity appointing the indemnitee
+  - name: appointing_stockholder_name
+    type: string
+    description: Full legal name of the venture fund or entity defined as the Appointing Stockholder in Section 1(d)
   - name: indemnitee_role_scope
     type: enum
     options: [directors, officers, directors_or_officers]
     description: >-
-      Corporate roles covered by the agreement: directors, officers, or directors and officers. The
-      directors_or_officers option renders the NVCA recital as "directors or officers" and the later singular carrier
-      as "an officer or director."
+      Corporate roles covered by the agreement. The directors_or_officers option renders the source recital as
+      "directors or officers" and the operative undertaking as "an officer or director."
     default: directors_or_officers
   - name: indemnitee_role_scope_plural
     type: string
@@ -51,6 +48,32 @@ fields:
     type: string
     description: Possessive pronoun for the indemnitee entity (e.g. its)
     default: its
+  - name: indemnitee_pronoun_subject
+    type: string
+    description: Subject pronoun for the indemnitee (for this fixture, they)
+    default: they
+  - name: indemnitee_pronoun_object
+    type: string
+    description: Object pronoun for the indemnitee (for this fixture, them)
+    default: them
+  - name: company_signatory_name
+    type: string
+    description: Printed name of the Company's authorized signatory
+  - name: company_signatory_title
+    type: string
+    description: Title of the Company's authorized signatory
+  - name: company_notice_address
+    type: string
+    description: Company's notice address
+  - name: company_notice_attention
+    type: string
+    description: Person and title receiving Company notices
+  - name: process_agent_name
+    type: string
+    description: Delaware process agent named for the Indemnitee
+  - name: process_agent_address
+    type: string
+    description: Delaware address of the process agent
   - name: bylaws_name
     type: string
     description: Name of the company's bylaws document
@@ -59,18 +82,14 @@ fields:
     type: string
     description: Name of the company's certificate of incorporation
     default: Certificate of Incorporation
-  - name: and_appointing_stockholder
-    type: string
-    description: Optional additional party text or empty string
-    default: ''
-  - name: appointing_stockholder_ipo_termination_clause
-    type: string
+  - name: include_appointing_stockholder_ipo_termination
+    type: boolean
     description: >-
-      Optional clause text that terminates Appointing Stockholder rights at IPO closing, inserted before the
-      sentence-ending period after "representative on the Company's Board" in Section 1(d). Supply the clause with a
-      leading comma and no trailing period (e.g. ", and terminate on the closing of an initial public offering of the
-      Company's Common Stock; provided, however, ..."); leave empty to omit.
-    default: ''
+      Whether the Appointing Stockholder's Section 1(d) rights terminate at the closing of the Company's initial public
+      offering, subject to the source form's protection for proceedings based on pre-termination facts
+  - name: appointing_stockholder_ipo_termination_carrier
+    type: string
+    description: Complete punctuation-bearing Section 1(d) carrier set by computed.json from the IPO-termination election
   - name: signature_page_marker
     type: string
     description: Signature page marker text
@@ -78,11 +97,20 @@ fields:
 priority_fields:
   - indemnitee_name
   - indemnitee_address
-  - service_of_process_agent_name
   - company_name
   - agreement_effective_date
+  - appointing_stockholder_name
+  - include_appointing_stockholder_ipo_termination
   - indemnitee_role_scope
   - indemnitee_pronoun_possessive
+  - indemnitee_pronoun_subject
+  - indemnitee_pronoun_object
+  - company_signatory_name
+  - company_signatory_title
+  - company_notice_address
+  - company_notice_attention
+  - process_agent_name
+  - process_agent_address
   - bylaws_name
   - certificate_name
 artifact_kind: agreement

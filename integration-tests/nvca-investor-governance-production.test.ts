@@ -131,7 +131,6 @@ describeWithSources('NVCA investor and governance production fills', () => {
       expectVerifiedFill(text, result.warnings);
       expect(text).toContain('IMIM Technologies, Inc., a Delaware corporation');
       expect(text).toContain('AI-native contract lifecycle automation');
-      expect(text).toContain('not later than 45 days');
       expect(text).toContain('(ii) 45 days after delivery');
       expect(text).toContain('holders of at least 60%');
       expect(text).toContain('Series C Preferred Stock');

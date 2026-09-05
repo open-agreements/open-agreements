@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "max_passes": 1,
+  "defaults": {
+    "company_letterhead_block": ""
+  },
+  "rules": [
+    {
+      "id": "company-letterhead-with-address",
+      "description": "Keep the supplied Company identity and Company address together in the source's Company letterhead carrier.",
+      "when_all": [
+        { "field": "company_letterhead", "op": "truthy" },
+        { "field": "company_address", "op": "truthy" }
+      ],
+      "set_fill": {
+        "company_letterhead_block": "${company_letterhead}\n${company_address}"
+      }
+    },
+    {
+      "id": "company-letterhead-without-address",
+      "description": "Preserve a supplied Company letterhead when no Company address is supplied.",
+      "when_all": [
+        { "field": "company_letterhead", "op": "truthy" },
+        { "field": "company_address", "op": "falsy" }
+      ],
+      "set_fill": {
+        "company_letterhead_block": "${company_letterhead}"
+      }
+    },
+    {
+      "id": "company-address-without-letterhead",
+      "description": "Render a supplied Company address even when no separate Company letterhead text is supplied.",
+      "when_all": [
+        { "field": "company_letterhead", "op": "falsy" },
+        { "field": "company_address", "op": "truthy" }
+      ],
+      "set_fill": {
+        "company_letterhead_block": "${company_address}"
+      }
+    }
+  ]
+}

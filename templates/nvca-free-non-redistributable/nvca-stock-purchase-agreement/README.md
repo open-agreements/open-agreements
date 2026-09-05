@@ -7,6 +7,10 @@ Field-selector for the NVCA Model Stock Purchase Agreement (version 10-28-2025).
 The source document is freely downloadable from [NVCA](https://nvca.org) but is
 not redistributable. This field-selector contains only transformation instructions.
 
+## Repeatable schedule dependency
+
+The Schedule of Purchasers and Schedule of Non-Signing Holders require repeatable table-row bindings for purchaser economics. The scalar recipe must not flatten those rows into one text field. Runtime support is tracked downstream in [open-agreements/open-agreements#733](https://github.com/open-agreements/open-agreements/issues/733); until that issue is implemented, an execution-readiness check must report the empty schedules as open items.
+
 ## Interaction Audit Coverage
 
 The NVCA SPA test suite includes interaction-focused coverage that asserts

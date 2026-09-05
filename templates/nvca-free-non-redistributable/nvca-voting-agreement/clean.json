@@ -3,10 +3,10 @@
   "removeParagraphPatterns": [
     "^Note to Drafter:",
     "^Preliminary Note\\b",
-    "^\\[?Alternative 1:",
-    "^\\[?Alternative 2:",
-    "^\\[Alternative",
-    "^Last [Uu]pdated"
+    "^Last [Uu]pdated",
+    "^\\[Alternative 1: Except as",
+    "^\\[Alternative 2:$"
+    ,"^\\[the provisions of Section 1\\.2\\(a\\) and this Section 7\\.8\\(b\\)\\(iii\\)"
   ],
   "removeRanges": [
     {

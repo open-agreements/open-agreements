@@ -293,6 +293,7 @@ describeWithSource('SPA agreement date + dispute-resolution alternatives (#619)'
         values: {
           company_name: 'Meridian Robotics, Inc.',
           agreement_date: '2026-03-15',
+          purchasers: [{ name_and_address: 'Example Purchaser' }],
         },
       });
 
@@ -318,6 +319,7 @@ describeWithSource('SPA agreement date + dispute-resolution alternatives (#619)'
           arbitration_location: 'Boston, Massachusetts',
           state_lower: 'massachusetts',
           judicial_district: 'District of Massachusetts',
+          purchasers: [{ name_and_address: 'Example Purchaser' }],
         },
       });
 
@@ -359,6 +361,7 @@ describeWithSource('SPA agreement date + dispute-resolution alternatives (#619)'
           // arbitration alternative that selection removes. Verification must
           // be selection-aware and not warn "Missing: arbitration_location".
           arbitration_location: 'Boston, Massachusetts',
+          purchasers: [{ name_and_address: 'Example Purchaser' }],
         },
       });
 
@@ -413,14 +416,14 @@ describe('loadSelectorContracts (CoI)', () => {
     const fieldSelectorDir = resolveFieldSelectorDir(COI);
     const fieldNames = loadFieldSelectorMetadata(fieldSelectorDir).fields.map((f) => f.name);
     const { manifests, templateManifest } = loadSelectorContracts(fieldSelectorDir, fieldNames);
-    // 28 field manifests; see header note for the deferrals. `original_incorporation_date` and
+    // 31 field manifests; see header note for the deferrals. `original_incorporation_date` and
     // `effective_date` (#608) are pure selector-contracts with NO migrated legacy keys — the 5 recital
     // `[________ __, 20__]` keys that formerly backed `effective_date` were removed from both
     // replacements.json and migrated_keys.
     // Percentage rendering remains declarative in replacements.json; it does
     // not need a selector manifest or migrated keys.
-    expect(manifests).toHaveLength(27);
-    expect(templateManifest?.migrated_keys).toHaveLength(56);
+    expect(manifests).toHaveLength(31);
+    expect(templateManifest?.migrated_keys).toHaveLength(63);
     // every field_id is a real metadata field (loadSelectorContracts already enforces this, but assert
     // the join key explicitly) and every migrated key is a real replacements.json key (no drift/typos).
     const metaFields = new Set(fieldNames);
@@ -482,6 +485,14 @@ describeWithCoiSource('CoI `>`-anchor field migration parity', () => {
     // removing the adjacent drafting instruction; the legacy replacement
     // consumed both and emitted a naked numeric value.
     'original_issue_price',
+    // These computed clause selectors deliberately replace a wider source
+    // carrier than the legacy scalar patch, so whole-document byte identity
+    // is neither expected nor the relevant contract. Production fill tests
+    // cover their selected and omitted output instead.
+    'qualified_direct_listing_market_cap_clause',
+    'qualified_ipo_price_clause',
+    'qualified_ipo_proceeds_clause',
+    'specify_percentage_clause',
   ]);
   for (const manifest of manifests.filter((m) => !noLegacyParity.has(m.field_id))) {
     const field = manifest.field_id;

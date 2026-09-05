@@ -19,9 +19,6 @@ fields:
   - name: investor_name
     type: string
     description: Full name of the lead investor
-  - name: investor_2_name
-    type: string
-    description: Full name of the second investor (if applicable)
   - name: key_holder_name
     type: string
     description: Name of the key holder (typically founder/CEO)
@@ -46,6 +43,31 @@ fields:
     type: string
     description: Computed active number-only percentage threshold or a visible insertion marker; do not supply directly
     default: ''
+  - name: requisite_holders_standard
+    type: enum
+    options: [percentage, majority]
+    description: Select whether Requisite Holders is an exact percentage threshold or a simple majority
+    default: percentage
+  - name: requisite_holders_percentage
+    type: string
+    description: Bare percentage number used when requisite_holders_standard is percentage (for example, 60; do not include the percent sign)
+    default: ''
+  - name: requisite_holders_text
+    type: string
+    description: Computed selected Requisite Holders threshold text; do not supply directly
+    default: ''
+  - name: board_size
+    type: string
+    description: Authorized number of Board seats under the agreed post-closing board structure (number only)
+  - name: vacant_board_seats_at_closing
+    type: string
+    description: Number of authorized Board seats intentionally vacant at the Closing (number only)
+    default: '0'
+  - name: common_director_designation
+    type: enum
+    options: [qualified_key_holders, named_service_contingent]
+    description: Select whether the Common Director is designated by the Qualified Key Holders or is a named director whose service is employment-contingent
+    default: qualified_key_holders
   - name: preferred_director_name
     type: string
     description: Initial preferred director named in the selected board-composition provision
@@ -58,18 +80,39 @@ fields:
   - name: mutual_director_name
     type: string
     description: Initial independent mutual director designated by the other seated directors
+  - name: include_qualified_direct_listing_termination
+    type: boolean
+    description: Whether a Qualified Direct Listing terminates the agreement alongside an underwritten public offering
+    default: true
+  - name: sale_section_3_survives
+    type: boolean
+    description: Whether Section 3 survives a Sale of the Company to the extent needed to enforce that sale
+    default: true
+  - name: termination_date_mode
+    type: enum
+    options: [no_fixed_date, fixed_date]
+    description: Select whether the agreement has an additional fixed calendar termination date
+    default: no_fixed_date
+  - name: fixed_termination_date
+    type: date
+    description: Additional calendar termination date; required only when termination_date_mode is fixed_date
+    default: ''
   - name: effective_date
     type: date
     description: >-
       Effective date of the agreement ("is made as of <date>"). Accepts ISO YYYY-MM-DD (rendered as e.g.
       "March 15, 2026") or a display-ready date string.
+  - name: has_prior_agreement
+    type: boolean
+    description: Whether this agreement amends and restates an expressly identified predecessor Voting Agreement
+    default: false
+  - name: prior_agreement_date
+    type: date
+    description: Date of the predecessor Voting Agreement; used only when has_prior_agreement is true
+    default: ''
   - name: company_counsel
     type: string
     description: Company counsel name and address
-  - name: counsel_cc
-    type: string
-    description: Additional counsel to CC on notices, or empty string if none
-    default: ''
   - name: judicial_district
     type: string
     description: Federal judicial district for disputes (e.g. District of Delaware)
@@ -80,7 +123,7 @@ fields:
     default: Delaware
   - name: specify_percentage
     type: string
-    description: Percentage threshold for drag-along and amendment provisions — include the percent sign (e.g. 60%); occurrences where the source carries a trailing % absorb it
+    description: Percentage threshold for drag-along and amendment provisions, as a number only (for example, 60)
   - name: amended_restated_upper
     type: string
     description: AMENDED AND RESTATED or empty string
@@ -101,15 +144,157 @@ fields:
     type: string
     description: Par value per share of common and preferred stock (number only, e.g. 0.0001 — the document supplies the dollar sign)
     default: '0.0001'
+  - name: qualified_key_holder_service_basis
+    type: enum
+    description: Service qualification used in the Qualified Key Holder definition
+    options: [employee_only, employee_or_consultant]
+  - name: qualified_key_holder_service_suffix
+    type: string
+    description: Computed consultant-service alternative for the Qualified Key Holder definition; do not supply directly
+    default: ''
+  - name: common_director_amendment_consent_basis
+    type: enum
+    description: Select whether the Common Director amendment protection is approved by Qualified Key Holders or a specified percentage of Common Stock holders
+    options: [qualified_key_holders, common_stock_percentage]
+    default: qualified_key_holders
+  - name: common_director_amendment_consent_text
+    type: string
+    description: Computed complete approval class for the Common Director amendment protection; do not supply directly
+    default: ''
+  - name: drag_approval_mode
+    type: enum
+    description: Approvals required in addition to the Selling Investors for a drag-along
+    options: [selling_investors_only, plus_key_holders, plus_board, plus_key_holders_and_board]
+  - name: drag_selling_investor_basis
+    type: enum
+    description: Securities used for the Selling Investor approval numerator
+    options: [preferred_stock, converted_common]
+  - name: drag_requires_key_holder_approval
+    type: boolean
+    description: Computed selector input for the separate Qualified Key Holder vote
+  - name: drag_requires_board_approval
+    type: boolean
+    description: Computed selector input for Board approval
+  - name: drag_include_certificate_amendment
+    type: boolean
+    description: Include related Restated Certificate amendments or restatements in the compelled vote
+  - name: drag_include_definitive_agreements
+    type: boolean
+    description: Include related definitive transaction agreements in the compelled vote
+  - name: drag_delay_uses_reasonable_expectation
+    type: boolean
+    description: Qualify competing proposals by whether they reasonably could be expected to delay or impair the Sale
+  - name: drag_include_gross_negligence_exception
+    type: boolean
+    description: Include gross negligence in the Stockholder Representative liability exception
+  - name: drag_include_company_representation_escrow
+    type: boolean
+    description: Permit Company-representation claims to be paid from the common escrow
+  - name: drag_include_same_form_consideration
+    type: boolean
+    description: Include Section 3.2(g)'s same-form-of-consideration protection
+  - name: stock_sale_notice_days
+    type: string
+    description: Advance notice period for a different allocation in a Stock Sale, number only
+  - name: director_removal_other_than_for_cause
+    type: boolean
+    description: Permit removal other than for cause when the selected contractual triggers apply
+  - name: joinder_security_scope
+    type: enum
+    description: Securities whose later issuance triggers a Voting Agreement joinder
+    options: [shares_only, shares_options_and_warrants]
+  - name: joinder_minimum_ownership_percentage
+    type: string
+    description: Minimum post-issuance ownership triggering joinder, number only
+  - name: key_holder_consent_percentage
+    type: string
+    description: Qualified Key Holder amendment-consent threshold, number only
+  - name: key_holder_ownership_floor_percentage
+    type: string
+    description: Outstanding-capital ownership floor below which Key Holder consent is not required, number only
+  - name: sanctions_scope
+    type: enum
+    description: Sanctions authorities and lists included in the Voting Agreement
+    options: [united_states_only, united_states_eu_uk]
+  - name: sanctions_authorities_suffix
+    type: string
+    description: Computed additional sanctions authorities; do not supply directly
+    default: ''
+  - name: sanctions_lists_suffix
+    type: string
+    description: Computed additional sanctions lists; do not supply directly
+    default: ''
+  - name: enforcement_costs_mode
+    type: enum
+    description: Allocation of enforcement costs
+    options: [own_costs, prevailing_party]
+  - name: company_signatory_name
+    type: string
+    description: Printed name of the Company's authorized signatory
+  - name: company_signatory_title
+    type: string
+    description: Title of the Company's authorized signatory
+  - name: company_notice_address
+    type: string
+    description: Company's notice address on its signature page
+  - name: company_notice_email
+    type: string
+    description: Company's notice email on its signature page
+  - name: investor_signatory_name
+    type: string
+    description: Printed name of the lead Investor's authorized signatory
+  - name: investor_signatory_title
+    type: string
+    description: Title of the lead Investor's authorized signatory
+  - name: investors
+    type: array
+    description: Investor notice and signature schedule rows
+    items:
+      - name: name
+        type: string
+        description: Investor legal name
+      - name: address
+        type: string
+        description: Investor notice address
+      - name: phone
+        type: string
+        description: Investor notice phone number
+      - name: email
+        type: string
+        description: Investor notice email address
+      - name: counsel_cc
+        type: string
+        description: Investor counsel copied on notices, or empty string if none
+  - name: key_holders
+    type: array
+    description: Key Holder personal notice and signature schedule rows
+    items:
+      - name: name
+        type: string
+        description: Key Holder legal name
+      - name: address
+        type: string
+        description: Key Holder personal notice address
+      - name: email
+        type: string
+        description: Key Holder personal email address
 priority_fields:
   - company_name
   - investor_name
   - key_holder_name
   - preferred_director_eligibility_basis
+  - requisite_holders_standard
+  - requisite_holders_percentage
+  - board_size
+  - vacant_board_seats_at_closing
+  - common_director_designation
   - preferred_director_name
   - common_director_name
   - ceo_director_name
   - mutual_director_name
+  - include_qualified_direct_listing_termination
+  - sale_section_3_survives
+  - termination_date_mode
   - effective_date
   - company_counsel
   - judicial_district
@@ -117,6 +302,31 @@ priority_fields:
   - specify_percentage
   - series_designation
   - par_value
+  - qualified_key_holder_service_basis
+  - drag_approval_mode
+  - drag_selling_investor_basis
+  - drag_include_certificate_amendment
+  - drag_include_definitive_agreements
+  - drag_delay_uses_reasonable_expectation
+  - drag_include_gross_negligence_exception
+  - drag_include_company_representation_escrow
+  - drag_include_same_form_consideration
+  - stock_sale_notice_days
+  - director_removal_other_than_for_cause
+  - joinder_security_scope
+  - joinder_minimum_ownership_percentage
+  - key_holder_consent_percentage
+  - key_holder_ownership_floor_percentage
+  - sanctions_scope
+  - enforcement_costs_mode
+  - company_signatory_name
+  - company_signatory_title
+  - company_notice_address
+  - company_notice_email
+  - investor_signatory_name
+  - investor_signatory_title
+  - investors
+  - key_holders
 artifact_kind: agreement
 capabilities:
   - review

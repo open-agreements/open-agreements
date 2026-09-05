@@ -86,6 +86,200 @@
       },
       "trim_unmatched_trailing_bracket": true,
       "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-defined-term-elections",
+      "ignore_heading": true,
+      "section_heading": "Definitions",
+      "paragraph_contains": "“Investors’ Rights Agreement” means",
+      "replacements": { "[and certain other stockholders of the Company]": "and certain other stockholders of the Company" }
+    },
+    {
+      "id": "unwrap-requisite-purchasers-majority",
+      "ignore_heading": true,
+      "section_heading": "Definitions",
+      "paragraph_contains": "Requisite Purchasers",
+      "replacements": { "[a majority]": "a majority" }
+    },
+    {
+      "id": "unwrap-subsidiary-section-refs",
+      "ignore_heading": true,
+      "section_heading": "Representations and Warranties of the Company",
+      "paragraph_contains": "For purposes of these representations and warranties",
+      "replacements": {
+        "[, 2.21, 2.22, 2.23, 2.24]": ", 2.21, 2.22, 2.23, 2.24",
+        "[and the second to last sentence of Section 2.25]": "and the second to last sentence of Section 2.25"
+      }
+    },
+    {
+      "id": "unwrap-subsequent-closing-carriers",
+      "ignore_heading": true,
+      "section_heading": "Conditions",
+      "paragraph_contains": "subsequent Closing",
+      "replacements": {
+        "[or any subsequent Closing]": "or any subsequent Closing",
+        "[and, as to any subsequent Closing, in all material respects as of such subsequent Closing]": "and, as to any subsequent Closing, in all material respects as of such subsequent Closing",
+        "[and, as to any subsequent Closing, in all material respects on or before such subsequent Closing]": "and, as to any subsequent Closing, in all material respects on or before such subsequent Closing",
+        "[or any subsequent Closing, as the case may be,]": "or any subsequent Closing, as the case may be,"
+      }
+    },
+    {
+      "id": "unwrap-post-closing-capitalization",
+      "ignore_heading": true,
+      "section_heading": "Capitalization",
+      "paragraph_contains": "Section 2.2(c) of the Disclosure Schedule",
+      "replacements": { "[Section": "Section", "if any.] Except": "if any. Except" }
+    },
+    {
+      "id": "unwrap-restated-certificate-filing",
+      "ignore_heading": true,
+      "section_heading": "Governmental Consents and Filings",
+      "paragraph_contains": "filing of the Restated Certificate",
+      "replacements": { "[(i) the filing": "(i) the filing", "and (ii)] filings": "and (ii) filings" }
+    },
+    {
+      "id": "unwrap-patent-knowledge-qualifiers",
+      "ignore_heading": true,
+      "section_heading": "Intellectual Property",
+      "paragraph_contains": "with respect to patents and trademarks",
+      "replacements": { "[with respect to patents and trademarks]": "with respect to patents and trademarks" }
+    },
+    {
+      "id": "unwrap-generative-ai",
+      "ignore_heading": true,
+      "section_heading": "Intellectual Property",
+      "paragraph_contains": "The Company uses all Generative AI Tools",
+      "replacements": { "[Generative AI.": "Generative AI.", "[material]": "material", "prompts.]": "prompts." }
+    },
+    {
+      "id": "unwrap-labor-representation",
+      "ignore_heading": true,
+      "section_heading": "Employee Matters",
+      "paragraph_contains": "contract, commitment or arrangement with any labor union",
+      "replacements": { "[The Company is not bound": "The Company is not bound", "employees.]": "employees." }
+    },
+    {
+      "id": "unwrap-bad-actor-representation",
+      "ignore_heading": true,
+      "section_heading": "Employee Matters",
+      "paragraph_contains": "none of the Officers or directors of the Company has been",
+      "replacements": { "[To the Company’s knowledge, none": "To the Company’s knowledge, none", "vacated.]": "vacated." }
+    },
+    {
+      "id": "unwrap-ira-condition-stockholders",
+      "ignore_heading": true,
+      "section_heading": "Investors’ Rights Agreement",
+      "paragraph_contains": "other stockholders of the Company named as parties thereto",
+      "replacements": { "[and the other stockholders": "and the other stockholders", "parties thereto]": "parties thereto" }
+    },
+    {
+      "id": "unwrap-disclosure-schedule-boilerplate",
+      "ignore_heading": true,
+      "section_heading": "Disclosure Schedule",
+      "paragraph_contains": "This Disclosure Schedule is made and given pursuant to Section 2",
+      "replacements": { "[This Disclosure Schedule": "This Disclosure Schedule", "respective counsel.]": "respective counsel." }
+    },
+    {
+      "id": "unwrap-anti-corruption-controls",
+      "ignore_heading": true, "section_heading": "Foreign Corrupt Practices Act",
+      "paragraph_contains": "systems of internal controls",
+      "replacements": { "[The Company represents": "The Company represents", "[and written policies]": "and written policies", "detail, all transactions and dispositions of funds and assets.]": "detail, all transactions and dispositions of funds and assets.", "nor[, to the Company’s knowledge,]": "nor, to the Company’s knowledge," }
+    },
+    {
+      "id": "unwrap-standard-inbound-carveout",
+      "ignore_heading": true, "section_heading": "Intellectual Property",
+      "paragraph_contains": "products and cloud services are not incorporated",
+      "replacements": { "[, which products": ", which products", "services]": "services" }
+    },
+    {
+      "id": "unwrap-ip-security-mae",
+      "ignore_heading": true, "section_heading": "Intellectual Property",
+      "paragraph_contains": "except as would not reasonably be expected to result in a Material Adverse Effect",
+      "replacements": { "[except as": "except as", "Effect]": "Effect" }
+    },
+    {
+      "id": "unwrap-consultant-ip-qualifiers",
+      "ignore_heading": true, "section_heading": "Intellectual Property",
+      "paragraph_contains": "Each current and former consultant",
+      "replacements": { "[material]": "material", "[substantially]": "substantially" }
+    },
+    {
+      "id": "unwrap-oss-materiality",
+      "ignore_heading": true, "section_heading": "Intellectual Property",
+      "paragraph_contains": "The Company has not embedded, used, linked or distributed any open source",
+      "replacements": { "[material]": "material" }
+    },
+    {
+      "id": "unwrap-related-party-qualifiers",
+      "ignore_heading": true, "section_heading": "Certain Transactions",
+      "paragraph_contains": "None of the Company’s directors, officers or employees",
+      "replacements": { "[or consultants]": "or consultants", "[material]": "material" }
+    },
+    {
+      "id": "unwrap-employee-conflict-knowledge",
+      "ignore_heading": true, "section_heading": "Employee Matters",
+      "paragraph_contains": "none of its employees is obligated under any contract",
+      "replacements": { "[To the Company’s knowledge,]": "To the Company’s knowledge,", "[, to the Company’s knowledge,]": ", to the Company’s knowledge," }
+    },
+    {
+      "id": "select-material-tax-scope",
+      "ignore_heading": true, "section_heading": "Tax Returns and Payments",
+      "paragraph_contains": "taxes due and payable by the Company",
+      "replacements": { "[income or other material]": "material" }
+    },
+    {
+      "id": "unwrap-environmental-knowledge",
+      "ignore_heading": true, "section_heading": "Environmental and Safety Laws",
+      "paragraph_contains": "Except as could not reasonably be expected to have a Material Adverse Effect",
+      "replacements": { "[to the best of its knowledge]": "to the best of its knowledge", "[to the Company’s knowledge]": "to the Company’s knowledge" }
+    },
+    {
+      "id": "unwrap-privacy-notification",
+      "ignore_heading": true, "section_heading": "Data Privacy",
+      "paragraph_contains": "where Privacy Requirements obligate the Company to notify",
+      "replacements": { "[To the Company’s knowledge,": "To the Company’s knowledge,", "[where Privacy Requirements": "where Privacy Requirements", "occurrence].]": "occurrence." }
+    },
+    {
+      "id": "unwrap-export-knowledge",
+      "ignore_heading": true, "section_heading": "Export Control Laws",
+      "paragraph_contains": "future claims",
+      "replacements": { "[to the Company’s knowledge,]": "to the Company’s knowledge," }
+    },
+    {
+      "id": "unwrap-cfius-future-intent",
+      "ignore_heading": true, "section_heading": "CFIUS Representations",
+      "paragraph_contains": "no current intention of engaging in such activities",
+      "replacements": { "[The Company has": "The Company has", "future.]": "future." }
+    },
+    {
+      "id": "select-us-sanctions",
+      "ignore_heading": true, "section_heading": "Sanctions",
+      "paragraph_contains": "trade and economic sanctions administered by the United States",
+      "replacements": { "[Since April 24, 2019]": "Since January 1, 2020", "[in all material respects]": "in all material respects", "[, European Union, or United Kingdom]": "", "[and ]": "and ", "[, the Consolidated List of Persons, Groups, and Entities Subject to EU Financial Sanctions, and the UK’s Consolidated Sanctions List]": "", "[or, [to the Company’s knowledge,] other relevant]": "or, to the Company’s knowledge, other relevant" }
+    },
+    {
+      "id": "unwrap-outbound-board-representation",
+      "ignore_heading": true, "section_heading": "Not a Covered Outbound Investment",
+      "paragraph_contains": "directly or indirectly holds a board seat",
+      "replacements": { "[(c) The Company": "(c) The Company", "Program.]": "Program." }
+    },
+    {
+      "id": "unwrap-dsp-policies",
+      "ignore_heading": true, "section_heading": "Data Security Program",
+      "paragraph_contains": "policies and procedures reasonably designed to promote compliance with the DSP",
+      "replacements": { "[The Company maintains": "The Company maintains", "DSP.]": "DSP." }
+    },
+    {
+      "id": "omit-known-foreign-purchaser-carveout",
+      "ignore_heading": true, "section_heading": "CFIUS Foreign Person Status",
+      "paragraph_contains": "Known Foreign Purchasers on Exhibit A",
+      "replacements": { "[Except for Purchasers indicated as Known Foreign Purchasers on Exhibit A,]": "" }
+    },
+    {
+      "id": "unwrap-amendment-elections",
+      "ignore_heading": true, "section_heading": "Amendments and Waivers",
+      "paragraph_contains": "for an amendment, termination or waiver effected prior to the Initial Closing",
+      "replacements": { "[(i)]": "(i)", "[, or (ii)": ", or (ii)", "Initial Closing]": "Initial Closing", "[; provided, however": "; provided, however", "own behalf, without the consent of any other party]": "own behalf, without the consent of any other party" }
     }
   ]
 }

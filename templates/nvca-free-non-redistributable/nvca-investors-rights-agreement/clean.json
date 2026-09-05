@@ -8,7 +8,7 @@
     "^Alternative 2:",
     "^Alternative:",
     "^\\[Alternative",
-    "^Annex 2",
+    "^\\]$",
     "^Last [Uu]pdated"
   ],
   "removeRanges": [

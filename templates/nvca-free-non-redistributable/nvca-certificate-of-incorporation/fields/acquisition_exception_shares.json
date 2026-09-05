@@ -22,7 +22,7 @@
     {
       "primary": {
         "kind": "regex",
-        "pattern": "Directors\\]\\s+\\[\\[do\\s+not\\s+exceed\\s+an\\s+aggregate\\s+of\\s+(\\[______\\])",
+        "pattern": "Directors\\]\\s+(\\[\\[do\\s+not\\s+exceed\\s+an\\s+aggregate\\s+of\\s+\\[______\\])",
         "group": 1
       }
     }

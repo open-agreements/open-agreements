@@ -2,7 +2,7 @@
   "schema_version": 1,
   "field_id": "original_issue_price",
   "field_label": "Original Issue Price",
-  "description": "Original purchase price per share of Series A Preferred Stock",
+  "description": "Original purchase price per share of the designated series of Preferred Stock; accepts a value with or without a leading dollar sign and renders exactly one dollar sign",
   "source_template_version": "10-1-2025",
   "occurrences": [
     {
@@ -14,7 +14,8 @@
     }
   ],
   "postconditions": [
-    "no_unresolved_placeholder"
+    "no_unresolved_placeholder",
+    "no_double_dollar"
   ],
   "failure_behavior": "warn",
   "fixtures": []

@@ -11,9 +11,11 @@
   "business_description": "AI-native contract lifecycle automation and governance software for enterprise legal teams",
   "signature_page_marker": "Signature Page Follows",
   "effective_date": "March 20, 2026",
-  "specify_percentage": "60%",
+  "specify_percentage": "60",
   "rofr_response_days": "45",
   "key_holders_label": "Key Holders",
   "series_designation": "C",
-  "par_value": "0.0001"
+  "par_value": "0.0001",
+  "investors": [{"name":"Atlas Peak Ventures, L.P.","address":"100 Market Street, Wilmington, DE 19801","phone":"302-555-0100","email":"atlas@example.com","counsel_cc":"Cooley LLP, 3175 Hanover Street, Palo Alto, CA 94304"}],
+  "key_holders": [{"name":"Maya Imani","address":"200 Founder Avenue, Palo Alto, CA 94304","email":"maya@example.com"}]
 }

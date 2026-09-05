@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "actions": [
+    {
+      "target": "_Ref264906803",
+      "strategy": "literalize",
+      "literal": "2.5",
+      "expected_cached_result": "2.5",
+      "expected_matches": 1,
+      "expected_target_count": 1
+    },
+    {
+      "target": "_Ref264906872",
+      "strategy": "literalize",
+      "literal": "2.5",
+      "expected_cached_result": "2.5",
+      "expected_matches": 1,
+      "expected_target_count": 1
+    }
+  ]
+}

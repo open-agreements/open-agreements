@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "field_id": "preferred_director_seats",
-  "field_label": "Preferred Director Seats",
-  "description": "Number of Preferred Director board seats",
+  "field_id": "specify_percentage_clause",
+  "field_label": "Specified Percentage Clause",
+  "description": "Complete percentage carrier computed from the number-only percentage input",
   "source_template_version": "10-1-2025",
   "occurrences": [
     {
       "primary": {
         "kind": "regex",
-        "pattern": "basis,\\s+shall\\s+be\\s+entitled\\s+to\\s+elect\\s+(\\[__\\])",
+        "pattern": "least\\s+(\\[specify\\s+percentage\\],?)",
         "group": 1
       }
     }

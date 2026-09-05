@@ -11,7 +11,7 @@
   "business_description": "enterprise maritime logistics software",
   "signature_page_marker": "Signature Page Follows",
   "effective_date": "2026-08-18",
-  "specify_percentage": "60%",
+  "specify_percentage": "60",
   "rofr_response_days": "45",
   "key_holders_label": "Key Holders",
   "series_designation": "B",
@@ -21,5 +21,7 @@
   "investor_minimum_shares": "250,000",
   "permitted_transfer_percentage": "10",
   "key_holder_consent_threshold_percentage": "5",
-  "permitted_transferee_minimum_shares": "100,000"
+  "permitted_transferee_minimum_shares": "100,000",
+  "investors": [{"name":"Northstar Ventures III, L.P.","address":"100 Market Street, Wilmington, DE 19801","phone":"302-555-0100","email":"northstar@example.com","counsel_cc":""}],
+  "key_holders": [{"name":"Elena Marquez","address":"200 Founder Avenue, Wilmington, DE 19801","email":"elena@example.com"}]
 }

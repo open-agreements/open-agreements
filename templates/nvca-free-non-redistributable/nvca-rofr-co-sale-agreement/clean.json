@@ -6,7 +6,8 @@
     "^\\[?Alternative 1:",
     "^\\[?Alternative 2:",
     "^\\[Alternative",
-    "^Last [Uu]pdated"
+    "^Last [Uu]pdated",
+    "^\\[.*[Rr]ight of [Ff]irst [Rr]efusal and [Cc]o-[Ss]ale [Aa]greement\\]$"
   ],
   "removeRanges": [
     {

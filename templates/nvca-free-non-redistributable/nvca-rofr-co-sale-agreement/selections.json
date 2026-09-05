@@ -1,0 +1,272 @@
+{
+  "groups": [
+    {
+      "id": "fresh_financing_conjunction",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        {
+          "label": "Prior-agreement recital conjunction",
+          "marker": "[and]",
+          "trigger": { "field": "has_prior_agreement", "equals": true },
+          "replaceWith": ""
+        }
+      ]
+    },
+    {
+      "id": "prior_agreement_recital",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": [".+"],
+      "options": [
+        {
+          "marker": "previously entered into",
+          "trigger": { "field": "has_prior_agreement", "equals": true },
+          "replaceWith": ""
+        }
+      ]
+    },
+    {
+      "id": "prior_agreement_existing_investors",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        {
+          "label": "Existing Investors recital reference",
+          "marker": "[, the Existing Investors]",
+          "trigger": { "field": "has_prior_agreement", "equals": true },
+          "replaceWith": ""
+        }
+      ]
+    },
+    {
+      "id": "prior_agreement_amendment_phrase",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        {
+          "label": "Amend-and-restate recital phrase",
+          "marker": "[amending and restating the Prior Agreement in its entirety and] ",
+          "trigger": { "field": "has_prior_agreement", "equals": true },
+          "replaceWith": ""
+        }
+      ]
+    },
+    {
+      "id": "prior_agreement_supersession_clause",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        {
+          "label": "Prior-agreement supersession clause",
+          "marker": "[Upon the effectiveness of this Agreement, the Prior Agreement shall be deemed amended and restated and superseded and replaced in its entirety by this Agreement, and shall be of no further force or effect.] ",
+          "trigger": { "field": "has_prior_agreement", "equals": true },
+          "replaceWith": ""
+        }
+      ]
+    },
+    {
+      "id": "additional_preferred_series",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        {
+          "label": "Additional Preferred Stock series",
+          "marker": "[and Series {additional_series_designation} Preferred Stock]",
+          "trigger": { "field": "has_additional_preferred_series", "equals": true },
+          "replaceWith": ""
+        }
+      ]
+    },
+    {
+      "id": "special_mandatory_conversion",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [{
+        "label": "Special mandatory conversion exclusion",
+        "marker": "[but excluding any shares of Common Stock issued upon Conversion of Preferred Stock pursuant to a Special Mandatory Conversion (as defined in the Restated Certificate)]",
+        "trigger": { "field": "include_special_mandatory_conversion", "equals": true },
+        "replaceWith": ""
+      }]
+    },
+    {
+      "id": "foreign_person_definitions",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": [".+"],
+      "options": [
+        { "label": "Defense Production Act definition", "marker": "“DPA” means Section 721", "trigger": { "field": "include_foreign_person_provisions", "equals": true } },
+        { "label": "DPA Triggering Rights definition", "marker": "“DPA Triggering Rights” means", "trigger": { "field": "include_foreign_person_provisions", "equals": true } },
+        { "label": "Foreign Person definition", "marker": "“Foreign Person” means either", "trigger": { "field": "include_foreign_person_provisions", "equals": true } },
+        {
+          "label": "Foreign Person investor limitation",
+          "marker": "Limitation on Foreign Person Investors",
+          "trigger": { "field": "include_foreign_person_provisions", "equals": true },
+          "removal": {
+            "kind": "section",
+            "startAnchor": "[Limitation on Foreign Person Investors",
+            "endAnchor": "[Entity Transfers. No Key Holder that is a trust, corporation, partnership, limited liability company or other entity shall engage or permit any Entity Transfer without complying with this Agreement mutatis mutandis as if such Entity Transfer were a direct Transfer of Transfer Stock by the Key Holder.]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sanctions_jurisdictions",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        { "label": "Additional sanctions jurisdictions", "marker": "[, European Union, or United Kingdom]", "trigger": { "field": "sanctions_scope", "equals": "united_states_eu_uk" }, "replaceWith": "" },
+        { "label": "Additional EU and UK sanctions lists", "marker": "[, the Consolidated List of Persons, Groups, and Entities Subject to EU Financial Sanctions, and the UK’s Consolidated Sanctions List]", "trigger": { "field": "sanctions_scope", "equals": "united_states_eu_uk" }, "replaceWith": "" }
+      ]
+    },
+    {
+      "id": "qualified_direct_listing",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        { "label": "Qualified Direct Listing definition", "marker": "[“Qualified Direct Listing” has the meaning ascribed to it in the Restated Certificate.]", "trigger": { "field": "include_qualified_direct_listing", "equals": true }, "replaceWith": "" },
+        { "label": "Qualified Direct Listing termination", "marker": "[or Qualified Direct Listing, as applicable]", "trigger": { "field": "include_qualified_direct_listing", "equals": true }, "replaceWith": "or Qualified Direct Listing, as applicable" }
+      ]
+    },
+    {
+      "id": "dle_termination_condition",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [{
+        "label": "Conditional liquidation-event termination",
+        "marker": "[in which the consideration received by the Investors in such Deemed Liquidation Event is in the form of cash and/or publicly traded securities, or if the Investors receive substantially similar rights]",
+        "trigger": { "field": "include_dle_termination_condition", "equals": true },
+        "replaceWith": "in which the consideration received by the Investors in such Deemed Liquidation Event is in the form of cash and/or publicly traded securities, or if the Investors receive substantially similar rights"
+      }]
+    },
+    {
+      "id": "dispute_resolution",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": [".+"],
+      "options": [
+        { "label": "Delaware court jurisdiction", "marker": "hereby irrevocably and unconditionally submit to the jurisdiction of the state courts", "trigger": { "field": "dispute_resolution", "equals": "delaware_courts" } }
+      ]
+    },
+    {
+      "id": "costs_rule",
+      "type": "radio",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        { "label": "Each party bears its own costs", "marker": "[Each party will bear its own costs in respect of any disputes arising under this Agreement.]", "trigger": { "field": "costs_rule", "equals": "each_party_own_costs" }, "replaceWith": "" },
+        { "label": "Prevailing party recovers costs", "marker": "[The prevailing party shall be entitled to reasonable attorney’s fees, costs, and necessary disbursements in addition to any other relief to which such party may be entitled.]", "trigger": { "field": "costs_rule", "equals": "prevailing_party" }, "replaceWith": "" }
+      ]
+    },
+    {
+      "id": "proportional_waiver_protection",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [{
+        "label": "Proportional waiver protection",
+        "marker": "provided, however, if, after giving effect to any waiver of Section 2 with respect to a particular transaction",
+        "trigger": { "field": "include_proportional_waiver_protection", "equals": true },
+        "replaceWith": ""
+      }]
+    },
+    {
+      "id": "preexisting_rofr_priority",
+      "type": "radio",
+      "markerless": true,
+      "subClauseStopPatterns": [".+"],
+      "options": [
+        { "label": "Agreement controls conflicting ROFR", "marker": "In the event of a conflict between this Agreement and any other agreement", "trigger": { "field": "preexisting_rofr_priority", "equals": "agreement_controls" } },
+        { "label": "Bylaws control conflicting ROFR", "marker": "In the event of a conflict between this Agreement and the Company’s Bylaws", "trigger": { "field": "preexisting_rofr_priority", "equals": "bylaws_control" } }
+      ]
+    },
+    {
+      "id": "undersubscription_forfeiture",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": [".+"],
+      "options": [{ "label": "All-or-none undersubscription forfeiture", "marker": "Forfeiture of Rights. Notwithstanding the foregoing", "trigger": { "field": "include_undersubscription_forfeiture", "equals": true } }]
+    },
+    {
+      "id": "cosale_denominator_secondary_purchases",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        { "label": "Include investor secondary purchases", "marker": "[(including any shares that such Participating Investor has agreed to purchase pursuant to the Secondary Refusal Right)]", "trigger": { "field": "include_secondary_purchases_in_cosale_denominator", "equals": true }, "replaceWith": "" },
+        { "label": "Include all secondary purchases", "marker": "[(including any shares that all Participating Investors have collectively agreed to purchase pursuant to the Secondary Refusal Right)]", "trigger": { "field": "include_secondary_purchases_in_cosale_denominator", "equals": true }, "replaceWith": "" },
+        { "label": "Reduce selling shares proportionally", "marker": "[To the extent one or more of the Participating Investors exercise such right of participation in accordance with the terms and conditions set forth herein, the number of shares of Transfer Stock that the selling Key Holder may sell in the Proposed Key Holder Transfer shall be correspondingly reduced.]", "trigger": { "field": "include_secondary_purchases_in_cosale_denominator", "equals": true }, "replaceWith": "" }
+      ]
+    },
+    {
+      "id": "entity_transfer_restriction",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": [".+"],
+      "options": [{ "label": "Entity transfer restriction", "marker": "Entity Transfers. No Key Holder that is a trust", "trigger": { "field": "include_entity_transfer_restriction", "equals": true } }]
+    },
+    {
+      "id": "exempt_transfer_additions",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        { "label": "Secured pledge exception", "marker": "[; (d) to a pledge of Transfer Stock that creates a mere security interest in the pledged Transfer Stock, provided that the pledgee thereof agrees in writing in advance to be bound by and comply with all applicable provisions of this Agreement to the same extent as if it were the Key Holder making such pledge;]", "trigger": { "field": "include_pledge_exempt_transfer", "equals": true }, "replaceWith": "" },
+        { "label": "Ten-percent sale exception", "marker": "[or (e) to the sale by the Key Holder of up to {permitted_transfer_percentage_display}% of the Transfer Stock held by such Key Holder as of the date that such Key Holder first became party to this Agreement {prior_agreement_indirect_amendment_reference}]", "trigger": { "field": "include_ten_percent_sale_exempt_transfer", "equals": true }, "replaceWith": "" }
+      ]
+    },
+    {
+      "id": "investor_status_minimum",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [{ "label": "Investor minimum-share threshold", "marker": "; provided, however, that any such person shall cease to be considered an Investor for purposes of this Agreement at any time such person and his, her or its Affiliates collectively hold fewer than {investor_minimum_shares_display} shares of Capital Stock (as adjusted for any stock combination, stock split, stock dividend, recapitalization or other similar transaction)", "trigger": { "field": "include_investor_status_minimum", "equals": true }, "replaceWith": "" }]
+    },
+    {
+      "id": "key_holder_consent_minimum",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [{ "label": "Key Holder consent ownership floor", "marker": "[provided that such consent shall not be required if the Key Holders do not then own shares of Capital Stock representing at least {key_holder_consent_threshold_percentage_display}% of the outstanding Capital Stock of the Company]", "trigger": { "field": "include_key_holder_consent_minimum", "equals": true }, "replaceWith": "provided that such consent shall not be required if the Key Holders do not then own shares of Capital Stock representing at least {key_holder_consent_threshold_percentage_display}% of the outstanding Capital Stock of the Company" }]
+    },
+    {
+      "id": "same_fashion_amendment_safeguard",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": [".+"],
+      "options": [{ "label": "Same-fashion amendment safeguard", "marker": "this Agreement may not be amended, modified or terminated and", "trigger": { "field": "include_full_same_fashion_amendment_safeguard", "equals": true } }]
+    },
+    {
+      "id": "foreign-person-prohibited-transferee-tail",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [{ "label": "Foreign Person transferee restriction", "marker": "[(d) Foreign Person that pursuant to any such transfer would acquire any DPA Triggering Rights, unless otherwise approved by the majority of the disinterested members of the] Board of Directors]", "trigger": { "field": "include_foreign_person_provisions", "equals": true }, "replaceWith": "" }]
+    }
+  ]
+}
