@@ -632,6 +632,105 @@ describe('markerless selections', () => {
 });
 
 describe('bounded markerless removals', () => {
+  it('scopes a duplicated paragraph to unique containing boundaries and preserves those boundaries', async () => {
+    const inputPath = buildTestDocx(
+      para('First section starts here.') +
+      para('Certificate surrender mechanics.') +
+      para('First section ends here.') +
+      para('Second section starts here.') +
+      para('Certificate surrender mechanics.') +
+      para('Second section ends here.'),
+    );
+    const outputPath = join(makeTempDir(), 'out.docx');
+    const config = { groups: [{
+      id: 'second_certificate_surrender', type: 'checkbox', standalone: true, markerless: true,
+      options: [{
+        marker: 'Certificate surrender mechanics.', trigger: { field: 'keep_second', equals: true },
+        removal: {
+          kind: 'paragraph', anchor: 'Certificate surrender', match: 'contains', expectedMatches: 1,
+          within: {
+            startAnchor: 'Second section starts', endAnchor: 'Second section ends',
+            match: 'contains', expectedMatches: 1,
+          },
+        },
+      }],
+    }] } as SelectionsConfig;
+
+    await applySelections(inputPath, outputPath, config, { keep_second: false });
+
+    const text = extractText(outputPath);
+    expect(text).toContain('First section starts here.Certificate surrender mechanics.First section ends here.');
+    expect(text).toContain('Second section starts here.Second section ends here.');
+    expect(text.match(/Certificate surrender mechanics\./g)).toHaveLength(1);
+  });
+
+  it.each([
+    ['missing start', para('Target.') + para('Scope ends.')],
+    ['duplicate start', para('Scope starts.') + para('Scope starts.') + para('Target.') + para('Scope ends.')],
+    ['missing end', para('Scope starts.') + para('Target.')],
+    ['duplicate end', para('Scope starts.') + para('Target.') + para('Scope ends.') + para('Scope ends.')],
+    ['end before start', para('Scope ends.') + para('Scope starts.') + para('Target.')],
+    ['target outside scope', para('Target.') + para('Scope starts.') + para('Inside.') + para('Scope ends.')],
+  ])('fails closed for bounded paragraph scope with %s', async (_name, body) => {
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+    const config = { groups: [{
+      id: 'scoped_target', type: 'checkbox', standalone: true, markerless: true,
+      options: [{
+        marker: 'Target.', trigger: { field: 'keep', equals: true },
+        removal: {
+          kind: 'paragraph', anchor: 'Target.', match: 'exact', expectedMatches: 1,
+          within: {
+            startAnchor: 'Scope starts.', endAnchor: 'Scope ends.',
+            match: 'exact', expectedMatches: 1,
+          },
+        },
+      }],
+    }] } as SelectionsConfig;
+
+    await expect(applySelections(inputPath, outputPath, config, { keep: false })).rejects.toThrow(/paragraph scope|within scope/i);
+  });
+
+  it('validates an ambiguous bounded paragraph target even when its option is selected', async () => {
+    const inputPath = buildTestDocx(
+      para('Scope starts.') + para('Target one.') + para('Target two.') + para('Scope ends.'),
+    );
+    const outputPath = join(makeTempDir(), 'out.docx');
+    const config = { groups: [{
+      id: 'selected_scoped_target', type: 'checkbox', standalone: true, markerless: true,
+      options: [{
+        marker: 'Target', trigger: { field: 'keep', equals: true },
+        removal: {
+          kind: 'paragraph', anchor: 'Target', match: 'contains', expectedMatches: 1,
+          within: {
+            startAnchor: 'Scope starts.', endAnchor: 'Scope ends.',
+            match: 'exact', expectedMatches: 1,
+          },
+        },
+      }],
+    }] } as SelectionsConfig;
+
+    await expect(applySelections(inputPath, outputPath, config, { keep: true })).rejects.toThrow(/within scope matched 2 paragraphs/i);
+  });
+
+  it('requires explicit single-match accounting for a paragraph scope', () => {
+    const parsed = SelectionsConfigSchema.safeParse({ groups: [{
+      id: 'scoped_target', type: 'checkbox', standalone: true, markerless: true,
+      options: [{
+        marker: 'Target.', trigger: { field: 'keep', equals: true },
+        removal: {
+          kind: 'paragraph', anchor: 'Target.', match: 'exact', expectedMatches: 1,
+          within: {
+            startAnchor: 'Scope starts.', endAnchor: 'Scope ends.',
+            match: 'exact', expectedMatches: 2,
+          },
+        },
+      }],
+    }] });
+
+    expect(parsed.success).toBe(false);
+  });
+
   it('removes one uniquely contained paragraph without spilling into sibling paragraphs', async () => {
     const inputPath = buildTestDocx(
       para('Before.') +
