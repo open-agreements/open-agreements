@@ -415,6 +415,7 @@ describe('runFieldSelector', () => {
       normalizedParagraphs: 0,
       declarativeRuleApplications: 1,
     }));
+    const normalizeNumberingMock = vi.fn(() => ({ sections: 0, paragraphs: 0 }));
 
     const runFillPipelineMock = vi.fn(async ({ outputPath, postProcess }: { outputPath: string; postProcess?: (p: string) => Promise<void> }) => {
       if (postProcess) {
@@ -442,6 +443,10 @@ describe('runFieldSelector', () => {
       normalizeBracketArtifacts: normalizeMock,
     }));
 
+    vi.doMock('./numbering-normalizer.js', () => ({
+      normalizeNumberedHeadingSections: normalizeNumberingMock,
+    }));
+
     vi.doMock('../unified-pipeline.js', () => ({
       runFillPipeline: runFillPipelineMock,
     }));
@@ -457,6 +462,7 @@ describe('runFieldSelector', () => {
     });
 
     expect(normalizeMock).toHaveBeenCalledTimes(1);
+    expect(normalizeNumberingMock).toHaveBeenCalledWith('/tmp/output.docx', '/tmp/output.docx');
     expect(normalizeMock.mock.calls[0]).toEqual([
       '/tmp/output.docx',
       '/tmp/output.docx',

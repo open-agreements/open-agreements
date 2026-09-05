@@ -21,6 +21,7 @@ import type { FieldSelectorRunOptions, FieldSelectorRunResult } from './types.js
 import type { ComputedValueMap } from './computed.js';
 import { applyRepeatableTables, loadRepeatableTablesConfig, validateRepeatableTableFields } from './repeatable-tables.js';
 import { bindAnchoredParagraphFields, loadAnchoredParagraphBindingsConfig } from './anchored-paragraph-bindings.js';
+import { normalizeNumberedHeadingSections } from './numbering-normalizer.js';
 
 function toComputedValueMap(values: Record<string, unknown>): ComputedValueMap {
   const computedValues: ComputedValueMap = {};
@@ -166,6 +167,7 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
       : undefined,
     postProcess: shouldNormalizeBracketArtifacts
       ? async (outputDocPath: string) => {
+        normalizeNumberedHeadingSections(outputDocPath, outputDocPath);
         if (shouldNormalizeBracketArtifacts) {
           await normalizeBracketArtifacts(outputDocPath, outputDocPath, {
             rules: normalizeConfig.paragraph_rules,
@@ -260,5 +262,7 @@ export type { FieldSelectorRunOptions, FieldSelectorRunResult, VerifyResult, Ver
 export type { ComputedArtifact, ComputedProfile } from './computed.js';
 export { applyRepeatableTables, loadRepeatableTablesConfig, RepeatableTablesConfigSchema, validateRepeatableTableFields } from './repeatable-tables.js';
 export type { RepeatableTablesConfig } from './repeatable-tables.js';
+export { normalizeNumberedHeadingSections } from './numbering-normalizer.js';
+export type { NumberingNormalizationStats } from './numbering-normalizer.js';
 export { bindAnchoredParagraphFields, loadAnchoredParagraphBindingsConfig, AnchoredParagraphBindingsConfigSchema } from './anchored-paragraph-bindings.js';
 export type { AnchoredParagraphBindingsConfig } from './anchored-paragraph-bindings.js';
