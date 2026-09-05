@@ -112,9 +112,13 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
   const computedEvaluation = computedProfile
     ? evaluateComputedProfile(computedProfile, computedInputValues)
     : null;
-  const effectiveValues = computedEvaluation
+  const mergedValues = computedEvaluation
     ? { ...inputValues, ...computedEvaluation.fillValues }
     : inputValues;
+  // Computed rules may populate a date-typed field. Apply the same strict
+  // formatting/validation boundary to derived values as direct inputs before
+  // writing either the computed trace or the document output.
+  const effectiveValues = formatDocumentDateFields(mergedValues, metadata.fields);
   const verificationValues: Record<string, string> = {};
   for (const field of metadata.fields) {
     if (!replacementFieldNames.has(field.name)) {

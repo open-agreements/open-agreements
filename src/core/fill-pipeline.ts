@@ -127,14 +127,10 @@ const MONTH_NAMES = [
  * and `toLocaleDateString` can render the previous calendar day in
  * negative-offset timezones — and never calls any locale/`Intl` API.
  *
- * Any value that is not a strict `YYYY-MM-DD` string denoting a REAL calendar
- * date is returned UNCHANGED. Beyond the coarse month (01–12) / day (01–31)
- * range, per-month day limits and leap years are enforced, so impossible dates
- * ("2026-02-31", "2025-02-29") are never dressed up as an authoritative document
- * date — they fall through exactly like a non-ISO string. This preserves
- * backward compatibility for callers/fixtures that already supply a display-ready
- * date string (e.g. "March 20, 2026") and passes through empty-but-non-null
- * placeholders (`''`, the blank placeholder) untouched.
+ * Non-ISO values are returned unchanged so callers may continue supplying a
+ * display-ready date string (e.g. "March 20, 2026"). A strict ISO-shaped value
+ * is a machine-readable assertion, however, so an impossible calendar date is
+ * rejected rather than copied into a legal document unchanged.
  */
 export function formatDocumentDate(value: string): string {
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
@@ -142,13 +138,17 @@ export function formatDocumentDate(value: string): string {
   const yearStr = match[1];
   const month = Number(match[2]);
   const day = Number(match[3]);
-  if (month < 1 || month > 12 || day < 1) return value;
+  if (month < 1 || month > 12 || day < 1) {
+    throw new Error(`Invalid ISO date "${value}": expected a real calendar date in YYYY-MM-DD format`);
+  }
   // Reject impossible calendar dates (Feb 30/31, Apr 31, Feb 29 in a non-leap
   // year, …). Deterministic arithmetic only — no Date/locale.
   const year = Number(yearStr);
   const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
   const daysInMonth = [31, isLeapYear ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-  if (day > daysInMonth[month - 1]) return value;
+  if (day > daysInMonth[month - 1]) {
+    throw new Error(`Invalid ISO date "${value}": expected a real calendar date in YYYY-MM-DD format`);
+  }
   // Number(match[3]) drops the leading zero: "05" → 5. yearStr keeps any leading
   // zeros the (unrealistic) 4-digit year might carry.
   return `${MONTH_NAMES[month - 1]} ${day}, ${yearStr}`;
@@ -162,14 +162,32 @@ export function formatDocumentDate(value: string): string {
  */
 export function formatDocumentDateFields(
   values: Record<string, unknown>,
-  fields: FieldDefinition[]
+  fields: FieldDefinition[],
+  pathPrefix = ''
 ): Record<string, unknown> {
   const formatted = { ...values };
   for (const field of fields) {
-    if (field.type !== 'date') continue;
+    const fieldPath = pathPrefix ? `${pathPrefix}.${field.name}` : field.name;
     const value = formatted[field.name];
-    if (typeof value === 'string') {
-      formatted[field.name] = formatDocumentDate(value);
+    if (field.type === 'date' && typeof value === 'string') {
+      try {
+        formatted[field.name] = formatDocumentDate(value);
+      } catch {
+        throw new Error(
+          `Invalid ISO date for field "${fieldPath}": "${value}"; expected a real calendar date in YYYY-MM-DD format`
+        );
+      }
+      continue;
+    }
+    if (field.type === 'array' && field.items && Array.isArray(value)) {
+      formatted[field.name] = value.map((entry, index) => {
+        if (entry === null || typeof entry !== 'object' || Array.isArray(entry)) return entry;
+        return formatDocumentDateFields(
+          entry as Record<string, unknown>,
+          field.items!,
+          `${fieldPath}[${index}]`
+        );
+      });
     }
   }
   return formatted;
