@@ -79,6 +79,39 @@ export async function cleanDocument(
   // Media part names dereferenced by removed drawings (orphan candidates)
   const orphanMediaCandidates = new Set<string>();
 
+  // Header/footer stories can carry source-only guidance independently from
+  // the body. Remove only recipe-declared paragraphs and require an exact
+  // match count so an upstream source change cannot silently delete operative
+  // letterhead (or leave a disclaimer in the execution copy).
+  for (const rule of config.removeStoryParagraphs ?? []) {
+    const partName = rule.part.startsWith('word/') ? rule.part : `word/${rule.part}`;
+    const entry = zip.getEntry(partName);
+    if (!entry) {
+      throw new Error(
+        `removeStoryParagraphs "${rule.id}" expected ${rule.expected_matches} match(es) in ${partName}, found 0 (part missing)`,
+      );
+    }
+    const doc = parser.parseFromString(entry.getData().toString('utf-8'), 'text/xml');
+    const matches = matchingParagraphs(doc, rule.pattern);
+    if (matches.length !== rule.expected_matches) {
+      throw new Error(
+        `removeStoryParagraphs "${rule.id}" expected ${rule.expected_matches} match(es) in ${partName}, found ${matches.length}`,
+      );
+    }
+    for (const paragraph of matches) {
+      if (extract) {
+        entries.push({
+          source: 'pattern',
+          part: partName,
+          index: indexCounter++,
+          text: extractParagraphText(paragraph),
+        });
+      }
+      paragraph.parentNode?.removeChild(paragraph);
+    }
+    modifiedParts.set(partName, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
+  }
+
   // Clear specified parts (replace content with minimal valid XML)
   if (config.clearParts && config.clearParts.length > 0) {
     for (const entry of zip.getEntries()) {
@@ -449,6 +482,18 @@ function removeParagraphsByPattern(doc: Document, patterns: string[]): void {
   for (const para of toRemove) {
     para.parentNode?.removeChild(para);
   }
+}
+
+function matchingParagraphs(doc: Document, pattern: string): Element[] {
+  const regex = new RegExp(pattern, 'i');
+  const paragraphs = doc.getElementsByTagNameNS(W_NS, 'p');
+  const matches: Element[] = [];
+  for (let i = 0; i < paragraphs.length; i++) {
+    const paragraph = paragraphs[i];
+    const text = extractParagraphText(paragraph);
+    if (text && regex.test(text)) matches.push(paragraph);
+  }
+  return matches;
 }
 
 /** Extract text from pattern-matched paragraphs, then remove them. */

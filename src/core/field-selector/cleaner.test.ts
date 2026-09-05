@@ -79,6 +79,26 @@ function addNotesPart(docxPath: string, kind: 'footnote' | 'endnote', ids: numbe
   zip.writeZip(docxPath);
 }
 
+function addStoryPart(docxPath: string, partName: string, paragraphs: string[]): void {
+  const zip = new AdmZip(docxPath);
+  const root = partName.includes('header') ? 'hdr' : 'ftr';
+  const xml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:${root} xmlns:w="${W_NS}">${paragraphs.map((text, index) =>
+    `<w:p><w:pPr><w:pStyle w:val="Story${index}"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>${text}</w:t></w:r></w:p>`,
+  ).join('')}</w:${root}>`;
+  zip.addFile(`word/${partName}`, Buffer.from(xml, 'utf-8'));
+  zip.writeZip(docxPath);
+}
+
+function extractPartParaTexts(docxPath: string, partName: string): string[] {
+  const zip = new AdmZip(docxPath);
+  const entry = zip.getEntry(`word/${partName}`);
+  if (!entry) return [];
+  const doc = new DOMParser().parseFromString(entry.getData().toString('utf-8'), 'text/xml');
+  const paragraphs = doc.getElementsByTagNameNS(W_NS, 'p');
+  return Array.from({ length: paragraphs.length }, (_, index) => paragraphs[index].textContent ?? '');
+}
+
 describe('cleanDocument removeFootnotes inline references', () => {
   it('removes footnote and endnote reference-only runs and leaves scan/render views consistent', async () => {
     const inputPath = buildTestDocxRaw([
@@ -355,6 +375,60 @@ describe('cleanDocument removeBeforePattern', () => {
     ]);
 
     rmSync(outputDir, { recursive: true, force: true });
+  });
+});
+
+describe('cleanDocument removeStoryParagraphs', () => {
+  it('requires an explicit story rule before removing a matching header/footer paragraph', async () => {
+    const inputPath = buildTestDocx(['Body execution text']);
+    addStoryPart(inputPath, 'header1.xml', ['Source guidance', 'Active letterhead']);
+    addStoryPart(inputPath, 'header2.xml', ['Source guidance', 'Second-section heading']);
+    addStoryPart(inputPath, 'footer1.xml', ['Source guidance', 'Page footer']);
+    const unchangedPath = inputPath.replace('input.docx', 'unchanged.docx');
+    const cleanedPath = inputPath.replace('input.docx', 'cleaned.docx');
+
+    await cleanDocument(inputPath, unchangedPath, makeConfig());
+    expect(extractPartParaTexts(unchangedPath, 'header1.xml')).toContain('Source guidance');
+    expect(extractPartParaTexts(unchangedPath, 'footer1.xml')).toContain('Source guidance');
+
+    await cleanDocument(inputPath, cleanedPath, makeConfig({
+      removeStoryParagraphs: [
+        { id: 'header-guidance', part: 'header1.xml', pattern: '^Source guidance$', expected_matches: 1 },
+        { id: 'footer-guidance', part: 'word/footer1.xml', pattern: '^Source guidance$', expected_matches: 1 },
+      ],
+    }));
+
+    expect(extractPartParaTexts(cleanedPath, 'header1.xml')).toEqual(['Active letterhead']);
+    expect(partXml(cleanedPath, 'word/header1.xml')).toContain('<w:b/>');
+    expect(extractPartParaTexts(cleanedPath, 'footer1.xml')).toEqual(['Page footer']);
+    expect(extractPartParaTexts(cleanedPath, 'header2.xml')).toEqual([
+      'Source guidance',
+      'Second-section heading',
+    ]);
+    expect(extractParaTexts(cleanedPath)).toEqual(['Body execution text']);
+
+    rmSync(inputPath.replace('/input.docx', ''), { recursive: true, force: true });
+  });
+
+  it.each([
+    ['missing part', 'header9.xml', '^Source guidance$', 1, /found 0 \(part missing\)/],
+    ['missing paragraph', 'header1.xml', '^Absent$', 1, /found 0$/],
+    ['ambiguous paragraph', 'header1.xml', '^Source guidance$', 1, /found 2$/],
+  ])('fails closed for a %s', async (_case, part, pattern, expectedMatches, error) => {
+    const inputPath = buildTestDocx(['Body execution text']);
+    addStoryPart(inputPath, 'header1.xml', ['Source guidance', 'Source guidance']);
+    const outputPath = inputPath.replace('input.docx', 'output.docx');
+
+    await expect(cleanDocument(inputPath, outputPath, makeConfig({
+      removeStoryParagraphs: [{
+        id: 'declared-cleanup',
+        part,
+        pattern,
+        expected_matches: expectedMatches,
+      }],
+    }))).rejects.toThrow(error);
+
+    rmSync(inputPath.replace('/input.docx', ''), { recursive: true, force: true });
   });
 });
 
