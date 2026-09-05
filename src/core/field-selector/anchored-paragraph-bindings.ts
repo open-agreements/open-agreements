@@ -19,6 +19,8 @@ export const AnchoredParagraphBindingsConfigSchema = z.object({
       expected_matches: z.literal(1),
       insert_after_label: z.literal(true),
       preserve_following_tabs: z.literal(true),
+      /** Opt in only when following underlined tab-only runs are blank form tails. */
+      consume_following_underlined_tabs: z.literal(true).optional(),
     }).strict()).min(1),
   }).strict()).min(1),
 }).strict();
@@ -86,7 +88,12 @@ export function bindAnchoredParagraphFields(
   const paragraphs = directBodyParagraphs(doc);
 
   // Validate the complete plan before mutation, so every failure is atomic.
-  const insertions: Array<{ textNode: Element; field: string; groupId: string }> = [];
+  const insertions: Array<{
+    textNode: Element;
+    field: string;
+    groupId: string;
+    consumeFollowingUnderlinedTabs: boolean;
+  }> = [];
   for (const group of config.groups) {
     const starts = exactAnchorIndices(paragraphs, group.start_anchor);
     const ends = exactAnchorIndices(paragraphs, group.end_anchor);
@@ -115,7 +122,12 @@ export function bindAnchoredParagraphFields(
           `expected one match inside boundaries; found ${matches.length}`,
         );
       }
-      insertions.push({ textNode: matches[0], field: binding.field, groupId: group.id });
+      insertions.push({
+        textNode: matches[0],
+        field: binding.field,
+        groupId: group.id,
+        consumeFollowingUnderlinedTabs: binding.consume_following_underlined_tabs === true,
+      });
     }
   }
 
@@ -132,6 +144,10 @@ export function bindAnchoredParagraphFields(
     // and underline layout carriers.
     tag.textContent = ` {${insertion.field}}`;
     run.insertBefore(tag, insertion.textNode.nextSibling);
+
+    if (insertion.consumeFollowingUnderlinedTabs) {
+      removeFollowingUnderlinedTabTails(run);
+    }
   }
 
   const serialized = new XMLSerializer().serializeToString(doc);
@@ -140,6 +156,37 @@ export function bindAnchoredParagraphFields(
     name === 'word/document.xml' ? Buffer.from(serialized, 'utf-8') : data,
   );
   writeFileSync(outputPath, outZip.toBuffer());
+}
+
+/**
+ * Remove only underlined, textless tab runs following an anchored label/value.
+ * Non-underlined layout tabs remain, and visible text, fields, breaks, drawings,
+ * or any other semantic run content ends the scan.
+ */
+function removeFollowingUnderlinedTabTails(labelRun: Element): void {
+  let sibling = labelRun.nextSibling;
+  while (sibling) {
+    const next = sibling.nextSibling;
+    if (sibling.nodeType !== 1) {
+      sibling = next;
+      continue;
+    }
+    const run = sibling as Element;
+    if (run.namespaceURI !== W_NS || run.localName !== 'r') break;
+
+    const texts = run.getElementsByTagNameNS(W_NS, 't');
+    const hasVisibleText = Array.from(texts).some((text) => (text.textContent ?? '').length > 0);
+    const tabs = run.getElementsByTagNameNS(W_NS, 'tab');
+    const breaks = run.getElementsByTagNameNS(W_NS, 'br');
+    const fields = run.getElementsByTagNameNS(W_NS, 'fldChar');
+    const underlines = run.getElementsByTagNameNS(W_NS, 'u');
+    if (hasVisibleText || breaks.length > 0 || fields.length > 0) break;
+
+    if (tabs.length > 0 && underlines.length > 0) {
+      run.parentNode?.removeChild(run);
+    }
+    sibling = next;
+  }
 }
 
 export function loadAnchoredParagraphBindingsConfig(path: string): AnchoredParagraphBindingsConfig {

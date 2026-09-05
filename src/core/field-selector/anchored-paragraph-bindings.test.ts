@@ -87,6 +87,37 @@ describe('anchor-scoped paragraph field binding', () => {
     rmSync(fixture.dir, { recursive: true, force: true });
   });
 
+  it('optionally consumes only residual underlined tab tails after a bound value', () => {
+    const fixture = build(
+      p(text('START')) +
+      p('<w:r><w:t>Name:</w:t></w:r><w:r><w:tab/></w:r><w:r><w:rPr><w:u w:val="single"/></w:rPr><w:tab/></w:r>') +
+      p(text('END')),
+    );
+    const tailConfig: AnchoredParagraphBindingsConfig = {
+      groups: [{
+        id: 'signature-tail',
+        start_anchor: 'START',
+        end_anchor: 'END',
+        expected_group_matches: 1,
+        bindings: [{
+          label: 'Name:',
+          field: 'signatory_name',
+          expected_matches: 1,
+          insert_after_label: true,
+          preserve_following_tabs: true,
+          consume_following_underlined_tabs: true,
+        }],
+      }],
+    };
+
+    bindAnchoredParagraphFields(fixture.input, fixture.output, tailConfig);
+    const xml = new AdmZip(fixture.output).readAsText('word/document.xml');
+    expect(xml).toContain('Name:</w:t><w:t xml:space="preserve"> {signatory_name}</w:t>');
+    expect((xml.match(/<w:tab/g) ?? [])).toHaveLength(1);
+    expect(xml).not.toContain('<w:u');
+    rmSync(fixture.dir, { recursive: true, force: true });
+  });
+
   it('fails closed on a zero-match label without writing an output', () => {
     const fixture = build(signatureBody.replace('Email:', 'E-mail:'));
     expect(() => bindAnchoredParagraphFields(fixture.input, fixture.output, config))
