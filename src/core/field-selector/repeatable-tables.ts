@@ -27,9 +27,17 @@ const TableBaseSchema = z.object({
 const HeaderTableSchema = TableBaseSchema.extend({
   header_cells: z.array(z.string()).min(1),
   prototype_row_index: z.number().int().positive().optional(),
-}).strict().refine((table) => table.header_cells.length === table.columns.length, {
-  message: 'header_cells and columns must have the same length',
-});
+  existing_data_row_count: z.number().int().positive().optional(),
+}).strict()
+  .refine((table) => table.header_cells.length === table.columns.length, {
+    message: 'header_cells and columns must have the same length',
+  })
+  .refine(
+    (table) => table.existing_data_row_count === undefined
+      || table.prototype_row_index === undefined
+      || table.prototype_row_index <= table.existing_data_row_count,
+    { message: 'prototype_row_index must identify one of the existing data rows' },
+  );
 
 const PrototypeTableSchema = TableBaseSchema.extend({
   prototype_cells: z.array(z.string()).min(1),
@@ -188,7 +196,13 @@ export function applyRepeatableTables(
     const table = candidates[0];
     const rows = directChildren(table, 'tr');
     const isHeaderTable = 'header_cells' in binding;
-    if (isHeaderTable && binding.prototype_row_index === undefined) {
+    const existingDataRowCount = isHeaderTable ? binding.existing_data_row_count : undefined;
+    if (isHeaderTable && existingDataRowCount !== undefined && rows.length !== existingDataRowCount + 1) {
+      throw new Error(
+        `repeatable table "${binding.id}" has ${rows.length - 1} post-header rows; expected exactly ${existingDataRowCount}`,
+      );
+    }
+    if (isHeaderTable && binding.prototype_row_index === undefined && existingDataRowCount === undefined) {
       const nonblank = rows.slice(1).find((row) => !isBlankRow(row));
       if (nonblank) {
         throw new Error(`repeatable table "${binding.id}" has a nonblank post-header row; use an explicit prototype_row_index or remove stale data`);
@@ -202,7 +216,9 @@ export function applyRepeatableTables(
       });
       if (inconsistent) throw new Error(`repeatable table "${binding.id}" has a row that does not match prototype_cells`);
     }
-    const explicitPrototypeIndex = isHeaderTable ? binding.prototype_row_index : undefined;
+    const explicitPrototypeIndex = isHeaderTable
+      ? (binding.prototype_row_index ?? (existingDataRowCount === undefined ? undefined : 1))
+      : undefined;
     const prototype = isHeaderTable && explicitPrototypeIndex === undefined
       ? rows[0].cloneNode(true) as XmlElement
       : rows[explicitPrototypeIndex ?? 0];
@@ -232,7 +248,10 @@ export function applyRepeatableTables(
     }
     const sourceRows = isHeaderTable ? rows.slice(1) : rows;
     for (const row of sourceRows) {
-      if (!isHeaderTable || explicitPrototypeIndex === undefined ? (!isHeaderTable || isBlankRow(row)) : row === prototype) table.removeChild(row);
+      const shouldRemove = !isHeaderTable
+        || existingDataRowCount !== undefined
+        || (explicitPrototypeIndex === undefined ? isBlankRow(row) : row === prototype);
+      if (shouldRemove) table.removeChild(row);
     }
   }
 

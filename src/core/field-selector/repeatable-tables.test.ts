@@ -2,6 +2,7 @@ import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
+import { DOMParser } from '@xmldom/xmldom';
 import { afterEach, describe, expect, it } from 'vitest';
 import { applyRepeatableTables, RepeatableTablesConfigSchema, validateRepeatableTableFields } from './repeatable-tables.js';
 
@@ -38,6 +39,39 @@ function prototypeOnlyFixture(rowCount = 3, inconsistent = false, duplicate = fa
   zip.addFile('word/document.xml', Buffer.from(
     `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>` +
     `<w:document xmlns:w="${W}"><w:body>${table}${duplicate ? table : ''}</w:body></w:document>`,
+  ));
+  return zip.toBuffer();
+}
+
+function prepopulatedHeaderFixture(): Buffer {
+  const zip = new AdmZip();
+  const row = (index: number) => `<w:tr><w:trPr><w:cantSplit/><w:tblCellSpacing w:w="${index + 1}" w:type="dxa"/></w:trPr>` +
+    `<w:tc><w:tcPr><w:tcW w:w="3000"/></w:tcPr><w:p><w:pPr><w:jc w:val="left"/></w:pPr><w:r><w:t>Old holder ${index + 1}</w:t></w:r></w:p></w:tc>` +
+    `<w:tc><w:tcPr><w:tcW w:w="3000"/></w:tcPr><w:p><w:pPr><w:jc w:val="right"/></w:pPr><w:r><w:t>Old amount ${index + 1}</w:t></w:r></w:p></w:tc></w:tr>`;
+  const header = `<w:tr><w:trPr><w:tblHeader/></w:trPr>` +
+    `<w:tc><w:p><w:r><w:t>Holder</w:t></w:r></w:p></w:tc>` +
+    `<w:tc><w:p><w:r><w:t>Amount</w:t></w:r></w:p></w:tc></w:tr>`;
+  zip.addFile('[Content_Types].xml', Buffer.from(
+    '<?xml version="1.0" encoding="UTF-8"?>' +
+    '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">' +
+    '<Default Extension="xml" ContentType="application/xml"/>' +
+    '<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>' +
+    '<Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/>' +
+    '</Types>',
+  ));
+  zip.addFile('_rels/.rels', Buffer.from(
+    '<?xml version="1.0" encoding="UTF-8"?>' +
+    '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">' +
+    '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/>' +
+    '</Relationships>',
+  ));
+  zip.addFile('word/_rels/document.xml.rels', Buffer.from(
+    '<?xml version="1.0" encoding="UTF-8"?>' +
+    '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"/>',
+  ));
+  zip.addFile('word/document.xml', Buffer.from(
+    `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>` +
+    `<w:document xmlns:w="${W}"><w:body><w:tbl>${header}${Array.from({ length: 7 }, (_, index) => row(index)).join('')}</w:tbl></w:body></w:document>`,
   ));
   return zip.toBuffer();
 }
@@ -98,6 +132,64 @@ describe('repeatable DOCX table bindings', () => {
     expect(xml).toContain('<w:cantSplit/>');
   });
 
+  it('replaces an asserted set of heterogeneous prepopulated rows', () => {
+    const root = mkdtempSync(join(tmpdir(), 'repeatable-prepopulated-'));
+    roots.push(root);
+    const input = join(root, 'in.docx');
+    const output = join(root, 'out.docx');
+    new AdmZip(prepopulatedHeaderFixture()).writeZip(input);
+    const binding = RepeatableTablesConfigSchema.parse({
+      schema_version: 1,
+      tables: [{
+        id: 'existing-holders',
+        rows_field: 'holders',
+        header_cells: ['Holder', 'Amount'],
+        existing_data_row_count: 7,
+        prototype_row_index: 4,
+        columns: [{ field: 'name' }, { field: 'amount', format: 'integer' }],
+      }],
+    });
+
+    applyRepeatableTables(input, output, binding, {holders: [
+      {name: 'Alpha Fund', amount: 1200},
+      {name: 'Beta Fund', amount: 3400},
+    ]});
+
+    const outputZip = new AdmZip(readFileSync(output));
+    expect(outputZip.getEntry('[Content_Types].xml')).not.toBeNull();
+    expect(outputZip.getEntry('_rels/.rels')).not.toBeNull();
+    const xml = outputZip.readAsText('word/document.xml');
+    const parsed = new DOMParser().parseFromString(xml, 'text/xml');
+    expect(parsed.documentElement.localName).toBe('document');
+    expect((xml.match(/<w:tr[ >]/g) ?? [])).toHaveLength(3);
+    expect(xml).toContain('Alpha Fund');
+    expect(xml).toContain('1,200');
+    expect(xml).toContain('Beta Fund');
+    expect(xml).toContain('3,400');
+    expect(xml.indexOf('Alpha Fund')).toBeLessThan(xml.indexOf('Beta Fund'));
+    expect(xml).not.toContain('Old holder');
+    expect(xml).not.toContain('Old amount');
+    expect((xml.match(/<w:tblHeader\/>/g) ?? [])).toHaveLength(1);
+    expect((xml.match(/w:tblCellSpacing w:w="4"/g) ?? [])).toHaveLength(2);
+  });
+
+  it('fails closed when the asserted prepopulated row count drifts', () => {
+    const root = mkdtempSync(join(tmpdir(), 'repeatable-prepopulated-'));
+    roots.push(root);
+    const input = join(root, 'in.docx');
+    new AdmZip(prepopulatedHeaderFixture()).writeZip(input);
+    const binding = RepeatableTablesConfigSchema.parse({
+      schema_version: 1,
+      tables: [{
+        id: 'existing-holders', rows_field: 'holders',
+        header_cells: ['Holder', 'Amount'], existing_data_row_count: 6,
+        columns: [{field: 'name'}, {field: 'amount'}],
+      }],
+    });
+    expect(() => applyRepeatableTables(input, join(root, 'out.docx'), binding, {holders: []}))
+      .toThrow(/has 7 post-header rows; expected exactly 6/);
+  });
+
   it('fills one row and preserves prototype formatting', () => {
     const xml = render([{ name: 'Alpha Fund', shares: 1250000, price: 2500000 }]);
     expect(xml).toContain('Alpha Fund');
@@ -142,6 +234,13 @@ describe('repeatable DOCX table bindings', () => {
       schema_version: 1,
       tables: [{ id: 'bad', rows_field: 'rows', header_cells: ['A', 'B'], columns: [{ field: 'only_one' }] }],
     })).toThrow(/same length/);
+    expect(() => RepeatableTablesConfigSchema.parse({
+      schema_version: 1,
+      tables: [{
+        id: 'bad-index', rows_field: 'rows', header_cells: ['A'], columns: [{field: 'value'}],
+        existing_data_row_count: 2, prototype_row_index: 3,
+      }],
+    })).toThrow(/prototype_row_index must identify one of the existing data rows/);
   });
 
   it('requires the rows field and every column to be declared in metadata', () => {

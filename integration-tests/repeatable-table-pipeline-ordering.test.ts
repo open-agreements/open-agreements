@@ -39,6 +39,24 @@ function sourceDocx(): Buffer {
   return zip.toBuffer();
 }
 
+function prepopulatedSourceDocx(): Buffer {
+  const zip = new AdmZip(sourceDocx());
+  const header = '<w:tr><w:trPr><w:tblHeader/></w:trPr>' +
+    '<w:tc><w:p><w:r><w:t>Investor</w:t></w:r></w:p></w:tc>' +
+    '<w:tc><w:p><w:r><w:t>Commitment</w:t></w:r></w:p></w:tc></w:tr>';
+  const rows = Array.from({length: 7}, (_, index) =>
+    `<w:tr><w:trPr><w:cantSplit/><w:tblCellSpacing w:w="${index + 1}" w:type="dxa"/></w:trPr>` +
+    `<w:tc><w:p><w:r><w:t>Legacy Investor ${index + 1}</w:t></w:r></w:p></w:tc>` +
+    `<w:tc><w:p><w:r><w:t>Legacy Amount ${index + 1}</w:t></w:r></w:p></w:tc></w:tr>`,
+  ).join('');
+  zip.updateFile('word/document.xml', Buffer.from(
+    `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>` +
+    `<w:document xmlns:w="${W}"><w:body><w:p><w:r><w:t>Lead: Legacy Investor 1</w:t></w:r></w:p>` +
+    `<w:tbl>${header}${rows}</w:tbl></w:body></w:document>`,
+  ));
+  return zip.toBuffer();
+}
+
 afterEach(() => {
   for (const root of roots.splice(0)) rmSync(root, {recursive: true, force: true});
 });
@@ -96,5 +114,64 @@ describe('repeatable-table full pipeline ordering', () => {
     expect((xml.match(/<w:tr[ >]/g) ?? [])).toHaveLength(2);
     expect(xml).not.toContain('Investor Name');
     expect(xml.match(/Lead Fund, L.P./g)).toHaveLength(1);
+  });
+
+  it('replaces seven distinct source rows before overlapping scalar fill', async () => {
+    const root = mkdtempSync(join(tmpdir(), 'repeatable-pipeline-prepopulated-'));
+    roots.push(root);
+    const inputPath = join(root, 'source.docx');
+    const outputPath = join(root, 'filled.docx');
+    new AdmZip(prepopulatedSourceDocx()).writeZip(inputPath);
+    const config = RepeatableTablesConfigSchema.parse({
+      schema_version: 1,
+      tables: [{
+        id: 'investor-commitments',
+        rows_field: 'investors',
+        header_cells: ['Investor', 'Commitment'],
+        existing_data_row_count: 7,
+        prototype_row_index: 3,
+        columns: [{field: 'name'}, {field: 'commitment', format: 'currency'}],
+      }],
+    });
+    const values = {
+      lead_investor: 'Lead Fund, L.P.',
+      investors: [
+        {name: 'Alpha Ventures, L.P.', commitment: 1000000},
+        {name: 'Beta Capital, LLC', commitment: 2500000},
+      ],
+    };
+
+    await runFillPipeline({
+      inputPath,
+      outputPath,
+      values,
+      fields: [
+        {name: 'lead_investor', type: 'string', description: 'Lead investor'},
+        {name: 'investors', type: 'array', description: 'Investor rows', items: [
+          {name: 'name', type: 'string', description: 'Name'},
+          {name: 'commitment', type: 'number', description: 'Commitment'},
+        ]},
+      ],
+      cleanPatch: {
+        cleanConfig: {removeParagraphPatterns: [], removeRanges: []},
+        replacements: {'Legacy Investor 1': '{lead_investor}'},
+      },
+      prePatchProcess: (source, destination) => applyRepeatableTables(source, destination, config, values),
+      verify: () => ({passed: true, checks: []}),
+    });
+
+    const outputZip = new AdmZip(readFileSync(outputPath));
+    expect(outputZip.getEntry('[Content_Types].xml')).not.toBeNull();
+    const xml = outputZip.readAsText('word/document.xml');
+    expect(xml).toContain('Lead: ');
+    expect(xml.match(/Lead Fund, L.P./g)).toHaveLength(1);
+    expect(xml).toContain('Alpha Ventures, L.P.');
+    expect(xml).toContain('1,000,000.00');
+    expect(xml).toContain('Beta Capital, LLC');
+    expect(xml).toContain('2,500,000.00');
+    expect((xml.match(/<w:tr[ >]/g) ?? [])).toHaveLength(3);
+    expect(xml).not.toContain('Legacy Investor');
+    expect(xml).not.toContain('Legacy Amount');
+    expect((xml.match(/w:tblCellSpacing w:w="3"/g) ?? [])).toHaveLength(2);
   });
 });
