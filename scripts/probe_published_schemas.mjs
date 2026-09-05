@@ -94,8 +94,8 @@ export async function probePublishedSchemas() {
     throw new Error(
       `Published schema references do not resolve:\n${problems.join("\n")}\n\n` +
         "Every card in skills/ points at openagreements.org. If this is failing right " +
-        "after a merge, the schema-hosting route in UseJunior/openagreements-org-deploy " +
-        "is not deployed yet — it has to land before the cards that reference it.",
+        "after a merge, the production schema-hosting route may not be deployed yet — " +
+        "it has to land before the cards that reference it.",
     );
   }
   console.log(`Published schema references resolve (${seen.size} URL${seen.size === 1 ? "" : "s"}).`);
