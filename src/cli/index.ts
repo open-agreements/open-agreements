@@ -199,7 +199,7 @@ export function createProgram(): Command {
     .command('schema [field-selector-id]')
     .description('Export the canonical caller-input JSON Schema for one or all field-selectors')
     .option('-o, --output <path>', 'Write one schema to a file instead of stdout')
-    .option('--all', 'Export every field-selector schema plus a signed-by-hash manifest')
+    .option('--all', 'Export every field-selector schema plus a hash-pinned manifest')
     .option('--output-dir <path>', 'Directory for --all schema bundle')
     .option('--runtime-revision <sha>', 'Exact lowercase 40-character Git revision for --all provenance')
     .action((fieldSelectorId: string | undefined, opts: { output?: string; all?: boolean; outputDir?: string; runtimeRevision?: string }) => {

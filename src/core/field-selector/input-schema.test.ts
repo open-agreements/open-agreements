@@ -18,7 +18,7 @@ import { listFieldSelectorIds, resolveFieldSelectorDir } from '../../utils/paths
 const NVCA_GOLDEN_HASHES: Record<string, string> = {
   'nvca-certificate-of-incorporation': '532a0ce6922a8baa2097881f68ac139e68e91c331c44a375f5b415dfd53b4f3e',
   'nvca-indemnification-agreement': '378070ff3d36bffc460b6b7d95a29f1c950c88f724fe90484260108900ac0b9b',
-  'nvca-investors-rights-agreement': '1d44d11fa4a0dc4513bf957b24a7b733c103670af2aa10d4f8375f5b5d016323',
+  'nvca-investors-rights-agreement': '054fa5f41f4355c65a1054ffb9aa11dadbe1497fbd19ddd2b6e3c09c3003525b',
   'nvca-management-rights-letter': 'b0b62fcf846b49166a6c7045b6134cc4ca24dda6b07f459145b12324597cedf1',
   'nvca-rofr-co-sale-agreement': 'a202c5bd4d08abafd5f67854e0a0ded2c0254d9a20c272022c50c6dc70f8c3b9',
   'nvca-stock-purchase-agreement': '1fd6470a5f1b2280633f804de230ee6ecb6e936aa4e9dec25674fa0f7d97efe9',
@@ -39,6 +39,9 @@ describe('field-selector caller-input JSON Schema', () => {
       const schema = getFieldSelectorInputSchema(id, resolveFieldSelectorDir(id));
       expect(canonicalSha256(schema), id).toBe(expected);
       expect(() => validator(schema)).not.toThrow();
+      const validate = validator(schema);
+      expect(validate({}), `${id} must enforce priority fields`).toBe(false);
+      expect(validate({ unexpected_field: true }), `${id} must be closed`).toBe(false);
     }
   });
 
