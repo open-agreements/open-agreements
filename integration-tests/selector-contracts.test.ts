@@ -423,7 +423,7 @@ describe('loadSelectorContracts (CoI)', () => {
     // Percentage rendering remains declarative in replacements.json; it does
     // not need a selector manifest or migrated keys.
     expect(manifests).toHaveLength(31);
-    expect(templateManifest?.migrated_keys).toHaveLength(62);
+    expect(templateManifest?.migrated_keys).toHaveLength(63);
     // every field_id is a real metadata field (loadSelectorContracts already enforces this, but assert
     // the join key explicitly) and every migrated key is a real replacements.json key (no drift/typos).
     const metaFields = new Set(fieldNames);
