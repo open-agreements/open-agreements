@@ -25,6 +25,19 @@ export const AnchoredParagraphBindingsConfigSchema = z.object({
 
 export type AnchoredParagraphBindingsConfig = z.infer<typeof AnchoredParagraphBindingsConfigSchema>;
 
+/**
+ * Canonicalize only layout whitespace and Word's common smart-punctuation
+ * substitutions. Matching remains case- and punctuation-sensitive otherwise.
+ */
+function canonicalMatchText(value: string): string {
+  return value
+    .replace(/[\u2018\u2019]/g, "'")
+    .replace(/[\u201C\u201D]/g, '"')
+    .replace(/[\u2013\u2014]/g, '-')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function normalizedText(para: Element): string {
   const chunks: string[] = [];
   const walk = (node: Node): void => {
@@ -35,7 +48,7 @@ function normalizedText(para: Element): string {
     for (let i = 0; i < el.childNodes.length; i++) walk(el.childNodes[i]);
   };
   walk(para);
-  return chunks.join('').replace(/\s+/g, ' ').trim();
+  return canonicalMatchText(chunks.join(''));
 }
 
 function directBodyParagraphs(doc: Document): Element[] {
@@ -51,7 +64,7 @@ function directBodyParagraphs(doc: Document): Element[] {
 }
 
 function exactAnchorIndices(paragraphs: Element[], anchor: string): number[] {
-  const expected = anchor.replace(/\s+/g, ' ').trim();
+  const expected = canonicalMatchText(anchor);
   const matches: number[] = [];
   for (let i = 0; i < paragraphs.length; i++) {
     if (normalizedText(paragraphs[i]) === expected) matches.push(i);
@@ -89,11 +102,11 @@ export function bindAnchoredParagraphFields(
 
     for (const binding of group.bindings) {
       const matches: Element[] = [];
-      const expectedLabel = binding.label.replace(/\s+/g, ' ').trim();
+      const expectedLabel = canonicalMatchText(binding.label);
       for (let i = start + 1; i < end; i++) {
         const texts = paragraphs[i].getElementsByTagNameNS(W_NS, 't');
         for (let j = 0; j < texts.length; j++) {
-          if ((texts[j].textContent ?? '').replace(/\s+/g, ' ').trim() === expectedLabel) matches.push(texts[j]);
+          if (canonicalMatchText(texts[j].textContent ?? '') === expectedLabel) matches.push(texts[j]);
         }
       }
       if (matches.length !== binding.expected_matches) {

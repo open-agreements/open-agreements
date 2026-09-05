@@ -112,4 +112,61 @@ describe('anchor-scoped paragraph field binding', () => {
       .toThrow(/end anchor does not follow start anchor/);
     rmSync(reversed.dir, { recursive: true, force: true });
   });
+
+  it('matches Word smart apostrophes, quotes, and en/em dashes to straight config punctuation', () => {
+    const fixture = build(
+      p(text('COMPANY’S “SIGNATURE” — START')) +
+      p(label('Officer’s “Name” –')) +
+      p(text('INVESTOR’S “SIGNATURE” — END')),
+    );
+    const smartConfig: AnchoredParagraphBindingsConfig = {
+      groups: [{
+        id: 'smart-punctuation',
+        start_anchor: 'COMPANY\'S "SIGNATURE" - START',
+        end_anchor: 'INVESTOR\'S "SIGNATURE" - END',
+        expected_group_matches: 1,
+        bindings: [{
+          label: 'Officer\'s "Name" -',
+          field: 'officer_name',
+          expected_matches: 1,
+          insert_after_label: true,
+          preserve_following_tabs: true,
+        }],
+      }],
+    };
+
+    bindAnchoredParagraphFields(fixture.input, fixture.output, smartConfig);
+    const xml = new AdmZip(fixture.output).getEntry('word/document.xml')!.getData().toString('utf-8');
+    expect(xml).toContain('{officer_name}');
+    expect(xml).toContain('COMPANY’S “SIGNATURE” — START');
+    rmSync(fixture.dir, { recursive: true, force: true });
+  });
+
+  it('does not case-fold or erase non-equivalent punctuation', () => {
+    const fixture = build(
+      p(text('Company’s Signature — Start')) +
+      p(label('Name;')) +
+      p(text('End')),
+    );
+    const strictConfig: AnchoredParagraphBindingsConfig = {
+      groups: [{
+        id: 'still-exact',
+        start_anchor: "COMPANY'S SIGNATURE - START",
+        end_anchor: 'End',
+        expected_group_matches: 1,
+        bindings: [{
+          label: 'Name:',
+          field: 'name',
+          expected_matches: 1,
+          insert_after_label: true,
+          preserve_following_tabs: true,
+        }],
+      }],
+    };
+
+    expect(() => bindAnchoredParagraphFields(fixture.input, fixture.output, strictConfig))
+      .toThrow(/still-exact.*start=0/);
+    expect(existsSync(fixture.output)).toBe(false);
+    rmSync(fixture.dir, { recursive: true, force: true });
+  });
 });
