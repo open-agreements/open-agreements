@@ -7,6 +7,7 @@ import { runValidate } from '../commands/validate.js';
 import { runList } from '../commands/list.js';
 import { runTemplateShow } from '../commands/template.js';
 import { runFieldSelectorCommand, runFieldSelectorClean, runFieldSelectorPatch } from '../commands/field-selector.js';
+import { runFieldSelectorSchema } from '../commands/field-selector-schema.js';
 import { runScan } from '../commands/scan.js';
 import {
   runChecklistCreate,
@@ -193,6 +194,17 @@ export function createProgram(): Command {
 
   const fieldSelectorCmd = new Command('field-selector');
   fieldSelectorCmd.description('Work with field-selector-based document pipelines');
+
+  fieldSelectorCmd
+    .command('schema [field-selector-id]')
+    .description('Export the canonical caller-input JSON Schema for one or all field-selectors')
+    .option('-o, --output <path>', 'Write one schema to a file instead of stdout')
+    .option('--all', 'Export every field-selector schema plus a signed-by-hash manifest')
+    .option('--output-dir <path>', 'Directory for --all schema bundle')
+    .option('--runtime-revision <sha>', 'Exact lowercase 40-character Git revision for --all provenance')
+    .action((fieldSelectorId: string | undefined, opts: { output?: string; all?: boolean; outputDir?: string; runtimeRevision?: string }) => {
+      runFieldSelectorSchema({ fieldSelectorId, ...opts });
+    });
 
   fieldSelectorCmd
     .command('run <field-selector-id>')

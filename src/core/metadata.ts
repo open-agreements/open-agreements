@@ -364,6 +364,28 @@ function validatePriorityFields(
   });
 }
 
+/** Object-shaped fill data cannot represent duplicate property names. */
+function validateUniqueFieldNames(
+  fields: FieldDefinition[],
+  ctx: z.RefinementCtx,
+  path: Array<string | number> = ['fields'],
+): void {
+  const seen = new Map<string, number>();
+  fields.forEach((field, index) => {
+    const previous = seen.get(field.name);
+    if (previous !== undefined) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: [...path, index, 'name'],
+        message: `Duplicate field name "${field.name}" (first declared at index ${previous})`,
+      });
+    } else {
+      seen.set(field.name, index);
+    }
+    if (field.items) validateUniqueFieldNames(field.items, ctx, [...path, index, 'items']);
+  });
+}
+
 function validateDerivedBooleanCollisions(fields: FieldDefinition[], ctx: z.RefinementCtx): void {
   const topLevelFieldNames = new Set(fields.map((field) => field.name));
   const derivedKeyOwners = new Map<string, string>();
@@ -438,6 +460,7 @@ const TemplateMetadataBaseSchema = z.object({
 });
 
 export const TemplateMetadataSchema = TemplateMetadataBaseSchema.superRefine((meta, ctx) => {
+  validateUniqueFieldNames(meta.fields, ctx);
   validatePriorityFields(meta.fields, meta.priority_fields, ctx);
   validateDerivedBooleanCollisions(meta.fields, ctx);
 });
@@ -455,6 +478,7 @@ export type TemplateMetadata = z.infer<typeof TemplateMetadataSchema>;
 export const ExternalMetadataSchema = TemplateMetadataBaseSchema.extend({
   source_sha256: z.string(),
 }).superRefine((meta, ctx) => {
+  validateUniqueFieldNames(meta.fields, ctx);
   validatePriorityFields(meta.fields, meta.priority_fields, ctx);
   validateDerivedBooleanCollisions(meta.fields, ctx);
 });
@@ -682,6 +706,7 @@ export const FieldSelectorMetadataSchema = z.object({
   market_data_citations: z.array(MarketDataCitationSchema).optional(),
   ...TemplateCapabilityManifestSchema.shape,
 }).superRefine((meta, ctx) => {
+  validateUniqueFieldNames(meta.fields, ctx);
   validatePriorityFields(meta.fields, meta.priority_fields, ctx);
   validateDerivedBooleanCollisions(meta.fields, ctx);
 });

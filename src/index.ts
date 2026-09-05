@@ -113,6 +113,19 @@ export {
   type ReferenceFieldsConfig,
 } from './core/field-selector/index.js';
 
+export {
+  buildFieldSelectorInputSchema,
+  getFieldSelectorInputSchema,
+  canonicalJson,
+  canonicalSha256,
+  computedFieldNames,
+  FIELD_SELECTOR_INPUT_SCHEMA_VERSION,
+  FIELD_SELECTOR_SCHEMA_GENERATOR,
+  type JsonSchema,
+  type FieldSelectorSchemaManifest,
+  type FieldSelectorSchemaProvenance,
+} from './core/field-selector/input-schema.js';
+
 // Closing checklist
 export {
   buildChecklistTemplateContext,

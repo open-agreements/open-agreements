@@ -558,6 +558,28 @@ describe('FieldDefinitionSchema', () => {
   });
 });
 
+describe('metadata field-name uniqueness', () => {
+  const field = (name: string) => ({ name, type: 'string' as const, description: name });
+  const base = {
+    name: 'Fixture',
+    source_url: 'https://example.com/source.docx',
+    source_version: '1',
+    license_note: 'fixture',
+    fields: [field('duplicate'), field('duplicate')],
+  };
+
+  it('rejects duplicate top-level field names', () => {
+    expect(() => FieldSelectorMetadataSchema.parse(base)).toThrow(/Duplicate field name/);
+  });
+
+  it('rejects duplicate nested array item names', () => {
+    expect(() => FieldSelectorMetadataSchema.parse({
+      ...base,
+      fields: [{ name: 'rows', type: 'array', description: 'Rows', items: [field('duplicate'), field('duplicate')] }],
+    })).toThrow(/Duplicate field name/);
+  });
+});
+
 const BASE_CAPABILITY_MANIFEST = {
   artifact_kind: 'agreement' as const,
   capabilities: ['create', 'review', 'render'] as const,
