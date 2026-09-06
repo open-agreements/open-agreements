@@ -20,6 +20,7 @@ import {
   rezipWithoutDirEntries,
 } from './field-selector/ooxml-parts.js';
 import type { FieldDefinition } from './metadata.js';
+import { assertConditionalRequiredInputs } from './conditional-inputs.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -211,6 +212,8 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
     computeDisplayFields,
     confirmClauses,
   } = options;
+
+  assertConditionalRequiredInputs(values, fields);
 
   // Apply defaults for fields not provided
   const defaultValue = useBlankPlaceholder ? BLANK_PLACEHOLDER : '';
