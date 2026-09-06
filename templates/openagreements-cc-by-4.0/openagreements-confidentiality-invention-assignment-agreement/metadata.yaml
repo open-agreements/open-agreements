@@ -1,5 +1,5 @@
 name: Confidentiality & Invention Assignment Agreement (CIIAA)
-category: employment
+category: invention-assignment
 description: Employee proprietary information and inventions assignment agreement with explicit prior-inventions and personal-project carveout language placeholders.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-confidentiality-invention-assignment-agreement
 version: 0.5.0
@@ -48,7 +48,7 @@ fields:
     description: Duration of confidentiality obligations for Confidential Information other than trade secrets after employment ends
     display_label: Other Confidential Information Duration
     default: For as long as the information remains confidential, and, where applicable law requires a fixed period, two years after employment ends
-    default_value_rationale: Filed employee agreements overwhelmingly run ordinary confidentiality open-ended (52% expressly in a 315-instrument EDGAR sample; 93% in the Yale Law Journal study of 446 agreements); where they bound it they use a fallback that applies only if law requires one, and the fallback is two years in six of eight cases. Wisconsin voids an unbounded non-trade-secret covenant, so the fallback is not optional. See docs/benchmarks/ciiaa-confidentiality-duration-evidence.md.
+    default_value_rationale: Filed employee agreements overwhelmingly run ordinary confidentiality open-ended (52% expressly in a 315-instrument EDGAR sample; 93% in the Yale Law Journal study of 446 agreements disclosed in federal trade-secret litigation); where they bound it they use a fallback that applies only if law requires one, and among the eight EDGAR filings in that sample that state a fallback, six set it at two years. Wisconsin voids an unbounded non-trade-secret covenant, so the fallback is not optional. See docs/benchmarks/ciiaa-confidentiality-duration-evidence.md.
     section: Confidentiality
   - name: post_termination_assistance
     type: string
