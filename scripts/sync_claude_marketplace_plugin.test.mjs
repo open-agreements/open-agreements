@@ -32,8 +32,12 @@ describe("Claude marketplace plugin allowlist", () => {
     // The allowlist is opt-in, so an artifact added to a skill source is
     // published to npm (via the broad `skills/` entry) while silently missing
     // from the plugin until someone lists it here.
-    for (const spec of skillSpecs) {
-      if (!existsSync(join(spec.source, "quality-card.json"))) continue;
+    const specsWithQualityCards = skillSpecs.filter((spec) =>
+      existsSync(join(spec.source, "quality-card.json")),
+    );
+
+    expect(specsWithQualityCards.length).toBeGreaterThan(0);
+    for (const spec of specsWithQualityCards) {
       expect(spec.files).toContain("quality-card.json");
     }
   });
