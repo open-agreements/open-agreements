@@ -24,7 +24,8 @@ import { applyRepeatableTables, loadRepeatableTablesConfig, validateRepeatableTa
 import { bindAnchoredParagraphFields, loadAnchoredParagraphBindingsConfig } from './anchored-paragraph-bindings.js';
 import { normalizeNumberedHeadingSections } from './numbering-normalizer.js';
 import { loadReferenceFieldsConfig } from './reference-fields.js';
-import { assertFieldSelectorInputValueShapes } from './input-schema.js';
+import { assertFieldSelectorInputValueShapes, computedFieldNames } from './input-schema.js';
+import { assertConditionalInputOwnership, assertConditionalRequiredInputs } from '../conditional-inputs.js';
 
 function toComputedValueMap(values: Record<string, unknown>): ComputedValueMap {
   const computedValues: ComputedValueMap = {};
@@ -49,6 +50,9 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
   const fieldSelectorDir = resolveFieldSelectorDir(fieldSelectorId);
 
   const metadata = loadFieldSelectorMetadata(fieldSelectorDir);
+  const computedProfile = loadComputedProfile(fieldSelectorDir);
+  assertConditionalInputOwnership(metadata.fields, computedFieldNames(computedProfile));
+  assertConditionalRequiredInputs(values, metadata.fields);
   // Validate source-owned token/sigil shapes before downloading, cleaning, or
   // writing a document. The exported caller schema uses the same constraints.
   assertFieldSelectorInputValueShapes(values, metadata.fields);
@@ -112,7 +116,6 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
   // the same display-ready value (and chained computed fields inherit it).
   const inputValues = formatDocumentDateFields(values, metadata.fields);
   const computedInputValues = toComputedValueMap(inputValues);
-  const computedProfile = loadComputedProfile(fieldSelectorDir);
   const computedEvaluation = computedProfile
     ? evaluateComputedProfile(computedProfile, computedInputValues)
     : null;

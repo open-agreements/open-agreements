@@ -66,6 +66,8 @@ export interface FieldDefinition {
   derive_booleans?: boolean;
   section?: string;
   items?: FieldDefinition[];
+  /** Require an explicit, nonblank input when a top-level scalar field matches. */
+  required_when?: { field: string; equals: string | number | boolean };
   /**
    * Marks this boolean field as a *statutory compliance representation*: its
    * `true` value asserts a past real-world fact that is a statutory precondition
@@ -122,6 +124,10 @@ export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
     derive_booleans: z.boolean().optional(),
     section: z.string().optional(),
     items: z.array(FieldDefinitionSchema).nonempty().optional(),
+    required_when: z.object({
+      field: z.string().min(1),
+      equals: z.union([z.string(), z.number().finite(), z.boolean()]),
+    }).strict().optional(),
     statutory_compliance_representation: z.boolean().optional(),
     authority_url: z.string().optional(),
     confirm_note: z.string().optional(),
@@ -341,6 +347,7 @@ function validatePriorityFields(
   priorityFields: string[],
   ctx: z.RefinementCtx
 ): void {
+  validateConditionalRequirements(fields, ctx);
   const fieldNames = new Set(fields.map((field) => field.name));
   const seen = new Set<string>();
 
@@ -362,6 +369,33 @@ function validatePriorityFields(
       });
     }
   });
+}
+
+function validateConditionalRequirements(fields: FieldDefinition[], ctx: z.RefinementCtx): void {
+  const byName = new Map(fields.map((field) => [field.name, field]));
+  const visit = (items: FieldDefinition[], path: (string | number)[], nested: boolean) => {
+    items.forEach((field, index) => {
+      const at = [...path, index];
+      if (field.required_when) {
+        const controller = byName.get(field.required_when.field);
+        const expectedType = controller?.type === 'boolean' ? 'boolean'
+          : controller?.type === 'number' ? 'number' : 'string';
+        if (nested || !controller || controller.name === field.name ||
+            ['array', 'multiselect'].includes(controller.type) ||
+            typeof field.required_when.equals !== expectedType ||
+            (controller.type === 'enum' && !controller.options?.includes(String(field.required_when.equals)))) {
+          ctx.addIssue({ code: z.ZodIssueCode.custom, path: [...at, 'required_when'],
+            message: 'required_when must reference another top-level scalar field with a compatible equals value; nested requirements are unsupported' });
+        }
+        if (field.default !== undefined || ['array', 'multiselect'].includes(field.type)) {
+          ctx.addIssue({ code: z.ZodIssueCode.custom, path: [...at, 'required_when'],
+            message: 'Conditionally required fields must be scalar inputs without defaults' });
+        }
+      }
+      if (field.items) visit(field.items, [...at, 'items'], true);
+    });
+  };
+  visit(fields, ['fields'], false);
 }
 
 /** Object-shaped fill data cannot represent duplicate property names. */
