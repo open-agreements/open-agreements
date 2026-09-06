@@ -880,6 +880,44 @@ describe('bounded markerless removals', () => {
 // ---------------------------------------------------------------------------
 
 describe('inline selections', () => {
+  it('removes only spaces stranded before punctuation by an omitted cross-run option', async () => {
+    const marker = '[optional condition]';
+    const config: SelectionsConfig = { groups: [{
+      id: 'optional', type: 'checkbox', standalone: true, markerless: true, inline: true,
+      options: [{ marker, trigger: { field: 'keep', equals: true } }],
+    }] };
+    const body = `<w:p>
+      <w:r><w:rPr><w:b/></w:rPr><w:t xml:space="preserve">Effective on closing </w:t></w:r>
+      <w:r><w:t>[optional </w:t></w:r><w:r><w:t>condition]</w:t></w:r>
+      <w:r><w:t xml:space="preserve"> .  Next sentence.</w:t></w:r></w:p>
+      ${para('Ordinary  spacing . stays unchanged.')}
+      ${para('Between [optional condition] words.')}
+      ${para('Nonbreaking\u00a0[optional condition].')}
+      ${para('Before [optional condition], after.')}
+      <w:p><w:r><w:fldChar w:fldCharType="begin"/></w:r>
+      <w:r><w:instrText xml:space="preserve"> REF preserved </w:instrText></w:r>
+      <w:r><w:fldChar w:fldCharType="separate"/></w:r><w:r><w:t>7</w:t></w:r>
+      <w:r><w:fldChar w:fldCharType="end"/></w:r>
+      <w:r><w:t xml:space="preserve"> [optional condition].</w:t></w:r></w:p>`;
+    const input = buildTestDocx(body);
+    const output = join(makeTempDir(), 'out.docx');
+    await applySelections(input, output, config, {});
+    const text = extractText(output);
+    expect(text).toContain('Effective on closing.  Next sentence.');
+    expect(text).toContain('Ordinary  spacing . stays unchanged.');
+    expect(text).toContain('Between  words.');
+    expect(text).toContain('Nonbreaking\u00a0.');
+    expect(text).toContain('Before, after.');
+    // The protected REF boundary is left intact when docx-core declines it.
+    expect(text).toContain('7 .');
+    const xml = new AdmZip(output).readAsText('word/document.xml');
+    expect(xml).toContain('<w:b/>');
+    expect(xml).toContain(' REF preserved ');
+    expect(xml.match(/<w:fldChar /g)).toHaveLength(3);
+    await applySelections(input, output, config, { keep: true });
+    expect(extractText(output)).toContain('Effective on closing [optional condition] .  Next sentence.');
+  });
+
   it('deletes inline marker text when trigger does not fire', async () => {
     const body = `
       ${para('Purchase at the Closing). , [Each Purchaser shall buy Tranche Shares.] The Company agrees.')}

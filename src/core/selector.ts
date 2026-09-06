@@ -1202,6 +1202,27 @@ function processMarkerlessGroup(
           if (idx === -1) break;
           try {
             replaceParagraphTextRange(globalPara, idx, idx + normalizedMarker.length, replacement);
+            // An omitted inline option can strand its separator before the
+            // sentence's punctuation. Repair only this deletion boundary, not
+            // unrelated punctuation/spacing elsewhere in the document.
+            if (replacement === '') {
+              const remaining = getParagraphText(globalPara);
+              const left = remaining.slice(0, idx).match(/ +$/);
+              const right = remaining.slice(idx).match(/^ *(?=[.,;:!?])/);
+              if (right && (left || right[0])) {
+                const start = idx - (left?.[0].length ?? 0);
+                const end = idx + right[0].length;
+                if (start > 0) {
+                  try {
+                    replaceParagraphTextRange(globalPara, start, end, '');
+                  } catch (error) {
+                    // Do not flatten a field result or other protected Word
+                    // structure merely to improve whitespace.
+                    if (!(error instanceof SafeDocxError)) throw error;
+                  }
+                }
+              }
+            }
             madeChanges = true;
             paraEdited = true;
           } catch (e) {
