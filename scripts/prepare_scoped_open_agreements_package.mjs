@@ -67,6 +67,7 @@ function getRootPackMetadata() {
 }
 
 const outDir = parseOutDir(process.argv.slice(2));
+execFileSync(process.execPath, ['scripts/check_runtime_capabilities.mjs'], { stdio: 'inherit' });
 const packageJsonRaw = fs.readFileSync(ROOT_PACKAGE_PATH, "utf8");
 const rootPackageJson = JSON.parse(packageJsonRaw);
 
@@ -85,6 +86,9 @@ const scopedPackageJson = {
 
 if (scopedPackageJson.scripts && typeof scopedPackageJson.scripts === "object") {
   delete scopedPackageJson.scripts.prepare;
+  // This staging entry point already verifies parity before copying. The
+  // development-only checker script is not part of the staged package.
+  delete scopedPackageJson.scripts.prepack;
 }
 
 fs.mkdirSync(outDir, { recursive: true });

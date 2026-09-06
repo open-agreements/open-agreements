@@ -186,6 +186,14 @@ function main() {
       throw new Error('open-agreements list --json did not return expected payload in isolated runtime');
     }
 
+    run('node', ['--input-type=module', '--eval', `
+      import assert from 'node:assert/strict';
+      import { readFileSync } from 'node:fs';
+      import { RUNTIME_CAPABILITIES } from 'open-agreements';
+      assert.deepEqual(JSON.parse(readFileSync('node_modules/open-agreements/runtime-capabilities.json', 'utf8')), RUNTIME_CAPABILITIES);
+      assert.ok(RUNTIME_CAPABILITIES.capabilities.includes('selections.bounded-removal.v1'));
+    `], { cwd: sandbox, timeout: 30000 });
+
     assertMcpStartup('open-agreements-workspace-mcp', sandbox);
     assertMcpStartup('open-agreements-contract-templates-mcp', sandbox);
     assertMcpStartup('open-agreements-checklist-mcp', sandbox);

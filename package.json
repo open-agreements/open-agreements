@@ -47,6 +47,7 @@
     "LICENSE",
     "SECURITY.md",
     "server.json",
+    "runtime-capabilities.json",
     "gemini-extension.json",
     "AGENTS.md",
     "llms.txt",
@@ -56,7 +57,8 @@
     "@usejunior/docx-core"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && node scripts/check_runtime_capabilities.mjs",
+    "prepack": "node scripts/check_runtime_capabilities.mjs",
     "build:workspace": "tsc -p packages/contracts-workspace/tsconfig.json",
     "build:workspace-mcp": "tsc -p packages/contracts-workspace-mcp/tsconfig.json",
     "build:contract-templates-mcp": "tsc -p packages/contract-templates-mcp/tsconfig.json",
