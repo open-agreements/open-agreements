@@ -116,8 +116,8 @@ export interface PipelineResult {
   fillCommandCount: number;
   /**
    * Structured guardrail warnings for callers (CLI/API/MCP): zero-fill-command
-   * documents, failed verification checks. Other advisory console output
-   * (priority fields, selector warnings, zero-match patch keys) intentionally
+   * documents, unexpected zero-match patch keys, failed verification checks.
+   * Other advisory console output (priority fields, selector warnings) intentionally
    * stays console-only for now.
    */
   warnings: string[];
@@ -202,6 +202,7 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
     syntheticFieldKeys.add('any_confirmation_pending');
   }
   let stages: PipelineResult['stages'] | undefined;
+  const warnings: string[] = [];
 
   try {
     // Step 2: Copy source to temp dir
@@ -266,8 +267,8 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
       });
 
       if (unexpectedZeroMatch.length > 0) {
-        console.warn(
-          `Note: ${unexpectedZeroMatch.length} replacement key(s) had zero matches: ${unexpectedZeroMatch.join(', ')}`
+        warnings.push(
+          `patch: ${unexpectedZeroMatch.length} replacement key(s) had zero matches: ${unexpectedZeroMatch.join(', ')}`
         );
       }
 
@@ -310,8 +311,6 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
       computeDisplayFields: instrumentedCompute,
       confirmClauses: options.confirmClauses,
     });
-
-    const warnings: string[] = [];
 
     // Step 5: Read current buffer; apply selections if configured
     let templateBuf: Buffer = readFileSync(currentPath);

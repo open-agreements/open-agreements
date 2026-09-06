@@ -1252,6 +1252,48 @@ describe('runFillPipeline', () => {
     }
   });
 
+  it('reports novel unmatched replacements while suppressing intentionally cleaned carriers', async () => {
+    const tempDir = mkdtempSync(join(tmpdir(), 'fill-pipeline-patch-warning-'));
+    const inputPath = join(tempDir, 'source.docx');
+    const outputPath = join(tempDir, 'output.docx');
+    writeFileSync(inputPath, buildDocxBuffer(docXml([
+      'Remove this drafting note [Note Value]',
+      'Company: [Company Name]',
+      'Start optional range Range Value',
+      'Optional range content',
+      'End optional range',
+    ])));
+
+    try {
+      const result = await runFillPipeline({
+        inputPath,
+        outputPath,
+        values: { company_name: 'Acme Corp' },
+        fields: [{ name: 'company_name', type: 'string', description: 'Company' }],
+        cleanPatch: {
+          cleanConfig: {
+            removeParagraphPatterns: ['Remove this drafting note [Note Value]'],
+            removeRanges: [{ start: 'Start optional range Range Value', end: 'End optional range' }],
+          } as never,
+          replacements: {
+            '[Company Name]': '{company_name}',
+            '[Previously Unseen Missing Carrier]': '{company_name}',
+            'Remove this drafting note > [Note Value]': '{company_name}',
+            'Range Value': '{company_name}',
+          },
+        },
+        verify: async () => ({ passed: true, checks: [] }),
+      });
+
+      expect(result.warnings).toEqual([
+        'patch: 1 replacement key(s) had zero matches: [Previously Unseen Missing Carrier]',
+      ]);
+      expect(docxBodyText(readFileSync(outputPath))).toBe('Company: Acme Corp');
+    } finally {
+      rmSync(tempDir, { recursive: true, force: true });
+    }
+  });
+
   it('failed verify checks surface in result.warnings (soft, no throw)', async () => {
     const tempDir = mkdtempSync(join(tmpdir(), 'fill-pipeline-verify-warn-'));
     const inputPath = join(tempDir, 'source.docx');
