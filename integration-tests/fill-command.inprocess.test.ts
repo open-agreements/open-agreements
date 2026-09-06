@@ -23,6 +23,7 @@ interface FillHarnessOptions {
   fillError?: Error;
   externalError?: Error;
   fieldSelectorError?: Error;
+  warnings?: string[];
   isEmploymentTemplateId?: (templateId: string) => boolean;
   memo?: Record<string, unknown>;
   memoMarkdown?: string;
@@ -86,7 +87,7 @@ async function loadFillHarness(opts: FillHarnessOptions = {}): Promise<FillHarne
       fieldsUsed: ['company_name'],
       providedFieldsUsed: ['company_name'],
       fillCommandCount: 1,
-      warnings: [],
+      warnings: opts.warnings ?? [],
       verify: { passed: true, checks: [] },
     };
   });
@@ -99,7 +100,7 @@ async function loadFillHarness(opts: FillHarnessOptions = {}): Promise<FillHarne
       fieldsUsed: ['company_name'],
       providedFieldsUsed: ['company_name'],
       fillCommandCount: 1,
-      warnings: [],
+      warnings: opts.warnings ?? [],
       stages: {},
     };
   });
@@ -112,7 +113,7 @@ async function loadFillHarness(opts: FillHarnessOptions = {}): Promise<FillHarne
       fieldsUsed: ['company_name'],
       providedFieldsUsed: ['company_name'],
       fillCommandCount: 1,
-      warnings: [],
+      warnings: opts.warnings ?? [],
       stages: {},
     };
   });
@@ -199,6 +200,20 @@ afterEach(() => {
 });
 
 describe('runFill in-process coverage', () => {
+  itFilling('prints structured patch warnings from each fill route', async () => {
+    const warning = 'patch: 1 replacement key(s) had zero matches: [Unseen Carrier]';
+    for (const route of ['templateDir', 'externalDir', 'fieldSelectorDir'] as const) {
+      const harness = await loadFillHarness({ [route]: '/templates/example', warnings: [warning] });
+      const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+      vi.spyOn(console, 'log').mockImplementation(() => {});
+
+      await harness.runFill({ template: 'example', values: { company_name: 'Acme Corp' } });
+
+      expect(warnSpy).toHaveBeenCalledExactlyOnceWith(`Warning: ${warning}`);
+      vi.restoreAllMocks();
+    }
+  });
+
   itFilling('fills a template path and defaults output filename', async () => {
     const harness = await loadFillHarness({
       templateDir: '/templates/common-paper-mutual-nda',

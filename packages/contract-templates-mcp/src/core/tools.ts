@@ -264,7 +264,7 @@ interface RepoModules {
   listTemplateItems: () => TemplateRecord[];
   findTemplateDir: (id: string) => string | undefined;
   loadMetadata: (dir: string) => Record<string, unknown>;
-  fillTemplate: (opts: { templateDir: string; values: Record<string, unknown>; outputPath: string }) => Promise<unknown>;
+  fillTemplate: (opts: { templateDir: string; values: Record<string, unknown>; outputPath: string }) => Promise<{ warnings?: string[] }>;
   categoryFromId: (id: string) => string;
   sourceName: (url: string) => string | null;
   mapFields: (fields: Record<string, unknown>[], required: string[]) => TemplateField[];
@@ -693,18 +693,23 @@ const tools: ToolDefinition[] = [
       try {
         const mod = await importRepoModules();
 
+        let warnings: string[];
         if (mod) {
           // In-process fill via findTemplateDir + fillTemplate
           const dir = mod.findTemplateDir(input.template);
           if (!dir) {
             return toolError('fill_template', 'TEMPLATE_NOT_FOUND', `Unknown template: "${input.template}"`);
           }
-          await mod.fillTemplate({ templateDir: dir, values: input.values, outputPath });
+          const result = await mod.fillTemplate({ templateDir: dir, values: input.values, outputPath });
+          warnings = result.warnings ?? [];
         } else {
           // Child process fallback
           const dataPath = join(workingDir, 'values.json');
           writeFileSync(dataPath, `${JSON.stringify(input.values, null, 2)}\n`, 'utf8');
-          await runOpenAgreements(['fill', input.template, '--data', dataPath, '--output', outputPath]);
+          const result = await runOpenAgreements(['fill', input.template, '--data', dataPath, '--output', outputPath]);
+          warnings = result.stderr.split(/\r?\n/)
+            .filter((line) => line.startsWith('Warning: '))
+            .map((line) => line.slice('Warning: '.length));
         }
 
         const basePayload = {
@@ -712,6 +717,7 @@ const tools: ToolDefinition[] = [
           output_path: outputPath,
           content_type: DOCX_MIME,
           return_mode: input.return_mode,
+          warnings,
         };
 
         if (input.return_mode === 'inline_base64') {

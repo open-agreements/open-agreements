@@ -1,5 +1,7 @@
 import AdmZip from 'adm-zip';
-import { existsSync } from 'node:fs';
+import { cpSync, existsSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { afterEach, describe, expect } from 'vitest';
 import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import { callTool, listToolDescriptors, _resetModuleCache, _setModuleOverride } from '../src/core/tools.js';
@@ -720,6 +722,51 @@ describe('contract-templates-mcp tools', () => {
       // priority_field_count derived from required fields
       expect(templates[0].priority_field_count).toBe(0);
       expect(templates[1].priority_field_count).toBe(1);
+    });
+
+    it('fill_template exposes structured engine warnings to MCP callers', async () => {
+      const warning = 'patch: 1 replacement key(s) had zero matches: [Unseen Carrier]';
+      _setModuleOverride(mockModules({
+        fillTemplate: async () => ({ warnings: [warning] }),
+      }));
+
+      const result = await callTool('fill_template', {
+        template: 'test-template',
+        return_mode: 'local_path',
+      });
+
+      expect(result.isError).toBeUndefined();
+      expect((getPayload(result).data as Record<string, unknown>).warnings).toEqual([warning]);
+      expect(JSON.parse(result.content[0].text).data.warnings).toEqual([warning]);
+    });
+
+    it('fill_template retains warnings from the real CLI fallback', async () => {
+      const root = mkdtempSync(join(tmpdir(), 'oa-mcp-patch-warning-'));
+      const previousRoots = process.env.OPEN_AGREEMENTS_CONTENT_ROOTS;
+      const id = 'common-paper-mutual-nda';
+      const templateDir = join(root, 'templates/common-paper-cc-by-4.0', id);
+      const key = '[Unseen MCP Legacy Carrier]';
+      try {
+        cpSync(findTemplateDir(id)!, templateDir, { recursive: true });
+        writeFileSync(join(templateDir, 'replacements.json'), JSON.stringify({ [key]: '{purpose}' }));
+        process.env.OPEN_AGREEMENTS_CONTENT_ROOTS = root;
+        _setModuleOverride(null);
+
+        const result = await callTool('fill_template', {
+          template: id,
+          values: { purpose: 'Evaluating a potential partnership' },
+          return_mode: 'inline_base64',
+        });
+
+        expect(result.isError).toBeUndefined();
+        const data = getPayload(result).data as Record<string, unknown>;
+        expect(data.warnings).toContain(`patch: 1 replacement key(s) had zero matches: ${key}`);
+        expect(readDocxText(data.inline_base64 as string)).toContain('Evaluating a potential partnership');
+      } finally {
+        if (previousRoots === undefined) delete process.env.OPEN_AGREEMENTS_CONTENT_ROOTS;
+        else process.env.OPEN_AGREEMENTS_CONTENT_ROOTS = previousRoots;
+        rmSync(root, { recursive: true, force: true });
+      }
     });
 
     it('fill_template returns FILL_FAILED on engine error', async () => {
