@@ -34,12 +34,17 @@ const TriggerSchema = z.union([
   z.object({ field: z.string() }).strict(),
 ]);
 type Trigger = z.infer<typeof TriggerSchema>;
+const ApplicabilitySchema = z.object({
+  field: z.string().min(1),
+  equals: z.union([z.string(), z.boolean()]),
+}).strict();
 
 const OptionSchema = z.object({
   label: z.string().optional(),
   marker: z.string(),
   trigger: TriggerSchema,
   replaceWith: z.string().optional(),
+  selectedAction: z.literal('unwrap_brackets').optional(),
   removal: z.discriminatedUnion('kind', [
     z.object({
       kind: z.literal('table'),
@@ -77,6 +82,7 @@ const GroupSchema = z
     inline: z.boolean().optional(),
     cellContext: z.string().optional(),
     subClauseStopPatterns: z.array(z.string()).optional(),
+    applies_when: ApplicabilitySchema.optional(),
     options: z.array(OptionSchema).min(1),
   }).strict()
   .refine(
@@ -100,6 +106,12 @@ const GroupSchema = z
   .refine(
     (g) => g.options.every((o) => !o.removal || (g.markerless === true && !g.inline && o.replaceWith === undefined)),
     { message: 'bounded removal requires markerless:true, inline:false, and no replaceWith' },
+  )
+  .refine(
+    (g) => g.options.every((o) => !o.selectedAction || (
+      g.markerless === true && g.inline === true && o.marker.startsWith('[') && o.marker.endsWith(']')
+    )),
+    { message: 'selectedAction:unwrap_brackets requires markerless:true, inline:true, and a square-bracket-delimited marker' },
   );
 
 export const SelectionsConfigSchema = z.object({
@@ -518,6 +530,21 @@ function triggerFires(trigger: Trigger, data: Record<string, unknown>): boolean 
   return val !== undefined && val !== '' && val !== false && val !== 'false';
 }
 
+function groupApplies(group: z.infer<typeof GroupSchema>, data: Record<string, unknown>): boolean {
+  const predicate = group.applies_when;
+  if (!predicate) return true;
+  const value = data[predicate.field];
+  if (value === undefined || value === '') {
+    throw new Error(`[selector] Group "${group.id}" applicability field "${predicate.field}" is missing`);
+  }
+  if (typeof value !== typeof predicate.equals) {
+    throw new Error(
+      `[selector] Group "${group.id}" applicability field "${predicate.field}" must be ${typeof predicate.equals}, received ${typeof value}`,
+    );
+  }
+  return value === predicate.equals;
+}
+
 // ---------------------------------------------------------------------------
 // Match reporting (#720)
 // ---------------------------------------------------------------------------
@@ -727,6 +754,7 @@ export async function applySelections(
 
     let partModified = false;
     for (const group of config.groups) {
+      if (!groupApplies(group, data)) continue;
       const result = processGroup(doc, group, data, stats, partName === 'word/document.xml', resolveNumbering);
       if (result) partModified = true;
     }
@@ -1146,6 +1174,10 @@ function processMarkerlessGroup(
   for (let oi = 0; oi < group.options.length; oi++) {
     const option = group.options[oi];
 
+    // Selected bracket actions are body-only, like bounded removals. This
+    // gives their exact-one assertion a single deterministic OOXML part.
+    if (option.selectedAction && !isMainDocument) continue;
+
     if (option.removal) {
       // Whole tables and sections are body-block concepts. Ignoring headers and
       // footers also makes the exact-one assertion global for the only part in
@@ -1175,6 +1207,12 @@ function processMarkerlessGroup(
 
     matchCounts[oi] += matchedParas.length;
 
+    if (option.selectedAction && matchedParas.length !== 1) {
+      throw new Error(
+        `[selector] Group "${group.id}" selected action for marker "${option.marker}" matched ${matchedParas.length} paragraphs (expected 1)`,
+      );
+    }
+
     // #720: a zero-match UNSELECTED option is not a benign no-op — the
     // alternative it was meant to delete survives into the filled document.
     // The count recorded above is what lets the caller reject that outcome
@@ -1182,7 +1220,21 @@ function processMarkerlessGroup(
     if (matchedParas.length === 0) continue;
 
     if (selectedIndices.has(oi)) {
-      // Selected — keep paragraphs as-is, no changes needed
+      if (option.selectedAction === 'unwrap_brackets') {
+        const markerPara = matchedParas[0] as unknown as globalThis.Element;
+        const paragraphText = normalizeQuotes(getParagraphText(markerPara));
+        const markerText = normalizeQuotes(option.marker);
+        const start = paragraphText.indexOf(markerText);
+        if (start < 0) {
+          throw new Error(`[selector] Group "${group.id}" could not locate selected bracket marker`);
+        }
+        // Delete only the two delimiter characters. Closing-first keeps the
+        // opening index stable and preserves every interior run and REF field.
+        replaceParagraphTextRange(markerPara, start + markerText.length - 1, start + markerText.length, '');
+        replaceParagraphTextRange(markerPara, start, start + 1, '');
+        appliedCounts[oi]++;
+        madeChanges = true;
+      }
       continue;
     }
 

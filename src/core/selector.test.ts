@@ -193,6 +193,101 @@ describe('SelectionsConfigSchema', () => {
     });
     expect(result.success).toBe(true);
   });
+
+  it('strictly scopes selected bracket unwrap to markerless inline bracketed options', () => {
+    const valid = SelectionsConfigSchema.safeParse({ groups: [{
+      id: 'opt_out', type: 'checkbox', markerless: true, inline: true,
+      applies_when: { field: 'include_regime', equals: true },
+      options: [{ marker: '[Optional text]', trigger: { field: 'include_opt_out', equals: true }, selectedAction: 'unwrap_brackets' }],
+    }] });
+    expect(valid.success).toBe(true);
+    expect(SelectionsConfigSchema.safeParse({ groups: [{
+      id: 'bad', type: 'checkbox', markerless: true,
+      options: [{ marker: '[Optional text]', trigger: { field: 'flag' }, selectedAction: 'unwrap_brackets' }],
+    }] }).success).toBe(false);
+    expect(SelectionsConfigSchema.safeParse({ groups: [{
+      id: 'bad', type: 'checkbox', markerless: true, inline: true,
+      options: [{ marker: 'Optional text', trigger: { field: 'flag' }, selectedAction: 'unwrap_brackets' }],
+    }] }).success).toBe(false);
+  });
+});
+
+describe('applicable markerless selected actions', () => {
+  const marker = '[Holder may opt out under Section 6.]';
+  const config: SelectionsConfig = {
+    groups: [{
+      id: 'holder_opt_out',
+      type: 'checkbox',
+      markerless: true,
+      inline: true,
+      applies_when: { field: 'include_redemption', equals: true },
+      options: [{
+        marker,
+        trigger: { field: 'include_holder_opt_out', equals: true },
+        selectedAction: 'unwrap_brackets',
+      }],
+    }],
+  };
+  const body = `<w:p xmlns:w="${W_NS}">`
+    + '<w:r><w:t>[Holder may opt out under Section </w:t></w:r>'
+    + '<w:r><w:rPr><w:b/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r>'
+    + '<w:r><w:instrText xml:space="preserve"> REF _RefOptOut \\h </w:instrText></w:r>'
+    + '<w:r><w:fldChar w:fldCharType="separate"/></w:r>'
+    + '<w:r><w:rPr><w:b/></w:rPr><w:t>6</w:t></w:r>'
+    + '<w:r><w:fldChar w:fldCharType="end"/></w:r>'
+    + '<w:r><w:t>.]</w:t></w:r></w:p>';
+
+  it('skips an explicitly inapplicable group without match reports or warnings', async () => {
+    const input = buildTestDocx(body);
+    const output = join(makeTempDir(), 'out.docx');
+    const result = await applySelections(input, output, config, {
+      include_redemption: false,
+      include_holder_opt_out: true,
+    });
+    expect(result.options).toEqual([]);
+    expect(extractText(output)).toContain(marker);
+  });
+
+  it('fails closed for missing or wrongly typed applicability input', async () => {
+    const input = buildTestDocx(body);
+    await expect(applySelections(input, join(makeTempDir(), 'missing.docx'), config, {}))
+      .rejects.toThrow(/applicability field "include_redemption" is missing/);
+    await expect(applySelections(input, join(makeTempDir(), 'wrong.docx'), config, { include_redemption: 'true' }))
+      .rejects.toThrow(/must be boolean, received string/);
+  });
+
+  it('unwraps only selected outer brackets while preserving REF runs and styles', async () => {
+    const input = buildTestDocx(body);
+    const output = join(makeTempDir(), 'selected.docx');
+    const result = await applySelections(input, output, config, {
+      include_redemption: true,
+      include_holder_opt_out: true,
+    });
+    expect(extractText(output)).toBe('Holder may opt out under Section 6.');
+    expect(result.options[0]).toMatchObject({ selected: true, matchCount: 1, appliedCount: 1 });
+    const xml = readDocumentXml(output);
+    expect(xml).toContain(' REF _RefOptOut \\h ');
+    expect(xml).toContain('w:fldCharType="begin"');
+    expect(xml).toContain('<w:b/>');
+  });
+
+  it('retains existing unselected deletion and fails selected source drift', async () => {
+    const input = buildTestDocx(body);
+    const output = join(makeTempDir(), 'unselected.docx');
+    await applySelections(input, output, config, {
+      include_redemption: true,
+      include_holder_opt_out: false,
+    });
+    expect(extractText(output)).toBe('');
+
+    const drifted: SelectionsConfig = {
+      groups: [{ ...config.groups[0], options: [{ ...config.groups[0].options[0], marker: '[Drifted marker]' }] }],
+    };
+    await expect(applySelections(input, join(makeTempDir(), 'drift.docx'), drifted, {
+      include_redemption: true,
+      include_holder_opt_out: true,
+    })).rejects.toThrow(/matched 0 paragraphs \(expected 1\)/);
+  });
 });
 
 // ---------------------------------------------------------------------------
