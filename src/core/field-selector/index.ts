@@ -24,6 +24,7 @@ import { applyRepeatableTables, loadRepeatableTablesConfig, validateRepeatableTa
 import { bindAnchoredParagraphFields, loadAnchoredParagraphBindingsConfig } from './anchored-paragraph-bindings.js';
 import { normalizeNumberedHeadingSections } from './numbering-normalizer.js';
 import { loadReferenceFieldsConfig } from './reference-fields.js';
+import { assertFieldSelectorInputValueShapes } from './input-schema.js';
 
 function toComputedValueMap(values: Record<string, unknown>): ComputedValueMap {
   const computedValues: ComputedValueMap = {};
@@ -48,6 +49,9 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
   const fieldSelectorDir = resolveFieldSelectorDir(fieldSelectorId);
 
   const metadata = loadFieldSelectorMetadata(fieldSelectorDir);
+  // Validate source-owned token/sigil shapes before downloading, cleaning, or
+  // writing a document. The exported caller schema uses the same constraints.
+  assertFieldSelectorInputValueShapes(values, metadata.fields);
   const cleanConfig = loadCleanConfig(fieldSelectorDir);
   const normalizeConfig = loadNormalizeConfig(fieldSelectorDir);
   const repeatableTablesConfig = loadRepeatableTablesConfig(fieldSelectorDir);

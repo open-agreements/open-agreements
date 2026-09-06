@@ -9,7 +9,9 @@ import {
   buildFieldSelectorInputSchema,
   canonicalSha256,
   computedFieldNames,
+  fieldValuePattern,
   getFieldSelectorInputSchema,
+  assertFieldSelectorInputValueShapes,
   type JsonSchema,
 } from './input-schema.js';
 import { loadComputedProfile } from './computed.js';
@@ -17,13 +19,13 @@ import { loadFieldSelectorMetadata } from '../metadata.js';
 import { listFieldSelectorIds, resolveFieldSelectorDir } from '../../utils/paths.js';
 
 const NVCA_GOLDEN_HASHES: Record<string, string> = {
-  'nvca-certificate-of-incorporation': '532a0ce6922a8baa2097881f68ac139e68e91c331c44a375f5b415dfd53b4f3e',
+  'nvca-certificate-of-incorporation': '1c532b9cb4caa0f43e0707a106495ce7b28d4734b5033775804878b619907bea',
   'nvca-indemnification-agreement': '378070ff3d36bffc460b6b7d95a29f1c950c88f724fe90484260108900ac0b9b',
-  'nvca-investors-rights-agreement': '054fa5f41f4355c65a1054ffb9aa11dadbe1497fbd19ddd2b6e3c09c3003525b',
-  'nvca-management-rights-letter': 'b0b62fcf846b49166a6c7045b6134cc4ca24dda6b07f459145b12324597cedf1',
-  'nvca-rofr-co-sale-agreement': 'a202c5bd4d08abafd5f67854e0a0ded2c0254d9a20c272022c50c6dc70f8c3b9',
-  'nvca-stock-purchase-agreement': '1fd6470a5f1b2280633f804de230ee6ecb6e936aa4e9dec25674fa0f7d97efe9',
-  'nvca-voting-agreement': '6959d714c6c0a444d8ea80e3558af516fa9bcf3ffdf95caccfa650ab9204fa63',
+  'nvca-investors-rights-agreement': '496076ea3931ff2e7d7d26d5d721b77c014e205207c798efe56e55ec41f75fb3',
+  'nvca-management-rights-letter': '5e27820907e815dbb139ff81943b6a9ee68cb06994a1b732de1f60aefd410ba9',
+  'nvca-rofr-co-sale-agreement': '70b3f7017a95c812926bca57a56beb189980500b73e09ee7fad9b09e2a8c6d56',
+  'nvca-stock-purchase-agreement': 'c4c8835b56aa13071a6c89f430929ca484b376f219d930161da0fe44e92d1d99',
+  'nvca-voting-agreement': 'b8d0a54005f0dd8131655f4f8c6f589615a4341f01b70507e409799041b45962',
 };
 const it = itAllure.epic('Discovery & Metadata');
 
@@ -109,6 +111,56 @@ describe('field-selector caller-input JSON Schema', () => {
       { ...valid, rows: [{ label: 'A' }] },
       { ...valid, rows: [{ label: 'A', shares: 10, extra: true }] },
     ]) expect(validate(invalid), JSON.stringify(invalid)).toBe(false);
+  });
+
+  it('rejects rendered series names and percent signs while accepting canonical bare values', () => {
+    const schema = getFieldSelectorInputSchema(
+      'nvca-voting-agreement',
+      resolveFieldSelectorDir('nvca-voting-agreement'),
+    );
+    const properties = schema.properties as Record<string, JsonSchema>;
+    expect(properties.series_designation.pattern).toBe(fieldValuePattern({
+      name: 'series_designation', type: 'string', description: 'Series token',
+    }));
+    expect(properties.requisite_holders_percentage.pattern).toBe(fieldValuePattern({
+      name: 'requisite_holders_percentage', type: 'string', description: 'Bare percent',
+    }));
+
+    const coiSchema = getFieldSelectorInputSchema(
+      'nvca-certificate-of-incorporation',
+      resolveFieldSelectorDir('nvca-certificate-of-incorporation'),
+    );
+    const coiProperties = coiSchema.properties as Record<string, JsonSchema>;
+    expect(coiProperties.redemption_interest_rate.pattern).toBeDefined();
+    expect(new RegExp(coiProperties.redemption_interest_rate.pattern as string).test('12%')).toBe(false);
+
+    const seriesPattern = new RegExp(properties.series_designation.pattern as string);
+    const percentagePattern = new RegExp(properties.requisite_holders_percentage.pattern as string);
+    expect(seriesPattern.test('A')).toBe(true);
+    expect(seriesPattern.test('B')).toBe(true);
+    expect(seriesPattern.test('C')).toBe(true);
+    expect(seriesPattern.test('Series A Preferred Stock')).toBe(false);
+    expect(percentagePattern.test('60')).toBe(true);
+    expect(percentagePattern.test('60.5')).toBe(true);
+    expect(percentagePattern.test('60%')).toBe(false);
+  });
+
+  it('applies value-shape checks recursively before fill', () => {
+    const fields = [{
+      name: 'rows', type: 'array' as const, description: 'Rows', items: [
+        { name: 'series_designation', type: 'string' as const, description: 'Series token' },
+        { name: 'approval_percentage', type: 'string' as const, description: 'Bare percent' },
+      ],
+    }];
+    expect(() => assertFieldSelectorInputValueShapes({
+      rows: [{ series_designation: 'A', approval_percentage: '60' }],
+    }, fields)).not.toThrow();
+    expect(() => assertFieldSelectorInputValueShapes({
+      rows: [{ series_designation: 'Series A Preferred Stock', approval_percentage: '60' }],
+    }, fields)).toThrow(/rows\[0\]\.series_designation/);
+    expect(() => assertFieldSelectorInputValueShapes({
+      rows: [{ series_designation: 'A', approval_percentage: '60%' }],
+    }, fields)).toThrow(/rows\[0\]\.approval_percentage/);
   });
 
   it('fails closed for unknown directories and invalid metadata', () => {

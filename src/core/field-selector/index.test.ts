@@ -73,6 +73,36 @@ function createFieldSelectorFixture(options?: {
 }
 
 describe('runFieldSelector', () => {
+  itFilling('rejects malformed source-owned values before document work', async () => {
+    const fieldSelectorDir = createFieldSelectorFixture({
+      fields: [
+        '  - name: company_name',
+        '    type: string',
+        '    description: Company name',
+        '  - name: series_designation',
+        '    type: string',
+        '    description: Series token',
+        '  - name: approval_percentage',
+        '    type: string',
+        '    description: Bare percentage',
+      ],
+    });
+    const ensureSourceDocxMock = vi.fn(async () => '/tmp/downloaded-source.docx');
+    vi.doMock('../../utils/paths.js', () => ({ resolveFieldSelectorDir: () => fieldSelectorDir }));
+    vi.doMock('./downloader.js', () => ({ ensureSourceDocx: ensureSourceDocxMock }));
+    const { runFieldSelector } = await import('./index.js');
+
+    await expect(runFieldSelector({
+      fieldSelectorId: 'fixture-fieldSelector', outputPath: '/tmp/output.docx',
+      values: { company_name: 'Acme', series_designation: 'Series A Preferred Stock', approval_percentage: '60' },
+    })).rejects.toThrow(/series_designation/);
+    await expect(runFieldSelector({
+      fieldSelectorId: 'fixture-fieldSelector', outputPath: '/tmp/output.docx',
+      values: { company_name: 'Acme', series_designation: 'A', approval_percentage: '60%' },
+    })).rejects.toThrow(/approval_percentage/);
+    expect(ensureSourceDocxMock).not.toHaveBeenCalled();
+  });
+
   itFilling('forwards priorityFieldNames when inputPath is supplied', async () => {
     const fieldSelectorDir = createFieldSelectorFixture();
 
