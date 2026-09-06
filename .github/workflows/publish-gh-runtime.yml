@@ -42,6 +42,7 @@ jobs:
           rm -rf runtime-pkg
           mkdir -p runtime-pkg
           cp -r dist runtime-pkg/dist
+          cp runtime-capabilities.json runtime-pkg/runtime-capabilities.json
           # All content is unified under templates/<source>-<rights>/<slug>/ (#1249).
           cp -r templates runtime-pkg/templates
           # bundleDependencies requires the dep to be declared in `dependencies`
@@ -63,7 +64,7 @@ jobs:
                 "./dist/*": "./dist/*",
                 "./templates/*": "./templates/*"
               },
-              files: ["dist/", "templates/"],
+              files: ["dist/", "templates/", "runtime-capabilities.json"],
               dependencies: {
                 "@usejunior/docx-core": process.env.DOCX_CORE_VERSION,
                 "@xmldom/xmldom": "^0.9.9",

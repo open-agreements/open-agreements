@@ -1,4 +1,5 @@
 // Public API exports
+export { RUNTIME_CAPABILITIES } from './core/runtime-capabilities.js';
 
 // Template engine
 export { fillTemplate, type FillOptions, type FillResult } from './core/engine.js';

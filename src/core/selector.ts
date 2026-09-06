@@ -30,12 +30,13 @@ function normalizeQuotes(text: string): string {
 
 const TriggerSchema = z.union([
   z.literal('default'),
-  z.object({ field: z.string(), equals: z.union([z.string(), z.boolean()]) }),
-  z.object({ field: z.string() }),
+  z.object({ field: z.string(), equals: z.union([z.string(), z.boolean()]) }).strict(),
+  z.object({ field: z.string() }).strict(),
 ]);
 type Trigger = z.infer<typeof TriggerSchema>;
 
 const OptionSchema = z.object({
+  label: z.string().optional(),
   marker: z.string(),
   trigger: TriggerSchema,
   replaceWith: z.string().optional(),
@@ -65,7 +66,7 @@ const OptionSchema = z.object({
       removeAdjacentBlankParagraphs: z.boolean().optional(),
     }).strict(),
   ]).optional(),
-});
+}).strict();
 
 const GroupSchema = z
   .object({
@@ -77,7 +78,7 @@ const GroupSchema = z
     cellContext: z.string().optional(),
     subClauseStopPatterns: z.array(z.string()).optional(),
     options: z.array(OptionSchema).min(1),
-  })
+  }).strict()
   .refine(
     (g) => g.standalone === true || g.markerless === true || g.options.length >= 2,
     { message: 'Non-standalone/non-markerless groups require at least 2 options' },
@@ -103,7 +104,7 @@ const GroupSchema = z
 
 export const SelectionsConfigSchema = z.object({
   groups: z.array(GroupSchema).min(1),
-});
+}).strict();
 export type SelectionsConfig = z.infer<typeof SelectionsConfigSchema>;
 
 // ---------------------------------------------------------------------------
