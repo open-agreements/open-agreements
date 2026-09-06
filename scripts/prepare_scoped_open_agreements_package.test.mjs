@@ -43,6 +43,12 @@ function bundledPackages(packageDir) {
 }
 
 describe('prepare_scoped_open_agreements_package', () => {
+  it('keeps successful capability checks silent for npm pack JSON consumers', () => {
+    expect(execFileSync(process.execPath, ['scripts/check_runtime_capabilities.mjs'], {
+      cwd: REPO_ROOT, encoding: 'utf8',
+    })).toBe('');
+  });
+
   it('refuses a capability declaration that exceeds the built runtime before copying', () => {
     const fixture = tempDir('oa-incompatible-package-');
     mkdirSync(join(fixture, 'scripts'));

@@ -12,6 +12,7 @@
     "repeatable-tables.v1",
     "anchored-paragraph-bindings.v1",
     "reference-fields.v1",
-    "reference-fields.grouped.v1"
+    "reference-fields.grouped.v1",
+    "conditional-input-requirements.v1"
   ]
 }

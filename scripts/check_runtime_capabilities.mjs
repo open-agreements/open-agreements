@@ -9,4 +9,5 @@ const root = resolve(process.argv[2] ?? '.');
 const declared = JSON.parse(readFileSync(resolve(root, 'runtime-capabilities.json'), 'utf8'));
 const { RUNTIME_CAPABILITIES } = await import(pathToFileURL(resolve(root, 'dist/core/runtime-capabilities.js')));
 assert.deepEqual(declared, RUNTIME_CAPABILITIES, 'runtime-capabilities.json does not match the built runtime');
-console.log('Runtime capability declaration matches built runtime.');
+// Stay silent on success: npm versions that forward lifecycle stdout into
+// `pack --json` otherwise corrupt the machine-readable package inventory.

@@ -18,5 +18,6 @@ export const RUNTIME_CAPABILITIES = Object.freeze({
     'anchored-paragraph-bindings.v1',
     'reference-fields.v1',
     'reference-fields.grouped.v1',
+    'conditional-input-requirements.v1',
   ]),
 });

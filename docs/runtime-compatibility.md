@@ -18,6 +18,11 @@ explicit capabilities because older runtimes lacked those operations. These name
 describe supported operation contracts, not a minimum npm release inferred from
 its version number. New incompatible operations require a new capability.
 
+`conditional-input-requirements.v1` identifies the `required_when` field contract:
+missing selected inputs are refused and exported input schemas express the same
+condition. Distributors must detect these declarations in metadata; an older
+runtime may otherwise strip them while accepting the rest of the field.
+
 Selections parsing is strict at the config, group, option and trigger levels.
 Unknown keys fail instead of being discarded. Existing option `label` values
 remain accepted. A schema-versioned distribution contract and a strict loader
