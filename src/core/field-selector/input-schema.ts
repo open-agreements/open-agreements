@@ -8,6 +8,7 @@ import {
 } from '../metadata.js';
 import { loadComputedProfile, type ComputedProfile } from './computed.js';
 import { resolveFieldSelectorDir } from '../../utils/paths.js';
+import { assertConditionalInputOwnership, conditionalControllerDefault } from '../conditional-inputs.js';
 
 export const FIELD_SELECTOR_INPUT_SCHEMA_VERSION = 1 as const;
 export const FIELD_SELECTOR_SCHEMA_GENERATOR = 'open-agreements field-selector schema' as const;
@@ -164,9 +165,31 @@ export function buildFieldSelectorInputSchema(
   computedProfile: ComputedProfile | null,
 ): JsonSchema {
   const computed = computedFieldNames(computedProfile);
+  assertConditionalInputOwnership(metadata.fields, computed);
   const fields = metadata.fields.filter((field) => !computed.has(field.name));
   const inputNames = new Set(fields.map((field) => field.name));
   const required = metadata.priority_fields.filter((name) => inputNames.has(name));
+  const conditions = fields.filter((field) => field.required_when).map((field) => {
+    const condition = field.required_when!;
+    const controller = fields.find((candidate) => candidate.name === condition.field);
+    if (!controller) throw new Error(`required_when controller "${condition.field}" must be a caller input`);
+    const usesDefault = conditionalControllerDefault(controller) === condition.equals;
+    return {
+      if: {
+        properties: { [condition.field]: { const: condition.equals } },
+        // Without a matching controller default, omission must not vacuously
+        // activate the condition. JSON Schema does not apply defaults itself.
+        ...(!usesDefault ? { required: [condition.field] } : {}),
+      },
+      then: {
+        required: [field.name],
+        properties: {
+          [field.name]: ['string', 'enum', 'date'].includes(field.type)
+            ? { type: 'string', pattern: '\\S' } : { type: field.type },
+        },
+      },
+    };
+  });
   return {
     $schema: 'https://json-schema.org/draft/2020-12/schema',
     $id: `https://openagreements.org/schemas/field-selector/${fieldSelectorId}.schema.json`,
@@ -176,6 +199,7 @@ export function buildFieldSelectorInputSchema(
     additionalProperties: false,
     properties: Object.fromEntries(fields.map((field) => [field.name, fieldSchema(field)])),
     required,
+    ...(conditions.length ? { allOf: conditions } : {}),
     'x-openagreements': {
       field_selector_id: fieldSelectorId,
       source_version: metadata.source_version,
