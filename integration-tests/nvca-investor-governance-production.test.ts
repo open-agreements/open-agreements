@@ -112,6 +112,8 @@ describeWithSources('NVCA investor and governance production fills', () => {
       expect(text).toContain('KEY HOLDERS: Maya Imani');
       expect(text).toContain('holders of at least 60%');
       expect(text).toContain('Series A Preferred Stock');
+      expect(text).not.toContain('Series Series A Preferred Stock Preferred Stock');
+      expect(text).not.toContain('60%%');
     } finally {
       rmSync(dir, { recursive: true, force: true });
     }
