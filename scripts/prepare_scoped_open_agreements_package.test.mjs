@@ -1,5 +1,5 @@
 import { execFileSync } from 'node:child_process';
-import { existsSync, mkdtempSync, rmSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 
@@ -43,6 +43,22 @@ function bundledPackages(packageDir) {
 }
 
 describe('prepare_scoped_open_agreements_package', () => {
+  it('refuses a capability declaration that exceeds the built runtime before copying', () => {
+    const fixture = tempDir('oa-incompatible-package-');
+    mkdirSync(join(fixture, 'scripts'));
+    mkdirSync(join(fixture, 'dist/core'), { recursive: true });
+    cpSync(join(REPO_ROOT, 'scripts/check_runtime_capabilities.mjs'), join(fixture, 'scripts/check_runtime_capabilities.mjs'));
+    writeFileSync(join(fixture, 'package.json'), JSON.stringify({ type: 'module', files: ['dist/'] }));
+    writeFileSync(join(fixture, 'dist/core/runtime-capabilities.js'), 'export const RUNTIME_CAPABILITIES = {schema_version:1,capabilities:[]};');
+    writeFileSync(join(fixture, 'runtime-capabilities.json'), JSON.stringify({ schema_version: 1, capabilities: ['selections.bounded-removal.v1'] }));
+    const outDir = tempDir('oa-incompatible-destination-');
+    writeFileSync(join(outDir, 'sentinel'), 'unchanged');
+
+    expect(() => execFileSync(process.execPath, [PREPARE_SCRIPT, '--out-dir', outDir], { cwd: fixture, stdio: 'pipe' })).toThrow();
+    expect(readFileSync(join(outDir, 'sentinel'), 'utf8')).toBe('unchanged');
+    expect(existsSync(join(outDir, 'dist'))).toBe(false);
+  });
+
   it(
     'stages the same bundled dependency tree as the root package',
     () => {
@@ -55,6 +71,9 @@ describe('prepare_scoped_open_agreements_package', () => {
       });
 
       const actual = bundledPackages(outDir);
+      expect(JSON.parse(readFileSync(join(outDir, 'runtime-capabilities.json'), 'utf8'))).toEqual(
+        JSON.parse(readFileSync(join(REPO_ROOT, 'runtime-capabilities.json'), 'utf8')),
+      );
       expect(actual).toContain('@usejunior/docx-core');
       expect([...actual].sort()).toEqual([...expected].sort());
       expect(
