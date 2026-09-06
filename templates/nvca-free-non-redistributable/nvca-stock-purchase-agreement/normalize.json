@@ -278,8 +278,10 @@
     {
       "id": "unwrap-amendment-elections",
       "ignore_heading": true, "section_heading": "Amendments and Waivers",
-      "paragraph_contains": "for an amendment, termination or waiver effected prior to the Initial Closing",
-      "replacements": { "[(i)]": "(i)", "[, or (ii)": ", or (ii)", "Initial Closing]": "Initial Closing", "[; provided, however": "; provided, however", "own behalf, without the consent of any other party]": "own behalf, without the consent of any other party" }
+      "paragraph_contains": "Purchasers obligated to purchase",
+      "expected_min_matches": 1,
+      "expected_max_matches": 1,
+      "replacements": { "[(i)]": "(i)", "[, or (ii)": ", or (ii)", "Initial Closing]": "Initial Closing", "Closing]": "Closing", "[; provided, however": "; provided, however", "own behalf, without the consent of any other party]": "own behalf, without the consent of any other party" }
     }
   ]
 }
