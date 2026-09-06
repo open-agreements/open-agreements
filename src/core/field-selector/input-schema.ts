@@ -8,7 +8,8 @@ import {
 } from '../metadata.js';
 import { loadComputedProfile, type ComputedProfile } from './computed.js';
 import { resolveFieldSelectorDir } from '../../utils/paths.js';
-import { assertConditionalInputOwnership, conditionalControllerDefault } from '../conditional-inputs.js';
+import { assertConditionalInputOwnership } from '../conditional-inputs.js';
+import { typedFieldDefault } from '../field-defaults.js';
 
 export const FIELD_SELECTOR_INPUT_SCHEMA_VERSION = 1 as const;
 export const FIELD_SELECTOR_SCHEMA_GENERATOR = 'open-agreements field-selector schema' as const;
@@ -107,25 +108,14 @@ export function computedFieldNames(profile: ComputedProfile | null): Set<string>
   return names;
 }
 
-function typedDefault(field: FieldDefinition): unknown {
-  if (field.default === undefined || field.default === '') return undefined;
-  if (field.type === 'boolean') return field.default === 'true';
-  if (field.type === 'number') {
-    const value = Number(field.default);
-    return Number.isFinite(value) ? value : field.default;
-  }
-  if (field.type === 'multiselect') {
-    try { return JSON.parse(field.default); } catch { return field.default; }
-  }
-  return field.default;
-}
-
 function fieldSchema(field: FieldDefinition): JsonSchema {
   const common: JsonSchema = {
     title: field.display_label ?? field.name,
     description: field.description,
   };
-  const defaultValue = typedDefault(field);
+  // Empty defaults are omitted from the schema annotation, even when the
+  // declared scalar default has meaning to a conditional controller.
+  const defaultValue = field.default === '' ? undefined : typedFieldDefault(field);
   if (defaultValue !== undefined) common.default = defaultValue;
   const pattern = fieldValuePattern(field);
   if (pattern) common.pattern = pattern;
@@ -173,7 +163,7 @@ export function buildFieldSelectorInputSchema(
     const condition = field.required_when!;
     const controller = fields.find((candidate) => candidate.name === condition.field);
     if (!controller) throw new Error(`required_when controller "${condition.field}" must be a caller input`);
-    const usesDefault = conditionalControllerDefault(controller) === condition.equals;
+    const usesDefault = typedFieldDefault(controller) === condition.equals;
     return {
       if: {
         properties: { [condition.field]: { const: condition.equals } },

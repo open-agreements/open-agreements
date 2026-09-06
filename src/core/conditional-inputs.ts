@@ -1,12 +1,5 @@
 import type { FieldDefinition } from './metadata.js';
-
-/** Defaults activate a regime only when the caller omitted its controller. */
-export function conditionalControllerDefault(field: FieldDefinition): unknown {
-  if (field.default === undefined) return undefined;
-  if (field.type === 'boolean') return field.default === 'true';
-  if (field.type === 'number') return Number(field.default);
-  return field.default;
-}
+import { typedFieldDefault } from './field-defaults.js';
 
 export class IncompleteConditionalInputError extends Error {
   readonly code = 'INCOMPLETE_CONDITIONAL_INPUT';
@@ -34,7 +27,7 @@ export function assertConditionalRequiredInputs(values: Record<string, unknown>,
     const controller = byName.get(condition.field);
     if (!controller) throw new Error(`Unknown required_when controller: ${condition.field}`);
     const supplied = Object.prototype.hasOwnProperty.call(values, condition.field);
-    const actual = supplied ? values[condition.field] : conditionalControllerDefault(controller);
+    const actual = supplied ? values[condition.field] : typedFieldDefault(controller);
     if (supplied && typeof actual !== typeof condition.equals) {
       throw new Error(`Conditional controller "${condition.field}" must be a ${typeof condition.equals}`);
     }

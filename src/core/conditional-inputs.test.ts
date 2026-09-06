@@ -61,6 +61,40 @@ describe('conditional required inputs', () => {
     }
   });
 
+  it('preserves empty controller semantics separately from schema default annotations', () => {
+    const metadata = FieldSelectorMetadataSchema.parse({ ...fixture, fields: [
+      { name: 'enabled', type: 'string', description: 'Controller', default: '' },
+      ...fixture.fields.slice(1).map(field => ({ ...field, required_when: { field: 'enabled', equals: '' } })),
+    ] });
+    const ajv = new Ajv2020({ strict: false }); addFormats(ajv);
+    const schema = buildFieldSelectorInputSchema('fixture', metadata, null);
+    const validate = ajv.compile(schema);
+    expect((schema.properties as Record<string, object>).enabled).not.toHaveProperty('default');
+    expect(validate({})).toBe(false);
+    expect(() => assertConditionalRequiredInputs({}, metadata.fields)).toThrow(/start_date/);
+    expect(validate({ enabled: '' })).toBe(false);
+    expect(() => assertConditionalRequiredInputs({ enabled: '' }, metadata.fields)).toThrow(/start_date/);
+  });
+
+  it('preserves numeric zero and enum defaults in both condition evaluation and schema annotations', () => {
+    for (const controller of [
+      { name: 'enabled', type: 'number', description: 'Controller', default: '0' },
+      { name: 'enabled', type: 'enum', description: 'Controller', default: 'yes', options: ['yes', 'no'] },
+    ]) {
+      const equals = controller.type === 'number' ? 0 : 'yes';
+      const metadata = FieldSelectorMetadataSchema.parse({ ...fixture, fields: [controller, {
+        name: 'chosen', type: 'string', description: 'Choice', required_when: { field: 'enabled', equals },
+      }] });
+      const schema = buildFieldSelectorInputSchema('fixture', metadata, null);
+      const ajv = new Ajv2020({ strict: false }); const validate = ajv.compile(schema);
+      expect((schema.properties as Record<string, object>).enabled).toHaveProperty('default', equals);
+      expect(validate({})).toBe(false);
+      expect(() => assertConditionalRequiredInputs({}, metadata.fields)).toThrow(/chosen/);
+      expect(validate({ chosen: '0' })).toBe(true);
+      expect(() => assertConditionalRequiredInputs({ chosen: '0' }, metadata.fields)).not.toThrow();
+    }
+  });
+
   it('rejects unknown, self, incompatible or nested controllers and silent economic defaults', () => {
     for (const condition of [{ field: 'missing', equals: true }, { field: 'start_date', equals: true }, { field: 'enabled', equals: 'true' }]) {
       const raw = structuredClone(fixture); raw.fields[1].required_when = condition as typeof raw.fields[1]['required_when'];
