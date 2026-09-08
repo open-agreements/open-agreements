@@ -497,10 +497,9 @@ function getComplexFieldRunRanges(runs: Element[]): ComplexFieldRunRange[] {
 
 /**
  * Replace an edit expanded across one or more complete field complexes.
- * Boundary text outside the requested character span is retained, while every
- * run in the expanded field-aware range is removed. A fresh ordinary text run
- * is inserted at the original range location, so no instruction/result
- * fragments can survive application field refresh.
+ * Keep boundary text in its original runs/containers and remove intersected
+ * field instructions/results. Only the replacement inherits the first matched
+ * run's formatting; untouched semantic children retain their document order.
  */
 function replaceExpandedAtomicRange(
   runs: Element[],
@@ -519,26 +518,60 @@ function replaceExpandedAtomicRange(
   const suffix = expandedEnd === lastEntry.runIndex
     ? lastText.slice(lastEntry.charOffset + 1)
     : '';
-  const replacementText = prefix + value + suffix;
+  if (firstEntry.runIndex === lastEntry.runIndex && prefix && suffix) {
+    throw new Error('Unsupported atomic field replacement: both boundary fragments share one run');
+  }
+  if (prefix && Array.from(runs[firstEntry.runIndex].childNodes).some(child =>
+    child.nodeType === 1 && !['rPr', 't'].includes((child as Element).localName ?? ''))) {
+    throw new Error('Unsupported atomic field replacement: semantic children share the prefix boundary run');
+  }
 
   const anchor = runs[expandedStart];
   const parent = anchor.parentNode;
   if (!parent) return;
   const doc = anchor.ownerDocument as Document;
-  if (replacementText !== '') {
+  if (value !== '') {
     const replacementRun = doc.createElementNS(W_NS, 'w:r');
     const sourceRPr = runs[firstEntry.runIndex].getElementsByTagNameNS(W_NS, 'rPr')[0];
     if (sourceRPr) replacementRun.appendChild(sourceRPr.cloneNode(true));
     const text = doc.createElementNS(W_NS, 'w:t');
     preserveXmlSpace(text);
-    text.textContent = replacementText;
+    text.textContent = value;
     replacementRun.appendChild(text);
     if (replacementColor) setRunColor(replacementRun, replacementColor);
-    parent.insertBefore(replacementRun, anchor);
+    if (prefix) {
+      const boundary = runs[firstEntry.runIndex];
+      boundary.parentNode!.insertBefore(replacementRun, boundary.nextSibling);
+    } else {
+      parent.insertBefore(replacementRun, anchor);
+    }
   }
 
   for (let i = expandedEnd; i >= expandedStart; i--) {
-    runs[i].parentNode?.removeChild(runs[i]);
+    const run = runs[i];
+    let offset = 0;
+    for (const child of Array.from(run.childNodes)) {
+      if (child.nodeType !== 1) continue;
+      const element = child as Element;
+      if (element.namespaceURI !== W_NS) continue;
+      if (element.localName === 't') {
+        const original = element.textContent ?? '';
+        const start = offset;
+        offset += original.length;
+        const keepPrefix = i === firstEntry.runIndex && prefix
+          ? original.slice(0, Math.max(0, firstEntry.charOffset - start)) : '';
+        const keepSuffix = i === lastEntry.runIndex && suffix
+          ? original.slice(Math.max(0, lastEntry.charOffset + 1 - start)) : '';
+        if (keepPrefix || keepSuffix) {
+          element.textContent = keepPrefix + keepSuffix;
+          preserveXmlSpace(element);
+        } else run.removeChild(element);
+      } else if (element.localName === 'fldChar' || element.localName === 'instrText') {
+        run.removeChild(element);
+      }
+    }
+    // Textless semantic children (references, breaks, drawings) are not empty runs.
+    if (getRunText(run) === '' && isRunSafeToRemove(run)) run.parentNode?.removeChild(run);
   }
 }
 

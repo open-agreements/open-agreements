@@ -1,7 +1,7 @@
 import { describe, expect } from 'vitest';
 import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import { join } from 'node:path';
-import { mkdtempSync, rmSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
@@ -638,6 +638,33 @@ describe('patchDocument — formatting preservation (docx-core)', () => {
 });
 
 describe('patchDocument — atomic complex-field range deletion', () => {
+  it('preserves boundary formatting and semantic events around atomic replacement', async () => {
+    const xml = `<w:document xmlns:w="${W_NS}"><w:body><w:p>` +
+      '<w:r w:rsidR="00112233"><w:rPr><w:b/><w:u w:val="single"/></w:rPr><w:t>Before [Section </w:t></w:r>' +
+      '<w:bookmarkStart w:id="9" w:name="target"/>' +
+      field('target', '3') +
+      '<w:r><w:commentReference w:id="4"/></w:r>' +
+      '<w:bookmarkEnd w:id="9"/>' +
+      '<w:r w:rsidR="00445566"><w:rPr><w:i/><w:u w:val="none"/></w:rPr><w:t>] After</w:t><w:br/></w:r>' +
+      '</w:p></w:body></w:document>';
+    const input = buildMinimalDocx(xml), output = input.replace('test.docx', 'output.docx');
+    const sourceBytes = readFileSync(input);
+    await patchDocument(input, output, {'[Section 3]': 'Replacement'}, {replacementColor: 'FF0000'});
+    expect(readFileSync(input)).toEqual(sourceBytes);
+    const doc = new DOMParser().parseFromString(outputXml(output), 'text/xml');
+    const runs = Array.from(doc.getElementsByTagNameNS(W_NS, 'r'));
+    const textRun = (text: string) => runs.find(r => Array.from(r.getElementsByTagNameNS(W_NS, 't')).map(t => t.textContent).join('') === text)!;
+    expect(extractText(output)).toBe('Before Replacement After');
+    expect(textRun('Before ').getElementsByTagNameNS(W_NS, 'b').length).toBe(1);
+    expect(textRun('Before ').getElementsByTagNameNS(W_NS, 'color').length).toBe(0);
+    expect(textRun(' After').getElementsByTagNameNS(W_NS, 'i').length).toBe(1);
+    expect(textRun(' After').getElementsByTagNameNS(W_NS, 'u')[0].getAttribute('w:val')).toBe('none');
+    expect(textRun(' After').getAttribute('w:rsidR')).toBe('00445566');
+    expect(textRun('Replacement').getElementsByTagNameNS(W_NS, 'color')[0].getAttribute('w:val')).toBe('FF0000');
+    expect(doc.getElementsByTagNameNS(W_NS, 'fldChar').length).toBe(0);
+    const events = Array.from(doc.getElementsByTagNameNS(W_NS, '*')).filter(e => ['bookmarkStart', 'bookmarkEnd', 'commentReference', 'br'].includes(e.localName!)).map(e => e.localName);
+    expect(events).toEqual(['bookmarkStart', 'commentReference', 'bookmarkEnd', 'br']);
+  });
   function field(bookmark: string, result: string): string {
     return (
       '<w:r><w:fldChar w:fldCharType="begin"/></w:r>' +
@@ -647,6 +674,32 @@ describe('patchDocument — atomic complex-field range deletion', () => {
       '<w:r><w:fldChar w:fldCharType="end"/></w:r>'
     );
   }
+
+  it('keeps a suffix inside its original hyperlink and preserves an outside field', async () => {
+    const xml = `<w:document xmlns:w="${W_NS}" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><w:body><w:p>` +
+      '<w:r><w:rPr><w:u w:val="single"/></w:rPr><w:t>[Section </w:t></w:r>' + field('inside', '2') +
+      '<w:hyperlink r:id="rId1"><w:r><w:rPr><w:i/></w:rPr><w:t>] Tail</w:t></w:r></w:hyperlink>' +
+      field('outside', '9') + '</w:p></w:body></w:document>';
+    const input = buildMinimalDocx(xml), output = input.replace('test.docx', 'output.docx');
+    await patchDocument(input, output, {'[Section 2]': ''});
+    const doc = new DOMParser().parseFromString(outputXml(output), 'text/xml');
+    const hyperlink = doc.getElementsByTagNameNS(W_NS, 'hyperlink')[0];
+    expect(hyperlink.getElementsByTagNameNS(W_NS, 't')[0].textContent).toBe(' Tail');
+    expect(hyperlink.getElementsByTagNameNS(W_NS, 'i').length).toBe(1);
+    expect(hyperlink.getElementsByTagNameNS(W_NS, 'u').length).toBe(0);
+    expect(doc.getElementsByTagNameNS(W_NS, 'instrText')[0].textContent).toContain('outside');
+    expect(doc.getElementsByTagNameNS(W_NS, 'fldChar').length).toBe(3);
+    expect(extractText(output)).toBe(' Tail9');
+  });
+
+  it('fails closed when prefix-run semantic placement cannot be preserved safely', async () => {
+    const xml = `<w:document xmlns:w="${W_NS}"><w:body><w:p>` +
+      '<w:r><w:t>Before [Section </w:t><w:commentReference w:id="5"/></w:r>' + field('inside', '2') +
+      '<w:r><w:t>] Tail</w:t></w:r></w:p></w:body></w:document>';
+    const input = buildMinimalDocx(xml), output = input.replace('test.docx', 'output.docx');
+    await expect(patchDocument(input, output, {'[Section 2]': 'Updated'})).rejects.toThrow('semantic children');
+    expect(existsSync(output)).toBe(false);
+  });
 
   function outputXml(path: string): string {
     return new AdmZip(path).getEntry('word/document.xml')!.getData().toString('utf-8');
