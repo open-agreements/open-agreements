@@ -42,6 +42,29 @@ function fixture(dateDefault = '2026-09-08', choicesDefault = '["one"]') {
     return { root, input };
 }
 describe('declared defaults before computed prose', () => {
+    it('preserves raw caller attribution for defaulted repeatable rows', async () => {
+        const { root, input } = fixture();
+        const dir = join(root, 'templates/synthetic/defaults-fixture');
+        const metadataPath = join(dir, 'metadata.yaml');
+        const metadata = JSON.parse(readFileSync(metadataPath, 'utf8'));
+        metadata.fields.push({ name: 'rows', type: 'array', description: 'Rows', default: '[]',
+            items: [{ name: 'label', type: 'string', description: 'Label' }] });
+        writeFileSync(metadataPath, JSON.stringify(metadata));
+        writeFileSync(join(dir, 'repeatable-tables.json'), JSON.stringify({ schema_version: 1, tables: [
+            { id: 'rows', rows_field: 'rows', header_cells: ['Labels'], columns: [{ field: 'label' }] },
+        ] }));
+        const zip = new AdmZip(input);
+        zip.updateFile('word/document.xml', Buffer.from(zip.readAsText('word/document.xml').replace('</w:body>',
+            '<w:tbl><w:tr><w:tc><w:p><w:r><w:t>Labels</w:t></w:r></w:p></w:tc></w:tr></w:tbl></w:body>')));
+        zip.writeZip(input);
+        for (const [name, values] of Object.entries({ omitted: {}, explicit: { rows: [{ label: 'Included row' }] } })) {
+            const outputPath = join(root, `${name}.docx`);
+            const result = await runFieldSelector({ fieldSelectorId: 'defaults-fixture', inputPath: input, outputPath, values });
+            expect(result.fieldsUsed).toContain('rows');
+            expect(result.providedFieldsUsed.includes('rows')).toBe(Object.hasOwn(values, 'rows'));
+            expect(extractAllText(outputPath).includes('Included row')).toBe(Object.hasOwn(values, 'rows'));
+        }
+    });
     it('renders omitted caller defaults exactly like explicit equivalents without seeding undeclared fields', async () => {
         const { root, input } = fixture(), before = readFileSync(input);
         for (const [name, values] of Object.entries({ omitted: {}, explicit: { mode: 'standard', days: '120', enabled: true, date: '2026-09-08' } })) {
