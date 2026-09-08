@@ -2,9 +2,12 @@ import {createHash} from 'node:crypto';
 import {existsSync, mkdtempSync, readFileSync, rmSync} from 'node:fs';
 import {homedir, tmpdir} from 'node:os';
 import {join} from 'node:path';
+import AdmZip from 'adm-zip';
+import {DOMParser} from '@xmldom/xmldom';
 import {describe, expect} from 'vitest';
 import {itAllure} from './helpers/allure-test.js';
 import {extractAllText, runFieldSelector} from '../src/core/field-selector/index.js';
+import {resolveNumberingSnapshots} from '../src/core/field-selector/numbering-counters.js';
 
 const it = itAllure.epic('Filling & Rendering');
 const recipeId = 'nvca-investors-rights-agreement';
@@ -59,6 +62,30 @@ describeWithSource('IRA complete split-section election matrix (LE #2521)', () =
       expect(createHash('sha256').update(mandatory ?? '').digest('hex'))
         .toBe('7fff4b798538848a988247c935240f4426a7b8bf4eb1421fe4268c6daa431457');
       expect(text).toContain('Termination of Covenants');
+      // Read actual surviving target numbers from the filled document, never
+      // duplicate computed.json's offset arithmetic (the old oracle missed QSBS).
+      const zip = new AdmZip(result.outputPath);
+      const parser = new DOMParser();
+      const part = (name: string) => parser.parseFromString(zip.readAsText(`word/${name}.xml`), 'text/xml');
+      const headings = resolveNumberingSnapshots(part('document'), part('styles'), part('numbering'))
+        .filter(snapshot => snapshot.ilvl === 1 && snapshot.counters[0] === 5)
+        .map(snapshot => ({
+          number: snapshot.counters.slice(0, 2).join('.'),
+          text: Array.from(snapshot.paragraph.getElementsByTagNameNS('http://schemas.openxmlformats.org/wordprocessingml/2006/main', 't'))
+            .map(node => node.textContent).join(''),
+        }));
+      expect(headings.filter(row => row.text.startsWith('Qualified Small Business Stock')).map(row => row.number))
+        .toEqual(['5.3']);
+      const expectedReferences = sections.slice(1, 4).filter(({field}) => values[field]).map(({field, heading}) => {
+        const targets = headings.filter(row => row.text.startsWith(heading));
+        expect(targets, `${name}: unique surviving target ${heading}`).toHaveLength(1);
+        return `${targets[0].number}${field === 'include_transaction_assistance' ? '(a)' : ''}`;
+      });
+      const termination = text.split('\n').find(line => line.includes('The covenants set forth in this'));
+      expect(termination, `${name}: termination paragraph`).toBeDefined();
+      expect(termination?.match(/5\.\d+(?:\([a-z]\))?/g) ?? [], `${name}: references resolve to actual targets`)
+        .toEqual(expectedReferences);
+      expect(termination?.includes('without exception')).toBe(expectedReferences.length === 0);
     } finally {
       rmSync(dir, {recursive: true, force: true});
     }
