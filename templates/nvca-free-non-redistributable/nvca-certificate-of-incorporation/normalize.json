@@ -9,6 +9,26 @@
         "..": "."
       },
       "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-enabled-redemption-opening-envelope",
+      "section_heading": "Redemption.",
+      "ignore_heading": true,
+      "paragraph_contains": "General. Unless prohibited by Delaware law governing distributions to stockholders",
+      "replacements": {
+        "[General.": "General."
+      },
+      "expected_min_matches": 1
+    },
+    {
+      "id": "unwrap-enabled-redemption-closing-envelope",
+      "section_heading": "Redemption.",
+      "ignore_heading": true,
+      "paragraph_contains": "Rights Subsequent to Redemption.",
+      "replacements": {
+        "certificates therefor.]": "certificates therefor."
+      },
+      "expected_min_matches": 1
     }
   ]
 }

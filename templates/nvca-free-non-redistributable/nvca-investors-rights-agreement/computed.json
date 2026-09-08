@@ -22,13 +22,131 @@
     "inspection_section": "3.2",
     "rofo_article": "4",
     "rofo_section": "4.1",
-    "successor_indemnification_section": "5.5",
+    "successor_indemnification_section": "5.4",
+    "transaction_assistance_section": "5.4",
+    "indemnification_matters_section": "5.4",
+    "covenant_survival_exception_clause": "",
     "indemnification_late_notice_clause": "The failure to give notice to the indemnifying party within a reasonable time of the commencement of any such action shall relieve such indemnifying party of any liability to the indemnified party under this Section 2.8, only to the extent that such failure materially prejudices the indemnifying party’s ability to defend such action. The failure to give notice to the indemnifying party will not relieve it of any liability that it may have to any indemnified party otherwise than under this Section 2.8.",
     "rofo_termination_liquidation_clause": "",
     "covenant_termination_liquidation_clause": ""
     ,"selling_holder_counsel_expense_exception_clause": ""
   },
   "rules": [
+    {
+      "id": "successor-section-without-board",
+      "when_all": [{ "field": "include_board_attendance_expenses", "op": "neq", "value": true }],
+      "set_fill": { "successor_indemnification_section": "5.4" }
+    },
+    {
+      "id": "successor-section-with-board",
+      "when_all": [{ "field": "include_board_attendance_expenses", "op": "eq", "value": true }],
+      "set_fill": { "successor_indemnification_section": "5.5" }
+    },
+    {
+      "id": "transaction-section-without-predecessors",
+      "when_all": [{ "field": "include_board_attendance_expenses", "op": "neq", "value": true }, { "field": "include_successor_indemnification", "op": "neq", "value": true }],
+      "set_fill": { "transaction_assistance_section": "5.4" }
+    },
+    {
+      "id": "transaction-section-with-one-predecessor-board",
+      "when_all": [{ "field": "include_board_attendance_expenses", "op": "eq", "value": true }, { "field": "include_successor_indemnification", "op": "neq", "value": true }],
+      "set_fill": { "transaction_assistance_section": "5.5" }
+    },
+    {
+      "id": "transaction-section-with-one-predecessor-successor",
+      "when_all": [{ "field": "include_board_attendance_expenses", "op": "neq", "value": true }, { "field": "include_successor_indemnification", "op": "eq", "value": true }],
+      "set_fill": { "transaction_assistance_section": "5.5" }
+    },
+    {
+      "id": "transaction-section-with-two-predecessors",
+      "when_all": [{ "field": "include_board_attendance_expenses", "op": "eq", "value": true }, { "field": "include_successor_indemnification", "op": "eq", "value": true }],
+      "set_fill": { "transaction_assistance_section": "5.6" }
+    },
+    {
+      "id": "indemnification-section-base",
+      "when_all": [{ "field": "include_board_attendance_expenses", "op": "neq", "value": true }, { "field": "include_successor_indemnification", "op": "neq", "value": true }, { "field": "include_transaction_assistance", "op": "neq", "value": true }],
+      "set_fill": { "indemnification_matters_section": "5.4" }
+    },
+    {
+      "id": "indemnification-section-one-predecessor-board",
+      "when_all": [{ "field": "include_board_attendance_expenses", "op": "eq", "value": true }, { "field": "include_successor_indemnification", "op": "neq", "value": true }, { "field": "include_transaction_assistance", "op": "neq", "value": true }],
+      "set_fill": { "indemnification_matters_section": "5.5" }
+    },
+    {
+      "id": "indemnification-section-one-predecessor-successor",
+      "when_all": [{ "field": "include_board_attendance_expenses", "op": "neq", "value": true }, { "field": "include_successor_indemnification", "op": "eq", "value": true }, { "field": "include_transaction_assistance", "op": "neq", "value": true }],
+      "set_fill": { "indemnification_matters_section": "5.5" }
+    },
+    {
+      "id": "indemnification-section-one-predecessor-transaction",
+      "when_all": [{ "field": "include_board_attendance_expenses", "op": "neq", "value": true }, { "field": "include_successor_indemnification", "op": "neq", "value": true }, { "field": "include_transaction_assistance", "op": "eq", "value": true }],
+      "set_fill": { "indemnification_matters_section": "5.5" }
+    },
+    {
+      "id": "indemnification-section-two-predecessors-board-successor",
+      "when_all": [{ "field": "include_board_attendance_expenses", "op": "eq", "value": true }, { "field": "include_successor_indemnification", "op": "eq", "value": true }, { "field": "include_transaction_assistance", "op": "neq", "value": true }],
+      "set_fill": { "indemnification_matters_section": "5.6" }
+    },
+    {
+      "id": "indemnification-section-two-predecessors-board-transaction",
+      "when_all": [{ "field": "include_board_attendance_expenses", "op": "eq", "value": true }, { "field": "include_successor_indemnification", "op": "neq", "value": true }, { "field": "include_transaction_assistance", "op": "eq", "value": true }],
+      "set_fill": { "indemnification_matters_section": "5.6" }
+    },
+    {
+      "id": "indemnification-section-two-predecessors-successor-transaction",
+      "when_all": [{ "field": "include_board_attendance_expenses", "op": "neq", "value": true }, { "field": "include_successor_indemnification", "op": "eq", "value": true }, { "field": "include_transaction_assistance", "op": "eq", "value": true }],
+      "set_fill": { "indemnification_matters_section": "5.6" }
+    },
+    {
+      "id": "indemnification-section-three-predecessors",
+      "when_all": [{ "field": "include_board_attendance_expenses", "op": "eq", "value": true }, { "field": "include_successor_indemnification", "op": "eq", "value": true }, { "field": "include_transaction_assistance", "op": "eq", "value": true }],
+      "set_fill": { "indemnification_matters_section": "5.7" }
+    },
+    {
+      "id": "covenant-survival-none-without-additional",
+      "when_all": [{ "field": "include_successor_indemnification", "op": "neq", "value": true }, { "field": "include_transaction_assistance", "op": "neq", "value": true }, { "field": "include_indemnification_matters", "op": "neq", "value": true }, { "field": "surviving_covenant_sections", "op": "falsy" }],
+      "set_fill": { "covenant_survival_exception_clause": ", without exception" }
+    },
+    {
+      "id": "covenant-survival-none-with-additional",
+      "when_all": [{ "field": "include_successor_indemnification", "op": "neq", "value": true }, { "field": "include_transaction_assistance", "op": "neq", "value": true }, { "field": "include_indemnification_matters", "op": "neq", "value": true }, { "field": "surviving_covenant_sections", "op": "truthy" }],
+      "set_fill": { "covenant_survival_exception_clause": "${surviving_covenant_sections}" }
+    },
+    {
+      "id": "covenant-survival-successor-only",
+      "when_all": [{ "field": "include_successor_indemnification", "op": "eq", "value": true }, { "field": "include_transaction_assistance", "op": "neq", "value": true }, { "field": "include_indemnification_matters", "op": "neq", "value": true }],
+      "set_fill": { "covenant_survival_exception_clause": ", except for Section ${successor_indemnification_section}${surviving_covenant_sections}" }
+    },
+    {
+      "id": "covenant-survival-transaction-only",
+      "when_all": [{ "field": "include_successor_indemnification", "op": "neq", "value": true }, { "field": "include_transaction_assistance", "op": "eq", "value": true }, { "field": "include_indemnification_matters", "op": "neq", "value": true }],
+      "set_fill": { "covenant_survival_exception_clause": ", except for Section ${transaction_assistance_section}(a)${surviving_covenant_sections}" }
+    },
+    {
+      "id": "covenant-survival-indemnification-only",
+      "when_all": [{ "field": "include_successor_indemnification", "op": "neq", "value": true }, { "field": "include_transaction_assistance", "op": "neq", "value": true }, { "field": "include_indemnification_matters", "op": "eq", "value": true }],
+      "set_fill": { "covenant_survival_exception_clause": ", except for Section ${indemnification_matters_section}${surviving_covenant_sections}" }
+    },
+    {
+      "id": "covenant-survival-successor-transaction",
+      "when_all": [{ "field": "include_successor_indemnification", "op": "eq", "value": true }, { "field": "include_transaction_assistance", "op": "eq", "value": true }, { "field": "include_indemnification_matters", "op": "neq", "value": true }],
+      "set_fill": { "covenant_survival_exception_clause": ", except for Sections ${successor_indemnification_section} and ${transaction_assistance_section}(a)${surviving_covenant_sections}" }
+    },
+    {
+      "id": "covenant-survival-successor-indemnification",
+      "when_all": [{ "field": "include_successor_indemnification", "op": "eq", "value": true }, { "field": "include_transaction_assistance", "op": "neq", "value": true }, { "field": "include_indemnification_matters", "op": "eq", "value": true }],
+      "set_fill": { "covenant_survival_exception_clause": ", except for Sections ${successor_indemnification_section} and ${indemnification_matters_section}${surviving_covenant_sections}" }
+    },
+    {
+      "id": "covenant-survival-transaction-indemnification",
+      "when_all": [{ "field": "include_successor_indemnification", "op": "neq", "value": true }, { "field": "include_transaction_assistance", "op": "eq", "value": true }, { "field": "include_indemnification_matters", "op": "eq", "value": true }],
+      "set_fill": { "covenant_survival_exception_clause": ", except for Sections ${transaction_assistance_section}(a) and ${indemnification_matters_section}${surviving_covenant_sections}" }
+    },
+    {
+      "id": "covenant-survival-all",
+      "when_all": [{ "field": "include_successor_indemnification", "op": "eq", "value": true }, { "field": "include_transaction_assistance", "op": "eq", "value": true }, { "field": "include_indemnification_matters", "op": "eq", "value": true }],
+      "set_fill": { "covenant_survival_exception_clause": ", except for Sections ${successor_indemnification_section}, ${transaction_assistance_section}(a), and ${indemnification_matters_section}${surviving_covenant_sections}" }
+    },
     {
       "id": "liquidation-termination-conditions-included",
       "when_all": [{ "field": "include_covenant_termination_deemed_liquidation_condition", "op": "eq", "value": true }],

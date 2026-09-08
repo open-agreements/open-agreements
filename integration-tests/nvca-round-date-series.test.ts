@@ -16,7 +16,7 @@
  * already appear in each template's replacements.json — the NVCA source
  * documents are not redistributable and are never embedded here.
  */
-import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
@@ -136,6 +136,15 @@ async function fillFixture(
     'selections.json',
   ]) {
     rmSync(join(fixtureRecipe, fullSourceOnlyConfig), { force: true });
+  }
+  const normalizePath = join(fixtureRecipe, 'normalize.json');
+  if (existsSync(normalizePath)) {
+    const normalize = JSON.parse(readFileSync(normalizePath, 'utf-8'));
+    // Only this temporary scalar fixture lacks the authenticated source's
+    // numbering families. Preserve all other normalization; real-source tests
+    // continue exercising the fail-closed continuation source-hash guard.
+    delete normalize.numbering_continuations;
+    writeFileSync(normalizePath, `${JSON.stringify(normalize, null, 2)}\n`);
   }
   const previousRoots = process.env.OPEN_AGREEMENTS_CONTENT_ROOTS;
   process.env.OPEN_AGREEMENTS_CONTENT_ROOTS = fixtureRoot;

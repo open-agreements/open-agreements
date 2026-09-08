@@ -21,7 +21,10 @@ async function fill(values: Record<string, unknown>, allowVerifyWarnings = false
   const dir = mkdtempSync(join(tmpdir(), 'nvca-ira-drafting-choices-'));
   const outputPath = join(dir, 'investors-rights-agreement.docx');
   try {
-    const result = await runFieldSelector({ fieldSelectorId: ID, outputPath, values });
+    const result = await runFieldSelector({ fieldSelectorId: ID, outputPath, values: {
+      // Explicit synthetic elections for unrelated parents; caller overrides win.
+      include_transaction_assistance: false, include_fair_practices_covenant: false, ...values,
+    } });
     if (!allowVerifyWarnings) {
       expect(result.warnings.filter((warning) => warning.startsWith('verify:'))).toEqual([]);
     }

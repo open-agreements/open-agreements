@@ -19,9 +19,9 @@ import { loadFieldSelectorMetadata } from '../metadata.js';
 import { listFieldSelectorIds, resolveFieldSelectorDir } from '../../utils/paths.js';
 
 const NVCA_GOLDEN_HASHES: Record<string, string> = {
-  'nvca-certificate-of-incorporation': '1c532b9cb4caa0f43e0707a106495ce7b28d4734b5033775804878b619907bea',
+  'nvca-certificate-of-incorporation': '003b1da0413315f4f7692f1b7641c0bdd1c683c64a2c7526f5f8ef1e4230eb9a',
   'nvca-indemnification-agreement': '378070ff3d36bffc460b6b7d95a29f1c950c88f724fe90484260108900ac0b9b',
-  'nvca-investors-rights-agreement': '496076ea3931ff2e7d7d26d5d721b77c014e205207c798efe56e55ec41f75fb3',
+  'nvca-investors-rights-agreement': 'b16253ec1e9a3db38974c1ad9d9774e5de1f79a3b6575e756afc227fb4ae4ce6',
   'nvca-management-rights-letter': '5e27820907e815dbb139ff81943b6a9ee68cb06994a1b732de1f60aefd410ba9',
   'nvca-rofr-co-sale-agreement': '70b3f7017a95c812926bca57a56beb189980500b73e09ee7fad9b09e2a8c6d56',
   'nvca-stock-purchase-agreement': 'c4c8835b56aa13071a6c89f430929ca484b376f219d930161da0fe44e92d1d99',

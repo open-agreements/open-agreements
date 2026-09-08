@@ -156,7 +156,7 @@
           }
         },
         {
-          "label": "Redemption-allocation adjustment",
+          "label": "Holder redemption opt-out",
           "marker": "If the Corporation receives, on or prior to the 20th day after the date of delivery of the Redemption Notice",
           "trigger": { "field": "include_redemption" },
           "removal": {
@@ -202,6 +202,38 @@
             "expectedMatches": 1,
             "within": { "startAnchor": "Redemption. {no_redemption_clause}", "endAnchor": "Redeemed or Otherwise Acquired Shares.", "match": "contains", "expectedMatches": 1 }
           }
+        }
+      ]
+    },
+    {
+      "id": "redemption_excluded_shares_allocation",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "applies_when": { "field": "include_redemption", "equals": true },
+      "options": [
+        {
+          "label": "Exclude opted-out shares from redemption allocation",
+          "marker": "[; provided, however, that Excluded Shares (as such term is defined in Section 6.2) shall not be redeemed and shall be excluded from the calculations set forth in this sentence]",
+          "trigger": { "field": "include_redemption_holder_opt_out", "equals": true },
+          "selectedAction": "unwrap_brackets"
+        }
+      ]
+    },
+    {
+      "id": "redemption_holder_opt_out",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "applies_when": { "field": "include_redemption", "equals": true },
+      "options": [
+        {
+          "label": "Permit a holder to opt out after Redemption Notice",
+          "marker": "[If the Corporation receives, on or prior to the 20th day after the date of delivery of the Redemption Notice to a holder of Preferred Stock, written notice from such holder that such holder elects to be excluded from the redemption provided in this Section 6, then the shares of Preferred Stock registered on the books of the Corporation in the name of such holder at the time of the Corporation’s receipt of such notice shall thereafter be “Excluded Shares.” Excluded Shares shall not be redeemed or redeemable pursuant to this Section 6, whether on such Redemption Date or thereafter.]",
+          "trigger": { "field": "include_redemption_holder_opt_out", "equals": true },
+          "selectedAction": "unwrap_brackets"
         }
       ]
     },
