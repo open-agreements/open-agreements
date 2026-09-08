@@ -109,9 +109,41 @@ fields:
       display-ready date string.
   - name: redemption_start_date
     type: date
+    required_when:
+      field: include_redemption
+      equals: true
     description: >-
       Earliest date on which preferred stock may be redeemed ("on or after <date>"). Accepts ISO YYYY-MM-DD (rendered as e.g.
       "March 15, 2026") or a display-ready date string.
+  - name: redemption_price_basis
+    type: enum
+    required_when:
+      field: include_redemption
+      equals: true
+    description: >-
+      Redemption Price formula to use when Article Sixth redemption is enabled; choose the Original Issue Price plus
+      declared but unpaid dividends, or the greater of that amount and Fair Market Value
+    options: [original_issue_price_plus_declared_unpaid_dividends, greater_of_original_issue_price_and_fair_market_value]
+  - name: include_redemption_holder_opt_out
+    type: boolean
+    required_when:
+      field: include_redemption
+      equals: true
+    description: >-
+      When Article Sixth redemption is enabled, permit a holder to opt out within 20 days after delivery of the
+      Redemption Notice and exclude those shares from the redemption allocation
+  - name: redemption_price_prefix_carrier
+    type: string
+    required: false
+    description: Computed prefix for the selected Redemption Price formula
+  - name: redemption_fair_market_value_prong_carrier
+    type: string
+    required: false
+    description: Computed Fair Market Value prong for the selected Redemption Price formula
+  - name: redemption_fair_market_value_definition_carrier
+    type: string
+    required: false
+    description: Computed Fair Market Value appraisal definition when that price basis is selected
   - name: no_redemption_clause
     type: string
     description: Computed whole carrier for the no-redemption statement when Article Sixth is not elected
@@ -202,9 +234,15 @@ fields:
     default: '10'
   - name: redemption_interest_rate
     type: string
+    required_when:
+      field: include_redemption
+      equals: true
     description: Annual interest rate on unredeemed shares (percentage)
   - name: redemption_compounding_frequency
     type: enum
+    required_when:
+      field: include_redemption
+      equals: true
     description: Frequency at which interest on unredeemed shares is compounded
     options: [annually, quarterly, monthly]
   - name: conversion_notice_days
