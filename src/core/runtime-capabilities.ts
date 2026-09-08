@@ -22,6 +22,7 @@ export const RUNTIME_CAPABILITIES = Object.freeze({
     'reference-fields.v1',
     'reference-fields.grouped.v1',
     'conditional-input-requirements.v1',
+    'conditional-input-requirements.all-of.v1',
     'render.numbering-snapshot.v1',
   ]),
 });

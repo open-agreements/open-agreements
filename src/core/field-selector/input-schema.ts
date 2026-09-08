@@ -10,6 +10,7 @@ import { loadComputedProfile, type ComputedProfile } from './computed.js';
 import { resolveFieldSelectorDir } from '../../utils/paths.js';
 import { assertConditionalInputOwnership } from '../conditional-inputs.js';
 import { typedFieldDefault } from '../field-defaults.js';
+import { conditionalPredicates } from '../conditional-predicates.js';
 
 export const FIELD_SELECTOR_INPUT_SCHEMA_VERSION = 1 as const;
 export const FIELD_SELECTOR_SCHEMA_GENERATOR = 'open-agreements field-selector schema' as const;
@@ -161,16 +162,19 @@ export function buildFieldSelectorInputSchema(
   const required = metadata.priority_fields.filter((name) => inputNames.has(name));
   const conditions = fields.filter((field) => field.required_when).map((field) => {
     const condition = field.required_when!;
-    const controller = fields.find((candidate) => candidate.name === condition.field);
-    if (!controller) throw new Error(`required_when controller "${condition.field}" must be a caller input`);
-    const usesDefault = typedFieldDefault(controller) === condition.equals;
-    return {
-      if: {
-        properties: { [condition.field]: { const: condition.equals } },
+    const predicates = conditionalPredicates(condition).map(predicate => {
+      const controller = fields.find((candidate) => candidate.name === predicate.field);
+      if (!controller) throw new Error(`required_when controller "${predicate.field}" must be a caller input`);
+      const usesDefault = typedFieldDefault(controller) === predicate.equals;
+      return {
+        properties: { [predicate.field]: { const: predicate.equals } },
         // Without a matching controller default, omission must not vacuously
         // activate the condition. JSON Schema does not apply defaults itself.
-        ...(!usesDefault ? { required: [condition.field] } : {}),
-      },
+        ...(!usesDefault ? { required: [predicate.field] } : {}),
+      };
+    });
+    return {
+      if: 'all_of' in condition ? { allOf: predicates } : predicates[0],
       then: {
         required: [field.name],
         properties: {
