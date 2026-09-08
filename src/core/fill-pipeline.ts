@@ -21,7 +21,7 @@ import {
 } from './field-selector/ooxml-parts.js';
 import type { FieldDefinition } from './metadata.js';
 import { assertConditionalRequiredInputs } from './conditional-inputs.js';
-import { typedFieldDefault } from './field-defaults.js';
+import { preparedFieldDefault } from './field-defaults.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -222,18 +222,7 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
 
   for (const field of fields) {
     if (!(field.name in data)) {
-      if (field.type === 'array') {
-        data[field.name] = [];
-      } else if (field.type === 'multiselect') {
-        data[field.name] = field.default ? JSON.parse(field.default) : [];
-      } else if (field.type === 'boolean' && field.default !== undefined) {
-        // Metadata defaults already have a declared type. Preserve it even
-        // when coercion of caller-supplied strings is intentionally disabled;
-        // selection applicability requires the same typed values as schemas.
-        data[field.name] = typedFieldDefault(field);
-      } else {
-        data[field.name] = field.default ?? defaultValue;
-      }
+      data[field.name] = preparedFieldDefault(field, defaultValue);
     }
   }
 

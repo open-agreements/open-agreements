@@ -27,7 +27,7 @@ import { validateNumberingContinuationSource } from './numbering-continuations.j
 import { loadReferenceFieldsConfig } from './reference-fields.js';
 import { assertFieldSelectorInputValueShapes, computedFieldNames } from './input-schema.js';
 import { assertConditionalInputOwnership, assertConditionalRequiredInputs } from '../conditional-inputs.js';
-import { typedFieldDefault } from '../field-defaults.js';
+import { preparedFieldDefault } from '../field-defaults.js';
 
 function toComputedValueMap(values: Record<string, unknown>): ComputedValueMap {
   const computedValues: ComputedValueMap = {};
@@ -127,16 +127,7 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
   const computedOwnedFields = computedFieldNames(computedProfile);
   for (const field of metadata.fields) {
     if (field.name in defaultedValues || field.default === undefined || computedOwnedFields.has(field.name)) continue;
-    // Match prepareFillData's representation, including string number defaults.
-    if (field.type === 'array') {
-      defaultedValues[field.name] = [];
-    } else if (field.type === 'multiselect') {
-      defaultedValues[field.name] = field.default ? JSON.parse(field.default) : [];
-    } else if (field.type === 'boolean') {
-      defaultedValues[field.name] = typedFieldDefault(field);
-    } else {
-      defaultedValues[field.name] = field.default;
-    }
+    defaultedValues[field.name] = preparedFieldDefault(field);
     materializedDefaultFields.add(field.name);
   }
   const inputValues = formatDocumentDateFields(defaultedValues, metadata.fields);
