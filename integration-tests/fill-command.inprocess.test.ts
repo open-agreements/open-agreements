@@ -25,6 +25,8 @@ interface FillHarnessOptions {
   fieldSelectorError?: Error;
   warnings?: string[];
   isEmploymentTemplateId?: (templateId: string) => boolean;
+  /** Route the template to the founder-separation memo family instead. */
+  isFounderTemplateId?: (templateId: string) => boolean;
   memo?: Record<string, unknown>;
   memoMarkdown?: string;
 }
@@ -57,6 +59,9 @@ interface FillHarness {
     generateEmploymentMemo: ReturnType<typeof vi.fn>;
     isEmploymentTemplateId: ReturnType<typeof vi.fn>;
     renderEmploymentMemoMarkdown: ReturnType<typeof vi.fn>;
+    generateFounderMemo: ReturnType<typeof vi.fn>;
+    renderFounderMemoMarkdown: ReturnType<typeof vi.fn>;
+    resolveMemoDispatch: ReturnType<typeof vi.fn>;
   };
 }
 
@@ -136,6 +141,35 @@ async function loadFillHarness(opts: FillHarnessOptions = {}): Promise<FillHarne
     return opts.memoMarkdown ?? '# Employment Memo\n\nNo additional risks.';
   });
 
+  const isFounderTemplateId = vi.fn((templateId: string) =>
+    opts.isFounderTemplateId ? opts.isFounderTemplateId(templateId) : false
+  );
+
+  const generateFounderMemo = vi.fn((input: Record<string, unknown>) => {
+    return opts.memo ?? { templateId: input.templateId, matter_family: 'founder-separation' };
+  });
+
+  const renderFounderMemoMarkdown = vi.fn(() => {
+    return opts.memoMarkdown ?? '# Founder Separation Companion Memo\n\nNo unresolved facts.';
+  });
+
+  // Mirrors the real family dispatch: founder first, then employment, else
+  // unsupported. The command under test must route on the resolved family.
+  const resolveMemoDispatch = vi.fn((templateId: string) => {
+    if (isFounderTemplateId(templateId)) {
+      return { family: 'founder-separation', templateId, profileId: templateId };
+    }
+    if (isEmploymentTemplateId(templateId)) {
+      return { family: 'employment', templateId, profileId: templateId };
+    }
+    return undefined;
+  });
+
+  const buildUnsupportedMemoFamilyMessage = vi.fn(
+    (templateId: string) =>
+      `Memo generation is not available for template "${templateId}". Templates that support --memo: ...`
+  );
+
   vi.doMock('../src/utils/paths.js', () => ({
     findTemplateDir,
     findExternalDir,
@@ -167,6 +201,17 @@ async function loadFillHarness(opts: FillHarnessOptions = {}): Promise<FillHarne
     renderEmploymentMemoMarkdown,
   }));
 
+  vi.doMock('../src/core/founder/memo.js', () => ({
+    generateFounderMemo,
+    isFounderTemplateId,
+    renderFounderMemoMarkdown,
+  }));
+
+  vi.doMock('../src/core/memo/families.js', () => ({
+    resolveMemoDispatch,
+    buildUnsupportedMemoFamilyMessage,
+  }));
+
   const { runFill } = await import('../src/commands/fill.js');
 
   return {
@@ -185,6 +230,9 @@ async function loadFillHarness(opts: FillHarnessOptions = {}): Promise<FillHarne
       generateEmploymentMemo,
       isEmploymentTemplateId,
       renderEmploymentMemoMarkdown,
+      generateFounderMemo,
+      renderFounderMemoMarkdown,
+      resolveMemoDispatch,
     },
   };
 }
@@ -398,7 +446,7 @@ describe('runFill in-process coverage', () => {
     expect(errorSpy).toHaveBeenCalledWith('Error: render failed');
   });
 
-  itFilling('rejects memo generation for non-employment templates', async () => {
+  itFilling('rejects memo generation for a template outside every memo family', async () => {
     const harness = await loadFillHarness({
       templateDir: '/templates/common-paper-mutual-nda',
       metadata: {
@@ -428,8 +476,48 @@ describe('runFill in-process coverage', () => {
     expect(exitSpy).toHaveBeenCalledWith(1);
     expect(harness.spies.fillTemplate).not.toHaveBeenCalled();
     expect(errorSpy).toHaveBeenCalledWith(
-      expect.stringContaining('Memo generation is currently supported only for employment templates')
+      expect.stringContaining('Memo generation is not available for template "common-paper-mutual-nda"')
     );
+    // The error must point at what IS supported, not only at what is not.
+    expect(errorSpy).toHaveBeenCalledWith(
+      expect.stringContaining('Templates that support --memo')
+    );
+  });
+
+  itFilling('writes memo artifacts for a founder-separation template', async () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-fill-founder-memo-'));
+    tempDirs.push(outDir);
+    const outputPath = join(outDir, 'repurchase-notice.docx');
+
+    const harness = await loadFillHarness({
+      templateDir: '/templates/openagreements-founder-share-repurchase-notice',
+      metadata: {
+        name: 'Founder Share Repurchase Election Notice',
+        allow_derivatives: true,
+        priority_fields: [],
+      },
+      isEmploymentTemplateId: () => false,
+      isFounderTemplateId: (templateId) => templateId.startsWith('openagreements-founder-'),
+      memo: { template_id: 'openagreements-founder-share-repurchase-notice', matter_family: 'founder-separation' },
+      memoMarkdown: '# Founder Separation Companion Memo',
+    });
+
+    await harness.runFill({
+      template: 'openagreements-founder-share-repurchase-notice',
+      output: outputPath,
+      values: {},
+      memo: { enabled: true, format: 'both' },
+    });
+
+    expect(harness.spies.generateFounderMemo).toHaveBeenCalledTimes(1);
+    expect(harness.spies.generateEmploymentMemo).not.toHaveBeenCalled();
+
+    const jsonPath = outputPath.replace(/\.docx$/, '.memo.json');
+    const markdownPath = outputPath.replace(/\.docx$/, '.memo.md');
+    expect(existsSync(jsonPath)).toBe(true);
+    expect(existsSync(markdownPath)).toBe(true);
+    expect(JSON.parse(readFileSync(jsonPath, 'utf-8')).matter_family).toBe('founder-separation');
+    expect(readFileSync(markdownPath, 'utf-8')).toContain('# Founder Separation Companion Memo');
   });
 
   itFilling('writes memo artifacts for employment templates with default output paths', async () => {
