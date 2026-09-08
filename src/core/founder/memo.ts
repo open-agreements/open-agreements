@@ -28,7 +28,7 @@
 import { type TemplateMetadata } from '../metadata.js';
 import {
   applyAdviceLanguageGuard,
-  assertNoProhibitedAdviceLanguage,
+  assertMemoArtifactHasNoProhibitedAdviceLanguage,
 } from '../memo/advice-language.js';
 import { resolveMemoDispatch } from '../memo/families.js';
 
@@ -82,6 +82,8 @@ export interface FounderMemoCounselEscalation {
   escalation_recommended: boolean;
   reason: string;
   high_severity_ids: string[];
+  /** Approvals whose authority rests on records this tool never received. */
+  outstanding_approval_dependency_ids: string[];
   guidance: string;
   follow_up_questions: string[];
 }
@@ -226,11 +228,11 @@ const BRANCH_SPECS: Record<string, BranchSpec[]> = {
       field: 'vacancy_action',
       consequences: {
         'reduce-board-size':
-          'The consent reduces the authorized number of directors. It does not appoint anyone to the seat the founder vacated.',
+          'The consent reduces the authorized number of directors, conditioned on any amendment to the certificate of incorporation required to effect the reduction having become effective. It appoints no one to the seat the founder vacated. Whether that amendment exists or is effective is not established by anything supplied to this tool.',
         'appoint-replacement':
-          'The consent appoints a named replacement director to the vacated seat and leaves the authorized board size unchanged.',
+          'The consent appoints a named replacement director to the vacated seat under section 223 of the Delaware General Corporation Law, to hold office until the next election of directors and until a successor is elected and qualified. The authorized number of directors is unchanged.',
         'leave-vacant':
-          'The consent leaves the vacated seat open and leaves the authorized board size unchanged, so the board operates below its authorized number until the seat is filled.',
+          'The consent leaves the vacated seat open, to be filled in accordance with the certificate of incorporation, the bylaws, and applicable law. The authorized number of directors is unchanged, so the board operates below it until the seat is filled.',
       },
     },
     {
@@ -261,11 +263,11 @@ const BRANCH_SPECS: Record<string, BranchSpec[]> = {
       field: 'stockholder_action',
       consequences: {
         'remove-director':
-          'The consent removes a named director by stockholder action.',
+          'The consent removes a named director under section 141(k) of the Delaware General Corporation Law and provides that the resulting vacancy is addressed under the certificate of incorporation, the bylaws, and Delaware law. It does not itself fill the vacancy.',
         'amend-charter-board-size':
-          'The consent amends the certificate of incorporation to change the authorized number of directors.',
+          'The consent adopts and approves an amendment to the certificate of incorporation fixing the authorized number of directors, in substantially the form presented to the stockholders, and authorizes officers to execute and file a certificate of amendment with the Delaware Secretary of State. That amendment is a separate document not supplied to this tool, and this consent alone does not make it effective.',
         other:
-          'A generic stockholder action is recorded. The specific action taken is not constrained by the template, so the operative language depends entirely on what the drafter supplied.',
+          'A generic stockholder-reserved action is approved and officers are authorized to effect it. The specific action is not constrained by the template, so what was approved depends entirely on the description the drafter supplied.',
       },
     },
   ],
@@ -273,9 +275,9 @@ const BRANCH_SPECS: Record<string, BranchSpec[]> = {
     {
       field: 'include_mutual_release',
       consequences: {
-        true: 'A mutual release is included, so the agreement disposes of claims beyond the share repurchase itself.',
+        true: 'A mutual release is included, so the agreement disposes of claims within the release scope stated in the fill, beyond the share repurchase itself.',
         false:
-          'No release is included. The agreement settles the share repurchase only, and any claims between the company and the founder remain open.',
+          'No release is included, so this agreement disposes of the share repurchase only and releases no claims. Whether any claims exist between the company and the founder, and whether another document releases them, is not established by anything supplied to this tool.',
       },
     },
   ],
@@ -396,7 +398,50 @@ const APPROVAL_SPECS: Record<string, ApprovalSpec[]> = {
       missingNote: 'No company signatory or title is recorded.',
     },
   ],
+  // The founder signs these two alone; no company approval is taken. The
+  // profile exists so the memo says that in terms rather than emitting an empty
+  // Approvals section, which reads as "nothing was required".
+  'openagreements-founder-separation-resignation-letter': [
+    {
+      id: 'founder-signature',
+      approval: 'Founder signature. No company approval is taken by this document',
+      evidenceFields: ['founder_name'],
+      recordedNote:
+        'The founder is named as the signer. This document is the founder\'s own act; the board and stockholder actions that respond to the resignation are separate documents in the package.',
+      missingNote: 'No founder is named, so the letter has no signer.',
+    },
+  ],
+  'openagreements-founder-stock-assignment-separate': [
+    {
+      id: 'founder-signature',
+      approval: 'Founder signature. No company approval is taken by this document',
+      evidenceFields: ['founder_name'],
+      recordedNote:
+        'The founder is named as the assignor. Whether a signature guarantee or a spousal consent is also needed depends on the certificate, the ledger, and the underlying purchase agreement, none of which are supplied to this tool.',
+      missingNote: 'No founder is named, so the assignment has no assignor.',
+    },
+    {
+      id: 'attorney-in-fact',
+      approval: 'Appointment of an attorney-in-fact to transfer the shares on the books',
+      evidenceFields: ['attorney_in_fact'],
+      recordedNote:
+        'An attorney-in-fact is named to effect the transfer on the corporate books.',
+      missingNote:
+        'No attorney-in-fact is named, so the assignment identifies no one authorized to transfer the shares on the books.',
+    },
+  ],
 };
+
+/**
+ * Templates the founder memo has an authored approval profile for. A founder
+ * template that ships without one still produces a memo, but without the
+ * approval section the family exists to provide — so
+ * `integration-tests/memo-families.test.ts` asserts this covers every installed
+ * founder template, and a new one fails the gate until its profile is written.
+ */
+export function founderTemplateIdsWithApprovalProfile(): string[] {
+  return Object.keys(APPROVAL_SPECS).sort((left, right) => left.localeCompare(right));
+}
 
 export function isFounderTemplateId(templateId: string): boolean {
   return resolveMemoDispatch(templateId)?.family === 'founder-separation';
@@ -409,8 +454,10 @@ export function generateFounderMemo(options: GenerateFounderMemoOptions): Founde
     );
   }
 
-  const fieldValues = resolveFounderFieldValues(options.templateMetadata, options.values);
-  const declaredFieldNames = new Set(options.templateMetadata.fields.map((field) => field.name));
+  const { values: fieldValues, arrays: arrayEvidence } = resolveFounderFieldValues(
+    options.templateMetadata,
+    options.values
+  );
 
   const sourceDocuments = buildSourceDocuments(options.templateId, fieldValues);
   const branchDecisions = buildBranchDecisions(options.templateId, options.templateMetadata, fieldValues);
@@ -418,7 +465,7 @@ export function generateFounderMemo(options: GenerateFounderMemoOptions): Founde
     templateId: options.templateId,
     templateMetadata: options.templateMetadata,
     fieldValues,
-    declaredFieldNames,
+    arrayEvidence,
   });
   const approvals = buildApprovals(options.templateId, fieldValues);
 
@@ -446,21 +493,11 @@ export function generateFounderMemo(options: GenerateFounderMemoOptions): Founde
     counsel_escalation: buildFounderCounselEscalation(unresolvedFacts, approvals),
   };
 
-  assertNoProhibitedAdviceLanguage(collectMemoText(memo));
+  // Walks the finished artifact rather than a hand-listed set of sections: a
+  // citation echoed back from a field value is emitted too, and was previously
+  // unchecked.
+  assertMemoArtifactHasNoProhibitedAdviceLanguage(memo);
   return memo;
-}
-
-function collectMemoText(memo: FounderMemo): string[] {
-  return [
-    memo.disclaimer,
-    ...memo.source_documents.map((entry) => entry.dependency_note),
-    ...memo.branch_decisions.map((entry) => entry.consequence),
-    ...memo.unresolved_facts.flatMap((entry) => [entry.summary, entry.follow_up_question]),
-    ...memo.approvals.map((entry) => entry.note),
-    memo.counsel_escalation.reason,
-    memo.counsel_escalation.guidance,
-    ...memo.counsel_escalation.follow_up_questions,
-  ];
 }
 
 /**
@@ -468,11 +505,25 @@ function collectMemoText(memo: FounderMemo): string[] {
  * and numbers become their literal text; an array becomes a count-bearing
  * summary so an empty signatory list is distinguishable from an absent one.
  */
+interface ArrayFieldEvidence {
+  /** How many entries the fill supplied, usable or not. */
+  supplied: number;
+  /** Entries that actually carry a name. Only these count as evidence. */
+  usableNames: string[];
+}
+
+interface ResolvedFounderValues {
+  values: Record<string, string>;
+  /** Structured view of array-valued fields, keyed by field name. */
+  arrays: Record<string, ArrayFieldEvidence>;
+}
+
 function resolveFounderFieldValues(
   metadata: TemplateMetadata,
   values: Record<string, unknown>
-): Record<string, string> {
+): ResolvedFounderValues {
   const resolved: Record<string, string> = {};
+  const arrays: Record<string, ArrayFieldEvidence> = {};
 
   for (const field of metadata.fields) {
     const value = values[field.name];
@@ -490,7 +541,12 @@ function resolveFounderFieldValues(
       continue;
     }
     if (Array.isArray(value)) {
-      resolved[field.name] = value.length === 0 ? '' : summarizeArrayValue(value);
+      const evidence = summarizeArrayValue(value);
+      arrays[field.name] = evidence;
+      // An entry with no usable name is NOT evidence that a signatory exists.
+      // Falling back to a bare count let `[{name: ''}]` read as a recorded
+      // approval.
+      resolved[field.name] = evidence.usableNames.join(', ');
       continue;
     }
     if (typeof field.default === 'string' && field.default.trim().length > 0) {
@@ -500,11 +556,11 @@ function resolveFounderFieldValues(
     resolved[field.name] = '';
   }
 
-  return resolved;
+  return { values: resolved, arrays };
 }
 
-function summarizeArrayValue(value: unknown[]): string {
-  const names = value
+function summarizeArrayValue(value: unknown[]): ArrayFieldEvidence {
+  const usableNames = value
     .map((entry) => {
       if (typeof entry === 'string') return entry.trim();
       if (entry && typeof entry === 'object' && 'name' in entry) {
@@ -515,7 +571,7 @@ function summarizeArrayValue(value: unknown[]): string {
     })
     .filter((entry) => entry.length > 0);
 
-  return names.length > 0 ? names.join(', ') : `${value.length} entr${value.length === 1 ? 'y' : 'ies'}`;
+  return { supplied: value.length, usableNames };
 }
 
 function buildSourceDocuments(
@@ -591,10 +647,10 @@ function buildUnresolvedFacts(args: {
   templateId: string;
   templateMetadata: TemplateMetadata;
   fieldValues: Record<string, string>;
-  declaredFieldNames: Set<string>;
+  arrayEvidence: Record<string, ArrayFieldEvidence>;
 }): FounderUnresolvedFact[] {
   const facts: FounderUnresolvedFact[] = [];
-  const { templateId, templateMetadata, fieldValues } = args;
+  const { templateId, templateMetadata, fieldValues, arrayEvidence } = args;
 
   for (const fieldName of templateMetadata.priority_fields) {
     if ((fieldValues[fieldName] ?? '').length > 0) continue;
@@ -633,9 +689,40 @@ function buildUnresolvedFacts(args: {
     });
   }
 
+  // A date the memo cannot read is reported. Previously an input like
+  // "03/15/2026" was accepted by the fill and then silently skipped by every
+  // date check, so the memo looked as though it had assessed the window.
+  for (const field of templateMetadata.fields) {
+    if (field.type !== 'date') continue;
+    const value = fieldValues[field.name] ?? '';
+    if (value.length === 0) continue;
+    if (parseIsoDate(value) !== undefined) continue;
+    facts.push({
+      id: `unresolved-${templateId}-unreadable-date-${field.name}`,
+      severity: 'high',
+      summary:
+        `${field.name} is recorded as "${value}", which this memo cannot read as a calendar date (expected YYYY-MM-DD). Every date check that depends on ${field.name} was skipped, so no timing in this document has been assessed against it.`,
+      evidence_fields: [field.name],
+      follow_up_question: `Can ${field.name} be restated as a YYYY-MM-DD date so the timing checks can run?`,
+    });
+  }
+
+  // An array field whose entries carry no usable name is not evidence.
+  for (const [fieldName, evidence] of Object.entries(arrayEvidence)) {
+    if (evidence.supplied === 0 || evidence.usableNames.length > 0) continue;
+    facts.push({
+      id: `unresolved-${templateId}-unnamed-entries-${fieldName}`,
+      severity: 'high',
+      summary:
+        `${fieldName} was supplied with ${evidence.supplied} entr${evidence.supplied === 1 ? 'y' : 'ies'}, none of which carries a name. The document has no one to name, and this memo treats the field as recording no one.`,
+      evidence_fields: [fieldName],
+      follow_up_question: `Which names belong in ${fieldName}?`,
+    });
+  }
+
   facts.push(...buildRepurchaseWindowFacts(templateId, fieldValues));
 
-  const boardSizeFact = buildBoardSizeFact(templateId, fieldValues);
+  const boardSizeFact = buildBoardSizeFact(templateId, fieldValues, arrayEvidence);
   if (boardSizeFact) facts.push(boardSizeFact);
 
   return facts;
@@ -700,14 +787,16 @@ function buildRepurchaseWindowFacts(
 
 function buildBoardSizeFact(
   templateId: string,
-  fieldValues: Record<string, string>
+  fieldValues: Record<string, string>,
+  arrayEvidence: Record<string, ArrayFieldEvidence>
 ): FounderUnresolvedFact | undefined {
   if (templateId !== 'openagreements-founder-separation-board-consent') return undefined;
   const boardSizeAfter = parseNonNegativeInteger(fieldValues.board_size_after);
   if (boardSizeAfter === undefined) return undefined;
 
-  const signatories = fieldValues.director_signatories ?? '';
-  const signatoryCount = signatories.length === 0 ? 0 : signatories.split(',').length;
+  // Counted from the structured entries. Splitting the rendered display string
+  // on commas turned a director named "Rivera, Alex" into two directors.
+  const signatoryCount = arrayEvidence.director_signatories?.usableNames.length ?? 0;
 
   if (signatoryCount === boardSizeAfter) return undefined;
 
@@ -765,32 +854,69 @@ function buildFounderCounselEscalation(
   const missingApprovalIds = approvals
     .filter((approval) => approval.status === 'not_recorded')
     .map((approval) => approval.id);
+  const dependentApprovalIds = approvals
+    .filter((approval) => approval.status === 'depends_on_records_not_supplied')
+    .map((approval) => approval.id);
 
   const allIds = [...highSeverityIds, ...missingApprovalIds];
   const escalationRecommended = allIds.length > 0;
 
+  // The summary must not contradict the approvals section. It previously read
+  // "every listed approval is recorded" while an approval in the same memo was
+  // marked depends_on_records_not_supplied. A recorded name and title is
+  // evidence that the fill named a signatory, never evidence that anyone signed
+  // or that the signer had authority.
+  const dependencyNote = dependentApprovalIds.length > 0
+    ? ` ${dependentApprovalIds.length} approval${dependentApprovalIds.length === 1 ? '' : 's'} in this memo `
+      + `depend${dependentApprovalIds.length === 1 ? 's' : ''} on records not supplied to this tool and `
+      + `remain${dependentApprovalIds.length === 1 ? 's' : ''} unverified.`
+    : '';
+
+  const recordedNote =
+    ' A signatory recorded in the fill evidences only that the fill named one; it does not establish that '
+    + 'the document was signed or that the signer had authority to sign it.';
+
+  const reason = escalationRecommended
+    ? `One or more unresolved facts are high severity or a required approval is not recorded.${dependencyNote}`
+    : `No unresolved fact is high severity and no listed approval is missing from the fill.${dependencyNote}`;
+
   const guidance = escalationRecommended
-    ? 'Unresolved facts or unrecorded approvals were detected. Share this informational memo, the fill values, and the cited source documents with licensed counsel before the package is executed.'
-    : 'No high-severity unresolved facts or unrecorded approvals were detected from the supplied values. Source documents cited by this package were still not supplied to this tool and remain unverified.';
+    ? 'Unresolved facts or unrecorded approvals were detected. Share this informational memo, the fill values, '
+      + 'and the cited source documents with licensed counsel before the package is executed.'
+      + recordedNote
+    : 'No high-severity unresolved fact and no missing approval were detected from the supplied values. The '
+      + 'source documents this package cites were still not supplied to this tool and remain unverified.'
+      + recordedNote;
+
+  const followUps = [
+    'Which of the cited source documents can be produced and reviewed before execution?',
+    'Which unresolved figures need to be reconciled against the corporate records?',
+  ];
+  if (dependentApprovalIds.length > 0) {
+    followUps.push(
+      'Which of the approvals that depend on records not supplied here can be confirmed from the originals?'
+    );
+  }
 
   return {
     escalation_recommended: escalationRecommended,
-    reason: escalationRecommended
-      ? 'One or more unresolved facts are high severity or a required approval is not recorded.'
-      : 'No unresolved fact is high severity and every listed approval is recorded.',
+    reason: applyAdviceLanguageGuard(reason),
     high_severity_ids: allIds,
+    outstanding_approval_dependency_ids: dependentApprovalIds,
     guidance: applyAdviceLanguageGuard(guidance),
-    follow_up_questions: [
-      'Which of the cited source documents can be produced and reviewed before execution?',
-      'Which unresolved figures need to be reconciled against the corporate records?',
-    ].map((question) => applyAdviceLanguageGuard(question)),
+    follow_up_questions: followUps.map((question) => applyAdviceLanguageGuard(question)),
   };
 }
 
 function parseIsoDate(value: string | undefined): Date | undefined {
-  if (!value || !/^\d{4}-\d{2}-\d{2}$/.test(value.trim())) return undefined;
-  const parsed = new Date(`${value.trim()}T00:00:00.000Z`);
-  return Number.isNaN(parsed.getTime()) ? undefined : parsed;
+  if (!value) return undefined;
+  const trimmed = value.trim();
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(trimmed)) return undefined;
+  const parsed = new Date(`${trimmed}T00:00:00.000Z`);
+  if (Number.isNaN(parsed.getTime())) return undefined;
+  // `new Date('2026-02-30T00:00:00Z')` rolls over to March 2 rather than
+  // failing. Round-tripping rejects a date that does not exist.
+  return parsed.toISOString().slice(0, 10) === trimmed ? parsed : undefined;
 }
 
 function parseNonNegativeInteger(value: string | undefined): number | undefined {
@@ -883,6 +1009,9 @@ export function renderFounderMemoMarkdown(memo: FounderMemo): string {
   lines.push(`- Reason: ${memo.counsel_escalation.reason}`);
   lines.push(
     `- High-severity items: ${memo.counsel_escalation.high_severity_ids.length === 0 ? 'none' : memo.counsel_escalation.high_severity_ids.join(', ')}`
+  );
+  lines.push(
+    `- Approvals depending on records not supplied: ${memo.counsel_escalation.outstanding_approval_dependency_ids.length === 0 ? 'none' : memo.counsel_escalation.outstanding_approval_dependency_ids.join(', ')}`
   );
   lines.push(`- Guidance: ${memo.counsel_escalation.guidance}`);
   lines.push('- Follow-up questions:');

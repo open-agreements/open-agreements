@@ -9,7 +9,7 @@ import {
   resolveMemoDispatch,
 } from '../src/core/memo/families.js';
 import { generateEmploymentMemo, isEmploymentTemplateId } from '../src/core/employment/memo.js';
-import { generateFounderMemo } from '../src/core/founder/memo.js';
+import { founderTemplateIdsWithApprovalProfile, generateFounderMemo } from '../src/core/founder/memo.js';
 
 const it = itAllure.epic('Compliance & Governance');
 
@@ -106,6 +106,26 @@ describe('memo family dispatch', () => {
       expect(isMemoSupportedTemplateId(templateId), templateId).toBe(false);
     }
     expect(isMemoSupportedTemplateId('openagreements-restrictive-covenant-wyoming')).toBe(true);
+  });
+
+  /**
+   * The prefix match sweeps in any future `openagreements-founder-*` template.
+   * Producing a memo is not enough — a founder memo without an approval profile
+   * is missing the section the family exists to provide. This fails when a new
+   * founder template ships before its profile is authored.
+   */
+  it('has an authored approval profile for every installed founder template', () => {
+    const installed = listTemplateIds()
+      .filter((templateId) => templateId.startsWith('openagreements-founder-'))
+      .sort();
+    expect(installed.length).toBeGreaterThan(0);
+
+    const profiled = founderTemplateIdsWithApprovalProfile();
+    for (const templateId of installed) {
+      expect(profiled, `${templateId} needs an approval profile in src/core/founder/memo.ts`).toContain(
+        templateId,
+      );
+    }
   });
 
   it('never dispatches a projection-source master id', () => {

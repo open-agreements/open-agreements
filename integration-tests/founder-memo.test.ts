@@ -219,6 +219,156 @@ describe('founder separation companion memo', () => {
     expect(markdown).toContain(FOUNDER_MEMO_DISCLAIMER);
   });
 
+  /**
+   * Regression tests for the six findings the Codex peer review of PR #822
+   * reproduced against the real CLI. Each asserts the specific behaviour that
+   * was wrong, not merely that the code runs.
+   */
+
+  it('rejects prescriptive language that arrives through a field value, without rewriting the value', () => {
+    // The guard used to check a hand-listed set of sections, so a citation
+    // echoed back from `rspa_reference` reached the artifact unchecked.
+    expect(() => memoForRepurchaseNotice({rspa_reference: 'Agreement in which you should waive all claims'}))
+      .toThrow(/prohibited advice-like language/);
+  });
+
+  it('guards a branch selection value too', () => {
+    const templateId = 'openagreements-founder-separation-stockholder-consent';
+    expect(() =>
+      generateFounderMemo({
+        templateId,
+        templateMetadata: loadMetadata(mustFindTemplateDir(templateId)),
+        values: {
+          company_legal_name: 'Nimbus Forge, Inc.',
+          consent_date: '2026-03-16',
+          founder_name: 'Maya Chen',
+          stockholder_action: 'you should remove the director',
+          stockholder_signatories: [{name: 'Alex Rivera'}],
+        },
+      })
+    ).toThrow(/prohibited advice-like language/);
+  });
+
+  it('never says every approval is recorded while an approval depends on records not supplied', () => {
+    const memo = memoForRepurchaseNotice();
+    const dependent = memo.approvals.filter(
+      (entry) => entry.status === 'depends_on_records_not_supplied'
+    );
+    expect(dependent.length).toBeGreaterThan(0);
+
+    expect(memo.counsel_escalation.outstanding_approval_dependency_ids).toEqual(
+      dependent.map((entry) => entry.id)
+    );
+    expect(memo.counsel_escalation.reason).not.toContain('every listed approval is recorded');
+    expect(memo.counsel_escalation.reason).toContain('depend');
+    expect(memo.counsel_escalation.guidance).toContain('does not establish that');
+  });
+
+  it('reports a date it cannot read instead of silently skipping every check that uses it', () => {
+    const memo = memoForRepurchaseNotice({termination_date: '03/15/2026', closing_date: '08/01/2026'});
+    const unreadable = memo.unresolved_facts.filter((entry) => entry.id.includes('unreadable-date'));
+
+    expect(unreadable.length).toBeGreaterThan(0);
+    expect(unreadable.map((entry) => entry.evidence_fields).flat()).toContain('termination_date');
+    expect(unreadable[0].severity).toBe('high');
+  });
+
+  it('rejects an ISO date that only parses by calendar rollover', () => {
+    const memo = memoForRepurchaseNotice({closing_date: '2026-02-30'});
+    expect(
+      memo.unresolved_facts.some(
+        (entry) => entry.id.includes('unreadable-date') && entry.evidence_fields.includes('closing_date')
+      )
+    ).toBe(true);
+  });
+
+  it('does not treat a signatory entry with a blank name as recorded approval evidence', () => {
+    const templateId = 'openagreements-founder-separation-board-consent';
+    const memo = generateFounderMemo({
+      templateId,
+      templateMetadata: loadMetadata(mustFindTemplateDir(templateId)),
+      values: {
+        company_legal_name: 'Nimbus Forge, Inc.',
+        consent_date: '2026-03-16',
+        founder_name: 'Maya Chen',
+        rspa_reference: 'Restricted Stock Purchase Agreement dated January 12, 2024',
+        vacancy_action: 'reduce-board-size',
+        director_signatories: [{name: ''}],
+      },
+      generatedAt: '2026-09-08T00:00:00.000Z',
+    });
+
+    const approval = memo.approvals.find((entry) => entry.id.endsWith('board-written-consent'));
+    expect(approval?.status).toBe('not_recorded');
+    expect(
+      memo.unresolved_facts.some((entry) => entry.id.includes('unnamed-entries-director_signatories'))
+    ).toBe(true);
+  });
+
+  it('counts directors from the structured entries, not from comma-separated display text', () => {
+    const templateId = 'openagreements-founder-separation-board-consent';
+    const memo = generateFounderMemo({
+      templateId,
+      templateMetadata: loadMetadata(mustFindTemplateDir(templateId)),
+      values: {
+        company_legal_name: 'Nimbus Forge, Inc.',
+        consent_date: '2026-03-16',
+        founder_name: 'Maya Chen',
+        rspa_reference: 'Restricted Stock Purchase Agreement dated January 12, 2024',
+        vacancy_action: 'reduce-board-size',
+        board_size_after: 2,
+        // A comma INSIDE a name previously split into a third director.
+        director_signatories: [{name: 'Rivera, Alex'}, {name: 'Priya Shah'}],
+      },
+      generatedAt: '2026-09-08T00:00:00.000Z',
+    });
+
+    expect(memo.unresolved_facts.some((entry) => entry.id.endsWith('board-size-vs-signatories'))).toBe(false);
+  });
+
+  it('keeps the conditions the consent documents actually state in the branch prose', () => {
+    const templateId = 'openagreements-founder-separation-board-consent';
+    const memo = generateFounderMemo({
+      templateId,
+      templateMetadata: loadMetadata(mustFindTemplateDir(templateId)),
+      values: {
+        company_legal_name: 'Nimbus Forge, Inc.',
+        consent_date: '2026-03-16',
+        founder_name: 'Maya Chen',
+        rspa_reference: 'Restricted Stock Purchase Agreement dated January 12, 2024',
+        vacancy_action: 'reduce-board-size',
+        director_signatories: [{name: 'Alex Rivera'}],
+      },
+      generatedAt: '2026-09-08T00:00:00.000Z',
+    });
+
+    const vacancy = memo.branch_decisions.find((entry) => entry.field === 'vacancy_action');
+    // Option A in the document is expressly conditioned on the charter amendment
+    // required to effect the reduction having become effective.
+    expect(vacancy?.consequence).toContain('certificate of incorporation required to effect the reduction');
+  });
+
+  it('does not claim the status of claims outside the agreement when no release is included', () => {
+    const templateId = 'openagreements-founder-stock-repurchase-agreement';
+    const memo = generateFounderMemo({
+      templateId,
+      templateMetadata: loadMetadata(mustFindTemplateDir(templateId)),
+      values: {
+        company_legal_name: 'Nimbus Forge, Inc.',
+        founder_name: 'Maya Chen',
+        rspa_reference: 'Restricted Stock Purchase Agreement dated January 12, 2024',
+        shares_repurchased: '3,300,000 shares of Common Stock',
+        aggregate_price: '$330.00',
+        include_mutual_release: false,
+      },
+      generatedAt: '2026-09-08T00:00:00.000Z',
+    });
+
+    const release = memo.branch_decisions.find((entry) => entry.field === 'include_mutual_release');
+    expect(release?.consequence).not.toContain('remain open');
+    expect(release?.consequence).toContain('is not established by anything supplied to this tool');
+  });
+
   it('refuses to generate a founder memo for a template outside the family', () => {
     const templateId = 'openagreements-employment-offer-letter';
     expect(isFounderTemplateId(templateId)).toBe(false);

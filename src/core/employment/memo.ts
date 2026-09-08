@@ -7,7 +7,7 @@ import {
 } from './jurisdiction-rules.js';
 import {
   applyAdviceLanguageGuard,
-  assertNoProhibitedAdviceLanguage,
+  assertMemoArtifactHasNoProhibitedAdviceLanguage,
   hasProhibitedAdviceLanguage,
 } from '../memo/advice-language.js';
 import { resolveMemoDispatch } from '../memo/families.js';
@@ -764,14 +764,13 @@ function sanitizeFinding(finding: EmploymentMemoFinding): EmploymentMemoFinding 
   };
 }
 
+/**
+ * Walks the finished artifact rather than a hand-listed set of sections. The
+ * enumerated version missed `evidence[].value` and the citation strings, both of
+ * which carry field values verbatim.
+ */
 function assertMemoHasNoProhibitedAdviceLanguage(memo: EmploymentMemo): void {
-  const textSections: string[] = [memo.disclaimer, memo.counsel_escalation.reason, memo.counsel_escalation.guidance];
-
-  for (const finding of memo.findings) {
-    textSections.push(finding.summary, ...finding.follow_up_questions);
-  }
-
-  assertNoProhibitedAdviceLanguage(textSections);
+  assertMemoArtifactHasNoProhibitedAdviceLanguage(memo);
 }
 
 function loadBaselineMetadata(baselineTemplateId: string): TemplateMetadata {
