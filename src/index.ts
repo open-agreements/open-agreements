@@ -1,5 +1,6 @@
 // Public API exports
 export { RUNTIME_CAPABILITIES } from './core/runtime-capabilities.js';
+export { createNumberingRenderCopy, type NumberingRenderCopyResult } from './core/field-selector/numbering-render-copy.js';
 
 // Template engine
 export { fillTemplate, type FillOptions, type FillResult } from './core/engine.js';
