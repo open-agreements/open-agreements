@@ -84,4 +84,13 @@ describe('caller-only conjunctive requirements', () => {
     }
     expect(() => assertConditionalInputOwnership(metadata.fields, new Set())).not.toThrow();
   });
+
+  it('defends runtime and schema entry points against a mutated missing controller', () => {
+    const metadata = FieldSelectorMetadataSchema.parse(fixture);
+    metadata.fields[1].name = 'renamed_after_parsing';
+    expect(() => assertConditionalRequiredInputs({ parent: false, child: true }, metadata.fields))
+      .toThrow(/Unknown required_when controller: child/);
+    expect(() => buildFieldSelectorInputSchema('fixture', metadata, null))
+      .toThrow(/required_when controller "child" must be a caller input/);
+  });
 });
