@@ -10823,6 +10823,55 @@
           "default_value_rationale": null
         },
         {
+          "name": "redemption_price_basis",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Redemption Price formula to use when Article Sixth redemption is enabled; choose the Original Issue Price plus declared but unpaid dividends, or the greater of that amount and Fair Market Value",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "original_issue_price_plus_declared_unpaid_dividends",
+            "greater_of_original_issue_price_and_fair_market_value"
+          ]
+        },
+        {
+          "name": "include_redemption_holder_opt_out",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "When Article Sixth redemption is enabled, permit a holder to opt out within 20 days after delivery of the Redemption Notice and exclude those shares from the redemption allocation",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "redemption_price_prefix_carrier",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed prefix for the selected Redemption Price formula",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "redemption_fair_market_value_prong_carrier",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed Fair Market Value prong for the selected Redemption Price formula",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "redemption_fair_market_value_definition_carrier",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed Fair Market Value appraisal definition when that price basis is selected",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
           "name": "no_redemption_clause",
           "type": "string",
           "required": false,
@@ -12015,7 +12064,34 @@
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Pinned-source section number for Successor Indemnification",
+          "description": "Computed rendered section number for Successor Indemnification",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "transaction_assistance_section",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed rendered section number for transaction assistance",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "indemnification_matters_section",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed rendered section number for Indemnification Matters",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "covenant_survival_exception_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed complete exception to the general Section 5 termination rule",
           "default": null,
           "default_value_rationale": null
         },
@@ -12310,8 +12386,8 @@
           "type": "string",
           "required": false,
           "section": null,
-          "description": "Additional Section 5 covenants that survive the general termination rule",
-          "default": null,
+          "description": "Optional complete display-ready clause adding negotiated surviving covenants; when model-form survivors remain, supply the leading punctuation and conjunction suffix, and when none remain, supply the complete leading exception phrase; empty when none",
+          "default": "",
           "default_value_rationale": null
         },
         {
@@ -13195,7 +13271,7 @@
           "required": false,
           "section": null,
           "description": "Apply discretionary stand-off releases pro rata",
-          "default": null,
+          "default": "false",
           "default_value_rationale": null
         },
         {
@@ -13204,6 +13280,15 @@
           "required": false,
           "section": null,
           "description": "Permit a discretionary de minimis stand-off release basket",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "standoff_discretionary_release_shares",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Maximum number of Common Stock shares in the discretionary stand-off release basket, as a bare nonnegative whole number without units or commas",
           "default": null,
           "default_value_rationale": null
         },
