@@ -58,7 +58,8 @@ describeWithSources('NVCA investor and governance production fills', () => {
       const result = await runFieldSelector({
         fieldSelectorId: CASES[0].id,
         outputPath,
-        values: loadFixture(CASES[0].fixture),
+        // Complete only this test's unrelated parent elections, not the shared fixture.
+        values: { ...loadFixture(CASES[0].fixture), include_transaction_assistance: false, include_fair_practices_covenant: false },
       });
       const text = extractAllText(outputPath);
 
@@ -81,7 +82,8 @@ describeWithSources('NVCA investor and governance production fills', () => {
       const result = await runFieldSelector({
         fieldSelectorId: CASES[0].id,
         outputPath,
-        values: { ...loadFixture(CASES[0].fixture), underwriter_selection: 'board_of_directors' },
+        // This case exercises underwriter selection, not transaction assistance or FCPA.
+        values: { ...loadFixture(CASES[0].fixture), include_transaction_assistance: false, include_fair_practices_covenant: false, underwriter_selection: 'board_of_directors' },
       });
       const text = extractAllText(outputPath);
 
