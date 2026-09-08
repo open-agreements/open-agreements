@@ -27,6 +27,7 @@ import { validateNumberingContinuationSource } from './numbering-continuations.j
 import { loadReferenceFieldsConfig } from './reference-fields.js';
 import { assertFieldSelectorInputValueShapes, computedFieldNames } from './input-schema.js';
 import { assertConditionalInputOwnership, assertConditionalRequiredInputs } from '../conditional-inputs.js';
+import { preparedFieldDefault } from '../field-defaults.js';
 
 function toComputedValueMap(values: Record<string, unknown>): ComputedValueMap {
   const computedValues: ComputedValueMap = {};
@@ -118,7 +119,18 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
   // Computed prose may interpolate source date fields. Normalize declared date
   // values before computed evaluation so both direct tags and derived prose see
   // the same display-ready value (and chained computed fields inherit it).
-  const inputValues = formatDocumentDateFields(values, metadata.fields);
+  // Computed prose must see the same declared caller defaults as direct tags.
+  // Do not seed placeholders or computed-owned fields: their profile defaults
+  // and rules retain authority. Explicit values (including blanks) stay intact.
+  const defaultedValues = { ...values };
+  const materializedDefaultFields = new Set<string>();
+  const computedOwnedFields = computedFieldNames(computedProfile);
+  for (const field of metadata.fields) {
+    if (field.name in defaultedValues || field.default === undefined || computedOwnedFields.has(field.name)) continue;
+    defaultedValues[field.name] = preparedFieldDefault(field);
+    materializedDefaultFields.add(field.name);
+  }
+  const inputValues = formatDocumentDateFields(defaultedValues, metadata.fields);
   const computedInputValues = toComputedValueMap(inputValues);
   const computedEvaluation = computedProfile
     ? evaluateComputedProfile(computedProfile, computedInputValues)
@@ -248,6 +260,10 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
     keepIntermediate,
   });
 
+  // Preserve the existing caller attribution: newly materialized metadata
+  // defaults are effective inputs, not explicitly provided values. Computed
+  // outputs retain their historical attribution behavior.
+  const providedFieldsUsed = result.providedFieldsUsed.filter((field) => !materializedDefaultFields.has(field));
   return {
     outputPath: result.outputPath,
     metadata,
@@ -256,12 +272,12 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
       : result.fieldsUsed,
     providedFieldsUsed: repeatableTablesConfig
       ? [...new Set([
-        ...result.providedFieldsUsed,
+        ...providedFieldsUsed,
         ...repeatableTablesConfig.tables
           .map((table) => table.rows_field)
-          .filter((field) => Object.hasOwn(inputValues, field)),
+          .filter((field) => Object.hasOwn(values, field)),
       ])]
-      : result.providedFieldsUsed,
+      : providedFieldsUsed,
     fillCommandCount: result.fillCommandCount,
     warnings: result.warnings,
     stages: result.stages!,

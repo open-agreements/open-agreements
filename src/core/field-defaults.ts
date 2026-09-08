@@ -13,3 +13,12 @@ export function typedFieldDefault(field: FieldDefinition): unknown {
   }
   return field.default;
 }
+
+/** Default representation used by document preparation, not schema export. */
+export function preparedFieldDefault(field: FieldDefinition, fallback: string = ''): unknown {
+  if (field.type === 'array') return [];
+  if (field.type === 'multiselect') return field.default ? JSON.parse(field.default) : [];
+  if (field.type === 'boolean' && field.default !== undefined) return typedFieldDefault(field);
+  // Number defaults intentionally remain strings, matching existing fills.
+  return field.default ?? fallback;
+}
