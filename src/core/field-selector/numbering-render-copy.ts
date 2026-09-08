@@ -94,10 +94,10 @@ export function createNumberingRenderCopy(inputPath: string, outputPath: string,
       || ['word/document.xml', 'word/numbering.xml', 'word/styles.xml'].includes(entry.entryName)) continue;
     const story = parser.parseFromString(entry.getData().toString('utf8'), 'text/xml');
     const root = story.documentElement;
-    if (!root || root.namespaceURI !== W || !['hdr', 'ftr', 'footnotes', 'endnotes', 'comments'].includes(root.localName ?? '')) continue;
     if (options.nonbreakingHyphenFont !== undefined && hasNonbreakingHyphen(story)) {
       throw new Error(`render-copy: nonbreaking hyphens in ${entry.entryName} are unsupported`);
     }
+    if (!root || root.namespaceURI !== W || !['hdr', 'ftr', 'footnotes', 'endnotes', 'comments'].includes(root.localName ?? '')) continue;
     const instruction = Array.from(story.getElementsByTagNameNS(W, 'p')).map((paragraph) =>
       Array.from(paragraph.getElementsByTagNameNS(W, 'instrText')).map((node) => node.textContent ?? '').join('')).join('\n')
       + '\n' + Array.from(story.getElementsByTagNameNS(W, 'fldSimple')).map((node) => node.getAttributeNS(W, 'instr') ?? '').join('\n');

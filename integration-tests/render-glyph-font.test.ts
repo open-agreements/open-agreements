@@ -45,9 +45,9 @@ describe('render-copy glyph fallback API and CLI', () => {
     expect(() => createNumberingRenderCopy(f.input, f.output, { nonbreakingHyphenFont: 'Verified Serif' })).toThrow(/EEXIST/);
   });
 
-  it.each(['header1.xml', 'footer1.xml', 'footnotes.xml', 'endnotes.xml', 'comments.xml', 'custom-story.xml'])('rejects unsupported glyph story %s before output', name => {
+  it.each(['header1.xml', 'footer1.xml', 'footnotes.xml', 'endnotes.xml', 'comments.xml', 'custom-story.xml', 'glossary/document.xml'])('rejects unsupported glyph story %s before output', name => {
     const f = fixture();
-    const root = name.startsWith('header') || name === 'custom-story.xml' ? 'hdr' : name.startsWith('footer') ? 'ftr' : name.replace('.xml', '');
+    const root = name.startsWith('glossary') ? 'glossaryDocument' : name.startsWith('header') || name === 'custom-story.xml' ? 'hdr' : name.startsWith('footer') ? 'ftr' : name.replace('.xml', '');
     f.zip.addFile(`word/${name}`, Buffer.from(`<w:${root} xmlns:w="${W}"><w:p><w:r><w:t>Other‑story</w:t></w:r></w:p></w:${root}>`));
     f.zip.writeZip(f.input);
     expect(() => createNumberingRenderCopy(f.input, f.output, { nonbreakingHyphenFont: 'Verified Serif' })).toThrow(/nonbreaking hyphens.*unsupported/);
@@ -58,5 +58,15 @@ describe('render-copy glyph fallback API and CLI', () => {
     const f = fixture();
     expect(() => createNumberingRenderCopy(f.input, f.output, { nonbreakingHyphenFont: 'Bad\nFont' })).toThrow(/font must/);
     expect(existsSync(f.output)).toBe(false);
+  });
+
+  it('rejects deleted-text glyphs without accepting revisions or writing output', () => {
+    const f = fixture();
+    f.zip.updateFile('word/document.xml', Buffer.from(`<w:document xmlns:w="${W}"><w:body><w:p><w:del w:id="1"><w:r><w:delText>A‑B</w:delText></w:r></w:del></w:p></w:body></w:document>`));
+    f.zip.writeZip(f.input);
+    const before = readFileSync(f.input);
+    expect(() => createNumberingRenderCopy(f.input, f.output, { nonbreakingHyphenFont: 'Verified Serif' })).toThrow(/deleted text.*unsupported/);
+    expect(existsSync(f.output)).toBe(false);
+    expect(readFileSync(f.input)).toEqual(before);
   });
 });

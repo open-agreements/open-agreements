@@ -21,12 +21,15 @@ export function validateNonbreakingHyphenFont(family: string): void {
 
 export function hasNonbreakingHyphen(document: Document | Element): boolean {
   return document.getElementsByTagNameNS(W, 'noBreakHyphen').length > 0
-    || Array.from(document.getElementsByTagNameNS(W, 't')).some(text => text.textContent?.includes('\u2011'));
+    || ['t', 'delText'].some(name => Array.from(document.getElementsByTagNameNS(W, name)).some(text => text.textContent?.includes('\u2011')));
 }
 
 /** Only split affected main-story runs; never discover or substitute host fonts. */
 export function applyNonbreakingHyphenFont(document: Document, fontFamily: string): GlyphFallbackReceipt {
   validateNonbreakingHyphenFont(fontFamily);
+  if (Array.from(document.getElementsByTagNameNS(W, 'delText')).some(text => text.textContent?.includes('\u2011'))) {
+    throw new Error('render-copy: nonbreaking hyphens in deleted text are unsupported');
+  }
   const tokens = [
     ...Array.from(document.getElementsByTagNameNS(W, 'noBreakHyphen')),
     ...Array.from(document.getElementsByTagNameNS(W, 't')).filter(text => text.textContent?.includes('\u2011')),

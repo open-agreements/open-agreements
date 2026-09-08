@@ -43,6 +43,7 @@ describe('opt-in nonbreaking-hyphen font isolation', () => {
     '<mc:AlternateContent><mc:Choice><w:p><w:r><w:noBreakHyphen/></w:r></w:p></mc:Choice></mc:AlternateContent>',
     '<w:txbxContent><w:p><w:r><w:t>A‑B</w:t></w:r></w:p></w:txbxContent>',
     '<w:p><w:ins><w:r><w:noBreakHyphen/></w:r></w:ins></w:p>',
+    '<w:p><w:del><w:r><w:delText>A‑B</w:delText></w:r></w:del></w:p>',
     '<w:p><w:r><w:rPr><w:rPrChange/></w:rPr><w:noBreakHyphen/></w:r></w:p>',
     '<w:p><w:noBreakHyphen/></w:p>',
   ])('fails unsupported glyph contexts atomically', content => {
