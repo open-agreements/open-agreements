@@ -5,6 +5,14 @@ import {
   type JurisdictionRule,
   type RuleConfidence,
 } from './jurisdiction-rules.js';
+import {
+  applyAdviceLanguageGuard,
+  assertMemoArtifactHasNoProhibitedAdviceLanguage,
+  hasProhibitedAdviceLanguage,
+} from '../memo/advice-language.js';
+import { resolveMemoDispatch } from '../memo/families.js';
+
+export { applyAdviceLanguageGuard, hasProhibitedAdviceLanguage };
 
 export type FindingCategory = 'clause_presence' | 'baseline_variance' | 'jurisdiction_warning';
 export type FindingSeverity = 'low' | 'medium' | 'high';
@@ -80,12 +88,10 @@ interface ClauseSignal {
   validateValue?: (value: string) => DurationValidation | null;
 }
 
-const EMPLOYMENT_TEMPLATE_IDS = new Set<string>([
-  'openagreements-employment-offer-letter',
-  'openagreements-confidentiality-invention-assignment-agreement',
-  'openagreements-restrictive-covenant-wyoming',
-]);
-
+/**
+ * Source dates are keyed by PROFILE id: a state projection of the offer letter
+ * inherits the master's source date because its clause signals are the master's.
+ */
 const TEMPLATE_SOURCE_DATES: Record<string, string> = {
   'openagreements-employment-offer-letter': '2026-02-10',
   'openagreements-confidentiality-invention-assignment-agreement': '2026-02-10',
@@ -96,26 +102,6 @@ const MEMO_VERSION = '1.0.0';
 
 export const EMPLOYMENT_MEMO_DISCLAIMER =
   'This employment memo provides operational information about template fields and cited sources. It is not legal advice, does not recommend legal strategy, and does not predict legal outcomes. Consult a licensed attorney for legal advice.';
-
-const ADVICE_REWRITE_RULES: Array<{ pattern: RegExp; replacement: string }> = [
-  { pattern: /\bwe recommend\b/gi, replacement: 'this memo flags' },
-  { pattern: /\byou should\b/gi, replacement: 'consider' },
-  { pattern: /\byou must\b/gi, replacement: 'consider whether it is necessary to' },
-  { pattern: /\bbest strategy\b/gi, replacement: 'possible operational approach' },
-  { pattern: /\bour advice\b/gi, replacement: 'this informational output' },
-  { pattern: /\bi advise\b/gi, replacement: 'this output notes' },
-  { pattern: /\bthe right strategy\b/gi, replacement: 'one operational option' },
-];
-
-const ADVICE_BLOCK_PATTERNS: RegExp[] = [
-  /\bwe recommend\b/i,
-  /\byou should\b/i,
-  /\byou must\b/i,
-  /\bbest strategy\b/i,
-  /\bour advice\b/i,
-  /\bi advise\b/i,
-  /\bthe right strategy\b/i,
-];
 
 function parseDurationMonths(value: string): number | null {
   const normalized = value.toLowerCase().trim();
@@ -323,24 +309,28 @@ const CLAUSE_SIGNALS: Record<string, ClauseSignal[]> = {
   ],
 };
 
+/**
+ * True for every template the employment memo family covers, including the
+ * state projections of the offer letter and CIIAA. Membership is resolved by
+ * `resolveMemoDispatch` rather than a transcribed set, so a state variant is
+ * recognized the moment it ships (legal-explainer#2569).
+ */
 export function isEmploymentTemplateId(templateId: string): boolean {
-  return EMPLOYMENT_TEMPLATE_IDS.has(templateId);
+  return resolveMemoDispatch(templateId)?.family === 'employment';
 }
 
-export function applyAdviceLanguageGuard(input: string): string {
-  let output = input;
-  for (const rule of ADVICE_REWRITE_RULES) {
-    output = output.replace(rule.pattern, rule.replacement);
-  }
-  return output.trim();
-}
-
-export function hasProhibitedAdviceLanguage(input: string): boolean {
-  return ADVICE_BLOCK_PATTERNS.some((pattern) => pattern.test(input));
+/**
+ * The base template whose employment memo rules govern `templateId`. A state
+ * projection inherits its master's clause signals and source date.
+ */
+export function resolveEmploymentProfileId(templateId: string): string | undefined {
+  const dispatch = resolveMemoDispatch(templateId);
+  return dispatch?.family === 'employment' ? dispatch.profileId : undefined;
 }
 
 export function generateEmploymentMemo(options: GenerateEmploymentMemoOptions): EmploymentMemo {
-  if (!isEmploymentTemplateId(options.templateId)) {
+  const profileId = resolveEmploymentProfileId(options.templateId);
+  if (!profileId) {
     throw new Error(
       `Template "${options.templateId}" is not in the employment pack and cannot produce an employment memo.`
     );
@@ -359,6 +349,7 @@ export function generateEmploymentMemo(options: GenerateEmploymentMemoOptions): 
   findings.push(
     ...buildClauseFindings({
       templateId: options.templateId,
+      profileId,
       templateMetadata: options.templateMetadata,
       fieldValues,
     })
@@ -378,7 +369,9 @@ export function generateEmploymentMemo(options: GenerateEmploymentMemoOptions): 
     );
   }
 
-  findings.push(...buildJurisdictionWarningFindings(options.templateId, jurisdiction, fieldValues));
+  findings.push(
+    ...buildJurisdictionWarningFindings(options.templateId, profileId, jurisdiction, fieldValues)
+  );
 
   const sanitizedFindings = findings
     .map((finding) => sanitizeFinding(finding))
@@ -508,11 +501,12 @@ function resolveEffectiveFieldValues(
 
 function buildClauseFindings(args: {
   templateId: string;
+  profileId: string;
   templateMetadata: TemplateMetadata;
   fieldValues: Record<string, string>;
 }): EmploymentMemoFinding[] {
-  const sourceDate = getTemplateSourceDate(args.templateId);
-  const signals = CLAUSE_SIGNALS[args.templateId] ?? [];
+  const sourceDate = getTemplateSourceDate(args.profileId);
+  const signals = CLAUSE_SIGNALS[args.profileId] ?? [];
   const findings: EmploymentMemoFinding[] = [];
 
   for (const signal of signals) {
@@ -679,6 +673,7 @@ function buildBaselineVarianceFindings(args: {
 
 function buildJurisdictionWarningFindings(
   templateId: string,
+  profileId: string,
   jurisdiction: string,
   fieldValues: Record<string, string>
 ): EmploymentMemoFinding[] {
@@ -689,7 +684,7 @@ function buildJurisdictionWarningFindings(
       continue;
     }
 
-    if (!ruleMatches(templateId, fieldValues, rule)) {
+    if (!ruleMatches(templateId, profileId, fieldValues, rule)) {
       continue;
     }
 
@@ -769,18 +764,13 @@ function sanitizeFinding(finding: EmploymentMemoFinding): EmploymentMemoFinding 
   };
 }
 
+/**
+ * Walks the finished artifact rather than a hand-listed set of sections. The
+ * enumerated version missed `evidence[].value` and the citation strings, both of
+ * which carry field values verbatim.
+ */
 function assertMemoHasNoProhibitedAdviceLanguage(memo: EmploymentMemo): void {
-  const textSections: string[] = [memo.disclaimer, memo.counsel_escalation.reason, memo.counsel_escalation.guidance];
-
-  for (const finding of memo.findings) {
-    textSections.push(finding.summary, ...finding.follow_up_questions);
-  }
-
-  for (const text of textSections) {
-    if (hasProhibitedAdviceLanguage(text)) {
-      throw new Error(`Memo text contains prohibited advice-like language: "${text}"`);
-    }
-  }
+  assertMemoArtifactHasNoProhibitedAdviceLanguage(memo);
 }
 
 function loadBaselineMetadata(baselineTemplateId: string): TemplateMetadata {
@@ -793,12 +783,22 @@ function loadBaselineMetadata(baselineTemplateId: string): TemplateMetadata {
 
 function ruleMatches(
   templateId: string,
+  profileId: string,
   fieldValues: Record<string, string>,
   rule: JurisdictionRule
 ): boolean {
   const trigger = rule.trigger;
 
-  if (trigger.template_ids && !trigger.template_ids.includes(templateId)) {
+  // A rule scoped to a base template also governs that template's state
+  // projections: `openagreements-employment-offer-letter-california` inherits
+  // the California restrictive-covenant warning written for the master. Without
+  // the profile-id check, recognizing state variants would have SILENCED the
+  // very jurisdiction warnings those variants most need.
+  if (
+    trigger.template_ids
+    && !trigger.template_ids.includes(templateId)
+    && !trigger.template_ids.includes(profileId)
+  ) {
     return false;
   }
 

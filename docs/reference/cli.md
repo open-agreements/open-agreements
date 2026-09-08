@@ -37,14 +37,37 @@ open-agreements fill <template> --set field=value --output agreement.docx
 `--values` is an alias for `--data`. Repeat `--set` for multiple fields. Values
 provided with `--set` override the same keys loaded from the JSON file.
 
-Employment templates can also emit JSON, Markdown, or both memo formats:
+### Companion memos
+
+Two template families can emit a companion memo alongside the filled document,
+as JSON, Markdown, or both:
+
+- **Employment** — the offer letter and every state variant of it, the
+  confidentiality and invention assignment agreement and its state variants, and
+  the Wyoming restrictive covenant. The memo reports clause-presence signals,
+  baseline variance, and jurisdiction warnings.
+- **Founder separation** — every `openagreements-founder-*` template. The memo
+  reports the source documents the package relies on, the branch decisions the
+  fill took, unresolved facts, and required approvals.
 
 ```bash
-open-agreements fill openagreements-employment-offer-letter \
+open-agreements fill openagreements-employment-offer-letter-new-york \
   --data employee.json \
   --output offer.docx \
   --memo both
+
+open-agreements fill openagreements-founder-share-repurchase-notice \
+  --data separation.json \
+  --output notice.docx \
+  --memo both
 ```
+
+Asking for `--memo` on a template outside both families fails with an error that
+lists every template that does support it.
+
+A memo is operational information about template fields and the records those
+fields cite. It is not legal advice, and neither generator will emit
+prescriptive wording.
 
 Use `open-agreements fill --help` for memo output paths, jurisdiction overrides,
 and baseline comparison options.

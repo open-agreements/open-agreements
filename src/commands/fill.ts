@@ -1,7 +1,7 @@
 import { writeFile } from 'node:fs/promises';
 import { parse, resolve } from 'node:path';
 import { fillTemplate } from '../core/engine.js';
-import { loadMetadata } from '../core/metadata.js';
+import { loadMetadata, type TemplateMetadata } from '../core/metadata.js';
 import {
   findTemplateDir,
   findExternalDir,
@@ -14,10 +14,15 @@ import { runExternalFill } from '../core/external/index.js';
 import { runFieldSelector } from '../core/field-selector/index.js';
 import {
   generateEmploymentMemo,
-  isEmploymentTemplateId,
   renderEmploymentMemoMarkdown,
   type MemoFormat,
 } from '../core/employment/memo.js';
+import { generateFounderMemo, renderFounderMemoMarkdown } from '../core/founder/memo.js';
+import {
+  buildUnsupportedMemoFamilyMessage,
+  resolveMemoDispatch,
+  type MemoDispatch,
+} from '../core/memo/families.js';
 
 interface FillMemoArgs {
   enabled: boolean;
@@ -77,10 +82,13 @@ export async function runFill(args: FillArgs): Promise<void> {
   const resolvedOutput = resolve(outputPath);
 
   try {
-    if (args.memo?.enabled && !isEmploymentTemplateId(args.template)) {
-      throw new Error(
-        `Memo generation is currently supported only for employment templates. Received template "${args.template}".`
-      );
+    // Memo support is resolved per family. Before legal-explainer#2569/#2572
+    // this was a single hardcoded set that rejected every state variant of the
+    // offer letter and every founder template, and said only what was NOT
+    // supported. The message now names what IS.
+    const memoDispatch = args.memo?.enabled ? resolveMemoDispatch(args.template) : undefined;
+    if (args.memo?.enabled && !memoDispatch) {
+      throw new Error(buildUnsupportedMemoFamilyMessage(args.template));
     }
 
     if (isFieldSelector) {
@@ -121,9 +129,9 @@ export async function runFill(args: FillArgs): Promise<void> {
         console.warn(`Warning: ${warning}`);
       }
 
-      if (args.memo?.enabled) {
-        const memo = generateEmploymentMemo({
-          templateId: args.template,
+      if (args.memo?.enabled && memoDispatch) {
+        const rendered = buildMemoArtifacts({
+          dispatch: memoDispatch,
           templateMetadata: result.metadata,
           values: args.values,
           jurisdiction: args.memo.jurisdiction,
@@ -138,13 +146,12 @@ export async function runFill(args: FillArgs): Promise<void> {
         });
 
         if (memoOutputPaths.jsonPath) {
-          await writeFile(memoOutputPaths.jsonPath, `${JSON.stringify(memo, null, 2)}\n`, 'utf-8');
+          await writeFile(memoOutputPaths.jsonPath, `${JSON.stringify(rendered.memo, null, 2)}\n`, 'utf-8');
           console.log(`Memo JSON: ${memoOutputPaths.jsonPath}`);
         }
 
         if (memoOutputPaths.markdownPath) {
-          const markdown = renderEmploymentMemoMarkdown(memo);
-          await writeFile(memoOutputPaths.markdownPath, `${markdown}\n`, 'utf-8');
+          await writeFile(memoOutputPaths.markdownPath, `${rendered.markdown}\n`, 'utf-8');
           console.log(`Memo Markdown: ${memoOutputPaths.markdownPath}`);
         }
       }
@@ -153,6 +160,36 @@ export async function runFill(args: FillArgs): Promise<void> {
     console.error(`Error: ${(err as Error).message}`);
     process.exit(1);
   }
+}
+
+/**
+ * Route to the memo generator for the resolved family. Each family owns its own
+ * artifact shape; both run the shared advice-language guard before returning.
+ */
+function buildMemoArtifacts(args: {
+  dispatch: MemoDispatch;
+  templateMetadata: TemplateMetadata;
+  values: Record<string, unknown>;
+  jurisdiction?: string;
+  baselineTemplateId?: string;
+}): { memo: unknown; markdown: string } {
+  if (args.dispatch.family === 'founder-separation') {
+    const memo = generateFounderMemo({
+      templateId: args.dispatch.templateId,
+      templateMetadata: args.templateMetadata,
+      values: args.values,
+    });
+    return { memo, markdown: renderFounderMemoMarkdown(memo) };
+  }
+
+  const memo = generateEmploymentMemo({
+    templateId: args.dispatch.templateId,
+    templateMetadata: args.templateMetadata,
+    values: args.values,
+    jurisdiction: args.jurisdiction,
+    baselineTemplateId: args.baselineTemplateId,
+  });
+  return { memo, markdown: renderEmploymentMemoMarkdown(memo) };
 }
 
 function getMemoOutputPaths(args: {
