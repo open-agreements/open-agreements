@@ -9,6 +9,8 @@ import { runTemplateShow } from '../commands/template.js';
 import { runFieldSelectorCommand, runFieldSelectorClean, runFieldSelectorPatch } from '../commands/field-selector.js';
 import { runFieldSelectorSchema } from '../commands/field-selector-schema.js';
 import { createNumberingRenderCopy } from '../core/field-selector/numbering-render-copy.js';
+import { FieldSelectorMetadataSchema } from '../core/metadata.js';
+import yaml from 'js-yaml';
 import { runScan } from '../commands/scan.js';
 import {
   runChecklistCreate,
@@ -201,8 +203,17 @@ export function createProgram(): Command {
     .description('Create a disposable numbering snapshot for PDF conversion; never replace the editable DOCX')
     .requiredOption('-o, --output <path>', 'New *.render.docx path (must not exist)')
     .option('--nonbreaking-hyphen-font <family>', 'Host-verified font for U+2011 glyphs in the temporary main-story render copy')
-    .action((input: string, opts: { output: string; nonbreakingHyphenFont?: string }) => {
-      console.log(JSON.stringify(createNumberingRenderCopy(input, opts.output, { nonbreakingHyphenFont: opts.nonbreakingHyphenFont }), null, 2));
+    .option('--style-separator-metadata <path>', 'Opt in to source-declared spacing corrections from canonical metadata.yaml')
+    .option('--style-separator-source <path>', 'Unmodified pinned source DOCX required with --style-separator-metadata')
+    .action((input: string, opts: { output: string; nonbreakingHyphenFont?: string; styleSeparatorMetadata?: string; styleSeparatorSource?: string }) => {
+      if (!!opts.styleSeparatorMetadata !== !!opts.styleSeparatorSource) throw new Error('Both style-separator metadata and source are required');
+      let styleSeparatorSpacing;
+      if (opts.styleSeparatorMetadata && opts.styleSeparatorSource) {
+        const metadata = FieldSelectorMetadataSchema.parse(yaml.load(readFileSync(opts.styleSeparatorMetadata, 'utf8')));
+        if (!metadata.rendering) throw new Error('Metadata has no style-separator spacing declaration');
+        styleSeparatorSpacing = { sourcePath: opts.styleSeparatorSource, sourceSha256: metadata.source_sha256!, profile: metadata.rendering.style_separator_spacing };
+      }
+      console.log(JSON.stringify(createNumberingRenderCopy(input, opts.output, { nonbreakingHyphenFont: opts.nonbreakingHyphenFont, styleSeparatorSpacing }), null, 2));
     });
 
   fieldSelectorCmd

@@ -8,6 +8,7 @@ import { resolveNumberingSnapshots } from './numbering-counters.js';
 import { materializeNumberingReferences } from './numbering-render-references.js';
 import { applyNonbreakingHyphenFont, hasNonbreakingHyphen, validateNonbreakingHyphenFont, type GlyphFallbackReceipt } from './nonbreaking-hyphen-font.js';
 import { enumerateTextParts, getAllTextPartNames } from './ooxml-parts.js';
+import { applyStyleSeparatorSpacing, type StyleSeparatorSpacingOptions, type StyleSeparatorSpacingReceipt } from './style-separator-spacing.js';
 
 const W = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const MC = 'http://schemas.openxmlformats.org/markup-compatibility/2006';
@@ -21,9 +22,13 @@ export interface NumberingRenderCopyResult {
   paragraphs: number;
   references: number;
   glyphFallback?: GlyphFallbackReceipt;
+  styleSeparatorSpacing?: StyleSeparatorSpacingReceipt;
 }
 
-export interface NumberingRenderCopyOptions { nonbreakingHyphenFont?: string }
+export interface NumberingRenderCopyOptions {
+  nonbreakingHyphenFont?: string;
+  styleSeparatorSpacing?: StyleSeparatorSpacingOptions;
+}
 
 function direct(parent: XmlElement, local: string): XmlElement | undefined {
   return Array.from(parent.childNodes).find((node) => node.nodeType === 1
@@ -64,6 +69,8 @@ export function createNumberingRenderCopy(inputPath: string, outputPath: string,
   const numbering = parser.parseFromString(numberingEntry?.getData().toString('utf8') ?? `<w:numbering xmlns:w="${W}"/>`, 'text/xml');
   const stylesEntry = zip.getEntry('word/styles.xml');
   const styles = stylesEntry ? parser.parseFromString(stylesEntry.getData().toString('utf8'), 'text/xml') : undefined;
+  const styleSeparatorSpacing = options.styleSeparatorSpacing === undefined ? undefined
+    : applyStyleSeparatorSpacing(zip, document, styles, options.styleSeparatorSpacing);
   const snapshots = resolveNumberingSnapshots(document, styles, numbering);
   // Choice and Fallback are mutually exclusive renderer branches. Walking both
   // would consume phantom counters or combine incompatible field instructions.
@@ -175,7 +182,7 @@ export function createNumberingRenderCopy(inputPath: string, outputPath: string,
     paragraphs += 1;
   }
   const serializer = new XMLSerializer();
-  if (numberingEntry || glyphFallback?.replacements) {
+  if (numberingEntry || glyphFallback?.replacements || styleSeparatorSpacing?.replacements) {
     zip.updateFile('word/document.xml', Buffer.from(serializer.serializeToString(document)));
   }
   if (numberingEntry) {
@@ -186,5 +193,5 @@ export function createNumberingRenderCopy(inputPath: string, outputPath: string,
   // Exclusive creation also rejects symlink/hardlink aliases and stale copies.
   writeFileSync(output, bytes, { flag: 'wx' });
   return { renderOnly: true, inputSha256, outputSha256: hash(bytes), outputPath: output, paragraphs, references,
-    ...(glyphFallback ? { glyphFallback } : {}) };
+    ...(glyphFallback ? { glyphFallback } : {}), ...(styleSeparatorSpacing ? { styleSeparatorSpacing } : {}) };
 }
