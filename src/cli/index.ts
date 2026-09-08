@@ -200,8 +200,9 @@ export function createProgram(): Command {
     .command('render-copy <input>')
     .description('Create a disposable numbering snapshot for PDF conversion; never replace the editable DOCX')
     .requiredOption('-o, --output <path>', 'New *.render.docx path (must not exist)')
-    .action((input: string, opts: { output: string }) => {
-      console.log(JSON.stringify(createNumberingRenderCopy(input, opts.output), null, 2));
+    .option('--nonbreaking-hyphen-font <family>', 'Host-verified font for U+2011 glyphs in the temporary main-story render copy')
+    .action((input: string, opts: { output: string; nonbreakingHyphenFont?: string }) => {
+      console.log(JSON.stringify(createNumberingRenderCopy(input, opts.output, { nonbreakingHyphenFont: opts.nonbreakingHyphenFont }), null, 2));
     });
 
   fieldSelectorCmd

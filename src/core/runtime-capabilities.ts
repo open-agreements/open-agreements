@@ -25,5 +25,6 @@ export const RUNTIME_CAPABILITIES = Object.freeze({
     'conditional-input-requirements.all-of.v1',
     'input-value-format.nonnegative-integer.v1',
     'render.numbering-snapshot.v1',
+    'render.nonbreaking-hyphen-font.v1',
   ]),
 });

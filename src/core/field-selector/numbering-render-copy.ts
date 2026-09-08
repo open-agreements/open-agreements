@@ -6,6 +6,8 @@ import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Element as XmlElement } from '@xmldom/xmldom';
 import { resolveNumberingSnapshots } from './numbering-counters.js';
 import { materializeNumberingReferences } from './numbering-render-references.js';
+import { applyNonbreakingHyphenFont, hasNonbreakingHyphen, validateNonbreakingHyphenFont, type GlyphFallbackReceipt } from './nonbreaking-hyphen-font.js';
+import { enumerateTextParts, getAllTextPartNames } from './ooxml-parts.js';
 
 const W = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const MC = 'http://schemas.openxmlformats.org/markup-compatibility/2006';
@@ -18,7 +20,10 @@ export interface NumberingRenderCopyResult {
   outputPath: string;
   paragraphs: number;
   references: number;
+  glyphFallback?: GlyphFallbackReceipt;
 }
+
+export interface NumberingRenderCopyOptions { nonbreakingHyphenFont?: string }
 
 function direct(parent: XmlElement, local: string): XmlElement | undefined {
   return Array.from(parent.childNodes).find((node) => node.nodeType === 1
@@ -31,7 +36,8 @@ function direct(parent: XmlElement, local: string): XmlElement | undefined {
  * shared numIds. Snapshot each effective counter tuple only in this copy; the
  * original DOCX retains its automatic numbering and exact original bytes.
  */
-export function createNumberingRenderCopy(inputPath: string, outputPath: string): NumberingRenderCopyResult {
+export function createNumberingRenderCopy(inputPath: string, outputPath: string, options: NumberingRenderCopyOptions = {}): NumberingRenderCopyResult {
+  if (options.nonbreakingHyphenFont !== undefined) validateNonbreakingHyphenFont(options.nonbreakingHyphenFont);
   const input = realpathSync(inputPath);
   const output = resolve(outputPath);
   if (input === output || !output.endsWith('.render.docx') || input.endsWith('.render.docx')) {
@@ -48,6 +54,13 @@ export function createNumberingRenderCopy(inputPath: string, outputPath: string)
     if (level !== 'warning') throw new Error(`render-copy: ${message}`);
   } });
   const document = parser.parseFromString(documentEntry.getData().toString('utf8'), 'text/xml');
+  if (options.nonbreakingHyphenFont !== undefined) {
+    for (const name of getAllTextPartNames(enumerateTextParts(zip)).filter(name => name !== 'word/document.xml')) {
+      if (hasNonbreakingHyphen(parser.parseFromString(zip.readAsText(name), 'text/xml'))) {
+        throw new Error(`render-copy: nonbreaking hyphens in ${name} are unsupported`);
+      }
+    }
+  }
   const numbering = parser.parseFromString(numberingEntry?.getData().toString('utf8') ?? `<w:numbering xmlns:w="${W}"/>`, 'text/xml');
   const stylesEntry = zip.getEntry('word/styles.xml');
   const styles = stylesEntry ? parser.parseFromString(stylesEntry.getData().toString('utf8'), 'text/xml') : undefined;
@@ -81,6 +94,9 @@ export function createNumberingRenderCopy(inputPath: string, outputPath: string)
       || ['word/document.xml', 'word/numbering.xml', 'word/styles.xml'].includes(entry.entryName)) continue;
     const story = parser.parseFromString(entry.getData().toString('utf8'), 'text/xml');
     const root = story.documentElement;
+    if (options.nonbreakingHyphenFont !== undefined && hasNonbreakingHyphen(story)) {
+      throw new Error(`render-copy: nonbreaking hyphens in ${entry.entryName} are unsupported`);
+    }
     if (!root || root.namespaceURI !== W || !['hdr', 'ftr', 'footnotes', 'endnotes', 'comments'].includes(root.localName ?? '')) continue;
     const instruction = Array.from(story.getElementsByTagNameNS(W, 'p')).map((paragraph) =>
       Array.from(paragraph.getElementsByTagNameNS(W, 'instrText')).map((node) => node.textContent ?? '').join('')).join('\n')
@@ -90,6 +106,8 @@ export function createNumberingRenderCopy(inputPath: string, outputPath: string)
     }
   }
   const references = materializeNumberingReferences(document, snapshots, styles);
+  const glyphFallback = options.nonbreakingHyphenFont === undefined ? undefined
+    : applyNonbreakingHyphenFont(document, options.nonbreakingHyphenFont);
   let abstractId = Math.max(0, ...Array.from(numbering.getElementsByTagNameNS(W, 'abstractNum'))
     .map((node) => Number(node.getAttributeNS(W, 'abstractNumId'))));
   let numId = Math.max(0, ...Array.from(numbering.getElementsByTagNameNS(W, 'num'))
@@ -157,13 +175,16 @@ export function createNumberingRenderCopy(inputPath: string, outputPath: string)
     paragraphs += 1;
   }
   const serializer = new XMLSerializer();
-  if (numberingEntry) {
+  if (numberingEntry || glyphFallback?.replacements) {
     zip.updateFile('word/document.xml', Buffer.from(serializer.serializeToString(document)));
+  }
+  if (numberingEntry) {
     zip.updateFile('word/numbering.xml', Buffer.from(serializer.serializeToString(numbering)));
   }
   if (hash(readFileSync(input)) !== inputSha256) throw new Error('render-copy: input changed during preparation');
   const bytes = zip.toBuffer();
   // Exclusive creation also rejects symlink/hardlink aliases and stale copies.
   writeFileSync(output, bytes, { flag: 'wx' });
-  return { renderOnly: true, inputSha256, outputSha256: hash(bytes), outputPath: output, paragraphs, references };
+  return { renderOnly: true, inputSha256, outputSha256: hash(bytes), outputPath: output, paragraphs, references,
+    ...(glyphFallback ? { glyphFallback } : {}) };
 }
