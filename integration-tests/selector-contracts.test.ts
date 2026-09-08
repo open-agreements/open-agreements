@@ -643,6 +643,8 @@ describeWithCoiSource('CoI original_incorporation_date and effective_date target
           company_name: 'Meridian Inc.',
           original_incorporation_date: '1995-03-20',
           effective_date: '2026-07-15',
+          // Explicit unrelated synthetic election; this case tests date slots.
+          include_redemption: false,
         },
       });
 

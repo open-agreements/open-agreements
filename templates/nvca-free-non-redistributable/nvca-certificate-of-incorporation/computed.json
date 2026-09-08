@@ -3,9 +3,38 @@
   "max_passes": 2,
   "defaults": {
     "full_ratchet_sunset_carrier": "",
-    "qualified_financing_proceeds_threshold_carrier": ""
+    "qualified_financing_proceeds_threshold_carrier": "",
+    "redemption_price_prefix_carrier": "",
+    "redemption_fair_market_value_prong_carrier": "",
+    "redemption_fair_market_value_definition_carrier": ""
   },
   "rules": [
+    {
+      "id": "redemption-price-original-issue-price",
+      "description": "Use Original Issue Price plus declared but unpaid dividends as the Redemption Price",
+      "when_all": [
+        { "field": "include_redemption", "op": "eq", "value": true },
+        { "field": "redemption_price_basis", "op": "eq", "value": "original_issue_price_plus_declared_unpaid_dividends" }
+      ],
+      "set_fill": {
+        "redemption_price_prefix_carrier": "",
+        "redemption_fair_market_value_prong_carrier": "",
+        "redemption_fair_market_value_definition_carrier": ""
+      }
+    },
+    {
+      "id": "redemption-price-greater-of-fair-market-value",
+      "description": "Use the greater of Original Issue Price plus declared but unpaid dividends and Fair Market Value",
+      "when_all": [
+        { "field": "include_redemption", "op": "eq", "value": true },
+        { "field": "redemption_price_basis", "op": "eq", "value": "greater_of_original_issue_price_and_fair_market_value" }
+      ],
+      "set_fill": {
+        "redemption_price_prefix_carrier": "the greater of (A) ",
+        "redemption_fair_market_value_prong_carrier": " and (B) the Fair Market Value (determined in the manner set forth below) of such share of Preferred Stock as of the date of the Corporation’s receipt of the Redemption Request",
+        "redemption_fair_market_value_definition_carrier": " For purposes of this Section 6.1, the Fair Market Value of a single share of Preferred Stock shall be the value of a single share of Preferred Stock as mutually agreed upon by the Corporation and the holders of a majority of the shares of Preferred Stock then outstanding, and, in the event that they are unable to reach agreement, by a third-party appraiser agreed to by the Corporation and the holders of a majority of the shares of Preferred Stock then outstanding."
+      }
+    },
     {
       "id": "full-ratchet-sunset-present",
       "description": "Include the complete optional sunset carrier only for full-ratchet anti-dilution when a date is supplied",

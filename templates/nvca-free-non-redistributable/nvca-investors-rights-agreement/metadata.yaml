@@ -185,7 +185,16 @@ fields:
     description: Pinned-source operative section number for Right of First Offer
   - name: successor_indemnification_section
     type: string
-    description: Pinned-source section number for Successor Indemnification
+    description: Computed rendered section number for Successor Indemnification
+  - name: transaction_assistance_section
+    type: string
+    description: Computed rendered section number for transaction assistance
+  - name: indemnification_matters_section
+    type: string
+    description: Computed rendered section number for Indemnification Matters
+  - name: covenant_survival_exception_clause
+    type: string
+    description: Computed complete exception to the general Section 5 termination rule
   - name: indemnification_late_notice_clause
     type: string
     description: Computed complete late-notice material-prejudice limitation
@@ -295,7 +304,8 @@ fields:
     description: Comma retained where the selected clause sequence requires it; empty when omitted
   - name: surviving_covenant_sections
     type: string
-    description: Additional Section 5 covenants that survive the general termination rule
+    description: Optional complete display-ready clause adding negotiated surviving covenants; when model-form survivors remain, supply the leading punctuation and conjunction suffix, and when none remain, supply the complete leading exception phrase; empty when none
+    default: ''
   - name: additional_sanctions_jurisdictions
     type: string
     description: Additional sanctions jurisdictions beyond the United States, or empty
@@ -596,10 +606,21 @@ fields:
     description: Exempt qualifying no-value family-trust transfers from the market stand-off
   - name: include_standoff_pro_rata_release
     type: boolean
+    default: false
     description: Apply discretionary stand-off releases pro rata
   - name: include_standoff_discretionary_minimum_release
     type: boolean
     description: Permit a discretionary de minimis stand-off release basket
+  - name: standoff_discretionary_release_shares
+    type: string
+    description: Maximum number of Common Stock shares in the discretionary stand-off release basket, as a bare nonnegative whole number without units or commas
+    value_format: nonnegative_integer
+    required_when:
+      all_of:
+        - field: include_standoff_pro_rata_release
+          equals: true
+        - field: include_standoff_discretionary_minimum_release
+          equals: true
   - name: include_covenant_termination_deemed_liquidation_condition
     type: boolean
     description: Condition covenant termination at a Deemed Liquidation Event on specified consideration or successor rights

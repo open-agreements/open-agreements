@@ -1,4 +1,38 @@
 {
+  "numbering_continuations": {
+    "source_sha256": "be8ad13f171a343bdb53716b1d318689ae3477cdf7f1986b2e3985e1cabbd08a",
+    "source_num_id": "2",
+    "headings": [
+      {
+        "anchor": "Restrictions on Transfer",
+        "num_id": "11",
+        "expected_abstract_num_id": "7",
+        "ilvl": 1,
+        "expected_starts": {"0": 2, "1": 12, "2": 1, "3": 1, "4": 1, "5": 1, "6": 1, "7": 1, "8": 1}
+      },
+      {
+        "anchor": "Termination and Suspension of Registration Rights",
+        "num_id": "5",
+        "expected_abstract_num_id": "7",
+        "ilvl": 1,
+        "expected_starts": {"0": 2, "1": 13, "2": 1, "3": 1, "4": 1, "5": 1, "6": 1, "7": 1, "8": 1}
+      },
+      {
+        "anchor": "Insurance",
+        "num_id": "8",
+        "expected_abstract_num_id": "2",
+        "ilvl": 1,
+        "expected_starts": {}
+      },
+      {
+        "anchor": "Employee Agreements",
+        "num_id": "6",
+        "expected_abstract_num_id": "7",
+        "ilvl": 1,
+        "expected_starts": {"0": 5, "1": 2, "2": 1, "3": 1, "4": 1, "5": 1, "6": 1, "7": 1, "8": 1}
+      }
+    ]
+  },
   "paragraph_rules": [
     {"id":"unwrap-foia-definition","ignore_heading":true,"section_heading":"Definitions","paragraph_contains":"“FOIA Party” means a Person that","replacements":{"[“FOIA Party”":"“FOIA Party”"},"trim_unmatched_trailing_bracket":true},
     {"id":"unwrap-dpa-definitions","section_heading":"Definitions","paragraph_contains":"“DPA” means Section 721","replacements":{"[“DPA”":"“DPA”"},"trim_unmatched_trailing_bracket":true},

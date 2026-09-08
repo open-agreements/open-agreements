@@ -18,6 +18,22 @@ const FIXTURE = JSON.parse(readFileSync(
 
 const describeWithSource = existsSync(SOURCE) ? describe : describe.skip;
 
+// Exact canonical enabled regression choices from LE #2518; these are test
+// inputs, not defaults or inferred negotiated transaction economics.
+const REDEMPTION_CHOICES = {
+  include_redemption: true,
+  include_redemption_cross_ref: true,
+  redemption_price_basis: 'greater_of_original_issue_price_and_fair_market_value',
+  include_redemption_holder_opt_out: true,
+  redemption_start_date: '2030-05-21',
+  redemption_interest_rate: '10',
+  redemption_compounding_frequency: 'annually',
+};
+const CONDITIONAL_REDEMPTION_FIELDS = [
+  'redemption_start_date', 'redemption_interest_rate', 'redemption_compounding_frequency',
+  'redemption_price_basis', 'include_redemption_holder_opt_out',
+];
+
 function expectCleanProductionOutput(text: string, warnings: string[]): void {
   expect(warnings.filter((warning) => warning.startsWith('verify:'))).toEqual([]);
   expect(text).toContain('Northstar Robotics, Inc.');
@@ -55,6 +71,38 @@ describeWithSource('NVCA COI production fill', () => {
     const actual = createHash('sha256').update(readFileSync(SOURCE)).digest('hex');
     expect(actual).toBe(SOURCE_SHA256);
   });
+
+  for (const field of CONDITIONAL_REDEMPTION_FIELDS) {
+    it(`refuses enabled redemption without ${field} before emitting output`, async () => {
+      const dir = mkdtempSync(join(tmpdir(), 'coi-redemption-incomplete-'));
+      try {
+        const values: Record<string, unknown> = {...FIXTURE, ...REDEMPTION_CHOICES};
+        delete values[field];
+        const outputPath = join(dir, 'incomplete.docx');
+        await expect(runFieldSelector({fieldSelectorId: FIELD_SELECTOR_ID, inputPath: SOURCE, outputPath, values}))
+          .rejects.toThrow(`Incomplete conditional input: ${field}`);
+        expect(existsSync(outputPath)).toBe(false);
+      } finally {
+        rmSync(dir, {recursive: true, force: true});
+      }
+    });
+  }
+
+  it('allows disabled redemption with all conditional economics and choices omitted', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'coi-redemption-disabled-'));
+    try {
+      const values: Record<string, unknown> = {...FIXTURE, include_redemption: false};
+      for (const field of CONDITIONAL_REDEMPTION_FIELDS) delete values[field];
+      const result = await runFieldSelector({fieldSelectorId: FIELD_SELECTOR_ID, inputPath: SOURCE, outputPath: join(dir, 'disabled.docx'), values, selectionsZeroMatchPolicy: 'error'});
+      expect(result.warnings).toEqual([]);
+      const text = extractAllText(result.outputPath);
+      expect(text).not.toContain('General. Unless prohibited');
+      expect(text).toContain('Preferred Stock is not redeemable');
+      expect(text).toContain('Redeemed or Otherwise Acquired Shares.');
+    } finally {
+      rmSync(dir, {recursive: true, force: true});
+    }
+  }, 15_000);
 
   it('rejects misspelled negotiated-term selections', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'coi-production-invalid-selection-'));
@@ -129,8 +177,7 @@ describeWithSource('NVCA COI production fill', () => {
           liquidation_participation: 'participating',
           anti_dilution_type: 'full_ratchet',
           include_pay_to_play: true,
-          include_redemption: true,
-          include_redemption_cross_ref: true,
+          ...REDEMPTION_CHOICES,
         },
       });
       const text = extractAllText(outputPath);
@@ -157,4 +204,39 @@ describeWithSource('NVCA COI production fill', () => {
       rmSync(dir, { recursive: true, force: true });
     }
   }, 15_000);
+
+  for (const price of ['greater_of_original_issue_price_and_fair_market_value', 'original_issue_price_plus_declared_unpaid_dividends']) {
+    for (const optOut of [false, true]) {
+      it(`closes selected redemption alternatives: price=${price}, optOut=${optOut}`, async () => {
+        const dir = mkdtempSync(join(tmpdir(), 'coi-redemption-choices-'));
+        try {
+          const result = await runFieldSelector({
+            fieldSelectorId: FIELD_SELECTOR_ID,
+            inputPath: SOURCE,
+            outputPath: join(dir, 'selected.docx'),
+            selectionsZeroMatchPolicy: 'error',
+            values: {...FIXTURE, ...REDEMPTION_CHOICES, redemption_price_basis: price, include_redemption_holder_opt_out: optOut},
+          });
+          expect(result.warnings).toEqual([]);
+          const text = extractAllText(result.outputPath);
+          const start = text.indexOf('General. Unless prohibited');
+          const end = text.indexOf('Redeemed or Otherwise Acquired Shares.');
+          expect(start).toBeGreaterThan(-1);
+          expect(end).toBeGreaterThan(start);
+          const redemption = text.slice(start, end);
+          expect(redemption).not.toMatch(/[\[\]]/);
+          expect(redemption).toContain('10%');
+          expect(redemption).toContain('compounded annually');
+          expect(redemption).toContain('May 21, 2030');
+          const fmv = price === 'greater_of_original_issue_price_and_fair_market_value';
+          expect(redemption.includes('third-party appraiser')).toBe(fmv);
+          expect(redemption.includes('greater of (A)')).toBe(fmv);
+          expect(redemption.includes('20th day after')).toBe(optOut);
+          expect(redemption.includes('shall thereafter be “Excluded Shares.”')).toBe(optOut);
+        } finally {
+          rmSync(dir, {recursive: true, force: true});
+        }
+      }, 15_000);
+    }
+  }
 });
