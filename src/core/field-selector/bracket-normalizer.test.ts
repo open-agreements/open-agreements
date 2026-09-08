@@ -1,4 +1,5 @@
-import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
@@ -55,6 +56,7 @@ interface RunSpec {
   text: string;
   bold?: boolean;
   underline?: boolean;
+  italic?: boolean;
 }
 
 function buildDocxWithRuns(paragraphs: RunSpec[][]): Buffer {
@@ -83,6 +85,7 @@ function buildDocxWithRuns(paragraphs: RunSpec[][]): Buffer {
           const props: string[] = [];
           if (run.bold) props.push('<w:b/>');
           if (run.underline) props.push('<w:u w:val="single"/>');
+          if (run.italic) props.push('<w:i/>');
           const rPr = props.length > 0 ? `<w:rPr>${props.join('')}</w:rPr>` : '';
           return `<w:r>${rPr}<w:t xml:space="preserve">${escapeXml(run.text)}</w:t></w:r>`;
         })
@@ -131,7 +134,108 @@ function escapeXml(value: string): string {
     .replaceAll('>', '&gt;');
 }
 
+function styledCharacters(path: string) {
+  const document = new DOMParser().parseFromString(new AdmZip(path).readAsText('word/document.xml'), 'text/xml');
+  return Array.from(document.getElementsByTagNameNS(W_NS, 'r')).flatMap(run => {
+    const properties = Array.from(run.getElementsByTagNameNS(W_NS, 'rPr')).map(p => new XMLSerializer().serializeToString(p));
+    return Array.from(run.getElementsByTagNameNS(W_NS, 't')).flatMap(t => Array.from(t.textContent ?? '').map(character => ({character, properties})));
+  });
+}
+
 describe('normalizeBracketArtifacts', () => {
+  it('preserves every unchanged character style on successful disjoint substitution and trim', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-normalize-styles-')); tempDirs.push(dir);
+    const input = join(dir, 'input.docx'), output = join(dir, 'output.docx');
+    writeFileSync(input, buildDocxWithRuns([[{text: 'Lead Section '}, {text: '1.2(c)', underline: true},
+      {text: ' Unchanged important bold wording ', bold: true}, {text: 'and italic ending. ', italic: true}]]));
+    const original = readFileSync(input), expected = styledCharacters(input).slice(0, -1);
+    expected[17] = {...expected[17], character: 'b'};
+    const stats = await normalizeBracketArtifacts(input, output, {rules: [{id: 'reference', ignore_heading: true,
+      section_heading: '', paragraph_contains: '1.2(c)', replacements: {'1.2(c)': '1.2(b)'}}]});
+    expect(styledCharacters(output)).toEqual(expected);
+    expect(stats.formattingFallbackCount).toBe(0);
+    expect(readFileSync(input)).toEqual(original);
+    const resultXml = new AdmZip(output).readAsText('word/document.xml');
+    expect(new DOMParser().parseFromString(resultXml, 'text/xml').getElementsByTagNameNS(W_NS, 'r').length).toBe(4);
+  });
+
+  it('retains a one-character styled anchor between substitutions', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-normalize-short-anchor-')); tempDirs.push(dir);
+    const input = join(dir, 'input.docx'), output = join(dir, 'output.docx');
+    writeFileSync(input, buildDocxWithRuns([[{text: 'x'}, {text: 'B', bold: true}, {text: 'y', italic: true}]]));
+    const expected = styledCharacters(input); expected[0].character = 'a'; expected[2].character = 'c';
+    await normalizeBracketArtifacts(input, output, {rules: [{id: 'short', ignore_heading: true,
+      section_heading: '', paragraph_contains: 'xBy', replacements: {x: 'a', y: 'c'}}]});
+    expect(styledCharacters(output)).toEqual(expected);
+  });
+
+  it('preserves Unicode run styles and bookmark/container events across separate edits', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-normalize-containers-')); tempDirs.push(dir);
+    const input = join(dir, 'input.docx'), output = join(dir, 'output.docx');
+    const zip = new AdmZip(buildDocx([]));
+    zip.updateFile('word/document.xml', Buffer.from(`<w:document xmlns:w="${W_NS}"><w:body><w:p>` +
+      '<w:bookmarkStart w:id="1" w:name="retained"/><w:hyperlink w:anchor="target">' +
+      '<w:r><w:rPr><w:u w:val="single"/></w:rPr><w:t>😀x</w:t></w:r></w:hyperlink>' +
+      '<w:r><w:rPr><w:b/></w:rPr><w:t>B</w:t></w:r><w:bookmarkEnd w:id="1"/>' +
+      '<w:sdt><w:sdtPr><w:tag w:val="retained"/></w:sdtPr><w:sdtContent><w:r><w:rPr><w:i/></w:rPr><w:t>😃</w:t></w:r></w:sdtContent></w:sdt>' +
+      '</w:p></w:body></w:document>'));
+    zip.writeZip(input);
+    const expected = styledCharacters(input); expected[1].character = 'a'; expected[3].character = '😄';
+    await normalizeBracketArtifacts(input, output, {rules: [{id: 'containers', ignore_heading: true,
+      section_heading: '', paragraph_contains: '😀xB😃', replacements: {x: 'a', '😃': '😄'}}]});
+    expect(styledCharacters(output)).toEqual(expected);
+    const before = new AdmZip(input).readAsText('word/document.xml');
+    const after = new AdmZip(output).readAsText('word/document.xml');
+    const events = (xml: string) => [...xml.matchAll(/<\/?w:(?:bookmarkStart|bookmarkEnd|hyperlink|sdt|sdtPr|sdtContent|tag)\b[^>]*>/g)].map(m => m[0]);
+    expect(events(after)).toEqual(events(before));
+    expect(readParagraphs(output)[0]).toBe('😀aB😄');
+  });
+
+  it('rejects an over-budget paragraph before replacing an existing output', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-normalize-budget-')); tempDirs.push(dir);
+    const input = join(dir, 'input.docx'), output = join(dir, 'output.docx');
+    const old = 'a'.repeat(2100), replacement = 'b'.repeat(2100);
+    writeFileSync(input, buildDocx([old])); writeFileSync(output, 'existing output sentinel');
+    const original = readFileSync(input);
+    await expect(normalizeBracketArtifacts(input, output, {rules: [{id: 'budget', ignore_heading: true,
+      section_heading: '', paragraph_contains: old, replacements: {[old]: replacement}}]})).rejects.toThrow(/budget/);
+    expect(readFileSync(output, 'utf8')).toBe('existing output sentinel');
+    expect(readFileSync(input)).toEqual(original);
+  });
+
+  it('declines a later unsupported field edit atomically without writing or flattening', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-normalize-atomic-')); tempDirs.push(dir);
+    const input = join(dir, 'input.docx'), output = join(dir, 'output.docx');
+    const zip = new AdmZip(buildDocx([]));
+    zip.updateFile('word/document.xml', Buffer.from(`<w:document xmlns:w="${W_NS}"><w:body><w:p>` +
+      '<w:r><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:instrText> REF target </w:instrText></w:r>' +
+      '<w:r><w:fldChar w:fldCharType="separate"/></w:r><w:r><w:t>A</w:t></w:r><w:r><w:t>B</w:t></w:r>' +
+      '<w:r><w:fldChar w:fldCharType="end"/></w:r><w:r><w:t xml:space="preserve"> retained text z </w:t></w:r>' +
+      '</w:p></w:body></w:document>'));
+    zip.writeZip(input); const original = readFileSync(input);
+    const options = {rules: [{id: 'atomic', ignore_heading: true, section_heading: '', paragraph_contains: 'AB', replacements: {AB: 'X', z: 'q'}}]};
+    await expect(normalizeBracketArtifacts(input, output, options)).rejects.toThrow(/normalization/i);
+    expect(existsSync(output)).toBe(false); expect(readFileSync(input)).toEqual(original);
+    writeFileSync(output, 'existing output sentinel');
+    await expect(normalizeBracketArtifacts(input, output, options)).rejects.toThrow(/normalization/i);
+    expect(readFileSync(output, 'utf8')).toBe('existing output sentinel');
+    await expect(normalizeBracketArtifacts(input, input, options)).rejects.toThrow(/normalization/i);
+    expect(readFileSync(input)).toEqual(original);
+  });
+  it('does not directly rewrite text inside simple fields or tracked revisions', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-normalize-ancestry-')); tempDirs.push(dir);
+    for (const container of ['fldSimple', 'ins', 'del', 'moveFrom', 'moveTo']) {
+      const input = join(dir, `${container}.docx`), output = join(dir, `${container}-out.docx`);
+      const zip = new AdmZip(buildDocx([]));
+      zip.updateFile('word/document.xml', Buffer.from(`<w:document xmlns:w="${W_NS}"><w:body><w:p>` +
+        `<w:${container}><w:r><w:t>1.2(c)</w:t></w:r></w:${container}>` +
+        '</w:p></w:body></w:document>'));
+      zip.writeZip(input); const original = readFileSync(input);
+      await expect(normalizeBracketArtifacts(input, output, {rules: [{id: 'unsafe', ignore_heading: true,
+        section_heading: '', paragraph_contains: '1.2(c)', replacements: {'1.2(c)': '1.2(b)'}}]})).rejects.toThrow(/ancestry/);
+      expect(existsSync(output)).toBe(false); expect(readFileSync(input)).toEqual(original);
+    }
+  });
   it('no-op when no declarative rules (does not strip brackets, does not corrupt formatting)', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-bracket-normalizer-'));
     tempDirs.push(dir);
@@ -535,6 +639,30 @@ describe('normalizeBracketArtifacts', () => {
 });
 
 describe('computeEditHunks', () => {
+  it('retains short anchors and uses whole-codepoint UTF-16 offsets', () => {
+    expect(computeEditHunks('xBy', 'aBc')).toEqual([{start: 0, end: 1, replacement: 'a'}, {start: 2, end: 3, replacement: 'c'}]);
+    expect(computeEditHunks('😀xB😃', '😀aB😄')).toEqual([{start: 2, end: 3, replacement: 'a'}, {start: 4, end: 6, replacement: '😄'}]);
+    expect(computeDeletionHunks('😀x😃', '😀😃')).toEqual([{start: 2, end: 3, replacement: ''}]);
+  });
+
+  it('declines excessive exact-alignment work and malformed surrogate input', () => {
+    expect(() => computeEditHunks('a'.repeat(2100), 'b'.repeat(2100))).toThrow(/budget/i);
+    expect(() => computeEditHunks('\ud83dX', 'Y')).toThrow(/surrogate/i);
+  });
+
+  it('replays repeated-text alignments deterministically and trims long common edges before budgeting', () => {
+    for (const [old, next] of [['xABABBy', 'aABABAc'], ['😀x😀y😀', '😀a😀b😀'], ['xBy', 'aBc']]) {
+      const hunks = computeEditHunks(old, next);
+      expect(computeEditHunks(old, next)).toEqual(hunks);
+      let replay = old;
+      for (const hunk of hunks.slice().reverse()) replay = replay.slice(0, hunk.start) + hunk.replacement + replay.slice(hunk.end);
+      expect(replay).toBe(next);
+    }
+    const prefix = 'P'.repeat(3000), suffix = 'S'.repeat(3000);
+    expect(computeEditHunks(`${prefix}xBz${suffix}`, `${prefix}yBc${suffix}`)).toEqual([
+      {start: 3000, end: 3001, replacement: 'y'}, {start: 3002, end: 3003, replacement: 'c'},
+    ]);
+  });
   it('returns no hunks for identical strings', () => {
     expect(computeEditHunks('same text here', 'same text here')).toEqual([]);
   });

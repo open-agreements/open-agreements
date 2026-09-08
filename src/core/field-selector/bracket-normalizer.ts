@@ -153,31 +153,12 @@ export async function normalizeBracketArtifacts(
       // Sanitize double-dollar artifacts ($$ or $ $) → single $
       finalText = finalText.replace(/\$[\s\u00A0\t]*\$/g, '$');
       if (finalText !== original) {
-        const range = computeReplacementRange(original, finalText);
-        if (range) {
-          try {
-            replaceParagraphTextRange(
-              para as unknown as globalThis.Element,
-              range.start,
-              range.end,
-              range.replacement,
-            );
-          } catch {
-            // The minimal CONTIGUOUS range can span nearly the whole paragraph
-            // when independent edits touch both ends (e.g. a leading ". " strip
-            // plus a trailing "]" trim), and such a wide range may intersect a
-            // Word field result that replaceParagraphTextRange refuses to edit.
-            // Before destroying formatting, split the diff into disjoint hunks
-            // (anchored on common substrings) and apply them individually —
-            // each small hunk typically avoids the field result entirely.
-            if (!applyEditHunks(para, original, finalText)) {
-              // Last resort for paragraphs whose individual hunks still cross
-              // complex structures. Set text directly on <w:t> elements —
-              // less formatting-safe but better than skipping the replacement.
-              setParagraphTextFallback(para, finalText);
-              stats.formattingFallbackCount += 1;
-            }
-          }
+        try {
+          const replacement = applyEditHunks(para, original, finalText);
+          para.parentNode!.replaceChild(replacement, para);
+        } catch (error) {
+          const reason = error instanceof Error ? error.message : String(error);
+          throw new Error(`Normalization refused in ${partName}, paragraph ${i}: ${reason}`);
         }
         stats.normalizedParagraphs += 1;
       }
@@ -200,12 +181,6 @@ export async function normalizeBracketArtifacts(
     }
   }
 
-  if (stats.formattingFallbackCount > 0) {
-    console.warn(
-      `Warning: ${stats.formattingFallbackCount} paragraph(s) used formatting-destructive fallback during normalization`
-    );
-  }
-
   const outZip = new AdmZip();
   copyEntriesSkippingDirs(zip, outZip);
   writeFileSync(outputPath, outZip.toBuffer());
@@ -220,6 +195,16 @@ export interface EditHunk {
   replacement: string;
 }
 
+function codePoints(text: string): { points: string[]; offsets: number[] } {
+  const points = Array.from(text), offsets = [0];
+  for (const point of points) {
+    const code = point.charCodeAt(0);
+    if (point.length === 1 && code >= 0xD800 && code <= 0xDFFF) throw new Error('Unpaired surrogate in normalization text');
+    offsets.push(offsets[offsets.length - 1] + point.length);
+  }
+  return { points, offsets };
+}
+
 /**
  * Return exact deletion hunks when `newText` is a subsequence of `oldText`.
  * The leftmost embedding is deterministic and, unlike a wide replacement,
@@ -232,12 +217,11 @@ export function computeDeletionHunks(
   offset = 0,
 ): EditHunk[] | null {
   if (newText.length >= oldText.length) return null;
-
+  const old = codePoints(oldText), next = codePoints(newText);
   const left: number[] = [];
   let oldIndex = 0;
-  for (let i = 0; i < newText.length; i++) {
-    const char = newText[i];
-    const found = oldText.indexOf(char, oldIndex);
+  for (const char of next.points) {
+    const found = old.points.indexOf(char, oldIndex);
     if (found < 0) return null;
     left.push(found);
     oldIndex = found + 1;
@@ -246,132 +230,106 @@ export function computeDeletionHunks(
   const retained = new Set(left);
   const hunks: EditHunk[] = [];
   let start = -1;
-  for (let i = 0; i <= oldText.length; i++) {
-    if (i < oldText.length && !retained.has(i)) {
+  for (let i = 0; i <= old.points.length; i++) {
+    if (i < old.points.length && !retained.has(i)) {
       if (start < 0) start = i;
     } else if (start >= 0) {
-      hunks.push({ start: offset + start, end: offset + i, replacement: '' });
+      hunks.push({ start: offset + old.offsets[start], end: offset + old.offsets[i], replacement: '' });
       start = -1;
     }
   }
   return hunks;
 }
 
-/** Minimum anchor length for hunk splitting — short anchors over-fragment. */
-const MIN_HUNK_ANCHOR_LENGTH = 12;
-/** Recursion cap for hunk splitting (2^6 = 64 hunks is far beyond real use). */
-const MAX_HUNK_DEPTH = 6;
-
-/**
- * Deterministic longest common substring of `a` and `b` (first occurrence wins
- * on ties). Classic O(|a|·|b|) dynamic program over a single reused row — only
- * invoked on the rare fallback path, for one paragraph at a time.
- */
-function longestCommonSubstring(
-  a: string,
-  b: string,
-): { aIndex: number; bIndex: number; length: number } | null {
-  if (a.length === 0 || b.length === 0) return null;
-  let best = { aIndex: 0, bIndex: 0, length: 0 };
-  const prev = new Int32Array(b.length + 1);
-  const curr = new Int32Array(b.length + 1);
-  for (let i = 1; i <= a.length; i++) {
-    for (let j = 1; j <= b.length; j++) {
-      if (a[i - 1] === b[j - 1]) {
-        curr[j] = prev[j - 1] + 1;
-        if (curr[j] > best.length) {
-          best = { aIndex: i - curr[j], bIndex: j - curr[j], length: curr[j] };
-        }
-      } else {
-        curr[j] = 0;
-      }
-    }
-    prev.set(curr);
-  }
-  return best.length > 0 ? best : null;
-}
+// At most 16 MB of alignment cells per changed paragraph. Larger ambiguous
+// transformations fail visibly rather than falling back to a wide style rewrite.
+const MAX_ALIGNMENT_CELLS = 4_000_000;
 
 /**
  * Compute DISJOINT edit hunks turning `oldText` into `newText`, in ascending
- * `start` order. Trims the common prefix/suffix, then recursively splits the
- * differing middle on its longest common substring (when long enough to be an
- * unambiguous anchor). Deterministic by construction; degrades to the single
- * minimal contiguous range when no adequate anchor exists.
+ * `start` order. Exact codepoint LCS retains even one-character interior anchors;
+ * returned offsets remain UTF-16 offsets for the DOCX mutation API. Ties prefer
+ * deletion, making repeated-text alignment deterministic.
  */
 export function computeEditHunks(
   oldText: string,
   newText: string,
   offset = 0,
-  depth = 0,
 ): EditHunk[] {
+  const old = codePoints(oldText), next = codePoints(newText);
   const deletionHunks = computeDeletionHunks(oldText, newText, offset);
   if (deletionHunks) return deletionHunks;
-
   let start = 0;
-  const minLen = Math.min(oldText.length, newText.length);
-  while (start < minLen && oldText[start] === newText[start]) start++;
-  let oldEnd = oldText.length;
-  let newEnd = newText.length;
-  while (oldEnd > start && newEnd > start && oldText[oldEnd - 1] === newText[newEnd - 1]) {
+  while (start < Math.min(old.points.length, next.points.length) && old.points[start] === next.points[start]) start++;
+  let oldEnd = old.points.length, newEnd = next.points.length;
+  while (oldEnd > start && newEnd > start && old.points[oldEnd - 1] === next.points[newEnd - 1]) {
     oldEnd--;
     newEnd--;
   }
   if (oldEnd === start && newEnd === start) return [];
 
-  const oldMid = oldText.slice(start, oldEnd);
-  const newMid = newText.slice(start, newEnd);
-
-  if (depth < MAX_HUNK_DEPTH) {
-    const anchor = longestCommonSubstring(oldMid, newMid);
-    if (anchor && anchor.length >= MIN_HUNK_ANCHOR_LENGTH) {
-      const left = computeEditHunks(
-        oldMid.slice(0, anchor.aIndex),
-        newMid.slice(0, anchor.bIndex),
-        offset + start,
-        depth + 1,
-      );
-      const right = computeEditHunks(
-        oldMid.slice(anchor.aIndex + anchor.length),
-        newMid.slice(anchor.bIndex + anchor.length),
-        offset + start + anchor.aIndex + anchor.length,
-        depth + 1,
-      );
-      return [...left, ...right];
+  const a = old.points.slice(start, oldEnd), b = next.points.slice(start, newEnd);
+  if (!a.length || !b.length) return [{start: offset + old.offsets[start], end: offset + old.offsets[oldEnd], replacement: b.join('')}];
+  const width = b.length + 1, cells = (a.length + 1) * width;
+  if (cells > MAX_ALIGNMENT_CELLS) throw new Error(`Exact normalization alignment budget exceeded (${cells} cells)`);
+  const lengths = new Uint32Array(cells);
+  for (let i = a.length - 1; i >= 0; i--) {
+    for (let j = b.length - 1; j >= 0; j--) {
+      lengths[i * width + j] = a[i] === b[j] ? 1 + lengths[(i + 1) * width + j + 1]
+        : Math.max(lengths[(i + 1) * width + j], lengths[i * width + j + 1]);
     }
   }
-
-  return [{ start: offset + start, end: offset + oldEnd, replacement: newMid }];
+  const hunks: EditHunk[] = [];
+  let i = 0, j = 0, current: EditHunk | undefined;
+  while (i < a.length || j < b.length) {
+    if (i < a.length && j < b.length && a[i] === b[j]) {
+      if (current) hunks.push(current);
+      current = undefined; i++; j++;
+    } else {
+      current ??= {start: offset + old.offsets[start + i], end: offset + old.offsets[start + i], replacement: ''};
+      if (i < a.length && (j === b.length || lengths[(i + 1) * width + j] >= lengths[i * width + j + 1])) {
+        current.end = offset + old.offsets[start + ++i];
+      } else current.replacement += b[j++];
+    }
+  }
+  if (current) hunks.push(current);
+  return hunks;
 }
 
 /**
  * Apply the disjoint hunks turning `original` into `finalText` to a paragraph,
  * highest-offset-first so earlier offsets stay valid as text length changes.
- * Returns true when EVERY hunk applied formatting-preservingly; false when any
- * hunk failed (the caller then falls back destructively — setParagraphTextFallback
- * overwrites the full text, so a partial application is safely superseded).
+ * Stage all edits on a clone. Never commit a partly-mutated paragraph or flatten
+ * formatting when a field/container boundary is unsupported.
  */
-function applyEditHunks(para: Element, original: string, finalText: string): boolean {
+function applyEditHunks(para: Element, original: string, finalText: string): Element {
   const hunks = computeEditHunks(original, finalText);
-  // A single hunk is exactly the contiguous range that already failed.
-  if (hunks.length <= 1) return false;
+  let replay = original;
+  for (const hunk of hunks.slice().reverse()) replay = replay.slice(0, hunk.start) + hunk.replacement + replay.slice(hunk.end);
+  if (replay !== finalText) throw new Error('Exact normalization replay mismatch');
+  let staged = para.cloneNode(true) as Element;
   for (let i = hunks.length - 1; i >= 0; i--) {
     const hunk = hunks[i];
+    if (replaceRangeInSingleSafeTextNode(staged, hunk)) continue;
+    const attempt = staged.cloneNode(true) as Element;
     try {
       replaceParagraphTextRange(
-        para as unknown as globalThis.Element,
+        attempt as unknown as globalThis.Element,
         hunk.start,
         hunk.end,
         hunk.replacement,
       );
+      staged = attempt;
     } catch {
-      if (!replaceRangeInSingleSafeTextNode(para, hunk)) return false;
+      throw new Error('Unsupported normalization field or container boundary');
     }
   }
-  return true;
+  if (extractParagraphText(staged) !== finalText) throw new Error('Normalized paragraph text does not match planned output');
+  return staged;
 }
 
 /**
- * Safe narrow fallback for a range wholly contained in one ordinary w:t node.
+ * Preserve the existing run for a range wholly contained in one ordinary w:t node.
  * Safe-docx intentionally rejects a boundary that it maps to the preceding
  * field-result run; direct mutation is nevertheless safe when the requested
  * characters are demonstrably in the following non-field text node. This
@@ -379,13 +337,15 @@ function applyEditHunks(para: Element, original: string, finalText: string): boo
  */
 function replaceRangeInSingleSafeTextNode(para: Element, hunk: EditHunk): boolean {
   if (hunk.end <= hunk.start) return false;
-  const textNodes: Array<{ node: Element; start: number; end: number; isFieldResult: boolean }> = [];
+  const textNodes: Array<{ node: Element; start: number; end: number; unsafe: boolean; fieldResult: boolean }> = [];
   let visibleOffset = 0;
   const fieldPhases: Array<'instruction' | 'result'> = [];
 
-  const visit = (node: Node): void => {
+  const visit = (node: Node, unsafeAncestor = false): void => {
     if (node.nodeType !== 1) return;
     const element = node as unknown as Element;
+    const unsafe = unsafeAncestor || (element.namespaceURI === W_NS &&
+      ['fldSimple', 'ins', 'del', 'moveFrom', 'moveTo'].includes(element.localName ?? ''));
     if (element.namespaceURI === W_NS && element.localName === 'fldChar') {
       const type = element.getAttributeNS(W_NS, 'fldCharType') || element.getAttribute('w:fldCharType');
       if (type === 'begin') fieldPhases.push('instruction');
@@ -400,17 +360,19 @@ function replaceRangeInSingleSafeTextNode(para: Element, hunk: EditHunk): boolea
         node: element,
         start: visibleOffset,
         end: visibleOffset + text.length,
-        isFieldResult: fieldPhases.at(-1) === 'result',
+        unsafe,
+        fieldResult: fieldPhases.length > 0,
       });
       visibleOffset += text.length;
       return;
     }
-    for (let child = element.firstChild; child; child = child.nextSibling) visit(child);
+    for (let child = element.firstChild; child; child = child.nextSibling) visit(child, unsafe);
   };
   visit(para as unknown as Node);
 
   const target = textNodes.find(({ start, end }) => hunk.start >= start && hunk.end <= end);
-  if (!target || target.isFieldResult) return false;
+  if (target?.unsafe) throw new Error('Unsupported normalization simple field or revision ancestry');
+  if (!target || target.fieldResult) return false;
   const text = target.node.textContent ?? '';
   const localStart = hunk.start - target.start;
   const localEnd = hunk.end - target.start;
@@ -419,27 +381,6 @@ function replaceRangeInSingleSafeTextNode(para: Element, hunk: EditHunk): boolea
     preserveXmlSpace(target.node);
   }
   return true;
-}
-
-/**
- * Compute the minimal contiguous replacement range between two strings.
- * Returns null if the strings are identical.
- */
-function computeReplacementRange(
-  oldText: string,
-  newText: string
-): { start: number; end: number; replacement: string } | null {
-  if (oldText === newText) return null;
-  let start = 0;
-  const minLen = Math.min(oldText.length, newText.length);
-  while (start < minLen && oldText[start] === newText[start]) start++;
-  let oldEnd = oldText.length;
-  let newEnd = newText.length;
-  while (oldEnd > start && newEnd > start && oldText[oldEnd - 1] === newText[newEnd - 1]) {
-    oldEnd--;
-    newEnd--;
-  }
-  return { start, end: oldEnd, replacement: newText.slice(start, newEnd) };
 }
 
 function isHeadingLike(text: string): boolean {
@@ -550,22 +491,4 @@ function extractParagraphText(para: Element): string {
     parts.push(tElements[i].textContent ?? '');
   }
   return parts.join('');
-}
-
-/**
- * Fallback for paragraphs where replaceParagraphTextRange cannot operate
- * (e.g., field results spanning across runs). Sets text on the first <w:t>
- * element and clears the rest. Less formatting-safe than replaceParagraphTextRange
- * but avoids throwing.
- */
-function setParagraphTextFallback(para: Element, text: string): void {
-  const tElements = para.getElementsByTagNameNS(W_NS, 't');
-  if (tElements.length === 0) return;
-  tElements[0].textContent = text;
-  if (text.startsWith(' ') || text.endsWith(' ')) {
-    preserveXmlSpace(tElements[0]);
-  }
-  for (let i = 1; i < tElements.length; i++) {
-    tElements[i].textContent = '';
-  }
 }
