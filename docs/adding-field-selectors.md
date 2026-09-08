@@ -50,8 +50,8 @@ and exported JSON Schema. Existing unformatted fields are unchanged.
 Accepted values include `"0"`, `"1"`, and `"100"`. Reject signs, leading zeros
 (`"01"`), decimals, scientific notation, commas, whitespace (including a final
 newline), non-ASCII digits, units, and non-string values such as numeric `0`.
-Empty strings remain valid for inactive/optional fields; an active
-`required_when` additionally rejects missing or blank values. Invalid declared
+The format permits empty strings; an active `required_when` additionally rejects
+missing or blank values. Generic priority-field blank handling is unchanged. Invalid declared
 defaults and incompatible field types are rejected when metadata loads.
 
 The end-of-input assertion deliberately does not use JavaScript's `$` alone,

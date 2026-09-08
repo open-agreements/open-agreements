@@ -64,4 +64,20 @@ describe('explicit nonnegative integer string format', () => {
     const metadata = FieldSelectorMetadataSchema.parse({...fixture, fields: [{name: 'x', type: 'string', description: 'X'}]});
     expect(() => assertFieldSelectorInputValueShapes({x: '-1 units'}, metadata.fields)).not.toThrow();
   });
+
+  it('preserves runtime/schema parity for explicit formats in existing array item fields', () => {
+    const metadata = FieldSelectorMetadataSchema.parse({...fixture, fields: [{
+      name: 'rows', type: 'array', description: 'Rows', items: [{
+        name: 'count', type: 'string', description: 'Count', value_format: 'nonnegative_integer',
+      }],
+    }]});
+    const ajv = new Ajv2020({strict: false});
+    const validate = ajv.compile(buildFieldSelectorInputSchema('fixture', metadata, null));
+    const valid = {rows: [{count: '0'}, {count: '123'}]};
+    expect(validate(valid)).toBe(true);
+    expect(() => assertFieldSelectorInputValueShapes(valid, metadata.fields)).not.toThrow();
+    const invalid = {rows: [{count: '0'}, {count: '1\n'}]};
+    expect(validate(invalid)).toBe(false);
+    expect(() => assertFieldSelectorInputValueShapes(invalid, metadata.fields)).toThrow(/rows\[1\]\.count/);
+  });
 });
