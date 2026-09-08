@@ -29,6 +29,9 @@ describeWithSource('IRA independent covenant lifecycle (LE #2519)', () => {
           ...fixture, include_fair_practices_covenant: fcpa, include_cybersecurity_covenant: cyber,
           include_fcpa_written_policies: written, include_real_property_reporting: true,
           include_corporate_governance_program: true,
+          // Explicit synthetic off election for an unrelated optional parent;
+          // the shared partial fixture omits it. This is not a deal default.
+          include_transaction_assistance: false,
           // Deliberately selected Annex policies must not be confused with the
           // same words in independently selected operative covenant headings.
           annex_2_policies: [
