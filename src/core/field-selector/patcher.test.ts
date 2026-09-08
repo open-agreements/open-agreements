@@ -681,7 +681,7 @@ describe('patchDocument — atomic complex-field range deletion', () => {
       '<w:hyperlink r:id="rId1"><w:r><w:rPr><w:i/></w:rPr><w:t>] Tail</w:t></w:r></w:hyperlink>' +
       field('outside', '9') + '</w:p></w:body></w:document>';
     const input = buildMinimalDocx(xml), output = input.replace('test.docx', 'output.docx');
-    await patchDocument(input, output, {'[Section 2]': ''});
+    await patchDocument(input, output, {'[Section 2]': 'Replacement'});
     const doc = new DOMParser().parseFromString(outputXml(output), 'text/xml');
     const hyperlink = doc.getElementsByTagNameNS(W_NS, 'hyperlink')[0];
     expect(hyperlink.getElementsByTagNameNS(W_NS, 't')[0].textContent).toBe(' Tail');
@@ -689,7 +689,7 @@ describe('patchDocument — atomic complex-field range deletion', () => {
     expect(hyperlink.getElementsByTagNameNS(W_NS, 'u').length).toBe(0);
     expect(doc.getElementsByTagNameNS(W_NS, 'instrText')[0].textContent).toContain('outside');
     expect(doc.getElementsByTagNameNS(W_NS, 'fldChar').length).toBe(3);
-    expect(extractText(output)).toBe(' Tail9');
+    expect(extractText(output)).toBe('Replacement Tail9');
   });
 
   it('fails closed when prefix-run semantic placement cannot be preserved safely', async () => {
