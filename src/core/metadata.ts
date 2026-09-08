@@ -773,6 +773,19 @@ const MarketDataCitationSchema = z.object({
  * provenance for upstream sources when present. `market_data_citations`
  * records optional external citation metadata used by fieldSelector guidance.
  */
+export const StyleSeparatorSpacingProfileSchema = z.object({
+  boundaries: z.array(z.object({
+    heading_para_id: z.string().regex(/^[0-9A-F]{8}$/),
+    continuation_para_id: z.string().regex(/^[0-9A-F]{8}$/),
+    before_twips: z.number().int().positive(),
+    expected_layout_sha256: z.string().regex(/^[0-9a-f]{64}$/),
+  }).strict()).min(1),
+}).strict().superRefine((profile, ctx) => {
+  const ids = profile.boundaries.flatMap(b => [b.heading_para_id, b.continuation_para_id]);
+  if (new Set(ids).size !== ids.length) ctx.addIssue({ code: 'custom', message: 'spacing boundaries must have unique paragraph IDs' });
+});
+export type StyleSeparatorSpacingProfile = z.infer<typeof StyleSeparatorSpacingProfileSchema>;
+
 export const FieldSelectorMetadataSchema = z.object({
   name: z.string().trim().min(1, 'name must be a non-empty string (used as display_name on list_templates)'),
   category: z.string().optional(),
@@ -784,11 +797,15 @@ export const FieldSelectorMetadataSchema = z.object({
   distribution: DistributionEnum.optional(),
   artifact_type: ArtifactTypeEnum.optional(),
   source_sha256: z.string().optional(),
+  rendering: z.object({ style_separator_spacing: StyleSeparatorSpacingProfileSchema }).strict().optional(),
   fields: z.array(FieldDefinitionSchema).default([]),
   priority_fields: z.array(z.string()).default([]),
   market_data_citations: z.array(MarketDataCitationSchema).optional(),
   ...TemplateCapabilityManifestSchema.shape,
 }).superRefine((meta, ctx) => {
+  if (meta.rendering && !/^[0-9a-f]{64}$/.test(meta.source_sha256 ?? '')) {
+    ctx.addIssue({ code: 'custom', path: ['source_sha256'], message: 'rendering declarations require an exact source SHA-256' });
+  }
   validateUniqueFieldNames(meta.fields, ctx);
   validatePriorityFields(meta.fields, meta.priority_fields, ctx);
   validateDerivedBooleanCollisions(meta.fields, ctx);
