@@ -71,3 +71,10 @@ undeclared restart. Real-source smoke documents and references stay local-only.
 This feature does not modify legal wording, add style-separator carriers, freeze
 editable numbering, or evaluate REF fields. Renderer-only REF handling is a
 separate concern.
+
+Known existing resolver limitation: an outline-only paragraph style with no
+numbering instance in its inheritance chain can lose its outline value when
+the paragraph supplies numbering directly. Such a continuation is safely
+rejected by the level/outline guard, not silently rebound. Supporting that style
+shape requires a separate paragraph-numbering inheritance fix; this change does
+not claim it is supported.
