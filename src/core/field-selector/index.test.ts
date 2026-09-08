@@ -73,6 +73,24 @@ function createFieldSelectorFixture(options?: {
 }
 
 describe('runFieldSelector', () => {
+  itFilling('rejects continuation source drift before invoking the fill pipeline', async () => {
+    const fieldSelectorDir = createFieldSelectorFixture({ normalizeConfig: {
+      numbering_continuations: {
+        source_sha256: '0'.repeat(64), source_num_id: '1',
+        headings: [{ anchor: 'Continued', num_id: '2', expected_abstract_num_id: '0', ilvl: 1, expected_starts: { 0: 2, 1: 2 } }],
+      },
+    } });
+    const inputPath = join(fieldSelectorDir, 'source.docx');
+    writeFileSync(inputPath, 'changed source bytes');
+    const runFillPipelineMock = vi.fn();
+    vi.doMock('../../utils/paths.js', () => ({ resolveFieldSelectorDir: () => fieldSelectorDir }));
+    vi.doMock('../unified-pipeline.js', () => ({ runFillPipeline: runFillPipelineMock }));
+    const { runFieldSelector } = await import('./index.js');
+    await expect(runFieldSelector({ fieldSelectorId: 'fixture', inputPath, outputPath: join(fieldSelectorDir, 'output.docx'), values: { company_name: 'Acme' } })).rejects.toThrow(/source SHA-256 mismatch/);
+    expect(runFillPipelineMock).not.toHaveBeenCalled();
+    expect(existsSync(join(fieldSelectorDir, 'output.docx'))).toBe(false);
+  });
+
   itFilling('rejects malformed source-owned values before document work', async () => {
     const fieldSelectorDir = createFieldSelectorFixture({
       fields: [
@@ -101,6 +119,28 @@ describe('runFieldSelector', () => {
       values: { company_name: 'Acme', series_designation: 'A', approval_percentage: '60%' },
     })).rejects.toThrow(/approval_percentage/);
     expect(ensureSourceDocxMock).not.toHaveBeenCalled();
+  });
+
+  itFilling('runs declared continuations even when bracket normalization is disabled', async () => {
+    const config = { source_sha256: '0'.repeat(64), source_num_id: '1', headings: [{ anchor: 'Continued', num_id: '2', expected_abstract_num_id: '0', ilvl: 1, expected_starts: { 0: 2, 1: 2 } }] };
+    const fieldSelectorDir = createFieldSelectorFixture({ normalizeConfig: { numbering_continuations: config } });
+    const plan = { sourceNumId: '1', sourceSha256: config.source_sha256 };
+    const validateSource = vi.fn(() => plan), normalizeNumbering = vi.fn(), normalizeBrackets = vi.fn();
+    vi.doMock('../../utils/paths.js', () => ({ resolveFieldSelectorDir: () => fieldSelectorDir }));
+    vi.doMock('./numbering-continuations.js', () => ({ validateNumberingContinuationSource: validateSource }));
+    vi.doMock('./numbering-normalizer.js', () => ({ normalizeNumberedHeadingSections: normalizeNumbering }));
+    vi.doMock('./bracket-normalizer.js', () => ({ normalizeBracketArtifacts: normalizeBrackets }));
+    vi.doMock('./heading-punctuation-normalizer.js', () => ({ normalizeDetachedHeadingPunctuation: vi.fn() }));
+    vi.doMock('../unified-pipeline.js', () => ({ runFillPipeline: vi.fn(async ({ outputPath, postProcess }: { outputPath: string; postProcess: (path: string) => Promise<void> }) => {
+      expect(validateSource).toHaveBeenCalledWith('/tmp/source.docx', config);
+      await postProcess(outputPath);
+      return { outputPath, fieldsUsed: [], providedFieldsUsed: [], fillCommandCount: 1, warnings: [], stages: {} };
+    }) }));
+    const { runFieldSelector } = await import('./index.js');
+    await runFieldSelector({ fieldSelectorId: 'fixture', inputPath: '/tmp/source.docx', outputPath: '/tmp/output.docx', values: { company_name: 'Acme' }, normalizeBracketArtifacts: false });
+    expect(normalizeNumbering).toHaveBeenCalledWith('/tmp/output.docx', '/tmp/output.docx', plan);
+    expect(normalizeBrackets).not.toHaveBeenCalled();
+    vi.doUnmock('./numbering-continuations.js');
   });
 
   itFilling('forwards priorityFieldNames when inputPath is supplied', async () => {
