@@ -548,6 +548,46 @@ describe('prepareFillData', () => {
     expect(result.is_free).toBe(true);
   });
 
+  it.each([false, true])('materializes declared boolean defaults as booleans (%s) without caller coercion', (value) => {
+    const field = { name: 'enabled', type: 'boolean' as const, default: String(value) };
+    expect(prepareFillData({ values: {}, fields: [field], coerceBooleans: false }).enabled).toBe(value);
+    expect(prepareFillData({ values: { enabled: !value }, fields: [field], coerceBooleans: false }).enabled).toBe(!value);
+    expect(prepareFillData({ values: { enabled: 'true' }, fields: [field], coerceBooleans: false }).enabled).toBe('true');
+  });
+
+  it.each([false, true])('passes a typed default (%s) through actual pipeline selection applicability', async (value) => {
+    const inputPath = buildDocxFile(docXml(['Before {company} [Parent [child]] After']));
+    const outputPath = join(dirname(inputPath), 'filled.docx');
+    try {
+      const result = await runFillPipeline({
+        inputPath, outputPath, values: { child: true, company: 'Acme' },
+        fields: [{ name: 'enabled', type: 'boolean', default: String(value) }, { name: 'child', type: 'boolean' }, { name: 'company', type: 'string' }],
+        coerceBooleans: false,
+        selectionsZeroMatchPolicy: 'error',
+        verify: (candidate) => {
+          expect(new AdmZip(candidate).readAsText('word/document.xml')).toContain('Acme');
+          return { passed: true, checks: [] };
+        },
+        selectionsConfig: { groups: [
+          { id: 'parent', type: 'checkbox', standalone: true, markerless: true, inline: true,
+            options: [{ marker: '[Parent [child]]', selectedAction: 'unwrap_brackets', trigger: { field: 'enabled', equals: true } }] },
+          { id: 'child', type: 'checkbox', standalone: true, markerless: true, inline: true,
+            applies_when: { field: 'enabled', equals: true },
+            options: [{ marker: '[child]', selectedAction: 'unwrap_brackets', trigger: { field: 'child', equals: true } }] },
+        ] },
+      });
+      expect(result.warnings).toEqual([]);
+      const xml = new AdmZip(outputPath).readAsText('word/document.xml');
+      const text = xml.replace(/<[^>]+>/g, '');
+      expect(text.includes('Parent')).toBe(value);
+      expect(text.includes('child')).toBe(value);
+      expect(text).toContain('Before');
+      expect(text).toContain('After');
+    } finally {
+      rmSync(dirname(inputPath), { recursive: true, force: true });
+    }
+  });
+
   it('coerces "false" string to false boolean', () => {
     const result = prepareFillData({
       values: { company: 'Acme', is_free: 'false' },
