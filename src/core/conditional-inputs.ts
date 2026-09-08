@@ -1,5 +1,6 @@
 import type { FieldDefinition } from './metadata.js';
 import { typedFieldDefault } from './field-defaults.js';
+import { conditionalPredicates } from './conditional-predicates.js';
 
 export class IncompleteConditionalInputError extends Error {
   readonly code = 'INCOMPLETE_CONDITIONAL_INPUT';
@@ -11,7 +12,7 @@ export class IncompleteConditionalInputError extends Error {
 
 export function assertConditionalInputOwnership(fields: FieldDefinition[], computed: Set<string>): void {
   for (const field of fields) {
-    if (field.required_when && (computed.has(field.name) || computed.has(field.required_when.field))) {
+    if (field.required_when && (computed.has(field.name) || conditionalPredicates(field.required_when).some(predicate => computed.has(predicate.field)))) {
       throw new Error(`required_when for "${field.name}" must use caller inputs, not computed fields`);
     }
   }
@@ -24,14 +25,19 @@ export function assertConditionalRequiredInputs(values: Record<string, unknown>,
   for (const field of fields) {
     const condition = field.required_when;
     if (!condition) continue;
-    const controller = byName.get(condition.field);
-    if (!controller) throw new Error(`Unknown required_when controller: ${condition.field}`);
-    const supplied = Object.prototype.hasOwnProperty.call(values, condition.field);
-    const actual = supplied ? values[condition.field] : typedFieldDefault(controller);
-    if (supplied && typeof actual !== typeof condition.equals) {
-      throw new Error(`Conditional controller "${condition.field}" must be a ${typeof condition.equals}`);
-    }
-    if (actual !== condition.equals) continue;
+    // Validate every controller even when an earlier predicate is false.
+    // A malformed later value must not pass depending on predicate order.
+    const matches = conditionalPredicates(condition).map(predicate => {
+      const controller = byName.get(predicate.field);
+      if (!controller) throw new Error(`Unknown required_when controller: ${predicate.field}`);
+      const supplied = Object.prototype.hasOwnProperty.call(values, predicate.field);
+      const actual = supplied ? values[predicate.field] : typedFieldDefault(controller);
+      if (supplied && typeof actual !== typeof predicate.equals) {
+        throw new Error(`Conditional controller "${predicate.field}" must be a ${typeof predicate.equals}`);
+      }
+      return actual === predicate.equals;
+    });
+    if (!matches.every(Boolean)) continue;
     const value = values[field.name];
     if (value == null || (typeof value === 'string' && value.trim() === '')) missing.push(field.name);
   }

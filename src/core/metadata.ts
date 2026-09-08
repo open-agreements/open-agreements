@@ -2,6 +2,12 @@ import { z } from 'zod';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import yaml from 'js-yaml';
+import { conditionalPredicates, type ConditionalRequirement } from './conditional-predicates.js';
+
+const ConditionalPredicateSchema = z.object({
+  field: z.string().min(1),
+  equals: z.union([z.string(), z.number().finite(), z.boolean()]),
+}).strict();
 
 /**
  * License values accepted by template metadata.
@@ -67,7 +73,7 @@ export interface FieldDefinition {
   section?: string;
   items?: FieldDefinition[];
   /** Require an explicit, nonblank input when a top-level scalar field matches. */
-  required_when?: { field: string; equals: string | number | boolean };
+  required_when?: ConditionalRequirement;
   /**
    * Marks this boolean field as a *statutory compliance representation*: its
    * `true` value asserts a past real-world fact that is a statutory precondition
@@ -124,10 +130,12 @@ export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
     derive_booleans: z.boolean().optional(),
     section: z.string().optional(),
     items: z.array(FieldDefinitionSchema).nonempty().optional(),
-    required_when: z.object({
-      field: z.string().min(1),
-      equals: z.union([z.string(), z.number().finite(), z.boolean()]),
-    }).strict().optional(),
+    required_when: z.union([
+      ConditionalPredicateSchema,
+      z.object({ all_of: z.array(ConditionalPredicateSchema).min(2) }).strict()
+        .refine(condition => new Set(condition.all_of.map(predicate => predicate.field)).size === condition.all_of.length,
+          'all_of must contain unique caller field predicates'),
+    ]).optional(),
     statutory_compliance_representation: z.boolean().optional(),
     authority_url: z.string().optional(),
     confirm_note: z.string().optional(),
@@ -377,15 +385,17 @@ function validateConditionalRequirements(fields: FieldDefinition[], ctx: z.Refin
     items.forEach((field, index) => {
       const at = [...path, index];
       if (field.required_when) {
-        const controller = byName.get(field.required_when.field);
-        const expectedType = controller?.type === 'boolean' ? 'boolean'
-          : controller?.type === 'number' ? 'number' : 'string';
-        if (nested || !controller || controller.name === field.name ||
-            ['array', 'multiselect'].includes(controller.type) ||
-            typeof field.required_when.equals !== expectedType ||
-            (controller.type === 'enum' && !controller.options?.includes(String(field.required_when.equals)))) {
-          ctx.addIssue({ code: z.ZodIssueCode.custom, path: [...at, 'required_when'],
-            message: 'required_when must reference another top-level scalar field with a compatible equals value; nested requirements are unsupported' });
+        for (const predicate of conditionalPredicates(field.required_when)) {
+          const controller = byName.get(predicate.field);
+          const expectedType = controller?.type === 'boolean' ? 'boolean'
+            : controller?.type === 'number' ? 'number' : 'string';
+          if (nested || !controller || controller.name === field.name ||
+              ['array', 'multiselect'].includes(controller.type) ||
+              typeof predicate.equals !== expectedType ||
+              (controller.type === 'enum' && !controller.options?.includes(String(predicate.equals)))) {
+            ctx.addIssue({ code: z.ZodIssueCode.custom, path: [...at, 'required_when'],
+              message: 'required_when must reference another top-level scalar field with a compatible equals value; nested requirements are unsupported' });
+          }
         }
         if (field.default !== undefined || ['array', 'multiselect'].includes(field.type)) {
           ctx.addIssue({ code: z.ZodIssueCode.custom, path: [...at, 'required_when'],

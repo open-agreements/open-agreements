@@ -15,6 +15,31 @@ Field-selectors enable OpenAgreements to work with non-redistributable document 
 - A publicly downloadable DOCX source document
 - Understanding of the document's placeholder conventions
 
+### Caller-only conditional requirements
+
+A scalar field may use `required_when: { field: enabled, equals: true }`.
+When a value is required only for a parent **and** child election, use the bounded
+conjunction form:
+
+```yaml
+required_when:
+  all_of:
+    - { field: include_parent, equals: true }
+    - { field: include_child, equals: true }
+```
+
+`all_of` requires at least two distinct caller-field predicates. Each controller
+must be another top-level scalar input with a type-compatible equality value;
+computed controllers/targets, nested expressions, and conditionally required
+target defaults are rejected. Missing controllers use their declared typed
+defaults; without a matching default they do not activate that predicate. Every
+predicate must match before the target becomes required. Runtime validation and
+the exported JSON Schema enforce the same conjunction and nonblank requirement.
+
+Mirrors/packages using this form must require capability
+`conditional-input-requirements.all-of.v1` in addition to the base conditional
+requirements capability. Older single-predicate consumers cannot execute it.
+
 ## Step 1: Scan the Source Document
 
 Use the `scan` command to discover all bracketed placeholders:
