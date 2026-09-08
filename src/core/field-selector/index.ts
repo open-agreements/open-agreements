@@ -23,6 +23,7 @@ import type { ComputedValueMap } from './computed.js';
 import { applyRepeatableTables, loadRepeatableTablesConfig, validateRepeatableTableFields } from './repeatable-tables.js';
 import { bindAnchoredParagraphFields, loadAnchoredParagraphBindingsConfig } from './anchored-paragraph-bindings.js';
 import { normalizeNumberedHeadingSections } from './numbering-normalizer.js';
+import { validateNumberingContinuationSource } from './numbering-continuations.js';
 import { loadReferenceFieldsConfig } from './reference-fields.js';
 import { assertFieldSelectorInputValueShapes, computedFieldNames } from './input-schema.js';
 import { assertConditionalInputOwnership, assertConditionalRequiredInputs } from '../conditional-inputs.js';
@@ -74,6 +75,9 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
 
   // Resolve input: explicit path or auto-download
   const inputPath = options.inputPath ?? await ensureSourceDocx(fieldSelectorId, metadata);
+  const numberingContinuationPlan = normalizeConfig.numbering_continuations
+    ? validateNumberingContinuationSource(inputPath, normalizeConfig.numbering_continuations)
+    : undefined;
 
   // Load replacements.json
   const replacementsPath = join(fieldSelectorDir, 'replacements.json');
@@ -180,9 +184,10 @@ export async function runFieldSelector(options: FieldSelectorRunOptions): Promis
       }
       : undefined,
     referenceFieldsConfig,
-    postProcess: shouldNormalizeBracketArtifacts
+    postProcess: shouldNormalizeBracketArtifacts || numberingContinuationPlan
       ? async (outputDocPath: string) => {
-        normalizeNumberedHeadingSections(outputDocPath, outputDocPath);
+        if (numberingContinuationPlan) normalizeNumberedHeadingSections(outputDocPath, outputDocPath, numberingContinuationPlan);
+        else normalizeNumberedHeadingSections(outputDocPath, outputDocPath);
         if (shouldNormalizeBracketArtifacts) {
           await normalizeBracketArtifacts(outputDocPath, outputDocPath, {
             rules: normalizeConfig.paragraph_rules,

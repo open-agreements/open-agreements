@@ -3,6 +3,8 @@ import { writeFileSync } from 'node:fs';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Element as XmlElement } from '@xmldom/xmldom';
 import { createParagraphNumberingResolver } from './paragraph-numbering.js';
+import { resolveNumberingContinuationParagraphs } from './numbering-continuations.js';
+import type { ValidatedNumberingContinuations } from './numbering-continuations.js';
 
 const W = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -19,17 +21,23 @@ function direct(parent: XmlElement, local: string): XmlElement | null {
   return null;
 }
 
-export function normalizeNumberedHeadingSections(inputPath: string, outputPath: string): NumberingNormalizationStats {
+export function normalizeNumberedHeadingSections(inputPath: string, outputPath: string, continuationPlan?: ValidatedNumberingContinuations): NumberingNormalizationStats {
   const zip = new AdmZip(inputPath);
   const documentEntry = zip.getEntry('word/document.xml');
   const stylesEntry = zip.getEntry('word/styles.xml');
   const numberingEntry = zip.getEntry('word/numbering.xml');
-  if (!documentEntry || !stylesEntry || !numberingEntry) return { sections: 0, paragraphs: 0 };
+  if (!documentEntry || !stylesEntry || !numberingEntry) {
+    if (continuationPlan) throw new Error('numbering continuations: missing required document parts');
+    return { sections: 0, paragraphs: 0 };
+  }
   const parser = new DOMParser();
   const serializer = new XMLSerializer();
   const document = parser.parseFromString(documentEntry.getData().toString('utf8'), 'text/xml');
   const styles = parser.parseFromString(stylesEntry.getData().toString('utf8'), 'text/xml');
   const numbering = parser.parseFromString(numberingEntry.getData().toString('utf8'), 'text/xml');
+  const continuationParagraphs = continuationPlan
+    ? resolveNumberingContinuationParagraphs(document, styles, numbering, continuationPlan)
+    : new Set<XmlElement>();
 
   const resolveNumbering = createParagraphNumberingResolver(styles);
   const numToAbstract = new Map<string, string>();
@@ -59,7 +67,10 @@ export function normalizeNumberedHeadingSections(inputPath: string, outputPath: 
       : null;
   });
   const roots = candidates.filter((item) => item?.ilvl === 0 && hierarchicalAbstracts.has(numToAbstract.get(item.numId) ?? ''));
-  if (roots.length < 2) return { sections: 0, paragraphs: 0 };
+  if (roots.length < 2) {
+    if (continuationPlan) throw new Error('numbering continuations: expected multiple source heading sections');
+    return { sections: 0, paragraphs: 0 };
+  }
   const counts = new Map<string, number>();
   for (const root of roots) counts.set(root!.numId, (counts.get(root!.numId) ?? 0) + 1);
   const ranked = [...counts.entries()].sort((a, b) => b[1] - a[1]);
@@ -67,6 +78,9 @@ export function normalizeNumberedHeadingSections(inputPath: string, outputPath: 
     throw new Error('numbering normalization: ambiguous dominant top-level numbering instance');
   }
   const sourceNumId = ranked[0][0];
+  if (continuationPlan && continuationPlan.sourceNumId !== sourceNumId) {
+    throw new Error('numbering continuations: declared source is not the normalized heading instance');
+  }
   const abstractNumId = numToAbstract.get(sourceNumId);
   if (!abstractNumId) throw new Error(`numbering normalization: missing abstract numbering for numId ${sourceNumId}`);
   const sourceAbstract = abstractElements.get(abstractNumId);
@@ -76,7 +90,7 @@ export function normalizeNumberedHeadingSections(inputPath: string, outputPath: 
   let rewritten = 0;
   let activeNumId: string | null = null;
   for (const item of candidates) {
-    if (!item || item.numId !== sourceNumId) continue;
+    if (!item || (item.numId !== sourceNumId && !continuationParagraphs.has(item.paragraph))) continue;
     if (item.ilvl === 0) {
       section += 1;
       activeNumId = String(++maxNumId);

@@ -16,6 +16,7 @@ export const RUNTIME_CAPABILITIES = Object.freeze({
     'selections.unwrap-brackets.v1',
     'computed.v1',
     'normalize.v1',
+    'normalize.numbering-continuations.v1',
     'repeatable-tables.v1',
     'anchored-paragraph-bindings.v1',
     'reference-fields.v1',
