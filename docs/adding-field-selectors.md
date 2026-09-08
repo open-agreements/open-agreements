@@ -40,6 +40,30 @@ Mirrors/packages using this form must require capability
 `conditional-input-requirements.all-of.v1` in addition to the base conditional
 requirements capability. Older single-predicate consumers cannot execute it.
 
+### Explicit whole-number string format
+
+Use `type: string` with `value_format: nonnegative_integer` when a source-owned
+blank requires a bare nonnegative whole-number token. This opt-in declaration,
+not the field name or description, drives the same pattern in runtime preflight
+and exported JSON Schema. Existing unformatted fields are unchanged.
+
+Accepted values include `"0"`, `"1"`, and `"100"`. Reject signs, leading zeros
+(`"01"`), decimals, scientific notation, commas, whitespace (including a final
+newline), non-ASCII digits, units, and non-string values such as numeric `0`.
+The format permits empty strings; an active `required_when` additionally rejects
+missing or blank values. Generic priority-field blank handling is unchanged. Invalid declared
+defaults and incompatible field types are rejected when metadata loads.
+
+The end-of-input assertion deliberately does not use JavaScript's `$` alone,
+which can match before a final newline. Values remain strings, so large counts
+are not rounded through floating-point conversion. This format does not infer
+a legal maximum or supply an economic default.
+
+This is a bounded format vocabulary, not arbitrary regex support. Consumers
+must advertise `input-value-format.nonnegative-integer.v1`; guarded mirrors
+must infer that requirement from the actual `value_format` declaration before
+any destination mutation. Manual copying into old consumers bypasses that guard.
+
 ## Step 1: Scan the Source Document
 
 Use the `scan` command to discover all bracketed placeholders:

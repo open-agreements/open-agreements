@@ -11,6 +11,7 @@ import { resolveFieldSelectorDir } from '../../utils/paths.js';
 import { assertConditionalInputOwnership } from '../conditional-inputs.js';
 import { typedFieldDefault } from '../field-defaults.js';
 import { conditionalPredicates } from '../conditional-predicates.js';
+import { INPUT_VALUE_FORMATS } from '../input-value-formats.js';
 
 export const FIELD_SELECTOR_INPUT_SCHEMA_VERSION = 1 as const;
 export const FIELD_SELECTOR_SCHEMA_GENERATOR = 'open-agreements field-selector schema' as const;
@@ -50,6 +51,7 @@ const PERCENTAGE_DESCRIPTION = /\bpercentage\b/i;
  */
 export function fieldValuePattern(field: FieldDefinition): string | undefined {
   if (field.type !== 'string') return undefined;
+  if (field.value_format) return INPUT_VALUE_FORMATS[field.value_format].pattern;
   if (SERIES_DESIGNATION_FIELD.test(field.name)) {
     // A designation is one token (A, B, C, Seed, A-1), never "Series A
     // Preferred Stock". Empty remains valid for conditional/optional fields.
@@ -74,7 +76,7 @@ function assertValueShapes(
     const fieldPath = path ? `${path}.${field.name}` : field.name;
     const pattern = fieldValuePattern(field);
     if (pattern && (typeof value !== 'string' || !new RegExp(pattern).test(value))) {
-      const expectation = SERIES_DESIGNATION_FIELD.test(field.name)
+      const expectation = field.value_format ? INPUT_VALUE_FORMATS[field.value_format].expectation : SERIES_DESIGNATION_FIELD.test(field.name)
         ? 'a designation token such as A, B, or C (not a rendered stock name)'
         : 'a number-only percentage from 0 through 100 without a percent sign';
       throw new Error(`Invalid field-selector input at "${fieldPath}": expected ${expectation}`);
