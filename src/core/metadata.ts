@@ -3,6 +3,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import yaml from 'js-yaml';
 import { conditionalPredicates, type ConditionalRequirement } from './conditional-predicates.js';
+import { INPUT_VALUE_FORMAT_IDS, INPUT_VALUE_FORMATS, type InputValueFormat } from './input-value-formats.js';
 
 const ConditionalPredicateSchema = z.object({
   field: z.string().min(1),
@@ -74,6 +75,8 @@ export interface FieldDefinition {
   items?: FieldDefinition[];
   /** Require an explicit, nonblank input when a top-level scalar field matches. */
   required_when?: ConditionalRequirement;
+  /** Explicit caller value shape; does not depend on field names or prose. */
+  value_format?: InputValueFormat;
   /**
    * Marks this boolean field as a *statutory compliance representation*: its
    * `true` value asserts a past real-world fact that is a statutory precondition
@@ -136,10 +139,19 @@ export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
         .refine(condition => new Set(condition.all_of.map(predicate => predicate.field)).size === condition.all_of.length,
           'all_of must contain unique caller field predicates'),
     ]).optional(),
+    value_format: z.enum(INPUT_VALUE_FORMAT_IDS).optional(),
     statutory_compliance_representation: z.boolean().optional(),
     authority_url: z.string().optional(),
     confirm_note: z.string().optional(),
   }).superRefine((field, ctx) => {
+    if (field.value_format) {
+      if (field.type !== 'string') {
+        ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['value_format'], message: 'value_format requires a string field' });
+      }
+      if (field.default !== undefined && !new RegExp(INPUT_VALUE_FORMATS[field.value_format].pattern).test(field.default)) {
+        ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['default'], message: 'Default does not match value_format' });
+      }
+    }
     if (
       (field.type === 'enum' || field.type === 'multiselect') &&
       (field.options === undefined || field.options.length === 0)

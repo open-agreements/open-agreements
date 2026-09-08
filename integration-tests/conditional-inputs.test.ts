@@ -10,13 +10,14 @@ const it = itAllure.epic('Filling & Rendering');
 const dirs: string[] = [];
 afterEach(() => { vi.unstubAllEnvs(); for (const dir of dirs.splice(0)) rmSync(dir, { recursive: true, force: true }); });
 
-function fixture(conjunctive = false) {
+function fixture(conjunctive = false, integerFormat = false) {
   const root = mkdtempSync(join(tmpdir(), 'oa-conditional-api-')); dirs.push(root);
   const dir = join(root, 'templates', 'synthetic', 'conditional-input-fixture'); mkdirSync(dir, { recursive: true });
   const fields = [
     { name: 'enabled', type: 'boolean', description: 'Enable optional regime', default: 'false' },
     ...(conjunctive ? [{ name: 'child', type: 'boolean', description: 'Nested election', default: 'false' }] : []),
-    ...['start_date', 'interest_rate', 'frequency'].map(name => ({ name, type: 'string', description: name,
+    ...(integerFormat ? ['amount'] : ['start_date', 'interest_rate', 'frequency']).map(name => ({ name, type: 'string', description: name,
+      ...(integerFormat ? {value_format: 'nonnegative_integer'} : {}),
       required_when: conjunctive
         ? { all_of: [{ field: 'enabled', equals: true }, { field: 'child', equals: true }] }
         : { field: 'enabled', equals: true } })),
@@ -28,6 +29,31 @@ function fixture(conjunctive = false) {
 }
 
 describe('conditional input public entry points', () => {
+  it('rejects invalid explicit integer formats through API and CLI before source/output I/O', async () => {
+    const root = fixture(false, true); vi.stubEnv('OPEN_AGREEMENTS_CONTENT_ROOTS', root);
+    const outputPath = join(root, 'out.docx'); const inputPath = join(root, 'missing.docx');
+    for (const amount of ['-1', '+1', '1.5', '1e3', '1,000', '1\n', '100 shares', 0]) {
+      await expect(runFieldSelector({fieldSelectorId: 'conditional-input-fixture', inputPath, outputPath,
+        values: {enabled: true, amount}})).rejects.toThrow(/nonnegative integer string/);
+      expect(existsSync(outputPath)).toBe(false);
+    }
+    for (const amount of ['0', '100']) {
+      await expect(runFieldSelector({fieldSelectorId: 'conditional-input-fixture', inputPath, outputPath,
+        values: {enabled: true, amount}})).rejects.toThrow(/not.exist|ENOENT|Invalid filename/i);
+    }
+    const data = join(root, 'values.json'); writeFileSync(data, JSON.stringify({enabled: true, amount: '1\n'}));
+    let error: unknown;
+    try {
+      execFileSync(process.execPath, [join(new URL('..', import.meta.url).pathname, 'bin/open-agreements.js'),
+        'field-selector', 'run', 'conditional-input-fixture', '--data', data, '--output', outputPath, '--input', inputPath], {
+        env: {...process.env, OPEN_AGREEMENTS_CONTENT_ROOTS: root}, encoding: 'utf8', stdio: 'pipe',
+      });
+    } catch (caught) { error = caught; }
+    expect(error).toMatchObject({status: 1});
+    expect(String((error as {stderr: string}).stderr)).toContain('nonnegative integer string');
+    expect(existsSync(outputPath)).toBe(false);
+  });
+
   it('API and CLI reject active conjunctions before input I/O; inactive siblings do not require economics', async () => {
     const root = fixture(true); vi.stubEnv('OPEN_AGREEMENTS_CONTENT_ROOTS', root);
     const outputPath = join(root, 'out.docx');
