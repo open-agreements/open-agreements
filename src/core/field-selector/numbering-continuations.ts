@@ -10,7 +10,7 @@ import { createParagraphNumberingResolver } from './paragraph-numbering.js';
 const W = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 /** Only plans returned by validateNumberingContinuationSource are accepted. */
 export interface ValidatedNumberingContinuations { readonly sourceNumId: string; readonly sourceSha256: string }
-const plans = new WeakMap<ValidatedNumberingContinuations, NumberingContinuations>();
+const plans = new WeakMap<ValidatedNumberingContinuations, { config: NumberingContinuations; fingerprint: string }>();
 const anchorKey = (text: string) => text.replaceAll('[', '').replaceAll(']', '').replace(/\s+/g, ' ').trim().replace(/\.$/, '');
 const text = (paragraph: Element) => Array.from(paragraph.getElementsByTagNameNS(W, 't')).map(node => node.textContent).join('');
 function elements(parent: Element, local: string): Element[] {
@@ -32,7 +32,28 @@ function numbers(numbering: Document): Map<string, Element> {
   }
   return result;
 }
-function checkShape(numbering: Document, config: NumberingContinuations): void {
+// Namespace-aware structural comparison ignores XML serialization details, not
+// numbering or formatting properties. These fingerprints never leave the plan.
+function structure(element: Element): unknown {
+  return [element.namespaceURI, element.localName,
+    Array.from(element.attributes).filter(a => a.namespaceURI !== 'http://www.w3.org/2000/xmlns/')
+      .map(a => [a.namespaceURI, a.localName, a.value]).sort((a, b) => JSON.stringify(a).localeCompare(JSON.stringify(b))),
+    Array.from(element.childNodes).filter((n): n is Element => n.nodeType === 1).map(structure)];
+}
+function compatibleLevel(level: Element): string {
+  const clone = level.cloneNode(true) as Element;
+  for (const child of [...elements(clone, 'start'), ...elements(clone, 'pStyle')]) clone.removeChild(child);
+  // Missing font hint and an otherwise empty explicit default hint both select
+  // the default script classification. Never discard font names/theme choices.
+  for (const props of elements(clone, 'rPr')) {
+    for (const fonts of elements(props, 'rFonts')) {
+      const attrs = Array.from(fonts.attributes).filter(a => a.namespaceURI !== 'http://www.w3.org/2000/xmlns/');
+      if (attrs.length === 1 && attrs[0].namespaceURI === W && attrs[0].localName === 'hint' && attrs[0].value === 'default') props.removeChild(fonts);
+    }
+  }
+  return JSON.stringify(structure(clone));
+}
+function checkShape(numbering: Document, config: NumberingContinuations): string {
   const nums = numbers(numbering);
   const source = nums.get(config.source_num_id);
   if (!source) throw new Error('numbering continuations: missing source instance');
@@ -41,11 +62,25 @@ function checkShape(numbering: Document, config: NumberingContinuations): void {
   if (abstracts.length !== 1 || elements(abstracts[0], 'numStyleLink').length || elements(abstracts[0], 'styleLink').length) {
     throw new Error('numbering continuations: missing, ambiguous or style-linked source abstract');
   }
+  if (elements(source, 'lvlOverride').length) throw new Error('numbering continuations: source overrides are unsupported');
+  const pinned: unknown[] = [structure(source), structure(abstracts[0])];
   for (const heading of config.headings) {
     const num = nums.get(heading.num_id);
-    if (!num || one(num, 'abstractNumId').getAttributeNS(W, 'val') !== abstractId) {
-      throw new Error(`numbering continuations: ${heading.num_id} does not share the declared source abstract`);
+    if (!num || one(num, 'abstractNumId').getAttributeNS(W, 'val') !== heading.expected_abstract_num_id) {
+      throw new Error(`numbering continuations: abstract ID drifted for ${heading.num_id}`);
     }
+    const targets = Array.from(numbering.getElementsByTagNameNS(W, 'abstractNum')).filter(node => node.getAttributeNS(W, 'abstractNumId') === heading.expected_abstract_num_id);
+    if (targets.length !== 1 || elements(targets[0], 'numStyleLink').length || elements(targets[0], 'styleLink').length) throw new Error('numbering continuations: missing, ambiguous or style-linked target abstract');
+    if (heading.expected_abstract_num_id !== abstractId) {
+      for (let index = 0; index <= heading.ilvl; index += 1) {
+        const level = (abstract: Element) => elements(abstract, 'lvl').filter(l => l.getAttributeNS(W, 'ilvl') === String(index));
+        const from = level(targets[0]), to = level(abstracts[0]);
+        if (from.length !== 1 || to.length !== 1 || compatibleLevel(from[0]) !== compatibleLevel(to[0])) {
+          throw new Error(`numbering continuations: incompatible formatting or counter semantics at level ${index}`);
+        }
+      }
+    }
+    pinned.push(structure(num), structure(targets[0]));
     const starts: Record<string, number> = {};
     for (const child of Array.from(num.childNodes).filter((node): node is Element => node.nodeType === 1)) {
       if (child.namespaceURI !== W || !['abstractNumId', 'lvlOverride'].includes(child.localName ?? '')) {
@@ -67,6 +102,7 @@ function checkShape(numbering: Document, config: NumberingContinuations): void {
       throw new Error(`numbering continuations: start overrides drifted for ${heading.num_id}`);
     }
   }
+  return createHash('sha256').update(JSON.stringify(pinned)).digest('hex');
 }
 
 function declaredParagraphs(document: Document, styles: Document, config: NumberingContinuations, source: boolean): Set<Element> {
@@ -106,18 +142,19 @@ export function validateNumberingContinuationSource(sourcePath: string, input: N
     return parser.parseFromString(entry.getData().toString('utf8'), 'text/xml');
   };
   const numbering = part('numbering');
-  checkShape(numbering, config);
+  const fingerprint = checkShape(numbering, config);
   declaredParagraphs(part('document'), part('styles'), config, true);
   const plan = Object.freeze({ sourceNumId: config.source_num_id, sourceSha256: config.source_sha256 });
-  plans.set(plan, config);
+  plans.set(plan, { config, fingerprint });
   return plan;
 }
 
 export function resolveNumberingContinuationParagraphs(
   document: Document, styles: Document, numbering: Document, plan: ValidatedNumberingContinuations,
 ): Set<Element> {
-  const config = plans.get(plan);
-  if (!config) throw new Error('numbering continuations: unvalidated source plan');
-  checkShape(numbering, config);
+  const stored = plans.get(plan);
+  if (!stored) throw new Error('numbering continuations: unvalidated source plan');
+  const { config, fingerprint } = stored;
+  if (checkShape(numbering, config) !== fingerprint) throw new Error('numbering continuations: pinned instance/abstract fingerprint drifted');
   return declaredParagraphs(document, styles, config, false);
 }

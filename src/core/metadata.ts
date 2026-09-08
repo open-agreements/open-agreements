@@ -622,6 +622,7 @@ const BUILTIN_NORMALIZE_PREREQUISITES = new Set(['clean', 'selection', 'fill']);
 const NumberingContinuationHeadingSchema = z.object({
   anchor: z.string().trim().min(1),
   num_id: z.string().regex(/^[1-9]\d*$/),
+  expected_abstract_num_id: z.string().regex(/^(0|[1-9]\d*)$/),
   ilvl: z.number().int().min(1).max(8),
   expected_starts: z.record(z.string().regex(/^[0-8]$/), z.number().int().nonnegative().max(Number.MAX_SAFE_INTEGER)),
 }).strict();
@@ -637,11 +638,6 @@ export const NumberingContinuationsSchema = z.object({
     const anchor = heading.anchor.replaceAll('[', '').replaceAll(']', '').replace(/\s+/g, ' ').trim().replace(/\.$/, '');
     if (!anchor || anchors.has(anchor) || ids.has(heading.num_id) || heading.num_id === config.source_num_id) {
       ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['headings', index], message: 'continuation anchors and instances must be unique and distinct from the source instance' });
-    }
-    for (let level = 0; level <= heading.ilvl; level += 1) {
-      if (heading.expected_starts[String(level)] === undefined) {
-        ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['headings', index, 'expected_starts'], message: 'continuation requires explicit starts for its level and all parents' });
-      }
     }
     anchors.add(anchor);
     ids.add(heading.num_id);

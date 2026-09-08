@@ -77,7 +77,7 @@ describe('runFieldSelector', () => {
     const fieldSelectorDir = createFieldSelectorFixture({ normalizeConfig: {
       numbering_continuations: {
         source_sha256: '0'.repeat(64), source_num_id: '1',
-        headings: [{ anchor: 'Continued', num_id: '2', ilvl: 1, expected_starts: { 0: 2, 1: 2 } }],
+        headings: [{ anchor: 'Continued', num_id: '2', expected_abstract_num_id: '0', ilvl: 1, expected_starts: { 0: 2, 1: 2 } }],
       },
     } });
     const inputPath = join(fieldSelectorDir, 'source.docx');
@@ -122,7 +122,7 @@ describe('runFieldSelector', () => {
   });
 
   itFilling('runs declared continuations even when bracket normalization is disabled', async () => {
-    const config = { source_sha256: '0'.repeat(64), source_num_id: '1', headings: [{ anchor: 'Continued', num_id: '2', ilvl: 1, expected_starts: { 0: 2, 1: 2 } }] };
+    const config = { source_sha256: '0'.repeat(64), source_num_id: '1', headings: [{ anchor: 'Continued', num_id: '2', expected_abstract_num_id: '0', ilvl: 1, expected_starts: { 0: 2, 1: 2 } }] };
     const fieldSelectorDir = createFieldSelectorFixture({ normalizeConfig: { numbering_continuations: config } });
     const plan = { sourceNumId: '1', sourceSha256: config.source_sha256 };
     const validateSource = vi.fn(() => plan), normalizeNumbering = vi.fn(), normalizeBrackets = vi.fn();

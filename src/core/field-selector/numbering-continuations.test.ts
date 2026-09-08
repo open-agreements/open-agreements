@@ -25,7 +25,7 @@ function fixture() {
   const num = (id: string, starts: number[]) => `<w:num w:numId="${id}"><w:abstractNumId w:val="0"/>${starts.map((start, i) => `<w:lvlOverride w:ilvl="${i}"><w:startOverride w:val="${start}"/></w:lvlOverride>`).join('')}</w:num>`;
   zip.addFile('word/numbering.xml', Buffer.from(`<w:numbering xmlns:w="${W}"><w:abstractNum w:abstractNumId="0">${[0, 1, 2].map(i => `<w:lvl w:ilvl="${i}"><w:start w:val="1"/><w:numFmt w:val="decimal"/><w:lvlText w:val="%1.%2"/></w:lvl>`).join('')}</w:abstractNum>${num('1', [])}${num('2', [2, 2, 1])}${num('3', [9, 7, 1])}</w:numbering>`));
   zip.writeZip(source);
-  const config: NumberingContinuations = { source_sha256: createHash('sha256').update(readFileSync(source)).digest('hex'), source_num_id: '1', headings: [{ anchor: 'Continued', num_id: '2', ilvl: 1, expected_starts: { 0: 2, 1: 2, 2: 1 } }] };
+  const config: NumberingContinuations = { source_sha256: createHash('sha256').update(readFileSync(source)).digest('hex'), source_num_id: '1', headings: [{ anchor: 'Continued', num_id: '2', expected_abstract_num_id: '0', ilvl: 1, expected_starts: { 0: 2, 1: 2, 2: 1 } }] };
   return { root, source, output, config };
 }
 function edit(path: string, part: string, mutate: (xml: string) => string) {
@@ -86,11 +86,60 @@ describe('explicit source-pinned numbering continuations', () => {
     });
   }
 
-  it('rejects duplicate anchors and instances, missing parent starts and unknown keys at load time', () => {
+  it('rejects duplicate anchors and instances, missing abstract ID and unknown keys at load time', () => {
     const f = fixture();
     expect(() => NumberingContinuationsSchema.parse({ ...f.config, headings: [...f.config.headings, f.config.headings[0]] })).toThrow();
-    expect(() => NumberingContinuationsSchema.parse({ ...f.config, headings: [{ ...f.config.headings[0], expected_starts: { 1: 2 } }] })).toThrow();
+    expect(() => NumberingContinuationsSchema.parse({ ...f.config, headings: [{ ...f.config.headings[0], expected_abstract_num_id: undefined }] })).toThrow();
     expect(() => NumberingContinuationsSchema.parse({ ...f.config, guess_same_abstract: true })).toThrow();
     expect(NormalizeConfigSchema.parse({ numbering_continuations: f.config }).numbering_continuations).toEqual(f.config);
+  });
+
+  function distinctAbstract(mutate: (xml: string) => string = x => x) {
+    const f = fixture();
+    edit(f.source, 'word/numbering.xml', xml => {
+      const source = xml.match(/<w:abstractNum w:abstractNumId="0">[\s\S]*?<\/w:abstractNum>/)![0];
+      const target = mutate(source.replace('abstractNumId="0"', 'abstractNumId="9"').replace('<w:start w:val="1"/>', '<w:start w:val="2"/>'));
+      return xml.replace('</w:abstractNum>', `</w:abstractNum>${target}`).replace(/<w:num w:numId="2">[\s\S]*?<\/w:num>/, '<w:num w:numId="2"><w:abstractNumId w:val="9"/></w:num>');
+    });
+    f.config.headings[0].expected_abstract_num_id = '9';
+    f.config.headings[0].expected_starts = {};
+    repin(f);
+    return f;
+  }
+
+  it('accepts explicit compatible different abstracts with no overrides and ignores unused-level differences', () => {
+    const f = distinctAbstract(xml => xml.replace('<w:lvl w:ilvl="2">', '<w:lvl w:ilvl="2"><w:pPr><w:ind w:left="999"/></w:pPr>').replace('<w:lvl w:ilvl="1">', '<w:lvl w:ilvl="1"><w:pStyle w:val="L1"/>'));
+    const plan = validateNumberingContinuationSource(f.source, f.config);
+    expect(normalizeNumberedHeadingSections(f.source, f.output, plan)).toEqual({ sections: 2, paragraphs: 7 });
+  });
+
+  it('accepts only an otherwise empty explicit default font hint as an equivalent font declaration', () => {
+    const f = distinctAbstract();
+    edit(f.source, 'word/numbering.xml', xml => xml.replaceAll('<w:numFmt', '<w:rPr><w:rFonts w:hint="default"/></w:rPr><w:numFmt').replace('<w:abstractNum w:abstractNumId="9">', '<w:abstractNum w:abstractNumId="9">'));
+    // Remove the hint only in the target; both sides retain equivalent rPr.
+    edit(f.source, 'word/numbering.xml', xml => xml.replace(/(<w:abstractNum w:abstractNumId="9">)([\s\S]*?)(<\/w:abstractNum>)/, (_, a, b: string, c) => a + b.replaceAll('<w:rFonts w:hint="default"/>', '') + c));
+    repin(f);
+    expect(() => validateNumberingContinuationSource(f.source, f.config)).not.toThrow();
+  });
+
+  for (const [name, insertion] of [
+    ['indent', '<w:pPr><w:ind w:left="99"/></w:pPr>'],
+    ['font', '<w:rPr><w:rFonts w:ascii="Different"/></w:rPr>'],
+    ['restart', '<w:lvlRestart w:val="0"/>'],
+    ['suffix', '<w:suff w:val="space"/>'],
+  ]) it(`rejects a different-abstract ${name} mismatch`, () => {
+    const f = distinctAbstract(xml => xml.replace('<w:lvl w:ilvl="1">', `<w:lvl w:ilvl="1">${insertion}`));
+    expect(() => validateNumberingContinuationSource(f.source, f.config)).toThrow(/incompatible/);
+  });
+
+  it('rejects different-abstract label formats even with matching anchors and starts', () => {
+    const f = distinctAbstract(xml => xml.replace('w:val="decimal"', 'w:val="upperRoman"'));
+    expect(() => validateNumberingContinuationSource(f.source, f.config)).toThrow(/incompatible/);
+  });
+
+  it('fingerprints unused levels and source defaults against post-validation drift', () => {
+    const f = distinctAbstract(), plan = validateNumberingContinuationSource(f.source, f.config);
+    edit(f.source, 'word/numbering.xml', xml => xml.replace('<w:start w:val="2"/>', '<w:start w:val="3"/>'));
+    expect(() => normalizeNumberedHeadingSections(f.source, f.output, plan)).toThrow(/fingerprint drifted/);
   });
 });
