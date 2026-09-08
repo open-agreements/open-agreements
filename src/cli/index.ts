@@ -8,6 +8,7 @@ import { runList } from '../commands/list.js';
 import { runTemplateShow } from '../commands/template.js';
 import { runFieldSelectorCommand, runFieldSelectorClean, runFieldSelectorPatch } from '../commands/field-selector.js';
 import { runFieldSelectorSchema } from '../commands/field-selector-schema.js';
+import { createNumberingRenderCopy } from '../core/field-selector/numbering-render-copy.js';
 import { runScan } from '../commands/scan.js';
 import {
   runChecklistCreate,
@@ -194,6 +195,14 @@ export function createProgram(): Command {
 
   const fieldSelectorCmd = new Command('field-selector');
   fieldSelectorCmd.description('Work with field-selector-based document pipelines');
+
+  fieldSelectorCmd
+    .command('render-copy <input>')
+    .description('Create a disposable numbering snapshot for PDF conversion; never replace the editable DOCX')
+    .requiredOption('-o, --output <path>', 'New *.render.docx path (must not exist)')
+    .action((input: string, opts: { output: string }) => {
+      console.log(JSON.stringify(createNumberingRenderCopy(input, opts.output), null, 2));
+    });
 
   fieldSelectorCmd
     .command('schema [field-selector-id]')
