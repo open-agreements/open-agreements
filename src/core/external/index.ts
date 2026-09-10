@@ -1,10 +1,12 @@
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { loadExternalMetadata, loadCleanConfig } from '../metadata.js';
 import { resolveExternalDir } from '../../utils/paths.js';
 import { verifyOutput } from '../field-selector/verifier.js';
 import { runFillPipeline } from '../unified-pipeline.js';
+import { formatDocumentDateFields } from '../fill-pipeline.js';
+import { bindAnchoredParagraphFields, loadAnchoredParagraphBindingsConfig } from '../field-selector/anchored-paragraph-bindings.js';
 import type { ExternalFillOptions, ExternalFillResult } from './types.js';
 
 /**
@@ -41,6 +43,10 @@ export async function runExternalFill(options: ExternalFillOptions): Promise<Ext
   const replacementsPath = join(externalDir, 'replacements.json');
   const replacements: Record<string, string> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
 
+  const bindingsPath = join(externalDir, 'anchored-paragraph-bindings.json');
+  const bindings = existsSync(bindingsPath) ? loadAnchoredParagraphBindingsConfig(bindingsPath) : undefined;
+  const verificationValues = formatDocumentDateFields(values, metadata.fields);
+
   const result = await runFillPipeline({
     inputPath: docxPath,
     outputPath,
@@ -48,9 +54,12 @@ export async function runExternalFill(options: ExternalFillOptions): Promise<Ext
     fields: metadata.fields,
     priorityFieldNames: metadata.priority_fields,
     cleanPatch: { cleanConfig, replacements },
+    prePatchProcess: bindings
+      ? async (input, output) => bindAnchoredParagraphFields(input, output, bindings)
+      : undefined,
     // Forward the cleaned source so formatting anomalies and context-key
     // placeholders are baselined against it (consistent with runFieldSelector).
-    verify: (p, cleanedSourcePath) => verifyOutput(p, values, replacements, cleanConfig, cleanedSourcePath),
+    verify: (p, cleanedSourcePath) => verifyOutput(p, verificationValues, replacements, cleanConfig, cleanedSourcePath),
     keepIntermediate,
   });
 

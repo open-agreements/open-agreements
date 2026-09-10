@@ -11,7 +11,8 @@ export const AnchoredParagraphBindingsConfigSchema = z.object({
   groups: z.array(z.object({
     id: z.string().min(1),
     start_anchor: z.string().min(1),
-    end_anchor: z.string().min(1),
+    end_anchor: z.string().min(1).optional(),
+    end_at_document_end: z.literal(true).optional(),
     expected_group_matches: z.literal(1),
     bindings: z.array(z.object({
       label: z.string().min(1),
@@ -22,7 +23,9 @@ export const AnchoredParagraphBindingsConfigSchema = z.object({
       /** Opt in only when following underlined tab-only runs are blank form tails. */
       consume_following_underlined_tabs: z.literal(true).optional(),
     }).strict()).min(1),
-  }).strict()).min(1),
+  }).strict().refine((group) => Boolean(group.end_anchor) !== Boolean(group.end_at_document_end), {
+    message: 'Specify exactly one of end_anchor or end_at_document_end',
+  })).min(1),
 }).strict();
 
 export type AnchoredParagraphBindingsConfig = z.infer<typeof AnchoredParagraphBindingsConfigSchema>;
@@ -96,7 +99,7 @@ export function bindAnchoredParagraphFields(
   }> = [];
   for (const group of config.groups) {
     const starts = exactAnchorIndices(paragraphs, group.start_anchor);
-    const ends = exactAnchorIndices(paragraphs, group.end_anchor);
+    const ends = group.end_at_document_end ? [paragraphs.length] : exactAnchorIndices(paragraphs, group.end_anchor!);
     if (starts.length !== group.expected_group_matches || ends.length !== group.expected_group_matches) {
       throw new Error(
         `anchored paragraph bindings '${group.id}': expected one unique start/end anchor; ` +
@@ -121,6 +124,9 @@ export function bindAnchoredParagraphFields(
           `anchored paragraph bindings '${group.id}' label '${binding.label}': ` +
           `expected one match inside boundaries; found ${matches.length}`,
         );
+      }
+      if (insertions.some((insertion) => insertion.textNode === matches[0])) {
+        throw new Error(`anchored paragraph bindings '${group.id}': duplicate binding target '${binding.label}'`);
       }
       insertions.push({
         textNode: matches[0],

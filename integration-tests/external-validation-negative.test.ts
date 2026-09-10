@@ -78,6 +78,31 @@ function createFixture(): { dir: string; docxBuffer: Buffer; docxSha: string } {
 }
 
 describe('validateExternal negative scenarios', () => {
+  it('rejects invalid signature-binding structure and nonunique real document anchors', () => {
+    const {dir} = createFixture();
+    const bytes = buildDocx('START</w:t></w:r></w:p><w:p><w:r><w:t>Name:');
+    writeFileSync(join(dir, 'template.docx'), bytes);
+    writeMetadata(dir, createHash('sha256').update(bytes).digest('hex'));
+    writeFileSync(join(dir, 'replacements.json'), JSON.stringify({'[Company Name]': '{company_name}'}));
+    const binding = {label: 'Name:', field: 'company_name', expected_matches: 1, insert_after_label: true, preserve_following_tabs: true};
+    const group = {id: 'final', start_anchor: 'START', end_at_document_end: true, expected_group_matches: 1, bindings: [binding]};
+    const configPath = join(dir, 'anchored-paragraph-bindings.json');
+    writeFileSync(configPath, JSON.stringify({groups: [group]}));
+    expect(validateExternal(dir, 'fixture').valid).toBe(true);
+    for (const invalid of [
+      {...group, start_anchor: 'MISSING'},
+      {...group, end_anchor: 'Name:'},
+      {...group, end_at_document_end: undefined},
+      {...group, bindings: [binding, binding]},
+      {...group, bindings: [{...binding, field: 'unknown_field'}]},
+    ]) {
+      writeFileSync(configPath, JSON.stringify({groups: [invalid]}));
+      expect(validateExternal(dir, 'fixture').valid).toBe(false);
+    }
+    writeFileSync(configPath, '{');
+    expect(validateExternal(dir, 'fixture').valid).toBe(false);
+  });
+
   it('fails when metadata is invalid', () => {
     const { dir } = createFixture();
     writeFileSync(join(dir, 'metadata.yaml'), 'name: Bad Fixture', 'utf-8');
