@@ -23,6 +23,13 @@
       "type": "application/json"
     },
     {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "text/html",
+      "external": true,
+      "title": "CC BY 4.0"
+    },
+    {
       "rel": "agent-skill",
       "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
       "type": "text/markdown"

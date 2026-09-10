@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-09-06
+* **Update**: Rename and reorder Colorado restrictive covenant notice (#2451) (67672ca)
+
 ## 2026-09-03
 * **Update**: fix: sharpen SEO metadata and sitemap indexing (#2425) (c10aed5)
 

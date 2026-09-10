@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-09-06
+* **Update**: Rename and reorder Colorado restrictive covenant notice (#2451) (67672ca)
+
 ## 2026-09-01
 * **Update**: content(ciiaa): survive restrictive covenants; scope Confidential Information to Company (#2308) (7d848af)
 
