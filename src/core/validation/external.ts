@@ -1,7 +1,9 @@
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, mkdtempSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
+import { tmpdir } from 'node:os';
 import { createHash } from 'node:crypto';
 import { validateExternalMetadata, loadExternalMetadata, CleanConfigSchema } from '../metadata.js';
+import { bindAnchoredParagraphFields, loadAnchoredParagraphBindingsConfig } from '../field-selector/anchored-paragraph-bindings.js';
 import { parseReplacementKey } from '../field-selector/replacement-keys.js';
 
 export interface ExternalValidationResult {
@@ -122,6 +124,28 @@ export function validateExternal(
       }
     } catch (err) {
       errors.push(`replacements.json: ${(err as Error).message}`);
+    }
+  }
+
+  const bindingsPath = join(externalDir, 'anchored-paragraph-bindings.json');
+  if (existsSync(bindingsPath)) {
+    try {
+      const bindings = loadAnchoredParagraphBindingsConfig(bindingsPath);
+      const fields = new Set(metadata.fields.map((field) => field.name));
+      for (const group of bindings.groups) {
+        for (const binding of group.bindings) {
+          if (!fields.has(binding.field)) errors.push(`Anchored binding {${binding.field}} not found in metadata fields`);
+        }
+      }
+      // Verify real anchor/label uniqueness without modifying the canonical file.
+      const scratch = mkdtempSync(join(tmpdir(), 'oa-external-bindings-validate-'));
+      try {
+        bindAnchoredParagraphFields(docxPath, join(scratch, 'bound.docx'), bindings);
+      } finally {
+        rmSync(scratch, {recursive: true, force: true});
+      }
+    } catch (error) {
+      errors.push(`anchored-paragraph-bindings.json: ${(error as Error).message}`);
     }
   }
 

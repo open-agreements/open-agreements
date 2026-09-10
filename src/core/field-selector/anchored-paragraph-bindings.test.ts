@@ -68,6 +68,29 @@ const signatureBody =
   p(text('KEY HOLDERS:'));
 
 describe('anchor-scoped paragraph field binding', () => {
+  it('binds a final signature group to the document end and rejects ambiguous boundaries', () => {
+    const fixture = build(signatureBody);
+    const finalGroup = {...config.groups[1], end_anchor: undefined, end_at_document_end: true as const};
+    bindAnchoredParagraphFields(fixture.input, fixture.output, {groups: [finalGroup]});
+    const xml = new AdmZip(fixture.output).getEntry('word/document.xml')!.getData().toString('utf-8');
+    expect(xml).toContain('{investor_signatory_name}');
+    expect(xml).not.toContain('{company_signatory_name}');
+    expect(() => bindAnchoredParagraphFields(fixture.input, fixture.output, {
+      groups: [{...finalGroup, end_anchor: 'KEY HOLDERS:'}],
+    })).toThrow('Specify exactly one');
+    rmSync(fixture.dir, {recursive: true, force: true});
+  });
+
+  it('rejects duplicate binding targets without writing an output', () => {
+    const fixture = build(signatureBody);
+    const group = config.groups[0];
+    expect(() => bindAnchoredParagraphFields(fixture.input, fixture.output, {groups: [
+      {...group, bindings: [group.bindings[0], group.bindings[0]]},
+    ]})).toThrow('duplicate binding target');
+    expect(existsSync(fixture.output)).toBe(false);
+    rmSync(fixture.dir, {recursive: true, force: true});
+  });
+
   it('binds repeated labels to distinct fields inside their unique boundaries', () => {
     const fixture = build(signatureBody);
     const before = new AdmZip(fixture.input).getEntry('word/document.xml')!.getData().toString('utf-8');
