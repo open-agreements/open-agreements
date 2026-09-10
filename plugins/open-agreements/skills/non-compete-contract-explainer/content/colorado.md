@@ -2,7 +2,7 @@
 jurisdiction: "Colorado"
 slug: colorado
 countryCode: US
-content_packaged_at: "2026-09-05"
+content_packaged_at: "2026-09-10"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/colorado · **Snapshot as of:** 2026-09-05 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/colorado · **Snapshot as of:** 2026-09-10 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Colorado[^about]
 
@@ -79,7 +79,7 @@ The notice must accompany a complete copy of the agreement, identify the agreeme
 > [!CAUTION]
 > **Drafting note.**
 >
-> Use the companion Colorado Notice of Restrictive Covenants, deliver it with the complete agreement, and list each enabled covenant by its exact heading. A notice buried inside an offer letter or omnibus agreement, a generic pointer to *the covenant's terms*, or a past-tense recital without delivery evidence does not establish compliance. For a current worker, the separate, signed notice must precede the covenant's effective date—or any raise or change that serves as consideration—by at least fourteen days [^crs-notice-timing][^crs-notice-content][^crs-notice-separate-document].
+> Use the companion Employee Notice of Restrictive Covenants (Colorado), deliver it with the complete agreement, and list each enabled covenant by its exact heading. A notice buried inside an offer letter or omnibus agreement, a generic pointer to *the covenant's terms*, or a past-tense recital without delivery evidence does not establish compliance. For a current worker, the separate, signed notice must precede the covenant's effective date—or any raise or change that serves as consideration—by at least fourteen days [^crs-notice-timing][^crs-notice-content][^crs-notice-separate-document].
 
 ## Are non-competes enforceable against Colorado physicians and other health-care providers? {#health-care-providers}
 
