@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "cli_version": "0.10.1",
+  "cli_version": "0.10.2",
   "items": [
     {
       "name": "bonterms-mutual-nda",
