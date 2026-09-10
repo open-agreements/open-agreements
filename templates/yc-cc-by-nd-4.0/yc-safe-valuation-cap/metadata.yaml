@@ -54,6 +54,24 @@ fields:
     type: string
     description: Title of the company signatory (e.g., "CEO")
     section: Signatures
+  - name: company_notice_address
+    type: string
+    description: Company notice mailing address
+  - name: company_notice_email
+    type: string
+    description: Company notice email address
+  - name: investor_signatory_name
+    type: string
+    description: Printed name of the individual signing for Investor
+  - name: investor_signatory_title
+    type: string
+    description: Title of the individual signing for Investor (if applicable)
+  - name: investor_notice_address
+    type: string
+    description: Investor notice mailing address
+  - name: investor_notice_email
+    type: string
+    description: Investor notice email address
 priority_fields:
   - company_name
   - investor_name
@@ -65,6 +83,12 @@ priority_fields:
   - company
   - name
   - title
+  - company_notice_address
+  - company_notice_email
+  - investor_signatory_name
+  - investor_signatory_title
+  - investor_notice_address
+  - investor_notice_email
 artifact_kind: agreement
 capabilities:
   - create

@@ -13,10 +13,6 @@ attribution_text: >-
   Based on the Common Paper Business Associate Agreement, available at https://commonpaper.com. Licensed under CC BY
   4.0. Copyright Common Paper, Inc.
 fields:
-  - name: company_name
-    type: string
-    description: Official company name
-    section: Parties
   - name: party_role
     type: string
     description: Role in the agreement (Business Associate or Covered Entity)
@@ -162,7 +158,6 @@ fields:
     description: Notice email address for the Company
     section: Signature Block
 priority_fields:
-  - company_name
   - party_role
   - principal_agreement
 artifact_kind: agreement

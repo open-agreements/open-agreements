@@ -14,10 +14,6 @@ attribution_text: >-
   Based on the Common Paper Professional Services Agreement, available at https://commonpaper.com. Licensed under CC BY
   4.0. Copyright Common Paper, Inc.
 fields:
-  - name: company_name
-    type: string
-    description: Official company name
-    section: Parties
   - name: provider_name
     type: string
     description: Official name of the Provider
@@ -451,7 +447,6 @@ fields:
     description: Notice email address for the Customer
     section: Signature Block
 priority_fields:
-  - company_name
   - provider_name
   - customer_name
   - key_terms_effective_date

@@ -13,10 +13,6 @@ attribution_text: >-
   Based on the Common Paper Amendment, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common
   Paper, Inc.
 fields:
-  - name: company_name
-    type: string
-    description: Company name (shown in header)
-    section: Parties
   - name: party_1
     type: string
     description: Full name of the first party to the original agreement
@@ -94,7 +90,6 @@ fields:
     description: Notice email address for the second party
     section: Signature Block
 priority_fields:
-  - company_name
   - party_1
   - party_2
   - agreement_name

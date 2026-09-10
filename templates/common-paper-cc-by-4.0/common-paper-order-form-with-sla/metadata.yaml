@@ -13,10 +13,6 @@ attribution_text: >-
   Based on the Common Paper Order Form with SLA, available at https://commonpaper.com. Licensed under CC BY 4.0.
   Copyright Common Paper, Inc.
 fields:
-  - name: company_name
-    type: string
-    description: Company name (shown in header)
-    section: Parties
   - name: provider_name
     type: string
     description: Name of the Provider
@@ -252,7 +248,6 @@ fields:
     description: Notice email address for the Customer
     section: Signature Block
 priority_fields:
-  - company_name
   - provider_name
   - customer_name
   - key_terms_effective_date
