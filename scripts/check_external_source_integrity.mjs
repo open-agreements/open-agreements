@@ -14,7 +14,7 @@ export function checkExternalSourceIntegrity({cwd = process.cwd(), base, head = 
   const protectedDirs = new Map();
   const violations = [];
   for (const path of changed) {
-    const match = /^(templates\/[^/]+\/[^/]+)\/(.+)$/.exec(path);
+    const match = /^(templates\/[^/]+\/[^/]+)\/([\s\S]+)$/.exec(path);
     if (!match) continue;
     const [, dir, relative] = match;
     if (!protectedDirs.has(dir)) {

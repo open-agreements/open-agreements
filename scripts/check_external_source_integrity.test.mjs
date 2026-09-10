@@ -25,7 +25,7 @@ it('allows administrative definitions without altering original content', () => 
   f.write('metadata.yaml', 'allow_derivatives: false\nfields: []\n'); f.commit();
   expect(checkExternalSourceIntegrity(f)).toEqual([]);
 });
-it.each(['template.docx', 'template.md', 'clean.json'])('blocks changed or added content: %s', name => {
+it.each(['template.docx', 'template.md', 'clean.json', 'copy\n.docx'])('blocks changed or added content: %s', name => {
   const f = fixture(); f.write(name, 'changed content'); f.commit();
   expect(checkExternalSourceIntegrity(f)).toEqual([`${dir}/${name}`]);
 });

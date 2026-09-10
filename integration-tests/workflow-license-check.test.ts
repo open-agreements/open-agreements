@@ -1,53 +1,25 @@
-import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
-import { describe, expect } from 'vitest';
-import {
-  allureAttachment,
-  allureParameter,
-  allureStep,
-  itAllure,
-} from './helpers/allure-test.js';
+import {readFileSync} from 'node:fs';
+import {join} from 'node:path';
+import yaml from 'js-yaml';
+import {describe, expect} from 'vitest';
+import {itAllure} from './helpers/allure-test.js';
 
 const ROOT = new URL('..', import.meta.url).pathname;
-const VALIDATE_WORKFLOW = readFileSync(join(ROOT, '.github/workflows/validate.yml'), 'utf-8');
+const workflow = yaml.load(readFileSync(join(ROOT, '.github/workflows/validate.yml'), 'utf8')) as {
+  jobs: {validate: {steps: Array<{name?: string; uses?: string; run?: string; env?: Record<string, string>; with?: Record<string, unknown>; 'continue-on-error'?: boolean}>}};
+};
+const steps = workflow.jobs.validate.steps;
 const it = itAllure.epic('Compliance & Governance');
 
-describe('validate workflow license-diff logic', () => {
-  it('uses PR base SHA for pull_request events', async () => {
-    await allureParameter('workflow', '.github/workflows/validate.yml');
-    await allureAttachment('workflow-snippet.txt', VALIDATE_WORKFLOW);
-
-    await allureStep('Assert pull_request branch base SHA logic', () => {
-      expect(VALIDATE_WORKFLOW).toContain('if [ "${{ github.event_name }}" = "pull_request" ]; then');
-      expect(VALIDATE_WORKFLOW).toContain('BASE_SHA="${{ github.event.pull_request.base.sha }}"');
-    });
+describe('validate workflow original-content protection', () => {
+  it('runs the tested integrity checker as a blocking step', () => {
+    const gate = steps.find(step => step.name === 'Check no CC BY-ND derivatives');
+    expect(gate?.run).toBe('node scripts/check_external_source_integrity.mjs');
+    expect(gate?.['continue-on-error']).not.toBe(true);
   });
-
-  it('uses HEAD~1 for push events', async () => {
-    await allureParameter('workflow', '.github/workflows/validate.yml');
-
-    await allureStep('Assert push-event base SHA fallback', () => {
-      expect(VALIDATE_WORKFLOW).toContain('BASE_SHA="HEAD~1"');
-    });
-  });
-
-  it('checks modified allow_derivatives=false templates and exits non-zero', async () => {
-    await allureParameter('workflow', '.github/workflows/validate.yml');
-
-    await allureStep('Assert non-derivative enforcement block', () => {
-      expect(VALIDATE_WORKFLOW).toContain('allow_derivatives:');
-      expect(VALIDATE_WORKFLOW).toContain('if [ "$allow" = "false" ]; then');
-      expect(VALIDATE_WORKFLOW).toContain('git diff --name-only "$BASE_SHA" -- "$dir"');
-      expect(VALIDATE_WORKFLOW).toContain('exit 1');
-    });
-  });
-
-  it('permits metadata-only changes in no-derivatives template directories', async () => {
-    await allureParameter('workflow', '.github/workflows/validate.yml');
-
-    await allureStep('Assert capability manifest metadata is excluded exactly', () => {
-      expect(VALIDATE_WORKFLOW).toContain('grep -vFx "${dir}metadata.yaml"');
-      expect(VALIDATE_WORKFLOW).toContain('if [ -n "$changed_files" ]; then');
-    });
+  it('compares against the PR base or the complete pre-push revision', () => {
+    const gate = steps.find(step => step.name === 'Check no CC BY-ND derivatives');
+    expect(gate?.env?.BASE_SHA).toBe('${{ github.event.pull_request.base.sha || github.event.before }}');
+    expect(steps.find(step => step.uses?.startsWith('actions/checkout@'))?.with?.['fetch-depth']).toBe(0);
   });
 });
