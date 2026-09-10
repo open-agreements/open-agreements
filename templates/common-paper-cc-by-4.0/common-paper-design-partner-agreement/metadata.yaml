@@ -13,10 +13,6 @@ attribution_text: >-
   Based on the Common Paper Design Partner Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0.
   Copyright Common Paper, Inc.
 fields:
-  - name: company_name
-    type: string
-    description: Official company name (shown in header)
-    section: Parties
   - name: product_description
     type: string
     description: Description of the product being developed
@@ -152,7 +148,6 @@ fields:
     description: Notice email address for the Partner
     section: Signature Block
 priority_fields:
-  - company_name
   - product_description
   - governing_law
   - jurisdiction

@@ -28,28 +28,6 @@ jobs:
         run: npm run check:templates-snapshot
 
       - name: Check no CC BY-ND derivatives
-        run: |
-          # Determine base ref for diff
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            BASE_SHA="${{ github.event.pull_request.base.sha }}"
-          else
-            BASE_SHA="HEAD~1"
-          fi
-
-          # Ensure no template content with allow_derivatives=false has been modified.
-          # metadata.yaml may change to add or maintain non-content capability manifests.
-          # Slugs live two levels deep: templates/<source>-<rights>/<slug>/ (#1249).
-          for dir in templates/*/*/; do
-            if [ -f "$dir/metadata.yaml" ]; then
-              allow=$(grep 'allow_derivatives:' "$dir/metadata.yaml" | awk '{print $2}')
-              if [ "$allow" = "false" ]; then
-                changed_files=$(git diff --name-only "$BASE_SHA" -- "$dir" 2>/dev/null | grep -vFx "${dir}metadata.yaml" || true)
-                if [ -n "$changed_files" ]; then
-                  echo "ERROR: Modified template in $dir which has allow_derivatives=false"
-                  printf '%s\n' "$changed_files"
-                  exit 1
-                fi
-              fi
-            fi
-          done
-          echo "License compliance check passed"
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: node scripts/check_external_source_integrity.mjs

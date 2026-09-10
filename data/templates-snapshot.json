@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "cli_version": "0.10.1",
+  "cli_version": "0.10.2",
   "items": [
     {
       "name": "bonterms-mutual-nda",
@@ -350,15 +350,6 @@
       "stability": null,
       "credits": [],
       "fields": [
-        {
-          "name": "company_name",
-          "type": "string",
-          "required": true,
-          "section": "Parties",
-          "description": "Official company name",
-          "default": null,
-          "default_value_rationale": null
-        },
         {
           "name": "agreement_description",
           "type": "string",
@@ -935,15 +926,6 @@
       "credits": [],
       "fields": [
         {
-          "name": "company_name",
-          "type": "string",
-          "required": true,
-          "section": "Parties",
-          "description": "Company name (shown in header)",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
           "name": "party_1",
           "type": "string",
           "required": true,
@@ -1122,15 +1104,6 @@
       "stability": null,
       "credits": [],
       "fields": [
-        {
-          "name": "company_name",
-          "type": "string",
-          "required": true,
-          "section": "Parties",
-          "description": "Official company name",
-          "default": null,
-          "default_value_rationale": null
-        },
         {
           "name": "party_role",
           "type": "string",
@@ -2390,15 +2363,6 @@
       "credits": [],
       "fields": [
         {
-          "name": "company_name",
-          "type": "string",
-          "required": true,
-          "section": "Parties",
-          "description": "Company name (shown in header)",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
           "name": "provider_name",
           "type": "string",
           "required": true,
@@ -3461,15 +3425,6 @@
       "credits": [],
       "fields": [
         {
-          "name": "company_name",
-          "type": "string",
-          "required": true,
-          "section": "Parties",
-          "description": "Company name (shown in header)",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
           "name": "provider_name",
           "type": "string",
           "required": true,
@@ -4442,15 +4397,6 @@
       "credits": [],
       "fields": [
         {
-          "name": "company_name",
-          "type": "string",
-          "required": true,
-          "section": "Parties",
-          "description": "Company name (shown in header)",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
           "name": "provider_name",
           "type": "string",
           "required": true,
@@ -5359,15 +5305,6 @@
       "stability": null,
       "credits": [],
       "fields": [
-        {
-          "name": "company_name",
-          "type": "string",
-          "required": true,
-          "section": "Parties",
-          "description": "Official company name",
-          "default": null,
-          "default_value_rationale": null
-        },
         {
           "name": "product_name",
           "type": "string",
@@ -6286,15 +6223,6 @@
       "credits": [],
       "fields": [
         {
-          "name": "company_name",
-          "type": "string",
-          "required": true,
-          "section": "Parties",
-          "description": "Official company name (shown in header)",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
           "name": "product_description",
           "type": "string",
           "required": true,
@@ -6787,15 +6715,6 @@
       "stability": null,
       "credits": [],
       "fields": [
-        {
-          "name": "company_name",
-          "type": "string",
-          "required": true,
-          "section": "Parties",
-          "description": "Official name of the company sending the letter",
-          "default": null,
-          "default_value_rationale": null
-        },
         {
           "name": "product_name",
           "type": "string",
@@ -7294,15 +7213,6 @@
       "credits": [],
       "fields": [
         {
-          "name": "company_name",
-          "type": "string",
-          "required": true,
-          "section": "Parties",
-          "description": "Company name (shown in header)",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
           "name": "provider_name",
           "type": "string",
           "required": true,
@@ -7706,15 +7616,6 @@
       "stability": null,
       "credits": [],
       "fields": [
-        {
-          "name": "company_name",
-          "type": "string",
-          "required": true,
-          "section": "Parties",
-          "description": "Company name (shown in header)",
-          "default": null,
-          "default_value_rationale": null
-        },
         {
           "name": "provider_name",
           "type": "string",
@@ -8930,15 +8831,6 @@
       "credits": [],
       "fields": [
         {
-          "name": "company_name",
-          "type": "string",
-          "required": true,
-          "section": "Parties",
-          "description": "Official company name (shown in header)",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
           "name": "product_description",
           "type": "string",
           "required": true,
@@ -9216,15 +9108,6 @@
       "stability": null,
       "credits": [],
       "fields": [
-        {
-          "name": "company_name",
-          "type": "string",
-          "required": true,
-          "section": "Parties",
-          "description": "Official company name",
-          "default": null,
-          "default_value_rationale": null
-        },
         {
           "name": "provider_name",
           "type": "string",
@@ -10071,15 +9954,6 @@
       "credits": [],
       "fields": [
         {
-          "name": "company_name",
-          "type": "string",
-          "required": true,
-          "section": "Parties",
-          "description": "Company name (shown in header)",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
           "name": "provider_name",
           "type": "string",
           "required": true,
@@ -10438,15 +10312,6 @@
       "stability": null,
       "credits": [],
       "fields": [
-        {
-          "name": "company_name",
-          "type": "string",
-          "required": true,
-          "section": "Parties",
-          "description": "Official name of the company",
-          "default": null,
-          "default_value_rationale": null
-        },
         {
           "name": "topic",
           "type": "string",
@@ -34467,6 +34332,60 @@
           "required": true,
           "section": "Signatures",
           "description": "Title of the company signatory (e.g., \"CEO\")",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_notice_address",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Company notice mailing address",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_notice_email",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Company notice email address",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_signatory_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Printed name of the individual signing for Investor",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_signatory_title",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Title of the individual signing for Investor (if applicable)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_notice_address",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Investor notice mailing address",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_notice_email",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Investor notice email address",
           "default": null,
           "default_value_rationale": null
         }

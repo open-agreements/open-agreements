@@ -13,10 +13,6 @@ attribution_text: >-
   Based on the Common Paper Data Processing Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0.
   Copyright Common Paper, Inc.
 fields:
-  - name: company_name
-    type: string
-    description: Official company name
-    section: Parties
   - name: product_name
     type: string
     description: Name of product or service
@@ -516,7 +512,6 @@ fields:
     description: Company name for the Customer signatory (entity only)
     section: Signature Block
 priority_fields:
-  - company_name
   - product_name
   - underlying_agreement
   - customer_contact_name

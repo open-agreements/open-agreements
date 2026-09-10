@@ -13,10 +13,6 @@ attribution_text: >-
   Based on the Common Paper AI Addendum, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright
   Common Paper, Inc.
 fields:
-  - name: company_name
-    type: string
-    description: Official company name
-    section: Parties
   - name: agreement_description
     type: string
     description: Description of the underlying agreement
@@ -166,7 +162,6 @@ fields:
     description: Notice email address for the Customer
     section: Signature Block
 priority_fields:
-  - company_name
   - agreement_description
 artifact_kind: agreement
 capabilities:

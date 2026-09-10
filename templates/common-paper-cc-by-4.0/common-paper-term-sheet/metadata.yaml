@@ -13,10 +13,6 @@ attribution_text: >-
   Based on the Common Paper Term Sheet, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common
   Paper, Inc.
 fields:
-  - name: company_name
-    type: string
-    description: Official name of the company
-    section: Parties
   - name: topic
     type: string
     description: Topic or subject area of the term
@@ -74,7 +70,6 @@ fields:
     description: Notice email address for the second party
     section: Signature Block
 priority_fields:
-  - company_name
   - topic
   - topic_details
 artifact_kind: agreement
