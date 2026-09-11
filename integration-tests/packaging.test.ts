@@ -151,5 +151,5 @@ describe('npm packaging', () => {
       }
       rmSync(sandbox, { recursive: true, force: true });
     }
-  }, seconds(90));
+  }, seconds(30));
 });
