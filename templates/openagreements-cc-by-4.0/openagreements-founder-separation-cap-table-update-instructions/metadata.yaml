@@ -49,6 +49,24 @@ fields:
     type: date
     description: Date these instructions are given
     section: Terms
+  - name: disposition_cancels_and_retires
+    type: boolean
+    description: Derived gate computed from share_disposition. True only when the board resolved cancelled-retired. Gates the retirement instruction so the records reflect one disposition, not both. A runtime with enum-derived-boolean-gates.v1 derives this gate from the selected enum and rejects conflicting explicit gate values. Older runtimes need matching gates supplied explicitly.
+    derived:
+      from: share_disposition
+      map:
+        cancelled-retired: true
+        held-as-treasury: false
+    section: Derived Gates
+  - name: disposition_holds_as_treasury
+    type: boolean
+    description: Derived gate computed from share_disposition. True only when the board resolved held-as-treasury. Gates the treasury instruction so the records reflect one disposition, not both. A runtime with enum-derived-boolean-gates.v1 derives this gate from the selected enum and rejects conflicting explicit gate values. Older runtimes need matching gates supplied explicitly.
+    derived:
+      from: share_disposition
+      map:
+        cancelled-retired: false
+        held-as-treasury: true
+    section: Derived Gates
 priority_fields:
   - company_legal_name
   - founder_name

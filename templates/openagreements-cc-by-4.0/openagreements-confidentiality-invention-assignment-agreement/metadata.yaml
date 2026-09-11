@@ -48,7 +48,9 @@ fields:
     description: Duration of confidentiality obligations for Confidential Information other than trade secrets after employment ends
     display_label: Other Confidential Information Duration
     default: For as long as the information remains confidential, and, where applicable law requires a fixed period, two years after employment ends
-    default_value_rationale: Filed employee agreements overwhelmingly run ordinary confidentiality open-ended (52% expressly in a 315-instrument EDGAR sample; 93% in the Yale Law Journal study of 446 agreements disclosed in federal trade-secret litigation); where they bound it they use a fallback that applies only if law requires one, and among the eight EDGAR filings in that sample that state a fallback, six set it at two years. Wisconsin voids an unbounded non-trade-secret covenant, so the fallback is not optional. See docs/benchmarks/ciiaa-confidentiality-duration-evidence.md.
+    default_value_rationale: In an evidence-verified sample of 1,116 employee agreements filed on EDGAR, 71.9% stated an indefinite duty for ordinary confidential information and 15.7% tied the duty to the information remaining confidential. Among the 51 instruments that used or incorporated a fixed period, two years was the most frequent resolved term. The fallback applies only where governing law requires a fixed period; Wisconsin can void an unbounded non-trade-secret covenant, so the fallback is not optional there.
+    rationale_source: prevalence
+    prevalence_key: edgar-ciiaa/confidentiality-duration
     section: Confidentiality
   - name: post_termination_assistance
     type: string
@@ -64,6 +66,20 @@ fields:
     description: Venue for disputes
     default: state and federal courts in the governing law state
     section: Legal
+  - name: personnel_nonsolicit_included
+    type: boolean
+    description: Whether the post-employment personnel non-solicitation covenant is included. Set false when the engagement prohibits post-employment restraints, or when the governing law voids a personnel non-solicit; the covenant is then omitted entirely instead of rendered with a savings clause. California employee nonsolicits carry substantial enforceability risk; “to the extent permitted” does not guarantee validity. Cooley retains a qualified covenant, while Orrick instructs users to remove its post-term language for California. Omitting it does not affect the invention-assignment, confidentiality, during-employment duty-of-loyalty, or statutory carve-out clauses. Not shown as a cover-term row.
+    display_label: Personnel Non-Solicitation Included
+    default: true
+    default_value_rationale: 'True preserves the form''s existing output: the covenant renders unless a caller affirmatively opts out, so a fill that omits this field renders the same document it rendered before the field existed.'
+    section: Post-Employment Restraints
+  - name: future_employer_notice_included
+    type: boolean
+    description: 'Whether the notice-to-future-employers clause is included. Set false together with personnel_nonsolicit_included when the engagement prohibits post-employment restraints: the clause obliges Employee to disclose these obligations to a future employer, so leaving it in reintroduces a post-employment obligation the covenant opt-out was meant to remove. Omitting it does not affect the confidentiality obligations themselves. Not shown as a cover-term row.'
+    display_label: Future-Employer Notice Included
+    default: true
+    default_value_rationale: 'True preserves the form''s existing output: the clause renders unless a caller affirmatively opts out, so a fill that omits this field renders the same document it rendered before the field existed.'
+    section: Post-Employment Restraints
 priority_fields: []
 artifact_kind: agreement
 capabilities:
