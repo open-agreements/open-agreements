@@ -470,6 +470,7 @@ fields:
   - name: include_transaction_assistance
     type: boolean
     description: Include investor-counsel and transaction-assistance covenants
+    default: false
   - name: include_indemnification_matters
     type: boolean
     description: Include investor-director indemnification priority provisions
@@ -479,6 +480,7 @@ fields:
   - name: include_fair_practices_covenant
     type: boolean
     description: Include the FCPA compliance covenant
+    default: false
   - name: include_cybersecurity_covenant
     type: boolean
     description: Include the cybersecurity covenant

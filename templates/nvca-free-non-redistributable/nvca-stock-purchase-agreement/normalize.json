@@ -1,6 +1,51 @@
 {
   "paragraph_rules": [
     {
+      "id": "tranche-reference-purchase-obligation",
+      "ignore_heading": true,
+      "section_heading": "Sale and Issuance of Preferred Stock",
+      "paragraph_contains": "as provided in Section [1.2(c)] below.",
+      "replacements": { "1.2(c)": "{tranche_closing_section_reference}" },
+      "expected_min_matches": 0,
+      "expected_max_matches": 1
+    },
+    {
+      "id": "tranche-reference-adjusted-shares",
+      "ignore_heading": true,
+      "section_heading": "Tranche Closing",
+      "paragraph_contains": "as adjusted pursuant to Section 1.2(c)(ii)",
+      "replacements": { "1.2(c)": "{tranche_closing_section_reference}" },
+      "expected_min_matches": 0,
+      "expected_max_matches": 1
+    },
+    {
+      "id": "tranche-reference-elective-closing",
+      "ignore_heading": true,
+      "section_heading": "Tranche Closing",
+      "paragraph_contains": "closings to occur pursuant to this Section 1.2(c)",
+      "replacements": { "1.2(c)": "{tranche_closing_section_reference}" },
+      "expected_min_matches": 0,
+      "expected_max_matches": 1
+    },
+    {
+      "id": "tranche-reference-conversion-waiver",
+      "ignore_heading": true,
+      "section_heading": "Tranche Closing",
+      "paragraph_contains": "unless this Section 1.2(c)(iv) is waived",
+      "replacements": { "1.2(c)": "{tranche_closing_section_reference}" },
+      "expected_min_matches": 0,
+      "expected_max_matches": 1
+    },
+    {
+      "id": "tranche-reference-termination",
+      "ignore_heading": true,
+      "section_heading": "Tranche Closing",
+      "paragraph_contains": "Termination of Section 1.2(c). This Section 1.2(c)",
+      "replacements": { "1.2(c)": "{tranche_closing_section_reference}" },
+      "expected_min_matches": 0,
+      "expected_max_matches": 1
+    },
+    {
       "id": "dispute-resolution-unwrap-alternative-1-arbitration",
       "section_heading": "Dispute Resolution",
       "paragraph_contains": "shall be resolved by arbitration before a single arbitrator",

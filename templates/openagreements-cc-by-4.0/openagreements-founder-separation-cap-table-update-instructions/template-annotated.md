@@ -40,9 +40,13 @@ You are directed to cancel and take possession of the share certificate(s) numbe
 
 Record only the disposition approved by the Board of Directors and identified as [How the repurchased shares are to be treated — cancelled and retired to authorized-but-unissued, or held as treasury shares], using the corresponding instruction below.
 
-*Option A — Cancelled and retired.* You are directed to record the repurchased shares as cancelled and retired, as resolved by the Board of Directors. The stock ledger and cap table should reflect that these shares have been restored to the status of authorized but unissued shares, are no longer issued and outstanding, and are available for future issuance.
+### Record the Shares as Cancelled and Retired
 
-*Option B — Held as treasury.* You are directed to record the repurchased shares as held in treasury, as resolved by the Board of Directors. The stock ledger and cap table should reflect that these shares are issued but not outstanding and carry no voting rights and are not entitled to receive dividends while so held.
+You are directed to record the repurchased shares as cancelled and retired, as resolved by the Board of Directors. The stock ledger and cap table should reflect that these shares have been restored to the status of authorized but unissued shares, are no longer issued and outstanding, and are available for future issuance.
+
+### Record the Shares as Held in Treasury
+
+You are directed to record the repurchased shares as held in treasury, as resolved by the Board of Directors. The stock ledger and cap table should reflect that these shares are issued but not outstanding and carry no voting rights and are not entitled to receive dividends while so held.
 
 ## Signatures
 

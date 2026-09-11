@@ -3,6 +3,26 @@
   "max_passes": 1,
   "rules": [
     {
+      "id": "key-holder-amendment-consent-percentage-present",
+      "when_all": [{ "field": "key_holder_amendment_consent_percentage", "op": "truthy" }],
+      "set_fill": { "key_holder_amendment_consent_percentage_display": "${key_holder_amendment_consent_percentage}" }
+    },
+    {
+      "id": "key-holder-amendment-consent-percentage-missing",
+      "when_all": [{ "field": "key_holder_amendment_consent_percentage", "op": "falsy" }],
+      "set_fill": { "key_holder_amendment_consent_percentage_display": "[INSERT KEY HOLDER AMENDMENT CONSENT PERCENTAGE]" }
+    },
+    {
+      "id": "investor-amendment-consent-percentage-present",
+      "when_all": [{ "field": "investor_amendment_consent_percentage", "op": "truthy" }],
+      "set_fill": { "investor_amendment_consent_percentage_display": "${investor_amendment_consent_percentage}" }
+    },
+    {
+      "id": "investor-amendment-consent-percentage-missing",
+      "when_all": [{ "field": "investor_amendment_consent_percentage", "op": "falsy" }],
+      "set_fill": { "investor_amendment_consent_percentage_display": "[INSERT INVESTOR AMENDMENT CONSENT PERCENTAGE]" }
+    },
+    {
       "id": "fresh-agreement-indirect-amendment-reference",
       "when_all": [{ "field": "has_prior_agreement", "op": "neq", "value": true }],
       "set_fill": { "prior_agreement_indirect_amendment_reference": "" }

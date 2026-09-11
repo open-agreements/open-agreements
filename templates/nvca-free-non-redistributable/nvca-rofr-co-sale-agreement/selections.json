@@ -251,7 +251,7 @@
       "standalone": true,
       "markerless": true,
       "inline": true,
-      "options": [{ "label": "Key Holder consent ownership floor", "marker": "[provided that such consent shall not be required if the Key Holders do not then own shares of Capital Stock representing at least {key_holder_consent_threshold_percentage_display}% of the outstanding Capital Stock of the Company]", "trigger": { "field": "include_key_holder_consent_minimum", "equals": true }, "replaceWith": "provided that such consent shall not be required if the Key Holders do not then own shares of Capital Stock representing at least {key_holder_consent_threshold_percentage_display}% of the outstanding Capital Stock of the Company" }]
+      "options": [{ "label": "Key Holder consent ownership floor", "marker": "[provided that such consent shall not be required if the Key Holders do not then own shares of Capital Stock representing at least {key_holder_consent_threshold_percentage_display}% of the outstanding Capital Stock of the Company]", "trigger": { "field": "include_key_holder_consent_minimum", "equals": true }, "replaceWith": "" }]
     },
     {
       "id": "same_fashion_amendment_safeguard",

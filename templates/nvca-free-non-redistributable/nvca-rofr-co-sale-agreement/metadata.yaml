@@ -154,9 +154,20 @@ fields:
     type: string
     description: Additional preferred-stock series designation; used only when has_additional_preferred_series is true
     default: ''
-  - name: specify_percentage
+  - name: key_holder_amendment_consent_percentage
     type: string
-    description: Specified percentage threshold for key holder transfers, as a number only (for example, 60)
+    description: Transfer Stock ownership percentage required for the Qualified Key Holder amendment vote, number only; independent of the Investor vote and the Capital Stock ownership floor
+  - name: investor_amendment_consent_percentage
+    type: string
+    description: Preferred Stock ownership percentage required for the Investor amendment vote, number only; independent of the Qualified Key Holder vote
+  - name: key_holder_amendment_consent_percentage_display
+    type: string
+    description: Computed Qualified Key Holder amendment-vote percentage or visible insertion marker; do not supply directly
+    default: ''
+  - name: investor_amendment_consent_percentage_display
+    type: string
+    description: Computed Investor amendment-vote percentage or visible insertion marker; do not supply directly
+    default: ''
   - name: rofr_response_days
     type: string
     description: Number of days for the company and investors to respond to a ROFR notice (default 45)
@@ -263,7 +274,8 @@ priority_fields:
   - state_of_incorporation
   - business_description
   - effective_date
-  - specify_percentage
+  - key_holder_amendment_consent_percentage
+  - investor_amendment_consent_percentage
   - rofr_response_days
   - series_designation
   - par_value

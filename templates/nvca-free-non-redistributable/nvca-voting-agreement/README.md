@@ -38,6 +38,7 @@ Create a JSON file with the field values:
   "effective_date": "January 15, 2025",
   "drag_along_percentage": "sixty percent (60%)",
   "board_size": "five (5)",
+  "board_electorate_profile": "nvca_model",
   "notice_period_days": "120",
   "judicial_district": "Northern District of California",
   "key_holder_name": "Jane Doe"
@@ -50,6 +51,15 @@ Create a JSON file with the field values:
 2. **Patch**: Replaces 33 bracketed placeholders with template tags, handling Word's split-run XML
 3. **Fill**: Renders template tags with your values using docx-templates
 4. **Verify**: Confirms all values appear, no leftover placeholders or unrendered tags remain
+
+### Board electorate profiles
+
+`board_electorate_profile` defaults to `nvca_model`, which preserves the source form’s one Preferred-exclusive seat,
+two Common-exclusive seats, and balance-joint structure. The bounded
+`one_preferred_one_common_balance_joint` election instead uses one Preferred-exclusive seat, one Common-exclusive
+seat, and the balance elected by Common and Preferred voting together. Both profiles continue to use `board_size`
+and `vacant_board_seats_at_closing`; under the bounded alternative, any supplied vacant seat is classified within
+the jointly elected balance and no occupant is invented.
 
 ## Option Vesting Policy Computation
 

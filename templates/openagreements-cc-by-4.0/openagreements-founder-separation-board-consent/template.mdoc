@@ -100,6 +100,83 @@ fields:
       - name: name
         type: string
         description: Full name of a director signing the consent
+  - name: disposition_cancels_and_retires
+    type: boolean
+    description: >-
+      Derived gate computed from share_disposition. True only when the
+      board elected cancelled-retired. Gates the DGCL Section 243
+      retirement resolution so a consent adopts one disposition, not both.
+      A machine fill must supply this gate alongside the enum: the
+      OpenAgreements metadata schema drops the derivation, so a filler
+      that sends only the enum renders no branch at all.
+    derived:
+      from: share_disposition
+      map:
+        cancelled-retired: true
+        held-as-treasury: false
+    section: Derived Gates
+  - name: disposition_holds_as_treasury
+    type: boolean
+    description: >-
+      Derived gate computed from share_disposition. True only when the
+      board elected held-as-treasury. Gates the DGCL Section 160(b)
+      treasury resolution so a consent adopts one disposition, not both. A
+      machine fill must supply this gate alongside the enum: the
+      OpenAgreements metadata schema drops the derivation, so a filler
+      that sends only the enum renders no branch at all.
+    derived:
+      from: share_disposition
+      map:
+        cancelled-retired: false
+        held-as-treasury: true
+    section: Derived Gates
+  - name: vacancy_reduces_board_size
+    type: boolean
+    description: >-
+      Derived gate computed from vacancy_action. True only when the board
+      elected reduce-board-size. Gates the board-size reduction resolution
+      and makes board_size_after applicable only under that election. A
+      machine fill must supply this gate alongside the enum: the
+      OpenAgreements metadata schema drops the derivation, so a filler
+      that sends only the enum renders no branch at all.
+    derived:
+      from: vacancy_action
+      map:
+        reduce-board-size: true
+        appoint-replacement: false
+        leave-vacant: false
+    section: Derived Gates
+  - name: vacancy_appoints_replacement
+    type: boolean
+    description: >-
+      Derived gate computed from vacancy_action. True only when the board
+      elected appoint-replacement. Gates the DGCL Section 223 appointment
+      resolution and makes replacement_director_name applicable only under
+      that election. A machine fill must supply this gate alongside the
+      enum: the OpenAgreements metadata schema drops the derivation, so a
+      filler that sends only the enum renders no branch at all.
+    derived:
+      from: vacancy_action
+      map:
+        reduce-board-size: false
+        appoint-replacement: true
+        leave-vacant: false
+    section: Derived Gates
+  - name: vacancy_left_open
+    type: boolean
+    description: >-
+      Derived gate computed from vacancy_action. True only when the board
+      elected leave-vacant. Gates the resolution leaving the seat open. A
+      machine fill must supply this gate alongside the enum: the
+      OpenAgreements metadata schema drops the derivation, so a filler
+      that sends only the enum renders no branch at all.
+    derived:
+      from: vacancy_action
+      map:
+        reduce-board-size: false
+        appoint-replacement: false
+        leave-vacant: true
+    section: Derived Gates
 priority_fields:
   - company_legal_name
   - consent_date
@@ -171,9 +248,17 @@ The undersigned, constituting all of the members of the Board of Directors (the 
 
 The Board approves the disposition identified as {% field name="share_disposition" /%} pursuant to the corresponding resolution below.
 
-*Option A — Cancel and retire.* **RESOLVED**, that, pursuant to Section 243 of the Delaware General Corporation Law, the repurchased shares be, and hereby are, retired and restored to the status of authorized but unissued shares of the Company, and the officers of the Company be, and each of them hereby is, authorized and directed to effect any related reduction of capital and any required filing in accordance with Sections 243 and 244 of the Delaware General Corporation Law.
+{% /clause %}
+{% clause id="disposition-cancel-and-retire" include-when="disposition_cancels_and_retires" %}
+### Retirement of the Repurchased Shares
 
-*Option B — Hold as treasury.* **RESOLVED**, that the repurchased shares be held by the Company as treasury shares, remaining issued but not outstanding, consistent with Section 160(b) of the Delaware General Corporation Law.
+**RESOLVED**, that, pursuant to Section 243 of the Delaware General Corporation Law, the repurchased shares be, and hereby are, retired and restored to the status of authorized but unissued shares of the Company, and the officers of the Company be, and each of them hereby is, authorized and directed to effect any related reduction of capital and any required filing in accordance with Sections 243 and 244 of the Delaware General Corporation Law.
+
+{% /clause %}
+{% clause id="disposition-hold-as-treasury" include-when="disposition_holds_as_treasury" %}
+### Treasury Holding of the Repurchased Shares
+
+**RESOLVED**, that the repurchased shares be held by the Company as treasury shares, remaining issued but not outstanding, consistent with Section 160(b) of the Delaware General Corporation Law.
 
 {% /clause %}
 {% clause id="manage-board-vacancy" %}
@@ -181,11 +266,23 @@ The Board approves the disposition identified as {% field name="share_dispositio
 
 The Board approves the action identified as {% field name="vacancy_action" /%} pursuant to the corresponding resolution below.
 
-*Option A — Reduce the authorized number of directors.* **RESOLVED**, that, to reflect the departure of the Founder, the authorized number of directors of the Company be, and it hereby is, reduced to {% field name="board_size_after" /%}, effective as of the date of these resolutions; provided that any amendment to the Company's certificate of incorporation required to effect the reduction has become effective.
+{% /clause %}
+{% clause id="vacancy-reduce-board-size" include-when="vacancy_reduces_board_size" %}
+### Reduction of the Authorized Number of Directors
 
-*Option B — Appoint a replacement director.* **RESOLVED**, that, to fill the vacancy on the Board resulting from the departure of the Founder, {% field name="replacement_director_name" /%} be, and hereby is, appointed as a director of the Company pursuant to Section 223 of the Delaware General Corporation Law, to hold office until the next election of directors and until a successor is duly elected and qualified or until such director's earlier resignation or removal.
+**RESOLVED**, that, to reflect the departure of the Founder, the authorized number of directors of the Company be, and it hereby is, reduced to {% field name="board_size_after" /%}, effective as of the date of these resolutions; provided that any amendment to the Company's certificate of incorporation required to effect the reduction has become effective.
 
-*Option C — Leave the seat vacant.* **RESOLVED**, that the vacancy on the Board resulting from the departure of the Founder remain open, to be filled in accordance with the Company's certificate of incorporation, bylaws, and applicable law.
+{% /clause %}
+{% clause id="vacancy-appoint-replacement" include-when="vacancy_appoints_replacement" %}
+### Appointment of a Replacement Director
+
+**RESOLVED**, that, to fill the vacancy on the Board resulting from the departure of the Founder, {% field name="replacement_director_name" /%} be, and hereby is, appointed as a director of the Company pursuant to Section 223 of the Delaware General Corporation Law, to hold office until the next election of directors and until a successor is duly elected and qualified or until such director's earlier resignation or removal.
+
+{% /clause %}
+{% clause id="vacancy-leave-seat-open" include-when="vacancy_left_open" %}
+### Vacancy Left Open
+
+**RESOLVED**, that the vacancy on the Board resulting from the departure of the Founder remain open, to be filled in accordance with the Company's certificate of incorporation, bylaws, and applicable law.
 
 {% /clause %}
 {% clause id="general-authorizing-resolution" %}

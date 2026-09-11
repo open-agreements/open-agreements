@@ -9,10 +9,33 @@ license_note: >-
   NVCA model documents are freely downloadable but not redistributable. This field-selector contains only transformation
   instructions, not the source document.
 source_sha256: b2c76452fa82dcda72f1fa9f82ba0ce28ea9445441c897f9cb7ac6663930dcab
+rendering:
+  style_separator_spacing:
+    boundaries:
+      - heading_para_id: 463F1C4F
+        continuation_para_id: 0AFD78D9
+        before_twips: 240
+        expected_layout_sha256: 583ecff1b9790f8cc8dfa2fcd4d10781477a0229524b66432419b13c9e013b6b
+      - heading_para_id: 1A5DA132
+        continuation_para_id: 60C7BFDE
+        before_twips: 240
+        expected_layout_sha256: 6bf481b2bc75d16b7ea93582d8007eb18c52a529b702aaf01d5870f3e0ea1b72
+      - heading_para_id: 23A439A2
+        continuation_para_id: 0C4F48E6
+        before_twips: 240
+        expected_layout_sha256: 67b50404636b93ce08da2ba0f4c927cd072c27b0489166177af46dcb2a2aaa0c
+      - heading_para_id: 76F10F94
+        continuation_para_id: 178D3487
+        before_twips: 240
+        expected_layout_sha256: 5897b0e8590c31dc6d9bc979fd2777222832efe39b3b97e212be0d9ccd901d79
 optional: false
 distribution: linked
 artifact_type: field-selector
 fields:
+  - name: tranche_closing_section_reference
+    type: string
+    description: Computed surviving Tranche Closing subsection reference based on the additional-closing election; do not supply directly
+    default: ''
   - name: company_name
     type: string
     description: Full legal name of the company
