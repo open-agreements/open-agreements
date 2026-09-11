@@ -252,6 +252,23 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
     }
   }
 
+  // Canonical enum elections control their clause gates. Never allow stale
+  // caller booleans to contradict an election or silently render both branches.
+  for (const field of fields) {
+    if (!field.derived) continue;
+    const source = data[field.derived.from];
+    const selected = typeof source === 'string' && Object.hasOwn(field.derived.map, source);
+    const expected = selected ? field.derived.map[source as string] : false;
+    if (Object.hasOwn(values, field.name)) {
+      const supplied = values[field.name];
+      if (!selected || ![true, false, 'true', 'false'].includes(supplied as boolean | string) ||
+          (supplied === true || supplied === 'true') !== expected) {
+        throw new Error(`Derived field "${field.name}" must match the selected "${field.derived.from}" enum; omit the gate to derive it automatically`);
+      }
+    }
+    data[field.name] = expected;
+  }
+
   for (const field of fields) {
     if (field.type !== 'multiselect') continue;
 

@@ -48,6 +48,27 @@ function runRule(
 // ── Per-template render-input rules (§3c) ────────────────────────────────────
 
 describe('per-template render-input rules', () => {
+  it('exempts the deleted side of an upstream-authored template rename', () => {
+    const oldDir = 'templates/openagreements-cc-by-4.0/openagreements-old-notice';
+    const newDir = 'templates/openagreements-cc-by-4.0/openagreements-new-notice';
+    const records = parseChangedFiles(JSON.stringify(
+      ['template.mdoc', 'metadata.yaml', 'template.docx'].map((name) => ({
+        status: 'renamed', previousPath: `${oldDir}/${name}`, path: `${newDir}/${name}`,
+      })),
+    ));
+    expect(expandTriggers(records, new Set(), new Set(['openagreements-new-notice'])).size).toBe(0);
+  });
+
+  it('still requires previews when a surviving template stops being upstream-authored', () => {
+    const dir = 'templates/openagreements-cc-by-4.0/openagreements-board-consent-safe';
+    const { missing } = runRule([
+      { status: 'removed', path: `${dir}/template.mdoc` },
+      { status: 'modified', path: `${dir}/metadata.yaml` },
+      { status: 'modified', path: `${dir}/template.docx` },
+    ]);
+    expect(missing).toEqual(new Set(['openagreements-board-consent-safe']));
+  });
+
   it('canonical template.md change without preview → missing', () => {
     const { missing } = runRule([
       { status: 'modified', path: 'templates/openagreements-cc-by-4.0/openagreements-board-consent-safe/template.md' },

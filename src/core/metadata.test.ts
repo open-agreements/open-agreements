@@ -23,6 +23,50 @@ type SafeParseSchema = {
 };
 const it = itAllure.epic('Discovery & Metadata');
 
+describe('enum-derived clause gates', () => {
+  const fixture = () => ({
+    name: 'Enum gate fixture', source_url: 'https://example.com/fixture',
+    version: '0.1.0', license: 'CC-BY-4.0', allow_derivatives: true,
+    attribution_text: 'Synthetic test fixture',
+    fields: [
+      { name: 'delivery_mode', type: 'enum', description: 'Delivery method', options: ['electronic', 'paper'] },
+      { name: 'electronic_delivery', type: 'boolean', description: 'Electronic delivery',
+        derived: { from: 'delivery_mode', map: { electronic: true, paper: false } } },
+    ] as Array<Record<string, unknown>>,
+  });
+
+  it('preserves complete enum maps when parsing template metadata', () => {
+    const parsed = TemplateMetadataSchema.parse(fixture());
+    expect(parsed.fields.find((field) => field.name === 'electronic_delivery')?.derived)
+      .toEqual({ from: 'delivery_mode', map: { electronic: true, paper: false } });
+  });
+
+  it('requires conditional inputs to reference the enum instead of its derived gate', () => {
+    const metadata = fixture();
+    metadata.fields.push({ name: 'email', type: 'string', description: 'Delivery address',
+      required_when: { field: 'electronic_delivery', equals: true } });
+    const invalid = TemplateMetadataSchema.safeParse(metadata);
+    expect(invalid.success).toBe(false);
+    if (!invalid.success) expect(invalid.error.issues.some((issue) =>
+      issue.message.includes('controlling enum directly'))).toBe(true);
+    metadata.fields[2].required_when = { field: 'delivery_mode', equals: 'electronic' };
+    expect(TemplateMetadataSchema.safeParse(metadata).success).toBe(true);
+  });
+
+  it('rejects missing or invalid enum mappings before a fill', () => {
+    for (const derived of [
+      { from: 'unknown', map: { x: true } },
+      { from: 'delivery_mode', map: { electronic: true } },
+      { from: 'delivery_mode', map: { electronic: true, paper: false, other: false } },
+      { from: 'delivery_mode', map: { electronic: 'true', paper: false } },
+    ]) {
+      const metadata = fixture();
+      metadata.fields.find((field) => field.name === 'electronic_delivery')!.derived = derived;
+      expect(TemplateMetadataSchema.safeParse(metadata).success).toBe(false);
+    }
+  });
+});
+
 describe('TemplateCapabilityManifestSchema', () => {
   it('accepts a complete local-agreement capability manifest', async () => {
     await expectSafeParseOutcome(

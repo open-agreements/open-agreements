@@ -270,6 +270,19 @@ export function isOAOwnedTemplateId(templateId, headOwnedIds) {
  */
 export function expandTriggers(records, headOwnedIds, upstreamAuthoredIds = new Set()) {
   const triggers = new Map(); // templateId -> [trigger record, ...]
+  // A removed/renamed upstream directory no longer has its MDoc at HEAD.
+  // Require both source and metadata deletion so removing just the upstream
+  // source from a surviving OA-rendered template does not waive its previews.
+  const removedPaths = new Set(records.filter((r) => r.status === "removed").map((r) => r.path));
+  const removedUpstreamIds = new Set();
+  for (const record of records) {
+    const match = matchTemplatePath(record.path);
+    if (record.status !== "removed" || match?.filename !== "template.mdoc") continue;
+    if (removedPaths.has(record.path.replace(/template\.mdoc$/, "metadata.yaml")) &&
+        !headOwnedIds.has(match.templateId)) {
+      removedUpstreamIds.add(match.templateId);
+    }
+  }
   const addTrigger = (templateId, record) => {
     // Upstream-authored templates render their DOCX upstream; OA does not own
     // their preview pipeline, so NOTHING — direct file changes OR layout/generator
@@ -278,7 +291,7 @@ export function expandTriggers(records, headOwnedIds, upstreamAuthoredIds = new 
     // `openagreements-` prefix fallback in isOAOwnedTemplateId) is covered.
     // `upstreamAuthoredIds` is passed in (not derived from the filesystem here) so
     // expandTriggers stays pure/testable; main() computes the real set.
-    if (upstreamAuthoredIds.has(templateId)) return;
+    if (upstreamAuthoredIds.has(templateId) || removedUpstreamIds.has(templateId)) return;
     if (!triggers.has(templateId)) triggers.set(templateId, []);
     triggers.get(templateId).push(record);
   };
