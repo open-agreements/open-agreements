@@ -3,13 +3,21 @@ import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, write
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterAll, afterEach, beforeAll, describe, expect, it } from 'vitest';
+import { acquirePackageArtifactLock } from '../integration-tests/helpers/package-artifact-lock.js';
 
 const REPO_ROOT = resolve(import.meta.dirname, '..');
 const PREPARE_SCRIPT = join(REPO_ROOT, 'scripts', 'prepare_scoped_open_agreements_package.mjs');
 const NPM_COMMAND = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 
 const tempDirs = [];
+let packageArtifactLock;
+
+beforeAll(async () => {
+  packageArtifactLock = await acquirePackageArtifactLock(REPO_ROOT);
+}, 150_000);
+
+afterAll(() => packageArtifactLock?.release());
 
 afterEach(() => {
   for (const dir of tempDirs.splice(0)) {
