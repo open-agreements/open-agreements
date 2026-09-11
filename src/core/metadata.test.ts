@@ -35,10 +35,22 @@ describe('enum-derived clause gates', () => {
     ] as Array<Record<string, unknown>>,
   });
 
-  it('preserves complete enum maps when parsing canonical metadata', () => {
+  it('preserves complete enum maps when parsing template metadata', () => {
     const parsed = TemplateMetadataSchema.parse(fixture());
     expect(parsed.fields.find((field) => field.name === 'electronic_delivery')?.derived)
       .toEqual({ from: 'delivery_mode', map: { electronic: true, paper: false } });
+  });
+
+  it('requires conditional inputs to reference the enum instead of its derived gate', () => {
+    const metadata = fixture();
+    metadata.fields.push({ name: 'email', type: 'string', description: 'Delivery address',
+      required_when: { field: 'electronic_delivery', equals: true } });
+    const invalid = TemplateMetadataSchema.safeParse(metadata);
+    expect(invalid.success).toBe(false);
+    if (!invalid.success) expect(invalid.error.issues.some((issue) =>
+      issue.message.includes('controlling enum directly'))).toBe(true);
+    metadata.fields[2].required_when = { field: 'delivery_mode', equals: 'electronic' };
+    expect(TemplateMetadataSchema.safeParse(metadata).success).toBe(true);
   });
 
   it('rejects missing or invalid enum mappings before a fill', () => {

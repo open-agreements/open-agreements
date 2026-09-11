@@ -419,6 +419,10 @@ function validateConditionalRequirements(fields: FieldDefinition[], ctx: z.Refin
       if (field.required_when) {
         for (const predicate of conditionalPredicates(field.required_when)) {
           const controller = byName.get(predicate.field);
+          if (controller?.derived) {
+            ctx.addIssue({ code: z.ZodIssueCode.custom, path: [...at, 'required_when'],
+              message: 'required_when must reference the controlling enum directly, not a derived gate' });
+          }
           const expectedType = controller?.type === 'boolean' ? 'boolean'
             : controller?.type === 'number' ? 'number' : 'string';
           if (nested || !controller || controller.name === field.name ||

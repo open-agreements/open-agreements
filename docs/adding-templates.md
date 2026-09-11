@@ -143,6 +143,10 @@ the gate from the selected enum; callers can omit the gate. If supplied, it
 must be a matching boolean or `"true"`/`"false"` string. Conflicting values,
 `null`, empty strings, and gates supplied without an enum selection are rejected.
 With neither a selection nor an explicit gate, a blank draft uses `false`.
+Conditional input requirements (`required_when`) must reference the enum directly;
+derived gates cannot control them. APAP agreement-data construction still requires
+explicit gate values. Supply matching values when constructing an APAP payload;
+the fill engine checks consistency when rendering it.
 
 #### Statutory compliance representations
 
