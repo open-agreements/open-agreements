@@ -23,6 +23,30 @@ type SafeParseSchema = {
 };
 const it = itAllure.epic('Discovery & Metadata');
 
+describe('enum-derived clause gates', () => {
+  const fixture = () => yaml.load(readFileSync(join(process.cwd(),
+    'templates/openagreements-cc-by-4.0/openagreements-founder-separation-board-consent/metadata.yaml'), 'utf8')) as { fields: Array<Record<string, unknown>> };
+
+  it('preserves complete enum maps when parsing canonical metadata', () => {
+    const parsed = TemplateMetadataSchema.parse(fixture());
+    expect(parsed.fields.find((field) => field.name === 'disposition_cancels_and_retires')?.derived)
+      .toEqual({ from: 'share_disposition', map: { 'cancelled-retired': true, 'held-as-treasury': false } });
+  });
+
+  it('rejects missing or invalid enum mappings before a fill', () => {
+    for (const derived of [
+      { from: 'unknown', map: { x: true } },
+      { from: 'share_disposition', map: { 'cancelled-retired': true } },
+      { from: 'share_disposition', map: { 'cancelled-retired': true, 'held-as-treasury': false, other: false } },
+      { from: 'share_disposition', map: { 'cancelled-retired': 'true', 'held-as-treasury': false } },
+    ]) {
+      const metadata = fixture();
+      metadata.fields.find((field) => field.name === 'disposition_cancels_and_retires')!.derived = derived;
+      expect(TemplateMetadataSchema.safeParse(metadata).success).toBe(false);
+    }
+  });
+});
+
 describe('TemplateCapabilityManifestSchema', () => {
   it('accepts a complete local-agreement capability manifest', async () => {
     await expectSafeParseOutcome(

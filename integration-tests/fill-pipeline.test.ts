@@ -469,6 +469,27 @@ describe('verifyTemplateFill', () => {
 // ---------------------------------------------------------------------------
 
 describe('prepareFillData', () => {
+  it('derives enum gates and validates explicitly supplied boolean or string gates', () => {
+    const fields = loadMetadata(templateDirFor('openagreements-founder-separation-cap-table-update-instructions')).fields;
+    for (const supplied of [undefined, true, 'true']) {
+      const values = { share_disposition: 'cancelled-retired',
+        ...(supplied === undefined ? {} : { disposition_cancels_and_retires: supplied }) };
+      const data = prepareFillData({ fields, values });
+      expect(data.disposition_cancels_and_retires).toBe(true);
+      expect(data.disposition_holds_as_treasury).toBe(false);
+    }
+    for (const values of [
+      { share_disposition: 'cancelled-retired', disposition_cancels_and_retires: false },
+      { share_disposition: 'cancelled-retired', disposition_cancels_and_retires: 'yes' },
+      { disposition_cancels_and_retires: true },
+    ]) {
+      expect(() => prepareFillData({ fields, values })).toThrow('must match the selected');
+    }
+    const blank = prepareFillData({ fields, values: {} });
+    expect(blank.disposition_cancels_and_retires).toBe(false);
+    expect(blank.disposition_holds_as_treasury).toBe(false);
+  });
+
   const fields = [
     { name: 'company', type: 'string' as const, description: 'Company name' },
     { name: 'amount', type: 'string' as const, description: 'Amount' },

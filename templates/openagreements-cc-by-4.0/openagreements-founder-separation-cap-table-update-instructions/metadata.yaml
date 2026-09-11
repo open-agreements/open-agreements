@@ -51,7 +51,7 @@ fields:
     section: Terms
   - name: disposition_cancels_and_retires
     type: boolean
-    description: 'Derived gate computed from share_disposition. True only when the board resolved cancelled-retired. Gates the retirement instruction so the records reflect one disposition, not both. A machine fill must supply this gate alongside the enum: the OpenAgreements metadata schema drops the derivation, so a filler that sends only the enum renders no branch at all.'
+    description: 'Derived gate computed from share_disposition. True only when the board resolved cancelled-retired. Gates the retirement instruction so the records reflect one disposition, not both. The fill engine derives this gate from the selected enum and rejects an explicit gate value that conflicts with that selection.'
     derived:
       from: share_disposition
       map:
@@ -60,7 +60,7 @@ fields:
     section: Derived Gates
   - name: disposition_holds_as_treasury
     type: boolean
-    description: 'Derived gate computed from share_disposition. True only when the board resolved held-as-treasury. Gates the treasury instruction so the records reflect one disposition, not both. A machine fill must supply this gate alongside the enum: the OpenAgreements metadata schema drops the derivation, so a filler that sends only the enum renders no branch at all.'
+    description: 'Derived gate computed from share_disposition. True only when the board resolved held-as-treasury. Gates the treasury instruction so the records reflect one disposition, not both. The fill engine derives this gate from the selected enum and rejects an explicit gate value that conflicts with that selection.'
     derived:
       from: share_disposition
       map:

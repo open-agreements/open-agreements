@@ -63,7 +63,7 @@ fields:
         description: Full name of a director signing the consent
   - name: disposition_cancels_and_retires
     type: boolean
-    description: 'Derived gate computed from share_disposition. True only when the board elected cancelled-retired. Gates the DGCL Section 243 retirement resolution so a consent adopts one disposition, not both. A machine fill must supply this gate alongside the enum: the OpenAgreements metadata schema drops the derivation, so a filler that sends only the enum renders no branch at all.'
+    description: 'Derived gate computed from share_disposition. True only when the board elected cancelled-retired. Gates the DGCL Section 243 retirement resolution so a consent adopts one disposition, not both. The fill engine derives this gate from the selected enum and rejects an explicit gate value that conflicts with that selection.'
     derived:
       from: share_disposition
       map:
@@ -72,7 +72,7 @@ fields:
     section: Derived Gates
   - name: disposition_holds_as_treasury
     type: boolean
-    description: 'Derived gate computed from share_disposition. True only when the board elected held-as-treasury. Gates the DGCL Section 160(b) treasury resolution so a consent adopts one disposition, not both. A machine fill must supply this gate alongside the enum: the OpenAgreements metadata schema drops the derivation, so a filler that sends only the enum renders no branch at all.'
+    description: 'Derived gate computed from share_disposition. True only when the board elected held-as-treasury. Gates the DGCL Section 160(b) treasury resolution so a consent adopts one disposition, not both. The fill engine derives this gate from the selected enum and rejects an explicit gate value that conflicts with that selection.'
     derived:
       from: share_disposition
       map:
@@ -81,7 +81,7 @@ fields:
     section: Derived Gates
   - name: vacancy_reduces_board_size
     type: boolean
-    description: 'Derived gate computed from vacancy_action. True only when the board elected reduce-board-size. Gates the board-size reduction resolution and makes board_size_after applicable only under that election. A machine fill must supply this gate alongside the enum: the OpenAgreements metadata schema drops the derivation, so a filler that sends only the enum renders no branch at all.'
+    description: 'Derived gate computed from vacancy_action. True only when the board elected reduce-board-size. Gates the board-size reduction resolution and makes board_size_after applicable only under that election. The fill engine derives this gate from the selected enum and rejects an explicit gate value that conflicts with that selection.'
     derived:
       from: vacancy_action
       map:
@@ -91,7 +91,7 @@ fields:
     section: Derived Gates
   - name: vacancy_appoints_replacement
     type: boolean
-    description: 'Derived gate computed from vacancy_action. True only when the board elected appoint-replacement. Gates the DGCL Section 223 appointment resolution and makes replacement_director_name applicable only under that election. A machine fill must supply this gate alongside the enum: the OpenAgreements metadata schema drops the derivation, so a filler that sends only the enum renders no branch at all.'
+    description: 'Derived gate computed from vacancy_action. True only when the board elected appoint-replacement. Gates the DGCL Section 223 appointment resolution and makes replacement_director_name applicable only under that election. The fill engine derives this gate from the selected enum and rejects an explicit gate value that conflicts with that selection.'
     derived:
       from: vacancy_action
       map:
@@ -101,7 +101,7 @@ fields:
     section: Derived Gates
   - name: vacancy_left_open
     type: boolean
-    description: 'Derived gate computed from vacancy_action. True only when the board elected leave-vacant. Gates the resolution leaving the seat open. A machine fill must supply this gate alongside the enum: the OpenAgreements metadata schema drops the derivation, so a filler that sends only the enum renders no branch at all.'
+    description: 'Derived gate computed from vacancy_action. True only when the board elected leave-vacant. Gates the resolution leaving the seat open. The fill engine derives this gate from the selected enum and rejects an explicit gate value that conflicts with that selection.'
     derived:
       from: vacancy_action
       map:

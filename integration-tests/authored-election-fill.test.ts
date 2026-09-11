@@ -19,12 +19,7 @@ describe('canonical authored template elections', () => {
   it('renders only the selected share disposition and board vacancy resolution', async () => {
     const text = await filledText('openagreements-founder-separation-board-consent', {
       share_disposition: 'held-as-treasury',
-      disposition_cancels_and_retires: false,
-      disposition_holds_as_treasury: true,
       vacancy_action: 'appoint-replacement',
-      vacancy_reduces_board_size: false,
-      vacancy_appoints_replacement: true,
-      vacancy_left_open: false,
       replacement_director_name: 'Jordan Example',
       director_signatories: [],
     });
@@ -39,11 +34,18 @@ describe('canonical authored template elections', () => {
   it('renders the retirement instruction without the treasury alternative', async () => {
     const text = await filledText('openagreements-founder-separation-cap-table-update-instructions', {
       share_disposition: 'cancelled-retired',
-      disposition_cancels_and_retires: true,
-      disposition_holds_as_treasury: false,
     });
     expect(text).toContain('Record the Shares as Cancelled and Retired');
     expect(text).not.toContain('Record the Shares as Held in Treasury');
+  });
+
+  it('rejects a gate that contradicts the enum instead of rendering conflicting resolutions', async () => {
+    await expect(filledText('openagreements-founder-separation-board-consent', {
+      share_disposition: 'held-as-treasury',
+      disposition_cancels_and_retires: true,
+      disposition_holds_as_treasury: true,
+      director_signatories: [],
+    })).rejects.toThrow('must match the selected "share_disposition" enum');
   });
 
   it('omits both Nevada post-employment clauses while retaining assignment and statutory protections', async () => {

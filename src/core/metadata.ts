@@ -71,6 +71,8 @@ export interface FieldDefinition {
   default_value_rationale?: string;
   options?: string[];
   derive_booleans?: boolean;
+  /** Boolean clause gate derived from a complete mapping of another enum. */
+  derived?: { from: string; map: Record<string, boolean> };
   section?: string;
   items?: FieldDefinition[];
   /** Require an explicit, nonblank input when a top-level scalar field matches. */
@@ -131,6 +133,10 @@ export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
     default_value_rationale: z.string().optional(),
     options: z.array(z.string()).optional(),
     derive_booleans: z.boolean().optional(),
+    derived: z.object({
+      from: z.string().min(1),
+      map: z.record(z.string(), z.boolean()),
+    }).strict().optional(),
     section: z.string().optional(),
     items: z.array(FieldDefinitionSchema).nonempty().optional(),
     required_when: z.union([
@@ -191,6 +197,10 @@ export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
         path: ['derive_booleans'],
         message: 'derive_booleans is only valid for fields with type "multiselect"',
       });
+    }
+    if (field.derived && (field.type !== 'boolean' || field.default !== undefined)) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, path: ['derived'],
+        message: 'derived requires a boolean field without a default' });
     }
 
     if (field.items !== undefined && field.type !== 'array') {
@@ -396,6 +406,16 @@ function validateConditionalRequirements(fields: FieldDefinition[], ctx: z.Refin
   const visit = (items: FieldDefinition[], path: (string | number)[], nested: boolean) => {
     items.forEach((field, index) => {
       const at = [...path, index];
+      if (field.derived) {
+        const controller = byName.get(field.derived.from);
+        const keys = Object.keys(field.derived.map);
+        if (nested || controller?.type !== 'enum' ||
+            keys.length !== controller.options?.length ||
+            !controller.options?.every((option) => Object.hasOwn(field.derived!.map, option))) {
+          ctx.addIssue({ code: z.ZodIssueCode.custom, path: [...at, 'derived'],
+            message: 'derived must completely map another top-level enum; nested derivations are unsupported' });
+        }
+      }
       if (field.required_when) {
         for (const predicate of conditionalPredicates(field.required_when)) {
           const controller = byName.get(predicate.field);
