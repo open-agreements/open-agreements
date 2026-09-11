@@ -117,6 +117,37 @@ Do not reference the multiselect field itself directly in `{IF ...}`
 blocks. `{IF industry_modules}` is invalid because empty arrays are
 truthy in the template runtime; the validator will reject it.
 
+#### Enum-derived clause gates
+
+Use a boolean field's `derived` map when an enum election controls a clause:
+
+```yaml
+- name: delivery_mode
+  type: enum
+  description: Selected delivery method
+  options: [electronic, paper]
+- name: electronic_delivery
+  type: boolean
+  description: Include the electronic-delivery clause
+  derived:
+    from: delivery_mode
+    map:
+      electronic: true
+      paper: false
+```
+
+This requires `enum-derived-boolean-gates.v1`. The controller must be another
+top-level enum, the map must cover every option exactly, and the boolean must
+have no default. Nested derivations are unsupported. The fill engine computes
+the gate from the selected enum; callers can omit the gate. If supplied, it
+must be a matching boolean or `"true"`/`"false"` string. Conflicting values,
+`null`, empty strings, and gates supplied without an enum selection are rejected.
+With neither a selection nor an explicit gate, a blank draft uses `false`.
+Conditional input requirements (`required_when`) must reference the enum directly;
+derived gates cannot control them. APAP agreement-data construction still requires
+explicit gate values. Supply matching values when constructing an APAP payload;
+the fill engine checks consistency when rendering it.
+
 #### Statutory compliance representations
 
 Use `statutory_compliance_representation: true` for the rare boolean field
