@@ -141,6 +141,65 @@ describe('anchor-scoped paragraph field binding', () => {
     rmSync(fixture.dir, { recursive: true, force: true });
   });
 
+  it('optionally aligns wrapped value lines without moving the tab-positioned first line', () => {
+    const fixture = build(
+      p(text('START')) +
+      '<w:p><w:pPr><w:pStyle w:val="SignatureLine2-col"/><w:ind w:right="120"/></w:pPr>' +
+        '<w:r><w:tab/><w:tab/><w:tab/><w:t>Address:</w:t></w:r></w:p>' +
+      p(text('END')),
+    );
+    const wrappedConfig: AnchoredParagraphBindingsConfig = {
+      groups: [{
+        id: 'notice-address',
+        start_anchor: 'START',
+        end_anchor: 'END',
+        expected_group_matches: 1,
+        bindings: [{
+          label: 'Address:',
+          field: 'notice_address',
+          expected_matches: 1,
+          insert_after_label: true,
+          preserve_following_tabs: true,
+          wrapped_line_indent_twips: 5760,
+        }],
+      }],
+    };
+
+    bindAnchoredParagraphFields(fixture.input, fixture.output, wrappedConfig);
+    const xml = new AdmZip(fixture.output).readAsText('word/document.xml');
+    expect(xml).toContain('Address:</w:t><w:t xml:space="preserve"> {notice_address}</w:t>');
+    expect(xml).toContain('<w:ind w:right="120" w:left="5760" w:hanging="5760"/>');
+    expect((xml.match(/<w:tab/g) ?? [])).toHaveLength(3);
+    rmSync(fixture.dir, {recursive: true, force: true});
+  });
+
+  it('inserts wrapped-line paragraph properties in WordprocessingML schema order', () => {
+    const fixture = build(
+      p(text('START')) +
+      '<w:p><w:pPr><w:pStyle w:val="SignatureLine2-col"/>' +
+        '<w:ind w:start="100" w:leftChars="200" w:firstLineChars="100" w:hangingChars="200"/>' +
+        '<w:jc w:val="left"/><w:rPr><w:sz w:val="22"/></w:rPr></w:pPr>' +
+        '<w:r><w:t>Address:</w:t></w:r></w:p>' +
+      p(text('END')),
+    );
+    bindAnchoredParagraphFields(fixture.input, fixture.output, {groups: [{
+      id: 'notice-address',
+      start_anchor: 'START',
+      end_anchor: 'END',
+      expected_group_matches: 1,
+      bindings: [{
+        label: 'Address:', field: 'notice_address', expected_matches: 1,
+        insert_after_label: true, preserve_following_tabs: true, wrapped_line_indent_twips: 5760,
+      }],
+    }]});
+    const xml = new AdmZip(fixture.output).readAsText('word/document.xml');
+    expect(xml).toContain(
+      '<w:pStyle w:val="SignatureLine2-col"/><w:ind w:left="5760" w:hanging="5760"/><w:jc w:val="left"/><w:rPr>',
+    );
+    expect(xml).not.toMatch(/w:(?:start|startChars|leftChars|firstLine|firstLineChars|hangingChars)=/);
+    rmSync(fixture.dir, {recursive: true, force: true});
+  });
+
   it('fails closed on a zero-match label without writing an output', () => {
     const fixture = build(signatureBody.replace('Email:', 'E-mail:'));
     expect(() => bindAnchoredParagraphFields(fixture.input, fixture.output, config))

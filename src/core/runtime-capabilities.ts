@@ -20,6 +20,7 @@ export const RUNTIME_CAPABILITIES = Object.freeze({
     'repeatable-tables.v1',
     'anchored-paragraph-bindings.v1',
     'anchored-paragraph-bindings.document-end.v1',
+    'anchored-paragraph-bindings.wrapped-line-indent.v1',
     'external.anchored-paragraph-bindings.v1',
     'reference-fields.v1',
     'reference-fields.grouped.v1',
