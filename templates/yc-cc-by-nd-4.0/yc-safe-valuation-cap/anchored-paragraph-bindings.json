@@ -11,7 +11,8 @@
           "field": "company_notice_address",
           "expected_matches": 1,
           "insert_after_label": true,
-          "preserve_following_tabs": true
+          "preserve_following_tabs": true,
+          "wrapped_line_indent_twips": 5760
         },
         {
           "label": "Email:",
@@ -47,7 +48,8 @@
           "field": "investor_notice_address",
           "expected_matches": 1,
           "insert_after_label": true,
-          "preserve_following_tabs": true
+          "preserve_following_tabs": true,
+          "wrapped_line_indent_twips": 5760
         },
         {
           "label": "Email:",

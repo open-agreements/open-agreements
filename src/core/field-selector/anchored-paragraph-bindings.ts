@@ -22,6 +22,13 @@ export const AnchoredParagraphBindingsConfigSchema = z.object({
       preserve_following_tabs: z.literal(true),
       /** Opt in only when following underlined tab-only runs are blank form tails. */
       consume_following_underlined_tabs: z.literal(true).optional(),
+      /**
+       * Keep wrapped value text aligned under its first-line value start while
+       * preserving the source paragraph's tab-positioned label. The transform
+       * writes a hanging indent: the first line remains at the original margin,
+       * and continuation lines begin at this position.
+       */
+      wrapped_line_indent_twips: z.number().int().positive().max(31680).optional(),
     }).strict()).min(1),
   }).strict().refine((group) => Boolean(group.end_anchor) !== Boolean(group.end_at_document_end), {
     message: 'Specify exactly one of end_anchor or end_at_document_end',
@@ -96,6 +103,7 @@ export function bindAnchoredParagraphFields(
     field: string;
     groupId: string;
     consumeFollowingUnderlinedTabs: boolean;
+    wrappedLineIndentTwips: number | undefined;
   }> = [];
   for (const group of config.groups) {
     const starts = exactAnchorIndices(paragraphs, group.start_anchor);
@@ -133,6 +141,7 @@ export function bindAnchoredParagraphFields(
         field: binding.field,
         groupId: group.id,
         consumeFollowingUnderlinedTabs: binding.consume_following_underlined_tabs === true,
+        wrappedLineIndentTwips: binding.wrapped_line_indent_twips,
       });
     }
   }
@@ -154,6 +163,9 @@ export function bindAnchoredParagraphFields(
     if (insertion.consumeFollowingUnderlinedTabs) {
       removeFollowingUnderlinedTabTails(run);
     }
+    if (insertion.wrappedLineIndentTwips !== undefined) {
+      applyWrappedLineIndent(run, insertion.wrappedLineIndentTwips, insertion.groupId);
+    }
   }
 
   const serialized = new XMLSerializer().serializeToString(doc);
@@ -162,6 +174,65 @@ export function bindAnchoredParagraphFields(
     name === 'word/document.xml' ? Buffer.from(serialized, 'utf-8') : data,
   );
   writeFileSync(outputPath, outZip.toBuffer());
+}
+
+/** Apply a hanging indent without changing where the tab-positioned first line starts. */
+function applyWrappedLineIndent(labelRun: Element, twips: number, groupId: string): void {
+  const paragraph = labelRun.parentNode as Element | null;
+  if (!paragraph || paragraph.localName !== 'p' || paragraph.namespaceURI !== W_NS) {
+    throw new Error(`anchored paragraph bindings '${groupId}': label run is not directly inside a paragraph`);
+  }
+
+  let paragraphProperties: Element | null = null;
+  for (let i = 0; i < paragraph.childNodes.length; i++) {
+    const child = paragraph.childNodes[i] as Element;
+    if (child.nodeType === 1 && child.namespaceURI === W_NS && child.localName === 'pPr') {
+      paragraphProperties = child;
+      break;
+    }
+  }
+  if (!paragraphProperties) {
+    paragraphProperties = paragraph.ownerDocument!.createElementNS(W_NS, 'w:pPr');
+    paragraph.insertBefore(paragraphProperties, paragraph.firstChild);
+  }
+
+  let indent: Element | null = null;
+  for (let i = 0; i < paragraphProperties.childNodes.length; i++) {
+    const child = paragraphProperties.childNodes[i] as Element;
+    if (child.nodeType === 1 && child.namespaceURI === W_NS && child.localName === 'ind') {
+      indent = child;
+      break;
+    }
+  }
+  if (!indent) {
+    indent = paragraph.ownerDocument!.createElementNS(W_NS, 'w:ind');
+    // CT_PPr orders w:ind before these later paragraph properties. The YC
+    // source has w:rPr but no direct w:ind, so appending would produce OOXML
+    // that tolerant readers accept but Word may repair.
+    let trailingProperties: Element | null = null;
+    const afterIndent = new Set([
+      'contextualSpacing', 'mirrorIndents', 'suppressOverlap', 'jc', 'textDirection',
+      'textAlignment', 'textboxTightWrap', 'outlineLvl', 'divId', 'cnfStyle',
+      'rPr', 'sectPr', 'pPrChange',
+    ]);
+    for (let i = 0; i < paragraphProperties.childNodes.length; i++) {
+      const child = paragraphProperties.childNodes[i] as Element;
+      if (child.nodeType === 1 && child.namespaceURI === W_NS && afterIndent.has(child.localName ?? '')) {
+        trailingProperties = child;
+        break;
+      }
+    }
+    paragraphProperties.insertBefore(indent, trailingProperties);
+  }
+  const value = String(twips);
+  indent.setAttributeNS(W_NS, 'w:left', value);
+  indent.setAttributeNS(W_NS, 'w:hanging', value);
+  // Absolute twip-based left/hanging indentation owns the same semantic axis
+  // as these logical/character-unit alternatives. Leaving either form behind
+  // makes renderer precedence decide whether the requested layout takes effect.
+  for (const attribute of ['start', 'startChars', 'leftChars', 'firstLine', 'firstLineChars', 'hangingChars']) {
+    indent.removeAttributeNS(W_NS, attribute);
+  }
 }
 
 /**
