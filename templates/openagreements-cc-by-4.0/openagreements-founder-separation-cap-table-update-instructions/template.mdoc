@@ -84,30 +84,6 @@ fields:
     type: date
     description: Date these instructions are given
     section: Terms
-  - name: disposition_cancels_and_retires
-    type: boolean
-    description: >-
-      Derived gate computed from share_disposition. True only when the
-      board resolved cancelled-retired. Gates the retirement instruction
-      so the records reflect one disposition, not both. The fill engine derives this gate from the selected enum and rejects an explicit gate value that conflicts with that selection.
-    derived:
-      from: share_disposition
-      map:
-        cancelled-retired: true
-        held-as-treasury: false
-    section: Derived Gates
-  - name: disposition_holds_as_treasury
-    type: boolean
-    description: >-
-      Derived gate computed from share_disposition. True only when the
-      board resolved held-as-treasury. Gates the treasury instruction so
-      the records reflect one disposition, not both. The fill engine derives this gate from the selected enum and rejects an explicit gate value that conflicts with that selection.
-    derived:
-      from: share_disposition
-      map:
-        cancelled-retired: false
-        held-as-treasury: true
-    section: Derived Gates
 priority_fields:
   - company_legal_name
   - founder_name
@@ -162,17 +138,9 @@ You are directed to cancel and take possession of the share certificate(s) numbe
 
 Record only the disposition approved by the Board of Directors and identified as {% field name="share_disposition" /%}, using the corresponding instruction below.
 
-{% /clause %}
-{% clause id="disposition-cancel-and-retire" include-when="disposition_cancels_and_retires" %}
-### Record the Shares as Cancelled and Retired
+*Option A — Cancelled and retired.* You are directed to record the repurchased shares as cancelled and retired, as resolved by the Board of Directors. The stock ledger and cap table should reflect that these shares have been restored to the status of authorized but unissued shares, are no longer issued and outstanding, and are available for future issuance.
 
-You are directed to record the repurchased shares as cancelled and retired, as resolved by the Board of Directors. The stock ledger and cap table should reflect that these shares have been restored to the status of authorized but unissued shares, are no longer issued and outstanding, and are available for future issuance.
-
-{% /clause %}
-{% clause id="disposition-hold-as-treasury" include-when="disposition_holds_as_treasury" %}
-### Record the Shares as Held in Treasury
-
-You are directed to record the repurchased shares as held in treasury, as resolved by the Board of Directors. The stock ledger and cap table should reflect that these shares are issued but not outstanding and carry no voting rights and are not entitled to receive dividends while so held.
+*Option B — Held as treasury.* You are directed to record the repurchased shares as held in treasury, as resolved by the Board of Directors. The stock ledger and cap table should reflect that these shares are issued but not outstanding and carry no voting rights and are not entitled to receive dividends while so held.
 
 {% /clause %}
 {% /agreement-section %}

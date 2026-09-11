@@ -16370,6 +16370,118 @@
       ]
     },
     {
+      "name": "openagreements-colorado-restrictive-covenant-notice",
+      "tier": "internal",
+      "display_name": "Colorado Notice of Restrictive Covenants",
+      "category": "non-compete",
+      "description": "Separate worker notice accompanying the Colorado Employee Restrictive Covenant Agreement under C.R.S. § 8-2-113(4).",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-colorado-restrictive-covenant-notice",
+      "source": "OpenAgreements",
+      "attribution_text": "Authored by OpenAgreements contributors. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "distribution": "bundled",
+      "artifact_type": "template",
+      "stability": "experimental",
+      "credits": [],
+      "fields": [
+        {
+          "name": "employer_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Full legal name of the employer providing the notice",
+          "display_label": "Employer",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employee_name",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Full name of the worker receiving the notice",
+          "display_label": "Worker",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "agreement_name",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Exact name of the accompanying agreement containing the covenants",
+          "display_label": "Agreement Name",
+          "default": "Employee Restrictive Covenant Agreement",
+          "default_value_rationale": null
+        },
+        {
+          "name": "notice_date",
+          "type": "date",
+          "required": false,
+          "section": null,
+          "description": "Date the notice and complete agreement copy are delivered",
+          "display_label": "Notice Date",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "worker_status",
+          "type": "enum",
+          "required": false,
+          "section": null,
+          "description": "Whether the recipient is a prospective or current worker",
+          "display_label": "Worker Status",
+          "default": null,
+          "default_value_rationale": null,
+          "options": [
+            "Prospective worker",
+            "Current worker"
+          ]
+        },
+        {
+          "name": "noncompete_included",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Whether the accompanying agreement includes Non-Competition",
+          "display_label": "Non-Competition Included",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "customer_nonsolicit_included",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Whether the accompanying agreement includes Non-Solicitation of Customers",
+          "display_label": "Customer Non-Solicitation Included",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "nondealing_included",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Whether the accompanying agreement includes No Business with Covered Customers",
+          "display_label": "No Business with Covered Customers Included",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "noninvestment_included",
+          "type": "boolean",
+          "required": false,
+          "section": null,
+          "description": "Whether the accompanying agreement includes Non-Investment",
+          "display_label": "Non-Investment Included",
+          "default": "false",
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
       "name": "openagreements-confidentiality-invention-assignment-agreement",
       "tier": "internal",
       "display_name": "Confidentiality & Invention Assignment Agreement (CIIAA)",
@@ -16493,26 +16605,6 @@
           "description": "Venue for disputes",
           "default": "state and federal courts in the governing law state",
           "default_value_rationale": null
-        },
-        {
-          "name": "personnel_nonsolicit_included",
-          "type": "boolean",
-          "required": false,
-          "section": "Post-Employment Restraints",
-          "description": "Whether the post-employment personnel non-solicitation covenant is included. Set false when the engagement prohibits post-employment restraints, or when the governing law voids a personnel non-solicit; the covenant is then omitted entirely instead of rendered with a savings clause. California employee nonsolicits carry substantial enforceability risk; “to the extent permitted” does not guarantee validity. Cooley retains a qualified covenant, while Orrick instructs users to remove its post-term language for California. Omitting it does not affect the invention-assignment, confidentiality, during-employment duty-of-loyalty, or statutory carve-out clauses. Not shown as a cover-term row.",
-          "display_label": "Personnel Non-Solicitation Included",
-          "default": "true",
-          "default_value_rationale": "True preserves the form's existing output: the covenant renders unless a caller affirmatively opts out, so a fill that omits this field renders the same document it rendered before the field existed."
-        },
-        {
-          "name": "future_employer_notice_included",
-          "type": "boolean",
-          "required": false,
-          "section": "Post-Employment Restraints",
-          "description": "Whether the notice-to-future-employers clause is included. Set false together with personnel_nonsolicit_included when the engagement prohibits post-employment restraints: the clause obliges Employee to disclose these obligations to a future employer, so leaving it in reintroduces a post-employment obligation the covenant opt-out was meant to remove. Omitting it does not affect the confidentiality obligations themselves. Not shown as a cover-term row.",
-          "display_label": "Future-Employer Notice Included",
-          "default": "true",
-          "default_value_rationale": "True preserves the form's existing output: the clause renders unless a caller affirmatively opts out, so a fill that omits this field renders the same document it rendered before the field existed."
         }
       ]
     },
@@ -16630,26 +16722,6 @@
           "description": "Venue for disputes",
           "default": "state and federal courts in the governing law state",
           "default_value_rationale": null
-        },
-        {
-          "name": "personnel_nonsolicit_included",
-          "type": "boolean",
-          "required": false,
-          "section": "Post-Employment Restraints",
-          "description": "Whether the post-employment personnel non-solicitation covenant is included. Set false when the engagement prohibits post-employment restraints, or when the governing law voids a personnel non-solicit; the covenant is then omitted entirely instead of rendered with a savings clause. Omitting it does not affect the invention-assignment, confidentiality, during-employment duty-of-loyalty, or statutory carve-out clauses. Not shown as a cover-term row.",
-          "display_label": "Personnel Non-Solicitation Included",
-          "default": "true",
-          "default_value_rationale": "True preserves the form's existing output: the covenant renders unless a caller affirmatively opts out, so a fill that omits this field renders the same document it rendered before the field existed."
-        },
-        {
-          "name": "future_employer_notice_included",
-          "type": "boolean",
-          "required": false,
-          "section": "Post-Employment Restraints",
-          "description": "Whether the notice-to-future-employers clause is included. Set false together with personnel_nonsolicit_included when the engagement prohibits post-employment restraints: the clause obliges Employee to disclose these obligations to a future employer, so leaving it in reintroduces a post-employment obligation the covenant opt-out was meant to remove. Omitting it does not affect the confidentiality obligations themselves. Not shown as a cover-term row.",
-          "display_label": "Future-Employer Notice Included",
-          "default": "true",
-          "default_value_rationale": "True preserves the form's existing output: the clause renders unless a caller affirmatively opts out, so a fill that omits this field renders the same document it rendered before the field existed."
         }
       ]
     },
@@ -18212,51 +18284,6 @@
               "default_value_rationale": null
             }
           ]
-        },
-        {
-          "name": "disposition_cancels_and_retires",
-          "type": "boolean",
-          "required": false,
-          "section": "Derived Gates",
-          "description": "Derived gate computed from share_disposition. True only when the board elected cancelled-retired. Gates the DGCL Section 243 retirement resolution so a consent adopts one disposition, not both. The fill engine derives this gate from the selected enum and rejects an explicit gate value that conflicts with that selection.",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "disposition_holds_as_treasury",
-          "type": "boolean",
-          "required": false,
-          "section": "Derived Gates",
-          "description": "Derived gate computed from share_disposition. True only when the board elected held-as-treasury. Gates the DGCL Section 160(b) treasury resolution so a consent adopts one disposition, not both. The fill engine derives this gate from the selected enum and rejects an explicit gate value that conflicts with that selection.",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "vacancy_reduces_board_size",
-          "type": "boolean",
-          "required": false,
-          "section": "Derived Gates",
-          "description": "Derived gate computed from vacancy_action. True only when the board elected reduce-board-size. Gates the board-size reduction resolution and makes board_size_after applicable only under that election. The fill engine derives this gate from the selected enum and rejects an explicit gate value that conflicts with that selection.",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "vacancy_appoints_replacement",
-          "type": "boolean",
-          "required": false,
-          "section": "Derived Gates",
-          "description": "Derived gate computed from vacancy_action. True only when the board elected appoint-replacement. Gates the DGCL Section 223 appointment resolution and makes replacement_director_name applicable only under that election. The fill engine derives this gate from the selected enum and rejects an explicit gate value that conflicts with that selection.",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "vacancy_left_open",
-          "type": "boolean",
-          "required": false,
-          "section": "Derived Gates",
-          "description": "Derived gate computed from vacancy_action. True only when the board elected leave-vacant. Gates the resolution leaving the seat open. The fill engine derives this gate from the selected enum and rejects an explicit gate value that conflicts with that selection.",
-          "default": null,
-          "default_value_rationale": null
         }
       ]
     },
@@ -18358,24 +18385,6 @@
           "required": false,
           "section": "Terms",
           "description": "Date these instructions are given",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "disposition_cancels_and_retires",
-          "type": "boolean",
-          "required": false,
-          "section": "Derived Gates",
-          "description": "Derived gate computed from share_disposition. True only when the board resolved cancelled-retired. Gates the retirement instruction so the records reflect one disposition, not both. The fill engine derives this gate from the selected enum and rejects an explicit gate value that conflicts with that selection.",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "disposition_holds_as_treasury",
-          "type": "boolean",
-          "required": false,
-          "section": "Derived Gates",
-          "description": "Derived gate computed from share_disposition. True only when the board resolved held-as-treasury. Gates the treasury instruction so the records reflect one disposition, not both. The fill engine derives this gate from the selected enum and rejects an explicit gate value that conflicts with that selection.",
           "default": null,
           "default_value_rationale": null
         }
@@ -28914,118 +28923,6 @@
           "display_label": "Covered Employee Look-Back",
           "default": "12 months",
           "default_value_rationale": "12 months is a conservative look-back period that ties the covered class to recent working relationships instead of sweeping in the employer's entire workforce."
-        }
-      ]
-    },
-    {
-      "name": "openagreements-restrictive-covenant-notice-colorado",
-      "tier": "internal",
-      "display_name": "Employee Notice of Restrictive Covenants (Colorado)",
-      "category": "non-compete",
-      "description": "Separate worker notice accompanying the Colorado Employee Restrictive Covenant Agreement under C.R.S. § 8-2-113(4).",
-      "license": "CC-BY-4.0",
-      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-notice-colorado",
-      "source": "OpenAgreements",
-      "attribution_text": "Authored by OpenAgreements contributors. Licensed under CC BY 4.0.",
-      "allow_derivatives": true,
-      "distribution": "bundled",
-      "artifact_type": "template",
-      "stability": "experimental",
-      "credits": [],
-      "fields": [
-        {
-          "name": "employer_name",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Full legal name of the employer providing the notice",
-          "display_label": "Employer",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "employee_name",
-          "type": "string",
-          "required": true,
-          "section": null,
-          "description": "Full name of the worker receiving the notice",
-          "display_label": "Worker",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "agreement_name",
-          "type": "string",
-          "required": false,
-          "section": null,
-          "description": "Exact name of the accompanying agreement containing the covenants",
-          "display_label": "Agreement Name",
-          "default": "Employee Restrictive Covenant Agreement",
-          "default_value_rationale": null
-        },
-        {
-          "name": "notice_date",
-          "type": "date",
-          "required": false,
-          "section": null,
-          "description": "Date the notice and complete agreement copy are delivered",
-          "display_label": "Notice Date",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "worker_status",
-          "type": "enum",
-          "required": false,
-          "section": null,
-          "description": "Whether the recipient is a prospective or current worker",
-          "display_label": "Worker Status",
-          "default": null,
-          "default_value_rationale": null,
-          "options": [
-            "Prospective worker",
-            "Current worker"
-          ]
-        },
-        {
-          "name": "noncompete_included",
-          "type": "boolean",
-          "required": false,
-          "section": null,
-          "description": "Whether the accompanying agreement includes Non-Competition",
-          "display_label": "Non-Competition Included",
-          "default": "false",
-          "default_value_rationale": null
-        },
-        {
-          "name": "customer_nonsolicit_included",
-          "type": "boolean",
-          "required": false,
-          "section": null,
-          "description": "Whether the accompanying agreement includes Non-Solicitation of Customers",
-          "display_label": "Customer Non-Solicitation Included",
-          "default": "false",
-          "default_value_rationale": null
-        },
-        {
-          "name": "nondealing_included",
-          "type": "boolean",
-          "required": false,
-          "section": null,
-          "description": "Whether the accompanying agreement includes No Business with Covered Customers",
-          "display_label": "No Business with Covered Customers Included",
-          "default": "false",
-          "default_value_rationale": null
-        },
-        {
-          "name": "noninvestment_included",
-          "type": "boolean",
-          "required": false,
-          "section": null,
-          "description": "Whether the accompanying agreement includes Non-Investment",
-          "display_label": "Non-Investment Included",
-          "default": "false",
-          "default_value_rationale": null
         }
       ]
     },

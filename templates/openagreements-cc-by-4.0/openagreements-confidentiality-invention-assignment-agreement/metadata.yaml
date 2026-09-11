@@ -64,20 +64,6 @@ fields:
     description: Venue for disputes
     default: state and federal courts in the governing law state
     section: Legal
-  - name: personnel_nonsolicit_included
-    type: boolean
-    description: Whether the post-employment personnel non-solicitation covenant is included. Set false when the engagement prohibits post-employment restraints, or when the governing law voids a personnel non-solicit; the covenant is then omitted entirely instead of rendered with a savings clause. California employee nonsolicits carry substantial enforceability risk; “to the extent permitted” does not guarantee validity. Cooley retains a qualified covenant, while Orrick instructs users to remove its post-term language for California. Omitting it does not affect the invention-assignment, confidentiality, during-employment duty-of-loyalty, or statutory carve-out clauses. Not shown as a cover-term row.
-    display_label: Personnel Non-Solicitation Included
-    default: true
-    default_value_rationale: 'True preserves the form''s existing output: the covenant renders unless a caller affirmatively opts out, so a fill that omits this field renders the same document it rendered before the field existed.'
-    section: Post-Employment Restraints
-  - name: future_employer_notice_included
-    type: boolean
-    description: 'Whether the notice-to-future-employers clause is included. Set false together with personnel_nonsolicit_included when the engagement prohibits post-employment restraints: the clause obliges Employee to disclose these obligations to a future employer, so leaving it in reintroduces a post-employment obligation the covenant opt-out was meant to remove. Omitting it does not affect the confidentiality obligations themselves. Not shown as a cover-term row.'
-    display_label: Future-Employer Notice Included
-    default: true
-    default_value_rationale: 'True preserves the form''s existing output: the clause renders unless a caller affirmatively opts out, so a fill that omits this field renders the same document it rendered before the field existed.'
-    section: Post-Employment Restraints
 priority_fields: []
 artifact_kind: agreement
 capabilities:

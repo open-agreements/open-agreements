@@ -2,7 +2,7 @@
 > with your own value. `[[Defined Terms]]` (double brackets) are glossary markers, not blanks.
 > Token-only (programmatic-fill) version: ./template.md
 
-# Employee Notice of Restrictive Covenants (Colorado)
+# Colorado Notice of Restrictive Covenants
 
 ## Notice Information
 

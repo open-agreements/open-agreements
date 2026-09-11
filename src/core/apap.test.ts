@@ -116,29 +116,4 @@ describe('APAP interoperability — OpenAgreements CIIAA pilot', () => {
       values: { company_name: 'Example Labs, Inc.' },
     })).toThrow('APAP agreement data is missing fields:');
   });
-
-  it('preserves defaults and permits opting out of both post-employment clauses through APAP', async () => {
-    const template = exportTemplateToApap({
-      templateDir: TEMPLATE_DIR,
-      concertoModelPath: MODEL_PATH,
-      concertoDependencyPaths: [CONTRACT_MODEL_PATH],
-    });
-    const metadata = loadMetadata(TEMPLATE_DIR);
-    const defaultData = toApapAgreementData(template, metadata, {
-      contractId: 'defaults', values: VALUES,
-    });
-    expect(defaultData.personnel_nonsolicit_included).toBe(true);
-    expect(defaultData.future_employer_notice_included).toBe(true);
-    const agreementData = toApapAgreementData(template, metadata, {
-      contractId: 'opt-out',
-      values: { ...VALUES, personnel_nonsolicit_included: false, future_employer_notice_included: false },
-    });
-    const outputPath = join(mkdtempSync(join(tmpdir(), 'oa-apap-opt-out-')), 'ciiaa.docx');
-    await fillApapAgreementToDocx({ templateDir: TEMPLATE_DIR, agreementData, outputPath });
-    const xml = new AdmZip(outputPath).readAsText('word/document.xml');
-    expect(xml).not.toContain('No Solicitation of Company Personnel');
-    expect(xml).not.toContain('Notice to Future Employers');
-    expect(xml).toContain('Employee hereby assigns');
-    expect(xml).toContain('Defend Trade Secrets Act');
-  });
 });

@@ -1,4 +1,4 @@
-# Employee Notice of Restrictive Covenants (Colorado)
+# Colorado Notice of Restrictive Covenants
 
 ## Notice Information
 

@@ -55,29 +55,19 @@ Share Disposition
 
 The Board approves the disposition identified as [The disposition of the repurchased shares resolved by the board — retired and restored to authorized-but-unissued, or held as treasury. Retirement of shares is a board act under DGCL Section 243(a), so the election belongs in this consent, not in an officer-level instruction.] pursuant to the corresponding resolution below.
 
-### Retirement of the Repurchased Shares
+*Option A — Cancel and retire.* **RESOLVED**, that, pursuant to Section 243 of the Delaware General Corporation Law, the repurchased shares be, and hereby are, retired and restored to the status of authorized but unissued shares of the Company, and the officers of the Company be, and each of them hereby is, authorized and directed to effect any related reduction of capital and any required filing in accordance with Sections 243 and 244 of the Delaware General Corporation Law.
 
-**RESOLVED**, that, pursuant to Section 243 of the Delaware General Corporation Law, the repurchased shares be, and hereby are, retired and restored to the status of authorized but unissued shares of the Company, and the officers of the Company be, and each of them hereby is, authorized and directed to effect any related reduction of capital and any required filing in accordance with Sections 243 and 244 of the Delaware General Corporation Law.
-
-### Treasury Holding of the Repurchased Shares
-
-**RESOLVED**, that the repurchased shares be held by the Company as treasury shares, remaining issued but not outstanding, consistent with Section 160(b) of the Delaware General Corporation Law.
+*Option B — Hold as treasury.* **RESOLVED**, that the repurchased shares be held by the Company as treasury shares, remaining issued but not outstanding, consistent with Section 160(b) of the Delaware General Corporation Law.
 
 ### Management of Board Vacancy
 
 The Board approves the action identified as [How the board addresses the seat the founder vacated] pursuant to the corresponding resolution below.
 
-### Reduction of the Authorized Number of Directors
+*Option A — Reduce the authorized number of directors.* **RESOLVED**, that, to reflect the departure of the Founder, the authorized number of directors of the Company be, and it hereby is, reduced to [Authorized number of directors after reduction (used when vacancy_action is reduce-board-size)], effective as of the date of these resolutions; provided that any amendment to the Company's certificate of incorporation required to effect the reduction has become effective.
 
-**RESOLVED**, that, to reflect the departure of the Founder, the authorized number of directors of the Company be, and it hereby is, reduced to [Authorized number of directors after reduction (used when vacancy_action is reduce-board-size)], effective as of the date of these resolutions; provided that any amendment to the Company's certificate of incorporation required to effect the reduction has become effective.
+*Option B — Appoint a replacement director.* **RESOLVED**, that, to fill the vacancy on the Board resulting from the departure of the Founder, [Full name of the director appointed to fill the vacancy (used when vacancy_action is appoint-replacement)] be, and hereby is, appointed as a director of the Company pursuant to Section 223 of the Delaware General Corporation Law, to hold office until the next election of directors and until a successor is duly elected and qualified or until such director's earlier resignation or removal.
 
-### Appointment of a Replacement Director
-
-**RESOLVED**, that, to fill the vacancy on the Board resulting from the departure of the Founder, [Full name of the director appointed to fill the vacancy (used when vacancy_action is appoint-replacement)] be, and hereby is, appointed as a director of the Company pursuant to Section 223 of the Delaware General Corporation Law, to hold office until the next election of directors and until a successor is duly elected and qualified or until such director's earlier resignation or removal.
-
-### Vacancy Left Open
-
-**RESOLVED**, that the vacancy on the Board resulting from the departure of the Founder remain open, to be filled in accordance with the Company's certificate of incorporation, bylaws, and applicable law.
+*Option C — Leave the seat vacant.* **RESOLVED**, that the vacancy on the Board resulting from the departure of the Founder remain open, to be filled in accordance with the Company's certificate of incorporation, bylaws, and applicable law.
 
 ### General Authorizing Resolution
 

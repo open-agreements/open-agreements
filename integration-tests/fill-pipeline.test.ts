@@ -470,24 +470,30 @@ describe('verifyTemplateFill', () => {
 
 describe('prepareFillData', () => {
   it('derives enum gates and validates explicitly supplied boolean or string gates', () => {
-    const fields = loadMetadata(templateDirFor('openagreements-founder-separation-cap-table-update-instructions')).fields;
+    const fields = [
+      { name: 'delivery_mode', type: 'enum' as const, description: 'Delivery method', options: ['electronic', 'paper'] },
+      { name: 'electronic_delivery', type: 'boolean' as const, description: 'Electronic delivery',
+        derived: { from: 'delivery_mode', map: { electronic: true, paper: false } } },
+      { name: 'paper_delivery', type: 'boolean' as const, description: 'Paper delivery',
+        derived: { from: 'delivery_mode', map: { electronic: false, paper: true } } },
+    ];
     for (const supplied of [undefined, true, 'true']) {
-      const values = { share_disposition: 'cancelled-retired',
-        ...(supplied === undefined ? {} : { disposition_cancels_and_retires: supplied }) };
+      const values = { delivery_mode: 'electronic',
+        ...(supplied === undefined ? {} : { electronic_delivery: supplied }) };
       const data = prepareFillData({ fields, values });
-      expect(data.disposition_cancels_and_retires).toBe(true);
-      expect(data.disposition_holds_as_treasury).toBe(false);
+      expect(data.electronic_delivery).toBe(true);
+      expect(data.paper_delivery).toBe(false);
     }
     for (const values of [
-      { share_disposition: 'cancelled-retired', disposition_cancels_and_retires: false },
-      { share_disposition: 'cancelled-retired', disposition_cancels_and_retires: 'yes' },
-      { disposition_cancels_and_retires: true },
+      { delivery_mode: 'electronic', electronic_delivery: false },
+      { delivery_mode: 'electronic', electronic_delivery: 'yes' },
+      { electronic_delivery: true },
     ]) {
       expect(() => prepareFillData({ fields, values })).toThrow('must match the selected');
     }
     const blank = prepareFillData({ fields, values: {} });
-    expect(blank.disposition_cancels_and_retires).toBe(false);
-    expect(blank.disposition_holds_as_treasury).toBe(false);
+    expect(blank.electronic_delivery).toBe(false);
+    expect(blank.paper_delivery).toBe(false);
   });
 
   const fields = [

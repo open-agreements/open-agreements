@@ -24,24 +24,32 @@ type SafeParseSchema = {
 const it = itAllure.epic('Discovery & Metadata');
 
 describe('enum-derived clause gates', () => {
-  const fixture = () => yaml.load(readFileSync(join(process.cwd(),
-    'templates/openagreements-cc-by-4.0/openagreements-founder-separation-board-consent/metadata.yaml'), 'utf8')) as { fields: Array<Record<string, unknown>> };
+  const fixture = () => ({
+    name: 'Enum gate fixture', source_url: 'https://example.com/fixture',
+    version: '0.1.0', license: 'CC-BY-4.0', allow_derivatives: true,
+    attribution_text: 'Synthetic test fixture',
+    fields: [
+      { name: 'delivery_mode', type: 'enum', description: 'Delivery method', options: ['electronic', 'paper'] },
+      { name: 'electronic_delivery', type: 'boolean', description: 'Electronic delivery',
+        derived: { from: 'delivery_mode', map: { electronic: true, paper: false } } },
+    ] as Array<Record<string, unknown>>,
+  });
 
   it('preserves complete enum maps when parsing canonical metadata', () => {
     const parsed = TemplateMetadataSchema.parse(fixture());
-    expect(parsed.fields.find((field) => field.name === 'disposition_cancels_and_retires')?.derived)
-      .toEqual({ from: 'share_disposition', map: { 'cancelled-retired': true, 'held-as-treasury': false } });
+    expect(parsed.fields.find((field) => field.name === 'electronic_delivery')?.derived)
+      .toEqual({ from: 'delivery_mode', map: { electronic: true, paper: false } });
   });
 
   it('rejects missing or invalid enum mappings before a fill', () => {
     for (const derived of [
       { from: 'unknown', map: { x: true } },
-      { from: 'share_disposition', map: { 'cancelled-retired': true } },
-      { from: 'share_disposition', map: { 'cancelled-retired': true, 'held-as-treasury': false, other: false } },
-      { from: 'share_disposition', map: { 'cancelled-retired': 'true', 'held-as-treasury': false } },
+      { from: 'delivery_mode', map: { electronic: true } },
+      { from: 'delivery_mode', map: { electronic: true, paper: false, other: false } },
+      { from: 'delivery_mode', map: { electronic: 'true', paper: false } },
     ]) {
       const metadata = fixture();
-      metadata.fields.find((field) => field.name === 'disposition_cancels_and_retires')!.derived = derived;
+      metadata.fields.find((field) => field.name === 'electronic_delivery')!.derived = derived;
       expect(TemplateMetadataSchema.safeParse(metadata).success).toBe(false);
     }
   });
