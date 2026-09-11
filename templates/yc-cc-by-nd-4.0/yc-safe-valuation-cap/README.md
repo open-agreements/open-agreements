@@ -19,4 +19,4 @@ You may fill in the blanks for your own use. Do not redistribute modified versio
 
 The original download intentionally leaves signature and notice blanks. The fill pipeline accepts `investor_signatory_name`, `investor_signatory_title`, `company_notice_address`, `company_notice_email`, `investor_notice_address`, and `investor_notice_email` for a completed unsigned draft. The existing `name` and `title` fields identify the company signatory. Signature strokes remain blank. Supplying `date_of_safe` as an ISO calendar date renders a readable document date.
 
-These fields require an engine supporting `external.anchored-paragraph-bindings.v1` and `anchored-paragraph-bindings.document-end.v1`; the source DOCX remains byte-for-byte unchanged.
+These fields require an engine supporting `external.anchored-paragraph-bindings.v1`, `anchored-paragraph-bindings.document-end.v1`, and `anchored-paragraph-bindings.wrapped-line-indent.v1` (for notice-address continuation indents); the source DOCX remains byte-for-byte unchanged.
