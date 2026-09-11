@@ -24,6 +24,8 @@ asset EmployeeIpInventionsAssignment extends Contract {
   o String return_of_materials_timing optional
   o String confidentiality_other_duration optional
   o String post_termination_assistance default="reasonable assistance with filings and signatures related to assigned inventions"
+  o Boolean personnel_nonsolicit_included default=true
+  o Boolean future_employer_notice_included default=true
   o String governing_law default="California"
   o String venue default="state and federal courts in the governing law state"
 }

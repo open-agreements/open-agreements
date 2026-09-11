@@ -116,6 +116,39 @@ fields:
     default: ""
     section: Document Management
     ai_only: true
+  - name: personnel_nonsolicit_included
+    type: boolean
+    description: >-
+      Whether the post-employment personnel non-solicitation covenant is included. Set false when
+      the engagement prohibits post-employment restraints, or when the governing law voids a
+      personnel non-solicit; the covenant is then omitted entirely instead of rendered with a
+      savings clause. California employee nonsolicits carry substantial enforceability risk;
+      “to the extent permitted” does not guarantee validity. Cooley retains a qualified covenant,
+      while Orrick instructs users to remove its post-term language for California. Omitting it does not affect the invention-assignment, confidentiality,
+      during-employment duty-of-loyalty, or statutory carve-out clauses. Not shown as a cover-term
+      row.
+    display_label: Personnel Non-Solicitation Included
+    default: true
+    default_value_rationale: >-
+      True preserves the form's existing output: the covenant renders unless a caller affirmatively
+      opts out, so a fill that omits this field renders the same document it rendered before
+      the field existed.
+    section: Post-Employment Restraints
+  - name: future_employer_notice_included
+    type: boolean
+    description: >-
+      Whether the notice-to-future-employers clause is included. Set false together with
+      personnel_nonsolicit_included when the engagement prohibits post-employment restraints: the
+      clause obliges Employee to disclose these obligations to a future employer, so leaving it in
+      reintroduces a post-employment obligation the covenant opt-out was meant to remove. Omitting
+      it does not affect the confidentiality obligations themselves. Not shown as a cover-term row.
+    display_label: Future-Employer Notice Included
+    default: true
+    default_value_rationale: >-
+      True preserves the form's existing output: the clause renders unless a caller affirmatively
+      opts out, so a fill that omits this field renders the same document it rendered before
+      the field existed.
+    section: Post-Employment Restraints
 priority_fields: []
 artifact_kind: agreement
 capabilities:
@@ -139,6 +172,7 @@ maturity: experimental
 ## Cover Terms
 
 The key business terms of this assignment agreement are as follows.
+
 
 {% cover-terms %}
 {% cover-term kind="row" label="Company" field="company_name" /%}
@@ -231,7 +265,7 @@ If Employee incorporates, or allows the incorporation of, any Prior Invention, E
 {% requirement id="duty-of-loyalty-during-employment" %}While performing services for Company, Employee will not, without Company's written consent, engage in any business or activity that competes with Company or that materially conflicts with Employee's duties to Company.{% /requirement %} This section does not restrict (a) passive investments, (b) lawful conduct during off-duty hours away from Company premises, (c) protected or concerted activity under applicable law, or (d) good-faith preparation to take a future job or start a business, so long as Employee does not misuse Company time, resources, or Confidential Information. This section applies only while Employee is employed by Company; it does not restrict Employee after employment ends.
 
 {% /clause %}
-{% clause id="non-solicitation-of-personnel" %}
+{% clause id="non-solicitation-of-personnel" include-when="personnel_nonsolicit_included" %}
 ### No Solicitation of Company Personnel
 
 {% requirement id="non-solicitation-employees" %}During employment and for twelve (12) months after employment ends, Employee will not actively recruit any employee, consultant, or independent contractor of Company to leave or end their relationship with Company.{% /requirement %} This section does not restrict (a) protected or concerted activity under applicable labor law, (b) giving a personal reference, (c) responding to someone who approaches Employee first without being recruited, or (d) general advertising or hiring that is not targeted at Company personnel. This section applies only to the extent permitted by applicable law and does not apply where the law restricts or voids non-solicitation of personnel.
@@ -261,7 +295,7 @@ If Employee incorporates, or allows the incorporation of, any Prior Invention, E
 {% requirement id="equitable-relief-injunction" %}Employee acknowledges that a breach of the assignment or confidentiality obligations in this agreement may cause Company harm that money alone cannot fully repair. Company may therefore seek injunctive or other equitable relief for a threatened or actual breach, in addition to any other remedy available at law, subject to applicable law.{% /requirement %}
 
 {% /clause %}
-{% clause id="notice-to-future-employers" %}
+{% clause id="notice-to-future-employers" include-when="future_employer_notice_included" %}
 ### Notice to Future Employers
 
 {% requirement id="notify-new-employer" %}Company may inform any future employer or other party with whom Employee enters a business relationship of Employee's obligations under this agreement, and Employee will inform such a party of these obligations when relevant.{% /requirement %} Any such notice will be limited to what is reasonably necessary.
