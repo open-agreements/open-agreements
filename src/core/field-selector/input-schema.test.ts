@@ -19,13 +19,13 @@ import { loadFieldSelectorMetadata } from '../metadata.js';
 import { listFieldSelectorIds, resolveFieldSelectorDir } from '../../utils/paths.js';
 
 const NVCA_GOLDEN_HASHES: Record<string, string> = {
-  'nvca-certificate-of-incorporation': '003b1da0413315f4f7692f1b7641c0bdd1c683c64a2c7526f5f8ef1e4230eb9a',
+  'nvca-certificate-of-incorporation': '721f94a610bcf09df9b8404a6109bf0995ddebd9fa4318bd62f5e070988494f8',
   'nvca-indemnification-agreement': '378070ff3d36bffc460b6b7d95a29f1c950c88f724fe90484260108900ac0b9b',
-  'nvca-investors-rights-agreement': 'b16253ec1e9a3db38974c1ad9d9774e5de1f79a3b6575e756afc227fb4ae4ce6',
+  'nvca-investors-rights-agreement': 'a9b0ba7216d1cdbd98c710a37f66dcf6a9ecef9de2dae4db649dd866f5a3b261',
   'nvca-management-rights-letter': '5e27820907e815dbb139ff81943b6a9ee68cb06994a1b732de1f60aefd410ba9',
-  'nvca-rofr-co-sale-agreement': '70b3f7017a95c812926bca57a56beb189980500b73e09ee7fad9b09e2a8c6d56',
+  'nvca-rofr-co-sale-agreement': 'ad4cbf0df5ae3f71f496632ca9c84f221860fc187b39fe7919370e78c093f786',
   'nvca-stock-purchase-agreement': 'c4c8835b56aa13071a6c89f430929ca484b376f219d930161da0fe44e92d1d99',
-  'nvca-voting-agreement': 'b8d0a54005f0dd8131655f4f8c6f589615a4341f01b70507e409799041b45962',
+  'nvca-voting-agreement': '9a3c754235b8a9c0439ce213c17954dddcdbe257a168e07f8e9e97b719ad8ebf',
 };
 const it = itAllure.epic('Discovery & Metadata');
 
@@ -37,6 +37,16 @@ function validator(schema: JsonSchema) {
 }
 
 describe('field-selector caller-input JSON Schema', () => {
+  it('requires independent ROFR amendment votes and excludes computed display values', () => {
+    const schema = getFieldSelectorInputSchema('nvca-rofr-co-sale-agreement',
+      resolveFieldSelectorDir('nvca-rofr-co-sale-agreement'));
+    expect(schema.required).toContain('key_holder_amendment_consent_percentage');
+    expect(schema.required).toContain('investor_amendment_consent_percentage');
+    expect(schema.properties).not.toHaveProperty('specify_percentage');
+    expect(schema.properties).not.toHaveProperty('key_holder_amendment_consent_percentage_display');
+    expect(schema.properties).not.toHaveProperty('investor_amendment_consent_percentage_display');
+  });
+
   it('has an intentional golden for every published NVCA field-selector', () => {
     expect(listFieldSelectorIds().sort()).toEqual(Object.keys(NVCA_GOLDEN_HASHES).sort());
     for (const [id, expected] of Object.entries(NVCA_GOLDEN_HASHES)) {

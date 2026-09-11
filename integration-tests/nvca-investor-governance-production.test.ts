@@ -137,6 +137,7 @@ describeWithSources('NVCA investor and governance production fills', () => {
       expect(text).toContain('AI-native contract lifecycle automation');
       expect(text).toContain('(ii) 45 days after delivery');
       expect(text).toContain('holders of at least 60%');
+      expect(text).toContain('Key Holders holding 55% of the shares of Transfer Stock');
       expect(text).toContain('Series C Preferred Stock');
       expect(text).toContain('par value $0.0001 per share');
     } finally {

@@ -29,7 +29,10 @@ asset NvcaRofrCoSaleAgreement extends Contract {
   o String business_description
   o String signature_page_marker default="Signature Page Follows"
   o String effective_date
-  o String specify_percentage
+  o String key_holder_amendment_consent_percentage
+  o String investor_amendment_consent_percentage
+  o String key_holder_amendment_consent_percentage_display default=""
+  o String investor_amendment_consent_percentage_display default=""
   o String rofr_response_days default="45"
   o String key_holders_label default="Key Holders"
   o String series_designation default=""

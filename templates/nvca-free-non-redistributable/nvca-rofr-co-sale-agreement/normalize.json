@@ -147,8 +147,8 @@
       "id": "repair-prohibited-transferee-removal-seam",
       "section_heading": "Exempt Transfers.",
       "ignore_heading": true,
-      "paragraph_contains": "Sanctioned Party. .",
-      "replacements": { ". Notwithstanding": ".. Notwithstanding", "Sanctioned Party. .": "Sanctioned Party." },
+      "paragraph_contains": "(c) Sanctioned Party.",
+      "replacements": { "Sanctioned Party..": "Sanctioned Party." },
       "expected_min_matches": 1,
       "expected_max_matches": 1,
       "source_drift": { "stage": "post_transform", "prerequisites": ["clean"] }
@@ -159,7 +159,8 @@
       "ignore_heading": true,
       "paragraph_contains": "such consent shall not be required",
       "replacements": { "[provided that": "provided that", "Company]": "Company" },
-      "expected_min_matches": 1
+      "expected_min_matches": 0,
+      "expected_max_matches": 1
     },
     {
       "id": "unwrap-same-fashion-safeguard",

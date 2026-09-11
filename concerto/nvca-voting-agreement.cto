@@ -15,7 +15,25 @@ enum Preferred_director_eligibility_basisType {
   o minimum_percentage
 }
 
+enum Board_electorate_profileType {
+  o nvca_model
+  o one_preferred_one_common_balance_joint
+}
+
+enum Common_director_amendment_consent_basisType {
+  o qualified_key_holders
+  o common_stock_majority
+  o common_stock_percentage
+}
+
 asset NvcaVotingAgreement extends Contract {
+  o Board_electorate_profileType board_electorate_profile default="nvca_model"
+  o String charter_board_electorate_clause default=""
+  o String board_composition_intro default=""
+  o String ceo_director_role_opening default=""
+  o String mutual_director_role_opening default=""
+  o Common_director_amendment_consent_basisType common_director_amendment_consent_basis default="qualified_key_holders"
+  o String common_director_amendment_consent_percentage optional
   o String company_name
   o String investor_name
   o String investor_2_name optional
