@@ -2,7 +2,7 @@ import { afterAll, beforeAll, describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
 import { seconds } from './helpers/timeouts.js';
 import { execSync } from 'node:child_process';
-import { mkdtempSync, rmSync } from 'node:fs';
+import { mkdtempSync, rmSync, statSync, utimesSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import {
@@ -26,10 +26,19 @@ describe('npm packaging', () => {
   let files: string[] = [];
   let available = true;
   let packageArtifactLock: PackageArtifactLock | undefined;
+  let artifactMtimeBeforePack: number | undefined;
+  let artifactMtimeAfterPack: number | undefined;
+  let artifactOriginalTimes: { atime: Date; mtime: Date } | undefined;
+  const artifact = new URL('../dist/cli/index.js', import.meta.url);
 
   beforeAll(async () => {
     packageArtifactLock = await acquirePackageArtifactLock(new URL('..', import.meta.url).pathname);
     try {
+      const artifactStat = statSync(artifact);
+      artifactOriginalTimes = { atime: artifactStat.atime, mtime: artifactStat.mtime };
+      const knownMtime = new Date('2000-01-01T00:00:00.000Z');
+      utimesSync(artifact, knownMtime, knownMtime);
+      artifactMtimeBeforePack = statSync(artifact).mtimeMs;
       const packResult: PackResult[] = JSON.parse(
         execSync('npm pack --dry-run --json --ignore-scripts 2>/dev/null', {
           cwd: new URL('..', import.meta.url).pathname,
@@ -37,6 +46,7 @@ describe('npm packaging', () => {
           timeout: seconds(30),
         })
       );
+      artifactMtimeAfterPack = statSync(artifact).mtimeMs;
       files = packResult[0].files.map((f) => f.path);
     } catch (err) {
       if (process.env.CI) throw err; // fail hard in CI
@@ -44,7 +54,20 @@ describe('npm packaging', () => {
     }
   }, seconds(150));
 
-  afterAll(() => packageArtifactLock?.release());
+  afterAll(() => {
+    try {
+      if (artifactOriginalTimes) {
+        utimesSync(artifact, artifactOriginalTimes.atime, artifactOriginalTimes.mtime);
+      }
+    } finally {
+      packageArtifactLock?.release();
+    }
+  });
+
+  it('does not rebuild dist when package scripts are ignored', () => {
+    if (!available) return;
+    expect(artifactMtimeAfterPack).toBe(artifactMtimeBeforePack);
+  });
 
   it('includes dist/cli/index.js', () => {
     if (!available) return;

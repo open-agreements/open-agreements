@@ -12,10 +12,10 @@ export interface PackageArtifactLock {
 
 /**
  * Serializes integration tests that read or regenerate the repository's shared
- * `dist/` package artifact. CI's npm 10 runs the root `prepare` lifecycle for
- * `npm pack` even with `--ignore-scripts`, which rebuilds `dist/`. Because
- * Vitest executes test files in parallel workers, another pack can otherwise
- * observe a source map while `tsc` is replacing it.
+ * `dist/` package artifact. CI's npm 10 invokes the root `prepare` lifecycle
+ * for `npm pack` even with `--ignore-scripts`; the prepare entry point guards
+ * that known path, while this lock prevents any unexpected artifact regeneration
+ * from racing another package operation in Vitest's parallel workers.
  */
 export async function acquirePackageArtifactLock(
   repoRoot: string,
