@@ -291,6 +291,7 @@ fields:
   - name: include_redemption
     type: boolean
     description: Include Article Sixth full redemption provisions (2-5% of deals)
+    default: false
   - name: include_direct_listing
     type: boolean
     description: Include a Qualified Direct Listing as a mandatory-conversion trigger

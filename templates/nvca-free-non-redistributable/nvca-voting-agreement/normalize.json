@@ -15,9 +15,10 @@
       "section_heading": "Board Composition",
       "paragraph_contains": "the following persons shall be elected to the Board:",
       "replacements": {
-        "the following persons shall be elected to the Board:": "the following persons shall be elected to the Board, which shall initially have {board_size} authorized seats, {vacant_board_seats_at_closing} of which shall remain vacant at the Closing:"
+        "the following persons shall be elected to the Board:": "{board_composition_intro}"
       },
-      "expected_min_matches": 1
+      "expected_min_matches": 1,
+      "expected_max_matches": 1
     },
     {
       "id": "unwrap-preferred-director-share-count-election",
@@ -52,22 +53,24 @@
       "section_heading": "Board Composition",
       "paragraph_contains": "CEO Director",
       "replacements": {
-        "[As the [other] Common Director,": "As the other Common Director,",
+        "[As the [other] Common Director, the Company’s Chief Executive Officer": "{ceo_director_role_opening}",
         "; and]": "; and"
       },
       "trim_unmatched_trailing_bracket": true,
-      "expected_min_matches": 1
+      "expected_min_matches": 1,
+      "expected_max_matches": 1
     },
     {
       "id": "unwrap-mutual-director-election",
       "section_heading": "Board Composition",
       "paragraph_contains": "Mutual Director",
       "replacements": {
-        "[As [each/the] Mutual Director, [one individual": "As the Mutual Director, one individual",
+        "[As [each/the] Mutual Director, [one individual": "{mutual_director_role_opening}, one individual",
         "].": "."
       },
       "trim_unmatched_trailing_bracket": true,
-      "expected_min_matches": 1
+      "expected_min_matches": 1,
+      "expected_max_matches": 1
     },
     {
       "id": "resolve-board-clause-range",
@@ -90,14 +93,6 @@
         "below[; and (d) ": "below; and (d) ",
         "].": "."
       },
-      "expected_min_matches": 1
-    },
-    {
-      "id": "close-charter-board-recital",
-      "section_heading": "VOTING AGREEMENT",
-      "ignore_heading": true,
-      "paragraph_contains": "Restated Certificate”) provides that",
-      "replacements": {"[(i)":"(i)", "directors of the Company];":"directors of the Company;"},
       "expected_min_matches": 1
     },
     {
@@ -261,7 +256,7 @@
       "id": "unwrap-lead-investor-consent",
       "section_heading": "Consent Required to Amend, Modify, Terminate or Waive",
       "ignore_heading": true,
-      "paragraph_contains": "without the written consent of Comstock Fuels Corporation",
+      "paragraph_contains": "the provisions of Section 1.2(a) and this Section 7.8(b)(ii)",
       "replacements": {"[the provisions":"the provisions", "Section 1.2(a);]":"Section 1.2(a);"},
       "expected_min_matches": 1,
       "expected_max_matches": 1,
@@ -308,21 +303,11 @@
       "expected_min_matches": 1
     },
     {
-      "id": "close-comstock-specific-consent",
-      "section_heading": "Consent Required to Amend, Modify, Terminate or Waive",
-      "ignore_heading": true,
-      "paragraph_contains": "written consent of Comstock Fuels Corporation",
-      "replacements": {"[the provisions":"the provisions", "Section 1.2(a);]":"Section 1.2(a);"},
-      "expected_min_matches": 1,
-      "expected_max_matches": 1,
-      "source_drift": { "stage": "post_transform", "prerequisites": ["fill"] }
-    },
-    {
       "id": "close-common-director-majority-consent",
       "section_heading": "Consent Required to Amend, Modify, Terminate or Waive",
       "ignore_heading": true,
       "paragraph_contains": "Section 7.8(b)(iv)",
-      "replacements": {"[the provisions":"the provisions", "[the [Qualified] Key Holders][the holders of 60% of shares of Common Stock]":"{common_director_amendment_consent_text}", ";]":";"},
+      "replacements": {"[the provisions":"the provisions", ";]":";"},
       "expected_min_matches": 1
     },
     {

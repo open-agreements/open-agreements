@@ -12,6 +12,16 @@
   },
   "rules": [
     {
+      "id": "tranche-section-reference-with-additional-closing",
+      "when_all": [{ "field": "closing_type", "op": "eq", "value": "additional" }],
+      "set_fill": { "tranche_closing_section_reference": "1.2(c)" }
+    },
+    {
+      "id": "tranche-section-reference-without-additional-closing",
+      "when_all": [{ "field": "closing_type", "op": "neq", "value": "additional" }],
+      "set_fill": { "tranche_closing_section_reference": "1.2(b)" }
+    },
+    {
       "id": "management-rights-letter-singular",
       "when_all": [{ "field": "management_rights_letter_count", "op": "neq", "value": "multiple" }],
       "set_fill": { "management_rights_instrument_name": "Management Rights Letter" }

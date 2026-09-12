@@ -178,7 +178,7 @@
         {
           "marker": "Additional Closings",
           "trigger": { "field": "closing_type", "equals": "additional" },
-          "replaceWith": ""
+          "removal": { "kind": "paragraph", "anchor": "Additional Closings", "match": "contains", "expectedMatches": 1 }
         }
       ]
     },

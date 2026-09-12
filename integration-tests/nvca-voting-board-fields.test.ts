@@ -39,6 +39,33 @@ async function renderVotingAgreement(overrides: Record<string, unknown> = {}): P
 }
 
 describeWithSource('NVCA Voting Agreement board fields', () => {
+  it('aligns the alternate charter electorate, CEO role, and closing vacancy', async () => {
+    const { text, warnings } = await renderVotingAgreement({
+      board_electorate_profile: 'one_preferred_one_common_balance_joint',
+      board_size: '5',
+      vacant_board_seats_at_closing: '1',
+      common_director_amendment_consent_basis: 'common_stock_majority',
+    });
+    expect(warnings).toEqual([]);
+    expect(text).toContain('shall be entitled to elect one director of the Company (the “Common Director”)');
+    expect(text).not.toContain('shall be entitled to elect two directors');
+    expect(text).toContain('any such vacant seat shall be among the seats elected');
+    expect(text).toContain('As a director elected by the holders of Common Stock and Preferred Stock');
+    expect(text).not.toContain('As the other Common Director');
+    expect(text).toContain('the holders of a majority of shares of Common Stock');
+  }, 15_000);
+
+  it('keeps the model electorate and independently fills a negotiated common-director amendment vote', async () => {
+    const { text } = await renderVotingAgreement({
+      common_director_amendment_consent_basis: 'common_stock_percentage',
+      common_director_amendment_consent_percentage: '67',
+      key_holder_consent_percentage: '55',
+    });
+    expect(text).toContain('shall be entitled to elect two directors');
+    expect(text).toContain('the holders of 67% of shares of Common Stock');
+    expect(text).not.toContain('the holders of 55% of shares of Common Stock');
+  }, 15_000);
+
   it('selects and fills the minimum-share preferred-director alternative', async () => {
     const { text, warnings } = await renderVotingAgreement();
 

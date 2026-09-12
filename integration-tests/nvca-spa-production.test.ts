@@ -49,6 +49,26 @@ function expectCoreTerms(text: string, warnings: string[], series = 'A'): void {
 }
 
 describeWithSource('NVCA SPA production fill', () => {
+  for (const [closingType, reference] of [['single', '1.2(b)'], ['additional', '1.2(c)']]) {
+    it(`keeps tranche cross-references aligned for ${closingType} closing`, async () => {
+      const dir = mkdtempSync(join(tmpdir(), 'spa-tranche-reference-'));
+      try {
+        const outputPath = join(dir, 'spa.docx');
+        await runFieldSelector({
+          fieldSelectorId: FIELD_SELECTOR_ID, outputPath,
+          values: { ...FIXTURE, closing_type: closingType, include_tranche_closing: true },
+        });
+        const text = extractAllText(outputPath);
+        expect(text).toContain(`Termination of Section ${reference}.`);
+        expect(text).toContain(`This Section ${reference} shall terminate`);
+        expect(text).toContain(`as adjusted pursuant to Section ${reference}(ii)`);
+        if (closingType === 'single') expect(text).not.toContain('Section 1.2(c)');
+      } finally {
+        rmSync(dir, { recursive: true, force: true });
+      }
+    }, 20_000);
+  }
+
   it('uses the hash-pinned NVCA source', () => {
     expect(createHash('sha256').update(readFileSync(SOURCE)).digest('hex')).toBe(SOURCE_SHA256);
   });

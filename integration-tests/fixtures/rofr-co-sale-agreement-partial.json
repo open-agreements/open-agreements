@@ -4,6 +4,7 @@
   "key_holder_name": "Maya Imani",
   "effective_date": "March 20, 2026",
   "state_of_incorporation": "Delaware",
-  "specify_percentage": "60",
+  "key_holder_amendment_consent_percentage": "55",
+  "investor_amendment_consent_percentage": "60",
   "rofr_response_days": "45"
 }

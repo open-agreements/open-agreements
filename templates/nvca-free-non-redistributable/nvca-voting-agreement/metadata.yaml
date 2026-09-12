@@ -59,6 +59,27 @@ fields:
   - name: board_size
     type: string
     description: Authorized number of Board seats under the agreed post-closing board structure (number only)
+  - name: board_electorate_profile
+    type: enum
+    options: [nvca_model, one_preferred_one_common_balance_joint]
+    default: nvca_model
+    description: Select the Restated Certificate electorate structure reflected in the Voting Agreement; the bounded alternative has one Preferred-exclusive seat, one Common-exclusive seat, and the balance elected by Common and Preferred voting together
+  - name: charter_board_electorate_clause
+    type: string
+    description: Computed complete Restated Certificate board-electorate recital; do not supply directly
+    default: ''
+  - name: board_composition_intro
+    type: string
+    description: Computed Board Composition introduction, including the supplied authorized-seat and closing-vacancy facts; do not supply directly
+    default: ''
+  - name: ceo_director_role_opening
+    type: string
+    description: Computed electorate-aware opening for the CEO Director provision; do not supply directly
+    default: ''
+  - name: mutual_director_role_opening
+    type: string
+    description: Computed electorate-aware opening for the Mutual Director provision; do not supply directly
+    default: ''
   - name: vacant_board_seats_at_closing
     type: string
     description: Number of authorized Board seats intentionally vacant at the Closing (number only)
@@ -154,9 +175,15 @@ fields:
     default: ''
   - name: common_director_amendment_consent_basis
     type: enum
-    description: Select whether the Common Director amendment protection is approved by Qualified Key Holders or a specified percentage of Common Stock holders
-    options: [qualified_key_holders, common_stock_percentage]
+    description: Select whether the Common Director amendment protection is approved by Qualified Key Holders, a majority of Common Stock, or a specified percentage of Common Stock
+    options: [qualified_key_holders, common_stock_majority, common_stock_percentage]
     default: qualified_key_holders
+  - name: common_director_amendment_consent_percentage
+    type: string
+    description: Common Stock ownership percentage required for the Common Director amendment protection, number only; independent of the Qualified Key Holder amendment threshold
+    required_when:
+      field: common_director_amendment_consent_basis
+      equals: common_stock_percentage
   - name: common_director_amendment_consent_text
     type: string
     description: Computed complete approval class for the Common Director amendment protection; do not supply directly
@@ -286,6 +313,7 @@ priority_fields:
   - requisite_holders_standard
   - requisite_holders_percentage
   - board_size
+  - board_electorate_profile
   - vacant_board_seats_at_closing
   - common_director_designation
   - preferred_director_name

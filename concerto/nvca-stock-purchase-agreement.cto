@@ -21,6 +21,7 @@ enum Dispute_resolution_modeType {
 }
 
 asset NvcaStockPurchaseAgreement extends Contract {
+  o String tranche_closing_section_reference default=""
   o String company_name
   o String investor_name
   o String company_counsel

@@ -76,7 +76,13 @@
       "options": [
         {
           "marker": "Special Mandatory Conversion.",
-          "trigger": { "field": "include_pay_to_play" }
+          "trigger": { "field": "include_pay_to_play" },
+          "removal": {
+            "kind": "section",
+            "startAnchor": "Special Mandatory Conversion.",
+            "endAnchor": "Redemption. {no_redemption_clause}",
+            "removeAdjacentBlankParagraphs": false
+          }
         }
       ]
     },

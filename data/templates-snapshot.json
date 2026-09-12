@@ -11092,7 +11092,7 @@
           "required": false,
           "section": null,
           "description": "Include Article Sixth full redemption provisions (2-5% of deals)",
-          "default": null,
+          "default": "false",
           "default_value_rationale": null
         },
         {
@@ -12727,7 +12727,7 @@
           "required": false,
           "section": null,
           "description": "Include investor-counsel and transaction-assistance covenants",
-          "default": null,
+          "default": "false",
           "default_value_rationale": null
         },
         {
@@ -12754,7 +12754,7 @@
           "required": false,
           "section": null,
           "description": "Include the FCPA compliance covenant",
-          "default": null,
+          "default": "false",
           "default_value_rationale": null
         },
         {
@@ -14137,12 +14137,39 @@
           "default_value_rationale": null
         },
         {
-          "name": "specify_percentage",
+          "name": "key_holder_amendment_consent_percentage",
           "type": "string",
           "required": true,
           "section": null,
-          "description": "Specified percentage threshold for key holder transfers, as a number only (for example, 60)",
+          "description": "Transfer Stock ownership percentage required for the Qualified Key Holder amendment vote, number only; independent of the Investor vote and the Capital Stock ownership floor",
           "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_amendment_consent_percentage",
+          "type": "string",
+          "required": true,
+          "section": null,
+          "description": "Preferred Stock ownership percentage required for the Investor amendment vote, number only; independent of the Qualified Key Holder vote",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "key_holder_amendment_consent_percentage_display",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed Qualified Key Holder amendment-vote percentage or visible insertion marker; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "investor_amendment_consent_percentage_display",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed Investor amendment-vote percentage or visible insertion marker; do not supply directly",
+          "default": "",
           "default_value_rationale": null
         },
         {
@@ -14386,6 +14413,15 @@
       "distribution": "linked",
       "artifact_type": "field-selector",
       "fields": [
+        {
+          "name": "tranche_closing_section_reference",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed surviving Tranche Closing subsection reference based on the additional-closing election; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
         {
           "name": "company_name",
           "type": "string",
@@ -15389,6 +15425,55 @@
           "default_value_rationale": null
         },
         {
+          "name": "board_electorate_profile",
+          "type": "enum",
+          "required": true,
+          "section": null,
+          "description": "Select the Restated Certificate electorate structure reflected in the Voting Agreement; the bounded alternative has one Preferred-exclusive seat, one Common-exclusive seat, and the balance elected by Common and Preferred voting together",
+          "default": "nvca_model",
+          "default_value_rationale": null,
+          "options": [
+            "nvca_model",
+            "one_preferred_one_common_balance_joint"
+          ]
+        },
+        {
+          "name": "charter_board_electorate_clause",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed complete Restated Certificate board-electorate recital; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "board_composition_intro",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed Board Composition introduction, including the supplied authorized-seat and closing-vacancy facts; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "ceo_director_role_opening",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed electorate-aware opening for the CEO Director provision; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "mutual_director_role_opening",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Computed electorate-aware opening for the Mutual Director provision; do not supply directly",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
           "name": "vacant_board_seats_at_closing",
           "type": "string",
           "required": true,
@@ -15621,13 +15706,23 @@
           "type": "enum",
           "required": false,
           "section": null,
-          "description": "Select whether the Common Director amendment protection is approved by Qualified Key Holders or a specified percentage of Common Stock holders",
+          "description": "Select whether the Common Director amendment protection is approved by Qualified Key Holders, a majority of Common Stock, or a specified percentage of Common Stock",
           "default": "qualified_key_holders",
           "default_value_rationale": null,
           "options": [
             "qualified_key_holders",
+            "common_stock_majority",
             "common_stock_percentage"
           ]
+        },
+        {
+          "name": "common_director_amendment_consent_percentage",
+          "type": "string",
+          "required": false,
+          "section": null,
+          "description": "Common Stock ownership percentage required for the Common Director amendment protection, number only; independent of the Qualified Key Holder amendment threshold",
+          "default": null,
+          "default_value_rationale": null
         },
         {
           "name": "common_director_amendment_consent_text",

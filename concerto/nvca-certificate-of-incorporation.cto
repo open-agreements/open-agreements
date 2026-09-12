@@ -82,5 +82,5 @@ asset NvcaCertificateOfIncorporation extends Contract {
   o Liquidation_participationType liquidation_participation default="non_participating"
   o Anti_dilution_typeType anti_dilution_type default="broad_based_weighted_average"
   o Boolean include_pay_to_play optional
-  o Boolean include_redemption optional
+  o Boolean include_redemption default=false
 }

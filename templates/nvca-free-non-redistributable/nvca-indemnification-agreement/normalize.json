@@ -57,27 +57,11 @@
       "expected_min_matches": 1
     },
     {
-      "id": "remove-duration-drafting-carrier",
-      "section_heading": "Duration of Agreement",
-      "ignore_heading": true,
-      "paragraph_contains": "consider extending for several years",
-      "replacements": {" [consider extending for several years after term of service, even if claim has not yet been paid]":""},
-      "expected_min_matches": 1
-    },
-    {
       "id": "remove-embedded-section-nine-comment",
       "section_heading": "Exception to Right of Indemnification",
       "ignore_heading": true,
       "paragraph_contains": "This provision is designed to prevent the indemnitee",
       "replacements": {"[Comment:  This provision is designed to prevent the indemnitee from being indemnified for actions brought by the indemnitee except as otherwise provided. as well as for liability under Section 16(b) of the 1934 Act, for certain reimbursements of the Company by Indemnitee and where payment has already been made under an insurance policy.]":""},
-      "expected_min_matches": 1
-    },
-    {
-      "id": "remove-embedded-process-agent-note",
-      "section_heading": "Governing Law and Consent to Jurisdiction",
-      "ignore_heading": true,
-      "paragraph_contains": "Delaware-incorporated Company is already subject",
-      "replacements": {" [NOTE: as the Delaware-incorporated Company is already subject to service of process in Delaware, this really only applies to the individual director.]":""},
       "expected_min_matches": 1
     }
   ]

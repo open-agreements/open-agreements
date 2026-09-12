@@ -27,6 +27,8 @@ enum Transferee_eligibility_standardType {
 }
 
 asset NvcaInvestorsRightsAgreement extends Contract {
+  o Boolean include_transaction_assistance default=false
+  o Boolean include_fair_practices_covenant default=false
   o String company_name
   o String investor_name
   o Underwriter_selectionType underwriter_selection default="company"

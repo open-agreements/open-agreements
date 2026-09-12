@@ -51,6 +51,15 @@ function loadFields(fieldSelectorId: string): MetadataField[] {
   return metadata.fields ?? [];
 }
 
+function publishedAnchor(fieldSelectorId: string, replacement: string): string {
+  const replacements = JSON.parse(readFileSync(
+    join(resolveFieldSelectorDir(fieldSelectorId), 'replacements.json'), 'utf-8',
+  )) as Record<string, string>;
+  const anchor = Object.keys(replacements).find((key) => replacements[key] === replacement);
+  if (!anchor) throw new Error(`Missing published binding ${fieldSelectorId}: ${replacement}`);
+  return anchor;
+}
+
 function escapeXml(value: string): string {
   return value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 }
@@ -351,7 +360,10 @@ const SERIES_PAR_FIXTURES: Array<{
     paragraphs: [
       'certain of the Investors hold shares of [Series [_]] Preferred Stock and/or shares of Common Stock.',
       'parties to that certain Series [_] Preferred Stock Purchase Agreement of even date herewith.',
-      'the holders of record of the shares of [Series [___]] Preferred Stock, $[___] par value per share, of the Company, and the holders of record of the shares of common stock, $[___] par value per share, of the Company.',
+      // The electorate is now one contextual binding. Exercise its full
+      // published anchor instead of an invented shortened recital that no
+      // longer corresponds to a source binding; production tests use NVCA DOCX.
+      publishedAnchor('nvca-voting-agreement', '{charter_board_electorate_clause}'),
       '“Series [___] Preferred Stock” means shares of the Company’s Series [___] Preferred Stock, par value [$0.___] per share.',
     ],
     values: ROUND_VALUES,
