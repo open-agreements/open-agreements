@@ -6,7 +6,7 @@ description: >-
   document(s).
 citation: 'Brown v. TGS Mgmt. Co., 57 Cal. App. 5th 303 (2020).'
 resource: 'https://www.courtlistener.com/opinion/4805583/brown-v-tgs-management-co-llc/'
-timestamp: '2026-07-04'
+timestamp: '2026-09-09'
 document_references:
   - type: Reviewer Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us'
@@ -37,5 +37,5 @@ Supporting case-law excerpt. Quoted across 4 document(s) in the OpenAgreements l
 
 - supports: `california-statutory-gates`, `confidentiality-and-trade-secret-treatment`, `definitions`, `trade-secrets`, `why-not-indefinite`
 - source_cards: `brown-de-facto`, `brown-tgs`, `ca-brown-de-facto-defs`, `ca-brown-duration`, `ca-brown-gate`
-- cited_by: [Non-Compete Agreement Reviewer Checklist](../checklists/non-compete/us.md), [Non-Compete Agreement Reviewer Checklist — California](../checklists/non-compete/us/california.md), [Non-Competes in California](../non-compete/us/california.md), [How Long Should a Trade-Secret Confidentiality Obligation Last?](../trade-secrets/us/confidentiality-duration.md)
+- cited_by: [Non-Compete Agreement Reviewer Checklist](../checklists/non-compete/us.md), [Non-Compete Agreement Reviewer Checklist — California](../checklists/non-compete/us/california.md), [Non-Competes in California](../non-compete/us/california.md), [Trade-Secret Confidentiality Duration in the United States](../trade-secrets/us/confidentiality-duration.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4805583/brown-v-tgs-management-co-llc/#:~:text=Collectively%2C%20these%20overly%20restrictive%20provisions,chosen%20profession%20of%20statistical%20arbitrage.>

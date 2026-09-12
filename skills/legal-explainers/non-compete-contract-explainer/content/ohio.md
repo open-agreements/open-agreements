@@ -2,7 +2,7 @@
 jurisdiction: "Ohio"
 slug: ohio
 countryCode: US
-content_packaged_at: "2026-09-10"
+content_packaged_at: "2026-09-12"
 law_checked_through: "2026-06-03"
 human_reviewed_at: null
 next_review_due: "2026-11-30"
@@ -17,7 +17,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/ohio · **Snapshot as of:** 2026-09-10 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/ohio · **Snapshot as of:** 2026-09-12 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Ohio[^about]
 
@@ -192,7 +192,7 @@ In *UZ Engineered Products Co. v. Midwest Motor Supply Co.*, the covenants at is
 >
 > The same reasonableness limits that govern an Ohio non-compete govern an employee non-solicit: no broader than needed, not unduly harsh, not injurious to the public. An overbroad anti-raiding clause is reformed or struck under Raimonde, not enforced as written [^uz-reasonable-extent].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Ohio. This article synthesizes Ohio primary law and is not legal advice from a Ohio-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Ohio*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/ohio.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Ohio. This article synthesizes Ohio primary law and is not legal advice from an Ohio-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Ohio*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/ohio.
 
 [^raimonde-reasonableness-test]: **Raimonde v. Van Vlerah** — "A covenant restraining an employee from competing with his former employer upon termination of employment is reasonable if it is no greater than is required for the protection of the employer, does not impose undue hardship on the employee, and is not injurious to the public." *Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975).* <https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/#:~:text=A%20covenant%20restraining%20an%20employee,not%20injurious%20to%20the%20public.>
 

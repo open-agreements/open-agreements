@@ -166,7 +166,7 @@ There is one defense worth knowing. An employer is not liable for failing to pay
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-08-15. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arizona. This article synthesizes Arizona primary law and is not legal advice from a Arizona-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Arizona*, OpenAgreements (last updated August 15, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/arizona.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-08-15. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arizona. This article synthesizes Arizona primary law and is not legal advice from an Arizona-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Wage and Hour Law in Arizona*, OpenAgreements (last updated August 15, 2026), https://openagreements.org/practice-guides/wage-and-hour/us/arizona.
 
 [^ica-2026-rate]: **Industrial Commission of Arizona, 2026 Minimum Wage Increase** — "In accordance with A.R.S. § 23-363(B), Arizona's minimum wage will increase from $14.70 to $15.15, effective January 1, 2026." *Industrial Commission of Arizona, 2026 Minimum Wage Increase (Sept. 29, 2025)* <https://www.azica.gov/sites/default/files/2025-10/2026%20Minimum%20Wage.pdf>
 

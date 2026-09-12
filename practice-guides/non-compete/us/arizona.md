@@ -256,7 +256,7 @@ Because neither ban has become law, an Arizona non-compete is still governed by 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arizona. This article synthesizes Arizona primary law and is not legal advice from a Arizona-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Arizona*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/arizona.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arizona. This article synthesizes Arizona primary law and is not legal advice from an Arizona-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship. CC BY 4.0. Cite as Steven Obiajulu, *Non-Competes in Arizona*, OpenAgreements (last updated June 3, 2026), https://openagreements.org/practice-guides/non-compete/us/arizona.
 
 [^q1-amex-disfavored]: **Amex Distributing Co. v. Mascari** — "Restrictive covenants which tend to prevent an employee from pursuing a similar vocation after termination of employment are disfavored." *Amex Distributing Co. v. Mascari, 150 Ariz. 510, 724 P.2d 596 (Ct. App. 1986).* <https://www.courtlistener.com/opinion/1211495/amex-distributing-co-inc-v-mascari/#:~:text=Restrictive%20covenants%20which%20tend%20to,termination%20of%20employment%20are%20disfavored.>
 
