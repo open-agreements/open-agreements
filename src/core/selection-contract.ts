@@ -2,7 +2,7 @@
  * Not a general template engine or a claim that every catalog entry is complete.
  */
 import { createHash } from 'node:crypto';
-import { readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { isDeepStrictEqual } from 'node:util';
 import AdmZip from 'adm-zip';
@@ -52,7 +52,15 @@ export async function compileSelectionContract(templateDir: string) {
   }
   const names = new Set(metadata.fields.map(f => f.name));
   if (names.size !== metadata.fields.length) throw new Error('Duplicate field');
-  const selections = selectionSchema.parse(JSON.parse(readFileSync(join(templateDir, 'selections.json'), 'utf8')));
+  const unimplemented = ['bonus_terms', 'equity_terms', 'order_date_display', 'pilot_fee_display', 'fees_display', 'payment_display', 'auto_renewal_display', 'effective_date_display', 'covered_claims_display', 'general_cap_display'];
+  for (const n of [1, 2]) {
+    unimplemented.push(`party_${n}_signatory_name_and_title`, `party_${n}_notice_email_check`, `party_${n}_notice_postal_check`);
+    if (names.has(`party_${n}_signatory_company`) && names.has(`party_${n}_name`)) throw new Error('Unsupported signatory company fallback');
+  }
+  if (unimplemented.some(name => names.has(name))) throw new Error('Unsupported legacy computed-field family');
+  const selections = existsSync(join(templateDir, 'selections.json'))
+    ? selectionSchema.parse(JSON.parse(readFileSync(join(templateDir, 'selections.json'), 'utf8')))
+    : { groups: [] };
   const docx = readFileSync(join(templateDir, 'template.docx'));
   if (docx.length > 16_000_000) throw new Error('DOCX size limit');
   const text = paragraphs(docx);
@@ -74,8 +82,12 @@ export async function compileSelectionContract(templateDir: string) {
     if (triggerFields.size !== 1) throw new Error('Radio alternatives must use one trigger field');
   }
   const rules: Rule[] = [];
-  // Explicitly bounded to the existing engine's party_1 / party_2 convention.
-  for (const prefix of ['party_1', 'party_2']) {
+  // Same discovery convention as the reviewed engine; not a template-ID switch.
+  const prefixes = [...new Set([
+    ...[...names].filter(name => name.endsWith('_signatory_type')).map(name => name.slice(0, -5)),
+    'party_1', 'party_2',
+  ])];
+  for (const prefix of prefixes) {
     if (!names.has(`${prefix}_type`)) continue;
     const type = metadata.fields.find(f => f.name === `${prefix}_type`)!;
     if (type.type !== 'enum' || !isDeepStrictEqual(type.options, ['entity', 'individual'])) throw new Error('Unsupported signature type');
@@ -95,9 +107,9 @@ export async function compileSelectionContract(templateDir: string) {
   if (!commands.length || commands.some(c => c.type !== 'INS' || !safeKey.test(c.code) || !available.has(c.code))) throw new Error('Unsupported or unresolved DOCX command');
   const bindings = [...new Set(commands.map(c => c.code))].sort();
   return {
-    profile: 'oa-radio-signature-pilot-v1', status: 'compiled-unverified',
-    sourceHashes: Object.fromEntries(['metadata.yaml', 'selections.json', 'template.docx'].map(name => [name, digest(readFileSync(join(templateDir, name)))])),
-    compatibility: { engineHash, ruleFamily: 'legacy-party-signature-v1', renderer: 'oa-unified-pipeline' },
+    profile: 'oa-radio-signature-pilot-v2', status: 'compiled-unverified',
+    sourceHashes: Object.fromEntries(['metadata.yaml', 'selections.json', 'template.docx'].filter(name => existsSync(join(templateDir, name))).map(name => [name, digest(readFileSync(join(templateDir, name)))])),
+    compatibility: { engineHash, ruleFamily: 'legacy-role-signature-v2', renderer: 'oa-unified-pipeline' },
     metadata, selections, rules, bindings,
   };
 }
@@ -115,7 +127,7 @@ export async function fillSelectionContract(templateDir: string, contract: unkno
   const result = await runFillPipeline({
     inputPath: join(templateDir, 'template.docx'), outputPath, values,
     fields: current.metadata.fields, priorityFieldNames: current.metadata.priority_fields,
-    selectionsConfig: current.selections, selectionsZeroMatchPolicy: 'error',
+    selectionsConfig: current.selections.groups.length ? current.selections : undefined, selectionsZeroMatchPolicy: 'error',
     coerceBooleans: true, fixSmartQuotes: true, verify: verifyTemplateFill,
     computeDisplayFields: data => {
       const blank = (v: unknown) => typeof v === 'string' && v.trim() === BLANK_PLACEHOLDER;

@@ -8,9 +8,9 @@ existing metadata, DOCX bindings and `selections.json`. It includes 18 input fie
 rules. There is no handwritten per-template contract or AI field-acceptance step.
 The original Common Paper source documents and operative language were not edited.
 
-This is a bounded `oa-radio-signature-pilot-v1` profile, not a universal conversion
-claim. It supports default/equality radio alternatives and the existing
-`party_1`/`party_2` entity-versus-individual signature convention. Inputs are typed
+This is a bounded `oa-radio-signature-pilot-v2` profile, not a universal conversion
+claim. It supports default/equality radio alternatives, templates with no selection
+stage, and the existing `party_1`/`party_2` and `*_signatory` entity-versus-individual signature conventions. Inputs are typed
 strings/dates/enums; existing metadata supplies defaults and field descriptions.
 Missing priority fields retain the existing pipeline's warning/blank behavior.
 Individual signers suppress entity-only title/company displays. Unlike the legacy
@@ -22,6 +22,7 @@ Run from this worktree:
 
 ```sh
 node node_modules/vitest/vitest.mjs run src/core/selection-contract.test.ts --configLoader runner
+node node_modules/vitest/vitest.mjs run src/core/selection-contract-expansion.test.ts --configLoader runner
 node node_modules/typescript/bin/tsc --noEmit
 node node_modules/eslint/bin/eslint.js src/core/selection-contract.ts src/core/selection-contract.test.ts
 git diff --check
@@ -63,7 +64,7 @@ not visually verifiable properties.
   changed sources/manifests. The compiler pins the reviewed legacy engine hash to
   force compatibility review after engine changes; that conservative pilot gate
   is not yet the long-term versioned profile/update protocol.
-- More complex preprocessing, array/IF DOCX commands, other signature conventions,
+- More complex preprocessing, array/IF DOCX commands, unrecognized signature conventions,
   and extra source artifacts fail closed here. The profile does not replace or
   restore the earlier catalog-wide compiler's conditions/arrays implementation.
 - Generated contracts say `compiled-unverified`; this case's test evidence does
@@ -81,3 +82,39 @@ checkpoints, rather than relying on temporary uncommitted implementation files.
 This focused successor lives at
 `/Users/stevenobiajulu/Projects/oa-common-paper-declarative-20260912`, branch
 `pilot/common-paper-declarative-20260912`, based on `7f96c6d5`.
+
+## Expansion — 2026-09-12
+
+Steven visually approved the Mutual NDA sample and requested more conversions.
+Profile v2 replaces v1's legacy-party-only discovery with the reviewed engine's
+role-based `*_signatory_type` discovery and makes selections optional. Explicit
+guards reject remaining legacy computed fields and Bonterms company-fallback
+semantics rather than silently bypass them. This is still source-generated data,
+not separate template-ID-specific adapters or edits to canonical contract prose.
+
+Three additional pinned templates now have generated-contract/render parity:
+
+| Template | Inputs | Unique bindings | New comparison cases |
+|---|---:|---:|---:|
+| Common Paper One-Way NDA | 14 | 13 | 8 term/confidentiality/party-type combinations + blank/default |
+| Common Paper Amendment | 17 | 13 | 4 party-type combinations + blank/default |
+| Common Paper CSA Click-Through | 14 | 14 | Full scalar fill with XML escaping + blank/default |
+
+Together with Mutual NDA, this durable worktree verifies four templates. CSA
+Click-Through had also been supported by the earlier missing temporary compiler;
+this is restored coverage here, not a newly discovered fifth template.
+
+37 tests pass across both files, including 33 exact decompressed-DOCX comparisons
+(17 original + 16 added) and negative/compiler tests. TypeScript and focused lint
+pass. New contracts and synthetic DOCXs regenerate beneath
+`.cache/common-paper-declarative/expansion/<template-id>/`.
+
+The first expansion run exposed a test-method error: a raw XML substring assertion
+assumed “In perpetuity.” occupied one Word text run. The source splits the period
+into another run. The corrected assertion concatenates `w:t` text per paragraph;
+the full ZIP-entry equality assertion remains unchanged. This is why both structural
+parity and independently extracted visible-text assertions are kept.
+
+Next difficult cases, such as Design Partner, remain blocked by preprocessing and
+checkbox-selection stages. No support for them is claimed by this batch. No Stella
+deployment, automatic catalog promotion or public changes occurred.
